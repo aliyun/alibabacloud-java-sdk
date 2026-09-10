@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateVoiceAccessProfileShrinkRequest extends TeaModel {
     /**
+     * <p>The Bailian workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-xdne77rxe14ziszr</p>
      */
@@ -12,12 +14,17 @@ public class CreateVoiceAccessProfileShrinkRequest extends TeaModel {
     public String businessUnitId;
 
     /**
+     * <p>The speech engine.</p>
+     * 
      * <strong>example:</strong>
      * <p>VOLC</p>
      */
     @NameInMap("NlsEngine")
     public String nlsEngine;
 
+    /**
+     * <p>The parameter settings.</p>
+     */
     @NameInMap("Profile")
     public String profileShrink;
 

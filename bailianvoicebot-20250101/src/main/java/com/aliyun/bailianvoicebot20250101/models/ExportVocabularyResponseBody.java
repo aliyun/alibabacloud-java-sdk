@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class ExportVocabularyResponseBody extends TeaModel {
     /**
+     * <p>The internal error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Not in use.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Not in use</p>
+     */
     @NameInMap("Data")
     public String data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,12 +32,17 @@ public class ExportVocabularyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance llm-zzu528i29ecnprcl does not exist.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of dynamic error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 

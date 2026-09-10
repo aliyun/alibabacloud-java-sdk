@@ -5,19 +5,35 @@ import com.aliyun.tea.*;
 
 public class CreateVariableRequest extends TeaModel {
     /**
+     * <p>The ID of the Bailian business workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-baployoyopf22m2r</p>
      */
     @NameInMap("BusinessUnitId")
     public String businessUnitId;
 
+    /**
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Indicates the user type, including VIP and regular users</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The display name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UserType</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
+     * <p>The variable name.</p>
+     * 
      * <strong>example:</strong>
      * <p>userType</p>
      */

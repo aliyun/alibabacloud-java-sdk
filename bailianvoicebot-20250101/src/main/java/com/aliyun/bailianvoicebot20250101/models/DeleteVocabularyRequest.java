@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteVocabularyRequest extends TeaModel {
     /**
+     * <p>The Bailian workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-c11iig67g863rih8</p>
      */
@@ -12,6 +14,8 @@ public class DeleteVocabularyRequest extends TeaModel {
     public String businessUnitId;
 
     /**
+     * <p>The hot word ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>af81a389-91f0-4157-8d82-720edd02b66b</p>
      */

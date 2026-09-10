@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationResponseBody extends TeaModel {
     /**
+     * <p>The API status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class CreateApplicationResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The returned result (application ID).</p>
+     * 
      * <strong>example:</strong>
      * <p>a395011f-a247-400f-bc69-28796749fd52</p>
      */
@@ -19,6 +23,8 @@ public class CreateApplicationResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class CreateApplicationResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -33,6 +41,8 @@ public class CreateApplicationResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CF6D3484-19A1-5C77-863B-AC8B5754D37C</p>
      */

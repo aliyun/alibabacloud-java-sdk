@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateVoiceAccessProfileResponseBody extends TeaModel {
     /**
+     * <p>The internal error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class UpdateVoiceAccessProfileResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The variable ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>82ea16d1-425c-4c03-9be5-cc91de9779ed</p>
      */
@@ -19,6 +23,8 @@ public class UpdateVoiceAccessProfileResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,12 +32,17 @@ public class UpdateVoiceAccessProfileResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance llm-baployoyopf22m2r does not exist.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The dynamic error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 

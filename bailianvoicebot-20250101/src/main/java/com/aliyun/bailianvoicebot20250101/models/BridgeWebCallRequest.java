@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BridgeWebCallRequest extends TeaModel {
     /**
+     * <p>The Bailian application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,21 @@ public class BridgeWebCallRequest extends TeaModel {
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    /**
+     * <p>The encoding type. If this parameter is not specified, PCM encoding is used by default. Valid values:</p>
+     * <ul>
+     * <li>PCM</li>
+     * <li>OPUS</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PCM</p>
+     */
     @NameInMap("AudioCodec")
     public String audioCodec;
 
     /**
+     * <p>The Bailian business space ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +38,8 @@ public class BridgeWebCallRequest extends TeaModel {
     public String businessUnitId;
 
     /**
+     * <p>The caller number for inbound calls (used for display purposes).</p>
+     * 
      * <strong>example:</strong>
      * <p>13052253537</p>
      */
@@ -33,6 +47,7 @@ public class BridgeWebCallRequest extends TeaModel {
     public String caller;
 
     /**
+     * <p>The device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +57,8 @@ public class BridgeWebCallRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>The sampling rate.</p>
+     * 
      * <strong>example:</strong>
      * <p>8000</p>
      */
@@ -49,6 +66,8 @@ public class BridgeWebCallRequest extends TeaModel {
     public Integer sampleRate;
 
     /**
+     * <p>Specifies whether the call is in a test environment.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -56,6 +75,8 @@ public class BridgeWebCallRequest extends TeaModel {
     public Boolean sandbox;
 
     /**
+     * <p>The pass-through data.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;ENV\&quot;: \&quot;production\&quot;}</p>
      */
@@ -63,6 +84,8 @@ public class BridgeWebCallRequest extends TeaModel {
     public String tags;
 
     /**
+     * <p>The timeout period. If the call is not connected within the specified time, the call is automatically hung up. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */

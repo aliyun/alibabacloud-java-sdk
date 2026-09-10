@@ -5,19 +5,35 @@ import com.aliyun.tea.*;
 
 public class UpdateVariableRequest extends TeaModel {
     /**
+     * <p>The ID of the Model Studio business unit.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-0rxabdztx7rsdi7n</p>
      */
     @NameInMap("BusinessUnitId")
     public String businessUnitId;
 
+    /**
+     * <p>The description of the variable.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>用户当前年龄</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The display name of the variable.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>年龄</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
+     * <p>The ID of the variable.</p>
+     * 
      * <strong>example:</strong>
      * <p>af81a389-91f0-4157-8d82-720edd02b66b</p>
      */

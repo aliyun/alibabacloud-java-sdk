@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GenerateFileUploadParamsRequest extends TeaModel {
     /**
+     * <p>The file type.</p>
+     * 
      * <strong>example:</strong>
      * <p>CloneVoice</p>
      */
@@ -12,6 +14,8 @@ public class GenerateFileUploadParamsRequest extends TeaModel {
     public String businessType;
 
     /**
+     * <p>The ID of the Bailian business workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-c11iig67g863rih8</p>
      */
@@ -19,6 +23,8 @@ public class GenerateFileUploadParamsRequest extends TeaModel {
     public String businessUnitId;
 
     /**
+     * <p>The file name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test.wav</p>
      */

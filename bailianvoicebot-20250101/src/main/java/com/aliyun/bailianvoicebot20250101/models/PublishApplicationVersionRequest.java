@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class PublishApplicationVersionRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class PublishApplicationVersionRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The Bailian business workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class PublishApplicationVersionRequest extends TeaModel {
     public String businessUnitId;
 
     /**
+     * <p>The version ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

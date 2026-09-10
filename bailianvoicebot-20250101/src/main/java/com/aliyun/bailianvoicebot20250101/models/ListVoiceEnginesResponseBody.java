@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListVoiceEnginesResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of <code>OK</code> indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The pagination data, which includes the list of voice engines.</p>
+     */
     @NameInMap("Data")
     public ListVoiceEnginesResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,17 +29,22 @@ public class ListVoiceEnginesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance llm-rj6aqmctjcit4acy does not exist.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>A list of dynamic error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D771A1B6-3D5F-174A-BEE1-98CE1000D337</p>
@@ -95,6 +107,8 @@ public class ListVoiceEnginesResponseBody extends TeaModel {
 
     public static class ListVoiceEnginesResponseBodyDataVoiceEngines extends TeaModel {
         /**
+         * <p>The engine configuration schema, provided as a JSON string.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{\&quot;displayName\&quot;:\&quot;AppKey\&quot;,\&quot;maxLength\&quot;:64,\&quot;name\&quot;:\&quot;AppKey\&quot;,\&quot;order\&quot;:1,\&quot;required\&quot;:true},{\&quot;displayName\&quot;:\&quot;AccessKey\&quot;,\&quot;maxLength\&quot;:64,\&quot;name\&quot;:\&quot;AccessKey\&quot;,\&quot;order\&quot;:2,\&quot;required\&quot;:true}]</p>
          */
@@ -102,12 +116,20 @@ public class ListVoiceEnginesResponseBody extends TeaModel {
         public String configSchema;
 
         /**
+         * <p>The identifier for the voice engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>VOLC</p>
          */
         @NameInMap("NlsEngine")
         public String nlsEngine;
 
+        /**
+         * <p>The display name of the voice engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>豆包</p>
+         */
         @NameInMap("NlsEngineName")
         public String nlsEngineName;
 
@@ -144,6 +166,8 @@ public class ListVoiceEnginesResponseBody extends TeaModel {
 
     public static class ListVoiceEnginesResponseBodyData extends TeaModel {
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -151,6 +175,8 @@ public class ListVoiceEnginesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries on the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -158,12 +184,17 @@ public class ListVoiceEnginesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of voice engines.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        /**
+         * <p>A list of voice engine objects.</p>
+         */
         @NameInMap("VoiceEngines")
         public java.util.List<ListVoiceEnginesResponseBodyDataVoiceEngines> voiceEngines;
 

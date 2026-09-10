@@ -8,7 +8,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("bailianvoicebot", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建软电话测试通话</p>
+     * <p>Creates a softphone test call.</p>
      * 
      * @param request BridgeWebCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -92,7 +92,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建软电话测试通话</p>
+     * <p>Creates a softphone test call.</p>
      * 
      * @param request BridgeWebCallRequest
      * @return BridgeWebCallResponse
@@ -104,7 +104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建应用</p>
+     * <p>Creates a voice chatbot application.</p>
      * 
      * @param request CreateApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -152,7 +152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建应用</p>
+     * <p>Creates a voice chatbot application.</p>
      * 
      * @param request CreateApplicationRequest
      * @return CreateApplicationResponse
@@ -176,6 +176,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.interactionConfig)) {
             request.interactionConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.interactionConfig, "InteractionConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.labelConfig)) {
+            request.labelConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.labelConfig, "LabelConfig", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.ragConfig)) {
@@ -209,6 +213,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.interactionConfigShrink)) {
             query.put("InteractionConfig", request.interactionConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labelConfigShrink)) {
+            query.put("LabelConfig", request.labelConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ragConfigShrink)) {
@@ -266,7 +274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建克隆音</p>
+     * <p>Creates a cloned voice.</p>
      * 
      * @param request CreateCloneVoiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -306,7 +314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建克隆音</p>
+     * <p>Creates a cloned voice.</p>
      * 
      * @param request CreateCloneVoiceRequest
      * @return CreateCloneVoiceResponse
@@ -318,7 +326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建变量</p>
+     * <p>Creates a variable.</p>
      * 
      * @param request CreateVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -362,7 +370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建变量</p>
+     * <p>Creates a variable.</p>
      * 
      * @param request CreateVariableRequest
      * @return CreateVariableResponse
@@ -374,7 +382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建实例</p>
+     * <p>Creates an instance.</p>
      * 
      * @param tmpReq CreateVocabularyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -424,7 +432,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建实例</p>
+     * <p>Creates an instance.</p>
      * 
      * @param request CreateVocabularyRequest
      * @return CreateVocabularyResponse
@@ -436,7 +444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建实例</p>
+     * <p>Creates an instance.</p>
      * 
      * @param tmpReq CreateVoiceAccessProfileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -482,7 +490,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建实例</p>
+     * <p>Creates an instance.</p>
      * 
      * @param request CreateVoiceAccessProfileRequest
      * @return CreateVoiceAccessProfileResponse
@@ -494,7 +502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除应用</p>
+     * <p>Deletes an application.</p>
      * 
      * @param request DeleteApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -530,7 +538,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除应用</p>
+     * <p>Deletes an application.</p>
      * 
      * @param request DeleteApplicationRequest
      * @return DeleteApplicationResponse
@@ -542,7 +550,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除场景</p>
+     * <p>Deletes a cloned voice.</p>
      * 
      * @param request DeleteCloneVoiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -578,7 +586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除场景</p>
+     * <p>Deletes a cloned voice.</p>
      * 
      * @param request DeleteCloneVoiceRequest
      * @return DeleteCloneVoiceResponse
@@ -590,7 +598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除变量</p>
+     * <p>Deletes a variable.</p>
      * 
      * @param request DeleteVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -626,7 +634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除变量</p>
+     * <p>Deletes a variable.</p>
      * 
      * @param request DeleteVariableRequest
      * @return DeleteVariableResponse
@@ -638,7 +646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除场景</p>
+     * <p>Deletes a scenario.</p>
      * 
      * @param request DeleteVocabularyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -674,7 +682,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除场景</p>
+     * <p>Deletes a scenario.</p>
      * 
      * @param request DeleteVocabularyRequest
      * @return DeleteVocabularyResponse
@@ -686,7 +694,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除三方语音配置</p>
+     * <p>Deletes a third-party voice configuration.</p>
      * 
      * @param request DeleteVoiceAccessProfileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -722,7 +730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除三方语音配置</p>
+     * <p>Deletes a third-party voice configuration.</p>
      * 
      * @param request DeleteVoiceAccessProfileRequest
      * @return DeleteVoiceAccessProfileResponse
@@ -734,7 +742,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>禁用消息订阅</p>
+     * <p>Disables message subscription.</p>
      * 
      * @param request DisableSubscriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -766,7 +774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>禁用消息订阅</p>
+     * <p>Disables message subscription.</p>
      * 
      * @param request DisableSubscriptionRequest
      * @return DisableSubscriptionResponse
@@ -778,7 +786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出热词</p>
+     * <p>Exports hot words.</p>
      * 
      * @param tmpReq ExportVocabularyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -820,7 +828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出热词</p>
+     * <p>Exports hot words.</p>
      * 
      * @param request ExportVocabularyRequest
      * @return ExportVocabularyResponse
@@ -832,7 +840,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取文件上传信息</p>
+     * <p>Retrieves file upload information.</p>
      * 
      * @param request GenerateFileUploadParamsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -872,7 +880,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取文件上传信息</p>
+     * <p>Retrieves file upload information.</p>
      * 
      * @param request GenerateFileUploadParamsRequest
      * @return GenerateFileUploadParamsResponse
@@ -884,7 +892,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get应用</p>
+     * <p>Retrieves a voice chatbot application.</p>
      * 
      * @param request GetApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -920,7 +928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get应用</p>
+     * <p>Retrieves a voice chatbot application.</p>
      * 
      * @param request GetApplicationRequest
      * @return GetApplicationResponse
@@ -932,7 +940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据通道凭证</p>
+     * <p>Retrieves data channel credentials.</p>
      * 
      * @param request GetDataChannelCredentialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -968,7 +976,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据通道凭证</p>
+     * <p>Retrieves data channel credentials.</p>
      * 
      * @param request GetDataChannelCredentialRequest
      * @return GetDataChannelCredentialResponse
@@ -980,7 +988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取MQ配置</p>
+     * <p>Retrieves the MQ configuration.</p>
      * 
      * @param request GetSubscriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1012,7 +1020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取MQ配置</p>
+     * <p>Retrieves the MQ configuration.</p>
      * 
      * @param request GetSubscriptionRequest
      * @return GetSubscriptionResponse
@@ -1024,7 +1032,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例详情</p>
+     * <p>Retrieves the details of a hot word vocabulary.</p>
      * 
      * @param request GetVocabularyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1060,7 +1068,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例详情</p>
+     * <p>Retrieves the details of a hot word vocabulary.</p>
      * 
      * @param request GetVocabularyRequest
      * @return GetVocabularyResponse
@@ -1072,7 +1080,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导入热词</p>
+     * <p>Imports hot words.</p>
      * 
      * @param request ImportVocabularyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1108,7 +1116,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导入热词</p>
+     * <p>Imports hot words.</p>
      * 
      * @param request ImportVocabularyRequest
      * @return ImportVocabularyResponse
@@ -1120,7 +1128,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询应用</p>
+     * <p>Queries the list of voice robot applications.</p>
      * 
      * @param request ListApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1164,7 +1172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询应用</p>
+     * <p>Queries the list of voice robot applications.</p>
      * 
      * @param request ListApplicationsRequest
      * @return ListApplicationsResponse
@@ -1176,7 +1184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取背景音列表</p>
+     * <p>Retrieves the list of background music.</p>
      * 
      * @param request ListBackgroundMusicsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1216,7 +1224,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取背景音列表</p>
+     * <p>Retrieves the list of background music.</p>
      * 
      * @param request ListBackgroundMusicsRequest
      * @return ListBackgroundMusicsResponse
@@ -1228,7 +1236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例详情</p>
+     * <p>Retrieves the details of an instance.</p>
      * 
      * @param request ListCloneVoiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1272,7 +1280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例详情</p>
+     * <p>Retrieves the details of an instance.</p>
      * 
      * @param request ListCloneVoiceRequest
      * @return ListCloneVoiceResponse
@@ -1284,7 +1292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取克隆音色可用模型列表</p>
+     * <p>Retrieves the list of available models for voice cloning.</p>
      * 
      * @param request ListCloneVoiceModelsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1320,7 +1328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取克隆音色可用模型列表</p>
+     * <p>Retrieves the list of available models for voice cloning.</p>
      * 
      * @param request ListCloneVoiceModelsRequest
      * @return ListCloneVoiceModelsResponse
@@ -1332,7 +1340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取对话模型列表</p>
+     * <p>Retrieves the list of conversation models.</p>
      * 
      * @param request ListNluModelsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1364,7 +1372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取对话模型列表</p>
+     * <p>Retrieves the list of conversation models.</p>
      * 
      * @param request ListNluModelsRequest
      * @return ListNluModelsResponse
@@ -1376,7 +1384,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取变量列表</p>
+     * <p>Retrieves a list of variables.</p>
      * 
      * @param request ListVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1420,7 +1428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取变量列表</p>
+     * <p>Retrieves a list of variables.</p>
      * 
      * @param request ListVariableRequest
      * @return ListVariableResponse
@@ -1432,7 +1440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例详情</p>
+     * <p>Retrieves the details of an instance.</p>
      * 
      * @param request ListVocabularyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1476,7 +1484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例详情</p>
+     * <p>Retrieves the details of an instance.</p>
      * 
      * @param request ListVocabularyRequest
      * @return ListVocabularyResponse
@@ -1488,7 +1496,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取三方语音配置列表</p>
+     * <p>Retrieves the list of third-party voice configurations.</p>
      * 
      * @param request ListVoiceAccessProfileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1528,7 +1536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取三方语音配置列表</p>
+     * <p>Retrieves the list of third-party voice configurations.</p>
      * 
      * @param request ListVoiceAccessProfileRequest
      * @return ListVoiceAccessProfileResponse
@@ -1540,7 +1548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取引擎列表</p>
+     * <p>Retrieves a paginated list of available voice engines.</p>
      * 
      * @param request ListVoiceEnginesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1576,7 +1584,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取引擎列表</p>
+     * <p>Retrieves a paginated list of available voice engines.</p>
      * 
      * @param request ListVoiceEnginesRequest
      * @return ListVoiceEnginesResponse
@@ -1588,7 +1596,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取音色列表</p>
+     * <p>Retrieves the list of voice timbres.</p>
      * 
      * @param request ListVoicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1636,7 +1644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取音色列表</p>
+     * <p>Retrieves the list of voice timbres.</p>
      * 
      * @param request ListVoicesRequest
      * @return ListVoicesResponse
@@ -1648,7 +1656,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>试听</p>
+     * <p>Generates a preview of a synthesized voice.</p>
      * 
      * @param tmpReq PreviewVoiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1710,7 +1718,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>试听</p>
+     * <p>Generates a preview of a synthesized voice.</p>
      * 
      * @param request PreviewVoiceRequest
      * @return PreviewVoiceResponse
@@ -1722,7 +1730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发布版本</p>
+     * <p>Publishes a voice robot version.</p>
      * 
      * @param request PublishApplicationVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1762,7 +1770,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发布版本</p>
+     * <p>Publishes a voice robot version.</p>
      * 
      * @param request PublishApplicationVersionRequest
      * @return PublishApplicationVersionResponse
@@ -1774,7 +1782,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改应用</p>
+     * <p>Updates a voice bot application.</p>
      * 
      * @param request UpdateApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1822,7 +1830,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改应用</p>
+     * <p>Updates a voice bot application.</p>
      * 
      * @param request UpdateApplicationRequest
      * @return UpdateApplicationResponse
@@ -1846,6 +1854,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.interactionConfig)) {
             request.interactionConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.interactionConfig, "InteractionConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.labelConfig)) {
+            request.labelConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.labelConfig, "LabelConfig", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.ragConfig)) {
@@ -1879,6 +1891,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.interactionConfigShrink)) {
             query.put("InteractionConfig", request.interactionConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labelConfigShrink)) {
+            query.put("LabelConfig", request.labelConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ragConfigShrink)) {
@@ -1936,7 +1952,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新实例</p>
+     * <p>Updates an instance.</p>
      * 
      * @param request UpdateCloneVoiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1976,7 +1992,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新实例</p>
+     * <p>Updates an instance.</p>
      * 
      * @param request UpdateCloneVoiceRequest
      * @return UpdateCloneVoiceResponse
@@ -1988,7 +2004,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建或更新MQ配置</p>
+     * <p>Creates or updates a message queue (MQ) subscription.</p>
      * 
      * @param tmpReq UpdateSubscriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2058,7 +2074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建或更新MQ配置</p>
+     * <p>Creates or updates a message queue (MQ) subscription.</p>
      * 
      * @param request UpdateSubscriptionRequest
      * @return UpdateSubscriptionResponse
@@ -2070,7 +2086,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新变量</p>
+     * <p>Updates a variable.</p>
      * 
      * @param request UpdateVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2114,7 +2130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新变量</p>
+     * <p>Updates a variable.</p>
      * 
      * @param request UpdateVariableRequest
      * @return UpdateVariableResponse
@@ -2126,7 +2142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新实例</p>
+     * <p>Updates a vocabulary.</p>
      * 
      * @param tmpReq UpdateVocabularyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2180,7 +2196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新实例</p>
+     * <p>Updates a vocabulary.</p>
      * 
      * @param request UpdateVocabularyRequest
      * @return UpdateVocabularyResponse
@@ -2192,7 +2208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新三方语音配置</p>
+     * <p>Updates the third-party voice configuration.</p>
      * 
      * @param tmpReq UpdateVoiceAccessProfileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2242,7 +2258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新三方语音配置</p>
+     * <p>Updates the third-party voice configuration.</p>
      * 
      * @param request UpdateVoiceAccessProfileRequest
      * @return UpdateVoiceAccessProfileResponse

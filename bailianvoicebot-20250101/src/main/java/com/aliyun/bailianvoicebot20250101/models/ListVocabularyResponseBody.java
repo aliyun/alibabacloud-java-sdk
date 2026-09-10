@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListVocabularyResponseBody extends TeaModel {
     /**
+     * <p>The internal error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The paginated data of the hot word list.</p>
+     */
     @NameInMap("Data")
     public ListVocabularyResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,12 +29,17 @@ public class ListVocabularyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance llm-xdne77rxe14ziszr does not exist.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of dynamic error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
@@ -95,26 +107,44 @@ public class ListVocabularyResponseBody extends TeaModel {
 
     public static class ListVocabularyResponseBodyDataVocabularies extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1754013825102</p>
          */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Contains professional terminology for finance scenarios</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The Bailian business workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The hot word name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Finance scenario hot words</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The tenant ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1308144684576655</p>
          */
@@ -122,6 +152,8 @@ public class ListVocabularyResponseBody extends TeaModel {
         public String tenantId;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1754013825102</p>
          */
@@ -129,6 +161,8 @@ public class ListVocabularyResponseBody extends TeaModel {
         public Long updatedTime;
 
         /**
+         * <p>The hot word ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>af81a389-91f0-4157-8d82-720edd02b66b</p>
          */
@@ -136,6 +170,8 @@ public class ListVocabularyResponseBody extends TeaModel {
         public String vocabularyId;
 
         /**
+         * <p>The number of hot words.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -215,6 +251,8 @@ public class ListVocabularyResponseBody extends TeaModel {
 
     public static class ListVocabularyResponseBodyData extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -222,6 +260,8 @@ public class ListVocabularyResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -229,12 +269,17 @@ public class ListVocabularyResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        /**
+         * <p>The list of hot word objects.</p>
+         */
         @NameInMap("Vocabularies")
         public java.util.List<ListVocabularyResponseBodyDataVocabularies> vocabularies;
 

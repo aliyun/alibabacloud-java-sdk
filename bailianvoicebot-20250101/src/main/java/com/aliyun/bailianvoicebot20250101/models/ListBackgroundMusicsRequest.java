@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListBackgroundMusicsRequest extends TeaModel {
     /**
+     * <p>The Bailian business workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-zzu528i29ecnprcl</p>
      */
@@ -12,6 +14,8 @@ public class ListBackgroundMusicsRequest extends TeaModel {
     public String businessUnitId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListBackgroundMusicsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

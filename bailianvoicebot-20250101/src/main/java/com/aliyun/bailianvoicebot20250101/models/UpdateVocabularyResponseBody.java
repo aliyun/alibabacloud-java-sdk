@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateVocabularyResponseBody extends TeaModel {
     /**
+     * <p>The internal error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class UpdateVocabularyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The ID of the vocabulary.</p>
+     * 
      * <strong>example:</strong>
      * <p>82ea16d1-425c-4c03-9be5-cc91de9779ed</p>
      */
@@ -19,6 +23,8 @@ public class UpdateVocabularyResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,17 +32,22 @@ public class UpdateVocabularyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The result message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance llm-zzu528i29ecnprcl does not exist.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>A list of dynamic error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D771A1B6-3D5F-174A-BEE1-98CE1000D337</p>

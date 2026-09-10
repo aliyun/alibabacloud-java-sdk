@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ExportVocabularyRequest extends TeaModel {
     /**
+     * <p>The ID of the Bailian business workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-c11iig67g863rih8</p>
      */
     @NameInMap("BusinessUnitId")
     public String businessUnitId;
 
+    /**
+     * <p>The list of hot word IDs.</p>
+     */
     @NameInMap("VocabularyIds")
     public java.util.List<String> vocabularyIds;
 

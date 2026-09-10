@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetSubscriptionResponseBody extends TeaModel {
     /**
+     * <p>The API status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The subscription information.</p>
+     */
     @NameInMap("Data")
     public GetSubscriptionResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,16 +29,23 @@ public class GetSubscriptionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance llm-zzu528i29ecnprcl does not exist.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of dynamic error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D771A1B6-3D5F-174A-BEE1-98CE1000D337</p>
      */
@@ -93,16 +107,26 @@ public class GetSubscriptionResponseBody extends TeaModel {
 
     public static class GetSubscriptionResponseBodyDataEventList extends TeaModel {
         /**
+         * <p>Indicates whether the event is pushed.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("Disabled")
         public Boolean disabled;
 
+        /**
+         * <p>The display name of the subscription content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Call Ended</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>The subscription content.</p>
+         * 
          * <strong>example:</strong>
          * <p>Released</p>
          */
@@ -142,6 +166,12 @@ public class GetSubscriptionResponseBody extends TeaModel {
 
     public static class GetSubscriptionResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the subscription is disabled. Valid values:</p>
+         * <ul>
+         * <li>0: enabled.</li>
+         * <li>1: disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -149,16 +179,23 @@ public class GetSubscriptionResponseBody extends TeaModel {
         public Boolean disabled;
 
         /**
+         * <p>The endpoint. This parameter is required when MqType is set to ROCKET_MQ_4 or ROCKET_MQ_5.</p>
+         * 
          * <strong>example:</strong>
          * <p>rmq-cn-l4p89zajz67.cn-hangzhou.rmq.aliyuncs.com:8080</p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <p>The list of subscription events.</p>
+         */
         @NameInMap("EventList")
         public java.util.List<GetSubscriptionResponseBodyDataEventList> eventList;
 
         /**
+         * <p>The Bailian business workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>llm-3pptowd2olrctsvc</p>
          */
@@ -166,6 +203,8 @@ public class GetSubscriptionResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The MQ instance ID. This parameter is required when MqType is set to ROCKET_MQ_5.</p>
+         * 
          * <strong>example:</strong>
          * <p>rmq-cn-l4p89zajz67.cn</p>
          */
@@ -173,6 +212,8 @@ public class GetSubscriptionResponseBody extends TeaModel {
         public String mqInstanceId;
 
         /**
+         * <p>The message push type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ROCKET_MQ_4</p>
          */
@@ -180,6 +221,8 @@ public class GetSubscriptionResponseBody extends TeaModel {
         public String mqType;
 
         /**
+         * <p>The password. This parameter is required when MqType is set to ROCKET_MQ_5.</p>
+         * 
          * <strong>example:</strong>
          * <p>pwd</p>
          */
@@ -187,6 +230,8 @@ public class GetSubscriptionResponseBody extends TeaModel {
         public String password;
 
         /**
+         * <p>The producer ID. This parameter is required when MqType is set to ROCKET_MQ_4.</p>
+         * 
          * <strong>example:</strong>
          * <p>PID_Webhook</p>
          */
@@ -194,6 +239,8 @@ public class GetSubscriptionResponseBody extends TeaModel {
         public String producerId;
 
         /**
+         * <p>The queue topic. This parameter is required when MqType is set to ROCKET_MQ_4 or ROCKET_MQ_5.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -201,6 +248,8 @@ public class GetSubscriptionResponseBody extends TeaModel {
         public String topic;
 
         /**
+         * <p>The username. This parameter is required when MqType is set to ROCKET_MQ_5.</p>
+         * 
          * <strong>example:</strong>
          * <p>username</p>
          */

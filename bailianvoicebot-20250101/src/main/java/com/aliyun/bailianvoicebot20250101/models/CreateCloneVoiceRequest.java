@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreateCloneVoiceRequest extends TeaModel {
     /**
+     * <p>The Bailian workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-xdne77rxe14ziszr</p>
      */
     @NameInMap("BusinessUnitId")
     public String businessUnitId;
 
+    /**
+     * <p>The path of the uploaded file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>voice_clone/voice_clone_unit_test.wav</p>
+     */
     @NameInMap("FileKey")
     public String fileKey;
 
     /**
+     * <p>The clone model.</p>
+     * 
      * <strong>example:</strong>
      * <p>CosyVoice</p>
      */

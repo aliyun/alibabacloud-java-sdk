@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
     /**
+     * <p>The ID of the Bailian business workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,22 +15,39 @@ public class CreateApplicationRequest extends TeaModel {
     public String businessUnitId;
 
     /**
+     * <p>The number of concurrent connections.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("Concurrency")
     public Integer concurrency;
 
+    /**
+     * <p>The application description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Describe this application</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test001</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The NLU access method.</p>
+     * <ul>
+     * <li>Managed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MANAGED</p>
      */

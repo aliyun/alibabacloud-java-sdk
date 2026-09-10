@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetApplicationResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetApplicationResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,13 +29,20 @@ public class GetApplicationResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("Params")
+    public java.util.List<String> params;
+
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D771A1B6-3D5F-174A-BEE1-98CE1000D337</p>
      */
@@ -72,6 +86,14 @@ public class GetApplicationResponseBody extends TeaModel {
         return this.message;
     }
 
+    public GetApplicationResponseBody setParams(java.util.List<String> params) {
+        this.params = params;
+        return this;
+    }
+    public java.util.List<String> getParams() {
+        return this.params;
+    }
+
     public GetApplicationResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -80,8 +102,95 @@ public class GetApplicationResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetApplicationResponseBodyDataDraftVersionInteractionConfigEndConversationConfigTriggers extends TeaModel {
+        @NameInMap("ClosingStatement")
+        public String closingStatement;
+
+        @NameInMap("KeyWords")
+        public java.util.List<String> keyWords;
+
+        @NameInMap("TriggerType")
+        public String triggerType;
+
+        @NameInMap("TurnLimit")
+        public Integer turnLimit;
+
+        public static GetApplicationResponseBodyDataDraftVersionInteractionConfigEndConversationConfigTriggers build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataDraftVersionInteractionConfigEndConversationConfigTriggers self = new GetApplicationResponseBodyDataDraftVersionInteractionConfigEndConversationConfigTriggers();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionInteractionConfigEndConversationConfigTriggers setClosingStatement(String closingStatement) {
+            this.closingStatement = closingStatement;
+            return this;
+        }
+        public String getClosingStatement() {
+            return this.closingStatement;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionInteractionConfigEndConversationConfigTriggers setKeyWords(java.util.List<String> keyWords) {
+            this.keyWords = keyWords;
+            return this;
+        }
+        public java.util.List<String> getKeyWords() {
+            return this.keyWords;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionInteractionConfigEndConversationConfigTriggers setTriggerType(String triggerType) {
+            this.triggerType = triggerType;
+            return this;
+        }
+        public String getTriggerType() {
+            return this.triggerType;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionInteractionConfigEndConversationConfigTriggers setTurnLimit(Integer turnLimit) {
+            this.turnLimit = turnLimit;
+            return this;
+        }
+        public Integer getTurnLimit() {
+            return this.turnLimit;
+        }
+
+    }
+
+    public static class GetApplicationResponseBodyDataDraftVersionInteractionConfigEndConversationConfig extends TeaModel {
+        @NameInMap("Delay")
+        public Integer delay;
+
+        @NameInMap("Triggers")
+        public java.util.List<GetApplicationResponseBodyDataDraftVersionInteractionConfigEndConversationConfigTriggers> triggers;
+
+        public static GetApplicationResponseBodyDataDraftVersionInteractionConfigEndConversationConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataDraftVersionInteractionConfigEndConversationConfig self = new GetApplicationResponseBodyDataDraftVersionInteractionConfigEndConversationConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionInteractionConfigEndConversationConfig setDelay(Integer delay) {
+            this.delay = delay;
+            return this;
+        }
+        public Integer getDelay() {
+            return this.delay;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionInteractionConfigEndConversationConfig setTriggers(java.util.List<GetApplicationResponseBodyDataDraftVersionInteractionConfigEndConversationConfigTriggers> triggers) {
+            this.triggers = triggers;
+            return this;
+        }
+        public java.util.List<GetApplicationResponseBodyDataDraftVersionInteractionConfigEndConversationConfigTriggers> getTriggers() {
+            return this.triggers;
+        }
+
+    }
+
     public static class GetApplicationResponseBodyDataDraftVersionInteractionConfigSilenceDetectionConfig extends TeaModel {
+        @NameInMap("MaxRepeats")
+        public Integer maxRepeats;
+
         /**
+         * <p>The task execution timeout period, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -91,6 +200,14 @@ public class GetApplicationResponseBody extends TeaModel {
         public static GetApplicationResponseBodyDataDraftVersionInteractionConfigSilenceDetectionConfig build(java.util.Map<String, ?> map) throws Exception {
             GetApplicationResponseBodyDataDraftVersionInteractionConfigSilenceDetectionConfig self = new GetApplicationResponseBodyDataDraftVersionInteractionConfigSilenceDetectionConfig();
             return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionInteractionConfigSilenceDetectionConfig setMaxRepeats(Integer maxRepeats) {
+            this.maxRepeats = maxRepeats;
+            return this;
+        }
+        public Integer getMaxRepeats() {
+            return this.maxRepeats;
         }
 
         public GetApplicationResponseBodyDataDraftVersionInteractionConfigSilenceDetectionConfig setTimeout(Integer timeout) {
@@ -104,12 +221,48 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyDataDraftVersionInteractionConfig extends TeaModel {
+        @NameInMap("BackgroundMusicId")
+        public String backgroundMusicId;
+
+        @NameInMap("EndConversationConfig")
+        public GetApplicationResponseBodyDataDraftVersionInteractionConfigEndConversationConfig endConversationConfig;
+
+        @NameInMap("InitialGreetingDelayMilliseconds")
+        public Integer initialGreetingDelayMilliseconds;
+
+        /**
+         * <p>The silence detection configuration.</p>
+         */
         @NameInMap("SilenceDetectionConfig")
         public GetApplicationResponseBodyDataDraftVersionInteractionConfigSilenceDetectionConfig silenceDetectionConfig;
 
         public static GetApplicationResponseBodyDataDraftVersionInteractionConfig build(java.util.Map<String, ?> map) throws Exception {
             GetApplicationResponseBodyDataDraftVersionInteractionConfig self = new GetApplicationResponseBodyDataDraftVersionInteractionConfig();
             return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionInteractionConfig setBackgroundMusicId(String backgroundMusicId) {
+            this.backgroundMusicId = backgroundMusicId;
+            return this;
+        }
+        public String getBackgroundMusicId() {
+            return this.backgroundMusicId;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionInteractionConfig setEndConversationConfig(GetApplicationResponseBodyDataDraftVersionInteractionConfigEndConversationConfig endConversationConfig) {
+            this.endConversationConfig = endConversationConfig;
+            return this;
+        }
+        public GetApplicationResponseBodyDataDraftVersionInteractionConfigEndConversationConfig getEndConversationConfig() {
+            return this.endConversationConfig;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionInteractionConfig setInitialGreetingDelayMilliseconds(Integer initialGreetingDelayMilliseconds) {
+            this.initialGreetingDelayMilliseconds = initialGreetingDelayMilliseconds;
+            return this;
+        }
+        public Integer getInitialGreetingDelayMilliseconds() {
+            return this.initialGreetingDelayMilliseconds;
         }
 
         public GetApplicationResponseBodyDataDraftVersionInteractionConfig setSilenceDetectionConfig(GetApplicationResponseBodyDataDraftVersionInteractionConfigSilenceDetectionConfig silenceDetectionConfig) {
@@ -122,19 +275,87 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
 
+    public static class GetApplicationResponseBodyDataDraftVersionLabelConfig extends TeaModel {
+        @NameInMap("CandidateValues")
+        public java.util.List<String> candidateValues;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static GetApplicationResponseBodyDataDraftVersionLabelConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataDraftVersionLabelConfig self = new GetApplicationResponseBodyDataDraftVersionLabelConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionLabelConfig setCandidateValues(java.util.List<String> candidateValues) {
+            this.candidateValues = candidateValues;
+            return this;
+        }
+        public java.util.List<String> getCandidateValues() {
+            return this.candidateValues;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionLabelConfig setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionLabelConfig setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class GetApplicationResponseBodyDataDraftVersionRagConfig extends TeaModel {
+        /**
+         * <p>Specifies whether RAG is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The list of knowledge base IDs.</p>
+         */
         @NameInMap("KnowledgeBaseIds")
         public java.util.List<String> knowledgeBaseIds;
 
+        /**
+         * <p>The maximum concatenation length of RAG content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("MaxContentLength")
         public Integer maxContentLength;
 
+        /**
+         * <p>The RAG engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BAILIAN</p>
+         */
         @NameInMap("RagEngine")
         public String ragEngine;
 
+        /**
+         * <p>The maximum number of data entries to retrieve.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("TopN")
         public Integer topN;
 
@@ -187,19 +408,38 @@ public class GetApplicationResponseBody extends TeaModel {
 
     public static class GetApplicationResponseBodyDataDraftVersionScriptProfileAgentProfile extends TeaModel {
         /**
+         * <p>The agent configuration ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>6a50b67072d44788951de29758432d94</p>
          */
         @NameInMap("AgentProfileId")
         public String agentProfileId;
 
+        /**
+         * <p>The agent description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chatbot</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <p>The prompt in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;prompts&quot;:&quot;I am a chatbot.&quot;}</p>
+         */
         @NameInMap("PromptsJson")
         public String promptsJson;
 
         /**
+         * <p>The application template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>SFM_PROMPTS_DEFAULT</p>
          */
@@ -227,6 +467,14 @@ public class GetApplicationResponseBody extends TeaModel {
             return this.description;
         }
 
+        public GetApplicationResponseBodyDataDraftVersionScriptProfileAgentProfile setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public GetApplicationResponseBodyDataDraftVersionScriptProfileAgentProfile setPromptsJson(String promptsJson) {
             this.promptsJson = promptsJson;
             return this;
@@ -245,18 +493,136 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
 
+    public static class GetApplicationResponseBodyDataDraftVersionScriptProfileFunctionMeta extends TeaModel {
+        @NameInMap("FunctionId")
+        public String functionId;
+
+        @NameInMap("FunctionName")
+        public String functionName;
+
+        @NameInMap("HttpTriggerName")
+        public String httpTriggerName;
+
+        @NameInMap("HttpTriggerUrl")
+        public String httpTriggerUrl;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        public static GetApplicationResponseBodyDataDraftVersionScriptProfileFunctionMeta build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataDraftVersionScriptProfileFunctionMeta self = new GetApplicationResponseBodyDataDraftVersionScriptProfileFunctionMeta();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionScriptProfileFunctionMeta setFunctionId(String functionId) {
+            this.functionId = functionId;
+            return this;
+        }
+        public String getFunctionId() {
+            return this.functionId;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionScriptProfileFunctionMeta setFunctionName(String functionName) {
+            this.functionName = functionName;
+            return this;
+        }
+        public String getFunctionName() {
+            return this.functionName;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionScriptProfileFunctionMeta setHttpTriggerName(String httpTriggerName) {
+            this.httpTriggerName = httpTriggerName;
+            return this;
+        }
+        public String getHttpTriggerName() {
+            return this.httpTriggerName;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionScriptProfileFunctionMeta setHttpTriggerUrl(String httpTriggerUrl) {
+            this.httpTriggerUrl = httpTriggerUrl;
+            return this;
+        }
+        public String getHttpTriggerUrl() {
+            return this.httpTriggerUrl;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionScriptProfileFunctionMeta setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+    }
+
+    public static class GetApplicationResponseBodyDataDraftVersionScriptProfileNluAccessProfile extends TeaModel {
+        @NameInMap("AccessProfileId")
+        public String accessProfileId;
+
+        public static GetApplicationResponseBodyDataDraftVersionScriptProfileNluAccessProfile build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataDraftVersionScriptProfileNluAccessProfile self = new GetApplicationResponseBodyDataDraftVersionScriptProfileNluAccessProfile();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionScriptProfileNluAccessProfile setAccessProfileId(String accessProfileId) {
+            this.accessProfileId = accessProfileId;
+            return this;
+        }
+        public String getAccessProfileId() {
+            return this.accessProfileId;
+        }
+
+    }
+
     public static class GetApplicationResponseBodyDataDraftVersionScriptProfile extends TeaModel {
+        @NameInMap("AgentKey")
+        public String agentKey;
+
+        /**
+         * <p>The agent configuration information.</p>
+         */
         @NameInMap("AgentProfile")
         public GetApplicationResponseBodyDataDraftVersionScriptProfileAgentProfile agentProfile;
 
+        @NameInMap("ChatbotId")
+        public String chatbotId;
+
+        @NameInMap("FunctionMeta")
+        public GetApplicationResponseBodyDataDraftVersionScriptProfileFunctionMeta functionMeta;
+
         /**
+         * <p>The model.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
          */
         @NameInMap("Model")
         public String model;
 
+        @NameInMap("NluAccessProfile")
+        public GetApplicationResponseBodyDataDraftVersionScriptProfileNluAccessProfile nluAccessProfile;
+
+        @NameInMap("NluAccessType")
+        public String nluAccessType;
+
+        @NameInMap("NluEngine")
+        public String nluEngine;
+
+        @NameInMap("OmniModel")
+        public Boolean omniModel;
+
         /**
+         * <p>The probability threshold for nucleus sampling during generation.</p>
+         * <blockquote>
+         * <ul>
+         * <li>For example, when the value is set to 0.8, only the smallest set of most likely tokens whose cumulative probability is greater than or equal to 0.8 is retained as the candidate set.<ul>
+         * <li>Valid values: (0, 1.0). A higher value increases randomness in generation. A lower value increases determinism in generation.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>0.8</p>
          */
@@ -264,6 +630,14 @@ public class GetApplicationResponseBody extends TeaModel {
         public String temperature;
 
         /**
+         * <p>Controls the randomness and diversity of model responses.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Specifically, the temperature value controls the degree of smoothing applied to the probability distribution of each candidate token during text generation. A higher temperature value flattens the probability distribution, allowing more low-probability tokens to be selected, which produces more diverse results. A lower temperature value sharpens the probability distribution, making high-probability tokens more likely to be selected, which produces more deterministic results.</li>
+         * <li>Valid values: [0, 2). Setting the value to 0 is not recommended because it is meaningless.</li>
+         * </ul>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>0.1</p>
          */
@@ -275,6 +649,14 @@ public class GetApplicationResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetApplicationResponseBodyDataDraftVersionScriptProfile setAgentKey(String agentKey) {
+            this.agentKey = agentKey;
+            return this;
+        }
+        public String getAgentKey() {
+            return this.agentKey;
+        }
+
         public GetApplicationResponseBodyDataDraftVersionScriptProfile setAgentProfile(GetApplicationResponseBodyDataDraftVersionScriptProfileAgentProfile agentProfile) {
             this.agentProfile = agentProfile;
             return this;
@@ -283,12 +665,60 @@ public class GetApplicationResponseBody extends TeaModel {
             return this.agentProfile;
         }
 
+        public GetApplicationResponseBodyDataDraftVersionScriptProfile setChatbotId(String chatbotId) {
+            this.chatbotId = chatbotId;
+            return this;
+        }
+        public String getChatbotId() {
+            return this.chatbotId;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionScriptProfile setFunctionMeta(GetApplicationResponseBodyDataDraftVersionScriptProfileFunctionMeta functionMeta) {
+            this.functionMeta = functionMeta;
+            return this;
+        }
+        public GetApplicationResponseBodyDataDraftVersionScriptProfileFunctionMeta getFunctionMeta() {
+            return this.functionMeta;
+        }
+
         public GetApplicationResponseBodyDataDraftVersionScriptProfile setModel(String model) {
             this.model = model;
             return this;
         }
         public String getModel() {
             return this.model;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionScriptProfile setNluAccessProfile(GetApplicationResponseBodyDataDraftVersionScriptProfileNluAccessProfile nluAccessProfile) {
+            this.nluAccessProfile = nluAccessProfile;
+            return this;
+        }
+        public GetApplicationResponseBodyDataDraftVersionScriptProfileNluAccessProfile getNluAccessProfile() {
+            return this.nluAccessProfile;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionScriptProfile setNluAccessType(String nluAccessType) {
+            this.nluAccessType = nluAccessType;
+            return this;
+        }
+        public String getNluAccessType() {
+            return this.nluAccessType;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionScriptProfile setNluEngine(String nluEngine) {
+            this.nluEngine = nluEngine;
+            return this;
+        }
+        public String getNluEngine() {
+            return this.nluEngine;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionScriptProfile setOmniModel(Boolean omniModel) {
+            this.omniModel = omniModel;
+            return this;
+        }
+        public Boolean getOmniModel() {
+            return this.omniModel;
         }
 
         public GetApplicationResponseBodyDataDraftVersionScriptProfile setTemperature(String temperature) {
@@ -366,6 +796,8 @@ public class GetApplicationResponseBody extends TeaModel {
         public GetApplicationResponseBodyDataDraftVersionSynthesizerConfigNlsAccessProfile nlsAccessProfile;
 
         /**
+         * <p>The TTS invocation method.</p>
+         * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
          */
@@ -373,6 +805,8 @@ public class GetApplicationResponseBody extends TeaModel {
         public String nlsAccessType;
 
         /**
+         * <p>The TTS engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>ALIYUN</p>
          */
@@ -380,6 +814,11 @@ public class GetApplicationResponseBody extends TeaModel {
         public String nlsEngine;
 
         /**
+         * <p>The pitch rate.</p>
+         * <blockquote>
+         * <p>Valid values: -500 to 500.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -390,6 +829,11 @@ public class GetApplicationResponseBody extends TeaModel {
         public java.util.List<GetApplicationResponseBodyDataDraftVersionSynthesizerConfigPronRules> pronRules;
 
         /**
+         * <p>The speech rate.</p>
+         * <blockquote>
+         * <p>Valid values: -500 to 500.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -397,6 +841,8 @@ public class GetApplicationResponseBody extends TeaModel {
         public Integer speechRate;
 
         /**
+         * <p>The voice.</p>
+         * 
          * <strong>example:</strong>
          * <p>aixia</p>
          */
@@ -404,6 +850,8 @@ public class GetApplicationResponseBody extends TeaModel {
         public String voice;
 
         /**
+         * <p>The volume.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -490,12 +938,30 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyDataDraftVersionToolConfigMcpServers extends TeaModel {
+        /**
+         * <p>The base URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com">https://example.com</a></p>
+         */
         @NameInMap("BaseUrl")
         public String baseUrl;
 
+        /**
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>phone-ai-call</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The SSE endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/phone-ai-call/mcp/sse?key=value</p>
+         */
         @NameInMap("SseEndpoint")
         public String sseEndpoint;
 
@@ -531,6 +997,9 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyDataDraftVersionToolConfig extends TeaModel {
+        /**
+         * <p>The list of MCP server configurations.</p>
+         */
         @NameInMap("McpServers")
         public java.util.List<GetApplicationResponseBodyDataDraftVersionToolConfigMcpServers> mcpServers;
 
@@ -615,6 +1084,8 @@ public class GetApplicationResponseBody extends TeaModel {
         public GetApplicationResponseBodyDataDraftVersionTranscriberConfigNlsAccessProfile nlsAccessProfile;
 
         /**
+         * <p>The ASR invocation method.</p>
+         * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
          */
@@ -622,6 +1093,8 @@ public class GetApplicationResponseBody extends TeaModel {
         public String nlsAccessType;
 
         /**
+         * <p>The ASR engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>ALIYUN</p>
          */
@@ -714,25 +1187,48 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyDataDraftVersion extends TeaModel {
+        /**
+         * <p>The interaction configuration.</p>
+         */
         @NameInMap("InteractionConfig")
         public GetApplicationResponseBodyDataDraftVersionInteractionConfig interactionConfig;
 
+        @NameInMap("LabelConfig")
+        public java.util.List<GetApplicationResponseBodyDataDraftVersionLabelConfig> labelConfig;
+
+        /**
+         * <p>The RAG configuration.</p>
+         */
         @NameInMap("RagConfig")
         public GetApplicationResponseBodyDataDraftVersionRagConfig ragConfig;
 
+        /**
+         * <p>The application model configuration.</p>
+         */
         @NameInMap("ScriptProfile")
         public GetApplicationResponseBodyDataDraftVersionScriptProfile scriptProfile;
 
+        /**
+         * <p>The text-to-speech (TTS) configuration.</p>
+         */
         @NameInMap("SynthesizerConfig")
         public GetApplicationResponseBodyDataDraftVersionSynthesizerConfig synthesizerConfig;
 
+        /**
+         * <p>The tool configuration.</p>
+         */
         @NameInMap("ToolConfig")
         public GetApplicationResponseBodyDataDraftVersionToolConfig toolConfig;
 
+        /**
+         * <p>The automatic speech recognition (ASR) configuration.</p>
+         */
         @NameInMap("TranscriberConfig")
         public GetApplicationResponseBodyDataDraftVersionTranscriberConfig transcriberConfig;
 
         /**
+         * <p>The version ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>743219815472857088</p>
          */
@@ -750,6 +1246,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public GetApplicationResponseBodyDataDraftVersionInteractionConfig getInteractionConfig() {
             return this.interactionConfig;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersion setLabelConfig(java.util.List<GetApplicationResponseBodyDataDraftVersionLabelConfig> labelConfig) {
+            this.labelConfig = labelConfig;
+            return this;
+        }
+        public java.util.List<GetApplicationResponseBodyDataDraftVersionLabelConfig> getLabelConfig() {
+            return this.labelConfig;
         }
 
         public GetApplicationResponseBodyDataDraftVersion setRagConfig(GetApplicationResponseBodyDataDraftVersionRagConfig ragConfig) {
@@ -802,8 +1306,95 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
 
+    public static class GetApplicationResponseBodyDataPublishedVersionInteractionConfigEndConversationConfigTriggers extends TeaModel {
+        @NameInMap("ClosingStatement")
+        public String closingStatement;
+
+        @NameInMap("KeyWords")
+        public java.util.List<String> keyWords;
+
+        @NameInMap("TriggerType")
+        public String triggerType;
+
+        @NameInMap("TurnLimit")
+        public Integer turnLimit;
+
+        public static GetApplicationResponseBodyDataPublishedVersionInteractionConfigEndConversationConfigTriggers build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataPublishedVersionInteractionConfigEndConversationConfigTriggers self = new GetApplicationResponseBodyDataPublishedVersionInteractionConfigEndConversationConfigTriggers();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionInteractionConfigEndConversationConfigTriggers setClosingStatement(String closingStatement) {
+            this.closingStatement = closingStatement;
+            return this;
+        }
+        public String getClosingStatement() {
+            return this.closingStatement;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionInteractionConfigEndConversationConfigTriggers setKeyWords(java.util.List<String> keyWords) {
+            this.keyWords = keyWords;
+            return this;
+        }
+        public java.util.List<String> getKeyWords() {
+            return this.keyWords;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionInteractionConfigEndConversationConfigTriggers setTriggerType(String triggerType) {
+            this.triggerType = triggerType;
+            return this;
+        }
+        public String getTriggerType() {
+            return this.triggerType;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionInteractionConfigEndConversationConfigTriggers setTurnLimit(Integer turnLimit) {
+            this.turnLimit = turnLimit;
+            return this;
+        }
+        public Integer getTurnLimit() {
+            return this.turnLimit;
+        }
+
+    }
+
+    public static class GetApplicationResponseBodyDataPublishedVersionInteractionConfigEndConversationConfig extends TeaModel {
+        @NameInMap("Delay")
+        public Integer delay;
+
+        @NameInMap("Triggers")
+        public java.util.List<GetApplicationResponseBodyDataPublishedVersionInteractionConfigEndConversationConfigTriggers> triggers;
+
+        public static GetApplicationResponseBodyDataPublishedVersionInteractionConfigEndConversationConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataPublishedVersionInteractionConfigEndConversationConfig self = new GetApplicationResponseBodyDataPublishedVersionInteractionConfigEndConversationConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionInteractionConfigEndConversationConfig setDelay(Integer delay) {
+            this.delay = delay;
+            return this;
+        }
+        public Integer getDelay() {
+            return this.delay;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionInteractionConfigEndConversationConfig setTriggers(java.util.List<GetApplicationResponseBodyDataPublishedVersionInteractionConfigEndConversationConfigTriggers> triggers) {
+            this.triggers = triggers;
+            return this;
+        }
+        public java.util.List<GetApplicationResponseBodyDataPublishedVersionInteractionConfigEndConversationConfigTriggers> getTriggers() {
+            return this.triggers;
+        }
+
+    }
+
     public static class GetApplicationResponseBodyDataPublishedVersionInteractionConfigSilenceDetectionConfig extends TeaModel {
+        @NameInMap("MaxRepeats")
+        public Integer maxRepeats;
+
         /**
+         * <p>The timeout period.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -813,6 +1404,14 @@ public class GetApplicationResponseBody extends TeaModel {
         public static GetApplicationResponseBodyDataPublishedVersionInteractionConfigSilenceDetectionConfig build(java.util.Map<String, ?> map) throws Exception {
             GetApplicationResponseBodyDataPublishedVersionInteractionConfigSilenceDetectionConfig self = new GetApplicationResponseBodyDataPublishedVersionInteractionConfigSilenceDetectionConfig();
             return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionInteractionConfigSilenceDetectionConfig setMaxRepeats(Integer maxRepeats) {
+            this.maxRepeats = maxRepeats;
+            return this;
+        }
+        public Integer getMaxRepeats() {
+            return this.maxRepeats;
         }
 
         public GetApplicationResponseBodyDataPublishedVersionInteractionConfigSilenceDetectionConfig setTimeout(Integer timeout) {
@@ -826,12 +1425,48 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyDataPublishedVersionInteractionConfig extends TeaModel {
+        @NameInMap("BackgroundMusicId")
+        public String backgroundMusicId;
+
+        @NameInMap("EndConversationConfig")
+        public GetApplicationResponseBodyDataPublishedVersionInteractionConfigEndConversationConfig endConversationConfig;
+
+        @NameInMap("InitialGreetingDelayMilliseconds")
+        public Integer initialGreetingDelayMilliseconds;
+
+        /**
+         * <p>The silence detection configuration.</p>
+         */
         @NameInMap("SilenceDetectionConfig")
         public GetApplicationResponseBodyDataPublishedVersionInteractionConfigSilenceDetectionConfig silenceDetectionConfig;
 
         public static GetApplicationResponseBodyDataPublishedVersionInteractionConfig build(java.util.Map<String, ?> map) throws Exception {
             GetApplicationResponseBodyDataPublishedVersionInteractionConfig self = new GetApplicationResponseBodyDataPublishedVersionInteractionConfig();
             return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionInteractionConfig setBackgroundMusicId(String backgroundMusicId) {
+            this.backgroundMusicId = backgroundMusicId;
+            return this;
+        }
+        public String getBackgroundMusicId() {
+            return this.backgroundMusicId;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionInteractionConfig setEndConversationConfig(GetApplicationResponseBodyDataPublishedVersionInteractionConfigEndConversationConfig endConversationConfig) {
+            this.endConversationConfig = endConversationConfig;
+            return this;
+        }
+        public GetApplicationResponseBodyDataPublishedVersionInteractionConfigEndConversationConfig getEndConversationConfig() {
+            return this.endConversationConfig;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionInteractionConfig setInitialGreetingDelayMilliseconds(Integer initialGreetingDelayMilliseconds) {
+            this.initialGreetingDelayMilliseconds = initialGreetingDelayMilliseconds;
+            return this;
+        }
+        public Integer getInitialGreetingDelayMilliseconds() {
+            return this.initialGreetingDelayMilliseconds;
         }
 
         public GetApplicationResponseBodyDataPublishedVersionInteractionConfig setSilenceDetectionConfig(GetApplicationResponseBodyDataPublishedVersionInteractionConfigSilenceDetectionConfig silenceDetectionConfig) {
@@ -844,19 +1479,87 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
 
+    public static class GetApplicationResponseBodyDataPublishedVersionLabelConfig extends TeaModel {
+        @NameInMap("CandidateValues")
+        public java.util.List<String> candidateValues;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static GetApplicationResponseBodyDataPublishedVersionLabelConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataPublishedVersionLabelConfig self = new GetApplicationResponseBodyDataPublishedVersionLabelConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionLabelConfig setCandidateValues(java.util.List<String> candidateValues) {
+            this.candidateValues = candidateValues;
+            return this;
+        }
+        public java.util.List<String> getCandidateValues() {
+            return this.candidateValues;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionLabelConfig setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionLabelConfig setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class GetApplicationResponseBodyDataPublishedVersionRagConfig extends TeaModel {
+        /**
+         * <p>Specifies whether RAG is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The list of knowledge base IDs.</p>
+         */
         @NameInMap("KnowledgeBaseIds")
         public java.util.List<String> knowledgeBaseIds;
 
+        /**
+         * <p>The maximum concatenation length of RAG content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("MaxContentLength")
         public Integer maxContentLength;
 
+        /**
+         * <p>The RAG engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BAILIAN</p>
+         */
         @NameInMap("RagEngine")
         public String ragEngine;
 
+        /**
+         * <p>The maximum number of data entries to retrieve.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("TopN")
         public Integer topN;
 
@@ -909,19 +1612,38 @@ public class GetApplicationResponseBody extends TeaModel {
 
     public static class GetApplicationResponseBodyDataPublishedVersionScriptProfileAgentProfile extends TeaModel {
         /**
+         * <p>The agent configuration ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>b97b6822dd624c32b6c2a54d717db718</p>
          */
         @NameInMap("AgentProfileId")
         public String agentProfileId;
 
+        /**
+         * <p>The agent description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I am a chatbot</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <p>The prompt in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;prompts&quot;:&quot;I am a chatbot.&quot;}</p>
+         */
         @NameInMap("PromptsJson")
         public String promptsJson;
 
         /**
+         * <p>The agent configuration template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>SFM_PROMPTS_DEFAULT</p>
          */
@@ -949,6 +1671,14 @@ public class GetApplicationResponseBody extends TeaModel {
             return this.description;
         }
 
+        public GetApplicationResponseBodyDataPublishedVersionScriptProfileAgentProfile setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public GetApplicationResponseBodyDataPublishedVersionScriptProfileAgentProfile setPromptsJson(String promptsJson) {
             this.promptsJson = promptsJson;
             return this;
@@ -967,18 +1697,136 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
 
+    public static class GetApplicationResponseBodyDataPublishedVersionScriptProfileFunctionMeta extends TeaModel {
+        @NameInMap("FunctionId")
+        public String functionId;
+
+        @NameInMap("FunctionName")
+        public String functionName;
+
+        @NameInMap("HttpTriggerName")
+        public String httpTriggerName;
+
+        @NameInMap("HttpTriggerUrl")
+        public String httpTriggerUrl;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        public static GetApplicationResponseBodyDataPublishedVersionScriptProfileFunctionMeta build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataPublishedVersionScriptProfileFunctionMeta self = new GetApplicationResponseBodyDataPublishedVersionScriptProfileFunctionMeta();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionScriptProfileFunctionMeta setFunctionId(String functionId) {
+            this.functionId = functionId;
+            return this;
+        }
+        public String getFunctionId() {
+            return this.functionId;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionScriptProfileFunctionMeta setFunctionName(String functionName) {
+            this.functionName = functionName;
+            return this;
+        }
+        public String getFunctionName() {
+            return this.functionName;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionScriptProfileFunctionMeta setHttpTriggerName(String httpTriggerName) {
+            this.httpTriggerName = httpTriggerName;
+            return this;
+        }
+        public String getHttpTriggerName() {
+            return this.httpTriggerName;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionScriptProfileFunctionMeta setHttpTriggerUrl(String httpTriggerUrl) {
+            this.httpTriggerUrl = httpTriggerUrl;
+            return this;
+        }
+        public String getHttpTriggerUrl() {
+            return this.httpTriggerUrl;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionScriptProfileFunctionMeta setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+    }
+
+    public static class GetApplicationResponseBodyDataPublishedVersionScriptProfileNluAccessProfile extends TeaModel {
+        @NameInMap("AccessProfileId")
+        public String accessProfileId;
+
+        public static GetApplicationResponseBodyDataPublishedVersionScriptProfileNluAccessProfile build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataPublishedVersionScriptProfileNluAccessProfile self = new GetApplicationResponseBodyDataPublishedVersionScriptProfileNluAccessProfile();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionScriptProfileNluAccessProfile setAccessProfileId(String accessProfileId) {
+            this.accessProfileId = accessProfileId;
+            return this;
+        }
+        public String getAccessProfileId() {
+            return this.accessProfileId;
+        }
+
+    }
+
     public static class GetApplicationResponseBodyDataPublishedVersionScriptProfile extends TeaModel {
+        @NameInMap("AgentKey")
+        public String agentKey;
+
+        /**
+         * <p>The agent configuration information.</p>
+         */
         @NameInMap("AgentProfile")
         public GetApplicationResponseBodyDataPublishedVersionScriptProfileAgentProfile agentProfile;
 
+        @NameInMap("ChatbotId")
+        public String chatbotId;
+
+        @NameInMap("FunctionMeta")
+        public GetApplicationResponseBodyDataPublishedVersionScriptProfileFunctionMeta functionMeta;
+
         /**
+         * <p>The model.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
          */
         @NameInMap("Model")
         public String model;
 
+        @NameInMap("NluAccessProfile")
+        public GetApplicationResponseBodyDataPublishedVersionScriptProfileNluAccessProfile nluAccessProfile;
+
+        @NameInMap("NluAccessType")
+        public String nluAccessType;
+
+        @NameInMap("NluEngine")
+        public String nluEngine;
+
+        @NameInMap("OmniModel")
+        public Boolean omniModel;
+
         /**
+         * <p>The probability threshold for nucleus sampling during generation.</p>
+         * <blockquote>
+         * <ul>
+         * <li>For example, when the value is set to 0.8, only the smallest set of most likely tokens whose cumulative probability is greater than or equal to 0.8 is retained as the candidate set.<ul>
+         * <li>Valid values: (0, 1.0). A higher value increases randomness in generation. A lower value increases determinism in generation.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>0.8</p>
          */
@@ -986,6 +1834,14 @@ public class GetApplicationResponseBody extends TeaModel {
         public String temperature;
 
         /**
+         * <p>Controls the randomness and diversity of model responses.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Specifically, the temperature value controls the degree of smoothing applied to the probability distribution of each candidate token during text generation. A higher temperature value flattens the probability distribution, allowing more low-probability tokens to be selected, which produces more diverse results. A lower temperature value sharpens the probability distribution, making high-probability tokens more likely to be selected, which produces more deterministic results.</li>
+         * <li>Valid values: [0, 2). Setting the value to 0 is not recommended because it is meaningless.</li>
+         * </ul>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>0.1</p>
          */
@@ -997,6 +1853,14 @@ public class GetApplicationResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetApplicationResponseBodyDataPublishedVersionScriptProfile setAgentKey(String agentKey) {
+            this.agentKey = agentKey;
+            return this;
+        }
+        public String getAgentKey() {
+            return this.agentKey;
+        }
+
         public GetApplicationResponseBodyDataPublishedVersionScriptProfile setAgentProfile(GetApplicationResponseBodyDataPublishedVersionScriptProfileAgentProfile agentProfile) {
             this.agentProfile = agentProfile;
             return this;
@@ -1005,12 +1869,60 @@ public class GetApplicationResponseBody extends TeaModel {
             return this.agentProfile;
         }
 
+        public GetApplicationResponseBodyDataPublishedVersionScriptProfile setChatbotId(String chatbotId) {
+            this.chatbotId = chatbotId;
+            return this;
+        }
+        public String getChatbotId() {
+            return this.chatbotId;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionScriptProfile setFunctionMeta(GetApplicationResponseBodyDataPublishedVersionScriptProfileFunctionMeta functionMeta) {
+            this.functionMeta = functionMeta;
+            return this;
+        }
+        public GetApplicationResponseBodyDataPublishedVersionScriptProfileFunctionMeta getFunctionMeta() {
+            return this.functionMeta;
+        }
+
         public GetApplicationResponseBodyDataPublishedVersionScriptProfile setModel(String model) {
             this.model = model;
             return this;
         }
         public String getModel() {
             return this.model;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionScriptProfile setNluAccessProfile(GetApplicationResponseBodyDataPublishedVersionScriptProfileNluAccessProfile nluAccessProfile) {
+            this.nluAccessProfile = nluAccessProfile;
+            return this;
+        }
+        public GetApplicationResponseBodyDataPublishedVersionScriptProfileNluAccessProfile getNluAccessProfile() {
+            return this.nluAccessProfile;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionScriptProfile setNluAccessType(String nluAccessType) {
+            this.nluAccessType = nluAccessType;
+            return this;
+        }
+        public String getNluAccessType() {
+            return this.nluAccessType;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionScriptProfile setNluEngine(String nluEngine) {
+            this.nluEngine = nluEngine;
+            return this;
+        }
+        public String getNluEngine() {
+            return this.nluEngine;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionScriptProfile setOmniModel(Boolean omniModel) {
+            this.omniModel = omniModel;
+            return this;
+        }
+        public Boolean getOmniModel() {
+            return this.omniModel;
         }
 
         public GetApplicationResponseBodyDataPublishedVersionScriptProfile setTemperature(String temperature) {
@@ -1088,6 +2000,8 @@ public class GetApplicationResponseBody extends TeaModel {
         public GetApplicationResponseBodyDataPublishedVersionSynthesizerConfigNlsAccessProfile nlsAccessProfile;
 
         /**
+         * <p>The TTS invocation method.</p>
+         * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
          */
@@ -1095,6 +2009,8 @@ public class GetApplicationResponseBody extends TeaModel {
         public String nlsAccessType;
 
         /**
+         * <p>The TTS engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>ALIYUN</p>
          */
@@ -1102,6 +2018,11 @@ public class GetApplicationResponseBody extends TeaModel {
         public String nlsEngine;
 
         /**
+         * <p>The pitch rate.</p>
+         * <blockquote>
+         * <p>Valid values: -500 to 500.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -1112,6 +2033,11 @@ public class GetApplicationResponseBody extends TeaModel {
         public java.util.List<GetApplicationResponseBodyDataPublishedVersionSynthesizerConfigPronRules> pronRules;
 
         /**
+         * <p>The speech rate.</p>
+         * <blockquote>
+         * <p>Valid values: -500 to 500.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>-20</p>
          */
@@ -1119,6 +2045,8 @@ public class GetApplicationResponseBody extends TeaModel {
         public Integer speechRate;
 
         /**
+         * <p>The voice.</p>
+         * 
          * <strong>example:</strong>
          * <p>aixia</p>
          */
@@ -1126,6 +2054,8 @@ public class GetApplicationResponseBody extends TeaModel {
         public String voice;
 
         /**
+         * <p>The volume.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -1212,12 +2142,30 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyDataPublishedVersionToolConfigMcpServers extends TeaModel {
+        /**
+         * <p>The base URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com">https://example.com</a></p>
+         */
         @NameInMap("BaseUrl")
         public String baseUrl;
 
+        /**
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>phone-ai-call</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The SSE endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/phone-ai-call/mcp/sse?key=value</p>
+         */
         @NameInMap("SseEndpoint")
         public String sseEndpoint;
 
@@ -1253,6 +2201,9 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyDataPublishedVersionToolConfig extends TeaModel {
+        /**
+         * <p>The list of MCP server configurations.</p>
+         */
         @NameInMap("McpServers")
         public java.util.List<GetApplicationResponseBodyDataPublishedVersionToolConfigMcpServers> mcpServers;
 
@@ -1337,6 +2288,8 @@ public class GetApplicationResponseBody extends TeaModel {
         public GetApplicationResponseBodyDataPublishedVersionTranscriberConfigNlsAccessProfile nlsAccessProfile;
 
         /**
+         * <p>The ASR invocation method.</p>
+         * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
          */
@@ -1344,6 +2297,8 @@ public class GetApplicationResponseBody extends TeaModel {
         public String nlsAccessType;
 
         /**
+         * <p>The ASR engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>ALIYUN</p>
          */
@@ -1436,25 +2391,48 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyDataPublishedVersion extends TeaModel {
+        /**
+         * <p>The interaction configuration.</p>
+         */
         @NameInMap("InteractionConfig")
         public GetApplicationResponseBodyDataPublishedVersionInteractionConfig interactionConfig;
 
+        @NameInMap("LabelConfig")
+        public java.util.List<GetApplicationResponseBodyDataPublishedVersionLabelConfig> labelConfig;
+
+        /**
+         * <p>The RAG configuration.</p>
+         */
         @NameInMap("RagConfig")
         public GetApplicationResponseBodyDataPublishedVersionRagConfig ragConfig;
 
+        /**
+         * <p>The application model configuration.</p>
+         */
         @NameInMap("ScriptProfile")
         public GetApplicationResponseBodyDataPublishedVersionScriptProfile scriptProfile;
 
+        /**
+         * <p>The text-to-speech (TTS) configuration.</p>
+         */
         @NameInMap("SynthesizerConfig")
         public GetApplicationResponseBodyDataPublishedVersionSynthesizerConfig synthesizerConfig;
 
+        /**
+         * <p>The tool configuration.</p>
+         */
         @NameInMap("ToolConfig")
         public GetApplicationResponseBodyDataPublishedVersionToolConfig toolConfig;
 
+        /**
+         * <p>The automatic speech recognition (ASR) configuration.</p>
+         */
         @NameInMap("TranscriberConfig")
         public GetApplicationResponseBodyDataPublishedVersionTranscriberConfig transcriberConfig;
 
         /**
+         * <p>The version ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>47889c1f-dd3f-4ace-9587-a13a3563e678</p>
          */
@@ -1472,6 +2450,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public GetApplicationResponseBodyDataPublishedVersionInteractionConfig getInteractionConfig() {
             return this.interactionConfig;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersion setLabelConfig(java.util.List<GetApplicationResponseBodyDataPublishedVersionLabelConfig> labelConfig) {
+            this.labelConfig = labelConfig;
+            return this;
+        }
+        public java.util.List<GetApplicationResponseBodyDataPublishedVersionLabelConfig> getLabelConfig() {
+            return this.labelConfig;
         }
 
         public GetApplicationResponseBodyDataPublishedVersion setRagConfig(GetApplicationResponseBodyDataPublishedVersionRagConfig ragConfig) {
@@ -1526,6 +2512,8 @@ public class GetApplicationResponseBody extends TeaModel {
 
     public static class GetApplicationResponseBodyData extends TeaModel {
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>a395011f-a247-400f-bc69-28796749fd52</p>
          */
@@ -1533,6 +2521,8 @@ public class GetApplicationResponseBody extends TeaModel {
         public String applicationId;
 
         /**
+         * <p>The call concurrency, which is the number of calls being made simultaneously.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -1540,22 +2530,41 @@ public class GetApplicationResponseBody extends TeaModel {
         public Integer concurrency;
 
         /**
+         * <p>The time when the application was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1730081561000</p>
          */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
+        /**
+         * <p>The application description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Describe this application</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The draft version configuration content.</p>
+         */
         @NameInMap("DraftVersion")
         public GetApplicationResponseBodyDataDraftVersion draftVersion;
 
+        /**
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test001</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The NLU access method.</p>
+         * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
          */
@@ -1563,16 +2572,26 @@ public class GetApplicationResponseBody extends TeaModel {
         public String nluAccessType;
 
         /**
+         * <p>The NLU engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>PROMPTS</p>
          */
         @NameInMap("NluEngine")
         public String nluEngine;
 
+        /**
+         * <p>The published application version.</p>
+         */
         @NameInMap("PublishedVersion")
         public GetApplicationResponseBodyDataPublishedVersion publishedVersion;
 
+        @NameInMap("Status")
+        public String status;
+
         /**
+         * <p>The time when the application was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>1730081561000</p>
          */
@@ -1654,6 +2673,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public GetApplicationResponseBodyDataPublishedVersion getPublishedVersion() {
             return this.publishedVersion;
+        }
+
+        public GetApplicationResponseBodyData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public GetApplicationResponseBodyData setUpdatedTime(Long updatedTime) {

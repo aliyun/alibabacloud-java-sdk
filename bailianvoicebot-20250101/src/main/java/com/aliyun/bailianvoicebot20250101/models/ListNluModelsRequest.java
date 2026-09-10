@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListNluModelsRequest extends TeaModel {
     /**
+     * <p>The Bailian workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-3pptowd2olrctsvc</p>
      */

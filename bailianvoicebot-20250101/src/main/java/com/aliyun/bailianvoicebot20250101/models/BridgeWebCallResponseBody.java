@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class BridgeWebCallResponseBody extends TeaModel {
     /**
+     * <p>The status code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public BridgeWebCallResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>connect timed out</p>
      */
@@ -22,6 +29,8 @@ public class BridgeWebCallResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class BridgeWebCallResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CF6D3484-19A1-5C77-863B-AC8B5754D37C</p>
      */
@@ -36,6 +47,8 @@ public class BridgeWebCallResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -97,6 +110,8 @@ public class BridgeWebCallResponseBody extends TeaModel {
 
     public static class BridgeWebCallResponseBodyData extends TeaModel {
         /**
+         * <p>The channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>894526715106764802</p>
          */
@@ -104,6 +119,11 @@ public class BridgeWebCallResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>The token expiration time.</p>
+         * <blockquote>
+         * <p>The value is in timestamp format.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1744964682422</p>
          */
@@ -111,6 +131,8 @@ public class BridgeWebCallResponseBody extends TeaModel {
         public String expirationTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-uf6abxo1tuuwarrtffpp</p>
          */
@@ -118,13 +140,17 @@ public class BridgeWebCallResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The server URL.</p>
+         * 
          * <strong>example:</strong>
-         * <p>wss://pre-cab-wss.aliyuncs.com:443/audio</p>
+         * <p>wss://sh-voicebot.aliyuncs.com:443/audio</p>
          */
         @NameInMap("ServerUrl")
         public String serverUrl;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ws-4b7c263f-9b4c-4b28-baae-a65e9155e380</p>
          */
@@ -132,6 +158,8 @@ public class BridgeWebCallResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>The authentication signature.</p>
+         * 
          * <strong>example:</strong>
          * <p>83480f806b48f022313de37b691e167e</p>
          */

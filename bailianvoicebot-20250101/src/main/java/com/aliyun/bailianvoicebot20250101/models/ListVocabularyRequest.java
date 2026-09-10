@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class ListVocabularyRequest extends TeaModel {
     /**
+     * <p>The Bailian business workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-c11iig67g863rih8</p>
      */
     @NameInMap("BusinessUnitId")
     public String businessUnitId;
 
+    /**
+     * <p>The hot word name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Finance</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +32,8 @@ public class ListVocabularyRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

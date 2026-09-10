@@ -5,12 +5,20 @@ import com.aliyun.tea.*;
 
 public class ImportVocabularyRequest extends TeaModel {
     /**
+     * <p>The ID of the Bailian business workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-zop7ukgtksltamo4</p>
      */
     @NameInMap("BusinessUnitId")
     public String businessUnitId;
 
+    /**
+     * <p>The path of the uploaded file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vocabulary/热词导入单元测试.zip</p>
+     */
     @NameInMap("FileKey")
     public String fileKey;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteCloneVoiceResponseBody extends TeaModel {
     /**
+     * <p>The internal error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class DeleteCloneVoiceResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The ID of the cloned voice.</p>
+     * 
      * <strong>example:</strong>
      * <p>82ea16d1-425c-4c03-9be5-cc91de9779ed</p>
      */
@@ -19,6 +23,8 @@ public class DeleteCloneVoiceResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class DeleteCloneVoiceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance llm-zzu528i29ecnprcl
      *  does not exist.</p>
@@ -33,10 +41,15 @@ public class DeleteCloneVoiceResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of dynamic error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CF6D3484-19A1-5C77-863B-AC8B5754D37C</p>
      */

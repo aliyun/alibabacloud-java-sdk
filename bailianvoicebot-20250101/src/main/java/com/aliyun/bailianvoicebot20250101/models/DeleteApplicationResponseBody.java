@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteApplicationResponseBody extends TeaModel {
     /**
+     * <p>The API status or POP error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class DeleteApplicationResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response result, which is the ID of the deleted application.</p>
+     * 
      * <strong>example:</strong>
      * <p>a395011f-a247-400f-bc69-28796749fd52</p>
      */
@@ -19,6 +23,8 @@ public class DeleteApplicationResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class DeleteApplicationResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The additional information.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -33,6 +41,8 @@ public class DeleteApplicationResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D771A1B6-3D5F-174A-BEE1-98CE1000D337</p>
      */

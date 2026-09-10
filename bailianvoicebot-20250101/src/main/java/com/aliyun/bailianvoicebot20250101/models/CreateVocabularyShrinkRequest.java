@@ -5,18 +5,35 @@ import com.aliyun.tea.*;
 
 public class CreateVocabularyShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the Bailian business workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-baployoyopf22m2r</p>
      */
     @NameInMap("BusinessUnitId")
     public String businessUnitId;
 
+    /**
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Contains financial industry terminology</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the hot word list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Financial industry hot words</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The hot word list.</p>
+     */
     @NameInMap("Words")
     public String wordsShrink;
 

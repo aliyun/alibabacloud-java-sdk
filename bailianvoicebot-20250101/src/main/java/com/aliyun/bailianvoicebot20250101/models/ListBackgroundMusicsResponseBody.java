@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListBackgroundMusicsResponseBody extends TeaModel {
     /**
+     * <p>The internal error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The paginated result of the background music list.</p>
+     */
     @NameInMap("Data")
     public ListBackgroundMusicsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,12 +29,17 @@ public class ListBackgroundMusicsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance llm-baployoyopf22m2r does not exist.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of dynamic error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
@@ -103,6 +115,12 @@ public class ListBackgroundMusicsResponseBody extends TeaModel {
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Office Ambience</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -130,10 +148,15 @@ public class ListBackgroundMusicsResponseBody extends TeaModel {
     }
 
     public static class ListBackgroundMusicsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of background music.</p>
+         */
         @NameInMap("BackgroundMusics")
         public java.util.List<ListBackgroundMusicsResponseBodyDataBackgroundMusics> backgroundMusics;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -141,6 +164,8 @@ public class ListBackgroundMusicsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -148,6 +173,8 @@ public class ListBackgroundMusicsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

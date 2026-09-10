@@ -6,24 +6,21 @@ import com.aliyun.tea.*;
 public class UpdateApplicationVersionRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>a395011f-a247-400f-bc69-28796749fd52</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>llm-c11iig67g863rih8</p>
      */
     @NameInMap("BusinessUnitId")
     public String businessUnitId;
 
     @NameInMap("InteractionConfig")
     public UpdateApplicationVersionRequestInteractionConfig interactionConfig;
+
+    @NameInMap("LabelConfig")
+    public java.util.List<UpdateApplicationVersionRequestLabelConfig> labelConfig;
 
     @NameInMap("RagConfig")
     public UpdateApplicationVersionRequestRagConfig ragConfig;
@@ -53,9 +50,6 @@ public class UpdateApplicationVersionRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>20904943-f711-494f-9f1f-e7f340f37707</p>
      */
     @NameInMap("VersionId")
     public String versionId;
@@ -87,6 +81,14 @@ public class UpdateApplicationVersionRequest extends TeaModel {
     }
     public UpdateApplicationVersionRequestInteractionConfig getInteractionConfig() {
         return this.interactionConfig;
+    }
+
+    public UpdateApplicationVersionRequest setLabelConfig(java.util.List<UpdateApplicationVersionRequestLabelConfig> labelConfig) {
+        this.labelConfig = labelConfig;
+        return this;
+    }
+    public java.util.List<UpdateApplicationVersionRequestLabelConfig> getLabelConfig() {
+        return this.labelConfig;
     }
 
     public UpdateApplicationVersionRequest setRagConfig(UpdateApplicationVersionRequestRagConfig ragConfig) {
@@ -137,17 +139,110 @@ public class UpdateApplicationVersionRequest extends TeaModel {
         return this.versionId;
     }
 
-    public static class UpdateApplicationVersionRequestInteractionConfigSilenceDetectionConfig extends TeaModel {
+    public static class UpdateApplicationVersionRequestInteractionConfigEndConversationConfigTriggers extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>3</p>
+         * <p>感谢您的接听，祝您生活愉快，再见!</p>
          */
+        @NameInMap("ClosingStatement")
+        public String closingStatement;
+
+        @NameInMap("KeyWords")
+        public java.util.List<String> keyWords;
+
+        @NameInMap("TriggerType")
+        public String triggerType;
+
+        @NameInMap("TurnLimit")
+        public Integer turnLimit;
+
+        public static UpdateApplicationVersionRequestInteractionConfigEndConversationConfigTriggers build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApplicationVersionRequestInteractionConfigEndConversationConfigTriggers self = new UpdateApplicationVersionRequestInteractionConfigEndConversationConfigTriggers();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApplicationVersionRequestInteractionConfigEndConversationConfigTriggers setClosingStatement(String closingStatement) {
+            this.closingStatement = closingStatement;
+            return this;
+        }
+        public String getClosingStatement() {
+            return this.closingStatement;
+        }
+
+        public UpdateApplicationVersionRequestInteractionConfigEndConversationConfigTriggers setKeyWords(java.util.List<String> keyWords) {
+            this.keyWords = keyWords;
+            return this;
+        }
+        public java.util.List<String> getKeyWords() {
+            return this.keyWords;
+        }
+
+        public UpdateApplicationVersionRequestInteractionConfigEndConversationConfigTriggers setTriggerType(String triggerType) {
+            this.triggerType = triggerType;
+            return this;
+        }
+        public String getTriggerType() {
+            return this.triggerType;
+        }
+
+        public UpdateApplicationVersionRequestInteractionConfigEndConversationConfigTriggers setTurnLimit(Integer turnLimit) {
+            this.turnLimit = turnLimit;
+            return this;
+        }
+        public Integer getTurnLimit() {
+            return this.turnLimit;
+        }
+
+    }
+
+    public static class UpdateApplicationVersionRequestInteractionConfigEndConversationConfig extends TeaModel {
+        @NameInMap("Delay")
+        public Integer delay;
+
+        @NameInMap("Triggers")
+        public java.util.List<UpdateApplicationVersionRequestInteractionConfigEndConversationConfigTriggers> triggers;
+
+        public static UpdateApplicationVersionRequestInteractionConfigEndConversationConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApplicationVersionRequestInteractionConfigEndConversationConfig self = new UpdateApplicationVersionRequestInteractionConfigEndConversationConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApplicationVersionRequestInteractionConfigEndConversationConfig setDelay(Integer delay) {
+            this.delay = delay;
+            return this;
+        }
+        public Integer getDelay() {
+            return this.delay;
+        }
+
+        public UpdateApplicationVersionRequestInteractionConfigEndConversationConfig setTriggers(java.util.List<UpdateApplicationVersionRequestInteractionConfigEndConversationConfigTriggers> triggers) {
+            this.triggers = triggers;
+            return this;
+        }
+        public java.util.List<UpdateApplicationVersionRequestInteractionConfigEndConversationConfigTriggers> getTriggers() {
+            return this.triggers;
+        }
+
+    }
+
+    public static class UpdateApplicationVersionRequestInteractionConfigSilenceDetectionConfig extends TeaModel {
+        @NameInMap("MaxRepeats")
+        public Integer maxRepeats;
+
         @NameInMap("Timeout")
         public Integer timeout;
 
         public static UpdateApplicationVersionRequestInteractionConfigSilenceDetectionConfig build(java.util.Map<String, ?> map) throws Exception {
             UpdateApplicationVersionRequestInteractionConfigSilenceDetectionConfig self = new UpdateApplicationVersionRequestInteractionConfigSilenceDetectionConfig();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateApplicationVersionRequestInteractionConfigSilenceDetectionConfig setMaxRepeats(Integer maxRepeats) {
+            this.maxRepeats = maxRepeats;
+            return this;
+        }
+        public Integer getMaxRepeats() {
+            return this.maxRepeats;
         }
 
         public UpdateApplicationVersionRequestInteractionConfigSilenceDetectionConfig setTimeout(Integer timeout) {
@@ -161,6 +256,15 @@ public class UpdateApplicationVersionRequest extends TeaModel {
     }
 
     public static class UpdateApplicationVersionRequestInteractionConfig extends TeaModel {
+        @NameInMap("BackgroundMusicId")
+        public String backgroundMusicId;
+
+        @NameInMap("EndConversationConfig")
+        public UpdateApplicationVersionRequestInteractionConfigEndConversationConfig endConversationConfig;
+
+        @NameInMap("InitialGreetingDelayMilliseconds")
+        public Integer initialGreetingDelayMilliseconds;
+
         @NameInMap("SilenceDetectionConfig")
         public UpdateApplicationVersionRequestInteractionConfigSilenceDetectionConfig silenceDetectionConfig;
 
@@ -169,12 +273,77 @@ public class UpdateApplicationVersionRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public UpdateApplicationVersionRequestInteractionConfig setBackgroundMusicId(String backgroundMusicId) {
+            this.backgroundMusicId = backgroundMusicId;
+            return this;
+        }
+        public String getBackgroundMusicId() {
+            return this.backgroundMusicId;
+        }
+
+        public UpdateApplicationVersionRequestInteractionConfig setEndConversationConfig(UpdateApplicationVersionRequestInteractionConfigEndConversationConfig endConversationConfig) {
+            this.endConversationConfig = endConversationConfig;
+            return this;
+        }
+        public UpdateApplicationVersionRequestInteractionConfigEndConversationConfig getEndConversationConfig() {
+            return this.endConversationConfig;
+        }
+
+        public UpdateApplicationVersionRequestInteractionConfig setInitialGreetingDelayMilliseconds(Integer initialGreetingDelayMilliseconds) {
+            this.initialGreetingDelayMilliseconds = initialGreetingDelayMilliseconds;
+            return this;
+        }
+        public Integer getInitialGreetingDelayMilliseconds() {
+            return this.initialGreetingDelayMilliseconds;
+        }
+
         public UpdateApplicationVersionRequestInteractionConfig setSilenceDetectionConfig(UpdateApplicationVersionRequestInteractionConfigSilenceDetectionConfig silenceDetectionConfig) {
             this.silenceDetectionConfig = silenceDetectionConfig;
             return this;
         }
         public UpdateApplicationVersionRequestInteractionConfigSilenceDetectionConfig getSilenceDetectionConfig() {
             return this.silenceDetectionConfig;
+        }
+
+    }
+
+    public static class UpdateApplicationVersionRequestLabelConfig extends TeaModel {
+        @NameInMap("CandidateValues")
+        public java.util.List<String> candidateValues;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static UpdateApplicationVersionRequestLabelConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApplicationVersionRequestLabelConfig self = new UpdateApplicationVersionRequestLabelConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApplicationVersionRequestLabelConfig setCandidateValues(java.util.List<String> candidateValues) {
+            this.candidateValues = candidateValues;
+            return this;
+        }
+        public java.util.List<String> getCandidateValues() {
+            return this.candidateValues;
+        }
+
+        public UpdateApplicationVersionRequestLabelConfig setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public UpdateApplicationVersionRequestLabelConfig setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }
@@ -252,10 +421,6 @@ public class UpdateApplicationVersionRequest extends TeaModel {
         @NameInMap("PromptsJson")
         public String promptsJson;
 
-        /**
-         * <strong>example:</strong>
-         * <p>SFM_PROMPTS_DEFAULT</p>
-         */
         @NameInMap("ScriptProfileTemplateId")
         public String scriptProfileTemplateId;
 
@@ -298,20 +463,144 @@ public class UpdateApplicationVersionRequest extends TeaModel {
 
     }
 
+    public static class UpdateApplicationVersionRequestScriptProfileFunctionMeta extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>9b752bbb-805a-4d3e-9013-eab5555c3fef</p>
+         */
+        @NameInMap("FunctionId")
+        public String functionId;
+
+        @NameInMap("FunctionName")
+        public String functionName;
+
+        @NameInMap("HttpTriggerName")
+        public String httpTriggerName;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://chat-xxxxx-v-yewiundukb.cn-hangzhou-xxx.run">http://chat-xxxxx-v-yewiundukb.cn-hangzhou-xxx.run</a></p>
+         */
+        @NameInMap("HttpTriggerUrl")
+        public String httpTriggerUrl;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        @NameInMap("RegionId")
+        public String regionId;
+
+        public static UpdateApplicationVersionRequestScriptProfileFunctionMeta build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApplicationVersionRequestScriptProfileFunctionMeta self = new UpdateApplicationVersionRequestScriptProfileFunctionMeta();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApplicationVersionRequestScriptProfileFunctionMeta setFunctionId(String functionId) {
+            this.functionId = functionId;
+            return this;
+        }
+        public String getFunctionId() {
+            return this.functionId;
+        }
+
+        public UpdateApplicationVersionRequestScriptProfileFunctionMeta setFunctionName(String functionName) {
+            this.functionName = functionName;
+            return this;
+        }
+        public String getFunctionName() {
+            return this.functionName;
+        }
+
+        public UpdateApplicationVersionRequestScriptProfileFunctionMeta setHttpTriggerName(String httpTriggerName) {
+            this.httpTriggerName = httpTriggerName;
+            return this;
+        }
+        public String getHttpTriggerName() {
+            return this.httpTriggerName;
+        }
+
+        public UpdateApplicationVersionRequestScriptProfileFunctionMeta setHttpTriggerUrl(String httpTriggerUrl) {
+            this.httpTriggerUrl = httpTriggerUrl;
+            return this;
+        }
+        public String getHttpTriggerUrl() {
+            return this.httpTriggerUrl;
+        }
+
+        public UpdateApplicationVersionRequestScriptProfileFunctionMeta setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+    }
+
+    public static class UpdateApplicationVersionRequestScriptProfileNluAccessProfile extends TeaModel {
+        @NameInMap("AccessProfileId")
+        public String accessProfileId;
+
+        public static UpdateApplicationVersionRequestScriptProfileNluAccessProfile build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApplicationVersionRequestScriptProfileNluAccessProfile self = new UpdateApplicationVersionRequestScriptProfileNluAccessProfile();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApplicationVersionRequestScriptProfileNluAccessProfile setAccessProfileId(String accessProfileId) {
+            this.accessProfileId = accessProfileId;
+            return this;
+        }
+        public String getAccessProfileId() {
+            return this.accessProfileId;
+        }
+
+    }
+
     public static class UpdateApplicationVersionRequestScriptProfile extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>6f444ecf21d94238b516735916c98666</p>
+         */
+        @NameInMap("AgentKey")
+        public String agentKey;
+
         @NameInMap("AgentProfile")
         public UpdateApplicationVersionRequestScriptProfileAgentProfile agentProfile;
 
         /**
          * <strong>example:</strong>
-         * <p>qwen-plus</p>
+         * <p>chatbot-cn-MQuyjjb666</p>
          */
+        @NameInMap("ChatbotId")
+        public String chatbotId;
+
+        @NameInMap("FunctionMeta")
+        public UpdateApplicationVersionRequestScriptProfileFunctionMeta functionMeta;
+
         @NameInMap("Model")
         public String model;
+
+        @NameInMap("NluAccessProfile")
+        public UpdateApplicationVersionRequestScriptProfileNluAccessProfile nluAccessProfile;
+
+        @NameInMap("NluAccessType")
+        public String nluAccessType;
+
+        @NameInMap("OmniModel")
+        public Boolean omniModel;
 
         public static UpdateApplicationVersionRequestScriptProfile build(java.util.Map<String, ?> map) throws Exception {
             UpdateApplicationVersionRequestScriptProfile self = new UpdateApplicationVersionRequestScriptProfile();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateApplicationVersionRequestScriptProfile setAgentKey(String agentKey) {
+            this.agentKey = agentKey;
+            return this;
+        }
+        public String getAgentKey() {
+            return this.agentKey;
         }
 
         public UpdateApplicationVersionRequestScriptProfile setAgentProfile(UpdateApplicationVersionRequestScriptProfileAgentProfile agentProfile) {
@@ -322,12 +611,52 @@ public class UpdateApplicationVersionRequest extends TeaModel {
             return this.agentProfile;
         }
 
+        public UpdateApplicationVersionRequestScriptProfile setChatbotId(String chatbotId) {
+            this.chatbotId = chatbotId;
+            return this;
+        }
+        public String getChatbotId() {
+            return this.chatbotId;
+        }
+
+        public UpdateApplicationVersionRequestScriptProfile setFunctionMeta(UpdateApplicationVersionRequestScriptProfileFunctionMeta functionMeta) {
+            this.functionMeta = functionMeta;
+            return this;
+        }
+        public UpdateApplicationVersionRequestScriptProfileFunctionMeta getFunctionMeta() {
+            return this.functionMeta;
+        }
+
         public UpdateApplicationVersionRequestScriptProfile setModel(String model) {
             this.model = model;
             return this;
         }
         public String getModel() {
             return this.model;
+        }
+
+        public UpdateApplicationVersionRequestScriptProfile setNluAccessProfile(UpdateApplicationVersionRequestScriptProfileNluAccessProfile nluAccessProfile) {
+            this.nluAccessProfile = nluAccessProfile;
+            return this;
+        }
+        public UpdateApplicationVersionRequestScriptProfileNluAccessProfile getNluAccessProfile() {
+            return this.nluAccessProfile;
+        }
+
+        public UpdateApplicationVersionRequestScriptProfile setNluAccessType(String nluAccessType) {
+            this.nluAccessType = nluAccessType;
+            return this;
+        }
+        public String getNluAccessType() {
+            return this.nluAccessType;
+        }
+
+        public UpdateApplicationVersionRequestScriptProfile setOmniModel(Boolean omniModel) {
+            this.omniModel = omniModel;
+            return this;
+        }
+        public Boolean getOmniModel() {
+            return this.omniModel;
         }
 
     }
@@ -388,48 +717,24 @@ public class UpdateApplicationVersionRequest extends TeaModel {
         @NameInMap("NlsAccessProfile")
         public UpdateApplicationVersionRequestSynthesizerConfigNlsAccessProfile nlsAccessProfile;
 
-        /**
-         * <strong>example:</strong>
-         * <p>MANAGED</p>
-         */
         @NameInMap("NlsAccessType")
         public String nlsAccessType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ALIYUN</p>
-         */
         @NameInMap("NlsEngine")
         public String nlsEngine;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("PitchRate")
         public Integer pitchRate;
 
         @NameInMap("PronRules")
         public java.util.List<UpdateApplicationVersionRequestSynthesizerConfigPronRules> pronRules;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("SpeechRate")
         public Integer speechRate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>aixia</p>
-         */
         @NameInMap("Voice")
         public String voice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("Volume")
         public Integer volume;
 
@@ -637,17 +942,9 @@ public class UpdateApplicationVersionRequest extends TeaModel {
         @NameInMap("NlsAccessProfile")
         public UpdateApplicationVersionRequestTranscriberConfigNlsAccessProfile nlsAccessProfile;
 
-        /**
-         * <strong>example:</strong>
-         * <p>MANAGED</p>
-         */
         @NameInMap("NlsAccessType")
         public String nlsAccessType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ALIYUN</p>
-         */
         @NameInMap("NlsEngine")
         public String nlsEngine;
 

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsResponseBody extends TeaModel {
     /**
+     * <p>The API status code or POP error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public ListApplicationsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListApplicationsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class ListApplicationsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D771A1B6-3D5F-174A-BEE1-98CE1000D337</p>
      */
@@ -82,6 +93,8 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     public static class ListApplicationsResponseBodyDataApplications extends TeaModel {
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>a395011f-a247-400f-bc69-28796749fd52</p>
          */
@@ -89,6 +102,8 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String applicationId;
 
         /**
+         * <p>The concurrency settings.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -96,26 +111,44 @@ public class ListApplicationsResponseBody extends TeaModel {
         public Integer concurrency;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1729909690</p>
          */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
+        /**
+         * <p>The application description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Describe this application</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The draft version ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>20904943-f711-494f-9f1f-e7f340f37707</p>
          */
         @NameInMap("DraftVersionId")
         public String draftVersionId;
 
+        /**
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test001</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The NLU invocation method.</p>
+         * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
          */
@@ -123,6 +156,8 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String nluAccessType;
 
         /**
+         * <p>The NLU engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>PROMPTS</p>
          */
@@ -130,6 +165,8 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String nluEngine;
 
         /**
+         * <p>The published version ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>20904943-f711-494f-9f1f-e7f340f37707</p>
          */
@@ -137,6 +174,8 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String publishedVersionId;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1729909348</p>
          */
@@ -231,10 +270,15 @@ public class ListApplicationsResponseBody extends TeaModel {
     }
 
     public static class ListApplicationsResponseBodyData extends TeaModel {
+        /**
+         * <p>The application list information.</p>
+         */
         @NameInMap("Applications")
         public java.util.List<ListApplicationsResponseBodyDataApplications> applications;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -242,6 +286,8 @@ public class ListApplicationsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -249,6 +295,8 @@ public class ListApplicationsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>6</p>
          */

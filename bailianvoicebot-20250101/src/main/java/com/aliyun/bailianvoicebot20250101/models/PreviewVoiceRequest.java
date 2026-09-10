@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PreviewVoiceRequest extends TeaModel {
     /**
+     * <p>The ID of the Model Studio business unit.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-c11iig67g863rih8</p>
      */
@@ -12,6 +14,8 @@ public class PreviewVoiceRequest extends TeaModel {
     public String businessUnitId;
 
     /**
+     * <p>The TTS model.</p>
+     * 
      * <strong>example:</strong>
      * <p>Qwen</p>
      */
@@ -19,6 +23,8 @@ public class PreviewVoiceRequest extends TeaModel {
     public String model;
 
     /**
+     * <p>The TTS access type.</p>
+     * 
      * <strong>example:</strong>
      * <p>MANAGED</p>
      */
@@ -26,19 +32,32 @@ public class PreviewVoiceRequest extends TeaModel {
     public String nlsAccessType;
 
     /**
+     * <p>The TTS engine.</p>
+     * 
      * <strong>example:</strong>
      * <p>BAILIAN</p>
      */
     @NameInMap("NlsEngine")
     public String nlsEngine;
 
+    /**
+     * <p>The synthesis parameters.</p>
+     */
     @NameInMap("Params")
     public PreviewVoiceRequestParams params;
 
+    /**
+     * <p>The text to synthesize for the preview.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>你好，很高兴认识你</p>
+     */
     @NameInMap("Text")
     public String text;
 
     /**
+     * <p>The voice for synthesis.</p>
+     * 
      * <strong>example:</strong>
      * <p>Cherry</p>
      */
@@ -108,6 +127,11 @@ public class PreviewVoiceRequest extends TeaModel {
 
     public static class PreviewVoiceRequestParams extends TeaModel {
         /**
+         * <p>The pitch rate.</p>
+         * <blockquote>
+         * <p>Valid values: -500 to 500.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -115,6 +139,11 @@ public class PreviewVoiceRequest extends TeaModel {
         public Float pitchRate;
 
         /**
+         * <p>The speech rate.</p>
+         * <blockquote>
+         * <p>Valid values: -500 to 500.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -122,6 +151,11 @@ public class PreviewVoiceRequest extends TeaModel {
         public Float speechRate;
 
         /**
+         * <p>The volume.</p>
+         * <blockquote>
+         * <p>Valid values: 0 to 100.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */

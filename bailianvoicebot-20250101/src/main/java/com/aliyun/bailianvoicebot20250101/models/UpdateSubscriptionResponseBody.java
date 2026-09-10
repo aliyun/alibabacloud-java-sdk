@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateSubscriptionResponseBody extends TeaModel {
     /**
+     * <p>The request status code. A value of <code>OK</code> indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The returned data, which is the application ID for this operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>a395011f-a247-400f-bc69-28796749fd52</p>
      */
@@ -19,6 +23,8 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,17 +32,22 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message. If the request fails, this parameter contains the error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance llm-rj6aqmctjcit4acy does not exist.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>A list of dynamic parameters used in the error message.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D771A1B6-3D5F-174A-BEE1-98CE1000D337</p>

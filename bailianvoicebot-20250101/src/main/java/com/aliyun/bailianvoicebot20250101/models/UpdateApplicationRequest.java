@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateApplicationRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The Model Studio workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,17 +25,29 @@ public class UpdateApplicationRequest extends TeaModel {
     public String businessUnitId;
 
     /**
+     * <p>The concurrency setting.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("Concurrency")
     public Integer concurrency;
 
+    /**
+     * <p>The application\&quot;s new description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>描述一下这个应用</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The new name for the application.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试001</p>
      */
     @NameInMap("Name")
     public String name;

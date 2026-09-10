@@ -1,3 +1,56 @@
+2026-09-10 Version: 1.5.4
+- Update API CreateApplicationVersion: add request parameters LabelConfig.
+- Update API CreateApplicationVersion: add request parameters InteractionConfig.BackgroundMusicId.
+- Update API CreateApplicationVersion: add request parameters InteractionConfig.EndConversationConfig.
+- Update API CreateApplicationVersion: add request parameters InteractionConfig.InitialGreetingDelayMilliseconds.
+- Update API CreateApplicationVersion: add request parameters InteractionConfig.SilenceDetectionConfig.MaxRepeats.
+- Update API CreateApplicationVersion: add request parameters ScriptProfile.AgentKey.
+- Update API CreateApplicationVersion: add request parameters ScriptProfile.ChatbotId.
+- Update API CreateApplicationVersion: add request parameters ScriptProfile.FunctionMeta.
+- Update API CreateApplicationVersion: add request parameters ScriptProfile.NluAccessProfile.
+- Update API CreateApplicationVersion: add request parameters ScriptProfile.NluAccessType.
+- Update API CreateApplicationVersion: add request parameters ScriptProfile.OmniModel.
+- Update API GetApplication: add response parameters Body.Params.
+- Update API GetApplication: add response parameters Body.Data.Status.
+- Update API GetApplication: add response parameters Body.Data.DraftVersion.LabelConfig.
+- Update API GetApplication: add response parameters Body.Data.DraftVersion.InteractionConfig.BackgroundMusicId.
+- Update API GetApplication: add response parameters Body.Data.DraftVersion.InteractionConfig.EndConversationConfig.
+- Update API GetApplication: add response parameters Body.Data.DraftVersion.InteractionConfig.InitialGreetingDelayMilliseconds.
+- Update API GetApplication: add response parameters Body.Data.DraftVersion.InteractionConfig.SilenceDetectionConfig.MaxRepeats.
+- Update API GetApplication: add response parameters Body.Data.DraftVersion.ScriptProfile.AgentKey.
+- Update API GetApplication: add response parameters Body.Data.DraftVersion.ScriptProfile.ChatbotId.
+- Update API GetApplication: add response parameters Body.Data.DraftVersion.ScriptProfile.FunctionMeta.
+- Update API GetApplication: add response parameters Body.Data.DraftVersion.ScriptProfile.NluAccessProfile.
+- Update API GetApplication: add response parameters Body.Data.DraftVersion.ScriptProfile.NluAccessType.
+- Update API GetApplication: add response parameters Body.Data.DraftVersion.ScriptProfile.NluEngine.
+- Update API GetApplication: add response parameters Body.Data.DraftVersion.ScriptProfile.OmniModel.
+- Update API GetApplication: add response parameters Body.Data.DraftVersion.ScriptProfile.AgentProfile.Name.
+- Update API GetApplication: add response parameters Body.Data.PublishedVersion.LabelConfig.
+- Update API GetApplication: add response parameters Body.Data.PublishedVersion.InteractionConfig.BackgroundMusicId.
+- Update API GetApplication: add response parameters Body.Data.PublishedVersion.InteractionConfig.EndConversationConfig.
+- Update API GetApplication: add response parameters Body.Data.PublishedVersion.InteractionConfig.InitialGreetingDelayMilliseconds.
+- Update API GetApplication: add response parameters Body.Data.PublishedVersion.InteractionConfig.SilenceDetectionConfig.MaxRepeats.
+- Update API GetApplication: add response parameters Body.Data.PublishedVersion.ScriptProfile.AgentKey.
+- Update API GetApplication: add response parameters Body.Data.PublishedVersion.ScriptProfile.ChatbotId.
+- Update API GetApplication: add response parameters Body.Data.PublishedVersion.ScriptProfile.FunctionMeta.
+- Update API GetApplication: add response parameters Body.Data.PublishedVersion.ScriptProfile.NluAccessProfile.
+- Update API GetApplication: add response parameters Body.Data.PublishedVersion.ScriptProfile.NluAccessType.
+- Update API GetApplication: add response parameters Body.Data.PublishedVersion.ScriptProfile.NluEngine.
+- Update API GetApplication: add response parameters Body.Data.PublishedVersion.ScriptProfile.OmniModel.
+- Update API GetApplication: add response parameters Body.Data.PublishedVersion.ScriptProfile.AgentProfile.Name.
+- Update API UpdateApplicationVersion: add request parameters LabelConfig.
+- Update API UpdateApplicationVersion: add request parameters InteractionConfig.BackgroundMusicId.
+- Update API UpdateApplicationVersion: add request parameters InteractionConfig.EndConversationConfig.
+- Update API UpdateApplicationVersion: add request parameters InteractionConfig.InitialGreetingDelayMilliseconds.
+- Update API UpdateApplicationVersion: add request parameters InteractionConfig.SilenceDetectionConfig.MaxRepeats.
+- Update API UpdateApplicationVersion: add request parameters ScriptProfile.AgentKey.
+- Update API UpdateApplicationVersion: add request parameters ScriptProfile.ChatbotId.
+- Update API UpdateApplicationVersion: add request parameters ScriptProfile.FunctionMeta.
+- Update API UpdateApplicationVersion: add request parameters ScriptProfile.NluAccessProfile.
+- Update API UpdateApplicationVersion: add request parameters ScriptProfile.NluAccessType.
+- Update API UpdateApplicationVersion: add request parameters ScriptProfile.OmniModel.
+
+
 2026-05-21 Version: 1.5.3
 - Update API CreateApplicationVersion: add request parameters ToolConfig.
 - Update API GetApplication: add response parameters Body.Data.DraftVersion.ToolConfig.

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSubscriptionRequest extends TeaModel {
     /**
+     * <p>The Bailian business workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-3pptowd2olrctsvc</p>
      */

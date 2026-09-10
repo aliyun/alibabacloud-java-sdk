@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsRequest extends TeaModel {
     /**
+     * <p>The Bailian business workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListApplicationsRequest extends TeaModel {
     public String businessUnitId;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ListApplicationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +34,12 @@ public class ListApplicationsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The template name for fuzzy match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>General</p>
+     */
     @NameInMap("SearchPattern")
     public String searchPattern;
 

@@ -6,24 +6,21 @@ import com.aliyun.tea.*;
 public class UpdateApplicationVersionShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>a395011f-a247-400f-bc69-28796749fd52</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>llm-c11iig67g863rih8</p>
      */
     @NameInMap("BusinessUnitId")
     public String businessUnitId;
 
     @NameInMap("InteractionConfig")
     public String interactionConfigShrink;
+
+    @NameInMap("LabelConfig")
+    public String labelConfigShrink;
 
     @NameInMap("RagConfig")
     public String ragConfigShrink;
@@ -53,9 +50,6 @@ public class UpdateApplicationVersionShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>20904943-f711-494f-9f1f-e7f340f37707</p>
      */
     @NameInMap("VersionId")
     public String versionId;
@@ -87,6 +81,14 @@ public class UpdateApplicationVersionShrinkRequest extends TeaModel {
     }
     public String getInteractionConfigShrink() {
         return this.interactionConfigShrink;
+    }
+
+    public UpdateApplicationVersionShrinkRequest setLabelConfigShrink(String labelConfigShrink) {
+        this.labelConfigShrink = labelConfigShrink;
+        return this;
+    }
+    public String getLabelConfigShrink() {
+        return this.labelConfigShrink;
     }
 
     public UpdateApplicationVersionShrinkRequest setRagConfigShrink(String ragConfigShrink) {

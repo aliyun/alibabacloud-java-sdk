@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListCloneVoiceModelsResponseBody extends TeaModel {
     /**
+     * <p>The internal error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The paginated data of voice cloning models.</p>
+     */
     @NameInMap("Data")
     public ListCloneVoiceModelsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,12 +29,17 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance llm-zzu528i29ecnprcl does not exist.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of dynamic error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
@@ -94,10 +106,18 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
     }
 
     public static class ListCloneVoiceModelsResponseBodyDataCloneVoiceModels extends TeaModel {
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>High accent restoration similarity with fluent prosody</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The display name.</p>
+         * 
          * <strong>example:</strong>
          * <p>CosyVoice</p>
          */
@@ -105,6 +125,8 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The model name.</p>
+         * 
          * <strong>example:</strong>
          * <p>CosyVoice</p>
          */
@@ -143,10 +165,15 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
     }
 
     public static class ListCloneVoiceModelsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of voice cloning models.</p>
+         */
         @NameInMap("CloneVoiceModels")
         public java.util.List<ListCloneVoiceModelsResponseBodyDataCloneVoiceModels> cloneVoiceModels;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -154,6 +181,8 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -161,6 +190,8 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

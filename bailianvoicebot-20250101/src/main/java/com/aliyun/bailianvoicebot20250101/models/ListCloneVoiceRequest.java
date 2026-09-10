@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCloneVoiceRequest extends TeaModel {
     /**
+     * <p>The Bailian business workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-3pptowd2olrctsvc</p>
      */
@@ -12,6 +14,8 @@ public class ListCloneVoiceRequest extends TeaModel {
     public String businessUnitId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListCloneVoiceRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class ListCloneVoiceRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Published</p>
      */

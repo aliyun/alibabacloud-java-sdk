@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteVariableRequest extends TeaModel {
     /**
+     * <p>The ID of the Bailian business workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-rj6aqmctjcit4acy</p>
      */
@@ -12,6 +14,8 @@ public class DeleteVariableRequest extends TeaModel {
     public String businessUnitId;
 
     /**
+     * <p>The variable ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>82ea16d1-425c-4c03-9be5-cc91de9779ed</p>
      */

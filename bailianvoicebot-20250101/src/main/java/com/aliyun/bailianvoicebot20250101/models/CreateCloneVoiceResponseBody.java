@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateCloneVoiceResponseBody extends TeaModel {
     /**
+     * <p>The internal error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The cloned voice object.</p>
+     */
     @NameInMap("Data")
     public CreateCloneVoiceResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class CreateCloneVoiceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance llm-xdne77rxe14ziszr
      *  does not exist.</p>
@@ -29,10 +38,15 @@ public class CreateCloneVoiceResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of dynamic error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CF6D3484-19A1-5C77-863B-AC8B5754D37C</p>
      */
@@ -94,6 +108,8 @@ public class CreateCloneVoiceResponseBody extends TeaModel {
 
     public static class CreateCloneVoiceResponseBodyData extends TeaModel {
         /**
+         * <p>The cloned voice ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>8ee1160a-6999-478f-8df6-f33ef21f27d5</p>
          */
@@ -101,6 +117,8 @@ public class CreateCloneVoiceResponseBody extends TeaModel {
         public String cloneVoiceId;
 
         /**
+         * <p>The voice speaker.</p>
+         * 
          * <strong>example:</strong>
          * <p>cosyvoice-v3-plus-voicebot2-3666e4bbb2b94832ac4f4107b5804c34</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateVoiceAccessProfileRequest extends TeaModel {
     /**
+     * <p>The configuration ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>af81a389-91f0-4157-8d82-720edd02b66b</p>
      */
@@ -12,6 +14,8 @@ public class UpdateVoiceAccessProfileRequest extends TeaModel {
     public String accessProfileId;
 
     /**
+     * <p>The Bailian business workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-xdne77rxe14ziszr</p>
      */
@@ -19,12 +23,17 @@ public class UpdateVoiceAccessProfileRequest extends TeaModel {
     public String businessUnitId;
 
     /**
+     * <p>The speech engine.</p>
+     * 
      * <strong>example:</strong>
      * <p>BAILIAN</p>
      */
     @NameInMap("NlsEngine")
     public String nlsEngine;
 
+    /**
+     * <p>The parameter settings.</p>
+     */
     @NameInMap("Profile")
     public UpdateVoiceAccessProfileRequestProfile profile;
 
@@ -67,6 +76,8 @@ public class UpdateVoiceAccessProfileRequest extends TeaModel {
 
     public static class UpdateVoiceAccessProfileRequestProfile extends TeaModel {
         /**
+         * <p>Required when using Doubao.</p>
+         * 
          * <strong>example:</strong>
          * <p>HwRnTXgwnQOlsj68URDS5_VMm4Wtapq9</p>
          */
@@ -74,6 +85,8 @@ public class UpdateVoiceAccessProfileRequest extends TeaModel {
         public String accessKey;
 
         /**
+         * <p>Required when using Bailian or iFLYTEK.</p>
+         * 
          * <strong>example:</strong>
          * <p>sk-12341e259b1049e8872b47981e545f78</p>
          */
@@ -81,6 +94,8 @@ public class UpdateVoiceAccessProfileRequest extends TeaModel {
         public String apiKey;
 
         /**
+         * <p>Required when using iFLYTEK.</p>
+         * 
          * <strong>example:</strong>
          * <p>c0358c6e51c1013b446fdeb21a3a1234</p>
          */
@@ -88,6 +103,8 @@ public class UpdateVoiceAccessProfileRequest extends TeaModel {
         public String apiSecret;
 
         /**
+         * <p>Required when using iFLYTEK.</p>
+         * 
          * <strong>example:</strong>
          * <p>5b123bfb</p>
          */
@@ -95,15 +112,29 @@ public class UpdateVoiceAccessProfileRequest extends TeaModel {
         public String appId;
 
         /**
+         * <p>Required when using Doubao.</p>
+         * 
          * <strong>example:</strong>
          * <p>2541370123</p>
          */
         @NameInMap("AppKey")
         public String appKey;
 
+        /**
+         * <p>Not currently in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not currently in use</p>
+         */
         @NameInMap("AsrAppKey")
         public String asrAppKey;
 
+        /**
+         * <p>Not currently in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not currently in use</p>
+         */
         @NameInMap("TtsApiKey")
         public String ttsApiKey;
 

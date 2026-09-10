@@ -4,38 +4,18 @@ package com.aliyun.bailianvoicebot20250101.models;
 import com.aliyun.tea.*;
 
 public class UpdateApplicationVersionResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>OK</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <strong>example:</strong>
-     * <p>82ea16d1-425c-4c03-9be5-cc91de9779ed</p>
-     */
     @NameInMap("Data")
     public String data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>successful</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>CF6D3484-19A1-5C77-863B-AC8B5754D37C</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
