@@ -4,6 +4,9 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class E2BVolume extends TeaModel {
+    @NameInMap("agenticBucketVolumeConfig")
+    public AgenticBucketVolumeConfig agenticBucketVolumeConfig;
+
     /**
      * <p>The AgenticFS configuration.</p>
      */
@@ -125,6 +128,14 @@ public class E2BVolume extends TeaModel {
     public static E2BVolume build(java.util.Map<String, ?> map) throws Exception {
         E2BVolume self = new E2BVolume();
         return TeaModel.build(map, self);
+    }
+
+    public E2BVolume setAgenticBucketVolumeConfig(AgenticBucketVolumeConfig agenticBucketVolumeConfig) {
+        this.agenticBucketVolumeConfig = agenticBucketVolumeConfig;
+        return this;
+    }
+    public AgenticBucketVolumeConfig getAgenticBucketVolumeConfig() {
+        return this.agenticBucketVolumeConfig;
     }
 
     public E2BVolume setAgenticFSVolumeConfig(AgenticFSVolumeConfig agenticFSVolumeConfig) {

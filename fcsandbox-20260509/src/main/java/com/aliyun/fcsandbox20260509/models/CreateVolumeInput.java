@@ -4,6 +4,9 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class CreateVolumeInput extends TeaModel {
+    @NameInMap("agenticBucketVolumeConfig")
+    public AgenticBucketVolumeConfig agenticBucketVolumeConfig;
+
     /**
      * <p>The AgenticFS configuration.</p>
      */
@@ -43,6 +46,14 @@ public class CreateVolumeInput extends TeaModel {
     public static CreateVolumeInput build(java.util.Map<String, ?> map) throws Exception {
         CreateVolumeInput self = new CreateVolumeInput();
         return TeaModel.build(map, self);
+    }
+
+    public CreateVolumeInput setAgenticBucketVolumeConfig(AgenticBucketVolumeConfig agenticBucketVolumeConfig) {
+        this.agenticBucketVolumeConfig = agenticBucketVolumeConfig;
+        return this;
+    }
+    public AgenticBucketVolumeConfig getAgenticBucketVolumeConfig() {
+        return this.agenticBucketVolumeConfig;
     }
 
     public CreateVolumeInput setAgenticFSVolumeConfig(AgenticFSVolumeConfig agenticFSVolumeConfig) {

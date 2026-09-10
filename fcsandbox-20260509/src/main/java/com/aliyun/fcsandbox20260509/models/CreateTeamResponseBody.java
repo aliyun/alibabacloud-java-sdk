@@ -32,7 +32,7 @@ public class CreateTeamResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The Team information.</p>
+     * <p>The team information.</p>
      */
     @NameInMap("team")
     public E2BTeam team;

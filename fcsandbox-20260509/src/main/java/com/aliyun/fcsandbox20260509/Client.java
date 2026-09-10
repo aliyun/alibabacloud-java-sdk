@@ -70,7 +70,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a Team.</p>
+     * <p>Creates a team.</p>
      * 
      * @param request CreateTeamRequest
      * @param headers map
@@ -99,7 +99,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a Team.</p>
+     * <p>Creates a team.</p>
      * 
      * @param request CreateTeamRequest
      * @return CreateTeamResponse
