@@ -12,18 +12,27 @@ public class CloudMonitoringCompositeEscalation extends TeaModel {
 
     /**
      * <p>The logical relationship between conditions (AND/OR).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AND</p>
      */
     @NameInMap("relation")
     public String relation;
 
     /**
      * <p>The severity level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CRITICAL</p>
      */
     @NameInMap("severity")
     public String severity;
 
     /**
-     * <p>The number of consecutive times the conditions are met before the alert is triggered.</p>
+     * <p>The number of consecutive times the condition is triggered.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("times")
     public Integer times;

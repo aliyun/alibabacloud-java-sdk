@@ -4,66 +4,192 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class AlertRuleTemplate extends TeaModel {
+    /**
+     * <p>The alert type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>METRIC_SET</p>
+     */
     @NameInMap("alertType")
     public String alertType;
 
+    /**
+     * <p>The number of rules that have been applied from this template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("applyCount")
     public Long applyCount;
 
+    /**
+     * <p>The business type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALERT</p>
+     */
     @NameInMap("bizType")
     public String bizType;
 
+    /**
+     * <p>The data source, in JSON string format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;type&quot;:&quot;SLS&quot;,&quot;project&quot;:&quot;my-project&quot;}</p>
+     */
     @NameInMap("datasource")
     public String datasource;
 
+    /**
+     * <p>The template description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Triggers an alert when the CPU usage of an ECS instance exceeds the threshold</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The creation time, in UNIX millisecond timestamp format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1700000000000</p>
+     */
     @NameInMap("gmtCreate")
     public Long gmtCreate;
 
+    /**
+     * <p>The last modified time, in UNIX millisecond timestamp format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1700000000000</p>
+     */
     @NameInMap("gmtModified")
     public Long gmtModified;
 
+    /**
+     * <p>The template ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1001</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <p>Indicates whether the template is a system template. Valid values: 1: yes. 0: no.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("isSystem")
     public Integer isSystem;
 
+    /**
+     * <p>The labels, in JSON string format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;env&quot;:&quot;prod&quot;,&quot;team&quot;:&quot;ops&quot;}</p>
+     */
     @NameInMap("labels")
     public String labels;
 
+    /**
+     * <p>The namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs_ecs_dashboard</p>
+     */
     @NameInMap("namespace")
     public String namespace;
 
+    /**
+     * <p>The cloud service category.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
+     */
     @NameInMap("productCategory")
     public String productCategory;
 
+    /**
+     * <p>The rule configurations, in JSON string format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;threshold&quot;:80,&quot;duration&quot;:60}</p>
+     */
     @NameInMap("ruleConfigs")
     public String ruleConfigs;
 
+    /**
+     * <p>The applicable scenarios.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS</p>
+     */
     @NameInMap("scenes")
     public String scenes;
 
+    /**
+     * <p>The schema version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0</p>
+     */
     @NameInMap("schemaVersion")
     public String schemaVersion;
 
+    /**
+     * <p>The source type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SYSTEM</p>
+     */
     @NameInMap("sourceType")
     public String sourceType;
 
+    /**
+     * <p>The template status. Valid values: 1: enabled. 0: disabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("status")
     public Integer status;
 
+    /**
+     * <p>The subtype.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>THRESHOLD</p>
+     */
     @NameInMap("subType")
     public String subType;
 
+    /**
+     * <p>The template name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS CPU Usage Alert Template</p>
+     */
     @NameInMap("templateName")
     public String templateName;
 
+    /**
+     * <p>The ID of the user to whom the template belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567890</p>
+     */
     @NameInMap("userId")
     public String userId;
 
+    /**
+     * <p>The template UUID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1b2c3d4-e5f6-7890-abcd-ef1234567890</p>
+     */
     @NameInMap("uuid")
     public String uuid;
 

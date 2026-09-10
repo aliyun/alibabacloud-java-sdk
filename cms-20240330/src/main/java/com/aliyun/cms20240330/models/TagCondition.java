@@ -4,12 +4,30 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class TagCondition extends TeaModel {
+    /**
+     * <p>The tag key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env</p>
+     */
     @NameInMap("key")
     public String key;
 
+    /**
+     * <p>The operator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EQ</p>
+     */
     @NameInMap("op")
     public String op;
 
+    /**
+     * <p>The tag value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prod</p>
+     */
     @NameInMap("value")
     public String value;
 

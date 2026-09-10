@@ -16,7 +16,7 @@ public class AlertRuleCondition extends TeaModel {
 
     /**
      * <p>Applicable condition type: SLS_CONDITION.</p>
-     * <p>The list of Simple Log Service alert conditions.</p>
+     * <p>The list of Simple Log Service (SLS) alert conditions.</p>
      */
     @NameInMap("caseList")
     public java.util.List<AlertRuleConditionCaseList> caseList;
@@ -30,17 +30,32 @@ public class AlertRuleCondition extends TeaModel {
 
     /**
      * <p>Applicable condition type: CMS_BASIC_CONDITION.</p>
-     * <p>This parameter takes effect only when escalationType is set to composite. The composite metric alert condition.</p>
+     * <p>Valid when escalationType is set to composite. The composite metric alert condition.</p>
      */
     @NameInMap("compositeEscalation")
     public AlertRuleConditionCompositeEscalation compositeEscalation;
 
+    /**
+     * <p>The count comparison operator, specified when type=LOG_SET_CONDITION. Valid values: GTE / GT / EQ / LTE / LT.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GTE</p>
+     */
     @NameInMap("countOperator")
     public String countOperator;
 
+    /**
+     * <p>The count threshold, specified when type=LOG_SET_CONDITION.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("countThreshold")
     public Long countThreshold;
 
+    /**
+     * <p>Used when type=UMODEL_METRICSET_MULTI_CONDITION. Specifies whether to enable severity suppression to the highest level. Default value: true. Only the highest severity level is reported for the same entity.</p>
+     */
     @NameInMap("enableSeveritySuppression")
     public Boolean enableSeveritySuppression;
 
@@ -48,9 +63,9 @@ public class AlertRuleCondition extends TeaModel {
      * <p>Applicable condition type: CMS_BASIC_CONDITION.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>simple: simple metric condition.</li>
-     * <li>composite: composite metric condition.</li>
-     * <li>express: expression condition.</li>
+     * <li>simple: simple metric condition</li>
+     * <li>composite: composite metric condition</li>
+     * <li>express: expression condition</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,29 +76,59 @@ public class AlertRuleCondition extends TeaModel {
 
     /**
      * <p>Applicable condition type: CMS_BASIC_CONDITION.</p>
-     * <p>This parameter takes effect only when escalationType is set to composite. The multi-metric composite alert condition.</p>
+     * <p>Valid when escalationType=composite. Specifies the multi-metric composite alert conditions.</p>
      */
     @NameInMap("expressEscalation")
     public AlertRuleConditionExpressEscalation expressEscalation;
 
+    /**
+     * <p>The log field name, specified when type=LOG_SET_CONDITION and matchOperator=CONTAINS/EQUALS/REGEX.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>logLevel</p>
+     */
     @NameInMap("matchField")
     public String matchField;
 
+    /**
+     * <p>The match operator, specified when type=LOG_SET_CONDITION. Valid values: PRESENT / NOT_PRESENT / CONTAINS / EQUALS / REGEX.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CONTAINS</p>
+     */
     @NameInMap("matchOperator")
     public String matchOperator;
 
+    /**
+     * <p>The match value, specified when type=LOG_SET_CONDITION and matchOperator=CONTAINS/EQUALS/REGEX.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("matchValue")
     public String matchValue;
 
+    /**
+     * <p>The upper bound of the range specified when type=BASIC_CONDITION and oper=IN_RANGE/OUT_OF_RANGE.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("max")
     public Double max;
 
+    /**
+     * <p>The lower bound of the range specified when type=BASIC_CONDITION and oper=IN_RANGE/OUT_OF_RANGE.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("min")
     public Double min;
 
     /**
      * <p>Applicable condition type: APM_CONDITION.</p>
-     * <p>The alert level when no data is available. If this parameter is not specified, no alert is triggered when no data is available.</p>
+     * <p>The alert level when no data is available. If not specified, no alert is triggered for no-data scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>INFO</p>
@@ -93,7 +138,7 @@ public class AlertRuleCondition extends TeaModel {
 
     /**
      * <p>Applicable condition type: APM_CONDITION.</p>
-     * <p>The compensation value when no data is available.</p>
+     * <p>The value to use as compensation when no data is available.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -103,10 +148,10 @@ public class AlertRuleCondition extends TeaModel {
 
     /**
      * <p>Applicable condition type: CMS_BASIC_CONDITION.</p>
-     * <p>The method used to handle alerts when no monitoring data is available. Valid values:</p>
+     * <p>Specifies how to handle alerts when no monitoring data is available. Valid values:</p>
      * <ul>
      * <li>KEEP_LAST_STATE (default): No action is taken.</li>
-     * <li>INSUFFICIENT_DATA: The alert content indicates that no data is available.</li>
+     * <li>INSUFFICIENT_DATA: The alert content indicates no data.</li>
      * <li>OK: Normal.</li>
      * </ul>
      * 
@@ -117,16 +162,16 @@ public class AlertRuleCondition extends TeaModel {
     public String noDataPolicy;
 
     /**
-     * <p>The comparison operator. Specifies whether to use year-over-year or period-over-period comparison. Valid values:</p>
+     * <p>The comparison operator. Determines whether year-over-year or period-over-period comparison is used.</p>
      * <ul>
-     * <li>GT: greater than.</li>
-     * <li>GTE: greater than or equal to.</li>
-     * <li>LT: less than.</li>
-     * <li>LTE: less than or equal to.</li>
-     * <li>EQ: equal to.</li>
-     * <li>NE: not equal to.</li>
-     * <li>YOY_UP: year-over-year increase.</li>
-     * <li>YOY_DOWN: year-over-year decrease.</li>
+     * <li>Greater than: GT</li>
+     * <li>Greater than or equal to: GTE</li>
+     * <li>Less than: LT</li>
+     * <li>Less than or equal to: LTE</li>
+     * <li>Equal to: EQ</li>
+     * <li>Not equal to: NE</li>
+     * <li>Year-over-year increase: YOY_UP</li>
+     * <li>Year-over-year decrease: YOY_DOWN</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -151,23 +196,29 @@ public class AlertRuleCondition extends TeaModel {
 
     /**
      * <p>Applicable condition type: CMS_BASIC_CONDITION.</p>
-     * <p>This parameter takes effect only when escalationType is set to simple. The alert condition configured for a single metric.</p>
+     * <p>Valid only when escalationType is set to simple. The alert condition for a single metric.</p>
      */
     @NameInMap("simpleEscalation")
     public AlertRuleConditionSimpleEscalation simpleEscalation;
 
+    /**
+     * <p>The list of multi-level thresholds and severity levels, used to map different thresholds to corresponding alert levels.</p>
+     */
     @NameInMap("thresholdList")
     public java.util.List<AlertRuleConditionThresholdList> thresholdList;
 
+    /**
+     * <p>Specified when type=UMODEL_METRICSET_MULTI_CONDITION. The list of trigger conditions. Each item contains severity, durationSecs, and an expression (SIMPLE for single-metric or COMPOSITE for multi-metric AND/OR/UNLESS).</p>
+     */
     @NameInMap("triggers")
     public java.util.List<AlertRuleConditionTriggers> triggers;
 
     /**
      * <p>The rule condition type. Valid values:</p>
      * <ul>
-     * <li>SLS_CONDITION: Simple Log Service alert condition.</li>
+     * <li>SLS_CONDITION: SLS alert condition.</li>
      * <li>APM_CONDITION: APM alert condition.</li>
-     * <li>CMS_BASIC_CONDITION: CloudMonitor Basic monitoring alert condition.</li>
+     * <li>CMS_BASIC_CONDITION: CloudMonitor Basic CloudMonitor alerts condition.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -178,7 +229,7 @@ public class AlertRuleCondition extends TeaModel {
     public String type;
 
     /**
-     * <p>The threshold that triggers the alert.</p>
+     * <p>The threshold for triggering an alert.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -414,13 +465,13 @@ public class AlertRuleCondition extends TeaModel {
         public String level;
 
         /**
-         * <p>The match type: has data, has a specific number of data entries, has data match, or has a specific number of data matches.</p>
+         * <p>The match type: has data, has specific count of data, has data match, or has specific count of data match.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>HasData: has data</li>
-         * <li>HasDataCount: has a specific number of data entries</li>
+         * <li>HasDataCount: has specific count of data</li>
          * <li>HasDataMatch: has data match</li>
-         * <li>HasDataMatchCount: has a specific number of data matches</li>
+         * <li>HasDataMatchCount: has specific count of data match</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -512,7 +563,7 @@ public class AlertRuleCondition extends TeaModel {
 
     public static class AlertRuleConditionCompareList extends TeaModel {
         /**
-         * <p>The aggregate functions applied after time series aggregation.</p>
+         * <p>The aggregation function applied after time series.</p>
          * <ul>
          * <li>count</li>
          * <li>sum</li>
@@ -583,7 +634,7 @@ public class AlertRuleCondition extends TeaModel {
         public java.util.List<AlertRuleConditionCompareListValueLevelList> valueLevelList;
 
         /**
-         * <p>The time unit for year-over-year comparison. Valid only when oper is set to YOY_UP or YOY_DOWN.
+         * <p>The year-over-year time unit. Valid only when oper is set to YOY_UP or YOY_DOWN.
          * Valid values: minute, hour, day, week, month.</p>
          * 
          * <strong>example:</strong>
@@ -593,7 +644,7 @@ public class AlertRuleCondition extends TeaModel {
         public String yoyTimeUnit;
 
         /**
-         * <p>The value of the year-over-year time period. Used together with yoyTimeUnit.</p>
+         * <p>The year-over-year time value. Used together with yoyTimeUnit.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -717,10 +768,10 @@ public class AlertRuleCondition extends TeaModel {
         /**
          * <p>The statistical method. The value of this parameter is determined by the Statistics column corresponding to the MetricName of the specified cloud service. Example values for the statistical method of a metric:</p>
          * <ul>
-         * <li>$Maximum: Maximum value.</li>
-         * <li>$Minimum: Minimum value.</li>
-         * <li>$Average: Average value.</li>
-         * <li>$Availability: Availability rate (typically used for site monitoring).</li>
+         * <li>$Maximum: maximum value.</li>
+         * <li>$Minimum: minimum value.</li>
+         * <li>$Average: average value.</li>
+         * <li>$Availability: availability rate (typically used for site monitoring).</li>
          * </ul>
          * <p>Note: $ is the unified prefix symbol for metrics.</p>
          * 
@@ -875,7 +926,7 @@ public class AlertRuleCondition extends TeaModel {
         public String level;
 
         /**
-         * <p>The alert condition expression.</p>
+         * <p>The alert conditional expression.</p>
          * 
          * <strong>example:</strong>
          * <p>@cpu_total[60].$Average &gt; 60</p>
@@ -962,7 +1013,7 @@ public class AlertRuleCondition extends TeaModel {
         public String level;
 
         /**
-         * <p>The statistical method. The value of this parameter is determined by the Statistics column corresponding to the MetricName of the specified cloud service. Examples: Maximum, Minimum, and Average.</p>
+         * <p>The statistical method. The valid values of this parameter are determined by the Statistics column corresponding to the MetricName of the specified cloud service. Examples: Maximum, Minimum, and Average.</p>
          * 
          * <strong>example:</strong>
          * <p>Average</p>
@@ -1037,7 +1088,7 @@ public class AlertRuleCondition extends TeaModel {
 
     public static class AlertRuleConditionSimpleEscalation extends TeaModel {
         /**
-         * <p>The list of conditions. When an alert rule corresponds to multiple levels, each level has a condition object.</p>
+         * <p>The list of conditions. If an alert rule corresponds to multiple levels, each level has a condition object.</p>
          */
         @NameInMap("escalations")
         public java.util.List<AlertRuleConditionSimpleEscalationEscalations> escalations;
@@ -1053,7 +1104,7 @@ public class AlertRuleCondition extends TeaModel {
         public String metricName;
 
         /**
-         * <p>The time window of the metric. Unit: seconds.</p>
+         * <p>The time window of the metric, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -1093,15 +1144,39 @@ public class AlertRuleCondition extends TeaModel {
     }
 
     public static class AlertRuleConditionThresholdList extends TeaModel {
+        /**
+         * <p>The upper bound of the range (required when operator=IN_RANGE/OUT_OF_RANGE).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("max")
         public Double max;
 
+        /**
+         * <p>The lower bound of the range (required when operator=IN_RANGE/OUT_OF_RANGE).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("min")
         public Double min;
 
+        /**
+         * <p>The severity level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CRITICAL</p>
+         */
         @NameInMap("severity")
         public String severity;
 
+        /**
+         * <p>The threshold (required when the operator is not a range operator).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("threshold")
         public Double threshold;
 
@@ -1145,15 +1220,39 @@ public class AlertRuleCondition extends TeaModel {
     }
 
     public static class AlertRuleConditionTriggersExpressionConditions extends TeaModel {
+        /**
+         * <p>The conditional expression type of the sub-condition, typically SIMPLE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
+         */
         @NameInMap("expressionType")
         public String expressionType;
 
+        /**
+         * <p>The comparison operator of the sub-condition, used to compare the query result with the threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GT</p>
+         */
         @NameInMap("operator")
         public String operator;
 
+        /**
+         * <p>The query name referenced by the sub-condition, corresponding to the name in queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpuUsageQuery</p>
+         */
         @NameInMap("queryName")
         public String queryName;
 
+        /**
+         * <p>The threshold value of the sub-condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("threshold")
         public Double threshold;
 
@@ -1197,12 +1296,27 @@ public class AlertRuleCondition extends TeaModel {
     }
 
     public static class AlertRuleConditionTriggersExpression extends TeaModel {
+        /**
+         * <p>The list of sub-conditions for the trigger condition. Multiple sub-conditions are evaluated based on the logicOperator of the parent expression.</p>
+         */
         @NameInMap("conditions")
         public java.util.List<AlertRuleConditionTriggersExpressionConditions> conditions;
 
+        /**
+         * <p>The expression type. SIMPLE indicates a single-metric condition. COMPOSITE indicates a multi-metric composite condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
+         */
         @NameInMap("expressionType")
         public String expressionType;
 
+        /**
+         * <p>The multi-metric composite operator. Valid only when expressionType=COMPOSITE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AND</p>
+         */
         @NameInMap("logicOperator")
         public String logicOperator;
 
@@ -1238,12 +1352,27 @@ public class AlertRuleCondition extends TeaModel {
     }
 
     public static class AlertRuleConditionTriggers extends TeaModel {
+        /**
+         * <p>The duration in seconds that the condition must be continuously met before an alert is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("durationSecs")
         public Integer durationSecs;
 
+        /**
+         * <p>The expression of the trigger condition. Supports two forms: SIMPLE (single-metric) and COMPOSITE (multi-metric AND/OR/UNLESS combination).</p>
+         */
         @NameInMap("expression")
         public AlertRuleConditionTriggersExpression expression;
 
+        /**
+         * <p>The alert severity level that corresponds to this trigger condition when it is met.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CRITICAL</p>
+         */
         @NameInMap("severity")
         public String severity;
 

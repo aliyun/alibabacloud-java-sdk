@@ -5,43 +5,61 @@ import com.aliyun.tea.*;
 
 public class MergeOncallSchedule extends TeaModel {
     /**
-     * <p>Details of the on-call schedule.</p>
+     * <p>The extension details.</p>
      */
     @NameInMap("detail")
     public java.util.Map<String, ?> detail;
 
     /**
-     * <p>The UTC time when the on-call schedule was created.</p>
+     * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1700000000</p>
      */
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
     /**
-     * <p>The UTC time when the on-call schedule was last modified.</p>
+     * <p>The last modified time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1700000000</p>
      */
     @NameInMap("gmtModified")
     public String gmtModified;
 
     /**
-     * <p>The unique identifier of the on-call schedule.</p>
+     * <p>The unique identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SampleValue</p>
      */
     @NameInMap("identifier")
     public String identifier;
 
     /**
-     * <p>The name of the on-call schedule.</p>
+     * <p>The schedule name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SampleName</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>The creation source of the on-call schedule.</p>
+     * <p>The source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SampleValue</p>
      */
     @NameInMap("source")
     public String source;
 
     /**
-     * <p>The workspace that the on-call schedule belongs to.</p>
+     * <p>The workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SampleValue</p>
      */
     @NameInMap("workspace")
     public String workspace;

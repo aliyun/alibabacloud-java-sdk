@@ -4,18 +4,40 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ThresholdList extends TeaModel {
+    /**
+     * <p>The upper bound of the interval.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("max")
     public Double max;
 
+    /**
+     * <p>The lower bound of the interval.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("min")
     public Double min;
 
     /**
+     * <p>The warning level.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CRITICAL</p>
      */
     @NameInMap("severity")
     public String severity;
 
+    /**
+     * <p>The threshold.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("threshold")
     public Float threshold;
 

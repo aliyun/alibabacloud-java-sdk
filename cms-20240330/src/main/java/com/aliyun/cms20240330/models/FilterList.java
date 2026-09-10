@@ -5,17 +5,31 @@ import com.aliyun.tea.*;
 
 public class FilterList extends TeaModel {
     /**
+     * <p>The dimension key.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env</p>
      */
     @NameInMap("key")
     public String key;
 
     /**
+     * <p>The filter type.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL</p>
      */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <p>The filter value. This parameter can be left empty when type is set to ALL or DISABLED.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prod</p>
+     */
     @NameInMap("value")
     public String value;
 

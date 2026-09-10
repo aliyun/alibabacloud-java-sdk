@@ -4,12 +4,30 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class LabelFilters extends TeaModel {
+    /**
+     * <p>The label name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The label filter operator. Supported operators: = (equal to), != (not equal to), =~ (regular expression match), and !~ (regular expression not match).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>=</p>
+     */
     @NameInMap("operator")
     public String operator;
 
+    /**
+     * <p>The label value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prod</p>
+     */
     @NameInMap("value")
     public String value;
 

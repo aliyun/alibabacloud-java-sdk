@@ -23,7 +23,7 @@ public class ListAlertWebhooksRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

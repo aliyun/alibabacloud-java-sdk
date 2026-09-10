@@ -4,6 +4,12 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class QueryAlertRulesProductCategoryFilter extends TeaModel {
+    /**
+     * <p>The exact match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
+     */
     @NameInMap("eq")
     public String eq;
 

@@ -20,7 +20,7 @@ public class ListContactsShrinkRequest extends TeaModel {
     public String email;
 
     /**
-     * <p>The ID of the contact group.</p>
+     * <p>The ID of the contact group to which the contact belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>group-id-123</p>
@@ -47,7 +47,7 @@ public class ListContactsShrinkRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 100.</p>
+     * <p>The number of entries per page. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -56,7 +56,7 @@ public class ListContactsShrinkRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The mobile number of the contact.</p>
+     * <p>The phone number of the contact.</p>
      * 
      * <strong>example:</strong>
      * <p>15012345678</p>
@@ -74,7 +74,10 @@ public class ListContactsShrinkRequest extends TeaModel {
     public Boolean queryUngroupedContacts;
 
     /**
-     * <p>The workspace ID.</p>
+     * <p>The workspace name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default-cms-1744108686100472-cn-hangzhou</p>
      */
     @NameInMap("workspace")
     public String workspace;

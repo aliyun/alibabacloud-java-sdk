@@ -14,7 +14,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,7 +32,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The chatbot ID.</p>
+     * <p>The robot IDs.</p>
      */
     @NameInMap("robots")
     public java.util.List<ListAlertRobotsResponseBodyRobots> robots;
@@ -92,6 +92,12 @@ public class ListAlertRobotsResponseBody extends TeaModel {
     }
 
     public static class ListAlertRobotsResponseBodyRobots extends TeaModel {
+        /**
+         * <p>The digital employee name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apsara-ops</p>
+         */
         @NameInMap("digitalEmployeeName")
         public String digitalEmployeeName;
 
@@ -105,7 +111,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         public String lang;
 
         /**
-         * <p>The chatbot name.</p>
+         * <p>The robot name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -114,7 +120,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The unique ID of the chatbot.</p>
+         * <p>The unique ID of the robot.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -126,7 +132,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         public String robotSignKey;
 
         /**
-         * <p>The chatbot type.</p>
+         * <p>The robot type.</p>
          * 
          * <strong>example:</strong>
          * <p>DING</p>
@@ -135,7 +141,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The webhook URL of the chatbot.</p>
+         * <p>The webhook URL of the robot.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>*******</p>
@@ -143,6 +149,12 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         @NameInMap("url")
         public String url;
 
+        /**
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-5551847274244273-cn-hangzhou</p>
+         */
         @NameInMap("workspace")
         public String workspace;
 

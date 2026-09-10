@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class SeverityNotifyConfig extends TeaModel {
     /**
-     * <p>The list of notification recipients. Each recipient specifies a type, an identifier, and the enabled channels.</p>
+     * <p>The list of Notification Recipients. Each recipient specifies the type, identifier, and enabled channels.</p>
      */
     @NameInMap("receivers")
     public java.util.List<DirectNotifyReceiver> receivers;
 
     /**
-     * <p>Specifies whether to send recovery notifications for this severity level. If this parameter is left empty, the value falls back to the top-level sendRecoverNotification parameter.</p>
+     * <p>Specifies whether to send recovery notifications for this severity level. If this parameter is empty, the value falls back to the top-level sendRecoverNotification parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("sendRecoverNotification")
     public Boolean sendRecoverNotification;

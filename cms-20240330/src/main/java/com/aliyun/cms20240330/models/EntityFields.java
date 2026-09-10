@@ -4,9 +4,21 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class EntityFields extends TeaModel {
+    /**
+     * <p>The entity field name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>region</p>
+     */
     @NameInMap("field")
     public String field;
 
+    /**
+     * <p>The field alias or display value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("value")
     public String value;
 

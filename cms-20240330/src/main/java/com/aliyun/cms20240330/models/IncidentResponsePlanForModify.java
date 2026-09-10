@@ -4,41 +4,101 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class IncidentResponsePlanForModify extends TeaModel {
+    /**
+     * <p>The auto-recovery time in seconds when no events occur.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("autoRecoverSeconds")
     public Long autoRecoverSeconds;
 
+    /**
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample description</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Indicates whether the response plan is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enabled")
     public Boolean enabled;
 
+    /**
+     * <p>The list of escalation plan IDs.</p>
+     */
     @NameInMap("escalationId")
     public java.util.List<String> escalationId;
 
+    /**
+     * <p>The lifecycle mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SampleValue</p>
+     */
     @NameInMap("mode")
     public String mode;
 
+    /**
+     * <p>The name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SampleName</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The push settings.</p>
+     */
     @NameInMap("pushingSetting")
     public PushingSetting pushingSetting;
 
+    /**
+     * <p>The repeat notification configuration.</p>
+     */
     @NameInMap("repeatNotifySetting")
     public RepeatNotifySetting repeatNotifySetting;
 
+    /**
+     * <p>The source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SampleValue</p>
+     */
     @NameInMap("source")
     public String source;
 
+    /**
+     * <p>The synchronization source type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("syncFromType")
     public String syncFromType;
 
+    /**
+     * <p>The type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("type")
     public String type;
 
     /**
-     * <p>Required for update operations. Optional for create operations; if omitted, the backend generates one. <code>NotifyStrategy</code> also uses this UUID.</p>
+     * <p>Required for Update. Can be omitted for Create, in which case the backend generates it. The UUID is shared with NotifyStrategy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-id-001</p>
      */
     @NameInMap("uuid")
     public String uuid;

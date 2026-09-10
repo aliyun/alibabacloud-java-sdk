@@ -29,7 +29,7 @@ public class ListContactsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -38,7 +38,7 @@ public class ListContactsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>56</p>
@@ -93,7 +93,7 @@ public class ListContactsResponseBody extends TeaModel {
 
     public static class ListContactsResponseBodyContacts extends TeaModel {
         /**
-         * <p>The ID of the contact.</p>
+         * <p>The contact ID.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -120,19 +120,19 @@ public class ListContactsResponseBody extends TeaModel {
         public Boolean emailVerify;
 
         /**
-         * <p>A list of contact group IDs to which the contact belongs.</p>
+         * <p>The contact groups to which the contact belongs.</p>
          */
         @NameInMap("groupList")
         public java.util.List<String> groupList;
 
         /**
-         * <p>A map of user IDs for various instant messaging (IM) tools.</p>
+         * <p>The instant messaging user ID mappings. Multiple instant messaging tools are supported.</p>
          */
         @NameInMap("imUserIds")
         public java.util.Map<String, String> imUserIds;
 
         /**
-         * <p>The language preference for notifications. Valid values: zh-CN and en-US.</p>
+         * <p>The language.</p>
          * 
          * <strong>example:</strong>
          * <p>zh_CN</p>
@@ -141,7 +141,7 @@ public class ListContactsResponseBody extends TeaModel {
         public String lang;
 
         /**
-         * <p>The name of the contact.</p>
+         * <p>The contact name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -159,7 +159,7 @@ public class ListContactsResponseBody extends TeaModel {
         public String phone;
 
         /**
-         * <p>Indicates whether the phone number is verified.</p>
+         * <p>Indicates whether the phone number of the contact is verified.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -168,7 +168,7 @@ public class ListContactsResponseBody extends TeaModel {
         public Boolean phoneVerify;
 
         /**
-         * <p>The last time the contact was updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-22 02:21:51</p>
@@ -176,6 +176,12 @@ public class ListContactsResponseBody extends TeaModel {
         @NameInMap("updateTime")
         public String updateTime;
 
+        /**
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-5884500827389836-cn-hangzhou</p>
+         */
         @NameInMap("workspace")
         public String workspace;
 

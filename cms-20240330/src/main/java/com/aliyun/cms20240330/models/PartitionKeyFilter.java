@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class PartitionKeyFilter extends TeaModel {
     /**
-     * <p>Returns only items whose partition key value equals this string.</p>
+     * <p>The exact match value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workspace</p>
      */
     @NameInMap("eq")
     public String eq;

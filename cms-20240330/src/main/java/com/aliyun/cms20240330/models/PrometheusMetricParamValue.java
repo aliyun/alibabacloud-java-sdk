@@ -4,9 +4,21 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class PrometheusMetricParamValue extends TeaModel {
+    /**
+     * <p>The parameter name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>threshold</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The parameter value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("value")
     public String value;
 

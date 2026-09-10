@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ArmsIntegrationConfig extends TeaModel {
     /**
-     * <p>Specifies whether ARMS integration is enabled.</p>
+     * <p>Indicates whether ARMS integration is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("enabled")
     public Boolean enabled;

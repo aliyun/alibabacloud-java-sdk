@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListContactGroupsResponseBody extends TeaModel {
     /**
-     * <p>A list of contact groups.</p>
+     * <p>The contact groups.</p>
      */
     @NameInMap("contactGroups")
     public java.util.List<ListContactGroupsResponseBodyContactGroups> contactGroups;
 
     /**
-     * <p>The returned page number.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListContactGroupsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListContactGroupsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -93,7 +93,7 @@ public class ListContactGroupsResponseBody extends TeaModel {
 
     public static class ListContactGroupsResponseBodyContactGroups extends TeaModel {
         /**
-         * <p>The contact group ID.</p>
+         * <p>The unique identifier of the contact group.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -102,16 +102,13 @@ public class ListContactGroupsResponseBody extends TeaModel {
         public String contactGroupId;
 
         /**
-         * <p>The contact IDs in the group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[&quot;Demo meeting&quot;]</p>
+         * <p>The contact IDs.</p>
          */
         @NameInMap("contactIds")
         public java.util.List<String> contactIds;
 
         /**
-         * <p>The name of the contact group.</p>
+         * <p>The contact name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -119,6 +116,12 @@ public class ListContactGroupsResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-1641973317055299-cn-hangzhou</p>
+         */
         @NameInMap("workspace")
         public String workspace;
 

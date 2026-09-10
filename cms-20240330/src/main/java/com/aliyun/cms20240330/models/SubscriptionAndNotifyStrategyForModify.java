@@ -5,46 +5,70 @@ import com.aliyun.tea.*;
 
 public class SubscriptionAndNotifyStrategyForModify extends TeaModel {
     /**
-     * <p>The description.</p>
+     * <p>The description of the alert policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Used to monitor the CPU utilization of ECS instances</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>Specifies whether to enable the subscription. Enabled by default during creation.</p>
+     * <p>Read-only. This parameter does not take effect even if specified. The backend forcibly sets this parameter to true during creation and retains the current value during updates. To enable or disable the policy, call the EnableAlertPolicy or DisableAlertPolicy operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("enabled")
     public Boolean enabled;
 
     /**
-     * <p>Optional. The backend derives the name from notifyStrategy if this parameter is not specified.</p>
+     * <p>Policy Name of the alert policy. If this parameter is not specified, the backend derives Policy Name from notifyStrategy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-alert-policy</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The notification configuration that defines noise reduction rules, notification channel routing, and templates. This parameter is required for Create operations.</p>
+     */
     @NameInMap("notifyStrategy")
     public NotifyStrategyForSNSModify notifyStrategy;
 
+    /**
+     * <p>The event management configuration that defines recovery notifications, repeat notifications, automatic recovery, and escalation policies.</p>
+     */
     @NameInMap("responsePlan")
     public IncidentResponsePlanForSNSModify responsePlan;
 
+    /**
+     * <p>The single primary subscription configuration that defines event filter conditions. This parameter is mutually exclusive with subscriptions. Do not specify both parameters at the same time.</p>
+     */
     @NameInMap("subscription")
     public SubscriptionForSNSModify subscription;
 
     /**
-     * <p>Used exclusively for Update operations. Performs batch create, update, or remove adjustments on member subscriptions.</p>
+     * <p>Dedicated to Update operations. Performs batch create, update, or remove adjustments on member subscriptions.</p>
      */
     @NameInMap("subscriptions")
     public java.util.List<SubscriptionOp> subscriptions;
 
     /**
-     * <p>Required for Update. Can be omitted for Create, in which case the backend generates it.</p>
+     * <p>The unique identifier of the alert policy. This parameter is required for Update operations. Do not specify this parameter for Create operations because the backend automatically generates the value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7076c75c-c804-461e-975f-c6f9ed5af745</p>
      */
     @NameInMap("uuid")
     public String uuid;
 
     /**
-     * <p>Required for Update. The value must match the backend record for the write to succeed. If the values do not match, OPTIMISTIC_LOCK_FAILED is returned.</p>
+     * <p>The optimistic lock version number. This parameter is required for Update operations and must match the current value on the backend. Otherwise, a 409 VersionConflict error is returned. The version number increments by 1 after each successful update.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("version")
     public Integer version;

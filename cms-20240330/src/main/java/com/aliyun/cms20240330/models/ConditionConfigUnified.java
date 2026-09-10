@@ -5,163 +5,256 @@ import com.aliyun.tea.*;
 
 public class ConditionConfigUnified extends TeaModel {
     /**
-     * <p>The aggregate functions (used by APM_SIMPLE_CONDITION. For UMODEL conditions, the aggregation semantics have been migrated to QueryConfigUnified and this field no longer takes effect).</p>
+     * <p>The dynamic baseline minimum deviation or absolute deviation dead zone (UMODEL_METRICSET_CONDITION / APM_SIMPLE_CONDITION). Takes effect only for baseline operators. If |current value − boundary| &lt; absDeviation, no alert is fired. The unit is the same as the metric. The value must be &gt;= 0. A value of 0 means no restriction.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.0</p>
+     */
+    @NameInMap("absDeviation")
+    public Double absDeviation;
+
+    /**
+     * <p>The aggregate functions (APM_SIMPLE_CONDITION).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AVG</p>
      */
     @NameInMap("aggregate")
     public String aggregate;
 
     /**
      * <p>The consecutive trigger count threshold (type=SLS_MULTI_CONDITION). An alert is fired only after the condition is met N times. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("alertCount")
     public Integer alertCount;
 
     /**
-     * <p>The list of comparison conditions (APM_COMPOSITE_CONDITION).</p>
+     * <p>The baseline period. Takes effect only for baseline operators. Valid values: AUTO (automatic detection), DAILY (daily), WEEKLY (weekly), and NONE (no period). When set to WEEKLY, the backend automatically expands the historical training window to at least 14 days. Automatic detection does not return the specific detection result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AUTO</p>
+     */
+    @NameInMap("baselinePeriod")
+    public String baselinePeriod;
+
+    /**
+     * <p>The multiple comparisons (APM_COMPOSITE_CONDITION).</p>
      */
     @NameInMap("compareList")
     public java.util.List<CompareList> compareList;
 
     /**
-     * <p>The multi-metric composite trigger configuration for CLOUD_MONITORING_CONDITION when escalationType=COMPOSITE (requires relation, severity, times, escalations).</p>
+     * <p>The multi-metric composite trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is set to COMPOSITE. Required fields: relation, severity, times, and escalations.</p>
      */
     @NameInMap("compositeEscalation")
     public CloudMonitoringCompositeEscalation compositeEscalation;
 
     /**
      * <p>The count comparison operator (type=UMODEL_LOGSET_CONDITION).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GTE</p>
      */
     @NameInMap("countOperator")
     public String countOperator;
 
     /**
      * <p>The count threshold (type=UMODEL_LOGSET_CONDITION).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("countThreshold")
     public Long countThreshold;
 
     /**
-     * <p>The duration in seconds. Used directly by PROMETHEUS_SIMPLE / UMODEL_METRICSET_CONDITION / UMODEL_LOGSET_CONDITION. For UMODEL_METRICSET_MULTI_CONDITION, this serves as the global default and can be overridden by the durationSecs field in each trigger.</p>
+     * <p>The duration in seconds. Used by PROMETHEUS_SIMPLE and UMODEL_METRICSET.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("durationSecs")
     public Integer durationSecs;
 
     /**
-     * <p>Specifies whether to enable severity suppression by highest level (type=UMODEL_METRICSET_MULTI_CONDITION / PROMETHEUS_MULTI_CONDITION). Default value: true. When enabled, only the highest severity trigger is reported for the same entity.</p>
+     * <p>Specifies whether to enable severity suppression to the highest level (type=UMODEL_METRICSET_MULTI_CONDITION / PROMETHEUS_MULTI_CONDITION). Default value: true. When enabled, only the highest severity trigger is reported for the same entity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("enableSeveritySuppression")
     public Boolean enableSeveritySuppression;
 
     /**
-     * <p>The expression type for CLOUD_MONITORING_CONDITION: SIMPLE / COMPOSITE / EXPRESS / PROMETHEUS (write paths support only SIMPLE / COMPOSITE). Specify the corresponding escalation sub-object based on the type.</p>
+     * <p>The expression type for CLOUD_MONITORING_CONDITION. Valid values: SIMPLE, COMPOSITE, EXPRESS, and PROMETHEUS. Only SIMPLE and COMPOSITE are supported in write paths. Specify the corresponding escalation sub-object based on the type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SIMPLE</p>
      */
     @NameInMap("escalationType")
     public String escalationType;
 
     /**
-     * <p>The expression-based trigger configuration for CLOUD_MONITORING_CONDITION when escalationType=EXPRESS (read path output only).</p>
+     * <p>The expression-based trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is set to EXPRESS. This field is output only in read paths.</p>
      */
     @NameInMap("expressEscalation")
     public CloudMonitoringExpressEscalation expressEscalation;
 
     /**
-     * <p>The raw V1 condition JSON string returned when type=UNKNOWN_CONDITION and the read path fails to parse the condition. If this field is not empty, display it as read-only on the frontend.</p>
+     * <p>The raw V1 condition JSON string returned when type is set to UNKNOWN_CONDITION and the read path fails to parse the condition. When the frontend detects that this field is not empty, display it as read-only.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value</p>
      */
     @NameInMap("legacyRaw")
     public String legacyRaw;
 
     /**
-     * <p>Returned when type=UNKNOWN_CONDITION. Indicates that this rule cannot be edited through the new API. Submit a ticket to contact the CloudMonitor team.</p>
+     * <p>Returned when type is set to UNKNOWN_CONDITION. Indicates that this rule cannot be edited through the new API. Submit a ticket to contact the CloudMonitor team.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("legacyType")
     public String legacyType;
 
     /**
-     * <p>The log field name (used when type=UMODEL_LOGSET_CONDITION and matchOperator=CONTAINS/EQUALS/REGEX).</p>
+     * <p>The log field name (used when type is set to UMODEL_LOGSET_CONDITION and matchOperator is set to CONTAINS, EQUALS, or REGEX).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value</p>
      */
     @NameInMap("matchField")
     public String matchField;
 
     /**
      * <p>The log match operator (type=UMODEL_LOGSET_CONDITION).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PRESENT</p>
      */
     @NameInMap("matchOperator")
     public String matchOperator;
 
     /**
-     * <p>The log match value (used when type=UMODEL_LOGSET_CONDITION and matchOperator=CONTAINS/EQUALS/REGEX).</p>
+     * <p>The log match value (used when type is set to UMODEL_LOGSET_CONDITION and matchOperator is set to CONTAINS, EQUALS, or REGEX).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value</p>
      */
     @NameInMap("matchValue")
     public String matchValue;
 
     /**
-     * <p>The upper bound of the range (used when UMODEL_METRICSET_CONDITION and operator=IN_RANGE/OUT_OF_RANGE).</p>
+     * <p>The upper bound of the range (used when UMODEL_METRICSET_CONDITION operator is set to IN_RANGE or OUT_OF_RANGE).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0</p>
      */
     @NameInMap("max")
     public Double max;
 
     /**
-     * <p>The lower bound of the range (used when UMODEL_METRICSET_CONDITION and operator=IN_RANGE/OUT_OF_RANGE).</p>
+     * <p>The lower bound of the range (used when UMODEL_METRICSET_CONDITION operator is set to IN_RANGE or OUT_OF_RANGE).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0</p>
      */
     @NameInMap("min")
     public Double min;
 
     /**
-     * <p>The no-data alert level (SLS_MULTI_CONDITION). APM and Prometheus conditions have migrated to noDataPolicy + noDataAlertSeverity.</p>
+     * <p>The no-data alert level (SLS_MULTI_CONDITION). APM and Prometheus conditions have migrated to noDataPolicy and noDataAlertSeverity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INFO</p>
      */
     @NameInMap("noDataAlertLevel")
     public String noDataAlertLevel;
 
     /**
-     * <p>The no-data alert severity level (PROMETHEUS_SIMPLE_CONDITION / PROMETHEUS_MULTI_CONDITION, takes effect when noDataPolicy=NO_DATA_TO_ALERT). SLS_MULTI_CONDITION still uses noDataAlertLevel.</p>
+     * <p>The no-data alert severity level (PROMETHEUS_SIMPLE_CONDITION / PROMETHEUS_MULTI_CONDITION). Takes effect only when noDataPolicy is set to NO_DATA_TO_ALERT. SLS_MULTI_CONDITION still uses noDataAlertLevel.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INFO</p>
      */
     @NameInMap("noDataAlertSeverity")
     public String noDataAlertSeverity;
 
     /**
-     * <p>The value to append when no data is available (APM_SIMPLE_CONDITION / APM_COMPOSITE_CONDITION). Nullable.</p>
+     * <p>The value to substitute when no data is available (APM_SIMPLE_CONDITION / APM_COMPOSITE_CONDITION). Nullable.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0</p>
      */
     @NameInMap("noDataAppendValue")
     public Double noDataAppendValue;
 
     /**
-     * <p>The no-data handling policy (CLOUD_MONITORING_CONDITION / PROMETHEUS_MULTI_CONDITION / PROMETHEUS_SIMPLE_CONDITION / APM_SIMPLE_CONDITION / APM_COMPOSITE_CONDITION): NO_DATA_TO_OK / NO_DATA_TO_ALERT / KEEP_LAST_STATE / APPEND_VALUE (APM only).</p>
+     * <p>The no-data handling policy (CLOUD_MONITORING_CONDITION / PROMETHEUS_MULTI_CONDITION / PROMETHEUS_SIMPLE_CONDITION / APM_SIMPLE_CONDITION / APM_COMPOSITE_CONDITION). Valid values: NO_DATA_TO_OK, NO_DATA_TO_ALERT, KEEP_LAST_STATE, and APPEND_VALUE (APM only).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value</p>
      */
     @NameInMap("noDataPolicy")
     public String noDataPolicy;
 
     /**
-     * <p>The comparison operator. For UMODEL_METRICSET_CONDITION: GT (greater than) / GE (greater than or equal to) / LT (less than) / LE (less than or equal to) / EQ (equal to) / NE (not equal to) / IN_RANGE (within range, requires min/max) / OUT_OF_RANGE (outside range, requires min/max) / PRESENT (field exists) / NOT_PRESENT (field does not exist). Not used by UMODEL_LOGSET_CONDITION. For APM_SIMPLE_CONDITION: GT/GTE/LT/LTE/EQ/NE/YOY_UP/YOY_DOWN (YOY_* requires yoyTimeUnit/yoyTimeValue).</p>
+     * <p>The comparison operator (UMODEL_METRICSET_CONDITION or APM_SIMPLE_CONDITION).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GT</p>
      */
     @NameInMap("operator")
     public String operator;
 
     /**
-     * <p>The PromQL-based trigger configuration for CLOUD_MONITORING_CONDITION when escalationType=PROMETHEUS (read path output only).</p>
+     * <p>The PromQL-based trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is set to PROMETHEUS. This field is output only in read paths.</p>
      */
     @NameInMap("prometheus")
     public CloudMonitoringPrometheusEscalation prometheus;
 
     /**
      * <p>The logical relationship between conditions (APM_COMPOSITE_CONDITION).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AND</p>
      */
     @NameInMap("relation")
     public String relation;
 
     /**
-     * <p>The severity level (UMODEL_METRICSET_CONDITION / UMODEL_LOGSET_CONDITION / PROMETHEUS_SIMPLE / APM_COMPOSITE).</p>
+     * <p>The dynamic baseline sensitivity (UMODEL_METRICSET_CONDITION / APM_SIMPLE_CONDITION). Takes effect only when operator is set to ABOVE_UPPER, BELOW_LOWER, or OUT_OF_BAND. Valid values: HIGH (narrowest band, most sensitive), MEDIUM, and LOW (widest band, least sensitive).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MEDIUM</p>
+     */
+    @NameInMap("sensitivity")
+    public String sensitivity;
+
+    /**
+     * <p>The severity level (UMODEL / PROMETHEUS_SIMPLE / APM_COMPOSITE).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INFO</p>
      */
     @NameInMap("severity")
     public String severity;
 
     /**
-     * <p>The single-metric multi-level trigger configuration for CLOUD_MONITORING_CONDITION when escalationType=SIMPLE (requires metricName, period, escalations).</p>
+     * <p>The single-metric multi-level trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is set to SIMPLE. Required fields: metricName, period, and escalations.</p>
      */
     @NameInMap("simpleEscalation")
     public CloudMonitoringSimpleEscalation simpleEscalation;
 
     /**
-     * <p>The threshold (used by UMODEL_METRICSET_CONDITION with non-range operators).</p>
+     * <p>The threshold (UMODEL_METRICSET_CONDITION).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("threshold")
     public Double threshold;
@@ -173,26 +266,35 @@ public class ConditionConfigUnified extends TeaModel {
     public java.util.List<ThresholdList> thresholdList;
 
     /**
-     * <p>The list of triggers (polymorphic by type. CLOUD_MONITORING_CONDITION does not use this field. Use simpleEscalation.escalations / compositeEscalation.escalations instead). For SLS_MULTI_CONDITION, each case contains matchField / matchOperator / matchValue / countOperator / countThreshold / severity, with at least one required. For UMODEL_METRICSET_MULTI_CONDITION, each trigger contains severity, durationSecs, and an expression (SIMPLE/COMPOSITE). For PROMETHEUS_MULTI_CONDITION, each trigger contains severity, durationSecs, and an expression (SIMPLE/COMPOSITE). Triggers are sorted by severity priority, and the first match fires.</p>
+     * <p>The trigger list. This field is polymorphic based on type. CLOUD_MONITORING_CONDITION does not use this field. Use simpleEscalation.escalations or compositeEscalation.escalations instead. For SLS_MULTI_CONDITION, each case contains matchField, matchOperator, matchValue, countOperator, countThreshold, and severity. At least one case is required. For UMODEL_METRICSET_MULTI_CONDITION, each trigger contains severity, durationSecs, and an expression (SIMPLE or COMPOSITE). For PROMETHEUS_MULTI_CONDITION, each trigger contains severity, durationSecs, and an expression (SIMPLE or COMPOSITE). Triggers are sorted by severity priority, and the first match fires.</p>
      */
     @NameInMap("triggers")
     public java.util.List<Triggers> triggers;
 
     /**
-     * <p>The detection condition type. Valid values and their required fields: PROMETHEUS_SIMPLE_CONDITION (requires operator, threshold, durationSecs, severity). UMODEL_METRICSET_CONDITION (requires operator, durationSecs, severity. Non-range operators require threshold. operator=IN_RANGE/OUT_OF_RANGE requires min and max). UMODEL_LOGSET_CONDITION (requires matchOperator, durationSecs, severity. matchOperator=CONTAINS/EQUALS/REGEX requires matchField and matchValue. countOperator/countThreshold are optional). UMODEL_METRICSET_MULTI_CONDITION (requires triggers[*]. Optional durationSecs as global default, enableSeveritySuppression). APM_SIMPLE_CONDITION (requires operator, aggregate. Use thresholdList or threshold. operator=YOY_UP/YOY_DOWN requires yoyTimeUnit and yoyTimeValue. Optional noDataPolicy, noDataAppendValue). APM_COMPOSITE_CONDITION (requires compareList, relation, severity. Optional noDataPolicy, noDataAppendValue). CLOUD_MONITORING_CONDITION (requires escalationType. escalationType=SIMPLE requires simpleEscalation. escalationType=COMPOSITE requires compositeEscalation. Optional noDataPolicy). UNKNOWN_CONDITION (read-only fallback. Do not use in write paths). Do not use non-enumerated values such as SLS_CONDITION or CMS_BASIC_CONDITION. The backend returns an Invalidtype 400 error.</p>
+     * <p>The detection condition type.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROMETHEUS_SIMPLE_CONDITION</p>
      */
     @NameInMap("type")
     public String type;
 
     /**
-     * <p>The year-over-year time unit (APM_SIMPLE_CONDITION, takes effect only when operator=YOY_UP/YOY_DOWN).</p>
+     * <p>The year-over-year time unit (APM_SIMPLE_CONDITION). Takes effect only when operator is set to YOY_UP or YOY_DOWN.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>minute</p>
      */
     @NameInMap("yoyTimeUnit")
     public String yoyTimeUnit;
 
     /**
-     * <p>The year-over-year time value (APM_SIMPLE_CONDITION, takes effect only when operator=YOY_UP/YOY_DOWN).</p>
+     * <p>The year-over-year time value (APM_SIMPLE_CONDITION). Takes effect only when operator is set to YOY_UP or YOY_DOWN.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("yoyTimeValue")
     public Integer yoyTimeValue;
@@ -200,6 +302,14 @@ public class ConditionConfigUnified extends TeaModel {
     public static ConditionConfigUnified build(java.util.Map<String, ?> map) throws Exception {
         ConditionConfigUnified self = new ConditionConfigUnified();
         return TeaModel.build(map, self);
+    }
+
+    public ConditionConfigUnified setAbsDeviation(Double absDeviation) {
+        this.absDeviation = absDeviation;
+        return this;
+    }
+    public Double getAbsDeviation() {
+        return this.absDeviation;
     }
 
     public ConditionConfigUnified setAggregate(String aggregate) {
@@ -216,6 +326,14 @@ public class ConditionConfigUnified extends TeaModel {
     }
     public Integer getAlertCount() {
         return this.alertCount;
+    }
+
+    public ConditionConfigUnified setBaselinePeriod(String baselinePeriod) {
+        this.baselinePeriod = baselinePeriod;
+        return this;
+    }
+    public String getBaselinePeriod() {
+        return this.baselinePeriod;
     }
 
     public ConditionConfigUnified setCompareList(java.util.List<CompareList> compareList) {
@@ -392,6 +510,14 @@ public class ConditionConfigUnified extends TeaModel {
     }
     public String getRelation() {
         return this.relation;
+    }
+
+    public ConditionConfigUnified setSensitivity(String sensitivity) {
+        this.sensitivity = sensitivity;
+        return this;
+    }
+    public String getSensitivity() {
+        return this.sensitivity;
     }
 
     public ConditionConfigUnified setSeverity(String severity) {

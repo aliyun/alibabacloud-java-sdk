@@ -4,17 +4,28 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class MeasureList extends TeaModel {
+    /**
+     * <p>The grouping dimension.</p>
+     */
     @NameInMap("groupBy")
     public java.util.List<String> groupBy;
 
     /**
+     * <p>The metric code.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cpu_usage</p>
      */
     @NameInMap("measureCode")
     public String measureCode;
 
     /**
+     * <p>The query time window, in seconds.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("windowSecs")
     public Integer windowSecs;

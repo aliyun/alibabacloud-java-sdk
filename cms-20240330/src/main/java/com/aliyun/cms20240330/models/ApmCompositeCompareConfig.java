@@ -5,15 +5,21 @@ import com.aliyun.tea.*;
 
 public class ApmCompositeCompareConfig extends TeaModel {
     /**
-     * <p>The aggregate functions used for aggregation.</p>
+     * <p>The aggregate functions.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AVG</p>
      */
     @NameInMap("aggregate")
     public String aggregate;
 
     /**
-     * <p>The comparison operator. GTE/LTE indicates greater than or equal to/less than or equal to. YOY_UP/YOY_DOWN indicates year-over-year increase/decrease, which requires yoyTimeUnit and yoyTimeValue to be specified.</p>
+     * <p>The comparison operator.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GT</p>
      */
     @NameInMap("operator")
     public String operator;
@@ -21,18 +27,27 @@ public class ApmCompositeCompareConfig extends TeaModel {
     /**
      * <p>The threshold.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("threshold")
     public Float threshold;
 
     /**
      * <p>The year-over-year time unit. This parameter takes effect only when operator is set to YOY_UP or YOY_DOWN.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>day</p>
      */
     @NameInMap("yoyTimeUnit")
     public String yoyTimeUnit;
 
     /**
      * <p>The year-over-year time value. This parameter takes effect only when operator is set to YOY_UP or YOY_DOWN.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("yoyTimeValue")
     public Integer yoyTimeValue;

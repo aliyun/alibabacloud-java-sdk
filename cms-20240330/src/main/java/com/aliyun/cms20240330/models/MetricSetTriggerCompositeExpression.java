@@ -4,12 +4,32 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class MetricSetTriggerCompositeExpression extends TeaModel {
+    /**
+     * <p>The list of sub-conditions. Each item is a simple comparison expression.</p>
+     */
     @NameInMap("conditions")
     public java.util.List<MetricSetTriggerSimpleExpression> conditions;
 
+    /**
+     * <p>The expression type, fixed as COMPOSITE.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>COMPOSITE</p>
+     */
     @NameInMap("expressionType")
     public String expressionType;
 
+    /**
+     * <p>The logical operator. Valid values:</p>
+     * <ul>
+     * <li>AND: All conditions are met.</li>
+     * <li>OR: Any condition is met.</li>
+     * <li>UNLESS: The first condition is met and none of the remaining conditions are met.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AND</p>
+     */
     @NameInMap("logicOperator")
     public String logicOperator;
 

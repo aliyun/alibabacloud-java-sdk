@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CloudMonitoringPrometheusEscalation extends TeaModel {
     /**
      * <p>The PromQL query statement.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rate(http_errors_total[5m]) &gt; 0.1</p>
      */
     @NameInMap("promQl")
     public String promQl;
 
     /**
      * <p>The severity level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CRITICAL</p>
      */
     @NameInMap("severity")
     public String severity;
 
     /**
      * <p>The number of consecutive times the alert is triggered.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("times")
     public Integer times;

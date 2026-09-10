@@ -5,62 +5,83 @@ import com.aliyun.tea.*;
 
 public class QueryConfigUnified extends TeaModel {
     /**
-     * <p>The aggregation function (used when type=UMODEL_METRICSET_QUERY / UMODEL_LOGSET_QUERY).</p>
+     * <p>The aggregate functions. Used when type=UMODEL_METRICSET_QUERY / UMODEL_LOGSET_QUERY.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AVG</p>
      */
     @NameInMap("aggregate")
     public String aggregate;
 
     /**
-     * <p><strong>[Deprecated]</strong> Specifies whether to perform alert detection only after data is complete (originally used when type=PROMETHEUS_MULTI_QUERY). This field overlaps with enableDataCompleteCheck. Using this field in write path returns 400.</p>
+     * <p><strong>[Deprecated]</strong> Specifies whether to perform alert detection only after data is complete (originally used when type=PROMETHEUS_MULTI_QUERY). This field overlaps with enableDataCompleteCheck. Using this field on write path returns 400.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("checkAfterDataComplete")
     @Deprecated
     public Boolean checkAfterDataComplete;
 
     /**
-     * <p>The dimension list (used when type=CLOUD_MONITORING_QUERY. Each dimension is a key/value string mapping).</p>
+     * <p>The list of dimensions. This parameter is used when type is set to CLOUD_MONITORING_QUERY. Each dimension is a key/value string mapping.</p>
      */
     @NameInMap("dimensions")
     public java.util.List<java.util.Map<String, String>> dimensions;
 
     /**
-     * <p>The duration in seconds (used when type=PROMETHEUS_MULTI_QUERY).</p>
+     * <p>The duration in seconds. Used when type=PROMETHEUS_MULTI_QUERY.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("durationSecs")
     public Long durationSecs;
 
     /**
-     * <p>Indicates whether the data integrity check is enabled (used when type=PROMETHEUS_SINGLE_QUERY / PROMETHEUS_MULTI_QUERY / PROMETHEUS_PREDEFINED_METRIC_QUERY / PROMETHEUS_METRIC_GROUP_QUERY [deprecated]).</p>
+     * <p>Indicates whether data integrity check is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("enableDataCompleteCheck")
     public Boolean enableDataCompleteCheck;
 
     /**
-     * <p>The entity domain (used when type=UMODEL_METRICSET_QUERY / UMODEL_METRICSET_MULTI_QUERY / UMODEL_LOGSET_QUERY. Works with entityType/entityFilters to locate UModel entities).</p>
+     * <p>The entity domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>k8s</p>
      */
     @NameInMap("entityDomain")
     public String entityDomain;
 
     /**
-     * <p>The entity fields to include in the response (used when type=UMODEL_METRICSET_QUERY / UMODEL_METRICSET_MULTI_QUERY / UMODEL_LOGSET_QUERY).</p>
+     * <p>The entity fields to include in the response.</p>
      */
     @NameInMap("entityFields")
     public java.util.List<EntityFields> entityFields;
 
     /**
-     * <p>The entity filter list (used when type=UMODEL_METRICSET_QUERY / UMODEL_METRICSET_MULTI_QUERY / UMODEL_LOGSET_QUERY).</p>
+     * <p>The entity filter list.</p>
      */
     @NameInMap("entityFilters")
     public java.util.List<EntityFilters> entityFilters;
 
     /**
-     * <p>The entity type (used when type=UMODEL_METRICSET_QUERY / UMODEL_METRICSET_MULTI_QUERY / UMODEL_LOGSET_QUERY).</p>
+     * <p>The entity type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>k8s.pod</p>
      */
     @NameInMap("entityType")
     public String entityType;
 
     /**
-     * <p>The query expression or SPL statement. Recommended when type=PROMETHEUS_SINGLE_QUERY. Optional when type=UMODEL_METRICSET_QUERY for custom SPL. Required when type=UMODEL_LOGSET_QUERY, where an SPL query statement must be provided (the service layer enforces this requirement).</p>
+     * <p>The query expression or SPL statement. Recommended when type=PROMETHEUS_SINGLE_QUERY. Optional when type=UMODEL_METRICSET_QUERY for custom SPL. Required when type=UMODEL_LOGSET_QUERY, where an SPL query statement must be provided (the business layer enforces this requirement).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value</p>
      */
     @NameInMap("expr")
     public String expr;
@@ -72,25 +93,31 @@ public class QueryConfigUnified extends TeaModel {
     public java.util.List<FilterList> filterList;
 
     /**
-     * <p>The list of predefined metric filter values (used when type=PROMETHEUS_PREDEFINED_METRIC_QUERY / PROMETHEUS_METRIC_GROUP_QUERY [deprecated]).</p>
+     * <p>The predefined metric filter value list (type=PROMETHEUS_PREDEFINED_METRIC_QUERY / PROMETHEUS_METRIC_GROUP_QUERY [deprecated]).</p>
      */
     @NameInMap("filterValues")
     public java.util.List<PrometheusMetricFilterValue> filterValues;
 
     /**
-     * <p>The group field list (used when type=SLS_MULTI_QUERY and groupType=custom).</p>
+     * <p>The list of group fields. This parameter is used when type is set to SLS_MULTI_QUERY and groupType is set to custom.</p>
      */
     @NameInMap("groupFieldList")
     public java.util.List<String> groupFieldList;
 
     /**
-     * <p>The resource group ID (used when type=CLOUD_MONITORING_QUERY and relationType=GROUP).</p>
+     * <p>The group ID (type=CLOUD_MONITORING_QUERY). Dual semantics: og- prefix = observation group (GROUP_V2. The prefix itself conveys the semantics. relationType is not required. The backend resolves members through the entity store). Numeric only = application group (GROUP_V1 legacy resource group. Requires relationType=GROUP).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>og-845e0a26455f437c</p>
      */
     @NameInMap("groupId")
     public String groupId;
 
     /**
      * <p>The grouping policy (used when type=SLS_MULTI_QUERY): none / label / custom.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("groupType")
     public String groupType;
@@ -102,31 +129,43 @@ public class QueryConfigUnified extends TeaModel {
     public java.util.List<Joinings> joinings;
 
     /**
-     * <p>The label filter conditions (used when type=UMODEL_METRICSET_QUERY. For UMODEL_METRICSET_MULTI_QUERY, place labelFilters in each queries[*] entry).</p>
+     * <p>The label filter conditions.</p>
      */
     @NameInMap("labelFilters")
     public java.util.List<LabelFilters> labelFilters;
 
     /**
-     * <p>The original V1 query JSON string returned as a fallback when type=UNKNOWN_QUERY and read path parsing fails (contains the field values that triggered the failure, such as filter.operator=ABC). The frontend displays this field as read-only when it is not empty.</p>
+     * <p>The original V1 query JSON string returned as a fallback when type=UNKNOWN_QUERY and read path parsing fails. Contains the field values that triggered the failure, such as filter.operator=ABC. When the frontend detects that this field is not empty, display it as read-only.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value</p>
      */
     @NameInMap("legacyRaw")
     public String legacyRaw;
 
     /**
-     * <p>Returned when type=UNKNOWN_QUERY, indicating that this rule cannot be edited through the new API. Submit a ticket to contact the CloudMonitor team.</p>
+     * <p>Returned when type=UNKNOWN_QUERY. Indicates that this rule cannot be edited through the new API. Submit a ticket to contact the CloudMonitor product team.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("legacyType")
     public String legacyType;
 
     /**
-     * <p>The log set name (used when type=UMODEL_LOGSET_QUERY).</p>
+     * <p>The log set name (type=UMODEL_LOGSET_QUERY).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample name</p>
      */
     @NameInMap("logSet")
     public String logSet;
 
     /**
-     * <p>The measure group key (optional when type=APM_MULTI_QUERY, corresponds to V1 alertMetricInput.groupKey).</p>
+     * <p>The measure group key. This parameter is optional when type is set to APM_MULTI_QUERY. It corresponds to alertMetricInput.groupKey in V1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value</p>
      */
     @NameInMap("measureGroupKey")
     public String measureGroupKey;
@@ -138,88 +177,118 @@ public class QueryConfigUnified extends TeaModel {
     public java.util.List<MeasureList> measureList;
 
     /**
-     * <p>The metric name (required when type=UMODEL_METRICSET_QUERY. Required when type=CLOUD_MONITORING_QUERY, used together with namespace to uniquely identify CloudMonitor monitoring metrics).</p>
+     * <p>The metric name (type=UMODEL_METRICSET_QUERY).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>node_cpu_seconds_total</p>
      */
     @NameInMap("metric")
     public String metric;
 
     /**
-     * <p>The metric group ID (used when type=PROMETHEUS_PREDEFINED_METRIC_QUERY / PROMETHEUS_METRIC_GROUP_QUERY [deprecated]).</p>
+     * <p>The metric group ID (type=PROMETHEUS_PREDEFINED_METRIC_QUERY / PROMETHEUS_METRIC_GROUP_QUERY [deprecated]).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-id-001</p>
      */
     @NameInMap("metricGroupId")
     public String metricGroupId;
 
     /**
-     * <p>The predefined metric ID (used when type=PROMETHEUS_PREDEFINED_METRIC_QUERY).</p>
+     * <p>The predefined metric ID (type=PROMETHEUS_PREDEFINED_METRIC_QUERY).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-id-001</p>
      */
     @NameInMap("metricId")
     public String metricId;
 
     /**
-     * <p><strong>[Deprecated]</strong> The list of predefined metric IDs (originally used when type=PROMETHEUS_METRIC_GROUP_QUERY). This query type is deprecated. Write path returns 400.</p>
+     * <p><strong>[Deprecated]</strong> The predefined metric ID list (originally used with type=PROMETHEUS_METRIC_GROUP_QUERY). This query type is deprecated. Write path returns 400.</p>
      */
     @NameInMap("metricIds")
     @Deprecated
     public java.util.List<String> metricIds;
 
     /**
-     * <p>The metric set name (used when type=UMODEL_METRICSET_QUERY).</p>
+     * <p>The metric set name (type=UMODEL_METRICSET_QUERY).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cms.acs_ecs_dashboard.CPUUtilization</p>
      */
     @NameInMap("metricSet")
     public String metricSet;
 
     /**
-     * <p>The CloudMonitor namespace (Alibaba Cloud service name, used when type=CLOUD_MONITORING_QUERY).</p>
+     * <p>The CloudMonitor namespace (Alibaba Cloud service name, type=CLOUD_MONITORING_QUERY).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample name</p>
      */
     @NameInMap("namespace")
     public String namespace;
 
     /**
-     * <p>The query time offset in seconds (used when type=UMODEL_METRICSET_QUERY / UMODEL_LOGSET_QUERY). Works with windowSecs to implement an offset query over the range [T - windowSecs - offsetSecs, T - offsetSecs]. Valid range: [0, 86400].</p>
+     * <p>The query time offset in seconds. Used when type=UMODEL_METRICSET_QUERY / UMODEL_LOGSET_QUERY. Works with windowSecs to implement an offset query over the range [T - windowSecs - offsetSecs, T - offsetSecs]. Valid range: [0, 86400].</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("offsetSecs")
     public Long offsetSecs;
 
     /**
-     * <p>The list of predefined metric parameter values (used when type=PROMETHEUS_PREDEFINED_METRIC_QUERY / PROMETHEUS_METRIC_GROUP_QUERY [deprecated]).</p>
+     * <p>The predefined metric parameter value list (type=PROMETHEUS_PREDEFINED_METRIC_QUERY / PROMETHEUS_METRIC_GROUP_QUERY [deprecated]).</p>
      */
     @NameInMap("paramValues")
     public java.util.List<PrometheusMetricParamValue> paramValues;
 
     /**
-     * <p><strong>[Deprecated]</strong> The legacy Prometheus query statement field. Use expr instead. This field is retained for backward compatibility. The backend automatically normalizes it to expr.</p>
+     * <p>The Prometheus query statement (type=PROMETHEUS_SINGLE_QUERY).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>avg(rate(node_cpu_seconds_total{mode=&quot;idle&quot;}[5m])) * 100</p>
      */
     @NameInMap("promQl")
     @Deprecated
     public String promQl;
 
     /**
-     * <p>The subquery list (polymorphic by type): when type=SLS_MULTI_QUERY, each entry is a SlsNamedQueryEntry (timeUnit/start/end/window/expr). When type=PROMETHEUS_MULTI_QUERY, each entry is a PrometheusNamedQueryEntry (name/expr). When type=UMODEL_METRICSET_MULTI_QUERY, each entry is a MetricSetNamedQueryEntry.</p>
+     * <p>The subquery list (polymorphic by type): When type=SLS_MULTI_QUERY, each entry is a SlsNamedQueryEntry (timeUnit/start/end/window/expr). When type=PROMETHEUS_MULTI_QUERY, each entry is a PrometheusNamedQueryEntry (name/expr). When type=UMODEL_METRICSET_MULTI_QUERY, each entry is a MetricSetNamedQueryEntry.</p>
      */
     @NameInMap("queries")
     public java.util.List<Queries> queries;
 
     /**
-     * <p>The resource relation type (used when type=CLOUD_MONITORING_QUERY).</p>
+     * <p>The resource association type (type=CLOUD_MONITORING_QUERY).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("relationType")
     public String relationType;
 
     /**
-     * <p>The list of service IDs (used when type=APM_MULTI_QUERY).</p>
+     * <p>The service ID list (type=APM_MULTI_QUERY).</p>
      */
     @NameInMap("serviceIdList")
     public java.util.List<String> serviceIdList;
 
     /**
-     * <p>The query type. Valid values and associated fields: PROMETHEUS_SINGLE_QUERY (required: expr. Optional: enableDataCompleteCheck). PROMETHEUS_PREDEFINED_METRIC_QUERY (required: metricGroupId, metricId. Optional: paramValues, filterValues, enableDataCompleteCheck). PROMETHEUS_METRIC_GROUP_QUERY ([deprecated] required: metricGroupId, metricIds. Optional: paramValues, filterValues, enableDataCompleteCheck. Write path returns 400). UMODEL_METRICSET_QUERY (required: metricSet, metric, windowSecs, aggregate. Optional: expr, entityDomain/entityType/entityFilters, labelFilters, entityFields, offsetSecs). UMODEL_METRICSET_MULTI_QUERY (required: queries[*]. Optional: entityDomain/entityType/entityFilters, windowSecs, offsetSecs, aggregate). UMODEL_LOGSET_QUERY (required: logSet, expr, windowSecs, aggregate. Optional: entityDomain/entityType/entityFilters, labelFilters, offsetSecs). APM_MULTI_QUERY (required: serviceIdList, measureList. Optional: filterList, measureGroupKey). CLOUD_MONITORING_QUERY (required: namespace, metric, relationType. When relationType=INSTANCE, dimensions is required. When relationType=GROUP, groupId is required. When relationType=USER, leave both empty). UNKNOWN_QUERY (read-only fallback. Do not use in write path). Do not use non-enumerated values (such as CMS_BASIC_QUERY/SLS_QUERY). The backend returns Invalidtype 400.</p>
+     * <p>The query type.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROMETHEUS_SINGLE_QUERY</p>
      */
     @NameInMap("type")
     public String type;
 
     /**
-     * <p>The aggregation time window in seconds (used when type=UMODEL_METRICSET_QUERY / UMODEL_LOGSET_QUERY). Valid range: [60, 86400].</p>
+     * <p>The aggregation time window in seconds. Used when type=UMODEL_METRICSET_QUERY / UMODEL_LOGSET_QUERY. Valid range: [60, 86400].</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("windowSecs")
     public Long windowSecs;

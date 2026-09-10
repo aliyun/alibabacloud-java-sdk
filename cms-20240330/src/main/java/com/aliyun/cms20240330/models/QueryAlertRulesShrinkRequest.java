@@ -29,7 +29,7 @@ public class QueryAlertRulesShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the position from which you want to start reading. If this parameter is left empty, data is read from the beginning.</p>
+     * <p>The pagination token that marks the position from which to start reading. Leave this parameter empty to read from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>

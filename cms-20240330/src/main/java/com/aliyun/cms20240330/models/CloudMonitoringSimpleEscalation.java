@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class CloudMonitoringSimpleEscalation extends TeaModel {
     /**
-     * <p>An object that defines a single escalation rule.</p>
+     * <p>The multi-level trigger list.</p>
      */
     @NameInMap("escalations")
     public java.util.List<CloudMonitoringSimpleEscalationEntry> escalations;
 
     /**
-     * <p>The name of the metric.</p>
+     * <p>The metric name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cpuUsage</p>
      */
     @NameInMap("metricName")
     public String metricName;
 
     /**
-     * <p>The evaluation period for the metric, in seconds.</p>
+     * <p>The collection period, in seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("period")
     public Integer period;

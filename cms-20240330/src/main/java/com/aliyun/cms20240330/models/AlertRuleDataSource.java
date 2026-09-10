@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class AlertRuleDataSource extends TeaModel {
     /**
-     * <p>Applies to the APM_DS data source type.</p>
-     * <p>The type of the application. Valid value:</p>
+     * <p>Applicable data source type: APM_DS.</p>
+     * <p>The application type. Valid values:</p>
      * <ul>
      * <li>apm</li>
      * </ul>
@@ -18,15 +18,15 @@ public class AlertRuleDataSource extends TeaModel {
     public String appType;
 
     /**
-     * <p>Applies to the SLS_MULTI_DS data source type.</p>
-     * <p>A list of sub-data sources.</p>
+     * <p>Applicable data source type: SLS_MULTI_DS.</p>
+     * <p>The list of sub-data sources.</p>
      */
     @NameInMap("dsList")
     public java.util.List<AlertRuleDataSourceDsList> dsList;
 
     /**
-     * <p>Applies to the PROMETHEUS_DS data source type.</p>
-     * <p>The ID of the Prometheus instance.</p>
+     * <p>Applicable data source type: PROMETHEUS_DS.</p>
+     * <p>The Prometheus instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rw-bbe8961b4a59be0</p>
@@ -35,7 +35,7 @@ public class AlertRuleDataSource extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Applies to the ENTERPRISE_DS data source type.</p>
+     * <p>Applicable data source type: ENTERPRISE_DS.</p>
      * <p>The name of the Hybrid Cloud Monitoring metric repository.</p>
      * 
      * <strong>example:</strong>
@@ -45,8 +45,8 @@ public class AlertRuleDataSource extends TeaModel {
     public String namespace;
 
     /**
-     * <p>Applies to the APM_DS and PROMETHEUS_DS data source types.</p>
-     * <p>The ID of the region where the data source is located.</p>
+     * <p>Applicable data source types: APM_DS and PROMETHEUS_DS.</p>
+     * <p>The region ID of the data source.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -54,6 +54,13 @@ public class AlertRuleDataSource extends TeaModel {
     @NameInMap("regionId")
     public String regionId;
 
+    /**
+     * <p>Applicable data source type: ENTERPRISE_DS.</p>
+     * <p>The tenant ID of the Hybrid Cloud Monitoring data source. Identifies the tenant in the Hybrid Cloud Monitoring environment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567890</p>
+     */
     @NameInMap("tenantId")
     public String tenantId;
 
@@ -61,16 +68,11 @@ public class AlertRuleDataSource extends TeaModel {
      * <p>The data source type.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>PROMETHEUS_DS: A Prometheus data source.</p>
-     * </li>
-     * <li><p>SLS_MULTI_DS: An SLS data source.</p>
-     * </li>
-     * <li><p>APM_DS: An Application Monitoring data source.</p>
-     * </li>
-     * <li><p>CMS_BASIC_DS: A basic Cloud Monitor data source.</p>
-     * </li>
-     * <li><p>ENTERPRISE_DS: A Hybrid Cloud Monitoring data source.</p>
-     * </li>
+     * <li>PROMETHEUS_DS: Prometheus data source.</li>
+     * <li>SLS_MULTI_DS: SLS data source.</li>
+     * <li>APM_DS: Application monitoring data source.</li>
+     * <li>CMS_BASIC_DS: CloudMonitor Basic data source.</li>
+     * <li>ENTERPRISE_DS: Hybrid Cloud Monitoring data source.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -143,7 +145,7 @@ public class AlertRuleDataSource extends TeaModel {
 
     public static class AlertRuleDataSourceDsList extends TeaModel {
         /**
-         * <p>The SLS project.</p>
+         * <p>The name of the Simple Log Service (SLS) project. Specifies the project where the logs or metrics reside.</p>
          * 
          * <strong>example:</strong>
          * <p>mySlsProject</p>
@@ -152,7 +154,7 @@ public class AlertRuleDataSource extends TeaModel {
         public String project;
 
         /**
-         * <p>The region where the SLS project is located.</p>
+         * <p>The region where the SLS project resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -172,10 +174,8 @@ public class AlertRuleDataSource extends TeaModel {
         /**
          * <p>The type of the SLS sub-data source. Valid values:</p>
          * <ul>
-         * <li><p>SLS_LOG_DS: A LogStore data source.</p>
-         * </li>
-         * <li><p>SLS_METRIC_DS: A MetricStore data source.</p>
-         * </li>
+         * <li>SLS_LOG_DS: LogStore data source.</li>
+         * <li>SLS_METRIC_DS: MetricStore data source.</li>
          * </ul>
          * 
          * <strong>example:</strong>

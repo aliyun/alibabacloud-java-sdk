@@ -5,27 +5,28 @@ import com.aliyun.tea.*;
 
 public class PrometheusSimpleExpression extends TeaModel {
     /**
-     * <p>The comparison operator. Valid values:</p>
-     * <ul>
-     * <li>GT: greater than</li>
-     * <li>GE: greater than or equal to</li>
-     * <li>LT: less than</li>
-     * <li>LE: less than or equal to</li>
-     * <li>EQ: equal to</li>
-     * <li>NE: not equal to</li>
-     * </ul>
+     * <p>The comparison operator. Valid values: GT (greater than), GE (greater than or equal to), LT (less than), LE (less than or equal to), EQ (equal to), and NE (not equal to).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GT</p>
      */
     @NameInMap("operator")
     public String operator;
 
     /**
      * <p>The referenced query name, corresponding to QueryConfigUnified.queries[].name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cpuQuery</p>
      */
     @NameInMap("queryName")
     public String queryName;
 
     /**
      * <p>The comparison threshold.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("threshold")
     public Double threshold;

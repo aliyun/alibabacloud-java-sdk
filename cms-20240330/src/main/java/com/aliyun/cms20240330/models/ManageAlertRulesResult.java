@@ -5,31 +5,37 @@ import com.aliyun.tea.*;
 
 public class ManageAlertRulesResult extends TeaModel {
     /**
-     * <p>The details of the created or updated alert rule.</p>
+     * <p>The alert rule V2.</p>
      */
     @NameInMap("alertRule")
     public AlertRuleV2 alertRule;
 
     /**
-     * <p>The number of deleted alert rules.</p>
+     * <p>The number of rules that were successfully deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("deletedCount")
     public Integer deletedCount;
 
     /**
-     * <p>A list of UUIDs of deleted alert rules.</p>
+     * <p>The list of UUIDs of rules that were successfully deleted.</p>
      */
     @NameInMap("deletedUuidList")
     public java.util.List<String> deletedUuidList;
 
     /**
-     * <p>The number of updated alert rules.</p>
+     * <p>The number of rules that were successfully enabled or disabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("updatedCount")
     public Integer updatedCount;
 
     /**
-     * <p>A list of UUIDs of updated alert rules.</p>
+     * <p>The list of UUIDs of rules that were successfully enabled or disabled.</p>
      */
     @NameInMap("updatedUuidList")
     public java.util.List<String> updatedUuidList;

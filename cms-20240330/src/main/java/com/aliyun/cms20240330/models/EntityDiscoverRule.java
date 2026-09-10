@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class EntityDiscoverRule extends TeaModel {
     /**
-     * <p>A collection of annotation matching rules.</p>
+     * <p>The collection of annotation matching rules.</p>
      */
     @NameInMap("annotations")
     public java.util.List<EntityDiscoverRuleAnnotations> annotations;
 
     /**
-     * <p>A collection of entity types.</p>
+     * <p>The collection of entity types.</p>
      */
     @NameInMap("entityTypes")
     public java.util.List<String> entityTypes;
@@ -23,25 +23,25 @@ public class EntityDiscoverRule extends TeaModel {
     public java.util.List<EntityDiscoverRuleFieldRules> fieldRules;
 
     /**
-     * <p>A collection of instance IDs.</p>
+     * <p>The collection of instance IDs.</p>
      */
     @NameInMap("instanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>A collection of IP address matching rules.</p>
+     * <p>The collection of IP matching rules.</p>
      */
     @NameInMap("ipMatchRule")
     public EntityDiscoverRuleIpMatchRule ipMatchRule;
 
     /**
-     * <p>A collection of label matching rules.</p>
+     * <p>The collection of label matching rules.</p>
      */
     @NameInMap("labels")
     public java.util.List<EntityDiscoverRuleLabels> labels;
 
     /**
-     * <p>A collection of region IDs.</p>
+     * <p>The collection of region IDs.</p>
      */
     @NameInMap("regionIds")
     public java.util.List<String> regionIds;
@@ -56,7 +56,7 @@ public class EntityDiscoverRule extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tag-based service discovery rules.</p>
+     * <p>The tag-based service discovery settings.</p>
      */
     @NameInMap("tags")
     public java.util.List<EntityDiscoverRuleTags> tags;
@@ -158,7 +158,7 @@ public class EntityDiscoverRule extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>A collection of annotation values.</p>
+         * <p>The collection of annotation values.</p>
          */
         @NameInMap("tagValues")
         public java.util.List<String> tagValues;
@@ -205,7 +205,7 @@ public class EntityDiscoverRule extends TeaModel {
         public String fieldKey;
 
         /**
-         * <p>A collection of property values.</p>
+         * <p>The collection of property values.</p>
          */
         @NameInMap("fieldValues")
         public java.util.List<String> fieldValues;
@@ -251,9 +251,21 @@ public class EntityDiscoverRule extends TeaModel {
     }
 
     public static class EntityDiscoverRuleIpMatchRule extends TeaModel {
+        /**
+         * <p>The CIDR block of the IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/16</p>
+         */
         @NameInMap("ipCIDR")
         public String ipCIDR;
 
+        /**
+         * <p>The property key of the IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs_ip</p>
+         */
         @NameInMap("ipFieldKey")
         public String ipFieldKey;
 
@@ -300,7 +312,7 @@ public class EntityDiscoverRule extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>A collection of label values.</p>
+         * <p>The collection of label values.</p>
          */
         @NameInMap("tagValues")
         public java.util.List<String> tagValues;
@@ -356,7 +368,7 @@ public class EntityDiscoverRule extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>A collection of tag values.</p>
+         * <p>The collection of tag values.</p>
          */
         @NameInMap("tagValues")
         public java.util.List<String> tagValues;

@@ -12,6 +12,9 @@ public class SlsQueryJoin extends TeaModel {
 
     /**
      * <p>The set operation type. Valid values: InnerJoin, LeftJoin, RightJoin, FullJoin, LeftExclude, RightExclude, CrossJoin, NoJoin, and Concat.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LEFT</p>
      */
     @NameInMap("type")
     public String type;

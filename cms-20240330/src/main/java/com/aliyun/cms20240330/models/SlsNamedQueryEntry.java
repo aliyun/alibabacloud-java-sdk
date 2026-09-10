@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class SlsNamedQueryEntry extends TeaModel {
     /**
      * <p>The end offset of the time range. This parameter is mutually exclusive with window.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1700000300000</p>
      */
     @NameInMap("end")
     public Long end;
 
     /**
      * <p>The SPL query expression.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>logLevel: error</p>
      */
     @NameInMap("expr")
     public String expr;
 
     /**
      * <p>The start offset of the time range. This parameter is mutually exclusive with window.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1700000000000</p>
      */
     @NameInMap("start")
     public Long start;
 
     /**
      * <p>The time unit. Valid values: day, hour, minute, and second.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>second</p>
      */
     @NameInMap("timeUnit")
     public String timeUnit;
 
     /**
      * <p>The snap window size. This parameter is mutually exclusive with start and end.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("window")
     public Long window;

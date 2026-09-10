@@ -1,3 +1,13 @@
+2026-09-10 Version: 10.5.0
+- Support API CreateMaintainWindow.
+- Support API DeleteMaintainWindow.
+- Support API DisableMaintainWindow.
+- Support API EnableMaintainWindow.
+- Support API GetMaintainWindow.
+- Support API ListMaintainWindows.
+- Support API UpdateMaintainWindow.
+
+
 2026-08-27 Version: 10.4.3
 - Update API DescribeMetricMetaList: add request parameters aliyunLang.
 - Update API DescribeMetricMetaList: add request parameters category.

@@ -4,12 +4,30 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class PrometheusMetricFilterValue extends TeaModel {
+    /**
+     * <p>The filter dimension name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>host</p>
+     */
     @NameInMap("dim")
     public String dim;
 
+    /**
+     * <p>The filter operator, such as eq, neq, contain, not_contain, all, or disabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>=</p>
+     */
     @NameInMap("opt")
     public String opt;
 
+    /**
+     * <p>The filter value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>web-01</p>
+     */
     @NameInMap("value")
     public String value;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AlertRuleRcaConfig extends TeaModel {
     /**
      * <p>The digital employee name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>O&amp;M Assistant</p>
      */
     @NameInMap("digitalEmployeeName")
     public String digitalEmployeeName;

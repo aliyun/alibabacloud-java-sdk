@@ -5,25 +5,28 @@ import com.aliyun.tea.*;
 
 public class IncidentResponsePlanForSNSModify extends TeaModel {
     /**
-     * <p>The auto recovery time, in seconds. After this period, the incident is automatically resolved.</p>
+     * <p>The auto-recovery time. Unit: seconds. After this is configured, if no new events are generated for the incident within this period, the incident is automatically marked as resolved.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3600</p>
      */
     @NameInMap("autoRecoverSeconds")
     public Long autoRecoverSeconds;
 
     /**
-     * <p>The IDs of the escalation policies.</p>
+     * <p>The list of escalation policy IDs. Associates with IncidentEscalationPolicy to define step-by-step escalation rules when an incident is not handled as expected, such as notifying a supervisor if the incident is not acknowledged within 30 minutes.</p>
      */
     @NameInMap("escalationId")
     public java.util.List<String> escalationId;
 
     /**
-     * <p>The push setting for notifications.</p>
+     * <p>The action integration execution configuration that defines automated actions to trigger when an incident occurs and when it is recovered.</p>
      */
     @NameInMap("pushingSetting")
     public IncidentResponsePlanForSNSModifyPushingSetting pushingSetting;
 
     /**
-     * <p>The repeat notification setting.</p>
+     * <p>The repeat notification settings. When an incident remains unresolved, notifications are sent repeatedly at a fixed interval.</p>
      */
     @NameInMap("repeatNotifySetting")
     public IncidentResponsePlanForSNSModifyRepeatNotifySetting repeatNotifySetting;
@@ -67,19 +70,22 @@ public class IncidentResponsePlanForSNSModify extends TeaModel {
 
     public static class IncidentResponsePlanForSNSModifyPushingSetting extends TeaModel {
         /**
-         * <p>The IDs of the alert actions.</p>
+         * <p>The list of action IDs to execute when an event is triggered. Actions must be created in advance by calling CreateAlertAction.</p>
          */
         @NameInMap("alertActionIds")
         public java.util.List<String> alertActionIds;
 
         /**
-         * <p>The IDs of the restore actions.</p>
+         * <p>The list of action IDs to execute when an event is recovered.</p>
          */
         @NameInMap("restoreActionIds")
         public java.util.List<String> restoreActionIds;
 
         /**
-         * <p>The UUID of the notification template.</p>
+         * <p>Deprecated. This parameter does not take effect even if a value is passed in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uuid</p>
          */
         @NameInMap("templateUuid")
         public String templateUuid;
@@ -117,13 +123,19 @@ public class IncidentResponsePlanForSNSModify extends TeaModel {
 
     public static class IncidentResponsePlanForSNSModifyRepeatNotifySetting extends TeaModel {
         /**
-         * <p>The incident state that stops repeat notifications.</p>
+         * <p>The incident status at which repeat notifications stop. Repeat notifications are no longer sent after the incident reaches this status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>resolved</p>
          */
         @NameInMap("endIncidentState")
         public String endIncidentState;
 
         /**
-         * <p>The repeat interval for notifications, in seconds.</p>
+         * <p>The repeat notification interval. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         @NameInMap("repeatInterval")
         public Integer repeatInterval;

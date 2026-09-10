@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ObserveResourceTypeFilter extends TeaModel {
     /**
-     * <p>The exact resource type to query. Returns only resources of this type.</p>
+     * <p>The exact match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS::ECS::Instance</p>
      */
     @NameInMap("eq")
     public String eq;

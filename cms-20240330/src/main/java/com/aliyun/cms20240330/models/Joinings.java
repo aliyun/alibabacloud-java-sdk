@@ -4,9 +4,18 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class Joinings extends TeaModel {
+    /**
+     * <p>The list of join conditions.</p>
+     */
     @NameInMap("conditions")
     public java.util.List<JoinConditions> conditions;
 
+    /**
+     * <p>The set operation type. Valid values: InnerJoin, LeftJoin, RightJoin, FullJoin, LeftExclude, RightExclude, CrossJoin, NoJoin, and Concat.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INNER</p>
+     */
     @NameInMap("type")
     public String type;
 

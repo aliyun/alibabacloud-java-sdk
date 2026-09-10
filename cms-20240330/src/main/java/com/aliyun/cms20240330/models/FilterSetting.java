@@ -11,7 +11,7 @@ public class FilterSetting extends TeaModel {
     public java.util.List<FilterSettingConditions> conditions;
 
     /**
-     * <p>The expression.</p>
+     * <p>Use either expression or relation. If expression is not empty, it takes precedence and relation is ignored. If expression is empty or not specified, relation (AND or OR) is used to perform a simple AND/OR operation on all conditions. Condition numbers correspond to the indexes of the conditions array (starting from 1). Each condition evaluates whether a single event field matches by using field (the event field path, which supports dot-notation nesting such as resource.tags.pod), op (the operator, such as CONTAIN, EQ, or IN), and value (the matching value).</p>
      * 
      * <strong>example:</strong>
      * <p>1 and 2 or 3</p>
@@ -20,7 +20,7 @@ public class FilterSetting extends TeaModel {
     public String expression;
 
     /**
-     * <p>The relationship between conditions.</p>
+     * <p>The logical relationship between conditions. This parameter takes effect when expression is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>AND</p>
@@ -59,10 +59,10 @@ public class FilterSetting extends TeaModel {
 
     public static class FilterSettingConditions extends TeaModel {
         /**
-         * <p>The field.</p>
+         * <p>The JSON path of the event field. Dot-notation nesting is supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>severity</p>
+         * <p>labels.alertname</p>
          */
         @NameInMap("field")
         public String field;
@@ -77,7 +77,7 @@ public class FilterSetting extends TeaModel {
         public String op;
 
         /**
-         * <p>The value.</p>
+         * <p>The matching value. Separate multiple values with commas when using IN or NOT_IN.</p>
          * 
          * <strong>example:</strong>
          * <p>CRITICAL</p>

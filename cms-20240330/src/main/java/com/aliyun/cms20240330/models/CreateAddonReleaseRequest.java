@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAddonReleaseRequest extends TeaModel {
     /**
-     * <p>The name of the add-on to integrate.</p>
+     * <p>The name of the addon component to be connected to monitoring.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateAddonReleaseRequest extends TeaModel {
     public String addonName;
 
     /**
-     * <p>The language of the add-on.</p>
+     * <p>The language type of the component.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -24,22 +24,23 @@ public class CreateAddonReleaseRequest extends TeaModel {
     public String aliyunLang;
 
     /**
-     * <p>Specifies whether to perform a dry run. The default value is false.</p>
+     * <p>Specifies whether to perform a dry run. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("dryRun")
+    @Deprecated
     public Boolean dryRun;
 
     /**
-     * <p>The entity discovery rules.</p>
+     * <p>The field rules.</p>
      */
     @NameInMap("entityRules")
     public EntityDiscoverRule entityRules;
 
     /**
-     * <p>The environment type. Set this parameter to CS for container environments or ECS for ECS environments. For all other environment types, set this parameter to Cloud.</p>
+     * <p>The environment type. If the policy type is CS or ECS, the corresponding value is used. For other types, the value is Cloud.</p>
      * 
      * <strong>example:</strong>
      * <p>CS</p>
@@ -48,7 +49,7 @@ public class CreateAddonReleaseRequest extends TeaModel {
     public String envType;
 
     /**
-     * <p>The ID of the parent AddonRelease.</p>
+     * <p>The parent AddonReleaseId.</p>
      * 
      * <strong>example:</strong>
      * <p>policy-xxxxxxxxxxx</p>
@@ -57,7 +58,7 @@ public class CreateAddonReleaseRequest extends TeaModel {
     public String parentAddonReleaseId;
 
     /**
-     * <p>The name of the release after the integration. If you do not specify this parameter, a default name is generated.</p>
+     * <p>The name of the plugin after access. If this parameter is not specified, a default rule name is generated.</p>
      * 
      * <strong>example:</strong>
      * <p>test-gpu-integration-name</p>
@@ -66,7 +67,7 @@ public class CreateAddonReleaseRequest extends TeaModel {
     public String releaseName;
 
     /**
-     * <p>The metadata.</p>
+     * <p>The input metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;install&quot;:{&quot;mode&quot;:&quot;auto-install&quot;,&quot;listenPort&quot;:&quot;9400&quot;},&quot;discoverMode&quot;:&quot;instances&quot;,&quot;discover&quot;:{&quot;instances&quot;:&quot;worker-k8s-for-cs-c126d87c76218487e83ab322017f11b44&quot;},&quot;scrapeInterval&quot;:&quot;15&quot;,&quot;enableSecuritecs-nodeyGroupInjection&quot;:&quot;true&quot;,&quot;metricTags&quot;:&quot;&quot;}</p>
@@ -75,7 +76,7 @@ public class CreateAddonReleaseRequest extends TeaModel {
     public String values;
 
     /**
-     * <p>The version of the add-on to integrate.</p>
+     * <p>The version of the addon component to be connected to monitoring.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,7 +86,7 @@ public class CreateAddonReleaseRequest extends TeaModel {
     public String version;
 
     /**
-     * <p>The name of the workspace where the add-on is installed.</p>
+     * <p>The name of the workspace where the component resources are installed.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -114,6 +115,7 @@ public class CreateAddonReleaseRequest extends TeaModel {
         return this.aliyunLang;
     }
 
+    @Deprecated
     public CreateAddonReleaseRequest setDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;

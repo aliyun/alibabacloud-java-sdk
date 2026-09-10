@@ -6,36 +6,54 @@ import com.aliyun.tea.*;
 public class CloudMonitoringSimpleEscalationEntry extends TeaModel {
     /**
      * <p>The comparison operator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GT</p>
      */
     @NameInMap("comparisonOperator")
     public String comparisonOperator;
 
     /**
      * <p>The precondition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3 consecutive times</p>
      */
     @NameInMap("preCondition")
     public String preCondition;
 
     /**
      * <p>The severity level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CRITICAL</p>
      */
     @NameInMap("severity")
     public String severity;
 
     /**
-     * <p>The statistics method.</p>
+     * <p>The statistical method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Average</p>
      */
     @NameInMap("statistics")
     public String statistics;
 
     /**
      * <p>The threshold.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("threshold")
     public String threshold;
 
     /**
-     * <p>The number of consecutive times the condition is triggered.</p>
+     * <p>The number of consecutive times the condition must be met to trigger an alert.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("times")
     public Integer times;

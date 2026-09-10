@@ -4,12 +4,30 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class EntityFilters extends TeaModel {
+    /**
+     * <p>The name of the filter field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>region</p>
+     */
     @NameInMap("field")
     public String field;
 
+    /**
+     * <p>The filter operator. Only = or != is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>=</p>
+     */
     @NameInMap("operator")
     public String operator;
 
+    /**
+     * <p>The filter value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("value")
     public String value;
 

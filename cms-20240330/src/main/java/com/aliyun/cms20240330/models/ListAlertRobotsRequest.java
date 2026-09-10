@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAlertRobotsRequest extends TeaModel {
     /**
-     * <p>The chatbot name. Prefix fuzzy match is supported.</p>
+     * <p>The robot name. Prefix fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -32,17 +32,23 @@ public class ListAlertRobotsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The chatbot ID.</p>
+     * <p>The robot IDs.</p>
      */
     @NameInMap("robotIds")
     public java.util.List<String> robotIds;
 
     /**
-     * <p>The chatbot type.</p>
+     * <p>The robot type.</p>
      */
     @NameInMap("types")
     public java.util.List<String> types;
 
+    /**
+     * <p>The workspace name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default-cms-1423134313712421-cn-shanghai</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 

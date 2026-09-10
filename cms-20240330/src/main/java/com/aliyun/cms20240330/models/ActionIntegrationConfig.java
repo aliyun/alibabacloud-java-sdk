@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ActionIntegrationConfig extends TeaModel {
     /**
-     * <p>The list of action integration IDs.</p>
+     * <p>The list of action integration configurations. An action integration is an automated action that is executed after an alert rule is triggered, such as sending a notification or invoking a webhook. Each action integration is referenced by its action integration ID.</p>
      */
     @NameInMap("actions")
     public java.util.List<String> actions;
 
     /**
-     * <p>Indicates whether action integration is started.</p>
+     * <p>Indicates whether action integration is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("enabled")
     public Boolean enabled;

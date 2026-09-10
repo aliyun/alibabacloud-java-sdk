@@ -4,45 +4,126 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class SubscriptionAndNotifyStrategyForListView extends TeaModel {
+    /**
+     * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1700000000</p>
+     */
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample description</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Indicates whether the policy is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enabled")
     public Boolean enabled;
 
+    /**
+     * <p>The migration batch ID. This field is empty for user-created entries and has a value for migration artifacts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-id-001</p>
+     */
     @NameInMap("migrationBatchId")
     public String migrationBatchId;
 
+    /**
+     * <p>The migration metadata JSON string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value</p>
+     */
     @NameInMap("migrationMeta")
     public String migrationMeta;
 
+    /**
+     * <p>The name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample name</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The notification policy snapshot.</p>
+     */
     @NameInMap("notifyStrategy")
     public NotifyStrategyForSNSView notifyStrategy;
 
+    /**
+     * <p>The UUID of the associated notifyStrategy, which is shared with the responsePlan UUID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-id-001</p>
+     */
     @NameInMap("notifyStrategyUuid")
     public String notifyStrategyUuid;
 
+    /**
+     * <p>The UUID of the directly bound primary subscription, which has a 1:1 association in the NOTIFY mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-id-001</p>
+     */
     @NameInMap("subscriptionUuid")
     public String subscriptionUuid;
 
+    /**
+     * <p>The update time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1700000000</p>
+     */
     @NameInMap("updateTime")
     public String updateTime;
 
+    /**
+     * <p>The user ID of the owner.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-id-001</p>
+     */
     @NameInMap("userId")
     public String userId;
 
+    /**
+     * <p>The UUID of the aggregate entity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-id-001</p>
+     */
     @NameInMap("uuid")
     public String uuid;
 
+    /**
+     * <p>The optimistic lock version number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("version")
     public Integer version;
 
+    /**
+     * <p>The workspace identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 

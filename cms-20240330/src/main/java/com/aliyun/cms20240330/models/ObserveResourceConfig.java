@@ -4,21 +4,54 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ObserveResourceConfig extends TeaModel {
+    /**
+     * <p>The UModel entity domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_monitor</p>
+     */
     @NameInMap("entityDomain")
     public String entityDomain;
 
+    /**
+     * <p>The UModel entity type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS::ECS::Instance</p>
+     */
     @NameInMap("entityType")
     public String entityType;
 
+    /**
+     * <p>The CloudMonitor namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs_ecs_dashboard</p>
+     */
     @NameInMap("namespace")
     public String namespace;
 
+    /**
+     * <p>The CloudMonitor product category.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
+     */
     @NameInMap("productCategory")
     public String productCategory;
 
+    /**
+     * <p>The relation type. TAG is supported only for alert rules where datasourceConfig.type is set to APM and queryConfig.type is set to APM_MULTI_QUERY. UMODEL_ENTITY does not support writes and is used only for reading existing data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL</p>
+     */
     @NameInMap("relationType")
     public String relationType;
 
+    /**
+     * <p>The list of resources. If relationType is set to ALL, this parameter can be left empty, which indicates all resources. If relationType is set to TAG, this parameter is a list of labels in key=value format (such as [&quot;env=prod&quot;, &quot;app=foo&quot;]). This is supported only for APM data sources with APM_MULTI_QUERY.</p>
+     */
     @NameInMap("resources")
     public java.util.List<String> resources;
 

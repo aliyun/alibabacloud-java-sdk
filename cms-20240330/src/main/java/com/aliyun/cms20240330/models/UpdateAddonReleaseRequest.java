@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAddonReleaseRequest extends TeaModel {
     /**
-     * <p>The version of the add-on.</p>
+     * <p>The version of the addon.</p>
      * 
      * <strong>example:</strong>
      * <p>0.0.2</p>
@@ -14,12 +14,17 @@ public class UpdateAddonReleaseRequest extends TeaModel {
     public String addonVersion;
 
     /**
-     * <p>Specifies whether to perform a dry run for the request.</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <ul>
+     * <li>true: Performs a dry run.</li>
+     * <li>false: Does not perform a dry run.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("dryRun")
+    @Deprecated
     public Boolean dryRun;
 
     /**
@@ -50,6 +55,7 @@ public class UpdateAddonReleaseRequest extends TeaModel {
         return this.addonVersion;
     }
 
+    @Deprecated
     public UpdateAddonReleaseRequest setDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;

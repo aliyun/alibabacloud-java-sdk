@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class WorkspaceFilterSetting extends TeaModel {
     /**
-     * <p>The tag filter.</p>
+     * <p>The label filter. This parameter is not supported and does not take effect if specified.</p>
      */
     @NameInMap("tagSelector")
     public FilterSetting tagSelector;
 
     /**
-     * <p>A list of workspace UUIDs.</p>
+     * <p>The list of workspace UUIDs.</p>
      */
     @NameInMap("workspaceUuids")
     public java.util.List<String> workspaceUuids;

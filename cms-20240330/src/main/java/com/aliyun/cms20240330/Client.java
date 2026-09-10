@@ -265,10 +265,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a release for an add-on.</p>
+     * <p>Creates a site monitoring task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Installs an add-on.</p>
+     * <p>Installs an access component, which represents a single access operation.</p>
      * 
      * @param request CreateAddonReleaseRequest
      * @param headers map
@@ -338,10 +338,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a release for an add-on.</p>
+     * <p>Creates a site monitoring task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Installs an add-on.</p>
+     * <p>Installs an access component, which represents a single access operation.</p>
      * 
      * @param request CreateAddonReleaseRequest
      * @return CreateAddonReleaseResponse
@@ -467,10 +467,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an alert webhook to use as a notification recipient.</p>
+     * <p>Creates a webhook notification recipient.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create a webhook</p>
+     * <p>Creates a webhook.</p>
      * 
      * @param request CreateAlertWebhookRequest
      * @param headers map
@@ -532,10 +532,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an alert webhook to use as a notification recipient.</p>
+     * <p>Creates a webhook notification recipient.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create a webhook</p>
+     * <p>Creates a webhook.</p>
      * 
      * @param request CreateAlertWebhookRequest
      * @return CreateAlertWebhookResponse
@@ -1079,6 +1079,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createIntegrationPolicyWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建订阅</p>
+     * 
+     * @param request CreateMaintainWindowRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMaintainWindowResponse
+     */
+    public CreateMaintainWindowResponse createMaintainWindowWithOptions(CreateMaintainWindowRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            query.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMaintainWindow"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/maintainWindows"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMaintainWindowResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建订阅</p>
+     * 
+     * @param request CreateMaintainWindowRequest
+     * @return CreateMaintainWindowResponse
+     */
+    public CreateMaintainWindowResponse createMaintainWindow(CreateMaintainWindowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createMaintainWindowWithOptions(request, headers, runtime);
     }
 
     /**
@@ -1868,7 +1916,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes add-on release information.</p>
+     * <p>Deletes addon release information.</p>
      * 
      * @param request DeleteAddonReleaseRequest
      * @param headers map
@@ -1910,7 +1958,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes add-on release information.</p>
+     * <p>Deletes addon release information.</p>
      * 
      * @param request DeleteAddonReleaseRequest
      * @return DeleteAddonReleaseResponse
@@ -2482,6 +2530,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteIntegrationPolicyWithOptions(policyId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除指定的静默策略。删除成功后，服务通过异步消息刷新运行时缓存，因此短时间内仍可能按删除前的策略处理事件。指定的静默策略不存在时返回 ResourceNotFound。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除转换器</p>
+     * 
+     * @param request DeleteMaintainWindowRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMaintainWindowResponse
+     */
+    public DeleteMaintainWindowResponse deleteMaintainWindowWithOptions(String maintainWindowId, DeleteMaintainWindowRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            query.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMaintainWindow"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/maintainWindows/" + com.aliyun.openapiutil.Client.getEncodeParam(maintainWindowId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMaintainWindowResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除指定的静默策略。删除成功后，服务通过异步消息刷新运行时缓存，因此短时间内仍可能按删除前的策略处理事件。指定的静默策略不存在时返回 ResourceNotFound。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除转换器</p>
+     * 
+     * @param request DeleteMaintainWindowRequest
+     * @return DeleteMaintainWindowResponse
+     */
+    public DeleteMaintainWindowResponse deleteMaintainWindow(String maintainWindowId, DeleteMaintainWindowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteMaintainWindowWithOptions(maintainWindowId, request, headers, runtime);
     }
 
     /**
@@ -3345,6 +3446,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>暂停指定的静默策略。暂停成功后，服务通过异步消息刷新运行时缓存；刷新完成后该策略不再参与事件静默判断，短时间内仍可能按暂停前状态处理事件。指定的静默策略不存在时返回 ResourceNotFound。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>暂停转换器</p>
+     * 
+     * @param request DisableMaintainWindowRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableMaintainWindowResponse
+     */
+    public DisableMaintainWindowResponse disableMaintainWindowWithOptions(String maintainWindowId, DisableMaintainWindowRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            query.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableMaintainWindow"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/maintainWindows/" + com.aliyun.openapiutil.Client.getEncodeParam(maintainWindowId) + "/disable"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableMaintainWindowResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>暂停指定的静默策略。暂停成功后，服务通过异步消息刷新运行时缓存；刷新完成后该策略不再参与事件静默判断，短时间内仍可能按暂停前状态处理事件。指定的静默策略不存在时返回 ResourceNotFound。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>暂停转换器</p>
+     * 
+     * @param request DisableMaintainWindowRequest
+     * @return DisableMaintainWindowResponse
+     */
+    public DisableMaintainWindowResponse disableMaintainWindow(String maintainWindowId, DisableMaintainWindowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.disableMaintainWindowWithOptions(maintainWindowId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Disables a notification policy by specifying the workspace and uuid (path parameter). Returns success and the policy uuid.</p>
      * 
      * <b>summary</b> : 
@@ -3394,6 +3548,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.disableNotifyPolicyWithOptions(uuid, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>启用指定的静默策略。启用成功后，服务通过异步消息刷新运行时缓存；刷新完成后，命中该策略过滤条件且处于生效时间内的事件不会触发通知，短时间内仍可能按启用前状态处理事件。指定的静默策略不存在时返回 ResourceNotFound。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>启动转换器</p>
+     * 
+     * @param request EnableMaintainWindowRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableMaintainWindowResponse
+     */
+    public EnableMaintainWindowResponse enableMaintainWindowWithOptions(String maintainWindowId, EnableMaintainWindowRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            query.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableMaintainWindow"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/maintainWindows/" + com.aliyun.openapiutil.Client.getEncodeParam(maintainWindowId) + "/enable"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableMaintainWindowResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>启用指定的静默策略。启用成功后，服务通过异步消息刷新运行时缓存；刷新完成后，命中该策略过滤条件且处于生效时间内的事件不会触发通知，短时间内仍可能按启用前状态处理事件。指定的静默策略不存在时返回 ResourceNotFound。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>启动转换器</p>
+     * 
+     * @param request EnableMaintainWindowRequest
+     * @return EnableMaintainWindowResponse
+     */
+    public EnableMaintainWindowResponse enableMaintainWindow(String maintainWindowId, EnableMaintainWindowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.enableMaintainWindowWithOptions(maintainWindowId, request, headers, runtime);
     }
 
     /**
@@ -4395,6 +4602,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getIntegrationVersionForCSWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查询指定静默策略的详细配置，包括策略名称、描述、启用状态、过滤条件、生效时间配置以及创建时间和更新时间。当前查询结果不返回 workspaceFilterSetting。指定的静默策略不存在时返回 ResourceNotFound。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取订阅</p>
+     * 
+     * @param request GetMaintainWindowRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMaintainWindowResponse
+     */
+    public GetMaintainWindowResponse getMaintainWindowWithOptions(String maintainWindowId, GetMaintainWindowRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            query.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMaintainWindow"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/maintainWindows/" + com.aliyun.openapiutil.Client.getEncodeParam(maintainWindowId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMaintainWindowResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查询指定静默策略的详细配置，包括策略名称、描述、启用状态、过滤条件、生效时间配置以及创建时间和更新时间。当前查询结果不返回 workspaceFilterSetting。指定的静默策略不存在时返回 ResourceNotFound。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取订阅</p>
+     * 
+     * @param request GetMaintainWindowRequest
+     * @return GetMaintainWindowResponse
+     */
+    public GetMaintainWindowResponse getMaintainWindow(String maintainWindowId, GetMaintainWindowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMaintainWindowWithOptions(maintainWindowId, request, headers, runtime);
     }
 
     /**
@@ -5519,8 +5779,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation can only query alert history from the last year.
+     * This topic provides an example of querying the alert history of Elastic Computing Service from the cloud service <code>product</code> dimension.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries alert chatbots.</p>
+     * <p>Queries alert robots.</p>
      * 
      * @param tmpReq ListAlertRobotsRequest
      * @param headers map
@@ -5583,8 +5847,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation can only query alert history from the last year.
+     * This topic provides an example of querying the alert history of Elastic Computing Service from the cloud service <code>product</code> dimension.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries alert chatbots.</p>
+     * <p>Queries alert robots.</p>
      * 
      * @param request ListAlertRobotsRequest
      * @return ListAlertRobotsResponse
@@ -5597,7 +5865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query webhooks</p>
+     * <p>Queries webhooks.</p>
      * 
      * @param tmpReq ListAlertWebhooksRequest
      * @param headers map
@@ -5653,7 +5921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query webhooks</p>
+     * <p>Queries webhooks.</p>
      * 
      * @param request ListAlertWebhooksRequest
      * @return ListAlertWebhooksResponse
@@ -5720,6 +5988,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example of how to create an alert contact group named <code>ECS_Group</code>.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries contact groups.</p>
      * 
@@ -5776,6 +6047,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example of how to create an alert contact group named <code>ECS_Group</code>.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries contact groups.</p>
      * 
@@ -5789,8 +6063,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example of how to create an alert contact group named <code>ECS_Group</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Query contacts</p>
+     * <p>Queries contacts.</p>
      * 
      * @param tmpReq ListContactsRequest
      * @param headers map
@@ -5861,8 +6138,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example of how to create an alert contact group named <code>ECS_Group</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Query contacts</p>
+     * <p>Queries contacts.</p>
      * 
      * @param request ListContactsRequest
      * @return ListContactsResponse
@@ -6682,6 +6962,89 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listIntegrationPolicyStorageRequirementsWithOptions(policyId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>分页查询指定工作空间下的静默策略列表，支持按策略名称模糊匹配、按策略 ID 精确匹配、按启用状态过滤，并支持按创建时间、更新时间或启用状态排序。没有匹配项时正常返回空列表；列表项不返回 workspaceFilterSetting。
+     * 当本次返回条数达到 maxResults 时，响应可能包含非空 nextToken；非空 nextToken 仅表示可以继续查询，不保证下一页一定包含数据。nextToken 为空表示分页结束。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询维护窗口列表</p>
+     * 
+     * @param request ListMaintainWindowsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMaintainWindowsResponse
+     */
+    public ListMaintainWindowsResponse listMaintainWindowsWithOptions(ListMaintainWindowsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
+            query.put("direction", request.direction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            query.put("enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maintainWindowId)) {
+            query.put("maintainWindowId", request.maintainWindowId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maintainWindowName)) {
+            query.put("maintainWindowName", request.maintainWindowName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("orderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            query.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMaintainWindows"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/maintainWindows"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMaintainWindowsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>分页查询指定工作空间下的静默策略列表，支持按策略名称模糊匹配、按策略 ID 精确匹配、按启用状态过滤，并支持按创建时间、更新时间或启用状态排序。没有匹配项时正常返回空列表；列表项不返回 workspaceFilterSetting。
+     * 当本次返回条数达到 maxResults 时，响应可能包含非空 nextToken；非空 nextToken 仅表示可以继续查询，不保证下一页一定包含数据。nextToken 为空表示分页结束。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询维护窗口列表</p>
+     * 
+     * @param request ListMaintainWindowsRequest
+     * @return ListMaintainWindowsResponse
+     */
+    public ListMaintainWindowsResponse listMaintainWindows(ListMaintainWindowsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMaintainWindowsWithOptions(request, headers, runtime);
     }
 
     /**
@@ -7792,7 +8155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to query the list of alert templates. The response shows that the alert template list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * <p>This topic provides an example on how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries alert rules.</p>
@@ -7853,7 +8216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to query the list of alert templates. The response shows that the alert template list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * <p>This topic provides an example on how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries alert rules.</p>
@@ -8159,7 +8522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrades an add-on component.</p>
+     * <p>Upgrades an access component.</p>
      * 
      * @param request UpdateAddonReleaseRequest
      * @param headers map
@@ -8205,7 +8568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrades an add-on component.</p>
+     * <p>Upgrades an access component.</p>
      * 
      * @param request UpdateAddonReleaseRequest
      * @return UpdateAddonReleaseResponse
@@ -8886,6 +9249,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateIntegrationPolicyWithOptions(integrationPolicyId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新指定静默策略的配置。maintainWindowName 为空时保留原名称；description、filterSetting、effective、effectTimeRange、startTime、endTime 按请求体中的值更新，未提供时写为空。建议先通过 GetMaintainWindow 获取当前配置后再提交修改。
+     * 本接口不修改策略的启用状态，启用或暂停请使用 EnableMaintainWindow、DisableMaintainWindow。时间配置校验与 CreateMaintainWindow 一致；同一工作空间下策略名称重复时返回 InvalidParameterValue；指定的静默策略不存在时返回 ResourceNotFound。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>修改已存在的维护窗口配置。</p>
+     * 
+     * @param request UpdateMaintainWindowRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMaintainWindowResponse
+     */
+    public UpdateMaintainWindowResponse updateMaintainWindowWithOptions(String maintainWindowId, UpdateMaintainWindowRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            query.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMaintainWindow"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/maintainWindows/" + com.aliyun.openapiutil.Client.getEncodeParam(maintainWindowId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMaintainWindowResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新指定静默策略的配置。maintainWindowName 为空时保留原名称；description、filterSetting、effective、effectTimeRange、startTime、endTime 按请求体中的值更新，未提供时写为空。建议先通过 GetMaintainWindow 获取当前配置后再提交修改。
+     * 本接口不修改策略的启用状态，启用或暂停请使用 EnableMaintainWindow、DisableMaintainWindow。时间配置校验与 CreateMaintainWindow 一致；同一工作空间下策略名称重复时返回 InvalidParameterValue；指定的静默策略不存在时返回 ResourceNotFound。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>修改已存在的维护窗口配置。</p>
+     * 
+     * @param request UpdateMaintainWindowRequest
+     * @return UpdateMaintainWindowResponse
+     */
+    public UpdateMaintainWindowResponse updateMaintainWindow(String maintainWindowId, UpdateMaintainWindowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateMaintainWindowWithOptions(maintainWindowId, request, headers, runtime);
     }
 
     /**

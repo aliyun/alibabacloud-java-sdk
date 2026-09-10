@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ObserveResourceGlobalScopeFilter extends TeaModel {
     /**
-     * <p>Specifies whether to retrieve only resources that are exclusive to the global scope.</p>
+     * <p>The exact match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("eq")
     public Boolean eq;

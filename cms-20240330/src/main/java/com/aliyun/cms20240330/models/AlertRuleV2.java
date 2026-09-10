@@ -4,6 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class AlertRuleV2 extends TeaModel {
+    /**
+     * <p>The action integration configuration.</p>
+     */
     @NameInMap("actionIntegrationConfig")
     public ActionIntegrationConfig actionIntegrationConfig;
 
@@ -13,47 +16,74 @@ public class AlertRuleV2 extends TeaModel {
     @NameInMap("annotations")
     public java.util.Map<String, String> annotations;
 
+    /**
+     * <p>The ARMS integration configuration.</p>
+     */
     @NameInMap("armsIntegrationConfig")
     public ArmsIntegrationConfig armsIntegrationConfig;
 
     /**
-     * <p>The business source. This field is read-only. Example values: managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, and sls.</p>
+     * <p>The business source. This value is read-only. Example values: managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, and sls.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value</p>
      */
     @NameInMap("bizSource")
     public String bizSource;
 
+    /**
+     * <p>The detection condition configuration. Supported types: Prometheus simple, UModel, APM simple, and APM composite.</p>
+     */
     @NameInMap("conditionConfig")
     public ConditionConfigUnified conditionConfig;
 
     /**
      * <p>The content template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Alert triggered: ${metricName} current value ${currentValue} exceeds threshold ${threshold}</p>
      */
     @NameInMap("contentTemplate")
     public String contentTemplate;
 
     /**
-     * <p>The creation time in ISO 8601 format. This field is read-only.</p>
+     * <p>The creation time in ISO 8601 format. This value is read-only.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1751595283143</p>
      */
     @NameInMap("createdAt")
     public String createdAt;
 
+    /**
+     * <p>The datasource configuration. This is a unified object shared by PROMETHEUS, UMODEL, and APM. Fields are selected based on the type.</p>
+     */
     @NameInMap("datasourceConfig")
     public DatasourceConfigUnified datasourceConfig;
 
     /**
-     * <p>The data source type. This field is read-only and derived.</p>
+     * <p>The datasource type. This value is read-only and derived.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("datasourceType")
     public String datasourceType;
 
     /**
      * <p>The display name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CPU usage alert 95%</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
      * <p>Specifies whether the alert rule is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("enabled")
     public Boolean enabled;
@@ -64,11 +94,17 @@ public class AlertRuleV2 extends TeaModel {
     @NameInMap("labels")
     public java.util.Map<String, String> labels;
 
+    /**
+     * <p>The notification configuration. Currently, only DIRECT_NOTIFY is supported, which corresponds to DirectNotifyConfig.</p>
+     */
     @NameInMap("notifyConfig")
     public NotifyConfigUnified notifyConfig;
 
     /**
-     * <p>The notification strategy ID. This field is read-only and derived from the first item in the notification strategy list.</p>
+     * <p>The notification policy ID. This value is read-only and derived from the first entry in the notification policy list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-id-001</p>
      */
     @NameInMap("notifyStrategyId")
     public String notifyStrategyId;
@@ -80,31 +116,43 @@ public class AlertRuleV2 extends TeaModel {
     public ObserveResourceConfig observeResourceConfig;
 
     /**
-     * <p><strong>[Deprecated]</strong> Indicates whether the rule applies to all resources of this type. This field is read-only and derived. Use observeResourceConfig.relationType set to ALL for equivalent semantics in new integrations.</p>
+     * <p><strong>[Deprecated]</strong> Indicates whether the rule applies to all resources of this type. This value is read-only and derived. For new integrations, use observeResourceConfig.relationType and check whether it is set to ALL for equivalent semantics.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("observeResourceGlobalScope")
     @Deprecated
     public Boolean observeResourceGlobalScope;
 
     /**
-     * <p>The list of observable resource IDs. This field is read-only and derived.</p>
+     * <p>The list of observable resource IDs. This value is read-only and derived.</p>
      */
     @NameInMap("observeResourceList")
     public java.util.List<String> observeResourceList;
 
     /**
-     * <p><strong>[Deprecated]</strong> The observable resource type. This field is read-only and derived. Use observeResourceConfig.entityType instead for new integrations.</p>
+     * <p><strong>[Deprecated]</strong> The observable resource type. This value is read-only and derived. Use observeResourceConfig.entityType instead for new integrations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("observeResourceType")
     @Deprecated
     public String observeResourceType;
 
     /**
-     * <p>The partition key. This field is read-only and maintained by the system for rule routing and sharding.</p>
+     * <p>The partition key. This value is read-only and maintained by the system for rule routing and sharding.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value</p>
      */
     @NameInMap("partitionKey")
     public String partitionKey;
 
+    /**
+     * <p>The query configuration. Valid types: PROMETHEUS_SINGLE_QUERY, UMODEL_METRICSET_QUERY, and APM_MULTI_QUERY.</p>
+     */
     @NameInMap("queryConfig")
     public QueryConfigUnified queryConfig;
 
@@ -115,40 +163,61 @@ public class AlertRuleV2 extends TeaModel {
     public AlertRuleRcaConfig rcaConfig;
 
     /**
-     * <p>The region ID. This field is aligned with V1 AlertRule.regionId. Priority: request body regionId &gt; gateway callerRegionId.</p>
+     * <p>The region ID, aligned with V1 AlertRule.regionId. Priority: the regionId in the request body takes precedence over the gateway callerRegionId.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-id-001</p>
      */
     @NameInMap("regionId")
     public String regionId;
 
+    /**
+     * <p>The scheduling configuration. Currently, only the FIXED type is supported.</p>
+     */
     @NameInMap("scheduleConfig")
     public ScheduleConfigUnified scheduleConfig;
 
     /**
-     * <p>The severity levels covered by this rule, separated by commas. This field is read-only and derived. The format is the same as the filter.severityLevels query parameter.</p>
+     * <p>The severity levels covered by this rule, in comma-separated format. This value is read-only and derived. The format is consistent with the filter.severityLevels query parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("severityLevels")
     public String severityLevels;
 
     /**
-     * <p>The alert status. This field is read-only.</p>
+     * <p>The alert status. This value is read-only.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Alarm</p>
      */
     @NameInMap("status")
     public String status;
 
     /**
-     * <p>The update time in ISO 8601 format. This field is read-only.</p>
+     * <p>The update time in ISO 8601 format. This value is read-only.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1764556086388</p>
      */
     @NameInMap("updatedAt")
     public String updatedAt;
 
     /**
-     * <p>The rule UUID. This field is system-generated and read-only.</p>
+     * <p>The rule UUID. This value is system-generated and read-only.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxx-xxxx-xxxx</p>
      */
     @NameInMap("uuid")
     public String uuid;
 
     /**
      * <p>The workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workspace-test</p>
      */
     @NameInMap("workspace")
     public String workspace;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class NotifyStrategyForModify extends TeaModel {
     /**
-     * <p>The auto-recovery time in seconds.</p>
+     * <p>The automatic recovery time in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -14,7 +14,7 @@ public class NotifyStrategyForModify extends TeaModel {
     public Integer autoRecoverSeconds;
 
     /**
-     * <p>The notification channel template.</p>
+     * <p>The notification channel templates.</p>
      */
     @NameInMap("customTemplateEntries")
     public java.util.List<NotifyStrategyForModifyCustomTemplateEntries> customTemplateEntries;
@@ -29,7 +29,7 @@ public class NotifyStrategyForModify extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to enable incident management.</p>
+     * <p>Indicates whether incident management is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -57,7 +57,7 @@ public class NotifyStrategyForModify extends TeaModel {
     public NotifyStrategyForModifyGroupingSetting groupingSetting;
 
     /**
-     * <p>Specifies whether to send a notification upon recovery.</p>
+     * <p>Indicates whether to send a notification when the alert is restored.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -66,11 +66,11 @@ public class NotifyStrategyForModify extends TeaModel {
     public Boolean ignoreRestoredNotification;
 
     /**
-     * <p>The name.</p>
+     * <p>The name of the notification policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Policy name.</p>
+     * <p>Policy Name</p>
      */
     @NameInMap("notifyStrategyName")
     public String notifyStrategyName;
@@ -82,13 +82,13 @@ public class NotifyStrategyForModify extends TeaModel {
     public NotifyStrategyForModifyPushingSetting pushingSetting;
 
     /**
-     * <p>The settings for repeated notifications.</p>
+     * <p>The repeat notification settings.</p>
      */
     @NameInMap("repeatNotifySetting")
     public NotifyStrategyForModifyRepeatNotifySetting repeatNotifySetting;
 
     /**
-     * <p>The routing settings for the notification channel.</p>
+     * <p>The notification channel route settings.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("routes")
@@ -255,7 +255,7 @@ public class NotifyStrategyForModify extends TeaModel {
 
     public static class NotifyStrategyForModifyGroupingSetting extends TeaModel {
         /**
-         * <p>The keys used for merging.</p>
+         * <p>The grouping keys.</p>
          */
         @NameInMap("groupingKeys")
         public java.util.List<String> groupingKeys;
@@ -270,7 +270,7 @@ public class NotifyStrategyForModify extends TeaModel {
         public Integer periodMin;
 
         /**
-         * <p>The silence period in seconds.</p>
+         * <p>The silence duration in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -279,7 +279,7 @@ public class NotifyStrategyForModify extends TeaModel {
         public Integer silenceSec;
 
         /**
-         * <p>The number of triggers.</p>
+         * <p>The number of times the alert is triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -334,7 +334,7 @@ public class NotifyStrategyForModify extends TeaModel {
         public java.util.List<String> alertActionIds;
 
         /**
-         * <p>The list of restore action IDs.</p>
+         * <p>The list of recovery action IDs.</p>
          */
         @NameInMap("restoreActionIds")
         public java.util.List<String> restoreActionIds;
@@ -343,7 +343,7 @@ public class NotifyStrategyForModify extends TeaModel {
          * <p>The message template UUID.</p>
          * 
          * <strong>example:</strong>
-         * <p>模板 UUID</p>
+         * <p>Template UUID</p>
          */
         @NameInMap("templateUuid")
         public String templateUuid;
@@ -381,7 +381,7 @@ public class NotifyStrategyForModify extends TeaModel {
 
     public static class NotifyStrategyForModifyRepeatNotifySetting extends TeaModel {
         /**
-         * <p>The incident state that stops the repeated notifications.</p>
+         * <p>The end incident state.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;Resolved&quot;</p>
@@ -390,7 +390,7 @@ public class NotifyStrategyForModify extends TeaModel {
         public String endIncidentState;
 
         /**
-         * <p>The interval for repeated notifications.</p>
+         * <p>The time interval for repeat notifications.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -478,7 +478,7 @@ public class NotifyStrategyForModify extends TeaModel {
 
     public static class NotifyStrategyForModifyRoutesEffectTimeRange extends TeaModel {
         /**
-         * <p>The days of the week when the policy is active. Monday to Sunday.</p>
+         * <p>The effective days (Monday to Sunday).</p>
          */
         @NameInMap("dayInWeek")
         public java.util.List<Integer> dayInWeek;
@@ -551,11 +551,17 @@ public class NotifyStrategyForModify extends TeaModel {
 
     public static class NotifyStrategyForModifyRoutes extends TeaModel {
         /**
-         * <p>The notification channel.</p>
+         * <p>The notification channels.</p>
          */
         @NameInMap("channels")
         public java.util.List<NotifyStrategyForModifyRoutesChannels> channels;
 
+        /**
+         * <p>The name of the digital employee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>On-call Assistant</p>
+         */
         @NameInMap("digitalEmployeeName")
         public String digitalEmployeeName;
 
@@ -565,11 +571,17 @@ public class NotifyStrategyForModify extends TeaModel {
         @NameInMap("effectTimeRange")
         public NotifyStrategyForModifyRoutesEffectTimeRange effectTimeRange;
 
+        /**
+         * <p>Indicates whether root cause analysis is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enableRca")
         public Boolean enableRca;
 
         /**
-         * <p>The routing conditions.</p>
+         * <p>The route condition.</p>
          */
         @NameInMap("filterSetting")
         public FilterSetting filterSetting;

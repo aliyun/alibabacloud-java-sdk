@@ -5,79 +5,109 @@ import com.aliyun.tea.*;
 
 public class IncidentResponsePlanForSNSView extends TeaModel {
     /**
-     * <p>The duration, in seconds, after which an incident without new alerts is automatically resolved.</p>
+     * <p>The auto-recovery time when no incidents occur, in seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>600</p>
      */
     @NameInMap("autoRecoverSeconds")
     public Long autoRecoverSeconds;
 
     /**
-     * <p>The time when the incident response plan was created, in UTC and in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+     * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1700000000000</p>
      */
     @NameInMap("createTime")
     public String createTime;
 
     /**
-     * <p>Indicates if the incident response plan is enabled. Valid values: <code>true</code> and <code>false</code>.</p>
+     * <p>Indicates whether the response plan is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("enable")
     public Boolean enable;
 
     /**
-     * <p>The IDs of the escalation policies.</p>
+     * <p>The list of escalation plan IDs.</p>
      */
     @NameInMap("escalationId")
     public java.util.List<String> escalationId;
 
     /**
-     * <p>The mode of the incident response plan. Valid values: <code>AUTO</code> and <code>MANUAL</code>.</p>
+     * <p>The lifecycle mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NOTIFY_STRATEGY_DEFINED</p>
      */
     @NameInMap("mode")
     public String mode;
 
     /**
-     * <p>The name of the incident response plan.</p>
+     * <p>The name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample response plan</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>The settings for sending notifications.</p>
+     * <p>The push settings.</p>
      */
     @NameInMap("pushingSetting")
     public IncidentResponsePlanForSNSViewPushingSetting pushingSetting;
 
     /**
-     * <p>The settings for repeated notifications.</p>
+     * <p>The repeat notification configuration.</p>
      */
     @NameInMap("repeatNotifySetting")
     public IncidentResponsePlanForSNSViewRepeatNotifySetting repeatNotifySetting;
 
     /**
-     * <p>The source of the incident.</p>
+     * <p>The source. The value must be CUSTOM within SNS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CUSTOM</p>
      */
     @NameInMap("source")
     public String source;
 
     /**
      * <p>The synchronization source type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CUSTOM</p>
      */
     @NameInMap("syncFromType")
     public String syncFromType;
 
     /**
-     * <p>The type of the incident response plan.</p>
+     * <p>The response plan type. The value must be NOTIFY_STRATEGY_DEFINED within SNS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NOTIFY_STRATEGY_DEFINED</p>
      */
     @NameInMap("type")
     public String type;
 
     /**
-     * <p>The time when the incident response plan was last updated, in UTC and in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+     * <p>The update time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1700000000000</p>
      */
     @NameInMap("updateTime")
     public String updateTime;
 
     /**
-     * <p>The unique ID of the incident response plan.</p>
+     * <p>The unique identifier of the response plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc-def-12345</p>
      */
     @NameInMap("uuid")
     public String uuid;
@@ -193,19 +223,22 @@ public class IncidentResponsePlanForSNSView extends TeaModel {
 
     public static class IncidentResponsePlanForSNSViewPushingSetting extends TeaModel {
         /**
-         * <p>The IDs of actions to run when an alert is triggered.</p>
+         * <p>The list of response action IDs triggered by alerts.</p>
          */
         @NameInMap("alertActionIds")
         public java.util.List<String> alertActionIds;
 
         /**
-         * <p>The IDs of actions to run when the incident is resolved.</p>
+         * <p>The list of response action IDs triggered by alert recovery.</p>
          */
         @NameInMap("restoreActionIds")
         public java.util.List<String> restoreActionIds;
 
         /**
-         * <p>The ID of the notification template.</p>
+         * <p>The UUID of the template used for pushing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tpl-001</p>
          */
         @NameInMap("templateUuid")
         public String templateUuid;
@@ -243,13 +276,19 @@ public class IncidentResponsePlanForSNSView extends TeaModel {
 
     public static class IncidentResponsePlanForSNSViewRepeatNotifySetting extends TeaModel {
         /**
-         * <p>The incident state at which repeated notifications stop. For example, <code>resolved</code>.</p>
+         * <p>The setting that specifies whether to send repeat notifications when an incident ends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("endIncidentState")
         public String endIncidentState;
 
         /**
-         * <p>The interval, in seconds, for repeated notifications.</p>
+         * <p>The repeat notification interval, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         @NameInMap("repeatInterval")
         public Integer repeatInterval;

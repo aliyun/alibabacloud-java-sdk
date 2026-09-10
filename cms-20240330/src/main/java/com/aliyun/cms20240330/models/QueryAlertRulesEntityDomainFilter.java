@@ -4,6 +4,12 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class QueryAlertRulesEntityDomainFilter extends TeaModel {
+    /**
+     * <p>The exact match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_monitor</p>
+     */
     @NameInMap("eq")
     public String eq;
 

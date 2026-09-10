@@ -4,6 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class SubscriptionForView extends TeaModel {
+    /**
+     * <p>The Agent configuration information.</p>
+     */
     @NameInMap("agentConfig")
     public SubscriptionForViewAgentConfig agentConfig;
 
@@ -56,17 +59,16 @@ public class SubscriptionForView extends TeaModel {
     public SubscriptionForViewPushingSetting pushingSetting;
 
     /**
-     * <p>Specifies whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace is null). Valid values:</p>
-     * <ul>
-     * <li>true: Subscribe.</li>
-     * <li>false or null: Do not subscribe.</li>
-     * </ul>
+     * <p>Indicates whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace=null). Valid values: true: Subscribed. false or null: Not subscribed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("subscribeLegacyEvent")
     public Boolean subscribeLegacyEvent;
 
     /**
-     * <p>UUID</p>
+     * <p>The unique identifier of the subscription.</p>
      * 
      * <strong>example:</strong>
      * <p>123123123123</p>
@@ -79,12 +81,14 @@ public class SubscriptionForView extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Subscription test.</p>
+     * <p>SubscriptionTest</p>
      */
     @NameInMap("subscriptionName")
     public String subscriptionName;
 
     /**
+     * <p>The subscription type.</p>
+     * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
      */
@@ -119,7 +123,7 @@ public class SubscriptionForView extends TeaModel {
     public String userId;
 
     /**
-     * <p>workspace</p>
+     * <p>The workspace identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test</p>
@@ -127,6 +131,9 @@ public class SubscriptionForView extends TeaModel {
     @NameInMap("workspace")
     public String workspace;
 
+    /**
+     * <p>The workspace filter settings.</p>
+     */
     @NameInMap("workspaceFilterSetting")
     public WorkspaceFilterSetting workspaceFilterSetting;
 
@@ -264,9 +271,18 @@ public class SubscriptionForView extends TeaModel {
     }
 
     public static class SubscriptionForViewAgentConfig extends TeaModel {
+        /**
+         * <p>The unique identifier of the Agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent-uuid-001</p>
+         */
         @NameInMap("agentUuid")
         public String agentUuid;
 
+        /**
+         * <p>The list of Agent routing configurations.</p>
+         */
         @NameInMap("routes")
         public java.util.List<NotifyRouteForSubscription> routes;
 

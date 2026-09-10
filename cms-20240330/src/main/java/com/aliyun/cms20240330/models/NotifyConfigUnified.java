@@ -4,36 +4,82 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class NotifyConfigUnified extends TeaModel {
+    /**
+     * <p>The days of the week on which notifications are sent, 1-7.</p>
+     */
     @NameInMap("activeDays")
     public java.util.List<Integer> activeDays;
 
+    /**
+     * <p>The daily notification effective end time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20:00</p>
+     */
     @NameInMap("activeEndTime")
     public String activeEndTime;
 
+    /**
+     * <p>The daily notification effective start time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>08:00</p>
+     */
     @NameInMap("activeStartTime")
     public String activeStartTime;
 
+    /**
+     * <p>The list of notification channels.</p>
+     */
     @NameInMap("channels")
     public java.util.List<DirectNotifyChannel> channels;
 
+    /**
+     * <p>The list of notification policy IDs (type=NOTIFY_POLICY, currently a maximum of 1 is supported. Mutually exclusive with the DIRECT_NOTIFY fields channels/silenceTimeSecs/activeDays/activeStartTime/activeEndTime/utcOffset).</p>
+     */
     @NameInMap("notifyStrategies")
     public java.util.List<String> notifyStrategies;
 
+    /**
+     * <p>Specifies whether to send recovery notifications (type=DIRECT_NOTIFY). Default value: true. Each severity level in severityChannels can independently override this setting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("sendRecoverNotification")
     public Boolean sendRecoverNotification;
 
+    /**
+     * <p>The Notification Recipients and channels configured by severity level (type=DIRECT_NOTIFY, new mode, mutually exclusive with channels). The key is the severity level: CRITICAL/ERROR/WARNING/INFO.</p>
+     */
     @NameInMap("severityChannels")
     public java.util.Map<String, SeverityNotifyConfig> severityChannels;
 
+    /**
+     * <p>The mute for epoch in seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("silenceTimeSecs")
     public Integer silenceTimeSecs;
 
     /**
+     * <p>The notification configuration type.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DIRECT_NOTIFY</p>
      */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <p>The UTC time zone offset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>+08:00</p>
+     */
     @NameInMap("utcOffset")
     public String utcOffset;
 

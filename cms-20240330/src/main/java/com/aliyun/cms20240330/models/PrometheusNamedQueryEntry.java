@@ -4,9 +4,21 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class PrometheusNamedQueryEntry extends TeaModel {
+    /**
+     * <p>The PromQL query expression.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>avg(cpu_usage) &gt; 80</p>
+     */
     @NameInMap("expr")
     public String expr;
 
+    /**
+     * <p>The query name, such as $A or $B, referenced by the condition trigger.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cpuQuery</p>
+     */
     @NameInMap("name")
     public String name;
 

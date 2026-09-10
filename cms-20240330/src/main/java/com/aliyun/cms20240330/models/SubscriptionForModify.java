@@ -4,6 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class SubscriptionForModify extends TeaModel {
+    /**
+     * <p>The agent configuration information.</p>
+     */
     @NameInMap("agentConfig")
     public SubscriptionForModifyAgentConfig agentConfig;
 
@@ -43,6 +46,9 @@ public class SubscriptionForModify extends TeaModel {
      * <li>true: Subscribe.</li>
      * <li>false or null: Do not subscribe.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("subscribeLegacyEvent")
     public Boolean subscribeLegacyEvent;
@@ -52,11 +58,14 @@ public class SubscriptionForModify extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test subscription.</p>
+     * <p>TestSubscription</p>
      */
     @NameInMap("subscriptionName")
     public String subscriptionName;
 
+    /**
+     * <p>The workspace filter settings.</p>
+     */
     @NameInMap("workspaceFilterSetting")
     public WorkspaceFilterSetting workspaceFilterSetting;
 
@@ -130,9 +139,18 @@ public class SubscriptionForModify extends TeaModel {
     }
 
     public static class SubscriptionForModifyAgentConfig extends TeaModel {
+        /**
+         * <p>The unique identifier of the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent-uuid-001</p>
+         */
         @NameInMap("agentUuid")
         public String agentUuid;
 
+        /**
+         * <p>The list of agent routing configurations.</p>
+         */
         @NameInMap("routes")
         public java.util.List<NotifyRouteForSubscription> routes;
 
@@ -161,7 +179,7 @@ public class SubscriptionForModify extends TeaModel {
 
     public static class SubscriptionForModifyPushingSetting extends TeaModel {
         /**
-         * <p>The list of action plan IDs for alert pushing.</p>
+         * <p>The list of action plan IDs for alert push.</p>
          */
         @NameInMap("alertActionIds")
         public java.util.List<String> alertActionIds;
@@ -176,7 +194,7 @@ public class SubscriptionForModify extends TeaModel {
         public String responsePlanId;
 
         /**
-         * <p>The list of action integration plan IDs for recovery pushing.</p>
+         * <p>The list of action integration plan IDs for recovery push.</p>
          */
         @NameInMap("restoreActionIds")
         public java.util.List<String> restoreActionIds;

@@ -4,51 +4,138 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class NotifyStrategyForSNSView extends TeaModel {
+    /**
+     * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1700000000</p>
+     */
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <p>The notification channel templates.</p>
+     */
     @NameInMap("customTemplateEntries")
     public java.util.List<NotifyStrategyForSNSViewCustomTemplateEntries> customTemplateEntries;
 
+    /**
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample description</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Indicates whether the notification policy is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enable")
     public Boolean enable;
 
+    /**
+     * <p>Indicates whether incident management is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enableIncidentManagement")
     public Boolean enableIncidentManagement;
 
+    /**
+     * <p>The grouping settings.</p>
+     */
     @NameInMap("groupingSetting")
     public NotifyStrategyForSNSViewGroupingSetting groupingSetting;
 
+    /**
+     * <p>Indicates whether recovery notifications are sent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ignoreRestoredNotification")
     public Boolean ignoreRestoredNotification;
 
+    /**
+     * <p>The UUID of the associated response plan, which equals notifyStrategyId.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-id-001</p>
+     */
     @NameInMap("incidentResponsePlanId")
     public String incidentResponsePlanId;
 
+    /**
+     * <p>The lifecycle mode. Within SNS, this value is always BundleStrategy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value</p>
+     */
     @NameInMap("mode")
     public String mode;
 
+    /**
+     * <p>The notification policy ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-id-001</p>
+     */
     @NameInMap("notifyStrategyId")
     public String notifyStrategyId;
 
+    /**
+     * <p>The name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample name</p>
+     */
     @NameInMap("notifyStrategyName")
     public String notifyStrategyName;
 
+    /**
+     * <p>The notification channel routing settings.</p>
+     */
     @NameInMap("routes")
     public java.util.List<NotifyStrategyForSNSViewRoutes> routes;
 
+    /**
+     * <p>The synchronization source. For SNS creation, this value is always OBS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("syncFromType")
     public String syncFromType;
 
+    /**
+     * <p>The update time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1700000000</p>
+     */
     @NameInMap("updateTime")
     public String updateTime;
 
+    /**
+     * <p>The user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-id-001</p>
+     */
     @NameInMap("userId")
     public String userId;
 
+    /**
+     * <p>The workspace identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 
@@ -186,9 +273,21 @@ public class NotifyStrategyForSNSView extends TeaModel {
     }
 
     public static class NotifyStrategyForSNSViewCustomTemplateEntries extends TeaModel {
+        /**
+         * <p>The notification type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("targetType")
         public String targetType;
 
+        /**
+         * <p>The template UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-id-001</p>
+         */
         @NameInMap("templateUuid")
         public String templateUuid;
 
@@ -216,15 +315,36 @@ public class NotifyStrategyForSNSView extends TeaModel {
     }
 
     public static class NotifyStrategyForSNSViewGroupingSetting extends TeaModel {
+        /**
+         * <p>The grouping keys.</p>
+         */
         @NameInMap("groupingKeys")
         public java.util.List<String> groupingKeys;
 
+        /**
+         * <p>The check period in minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("periodMin")
         public Integer periodMin;
 
+        /**
+         * <p>The silence duration in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("silenceSec")
         public Integer silenceSec;
 
+        /**
+         * <p>The number of times the condition is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("times")
         public Integer times;
 
@@ -268,12 +388,24 @@ public class NotifyStrategyForSNSView extends TeaModel {
     }
 
     public static class NotifyStrategyForSNSViewRoutesChannels extends TeaModel {
+        /**
+         * <p>The channel type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DING</p>
+         */
         @NameInMap("channelType")
         public String channelType;
 
+        /**
+         * <p>The enabled notification types.</p>
+         */
         @NameInMap("enabledSubChannels")
         public java.util.List<String> enabledSubChannels;
 
+        /**
+         * <p>The channel receivers.</p>
+         */
         @NameInMap("receivers")
         public java.util.List<String> receivers;
 
@@ -309,15 +441,36 @@ public class NotifyStrategyForSNSView extends TeaModel {
     }
 
     public static class NotifyStrategyForSNSViewRoutesEffectTimeRange extends TeaModel {
+        /**
+         * <p>The effective days, from Monday to Sunday.</p>
+         */
         @NameInMap("dayInWeek")
         public java.util.List<Integer> dayInWeek;
 
+        /**
+         * <p>The start time in minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("endTimeInMinute")
         public Integer endTimeInMinute;
 
+        /**
+         * <p>The start time in minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("startTimeInMinute")
         public Integer startTimeInMinute;
 
+        /**
+         * <p>The time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700000000</p>
+         */
         @NameInMap("timeZone")
         public String timeZone;
 
@@ -361,21 +514,45 @@ public class NotifyStrategyForSNSView extends TeaModel {
     }
 
     public static class NotifyStrategyForSNSViewRoutes extends TeaModel {
+        /**
+         * <p>The notification channels.</p>
+         */
         @NameInMap("channels")
         public java.util.List<NotifyStrategyForSNSViewRoutesChannels> channels;
 
+        /**
+         * <p>The digital employee name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample name</p>
+         */
         @NameInMap("digitalEmployeeName")
         public String digitalEmployeeName;
 
+        /**
+         * <p>The effective time range.</p>
+         */
         @NameInMap("effectTimeRange")
         public NotifyStrategyForSNSViewRoutesEffectTimeRange effectTimeRange;
 
+        /**
+         * <p>Indicates whether root cause analysis (RCA) is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enableRca")
         public Boolean enableRca;
 
+        /**
+         * <p>The route-level filter.</p>
+         */
         @NameInMap("filterSetting")
         public FilterSetting filterSetting;
 
+        /**
+         * <p>The severity filter.</p>
+         */
         @NameInMap("severities")
         public java.util.List<String> severities;
 

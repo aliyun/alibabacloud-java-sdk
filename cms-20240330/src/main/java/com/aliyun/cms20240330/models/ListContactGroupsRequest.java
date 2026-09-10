@@ -11,7 +11,7 @@ public class ListContactGroupsRequest extends TeaModel {
     public java.util.List<String> contactGroupIds;
 
     /**
-     * <p>The name of the contact group.</p>
+     * <p>The contact name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -20,7 +20,7 @@ public class ListContactGroupsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The page number. The default is 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class ListContactGroupsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return per page. The default is 100.</p>
+     * <p>The number of entries per page. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -37,6 +37,12 @@ public class ListContactGroupsRequest extends TeaModel {
     @NameInMap("pageSize")
     public Long pageSize;
 
+    /**
+     * <p>The workspace name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default-cms-xxxxxx-cn-beijing</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 

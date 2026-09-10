@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class BizSourceFilter extends TeaModel {
     /**
-     * <p>The exact match value.</p>
+     * <p>The exact match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>managed_service_for_prometheus</p>
      */
     @NameInMap("eq")
     public String eq;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAlertWebhooksResponseBody extends TeaModel {
     /**
-     * <p>The page number. The default value is 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
     public Long total;
 
     /**
-     * <p>The webhooks.</p>
+     * <p>The list of webhooks.</p>
      */
     @NameInMap("webhooks")
     public java.util.List<ListAlertWebhooksResponseBodyWebhooks> webhooks;
@@ -95,10 +95,8 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
         /**
          * <p>The content type of the data. Valid values:</p>
          * <ul>
-         * <li><p>JSON</p>
-         * </li>
-         * <li><p>FORM</p>
-         * </li>
+         * <li>JSON</li>
+         * <li>FORM</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,7 +106,7 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The headers.</p>
+         * <p>The collection of HTTP request headers.</p>
          * 
          * <strong>example:</strong>
          * <p>key</p>
@@ -119,10 +117,8 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
         /**
          * <p>The language. Valid values:</p>
          * <ul>
-         * <li><p>zh_CN</p>
-         * </li>
-         * <li><p>en_US</p>
-         * </li>
+         * <li>zh_CN</li>
+         * <li>en_US</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,10 +130,8 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
         /**
          * <p>The request method. Valid values:</p>
          * <ul>
-         * <li><p>GET</p>
-         * </li>
-         * <li><p>POST</p>
-         * </li>
+         * <li>GET</li>
+         * <li>POST</li>
          * </ul>
          * 
          * <strong>example:</strong>

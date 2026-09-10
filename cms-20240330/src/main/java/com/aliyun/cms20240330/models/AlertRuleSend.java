@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AlertRuleSend extends TeaModel {
     /**
-     * <p>The integrated alert action configuration.</p>
+     * <p>The alert action integration configuration.</p>
      */
     @NameInMap("action")
     public AlertRuleAction action;
@@ -17,16 +17,19 @@ public class AlertRuleSend extends TeaModel {
     public AlertRuleNotification notification;
 
     /**
-     * <p>The list of notification policies. Each policy defines the notification method or policy name to use for a specific alert state, such as trigger or recovery.</p>
+     * <p>The list of notification policies that define the notification methods or Policy Name values to use for different alert states, such as triggered and recover.</p>
      */
     @NameInMap("notifyStrategies")
     public java.util.List<String> notifyStrategies;
 
+    /**
+     * <p>The root cause analysis (RCA) configuration. After this feature is enabled, root cause analysis is automatically performed when an alert is triggered.</p>
+     */
     @NameInMap("rcaConfig")
     public AlertRuleRcaConfig rcaConfig;
 
     /**
-     * <p>Specifies whether to deliver alert events to Alert Management of Application Real-Time Monitoring Service (ARMS).</p>
+     * <p>Indicates whether event delivery of alert events to ARMS alert management is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

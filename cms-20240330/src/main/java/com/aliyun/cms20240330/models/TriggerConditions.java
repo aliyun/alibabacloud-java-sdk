@@ -5,37 +5,55 @@ import com.aliyun.tea.*;
 
 public class TriggerConditions extends TeaModel {
     /**
-     * <p>The expression type, fixed as SIMPLE (used by MetricSet multi-threshold triggers).</p>
+     * <p>The expression type. Fixed as SIMPLE (used for MetricSet multi-threshold triggers).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SIMPLE</p>
      */
     @NameInMap("expressionType")
     public String expressionType;
 
     /**
      * <p>The upper bound of the range. Required when operator is IN_RANGE or OUT_OF_RANGE. Must be greater than or equal to min.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("max")
     public Double max;
 
     /**
      * <p>The lower bound of the range. Required when operator is IN_RANGE or OUT_OF_RANGE.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("min")
     public Double min;
 
     /**
-     * <p>The comparison operator. Valid values: GT / GE / LT / LE / EQ / NE / IN_RANGE (requires both min and max) / OUT_OF_RANGE (requires both min and max) / PRESENT / NOT_PRESENT.</p>
+     * <p>The comparison operator. Valid values: GT, GE, LT, LE, EQ, NE, IN_RANGE (requires both min and max), OUT_OF_RANGE (requires both min and max), PRESENT, and NOT_PRESENT.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GT</p>
      */
     @NameInMap("operator")
     public String operator;
 
     /**
      * <p>The referenced query name, corresponding to QueryConfigUnified.queries[].name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cpuQuery</p>
      */
     @NameInMap("queryName")
     public String queryName;
 
     /**
-     * <p>The comparison threshold. Used when operator is GT, GE, LT, LE, EQ, or NE. Use min and max for IN_RANGE or OUT_OF_RANGE. Leave empty for PRESENT or NOT_PRESENT.</p>
+     * <p>The comparison threshold. Used when operator is GT, GE, LT, LE, EQ, or NE. For IN_RANGE or OUT_OF_RANGE, use min and max instead. Not required for PRESENT or NOT_PRESENT.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("threshold")
     public Double threshold;

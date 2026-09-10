@@ -4,25 +4,48 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class NotifyStrategyForSNSModify extends TeaModel {
+    /**
+     * <p>The notification channel templates.</p>
+     */
     @NameInMap("customTemplateEntries")
     public java.util.List<NotifyStrategyForSNSModifyCustomTemplateEntries> customTemplateEntries;
 
+    /**
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Specifies whether to enable incident management.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enableIncidentManagement")
     public Boolean enableIncidentManagement;
 
     /**
+     * <p>The grouping settings.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("groupingSetting")
     public NotifyStrategyForSNSModifyGroupingSetting groupingSetting;
 
+    /**
+     * <p>Specifies whether to send a notification when the alert is recovered.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ignoreRestoredNotification")
     public Boolean ignoreRestoredNotification;
 
     /**
+     * <p>The notification channel routing settings.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("routes")
@@ -82,9 +105,21 @@ public class NotifyStrategyForSNSModify extends TeaModel {
     }
 
     public static class NotifyStrategyForSNSModifyCustomTemplateEntries extends TeaModel {
+        /**
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not take effect. The actual purpose of the template is determined by the type field of the template object referenced by templateUuid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DING</p>
+         */
         @NameInMap("targetType")
         public String targetType;
 
+        /**
+         * <p>The UUID of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adef12efca3f-8728-1928-eeaac12ef9ad92</p>
+         */
         @NameInMap("templateUuid")
         public String templateUuid;
 
@@ -112,15 +147,36 @@ public class NotifyStrategyForSNSModify extends TeaModel {
     }
 
     public static class NotifyStrategyForSNSModifyGroupingSetting extends TeaModel {
+        /**
+         * <p>The grouping keys.</p>
+         */
         @NameInMap("groupingKeys")
         public java.util.List<String> groupingKeys;
 
+        /**
+         * <p>The check period in minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("periodMin")
         public Integer periodMin;
 
+        /**
+         * <p>The silence duration in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("silenceSec")
         public Integer silenceSec;
 
+        /**
+         * <p>The number of times the condition is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("times")
         public Integer times;
 
@@ -165,17 +221,17 @@ public class NotifyStrategyForSNSModify extends TeaModel {
 
     public static class NotifyStrategyForSNSModifyRoutesChannels extends TeaModel {
         /**
-         * <p>The notification channel type. The value must be one of the following uppercase enum values: DING (DingTalk chatbot), WEIXIN (WeCom chatbot), FEISHU (Lark chatbot), SLACK, TEAMS, WEBHOOK (custom webhook), CONTACT (contact, requires enabledSubChannels to specify sub-channels), GROUP (contact group), DUTY (on-call schedule), or DING_COOL_APP (DingTalk Cool App). Note: Lowercase values such as EMAIL or SMS are not supported. To send email, text message, or voice notifications, set channelType to CONTACT and specify EMAIL, SMS, or VOICE in enabledSubChannels.</p>
+         * <p>The channel type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>WEBHOOK</p>
+         * <p>DING</p>
          */
         @NameInMap("channelType")
         public String channelType;
 
         /**
-         * <p>Required only when channelType is CONTACT, GROUP, or DUTY. Valid values: EMAIL (email), SMS (text message), VOICE (voice call), DING (DingTalk work notification), WEIXIN (WeCom message), FEISHU (Lark message), and WEBHOOK. For example, to notify a contact by email and text message, set channelType to CONTACT and enabledSubChannels to [&quot;EMAIL&quot;,&quot;SMS&quot;]. This field is not required for other channelType values such as WEBHOOK or DING.</p>
+         * <p>The enabled notification types.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;EMAIL&quot;,&quot;SMS&quot;]</p>
@@ -184,7 +240,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
         public java.util.List<String> enabledSubChannels;
 
         /**
-         * <p>The list of receiver identifiers. For the WEBHOOK type, specify the webhook UUID. For DING, WEIXIN, or FEISHU, specify the chatbot UUID. For CONTACT, specify the contact ID. For GROUP, specify the contact group ID. For DUTY, specify the on-call schedule UUID. At least one element is required.</p>
+         * <p>The channel receivers.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +282,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
 
     public static class NotifyStrategyForSNSModifyRoutesEffectTimeRange extends TeaModel {
         /**
-         * <p>The days of the week on which the setting takes effect. Array element values range from 0 to 6 (0 = Sunday, 1 = Monday, 2 = Tuesday, ... 6 = Saturday). Note: The value 7 is not supported. The maximum value is 6. Example for all days: [0,1,2,3,4,5,6]. Example for weekdays only: [1,2,3,4,5].</p>
+         * <p>The effective days of the week (Monday through Sunday).</p>
          * 
          * <strong>example:</strong>
          * <p>[0,1,2,3,4,5,6]</p>
@@ -235,25 +291,25 @@ public class NotifyStrategyForSNSModify extends TeaModel {
         public java.util.List<Integer> dayInWeek;
 
         /**
-         * <p>The end time of the day, expressed as the number of minutes from 00:00. Valid values: 0 to 1439 (23 × 60 + 59 = 1439, which represents 23:59).</p>
+         * <p>The end time in minutes.</p>
          * 
          * <strong>example:</strong>
-         * <p>1439</p>
+         * <p>1</p>
          */
         @NameInMap("endTimeInMinute")
         public Integer endTimeInMinute;
 
         /**
-         * <p>The start time of the day, expressed as the number of minutes from 00:00. Valid values: 0 to 1439 (0 represents 00:00).</p>
+         * <p>The start time in minutes.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>59</p>
          */
         @NameInMap("startTimeInMinute")
         public Integer startTimeInMinute;
 
         /**
-         * <p>The IANA time zone identifier, such as Asia/Shanghai or America/Los_Angeles.</p>
+         * <p>The time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>
@@ -301,12 +357,30 @@ public class NotifyStrategyForSNSModify extends TeaModel {
     }
 
     public static class NotifyStrategyForSNSModifyRoutesFilterSettingConditions extends TeaModel {
+        /**
+         * <p>The JSON path of the field, such as labels._cms_rule_name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subject</p>
+         */
         @NameInMap("field")
         public String field;
 
+        /**
+         * <p>The comparison operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EQ</p>
+         */
         @NameInMap("op")
         public String op;
 
+        /**
+         * <p>The value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pod OOM</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -342,12 +416,27 @@ public class NotifyStrategyForSNSModify extends TeaModel {
     }
 
     public static class NotifyStrategyForSNSModifyRoutesFilterSetting extends TeaModel {
+        /**
+         * <p>The subscription conditions.</p>
+         */
         @NameInMap("conditions")
         public java.util.List<NotifyStrategyForSNSModifyRoutesFilterSettingConditions> conditions;
 
+        /**
+         * <p>If expression is not empty, it takes precedence and relation is ignored. If expression is empty or not specified, the system uses relation (AND or OR) to perform a simple AND/OR operation on all conditions. Condition numbers correspond to the indexes of the conditions array (starting from 1). Each condition evaluates whether a single event field matches by using field (the event field path, which supports dot-separated nesting such as resource.tags.pod), op (the operator, such as CONTAIN, EQ, or IN), and value (the match value).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(1 AND 2 )OR 3</p>
+         */
         @NameInMap("expression")
         public String expression;
 
+        /**
+         * <p>The relationship between conditions. If an expression is configured, the expression takes higher precedence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AND</p>
+         */
         @NameInMap("relation")
         public String relation;
 
@@ -383,24 +472,39 @@ public class NotifyStrategyForSNSModify extends TeaModel {
     }
 
     public static class NotifyStrategyForSNSModifyRoutes extends TeaModel {
+        /**
+         * <p>The notification channels.</p>
+         */
         @NameInMap("channels")
         public java.util.List<NotifyStrategyForSNSModifyRoutesChannels> channels;
 
+        /**
+         * <p>The digital employee name.</p>
+         */
         @NameInMap("digitalEmployeeName")
         public String digitalEmployeeName;
 
         /**
-         * <p>The effective period settings for notifications. Defines on which days and during which time range the system sends notifications.</p>
+         * <p>The effective time range.</p>
          */
         @NameInMap("effectTimeRange")
         public NotifyStrategyForSNSModifyRoutesEffectTimeRange effectTimeRange;
 
+        /**
+         * <p>Specifies whether to enable root cause analysis (RCA).</p>
+         */
         @NameInMap("enableRca")
         public Boolean enableRca;
 
+        /**
+         * <p>The route-level filter. This is different from the top-level subscription.filterSetting.</p>
+         */
         @NameInMap("filterSetting")
         public NotifyStrategyForSNSModifyRoutesFilterSetting filterSetting;
 
+        /**
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not take effect. Route matching only checks filterSetting and effectTimeRange.</p>
+         */
         @NameInMap("severities")
         public java.util.List<String> severities;
 

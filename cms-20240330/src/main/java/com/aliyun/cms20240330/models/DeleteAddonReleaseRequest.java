@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAddonReleaseRequest extends TeaModel {
     /**
-     * <p>The name of the add-on. If you specify this parameter, the ReleaseName parameter is ignored and all AddonReleases that belong to the add-on are uninstalled in a batch.</p>
+     * <p>The addon name. If AddonName is specified, the ReleaseName parameter is ignored and all AddonRelease instances that belong to the same addon are uninstalled in a batch.</p>
      * 
      * <strong>example:</strong>
      * <p>cs-gpu</p>
@@ -14,12 +14,13 @@ public class DeleteAddonReleaseRequest extends TeaModel {
     public String addonName;
 
     /**
-     * <p>Specifies whether to forcibly delete the add-on release. The default value is false.</p>
+     * <p>Specifies whether to force delete the addon release. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("force")
+    @Deprecated
     public Boolean force;
 
     /**
@@ -44,6 +45,7 @@ public class DeleteAddonReleaseRequest extends TeaModel {
         return this.addonName;
     }
 
+    @Deprecated
     public DeleteAddonReleaseRequest setForce(Boolean force) {
         this.force = force;
         return this;

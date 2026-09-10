@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CloudMonitoringExpressEscalation extends TeaModel {
     /**
      * <p>The raw expression.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cpu_usage &gt; 90</p>
      */
     @NameInMap("rawExpression")
     public String rawExpression;
 
     /**
      * <p>The severity level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CRITICAL</p>
      */
     @NameInMap("severity")
     public String severity;
 
     /**
      * <p>The number of consecutive times the alert is triggered.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("times")
     public Integer times;

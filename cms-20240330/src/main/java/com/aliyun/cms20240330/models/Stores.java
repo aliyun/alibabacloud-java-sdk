@@ -4,17 +4,45 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class Stores extends TeaModel {
+    /**
+     * <p><strong>[Deprecated]</strong> The SLS project name. This field has been moved to DatasourceConfigUnified.project. Using this field in write paths returns HTTP status code 400.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-sls-project</p>
+     */
     @NameInMap("project")
     @Deprecated
     public String project;
 
+    /**
+     * <p><strong>[Deprecated]</strong> The region ID. This field has been moved to DatasourceConfigUnified.regionId. Using this field in write paths returns HTTP status code 400.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regionId")
     @Deprecated
     public String regionId;
 
+    /**
+     * <p>The name of the SLS Store.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-log-store</p>
+     */
     @NameInMap("store")
     public String store;
 
+    /**
+     * <p>The store type. Valid values:</p>
+     * <ul>
+     * <li>LOG: Logstore.</li>
+     * <li>METRIC: Metricstore.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>LOG</p>
+     */
     @NameInMap("storeType")
     public String storeType;
 

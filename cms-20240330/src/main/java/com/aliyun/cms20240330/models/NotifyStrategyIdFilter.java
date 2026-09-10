@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class NotifyStrategyIdFilter extends TeaModel {
     /**
-     * <p>The exact ID of the notification strategy to retrieve.</p>
+     * <p>The exact match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ns_1234567890</p>
      */
     @NameInMap("eq")
     public String eq;

@@ -4,44 +4,68 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class QueryAlertRulesFilter extends TeaModel {
+    /**
+     * <p>The filter condition for the business source.</p>
+     */
     @NameInMap("bizSource")
     public BizSourceFilter bizSource;
 
+    /**
+     * <p>The filter condition for the data source type.</p>
+     */
     @NameInMap("datasourceType")
     public DatasourceTypeFilter datasourceType;
 
+    /**
+     * <p>The filter for alert rule names.</p>
+     */
     @NameInMap("displayName")
     public DisplayNameFilter displayName;
 
+    /**
+     * <p>The filter for whether the alert rule is enabled.</p>
+     */
     @NameInMap("enabled")
     public EnabledFilter enabled;
 
+    /**
+     * <p>The filter for labels.</p>
+     */
     @NameInMap("labels")
     public LabelsFilter labels;
 
     /**
-     * <p>Filters by migration status. isMigrated=true queries migrated rules (migration_status is not 0 or NULL). isMigrated=false queries native rules (migration_status=0).</p>
+     * <p>The migration status filter. Set isMigrated to true to query migrated rules (migration_status is not 0 or NULL). Set isMigrated to false to query native rules (migration_status=0).</p>
      */
     @NameInMap("migrationStatus")
     public MigrationStatusFilter migrationStatus;
 
+    /**
+     * <p>The filter condition for notification channels.</p>
+     */
     @NameInMap("notificationChannels")
     public NotificationChannelsFilter notificationChannels;
 
+    /**
+     * <p>The filter condition for the notification policy ID.</p>
+     */
     @NameInMap("notifyStrategyId")
     public NotifyStrategyIdFilter notifyStrategyId;
 
     /**
-     * <p>Filters by the observeResourceConfig structure. This takes priority over the standalone observeResourceType / observeResourceGlobalScope / observeResourceList fields below. If both are specified and their semantics conflict, the request is rejected.</p>
+     * <p>The composite filter based on the observeResourceConfig structure. This filter takes priority over the standalone observeResourceType, observeResourceGlobalScope, and observeResourceList fields. If both are specified and their semantics conflict, the request is rejected.</p>
      */
     @NameInMap("observeResourceConfig")
     public ObserveResourceConfigFilter observeResourceConfig;
 
+    /**
+     * <p>The filter condition for the global scope of observable resources.</p>
+     */
     @NameInMap("observeResourceGlobalScope")
     public ObserveResourceGlobalScopeFilter observeResourceGlobalScope;
 
     /**
-     * <p><strong>[Deprecated]</strong> Filters by a single resource entity ID. This field is retained only for backward compatibility with legacy SDKs. For new integrations, use observeResourceList.contains instead. If this field is not empty and observeResourceList is not specified, it is equivalent to observeResourceList.contains=[observeResourceInstanceId].</p>
+     * <p><strong>[Deprecated]</strong> The single-value filter for the resource instance ID. This field is retained only for compatibility with legacy SDKs. Use observeResourceList.contains instead for new integrations. If this field is not empty and observeResourceList is not specified, it is equivalent to observeResourceList.contains=[observeResourceInstanceId].</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp1abcxxxxxxxx</p>
@@ -50,25 +74,40 @@ public class QueryAlertRulesFilter extends TeaModel {
     @Deprecated
     public String observeResourceInstanceId;
 
+    /**
+     * <p>The filter condition for the list of observable resources.</p>
+     */
     @NameInMap("observeResourceList")
     public ObserveResourceListFilter observeResourceList;
 
     /**
-     * <p><strong>[Deprecated]</strong> Filters by observable resource type. For new integrations, use observeResourceConfig.entityType instead.</p>
+     * <p><strong>[Deprecated]</strong> The filter for the observable resource type. Use observeResourceConfig.entityType instead for new integrations.</p>
      */
     @NameInMap("observeResourceType")
     @Deprecated
     public ObserveResourceTypeFilter observeResourceType;
 
+    /**
+     * <p>The filter condition for the partition key.</p>
+     */
     @NameInMap("partitionKey")
     public PartitionKeyFilter partitionKey;
 
+    /**
+     * <p>The filter condition for alert severity levels.</p>
+     */
     @NameInMap("severityLevels")
     public SeverityLevelsFilter severityLevels;
 
+    /**
+     * <p>The filter for statuses.</p>
+     */
     @NameInMap("status")
     public StatusFilter status;
 
+    /**
+     * <p>The filter for alert rule UUIDs.</p>
+     */
     @NameInMap("uuid")
     public UuidFilter uuid;
 

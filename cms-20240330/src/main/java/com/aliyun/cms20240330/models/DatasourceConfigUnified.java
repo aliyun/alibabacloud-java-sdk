@@ -5,28 +5,34 @@ import com.aliyun.tea.*;
 
 public class DatasourceConfigUnified extends TeaModel {
     /**
-     * <p>The Prometheus instance ID. Required when type is PROMETHEUS or VIRTUAL_PROMETHEUS. Ignored for other types.</p>
+     * <p>The Prometheus instance ID. Used when type is set to PROMETHEUS.</p>
      * 
      * <strong>example:</strong>
-     * <p>prom-xxxxxxx</p>
+     * <p>rw-xxx</p>
      */
     @NameInMap("instanceId")
     public String instanceId;
 
     /**
-     * <p>The raw V1 datasource JSON string returned as a fallback when type is UNKNOWN and read-path parsing fails. When the frontend detects that this field is not empty, display it as read-only.</p>
+     * <p>The raw V1 datasource JSON string returned as a read-path fallback when type is set to UNKNOWN and parsing fails. The frontend displays this field as read-only when the value is not empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;type&quot;:&quot;SLS&quot;}</p>
      */
     @NameInMap("legacyRaw")
     public String legacyRaw;
 
     /**
-     * <p>Returned when type is UNKNOWN. Indicates that this rule cannot be edited through the new API. Submit a ticket to contact the CloudMonitor team.</p>
+     * <p>Returned when type is set to UNKNOWN. Indicates that the rule cannot be edited through the new API. Submit a ticket to contact the CloudMonitor team.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SLS</p>
      */
     @NameInMap("legacyType")
     public String legacyType;
 
     /**
-     * <p>The namespace. Optional when type is VIRTUAL_PROMETHEUS. Identifies the namespace to which the virtual Prometheus instance belongs.</p>
+     * <p>The namespace. Optional when type is set to VIRTUAL_PROMETHEUS. Identifies the namespace to which the virtual Prometheus instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>selectdb</p>
@@ -35,19 +41,25 @@ public class DatasourceConfigUnified extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The Alibaba Cloud service category. Optional when type is CLOUD_MONITORING. Returns unknown when the source lacks this information.</p>
+     * <p>The Alibaba Cloud service category. Optional when type is set to CLOUD_MONITORING. Returns unknown when the source does not contain this information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("productCategory")
     public String productCategory;
 
     /**
-     * <p>The Simple Log Service (SLS) project name. Required when type is SLS. All stores share the same project.</p>
+     * <p>The Simple Log Service (SLS) project name. Required when type is set to SLS. All stores share the same project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-project</p>
      */
     @NameInMap("project")
     public String project;
 
     /**
-     * <p>The region ID. Optional for PROMETHEUS, VIRTUAL_PROMETHEUS, UMODEL, APM, XTRACE, EBPF, RUM, and SLS types. Defaults to the region of the rule or gateway. Not used for CLOUD_MONITORING. Use AlertRuleV2.regionId instead for CLOUD_MONITORING.</p>
+     * <p>The region ID. Optional for all types. Defaults to the region of the rule or gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -56,13 +68,13 @@ public class DatasourceConfigUnified extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of SLS stores. Used when type is SLS. At least one store is required. Each store contains store and storeType fields. The project and regionId fields have been moved to the top level. The deprecated fields with the same names that remain in stores return a 400 error if used in write paths.</p>
+     * <p>The list of SLS stores. Used when type is set to SLS. At least one store is required. Each store contains store and storeType fields. The project and regionId fields have been moved to the top level. The deprecated fields with the same names that remain in stores return a 400 error if used in write paths.</p>
      */
     @NameInMap("stores")
     public java.util.List<Stores> stores;
 
     /**
-     * <p>The tenant ID. Optional when type is VIRTUAL_PROMETHEUS. Identifies the tenant to which the virtual Prometheus instance belongs.</p>
+     * <p>The tenant ID. Optional when type is set to VIRTUAL_PROMETHEUS. Identifies the tenant to which the virtual Prometheus instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>t-xxxxxxx</p>
@@ -71,7 +83,7 @@ public class DatasourceConfigUnified extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The data source type. Valid values and associated fields: PROMETHEUS (instanceId required; regionId optional). VIRTUAL_PROMETHEUS (instanceId required; regionId, namespace, and tenantId optional). UMODEL (regionId optional; other fields are carried in queryConfig/conditionConfig). APM (regionId optional). XTRACE (regionId optional). EBPF (regionId optional). RUM (regionId optional). CLOUD_MONITORING (regionId and productCategory optional). SLS (project and stores required). UNKNOWN (read-only fallback; do not use in write paths). Non-enumerated values (such as CMS_BASIC_DS/SLS_DS) are prohibited and the backend returns an Invalidtype 400 error.</p>
+     * <p>The datasource type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

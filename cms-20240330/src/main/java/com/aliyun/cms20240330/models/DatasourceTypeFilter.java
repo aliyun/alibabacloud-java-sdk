@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DatasourceTypeFilter extends TeaModel {
     /**
-     * <p>Specifies the data source type for an exact match.</p>
+     * <p>The exact match value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>APM_DS</p>
      */
     @NameInMap("eq")
     public String eq;

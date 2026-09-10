@@ -4,54 +4,132 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class SubscriptionForSNSView extends TeaModel {
+    /**
+     * <p>The time when the subscription was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1700000000</p>
+     */
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <p>Indicates whether the subscription is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enable")
     public Boolean enable;
 
+    /**
+     * <p>The filter configuration.</p>
+     */
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
 
+    /**
+     * <p>The lifecycle mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value</p>
+     */
     @NameInMap("mode")
     public String mode;
 
+    /**
+     * <p>The subscription name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample name</p>
+     */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>The reverse association to SNS (= snsUuid).</p>
+     * <p>The reverse association to the SNS (= snsUuid).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-id-001</p>
      */
     @NameInMap("notifyStrategyUuid")
     public String notifyStrategyUuid;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-id-001</p>
+     */
     @NameInMap("regionId")
     public String regionId;
 
     /**
-     * <p>Indicates whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace=null). Valid values: true: subscribed. false or null: not subscribed.</p>
+     * <p>Indicates whether the subscription includes legacy product events (CMS 1.0, ARMS, or SLS events where workspace is null). Valid values: true: Subscribed. false or null: Not subscribed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("subscribeLegacyEvent")
     public Boolean subscribeLegacyEvent;
 
+    /**
+     * <p>The subscription type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("subscriptionType")
     public String subscriptionType;
 
+    /**
+     * <p>The sync source type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("syncFromType")
     public String syncFromType;
 
+    /**
+     * <p>The time when the subscription was last updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1700000000</p>
+     */
     @NameInMap("updateTime")
     public String updateTime;
 
+    /**
+     * <p>The user ID of the owner.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-id-001</p>
+     */
     @NameInMap("userId")
     public String userId;
 
+    /**
+     * <p>The subscription UUID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-id-001</p>
+     */
     @NameInMap("uuid")
     public String uuid;
 
+    /**
+     * <p>The workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 
+    /**
+     * <p>The workspace filter configuration.</p>
+     */
     @NameInMap("workspaceFilterSetting")
     public WorkspaceFilterSetting workspaceFilterSetting;
 

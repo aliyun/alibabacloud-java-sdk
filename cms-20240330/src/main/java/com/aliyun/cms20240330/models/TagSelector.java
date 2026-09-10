@@ -4,12 +4,27 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class TagSelector extends TeaModel {
+    /**
+     * <p>The list of label filter conditions.</p>
+     */
     @NameInMap("conditions")
     public java.util.List<TagCondition> conditions;
 
+    /**
+     * <p>The custom expression in advanced mode, which overwrites conditions and relation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env=prod AND region=cn-hangzhou</p>
+     */
     @NameInMap("expression")
     public String expression;
 
+    /**
+     * <p>The condition relationship.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AND</p>
+     */
     @NameInMap("relation")
     public String relation;
 

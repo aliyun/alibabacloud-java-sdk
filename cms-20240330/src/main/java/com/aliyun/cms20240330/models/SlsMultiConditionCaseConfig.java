@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class SlsMultiConditionCaseConfig extends TeaModel {
     /**
      * <p>The match expression (corresponds to V1 condition, preserved as-is without structured parsing).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value</p>
      */
     @NameInMap("condition")
     public String condition;
 
     /**
      * <p>The count match expression (corresponds to V1 countCondition, preserved as-is without structured parsing).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value</p>
      */
     @NameInMap("countCondition")
     public String countCondition;
 
     /**
      * <p><strong>[Deprecated]</strong> The write path is disabled. Use countCondition instead.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GTE</p>
      */
     @NameInMap("countOperator")
     @Deprecated
@@ -25,6 +34,9 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
 
     /**
      * <p><strong>[Deprecated]</strong> The write path is disabled. Use countCondition instead.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("countThreshold")
     @Deprecated
@@ -32,6 +44,9 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
 
     /**
      * <p><strong>[Deprecated]</strong> The write path is disabled. Use condition instead.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value</p>
      */
     @NameInMap("matchField")
     @Deprecated
@@ -39,6 +54,9 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
 
     /**
      * <p><strong>[Deprecated]</strong> The write path is disabled. Use condition instead.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PRESENT</p>
      */
     @NameInMap("matchOperator")
     @Deprecated
@@ -46,6 +64,9 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
 
     /**
      * <p><strong>[Deprecated]</strong> The write path is disabled. Use condition instead.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value</p>
      */
     @NameInMap("matchValue")
     @Deprecated
@@ -53,12 +74,18 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
 
     /**
      * <p>The detection operator (aligned with V1 caseList.type): HAS_DATA / HAS_DATA_COUNT / HAS_DATA_MATCH / HAS_DATA_MATCH_COUNT.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HAS_DATA</p>
      */
     @NameInMap("operator")
     public String operator;
 
     /**
      * <p><strong>[Deprecated]</strong> The write path is disabled. Use condition instead.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value</p>
      */
     @NameInMap("rawCondition")
     @Deprecated
@@ -66,6 +93,9 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
 
     /**
      * <p>The severity level (corresponds to V1 level).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INFO</p>
      */
     @NameInMap("severity")
     public String severity;

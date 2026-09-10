@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ObserveGroupPromInstance extends TeaModel {
     /**
      * <p>The ID of the Managed Service for Prometheus instance, such as rw-xxxxxxxxxx.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prom-12345</p>
      */
     @NameInMap("id")
     public String id;
@@ -16,18 +19,27 @@ public class ObserveGroupPromInstance extends TeaModel {
      * <li>system: The system automatically identifies the instance based on the workspace or UModel.</li>
      * <li>custom: The user manually selects the instance in the console.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Prometheus</p>
      */
     @NameInMap("kind")
     public String kind;
 
     /**
-     * <p>The region where the Managed Service for Prometheus instance resides. If this parameter is left empty, the backend automatically populates the region based on the workspace to which the application group belongs.</p>
+     * <p>The region where the Managed Service for Prometheus instance resides. If this parameter is left empty, the backend automatically populates the region based on the workspace to which the observation group belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("region")
     public String region;
 
     /**
      * <p>The time when the record was written or selected. Format: yyyy-MM-dd HH:mm:ss.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-01-15 10:30:00</p>
      */
     @NameInMap("time")
     public String time;

@@ -41,22 +41,31 @@ public class AlertRuleNotification extends TeaModel {
     public java.util.List<String> groups;
 
     /**
-     * <p>The notification time period. Notifications are sent only during this time period.</p>
+     * <p>The notification time window. Notifications are sent only within this time window.</p>
      */
     @NameInMap("notifyTime")
     public AlertRuleTimeSpan notifyTime;
 
+    /**
+     * <p>The Qwen (Qwencloud) Notification Recipient configuration. Both the outer key and inner key are custom identity values. The inner Boolean value specifies whether the Notification Recipient is enabled.</p>
+     */
     @NameInMap("qwencloudContacts")
     public java.util.Map<String, java.util.Map<String, ?>> qwencloudContacts;
 
+    /**
+     * <p>Specifies whether to send recovery notifications. Each severity level in severityNotifications can independently override this setting.</p>
+     */
     @NameInMap("sendOk")
     public Boolean sendOk;
 
+    /**
+     * <p>The Notification Recipients and channels configured by severity level. This parameter is mutually exclusive with the top-level contacts, groups, and similar parameters. The key is the severity level: CRITICAL, ERROR, WARNING, or INFO.</p>
+     */
     @NameInMap("severityNotifications")
     public java.util.Map<String, SeverityNotifyConfig> severityNotifications;
 
     /**
-     * <p>The notification mute duration, in seconds.</p>
+     * <p>The notification mute duration. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>86400</p>

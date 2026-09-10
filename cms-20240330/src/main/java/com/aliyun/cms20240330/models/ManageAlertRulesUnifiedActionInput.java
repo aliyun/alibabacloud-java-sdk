@@ -5,73 +5,167 @@ import com.aliyun.tea.*;
 
 public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     /**
+     * <p>The action type.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CREATE</p>
      */
     @NameInMap("action")
     public String action;
 
+    /**
+     * <p>The action integration configuration.</p>
+     */
     @NameInMap("actionIntegrationConfig")
     public ActionIntegrationConfig actionIntegrationConfig;
 
+    /**
+     * <p>The annotations.</p>
+     */
     @NameInMap("annotations")
     public java.util.Map<String, String> annotations;
 
+    /**
+     * <p>The ARMS integration configuration.</p>
+     */
     @NameInMap("armsIntegrationConfig")
     public ArmsIntegrationConfig armsIntegrationConfig;
 
+    /**
+     * <p>The business source (optional). Examples: managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, sls. Provide as needed for CREATE/UPDATE/PATCH.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value</p>
+     */
     @NameInMap("bizSource")
     public String bizSource;
 
+    /**
+     * <p>The aggregated condition configuration.</p>
+     */
     @NameInMap("conditionConfig")
     public ConditionConfigUnified conditionConfig;
 
+    /**
+     * <p>The content template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Instance {{instance}} CPU usage exceeds {{threshold}}%</p>
+     */
     @NameInMap("contentTemplate")
     public String contentTemplate;
 
+    /**
+     * <p>The aggregated data source configuration.</p>
+     */
     @NameInMap("datasourceConfig")
     public DatasourceConfigUnified datasourceConfig;
 
+    /**
+     * <p>The display name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <p>Specifies whether the rule is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enabled")
     public Boolean enabled;
 
+    /**
+     * <p>The labels.</p>
+     */
     @NameInMap("labels")
     public java.util.Map<String, String> labels;
 
+    /**
+     * <p>The aggregated notification configuration.</p>
+     */
     @NameInMap("notifyConfig")
     public NotifyConfigUnified notifyConfig;
 
+    /**
+     * <p>The observable resource configuration.</p>
+     */
     @NameInMap("observeResourceConfig")
     public ObserveResourceConfig observeResourceConfig;
 
+    /**
+     * <p><strong>[Deprecated]</strong> The monitored object instance ID. Use observeResourceConfig.resources instead. Retained only for backward compatibility with legacy SDKs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-id-001</p>
+     */
     @NameInMap("observeResourceInstanceId")
     @Deprecated
     public String observeResourceInstanceId;
 
+    /**
+     * <p><strong>[Deprecated]</strong> The monitored object resource type. Use observeResourceConfig.entityType instead. Retained only for backward compatibility with legacy SDKs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("observeResourceType")
     @Deprecated
     public String observeResourceType;
 
+    /**
+     * <p>The aggregated query configuration.</p>
+     */
     @NameInMap("queryConfig")
     public QueryConfigUnified queryConfig;
 
+    /**
+     * <p>The root cause analysis (RCA) configuration (optional). Provide as needed for CREATE/UPDATE/PATCH.</p>
+     */
     @NameInMap("rcaConfig")
     public AlertRuleRcaConfig rcaConfig;
 
+    /**
+     * <p>The region ID. Aligned with V1 AlertRule.regionId. If not provided, the gateway callerRegionId is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-id-001</p>
+     */
     @NameInMap("regionId")
     public String regionId;
 
+    /**
+     * <p>The aggregated schedule configuration.</p>
+     */
     @NameInMap("scheduleConfig")
     public ScheduleConfigUnified scheduleConfig;
 
+    /**
+     * <p>The UUID of the rule. Required for UPDATE/PATCH.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx-xxx-xxx</p>
+     */
     @NameInMap("uuid")
     public String uuid;
 
+    /**
+     * <p>The list of rule UUIDs to delete (BATCH_DELETE).</p>
+     */
     @NameInMap("uuidList")
     public java.util.List<String> uuidList;
 
+    /**
+     * <p>The workspace. Required for CREATE/UPDATE and other actions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workspace-test</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 

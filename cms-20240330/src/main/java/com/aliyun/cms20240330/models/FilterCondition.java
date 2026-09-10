@@ -5,19 +5,28 @@ import com.aliyun.tea.*;
 
 public class FilterCondition extends TeaModel {
     /**
-     * <p>The name of the field to filter on.</p>
+     * <p>The field name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>region</p>
      */
     @NameInMap("field")
     public String field;
 
     /**
-     * <p>The comparison operator, such as <code>equals</code> or <code>startsWith</code>.</p>
+     * <p>The operator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EQ</p>
      */
     @NameInMap("op")
     public String op;
 
     /**
-     * <p>The value to match for the specified field and operator.</p>
+     * <p>The comparison value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("value")
     public String value;
