@@ -11,7 +11,7 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
     public java.util.List<ListKVCacheStoreAttachInfoResponseBodyAttachInfos> attachInfos;
 
     /**
-     * <p>The pagination token used to query the next batch of data.</p>
+     * <p>The pagination token. Used to query the next batch of data.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3NUkN7qf+fcWj7joK8M6tU</p>
@@ -110,7 +110,7 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
 
     public static class ListKVCacheStoreAttachInfoResponseBodyAttachInfos extends TeaModel {
         /**
-         * <p>The time of the most recent attach operation, in ISO 8601 format. The value is null if the instance has not been attached.</p>
+         * <p>The time of the most recent attach operation, in ISO 8601 format. This value is null if the instance has not been attached.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-20T08:30:00Z</p>
@@ -137,7 +137,7 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
         public String kvcsId;
 
         /**
-         * <p>The mount point ID at the file system level.</p>
+         * <p>The file system-level mount point ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mp-xxxxx</p>
@@ -170,10 +170,7 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The instance type. Valid values:</p>
-         * <ul>
-         * <li>kvcs: KVCacheStore (CPFS).</li>
-         * </ul>
+         * <p>The instance type. Valid values: kvcs (KVCacheStore, CPFS).</p>
          * 
          * <strong>example:</strong>
          * <p>preview</p>

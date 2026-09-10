@@ -9,11 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-beijing", "kvcachestore.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "kvcachestore.cn-shanghai.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "kvcachestore.ap-southeast-1.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("kvcachestore", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -39,7 +34,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Mounts KVCacheInstance resources to the virtualization side in batches.</p>
+     * <p>Mounts KVCacheInstance resources to the virtualization stack in batches.</p>
      * 
      * @param request AttachKVCacheStoreRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -89,7 +84,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Mounts KVCacheInstance resources to the virtualization side in batches.</p>
+     * <p>Mounts KVCacheInstance resources to the virtualization stack in batches.</p>
      * 
      * @param request AttachKVCacheStoreRequest
      * @return AttachKVCacheStoreResponse
@@ -405,7 +400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 KvCacheStore 实例详情</p>
+     * <p>Queries the details of a KvCacheStore instance.</p>
      * 
      * @param request GetKVCacheStoreRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -441,7 +436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 KvCacheStore 实例详情</p>
+     * <p>Queries the details of a KvCacheStore instance.</p>
      * 
      * @param request GetKVCacheStoreRequest
      * @return GetKVCacheStoreResponse
@@ -452,8 +447,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation has no KVCacheStore status restrictions. If a KVCacheStore is in the Creating state, an empty list is returned.</p>
+     * <ul>
+     * <li>A KVCacheStore can be mounted to multiple VSCs, so each KVCacheStore may return multiple mount records.</li>
+     * <li>This operation supports batch queries. You can query up to 100 KVCacheStores in a single request.</li>
+     * <li>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are specified, cursor-based pagination takes precedence.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the mount information of KVCacheInstance resources in batches.</p>
+     * <p>Queries mount information of KVCacheInstances in batches.</p>
      * 
      * @param request ListKVCacheStoreAttachInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -504,8 +507,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation has no KVCacheStore status restrictions. If a KVCacheStore is in the Creating state, an empty list is returned.</p>
+     * <ul>
+     * <li>A KVCacheStore can be mounted to multiple VSCs, so each KVCacheStore may return multiple mount records.</li>
+     * <li>This operation supports batch queries. You can query up to 100 KVCacheStores in a single request.</li>
+     * <li>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are specified, cursor-based pagination takes precedence.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the mount information of KVCacheInstance resources in batches.</p>
+     * <p>Queries mount information of KVCacheInstances in batches.</p>
      * 
      * @param request ListKVCacheStoreAttachInfoRequest
      * @return ListKVCacheStoreAttachInfoResponse
@@ -516,8 +527,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries available HpnZones by KVCacheStore. Use this operation to query available HPN cluster IDs before scaling or migrating a KVCacheStore.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询指定 KVCacheStore 实例可用的 HpnZone 列表</p>
+     * <p>Queries the list of available HpnZones for a specified KVCacheStore instance.</p>
      * 
      * @param request ListKVCacheStoreAvailableHpnZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -552,8 +566,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries available HpnZones by KVCacheStore. Use this operation to query available HPN cluster IDs before scaling or migrating a KVCacheStore.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询指定 KVCacheStore 实例可用的 HpnZone 列表</p>
+     * <p>Queries the list of available HpnZones for a specified KVCacheStore instance.</p>
      * 
      * @param request ListKVCacheStoreAvailableHpnZonesRequest
      * @return ListKVCacheStoreAvailableHpnZonesResponse
@@ -561,6 +578,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListKVCacheStoreAvailableHpnZonesResponse listKVCacheStoreAvailableHpnZones(ListKVCacheStoreAvailableHpnZonesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listKVCacheStoreAvailableHpnZonesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of available VSC resources associated with a specified KVCacheStore instance.</p>
+     * 
+     * @param request ListKVCacheStoreAvailableVscsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListKVCacheStoreAvailableVscsResponse
+     */
+    public ListKVCacheStoreAvailableVscsResponse listKVCacheStoreAvailableVscsWithOptions(ListKVCacheStoreAvailableVscsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.arns)) {
+            query.put("Arns", request.arns);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
+            query.put("InstanceType", request.instanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kvcsId)) {
+            query.put("KvcsId", request.kvcsId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListKVCacheStoreAvailableVscs"),
+            new TeaPair("version", "2026-06-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListKVCacheStoreAvailableVscsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of available VSC resources associated with a specified KVCacheStore instance.</p>
+     * 
+     * @param request ListKVCacheStoreAvailableVscsRequest
+     * @return ListKVCacheStoreAvailableVscsResponse
+     */
+    public ListKVCacheStoreAvailableVscsResponse listKVCacheStoreAvailableVscs(ListKVCacheStoreAvailableVscsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listKVCacheStoreAvailableVscsWithOptions(request, runtime);
     }
 
     /**

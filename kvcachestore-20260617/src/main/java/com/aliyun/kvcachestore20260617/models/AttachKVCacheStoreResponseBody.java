@@ -11,7 +11,7 @@ public class AttachKVCacheStoreResponseBody extends TeaModel {
     public java.util.List<AttachKVCacheStoreResponseBodyAttachResults> attachResults;
 
     /**
-     * <p>The request ID. A request ID is returned regardless of whether the operation is successful.</p>
+     * <p>The request ID. A request ID is returned regardless of whether the API call succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>F7BEF1E2-7E56-5BF1-8E36-77A51C5812F1</p>

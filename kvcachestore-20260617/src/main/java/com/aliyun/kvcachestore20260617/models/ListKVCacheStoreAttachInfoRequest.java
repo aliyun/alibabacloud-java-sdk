@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListKVCacheStoreAttachInfoRequest extends TeaModel {
     /**
-     * <p>The list of KVCacheStore KvcsId values to query. A maximum of 100 values can be specified.</p>
+     * <p>The list of KVCacheStore KvcsIds to query. You can specify up to 100 IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("KvcsIds")
     public java.util.List<String> kvcsIds;
 
     /**
-     * <p>The maximum number of entries to return in a single request. Valid values: 1 to 500.</p>
+     * <p>The maximum number of entries to return per query. Valid values: 1 to 500.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +22,7 @@ public class ListKVCacheStoreAttachInfoRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request. If you set NextToken, the PageSize and PageNumber request parameters become ineffective, and the TotalCount value in the response is invalid.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request. If NextToken is specified, the PageSize and PageNumber request parameters become ineffective, and TotalCount in the response is invalid.</p>
      * 
      * <strong>example:</strong>
      * <p>your-client-token</p>
@@ -31,7 +31,7 @@ public class ListKVCacheStoreAttachInfoRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number for a paged query. Used together with PageSize. If the value exceeds the total number of pages, the last page of data is returned.</p>
+     * <p>The page number for a paged query. Used together with PageSize. If the specified page number exceeds the total number of pages, the last page of data is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>

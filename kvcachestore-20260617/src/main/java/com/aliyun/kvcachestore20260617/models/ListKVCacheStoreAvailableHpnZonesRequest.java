@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListKVCacheStoreAvailableHpnZonesRequest extends TeaModel {
     /**
+     * <p>The list of KVCacheStore instance IDs, separated by commas. You can specify a minimum of 1 and a maximum of 100 instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("KvcsIds")
     public java.util.List<String> kvcsIds;
 
     /**
+     * <p>The region ID, such as cn-hangzhou.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

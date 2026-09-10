@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>kvcachestore20260617</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <packaging>jar</packaging>
   <name>kvcachestore20260617</name>
   <description>Alibaba Cloud Kvcachestore (20260617) SDK for Java
