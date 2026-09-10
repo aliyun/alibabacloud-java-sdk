@@ -14,7 +14,10 @@ public class DescribeFileModerationResultRequest extends TeaModel {
     public String service;
 
     /**
-     * <p>The set of parameters required by the moderation service, in JSON string format.</p>
+     * <p>The set of parameters required by the moderation service, in JSON character string format.</p>
+     * <ul>
+     * <li>taskId: Required. The URL of the object to be moderated. Make sure that the URL is accessible through public network access.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;taskId\&quot;:\&quot;vi_f_hPgx9PFIQISdlfA888hOFG-1yJq8v\&quot;}</p>

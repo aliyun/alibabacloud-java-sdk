@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MultiModalAgentSSERequest extends TeaModel {
     /**
-     * <p>The unique identifier of the whiteboard application. To obtain the whiteboard application ID, see <a href="https://help.aliyun.com/document_detail/204234.html">CreateApp</a>.</p>
+     * <p>The unique identifier of the whiteboard application. To obtain the whiteboard application ID, refer to <a href="https://help.aliyun.com/document_detail/204234.html">CreateApp</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>txt_check_pro_agent_01</p>
@@ -14,11 +14,11 @@ public class MultiModalAgentSSERequest extends TeaModel {
     public String appID;
 
     /**
-     * <p>The parameter set required by the moderation service, in JSON string format. The input parameter for text content is content (String), the custom data ID is DataId (String), and the cache type is CacheType (String, valid value: ephemeral).</p>
+     * <p>The parameter set required by the moderation service, in JSON string format. The text content input parameter is content (String), the custom data ID is DataId (String), and the cache type is CacheType (String, valid value: ephemeral).</p>
      * 
      * <strong>example:</strong>
      * <p>{
-     *     &quot;content&quot;: &quot;这里待审核的文本内容&quot;,
+     *     &quot;content&quot;: &quot;Text content to be moderated&quot;,
      *     &quot;DataId&quot;: &quot;data123***&quot;,
      *     &quot;CacheType&quot;:&quot;ephemeral&quot;
      *     }</p>

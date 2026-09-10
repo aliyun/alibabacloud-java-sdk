@@ -29,10 +29,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-shanghai-finance-1", "green.aliyuncs.com"),
             new TeaPair("cn-north-2-gov-1", "green.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "green-cip.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "green-cip.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "green-cip.cn-hangzhou.aliyuncs.com"),
             new TeaPair("cn-beijing", "green-cip.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "green-cip.ap-southeast-1.aliyuncs.com")
+            new TeaPair("cn-shanghai", "green-cip.cn-shanghai.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "green-cip.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "green-cip.cn-hangzhou.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("green", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -789,7 +789,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The content moderation agent.</p>
      * 
      * <b>summary</b> : 
-     * <p>Synchronously detects content by using the multimodal Agent API.</p>
+     * <p>Synchronously detects content by calling the multimodal Agent API.</p>
      * 
      * @param request MultiModalAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -828,7 +828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The content moderation agent.</p>
      * 
      * <b>summary</b> : 
-     * <p>Synchronously detects content by using the multimodal Agent API.</p>
+     * <p>Synchronously detects content by calling the multimodal Agent API.</p>
      * 
      * @param request MultiModalAgentRequest
      * @return MultiModalAgentResponse
@@ -843,7 +843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The content moderation Agent.</p>
      * 
      * <b>summary</b> : 
-     * <p>Synchronously detects multimodal content by using the Agent API.</p>
+     * <p>Synchronously moderates multimodal content through the Agent API.</p>
      * 
      * @param request MultiModalAgentSSERequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -886,7 +886,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The content moderation Agent.</p>
      * 
      * <b>summary</b> : 
-     * <p>Synchronously detects multimodal content by using the Agent API.</p>
+     * <p>Synchronously moderates multimodal content through the Agent API.</p>
      * 
      * @param request MultiModalAgentSSERequest
      * @return MultiModalAgentSSEResponse
@@ -1437,8 +1437,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, you must activate Content Moderation Enhanced Edition. Activation link: <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.14652963KTpjic&commodityCode=lvwang_cip_public_cn">https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.14652963KTpjic&amp;commodityCode=lvwang_cip_public_cn</a>. You must grant the required RAM access policy (such as AliyunYundunGreenWebFullAccess) and use the correct endpoint (green-cip.{region}.aliyuncs.com).</p>
+     * 
      * <b>summary</b> : 
-     * <p>Cancels an ApsaraVideo Live moderation task.</p>
+     * <p>Cancels an ApsaraVideo Live content moderation node.</p>
      * 
      * @param request VideoModerationCancelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1473,8 +1476,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, you must activate Content Moderation Enhanced Edition. Activation link: <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.14652963KTpjic&commodityCode=lvwang_cip_public_cn">https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.14652963KTpjic&amp;commodityCode=lvwang_cip_public_cn</a>. You must grant the required RAM access policy (such as AliyunYundunGreenWebFullAccess) and use the correct endpoint (green-cip.{region}.aliyuncs.com).</p>
+     * 
      * <b>summary</b> : 
-     * <p>Cancels an ApsaraVideo Live moderation task.</p>
+     * <p>Cancels an ApsaraVideo Live content moderation node.</p>
      * 
      * @param request VideoModerationCancelRequest
      * @return VideoModerationCancelResponse
@@ -1486,7 +1492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After 24 hours, results are automatically deleted.</p>
+     * <p>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous detection task). The maximum query window is 24 hours. After 24 hours, results are automatically deleted.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the task result of a video moderation node from the enhanced video moderation service.</p>
@@ -1525,7 +1531,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After 24 hours, results are automatically deleted.</p>
+     * <p>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous detection task). The maximum query window is 24 hours. After 24 hours, results are automatically deleted.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the task result of a video moderation node from the enhanced video moderation service.</p>

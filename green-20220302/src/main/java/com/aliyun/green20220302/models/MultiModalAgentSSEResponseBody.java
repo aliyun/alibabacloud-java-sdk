@@ -110,7 +110,7 @@ public class MultiModalAgentSSEResponseBody extends TeaModel {
         public Long created;
 
         /**
-         * <p>The value of dataId passed in the API request. This field is not returned if dataId is not specified in the request.</p>
+         * <p>The value of DataId passed in the API request. This field is not returned if DataId is not specified in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>dataId-XXX</p>
@@ -119,7 +119,7 @@ public class MultiModalAgentSSEResponseBody extends TeaModel {
         public String dataId;
 
         /**
-         * <p>If streaming output is used, this field is null during generation. When generation ends, this field is set to stop if the generation stopped due to a stop token.</p>
+         * <p>For streaming output, this value is null during generation. When generation ends, the value is stop if the generation stopped due to a stop token.</p>
          * 
          * <strong>example:</strong>
          * <p>stop</p>
@@ -131,13 +131,13 @@ public class MultiModalAgentSSEResponseBody extends TeaModel {
          * <p>The output result.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;违规，原因XX&quot;</p>
+         * <p>&quot;Violation, reason XX&quot;</p>
          */
         @NameInMap("Output")
         public String output;
 
         /**
-         * <p>The credits usage.</p>
+         * <p>The credits usage information.</p>
          */
         @NameInMap("Usage")
         public MultiModalAgentSSEResponseBodyDataUsage usage;

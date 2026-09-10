@@ -88,7 +88,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is a title.</p>
+         * <p>This is a title</p>
          */
         @NameInMap("Description")
         public String description;
@@ -214,7 +214,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is a title.</p>
+         * <p>This is a title</p>
          */
         @NameInMap("Description")
         public String description;
@@ -296,12 +296,234 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeFileModerationResultResponseBodyDataPageResultTextResultResultCustomizedHit extends TeaModel {
+        /**
+         * <p>The hit keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Popular among everyone</p>
+         */
+        @NameInMap("KeyWords")
+        public String keyWords;
+
+        /**
+         * <p>The vocabulary name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestVocabulary22</p>
+         */
+        @NameInMap("LibName")
+        public String libName;
+
+        public static DescribeFileModerationResultResponseBodyDataPageResultTextResultResultCustomizedHit build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFileModerationResultResponseBodyDataPageResultTextResultResultCustomizedHit self = new DescribeFileModerationResultResponseBodyDataPageResultTextResultResultCustomizedHit();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageResultTextResultResultCustomizedHit setKeyWords(String keyWords) {
+            this.keyWords = keyWords;
+            return this;
+        }
+        public String getKeyWords() {
+            return this.keyWords;
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageResultTextResultResultCustomizedHit setLibName(String libName) {
+            this.libName = libName;
+            return this;
+        }
+        public String getLibName() {
+            return this.libName;
+        }
+
+    }
+
+    public static class DescribeFileModerationResultResponseBodyDataPageResultTextResultResultRiskPositions extends TeaModel {
+        /**
+         * <p>The end position.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
+         */
+        @NameInMap("EndPos")
+        public Long endPos;
+
+        /**
+         * <p>The violation word.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Visit pornographic website</p>
+         */
+        @NameInMap("RiskWord")
+        public String riskWord;
+
+        /**
+         * <p>The start position.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17</p>
+         */
+        @NameInMap("StartPos")
+        public Long startPos;
+
+        public static DescribeFileModerationResultResponseBodyDataPageResultTextResultResultRiskPositions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFileModerationResultResponseBodyDataPageResultTextResultResultRiskPositions self = new DescribeFileModerationResultResponseBodyDataPageResultTextResultResultRiskPositions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageResultTextResultResultRiskPositions setEndPos(Long endPos) {
+            this.endPos = endPos;
+            return this;
+        }
+        public Long getEndPos() {
+            return this.endPos;
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageResultTextResultResultRiskPositions setRiskWord(String riskWord) {
+            this.riskWord = riskWord;
+            return this;
+        }
+        public String getRiskWord() {
+            return this.riskWord;
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageResultTextResultResultRiskPositions setStartPos(Long startPos) {
+            this.startPos = startPos;
+            return this;
+        }
+        public Long getStartPos() {
+            return this.startPos;
+        }
+
+    }
+
+    public static class DescribeFileModerationResultResponseBodyDataPageResultTextResultResult extends TeaModel {
+        /**
+         * <p>The label confidence score.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90.50</p>
+         */
+        @NameInMap("Confidence")
+        public Float confidence;
+
+        /**
+         * <p>The custom vocabulary hit results.</p>
+         */
+        @NameInMap("CustomizedHit")
+        public java.util.List<DescribeFileModerationResultResponseBodyDataPageResultTextResultResultCustomizedHit> customizedHit;
+
+        /**
+         * <p>The description corresponding to the label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pornography</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>The text label in page results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Political sensitivity</p>
+         */
+        @NameInMap("Label")
+        public String label;
+
+        /**
+         * <p>The risk level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
+         */
+        @NameInMap("RiskLevel")
+        public String riskLevel;
+
+        /**
+         * <p>The positions of the violation words.</p>
+         */
+        @NameInMap("RiskPositions")
+        public java.util.List<DescribeFileModerationResultResponseBodyDataPageResultTextResultResultRiskPositions> riskPositions;
+
+        /**
+         * <p>The hit violation words.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Popular among everyone</p>
+         */
+        @NameInMap("RiskWords")
+        public String riskWords;
+
+        public static DescribeFileModerationResultResponseBodyDataPageResultTextResultResult build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFileModerationResultResponseBodyDataPageResultTextResultResult self = new DescribeFileModerationResultResponseBodyDataPageResultTextResultResult();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageResultTextResultResult setConfidence(Float confidence) {
+            this.confidence = confidence;
+            return this;
+        }
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageResultTextResultResult setCustomizedHit(java.util.List<DescribeFileModerationResultResponseBodyDataPageResultTextResultResultCustomizedHit> customizedHit) {
+            this.customizedHit = customizedHit;
+            return this;
+        }
+        public java.util.List<DescribeFileModerationResultResponseBodyDataPageResultTextResultResultCustomizedHit> getCustomizedHit() {
+            return this.customizedHit;
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageResultTextResultResult setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageResultTextResultResult setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageResultTextResultResult setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageResultTextResultResult setRiskPositions(java.util.List<DescribeFileModerationResultResponseBodyDataPageResultTextResultResultRiskPositions> riskPositions) {
+            this.riskPositions = riskPositions;
+            return this;
+        }
+        public java.util.List<DescribeFileModerationResultResponseBodyDataPageResultTextResultResultRiskPositions> getRiskPositions() {
+            return this.riskPositions;
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageResultTextResultResult setRiskWords(String riskWords) {
+            this.riskWords = riskWords;
+            return this;
+        }
+        public String getRiskWords() {
+            return this.riskWords;
+        }
+
+    }
+
     public static class DescribeFileModerationResultResponseBodyDataPageResultTextResult extends TeaModel {
         /**
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is a title.</p>
+         * <p>This is a title</p>
          */
         @NameInMap("Description")
         public String description;
@@ -310,7 +532,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
          * <p>The label descriptions.</p>
          * 
          * <strong>example:</strong>
-         * <p>Suspected advertising content.</p>
+         * <p>Suspected advertising content</p>
          */
         @NameInMap("Descriptions")
         public String descriptions;
@@ -325,6 +547,12 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public String labels;
 
         /**
+         * <p>The text plus version result.</p>
+         */
+        @NameInMap("Result")
+        public java.util.List<DescribeFileModerationResultResponseBodyDataPageResultTextResultResult> result;
+
+        /**
          * <p>The risk level.</p>
          * 
          * <strong>example:</strong>
@@ -334,7 +562,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
-         * <p>The details of the hit risk.</p>
+         * <p>The hit risk details.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -343,7 +571,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public String riskTips;
 
         /**
-         * <p>The risk keywords that are hit.</p>
+         * <p>The hit risk keywords.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -364,7 +592,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
          * <p>The text content.</p>
          * 
          * <strong>example:</strong>
-         * <p>blah blah.</p>
+         * <p>blah blah</p>
          */
         @NameInMap("Text")
         public String text;
@@ -405,6 +633,14 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         }
         public String getLabels() {
             return this.labels;
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageResultTextResult setResult(java.util.List<DescribeFileModerationResultResponseBodyDataPageResultTextResultResult> result) {
+            this.result = result;
+            return this;
+        }
+        public java.util.List<DescribeFileModerationResultResponseBodyDataPageResultTextResultResult> getResult() {
+            return this.result;
         }
 
         public DescribeFileModerationResultResponseBodyDataPageResultTextResult setRiskLevel(String riskLevel) {
@@ -662,10 +898,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public String contentPropagator;
 
         /**
-         * <p>The content attribute declared by the implicit identifier.</p>
+         * <p>The content attribute declared by the implicit label.</p>
          * 
          * <strong>example:</strong>
-         * <p>Belongs to AI-generated synthetic content.</p>
+         * <p>AI-generated or synthetic content</p>
          */
         @NameInMap("Label")
         public String label;
@@ -692,7 +928,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
          * <p>Reserved field 1.</p>
          * 
          * <strong>example:</strong>
-         * <p>None.</p>
+         * <p>None</p>
          */
         @NameInMap("ReservedCode1")
         public String reservedCode1;
@@ -701,7 +937,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
          * <p>Reserved field 2.</p>
          * 
          * <strong>example:</strong>
-         * <p>None.</p>
+         * <p>None</p>
          */
         @NameInMap("ReservedCode2")
         public String reservedCode2;
@@ -771,16 +1007,20 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
     public static class DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryExtAigcData extends TeaModel {
         /**
-         * <p>The implicit identifier information of AI-generated content.</p>
+         * <p>The implicit label information of AI-generated or synthetic content.</p>
          */
         @NameInMap("AIGC")
         public DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryExtAigcDataAIGC AIGC;
 
         /**
-         * <p>The comprehensive analysis report of large model authenticity verification.</p>
+         * <p>The comprehensive analysis report for forgery detection by the large language model.</p>
          * 
          * <strong>example:</strong>
-         * <h3>Comprehensive report for users.</h3>
+         * <h3>Comprehensive Report for Users</h3>
+         * <h4>Quick Image Overview</h4>
+         * <ul>
+         * <li><strong>Image Subject</strong>: A scanned document titled &quot;Letter of Authorization&quot;, containing the names of the authorizing and authorized companies and red official seals</li>
+         * </ul>
          */
         @NameInMap("Explain")
         public String explain;
@@ -810,7 +1050,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
     public static class DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryExt extends TeaModel {
         /**
-         * <p>The detection details of AI-generated content.</p>
+         * <p>The details of AI-generated or synthetic content detection.</p>
          */
         @NameInMap("AigcData")
         public DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryExtAigcData aigcData;
@@ -832,7 +1072,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
     public static class DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryRiskLabels extends TeaModel {
         /**
-         * <p>The label confidence score.</p>
+         * <p>The confidence score of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>95.96</p>
@@ -841,10 +1081,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public Float confidence;
 
         /**
-         * <p>The Chinese description of the risk label.</p>
+         * <p>The description of the risk label in Chinese.</p>
          * 
          * <strong>example:</strong>
-         * <p>Suspected AI-generated synthetic content.</p>
+         * <p>疑似AI生成合成内容</p>
          */
         @NameInMap("Description")
         public String description;
@@ -897,13 +1137,13 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryExt ext;
 
         /**
-         * <p>The list of hit authenticity verification risk labels.</p>
+         * <p>The list of matched forgery detection risk labels.</p>
          */
         @NameInMap("RiskLabels")
         public java.util.List<DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryRiskLabels> riskLabels;
 
         /**
-         * <p>The overall risk level of the document, which is the highest level among all hit labels.</p>
+         * <p>The overall risk level of the document, which is the highest level among all matched labels.</p>
          * 
          * <strong>example:</strong>
          * <p>high</p>
@@ -947,7 +1187,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
          * <p>The label descriptions.</p>
          * 
          * <strong>example:</strong>
-         * <p>No risk detected.</p>
+         * <p>No risk detected</p>
          */
         @NameInMap("Description")
         public String description;
@@ -1057,7 +1297,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public Integer pageSum;
 
         /**
-         * <p>The document authenticity verification risk summary.</p>
+         * <p>The document forgery detection risk summary.</p>
          */
         @NameInMap("RiskSummary")
         public DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummary riskSummary;
@@ -1109,7 +1349,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
     public static class DescribeFileModerationResultResponseBodyData extends TeaModel {
         /**
-         * <p>The AccountId specified in the request.</p>
+         * <p>The AccountId specified by the caller.</p>
          * 
          * <strong>example:</strong>
          * <p>accountIdtest123</p>
@@ -1157,7 +1397,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
-         * <p>The file download URL.</p>
+         * <p>The URL for downloading the file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf">https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf</a></p>

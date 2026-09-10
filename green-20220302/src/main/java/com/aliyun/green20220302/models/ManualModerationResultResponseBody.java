@@ -79,7 +79,7 @@ public class ManualModerationResultResponseBody extends TeaModel {
          * <p>The label description.</p>
          * 
          * <strong>example:</strong>
-         * <p>No risk detected.</p>
+         * <p>No risk detected</p>
          */
         @NameInMap("Description")
         public String description;

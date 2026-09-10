@@ -4,6 +4,12 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class MultiModalGuardForBase64Request extends TeaModel {
+    /**
+     * <p>The base64-encoded string of the document.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{base64}</p>
+     */
     @NameInMap("FileBase64Str")
     public String fileBase64Str;
 

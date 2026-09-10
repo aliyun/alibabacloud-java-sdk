@@ -98,10 +98,10 @@ public class MultiModalAgentResponseBody extends TeaModel {
          * <ul>
          * <li><strong>SESSION_KILLED</strong>: The session is terminated.</li>
          * <li><strong>SESSION_EXPIRED</strong>: The session has expired.</li>
-         * <li><strong>SESSION_NO_PERMISSION</strong>: Operations account used to terminate the session has insufficient permissions.</li>
-         * <li><strong>SESSION_ACCOUNT_ERROR</strong>: Operations account or password used to terminate the session is incorrect.</li>
-         * <li><strong>SESSION_IGNORED_USER</strong>: The session of an account that does not need to be terminated.</li>
-         * <li><strong>SESSION_INTERNAL_USER_OR_COMMAND</strong>: The session or command of an Alibaba Cloud O&amp;M account.</li>
+         * <li><strong>SESSION_NO_PERMISSION</strong>: The account used to terminate the session has insufficient permissions.</li>
+         * <li><strong>SESSION_ACCOUNT_ERROR</strong>: The account or password used to terminate the session is incorrect.</li>
+         * <li><strong>SESSION_IGNORED_USER</strong>: The session belongs to an account that does not need to be terminated.</li>
+         * <li><strong>SESSION_INTERNAL_USER_OR_COMMAND</strong>: The session or command belongs to an Alibaba Cloud operations account.</li>
          * <li><strong>SESSION_KILL_TASK_TIMEOUT</strong>: The session termination timed out.</li>
          * <li><strong>SESSION_OTHER_ERROR</strong>: Other errors.</li>
          * </ul>
@@ -159,6 +159,12 @@ public class MultiModalAgentResponseBody extends TeaModel {
         @NameInMap("ContentLength")
         public Long contentLength;
 
+        /**
+         * <p>The credits consumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.23</p>
+         */
         @NameInMap("Credits")
         public Double credits;
 
