@@ -31,8 +31,8 @@ public class ModifyDtsJobEndpointRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. If the dry run succeeds, the instance is not modified.</li>
-     * <li><strong>false</strong> (default): performs a dry run and then modifies the database instance of the DTS task if the dry run succeeds.</li>
+     * <li><strong>true</strong>: Yes. After the dry run succeeds, the instance is not modified.</li>
+     * <li><strong>false</strong> (default): No. After the dry run succeeds, the database instance of the DTS task is modified and the task runs.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class ModifyDtsJobEndpointRequest extends TeaModel {
     public String dtsInstanceId;
 
     /**
-     * <p>The DTS task ID. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the task ID.</p>
+     * <p>The ID of the DTS task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the task ID.</p>
      * <blockquote>
      * <p>If you do not specify this parameter, you must specify <strong>DtsInstanceId</strong>.</p>
      * </blockquote>
@@ -66,7 +66,7 @@ public class ModifyDtsJobEndpointRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The database instance to modify. Valid values:</p>
+     * <p>The database instance to be modified. Valid values:</p>
      * <ul>
      * <li><strong>src</strong>: source instance.</li>
      * <li><strong>dest</strong>: destination instance.</li>
@@ -102,9 +102,9 @@ public class ModifyDtsJobEndpointRequest extends TeaModel {
      * <ul>
      * <li><strong>greenplum</strong>: cloud-native data warehouse AnalyticDB for PostgreSQL.</li>
      * <li><strong>kafka</strong>: ApsaraMQ for Kafka.</li>
-     * <li><strong>ecs</strong>: a self-managed database hosted on an ECS instance (only supported database types).</li>
-     * <li><strong>express</strong>: a database connected over Express Connect (only supported database types).</li>
-     * <li><strong>other</strong>: a database connected over the Internet (only supported database types).</li>
+     * <li><strong>ecs</strong>: self-managed database on an ECS instance (only supported database types).</li>
+     * <li><strong>express</strong>: database connected over Express Connect (only supported database types).</li>
+     * <li><strong>other</strong>: database connected over the Internet (only supported database types).</li>
      * </ul>
      * <blockquote>
      * <ul>
@@ -113,7 +113,7 @@ public class ModifyDtsJobEndpointRequest extends TeaModel {
      * </blockquote>
      * <ul>
      * <li>If the database is MongoDB (sharded cluster), the number of shards in the new database must be the same as that in the original MongoDB (sharded cluster).</li>
-     * <li>If you want to modify the source instance and the database type is <strong>PostgreSQL</strong>, make sure that the latency of the DTS instance is less than 30 seconds and stop writing data to the source. Otherwise, data inconsistency may occur.</li>
+     * <li>If the source instance is to be modified and the database type is <strong>PostgreSQL</strong>, make sure that the latency of the DTS instance is less than 30 seconds and stop writing data to the source. Otherwise, inconsistent data may occur.</li>
      * <li>The parameter values are case-insensitive.</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -143,6 +143,15 @@ public class ModifyDtsJobEndpointRequest extends TeaModel {
     public String endpointPort;
 
     /**
+     * <p>The primary vSwitch for Express Connect access.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1w7gscw7pky*******</p>
+     */
+    @NameInMap("EndpointPrimaryVswId")
+    public String endpointPrimaryVswId;
+
+    /**
      * <p>The region to which the database instance belongs.</p>
      * 
      * <strong>example:</strong>
@@ -152,10 +161,28 @@ public class ModifyDtsJobEndpointRequest extends TeaModel {
     public String endpointRegionId;
 
     /**
+     * <p>The secondary vSwitch for Express Connect access.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1ud8e2mhw*****</p>
+     */
+    @NameInMap("EndpointSecondaryVswId")
+    public String endpointSecondaryVswId;
+
+    /**
+     * <p>The VPC ID for Express Connect access.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1q00qitocaem****</p>
+     */
+    @NameInMap("EndpointVpcId")
+    public String endpointVpcId;
+
+    /**
      * <p>Specifies whether to modify the account and password. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes.</li>
-     * <li><strong>false</strong> (default): no.</li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong> (default): No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -197,7 +224,7 @@ public class ModifyDtsJobEndpointRequest extends TeaModel {
     /**
      * <p>The name of the RAM role for cross-account access.</p>
      * <blockquote>
-     * <p>This parameter is required when you perform cross-account data synchronization. For the permissions required by this role and how to grant them, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration or synchronization</a>.</p>
+     * <p>Specify this parameter when performing cross-account data synchronization. For the required permissions and authorization method of this role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration or synchronization</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -265,6 +292,16 @@ public class ModifyDtsJobEndpointRequest extends TeaModel {
     @NameInMap("Username")
     public String username;
 
+    /**
+     * <p>Specifies whether this is a seamless integration (zero-ETL) node. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ZeroEtlJob")
     public Boolean zeroEtlJob;
 
@@ -353,12 +390,36 @@ public class ModifyDtsJobEndpointRequest extends TeaModel {
         return this.endpointPort;
     }
 
+    public ModifyDtsJobEndpointRequest setEndpointPrimaryVswId(String endpointPrimaryVswId) {
+        this.endpointPrimaryVswId = endpointPrimaryVswId;
+        return this;
+    }
+    public String getEndpointPrimaryVswId() {
+        return this.endpointPrimaryVswId;
+    }
+
     public ModifyDtsJobEndpointRequest setEndpointRegionId(String endpointRegionId) {
         this.endpointRegionId = endpointRegionId;
         return this;
     }
     public String getEndpointRegionId() {
         return this.endpointRegionId;
+    }
+
+    public ModifyDtsJobEndpointRequest setEndpointSecondaryVswId(String endpointSecondaryVswId) {
+        this.endpointSecondaryVswId = endpointSecondaryVswId;
+        return this;
+    }
+    public String getEndpointSecondaryVswId() {
+        return this.endpointSecondaryVswId;
+    }
+
+    public ModifyDtsJobEndpointRequest setEndpointVpcId(String endpointVpcId) {
+        this.endpointVpcId = endpointVpcId;
+        return this;
+    }
+    public String getEndpointVpcId() {
+        return this.endpointVpcId;
     }
 
     public ModifyDtsJobEndpointRequest setModifyAccount(Boolean modifyAccount) {

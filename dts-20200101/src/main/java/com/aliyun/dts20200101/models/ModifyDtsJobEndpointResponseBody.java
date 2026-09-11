@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDtsJobEndpointResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The error code returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>DTS.Msg.InvalidEndpoint</p>
@@ -14,7 +14,7 @@ public class ModifyDtsJobEndpointResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The error message returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The endpoint is invalid.</p>

@@ -70,16 +70,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-zhangjiakou-na62-a01", "dts.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "dts.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "dts.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "dts.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "dts.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "dts.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "dts.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "dts.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "dts.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "dts.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-wuhan-lr", "dts.cn-wuhan-lr.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-jva", "dts.cn-zhengzhou-jva.aliyuncs.com"),
-            new TeaPair("me-central-1", "dts.me-central-1.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "dts.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dts", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -7346,7 +7337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>After the database instance is modified, the DTS incremental write module rolls back writes by 10 seconds. If the synchronized or migrated data does not have a primary key, stop writing data to the source instance during the database instance replacement. Otherwise, duplicate data may occur.</p>
+     * <p>After the database instance is modified, the DTS incremental write module rolls back writes by 10 seconds. If the data being synchronized or migrated does not have a primary key, stop writing data to the business associated with the source instance during the database instance replacement. Otherwise, duplicate data may occur.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -7399,8 +7390,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EndpointPort", request.endpointPort);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointPrimaryVswId)) {
+            query.put("EndpointPrimaryVswId", request.endpointPrimaryVswId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endpointRegionId)) {
             query.put("EndpointRegionId", request.endpointRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointSecondaryVswId)) {
+            query.put("EndpointSecondaryVswId", request.endpointSecondaryVswId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointVpcId)) {
+            query.put("EndpointVpcId", request.endpointVpcId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.modifyAccount)) {
@@ -7463,7 +7466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>After the database instance is modified, the DTS incremental write module rolls back writes by 10 seconds. If the synchronized or migrated data does not have a primary key, stop writing data to the source instance during the database instance replacement. Otherwise, duplicate data may occur.</p>
+     * <p>After the database instance is modified, the DTS incremental write module rolls back writes by 10 seconds. If the data being synchronized or migrated does not have a primary key, stop writing data to the business associated with the source instance during the database instance replacement. Otherwise, duplicate data may occur.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
