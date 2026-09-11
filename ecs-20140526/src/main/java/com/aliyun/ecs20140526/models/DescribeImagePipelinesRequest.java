@@ -14,7 +14,7 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     public java.util.List<String> imagePipelineId;
 
     /**
-     * <p>The maximum number of entries per page for paging queries. Valid values: 1 to 500.</p>
+     * <p>The maximum number of entries per page in a paging query. Valid values: 1 to 500.</p>
      * <p>Default value: 50.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the enterprise resource group. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
+     * <p>The ID of the enterprise resource group. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
      * <blockquote>
      * <p>Filtering by the default resource group is not supported.</p>
      * </blockquote>

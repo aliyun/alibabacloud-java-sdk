@@ -17,7 +17,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page when the automatic snapshot policies are displayed by page.</p>
+     * <p>The number of entries per page when the automatic snapshot policies are displayed in paging mode.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

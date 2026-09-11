@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     /**
-     * <p>The association type between the automatic snapshot policy and target resources. Valid values:
-     * ● AssociatedWithDisk: associated with disks.
-     * ● AssociatedWithInstanceTag: associated with instance tags.
-     * Default value: AssociatedWithDisk.</p>
+     * <p>The association type between the automatic snapshot policy and the target resource. Valid values:</p>
+     * <ul>
+     * <li>AssociatedWithDisk: associated with disks</li>
+     * <li>AssociatedWithInstanceTag: associated with instance tags</li>
+     * </ul>
+     * <p>Default value: AssociatedWithDisk.</p>
      * 
      * <strong>example:</strong>
      * <p>AssociatedWithDisk</p>
@@ -31,16 +33,16 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public Integer copiedSnapshotsRetentionDays;
 
     /**
-     * <p>The backup encryption parameters for snapshot geo-redundancy.</p>
+     * <p>The backup encryption parameter object for snapshot geo-redundancy.</p>
      */
     @NameInMap("CopyEncryptionConfiguration")
     public CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration copyEncryptionConfiguration;
 
     /**
-     * <p>Specifies whether to enable automatic cross-region replication.</p>
+     * <p>Specifies whether to allow automatic cross-region replication.</p>
      * <ul>
-     * <li>true: enables automatic cross-region replication.</li>
-     * <li>false: disables automatic cross-region replication.</li>
+     * <li>true: Allowed.</li>
+     * <li>false: Not allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -95,7 +97,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
 
     /**
      * <p>The list of target resource tags. The automatic snapshot policy matches target resources based on tags.
-     * This parameter is required when AssociationType is set to AssociatedWithInstanceTag.</p>
+     * This parameter is required when <code>AssociationType=AssociatedWithInstanceTag</code>.</p>
      */
     @NameInMap("TargetTags")
     public java.util.List<CreateAutoSnapshotPolicyRequestTargetTags> targetTags;
@@ -150,13 +152,13 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public Integer retentionDays;
 
     /**
-     * <p>The points in time at which automatic snapshots are created. The time is in UTC+8. Unit: hours. Valid values: 0 to 23, which represent 00:00 to 23:00 (a total of 24 points in time). For example, 1 indicates 01:00. Format description:</p>
+     * <p>The points in time at which automatic snapshots are created. The time is in UTC+8. Unit: hours. Valid values: 0 to 23, which represent the 24 points in time from 00:00 to 23:00. For example, 1 indicates 01:00. Format description:</p>
      * <ul>
      * <li>The parameter value must be a JSON array. For example, [&quot;1&quot;\] indicates that automatic snapshots are created at 01:00.</li>
      * <li>To create multiple automatic snapshots within a day, specify multiple points in time separated by commas (,). You can specify up to 24 points in time. For example, [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;\] indicates that automatic snapshots are created at 01:00, 03:00, and 05:00.</li>
      * </ul>
      * <blockquote>
-     * <p>If a disk contains a large amount of data and the time required to create a single automatic snapshot exceeds the interval between two consecutive points in time, the next point in time is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as the points in time for automatic snapshot creation. The snapshot creation starts at 09:00 and is completed at 10:20, which takes 80 minutes. The system skips the 10:00 point in time and creates the next automatic snapshot at 11:00.</p>
+     * <p>If a disk contains a large amount of data and the time required to create a single automatic snapshot exceeds the interval between two consecutive points in time, the next point in time is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as the points in time for automatic snapshot creation. Because the disk contains a large amount of data, the snapshot creation starts at 09:00 and is completed at 10:20, which takes 80 minutes. The system skips the 10:00 point in time and creates the next automatic snapshot at 11:00.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -384,8 +386,8 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable encryption for cross-region snapshot backup. Valid values:</p>
          * <ul>
-         * <li>true: enables encryption.</li>
-         * <li>false: disables encryption.</li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -396,7 +398,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
         public Boolean encrypted;
 
         /**
-         * <p>The key ID of the Key Management Service (KMS) key used for cross-region encrypted snapshot backup.</p>
+         * <p>The key ID of the KMS key used for cross-region encrypted snapshot backup.</p>
          * 
          * <strong>example:</strong>
          * <p>0e478b7a-4262-4802-b8cb-00d3fb40826X</p>
@@ -479,17 +481,20 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
 
     public static class CreateAutoSnapshotPolicyRequestTargetTags extends TeaModel {
         /**
-         * <p>The tag key.
-         * Valid values of N: 1 to 10.
-         * The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
+         * <p>The tag key.</p>
+         * <p>Valid values of N: 1 to 5.</p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.
-         * Valid values of N: 1 to 10. The tag value can be up to 128 characters in length and cannot contain http:// or https://.
-         * Note: If you pass in an empty or empty string value, it indicates any value.</p>
+         * <p>The tag value.</p>
+         * <p>Valid values of N: 1 to 5.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <blockquote>
+         * <p>If you pass in an empty value or an empty string, the tag value matches any value.</p>
+         * </blockquote>
          */
         @NameInMap("Value")
         public String value;

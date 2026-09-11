@@ -8,7 +8,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public DescribeInstancesResponseBodyInstances instances;
 
     /**
-     * <p>The query token returned in this call.</p>
+     * <p>The pagination token returned in this call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -26,7 +26,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page as specified in the request.</p>
+     * <p>The number of entries per page that was specified in the request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -112,6 +112,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("EnableHighDensityMode")
         public Boolean enableHighDensityMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mh-f2d3647ca21****</p>
+         */
+        @NameInMap("ManagedHostId")
+        public String managedHostId;
+
         @NameInMap("NodeSerialNumber")
         public String nodeSerialNumber;
 
@@ -126,6 +133,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Boolean getEnableHighDensityMode() {
             return this.enableHighDensityMode;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAdditionalInfo setManagedHostId(String managedHostId) {
+            this.managedHostId = managedHostId;
+            return this;
+        }
+        public String getManagedHostId() {
+            return this.managedHostId;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceAdditionalInfo setNodeSerialNumber(String nodeSerialNumber) {

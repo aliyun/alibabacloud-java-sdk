@@ -14,7 +14,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     public String autoSnapshotPolicyId;
 
     /**
-     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length and can contain characters that are classified as letter in Unicode, including Chinese characters, English letters, and digits. The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
+     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length and can contain characters that are classified as letter in Unicode, including Chinese characters, English letters, and digits. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>TestName</p>
@@ -29,7 +29,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the automatic snapshot policy list. The results are displayed on multiple pages.</p>
+     * <p>The page number of the page to return for the automatic snapshot policy list.</p>
      * <p>Minimum value: 1.</p>
      * <p>Default value: 1.</p>
      * 
@@ -40,7 +40,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page when the automatic snapshot policies are displayed by page.</p>
+     * <p>The number of entries per page for the automatic snapshot policy list.</p>
      * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -61,7 +61,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. If you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
+     * <p>The ID of the resource group. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
      * <blockquote>
      * <p>Filtering by the default resource group is not supported.</p>
      * </blockquote>
@@ -79,7 +79,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeAutoSnapshotPolicyExRequestTag> tag;

@@ -56,8 +56,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public String targetCopyRegions;
 
     /**
-     * <p>The list of target resource tags. The automatic snapshot policy matches target resources based on tags.
-     * This parameter is required when AssociationType is set to AssociatedWithInstanceTag.</p>
+     * <p>The list of target resource tags. The automatic snapshot policy matches target resources by tag.</p>
      */
     @NameInMap("TargetTags")
     public java.util.List<ModifyAutoSnapshotPolicyExRequestTargetTags> targetTags;
@@ -319,8 +318,8 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable encryption for cross-region snapshot replication. Valid values:</p>
          * <ul>
-         * <li>true: Encryption is enabled. </li>
-         * <li>false: Encryption is not enabled.</li>
+         * <li>true: enabled. </li>
+         * <li>false: disabled.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -372,17 +371,20 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
 
     public static class ModifyAutoSnapshotPolicyExRequestTargetTags extends TeaModel {
         /**
-         * <p>The tag key.
-         * Valid values of N: 1 to 10.
-         * The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
+         * <p>The tag key.</p>
+         * <p>Valid values of N: 1 to 5.</p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.
-         * Valid values of N: 1 to 10. The tag value can be up to 128 characters in length and cannot contain http:// or https://.
-         * Note: If you pass in an empty value or an empty string, it indicates any value.</p>
+         * <p>The tag value.</p>
+         * <p>Valid values of N: 1 to 5.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <blockquote>
+         * <p>If you pass in an empty value or an empty string, the tag value matches any value.</p>
+         * </blockquote>
          */
         @NameInMap("Value")
         public String value;
