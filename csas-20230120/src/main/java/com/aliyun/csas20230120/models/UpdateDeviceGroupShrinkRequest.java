@@ -3,7 +3,7 @@ package com.aliyun.csas20230120.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateDeviceGroupRequest extends TeaModel {
+public class UpdateDeviceGroupShrinkRequest extends TeaModel {
     /**
      * <p>The description of the device label. Set this parameter to an empty string to clear the description. The description can contain letters, digits, Chinese characters, spaces, periods (.), underscores (_), and hyphens (-).</p>
      * 
@@ -36,7 +36,7 @@ public class UpdateDeviceGroupRequest extends TeaModel {
      * <p>The matching rule of the dynamic device label.</p>
      */
     @NameInMap("DynamicRule")
-    public Rule dynamicRule;
+    public String dynamicRuleShrink;
 
     /**
      * <p>The name of the device label. The name must be 1 to 128 characters in length and can contain letters, digits, Chinese characters, periods (.), underscores (_), and hyphens (-). Spaces are not supported.</p>
@@ -47,12 +47,12 @@ public class UpdateDeviceGroupRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    public static UpdateDeviceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateDeviceGroupRequest self = new UpdateDeviceGroupRequest();
+    public static UpdateDeviceGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateDeviceGroupShrinkRequest self = new UpdateDeviceGroupShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateDeviceGroupRequest setDescription(String description) {
+    public UpdateDeviceGroupShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -60,7 +60,7 @@ public class UpdateDeviceGroupRequest extends TeaModel {
         return this.description;
     }
 
-    public UpdateDeviceGroupRequest setDeviceGroupId(String deviceGroupId) {
+    public UpdateDeviceGroupShrinkRequest setDeviceGroupId(String deviceGroupId) {
         this.deviceGroupId = deviceGroupId;
         return this;
     }
@@ -69,7 +69,7 @@ public class UpdateDeviceGroupRequest extends TeaModel {
     }
 
     @Deprecated
-    public UpdateDeviceGroupRequest setDynamicOperator(String dynamicOperator) {
+    public UpdateDeviceGroupShrinkRequest setDynamicOperator(String dynamicOperator) {
         this.dynamicOperator = dynamicOperator;
         return this;
     }
@@ -77,15 +77,15 @@ public class UpdateDeviceGroupRequest extends TeaModel {
         return this.dynamicOperator;
     }
 
-    public UpdateDeviceGroupRequest setDynamicRule(Rule dynamicRule) {
-        this.dynamicRule = dynamicRule;
+    public UpdateDeviceGroupShrinkRequest setDynamicRuleShrink(String dynamicRuleShrink) {
+        this.dynamicRuleShrink = dynamicRuleShrink;
         return this;
     }
-    public Rule getDynamicRule() {
-        return this.dynamicRule;
+    public String getDynamicRuleShrink() {
+        return this.dynamicRuleShrink;
     }
 
-    public UpdateDeviceGroupRequest setName(String name) {
+    public UpdateDeviceGroupShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }

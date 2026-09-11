@@ -10492,12 +10492,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Updates a device label.</p>
      * 
-     * @param request UpdateDeviceGroupRequest
+     * @param tmpReq UpdateDeviceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateDeviceGroupResponse
      */
-    public UpdateDeviceGroupResponse updateDeviceGroupWithOptions(UpdateDeviceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateDeviceGroupResponse updateDeviceGroupWithOptions(UpdateDeviceGroupRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateDeviceGroupShrinkRequest request = new UpdateDeviceGroupShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dynamicRule)) {
+            request.dynamicRuleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dynamicRule, "DynamicRule", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
@@ -10509,6 +10515,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dynamicOperator)) {
             body.put("DynamicOperator", request.dynamicOperator);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dynamicRuleShrink)) {
+            body.put("DynamicRule", request.dynamicRuleShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
