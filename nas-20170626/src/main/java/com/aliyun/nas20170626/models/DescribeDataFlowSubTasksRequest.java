@@ -39,7 +39,7 @@ public class DescribeDataFlowSubTasksRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>If the returned results are truncated, you can use NextToken to initiate a new request to retrieve the content after the current truncation point.</p>
+     * <p>If the response is truncated, you can use NextToken to send a subsequent request to retrieve the remaining content from the point of truncation.</p>
      * 
      * <strong>example:</strong>
      * <p>iWk0AQAAAAAvY2FzZS8=</p>
@@ -104,14 +104,14 @@ public class DescribeDataFlowSubTasksRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the filter key. Wildcards are not supported for this parameter.</p>
+         * <p>The value of the filter key. Wildcards are not supported.</p>
          * <ul>
          * <li>If Key is set to DataFlowIds, Value is set to a data flow ID or part of a data flow ID. You can specify one or more data flow IDs. A maximum of 10 data flow IDs can be specified. Example: <code>df-194433a5be31****</code> or <code>df-194433a512a2****,df-234533a5be31****</code>.</li>
          * <li>If Key is set to DataFlowTaskIds, Value is set to a data flow task ID or part of a data flow task ID. You can specify one or more data flow task IDs. A maximum of 10 data flow task IDs can be specified. Example: <code>task-29ee8e890f45****</code> or <code>task-29ee8e890f45****,task-38ae8e890f45****</code>.</li>
          * <li>If Key is set to DataFlowSubTaskIds, Value is set to a data flow streaming task ID or part of a data flow streaming task ID. You can specify one or more data flow streaming task IDs. A maximum of 10 data flow streaming task IDs can be specified. Example: <code>subTaskId-370kyfmyknxcyzw****</code> or <code>subTaskId-247kyfmyknxcyzw****,subTaskId-256kyfmyknxcyzw****</code>.</li>
          * <li>If Key is set to Status, Value is set to the status of the data flow task, including EXPIRED, CREATED, RUNNING, COMPLETE, CANCELING, FAILED, and CANCELED. Combined queries are supported.</li>
-         * <li>If Key is set to SrcFilePath, Value is set to the source file path. The maximum length is 1023 characters.</li>
-         * <li>If Key is set to DstFilePath, Value is set to the destination file path. The maximum length is 1023 characters.</li>
+         * <li>If Key is set to SrcFilePath, Value is set to the source file path. The maximum length is 1,023 characters.</li>
+         * <li>If Key is set to DstFilePath, Value is set to the destination file path. The maximum length is 1,023 characters.</li>
          * </ul>
          * 
          * <strong>example:</strong>

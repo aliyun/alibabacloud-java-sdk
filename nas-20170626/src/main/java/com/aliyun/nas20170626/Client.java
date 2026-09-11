@@ -41,40 +41,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-zhangjiakou-na62-a01", "nas.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "nas.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "nas.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "nas.aliyuncs.com"),
-            new TeaPair("cn-zhongwei", "nas.cn-zhongwei.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "nas.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "nas.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "nas.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "nas.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "nas.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "nas.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "nas.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "nas.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "nas.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "nas.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "nas.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "nas.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "nas.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "nas.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "nas.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "nas.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "nas.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "nas.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "nas.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("us-east-1", "nas.us-east-1.aliyuncs.com"),
-            new TeaPair("us-southeast-1", "nas.us-southeast-1.aliyuncs.com"),
-            new TeaPair("sa-east-1", "nas.sa-east-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "nas.eu-west-1.aliyuncs.com"),
-            new TeaPair("eu-west-2", "nas.eu-west-2.aliyuncs.com"),
-            new TeaPair("us-west-1", "nas.us-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "nas.eu-central-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "nas.na-south-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "nas.me-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "nas.me-central-1.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "nas.cn-shenzhen-finance-1.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "nas.cn-beijing-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "nas.cn-shanghai-finance-1.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "nas.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("nas", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -363,7 +330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Only CPFS for Lingjun supports this feature.</li>
-     * <li>Batch operations are supported. In batch mode, only one VscId can be associated with multiple file system IDs (FileSystemId). This means the ResourceIds.VscId values must be the same.</li>
+     * <li>Batch operations are supported. In batch mode, only one VscId can be associated with multiple FileSystemId values. This means the ResourceIds.VscId values must be the same.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -409,7 +376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Only CPFS for Lingjun supports this feature.</li>
-     * <li>Batch operations are supported. In batch mode, only one VscId can be associated with multiple file system IDs (FileSystemId). This means the ResourceIds.VscId values must be the same.</li>
+     * <li>Batch operations are supported. In batch mode, only one VscId can be associated with multiple FileSystemId values. This means the ResourceIds.VscId values must be the same.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -853,7 +820,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only CPFS for Lingjun 2.7.0 and later support quota cancellation.</p>
+     * <p>Only CPFS for Lingjun 2.7.0 and later support quota cancellation.
+     * <strong>Before you begin</strong></p>
+     * <ul>
+     * <li>This operation applies only to CPFS for Lingjun file systems of version 2.7.0 or later.</li>
+     * <li>The file system ID must start with <code>bmcpfs-</code>.</li>
+     * <li>Before you call this operation, make sure that a quota has been configured for the target fileset by calling the <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-setfilesetquota-bmcpfs">SetFilesetQuota</a> operation.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Cancels the quota configured for a fileset.</p>
@@ -900,7 +873,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only CPFS for Lingjun 2.7.0 and later support quota cancellation.</p>
+     * <p>Only CPFS for Lingjun 2.7.0 and later support quota cancellation.
+     * <strong>Before you begin</strong></p>
+     * <ul>
+     * <li>This operation applies only to CPFS for Lingjun file systems of version 2.7.0 or later.</li>
+     * <li>The file system ID must start with <code>bmcpfs-</code>.</li>
+     * <li>Before you call this operation, make sure that a quota has been configured for the target fileset by calling the <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-setfilesetquota-bmcpfs">SetFilesetQuota</a> operation.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Cancels the quota configured for a fileset.</p>
@@ -1335,7 +1314,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applicable to agentic-type file systems.</p>
+     * <p><em>Before you begin</em>*
+     * Complete the following preparations before calling this operation:</p>
+     * <ol>
+     * <li><strong>An Agentic file system is created</strong>: When calling <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createfilesystem-cpfs">CreateFileSystem</a> to create a file system, set the following parameters:<ul>
+     * <li><code>StorageType</code>: Set to <code>Agentic</code>.</li>
+     * <li><code>ProtocolType</code>: Set to <code>NFS</code>.</li>
+     * <li><strong>Supported regions</strong>: The Agentic storage type is available only in specific regions and zones. Check the console for details.
+     * <strong>Usage notes</strong></li>
+     * </ul>
+     * </li>
+     * </ol>
+     * <ul>
+     * <li>This operation applies only to Agentic file systems.</li>
+     * <li>Complete call chain example:<ol>
+     * <li>Call CreateFileSystem to create an Agentic file system (StorageType=Agentic, ProtocolType=NFS).</li>
+     * <li>After the file system is created (status is Running), call this operation CreateAgenticSpace to create an Agentic space.</li>
+     * <li>To modify the Agentic space configuration, call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-modifyagenticspace">ModifyAgenticSpace</a> operation.</li>
+     * </ol>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Creates an Agentic space.</p>
@@ -1394,7 +1392,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applicable to agentic-type file systems.</p>
+     * <p><em>Before you begin</em>*
+     * Complete the following preparations before calling this operation:</p>
+     * <ol>
+     * <li><strong>An Agentic file system is created</strong>: When calling <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createfilesystem-cpfs">CreateFileSystem</a> to create a file system, set the following parameters:<ul>
+     * <li><code>StorageType</code>: Set to <code>Agentic</code>.</li>
+     * <li><code>ProtocolType</code>: Set to <code>NFS</code>.</li>
+     * <li><strong>Supported regions</strong>: The Agentic storage type is available only in specific regions and zones. Check the console for details.
+     * <strong>Usage notes</strong></li>
+     * </ul>
+     * </li>
+     * </ol>
+     * <ul>
+     * <li>This operation applies only to Agentic file systems.</li>
+     * <li>Complete call chain example:<ol>
+     * <li>Call CreateFileSystem to create an Agentic file system (StorageType=Agentic, ProtocolType=NFS).</li>
+     * <li>After the file system is created (status is Running), call this operation CreateAgenticSpace to create an Agentic space.</li>
+     * <li>To modify the Agentic space configuration, call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-modifyagenticspace">ModifyAgenticSpace</a> operation.</li>
+     * </ol>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Creates an Agentic space.</p>
@@ -1547,6 +1564,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.rootDirectory)) {
             query.put("RootDirectory", request.rootDirectory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2030,17 +2051,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Usage notes for CPFS<ul>
+     * <li>Notes on CPFS<ul>
      * <li>Only CPFS 2.2.0 and later support data flow. You can view the version information on the file system details page in the console.</li>
-     * <li>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. If a large amount of data is involved, split the data into multiple tasks.</li>
+     * <li>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. For large amounts of data, split the data into multiple tasks.</li>
      * <li>You can create a data flow task only on a data flow in the Running state.</li>
-     * <li>When you manually execute a data flow task, the automatic data update task of the data flow is interrupted and waits.</li>
+     * <li>When you manually run a data flow task, the automatic data update task of the data flow is interrupted and waits.</li>
      * <li>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS does not exceed 1,023 characters.</li>
      * </ul>
      * </li>
-     * <li>Usage notes for CPFS for Lingjun<ul>
+     * <li>Notes on CPFS for Lingjun<ul>
      * <li>Only CPFS for Lingjun 2.4.0 and later support data flow. You can view the version information on the file system details page in the console.</li>
-     * <li>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. If a large amount of data is involved, split the data into multiple tasks.</li>
+     * <li>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. For large amounts of data, split the data into multiple tasks.</li>
      * <li>You can create a data flow task only on a data flow in the Running state.</li>
      * <li>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS for Lingjun does not exceed 1,023 characters.</li>
      * <li>CPFS for Lingjun supports two task types: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task type overview</a>.</li>
@@ -2134,17 +2155,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Usage notes for CPFS<ul>
+     * <li>Notes on CPFS<ul>
      * <li>Only CPFS 2.2.0 and later support data flow. You can view the version information on the file system details page in the console.</li>
-     * <li>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. If a large amount of data is involved, split the data into multiple tasks.</li>
+     * <li>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. For large amounts of data, split the data into multiple tasks.</li>
      * <li>You can create a data flow task only on a data flow in the Running state.</li>
-     * <li>When you manually execute a data flow task, the automatic data update task of the data flow is interrupted and waits.</li>
+     * <li>When you manually run a data flow task, the automatic data update task of the data flow is interrupted and waits.</li>
      * <li>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS does not exceed 1,023 characters.</li>
      * </ul>
      * </li>
-     * <li>Usage notes for CPFS for Lingjun<ul>
+     * <li>Notes on CPFS for Lingjun<ul>
      * <li>Only CPFS for Lingjun 2.4.0 and later support data flow. You can view the version information on the file system details page in the console.</li>
-     * <li>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. If a large amount of data is involved, split the data into multiple tasks.</li>
+     * <li>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. For large amounts of data, split the data into multiple tasks.</li>
      * <li>You can create a data flow task only on a data flow in the Running state.</li>
      * <li>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS for Lingjun does not exceed 1,023 characters.</li>
      * <li>CPFS for Lingjun supports two task types: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task type overview</a>.</li>
@@ -2341,10 +2362,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>Make sure that you understand the billing methods and pricing of File Storage NAS before you invoke this operation. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</li>
-     * <li>You must complete real-name verification before you can create a file system instance. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</li>
-     * <li>When you invoke this operation, the service-linked role required for the operation is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</li>
+     * <li>Before you call this operation, make sure that you fully understand the billing and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/">Pricing</a>.</li>
+     * <li>To create a file system instance, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</li>
+     * <li>When you invoke this operation, the NAS service-linked role associated with the operation is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>Before you call this operation, make sure that you fully understand the billing and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.alibabacloud.com/zh/product/nas/pricing?_p_lc=1&spm=a2796.7960336.8215766810.64.414bb91aiZQiRG&spm=a2c4g.11186623.help-menu-27516.d_5_1_4_2_0.572a1880hEiKCk">Pricing</a>.</li>
+     * <li>To create a file system instance, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</li>
+     * <li>When you invoke this operation, the NAS service-linked role associated with the operation is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2456,10 +2482,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>Make sure that you understand the billing methods and pricing of File Storage NAS before you invoke this operation. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</li>
-     * <li>You must complete real-name verification before you can create a file system instance. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</li>
-     * <li>When you invoke this operation, the service-linked role required for the operation is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</li>
+     * <li>Before you call this operation, make sure that you fully understand the billing and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/">Pricing</a>.</li>
+     * <li>To create a file system instance, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</li>
+     * <li>When you invoke this operation, the NAS service-linked role associated with the operation is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>Before you call this operation, make sure that you fully understand the billing and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.alibabacloud.com/zh/product/nas/pricing?_p_lc=1&spm=a2796.7960336.8215766810.64.414bb91aiZQiRG&spm=a2c4g.11186623.help-menu-27516.d_5_1_4_2_0.572a1880hEiKCk">Pricing</a>.</li>
+     * <li>To create a file system instance, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</li>
+     * <li>When you invoke this operation, the NAS service-linked role associated with the operation is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2662,7 +2693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>Only General-purpose NAS file systems and CPFS for Lingjun support creating lifecycle management policies.</li>
      * <li>Each CPFS for Lingjun file system supports up to 10 Auto-type and 100 OnDemand-type lifecycle management policies.</li>
-     * <li>Up to 20 lifecycle management policies can be created for General-purpose NAS in each region.</li>
+     * <li>Up to 20 lifecycle management policies for General-purpose NAS can be created in each region.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2741,7 +2772,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>Only General-purpose NAS file systems and CPFS for Lingjun support creating lifecycle management policies.</li>
      * <li>Each CPFS for Lingjun file system supports up to 10 Auto-type and 100 OnDemand-type lifecycle management policies.</li>
-     * <li>Up to 20 lifecycle management policies can be created for General-purpose NAS in each region.</li>
+     * <li>Up to 20 lifecycle management policies for General-purpose NAS can be created in each region.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2954,15 +2985,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><p>This operation is applicable only to Cloud Parallel File Storage (CPFS) file systems.</p>
+     * <li><p>This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</p>
      * </li>
      * <li><p>Before you begin</p>
-     * <p>The CPFS file system must be in the Running state and a protocol service must be created.</p>
+     * <p>The target CPFS file system must be in the Running state, and a protocol service must have been created.</p>
      * </li>
      * <li><p>Other information</p>
      * <ul>
-     * <li>The VPC CIDR block of the protocol service export cannot overlap with the VPC CIDR block of the file system.</li>
-     * <li>The VPC CIDR blocks of multiple exports on the same protocol service cannot overlap with each other.</li>
+     * <li>The VPC CIDR block of the protocol service export must not overlap with the VPC CIDR block of the file system.</li>
+     * <li>The VPC CIDR blocks of multiple exports on the same protocol service must not overlap with each other.</li>
      * <li>You can create up to 10 export directories for a single protocol service.</li>
      * <li>Creating a protocol service export directory consumes IP addresses from the specified vSwitch (up to 32 IP addresses). Make sure that the target vSwitch has sufficient IP address resources.</li>
      * </ul>
@@ -3043,15 +3074,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><p>This operation is applicable only to Cloud Parallel File Storage (CPFS) file systems.</p>
+     * <li><p>This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</p>
      * </li>
      * <li><p>Before you begin</p>
-     * <p>The CPFS file system must be in the Running state and a protocol service must be created.</p>
+     * <p>The target CPFS file system must be in the Running state, and a protocol service must have been created.</p>
      * </li>
      * <li><p>Other information</p>
      * <ul>
-     * <li>The VPC CIDR block of the protocol service export cannot overlap with the VPC CIDR block of the file system.</li>
-     * <li>The VPC CIDR blocks of multiple exports on the same protocol service cannot overlap with each other.</li>
+     * <li>The VPC CIDR block of the protocol service export must not overlap with the VPC CIDR block of the file system.</li>
+     * <li>The VPC CIDR blocks of multiple exports on the same protocol service must not overlap with each other.</li>
      * <li>You can create up to 10 export directories for a single protocol service.</li>
      * <li>Creating a protocol service export directory consumes IP addresses from the specified vSwitch (up to 32 IP addresses). Make sure that the target vSwitch has sufficient IP address resources.</li>
      * </ul>
@@ -3266,14 +3297,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>仅通用型NAS文件系统支持该功能。</li>
-     * <li>单个文件系统一次只能执行一个文件恢复或清理任务。正在恢复文件时，无法发起新的文件恢复或清理任务。</li>
-     * <li>单个恢复任务只能恢复一个文件或目录，恢复指定目录会递归恢复目录下的所有文件。</li>
-     * <li>文件被恢复后会进行数据整理，数据整理期间读请求性能稍有下降。</li>
+     * <li>Only General-purpose NAS file systems support this feature.</li>
+     * <li>A single file system can execute only one file restoration or cleanup task at a time. While a file is being restored, you cannot initiate a new file restoration or cleanup task.</li>
+     * <li>A single restoration task can restore only one file or directory. Restoring a specified directory recursively restores all files in the directory.</li>
+     * <li>After a file is restored, data reorganization is performed. Read request performance slightly decreases during data reorganization.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Restores a file or directory from the recycle bin.</p>
+     * <p>Restores a file from the recycle bin.</p>
      * 
      * @param request CreateRecycleBinRestoreJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3302,14 +3333,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>仅通用型NAS文件系统支持该功能。</li>
-     * <li>单个文件系统一次只能执行一个文件恢复或清理任务。正在恢复文件时，无法发起新的文件恢复或清理任务。</li>
-     * <li>单个恢复任务只能恢复一个文件或目录，恢复指定目录会递归恢复目录下的所有文件。</li>
-     * <li>文件被恢复后会进行数据整理，数据整理期间读请求性能稍有下降。</li>
+     * <li>Only General-purpose NAS file systems support this feature.</li>
+     * <li>A single file system can execute only one file restoration or cleanup task at a time. While a file is being restored, you cannot initiate a new file restoration or cleanup task.</li>
+     * <li>A single restoration task can restore only one file or directory. Restoring a specified directory recursively restores all files in the directory.</li>
+     * <li>After a file is restored, data reorganization is performed. Read request performance slightly decreases during data reorganization.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Restores a file or directory from the recycle bin.</p>
+     * <p>Restores a file from the recycle bin.</p>
      * 
      * @param request CreateRecycleBinRestoreJobRequest
      * @return CreateRecycleBinRestoreJobResponse
@@ -4619,10 +4650,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applies to agentic-type file systems.</p>
+     * <p>Applicable to Agentic file systems.</p>
+     * <h2>Before you begin</h2>
+     * <p>Before you call this operation, create resources in the following order:</p>
+     * <ol>
+     * <li><strong>Create an Agentic file system</strong>: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createfilesystem-cpfs">CreateFileSystem</a> to create a file system with the following parameters:<ul>
+     * <li><code>StorageType</code>: Set to <code>Agentic</code>.</li>
+     * <li><code>ProtocolType</code>: Set to <code>NFS</code>.</li>
+     * <li><strong>Supported regions</strong>: The Agentic storage type is available only in specific regions and zones. Check the console for details.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Query the AgenticSpace list</strong>: After the file system is created (status is Running), call this operation DescribeAgenticSpaces to query the list of AgenticSpaces in the file system.<ul>
+     * <li>If AgenticSpaces have been created in the file system, the complete list is returned.</li>
+     * <li>If no AgenticSpaces have been created in the file system, an empty list is returned.</li>
+     * </ul>
+     * </li>
+     * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries Agentic spaces.</p>
+     * <p>Queries an Agentic space.</p>
      * 
      * @param request DescribeAgenticSpacesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4666,10 +4712,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applies to agentic-type file systems.</p>
+     * <p>Applicable to Agentic file systems.</p>
+     * <h2>Before you begin</h2>
+     * <p>Before you call this operation, create resources in the following order:</p>
+     * <ol>
+     * <li><strong>Create an Agentic file system</strong>: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createfilesystem-cpfs">CreateFileSystem</a> to create a file system with the following parameters:<ul>
+     * <li><code>StorageType</code>: Set to <code>Agentic</code>.</li>
+     * <li><code>ProtocolType</code>: Set to <code>NFS</code>.</li>
+     * <li><strong>Supported regions</strong>: The Agentic storage type is available only in specific regions and zones. Check the console for details.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Query the AgenticSpace list</strong>: After the file system is created (status is Running), call this operation DescribeAgenticSpaces to query the list of AgenticSpaces in the file system.<ul>
+     * <li>If AgenticSpaces have been created in the file system, the complete list is returned.</li>
+     * <li>If no AgenticSpaces have been created in the file system, an empty list is returned.</li>
+     * </ul>
+     * </li>
+     * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries Agentic spaces.</p>
+     * <p>Queries an Agentic space.</p>
      * 
      * @param request DescribeAgenticSpacesRequest
      * @return DescribeAgenticSpacesResponse
@@ -5001,6 +5062,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -5035,7 +5100,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</p>
+     * <p>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.
+     * <strong>Before you begin</strong>
+     * Before calling this operation to query data flow subtasks, complete resource creation and task startup in the following order:</p>
+     * <ol>
+     * <li><strong>Create a bmcpfs file system</strong>: Create a CPFS for Lingjun file system in the console and wait until the status changes to Running.</li>
+     * <li><strong>Create a data flow</strong>: Call <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-createdataflow-bmcpfs">CreateDataFlow</a> to create a data flow channel on the file system.</li>
+     * <li><strong>Start a data flow task</strong>: Call <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-createdataflowtask-bmcpfs">CreateDataFlowTask</a> to create and start a data flow task. The task status must be Running.</li>
+     * <li><strong>Query subtasks</strong>: Subtasks are automatically generated during the execution of a data flow task. Call the DescribeDataFlowSubTasks operation to query the list of these subtasks.</li>
+     * </ol>
      * 
      * <b>summary</b> : 
      * <p>Queries data flow batch subtasks.</p>
@@ -5082,7 +5155,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</p>
+     * <p>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.
+     * <strong>Before you begin</strong>
+     * Before calling this operation to query data flow subtasks, complete resource creation and task startup in the following order:</p>
+     * <ol>
+     * <li><strong>Create a bmcpfs file system</strong>: Create a CPFS for Lingjun file system in the console and wait until the status changes to Running.</li>
+     * <li><strong>Create a data flow</strong>: Call <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-createdataflow-bmcpfs">CreateDataFlow</a> to create a data flow channel on the file system.</li>
+     * <li><strong>Start a data flow task</strong>: Call <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-createdataflowtask-bmcpfs">CreateDataFlowTask</a> to create and start a data flow task. The task status must be Running.</li>
+     * <li><strong>Query subtasks</strong>: Subtasks are automatically generated during the execution of a data flow task. Call the DescribeDataFlowSubTasks operation to query the list of these subtasks.</li>
+     * </ol>
      * 
      * <b>summary</b> : 
      * <p>Queries data flow batch subtasks.</p>
@@ -5569,11 +5650,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Only CPFS for Lingjun supports this feature.</li>
-     * <li>Batch execution is supported. In batch execution mode, only one VscId can be associated with multiple FileSystemIds, which means the values of ResourceIds.VscId must be the same.</li>
+     * <li>Batch execution is supported. In batch execution mode, only one VscId can be associated with multiple FileSystemIds. This means the ResourceIds.VscId values must be the same.</li>
+     * <li>To query the association results between file systems and virtual storage channels, call AttachVscToFilesystems to complete the association first. You can call ListVscs of Lingjun Intelligent Computing eflo-controller/2022-12-15 to query VscIds. If no virtual storage channel has been created, call CreateVsc to create one.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the virtual storage channel information associated with a file system.</p>
+     * <p>Queries the virtual storage channel information associated with file systems.</p>
      * 
      * @param request DescribeFilesystemsVscAttachInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5619,11 +5701,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Only CPFS for Lingjun supports this feature.</li>
-     * <li>Batch execution is supported. In batch execution mode, only one VscId can be associated with multiple FileSystemIds, which means the values of ResourceIds.VscId must be the same.</li>
+     * <li>Batch execution is supported. In batch execution mode, only one VscId can be associated with multiple FileSystemIds. This means the ResourceIds.VscId values must be the same.</li>
+     * <li>To query the association results between file systems and virtual storage channels, call AttachVscToFilesystems to complete the association first. You can call ListVscs of Lingjun Intelligent Computing eflo-controller/2022-12-15 to query VscIds. If no virtual storage channel has been created, call CreateVsc to create one.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the virtual storage channel information associated with a file system.</p>
+     * <p>Queries the virtual storage channel information associated with file systems.</p>
      * 
      * @param request DescribeFilesystemsVscAttachInfoRequest
      * @return DescribeFilesystemsVscAttachInfoResponse
@@ -6433,11 +6516,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Only CPFS for Lingjun supports this feature.</li>
-     * <li>Batch operations are supported. In batch mode, only one VscId can be associated with multiple FileSystemIds. This means the ResourceIds.VscId values must be the same.</li>
+     * <li>Batch operations are supported. In batch mode, only one VscId can be associated with multiple FileSystemId values. This means the ResourceIds.VscId values must be the same.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Dissociates a VSC device from a file system.</p>
+     * <p>Disassociates a Virtual Storage Channel (VSC) device from a file system.</p>
      * 
      * @param request DetachVscFromFilesystemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6479,11 +6562,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Only CPFS for Lingjun supports this feature.</li>
-     * <li>Batch operations are supported. In batch mode, only one VscId can be associated with multiple FileSystemIds. This means the ResourceIds.VscId values must be the same.</li>
+     * <li>Batch operations are supported. In batch mode, only one VscId can be associated with multiple FileSystemId values. This means the ResourceIds.VscId values must be the same.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Dissociates a VSC device from a file system.</p>
+     * <p>Disassociates a Virtual Storage Channel (VSC) device from a file system.</p>
      * 
      * @param request DetachVscFromFilesystemsRequest
      * @return DetachVscFromFilesystemsResponse
@@ -7090,8 +7173,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the export directory information of a protocol service.
+     * <strong>Before you begin</strong>
+     * Before you call this operation, make sure that each dependent resource in the following three-layer resource model already exists:</p>
+     * <ol>
+     * <li><strong>File system (FileSystem)</strong>: Call <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-describefilesystems">DescribeFileSystems</a> to obtain the FileSystemId.</li>
+     * <li><strong>Protocol service (ProtocolService)</strong>: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolservice-cpfs">DescribeProtocolService</a> to obtain the ProtocolServiceId, or call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createprotocolservice-cpfs">CreateProtocolService</a> to create one.</li>
+     * <li><strong>Export directory (ProtocolMountTarget)</strong>: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createprotocolmounttarget-cpfs">CreateProtocolMountTarget</a> to create an export directory and obtain the ExportId, or call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolmounttarget-cpfs">DescribeProtocolMountTarget</a> to query the ExportId.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Query the export directory information of the protocol service</p>
+     * <p>Queries the export directory information of a protocol service.</p>
      * 
      * @param request GetProtocolMountTargetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7142,8 +7235,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the export directory information of a protocol service.
+     * <strong>Before you begin</strong>
+     * Before you call this operation, make sure that each dependent resource in the following three-layer resource model already exists:</p>
+     * <ol>
+     * <li><strong>File system (FileSystem)</strong>: Call <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-describefilesystems">DescribeFileSystems</a> to obtain the FileSystemId.</li>
+     * <li><strong>Protocol service (ProtocolService)</strong>: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolservice-cpfs">DescribeProtocolService</a> to obtain the ProtocolServiceId, or call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createprotocolservice-cpfs">CreateProtocolService</a> to create one.</li>
+     * <li><strong>Export directory (ProtocolMountTarget)</strong>: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createprotocolmounttarget-cpfs">CreateProtocolMountTarget</a> to create an export directory and obtain the ExportId, or call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolmounttarget-cpfs">DescribeProtocolMountTarget</a> to query the ExportId.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Query the export directory information of the protocol service</p>
+     * <p>Queries the export directory information of a protocol service.</p>
      * 
      * @param request GetProtocolMountTargetRequest
      * @return GetProtocolMountTargetResponse
@@ -7402,7 +7505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Only General-purpose NAS file systems support this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of created data retrieval tasks.</p>
+     * <p>Retrieves a list of created data retrieval tasks.</p>
      * 
      * @param request ListLifecycleRetrieveJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7453,7 +7556,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Only General-purpose NAS file systems support this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of created data retrieval tasks.</p>
+     * <p>Retrieves a list of created data retrieval tasks.</p>
      * 
      * @param request ListLifecycleRetrieveJobsRequest
      * @return ListLifecycleRetrieveJobsResponse
@@ -7465,7 +7568,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS file systems support this feature.</p>
+     * <p>Only General-purpose NAS file systems support this feature.
+     * <strong>Before you begin</strong>
+     * Before calling this operation, make sure that the recycle bin feature is enabled for the file system. If the recycle bin is not enabled, this operation cannot return the list of recently deleted directories.
+     * <strong>Enable the recycle bin</strong>
+     * To enable the recycle bin feature, call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-enablerecyclebin">EnableRecycleBin</a> operation. After the recycle bin is enabled, deleted directories in the file system are moved to the recycle bin. You can call this operation to query the list of recently deleted directories.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries directories on which delete operations were recently performed.</p>
@@ -7496,7 +7603,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS file systems support this feature.</p>
+     * <p>Only General-purpose NAS file systems support this feature.
+     * <strong>Before you begin</strong>
+     * Before calling this operation, make sure that the recycle bin feature is enabled for the file system. If the recycle bin is not enabled, this operation cannot return the list of recently deleted directories.
+     * <strong>Enable the recycle bin</strong>
+     * To enable the recycle bin feature, call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-enablerecyclebin">EnableRecycleBin</a> operation. After the recycle bin is enabled, deleted directories in the file system are moved to the recycle bin. You can call this operation to query the list of recently deleted directories.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries directories on which delete operations were recently performed.</p>
@@ -7867,7 +7978,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applicable to agentic-type file systems.</p>
+     * <p><em>Prerequisites</em>*
+     * Before you call this operation, complete the following preparations:</p>
+     * <ol>
+     * <li><strong>Obtain an AgenticSpaceId</strong>: Call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createagenticspace">CreateAgenticSpace</a> operation to create an Agentic space and obtain the AgenticSpaceId.</li>
+     * <li><strong>Create an Agentic file system</strong>: When you call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createfilesystem-cpfs">CreateFileSystem</a> operation to create a file system, set the following parameters:<ul>
+     * <li><code>StorageType</code>: Set to <code>Agentic</code>.</li>
+     * <li><code>ProtocolType</code>: Set to <code>NFS</code>.</li>
+     * <li><strong>Supported regions</strong>: The Agentic storage type is available only in specific regions and zones. Check the console for details.
+     * <strong>Usage notes</strong></li>
+     * </ul>
+     * </li>
+     * </ol>
+     * <ul>
+     * <li>This operation applies only to Agentic file systems.</li>
+     * <li>Complete call chain example:<ol>
+     * <li>Call CreateFileSystem to create an Agentic file system (StorageType=Agentic, ProtocolType=NFS).</li>
+     * <li>After the file system is created (status is Running), call CreateAgenticSpace to create an Agentic space.</li>
+     * <li>Call this operation (ModifyAgenticSpace) to modify the Agentic space configurations.</li>
+     * </ol>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Modifies an Agentic space.</p>
@@ -7918,7 +8049,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applicable to agentic-type file systems.</p>
+     * <p><em>Prerequisites</em>*
+     * Before you call this operation, complete the following preparations:</p>
+     * <ol>
+     * <li><strong>Obtain an AgenticSpaceId</strong>: Call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createagenticspace">CreateAgenticSpace</a> operation to create an Agentic space and obtain the AgenticSpaceId.</li>
+     * <li><strong>Create an Agentic file system</strong>: When you call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createfilesystem-cpfs">CreateFileSystem</a> operation to create a file system, set the following parameters:<ul>
+     * <li><code>StorageType</code>: Set to <code>Agentic</code>.</li>
+     * <li><code>ProtocolType</code>: Set to <code>NFS</code>.</li>
+     * <li><strong>Supported regions</strong>: The Agentic storage type is available only in specific regions and zones. Check the console for details.
+     * <strong>Usage notes</strong></li>
+     * </ul>
+     * </li>
+     * </ol>
+     * <ul>
+     * <li>This operation applies only to Agentic file systems.</li>
+     * <li>Complete call chain example:<ol>
+     * <li>Call CreateFileSystem to create an Agentic file system (StorageType=Agentic, ProtocolType=NFS).</li>
+     * <li>After the file system is created (status is Running), call CreateAgenticSpace to create an Agentic space.</li>
+     * <li>Call this operation (ModifyAgenticSpace) to modify the Agentic space configurations.</li>
+     * </ol>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Modifies an Agentic space.</p>
@@ -8577,10 +8728,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口仅适用于CPFS文件系统。</p>
+     * <ul>
+     * <li>Before you begin: This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</li>
+     * <li>Status prerequisite: Before calling this operation, the export directory corresponding to ExportId must be in the AVAILABLE state. Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolmounttarget-cpfs">DescribeProtocolMountTarget</a> to query the status and wait until the creation is complete before retrying.</li>
+     * <li>Dependency chain:<ol>
+     * <li>Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describefilesystems-cpfs">DescribeFileSystems</a> (with FileSystemType set to cpfs) to obtain the CPFS file system.</li>
+     * <li>Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolservice-cpfs">DescribeProtocolService</a> to verify that the protocol service is in the Running state.</li>
+     * <li>Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolmounttarget-cpfs">DescribeProtocolMountTarget</a> to verify that the export directory is in the AVAILABLE state.</li>
+     * <li>If no export directory exists, call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createprotocolmounttarget-cpfs">CreateProtocolMountTarget</a> to create one first.</li>
+     * </ol>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the export directory parameters of a protocol service. Only the description can be modified. The virtual private cloud (VPC) ID and vSwitch ID cannot be changed. To change these IDs, you must delete the export directory and create a new one.</p>
+     * <p>Modifies the export directory parameters of a protocol service. You can modify only the permission group and description. The VPC ID and vSwitch ID cannot be modified. To change them, delete the export directory and create a new one.</p>
      * 
      * @param request ModifyProtocolMountTargetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8632,10 +8793,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口仅适用于CPFS文件系统。</p>
+     * <ul>
+     * <li>Before you begin: This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</li>
+     * <li>Status prerequisite: Before calling this operation, the export directory corresponding to ExportId must be in the AVAILABLE state. Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolmounttarget-cpfs">DescribeProtocolMountTarget</a> to query the status and wait until the creation is complete before retrying.</li>
+     * <li>Dependency chain:<ol>
+     * <li>Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describefilesystems-cpfs">DescribeFileSystems</a> (with FileSystemType set to cpfs) to obtain the CPFS file system.</li>
+     * <li>Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolservice-cpfs">DescribeProtocolService</a> to verify that the protocol service is in the Running state.</li>
+     * <li>Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolmounttarget-cpfs">DescribeProtocolMountTarget</a> to verify that the export directory is in the AVAILABLE state.</li>
+     * <li>If no export directory exists, call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createprotocolmounttarget-cpfs">CreateProtocolMountTarget</a> to create one first.</li>
+     * </ol>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the export directory parameters of a protocol service. Only the description can be modified. The virtual private cloud (VPC) ID and vSwitch ID cannot be changed. To change these IDs, you must delete the export directory and create a new one.</p>
+     * <p>Modifies the export directory parameters of a protocol service. You can modify only the permission group and description. The VPC ID and vSwitch ID cannot be modified. To change them, delete the export directory and create a new one.</p>
      * 
      * @param request ModifyProtocolMountTargetRequest
      * @return ModifyProtocolMountTargetResponse
@@ -8647,7 +8818,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口仅适用于CPFS文件系统。</p>
+     * <p>This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</p>
+     * <ul>
+     * <li>This operation allows you to modify the description of a protocol service.</li>
+     * <li>You can obtain the protocol service ID (ProtocolServiceId) by using one of the following methods:<ul>
+     * <li>Call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createprotocolservice-cpfs">CreateProtocolService</a> operation to create a protocol service. The protocol service ID is returned in the response.</li>
+     * <li>Call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolservice-cpfs">DescribeProtocolService</a> operation to query existing protocol services.</li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Modifies a protocol service. You can modify the description of a protocol service.</p>
@@ -8698,7 +8877,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口仅适用于CPFS文件系统。</p>
+     * <p>This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</p>
+     * <ul>
+     * <li>This operation allows you to modify the description of a protocol service.</li>
+     * <li>You can obtain the protocol service ID (ProtocolServiceId) by using one of the following methods:<ul>
+     * <li>Call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createprotocolservice-cpfs">CreateProtocolService</a> operation to create a protocol service. The protocol service ID is returned in the response.</li>
+     * <li>Call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolservice-cpfs">DescribeProtocolService</a> operation to query existing protocol services.</li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Modifies a protocol service. You can modify the description of a protocol service.</p>
@@ -8998,10 +9185,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS file systems support this operation.</p>
+     * <p>Only General-purpose NAS file systems support this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retries failed a data retrieval task.</p>
+     * <p>Retries a data retrieval task that is in the failed state.</p>
      * 
      * @param request RetryLifecycleRetrieveJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9033,10 +9220,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS file systems support this operation.</p>
+     * <p>Only General-purpose NAS file systems support this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retries failed a data retrieval task.</p>
+     * <p>Retries a data retrieval task that is in the failed state.</p>
      * 
      * @param request RetryLifecycleRetrieveJobRequest
      * @return RetryLifecycleRetrieveJobResponse
@@ -9048,7 +9235,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applies to agentic-type file systems.</p>
+     * <p><em>Before you begin</em>*
+     * Before you call this operation, complete the following preparations:</p>
+     * <ol>
+     * <li><strong>Obtain an AgenticSpaceId</strong>: Call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createagenticspace">CreateAgenticSpace</a> operation to create an Agentic space and obtain the AgenticSpaceId.</li>
+     * <li><strong>Create an Agentic file system</strong>: When you call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createfilesystem-cpfs">CreateFileSystem</a> operation to create a file system, set <code>StorageType=Agentic</code>.<ul>
+     * <li><strong>Supported regions</strong>: The Agentic storage type is available only in specific regions and zones. Check the console for details.
+     * <strong>Usage notes</strong></li>
+     * </ul>
+     * </li>
+     * </ol>
+     * <ul>
+     * <li>This operation applies only to Agentic file systems.</li>
+     * <li>Quota statistics have a 15-minute delay. The actual usage takes effect 15 minutes later.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Sets the quota for an Agentic space.</p>
@@ -9103,7 +9303,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applies to agentic-type file systems.</p>
+     * <p><em>Before you begin</em>*
+     * Before you call this operation, complete the following preparations:</p>
+     * <ol>
+     * <li><strong>Obtain an AgenticSpaceId</strong>: Call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createagenticspace">CreateAgenticSpace</a> operation to create an Agentic space and obtain the AgenticSpaceId.</li>
+     * <li><strong>Create an Agentic file system</strong>: When you call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createfilesystem-cpfs">CreateFileSystem</a> operation to create a file system, set <code>StorageType=Agentic</code>.<ul>
+     * <li><strong>Supported regions</strong>: The Agentic storage type is available only in specific regions and zones. Check the console for details.
+     * <strong>Usage notes</strong></li>
+     * </ul>
+     * </li>
+     * </ol>
+     * <ul>
+     * <li>This operation applies only to Agentic file systems.</li>
+     * <li>Quota statistics have a 15-minute delay. The actual usage takes effect 15 minutes later.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Sets the quota for an Agentic space.</p>
@@ -9194,11 +9407,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Only CPFS for Lingjun 2.7.0 and later support setting quotas for filesets.</li>
-     * <li>The minimum fileset capacity quota is 10 GiB, and the capacity is scaled in increments of 1 GiB.</li>
-     * <li>A fileset supports up to 10 billion files or directories. The minimum value is 10,000, and the value is scaled in increments of 1.</li>
+     * <li>The minimum fileset capacity quota is 10 GiB, and the capacity is increased in increments of 1 GiB.</li>
+     * <li>A fileset supports up to 10 billion files or directories. The minimum value is 10,000, and the value is increased in increments of 1.</li>
      * <li>When you modify a directory quota, the quota capacity or file count must be greater than the used capacity or file count.</li>
-     * <li>You must specify at least one of the capacity limit and file count limit.</li>
-     * <li>Quota statistics have a 15-minute delay. The current actual usage takes effect after 15 minutes.</li>
+     * <li>Specify at least one of the capacity limit and file count limit.</li>
+     * <li>Quota statistics have a 15-minute delay. The actual usage takes effect 15 minutes later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9256,11 +9469,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Only CPFS for Lingjun 2.7.0 and later support setting quotas for filesets.</li>
-     * <li>The minimum fileset capacity quota is 10 GiB, and the capacity is scaled in increments of 1 GiB.</li>
-     * <li>A fileset supports up to 10 billion files or directories. The minimum value is 10,000, and the value is scaled in increments of 1.</li>
+     * <li>The minimum fileset capacity quota is 10 GiB, and the capacity is increased in increments of 1 GiB.</li>
+     * <li>A fileset supports up to 10 billion files or directories. The minimum value is 10,000, and the value is increased in increments of 1.</li>
      * <li>When you modify a directory quota, the quota capacity or file count must be greater than the used capacity or file count.</li>
-     * <li>You must specify at least one of the capacity limit and file count limit.</li>
-     * <li>Quota statistics have a 15-minute delay. The current actual usage takes effect after 15 minutes.</li>
+     * <li>Specify at least one of the capacity limit and file count limit.</li>
+     * <li>Quota statistics have a 15-minute delay. The actual usage takes effect 15 minutes later.</li>
      * </ul>
      * 
      * <b>summary</b> : 

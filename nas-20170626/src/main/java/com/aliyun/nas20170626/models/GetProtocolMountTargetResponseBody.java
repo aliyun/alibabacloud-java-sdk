@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetProtocolMountTargetResponseBody extends TeaModel {
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>If the response is truncated, you can use NextToken to send a subsequent request to retrieve the content after the current truncation point.</p>
      * 
      * <strong>example:</strong>
      * <p>M18xMA==</p>
@@ -14,7 +14,7 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Information of the export directory for the protocol service</p>
+     * <p>The export directory information of the protocol service.</p>
      */
     @NameInMap("ProtocolMountTarget")
     public GetProtocolMountTargetResponseBodyProtocolMountTarget protocolMountTarget;
@@ -59,8 +59,8 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
 
     public static class GetProtocolMountTargetResponseBodyProtocolMountTarget extends TeaModel {
         /**
-         * <p>The name of the permission group.</p>
-         * <p>Default permission group: DEFAULT_VPC_GROUP_NAME</p>
+         * <p>The permission group name.</p>
+         * <p>Default permission group: DEFAULT_VPC_GROUP_NAME.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT_VPC_GROUP_NAME</p>
@@ -69,7 +69,8 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
         public String accessGroupName;
 
         /**
-         * <p>The time when the export directory was created. Return format: yyyy-MM-dd HH:mm:ss</p>
+         * <p>The creation time.
+         * Format: yyyy-MM-dd HH:mm:ss</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-22 17:49:25</p>
@@ -78,16 +79,16 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The description of the export directory.</p>
+         * <p>The description of the protocol service export.</p>
          * 
          * <strong>example:</strong>
-         * <p>此协议服务导出的描述。</p>
+         * <p>Description of this protocol service export</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the export directory.</p>
+         * <p>The export directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exp-19abf5beab8d****</p>
@@ -96,7 +97,7 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
         public String exportId;
 
         /**
-         * <p>The fileset ID.</p>
+         * <p>Fileset ID。</p>
          * 
          * <strong>example:</strong>
          * <p>fset-299b4ca04de8****</p>
@@ -105,12 +106,12 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
         public String fsetId;
 
         /**
-         * <p>The path of the CPFS directory that was queried.</p>
+         * <p>The path of the queried CPFS directory.</p>
          * <p>Format:</p>
          * <ul>
-         * <li>Must be 1 to 1,024 characters in length.</li>
-         * <li>Must be encoded in UTF-8.</li>
-         * <li>Must start and end with a forward slash (/). The root directory is <code>/</code>.</li>
+         * <li>The path is 1 to 1,024 characters in length.</li>
+         * <li>The path is encoded in UTF-8.</li>
+         * <li>The path must start and end with a forward slash (/). The root directory is <code>/</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -120,7 +121,7 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The domain name of the export directory for the protocol service.</p>
+         * <p>The domain name of the protocol service export directory.</p>
          * 
          * <strong>example:</strong>
          * <p>cpfs-0229cb80bcc0****-x******.cn-*****.cpfs.aliyuncs.com</p>
@@ -132,9 +133,9 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
          * <p>The protocol type of the file system.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>NFS: Network File System (NFS)</li>
-         * <li>SMB: Server Message Block (SMB)</li>
-         * <li>cpfs: The protocol type supported by the CPFS file system.</li>
+         * <li>NFS: NFS protocol</li>
+         * <li>SMB: SMB protocol</li>
+         * <li>cpfs: the protocol type supported by CPFS file systems</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -144,13 +145,13 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
         public String protocolType;
 
         /**
-         * <p>The status of the export directory. Valid values:</p>
+         * <p>The status of the protocol service export directory. Valid values:</p>
          * <ul>
-         * <li>CREATING: The export directory is being created.</li>
-         * <li>AVAILABLE : The export directory is available.</li>
-         * <li>MODIFYING: The export directory is being modified.</li>
-         * <li>DELETING: The export directory is being deleted.</li>
-         * <li>STOPPING: The export directory is being stopped.</li>
+         * <li>CREATING: Being created.</li>
+         * <li>AVAILABLE: Available.</li>
+         * <li>MODIFYING: Being modified.</li>
+         * <li>DELETING: Being deleted.</li>
+         * <li>STOPPING: Being stopped.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -160,7 +161,7 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The vSwitch ID of the export directory.</p>
+         * <p>The vSwitch ID of the protocol service export.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-8vb2qjnxs6hiobzve****</p>
@@ -169,13 +170,13 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The vSwitch ID list of the export directory.</p>
+         * <p>The list of vSwitch IDs of the protocol service export.</p>
          */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The VPC ID of the export directory.</p>
+         * <p>The virtual private cloud (VPC) ID of the protocol service export.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1h5mxoqfuo3xurf****</p>

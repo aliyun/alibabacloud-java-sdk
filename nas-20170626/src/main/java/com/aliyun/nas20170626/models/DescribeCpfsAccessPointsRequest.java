@@ -59,6 +59,12 @@ public class DescribeCpfsAccessPointsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The list of CPFS access point tags.</p>
+     */
+    @NameInMap("Tag")
+    public java.util.List<DescribeCpfsAccessPointsRequestTag> tag;
+
     public static DescribeCpfsAccessPointsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCpfsAccessPointsRequest self = new DescribeCpfsAccessPointsRequest();
         return TeaModel.build(map, self);
@@ -102,6 +108,56 @@ public class DescribeCpfsAccessPointsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeCpfsAccessPointsRequest setTag(java.util.List<DescribeCpfsAccessPointsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeCpfsAccessPointsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeCpfsAccessPointsRequestTag extends TeaModel {
+        /**
+         * <p>The key of the CPFS access point tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The value of the CPFS access point tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeCpfsAccessPointsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCpfsAccessPointsRequestTag self = new DescribeCpfsAccessPointsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCpfsAccessPointsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeCpfsAccessPointsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

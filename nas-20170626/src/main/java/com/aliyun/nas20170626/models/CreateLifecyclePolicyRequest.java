@@ -37,7 +37,7 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
     /**
      * <p>The lifecycle management policy name. The name must be 3 to 64 characters in length, start with an uppercase letter or lowercase letter, and can contain letters, digits, underscores (_), or hyphens (-).</p>
      * <blockquote>
-     * <p>This parameter is required for General-purpose NAS but not required for CPFS for Lingjun.</p>
+     * <p>Required for General-purpose NAS. Not required for CPFS for Lingjun.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
      * <li>General-purpose NAS supports associating only a single directory. The path must start with a forward slash (/) and must be an existing path in the mount target.</li>
      * </ul>
      * <blockquote>
-     * <p>Only General-purpose NAS is supported. For General-purpose NAS, use Paths.N to associate multiple directories at the same time.</p>
+     * <p>Only General-purpose NAS is supported. For General-purpose NAS, use Paths.N instead to associate multiple directories at the same time.</p>
      * <ul>
      * <li>Only one of Path and Paths can be specified.</li>
      * </ul>
@@ -125,7 +125,7 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
      * <p>The storage tiering type.</p>
      * <ul>
      * <li>InfrequentAccess: IA storage class.</li>
-     * <li>Archive: Archive storage.</li>
+     * <li>Archive: Archive storage class.</li>
      * </ul>
      * <blockquote>
      * <p>General-purpose NAS supports InfrequentAccess and Archive. CPFS for Lingjun supports only InfrequentAccess.</p>
@@ -141,7 +141,7 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
     /**
      * <p>The file data transit rules. You can configure up to one rule.</p>
      * <blockquote>
-     * <p>This parameter is supported only when LifecyclePolicyType is set to Auto for CPFS for Lingjun file systems.</p>
+     * <p>Supported only when LifecyclePolicyType is set to Auto for CPFS for Lingjun file systems.</p>
      * </blockquote>
      */
     @NameInMap("TransitRules")
@@ -245,7 +245,7 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
          * <p>The rule attribute.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Atime: the access time of the file.</li>
+         * <li>Atime: the last access time of the file.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -258,7 +258,7 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
          * <p>The rule threshold.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>When Attribute is set to Atime, this parameter specifies the number of days that the file has not been accessed. Valid values: 1 to 365.</li>
+         * <li>When Attribute is set to Atime, the value specifies the number of days since the file was last accessed. Valid values: 1 to 365.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -347,7 +347,7 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
          * <p>The rule attribute.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Atime: the access time of the file.</li>
+         * <li>Atime: the last access time of the file.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -360,7 +360,7 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
          * <p>The rule threshold.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>When Attribute is set to Atime, this parameter specifies the number of days that the file has not been accessed. Valid values: 0 to 365.</li>
+         * <li>When Attribute is set to Atime, the value specifies the number of days since the file was last accessed. Valid values: 0 to 365.</li>
          * </ul>
          * 
          * <strong>example:</strong>

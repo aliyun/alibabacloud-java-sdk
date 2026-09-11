@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLifecyclePolicyRequest extends TeaModel {
     /**
-     * <p>The file data expiration and deletion rules.</p>
+     * <p>The expiration and deletion rules for file data.</p>
      */
     @NameInMap("DeleteRules")
     public java.util.List<UpdateLifecyclePolicyRequestDeleteRules> deleteRules;
@@ -57,7 +57,7 @@ public class UpdateLifecyclePolicyRequest extends TeaModel {
     public java.util.List<String> paths;
 
     /**
-     * <p>The file data retrieval rules. You can configure up to one rule.</p>
+     * <p>The data retrieval rules. You can configure up to one rule.</p>
      * <blockquote>
      * <p>Only CPFS for Lingjun file systems are supported.</p>
      * </blockquote>
@@ -67,10 +67,9 @@ public class UpdateLifecyclePolicyRequest extends TeaModel {
 
     /**
      * <p>The tiered storage type.</p>
-     * <p>Valid values:</p>
      * <ul>
-     * <li>InfrequentAccess: IA storage class. This is the default value.</li>
-     * <li>Archive: Archive storage.</li>
+     * <li>InfrequentAccess: IA storage class (default).</li>
+     * <li>Archive: Archive storage class.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,9 +79,9 @@ public class UpdateLifecyclePolicyRequest extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The file data transit rules. You can configure up to one rule.</p>
+     * <p>The data transit rules. You can configure up to one rule.</p>
      * <blockquote>
-     * <p>This parameter is supported only when LifecyclePolicyType is set to Auto for a CPFS for Lingjun file system.</p>
+     * <p>This parameter is supported only when LifecyclePolicyType is set to Auto for CPFS for Lingjun file systems.</p>
      * </blockquote>
      */
     @NameInMap("TransitRules")
@@ -162,7 +161,7 @@ public class UpdateLifecyclePolicyRequest extends TeaModel {
          * <p>The attribute of the rule.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Atime: the access time of the file.</li>
+         * <li>Atime: the last access time of the file.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -209,8 +208,7 @@ public class UpdateLifecyclePolicyRequest extends TeaModel {
 
     public static class UpdateLifecyclePolicyRequestRetrieveRules extends TeaModel {
         /**
-         * <p>The attribute of the rule.</p>
-         * <p>Valid values:</p>
+         * <p>The attribute of the rule. Valid values:</p>
          * <ul>
          * <li>RetrieveType: the retrieval method.</li>
          * </ul>
@@ -222,12 +220,11 @@ public class UpdateLifecyclePolicyRequest extends TeaModel {
         public String attribute;
 
         /**
-         * <p>The threshold of the rule.</p>
-         * <p>Valid values:</p>
+         * <p>The threshold of the rule. Valid values:</p>
          * <ul>
          * <li>RetrieveType<ul>
          * <li>AfterVisit: supported when LifecyclePolicyType is set to Auto. Indicates best-effort recall on visit.</li>
-         * <li>All: supported when LifecyclePolicyType is set to OnDemand. Indicates retrieval of all data.</li>
+         * <li>All: supported when LifecyclePolicyType is set to OnDemand. Indicates retrieving all data.</li>
          * </ul>
          * </li>
          * </ul>
@@ -266,7 +263,7 @@ public class UpdateLifecyclePolicyRequest extends TeaModel {
          * <p>The attribute of the rule.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Atime: the access time of the file.</li>
+         * <li>Atime: the last access time of the file.</li>
          * </ul>
          * 
          * <strong>example:</strong>

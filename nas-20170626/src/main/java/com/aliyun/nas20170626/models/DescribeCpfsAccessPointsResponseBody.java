@@ -106,9 +106,9 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
          * <p>The current status of the root directory.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Unknown: The root path status is unknown.</li>
-         * <li>NotExist: The root path does not exist. It may have been deleted by the user.</li>
-         * <li>Ready: The root path status is normal.</li>
+         * <li>Unknown: the root path status is unknown.</li>
+         * <li>NotExist: the root path does not exist. It may have been deleted by the user.</li>
+         * <li>Ready: the root path status is normal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,6 +136,48 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
         }
         public String getRootPathStatus() {
             return this.rootPathStatus;
+        }
+
+    }
+
+    public static class DescribeCpfsAccessPointsResponseBodyAccessPointsTags extends TeaModel {
+        /**
+         * <p>The key of the CPFS access point tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The value of the CPFS access point tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeCpfsAccessPointsResponseBodyAccessPointsTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCpfsAccessPointsResponseBodyAccessPointsTags self = new DescribeCpfsAccessPointsResponseBodyAccessPointsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCpfsAccessPointsResponseBodyAccessPointsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeCpfsAccessPointsResponseBodyAccessPointsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -214,13 +256,13 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
          * <p>The current status of the access point.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Active: available</li>
-         * <li>Inactive: unavailable</li>
-         * <li>Pending: being created</li>
-         * <li>Deleting: being deleted</li>
+         * <li>Active: available.</li>
+         * <li>Inactive: unavailable.</li>
+         * <li>Pending: being created.</li>
+         * <li>Deleting: being deleted.</li>
          * </ul>
          * <blockquote>
-         * <p>The file system can be mounted only when the status is Active.</p>
+         * <p>You can mount the file system only when the status is Active.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -228,6 +270,12 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        /**
+         * <p>The list of CPFS access point tags.</p>
+         */
+        @NameInMap("Tags")
+        public java.util.List<DescribeCpfsAccessPointsResponseBodyAccessPointsTags> tags;
 
         public static DescribeCpfsAccessPointsResponseBodyAccessPoints build(java.util.Map<String, ?> map) throws Exception {
             DescribeCpfsAccessPointsResponseBodyAccessPoints self = new DescribeCpfsAccessPointsResponseBodyAccessPoints();
@@ -304,6 +352,14 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeCpfsAccessPointsResponseBodyAccessPoints setTags(java.util.List<DescribeCpfsAccessPointsResponseBodyAccessPointsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeCpfsAccessPointsResponseBodyAccessPointsTags> getTags() {
+            return this.tags;
         }
 
     }

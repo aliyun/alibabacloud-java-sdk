@@ -37,10 +37,10 @@ public class ListLifecycleRetrieveJobsRequest extends TeaModel {
     /**
      * <p>The status of the data retrieval task. Valid values:</p>
      * <ul>
-     * <li>active: running.</li>
-     * <li>canceled: canceled.</li>
-     * <li>completed: completed.</li>
-     * <li>failed: failed.</li>
+     * <li>active: Running.</li>
+     * <li>canceled: Canceled.</li>
+     * <li>completed: Completed.</li>
+     * <li>failed: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class ListLifecycleRetrieveJobsRequest extends TeaModel {
      * <p>The storage class. Valid values:</p>
      * <ul>
      * <li>InfrequentAccess: IA storage class.</li>
-     * <li>Archive: Archive storage class.<blockquote>
+     * <li>Archive: Archive storage.<blockquote>
      * <p>If StorageType is not specified, data retrieval tasks of all storage classes are returned.</p>
      * </blockquote>
      * </li>

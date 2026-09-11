@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CancelFilesetQuotaRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</p>
      * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class CancelFilesetQuotaRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to perform a dry run.</p>
-     * <p>A dry run validates parameter correctness and business constraints without actually canceling the fileset quota or incurring fees.</p>
+     * <p>A dry run validates the parameter validity and business constraints without actually canceling the fileset quota or incurring any charges.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>true: Sends a dry run request without canceling the quota. The system checks required parameters, request format, and business limits. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned.</li>
@@ -33,7 +33,7 @@ public class CancelFilesetQuotaRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the CPFS for Lingjun file system. The ID must start with <code>bmcpfs-</code>. Example: bmcpfs-290w65p03ok64ya****.</p>
+     * <p>The ID of the CPFS for Lingjun file system. The ID must start with <code>bmcpfs-</code>, such as bmcpfs-290w65p03ok64ya****.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

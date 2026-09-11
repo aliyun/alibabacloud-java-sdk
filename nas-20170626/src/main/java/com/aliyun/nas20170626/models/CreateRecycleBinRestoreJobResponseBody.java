@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRecycleBinRestoreJobResponseBody extends TeaModel {
     /**
-     * <p>The job ID.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rb-10<strong><strong>491ff-r-162</strong></strong>165400</p>

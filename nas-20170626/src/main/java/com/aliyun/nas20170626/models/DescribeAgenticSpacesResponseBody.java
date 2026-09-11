@@ -8,7 +8,7 @@ public class DescribeAgenticSpacesResponseBody extends TeaModel {
     public DescribeAgenticSpacesResponseBodyAgenticSpaces agenticSpaces;
 
     /**
-     * <p>The query token. Set this parameter to the NextToken value returned in the previous API call.</p>
+     * <p>The pagination token. Set this parameter to the value of NextToken that is returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>MTc2NTg1MTUyMzA1OTczNTc1OCM0NjQxMzQ****=</p>

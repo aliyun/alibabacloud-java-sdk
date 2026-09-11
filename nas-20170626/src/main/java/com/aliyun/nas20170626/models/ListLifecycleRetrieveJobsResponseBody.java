@@ -94,7 +94,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
     public static class ListLifecycleRetrieveJobsResponseBodyLifecycleRetrieveJobs extends TeaModel {
         /**
          * <p>The time when the task was created.</p>
-         * <p>The time follows the ISO 8601 standard in the format of <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+         * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-02-30T10:08:08Z</p>
@@ -136,7 +136,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         public java.util.List<String> paths;
 
         /**
-         * <p>The number of files successfully retrieved by the data retrieval task.</p>
+         * <p>The number of files that are successfully retrieved by the data retrieval task.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -147,10 +147,10 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         /**
          * <p>The status of the data retrieval task. Valid values:</p>
          * <ul>
-         * <li>active: running.</li>
-         * <li>canceled: canceled.</li>
-         * <li>completed: completed.</li>
-         * <li>failed: failed.</li>
+         * <li>active: Running.</li>
+         * <li>canceled: Canceled.</li>
+         * <li>completed: Completed.</li>
+         * <li>failed: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -163,7 +163,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
          * <p>The storage class. Valid values:</p>
          * <ul>
          * <li>InfrequentAccess: IA storage class.</li>
-         * <li>Archive: Archive storage class.</li>
+         * <li>Archive: Archive storage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,7 +174,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
 
         /**
          * <p>The time when the task was last updated.</p>
-         * <p>The time follows the ISO 8601 standard in the format of <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+         * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-02-30T11:08:08Z</p>

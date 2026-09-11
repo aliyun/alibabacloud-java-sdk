@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFilesystemsVscAttachInfoRequest extends TeaModel {
     /**
-     * <p>The number of results for each query.</p>
+     * <p>The number of results returned per query.</p>
      * <p>Valid values: 10 to 100.
      * Default value: 10.</p>
      * 
@@ -16,7 +16,7 @@ public class DescribeFilesystemsVscAttachInfoRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The query token. Set the value to the NextToken value returned in the previous API call.</p>
+     * <p>The query token. Set this parameter to the NextToken value returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
@@ -121,7 +121,7 @@ public class DescribeFilesystemsVscAttachInfoRequest extends TeaModel {
 
     public static class DescribeFilesystemsVscAttachInfoRequestRoleChain extends TeaModel {
         /**
-         * <p>The UID of the Alibaba Cloud account, which specifies the account on whose behalf the service assumes the role.</p>
+         * <p>The UID of the Alibaba Cloud account (primary account), which specifies the account on whose behalf the service assumes the role.</p>
          * 
          * <strong>example:</strong>
          * <p>101522855006****</p>

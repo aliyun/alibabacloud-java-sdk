@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
     /**
-     * <p>The information about files or directories in the recycle bin.</p>
+     * <p>The collection of files or directories in the recycle bin.</p>
      */
     @NameInMap("Entries")
     public java.util.List<ListRecycledDirectoriesAndFilesResponseBodyEntries> entries;
 
     /**
      * <p>The pagination token for the next page.</p>
-     * <p>If a single query does not return all files and directories, a non-empty NextToken is returned. You can specify the correct NextToken in subsequent queries to continue listing.</p>
+     * <p>If a single query does not return all files and directories, a non-empty NextToken is returned. You can pass the correct NextToken in subsequent queries to continue retrieving results.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -124,7 +124,7 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
 
         /**
          * <p>The file size. Unit: bytes.</p>
-         * <p>If Type is set to Directory, the value 0 is returned.</p>
+         * <p>When Type is set to Directory, the value 0 is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1073741824</p>

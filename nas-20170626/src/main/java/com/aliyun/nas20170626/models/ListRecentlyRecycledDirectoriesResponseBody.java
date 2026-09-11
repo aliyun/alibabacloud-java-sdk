@@ -12,7 +12,7 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
 
     /**
      * <p>The pagination token for the next page.</p>
-     * <p>If the query results are not completely returned, the NextToken parameter is returned with a value. You can specify the NextToken value in the next request to continue the query.</p>
+     * <p>If a single query does not return all directories, the NextToken parameter is returned with a value. You can specify a valid NextToken value in subsequent requests to continue the query.</p>
      * 
      * <strong>example:</strong>
      * <p>1256****25</p>
@@ -69,7 +69,7 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
         public String fileId;
 
         /**
-         * <p>The most recent time when a delete operation was performed on the directory. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The time when the most recent delete operation was performed on the directory. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-05-30T10:08:08Z</p>
