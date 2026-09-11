@@ -214,10 +214,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Idempotently cancels favorites across three independent dimensions: graphName, operatingObjectName, and objectType. The input array accepts 1 to 200 items per request. Each item must be a non-empty string with a maximum length of 128 characters. The server validates and deduplicates items while preserving order. Non-string values, values that exceed the length limit, or arrays that exceed the size limit are rejected. Deletion, per-item status updates, and remaining valid count are completed within a single transaction. To safely cancel all favorites, you must also call ClearOperatingObjectFavorites to clean up historical records, MISSING records, or permission-hidden records that are not visible in the list. Then read back the result to confirm that total is 0.</p>
+     * <p>Idempotently cancels subscriptions along three independent dimensions: graphName, operatingObjectName, and objectType. The input array accepts 1 to 200 items per request. Each item must be a non-empty string with a maximum length of 128 characters. After server-side validation, items are deduplicated while preserving order. Non-string values, values that exceed the length limit, or arrays that exceed the size limit are rejected. The delete operation, per-item status tracking, and remaining valid count are completed within a single transaction. To safely cancel all subscriptions, you must also invoke ClearOperatingObjectFavorites to clean up historical, MISSING, or permission-hidden records that are invisible in the list, and then read back to confirm that total is 0.</p>
      * 
      * <b>summary</b> : 
-     * <p>Batch cancels digital employee favorites for specific object types.</p>
+     * <p>Batch cancels digital employee precise object type subscriptions.</p>
      * 
      * @param tmpReq BatchRemoveOperatingObjectFavoritesRequest
      * @param headers map
@@ -275,10 +275,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Idempotently cancels favorites across three independent dimensions: graphName, operatingObjectName, and objectType. The input array accepts 1 to 200 items per request. Each item must be a non-empty string with a maximum length of 128 characters. The server validates and deduplicates items while preserving order. Non-string values, values that exceed the length limit, or arrays that exceed the size limit are rejected. Deletion, per-item status updates, and remaining valid count are completed within a single transaction. To safely cancel all favorites, you must also call ClearOperatingObjectFavorites to clean up historical records, MISSING records, or permission-hidden records that are not visible in the list. Then read back the result to confirm that total is 0.</p>
+     * <p>Idempotently cancels subscriptions along three independent dimensions: graphName, operatingObjectName, and objectType. The input array accepts 1 to 200 items per request. Each item must be a non-empty string with a maximum length of 128 characters. After server-side validation, items are deduplicated while preserving order. Non-string values, values that exceed the length limit, or arrays that exceed the size limit are rejected. The delete operation, per-item status tracking, and remaining valid count are completed within a single transaction. To safely cancel all subscriptions, you must also invoke ClearOperatingObjectFavorites to clean up historical, MISSING, or permission-hidden records that are invisible in the list, and then read back to confirm that total is 0.</p>
      * 
      * <b>summary</b> : 
-     * <p>Batch cancels digital employee favorites for specific object types.</p>
+     * <p>Batch cancels digital employee precise object type subscriptions.</p>
      * 
      * @param request BatchRemoveOperatingObjectFavoritesRequest
      * @return BatchRemoveOperatingObjectFavoritesResponse
@@ -668,6 +668,99 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createCustomOrgWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>OpenAPI 创建语义图谱（同步快建占位记录 0.0.0）并在创建时绑定数据源。
+     *     内容编辑走个人草稿接口，正式发布走产品控制台。
+     *     业务编排：
+     *     1. 权限校验（个人 Token 校验语义管理权限；部署/系统级 Token 放行）
+     *     2. 同步落库 active 占位记录（schemaVersion 固定 0.0.0）并绑定数据源；
+     *        不写 history、不触发 runtime 重建
+     *     3. 图谱内容后续经个人草稿编辑，在控制台正式发布
+     *     错误码：
+     *     - ERR.GraphSchema.GraphNameInvalid: 图谱名称不合法
+     *     - ERR.GraphSchema.GraphNameDuplicated: 图谱名称已存在
+     *     - ERR.GraphSchema.DisplayNameInvalid: 展示名不合法或重复
+     *     - ERR.GraphDataSource.*: 数据源不存在 / 非 RDB 类不可绑定</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建语义图谱并绑定数据源</p>
+     * 
+     * @param request CreateGraphRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateGraphResponse
+     */
+    public CreateGraphResponse createGraphWithOptions(CreateGraphRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessProfile)) {
+            body.put("businessProfile", request.businessProfile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceId)) {
+            body.put("dataSourceId", request.dataSourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("displayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.graphName)) {
+            body.put("graphName", request.graphName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateGraph"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/createGraph"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateGraphResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>OpenAPI 创建语义图谱（同步快建占位记录 0.0.0）并在创建时绑定数据源。
+     *     内容编辑走个人草稿接口，正式发布走产品控制台。
+     *     业务编排：
+     *     1. 权限校验（个人 Token 校验语义管理权限；部署/系统级 Token 放行）
+     *     2. 同步落库 active 占位记录（schemaVersion 固定 0.0.0）并绑定数据源；
+     *        不写 history、不触发 runtime 重建
+     *     3. 图谱内容后续经个人草稿编辑，在控制台正式发布
+     *     错误码：
+     *     - ERR.GraphSchema.GraphNameInvalid: 图谱名称不合法
+     *     - ERR.GraphSchema.GraphNameDuplicated: 图谱名称已存在
+     *     - ERR.GraphSchema.DisplayNameInvalid: 展示名不合法或重复
+     *     - ERR.GraphDataSource.*: 数据源不存在 / 非 RDB 类不可绑定</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建语义图谱并绑定数据源</p>
+     * 
+     * @param request CreateGraphRequest
+     * @return CreateGraphResponse
+     */
+    public CreateGraphResponse createGraph(CreateGraphRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createGraphWithOptions(request, headers, runtime);
     }
 
     /**
@@ -1667,6 +1760,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("shanjiUrl", request.shanjiUrl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceTags)) {
+            body.put("sourceTags", request.sourceTags);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
@@ -1714,13 +1811,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API is used to add an AliDing online document to the &quot;My Resources&quot; section of a specified digital employee.</li>
+     * <li>This API operation adds an AliDing online document to the &quot;My Resources&quot; section of a specified digital employee.</li>
      * <li>Fixed parameters include <code>source_type=ONLINE_DOC</code>, <code>platform=ALI_DING</code>, and <code>scope=PERSONAL</code>.</li>
-     * <li>If <code>directoryId</code> is not provided, the document is attached to the root folder of the current digital employee by default. If provided, ensure that the folder belongs to the current user and exists under the current digital employee.</li>
+     * <li>If <code>directoryId</code> is not provided, the document is attached to the root folder of the current digital employee by default. If <code>directoryId</code> is provided, make sure that the folder belongs to the current user and exists under the current digital employee.</li>
      * <li>During the invoke process, metering is started and related operation logs are recorded.</li>
      * <li>For security purposes, <code>tenant_id</code> and <code>user_id</code> are obtained only from the authentication identity. Values provided by the caller for these fields are ignored.</li>
-     * <li>Any validation or execute failure is thrown as an exception by the service and transformed into a POP error code returned to the caller.</li>
+     * <li>Any validation or execute failure throws an exception through the service and is transformed to a POP error code returned to the caller.</li>
      * </ul>
+     * <h2>Related operations</h2>
      * 
      * <b>summary</b> : 
      * <p>Uploads an AliDing online document to the personal resources of the current digital employee.</p>
@@ -1758,6 +1856,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("operatingObjectName", request.operatingObjectName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceTags)) {
+            body.put("sourceTags", request.sourceTags);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
@@ -1781,13 +1883,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API is used to add an AliDing online document to the &quot;My Resources&quot; section of a specified digital employee.</li>
+     * <li>This API operation adds an AliDing online document to the &quot;My Resources&quot; section of a specified digital employee.</li>
      * <li>Fixed parameters include <code>source_type=ONLINE_DOC</code>, <code>platform=ALI_DING</code>, and <code>scope=PERSONAL</code>.</li>
-     * <li>If <code>directoryId</code> is not provided, the document is attached to the root folder of the current digital employee by default. If provided, ensure that the folder belongs to the current user and exists under the current digital employee.</li>
+     * <li>If <code>directoryId</code> is not provided, the document is attached to the root folder of the current digital employee by default. If <code>directoryId</code> is provided, make sure that the folder belongs to the current user and exists under the current digital employee.</li>
      * <li>During the invoke process, metering is started and related operation logs are recorded.</li>
      * <li>For security purposes, <code>tenant_id</code> and <code>user_id</code> are obtained only from the authentication identity. Values provided by the caller for these fields are ignored.</li>
-     * <li>Any validation or execute failure is thrown as an exception by the service and transformed into a POP error code returned to the caller.</li>
+     * <li>Any validation or execute failure throws an exception through the service and is transformed to a POP error code returned to the caller.</li>
      * </ul>
+     * <h2>Related operations</h2>
      * 
      * <b>summary</b> : 
      * <p>Uploads an AliDing online document to the personal resources of the current digital employee.</p>
@@ -1805,18 +1908,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API creates an AliDing knowledge base and mounts it to the personal resource directory of the specified digital employee.</li>
+     * <li>This API creates an AliDing knowledge base and mounts it under the personal resource directory of the specified digital employee.</li>
      * <li><code>platform</code> is fixed to <code>ALI_DING</code>, and <code>directory_type</code> is fixed to <code>PERSONAL</code>.</li>
      * <li>If <code>directoryId</code> is provided, the system verifies that the directory exists and belongs to the current tenant and is of the personal type.</li>
      * <li>During creation, the knowledge base root directory is initialized (with the status set to <code>RUNNING</code>), and background tasks are dispatched based on the provided synchronization configuration to pull the remote directory tree and create child nodes.</li>
      * <li>For security purposes, <code>tenant_id</code> and <code>user_id</code> are obtained only from the authenticated identity. These fields in the request body are ignored.</li>
-     * <li>The synchronization configuration is optional. If enabled, a cron expression must be provided. If not provided or disabled, scheduled synchronization is not performed by default.</li>
+     * <li>The synchronization configuration is optional. If enabled, a cron expression is required. If not provided or disabled, scheduled synchronization is not performed by default.</li>
      * <li>The knowledge base name can be customized. If not provided, it is automatically populated after background synchronization.</li>
      * <li>Multi-value object binding is supported. Related information is serialized and stored in the knowledge base metadata.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds an AliDing knowledge base to the personal resources of the current digital employee.</p>
+     * <p>Adds the entire AliDing knowledge base to the personal resources of the current digital employee.</p>
      * 
      * @param tmpReq CreatePersonalAlidingKnowledgeBaseRequest
      * @param headers map
@@ -1861,6 +1964,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("operatingObjectName", request.operatingObjectName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceTags)) {
+            body.put("sourceTags", request.sourceTags);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.syncConfigShrink)) {
             body.put("syncConfig", request.syncConfigShrink);
         }
@@ -1888,18 +1995,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API creates an AliDing knowledge base and mounts it to the personal resource directory of the specified digital employee.</li>
+     * <li>This API creates an AliDing knowledge base and mounts it under the personal resource directory of the specified digital employee.</li>
      * <li><code>platform</code> is fixed to <code>ALI_DING</code>, and <code>directory_type</code> is fixed to <code>PERSONAL</code>.</li>
      * <li>If <code>directoryId</code> is provided, the system verifies that the directory exists and belongs to the current tenant and is of the personal type.</li>
      * <li>During creation, the knowledge base root directory is initialized (with the status set to <code>RUNNING</code>), and background tasks are dispatched based on the provided synchronization configuration to pull the remote directory tree and create child nodes.</li>
      * <li>For security purposes, <code>tenant_id</code> and <code>user_id</code> are obtained only from the authenticated identity. These fields in the request body are ignored.</li>
-     * <li>The synchronization configuration is optional. If enabled, a cron expression must be provided. If not provided or disabled, scheduled synchronization is not performed by default.</li>
+     * <li>The synchronization configuration is optional. If enabled, a cron expression is required. If not provided or disabled, scheduled synchronization is not performed by default.</li>
      * <li>The knowledge base name can be customized. If not provided, it is automatically populated after background synchronization.</li>
      * <li>Multi-value object binding is supported. Related information is serialized and stored in the knowledge base metadata.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds an AliDing knowledge base to the personal resources of the current digital employee.</p>
+     * <p>Adds the entire AliDing knowledge base to the personal resources of the current digital employee.</p>
      * 
      * @param request CreatePersonalAlidingKnowledgeBaseRequest
      * @return CreatePersonalAlidingKnowledgeBaseResponse
@@ -2130,16 +2237,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API creates a meeting resource by using a standard DingTalk Shanji link. The collection method is fixed to the DWS corresponding to personal OAuth.</li>
+     * <li>This API creates a meeting resource by using a standard DingTalk Shanji note link. The collection method is fixed to the DWS corresponding to personal OAuth.</li>
      * <li><code>source_type</code> is fixed to <code>DINGTALK_MEETING</code>, and <code>scope</code> is fixed to <code>PERSONAL</code>.</li>
-     * <li>You must provide a standard DingTalk Shanji link or taskUuid (<code>shanjiUrl</code>).</li>
+     * <li>You must provide a standard DingTalk Shanji note link or taskUuid (<code>shanjiUrl</code>).</li>
      * <li>Optionally specify a target personal directory ID (<code>directoryId</code>). If not specified, the default root directory of the current digital employee is used.</li>
      * <li>You can add a resource description (<code>description</code>) and meeting notes (<code>notes</code>).</li>
      * <li>This operation supports one of the following authentication methods: AK, BearerToken, or APP.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Uploads a meeting to the current user\&quot;s personal knowledge base by using a standard DingTalk Shanji URL.</p>
+     * <p>Uploads a meeting to the current user\&quot;s personal knowledge base by using the URL of a standard DingTalk Shanji note.</p>
      * 
      * @param request CreatePersonalDingtalkMinutesRequest
      * @param headers map
@@ -2178,6 +2285,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("shanjiUrl", request.shanjiUrl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceTags)) {
+            body.put("sourceTags", request.sourceTags);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
@@ -2201,16 +2312,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API creates a meeting resource by using a standard DingTalk Shanji link. The collection method is fixed to the DWS corresponding to personal OAuth.</li>
+     * <li>This API creates a meeting resource by using a standard DingTalk Shanji note link. The collection method is fixed to the DWS corresponding to personal OAuth.</li>
      * <li><code>source_type</code> is fixed to <code>DINGTALK_MEETING</code>, and <code>scope</code> is fixed to <code>PERSONAL</code>.</li>
-     * <li>You must provide a standard DingTalk Shanji link or taskUuid (<code>shanjiUrl</code>).</li>
+     * <li>You must provide a standard DingTalk Shanji note link or taskUuid (<code>shanjiUrl</code>).</li>
      * <li>Optionally specify a target personal directory ID (<code>directoryId</code>). If not specified, the default root directory of the current digital employee is used.</li>
      * <li>You can add a resource description (<code>description</code>) and meeting notes (<code>notes</code>).</li>
      * <li>This operation supports one of the following authentication methods: AK, BearerToken, or APP.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Uploads a meeting to the current user\&quot;s personal knowledge base by using a standard DingTalk Shanji URL.</p>
+     * <p>Uploads a meeting to the current user\&quot;s personal knowledge base by using the URL of a standard DingTalk Shanji note.</p>
      * 
      * @param request CreatePersonalDingtalkMinutesRequest
      * @return CreatePersonalDingtalkMinutesResponse
@@ -2525,7 +2636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li><code>name</code>: The display name of the uploaded resource in the system.</li>
      * <li><code>minuteToken</code>: The unique identifier of the meeting from the Lark Minutes platform.</li>
      * <li><code>credentialId</code>: The ID associated with specific authentication information, used to verify the validity of the request.</li>
-     * <li><code>directoryId</code> (optional): The ID of the target personal directory where the resource is stored. If this field is omitted, the resource is automatically placed in the default location.</li>
+     * <li><code>directoryId</code> (optional): The ID of the target personal directory in which to store the resource. If this field is omitted, the resource is automatically placed in the default location.</li>
      * <li><code>description</code> (optional): A brief description or note about the uploaded resource.
      * Precautions:</li>
      * <li>Ensure that the provided <code>minuteToken</code> and <code>credentialId</code> are valid.</li>
@@ -2572,6 +2683,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("operatingObjectName", request.operatingObjectName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceTags)) {
+            body.put("sourceTags", request.sourceTags);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
@@ -2600,7 +2715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li><code>name</code>: The display name of the uploaded resource in the system.</li>
      * <li><code>minuteToken</code>: The unique identifier of the meeting from the Lark Minutes platform.</li>
      * <li><code>credentialId</code>: The ID associated with specific authentication information, used to verify the validity of the request.</li>
-     * <li><code>directoryId</code> (optional): The ID of the target personal directory where the resource is stored. If this field is omitted, the resource is automatically placed in the default location.</li>
+     * <li><code>directoryId</code> (optional): The ID of the target personal directory in which to store the resource. If this field is omitted, the resource is automatically placed in the default location.</li>
      * <li><code>description</code> (optional): A brief description or note about the uploaded resource.
      * Precautions:</li>
      * <li>Ensure that the provided <code>minuteToken</code> and <code>credentialId</code> are valid.</li>
@@ -2682,6 +2797,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.operatingObjectName)) {
             body.put("operatingObjectName", request.operatingObjectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceTags)) {
+            body.put("sourceTags", request.sourceTags);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2773,6 +2892,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("operatingObjectName", request.operatingObjectName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceTags)) {
+            body.put("sourceTags", request.sourceTags);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.textContent)) {
             body.put("textContent", request.textContent);
         }
@@ -2825,7 +2948,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>This API operation uploads an offline meeting audio file to the &quot;My Resources&quot; section of a specified digital employee.</li>
+     * <li>This API operation uploads an offline meeting audio file to the My Resources section of a specified digital employee.</li>
      * <li><code>source_type</code> is fixed to <code>VOICE_MEETING</code>, <code>scope</code> is fixed to <code>PERSONAL</code>, and <code>voice_meeting_type</code> is fixed to <code>OFFLINE</code>.</li>
      * <li>If <code>directoryId</code> is not provided in the request body, the resource is automatically bound to the default root directory. If <code>directoryId</code> is provided, it must be an existing personal directory of the current user under the current digital employee.</li>
      * <li>Calling this operation starts a background process to transcribe the audio file and returns information about the newly created resource.</li>
@@ -2869,6 +2992,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("operatingObjectName", request.operatingObjectName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceTags)) {
+            body.put("sourceTags", request.sourceTags);
+        }
+
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -2901,7 +3028,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>This API operation uploads an offline meeting audio file to the &quot;My Resources&quot; section of a specified digital employee.</li>
+     * <li>This API operation uploads an offline meeting audio file to the My Resources section of a specified digital employee.</li>
      * <li><code>source_type</code> is fixed to <code>VOICE_MEETING</code>, <code>scope</code> is fixed to <code>PERSONAL</code>, and <code>voice_meeting_type</code> is fixed to <code>OFFLINE</code>.</li>
      * <li>If <code>directoryId</code> is not provided in the request body, the resource is automatically bound to the default root directory. If <code>directoryId</code> is provided, it must be an existing personal directory of the current user under the current digital employee.</li>
      * <li>Calling this operation starts a background process to transcribe the audio file and returns information about the newly created resource.</li>
@@ -3787,10 +3914,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API uploads a file to the &quot;My Resources&quot; section of a specified digital employee.</li>
+     * <li>This API is exclusively for the Winnexo Lite Workbench.</li>
+     * <li>Retrieves the title, meeting summary, to-do items, and full transcription based on a DingTalk minutes ID.</li>
+     * <li>Audio and video files are not downloaded. If any content fails to be read, the entire request fails.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves DingTalk meeting minutes content for the Winnexo Lite Workbench.</p>
+     * 
+     * @param request GetAliDingMinutesContentRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAliDingMinutesContentResponse
+     */
+    public GetAliDingMinutesContentResponse getAliDingMinutesContentWithOptions(GetAliDingMinutesContentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.minutesId)) {
+            body.put("minutesId", request.minutesId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAliDingMinutesContent"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/getAliDingMinutesContent"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAliDingMinutesContentResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This API is exclusively for the Winnexo Lite Workbench.</li>
+     * <li>Retrieves the title, meeting summary, to-do items, and full transcription based on a DingTalk minutes ID.</li>
+     * <li>Audio and video files are not downloaded. If any content fails to be read, the entire request fails.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves DingTalk meeting minutes content for the Winnexo Lite Workbench.</p>
+     * 
+     * @param request GetAliDingMinutesContentRequest
+     * @return GetAliDingMinutesContentResponse
+     */
+    public GetAliDingMinutesContentResponse getAliDingMinutesContent(GetAliDingMinutesContentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAliDingMinutesContentWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This API is used to upload files to the &quot;My Resources&quot; section of a specified digital employee.</li>
      * <li><code>source_type</code> is fixed to <code>FILE</code>, <code>scope</code> is fixed to <code>PERSONAL</code>, and <code>platform</code> is fixed to <code>LOCAL</code>.</li>
      * <li>The file must include an OSS persistent address (<code>filePath</code>). Other information such as the public access URL and original file name is optional.</li>
-     * <li>If no target folder ID (<code>directoryId</code>) is specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</li>
+     * <li>If the target folder ID (<code>directoryId</code>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</li>
      * <li>Multiple authentication methods (AK, BearerToken, APP) are supported to authenticate requests.</li>
      * <li>The operation type is write (<code>write</code>), and operation logs are recorded for subsequent auditing.</li>
      * </ul>
@@ -3838,12 +4034,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>This API uploads a file to the &quot;My Resources&quot; section of a specified digital employee.</li>
+     * <li>This API is used to upload files to the &quot;My Resources&quot; section of a specified digital employee.</li>
      * <li><code>source_type</code> is fixed to <code>FILE</code>, <code>scope</code> is fixed to <code>PERSONAL</code>, and <code>platform</code> is fixed to <code>LOCAL</code>.</li>
      * <li>The file must include an OSS persistent address (<code>filePath</code>). Other information such as the public access URL and original file name is optional.</li>
-     * <li>If no target folder ID (<code>directoryId</code>) is specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</li>
+     * <li>If the target folder ID (<code>directoryId</code>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</li>
      * <li>Multiple authentication methods (AK, BearerToken, APP) are supported to authenticate requests.</li>
      * <li>The operation type is write (<code>write</code>), and operation logs are recorded for subsequent auditing.</li>
      * </ul>
@@ -3858,6 +4054,81 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getChatSessionWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the full schema YAML by merging the active schema with the current user\&quot;s draft via OpenAPI (personal token only).
+     *     Business orchestration:
+     *     1. Draft domain identity verification (personal token only. Deploy/system-level tokens are rejected)
+     *        and semantic view permission verification.
+     *     2. If no personal draft exists, the full active YAML is returned (underlying short path).
+     *        If a draft exists, the merged full YAML is returned for editor rendering and pre-publish preview.
+     *     Error codes:
+     *     - ERR.User.TokenUserOnly: Personal drafts support only user tokens.
+     *     - ERR.GraphSchema.*: The knowledge graph does not exist.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the full schema after merging the active schema with personal drafts.</p>
+     * 
+     * @param request GetGraphDraftAssembledRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetGraphDraftAssembledResponse
+     */
+    public GetGraphDraftAssembledResponse getGraphDraftAssembledWithOptions(GetGraphDraftAssembledRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.graphName)) {
+            body.put("graphName", request.graphName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetGraphDraftAssembled"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/getGraphDraftAssembled"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGraphDraftAssembledResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the full schema YAML by merging the active schema with the current user\&quot;s draft via OpenAPI (personal token only).
+     *     Business orchestration:
+     *     1. Draft domain identity verification (personal token only. Deploy/system-level tokens are rejected)
+     *        and semantic view permission verification.
+     *     2. If no personal draft exists, the full active YAML is returned (underlying short path).
+     *        If a draft exists, the merged full YAML is returned for editor rendering and pre-publish preview.
+     *     Error codes:
+     *     - ERR.User.TokenUserOnly: Personal drafts support only user tokens.
+     *     - ERR.GraphSchema.*: The knowledge graph does not exist.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the full schema after merging the active schema with personal drafts.</p>
+     * 
+     * @param request GetGraphDraftAssembledRequest
+     * @return GetGraphDraftAssembledResponse
+     */
+    public GetGraphDraftAssembledResponse getGraphDraftAssembled(GetGraphDraftAssembledRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getGraphDraftAssembledWithOptions(request, headers, runtime);
     }
 
     /**
@@ -3917,6 +4188,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getGraphSchemaWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the complete active schema of a graph from the OpenAPI management perspective. This operation does not perform resource-level permission trimming, but requires semantic view permission at the entry point.
+     * graphStatus and hasDraft reflect the personal draft and publish status from the current caller\&quot;s perspective. Deployment or system-level tokens have no personal identity, so hasDraft is always false.
+     * Error codes:</p>
+     * <ul>
+     * <li>ERR.GraphSchema.GraphSchemaNotFound: The graph does not exist.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the complete schema of a semantic graph from the management perspective.</p>
+     * 
+     * @param request GetGraphSchemaDetailRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetGraphSchemaDetailResponse
+     */
+    public GetGraphSchemaDetailResponse getGraphSchemaDetailWithOptions(GetGraphSchemaDetailRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.graphName)) {
+            body.put("graphName", request.graphName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetGraphSchemaDetail"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/getGraphSchemaDetail"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGraphSchemaDetailResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the complete active schema of a graph from the OpenAPI management perspective. This operation does not perform resource-level permission trimming, but requires semantic view permission at the entry point.
+     * graphStatus and hasDraft reflect the personal draft and publish status from the current caller\&quot;s perspective. Deployment or system-level tokens have no personal identity, so hasDraft is always false.
+     * Error codes:</p>
+     * <ul>
+     * <li>ERR.GraphSchema.GraphSchemaNotFound: The graph does not exist.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the complete schema of a semantic graph from the management perspective.</p>
+     * 
+     * @param request GetGraphSchemaDetailRequest
+     * @return GetGraphSchemaDetailResponse
+     */
+    public GetGraphSchemaDetailResponse getGraphSchemaDetail(GetGraphSchemaDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getGraphSchemaDetailWithOptions(request, headers, runtime);
     }
 
     /**
@@ -4142,13 +4482,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>This operation uploads a file to the enterprise knowledge base.</li>
-     * <li>The <code>DEVELOPMENT_KB_MANAGE</code> feature permission is required to call this API.</li>
+     * <li>This operation uploads files to an enterprise knowledge base.</li>
+     * <li>You must have the <code>DEVELOPMENT_KB_MANAGE</code> feature permission to call this operation.</li>
      * <li>You must provide the OSS persistent address (<code>filePath</code>) of the file when uploading.</li>
      * <li>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</li>
-     * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</li>
-     * <li>You can add tags to the resource by using <code>sourceTags</code> for subsequent management and retrieval.</li>
-     * <li>This operation initiates a billing item (UNSTRUCTURED_PARSE). Ensure that your account balance is sufficient.</li>
+     * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base folder. Otherwise, the file is bound to the default root folder of the current digital employee.</li>
+     * <li>You can add tags to resources by using <code>sourceTags</code> for subsequent management and retrieval.</li>
+     * <li>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4212,13 +4552,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>This operation uploads a file to the enterprise knowledge base.</li>
-     * <li>The <code>DEVELOPMENT_KB_MANAGE</code> feature permission is required to call this API.</li>
+     * <li>This operation uploads files to an enterprise knowledge base.</li>
+     * <li>You must have the <code>DEVELOPMENT_KB_MANAGE</code> feature permission to call this operation.</li>
      * <li>You must provide the OSS persistent address (<code>filePath</code>) of the file when uploading.</li>
      * <li>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</li>
-     * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</li>
-     * <li>You can add tags to the resource by using <code>sourceTags</code> for subsequent management and retrieval.</li>
-     * <li>This operation initiates a billing item (UNSTRUCTURED_PARSE). Ensure that your account balance is sufficient.</li>
+     * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base folder. Otherwise, the file is bound to the default root folder of the current digital employee.</li>
+     * <li>You can add tags to resources by using <code>sourceTags</code> for subsequent management and retrieval.</li>
+     * <li>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4298,15 +4638,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
      * <li>This operation uploads a file to the enterprise knowledge base.</li>
-     * <li>The <code>DEVELOPMENT_KB_MANAGE</code> feature permission is required to call this API.</li>
-     * <li>The OSS persistent address (<code>filePath</code>) of the file must be provided during upload.</li>
-     * <li>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</li>
-     * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</li>
+     * <li>You must have the <code>DEVELOPMENT_KB_MANAGE</code> permission to call this operation.</li>
+     * <li>You must provide the OSS persistent address (<code>filePath</code>) of the file when uploading.</li>
+     * <li>Optional parameters include the public access URL and original file name of the file to enhance the completeness of file information.</li>
+     * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</li>
      * <li>You can add tags to the resource by using <code>sourceTags</code> for subsequent management and retrieval.</li>
-     * <li>This operation initiates a billing item (UNSTRUCTURED_PARSE). Ensure that your account balance is sufficient.</li>
+     * <li>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4374,15 +4714,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
      * <li>This operation uploads a file to the enterprise knowledge base.</li>
-     * <li>The <code>DEVELOPMENT_KB_MANAGE</code> feature permission is required to call this API.</li>
-     * <li>The OSS persistent address (<code>filePath</code>) of the file must be provided during upload.</li>
-     * <li>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</li>
-     * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</li>
+     * <li>You must have the <code>DEVELOPMENT_KB_MANAGE</code> permission to call this operation.</li>
+     * <li>You must provide the OSS persistent address (<code>filePath</code>) of the file when uploading.</li>
+     * <li>Optional parameters include the public access URL and original file name of the file to enhance the completeness of file information.</li>
+     * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</li>
      * <li>You can add tags to the resource by using <code>sourceTags</code> for subsequent management and retrieval.</li>
-     * <li>This operation initiates a billing item (UNSTRUCTURED_PARSE). Ensure that your account balance is sufficient.</li>
+     * <li>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5098,10 +5438,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>This operation returns the detailed information of the current authenticated user.</li>
      * <li>If the tenant information is invalid, the corresponding error message is returned.</li>
-     * <li><code>tenantId</code> is an optional parameter. If not provided, the default tenant ID of the caller is used.</li>
-     * <li>Multiple authentication methods are supported: AK, BearerToken, and APP authentication.</li>
+     * <li>tenantId is an optional parameter. If not provided, the default tenant ID of the caller is used.</li>
+     * <li>Multiple authentication methods are supported: AccessKey, BearerToken, and APP authentication.</li>
      * <li>The returned data includes the user profile (such as username and profile picture URL), role preference settings, and details of all tenants to which the user belongs.</li>
-     * <li>If the current logon tenant is the system tenant (that is, <code>tenantId=10000</code>), this is explicitly indicated in the response.</li>
+     * <li>Note that if the current logon tenant is a system tenant (tenantId=10000), this is explicitly indicated in the response.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5143,10 +5483,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>This operation returns the detailed information of the current authenticated user.</li>
      * <li>If the tenant information is invalid, the corresponding error message is returned.</li>
-     * <li><code>tenantId</code> is an optional parameter. If not provided, the default tenant ID of the caller is used.</li>
-     * <li>Multiple authentication methods are supported: AK, BearerToken, and APP authentication.</li>
+     * <li>tenantId is an optional parameter. If not provided, the default tenant ID of the caller is used.</li>
+     * <li>Multiple authentication methods are supported: AccessKey, BearerToken, and APP authentication.</li>
      * <li>The returned data includes the user profile (such as username and profile picture URL), role preference settings, and details of all tenants to which the user belongs.</li>
-     * <li>If the current logon tenant is the system tenant (that is, <code>tenantId=10000</code>), this is explicitly indicated in the response.</li>
+     * <li>Note that if the current logon tenant is a system tenant (tenantId=10000), this is explicitly indicated in the response.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5332,10 +5672,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Operation description</h2>
      * <ul>
      * <li>This API supports two modes: when <code>directoryId</code> is empty or set to \&quot;root\&quot;, the top-level knowledge base list is returned. When <code>directoryId</code> has a specific value, a drill-down operation is performed to return subdirectories and resources under the specified directory.</li>
-     * <li><code>tenantId</code> is a common parameter. If not provided, the caller\&quot;s tenant ID is used by default.</li>
-     * <li>In drill-down mode (when <code>directoryId</code> is not empty), use the <code>sourceTypes</code> parameter to filter resources by specific types.</li>
+     * <li><code>tenantId</code> is a common parameter. If not provided, the tenant ID of the caller is used by default.</li>
+     * <li>In drill-down mode (when <code>directoryId</code> is not empty), use the <code>sourceTypes</code> parameter to filter resources of specific types.</li>
      * <li>The sort field (<code>sortField</code>) and sort order (<code>sortOrder</code>) can be customized. Invalid values are reset to default settings.</li>
-     * <li>The search feature is only effective when retrieving the top-level list and supports only fuzzy matching on names or descriptions.</li>
+     * <li>The search feature is effective only when retrieving the top-level list and supports only fuzzy matching on names or descriptions.</li>
      * <li>For security purposes, <code>tenant_id</code> is strictly obtained from the authenticated identity and cannot be passed through the request body.</li>
      * </ul>
      * 
@@ -5413,10 +5753,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Operation description</h2>
      * <ul>
      * <li>This API supports two modes: when <code>directoryId</code> is empty or set to \&quot;root\&quot;, the top-level knowledge base list is returned. When <code>directoryId</code> has a specific value, a drill-down operation is performed to return subdirectories and resources under the specified directory.</li>
-     * <li><code>tenantId</code> is a common parameter. If not provided, the caller\&quot;s tenant ID is used by default.</li>
-     * <li>In drill-down mode (when <code>directoryId</code> is not empty), use the <code>sourceTypes</code> parameter to filter resources by specific types.</li>
+     * <li><code>tenantId</code> is a common parameter. If not provided, the tenant ID of the caller is used by default.</li>
+     * <li>In drill-down mode (when <code>directoryId</code> is not empty), use the <code>sourceTypes</code> parameter to filter resources of specific types.</li>
      * <li>The sort field (<code>sortField</code>) and sort order (<code>sortOrder</code>) can be customized. Invalid values are reset to default settings.</li>
-     * <li>The search feature is only effective when retrieving the top-level list and supports only fuzzy matching on names or descriptions.</li>
+     * <li>The search feature is effective only when retrieving the top-level list and supports only fuzzy matching on names or descriptions.</li>
      * <li>For security purposes, <code>tenant_id</code> is strictly obtained from the authenticated identity and cannot be passed through the request body.</li>
      * </ul>
      * 
@@ -5436,9 +5776,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Queries the full list of digital employees under a tenant, including deactivated ones.
      *     Business logic:
-     *     1. Constructs AuthContext from identity.
-     *     2. Delegates to AgentAuthorizationAuthorizedService.list_agents to complete permission verification (APPLICATION_AGENT_VIEW).
-     *     3. Returns rich fields for all digital employees of the tenant (operatingObjectName / displayName / authMode / isActive).
+     *     1. Constructs an AuthContext from the identity.
+     *     2. Delegates to AgentAuthorizationAuthorizedService.list_agents to perform permission verification (APPLICATION_AGENT_VIEW).
+     *     3. Returns rich fields for all digital employees of the tenant (operatingObjectName, displayName, authMode, and isActive).
      *     4. System-level tokens are automatically allowed through ctx.skip_permission.
      *     Difference from listAuthorizedAgents: This operation returns all digital employees of the tenant (including deactivated ones, without authorization filtering) and includes rich fields such as displayName and isActive for management console display.</p>
      * 
@@ -5479,9 +5819,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Queries the full list of digital employees under a tenant, including deactivated ones.
      *     Business logic:
-     *     1. Constructs AuthContext from identity.
-     *     2. Delegates to AgentAuthorizationAuthorizedService.list_agents to complete permission verification (APPLICATION_AGENT_VIEW).
-     *     3. Returns rich fields for all digital employees of the tenant (operatingObjectName / displayName / authMode / isActive).
+     *     1. Constructs an AuthContext from the identity.
+     *     2. Delegates to AgentAuthorizationAuthorizedService.list_agents to perform permission verification (APPLICATION_AGENT_VIEW).
+     *     3. Returns rich fields for all digital employees of the tenant (operatingObjectName, displayName, authMode, and isActive).
      *     4. System-level tokens are automatically allowed through ctx.skip_permission.
      *     Difference from listAuthorizedAgents: This operation returns all digital employees of the tenant (including deactivated ones, without authorization filtering) and includes rich fields such as displayName and isActive for management console display.</p>
      * 
@@ -5495,6 +5835,168 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listAgentsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation is exclusively for the Winnexo lightweight workbench.</li>
+     * <li>Uses the existing time, direction, and pageSize time-watermark protocol to read messages from a specified group chat.</li>
+     * <li>Does not introduce start or end time ranges. The response does not include raw DWS objects, attachment locators, or temporary download URLs.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves DingTalk group chat records for the Winnexo lightweight workbench.</p>
+     * 
+     * @param request ListAliDingGroupMessagesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAliDingGroupMessagesResponse
+     */
+    public ListAliDingGroupMessagesResponse listAliDingGroupMessagesWithOptions(ListAliDingGroupMessagesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.chatId)) {
+            body.put("chatId", request.chatId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
+            body.put("direction", request.direction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.time)) {
+            body.put("time", request.time);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAliDingGroupMessages"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/listAliDingGroupMessages"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAliDingGroupMessagesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation is exclusively for the Winnexo lightweight workbench.</li>
+     * <li>Uses the existing time, direction, and pageSize time-watermark protocol to read messages from a specified group chat.</li>
+     * <li>Does not introduce start or end time ranges. The response does not include raw DWS objects, attachment locators, or temporary download URLs.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves DingTalk group chat records for the Winnexo lightweight workbench.</p>
+     * 
+     * @param request ListAliDingGroupMessagesRequest
+     * @return ListAliDingGroupMessagesResponse
+     */
+    public ListAliDingGroupMessagesResponse listAliDingGroupMessages(ListAliDingGroupMessagesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAliDingGroupMessagesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation is exclusively for the Winnexo lightweight workbench.</li>
+     * <li>Queries DingTalk meeting transcripts that the current platform user has access to, based on the startTime and endTime provided by the caller.</li>
+     * <li>The time must include a time zone. This operation does not use recentDays and does not determine the time range on behalf of the caller.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the list of DingTalk meeting minutes for the Winnexo lightweight workbench.</p>
+     * 
+     * @param request ListAliDingMinutesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAliDingMinutesResponse
+     */
+    public ListAliDingMinutesResponse listAliDingMinutesWithOptions(ListAliDingMinutesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cursor)) {
+            body.put("cursor", request.cursor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("endTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("startTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAliDingMinutes"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/listAliDingMinutes"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAliDingMinutesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation is exclusively for the Winnexo lightweight workbench.</li>
+     * <li>Queries DingTalk meeting transcripts that the current platform user has access to, based on the startTime and endTime provided by the caller.</li>
+     * <li>The time must include a time zone. This operation does not use recentDays and does not determine the time range on behalf of the caller.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the list of DingTalk meeting minutes for the Winnexo lightweight workbench.</p>
+     * 
+     * @param request ListAliDingMinutesRequest
+     * @return ListAliDingMinutesResponse
+     */
+    public ListAliDingMinutesResponse listAliDingMinutes(ListAliDingMinutesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAliDingMinutesWithOptions(request, headers, runtime);
     }
 
     /**
@@ -5723,14 +6225,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Request description</h2>
      * <ul>
      * <li>This operation queries the bill list based on specified conditions.</li>
-     * <li>Supports filtering by tenant, user, operation type, status, time range, business source, and other conditions.</li>
-     * <li>Returns bill data in pages. The default page size is 20 records.</li>
+     * <li>Filtering is supported by tenant, user, operation type, status, time range, business source, and other conditions.</li>
+     * <li>Bill data is returned in pages. By default, 20 records are displayed per page.</li>
      * <li>You can choose whether to filter out bills with zero credit consumption. By default, such bills are filtered out.</li>
-     * <li>Authentication information (such as AK, BearerToken, or APP authentication) is required for the request.</li>
+     * <li>Provide the required authentication information (such as AccessKey pair, BearerToken, or APP authentication) when you send a request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries and filters the bill list through OpenAPI with support for multiple filter conditions.</p>
+     * <p>Queries and filters a bill list by using OpenAPI. Multiple filter conditions are supported.</p>
      * 
      * @param request ListBillingRequest
      * @param headers map
@@ -5809,14 +6311,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Request description</h2>
      * <ul>
      * <li>This operation queries the bill list based on specified conditions.</li>
-     * <li>Supports filtering by tenant, user, operation type, status, time range, business source, and other conditions.</li>
-     * <li>Returns bill data in pages. The default page size is 20 records.</li>
+     * <li>Filtering is supported by tenant, user, operation type, status, time range, business source, and other conditions.</li>
+     * <li>Bill data is returned in pages. By default, 20 records are displayed per page.</li>
      * <li>You can choose whether to filter out bills with zero credit consumption. By default, such bills are filtered out.</li>
-     * <li>Authentication information (such as AK, BearerToken, or APP authentication) is required for the request.</li>
+     * <li>Provide the required authentication information (such as AccessKey pair, BearerToken, or APP authentication) when you send a request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries and filters the bill list through OpenAPI with support for multiple filter conditions.</p>
+     * <p>Queries and filters a bill list by using OpenAPI. Multiple filter conditions are supported.</p>
      * 
      * @param request ListBillingRequest
      * @return ListBillingResponse
@@ -5904,6 +6406,158 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listChatSessionsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of personal draft changes for the current user under a specified graph (personal token only).
+     *     Business orchestration:
+     *     1. Draft domain identity verification (personal token only. Deployment/system-level tokens are rejected)
+     *        and semantic view permission verification.
+     *     2. Returns the active drafts of the current user (with online change risks).
+     *        In permission revocation scenarios, the system also cleans up unauthorized drafts (existing behavior).
+     *     Online risk aggregation (riskCode / riskMessage) is serialized as risk JSON text.
+     *     Error codes:
+     *     - ERR.User.TokenUserOnly: Personal drafts support only user tokens.
+     *     - ERR.GraphSchema.*: The graph does not exist.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists personal draft changes for a semantic graph.</p>
+     * 
+     * @param request ListGraphDraftResourcesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListGraphDraftResourcesResponse
+     */
+    public ListGraphDraftResourcesResponse listGraphDraftResourcesWithOptions(ListGraphDraftResourcesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.graphName)) {
+            body.put("graphName", request.graphName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListGraphDraftResources"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/listGraphDraftResources"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListGraphDraftResourcesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of personal draft changes for the current user under a specified graph (personal token only).
+     *     Business orchestration:
+     *     1. Draft domain identity verification (personal token only. Deployment/system-level tokens are rejected)
+     *        and semantic view permission verification.
+     *     2. Returns the active drafts of the current user (with online change risks).
+     *        In permission revocation scenarios, the system also cleans up unauthorized drafts (existing behavior).
+     *     Online risk aggregation (riskCode / riskMessage) is serialized as risk JSON text.
+     *     Error codes:
+     *     - ERR.User.TokenUserOnly: Personal drafts support only user tokens.
+     *     - ERR.GraphSchema.*: The graph does not exist.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists personal draft changes for a semantic graph.</p>
+     * 
+     * @param request ListGraphDraftResourcesRequest
+     * @return ListGraphDraftResourcesResponse
+     */
+    public ListGraphDraftResourcesResponse listGraphDraftResources(ListGraphDraftResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listGraphDraftResourcesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>OpenAPI 管理视角图谱列表（含草稿/发布中状态）。
+     *     返回租户级 active 图谱；graphStatus 三态：PUBLISHED / DEVELOPING（当前用户有活动草稿）/
+     *     PUBLISHING（当前用户发布中）；部署/系统级 Token 无个人身份，hasDraft 恒 false。
+     *     keyword 匹配 graphName / displayName（忽略大小写）；semanticTags 命中任一标签即保留。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>管理视角图谱列表</p>
+     * 
+     * @param tmpReq ListGraphSchemasRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListGraphSchemasResponse
+     */
+    public ListGraphSchemasResponse listGraphSchemasWithOptions(ListGraphSchemasRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListGraphSchemasShrinkRequest request = new ListGraphSchemasShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.semanticTags)) {
+            request.semanticTagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.semanticTags, "semanticTags", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            body.put("keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.semanticTagsShrink)) {
+            body.put("semanticTags", request.semanticTagsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListGraphSchemas"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/listGraphSchemas"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListGraphSchemasResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>OpenAPI 管理视角图谱列表（含草稿/发布中状态）。
+     *     返回租户级 active 图谱；graphStatus 三态：PUBLISHED / DEVELOPING（当前用户有活动草稿）/
+     *     PUBLISHING（当前用户发布中）；部署/系统级 Token 无个人身份，hasDraft 恒 false。
+     *     keyword 匹配 graphName / displayName（忽略大小写）；semanticTags 命中任一标签即保留。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>管理视角图谱列表</p>
+     * 
+     * @param request ListGraphSchemasRequest
+     * @return ListGraphSchemasResponse
+     */
+    public ListGraphSchemasResponse listGraphSchemas(ListGraphSchemasRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listGraphSchemasWithOptions(request, headers, runtime);
     }
 
     /**
@@ -6220,16 +6874,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>This API is used to drill down and query subdirectories and resources under the &quot;My Resources&quot; directory.</li>
+     * <li>This API is used to drill down and query the subdirectories and resources under the &quot;My Resources&quot; directory.</li>
      * <li>When <code>directoryId</code> is set to \&quot;root\&quot;, the service automatically resolves and returns the content under the current digital employee\&quot;s default root directory. If a specific directory ID is provided, the subdirectories and resources under that directory are returned.</li>
      * <li>Security constraint: <code>tenant_id</code> and <code>user_id</code> can only come from the authenticated identity information. These fields provided by the caller in the request body are ignored.</li>
      * <li>You can use the <code>sourceTypes</code> parameter to filter resources of specific types. When this parameter has a value, only resources that match the type condition are returned, and subdirectories are not included.</li>
-     * <li>Sorting supports ascending or descending order by name (<code>name</code>), creation time (<code>gmt_create</code>), or modification time (<code>gmt_modified</code>).</li>
+     * <li>Sorting is supported by name (<code>name</code>), creation time (<code>gmt_create</code>), or modification time (<code>gmt_modified</code>) in ascending or descending order.</li>
      * <li>The pagination feature allows you to customize the number of items displayed per page (maximum 100) and the current page number.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries subdirectories and resources under a specified digital employee resource directory.</p>
+     * <p>Queries the subdirectories and resources under a specified digital employee resource directory.</p>
      * 
      * @param tmpReq ListPersonalDirectoryContentsRequest
      * @param headers map
@@ -6301,16 +6955,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>This API is used to drill down and query subdirectories and resources under the &quot;My Resources&quot; directory.</li>
+     * <li>This API is used to drill down and query the subdirectories and resources under the &quot;My Resources&quot; directory.</li>
      * <li>When <code>directoryId</code> is set to \&quot;root\&quot;, the service automatically resolves and returns the content under the current digital employee\&quot;s default root directory. If a specific directory ID is provided, the subdirectories and resources under that directory are returned.</li>
      * <li>Security constraint: <code>tenant_id</code> and <code>user_id</code> can only come from the authenticated identity information. These fields provided by the caller in the request body are ignored.</li>
      * <li>You can use the <code>sourceTypes</code> parameter to filter resources of specific types. When this parameter has a value, only resources that match the type condition are returned, and subdirectories are not included.</li>
-     * <li>Sorting supports ascending or descending order by name (<code>name</code>), creation time (<code>gmt_create</code>), or modification time (<code>gmt_modified</code>).</li>
+     * <li>Sorting is supported by name (<code>name</code>), creation time (<code>gmt_create</code>), or modification time (<code>gmt_modified</code>) in ascending or descending order.</li>
      * <li>The pagination feature allows you to customize the number of items displayed per page (maximum 100) and the current page number.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries subdirectories and resources under a specified digital employee resource directory.</p>
+     * <p>Queries the subdirectories and resources under a specified digital employee resource directory.</p>
      * 
      * @param request ListPersonalDirectoryContentsRequest
      * @return ListPersonalDirectoryContentsResponse
@@ -6498,7 +7152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, and keywords, and supports pagination.</p>
+     * <p>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, keywords, and other conditions, and supports pagination.</p>
      * <h3>Request parameters</h3>
      * <ul>
      * <li><strong>TenantId</strong>: Optional. A common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</li>
@@ -6507,11 +7161,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li><strong>Keyword</strong>: Optional. Performs a fuzzy match on the skill name or description.</li>
      * <li><strong>Page</strong>: Optional. The page number. Minimum value: 1. Default value: 1.</li>
      * <li><strong>PageSize</strong>: Optional. The number of entries per page. Valid values: 1 to 100. Default value: 20.</li>
-     * <li><strong>OperatingObjectName</strong>: Optional. The digital employee name. If specified, results are filtered by binding relationship. Must be used together with <code>BindStatus</code>.</li>
+     * <li><strong>OperatingObjectName</strong>: Optional. The name of the digital employee. If specified, results are filtered by binding relationship. Must be used together with <code>BindStatus</code>.</li>
      * <li><strong>BindStatus</strong>: Optional. The binding status. Valid values: <code>BOUND</code> (bound), <code>UNBOUND</code> (unbound global skills).</li>
      * </ul>
      * <h3>Response parameters</h3>
-     * <p>The response contains the skill list <code>items</code>, total count <code>total</code>, current page <code>page</code>, and page size <code>pageSize</code>.</p>
+     * <p>The response contains the skill list <code>items</code>, the total count <code>total</code>, the current page <code>page</code>, and the number of entries per page <code>pageSize</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Lists the skills visible to the current tenant.</p>
@@ -6585,7 +7239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, and keywords, and supports pagination.</p>
+     * <p>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, keywords, and other conditions, and supports pagination.</p>
      * <h3>Request parameters</h3>
      * <ul>
      * <li><strong>TenantId</strong>: Optional. A common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</li>
@@ -6594,11 +7248,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li><strong>Keyword</strong>: Optional. Performs a fuzzy match on the skill name or description.</li>
      * <li><strong>Page</strong>: Optional. The page number. Minimum value: 1. Default value: 1.</li>
      * <li><strong>PageSize</strong>: Optional. The number of entries per page. Valid values: 1 to 100. Default value: 20.</li>
-     * <li><strong>OperatingObjectName</strong>: Optional. The digital employee name. If specified, results are filtered by binding relationship. Must be used together with <code>BindStatus</code>.</li>
+     * <li><strong>OperatingObjectName</strong>: Optional. The name of the digital employee. If specified, results are filtered by binding relationship. Must be used together with <code>BindStatus</code>.</li>
      * <li><strong>BindStatus</strong>: Optional. The binding status. Valid values: <code>BOUND</code> (bound), <code>UNBOUND</code> (unbound global skills).</li>
      * </ul>
      * <h3>Response parameters</h3>
-     * <p>The response contains the skill list <code>items</code>, total count <code>total</code>, current page <code>page</code>, and page size <code>pageSize</code>.</p>
+     * <p>The response contains the skill list <code>items</code>, the total count <code>total</code>, the current page <code>page</code>, and the number of entries per page <code>pageSize</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Lists the skills visible to the current tenant.</p>
@@ -7624,17 +8278,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>This API queries primary object data with pagination based on a specified operating object name (such as <code>customer_1</code>).</li>
-     * <li>Supports keyword-based searching and allows you to specify whether to return only objects marked as favorites.</li>
-     * <li>Complex filter conditions can be used to further refine results, including but not limited to logical operators such as equal to, not equal to, greater than, and less than.</li>
+     * <li>This API operation queries primary object data with paging by a specified operating object name (such as <code>customer_1</code>).</li>
+     * <li>You can search by keyword and specify whether to return only objects marked as favorites.</li>
+     * <li>You can use complex filter conditions to further narrow results, including but not limited to operators such as equal to, not equal to, greater than, and less than.</li>
      * <li>If no primary object type is configured, an empty result set is returned.</li>
-     * <li>Data included in the request undergoes authentication and filtering to ensure security and accuracy.</li>
+     * <li>The data in the request is subject to authentication and filtering to ensure security and accuracy.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries primary object data by operating object name with pagination, and supports filtering and searching.</p>
+     * <p>Queries primary object data with paging by operating object name, with support for filtering and search.</p>
      * 
      * @param request QueryPrimaryObjectDataRequest
      * @param headers map
@@ -7690,17 +8344,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>This API queries primary object data with pagination based on a specified operating object name (such as <code>customer_1</code>).</li>
-     * <li>Supports keyword-based searching and allows you to specify whether to return only objects marked as favorites.</li>
-     * <li>Complex filter conditions can be used to further refine results, including but not limited to logical operators such as equal to, not equal to, greater than, and less than.</li>
+     * <li>This API operation queries primary object data with paging by a specified operating object name (such as <code>customer_1</code>).</li>
+     * <li>You can search by keyword and specify whether to return only objects marked as favorites.</li>
+     * <li>You can use complex filter conditions to further narrow results, including but not limited to operators such as equal to, not equal to, greater than, and less than.</li>
      * <li>If no primary object type is configured, an empty result set is returned.</li>
-     * <li>Data included in the request undergoes authentication and filtering to ensure security and accuracy.</li>
+     * <li>The data in the request is subject to authentication and filtering to ensure security and accuracy.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries primary object data by operating object name with pagination, and supports filtering and searching.</p>
+     * <p>Queries primary object data with paging by operating object name, with support for filtering and search.</p>
      * 
      * @param request QueryPrimaryObjectDataRequest
      * @return QueryPrimaryObjectDataResponse
@@ -7854,13 +8508,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>Based on the most recent N messages in a session and the skills attached to the agent, this operation invokes an LLM to generate 0 to 3 next-step recommendations (follow-up questions or recommended skills to execute).</p>
+     * <p>Based on the most recent N messages in a session and the skills attached to the agent, invokes an LLM to generate 0 to 3 next-step recommendations (follow-up questions or recommended skills to execute).</p>
      * <ul>
      * <li><code>sessionId</code>: The session ID. Required. Only sessions that the currently authenticated user has permission to access are allowed.</li>
-     * <li><code>recentMessageCount</code>: The number of recent messages used to assemble contextual information. Valid values: 1 to 30. Default value: 10 (approximately 5 rounds of user+assistant conversation).</li>
-     * <li><code>customPrompt</code>: A custom recommendation instruction (up to 10,000 characters). This is injected into the default recommendation template as a custom instruction (before the output format constraints). The output is still subject to the JSON format and type constraints of the template.</li>
-     * <li><code>outputType</code>: The output type filter. followUpOnly = follow-up recommendations only (default). skillOnly = skill recommendations only. both = generate both types.
-     * Unlike internal endpoints, API calls are not restricted by the next-step recommendation toggle in user personal settings and always execute recommendation generation.</li>
+     * <li><code>recentMessageCount</code>: The number of recent messages used to assemble the contextual information. Valid values: 1 to 30. Default value: 10 (approximately 5 rounds of user+assistant conversation).</li>
+     * <li><code>customPrompt</code>: A custom recommendation instruction (up to 10,000 characters). This instruction is injected into the default recommendation template before the output format constraints. The output is still subject to the JSON format and type constraints of the template.</li>
+     * <li><code>outputType</code>: Filters the output type. followUpOnly = follow-up question recommendations only (default). skillOnly = skill recommendations only. both = generates both types.
+     * Unlike internal endpoints, API calls are not restricted by the next-step recommendation toggle in user personal settings and always perform recommendation generation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7917,13 +8571,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>Based on the most recent N messages in a session and the skills attached to the agent, this operation invokes an LLM to generate 0 to 3 next-step recommendations (follow-up questions or recommended skills to execute).</p>
+     * <p>Based on the most recent N messages in a session and the skills attached to the agent, invokes an LLM to generate 0 to 3 next-step recommendations (follow-up questions or recommended skills to execute).</p>
      * <ul>
      * <li><code>sessionId</code>: The session ID. Required. Only sessions that the currently authenticated user has permission to access are allowed.</li>
-     * <li><code>recentMessageCount</code>: The number of recent messages used to assemble contextual information. Valid values: 1 to 30. Default value: 10 (approximately 5 rounds of user+assistant conversation).</li>
-     * <li><code>customPrompt</code>: A custom recommendation instruction (up to 10,000 characters). This is injected into the default recommendation template as a custom instruction (before the output format constraints). The output is still subject to the JSON format and type constraints of the template.</li>
-     * <li><code>outputType</code>: The output type filter. followUpOnly = follow-up recommendations only (default). skillOnly = skill recommendations only. both = generate both types.
-     * Unlike internal endpoints, API calls are not restricted by the next-step recommendation toggle in user personal settings and always execute recommendation generation.</li>
+     * <li><code>recentMessageCount</code>: The number of recent messages used to assemble the contextual information. Valid values: 1 to 30. Default value: 10 (approximately 5 rounds of user+assistant conversation).</li>
+     * <li><code>customPrompt</code>: A custom recommendation instruction (up to 10,000 characters). This instruction is injected into the default recommendation template before the output format constraints. The output is still subject to the JSON format and type constraints of the template.</li>
+     * <li><code>outputType</code>: Filters the output type. followUpOnly = follow-up question recommendations only (default). skillOnly = skill recommendations only. both = generates both types.
+     * Unlike internal endpoints, API calls are not restricted by the next-step recommendation toggle in user personal settings and always perform recommendation generation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8834,18 +9488,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Operation description</h2>
      * <p>This API retrieves and retries all data sources in FAILED status under a specified enterprise knowledge base directory (including its subdirectories). The request returns immediately, and the actual retry operations are executed asynchronously in the background.</p>
      * <ul>
-     * <li><strong>Authentication</strong>: In addition to basic authentication, the <code>DEVELOPMENT_KB_MANAGE</code> permission is required.</li>
+     * <li><strong>Authentication</strong>: In addition to basic authentication, the DEVELOPMENT_KB_MANAGE permission is required.</li>
      * <li><strong>Security constraints</strong>: Only callers with the corresponding tenant and user identity are allowed access, and KB management permission is required. Administrators can initiate retries for failed resources of any user.</li>
      * <li><strong>Parameters</strong>:<ul>
-     * <li><code>directoryId</code> (required): The ID of the enterprise knowledge base directory to check and retry failed data sources.</li>
+     * <li><code>directoryId</code> (required): The ID of the enterprise knowledge base directory for which to check and retry failed data sources.</li>
      * <li><code>tenantId</code> (optional): The tenant ID. The default tenant of the caller is used if this parameter is not specified.</li>
      * </ul>
      * </li>
-     * <li><strong>Response</strong>: On success, returns the number of data sources enqueued for retry and related details.</li>
+     * <li><strong>Response</strong>: On success, the response includes the number of data sources enqueued for retry and their details.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retries all data sources in failed status under a specified directory in batches.</p>
+     * <p>Retries all data sources in failed status under a specified directory in batch.</p>
      * 
      * @param request RetryKnowledgeBaseFailedSourcesRequest
      * @param headers map
@@ -8888,18 +9542,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Operation description</h2>
      * <p>This API retrieves and retries all data sources in FAILED status under a specified enterprise knowledge base directory (including its subdirectories). The request returns immediately, and the actual retry operations are executed asynchronously in the background.</p>
      * <ul>
-     * <li><strong>Authentication</strong>: In addition to basic authentication, the <code>DEVELOPMENT_KB_MANAGE</code> permission is required.</li>
+     * <li><strong>Authentication</strong>: In addition to basic authentication, the DEVELOPMENT_KB_MANAGE permission is required.</li>
      * <li><strong>Security constraints</strong>: Only callers with the corresponding tenant and user identity are allowed access, and KB management permission is required. Administrators can initiate retries for failed resources of any user.</li>
      * <li><strong>Parameters</strong>:<ul>
-     * <li><code>directoryId</code> (required): The ID of the enterprise knowledge base directory to check and retry failed data sources.</li>
+     * <li><code>directoryId</code> (required): The ID of the enterprise knowledge base directory for which to check and retry failed data sources.</li>
      * <li><code>tenantId</code> (optional): The tenant ID. The default tenant of the caller is used if this parameter is not specified.</li>
      * </ul>
      * </li>
-     * <li><strong>Response</strong>: On success, returns the number of data sources enqueued for retry and related details.</li>
+     * <li><strong>Response</strong>: On success, the response includes the number of data sources enqueued for retry and their details.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retries all data sources in failed status under a specified directory in batches.</p>
+     * <p>Retries all data sources in failed status under a specified directory in batch.</p>
      * 
      * @param request RetryKnowledgeBaseFailedSourcesRequest
      * @return RetryKnowledgeBaseFailedSourcesResponse
@@ -8908,6 +9562,85 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.retryKnowledgeBaseFailedSourcesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Revokes a single semantic resource draft via OpenAPI (personal token only).
+     *     Business orchestration:
+     *     1. Draft domain identity verification (personal token only. Deploy/system-level tokens are rejected)
+     *        and semantic management permission verification.
+     *     2. When graphName is provided, verifies draft ownership consistency (prevents accidental cross-knowledge-graph deletion).
+     *        If the draft no longer exists, returns reverted=false (idempotent semantics, no error is reported).
+     *     Error codes:
+     *     - ERR.User.TokenUserOnly: Personal drafts support only user tokens.
+     *     - ERR.Robject.Global.InvalidParameter: draftChangeId does not belong to the specified knowledge graph.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Revokes a single semantic resource draft.</p>
+     * 
+     * @param request RevertGraphDraftResourceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RevertGraphDraftResourceResponse
+     */
+    public RevertGraphDraftResourceResponse revertGraphDraftResourceWithOptions(RevertGraphDraftResourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.draftChangeId)) {
+            body.put("draftChangeId", request.draftChangeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.graphName)) {
+            body.put("graphName", request.graphName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RevertGraphDraftResource"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/revertGraphDraftResource"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RevertGraphDraftResourceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Revokes a single semantic resource draft via OpenAPI (personal token only).
+     *     Business orchestration:
+     *     1. Draft domain identity verification (personal token only. Deploy/system-level tokens are rejected)
+     *        and semantic management permission verification.
+     *     2. When graphName is provided, verifies draft ownership consistency (prevents accidental cross-knowledge-graph deletion).
+     *        If the draft no longer exists, returns reverted=false (idempotent semantics, no error is reported).
+     *     Error codes:
+     *     - ERR.User.TokenUserOnly: Personal drafts support only user tokens.
+     *     - ERR.Robject.Global.InvalidParameter: draftChangeId does not belong to the specified knowledge graph.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Revokes a single semantic resource draft.</p>
+     * 
+     * @param request RevertGraphDraftResourceRequest
+     * @return RevertGraphDraftResourceResponse
+     */
+    public RevertGraphDraftResourceResponse revertGraphDraftResource(RevertGraphDraftResourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.revertGraphDraftResourceWithOptions(request, headers, runtime);
     }
 
     /**
@@ -9098,6 +9831,101 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.runSkillWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>OpenAPI 保存单个语义资源草稿（仅个人 Token）。
+     *     业务编排：
+     *     1. 草稿域身份校验（仅个人 Token；部署/系统级 Token 被拒绝）
+     *        与语义管理权限校验
+     *     2. 委托个人草稿服务保存（来源固定 YAML），底层含资源级写权限校验；
+     *        内容与在线完全一致时跳过落库，摘要字段返回 null
+     *     错误码：
+     *     - ERR.User.TokenUserOnly: 个人草稿仅支持用户 Token
+     *     - ERR.Robject.Global.InvalidParameter: resourceType/elementType 组合不合法
+     *     - ERR.GraphSchema.*: 图谱不存在 / 资源命名与归属校验失败
+     *     - ERR.Robject.Global.ResourceNotFound: 资源不存在等底层校验失败</p>
+     * 
+     * <b>summary</b> : 
+     * <p>保存单个语义资源草稿</p>
+     * 
+     * @param request SaveGraphDraftResourceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SaveGraphDraftResourceResponse
+     */
+    public SaveGraphDraftResourceResponse saveGraphDraftResourceWithOptions(SaveGraphDraftResourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.elementType)) {
+            body.put("elementType", request.elementType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.graphName)) {
+            body.put("graphName", request.graphName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceName)) {
+            body.put("resourceName", request.resourceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            body.put("resourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.yamlEdit)) {
+            body.put("yamlEdit", request.yamlEdit);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SaveGraphDraftResource"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/saveGraphDraftResource"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SaveGraphDraftResourceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>OpenAPI 保存单个语义资源草稿（仅个人 Token）。
+     *     业务编排：
+     *     1. 草稿域身份校验（仅个人 Token；部署/系统级 Token 被拒绝）
+     *        与语义管理权限校验
+     *     2. 委托个人草稿服务保存（来源固定 YAML），底层含资源级写权限校验；
+     *        内容与在线完全一致时跳过落库，摘要字段返回 null
+     *     错误码：
+     *     - ERR.User.TokenUserOnly: 个人草稿仅支持用户 Token
+     *     - ERR.Robject.Global.InvalidParameter: resourceType/elementType 组合不合法
+     *     - ERR.GraphSchema.*: 图谱不存在 / 资源命名与归属校验失败
+     *     - ERR.Robject.Global.ResourceNotFound: 资源不存在等底层校验失败</p>
+     * 
+     * <b>summary</b> : 
+     * <p>保存单个语义资源草稿</p>
+     * 
+     * @param request SaveGraphDraftResourceRequest
+     * @return SaveGraphDraftResourceResponse
+     */
+    public SaveGraphDraftResourceResponse saveGraphDraftResource(SaveGraphDraftResourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.saveGraphDraftResourceWithOptions(request, headers, runtime);
     }
 
     /**
@@ -9379,6 +10207,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>仅供 Winnexo 轻量工作台使用。</li>
+     * <li>按关键词分页搜索当前平台用户可见的阿里钉群聊。</li>
+     * <li>响应不包含 DWS 原始对象。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Winnexo 轻量工作台搜索阿里钉群聊。</p>
+     * 
+     * @param request SearchAliDingGroupChatsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchAliDingGroupChatsResponse
+     */
+    public SearchAliDingGroupChatsResponse searchAliDingGroupChatsWithOptions(SearchAliDingGroupChatsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cursor)) {
+            body.put("cursor", request.cursor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeMuted)) {
+            body.put("excludeMuted", request.excludeMuted);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            body.put("keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchAliDingGroupChats"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/searchAliDingGroupChats"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchAliDingGroupChatsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>仅供 Winnexo 轻量工作台使用。</li>
+     * <li>按关键词分页搜索当前平台用户可见的阿里钉群聊。</li>
+     * <li>响应不包含 DWS 原始对象。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Winnexo 轻量工作台搜索阿里钉群聊。</p>
+     * 
+     * @param request SearchAliDingGroupChatsRequest
+     * @return SearchAliDingGroupChatsResponse
+     */
+    public SearchAliDingGroupChatsResponse searchAliDingGroupChats(SearchAliDingGroupChatsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.searchAliDingGroupChatsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Asynchronously sends a session message.</p>
      * 
      * <b>summary</b> : 
@@ -9425,6 +10334,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.directChat)) {
             body.put("directChat", request.directChat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableWebSearch)) {
+            body.put("enableWebSearch", request.enableWebSearch);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.filesShrink)) {
@@ -9488,14 +10401,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</li>
+     * <li>This API operation is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</li>
      * <li><code>source_type</code> is fixed to <code>FILE</code>, <code>scope</code> is fixed to <code>PERSONAL</code>, and <code>platform</code> is fixed to <code>LOCAL</code>.</li>
-     * <li>The file must include an OSS persistent address (<code>filePath</code>). Other information such as the public access URL and original file name is optional.</li>
-     * <li>If no target folder ID (<code>directoryId</code>) is specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</li>
-     * <li>Multiple authentication methods (AK, BearerToken, APP) are supported to authenticate requests.</li>
-     * <li>The operation type is write, and operation logs are recorded for subsequent auditing.</li>
+     * <li>A persistent OSS address (<code>filePath</code>) must be provided for the file. Other information such as the public access URL and original file name is optional.</li>
+     * <li>If the target folder ID (<code>directoryId</code>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the invoker.</li>
+     * <li>Multiple authentication methods (AK, BearerToken, APP) are supported for security authentication.</li>
+     * <li>The operation type is write (<code>write</code>), and operation logs are recorded for subsequent auditing.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9544,6 +10457,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("directChat", request.directChat);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableWebSearch)) {
+            body.put("enableWebSearch", request.enableWebSearch);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.filesShrink)) {
             body.put("files", request.filesShrink);
         }
@@ -9589,14 +10506,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</li>
+     * <li>This API operation is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</li>
      * <li><code>source_type</code> is fixed to <code>FILE</code>, <code>scope</code> is fixed to <code>PERSONAL</code>, and <code>platform</code> is fixed to <code>LOCAL</code>.</li>
-     * <li>The file must include an OSS persistent address (<code>filePath</code>). Other information such as the public access URL and original file name is optional.</li>
-     * <li>If no target folder ID (<code>directoryId</code>) is specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</li>
-     * <li>Multiple authentication methods (AK, BearerToken, APP) are supported to authenticate requests.</li>
-     * <li>The operation type is write, and operation logs are recorded for subsequent auditing.</li>
+     * <li>A persistent OSS address (<code>filePath</code>) must be provided for the file. Other information such as the public access URL and original file name is optional.</li>
+     * <li>If the target folder ID (<code>directoryId</code>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the invoker.</li>
+     * <li>Multiple authentication methods (AK, BearerToken, APP) are supported for security authentication.</li>
+     * <li>The operation type is write (<code>write</code>), and operation logs are recorded for subsequent auditing.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9929,6 +10846,195 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This API is used for speech-to-text (ASR) and uses the <strong>file transfer upload</strong> mode (<code>fileTransfer</code>). Audio files are not transmitted through the request body of this API. Instead, the audio file is first uploaded to OSS, and then the OSS address is passed to the backend through the <code>FileUrl</code> parameter. The backend retrieves the audio bytes from that address and calls the ASR model to convert them to text.</p>
+     * <h3>Call methods</h3>
+     * <ul>
+     * <li><strong>Recommended</strong>: Use the <code>TranscribeChatVoiceAdvance</code> method generated by the SDK. Pass in the local audio file stream, and the SDK automatically completes the transfer upload and populates the <code>FileUrl</code> parameter.</li>
+     * <li><strong>Direct upload</strong>: Upload the audio file to an OSS address accessible by the server, and then call this API directly with the <code>FileUrl</code> parameter.</li>
+     * </ul>
+     * <h3>Request parameters</h3>
+     * <ul>
+     * <li><strong>FileUrl</strong>: Required. The OSS address of the audio file. When you use the Advance method, the SDK automatically populates this parameter. You do not need to set it manually.</li>
+     * <li><strong>FileName</strong>: Required. The original file name including the extension, such as <code>meeting.mp3</code>. The OSS address generated during the transfer does not carry the original file name. The backend uses this parameter to determine the audio format, so you must explicitly specify it.</li>
+     * <li><strong>ContentType</strong>: Optional. The MIME type of the audio, such as <code>audio/mpeg</code>. If this parameter is not specified, the MIME type is determined based on the file name extension.</li>
+     * <li>Supported audio formats: mp3, wav, m4a, mp4, webm, ogg, oga, opus, flac, and amr. Maximum file size: 25 MB.</li>
+     * </ul>
+     * <h3>Response parameters</h3>
+     * <p>Returns the recognized text content <code>text</code>.</p>
+     * <h3>Before you begin</h3>
+     * <p>The tenant must have the speech recognition model (model_audio_flash) configured. If it is not configured, the error <code>ERR.Robject.Chat.VoiceAudioNotConfigured</code> is returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Converts speech to text.</p>
+     * 
+     * @param request TranscribeChatVoiceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TranscribeChatVoiceResponse
+     */
+    public TranscribeChatVoiceResponse transcribeChatVoiceWithOptions(TranscribeChatVoiceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contentType)) {
+            body.put("contentType", request.contentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            body.put("fileName", request.fileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUrl)) {
+            body.put("fileUrl", request.fileUrl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TranscribeChatVoice"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/transcribeChatVoice"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TranscribeChatVoiceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This API is used for speech-to-text (ASR) and uses the <strong>file transfer upload</strong> mode (<code>fileTransfer</code>). Audio files are not transmitted through the request body of this API. Instead, the audio file is first uploaded to OSS, and then the OSS address is passed to the backend through the <code>FileUrl</code> parameter. The backend retrieves the audio bytes from that address and calls the ASR model to convert them to text.</p>
+     * <h3>Call methods</h3>
+     * <ul>
+     * <li><strong>Recommended</strong>: Use the <code>TranscribeChatVoiceAdvance</code> method generated by the SDK. Pass in the local audio file stream, and the SDK automatically completes the transfer upload and populates the <code>FileUrl</code> parameter.</li>
+     * <li><strong>Direct upload</strong>: Upload the audio file to an OSS address accessible by the server, and then call this API directly with the <code>FileUrl</code> parameter.</li>
+     * </ul>
+     * <h3>Request parameters</h3>
+     * <ul>
+     * <li><strong>FileUrl</strong>: Required. The OSS address of the audio file. When you use the Advance method, the SDK automatically populates this parameter. You do not need to set it manually.</li>
+     * <li><strong>FileName</strong>: Required. The original file name including the extension, such as <code>meeting.mp3</code>. The OSS address generated during the transfer does not carry the original file name. The backend uses this parameter to determine the audio format, so you must explicitly specify it.</li>
+     * <li><strong>ContentType</strong>: Optional. The MIME type of the audio, such as <code>audio/mpeg</code>. If this parameter is not specified, the MIME type is determined based on the file name extension.</li>
+     * <li>Supported audio formats: mp3, wav, m4a, mp4, webm, ogg, oga, opus, flac, and amr. Maximum file size: 25 MB.</li>
+     * </ul>
+     * <h3>Response parameters</h3>
+     * <p>Returns the recognized text content <code>text</code>.</p>
+     * <h3>Before you begin</h3>
+     * <p>The tenant must have the speech recognition model (model_audio_flash) configured. If it is not configured, the error <code>ERR.Robject.Chat.VoiceAudioNotConfigured</code> is returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Converts speech to text.</p>
+     * 
+     * @param request TranscribeChatVoiceRequest
+     * @return TranscribeChatVoiceResponse
+     */
+    public TranscribeChatVoiceResponse transcribeChatVoice(TranscribeChatVoiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.transcribeChatVoiceWithOptions(request, headers, runtime);
+    }
+
+    public TranscribeChatVoiceResponse transcribeChatVoiceAdvance(TranscribeChatVoiceAdvanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        // Step 0: init client
+        com.aliyun.credentials.models.CredentialModel credentialModel = null;
+        if (com.aliyun.teautil.Common.isUnset(_credential)) {
+            throw new TeaException(TeaConverter.buildMap(
+                new TeaPair("code", "InvalidCredentials"),
+                new TeaPair("message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details.")
+            ));
+        }
+
+        credentialModel = _credential.getCredential();
+        String accessKeyId = credentialModel.accessKeyId;
+        String accessKeySecret = credentialModel.accessKeySecret;
+        String securityToken = credentialModel.securityToken;
+        String credentialType = credentialModel.type;
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
+        if (com.aliyun.teautil.Common.isUnset(credentialType)) {
+            credentialType = "access_key";
+        }
+
+        com.aliyun.teaopenapi.models.Config authConfig = com.aliyun.teaopenapi.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("securityToken", securityToken),
+            new TeaPair("type", credentialType),
+            new TeaPair("endpoint", openPlatformEndpoint),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.teaopenapi.Client authClient = new com.aliyun.teaopenapi.Client(authConfig);
+        java.util.Map<String, String> authRequest = TeaConverter.buildMap(
+            new TeaPair("Product", "WinNexo"),
+            new TeaPair("RegionId", _regionId)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest authReq = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(authRequest))
+        ));
+        com.aliyun.teaopenapi.models.Params authParams = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AuthorizeFileUpload"),
+            new TeaPair("version", "2019-12-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        java.util.Map<String, Object> authResponse = new java.util.HashMap<>();
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        java.util.Map<String, Object> ossHeader = new java.util.HashMap<>();
+        java.util.Map<String, Object> tmpBody = new java.util.HashMap<>();
+        Boolean useAccelerate = false;
+        java.util.Map<String, String> authResponseBody = new java.util.HashMap<>();
+        TranscribeChatVoiceRequest transcribeChatVoiceReq = new TranscribeChatVoiceRequest();
+        com.aliyun.openapiutil.Client.convert(request, transcribeChatVoiceReq);
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUrlObject)) {
+            Object tmpResp0 = authClient.callApi(authParams, authReq, runtime);
+            authResponse = com.aliyun.teautil.Common.assertAsMap(tmpResp0);
+            tmpBody = com.aliyun.teautil.Common.assertAsMap(authResponse.get("body"));
+            useAccelerate = com.aliyun.teautil.Common.assertAsBoolean(tmpBody.get("UseAccelerate"));
+            authResponseBody = com.aliyun.teautil.Common.stringifyMapValue(tmpBody);
+            fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponseBody.get("ObjectKey")),
+                new TeaPair("content", request.fileUrlObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = TeaConverter.buildMap(
+                new TeaPair("host", com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType)),
+                new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
+                new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
+                new TeaPair("Signature", authResponseBody.get("Signature")),
+                new TeaPair("key", authResponseBody.get("ObjectKey")),
+                new TeaPair("file", fileObj),
+                new TeaPair("success_action_status", "201")
+            );
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
+            transcribeChatVoiceReq.fileUrl = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
+        }
+
+        TranscribeChatVoiceResponse transcribeChatVoiceResp = this.transcribeChatVoiceWithOptions(transcribeChatVoiceReq, headers, runtime);
+        return transcribeChatVoiceResp;
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Switches the authorization mode for digital employee usage permissions.
      *     Business logic:
      *     1. Constructs an AuthContext from the identity.
@@ -10168,6 +11274,85 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateDirectoryWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>OpenAPI 快更图谱元信息（displayName / businessProfile），同步更新 active 记录。
+     *     displayName 与 businessProfile 至少传其一，否则返回 ERR.GraphSchema.QuickUpdateNoFieldsToUpdate。
+     *     错误码：
+     *     - ERR.GraphSchema.QuickUpdateNoFieldsToUpdate: 未传任何可更新字段
+     *     - ERR.GraphSchema.GraphNameInvalid: 图谱名称不合法
+     *     - ERR.GraphSchema.GraphSchemaNotFound: 图谱不存在
+     *     - ERR.GraphSchema.DisplayNameInvalid: 展示名不合法或重复</p>
+     * 
+     * <b>summary</b> : 
+     * <p>快更图谱元信息</p>
+     * 
+     * @param request UpdateGraphInfoRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateGraphInfoResponse
+     */
+    public UpdateGraphInfoResponse updateGraphInfoWithOptions(UpdateGraphInfoRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessProfile)) {
+            body.put("businessProfile", request.businessProfile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("displayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.graphName)) {
+            body.put("graphName", request.graphName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateGraphInfo"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/updateGraphInfo"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateGraphInfoResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>OpenAPI 快更图谱元信息（displayName / businessProfile），同步更新 active 记录。
+     *     displayName 与 businessProfile 至少传其一，否则返回 ERR.GraphSchema.QuickUpdateNoFieldsToUpdate。
+     *     错误码：
+     *     - ERR.GraphSchema.QuickUpdateNoFieldsToUpdate: 未传任何可更新字段
+     *     - ERR.GraphSchema.GraphNameInvalid: 图谱名称不合法
+     *     - ERR.GraphSchema.GraphSchemaNotFound: 图谱不存在
+     *     - ERR.GraphSchema.DisplayNameInvalid: 展示名不合法或重复</p>
+     * 
+     * <b>summary</b> : 
+     * <p>快更图谱元信息</p>
+     * 
+     * @param request UpdateGraphInfoRequest
+     * @return UpdateGraphInfoResponse
+     */
+    public UpdateGraphInfoResponse updateGraphInfo(UpdateGraphInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateGraphInfoWithOptions(request, headers, runtime);
     }
 
     /**
@@ -10876,12 +12061,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
      * <li>This API allows the caller to update some or all optional fields of a specified user. Fields that are not provided retain their original values.</li>
      * <li>Use the <code>tenantId</code> parameter to specify a tenant ID. If omitted, the default tenant of the caller is used.</li>
      * <li>After a successful update, the response body contains the complete user information object.</li>
-     * <li>This operation requires authentication and supports AK, BearerToken, and APP security schemes.</li>
+     * <li>This operation requires authentication and supports three security schemes: AK, BearerToken, and APP.</li>
      * <li>The request content type is JSON, and the operation is available only over HTTPS.</li>
      * <li>Note: The <code>profileRoleInfo</code> field is valid only when the user role is set to Others. It describes the specific role information of the user.</li>
      * </ul>
@@ -10947,12 +12132,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
      * <li>This API allows the caller to update some or all optional fields of a specified user. Fields that are not provided retain their original values.</li>
      * <li>Use the <code>tenantId</code> parameter to specify a tenant ID. If omitted, the default tenant of the caller is used.</li>
      * <li>After a successful update, the response body contains the complete user information object.</li>
-     * <li>This operation requires authentication and supports AK, BearerToken, and APP security schemes.</li>
+     * <li>This operation requires authentication and supports three security schemes: AK, BearerToken, and APP.</li>
      * <li>The request content type is JSON, and the operation is available only over HTTPS.</li>
      * <li>Note: The <code>profileRoleInfo</code> field is valid only when the user role is set to Others. It describes the specific role information of the user.</li>
      * </ul>

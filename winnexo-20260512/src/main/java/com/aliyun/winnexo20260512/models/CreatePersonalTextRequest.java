@@ -42,6 +42,15 @@ public class CreatePersonalTextRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
+     * <p>资源标签 JSON 字符串列表</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;重点&quot;,&quot;文本&quot;]</p>
+     */
+    @NameInMap("sourceTags")
+    public String sourceTags;
+
+    /**
      * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
@@ -95,6 +104,14 @@ public class CreatePersonalTextRequest extends TeaModel {
     }
     public String getOperatingObjectName() {
         return this.operatingObjectName;
+    }
+
+    public CreatePersonalTextRequest setSourceTags(String sourceTags) {
+        this.sourceTags = sourceTags;
+        return this;
+    }
+    public String getSourceTags() {
+        return this.sourceTags;
     }
 
     public CreatePersonalTextRequest setTenantId(String tenantId) {

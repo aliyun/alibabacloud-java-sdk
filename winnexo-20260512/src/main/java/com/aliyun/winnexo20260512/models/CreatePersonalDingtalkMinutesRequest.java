@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePersonalDingtalkMinutesRequest extends TeaModel {
     /**
-     * <p>The description of the pipeline.</p>
+     * <p>The pipeline description.</p>
      * 
      * <strong>example:</strong>
      * <p>Sample description</p>
@@ -51,7 +51,7 @@ public class CreatePersonalDingtalkMinutesRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>The original Shanji link (required).</p>
+     * <p>The original Shanji note link (required).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +59,15 @@ public class CreatePersonalDingtalkMinutesRequest extends TeaModel {
      */
     @NameInMap("shanjiUrl")
     public String shanjiUrl;
+
+    /**
+     * <p>A list of resource tag JSON strings.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;Important&quot;,&quot;Shanji&quot;]</p>
+     */
+    @NameInMap("sourceTags")
+    public String sourceTags;
 
     /**
      * <p>The tenant ID.</p>
@@ -120,6 +129,14 @@ public class CreatePersonalDingtalkMinutesRequest extends TeaModel {
     }
     public String getShanjiUrl() {
         return this.shanjiUrl;
+    }
+
+    public CreatePersonalDingtalkMinutesRequest setSourceTags(String sourceTags) {
+        this.sourceTags = sourceTags;
+        return this;
+    }
+    public String getSourceTags() {
+        return this.sourceTags;
     }
 
     public CreatePersonalDingtalkMinutesRequest setTenantId(String tenantId) {

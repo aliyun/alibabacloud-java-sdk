@@ -20,7 +20,7 @@ public class ListAvailableConfigsResponseBody extends TeaModel {
     public java.util.List<ListAvailableConfigsResponseBodyConfigs> configs;
 
     /**
-     * <p>The status code description.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -103,7 +103,7 @@ public class ListAvailableConfigsResponseBody extends TeaModel {
         public String platformType;
 
         /**
-         * <p>The SSO configuration ID. This field has a value only for SAML, OAuth2, or WeCom types. The value is null for custom types.</p>
+         * <p>The SSO configuration ID. This parameter has a value only for SAML, OAuth2, and WeCom types. The value is null for the custom type.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleSsoSettingsId</p>
@@ -112,7 +112,7 @@ public class ListAvailableConfigsResponseBody extends TeaModel {
         public String ssoSettingsId;
 
         /**
-         * <p>The SSO configuration name. This field has a value only for SAML, OAuth2, or WeCom types. The value is null for custom types.</p>
+         * <p>The SSO configuration name. This parameter has a value only for SAML, OAuth2, and WeCom types. The value is null for the custom type.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

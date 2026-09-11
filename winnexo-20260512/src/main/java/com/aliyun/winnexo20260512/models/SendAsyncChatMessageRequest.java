@@ -42,6 +42,15 @@ public class SendAsyncChatMessageRequest extends TeaModel {
     public Boolean directChat;
 
     /**
+     * <p>是否启用联网搜索，默认 False；任务执行场景（传 taskExecution）下以任务配置为准</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("enableWebSearch")
+    public Boolean enableWebSearch;
+
+    /**
      * <p>The list of file references. Each item is an object in which fileId is required and is returned by uploadChatFile.</p>
      */
     @NameInMap("files")
@@ -133,6 +142,14 @@ public class SendAsyncChatMessageRequest extends TeaModel {
     }
     public Boolean getDirectChat() {
         return this.directChat;
+    }
+
+    public SendAsyncChatMessageRequest setEnableWebSearch(Boolean enableWebSearch) {
+        this.enableWebSearch = enableWebSearch;
+        return this;
+    }
+    public Boolean getEnableWebSearch() {
+        return this.enableWebSearch;
     }
 
     public SendAsyncChatMessageRequest setFiles(java.util.List<SendAsyncChatMessageRequestFiles> files) {

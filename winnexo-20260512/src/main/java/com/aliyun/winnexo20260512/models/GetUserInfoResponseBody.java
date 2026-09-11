@@ -41,7 +41,7 @@ public class GetUserInfoResponseBody extends TeaModel {
     public Boolean isAdmin;
 
     /**
-     * <p>Indicates whether the current logon tenant is the system tenant (tenantId=10000).</p>
+     * <p>Indicates whether the current logon tenant is a system tenant (tenantId=10000).</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -77,7 +77,7 @@ public class GetUserInfoResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The user service description. Maximum length: 1000 characters.</p>
+     * <p>The user service description. The value can be up to 1000 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -86,7 +86,7 @@ public class GetUserInfoResponseBody extends TeaModel {
     public String offering;
 
     /**
-     * <p>The parsed result of the user service (JSON format).</p>
+     * <p>The parsed result of the user service description in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -122,7 +122,7 @@ public class GetUserInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The user self-introduction. Maximum length: 1000 characters.</p>
+     * <p>The user self-introduction. The value can be up to 1000 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>

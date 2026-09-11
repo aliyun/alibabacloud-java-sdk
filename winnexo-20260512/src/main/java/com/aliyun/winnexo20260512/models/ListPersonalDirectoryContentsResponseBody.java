@@ -154,7 +154,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
         public String objectType;
 
         /**
-         * <p>The display name of the object type, such as &quot;Customer&quot;. This value is resolved from the graph schema. The value is null when the cache is missed.</p>
+         * <p>The display name of the object type, such as &quot;Customer&quot;, resolved from the graph schema. The value is null when there is a cache miss.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -281,7 +281,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
         public java.util.List<ListPersonalDirectoryContentsResponseBodyItemsObjectBindings> objectBindings;
 
         /**
-         * <p>The number of resources in the FAILED state. This field is returned only when the top-level KB directory list is queried.</p>
+         * <p>The number of resources with the FAILED status. This parameter is returned only when the top-level KB directory is listed.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -290,7 +290,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
         public Long sourceFailedCount;
 
         /**
-         * <p>The knowledge base affiliation type. Valid values: aliding_kb_doc (DingTalk knowledge base document), normal (common knowledge).</p>
+         * <p>The knowledge base (KB) ownership type. Valid values: aliding_kb_doc (DingTalk knowledge base document) and normal (common knowledge).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -299,7 +299,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
         public String sourceKind;
 
         /**
-         * <p>The number of resources in the READY state. This field is returned only when the top-level KB directory list is queried.</p>
+         * <p>The number of resources with the READY status. This parameter is returned only when the top-level KB directory is listed.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -308,7 +308,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
         public Long sourceReadyCount;
 
         /**
-         * <p>The resource status. This field has a value only when itemType is resource.</p>
+         * <p>The resource status. This parameter has a value only when itemType is resource.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -317,7 +317,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
         public String sourceStatus;
 
         /**
-         * <p>The total number of resources under the directory and its subdirectories. This field is returned only when the top-level KB directory list is queried.</p>
+         * <p>The total number of resources under the directory and its subdirectories. This parameter is returned only when the top-level KB directory is listed.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

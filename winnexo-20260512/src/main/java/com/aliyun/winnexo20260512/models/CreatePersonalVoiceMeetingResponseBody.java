@@ -14,7 +14,7 @@ public class CreatePersonalVoiceMeetingResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The bound directory ID. This value echoes the directoryId provided in the request body. If no directoryId is specified, the value is null because the default root directory is used.</p>
+     * <p>The bound directory ID. This value is echoed back if provided in the request body. The value is null if the default root directory is used.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -68,7 +68,7 @@ public class CreatePersonalVoiceMeetingResponseBody extends TeaModel {
     public String scope;
 
     /**
-     * <p>The unique identifier on the business system side, that is, the business ID.</p>
+     * <p>The unique ID on the business system side, which is the business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>

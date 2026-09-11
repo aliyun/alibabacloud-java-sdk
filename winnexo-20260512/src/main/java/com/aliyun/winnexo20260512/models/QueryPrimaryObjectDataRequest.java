@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryPrimaryObjectDataRequest extends TeaModel {
     /**
-     * <p>The keyword for searching. The keyword is matched against the name field by default. If the schema defines a description field, the keyword is also matched against the description field.</p>
+     * <p>The keyword for search. The keyword is matched against the name field. If the schema defines a description field, the keyword is also matched against the description field.</p>
      * 
      * <strong>example:</strong>
      * <p>SampleKeyword</p>
@@ -33,7 +33,7 @@ public class QueryPrimaryObjectDataRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>The page number. Pages start from 1.</p>
+     * <p>The page number. Pages start from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +51,7 @@ public class QueryPrimaryObjectDataRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The tenant ID. This is a common parameter. You can explicitly pass it in winnexo-cli by using --tenant-id.</p>
+     * <p>The tenant ID. This is a common parameter. You can explicitly pass this parameter by using --tenant-id in winnexo-cli.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

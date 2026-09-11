@@ -23,7 +23,7 @@ public class GetChatSessionResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The message data detail structure.</p>
+     * <p>The message data details structure.</p>
      */
     @NameInMap("messages")
     public java.util.List<GetChatSessionResponseBodyMessages> messages;
@@ -38,7 +38,7 @@ public class GetChatSessionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The session information.</p>
+     * <p>The session ID.</p>
      */
     @NameInMap("session")
     public GetChatSessionResponseBodySession session;
@@ -99,7 +99,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>Indicates whether the LLM context has been cleared after this message.</p>
+         * <p>Indicates whether the LLM context was cleared after this message.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -108,7 +108,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         public Boolean contextCleared;
 
         /**
-         * <p>Indicates whether the message is copied from a shared conversation.</p>
+         * <p>Indicates whether the message was copied from a shared conversation.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -153,7 +153,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         public String role;
 
         /**
-         * <p>The username of the user who shared the message. This parameter has a value only when from_share is set to True.</p>
+         * <p>The username of the sharing source. This field has a value only when from_share is set to True.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -189,7 +189,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         public Long updateAt;
 
         /**
-         * <p>The user feedback type: LIKE | DISLIKE | CANCEL.</p>
+         * <p>The user feedback type. Valid values: LIKE, DISLIKE, and CANCEL.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -320,7 +320,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Indicates whether the creation time is older than 30 days.</p>
+         * <p>Indicates whether the creation time exceeds 30 days.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -338,7 +338,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         public java.util.Map<String, ?> metadata;
 
         /**
-         * <p>The abstract model name used by the session (quick/standard/flagship).</p>
+         * <p>The abstract model name used by the session. Valid values: quick, standard, and flagship.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

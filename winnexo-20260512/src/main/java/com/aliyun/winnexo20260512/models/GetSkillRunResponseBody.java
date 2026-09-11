@@ -41,7 +41,7 @@ public class GetSkillRunResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The task end time in ISO 8601 format. This parameter has a value only in desired states (Succeeded, Failed, or Cancelled).</p>
+     * <p>The task end time in ISO 8601 format. This parameter has a value only when the task is in a desired state (Succeeded, Failed, or Cancelled).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -56,7 +56,7 @@ public class GetSkillRunResponseBody extends TeaModel {
     public java.util.List<java.util.Map<String, ?>> logs;
 
     /**
-     * <p>The status code description.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>

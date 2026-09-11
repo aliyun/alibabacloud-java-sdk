@@ -42,7 +42,16 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public Boolean directChat;
 
     /**
-     * <p>The list of file references. Each item is an object in which fileId is required and is returned by uploadChatFile.</p>
+     * <p>Specifies whether to enable web search. Default value: False. In task execution scenarios (when taskExecution is passed), the task configuration takes precedence.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("enableWebSearch")
+    public Boolean enableWebSearch;
+
+    /**
+     * <p>The list of file references. Each item is an object, and fileId is required (returned by uploadChatFile).</p>
      */
     @NameInMap("files")
     public String filesShrink;
@@ -57,7 +66,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>Specifies whether to reuse the most recent session of the digital employee when sessionId is not provided (CLI scenario). Default value: false, which creates a new session.</p>
+     * <p>Specifies whether to reuse the most recent session of the digital employee when sessionId is not passed (CLI scenario). Default value: false, which creates a new session.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -75,7 +84,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>Specifies whether to use streaming output.</p>
+     * <p>Specifies whether to enable streaming output.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -133,6 +142,14 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     }
     public Boolean getDirectChat() {
         return this.directChat;
+    }
+
+    public SendChatMessageShrinkRequest setEnableWebSearch(Boolean enableWebSearch) {
+        this.enableWebSearch = enableWebSearch;
+        return this;
+    }
+    public Boolean getEnableWebSearch() {
+        return this.enableWebSearch;
     }
 
     public SendChatMessageShrinkRequest setFilesShrink(String filesShrink) {

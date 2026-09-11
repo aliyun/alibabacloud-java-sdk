@@ -48,6 +48,15 @@ public class CreatePersonalAlidingKnowledgeBaseShrinkRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
+     * <p>The list of resource tag JSON strings applied to all child sources created during knowledge base synchronization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;Key&quot;,&quot;KnowledgeBase&quot;]</p>
+     */
+    @NameInMap("sourceTags")
+    public String sourceTags;
+
+    /**
      * <p>The synchronization settings.</p>
      */
     @NameInMap("syncConfig")
@@ -105,6 +114,14 @@ public class CreatePersonalAlidingKnowledgeBaseShrinkRequest extends TeaModel {
     }
     public String getOperatingObjectName() {
         return this.operatingObjectName;
+    }
+
+    public CreatePersonalAlidingKnowledgeBaseShrinkRequest setSourceTags(String sourceTags) {
+        this.sourceTags = sourceTags;
+        return this;
+    }
+    public String getSourceTags() {
+        return this.sourceTags;
     }
 
     public CreatePersonalAlidingKnowledgeBaseShrinkRequest setSyncConfigShrink(String syncConfigShrink) {

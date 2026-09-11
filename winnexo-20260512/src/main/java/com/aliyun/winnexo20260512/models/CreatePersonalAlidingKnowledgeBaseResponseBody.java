@@ -32,7 +32,7 @@ public class CreatePersonalAlidingKnowledgeBaseResponseBody extends TeaModel {
     public String gmtCreate;
 
     /**
-     * <p>The knowledge base URL (echoed from the request parameter for caller alignment).</p>
+     * <p>The knowledge base URL. This echoes the input parameter for the caller to verify alignment.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></p>
@@ -79,8 +79,8 @@ public class CreatePersonalAlidingKnowledgeBaseResponseBody extends TeaModel {
     /**
      * <p>The status. Valid values:</p>
      * <ul>
-     * <li>200: Success.</li>
-     * <li>500: Failure.</li>
+     * <li>200: Succeeded.</li>
+     * <li>500: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

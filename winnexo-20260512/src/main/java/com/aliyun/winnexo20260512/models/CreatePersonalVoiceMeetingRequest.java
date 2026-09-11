@@ -52,6 +52,15 @@ public class CreatePersonalVoiceMeetingRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
+     * <p>The list of resource tag JSON strings.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;Key&quot;,&quot;Meeting&quot;]</p>
+     */
+    @NameInMap("sourceTags")
+    public String sourceTags;
+
+    /**
      * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
@@ -103,6 +112,14 @@ public class CreatePersonalVoiceMeetingRequest extends TeaModel {
     }
     public String getOperatingObjectName() {
         return this.operatingObjectName;
+    }
+
+    public CreatePersonalVoiceMeetingRequest setSourceTags(String sourceTags) {
+        this.sourceTags = sourceTags;
+        return this;
+    }
+    public String getSourceTags() {
+        return this.sourceTags;
     }
 
     public CreatePersonalVoiceMeetingRequest setTenantId(String tenantId) {

@@ -77,7 +77,7 @@ public class CreatePersonalAlidingDocResponseBody extends TeaModel {
     public String scope;
 
     /**
-     * <p>The unique identifier on the business system side, that is, the business ID.</p>
+     * <p>The unique ID on the business system side, which is the business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2000413</p>
@@ -88,8 +88,8 @@ public class CreatePersonalAlidingDocResponseBody extends TeaModel {
     /**
      * <p>The call status. Valid values:</p>
      * <ul>
-     * <li><strong>PENDING</strong>: Waiting for receipt.</li>
-     * <li><strong>SUCCESS</strong>: Succeeded.</li>
+     * <li><strong>PENDING</strong>: Waiting for a receipt.</li>
+     * <li><strong>SUCCESS</strong>: Successful.</li>
      * <li><strong>FAILED</strong>: Failed.</li>
      * <li><strong>TIMEOUT</strong>: Timed out.</li>
      * </ul>

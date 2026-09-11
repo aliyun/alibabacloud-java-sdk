@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAvailableConfigsRequest extends TeaModel {
     /**
-     * <p>The tenant ID. This is a common parameter. Pass it explicitly through --tenant-id in winnexo-cli.</p>
+     * <p>The tenant ID. This is a common parameter. The winnexo-cli passes this parameter explicitly by using --tenant-id.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

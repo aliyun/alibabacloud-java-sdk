@@ -61,6 +61,15 @@ public class CreatePersonalAliDingMeetingRequest extends TeaModel {
     public String shanjiUrl;
 
     /**
+     * <p>A list of resource tag JSON strings.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;Important&quot;,&quot;Meeting&quot;]</p>
+     */
+    @NameInMap("sourceTags")
+    public String sourceTags;
+
+    /**
      * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
@@ -120,6 +129,14 @@ public class CreatePersonalAliDingMeetingRequest extends TeaModel {
     }
     public String getShanjiUrl() {
         return this.shanjiUrl;
+    }
+
+    public CreatePersonalAliDingMeetingRequest setSourceTags(String sourceTags) {
+        this.sourceTags = sourceTags;
+        return this;
+    }
+    public String getSourceTags() {
+        return this.sourceTags;
     }
 
     public CreatePersonalAliDingMeetingRequest setTenantId(String tenantId) {

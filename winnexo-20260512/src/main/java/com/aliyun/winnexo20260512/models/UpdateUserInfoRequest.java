@@ -14,7 +14,7 @@ public class UpdateUserInfoRequest extends TeaModel {
     public String avatar;
 
     /**
-     * <p>The language preference: zh-CN, en-US.</p>
+     * <p>The language preference: zh-CN or en-US.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -41,7 +41,7 @@ public class UpdateUserInfoRequest extends TeaModel {
     public String offering;
 
     /**
-     * <p>The user role description (used when profileRole is set to Others). Maximum length: 100 characters.</p>
+     * <p>The user role description. This parameter is used when profileRole is set to Others. Maximum length: 100 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -59,7 +59,7 @@ public class UpdateUserInfoRequest extends TeaModel {
     public String selfIntroduction;
 
     /**
-     * <p>The effective tenant ID.</p>
+     * <p>The ID of the effective tenant.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

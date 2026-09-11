@@ -41,7 +41,7 @@ public class CreatePersonalFeishuMinuteResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The resource name.</p>
+     * <p>The image name.</p>
      * 
      * <strong>example:</strong>
      * <p>issue_research</p>

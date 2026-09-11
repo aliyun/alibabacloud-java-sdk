@@ -20,7 +20,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
     public java.util.List<ListAdminKnowledgeBasesResponseBodyItems> items;
 
     /**
-     * <p>The status code description.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -56,7 +56,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The maximum number of records returned in this request.</p>
+     * <p>The maximum number of entries returned in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -127,7 +127,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
 
     public static class ListAdminKnowledgeBasesResponseBodyItemsObjectBindings extends TeaModel {
         /**
-         * <p>The semantic graph name to which the object belongs. The object_id is unique within this graph.</p>
+         * <p>The name of the semantic graph to which the object belongs. The object_id is unique within this graph.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -136,7 +136,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         public String graphName;
 
         /**
-         * <p>The ID of the recommended item, which can be a feedId or a micro-application ID.</p>
+         * <p>The ID of the recommended item, which can be a <strong>feedId</strong> or a micro-application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleObjectId</p>
@@ -154,7 +154,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         public String objectName;
 
         /**
-         * <p>The object type, such as customer. This field has a value only when type is mention.</p>
+         * <p>The object type, such as customer. This field has a value when type is set to mention.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -298,7 +298,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         public java.util.List<ListAdminKnowledgeBasesResponseBodyItemsObjectBindings> objectBindings;
 
         /**
-         * <p>The number of resources with FAILED status. This field is returned only for the top-level knowledge base directory list.</p>
+         * <p>The number of resources with the FAILED status. This field is returned only in the top-level knowledge base directory list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -307,7 +307,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         public Long sourceFailedCount;
 
         /**
-         * <p>The knowledge base ownership type. Valid values: aliding_kb_doc (DingTalk knowledge base document) and normal (common knowledge).</p>
+         * <p>The knowledge base source type. Valid values: aliding_kb_doc (DingTalk knowledge base document) and normal (common knowledge).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -316,7 +316,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         public String sourceKind;
 
         /**
-         * <p>The number of resources with READY status. This field is returned only for the top-level knowledge base directory list.</p>
+         * <p>The number of resources with the READY status. This field is returned only in the top-level knowledge base directory list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -325,7 +325,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         public Long sourceReadyCount;
 
         /**
-         * <p>The resource status. This field has a value only when itemType is resource.</p>
+         * <p>The resource status. This field has a value when itemType is set to resource.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -334,7 +334,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         public String sourceStatus;
 
         /**
-         * <p>The total number of resources in the directory and its subdirectories. This field is returned only for the top-level knowledge base directory list.</p>
+         * <p>The total number of resources in the directory and its subdirectories. This field is returned only in the top-level knowledge base directory list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

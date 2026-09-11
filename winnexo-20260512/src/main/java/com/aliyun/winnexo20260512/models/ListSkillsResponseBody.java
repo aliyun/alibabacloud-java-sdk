@@ -181,7 +181,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The actual skill code for execution.</p>
+         * <p>The skill code that is actually executed.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -217,7 +217,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The key.</p>
+         * <p>The keys.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

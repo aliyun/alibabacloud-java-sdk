@@ -38,7 +38,7 @@ public class RecommendNextActionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The meeting reservation title.</p>
+     * <p>The scheduled meeting title.</p>
      * 
      * <strong>example:</strong>
      * <p>Sample session title</p>
@@ -114,7 +114,7 @@ public class RecommendNextActionsResponseBody extends TeaModel {
          * <p>The skill name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sample skill</p>
+         * <p>SampleSkill</p>
          */
         @NameInMap("skillName")
         public String skillName;

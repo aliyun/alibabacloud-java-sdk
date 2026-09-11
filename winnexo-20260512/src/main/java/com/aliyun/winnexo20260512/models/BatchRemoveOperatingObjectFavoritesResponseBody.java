@@ -50,7 +50,7 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>The number of remaining favorited objects within the specified scope.</p>
+     * <p>The number of remaining subscribed objects within the precise scope.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -59,7 +59,7 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
     public Long remainingCount;
 
     /**
-     * <p>The number of physical favorite records that are actually deleted.</p>
+     * <p>The number of physical subscription records that are actually deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -178,7 +178,7 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
 
     public static class BatchRemoveOperatingObjectFavoritesResponseBodyResults extends TeaModel {
         /**
-         * <p>Indicates whether the object is favorited after the operation.</p>
+         * <p>Indicates whether the object is subscribed after the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -196,7 +196,7 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
         public String objectId;
 
         /**
-         * <p>Indicates whether the request has been processed.</p>
+         * <p>Indicates whether the request is processed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

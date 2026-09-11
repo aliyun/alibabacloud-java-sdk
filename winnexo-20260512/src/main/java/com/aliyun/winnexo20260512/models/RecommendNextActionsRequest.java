@@ -23,7 +23,7 @@ public class RecommendNextActionsRequest extends TeaModel {
     public String outputType;
 
     /**
-     * <p>The number of recent messages used to assemble contextual information.</p>
+     * <p>The number of recent messages used to assemble the contextual information.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -42,7 +42,7 @@ public class RecommendNextActionsRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>The tenant ID. This is a common parameter. Pass it explicitly through winnexo-cli using --tenant-id.</p>
+     * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass this value explicitly by using --tenant-id.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

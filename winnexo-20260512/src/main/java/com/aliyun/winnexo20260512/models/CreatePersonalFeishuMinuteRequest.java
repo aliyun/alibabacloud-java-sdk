@@ -15,7 +15,7 @@ public class CreatePersonalFeishuMinuteRequest extends TeaModel {
     public String credentialId;
 
     /**
-     * <p>The resource description.</p>
+     * <p>The schedule description.</p>
      * 
      * <strong>example:</strong>
      * <p>created by eventbridge</p>
@@ -43,7 +43,7 @@ public class CreatePersonalFeishuMinuteRequest extends TeaModel {
     public String minuteToken;
 
     /**
-     * <p>The resource name.</p>
+     * <p>The image name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +60,15 @@ public class CreatePersonalFeishuMinuteRequest extends TeaModel {
      */
     @NameInMap("operatingObjectName")
     public String operatingObjectName;
+
+    /**
+     * <p>The list of resource tag JSON strings.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;Important&quot;,&quot;Minutes&quot;]</p>
+     */
+    @NameInMap("sourceTags")
+    public String sourceTags;
 
     /**
      * <p>The tenant ID.</p>
@@ -121,6 +130,14 @@ public class CreatePersonalFeishuMinuteRequest extends TeaModel {
     }
     public String getOperatingObjectName() {
         return this.operatingObjectName;
+    }
+
+    public CreatePersonalFeishuMinuteRequest setSourceTags(String sourceTags) {
+        this.sourceTags = sourceTags;
+        return this;
+    }
+    public String getSourceTags() {
+        return this.sourceTags;
     }
 
     public CreatePersonalFeishuMinuteRequest setTenantId(String tenantId) {

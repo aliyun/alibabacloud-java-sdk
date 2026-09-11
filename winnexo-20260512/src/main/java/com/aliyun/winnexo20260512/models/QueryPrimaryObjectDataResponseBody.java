@@ -14,7 +14,7 @@ public class QueryPrimaryObjectDataResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The incremental information list.</p>
+     * <p>The list of incremental information.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -23,7 +23,7 @@ public class QueryPrimaryObjectDataResponseBody extends TeaModel {
     public java.util.List<java.util.Map<String, String>> items;
 
     /**
-     * <p>The error description. This parameter is empty when the request succeeds.</p>
+     * <p>The error description. This parameter is empty if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>

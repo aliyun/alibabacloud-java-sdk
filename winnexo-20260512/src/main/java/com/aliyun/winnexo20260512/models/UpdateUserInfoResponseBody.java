@@ -118,7 +118,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
 
     public static class UpdateUserInfoResponseBodyUser extends TeaModel {
         /**
-         * <p>The user profile picture URL.</p>
+         * <p>The profile picture URL of the user.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/avatar.png">https://example.com/avatar.png</a></p>
@@ -145,7 +145,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         public Boolean isSystemTenant;
 
         /**
-         * <p>The user language preference.</p>
+         * <p>The language preference of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -154,7 +154,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         public String languagePreference;
 
         /**
-         * <p>The username.</p>
+         * <p>The name of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>SampleName.pdf</p>
@@ -163,7 +163,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The user service description.</p>
+         * <p>The service description of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -172,7 +172,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         public String offering;
 
         /**
-         * <p>The parsed user service result in JSON format.</p>
+         * <p>The parsed result of the user service in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -181,7 +181,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         public String parsedOffering;
 
         /**
-         * <p>The user role.</p>
+         * <p>The role of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -190,7 +190,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         public String profileRole;
 
         /**
-         * <p>The user role description.</p>
+         * <p>The role description of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -199,7 +199,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         public String profileRoleInfo;
 
         /**
-         * <p>The user self-introduction.</p>
+         * <p>The self-introduction of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -208,7 +208,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         public String selfIntroduction;
 
         /**
-         * <p>The current tenant ID.</p>
+         * <p>The ID of the current tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -223,7 +223,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         public java.util.List<UpdateUserInfoResponseBodyUserTenantList> tenantList;
 
         /**
-         * <p>The current tenant name.</p>
+         * <p>The name of the current tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

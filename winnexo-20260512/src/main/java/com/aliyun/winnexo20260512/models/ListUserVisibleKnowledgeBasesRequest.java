@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListUserVisibleKnowledgeBasesRequest extends TeaModel {
     /**
-     * <p>The keyword for fuzzy match on knowledge base name or description.</p>
+     * <p>The keyword for fuzzy match on form component data.</p>
      * 
      * <strong>example:</strong>
-     * <p>Product knowledge</p>
+     * <p>ProductKnowledge</p>
      */
     @NameInMap("keyword")
     public String keyword;
 
     /**
-     * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly with --tenant-id.</p>
+     * <p>The tenant ID. This is a common parameter. Pass it explicitly in winnexo-cli by using --tenant-id.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

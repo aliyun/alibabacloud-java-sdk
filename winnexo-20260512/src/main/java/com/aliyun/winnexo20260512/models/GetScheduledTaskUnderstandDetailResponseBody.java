@@ -50,7 +50,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task understanding description polished by the LLM.</p>
+     * <p>The task understanding description refined by the LLM.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -139,7 +139,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The object ID. Pass the project task ID.</p>
+         * <p>The object ID. Set this parameter to the project task ID.</p>
          * <ul>
          * <li><p>For internal enterprise applications, this is the taskId obtained by calling the <a href="https://open.dingtalk.com/document/orgapp-server/create-a-project-task">Create a project task</a> operation.</p>
          * </li>
@@ -272,7 +272,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
         public String skillCode;
 
         /**
-         * <p>The list of source IDs for related skills.</p>
+         * <p>The list of related skill source IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

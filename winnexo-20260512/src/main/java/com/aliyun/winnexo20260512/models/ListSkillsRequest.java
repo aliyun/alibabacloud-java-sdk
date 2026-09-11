@@ -36,7 +36,7 @@ public class ListSkillsRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The digital employee name. Used to calculate the CodeAgent allowedSkills whitelist based on binding relationships.</p>
+     * <p>The name of the digital employee. Used to calculate the CodeAgent allowedSkills whitelist based on binding relationships.</p>
      * 
      * <strong>example:</strong>
      * <p>11111</p>

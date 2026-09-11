@@ -68,7 +68,7 @@ public class CreatePersonalDingtalkMinutesResponseBody extends TeaModel {
     public String scope;
 
     /**
-     * <p>The unique identifier on the business system side, which is the business ID.</p>
+     * <p>The unique ID on the business system side, that is, the business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleSourceId</p>

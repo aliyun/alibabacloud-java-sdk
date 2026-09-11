@@ -14,7 +14,7 @@ public class RetryKnowledgeBaseFailedSourcesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The enterprise knowledge base directory ID.</p>
+     * <p>The ID of the enterprise knowledge base directory.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -23,7 +23,7 @@ public class RetryKnowledgeBaseFailedSourcesResponseBody extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The number of resources successfully enqueued for retry.</p>
+     * <p>The number of data sources successfully enqueued for retry.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -74,7 +74,7 @@ public class RetryKnowledgeBaseFailedSourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of resources skipped (not in FAILED status).</p>
+     * <p>The number of data sources skipped because they are not in FAILED status.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

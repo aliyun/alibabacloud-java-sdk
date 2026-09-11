@@ -144,7 +144,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
 
     public static class GetScheduledTaskExecutionRecordsResponseBodyTasksTimeline extends TeaModel {
         /**
-         * <p>The actual working hours, in hours.</p>
+         * <p>The actual hours spent, in hours.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-01T12:00:00Z</p>
@@ -288,7 +288,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
 
     public static class GetScheduledTaskExecutionRecordsResponseBodyTasks extends TeaModel {
         /**
-         * <p>The ID of the collaboration group to which the task belongs. If empty, the task is a personal task.</p>
+         * <p>The ID of the collaboration group to which the task belongs. An empty value indicates a personal task.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleCollaborationGroupId</p>
@@ -326,9 +326,9 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         /**
          * <p>The execution model tier. Valid values:</p>
          * <ul>
-         * <li>flagship: flagship.</li>
-         * <li>standard: standard.</li>
-         * <li>quick: lightweight.</li>
+         * <li>flagship: Flagship.</li>
+         * <li>standard: Standard.</li>
+         * <li>quick: Lightweight.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -376,8 +376,8 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         /**
          * <p>The trigger type. Valid values:</p>
          * <ul>
-         * <li>Manual: manually executed.</li>
-         * <li>Cron: triggered by a schedule.</li>
+         * <li>Manual: Manual execution.</li>
+         * <li>Cron: Timed scheduling.</li>
          * </ul>
          * 
          * <strong>example:</strong>

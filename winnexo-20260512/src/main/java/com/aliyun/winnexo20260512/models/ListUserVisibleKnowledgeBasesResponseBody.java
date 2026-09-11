@@ -95,7 +95,7 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
 
     public static class ListUserVisibleKnowledgeBasesResponseBodyItems extends TeaModel {
         /**
-         * <p>The user ID of the creator.</p>
+         * <p>The user ID of the task creator.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -104,19 +104,19 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
         public Long creatorId;
 
         /**
-         * <p>The name of the creator.</p>
+         * <p>The creator name.</p>
          * 
          * <strong>example:</strong>
-         * <p>John</p>
+         * <p>John Doe</p>
          */
         @NameInMap("creatorName")
         public String creatorName;
 
         /**
-         * <p>The description of the knowledge base.</p>
+         * <p>The description of the to-do card type.</p>
          * 
          * <strong>example:</strong>
-         * <p>Product materials and usage instructions</p>
+         * <p>Product materials and user guides</p>
          */
         @NameInMap("description")
         public String description;
@@ -170,7 +170,7 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
          * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Product Knowledge Base</p>
+         * <p>ProductKnowledgeBase</p>
          */
         @NameInMap("name")
         public String name;
