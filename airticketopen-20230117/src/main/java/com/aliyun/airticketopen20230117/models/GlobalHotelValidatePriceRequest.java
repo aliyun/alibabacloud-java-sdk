@@ -15,7 +15,7 @@ public class GlobalHotelValidatePriceRequest extends TeaModel {
     public Long accountNo;
 
     /**
-     * <p>The number of adults per room.</p>
+     * <p>The total number of adults.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GlobalHotelValidatePriceRequest extends TeaModel {
     public Integer adults;
 
     /**
-     * <p>The number of children per room.</p>
+     * <p>The total number of children.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -34,7 +34,7 @@ public class GlobalHotelValidatePriceRequest extends TeaModel {
     public Integer children;
 
     /**
-     * <p>The list of children ages.</p>
+     * <p>The list of children\&quot;s ages.</p>
      * 
      * <strong>example:</strong>
      * <p>[8]</p>

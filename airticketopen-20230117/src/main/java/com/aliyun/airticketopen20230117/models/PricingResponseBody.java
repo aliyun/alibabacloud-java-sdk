@@ -463,6 +463,9 @@ public class PricingResponseBody extends TeaModel {
         @NameInMap("equip_type")
         public String equipType;
 
+        @NameInMap("fare_basis")
+        public String fareBasis;
+
         /**
          * <p>The flight duration in minutes.</p>
          * 
@@ -651,6 +654,14 @@ public class PricingResponseBody extends TeaModel {
         }
         public String getEquipType() {
             return this.equipType;
+        }
+
+        public PricingResponseBodyDataSolutionJourneyListSegmentList setFareBasis(String fareBasis) {
+            this.fareBasis = fareBasis;
+            return this;
+        }
+        public String getFareBasis() {
+            return this.fareBasis;
         }
 
         public PricingResponseBodyDataSolutionJourneyListSegmentList setFlightDuration(Integer flightDuration) {

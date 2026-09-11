@@ -38,7 +38,7 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -128,7 +128,7 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         public String end;
 
         /**
-         * <p>The penalty type (PERCENT/NIGHTS/NON_CANCELLABLE).</p>
+         * <p>The penalty type.</p>
          * 
          * <strong>example:</strong>
          * <p>PERCENTAGE</p>
@@ -137,7 +137,7 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         public String penaltyType;
 
         /**
-         * <p>The penalty value (percentage, amount, or number of nights). This field is not present when PenaltyType is NON_CANCELLABLE.</p>
+         * <p>The penalty value, which represents a percentage, amount, or number of nights.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -226,7 +226,7 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         public java.util.List<GlobalHotelValidatePriceResponseBodyDataCancellationPoliciesPenalties> penalties;
 
         /**
-         * <p>The cancellation policy type (FREE_CANCEL/CONDITIONAL/NON_REFUNDABLE).</p>
+         * <p>The cancellation policy type.</p>
          * 
          * <strong>example:</strong>
          * <p>FREE_CANCELLATION</p>
@@ -285,7 +285,7 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         public String amount;
 
         /**
-         * <p>The currency code (ISO 4217).</p>
+         * <p>The currency code in ISO 4217 format.</p>
          * 
          * <strong>example:</strong>
          * <p>USD</p>
@@ -335,7 +335,7 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
 
     public static class GlobalHotelValidatePriceResponseBodyDataDailyPrices extends TeaModel {
         /**
-         * <p>The date in yyyy-MM-dd format, in the local time zone of the hotel.</p>
+         * <p>The date in yyyy-MM-dd format, based on the hotel\&quot;s local time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-16</p>
@@ -400,7 +400,7 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         public String amount;
 
         /**
-         * <p>The currency code (ISO 4217).</p>
+         * <p>The currency code in ISO 4217 format.</p>
          * 
          * <strong>example:</strong>
          * <p>USD</p>
@@ -462,7 +462,7 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         public java.util.List<GlobalHotelValidatePriceResponseBodyDataDailyPrices> dailyPrices;
 
         /**
-         * <p>The price validation result ID, used for subsequent order creation.</p>
+         * <p>The price validation result ID, which is used for subsequent order creation.</p>
          * 
          * <strong>example:</strong>
          * <p>itemOffer_123</p>
