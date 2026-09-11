@@ -12989,7 +12989,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the list of applications for all PolarDB instances in a specified region.</p>
+     * <p>Retrieves the list of applications for all PolarDB instances in a specified region.</p>
      * 
      * @param request DescribeApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13045,7 +13045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the list of applications for all PolarDB instances in a specified region.</p>
+     * <p>Retrieves the list of applications for all PolarDB instances in a specified region.</p>
      * 
      * @param request DescribeApplicationsRequest
      * @return DescribeApplicationsResponse
@@ -26744,7 +26744,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation modifies the properties of a PolarDB cluster endpoint. You can configure settings such as the read/write mode, automatic node addition, consistency level, transaction splitting, the connection pool, and whether the primary node accepts read requests.</p>
+     * <p>Modifies the cluster endpoint attributes of a PolarDB cluster, including the read/write mode, whether new nodes are automatically added to the endpoint, the consistency level, transaction splitting, whether the primary node accepts read requests, and connection pooling.</p>
      * 
      * @param request ModifyDBClusterEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26828,7 +26828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation modifies the properties of a PolarDB cluster endpoint. You can configure settings such as the read/write mode, automatic node addition, consistency level, transaction splitting, the connection pool, and whether the primary node accepts read requests.</p>
+     * <p>Modifies the cluster endpoint attributes of a PolarDB cluster, including the read/write mode, whether new nodes are automatically added to the endpoint, the consistency level, transaction splitting, whether the primary node accepts read requests, and connection pooling.</p>
      * 
      * @param request ModifyDBClusterEndpointRequest
      * @return ModifyDBClusterEndpointResponse
@@ -31662,7 +31662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves knowledge base search results.</p>
+     * <p>Retrieves information from a knowledge base.</p>
      * 
      * @param request RetrievalKnowledgeBaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31714,7 +31714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves knowledge base search results.</p>
+     * <p>Retrieves information from a knowledge base.</p>
      * 
      * @param request RetrievalKnowledgeBaseRequest
      * @return RetrievalKnowledgeBaseResponse

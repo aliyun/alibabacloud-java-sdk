@@ -76,7 +76,7 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
 
     public static class RetrievalKnowledgeBaseResponseBodyResultsImageResources extends TeaModel {
         /**
-         * <p>The index of the source document that the image belongs to, starting from 0.</p>
+         * <p>The index of the source document to which the image belongs, starting from 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -85,7 +85,7 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
         public Integer documentIndex;
 
         /**
-         * <p>The unique ID of the image resource.</p>
+         * <p>The unique identifier of the image resource.</p>
          * 
          * <strong>example:</strong>
          * <p>document-0/pictures/1</p>
@@ -175,13 +175,13 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
         public java.util.List<String> captions;
 
         /**
-         * <p>The list of Docling source document structured element references associated with the chunk. You can use these references to precisely locate original elements.</p>
+         * <p>The list of Docling source document structured element references associated with the chunk. You can use these references to precisely locate elements in the original document.</p>
          */
         @NameInMap("DocItems")
         public java.util.List<String> docItems;
 
         /**
-         * <p>The unique ID of the file.</p>
+         * <p>The unique identifier of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>91b97b71-xxxx-xxxx-xxxx-33c6a6341cdc</p>
@@ -199,7 +199,7 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The chain of section headings that the chunk belongs to.</p>
+         * <p>The chain of section headings to which the chunk belongs.</p>
          */
         @NameInMap("Headings")
         public java.util.List<String> headings;
@@ -220,7 +220,7 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
         public String metadata;
 
         /**
-         * <p>The list of page numbers that the chunk belongs to.</p>
+         * <p>The list of page numbers to which the chunk belongs.</p>
          */
         @NameInMap("PageNumbers")
         public java.util.List<Integer> pageNumbers;

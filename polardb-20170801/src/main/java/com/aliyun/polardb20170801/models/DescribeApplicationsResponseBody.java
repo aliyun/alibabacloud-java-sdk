@@ -4,14 +4,11 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeApplicationsResponseBody extends TeaModel {
-    /**
-     * <p>Contains the returned applications.</p>
-     */
     @NameInMap("Items")
     public DescribeApplicationsResponseBodyItems items;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +17,7 @@ public class DescribeApplicationsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records on the current page.</p>
+     * <p>The number of entries on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +35,7 @@ public class DescribeApplicationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total record count.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -215,6 +212,13 @@ public class DescribeApplicationsResponseBody extends TeaModel {
         @NameInMap("ApplicationType")
         public String applicationType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>br-1db52a73dc8545f19a47a3f1d8</p>
+         */
+        @NameInMap("BranchId")
+        public String branchId;
+
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -277,6 +281,14 @@ public class DescribeApplicationsResponseBody extends TeaModel {
         }
         public String getApplicationType() {
             return this.applicationType;
+        }
+
+        public DescribeApplicationsResponseBodyItemsApplications setBranchId(String branchId) {
+            this.branchId = branchId;
+            return this;
+        }
+        public String getBranchId() {
+            return this.branchId;
         }
 
         public DescribeApplicationsResponseBodyItemsApplications setCreationTime(String creationTime) {
