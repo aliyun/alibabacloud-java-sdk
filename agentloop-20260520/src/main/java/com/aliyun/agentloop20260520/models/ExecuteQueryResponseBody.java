@@ -17,7 +17,7 @@ public class ExecuteQueryResponseBody extends TeaModel {
     public java.util.List<String> columns;
 
     /**
-     * <p>The metadata of the returned data.</p>
+     * <p>The metadata of the response.</p>
      */
     @NameInMap("meta")
     public ExecuteQueryResponseBodyMeta meta;
@@ -83,9 +83,15 @@ public class ExecuteQueryResponseBody extends TeaModel {
     }
 
     public static class ExecuteQueryResponseBodyMetaTruncation extends TeaModel {
+        /**
+         * <p>Indicates whether the result is truncated.</p>
+         */
         @NameInMap("truncated")
         public Boolean truncated;
 
+        /**
+         * <p>The truncation details of result rows.</p>
+         */
         @NameInMap("truncatedColumnIndexes")
         public java.util.List<java.util.List<Integer>> truncatedColumnIndexes;
 
@@ -149,6 +155,9 @@ public class ExecuteQueryResponseBody extends TeaModel {
         @NameInMap("progress")
         public String progress;
 
+        /**
+         * <p>The result truncation details.</p>
+         */
         @NameInMap("truncation")
         public ExecuteQueryResponseBodyMetaTruncation truncation;
 

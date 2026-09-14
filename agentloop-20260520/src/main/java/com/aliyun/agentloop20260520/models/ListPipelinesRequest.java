@@ -39,6 +39,13 @@ public class ListPipelinesRequest extends TeaModel {
     @NameInMap("scheduleType")
     public String scheduleType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>my-dataset</p>
+     */
+    @NameInMap("sinkName")
+    public String sinkName;
+
     public static ListPipelinesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPipelinesRequest self = new ListPipelinesRequest();
         return TeaModel.build(map, self);
@@ -82,6 +89,14 @@ public class ListPipelinesRequest extends TeaModel {
     }
     public String getScheduleType() {
         return this.scheduleType;
+    }
+
+    public ListPipelinesRequest setSinkName(String sinkName) {
+        this.sinkName = sinkName;
+        return this;
+    }
+    public String getSinkName() {
+        return this.sinkName;
     }
 
 }

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPipelineResponseBody extends TeaModel {
     /**
+     * <p>The committed watermark. The value is a UNIX timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1735660800</p>
      */
@@ -12,6 +14,7 @@ public class GetPipelineResponseBody extends TeaModel {
     public Long committedWatermark;
 
     /**
+     * <p>The time when the pipeline was created, in ISO 8601 UTC format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -21,26 +24,38 @@ public class GetPipelineResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The pipeline description.</p>
+     * 
      * <strong>example:</strong>
-     * <p>我的流水线</p>
+     * <p>My pipeline</p>
      */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The scheduling method.</p>
+     */
     @NameInMap("executePolicy")
     public GetPipelineResponseBodyExecutePolicy executePolicy;
 
     /**
+     * <p>The next scheduling trigger time. The value is a UNIX timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1735661100</p>
      */
     @NameInMap("nextTriggerTime")
     public Long nextTriggerTime;
 
+    /**
+     * <p>The pipeline configuration for node orchestration.</p>
+     */
     @NameInMap("pipeline")
     public GetPipelineResponseBodyPipeline pipeline;
 
     /**
+     * <p>The pipeline name.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-pipeline</p>
      */
@@ -48,6 +63,8 @@ public class GetPipelineResponseBody extends TeaModel {
     public String pipelineName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -55,6 +72,8 @@ public class GetPipelineResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
      */
@@ -62,19 +81,34 @@ public class GetPipelineResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The scheduling status. Valid values:</p>
+     * <ul>
+     * <li>None: No scheduling.</li>
+     * <li>Active: Active.</li>
+     * <li>Paused: Paused.</li>
+     * <li>Terminated: Terminated.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Active</p>
      */
     @NameInMap("scheduleStatus")
     public String scheduleStatus;
 
+    /**
+     * <p>The pipeline sink, which is the data write destination.</p>
+     */
     @NameInMap("sink")
     public GetPipelineResponseBodySink sink;
 
+    /**
+     * <p>The pipeline data source.</p>
+     */
     @NameInMap("source")
     public GetPipelineResponseBodySource source;
 
     /**
+     * <p>The time when the pipeline was last updated, in ISO 8601 UTC format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -84,6 +118,8 @@ public class GetPipelineResponseBody extends TeaModel {
     public String updateTime;
 
     /**
+     * <p>The workspace associated with the pipeline.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-workspace</p>
      */
@@ -209,6 +245,8 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodyExecutePolicyRunOnce extends TeaModel {
         /**
+         * <p>The start time for data processing. The value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1735660800000</p>
          */
@@ -216,6 +254,8 @@ public class GetPipelineResponseBody extends TeaModel {
         public Long fromTime;
 
         /**
+         * <p>The end time for data processing. The value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1735747200000</p>
          */
@@ -247,6 +287,8 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodyExecutePolicyScheduled extends TeaModel {
         /**
+         * <p>The scheduling start time. The value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1735660800000</p>
          */
@@ -254,6 +296,8 @@ public class GetPipelineResponseBody extends TeaModel {
         public Long fromTime;
 
         /**
+         * <p>The scheduling interval. For example, 1h.</p>
+         * 
          * <strong>example:</strong>
          * <p>1h</p>
          */
@@ -285,15 +329,23 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodyExecutePolicy extends TeaModel {
         /**
+         * <p>The scheduling mode. For example, scheduled (timed scheduling) or runOnce (one-time execution).</p>
+         * 
          * <strong>example:</strong>
          * <p>scheduled</p>
          */
         @NameInMap("mode")
         public String mode;
 
+        /**
+         * <p>The configuration for one-time execution.</p>
+         */
         @NameInMap("runOnce")
         public GetPipelineResponseBodyExecutePolicyRunOnce runOnce;
 
+        /**
+         * <p>The timed scheduling configuration.</p>
+         */
         @NameInMap("scheduled")
         public GetPipelineResponseBodyExecutePolicyScheduled scheduled;
 
@@ -330,16 +382,23 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodyPipelineNodes extends TeaModel {
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>node-1</p>
          */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The node parameters in key-value structure, which vary depending on the node type.</p>
+         */
         @NameInMap("parameters")
         public java.util.Map<String, ?> parameters;
 
         /**
+         * <p>The node type.</p>
+         * 
          * <strong>example:</strong>
          * <p>transform</p>
          */
@@ -378,6 +437,9 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     public static class GetPipelineResponseBodyPipeline extends TeaModel {
+        /**
+         * <p>The list of nodes.</p>
+         */
         @NameInMap("nodes")
         public java.util.List<GetPipelineResponseBodyPipelineNodes> nodes;
 
@@ -398,6 +460,8 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodySinkConditionDefaultSinkDataset extends TeaModel {
         /**
+         * <p>The name of the AgentSpace to which the default destination dataset belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-agent-space</p>
          */
@@ -405,6 +469,8 @@ public class GetPipelineResponseBody extends TeaModel {
         public String agentSpace;
 
         /**
+         * <p>The name of the default destination dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>other-result</p>
          */
@@ -435,10 +501,15 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     public static class GetPipelineResponseBodySinkConditionDefaultSink extends TeaModel {
+        /**
+         * <p>The default destination dataset.</p>
+         */
         @NameInMap("dataset")
         public GetPipelineResponseBodySinkConditionDefaultSinkDataset dataset;
 
         /**
+         * <p>The default destination type. Currently, only dataset is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>dataset</p>
          */
@@ -470,6 +541,8 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodySinkConditionRoutesSinkDataset extends TeaModel {
         /**
+         * <p>The name of the AgentSpace to which the destination dataset belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-agent-space</p>
          */
@@ -477,6 +550,8 @@ public class GetPipelineResponseBody extends TeaModel {
         public String agentSpace;
 
         /**
+         * <p>The name of the destination dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>refund-result</p>
          */
@@ -507,10 +582,15 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     public static class GetPipelineResponseBodySinkConditionRoutesSink extends TeaModel {
+        /**
+         * <p>The route destination dataset.</p>
+         */
         @NameInMap("dataset")
         public GetPipelineResponseBodySinkConditionRoutesSinkDataset dataset;
 
         /**
+         * <p>The route destination type. Currently, only dataset is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>dataset</p>
          */
@@ -542,6 +622,8 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodySinkConditionRoutes extends TeaModel {
         /**
+         * <p>The route expression in SPL. Only where, project, and extend are supported.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li>| where intent = \&quot;refund\&quot;</li>
@@ -551,12 +633,17 @@ public class GetPipelineResponseBody extends TeaModel {
         public String expression;
 
         /**
+         * <p>The route ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>refund</p>
          */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The route write destination.</p>
+         */
         @NameInMap("sink")
         public GetPipelineResponseBodySinkConditionRoutesSink sink;
 
@@ -592,16 +679,24 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     public static class GetPipelineResponseBodySinkCondition extends TeaModel {
+        /**
+         * <p>The default write destination used when no conditional route is matched.</p>
+         */
         @NameInMap("defaultSink")
         public GetPipelineResponseBodySinkConditionDefaultSink defaultSink;
 
         /**
+         * <p>The route match mode. Currently, only all is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>all</p>
          */
         @NameInMap("matchMode")
         public String matchMode;
 
+        /**
+         * <p>The list of conditional routes.</p>
+         */
         @NameInMap("routes")
         public java.util.List<GetPipelineResponseBodySinkConditionRoutes> routes;
 
@@ -638,6 +733,8 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodySinkDataset extends TeaModel {
         /**
+         * <p>The name of the AgentSpace to which the target dataset belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-agent-space</p>
          */
@@ -645,6 +742,8 @@ public class GetPipelineResponseBody extends TeaModel {
         public String agentSpace;
 
         /**
+         * <p>The target dataset name.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-dataset</p>
          */
@@ -675,13 +774,21 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     public static class GetPipelineResponseBodySink extends TeaModel {
+        /**
+         * <p>The conditional routing configuration. This parameter is used only when sink.type is set to condition.</p>
+         */
         @NameInMap("condition")
         public GetPipelineResponseBodySinkCondition condition;
 
+        /**
+         * <p>The target dataset configuration for the dataset sink. This parameter is used only when sink.type is set to dataset.</p>
+         */
         @NameInMap("dataset")
         public GetPipelineResponseBodySinkDataset dataset;
 
         /**
+         * <p>The sink type. Valid values: dataset and condition.</p>
+         * 
          * <strong>example:</strong>
          * <p>condition</p>
          */
@@ -721,6 +828,8 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodySourceDataset extends TeaModel {
         /**
+         * <p>The source dataset name.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-dataset</p>
          */
@@ -728,6 +837,8 @@ public class GetPipelineResponseBody extends TeaModel {
         public String dataset;
 
         /**
+         * <p>The dataset data filter condition.</p>
+         * 
          * <strong>example:</strong>
          * <p>status = \&quot;pending\&quot;</p>
          */
@@ -759,6 +870,8 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodySourceInputFields extends TeaModel {
         /**
+         * <p>The field name.</p>
+         * 
          * <strong>example:</strong>
          * <p>question</p>
          */
@@ -766,6 +879,8 @@ public class GetPipelineResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The field type. Valid values: text, long, double, and json.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -797,6 +912,8 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodySourceLogstore extends TeaModel {
         /**
+         * <p>The SLS Logstore name.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-sls-logstore</p>
          */
@@ -804,6 +921,8 @@ public class GetPipelineResponseBody extends TeaModel {
         public String logstore;
 
         /**
+         * <p>The SLS project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-sls-project</p>
          */
@@ -811,6 +930,8 @@ public class GetPipelineResponseBody extends TeaModel {
         public String project;
 
         /**
+         * <p>The data filtered query statement in SLS query/analysis syntax.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li>| SELECT *</li>
@@ -851,16 +972,27 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     public static class GetPipelineResponseBodySource extends TeaModel {
+        /**
+         * <p>The dataset datasource config under the current AgentSpace.</p>
+         */
         @NameInMap("dataset")
         public GetPipelineResponseBodySourceDataset dataset;
 
+        /**
+         * <p>The input fields and field types, applicable to all data source types.</p>
+         */
         @NameInMap("inputFields")
         public java.util.List<GetPipelineResponseBodySourceInputFields> inputFields;
 
+        /**
+         * <p>The SLS Logstore datasource config.</p>
+         */
         @NameInMap("logstore")
         public GetPipelineResponseBodySourceLogstore logstore;
 
         /**
+         * <p>The data source type. Valid values: logstore and dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>dataset</p>
          */

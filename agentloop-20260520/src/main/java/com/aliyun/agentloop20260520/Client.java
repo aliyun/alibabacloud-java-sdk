@@ -9,17 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-shenzhen", "agentloop.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-beijing", "agentloop.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "agentloop.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "agentloop.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "agentloop.cn-hongkong.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "agentloop.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "agentloop.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "agentloop.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "agentloop.cn-chengdu.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("agentloop", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -1436,6 +1425,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Calls CreateEvaluationTask to create an evaluation task in a specified AgentSpace. The server validates AgentSpace permissions, initializes evaluation result storage, checks task name uniqueness, and asynchronously creates and executes an EvaluationRun based on <code>taskMode</code> and <code>runStrategies</code>.
+     * This operation is applicable to running built-in or custom evaluators on Trace, Dataset, or SLS Log data. It supports two execution strategies: historical backfill and continuous evaluation.</p>
+     * 
      * <b>summary</b> : 
      * <p>Executes a query statement.</p>
      * 
@@ -1447,6 +1440,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ExecuteQueryResponse executeQueryWithOptions(String agentSpace, String datasetName, ExecuteQueryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.annotationFilter)) {
+            body.put("annotationFilter", request.annotationFilter);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.from)) {
             body.put("from", request.from);
         }
@@ -1498,6 +1495,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Calls CreateEvaluationTask to create an evaluation task in a specified AgentSpace. The server validates AgentSpace permissions, initializes evaluation result storage, checks task name uniqueness, and asynchronously creates and executes an EvaluationRun based on <code>taskMode</code> and <code>runStrategies</code>.
+     * This operation is applicable to running built-in or custom evaluators on Trace, Dataset, or SLS Log data. It supports two execution strategies: historical backfill and continuous evaluation.</p>
+     * 
      * <b>summary</b> : 
      * <p>Executes a query statement.</p>
      * 
@@ -1950,7 +1951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a CI/CD pipeline.</p>
+     * <p>Queries a pipeline.</p>
      * 
      * @param request GetPipelineRequest
      * @param headers map
@@ -1978,7 +1979,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a CI/CD pipeline.</p>
+     * <p>Queries a pipeline.</p>
      * 
      * @param request GetPipelineRequest
      * @return GetPipelineResponse
@@ -2086,8 +2087,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Supports filtering by region.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the list of AgentSpaces.</p>
+     * <p>Queries a list of AgentSpaces.</p>
      * 
      * @param request ListAgentSpacesRequest
      * @param headers map
@@ -2132,8 +2136,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Supports filtering by region.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the list of AgentSpaces.</p>
+     * <p>Queries a list of AgentSpaces.</p>
      * 
      * @param request ListAgentSpacesRequest
      * @return ListAgentSpacesResponse
@@ -2826,6 +2833,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.scheduleType)) {
             query.put("scheduleType", request.scheduleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sinkName)) {
+            query.put("sinkName", request.sinkName);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
