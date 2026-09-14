@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkspaceQueuesResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of records returned at a time.</p>
+     * <p>The maximum number of records returned per request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -132,7 +132,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
          * <p>The display name of the permission.</p>
          * 
          * <strong>example:</strong>
-         * <p>文件目录遍历、文件浏览</p>
+         * <p>File directory traversal, file browsing</p>
          */
         @NameInMap("displayName")
         public String displayName;
@@ -210,6 +210,15 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test queue</p>
+         */
+        @NameInMap("description")
+        public String description;
+
+        /**
          * <p>The list of queue environment types.</p>
          */
         @NameInMap("environments")
@@ -218,6 +227,9 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         @NameInMap("gpuMachineNum")
         public Integer gpuMachineNum;
 
+        /**
+         * <p>The list of GPU models.</p>
+         */
         @NameInMap("gpuSpec")
         public java.util.List<String> gpuSpec;
 
@@ -243,10 +255,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public String minResource;
 
         /**
-         * <p>The billing method. Valid values:</p>
+         * <p>The billing type. Valid values:</p>
          * <ul>
-         * <li>PayAsYouGo: pay-as-you-go</li>
-         * <li>Pre: subscription</li>
+         * <li>PayAsYouGo: pay-as-you-go.</li>
+         * <li>Pre: subscription.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -255,6 +267,9 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         @NameInMap("paymentType")
         public String paymentType;
 
+        /**
+         * <p>Indicates whether resource prefetch is enabled.</p>
+         */
         @NameInMap("preheat")
         public Boolean preheat;
 
@@ -268,6 +283,8 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public String properties;
 
         /**
+         * <p>The queue category, CPU or GPU.</p>
+         * 
          * <strong>example:</strong>
          * <p>CPU</p>
          */
@@ -284,7 +301,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public String queueName;
 
         /**
-         * <p>The queue scope.</p>
+         * <p>The queue architecture.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;arch&quot;: &quot;x86&quot;}</p>
@@ -368,6 +385,14 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         }
         public String getCreator() {
             return this.creator;
+        }
+
+        public ListWorkspaceQueuesResponseBodyQueues setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public ListWorkspaceQueuesResponseBodyQueues setEnvironments(java.util.List<String> environments) {

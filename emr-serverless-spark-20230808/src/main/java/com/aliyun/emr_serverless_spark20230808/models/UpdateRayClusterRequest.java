@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateRayClusterRequest extends TeaModel {
     /**
-     * <p>Description of the cluster.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>Ray Cluster for dev.</p>
@@ -14,7 +14,7 @@ public class UpdateRayClusterRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Ray engine version.</p>
+     * <p>The Ray DPI engine version.</p>
      * 
      * <strong>example:</strong>
      * <p>ray-1.0.0 (Ray 2.47.1, Python 3.12)</p>
@@ -23,7 +23,7 @@ public class UpdateRayClusterRequest extends TeaModel {
     public String displayReleaseVersion;
 
     /**
-     * <p>The extra parameters. This must be in JSON format.</p>
+     * <p>The extra parameters. The value must be in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -32,13 +32,13 @@ public class UpdateRayClusterRequest extends TeaModel {
     public String extraParam;
 
     /**
-     * <p>The information about the head node of the Ray cluster.</p>
+     * <p>The Ray cluster head node information.</p>
      */
     @NameInMap("headSpec")
     public UpdateRayClusterRequestHeadSpec headSpec;
 
     /**
-     * <p>The name of the Ray cluster. The name must be 1 to 64 characters in length.</p>
+     * <p>The Ray cluster name. The name must be 1 to 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>myRayCluster</p>
@@ -47,7 +47,7 @@ public class UpdateRayClusterRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The name of the network service.</p>
+     * <p>The network connectivity name.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc</p>
@@ -55,11 +55,14 @@ public class UpdateRayClusterRequest extends TeaModel {
     @NameInMap("networkServiceName")
     public String networkServiceName;
 
+    /**
+     * <p>The list of managed folder IDs to mount.</p>
+     */
     @NameInMap("volumeIds")
     public java.util.List<String> volumeIds;
 
     /**
-     * <p>The information about the worker nodes of the Ray cluster. You can specify up to 50 groups.</p>
+     * <p>The Ray cluster worker node information. A maximum of 50 groups are supported.</p>
      */
     @NameInMap("workerSpec")
     public java.util.List<UpdateRayClusterRequestWorkerSpec> workerSpec;
@@ -133,6 +136,65 @@ public class UpdateRayClusterRequest extends TeaModel {
         return this.workerSpec;
     }
 
+    public static class UpdateRayClusterRequestHeadSpecGftConfig extends TeaModel {
+        /**
+         * <p>The Redis password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
+        @NameInMap("redisPassword")
+        public String redisPassword;
+
+        /**
+         * <p>The Redis address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.4.5.6:6379</p>
+         */
+        @NameInMap("redisUrl")
+        public String redisUrl;
+
+        /**
+         * <p>The Redis username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
+        @NameInMap("redisUsername")
+        public String redisUsername;
+
+        public static UpdateRayClusterRequestHeadSpecGftConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateRayClusterRequestHeadSpecGftConfig self = new UpdateRayClusterRequestHeadSpecGftConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateRayClusterRequestHeadSpecGftConfig setRedisPassword(String redisPassword) {
+            this.redisPassword = redisPassword;
+            return this;
+        }
+        public String getRedisPassword() {
+            return this.redisPassword;
+        }
+
+        public UpdateRayClusterRequestHeadSpecGftConfig setRedisUrl(String redisUrl) {
+            this.redisUrl = redisUrl;
+            return this;
+        }
+        public String getRedisUrl() {
+            return this.redisUrl;
+        }
+
+        public UpdateRayClusterRequestHeadSpecGftConfig setRedisUsername(String redisUsername) {
+            this.redisUsername = redisUsername;
+            return this;
+        }
+        public String getRedisUsername() {
+            return this.redisUsername;
+        }
+
+    }
+
     public static class UpdateRayClusterRequestHeadSpec extends TeaModel {
         /**
          * <p>The number of CPU cores.</p>
@@ -144,6 +206,15 @@ public class UpdateRayClusterRequest extends TeaModel {
         public String cpu;
 
         /**
+         * <p>The Ray DPI engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ray-1.2.0 (Ray 2.55.1, Python 3.12)</p>
+         */
+        @NameInMap("displayReleaseVersion")
+        public String displayReleaseVersion;
+
+        /**
          * <p>Specifies whether to enable automatic scaling.</p>
          * 
          * <strong>example:</strong>
@@ -153,6 +224,32 @@ public class UpdateRayClusterRequest extends TeaModel {
         public Boolean enableAutoScaling;
 
         /**
+         * <p>The environment variables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MY_ENV=123456</p>
+         */
+        @NameInMap("env")
+        public String env;
+
+        /**
+         * <p>The GCS Fault Tolerance configuration.</p>
+         */
+        @NameInMap("gftConfig")
+        public UpdateRayClusterRequestHeadSpecGftConfig gftConfig;
+
+        /**
+         * <p>Specifies whether to enable GCS Fault Tolerance.</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("gftEnabled")
+        public Boolean gftEnabled;
+
+        /**
+         * <p>The GPU instance type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs.gn6i-c4g1.xlarge</p>
          */
@@ -160,7 +257,7 @@ public class UpdateRayClusterRequest extends TeaModel {
         public String gpuSpec;
 
         /**
-         * <p>The idle timeout in seconds for workers. This parameter is effective only when automatic scaling is enabled.</p>
+         * <p>The idle timeout period of workers after automatic scaling is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -169,7 +266,7 @@ public class UpdateRayClusterRequest extends TeaModel {
         public Integer idleTimeoutSeconds;
 
         /**
-         * <p>The memory size. Unit: Gi.</p>
+         * <p>The memory size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>8Gi</p>
@@ -178,13 +275,22 @@ public class UpdateRayClusterRequest extends TeaModel {
         public String memory;
 
         /**
-         * <p>The name of the queue.</p>
+         * <p>The queue name.</p>
          * 
          * <strong>example:</strong>
          * <p>root_queue</p>
          */
         @NameInMap("queueName")
         public String queueName;
+
+        /**
+         * <p>The Ray startup parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>--num-cpus=0</p>
+         */
+        @NameInMap("rayStartParams")
+        public String rayStartParams;
 
         public static UpdateRayClusterRequestHeadSpec build(java.util.Map<String, ?> map) throws Exception {
             UpdateRayClusterRequestHeadSpec self = new UpdateRayClusterRequestHeadSpec();
@@ -199,12 +305,44 @@ public class UpdateRayClusterRequest extends TeaModel {
             return this.cpu;
         }
 
+        public UpdateRayClusterRequestHeadSpec setDisplayReleaseVersion(String displayReleaseVersion) {
+            this.displayReleaseVersion = displayReleaseVersion;
+            return this;
+        }
+        public String getDisplayReleaseVersion() {
+            return this.displayReleaseVersion;
+        }
+
         public UpdateRayClusterRequestHeadSpec setEnableAutoScaling(Boolean enableAutoScaling) {
             this.enableAutoScaling = enableAutoScaling;
             return this;
         }
         public Boolean getEnableAutoScaling() {
             return this.enableAutoScaling;
+        }
+
+        public UpdateRayClusterRequestHeadSpec setEnv(String env) {
+            this.env = env;
+            return this;
+        }
+        public String getEnv() {
+            return this.env;
+        }
+
+        public UpdateRayClusterRequestHeadSpec setGftConfig(UpdateRayClusterRequestHeadSpecGftConfig gftConfig) {
+            this.gftConfig = gftConfig;
+            return this;
+        }
+        public UpdateRayClusterRequestHeadSpecGftConfig getGftConfig() {
+            return this.gftConfig;
+        }
+
+        public UpdateRayClusterRequestHeadSpec setGftEnabled(Boolean gftEnabled) {
+            this.gftEnabled = gftEnabled;
+            return this;
+        }
+        public Boolean getGftEnabled() {
+            return this.gftEnabled;
         }
 
         public UpdateRayClusterRequestHeadSpec setGpuSpec(String gpuSpec) {
@@ -239,6 +377,14 @@ public class UpdateRayClusterRequest extends TeaModel {
             return this.queueName;
         }
 
+        public UpdateRayClusterRequestHeadSpec setRayStartParams(String rayStartParams) {
+            this.rayStartParams = rayStartParams;
+            return this;
+        }
+        public String getRayStartParams() {
+            return this.rayStartParams;
+        }
+
     }
 
     public static class UpdateRayClusterRequestWorkerSpec extends TeaModel {
@@ -252,6 +398,26 @@ public class UpdateRayClusterRequest extends TeaModel {
         public String cpu;
 
         /**
+         * <p>The DPI engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ray-1.2.0 (Ray 2.55.1, Python 3.12)</p>
+         */
+        @NameInMap("displayReleaseVersion")
+        public String displayReleaseVersion;
+
+        /**
+         * <p>The Ray environment variables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MY_ENV=123456</p>
+         */
+        @NameInMap("env")
+        public String env;
+
+        /**
+         * <p>The GPU instance type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs.gn6i-c4g1.xlarge</p>
          */
@@ -259,7 +425,7 @@ public class UpdateRayClusterRequest extends TeaModel {
         public String gpuSpec;
 
         /**
-         * <p>The name of the worker group.</p>
+         * <p>The worker group name.</p>
          * 
          * <strong>example:</strong>
          * <p>WorkerGroup1</p>
@@ -268,7 +434,7 @@ public class UpdateRayClusterRequest extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The maximum number of workers. The minimum value is 1.</p>
+         * <p>The maximum number of workers. Minimum value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -277,7 +443,7 @@ public class UpdateRayClusterRequest extends TeaModel {
         public Integer maxReplica;
 
         /**
-         * <p>The memory size. Unit: Gi.</p>
+         * <p>The memory size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>8Gi</p>
@@ -286,7 +452,7 @@ public class UpdateRayClusterRequest extends TeaModel {
         public String memory;
 
         /**
-         * <p>The minimum number of workers. The minimum value is 1. This value must be less than or equal to maxReplica.</p>
+         * <p>The minimum number of workers. Minimum value: 1. The value must be less than or equal to maxReplica.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -295,7 +461,7 @@ public class UpdateRayClusterRequest extends TeaModel {
         public Integer minReplica;
 
         /**
-         * <p>The name of the queue.</p>
+         * <p>The queue name.</p>
          * 
          * <strong>example:</strong>
          * <p>root_queue</p>
@@ -304,7 +470,16 @@ public class UpdateRayClusterRequest extends TeaModel {
         public String queueName;
 
         /**
-         * <p>The number of workers. The minimum value is 1.</p>
+         * <p>The Ray startup parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>--num-cpus=0</p>
+         */
+        @NameInMap("rayStartParams")
+        public String rayStartParams;
+
+        /**
+         * <p>The number of workers. Minimum value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -313,7 +488,7 @@ public class UpdateRayClusterRequest extends TeaModel {
         public Integer replica;
 
         /**
-         * <p>The type of worker.</p>
+         * <p>The worker type.</p>
          * 
          * <strong>example:</strong>
          * <p>CPU</p>
@@ -332,6 +507,22 @@ public class UpdateRayClusterRequest extends TeaModel {
         }
         public String getCpu() {
             return this.cpu;
+        }
+
+        public UpdateRayClusterRequestWorkerSpec setDisplayReleaseVersion(String displayReleaseVersion) {
+            this.displayReleaseVersion = displayReleaseVersion;
+            return this;
+        }
+        public String getDisplayReleaseVersion() {
+            return this.displayReleaseVersion;
+        }
+
+        public UpdateRayClusterRequestWorkerSpec setEnv(String env) {
+            this.env = env;
+            return this;
+        }
+        public String getEnv() {
+            return this.env;
         }
 
         public UpdateRayClusterRequestWorkerSpec setGpuSpec(String gpuSpec) {
@@ -380,6 +571,14 @@ public class UpdateRayClusterRequest extends TeaModel {
         }
         public String getQueueName() {
             return this.queueName;
+        }
+
+        public UpdateRayClusterRequestWorkerSpec setRayStartParams(String rayStartParams) {
+            this.rayStartParams = rayStartParams;
+            return this;
+        }
+        public String getRayStartParams() {
+            return this.rayStartParams;
         }
 
         public UpdateRayClusterRequestWorkerSpec setReplica(Integer replica) {

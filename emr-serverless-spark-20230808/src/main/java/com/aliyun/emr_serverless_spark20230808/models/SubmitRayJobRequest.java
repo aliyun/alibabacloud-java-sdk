@@ -14,6 +14,15 @@ public class SubmitRayJobRequest extends TeaModel {
     public Integer activeDeadlineSeconds;
 
     /**
+     * <p>The ID of an existing Ray cluster to which the job is submitted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ray-xxxxxxxxx</p>
+     */
+    @NameInMap("clusterId")
+    public String clusterId;
+
+    /**
      * <p>The Ray DPI engine version number.</p>
      * 
      * <strong>example:</strong>
@@ -68,7 +77,7 @@ public class SubmitRayJobRequest extends TeaModel {
     public String entrypointResources;
 
     /**
-     * <p>The extra parameter JSON string.</p>
+     * <p>The extra parameters in a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;userDefinedFiles&quot;: &quot;oss://mybucket/artifact/config.json,oss://mybucket/artifact/config2.json&quot;, &quot;userRequirementsFile&quot;: &quot;oss://mybucket/requirements.txt&quot;}</p>
@@ -119,7 +128,7 @@ public class SubmitRayJobRequest extends TeaModel {
     public String runtimeEnvJson;
 
     /**
-     * <p>Specifies whether to automatically destroy the temporary cluster after the job is completed. Default value: true.</p>
+     * <p>Specifies whether to automatically destroy the temporary cluster after the job finishes. Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -152,13 +161,13 @@ public class SubmitRayJobRequest extends TeaModel {
     public Integer ttlSecondsAfterFinished;
 
     /**
-     * <p>The list of mount volume IDs.</p>
+     * <p>The list of mounted volume IDs.</p>
      */
     @NameInMap("volumeIds")
     public java.util.List<String> volumeIds;
 
     /**
-     * <p>The Ray cluster worker node parameters.</p>
+     * <p>The parameters of the worker nodes in the Ray cluster.</p>
      */
     @NameInMap("workerSpec")
     public java.util.List<SubmitRayJobRequestWorkerSpec> workerSpec;
@@ -183,6 +192,14 @@ public class SubmitRayJobRequest extends TeaModel {
     }
     public Integer getActiveDeadlineSeconds() {
         return this.activeDeadlineSeconds;
+    }
+
+    public SubmitRayJobRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     public SubmitRayJobRequest setDisplayReleaseVersion(String displayReleaseVersion) {
@@ -348,7 +365,16 @@ public class SubmitRayJobRequest extends TeaModel {
         public String cpu;
 
         /**
-         * <p>Specifies whether to enable automatic worker scaling.</p>
+         * <p>The Ray DPI engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>err-1.3.0 (Ray 2.55.1, Python 3.12)</p>
+         */
+        @NameInMap("displayReleaseVersion")
+        public String displayReleaseVersion;
+
+        /**
+         * <p>Specifies whether to enable automatic scaling for workers.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -375,7 +401,7 @@ public class SubmitRayJobRequest extends TeaModel {
         public Integer idleTimeoutSeconds;
 
         /**
-         * <p>The memory size. Unit: Gi.</p>
+         * <p>The memory size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>8Gi</p>
@@ -403,6 +429,14 @@ public class SubmitRayJobRequest extends TeaModel {
         }
         public String getCpu() {
             return this.cpu;
+        }
+
+        public SubmitRayJobRequestHeadSpec setDisplayReleaseVersion(String displayReleaseVersion) {
+            this.displayReleaseVersion = displayReleaseVersion;
+            return this;
+        }
+        public String getDisplayReleaseVersion() {
+            return this.displayReleaseVersion;
         }
 
         public SubmitRayJobRequestHeadSpec setEnableAutoScaling(Boolean enableAutoScaling) {
@@ -500,6 +534,15 @@ public class SubmitRayJobRequest extends TeaModel {
         public String cpu;
 
         /**
+         * <p>The database engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ray-1.2.0 (Ray 2.55.1, Python 3.12)</p>
+         */
+        @NameInMap("displayReleaseVersion")
+        public String displayReleaseVersion;
+
+        /**
          * <p>The GPU instance type.</p>
          * 
          * <strong>example:</strong>
@@ -527,7 +570,7 @@ public class SubmitRayJobRequest extends TeaModel {
         public Integer maxReplica;
 
         /**
-         * <p>The memory size. Unit: Gi.</p>
+         * <p>The memory size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>16Gi</p>
@@ -582,6 +625,14 @@ public class SubmitRayJobRequest extends TeaModel {
         }
         public String getCpu() {
             return this.cpu;
+        }
+
+        public SubmitRayJobRequestWorkerSpec setDisplayReleaseVersion(String displayReleaseVersion) {
+            this.displayReleaseVersion = displayReleaseVersion;
+            return this;
+        }
+        public String getDisplayReleaseVersion() {
+            return this.displayReleaseVersion;
         }
 
         public SubmitRayJobRequestWorkerSpec setGpuSpec(String gpuSpec) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListReleaseVersionsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of records to return on a single page.</p>
+     * <p>The maximum number of records returned per request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page of results.</p>
+     * <p>The token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
 
     public static class ListReleaseVersionsResponseBodyReleaseVersions extends TeaModel {
         /**
-         * <p>The community version number of Spark.</p>
+         * <p>The community Spark version number.</p>
          * 
          * <strong>example:</strong>
          * <p>Spark 3.3.1</p>
@@ -117,7 +117,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         public String displayReleaseVersion;
 
         /**
-         * <p>Indicates whether the Fusion engine is enabled for acceleration.</p>
+         * <p>Indicates whether Fusion engine acceleration is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -126,7 +126,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         public Boolean fusion;
 
         /**
-         * <p>The time when the version was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1716215854101</p>
@@ -135,13 +135,19 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>The type of the IaaS layer.</p>
+         * <p>The IaaS layer type.</p>
          * 
          * <strong>example:</strong>
          * <p>ASI</p>
          */
         @NameInMap("iaasType")
         public String iaasType;
+
+        /**
+         * <p>Indicates whether the version is a custom image.</p>
+         */
+        @NameInMap("isCustom")
+        public Boolean isCustom;
 
         /**
          * <p>The version number.</p>
@@ -162,7 +168,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         public String scalaVersion;
 
         /**
-         * <p>The status of the version.</p>
+         * <p>The version status.</p>
          * 
          * <strong>example:</strong>
          * <p>ONLINE</p>
@@ -171,7 +177,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The type of the version.</p>
+         * <p>The version type.</p>
          * 
          * <strong>example:</strong>
          * <p>stable</p>
@@ -230,6 +236,14 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
         public String getIaasType() {
             return this.iaasType;
+        }
+
+        public ListReleaseVersionsResponseBodyReleaseVersions setIsCustom(Boolean isCustom) {
+            this.isCustom = isCustom;
+            return this;
+        }
+        public Boolean getIsCustom() {
+            return this.isCustom;
         }
 
         public ListReleaseVersionsResponseBodyReleaseVersions setReleaseVersion(String releaseVersion) {

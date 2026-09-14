@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetJobRunRequest extends TeaModel {
     /**
-     * <p>The region ID. For example, cn-hangzhou represents the Hangzhou region.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

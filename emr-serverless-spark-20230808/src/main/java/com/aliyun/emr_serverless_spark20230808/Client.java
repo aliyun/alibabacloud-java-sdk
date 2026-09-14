@@ -9,23 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-shenzhen", "emr-serverless-spark.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "emr-serverless-spark.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "emr-serverless-spark.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "emr-serverless-spark.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "emr-serverless-spark.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "emr-serverless-spark.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "emr-serverless-spark.cn-hongkong.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "emr-serverless-spark.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "emr-serverless-spark.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "emr-serverless-spark.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "emr-serverless-spark.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("us-west-1", "emr-serverless-spark.us-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "emr-serverless-spark.us-east-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "emr-serverless-spark.eu-central-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "emr-serverless-spark.na-south-1.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("emr-serverless-spark", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -1489,7 +1472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a workspace queue.</p>
+     * <p>Edits a workspace queue.</p>
      * 
      * @param request EditWorkspaceQueueRequest
      * @param headers map
@@ -1504,6 +1487,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.environments)) {
             body.put("environments", request.environments);
         }
@@ -1549,7 +1536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a workspace queue.</p>
+     * <p>Edits a workspace queue.</p>
      * 
      * @param request EditWorkspaceQueueRequest
      * @return EditWorkspaceQueueResponse
@@ -1811,7 +1798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get the details of a job.</p>
+     * <p>Retrieves the details of a job run by calling GetJobRun.</p>
      * 
      * @param request GetJobRunRequest
      * @param headers map
@@ -1845,7 +1832,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get the details of a job.</p>
+     * <p>Retrieves the details of a job run by calling GetJobRun.</p>
      * 
      * @param request GetJobRunRequest
      * @return GetJobRunResponse
@@ -2036,7 +2023,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a Ray cluster, including its configuration, runtime state, node information, and connection endpoints.</p>
+     * <p>Retrieves a Ray cluster.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2062,7 +2049,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a Ray cluster, including its configuration, runtime state, node information, and connection endpoints.</p>
+     * <p>Retrieves a Ray cluster.</p>
      * @return GetRayClusterResponse
      */
     public GetRayClusterResponse getRayCluster(String workspaceId, String clusterId) throws Exception {
@@ -2722,13 +2709,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Lists Kyuubi Gateways.</p>
      * 
+     * @param request ListKyuubiServicesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListKyuubiServicesResponse
      */
-    public ListKyuubiServicesResponse listKyuubiServicesWithOptions(String workspaceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListKyuubiServicesResponse listKyuubiServicesWithOptions(String workspaceId, ListKyuubiServicesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            query.put("token", request.token);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListKyuubiServices"),
@@ -2747,12 +2742,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Lists Kyuubi Gateways.</p>
+     * 
+     * @param request ListKyuubiServicesRequest
      * @return ListKyuubiServicesResponse
      */
-    public ListKyuubiServicesResponse listKyuubiServices(String workspaceId) throws Exception {
+    public ListKyuubiServicesResponse listKyuubiServices(String workspaceId, ListKyuubiServicesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listKyuubiServicesWithOptions(workspaceId, headers, runtime);
+        return this.listKyuubiServicesWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
@@ -3774,6 +3771,107 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries APM Grafana panel data for Serverless Spark.</p>
+     * 
+     * @param tmpReq QueryApmGrafanaDataRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryApmGrafanaDataResponse
+     */
+    public QueryApmGrafanaDataResponse queryApmGrafanaDataWithOptions(QueryApmGrafanaDataRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryApmGrafanaDataShrinkRequest request = new QueryApmGrafanaDataShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.queryParams)) {
+            request.queryParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.queryParams, "queryParams", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.componentName)) {
+            query.put("componentName", request.componentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dashboardId)) {
+            query.put("dashboardId", request.dashboardId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.end)) {
+            query.put("end", request.end);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.provider)) {
+            query.put("provider", request.provider);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryParamsShrink)) {
+            query.put("queryParams", request.queryParamsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryUrl)) {
+            query.put("queryUrl", request.queryUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.start)) {
+            query.put("start", request.start);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.step)) {
+            query.put("step", request.step);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.time)) {
+            query.put("time", request.time);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.variables)) {
+            query.put("variables", request.variables);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("workspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryApmGrafanaData"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/apm/action/queryApmGrafanaData"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryApmGrafanaDataResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries APM Grafana panel data for Serverless Spark.</p>
+     * 
+     * @param request QueryApmGrafanaDataRequest
+     * @return QueryApmGrafanaDataResponse
+     */
+    public QueryApmGrafanaDataResponse queryApmGrafanaData(QueryApmGrafanaDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.queryApmGrafanaDataWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Refreshes the token for a Livy Gateway.</p>
      * 
      * @param request RefreshLivyComputeTokenRequest
@@ -4063,7 +4161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a workflow manually.</p>
+     * <p>Manually runs a workflow.</p>
      * 
      * @param request StartProcessInstanceRequest
      * @param headers map
@@ -4085,6 +4183,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("email", request.email);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.expectedParallelismNumber)) {
+            query.put("expectedParallelismNumber", request.expectedParallelismNumber);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
             query.put("interval", request.interval);
         }
@@ -4103,6 +4205,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("regionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runMode)) {
+            query.put("runMode", request.runMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.runtimeQueue)) {
@@ -4137,7 +4243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a workflow manually.</p>
+     * <p>Manually runs a workflow.</p>
      * 
      * @param request StartProcessInstanceRequest
      * @return StartProcessInstanceResponse
@@ -4501,6 +4607,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.activeDeadlineSeconds)) {
             body.put("activeDeadlineSeconds", request.activeDeadlineSeconds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            body.put("clusterId", request.clusterId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.displayReleaseVersion)) {

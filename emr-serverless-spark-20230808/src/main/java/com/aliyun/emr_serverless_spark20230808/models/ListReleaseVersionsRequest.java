@@ -14,7 +14,7 @@ public class ListReleaseVersionsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The type of the version.</p>
+     * <p>The version type.</p>
      * 
      * <strong>example:</strong>
      * <p>stable</p>
@@ -23,7 +23,7 @@ public class ListReleaseVersionsRequest extends TeaModel {
     public String releaseType;
 
     /**
-     * <p>The EMR Serverless Spark version.</p>
+     * <p>The Serverless Spark version.</p>
      * 
      * <strong>example:</strong>
      * <p>esr-2.1 (Spark 3.3.1, Scala 2.12, Java Runtime)</p>
@@ -32,7 +32,7 @@ public class ListReleaseVersionsRequest extends TeaModel {
     public String releaseVersion;
 
     /**
-     * <p>The status of the version.</p>
+     * <p>The version status.</p>
      * 
      * <strong>example:</strong>
      * <p>ONLINE</p>

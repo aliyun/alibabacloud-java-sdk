@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartProcessInstanceResponseBody extends TeaModel {
     /**
-     * <p>The return code from the backend.</p>
+     * <p>The return code of the API request backend.</p>
      * 
      * <strong>example:</strong>
      * <p>1400009</p>
@@ -41,7 +41,7 @@ public class StartProcessInstanceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The detailed description of the return code.</p>
+     * <p>The detailed description corresponding to the request code.</p>
      * 
      * <strong>example:</strong>
      * <p>No permission for resource action</p>

@@ -13,11 +13,20 @@ public class StartProcessInstanceRequest extends TeaModel {
     @NameInMap("email")
     public String email;
 
+    /**
+     * <p>The expected concurrency.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
+    @NameInMap("expectedParallelismNumber")
+    public Integer expectedParallelismNumber;
+
     @NameInMap("interval")
     public String interval;
 
     /**
-     * <p>Specifies whether the workflow runs in a production environment.</p>
+     * <p>Specifies whether the workflow runs in the production environment.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -55,6 +64,15 @@ public class StartProcessInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The execution policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RUN_MODE_PARALLEL</p>
+     */
+    @NameInMap("runMode")
+    public String runMode;
+
+    /**
      * <p>The runtime queue.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +82,7 @@ public class StartProcessInstanceRequest extends TeaModel {
     public String runtimeQueue;
 
     /**
-     * <p>The hash code of the version.</p>
+     * <p>The version hash code.</p>
      * 
      * <strong>example:</strong>
      * <p>dh*********</p>
@@ -73,7 +91,7 @@ public class StartProcessInstanceRequest extends TeaModel {
     public String versionHashCode;
 
     /**
-     * <p>The version number of the workflow definition.</p>
+     * <p>The workflow definition version number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -108,6 +126,14 @@ public class StartProcessInstanceRequest extends TeaModel {
     }
     public String getEmail() {
         return this.email;
+    }
+
+    public StartProcessInstanceRequest setExpectedParallelismNumber(Integer expectedParallelismNumber) {
+        this.expectedParallelismNumber = expectedParallelismNumber;
+        return this;
+    }
+    public Integer getExpectedParallelismNumber() {
+        return this.expectedParallelismNumber;
     }
 
     public StartProcessInstanceRequest setInterval(String interval) {
@@ -148,6 +174,14 @@ public class StartProcessInstanceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public StartProcessInstanceRequest setRunMode(String runMode) {
+        this.runMode = runMode;
+        return this;
+    }
+    public String getRunMode() {
+        return this.runMode;
     }
 
     public StartProcessInstanceRequest setRuntimeQueue(String runtimeQueue) {

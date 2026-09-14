@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRayClusterResponseBody extends TeaModel {
     /**
-     * <p>The ID of the Ray cluster.</p>
+     * <p>The Ray cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ray-k7nm8ahl5te4tg91</p>

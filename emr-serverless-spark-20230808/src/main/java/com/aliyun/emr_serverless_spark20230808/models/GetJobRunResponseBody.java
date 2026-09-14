@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetJobRunResponseBody extends TeaModel {
     /**
-     * <p>The details of the job.</p>
+     * <p>The job run details.</p>
      */
     @NameInMap("jobRun")
     public GetJobRunResponseBodyJobRun jobRun;
@@ -42,7 +42,7 @@ public class GetJobRunResponseBody extends TeaModel {
 
     public static class GetJobRunResponseBodyJobRunConfigurationOverrides extends TeaModel {
         /**
-         * <p>The configurations.</p>
+         * <p>The list of configurations.</p>
          */
         @NameInMap("configurations")
         public java.util.List<Configuration> configurations;
@@ -123,13 +123,13 @@ public class GetJobRunResponseBody extends TeaModel {
         public String codeType;
 
         /**
-         * <p>The Spark configurations of the job.</p>
+         * <p>The Spark job configuration.</p>
          */
         @NameInMap("configurationOverrides")
         public GetJobRunResponseBodyJobRunConfigurationOverrides configurationOverrides;
 
         /**
-         * <p>The version that is displayed in the console.</p>
+         * <p>The version displayed in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-4.0.0 (Spark 3.5.2, Scala 2.12)</p>
@@ -156,7 +156,7 @@ public class GetJobRunResponseBody extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>The timeout period for the job execution.</p>
+         * <p>The execution timeout period, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -165,7 +165,7 @@ public class GetJobRunResponseBody extends TeaModel {
         public Integer executionTimeoutSeconds;
 
         /**
-         * <p>Indicates whether to enable the Fusion engine to accelerate the job execution.</p>
+         * <p>Indicates whether the Fusion engine acceleration is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -174,7 +174,7 @@ public class GetJobRunResponseBody extends TeaModel {
         public Boolean fusion;
 
         /**
-         * <p>The Spark driver information.</p>
+         * <p>The Spark Driver information.</p>
          */
         @NameInMap("jobDriver")
         public JobDriver jobDriver;
@@ -195,7 +195,7 @@ public class GetJobRunResponseBody extends TeaModel {
         public RunLog log;
 
         /**
-         * <p>The name of the job.</p>
+         * <p>The job run name.</p>
          * 
          * <strong>example:</strong>
          * <p>jobName</p>
@@ -204,7 +204,7 @@ public class GetJobRunResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The access URL for the notebook of the job run.</p>
+         * <p>The download URL of the NOTEBOOK file. This parameter is returned only when the job type is NOTEBOOK.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://workflow-ide-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/spark-notebook-output/w-xxxxxxxxx/xxxxxxx">http://workflow-ide-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/spark-notebook-output/w-xxxxxxxxx/xxxxxxx</a></p>
@@ -213,7 +213,7 @@ public class GetJobRunResponseBody extends TeaModel {
         public String notebookAccessUrl;
 
         /**
-         * <p>The priority of the job run.</p>
+         * <p>The job priority.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -222,7 +222,7 @@ public class GetJobRunResponseBody extends TeaModel {
         public String priority;
 
         /**
-         * <p>The Spark engine version.</p>
+         * <p>The Spark DPI engine version used to run the job.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-3.3.1</p>
@@ -231,7 +231,7 @@ public class GetJobRunResponseBody extends TeaModel {
         public String releaseVersion;
 
         /**
-         * <p>The UID of the user who creates the job.</p>
+         * <p>The UID of the user who created the job.</p>
          * 
          * <strong>example:</strong>
          * <p>150978934701****</p>
@@ -240,7 +240,7 @@ public class GetJobRunResponseBody extends TeaModel {
         public String resourceOwnerId;
 
         /**
-         * <p>The name of the queue on which the job runs.</p>
+         * <p>The name of the queue used to run the job.</p>
          * 
          * <strong>example:</strong>
          * <p>root_queue</p>
@@ -249,7 +249,7 @@ public class GetJobRunResponseBody extends TeaModel {
         public String resourceQueueId;
 
         /**
-         * <p>The state of the job.</p>
+         * <p>The job run state.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -273,10 +273,19 @@ public class GetJobRunResponseBody extends TeaModel {
         public Long submitTime;
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("tags")
         public java.util.List<Tag> tags;
+
+        /**
+         * <p>The total number of tokens consumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
+        @NameInMap("totalTokens")
+        public Long totalTokens;
 
         /**
          * <p>The web UI of the job.</p>
@@ -459,6 +468,14 @@ public class GetJobRunResponseBody extends TeaModel {
         }
         public java.util.List<Tag> getTags() {
             return this.tags;
+        }
+
+        public GetJobRunResponseBodyJobRun setTotalTokens(Long totalTokens) {
+            this.totalTokens = totalTokens;
+            return this;
+        }
+        public Long getTotalTokens() {
+            return this.totalTokens;
         }
 
         public GetJobRunResponseBodyJobRun setWebUI(String webUI) {

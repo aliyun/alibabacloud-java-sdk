@@ -26,7 +26,7 @@ public class GetRayJobResponseBody extends TeaModel {
      * <p>The status of the corresponding Ray cluster. Valid values:</p>
      * <ul>
      * <li>Deleted: Deleted.</li>
-     * <li>Submitted: Submitted but not yet created.</li>
+     * <li>Submitted: Submitted but creation has not started.</li>
      * <li>Pending: Being created.</li>
      * <li>Running: Running.</li>
      * </ul>
@@ -56,7 +56,7 @@ public class GetRayJobResponseBody extends TeaModel {
     public Double cuHours;
 
     /**
-     * <p>The Ray cluster dashboard URL. When the Ray cluster is in Running state, this is the Runtime UI. After the cluster is deleted, this is the History UI. History UI is supported only in err-1.2.0 and later versions.</p>
+     * <p>The dashboard URL of the Ray cluster. When the Ray cluster is in the Running state, this is the Runtime UI. After the cluster enters the Deleted state, this is the History UI. History UI is supported only in err-1.2.0 and later versions.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://emr-ray-gateway-cn-hangzhou.aliyuncs.com/workspace/w-xxxxxxxx/raycluster/ray-xxxxxx/dashboard?token=xxxxxx">https://emr-ray-gateway-cn-hangzhou.aliyuncs.com/workspace/w-xxxxxxxx/raycluster/ray-xxxxxx/dashboard?token=xxxxxx</a></p>
@@ -65,7 +65,7 @@ public class GetRayJobResponseBody extends TeaModel {
     public String dashboardUrl;
 
     /**
-     * <p>The extra dashboard UI URLs. Currently empty.</p>
+     * <p>The extra dashboard UI URLs. This field is currently empty.</p>
      */
     @NameInMap("dashboardUrlExtra")
     public java.util.List<String> dashboardUrlExtra;
@@ -80,7 +80,7 @@ public class GetRayJobResponseBody extends TeaModel {
     public String displayReleaseVersion;
 
     /**
-     * <p>The job duration, in seconds.</p>
+     * <p>The task duration, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>2459764</p>
@@ -89,7 +89,7 @@ public class GetRayJobResponseBody extends TeaModel {
     public Long duration;
 
     /**
-     * <p>The job end time. This value is a UNIX timestamp in milliseconds.</p>
+     * <p>The task end time. This value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1762949372000</p>
@@ -152,13 +152,13 @@ public class GetRayJobResponseBody extends TeaModel {
     public String extraParam;
 
     /**
-     * <p>The consumed GPU hours. Currently empty.</p>
+     * <p>The consumed GPU hours. This field is currently empty.</p>
      */
     @NameInMap("guHours")
     public GetRayJobResponseBodyGuHours guHours;
 
     /**
-     * <p>The Ray cluster head node parameters.</p>
+     * <p>The parameters of the Ray cluster head node.</p>
      */
     @NameInMap("headSpec")
     public GetRayJobResponseBodyHeadSpec headSpec;
@@ -182,7 +182,7 @@ public class GetRayJobResponseBody extends TeaModel {
     public String logPath;
 
     /**
-     * <p>The execution message.</p>
+     * <p>The execution information.</p>
      * 
      * <strong>example:</strong>
      * <p>Job finished successfully.</p>
@@ -191,7 +191,7 @@ public class GetRayJobResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The job metadata JSON string.</p>
+     * <p>The task metadata JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;owner&quot;: &quot;alice&quot;}</p>
@@ -200,7 +200,7 @@ public class GetRayJobResponseBody extends TeaModel {
     public String metadataJson;
 
     /**
-     * <p>The Ray cluster name.</p>
+     * <p>The name of the Ray cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>myRayCluster</p>
@@ -236,7 +236,7 @@ public class GetRayJobResponseBody extends TeaModel {
     public String runtimeEnvJson;
 
     /**
-     * <p>Specifies whether to automatically destroy the temporary cluster after the job finishes. Default value: true.</p>
+     * <p>Specifies whether to automatically destroy the temporary cluster after the task is completed. Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -254,16 +254,16 @@ public class GetRayJobResponseBody extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The job status. Valid values:</p>
+     * <p>The task status. Valid values:</p>
      * <ul>
-     * <li>Submitted: Submitted.</li>
+     * <li>Submitted: The task is submitted.</li>
      * <li>Pending: The cluster is being created.</li>
-     * <li>Running: The job is running.</li>
-     * <li>Succeeded: The job succeeded.</li>
-     * <li>Failed: The job failed.</li>
-     * <li>Cancelling: Cancelling.</li>
-     * <li>Cancelled: Cancelled.</li>
-     * <li>Timeout: Timed out and cancelled.</li>
+     * <li>Running: The task is running.</li>
+     * <li>Succeeded: The task succeeded.</li>
+     * <li>Failed: The task failed.</li>
+     * <li>Cancelling: The task is being canceled.</li>
+     * <li>Cancelled: The task is canceled.</li>
+     * <li>Timeout: The task timed out and was canceled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -291,7 +291,7 @@ public class GetRayJobResponseBody extends TeaModel {
     public String submissionMode;
 
     /**
-     * <p>The job submission time. This value is a UNIX timestamp in milliseconds.</p>
+     * <p>The task submission time. This value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1750327082303</p>
@@ -306,7 +306,7 @@ public class GetRayJobResponseBody extends TeaModel {
     public java.util.List<Tag> tags;
 
     /**
-     * <p>The data development task ID.</p>
+     * <p>The ID of the data development node.</p>
      * 
      * <strong>example:</strong>
      * <p>TSK-682e0112f6f24d9f9305b92174846985</p>
@@ -336,7 +336,7 @@ public class GetRayJobResponseBody extends TeaModel {
     public java.util.List<GetRayJobResponseBodyWorkerSpecs> workerSpecs;
 
     /**
-     * <p>The URL of the job code working directory.</p>
+     * <p>The URL of the task code working directory.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://mybucket/hello.zip</p>
@@ -706,7 +706,16 @@ public class GetRayJobResponseBody extends TeaModel {
         public String cpu;
 
         /**
-         * <p>Indicates whether auto scaling is enabled for worker nodes.</p>
+         * <p>The Ray DPI engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>err-1.3.0 (Ray 2.55.1, Python 3.12)</p>
+         */
+        @NameInMap("displayReleaseVersion")
+        public String displayReleaseVersion;
+
+        /**
+         * <p>Indicates whether automatic scaling is enabled for worker nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -724,7 +733,7 @@ public class GetRayJobResponseBody extends TeaModel {
         public String gpuSpec;
 
         /**
-         * <p>The idle timeout in seconds for worker nodes when auto scaling is enabled.</p>
+         * <p>The idle timeout for worker nodes when automatic scaling is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -770,6 +779,14 @@ public class GetRayJobResponseBody extends TeaModel {
         }
         public String getCpu() {
             return this.cpu;
+        }
+
+        public GetRayJobResponseBodyHeadSpec setDisplayReleaseVersion(String displayReleaseVersion) {
+            this.displayReleaseVersion = displayReleaseVersion;
+            return this;
+        }
+        public String getDisplayReleaseVersion() {
+            return this.displayReleaseVersion;
         }
 
         public GetRayJobResponseBodyHeadSpec setEnableAutoScaling(Boolean enableAutoScaling) {
@@ -831,6 +848,15 @@ public class GetRayJobResponseBody extends TeaModel {
          */
         @NameInMap("cpu")
         public String cpu;
+
+        /**
+         * <p>The DPI engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ray-1.2.0 (Ray 2.55.1, Python 3.12)</p>
+         */
+        @NameInMap("displayReleaseVersion")
+        public String displayReleaseVersion;
 
         /**
          * <p>The GPU type.</p>
@@ -906,6 +932,14 @@ public class GetRayJobResponseBody extends TeaModel {
         }
         public String getCpu() {
             return this.cpu;
+        }
+
+        public GetRayJobResponseBodyWorkerSpecs setDisplayReleaseVersion(String displayReleaseVersion) {
+            this.displayReleaseVersion = displayReleaseVersion;
+            return this;
+        }
+        public String getDisplayReleaseVersion() {
+            return this.displayReleaseVersion;
         }
 
         public GetRayJobResponseBodyWorkerSpecs setGpuSpec(String gpuSpec) {

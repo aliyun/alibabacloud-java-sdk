@@ -5,11 +5,23 @@ import com.aliyun.tea.*;
 
 public class EditWorkspaceQueueRequest extends TeaModel {
     /**
-     * <p>The queue environment type.</p>
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test queue</p>
+     */
+    @NameInMap("description")
+    public String description;
+
+    /**
+     * <p>The environment type of the queue.</p>
      */
     @NameInMap("environments")
     public java.util.List<String> environments;
 
+    /**
+     * <p>The list of GPU models.</p>
+     */
     @NameInMap("gpuSpec")
     public java.util.List<String> gpuSpec;
 
@@ -17,7 +29,7 @@ public class EditWorkspaceQueueRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The resource specifications.</p>
+     * <p>The resource quota.</p>
      */
     @NameInMap("resourceSpec")
     public EditWorkspaceQueueRequestResourceSpec resourceSpec;
@@ -32,7 +44,7 @@ public class EditWorkspaceQueueRequest extends TeaModel {
     public String workspaceId;
 
     /**
-     * <p>The workspace queue name.</p>
+     * <p>The name of the workspace queue.</p>
      * 
      * <strong>example:</strong>
      * <p>dev_queue</p>
@@ -52,6 +64,14 @@ public class EditWorkspaceQueueRequest extends TeaModel {
     public static EditWorkspaceQueueRequest build(java.util.Map<String, ?> map) throws Exception {
         EditWorkspaceQueueRequest self = new EditWorkspaceQueueRequest();
         return TeaModel.build(map, self);
+    }
+
+    public EditWorkspaceQueueRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public EditWorkspaceQueueRequest setEnvironments(java.util.List<String> environments) {
@@ -121,16 +141,23 @@ public class EditWorkspaceQueueRequest extends TeaModel {
         public Long cu;
 
         /**
+         * <p>The number of GPU cards.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("gpu")
         public Integer gpu;
 
+        /**
+         * <p>The number of GPU machines.</p>
+         */
         @NameInMap("gpuMachineNum")
         public Integer gpuMachineNum;
 
         /**
+         * <p>The maximum number of CUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */
