@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskDeploymentRequest extends TeaModel {
     /**
-     * <p>The new disk type. This parameter takes effect only when you migrate a disk between different dedicated block storage clusters. Currently, only cloud_essd (enterprise SSD) is supported.</p>
-     * <p>Default value: empty, which indicates that the disk type is not changed.</p>
+     * <p>The new disk type. This parameter is valid only when you migrate a disk between different dedicated block storage clusters. Only cloud_essd (standard SSD) is supported.</p>
+     * <p>Default value: empty, which indicates that the disk type is not changed (no Upgrade/Downgrade) during migration.</p>
      * 
      * <strong>example:</strong>
      * <p>cloud_essd</p>
@@ -25,10 +25,10 @@ public class ModifyDiskDeploymentRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>Specifies whether to perform only a dry run. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run for this request. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
-     * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2XX HTTP status code is returned and the disk is migrated.</li>
+     * <li>true: performs a dry run. The system checks whether the required parameters are specified, the request format is valid, business limits are met, and ECS inventory is sufficient. If the check fails, the corresponding error is returned. If the check passes, the error code DryRunOperation is returned.</li>
+     * <li>false: performs a normal request. After the check passes, a 2XX HTTP status code is returned and the disk migration starts immediately.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -45,12 +45,12 @@ public class ModifyDiskDeploymentRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The performance level (PL) of the enterprise SSD. This parameter takes effect only when you migrate a disk between different dedicated block storage clusters. Valid values:</p>
+     * <p>The new ESSD performance level of the standard SSD. This parameter is valid only when you migrate a disk between different dedicated block storage clusters. Valid values:</p>
      * <ul>
-     * <li>PL0: A maximum of 10,000 random read/write IOPS per disk.</li>
-     * <li>PL1: A maximum of 50,000 random read/write IOPS per disk.</li>
+     * <li>PL0: maximum random read/write IOPS of 10,000 for a single disk.</li>
+     * <li>PL1: maximum random read/write IOPS of 50,000 for a single disk.</li>
      * </ul>
-     * <p>Default value: empty, which indicates that the performance level (PL) is not changed.</p>
+     * <p>Default value: empty, which indicates that the performance level is not changed during migration.</p>
      * 
      * <strong>example:</strong>
      * <p>PL1</p>
@@ -67,10 +67,10 @@ public class ModifyDiskDeploymentRequest extends TeaModel {
     /**
      * <p>The dedicated block storage cluster ID.</p>
      * <ul>
-     * <li>To migrate a disk to a dedicated block storage cluster, you must specify StorageClusterId.</li>
-     * <li>To migrate a disk to a public cloud block storage cluster, StorageClusterId must be empty.</li>
+     * <li>If you migrate the disk to a dedicated block storage cluster, you must specify <code>StorageClusterId</code>.</li>
+     * <li>If you migrate the disk to a public block storage cluster, <code>StorageClusterId</code> must be empty.</li>
      * </ul>
-     * <p>Default value: empty, which indicates that the disk is migrated to a public cloud block storage cluster.</p>
+     * <p>Default value: empty, which indicates that the disk is migrated to a public block storage cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>dbsc-cn-c4d2uea****</p>

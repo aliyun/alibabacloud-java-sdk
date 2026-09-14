@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskSpecResponseBody extends TeaModel {
     /**
-     * <p>The order ID.</p>
+     * <p>The ID of the generated order.</p>
      * <blockquote>
-     * <p>An order ID is returned only when you change or modify a subscription disk.</p>
+     * <p>An order ID is returned only when a subscription disk is changed or modified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,9 +26,9 @@ public class ModifyDiskSpecResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task ID for the disk specification change.</p>
+     * <p>The ID of the task for the disk specification change.</p>
      * <blockquote>
-     * <p>This parameter is not returned if you only modify the performance level (PL) of an ESSD.</p>
+     * <p>This parameter is not returned if you only modified the performance level (PL) of an enterprise SSD (ESSD).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

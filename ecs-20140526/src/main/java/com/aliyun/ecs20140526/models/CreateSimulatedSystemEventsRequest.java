@@ -7,8 +7,8 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
     /**
      * <p>The type of the system event. Valid values: </p>
      * <ul>
-     * <li>SystemMaintenance.Reboot: The instance is restarted due to system maintenance. </li>
-     * <li>SystemFailure.Reboot: The instance is restarted due to a system error. </li>
+     * <li>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</li>
+     * <li>SystemFailure.Reboot: The instance is restarted due to a system error.</li>
      * <li>InstanceFailure.Reboot: The instance is restarted due to an instance error.</li>
      * <li>SystemMaintenance.Stop: The instance is stopped due to system maintenance.</li>
      * <li>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</li>
@@ -37,7 +37,7 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
     /**
      * <p>The scheduled start time of the event. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <blockquote>
-     * <p>For abnormal events caused by system errors or instance errors, the event is already in the Executing state after it is created. In this case, the NotBefore parameter specifies the time when the event enters the Executed state.</p>
+     * <p>For unexpected events caused by system errors or instance errors, the event is already in the Executing state after it is created. In this case, the NotBefore parameter specifies the time when the event enters the Executed state.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -54,7 +54,7 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of Alibaba Cloud regions.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +68,15 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    /**
+     * <p>Specifies whether to trigger real O&amp;M operations. Valid values:<br>- true: Triggers real O&amp;M operations. The system actually stops or releases the instance. Exercise caution when you perform this operation, or use instances that do not run workloads for testing.<br>- false (default): Only simulates event notifications without affecting the actual lifecycle of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("TriggerRealOps")
+    public Boolean triggerRealOps;
 
     public static CreateSimulatedSystemEventsRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSimulatedSystemEventsRequest self = new CreateSimulatedSystemEventsRequest();
@@ -136,6 +145,14 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreateSimulatedSystemEventsRequest setTriggerRealOps(Boolean triggerRealOps) {
+        this.triggerRealOps = triggerRealOps;
+        return this;
+    }
+    public Boolean getTriggerRealOps() {
+        return this.triggerRealOps;
     }
 
 }

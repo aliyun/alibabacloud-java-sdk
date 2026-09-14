@@ -7,11 +7,11 @@ public class CreateSnapshotRequest extends TeaModel {
     /**
      * <p>The snapshot type. Valid values:</p>
      * <ul>
-     * <li>Standard: standard snapshot.</li>
+     * <li>Standard: normal snapshot.</li>
      * <li>Flash: local snapshot.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter will be deprecated. Standard snapshots for enterprise SSDs have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or costs are required.</p>
+     * <p>This parameter is being deprecated. Standard snapshots for ESSD disks have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration is required and no additional fees are incurred.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class CreateSnapshotRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotency</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -30,7 +30,7 @@ public class CreateSnapshotRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The snapshot description. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * <p>Default value: empty.</p>
      * 
      * <strong>example:</strong>
@@ -52,12 +52,12 @@ public class CreateSnapshotRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the snapshot instant access feature. Valid values:</p>
      * <ul>
-     * <li>true: enables the feature. Only enterprise SSDs support this feature.</li>
-     * <li>false: disables the feature. A standard snapshot is created.</li>
+     * <li>true: enables the feature. Only ESSD disks support this feature.</li>
+     * <li>false: disables the feature. A normal snapshot is created.</li>
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p>This parameter is deprecated. Standard snapshots for enterprise SSDs have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or costs are required.</p>
+     * <p>This parameter is deprecated. Standard snapshots for ESSD disks have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration is required and no additional fees are incurred.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -67,10 +67,10 @@ public class CreateSnapshotRequest extends TeaModel {
     public Boolean instantAccess;
 
     /**
-     * <p>Settings for the retention period of the snapshot instant access feature. After the retention period expires, the snapshot is subject to automatic release. This parameter takes effect only when <code>InstantAccess=true</code>. Unit: days. Valid values: 1 to 65535.</p>
-     * <p>The default value is the same as the value of the <code>RetentionDays</code> parameter.</p>
+     * <p>Settings for the retention period of the snapshot instant access feature. The snapshot undergoes automatic release when the retention period expires. This parameter takes effect only when <code>InstantAccess</code> is set to <code>true</code>. Unit: days. Valid values: 1 to 65535.</p>
+     * <p>Default value: the same as the value of the <code>RetentionDays</code> parameter.</p>
      * <blockquote>
-     * <p>This parameter is deprecated. Standard snapshots for enterprise SSDs have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or costs are required.</p>
+     * <p>This parameter is deprecated. Standard snapshots for ESSD disks have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration is required and no additional fees are incurred.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -101,8 +101,8 @@ public class CreateSnapshotRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Settings for the retention period of the snapshot. Unit: days. Valid values: 1 to 65536. The snapshot is subject to automatic release when the retention period expires.</p>
-     * <p>Default value: empty, which indicates that the snapshot is not subject to automatic release.</p>
+     * <p>Settings for the retention period of the snapshot, in days. Valid values: 1 to 65536. The snapshot undergoes automatic release when the retention period expires.</p>
+     * <p>Default value: empty, which indicates that the snapshot does not undergo automatic release.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -111,9 +111,9 @@ public class CreateSnapshotRequest extends TeaModel {
     public Integer retentionDays;
 
     /**
-     * <p>The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain Unicode characters under the letter category (including letters in English and Chinese), ASCII digits (0-9), colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The snapshot name. The name must be 2 to 128 characters in length, must start with an uppercase or lowercase letter or a Chinese character, and can contain Unicode characters in the letter category (including English and Chinese characters) and ASCII digits (0–9). The name can contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
      * <blockquote>
-     * <p>To prevent naming conflicts with automatic snapshots, the name cannot start with <code>auto</code>.</p>
+     * <p>The name cannot start with http:// or https://. To avoid conflicts with automatic snapshot names, the name cannot start with <code>auto</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -124,7 +124,7 @@ public class CreateSnapshotRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not publicly available.</p>
+     * <p>This parameter is not available for use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class CreateSnapshotRequest extends TeaModel {
     public String storageLocationArn;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateSnapshotRequestTag> tag;
@@ -266,7 +266,7 @@ public class CreateSnapshotRequest extends TeaModel {
 
     public static class CreateSnapshotRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
+         * <p>The tag key of the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>

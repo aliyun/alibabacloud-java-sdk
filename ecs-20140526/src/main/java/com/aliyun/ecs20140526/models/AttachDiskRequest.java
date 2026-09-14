@@ -7,14 +7,14 @@ public class AttachDiskRequest extends TeaModel {
     /**
      * <p>Specifies whether to attach the disk as a system disk. Valid values:</p>
      * <ul>
-     * <li><p>true: The disk is attached as a system disk.</p>
+     * <li><p>true: Attach as a system disk.</p>
      * </li>
-     * <li><p>false: The disk is not attached as a system disk.</p>
+     * <li><p>false: Do not attach as a system disk.</p>
      * </li>
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p>If you set <code>Bootable=true</code>, the destination ECS instance must have no system disk attached.</p>
+     * <p>If <code>Bootable</code> is set to <code>true</code>, the target ECS instance must have no system disk attached.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,17 +26,17 @@ public class AttachDiskRequest extends TeaModel {
     /**
      * <p>Specifies whether to release the disk when the instance is released. Valid values:</p>
      * <ul>
-     * <li>true: The disk is released together with the instance.</li>
-     * <li>false: The disk is not released together with the instance. The disk is retained as a pay-as-you-go data disk.</li>
+     * <li>true: The disk is released with the instance.</li>
+     * <li>false: The disk is not released with the instance. The disk is retained as a pay-as-you-go data disk.</li>
      * </ul>
      * <p>Default value: false.</p>
-     * <p>Take note of the following items when you set this parameter:</p>
+     * <p>Note the following when setting this parameter:</p>
      * <ul>
-     * <li><p>If you set <code>DeleteWithInstance</code> to <code>false</code> and the ECS instance is locked for security reasons, meaning that <code>OperationLocks</code> contains <code>&quot;LockReason&quot; : &quot;security&quot;</code>, this attribute is ignored when the ECS instance is released, and the disk is released together with the instance.</p>
+     * <li><p>If <code>DeleteWithInstance</code> is set to <code>false</code> and the ECS instance is under security control (that is, <code>OperationLocks</code> contains <code>&quot;LockReason&quot; : &quot;security&quot;</code>), this attribute is ignored when the ECS instance is released, and the disk is released along with the instance.</p>
      * </li>
-     * <li><p>If the destination disk is an <code>elastic ephemeral disk</code>, you must set <code>DeleteWithInstance</code> to <code>true</code>.</p>
+     * <li><p>If the disk to attach is an elastic ephemeral disk, you must set <code>DeleteWithInstance</code> to <code>true</code>.</p>
      * </li>
-     * <li><p>Disks with the multi-attach feature enabled do not support this parameter.</p>
+     * <li><p>This parameter is not supported for disks with the multi-attach feature enabled.</p>
      * </li>
      * </ul>
      * 
@@ -49,7 +49,7 @@ public class AttachDiskRequest extends TeaModel {
     /**
      * <p>The device name of the disk.</p>
      * <blockquote>
-     * <p>This parameter will be deprecated soon. To improve compatibility, use other parameters to identify the disk.</p>
+     * <p>This parameter is being deprecated. To improve compatibility, use other parameters to identify the disk.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,9 +59,9 @@ public class AttachDiskRequest extends TeaModel {
     public String device;
 
     /**
-     * <p>The ID of the disk to be attached. The disk (<code>DiskId</code>) and the instance (<code>InstanceId</code>) must be in the same zone.</p>
+     * <p>The ID of the disk to attach. The disk (<code>DiskId</code>) and the instance (<code>InstanceId</code>) must be in the same zone.</p>
      * <blockquote>
-     * <p>You can attach data disks and system disks. For related constraints, see the operation description section above.</p>
+     * <p>Both data disks and system disks are supported. For the relevant constraints, see the operation description above.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -72,14 +72,14 @@ public class AttachDiskRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>Specifies whether to forcefully attach the disk. Valid values:</p>
+     * <p>Specifies whether the request is a forced attach request. Valid values:</p>
      * <ul>
-     * <li>true: Forcefully attaches the disk.</li>
-     * <li>false: Does not forcefully attach the disk.</li>
+     * <li>true: Yes.</li>
+     * <li>false: No.</li>
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p>Currently, only regional ESSDs (cloud_regional_disk_auto) support setting this parameter to true.</p>
+     * <p>Currently, only the ESSD regional disk type (cloud_regional_disk_auto) supports setting this field to true.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -99,11 +99,11 @@ public class AttachDiskRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the SSH key pair that is bound to the Linux ECS instance when you attach a system disk.</p>
+     * <p>The name of the SSH key pair to bind to a Linux ECS instance when attaching a system disk.</p>
      * <ul>
      * <li><p>Windows Server instances: SSH key pairs are not supported. Even if this parameter is specified, only the <code>Password</code> configuration takes effect.</p>
      * </li>
-     * <li><p>Linux instances: The password logon method is disabled by default.</p>
+     * <li><p>Linux instances: Password-based logon is disabled after the key pair is bound.</p>
      * </li>
      * </ul>
      * 
@@ -120,12 +120,12 @@ public class AttachDiskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The password that is set for the instance when you attach a system disk. The password is effective only for the administrator and root usernames and is not effective for other usernames. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</p>
+     * <p>The password for the instance when attaching a system disk. This parameter applies only to the administrator and root usernames. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</p>
      * <pre><code>()`~!@#$%^&amp;*-_+=|{}[]:;\\&quot;&lt;&gt;,.?/
      * </code></pre>
      * <p>For Windows instances, the password cannot start with a forward slash (/).</p>
      * <blockquote>
-     * <p>If you specify the <code>Password</code> parameter, send the request over HTTPS to prevent password leaks.</p>
+     * <p>If you specify the <code>Password</code> parameter, use HTTPS to send the request to prevent password leakage.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

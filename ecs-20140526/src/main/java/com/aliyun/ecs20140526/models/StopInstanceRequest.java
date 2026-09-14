@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopInstanceRequest extends TeaModel {
     /**
-     * <p>This parameter is about to be deprecated and is retained only for compatibility purposes. Ignore this parameter when you call this operation.</p>
+     * <p>This parameter is being deprecated and is retained only for compatibility purposes. Ignore this parameter when you call this operation.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,10 +14,10 @@ public class StopInstanceRequest extends TeaModel {
     public Boolean confirmStop;
 
     /**
-     * <p>Specifies whether to perform only a dry run. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The instance is not stopped. The system checks whether the required parameters are specified, whether the request format is valid, whether business restrictions are met, and whether the ECS inventory is sufficient. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li>false: performs a dry run and sends the request. The instance is stopped after the check succeeds.</li>
+     * <li>true: Performs a dry run without stopping the instance. The system checks whether the required parameters are specified, the request format is valid, service limits are met, and ECS inventory is sufficient. If the check fails, the corresponding error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li>false: Performs a normal request. After the check passes, the instance is stopped.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -30,8 +30,8 @@ public class StopInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcefully stop the instance. Valid values:</p>
      * <ul>
-     * <li>true: forcefully stops the instance. This is equivalent to a power-off operation. All cached data that is not written to storage devices is lost.</li>
-     * <li>false: normally stops the instance.</li>
+     * <li>true: Forcefully stops the instance. This is equivalent to a typical power-off operation. All cached data that is not written to the storage device is lost.</li>
+     * <li>false: Normally stops the instance.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -43,7 +43,7 @@ public class StopInstanceRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is in invitational preview and is not available for general use.</p>
+     * <p>This parameter is in invitational preview and is not available for use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -75,14 +75,14 @@ public class StopInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The stop mode for the pay-as-you-go ECS instance. Valid values:</p>
+     * <p>The stop mode for a pay-as-you-go ECS instance. Valid values:</p>
      * <ul>
-     * <li><p>StopCharging: economical mode. After the economical mode is enabled:</p>
+     * <li><p>StopCharging: Economical mode. After economical mode is enabled:</p>
      * <ul>
-     * <li>Billing is suspended for compute resources (vCPUs, memory, and GPUs), image license fees, and fixed bandwidth of static public IP addresses.</li>
-     * <li>Billing continues for system disks, data disks, and fixed bandwidth of Elastic IP Addresses (EIPs).</li>
-     * <li>Because compute resources are released, the instance may fail to restart due to insufficient inventory. Try again later or change the instance type.</li>
-     * <li>If the instance is associated with an EIP before it is stopped, the IP address remains unchanged after the instance is restarted. Otherwise, the static public IP address may change, but the private IP address remains unchanged.</li>
+     * <li>Billing is suspended for compute resources (vCPUs, memory, and GPUs), image license fees, and the pay-by-bandwidth mode for static public IP addresses.</li>
+     * <li>Billing continues for system disks, data disks, and the pay-by-bandwidth mode for elastic IP addresses (EIPs).</li>
+     * <li>Because compute resources are reclaimed, the instance may fail to start due to insufficient inventory. In this case, try again later or change the instance type.</li>
+     * <li>If an EIP is associated with the instance before the instance is stopped, the IP address remains unchanged after the instance is restarted. Otherwise, the static public IP address may change, but the private IP address remains unchanged.</li>
      * </ul>
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode</a>.</p>
      * <blockquote>
@@ -90,11 +90,11 @@ public class StopInstanceRequest extends TeaModel {
      * </blockquote>
      * </li>
      * </ul>
-     * <p>If the instance does not support the economical mode, the API does not return an error. Stopping the instance takes priority. Instance types that do not support the economical mode include instances with local disks and subscription instances.</p>
+     * <p>If the instance does not support economical mode, the API does not return an error. The instance is stopped as a priority. Instance types that do not support economical mode include instances with local disks and subscription instances.</p>
      * <ul>
-     * <li>KeepCharging: standard stop mode. The instance continues to be billed after it is stopped.</li>
+     * <li>KeepCharging: Standard stop mode. Billing continues after the instance is stopped.</li>
      * </ul>
-     * <p>Default value: If you enable the economical mode for VPC-connected instances in the ECS console (for more information, see <a href="~~63353#default~~">Enable the economical mode by default</a>) and the conditions are met, the default value is <code>StopCharging</code>. Otherwise, the default value is <code>KeepCharging</code>.</p>
+     * <p>Default value: If you enable the economical mode for instances in a VPC in the ECS console (for more information, see <a href="~~63353#default~~">Enable economical mode by default</a>) and the conditions are met, the default value is <code>StopCharging</code>. Otherwise, the default value is <code>KeepCharging</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>KeepCharging</p>

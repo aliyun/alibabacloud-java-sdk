@@ -23,11 +23,11 @@ public class RunInstancesRequest extends TeaModel {
     public RunInstancesRequestSystemDisk systemDisk;
 
     /**
-     * <p>Specifies whether the instance on a dedicated host is associated with the dedicated host. Valid values:</p>
+     * <p>Specifies whether to associate the instance with a dedicated host. Valid values:</p>
      * <ul>
-     * <li><p>default: The instance is not associated with the dedicated host. When an instance that has economical mode enabled is restarted after it is stopped, if the original dedicated host has insufficient resources, the instance is placed on another dedicated host in the automatic deployment resource pool.</p>
+     * <li><p>default: The instance is not associated with a dedicated host. If the instance is stopped in economical mode and then restarted, and the original dedicated host has insufficient resources, the instance is placed on another dedicated host in the automatic deployment resource pool.</p>
      * </li>
-     * <li><p>host: The instance is associated with the dedicated host. When an instance that has economical mode enabled is restarted after it is stopped, the instance remains on the original dedicated host. If the original dedicated host has insufficient resources, the instance fails to restart.</p>
+     * <li><p>host: The instance is associated with a dedicated host. If the instance is stopped in economical mode and then restarted, it remains on the original dedicated host. If the original dedicated host has insufficient resources, the restart fails.</p>
      * </li>
      * </ul>
      * <p>Default value: default.</p>
@@ -40,15 +40,15 @@ public class RunInstancesRequest extends TeaModel {
 
     /**
      * <p>The number of ECS instances to create. Valid values: 1 to 100.</p>
-     * <p>The number of successfully created ECS instances depends on the specified Amount and MinAmount values:</p>
+     * <p>The number of instances successfully created depends on the values of Amount and MinAmount:</p>
      * <ul>
-     * <li><p>If MinAmount is not specified: Instances are created based on the Amount value. If the inventory is insufficient, the API returns a failure and no instances are created.</p>
+     * <li><p>If MinAmount is not specified: instances are created according to the Amount value. If inventory is insufficient, the API returns a creation failure and no instances are created.</p>
      * </li>
      * <li><p>If MinAmount is specified:</p>
      * <ul>
-     * <li>If the ECS inventory &lt; MinAmount: No instances are created and the API returns a failure.</li>
-     * <li>If MinAmount ≤ ECS inventory &lt; Amount: Instances are created based on the available inventory and the API returns a success.</li>
-     * <li>If the ECS inventory ≥ Amount: Instances are created based on the specified Amount value and the API returns a success.</li>
+     * <li>If the available ECS inventory &lt; MinAmount: no instances are created and the API returns a creation failure.</li>
+     * <li>If MinAmount ≤ available ECS inventory &lt; Amount: instances are created based on the available inventory and the API returns a creation success.</li>
+     * <li>If the available ECS inventory ≥ Amount: instances are created according to the specified Amount and the API returns a creation success.</li>
      * </ul>
      * </li>
      * </ul>
@@ -62,23 +62,23 @@ public class RunInstancesRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not publicly available.</p>
+     * <p>This parameter is not available for use.</p>
      * </blockquote>
      */
     @NameInMap("Arn")
     public java.util.List<RunInstancesRequestArn> arn;
 
     /**
-     * <p>Specifies whether to automatically make the payment when you create the instance. Valid values:</p>
+     * <p>Specifies whether to automatically complete the payment when creating an instance. Valid values:</p>
      * <ul>
-     * <li><p>true: automatically makes the payment.</p>
+     * <li><p>true: automatically completes the payment.</p>
      * <blockquote>
-     * <p>When automatic payment is enabled, make sure that your payment method has a sufficient balance. Otherwise, an abnormal order is generated and can only be canceled. If your payment method has an insufficient balance, set <code>AutoPay</code> to <code>false</code> to generate an unpaid order. Then, log on to the ECS console to complete the payment.</p>
+     * <p>If automatic payment is enabled, make sure that your payment method has sufficient balance. Otherwise, an abnormal order is generated and can only be voided. If your payment method has insufficient balance, set <code>AutoPay</code> to <code>false</code>. An unpaid order is then generated, which you can pay for in the ECS console.</p>
      * </blockquote>
      * </li>
-     * <li><p>false: generates the order without making the payment.</p>
+     * <li><p>false: generates an order without charging.</p>
      * <blockquote>
-     * <p>When <code>InstanceChargeType</code> is set to <code>PostPaid</code>, <code>AutoPay</code> cannot be set to <code>false</code>.</p>
+     * <p>If <code>InstanceChargeType</code> is set to <code>PostPaid</code>, <code>AutoPay</code> cannot be set to <code>false</code>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -91,11 +91,11 @@ public class RunInstancesRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The automatic release time of the pay-as-you-go instance. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the UTC+0 time zone. The format is <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+     * <p>The automatic release time for pay-as-you-go instances. Specify the time in <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> format in UTC+0. The format is <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
      * <ul>
-     * <li><p>If the value of seconds (<code>ss</code>) is not <code>00</code>, the time is automatically rounded down to the start of the current minute (<code>mm</code>).</p>
+     * <li><p>If the seconds (<code>ss</code>) value is not <code>00</code>, it is automatically set to the start of the current minute (<code>mm</code>).</p>
      * </li>
-     * <li><p>The earliest release time is 30 minutes after the current time.</p>
+     * <li><p>The earliest release time is 30 minutes from the current time.</p>
      * </li>
      * <li><p>The latest release time cannot be more than three years from the current time.</p>
      * </li>
@@ -110,8 +110,8 @@ public class RunInstancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when <code>InstanceChargeType</code> is set to <code>PrePaid</code>. Valid values:</p>
      * <ul>
-     * <li>true: Enables auto-renewal.</li>
-     * <li>false: Disables auto-renewal.</li>
+     * <li>true: enables auto-renewal.</li>
+     * <li>false: disables auto-renewal.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -122,13 +122,13 @@ public class RunInstancesRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal period for each renewal. Valid values: </p>
+     * <p>The auto-renewal period for a single renewal. Valid values: </p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>If PeriodUnit is set to Week: 1, 2, and 3.</li>
-     * <li>If PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</li>
+     * <li>When PeriodUnit=Week: 1, 2, 3.</li>
+     * <li>When PeriodUnit=Month: 1, 2, 3, 6, 12, 24, 36, 48, 60.</li>
      * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;If PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;When PeriodUnit=Month: 1, 2, 3, 6, 12, 24, 36, 48, 60.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class RunInstancesRequest extends TeaModel {
     public Integer autoRenewPeriod;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, refer to <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token used to ensure the idempotency of the request. Generate a unique value for this parameter from your client to ensure that different requests use different values. <strong>ClientToken</strong> supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotency</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -147,16 +147,16 @@ public class RunInstancesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The clock-related property parameters of the instance.</p>
+     * <p>The instance clock parameters.</p>
      */
     @NameInMap("ClockOptions")
     public RunInstancesRequestClockOptions clockOptions;
 
     /**
-     * <p>The running mode of the burstable instance. Valid values:</p>
+     * <p>Sets the running mode of a burstable instance. Valid values:</p>
      * <ul>
-     * <li>Standard: standard mode. For more information about instance performance, see the performance constrained mode section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
-     * <li>Unlimited: unlimited mode. For more information about instance performance, see the unlimited mode section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+     * <li>Standard: standard mode. For more information about the performance of instances in standard mode, see the performance constraint mode section in <a href="https://help.aliyun.com/document_detail/59977.html">What are burstable instances</a>.</li>
+     * <li>Unlimited: unlimited mode. For more information about the performance of instances in unlimited mode, see the unlimited mode section in <a href="https://help.aliyun.com/document_detail/59977.html">What are burstable instances</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -166,7 +166,7 @@ public class RunInstancesRequest extends TeaModel {
     public String creditSpecification;
 
     /**
-     * <p>The list of data disk information.</p>
+     * <p>The list of data disk information collections.</p>
      */
     @NameInMap("DataDisk")
     public java.util.List<RunInstancesRequestDataDisk> dataDisk;
@@ -176,7 +176,7 @@ public class RunInstancesRequest extends TeaModel {
      * &lt;props=&quot;china&quot;&gt;You can call <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> to query the list of dedicated host IDs.</p>
      * <p>&lt;props=&quot;intl&quot;&gt;You can call <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> to query the list of dedicated host IDs.</p>
      * <blockquote>
-     * <p>Notice: Dedicated hosts do not support the creation of spot instances. If you specify <code>DedicatedHostId</code>, the <code>SpotStrategy</code> and <code>SpotPriceLimit</code> settings in the request are automatically ignored.</p>
+     * <p>Notice: Dedicated hosts do not support spot instances. If <code>DedicatedHostId</code> is specified, the <code>SpotStrategy</code> and <code>SpotPriceLimit</code> settings in the request are automatically ignored.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -186,14 +186,14 @@ public class RunInstancesRequest extends TeaModel {
     public String dedicatedHostId;
 
     /**
-     * <p>Specifies whether to enable release protection for the instance. This parameter determines whether the instance can be released from the console or by calling the <a href="https://help.aliyun.com/document_detail/25507.html">DeleteInstance</a> operation. Valid values: </p>
+     * <p>Specifies whether to enable deletion protection for the instance. This parameter controls whether the instance can be released through the console or by calling <a href="https://help.aliyun.com/document_detail/25507.html">DeleteInstance</a>. Valid values: </p>
      * <ul>
-     * <li>true: enables release protection.</li>
-     * <li>false: disables release protection.</li>
+     * <li>true: enables deletion protection.</li>
+     * <li>false: disables deletion protection.</li>
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p>This parameter is applicable only to pay-as-you-go instances. It can only restrict manual release operations and does not take effect on system-initiated release operations.</p>
+     * <p>This parameter applies only to pay-as-you-go instances. It prevents manual release only and does not apply to system-initiated release operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class RunInstancesRequest extends TeaModel {
     public Boolean deletionProtection;
 
     /**
-     * <p>The group number of the instance in the deployment set. If the deployment set uses the high availability group strategy (AvailabilityGroup), you can use this parameter to specify the group number. Valid values: 1 to 7.</p>
+     * <p>The group number of the instance within the deployment set. This parameter applies when the deployment set uses the AvailabilityGroup strategy. Valid values: 1 to 7.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -230,10 +230,10 @@ public class RunInstancesRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform only a dry run. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run for this request. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks whether the required parameters are specified, whether the request format is valid, whether the business restrictions are met, and whether the ECS inventory is sufficient. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li>false (default): performs a dry run and sends the request. If the check succeeds, instances are created.</li>
+     * <li>true: sends a check request without creating the instance. The check includes whether required parameters are specified, the request format, business limits, and ECS inventory. If the check fails, the corresponding error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li>false (default): sends a normal request. After passing the check, the instance is created immediately.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -243,20 +243,20 @@ public class RunInstancesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The hostname of the instance. Take note of the following items:</p>
+     * <p>The hostname of the instance. The following limits apply:</p>
      * <ul>
-     * <li>The hostname cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods or hyphens.</li>
-     * <li>Windows instances: The hostname must be 2 to 15 characters in length and cannot contain periods (.) or consist entirely of digits. The hostname can contain uppercase and lowercase letters, digits, and hyphens (-).</li>
-     * <li>Instances that run other operating systems such as Linux:<ul>
-     * <li>The hostname must be 2 to 64 characters in length and can contain multiple periods (.). Each segment separated by a period can contain uppercase and lowercase letters, digits, and hyphens (-).</li>
-     * <li>You can use the <code>${instance_id}</code> placeholder to include the instance ID in the <code>HostName</code> parameter. For example, if you set <code>HostName=k8s-${instance_id}</code> and the ECS instance ID is <code>i-123abc****</code>, the hostname is <code>k8s-i-123abc****</code>.</li>
+     * <li>Periods (.) and hyphens (-) cannot be used as the first or last character, and cannot be used consecutively.</li>
+     * <li>Windows instances: The hostname must be 2 to 15 characters in length. Periods (.) are not supported. The hostname cannot consist of digits only. It can contain uppercase and lowercase letters, digits, and hyphens (-).</li>
+     * <li>Other instance types (such as Linux):<ul>
+     * <li>The hostname must be 2 to 64 characters in length. Multiple periods (.) are supported. Each segment between periods can contain uppercase and lowercase letters, digits, and hyphens (-).</li>
+     * <li>You can use the placeholder <code>${instance_id}</code> to write the instance ID into the <code>HostName</code> parameter. For example, if <code>HostName=k8s-${instance_id}</code> and the ECS instance ID is <code>i-123abc****</code>, the hostname of the instance is <code>k8s-i-123abc****</code>.</li>
      * </ul>
      * </li>
      * </ul>
-     * <p>When you create multiple ECS instances, you can:</p>
+     * <p>When creating multiple ECS instances, you can:</p>
      * <ul>
-     * <li>Batch configure sequential hostnames. For more information, refer to <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential names or hostnames for instances</a>.</li>
-     * <li>Use the <code>HostNames.N</code> parameter to specify a separate hostname for each instance. You cannot set both <code>HostName</code> and <code>HostNames.N</code>.</li>
+     * <li>Set sequential hostnames in batch. For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Set sequential instance names or hostnames in batch</a>.</li>
+     * <li>Use the <code>HostNames.N</code> parameter to set a different hostname for each instance. Note that <code>HostName</code> and <code>HostNames.N</code> cannot be specified at the same time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -266,7 +266,7 @@ public class RunInstancesRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The hostnames of instances. Each instance is assigned a different hostname when you create multiple instances.</p>
+     * <p>The hostnames of instances when you create multiple instances at a time. Each instance is assigned a unique hostname.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs-host-01</p>
@@ -276,7 +276,7 @@ public class RunInstancesRequest extends TeaModel {
 
     /**
      * <p>The ID of the HPC cluster to which the instance belongs. </p>
-     * <p>This parameter is required when you create Super Computing Cluster (SCC) instances. You can call <a href="https://help.aliyun.com/document_detail/109138.html">CreateHpcCluster</a> to create an HPC cluster.</p>
+     * <p>This parameter is required when creating an SCC instance. You can create an HPC cluster by referring to <a href="https://help.aliyun.com/document_detail/109138.html">CreateHpcCluster</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>hpc-bp67acfmxazb4p****</p>
@@ -292,7 +292,7 @@ public class RunInstancesRequest extends TeaModel {
      * </ul>
      * <p>Default value: enabled.</p>
      * <blockquote>
-     * <p>For information about instance metadata, see <a href="https://help.aliyun.com/document_detail/49122.html">Overview of ECS instance metadata</a>.</p>
+     * <p>For more information about instance metadata, see <a href="https://help.aliyun.com/document_detail/49122.html">Overview of instance metadata</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -303,7 +303,7 @@ public class RunInstancesRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not publicly available.</p>
+     * <p>This parameter is not available for use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -313,14 +313,14 @@ public class RunInstancesRequest extends TeaModel {
     public Integer httpPutResponseHopLimit;
 
     /**
-     * <p>Specifies whether to forcefully use the security-hardened mode (IMDSv2) to access instance metadata. Valid values:</p>
+     * <p>Specifies whether to enforce the use of the hardened mode (IMDSv2) to access instance metadata. Valid values:</p>
      * <ul>
-     * <li>optional: does not forcefully use the security-hardened mode.</li>
-     * <li>required: forcefully uses the security-hardened mode. After you set this value, instance metadata cannot be accessed in normal mode.</li>
+     * <li>optional: does not enforce the use of the hardened mode.</li>
+     * <li>required: enforces the use of the hardened mode. After you set this value, the normal mode cannot be used to access instance metadata.</li>
      * </ul>
      * <p>Default value: optional.</p>
      * <blockquote>
-     * <p>For information about the modes for accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/150575.html">Access mode of instance metadata</a>.</p>
+     * <p>For more information about the modes for accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/150575.html">Access modes for instance metadata</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -330,15 +330,15 @@ public class RunInstancesRequest extends TeaModel {
     public String httpTokens;
 
     /**
-     * <p>The name of the image family. Set this parameter to obtain the latest available image from the specified image family to create instances.</p>
-     * <p>The name must be 2 to 128 characters in length. The name cannot start with a special character, digit, http://, or https://. The name can contain only the following special characters: periods (.), underscores (_), hyphens (-), and colons (:).</p>
-     * <p>Note the following items:</p>
+     * <p>The name of the image family. Set this parameter to use the latest available image from the specified image family to create the instance.</p>
+     * <p>The name must be 2 to 128 characters in length. It cannot start with a special character, a digit, <code>http://</code>, or <code>https://</code>. It can contain only the following special characters: periods (.), underscores (_), hyphens (-), and colons (:).</p>
+     * <p>Note the following:</p>
      * <ul>
-     * <li>If you set <code>ImageId</code>, you cannot set this parameter.</li>
-     * <li>If you do not set <code>ImageId</code>, but the launch template specified by <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> has <code>ImageId</code> configured, you cannot set this parameter.</li>
-     * <li>If you do not set <code>ImageId</code>, and the launch template specified by <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> does not have <code>ImageId</code> configured, you can set this parameter.</li>
-     * <li>If you do not set <code>ImageId</code>, <code>LaunchTemplateId</code>, or <code>LaunchTemplateName</code>, you can set this parameter.<blockquote>
-     * <p>For information about image families associated with Alibaba Cloud public images, refer to <a href="https://help.aliyun.com/document_detail/108393.html">Public image overview</a>.</p>
+     * <li>If <code>ImageId</code> is specified, do not set this parameter.</li>
+     * <li>If <code>ImageId</code> is not specified but the launch template identified by <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> has <code>ImageId</code> configured, do not set this parameter.</li>
+     * <li>If <code>ImageId</code> is not specified and the launch template identified by <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> does not have <code>ImageId</code> configured, you can set this parameter.</li>
+     * <li>If <code>ImageId</code> is not specified and neither <code>LaunchTemplateId</code> nor <code>LaunchTemplateName</code> is specified, you can set this parameter.<blockquote>
+     * <p>For image family information associated with Alibaba Cloud official images, see <a href="https://help.aliyun.com/document_detail/108393.html">Public image overview</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -350,7 +350,7 @@ public class RunInstancesRequest extends TeaModel {
     public String imageFamily;
 
     /**
-     * <p>The image ID. Specifies the image resource used to start the instance. You can call <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> to query available image resources. If you do not specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to use a launch template, and do not specify <code>ImageFamily</code> to use the latest available image from an image family, <code>ImageId</code> is required.</p>
+     * <p>The ID of the image used to create the instance. You can call <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> to query available images. If you do not specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to identify a launch template, and do not use <code>ImageFamily</code> to select the latest available image from an image family, ImageId is required.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyun_2_1903_x64_20G_alibase_20200324.vhd</p>
@@ -359,7 +359,7 @@ public class RunInstancesRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The image-related property information.</p>
+     * <p>The image-related attributes.</p>
      */
     @NameInMap("ImageOptions")
     public RunInstancesRequestImageOptions imageOptions;
@@ -371,8 +371,8 @@ public class RunInstancesRequest extends TeaModel {
      * <li>PostPaid: pay-as-you-go.</li>
      * </ul>
      * <p>Default value: PostPaid.</p>
-     * <p>&lt;props=&quot;china&quot;&gt;If you select subscription, make sure that your account supports balance payment or credit payment. Otherwise, the <code>InvalidPayMethod</code> error is returned.</p>
-     * <p>&lt;props=&quot;intl&quot;&gt;If you select subscription, make sure that your account supports credit payment. Otherwise, the <code>InvalidPayMethod</code> error is returned.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;If you select subscription, make sure your account supports balance payment or credit payment. Otherwise, the error <code>InvalidPayMethod</code> is returned.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;If you select subscription, make sure your account supports credit payment. Otherwise, the error <code>InvalidPayMethod</code> is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -381,8 +381,8 @@ public class RunInstancesRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The instance name. The name must be 2 to 128 characters in length and can contain characters that are categorized as letter in Unicode (including English and Chinese characters) and digits. The name can contain colons (:), underscores (_), periods (.), or hyphens (-). The default value is the <code>InstanceId</code> of the instance.</p>
-     * <p>When you create multiple ECS instances, you can batch configure sequential instance names that contain brackets ([]) and commas (,). For more information, refer to <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential names or hostnames for instances</a>.</p>
+     * <p>The instance name. The name must be 2 to 128 characters in length and can contain Unicode letters (including English and Chinese characters) and digits. It can also contain colons (:), underscores (_), periods (.), and hyphens (-). The default value is the <code>InstanceId</code> of the instance.</p>
+     * <p>When creating multiple ECS instances, you can set sequential instance names in batch. The name can contain brackets ([]) and commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Set sequential instance names or hostnames in batch</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>k8s-node-[1,4]-alibabacloud</p>
@@ -391,10 +391,10 @@ public class RunInstancesRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The instance type. If you do not specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to use a launch template, <code>InstanceType</code> is required.  </p>
+     * <p>The instance type. If you do not specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to identify a launch template, InstanceType is required.</p>
      * <ul>
-     * <li>Product selection: Refer to <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the performance data of the target instance type. You can also refer to <a href="https://help.aliyun.com/document_detail/58291.html">Best practices for instance type selection</a> to learn how to select an instance type.</li>
-     * <li>Inventory query: Invoke <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> to query the resource availability in a specific region or zone.</li>
+     * <li>To select an instance type: see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the performance data of a target instance type. You can also see <a href="https://help.aliyun.com/document_detail/58291.html">Select instance types</a> for guidance on how to choose an instance type.</li>
+     * <li>To check inventory: invoke <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> to query resource availability in a specified region or zone.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -411,7 +411,7 @@ public class RunInstancesRequest extends TeaModel {
      * </ul>
      * <p>Default value: PayByTraffic.</p>
      * <blockquote>
-     * <p>In <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidths are used as upper limits of bandwidths instead of guaranteed performance specifications. When resource contention occurs, the peak bandwidths may be limited. If you require guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
+     * <p>In <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidth values are upper limits and are not guaranteed. When resource contention occurs, the peak bandwidth may be limited. If your workloads require guaranteed bandwidth, use <strong>pay-by-bandwidth</strong> mode.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -421,7 +421,7 @@ public class RunInstancesRequest extends TeaModel {
     public String internetChargeType;
 
     /**
-     * <p>The maximum inbound public bandwidth, in Mbit/s. Valid values:</p>
+     * <p>The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:</p>
      * <ul>
      * <li>If the purchased outbound public bandwidth is less than or equal to 10 Mbit/s: 1 to 10. Default value: 10.</li>
      * <li>If the purchased outbound public bandwidth is greater than 10 Mbit/s: 1 to the value of <code>InternetMaxBandwidthOut</code>. Default value: the value of <code>InternetMaxBandwidthOut</code>.</li>
@@ -434,7 +434,7 @@ public class RunInstancesRequest extends TeaModel {
     public Integer internetMaxBandwidthIn;
 
     /**
-     * <p>The maximum outbound public bandwidth, in Mbit/s. Valid values: 0 to 100.</p>
+     * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</p>
      * <p>Default value: 0.</p>
      * 
      * <strong>example:</strong>
@@ -444,10 +444,10 @@ public class RunInstancesRequest extends TeaModel {
     public Integer internetMaxBandwidthOut;
 
     /**
-     * <p>Specifies whether the instance is an I/O optimized instance. The default value is none for <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a> and optimized for other instance types. Valid values:</p>
+     * <p>Specifies whether the instance is an I/O optimized instance. The default value for <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a> is none. The default value for all other instance types is optimized. Valid values:</p>
      * <ul>
-     * <li>none: non-I/O optimization.</li>
-     * <li>optimized: I/O optimization.</li>
+     * <li>none: not I/O optimized.</li>
+     * <li>optimized: I/O optimized.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -457,13 +457,13 @@ public class RunInstancesRequest extends TeaModel {
     public String ioOptimized;
 
     /**
-     * <p>The IPv6 addresses to assign to the primary ENI. You can specify up to 10 IPv6 addresses. Valid values of N: 1 to 10.</p>
+     * <p>One or more IPv6 addresses assigned to the primary ENI. You can specify up to 10 IPv6 addresses. The valid values of N range from 1 to 10.</p>
      * <p>Example: <code>Ipv6Address.1=2001:db8:1234:1a00::***</code>.</p>
-     * <p>Take note of the following items:</p>
+     * <p>Note:</p>
      * <ul>
-     * <li><p>If you set <code>Ipv6Address.N</code>, the value of <code>Amount</code> can only be 1, and you cannot set <code>Ipv6AddressCount</code> at the same time.</p>
+     * <li><p>If <code>Ipv6Address.N</code> is set, <code>Amount</code> can only be set to 1, and you cannot set <code>Ipv6AddressCount</code> at the same time.</p>
      * </li>
-     * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you cannot set <code>Ipv6Addresses.N</code> or <code>Ipv6AddressCount</code>. Instead, set <code>NetworkInterface.N.Ipv6Addresses.N</code> or <code>NetworkInterface.N.Ipv6AddressCount</code>.</p>
+     * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you cannot set <code>Ipv6Addresses.N</code> or <code>Ipv6AddressCount</code>. Set <code>NetworkInterface.N.Ipv6Addresses.N</code> or <code>NetworkInterface.N.Ipv6AddressCount</code> instead.</p>
      * </li>
      * </ul>
      * 
@@ -475,11 +475,11 @@ public class RunInstancesRequest extends TeaModel {
 
     /**
      * <p>The number of randomly generated IPv6 addresses to assign to the primary ENI. Valid values: 1 to 10.</p>
-     * <p>Take note of the following items:</p>
+     * <p>Note the following:</p>
      * <ul>
-     * <li><p>You cannot set both <code>Ipv6Address.N</code> and <code>Ipv6AddressCount</code>.</p>
+     * <li><p>You cannot specify both <code>Ipv6Address.N</code> and <code>Ipv6AddressCount</code>.</p>
      * </li>
-     * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you cannot set <code>Ipv6Address.N</code> or <code>Ipv6AddressCount</code>. Set <code>NetworkInterface.N.Ipv6Address.N</code> or <code>NetworkInterface.N.Ipv6AddressCount</code> instead.</p>
+     * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you cannot set <code>Ipv6Address.N</code> or <code>Ipv6AddressCount</code>. Use <code>NetworkInterface.N.Ipv6Address.N</code> or <code>NetworkInterface.N.Ipv6AddressCount</code> instead.</p>
      * </li>
      * </ul>
      * 
@@ -491,7 +491,7 @@ public class RunInstancesRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is in invitational preview and is not publicly available.</p>
+     * <p>This parameter is currently in invitational preview and is not available for use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -501,9 +501,9 @@ public class RunInstancesRequest extends TeaModel {
     public String isp;
 
     /**
-     * <p>The name of the key pair.</p>
+     * <p>The name of the SSH key pair.</p>
      * <blockquote>
-     * <p>For Windows instances, this parameter is ignored. The default value is empty. Even if you specify this parameter, only the <code>Password</code> value is used.</p>
+     * <p>This parameter is ignored for Windows instances and is empty by default. Even if this parameter is specified, only the <code>Password</code> content is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -513,8 +513,8 @@ public class RunInstancesRequest extends TeaModel {
     public String keyPairName;
 
     /**
-     * <p>The launch template ID. For more information, call <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a>.</p>
-     * <p>To create instances by using a launch template, you must specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code>.</p>
+     * <p>The ID of the launch template. For more information, call <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a>.</p>
+     * <p>When creating an instance from a launch template, you must specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to identify the template.</p>
      * 
      * <strong>example:</strong>
      * <p>lt-bp1apo0bbbkuy0rj****</p>
@@ -523,8 +523,8 @@ public class RunInstancesRequest extends TeaModel {
     public String launchTemplateId;
 
     /**
-     * <p>The launch template name.</p>
-     * <p>To create instances by using a launch template, you must specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code>.</p>
+     * <p>The name of the launch template.</p>
+     * <p>When creating an instance from a launch template, you must specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to identify the template.</p>
      * 
      * <strong>example:</strong>
      * <p>LaunchTemplate_Name</p>
@@ -533,7 +533,7 @@ public class RunInstancesRequest extends TeaModel {
     public String launchTemplateName;
 
     /**
-     * <p>The launch template version. If you specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> but do not specify the launch template version, the default version is used.</p>
+     * <p>The version of the launch template. If you specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> without specifying a version number, the default version is used.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -542,7 +542,7 @@ public class RunInstancesRequest extends TeaModel {
     public Long launchTemplateVersion;
 
     /**
-     * <p>The unique identifier of the platform managed host, such as mh-f2d3647ca21****.</p>
+     * <p>The unique identifier of the platform-managed host, such as mh-f2d3647ca21****.</p>
      * 
      * <strong>example:</strong>
      * <p>mh-f2d3647ca21****</p>
@@ -551,16 +551,16 @@ public class RunInstancesRequest extends TeaModel {
     public String managedHostId;
 
     /**
-     * <p>The minimum Quantity of ECS instances to purchase. Valid values: 1 to 100.</p>
-     * <p>The number of successfully created ECS instances depends on the specified Amount and MinAmount values:</p>
+     * <p>The minimum number of ECS instances to purchase. Valid values: 1 to 100.</p>
+     * <p>The number of instances successfully created depends on the values of Amount and MinAmount:</p>
      * <ul>
-     * <li><p>If MinAmount is not specified: Instances are created based on the Amount value. If the inventory is insufficient, the API returns a failed response and no instances are created.</p>
+     * <li><p>If MinAmount is not specified: instances are created according to the Amount value. If inventory is insufficient, the API returns a creation failure and no instances are created.</p>
      * </li>
      * <li><p>If MinAmount is specified:</p>
      * <ul>
-     * <li>If the ECS inventory &lt; MinAmount: No instances are created and the API returns a failed response.</li>
-     * <li>If MinAmount ≤ ECS inventory &lt; Amount: Instances are created based on the available inventory and the API returns a success.</li>
-     * <li>If the ECS inventory ≥ Amount: Instances are created based on the specified Amount value and the API returns a success.</li>
+     * <li>If the available ECS inventory &lt; MinAmount: no instances are created and the API returns a creation failure.</li>
+     * <li>If MinAmount ≤ available ECS inventory &lt; Amount: instances are created based on the available inventory and the API returns a creation success.</li>
+     * <li>If the available ECS inventory ≥ Amount: instances are created according to the specified Amount and the API returns a creation success.</li>
      * </ul>
      * </li>
      * </ul>
@@ -572,19 +572,19 @@ public class RunInstancesRequest extends TeaModel {
     public Integer minAmount;
 
     /**
-     * <p>The Elastic Network Interface (ENI) information.</p>
+     * <p>The network interface controller (NIC) information.</p>
      */
     @NameInMap("NetworkInterface")
     public java.util.List<RunInstancesRequestNetworkInterface> networkInterface;
 
     /**
-     * <p>The number of queues supported by the primary ENI. Take note of the following items:</p>
+     * <p>The number of queues for the primary ENI. Note the following:</p>
      * <ul>
      * <li><p>The value cannot exceed the maximum number of queues per ENI allowed by the instance type.</p>
      * </li>
-     * <li><p>The total number of queues across all ENIs of the instance cannot exceed the total queue quota allowed by the instance type. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the <code>MaximumQueueNumberPerEni</code> and <code>TotalEniQueueQuantity</code> fields for the maximum number of queues per ENI and the total queue quota.</p>
+     * <li><p>The total number of queues across all ENIs on the instance cannot exceed the total queue quota for the instance type. To query the maximum number of queues per ENI and the total queue quota for an instance type, call <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> and check the <code>MaximumQueueNumberPerEni</code> and <code>TotalEniQueueQuantity</code> fields.</p>
      * </li>
-     * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you cannot set <code>NetworkInterfaceQueueNumber</code>. Set <code>NetworkInterface.N.QueueNumber</code> instead.</p>
+     * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you cannot set <code>NetworkInterfaceQueueNumber</code>. Use <code>NetworkInterface.N.QueueNumber</code> instead.</p>
      * </li>
      * </ul>
      * 
@@ -595,7 +595,7 @@ public class RunInstancesRequest extends TeaModel {
     public Integer networkInterfaceQueueNumber;
 
     /**
-     * <p>The network-related property parameters.</p>
+     * <p>The network-related parameters.</p>
      */
     @NameInMap("NetworkOptions")
     public RunInstancesRequestNetworkOptions networkOptions;
@@ -607,12 +607,12 @@ public class RunInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The password of the instance. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</p>
+     * <p>The logon password of the instance. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</p>
      * <pre><code>()`~!@#$%^&amp;*-_+=|{}[]:;\\&quot;&lt;&gt;,.?/
      * </code></pre>
      * <p>For Windows instances, the password cannot start with a forward slash (/).</p>
      * <blockquote>
-     * <p>If you specify <code>Password</code>, use HTTPS to send the request to avoid password leaks.</p>
+     * <p>If you specify <code>Password</code>, use HTTPS to send the request to prevent password leakage.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -624,12 +624,12 @@ public class RunInstancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to use the password preset in the image. Valid values:</p>
      * <ul>
-     * <li>true: Uses the preset password.</li>
-     * <li>false: Does not use the preset password.</li>
+     * <li>true: uses the preset password.</li>
+     * <li>false: does not use the preset password.</li>
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p>When you use this parameter, leave Password empty and make sure that the image has a password configured.</p>
+     * <p>When you use this parameter, the Password parameter must be empty, and the image you use must have a password configured.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -639,13 +639,13 @@ public class RunInstancesRequest extends TeaModel {
     public Boolean passwordInherit;
 
     /**
-     * <p>The subscription duration of the resource. The unit is specified by <code>PeriodUnit</code>. This parameter takes effect and is required only when <code>InstanceChargeType</code> is set to <code>PrePaid</code>. If <code>DedicatedHostId</code> is specified, the value of Period cannot exceed the subscription duration of the dedicated host. Valid values:</p>
+     * <p>The subscription period of the resource. The unit is specified by <code>PeriodUnit</code>. This parameter takes effect and is required only when <code>InstanceChargeType</code> is set to <code>PrePaid</code>. If <code>DedicatedHostId</code> is specified, the value cannot exceed the subscription period of the dedicated host. Valid values:</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>If PeriodUnit is set to Week, valid values of Period are 1, 2, 3, and 4.</li>
-     * <li>If PeriodUnit is set to Month, valid values of Period are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
+     * <li>When PeriodUnit=Week: 1, 2, 3, 4.</li>
+     * <li>When PeriodUnit=Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, 60.</li>
      * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;If PeriodUnit is set to Month, valid values of Period are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;When PeriodUnit=Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, 60.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -654,7 +654,7 @@ public class RunInstancesRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the subscription billable methods duration. Valid values: </p>
+     * <p>The unit of the subscription billing period. Valid values:</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
      * <li>Week.</li>
@@ -669,28 +669,28 @@ public class RunInstancesRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The private domain name configuration of the instance.</p>
-     * <p>For more information about private private domain resolution, see <a href="https://help.aliyun.com/document_detail/2844797.html">ECS private private domain resolution</a>.</p>
+     * <p>The private DNS name configuration for the instance.</p>
+     * <p>For information about private Private domain resolution, see <a href="https://help.aliyun.com/document_detail/2844797.html">ECS private Private domain resolution</a>.</p>
      */
     @NameInMap("PrivateDnsNameOptions")
     public RunInstancesRequestPrivateDnsNameOptions privateDnsNameOptions;
 
     /**
-     * <p>The private IP address of the instance. When you set a private IP address for a VPC-type ECS instance, the IP address must be from the idle CIDR block of the vSwitch (<code>VSwitchId</code>).</p>
-     * <p>Take note of the following items:</p>
+     * <p>The private IP address of the instance. When setting a private IP address for a VPC-type ECS instance, you must select an available IP address from the CIDR block of the vSwitch (VSwitchId).</p>
+     * <p>Note the following:</p>
      * <ul>
-     * <li><p>After you set <code>PrivateIpAddress</code>:</p>
+     * <li><p>After you set PrivateIpAddress:</p>
      * <ul>
-     * <li>If <code>Amount</code> is set to 1, a private IP address is allocated to the created ECS instance.</li>
-     * <li>If <code>Amount</code> is set to a value greater than 1, consecutive private IP addresses are allocated to the ECS instances in a batch creation, starting from the specified private IP address. In this case, you cannot attach a secondary network interface controller (NIC) to the instances (that is, you cannot set <code>NetworkInterface.N.*</code> parameters).</li>
+     * <li>If Amount is set to 1, a private IP address is assigned to the created ECS instance.</li>
+     * <li>If Amount is set to a value greater than 1, the specified private IP address is used as the starting address, and consecutive private IP addresses are assigned to multiple ECS instances in sequence. In this case, secondary ENIs cannot be attached to the instances (that is, NetworkInterface.N.* parameters are not supported).</li>
      * </ul>
      * </li>
-     * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you cannot set <code>PrivateIpAddress</code>. Set <code>NetworkInterface.N.PrimaryIpAddress</code> instead.</p>
+     * <li><p>If NetworkInterface.N.InstanceType is set to Primary, you cannot set PrivateIpAddress. Set NetworkInterface.N.PrimaryIpAddress instead.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>The first and last three IP addresses of each vSwitch CIDR block are system reserved addresses and cannot be specified.
-     * For example, if the vSwitch CIDR block is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are system reserved addresses.</p>
+     * <p>The first IP address and the last three IP addresses of each vSwitch are reserved by the system and cannot be specified.
+     * For example, if the CIDR block of a vSwitch is 192.168.1.0/24, the addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -700,7 +700,7 @@ public class RunInstancesRequest extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>The name of the instance RAM role. You can call the RAM API <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> to query the instance RAM roles that you have created.</p>
+     * <p>The name of the instance RAM role. You can call the RAM API <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> to query the instance RAM roles you have created.</p>
      * 
      * <strong>example:</strong>
      * <p>RAM_Name</p>
@@ -736,8 +736,8 @@ public class RunInstancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable security hardening. Valid values:</p>
      * <ul>
-     * <li>Active: Enables security hardening. This value is applicable only to public images.</li>
-     * <li>Deactive: Disables security hardening. This value is applicable to all image types.</li>
+     * <li>Active: enables security hardening. This value applies only to public images.</li>
+     * <li>Deactive: disables security hardening. This value applies to all image types.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -747,15 +747,15 @@ public class RunInstancesRequest extends TeaModel {
     public String securityEnhancementStrategy;
 
     /**
-     * <p>The security group ID to which the new instances belong. Instances in the same security group can communicate with each other. The maximum number of instances that a security group can contain varies based on the security group type. For more information, refer to the security group section in <a href="~~25412#SecurityGroupQuota~~">Limits</a>.</p>
+     * <p>The ID of the security group to which the new instance belongs. Instances in the same security group can communicate with each other. The maximum number of instances a security group can contain depends on the security group type. For more information, see the security group section in <a href="~~25412#SecurityGroupQuota~~">Limits</a>.</p>
      * <blockquote>
-     * <p><code>SecurityGroupId</code> determines the network type of the instance. For example, if the specified security group is of the VPC type, the instance is a VPC-type instance, and you must also specify <code>VSwitchId</code>.</p>
+     * <p>The network type of the instance is determined by <code>SecurityGroupId</code>. For example, if the security group uses a VPC network, the instance is also VPC-type, and you must also specify <code>VSwitchId</code>.</p>
      * </blockquote>
-     * <p>If you do not specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to use a launch template, the security group ID is required. Note the following items:</p>
+     * <p>If you do not specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to identify a launch template, the security group ID is required. Note the following:</p>
      * <ul>
-     * <li><p>You can set <code>SecurityGroupId</code> to specify a single security group, or set <code>SecurityGroupIds.N</code> to specify one or more security groups. You cannot specify both <code>SecurityGroupId</code> and <code>SecurityGroupIds.N</code>.</p>
+     * <li><p>You can specify one security group using <code>SecurityGroupId</code>, or one or more security groups using <code>SecurityGroupIds.N</code>. You cannot specify both <code>SecurityGroupId</code> and <code>SecurityGroupIds.N</code> at the same time.</p>
      * </li>
-     * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you cannot set <code>SecurityGroupId</code> or <code>SecurityGroupIds.N</code>. Set only <code>NetworkInterface.N.SecurityGroupId</code> or <code>NetworkInterface.N.SecurityGroupIds.N</code>.</p>
+     * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, do not set <code>SecurityGroupId</code> or <code>SecurityGroupIds.N</code>. Use <code>NetworkInterface.N.SecurityGroupId</code> or <code>NetworkInterface.N.SecurityGroupIds.N</code> instead.</p>
      * </li>
      * </ul>
      * 
@@ -766,11 +766,11 @@ public class RunInstancesRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>Adds the instance to multiple security groups. The valid values of N depend on the maximum number of security groups to which an instance can belong. For more information, see <a href="https://help.aliyun.com/document_detail/101348.html">Security group limits</a>.</p>
-     * <p>Take note of the following items:</p>
+     * <p>Adds the instance to multiple security groups at the same time. The valid values of N depend on the maximum number of security groups to which an instance can belong. For more information, see <a href="https://help.aliyun.com/document_detail/101348.html">Security group limits</a>.</p>
+     * <p>Note:</p>
      * <ul>
-     * <li>You cannot specify both <code>SecurityGroupId</code> and <code>SecurityGroupIds.N</code>.</li>
-     * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you cannot specify <code>SecurityGroupId</code> or <code>SecurityGroupIds.N</code>. Instead, specify <code>NetworkInterface.N.SecurityGroupId</code> or <code>NetworkInterface.N.SecurityGroupIds.N</code>.</li>
+     * <li>You cannot specify both <code>SecurityGroupId</code> and <code>SecurityGroupIds.N</code> at the same time.</li>
+     * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you cannot set <code>SecurityGroupId</code> or <code>SecurityGroupIds.N</code>. Set <code>NetworkInterface.N.SecurityGroupId</code> or <code>NetworkInterface.N.SecurityGroupIds.N</code> instead.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -780,17 +780,17 @@ public class RunInstancesRequest extends TeaModel {
     public java.util.List<String> securityGroupIds;
 
     /**
-     * <p>The protection period of the spot instance, in hours. Valid values:</p>
+     * <p>The retention period of the spot instance. Unit: hours. Valid values:</p>
      * <ul>
-     * <li>1: After the instance is created, Alibaba Cloud guarantees that the instance is not automatically released for 1 hour. After 1 hour, the system compares the bid price with the marketplace price in real-time and checks the resource inventory to determine whether to retain or revoke the instance.</li>
-     * <li>0: After the instance is created, Alibaba Cloud does not guarantee a runtime. The system compares the bid price with the marketplace price in real-time and checks the resource inventory to determine whether to retain or revoke the instance.</li>
+     * <li>1: Alibaba Cloud guarantees that the instance runs for 1 hour after creation without being automatically released. After 1 hour, the system compares the bid price against the market price and checks resource inventory in real time to determine whether to retain or revoke the instance.</li>
+     * <li>0: Alibaba Cloud does not guarantee the runtime of the instance after creation. The system compares the bid price against the market price and checks resource inventory in real time to determine whether to retain or revoke the instance.</li>
      * </ul>
      * <p>Default value: 1.</p>
      * <blockquote>
      * <ul>
      * <li>This parameter currently supports only the values 0 and 1.</li>
-     * <li>Spot instances are billed by second. Select an appropriate protection period based on the expected task execution duration.</li>
-     * <li>Alibaba Cloud sends a notification through an ECS system event 5 minutes before the instance is revoked.</li>
+     * <li>Spot instances are billed by the second. Choose a retention period based on the expected execution duration of your task.</li>
+     * <li>Alibaba Cloud sends a notification through an ECS system event 5 minutes before the instance is reclaimed.</li>
      * </ul>
      * </blockquote>
      * 
@@ -801,12 +801,12 @@ public class RunInstancesRequest extends TeaModel {
     public Integer spotDuration;
 
     /**
-     * <p>The interruption mode of the spot instance. Valid values:</p>
+     * <p>The interruption mode for spot instances. Valid values:</p>
      * <ul>
-     * <li><p>Terminate: directly releases the instance.</p>
+     * <li><p>Terminate: releases the instance immediately.</p>
      * </li>
      * <li><p>Stop: puts the instance into economical mode.</p>
-     * <p>For more information about economical mode, refer to <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode for pay-as-you-go instances</a>.</p>
+     * <p>For more information about economical mode, see <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode for pay-as-you-go instances</a>.</p>
      * </li>
      * </ul>
      * <p>Default value: Terminate.</p>
@@ -818,7 +818,7 @@ public class RunInstancesRequest extends TeaModel {
     public String spotInterruptionBehavior;
 
     /**
-     * <p>The maximum hourly price of the instance. This parameter supports up to three decimal places and takes effect when <code>SpotStrategy</code> is set to <code>SpotWithPriceLimit</code>.</p>
+     * <p>The maximum hourly price for the instance. This parameter supports up to three decimal places and takes effect when <code>SpotStrategy</code> is set to <code>SpotWithPriceLimit</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>0.97</p>
@@ -827,11 +827,11 @@ public class RunInstancesRequest extends TeaModel {
     public Float spotPriceLimit;
 
     /**
-     * <p>The bidding strategy for the pay-as-you-go instance. This parameter takes effect when <code>InstanceChargeType</code> is set to <code>PostPaid</code>. Valid values:</p>
+     * <p>The bidding strategy for pay-as-you-go instances. This parameter takes effect when <code>InstanceChargeType</code> is set to <code>PostPaid</code>. Valid values:</p>
      * <ul>
      * <li>NoSpot: regular pay-as-you-go instance.</li>
-     * <li>SpotWithPriceLimit: spot instance with a maximum price limit.</li>
-     * <li>SpotAsPriceGo: spot instance priced at the market price at the time of purchase.</li>
+     * <li>SpotWithPriceLimit: spot instance with a maximum price.</li>
+     * <li>SpotAsPriceGo: spot instance where the system automatically bids at the current market price.</li>
      * </ul>
      * <p>Default value: NoSpot.</p>
      * 
@@ -851,7 +851,7 @@ public class RunInstancesRequest extends TeaModel {
     public String storageSetId;
 
     /**
-     * <p>The maximum number of partitions in the storage set. Valid values: greater than or equal to 1.</p>
+     * <p>The maximum number of partitions in the storage set. The value must be greater than or equal to 1.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -860,7 +860,7 @@ public class RunInstancesRequest extends TeaModel {
     public Integer storageSetPartitionNumber;
 
     /**
-     * <p>The tags of the instance, disks, and primary ENI.</p>
+     * <p>The tags of the instance, disk, and primary ENI.</p>
      */
     @NameInMap("Tag")
     public java.util.List<RunInstancesRequestTag> tag;
@@ -870,7 +870,7 @@ public class RunInstancesRequest extends TeaModel {
      * <ul>
      * <li><p>default: creates a non-dedicated-host instance.</p>
      * </li>
-     * <li><p>host: creates an instance on a dedicated host. If you do not specify <code>DedicatedHostId</code>, Alibaba Cloud automatically selects a dedicated host for the instance.</p>
+     * <li><p>host: creates a dedicated host instance. If you do not specify <code>DedicatedHostId</code>, Alibaba Cloud automatically selects a dedicated host for the instance.</p>
      * </li>
      * </ul>
      * <p>Default value: default.</p>
@@ -882,14 +882,14 @@ public class RunInstancesRequest extends TeaModel {
     public String tenancy;
 
     /**
-     * <p>Specifies whether to automatically append sequential suffixes to <code>HostName</code> and <code>InstanceName</code> when you create multiple instances. The sequential suffixes start from 001 and cannot exceed 999. Valid values:</p>
+     * <p>Specifies whether to automatically append a sequential suffix to <code>HostName</code> and <code>InstanceName</code> when creating multiple instances. The sequential suffix starts from 001 and cannot exceed 999. Valid values:</p>
      * <ul>
-     * <li>true: Appends sequential suffixes.</li>
-     * <li>false: Does not append sequential suffixes.</li>
+     * <li>true: appends the suffix.</li>
+     * <li>false: does not append the suffix.</li>
      * </ul>
      * <p>Default value: false.</p>
-     * <p>When <code>HostName</code> or <code>InstanceName</code> is set in a specified sequential format without the <code>name_suffix</code> naming suffix (that is, the naming format is <code>name_prefix[begin_number,bits]</code>), <code>UniqueSuffix</code> does not take effect. Names are ordered only in the specified sequence.</p>
-     * <p>For more information, refer to <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential names or hostnames for instances</a>.</p>
+     * <p>If <code>HostName</code> or <code>InstanceName</code> is set in a specified sort format without a name suffix (<code>name_suffix</code>), that is, the naming format is <code>name_prefix[begin_number,bits]</code>, UniqueSuffix does not take effect and names are sorted only in the specified order.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Set sequential instance names or hostnames in batch</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -898,10 +898,10 @@ public class RunInstancesRequest extends TeaModel {
     public Boolean uniqueSuffix;
 
     /**
-     * <p>The instance user data. The data must be Base64-encoded. The maximum size of the raw data before Base64 encoding is 32 KB.</p>
-     * <p>For more information about the usage limits, formats, and execution frequency of instance user data, refer to <a href="https://help.aliyun.com/document_detail/49121.html">Instance user data</a>.</p>
+     * <p>The custom data of the instance. The data must be Base64-encoded, and the size of the data before Base64 encoding cannot exceed 32 KB.</p>
+     * <p>For information about the limits, formats, and execution frequency of instance user data, see <a href="https://help.aliyun.com/document_detail/49121.html">Instance user data</a>.</p>
      * <blockquote>
-     * <p>To ensure the security of UserData during transmission, do not pass sensitive data such as passwords and private keys in plaintext. If you need to pass such information, encrypt it first, encode it in Base64, and then decrypt it inside the instance.</p>
+     * <p>To protect the security of UserData during transmission, avoid passing sensitive data such as passwords and private keys in plaintext. If you need to pass such information, encrypt it first and then Base64-encode it. Decrypt the data inside the instance to ensure security.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -911,12 +911,12 @@ public class RunInstancesRequest extends TeaModel {
     public String userData;
 
     /**
-     * <p>The vSwitch ID. If you are creating VPC-type ECS instances, you must specify a vSwitch ID. The security group and the vSwitch must belong to the same VPC. You can call <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> to query available vSwitches.</p>
-     * <p>Note the following items:</p>
+     * <p>The ID of the vSwitch. If you are creating a VPC-type ECS instance, you must specify a vSwitch ID. The security group and vSwitch must belong to the same VPC. You can call <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> to query information about existing vSwitches.</p>
+     * <p>Note the following:</p>
      * <ul>
-     * <li><p>If you set <code>VSwitchId</code>, the <code>ZoneId</code> value must match the zone of the vSwitch. You can also leave <code>ZoneId</code> empty, and the system automatically selects the zone of the specified vSwitch.</p>
+     * <li><p>If you specify <code>VSwitchId</code>, the <code>ZoneId</code> you specify must match the zone where the vSwitch resides. You can also omit <code>ZoneId</code>, and the system automatically selects the zone where the specified vSwitch resides.</p>
      * </li>
-     * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you cannot set <code>VSwitchId</code>. Set only <code>NetworkInterface.N.VSwitchId</code>.</p>
+     * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, do not set <code>VSwitchId</code>. Use <code>NetworkInterface.N.VSwitchId</code> instead.</p>
      * </li>
      * </ul>
      * 
@@ -927,9 +927,9 @@ public class RunInstancesRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The zone ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> to query available zones.</p>
+     * <p>The ID of the zone where the instance resides. You can call <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> to query the list of zones.</p>
      * <blockquote>
-     * <p>If you specify <code>VSwitchId</code>, the <code>ZoneId</code> value must match the zone of the vSwitch. You can also leave <code>ZoneId</code> empty, and the system automatically selects the zone of the specified vSwitch.</p>
+     * <p>If you specify <code>VSwitchId</code>, the <code>ZoneId</code> you specify must match the zone where the vSwitch resides. You can also omit <code>ZoneId</code>, and the system automatically selects the zone where the specified vSwitch resides.</p>
      * </blockquote>
      * <p>Default value: automatically selected by the system.</p>
      * 
@@ -1579,7 +1579,7 @@ public class RunInstancesRequest extends TeaModel {
     public static class RunInstancesRequestCpuOptions extends TeaModel {
         /**
          * <p>The number of CPU cores.</p>
-         * <p>&lt;props=&quot;china&quot;&gt;Default value: For more information, see <a href="https://help.aliyun.com/document_detail/145895.html">Customize CPU options</a>.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;Default value: see <a href="https://help.aliyun.com/document_detail/145895.html">Customize CPU options</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1597,14 +1597,14 @@ public class RunInstancesRequest extends TeaModel {
         public String numa;
 
         /**
-         * <p>The number of threads per CPU core. The number of vCPUs of the ECS instance = <code>CpuOptions.Core</code> value × <code>CpuOptions.ThreadsPerCore</code> value.</p>
+         * <p>The number of threads per CPU core. The number of vCPUs for an ECS instance equals <code>CpuOptions.Core</code> × <code>CpuOptions.ThreadsPerCore</code>.</p>
          * <ul>
-         * <li><p><code>CpuOptions.ThreadsPerCore=1</code> indicates that hyper-threading is disabled.</p>
+         * <li><p>Setting <code>CpuOptions.ThreadsPerCore=1</code> disables hyper-threading.</p>
          * </li>
-         * <li><p>Only specific instance types support setting the number of threads per CPU core.</p>
+         * <li><p>Only some instance types support configuring the number of threads per core.</p>
          * </li>
          * </ul>
-         * <p>&lt;props=&quot;china&quot;&gt;For information about valid values and default values, see <a href="https://help.aliyun.com/document_detail/145895.html">Customize CPU options</a>.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;For valid values and default values, see <a href="https://help.aliyun.com/document_detail/145895.html">Customize CPU options</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1615,12 +1615,12 @@ public class RunInstancesRequest extends TeaModel {
         /**
          * <p>The CPU topology type of the instance. Valid values:</p>
          * <ul>
-         * <li>ContinuousCoreToHTMapping: The hyper-threads (HTs) within the same core of the instance CPU topology are continuous.</li>
-         * <li>DiscreteCoreToHTMapping: The HTs within the same core of the instance are discrete.</li>
+         * <li>ContinuousCoreToHTMapping: In the CPU topology structure, the hyper-threads (HTs) of the same core are contiguous.</li>
+         * <li>DiscreteCoreToHTMapping: In the CPU topology structure, the HTs of the same core are discrete.</li>
          * </ul>
-         * <p>Default value: null.</p>
+         * <p>Default value: none.</p>
          * <blockquote>
-         * <p>Only specific instance families support this parameter. For information about supported instance families, see <a href="https://help.aliyun.com/document_detail/2636059.html">View and modify the CPU topology structure</a>.</p>
+         * <p>Only some instance families support this parameter. For the supported instance families, see <a href="https://help.aliyun.com/document_detail/2636059.html">View and modify the CPU topology structure</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1631,7 +1631,7 @@ public class RunInstancesRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in invitational preview and is not available for general use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1690,7 +1690,7 @@ public class RunInstancesRequest extends TeaModel {
     public static class RunInstancesRequestHibernationOptions extends TeaModel {
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is currently in invitational preview and is not available for use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1716,7 +1716,7 @@ public class RunInstancesRequest extends TeaModel {
 
     public static class RunInstancesRequestPrivatePoolOptions extends TeaModel {
         /**
-         * <p>The ID of the private pool. The ID of an elasticity assurance or a capacity reservation.</p>
+         * <p>The ID of the private pool, which is the ID of the elasticity assurance or capacity reservation.</p>
          * 
          * <strong>example:</strong>
          * <p>eap-bp67acfmxazb4****</p>
@@ -1725,17 +1725,17 @@ public class RunInstancesRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The private pool option for launching the instance. After an elasticity assurance or capacity reservation takes effect, a private pool is generated. You can select a private pool when you launch an instance. Valid values:</p>
+         * <p>The private pool capacity option for starting the instance. After an elasticity assurance or capacity reservation takes effect, a private pool is generated for launching instances. Valid values:</p>
          * <ul>
-         * <li>Open: open mode. The system automatically matches available open private pool capacity. If no matching private pool capacity is available, public pool resources are used to launch the instance. In this mode, you do not need to set <code>PrivatePoolOptions.Id</code>.</li>
-         * <li>Target: specified mode. The instance is launched by using the capacity of the specified private pool. If the specified private pool capacity is unavailable, the instance fails to launch. In this mode, you must specify the private pool ID, that is, <code>PrivatePoolOptions.Id</code> is required.</li>
-         * <li>None: none mode. No private pool capacity is used to launch the instance.</li>
+         * <li>Open: open mode. The system automatically matches an open private pool. If no matching private pool is available, the instance is launched from the public pool. In this mode, you do not need to set <code>PrivatePoolOptions.Id</code>.</li>
+         * <li>Target: targeted mode. The instance is launched from the specified private pool. If the specified private pool is unavailable, the instance fails to start. In this mode, you must specify a private pool ID by setting <code>PrivatePoolOptions.Id</code>.</li>
+         * <li>None: no private pool mode. The instance is launched without using a private pool.</li>
          * </ul>
          * <p>Default value: None.</p>
-         * <p>In any of the following scenarios, the private pool option can only be set to <code>None</code> or left empty:</p>
+         * <p>In the following scenarios, the private pool capacity option can only be set to <code>None</code> or left unset:</p>
          * <ul>
          * <li>Creating a spot instance.</li>
-         * <li>Creating an ECS instance on a dedicated host.</li>
+         * <li>Creating an ECS instance on a dedicated host (DDH).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1769,18 +1769,18 @@ public class RunInstancesRequest extends TeaModel {
 
     public static class RunInstancesRequestSchedulerOptions extends TeaModel {
         /**
-         * <p>The ID of the dedicated host cluster to which the ECS instance belongs. The system automatically selects a dedicated host in the cluster to deploy the ECS instance.</p>
+         * <p>The ID of the dedicated host cluster to which the ECS instance belongs. The system automatically selects a dedicated host from the specified cluster to deploy the ECS instance.</p>
          * <blockquote>
          * <p>This parameter takes effect only when <code>Tenancy</code> is set to <code>host</code>.</p>
          * </blockquote>
          * <p>If you specify both a dedicated host (<code>DedicatedHostId</code>) and a dedicated host cluster (<code>SchedulerOptions.DedicatedHostClusterId</code>):</p>
          * <ul>
-         * <li>If the dedicated host belongs to the dedicated host cluster, the ECS instance is preferentially deployed on the specified dedicated host.</li>
-         * <li>If the dedicated host does not belong to the dedicated host cluster, the ECS instance fails to be created.</li>
+         * <li>If the dedicated host belongs to the specified cluster, the ECS instance is preferentially deployed on the specified dedicated host.</li>
+         * <li>If the dedicated host does not belong to the specified cluster, the ECS instance fails to be created.</li>
          * </ul>
-         * <p>&lt;props=&quot;china&quot;&gt;You can call the <a href="https://help.aliyun.com/document_detail/184145.html">DescribeDedicatedHostClusters</a> operation to query the list of dedicated host cluster IDs.</p>
-         * <p>&lt;props=&quot;intl&quot;&gt;You can call the <a href="https://help.aliyun.com/document_detail/184145.html">DescribeDedicatedHostClusters</a> operation to query the list of dedicated host cluster IDs.</p>
-         * <p>&lt;props=&quot;partner&quot;&gt;You can call the <a href="https://help.aliyun.com/document_detail/184145.html">DescribeDedicatedHostClusters</a> operation to query the list of dedicated host cluster IDs.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;To query the list of dedicated host cluster IDs, call <a href="https://help.aliyun.com/document_detail/184145.html">DescribeDedicatedHostClusters</a>.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;To query the list of dedicated host cluster IDs, call <a href="https://help.aliyun.com/document_detail/184145.html">DescribeDedicatedHostClusters</a>.</p>
+         * <p>&lt;props=&quot;partner&quot;&gt;To query the list of dedicated host cluster IDs, call <a href="https://help.aliyun.com/document_detail/184145.html">DescribeDedicatedHostClusters</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>dc-bp12wlf6am0vz9v2****</p>
@@ -1806,16 +1806,16 @@ public class RunInstancesRequest extends TeaModel {
     public static class RunInstancesRequestSecurityOptions extends TeaModel {
         /**
          * <p>The confidential computing mode. Set the value to Enclave.</p>
-         * <p>When this parameter is set to Enclave, the ECS instance uses Enclave to build a confidential computing environment. Currently, only the c7, g7, and r7 instance families support specifying this parameter when you invoke <code>RunInstances</code> to use Enclave confidential computing. Take note of the following items:</p>
+         * <p>Setting this parameter to Enclave means the ECS instance uses Enclave to build a confidential computing environment. Currently, only instance types in instance families c7, g7, and r7 support setting this parameter when invoking <code>RunInstances</code>. Note the following:</p>
          * <ul>
          * <li><p>The confidential computing feature is in invitational preview.</p>
          * </li>
-         * <li><p>When you create an Enclave confidential computing ECS instance by invoking an API operation, you can only invoke <code>RunInstances</code>. <code>CreateInstance</code> does not support the <code>SecurityOptions.ConfidentialComputingMode</code> parameter.</p>
+         * <li><p>To create an Enclave-based confidential computing instance by invoking an API operation, use <code>RunInstances</code>. <code>CreateInstance</code> does not support the <code>SecurityOptions.ConfidentialComputingMode</code> parameter.</p>
          * </li>
-         * <li><p>Enclave confidential computing relies on the trusted system (vTPM). When you specify that an ECS instance uses Enclave to build a confidential computing environment, the trusted system is also enabled for the instance. Therefore, when you invoke this operation, if you set <code>SecurityOptions.ConfidentialComputingMode=Enclave</code>, the created ECS instance has both Enclave confidential computing mode and the trusted system enabled, regardless of whether you set <code>SecurityOptions.TrustedSystemMode=vTPM</code>.</p>
+         * <li><p>Enclave-based confidential computing relies on the trusted system (vTPM). If you configure an instance to use Enclave, the trusted system is also enabled. Therefore, if you set <code>SecurityOptions.ConfidentialComputingMode=Enclave</code>, the instance will have both Enclave confidential computing pattern and the trusted system enabled, regardless of whether you set <code>SecurityOptions.TrustedSystemMode=vTPM</code>.</p>
          * </li>
          * </ul>
-         * <p>For more information about confidential computing, see <a href="https://help.aliyun.com/document_detail/203433.html">Build a confidential computing environment by using Enclave</a>.</p>
+         * <p>For more information about confidential computing, see <a href="https://help.aliyun.com/document_detail/203433.html">Use Enclave to build a confidential computing environment</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Enclave</p>
@@ -1825,21 +1825,21 @@ public class RunInstancesRequest extends TeaModel {
 
         /**
          * <p>The trusted system mode. Set the value to vTPM.</p>
-         * <p>The following instance families support the trusted system mode:</p>
+         * <p>The trusted system mode supports the following instance families:</p>
          * <ul>
-         * <li>g7, c7, and r7.</li>
-         * <li>Security-enhanced instance family (g7t, c7t, and r7t).</li>
+         * <li>g7, c7, r7.</li>
+         * <li>Security-enhanced instance families (g7t, c7t, r7t).</li>
          * </ul>
-         * <p>When you create instances of the preceding instance families, you must set this parameter. Take note of the following items:</p>
+         * <p>If you create an ECS instance that belongs to one of the above instance families, configure this parameter as follows:</p>
          * <ul>
-         * <li>To use Alibaba Cloud Trusted System, set this parameter to vTPM. Then, Alibaba Cloud Trusted System performs trusted verification when the instance starts.</li>
-         * <li>If you do not want to use Alibaba Cloud Trusted System, you can leave this parameter empty. However, if the ECS instance that you create uses the Enclave confidential computing mode (<code>SecurityOptions.ConfidentialComputingMode=Enclave</code>), the trusted system is also enabled for the instance.</li>
-         * <li>When you create a trusted ECS instance by invoking an API operation, you can only invoke <code>RunInstances</code>. <code>CreateInstance</code> does not support the <code>SecurityOptions.TrustedSystemMode</code> parameter.<blockquote>
-         * <p>If you specify the instance as a trusted instance during creation, you can only use images that support the trusted system when you replace the system disk.</p>
+         * <li>To use the Alibaba Cloud Trusted System, set this parameter to vTPM. The trusted system then performs a trusted verification when the instance starts.</li>
+         * <li>If you do not use the Alibaba Cloud Trusted System, you can leave this parameter unset. However, if the instance uses Enclave-based confidential computing (<code>SecurityOptions.ConfidentialComputingMode=Enclave</code>), the trusted system is also enabled.</li>
+         * <li>To create a trusted instance by invoking an API operation, use <code>RunInstances</code>. <code>CreateInstance</code> does not support the <code>SecurityOptions.TrustedSystemMode</code> parameter.<blockquote>
+         * <p>If you configure an instance as a trusted instance at creation time, you can only use images that support the trusted system when replacing the system disk.</p>
          * </blockquote>
          * </li>
          * </ul>
-         * <p>For more information about the trusted system, see <a href="https://help.aliyun.com/document_detail/201394.html">Overview of the trusted feature for security-enhanced instance families</a>.</p>
+         * <p>For more information about the trusted system, see <a href="https://help.aliyun.com/document_detail/201394.html">Overview of the trusted feature for security-enhanced instances</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>vTPM</p>
@@ -1895,7 +1895,7 @@ public class RunInstancesRequest extends TeaModel {
         public String autoSnapshotPolicyId;
 
         /**
-         * <p>The category of the system disk. Valid values:</p>
+         * <p>The disk type of the system disk. Valid values:</p>
          * <ul>
          * <li>cloud_efficiency: ultra disk.</li>
          * <li>cloud_ssd: standard SSD.</li>
@@ -1906,11 +1906,11 @@ public class RunInstancesRequest extends TeaModel {
          * </ul>
          * <p>Default value description:</p>
          * <ul>
-         * <li>If InstanceType is a retired instance type that is not I/O optimized, the default value is <code>cloud</code>.</li>
-         * <li>In other cases, the default value is <code>cloud_efficiency</code>.&lt;props=&quot;china&quot;&gt; After January 30, 2026, for instance types that support only cloud_essd, the default value is changed from cloud_efficiency to cloud_essd PL0. For more information, refer to <a href="https://www.aliyun.com/notice/117844">Change notice</a>.</li>
+         * <li>If the instance type is a retired non-I/O optimized instance type, the default value is <code>cloud</code>.</li>
+         * <li>In all other cases, the default value is <code>cloud_efficiency</code>.&lt;props=&quot;china&quot;&gt;After January 30, 2026, for instance types that support only cloud_essd, the default value changes from cloud_efficiency to cloud_essd PL0. For more information, see <a href="https://www.aliyun.com/notice/117844">Change notice</a>.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter supports the <code>cloud_essd_entry</code> value only when <code>InstanceType</code> is set to the <a href="https://help.aliyun.com/document_detail/457079.html">u1, universal instance family</a> (<code>ecs.u1</code>) or the <a href="https://help.aliyun.com/document_detail/108489.html">e, economy instance family</a> (<code>ecs.e</code>).</p>
+         * <p><code>cloud_essd_entry</code> is supported only when <code>InstanceType</code> is set to <a href="https://help.aliyun.com/document_detail/457079.html">u1, universal instance family</a> (<code>ecs.u1</code>) or <a href="https://help.aliyun.com/document_detail/108489.html">e, economy instance family</a> (<code>ecs.e</code>).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1929,7 +1929,7 @@ public class RunInstancesRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the system disk. The name must be 2 to 128 characters in length and can contain characters that are categorized as letter in Unicode (including English and Chinese characters and digits). The name can contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
+         * <p>The name of the system disk. The name must be 2 to 128 characters in length and can contain Unicode letters (including English, Chinese, and digits). It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssdSystem</p>
@@ -1938,14 +1938,14 @@ public class RunInstancesRequest extends TeaModel {
         public String diskName;
 
         /**
-         * <p>The performance level of the enterprise SSD used as the system disk. Set this parameter when you create an enterprise SSD as the system disk. Valid values:</p>
+         * <p>The performance level of the enterprise SSD used as the system disk. This parameter takes effect when you create an enterprise SSD as the system disk. Valid values:</p>
          * <ul>
-         * <li>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</li>
-         * <li>PL1 (default): A single disk can deliver up to 50,000 random read/write IOPS.</li>
-         * <li>PL2: A single disk can deliver up to 100,000 random read/write IOPS.</li>
-         * <li>PL3: A single disk can deliver up to 1,000,000 random read/write IOPS.</li>
+         * <li>PL0: maximum random read/write IOPS of 10,000 per disk.</li>
+         * <li>PL1 (default): maximum random read/write IOPS of 50,000 per disk.</li>
+         * <li>PL2: maximum random read/write IOPS of 100,000 per disk.</li>
+         * <li>PL3: maximum random read/write IOPS of 1,000,000 per disk.</li>
          * </ul>
-         * <p>For information about how to select an ESSD performance level, refer to <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</p>
+         * <p>For information about how to choose an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>PL0</p>
@@ -1954,7 +1954,7 @@ public class RunInstancesRequest extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The size of the system disk, in GiB. Valid values:</p>
+         * <p>The size of the system disk. Unit: GiB. Valid values:</p>
          * <ul>
          * <li>Basic disk: 20 to 500.</li>
          * <li>Enterprise SSD:<ul>
@@ -1967,8 +1967,8 @@ public class RunInstancesRequest extends TeaModel {
          * <li>ESSD AutoPL disk: 1 to 2048.</li>
          * <li>Other disk types: 20 to 2048.</li>
          * </ul>
-         * <p>The value of this parameter must be greater than or equal to max{1, ImageSize}.</p>
-         * <p>Default value: max{40, size of the image specified by ImageId}.</p>
+         * <p>The value must be greater than or equal to max{1, ImageSize}.</p>
+         * <p>Default value: max{40, the size of the image specified by the ImageId parameter}.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -1977,13 +1977,13 @@ public class RunInstancesRequest extends TeaModel {
         public String size;
 
         /**
-         * <p>Specifies whether to enable the performance burst feature. Valid values:</p>
+         * <p>Specifies whether to enable the burst feature (performance burst). Valid values:</p>
          * <ul>
-         * <li>true: enables the performance burst feature.</li>
-         * <li>false: does not enable the performance burst feature.</li>
+         * <li>true: yes.</li>
+         * <li>false: no.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is available only when <code>SystemDisk.Category</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disk</a>.</p>
+         * <p>This parameter is valid only when <code>SystemDisk.Category</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disk</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1994,7 +1994,7 @@ public class RunInstancesRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available for use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2013,10 +2013,10 @@ public class RunInstancesRequest extends TeaModel {
          * </ul>
          * <p>Default value: false.</p>
          * <blockquote>
-         * <p>Zone D in Hong Kong (China) and Zone A in Singapore do not support system disk encryption during instance creation.</p>
+         * <p>Encrypting the system disk during instance creation is not supported in China (Hong Kong) Zone D or Singapore Zone A.</p>
          * </blockquote>
          * <blockquote>
-         * <p>Notice: When you use a shared encrypted image to create a disk based on an encrypted snapshot, you must specify the request parameter Encrypted=true for the disk to ensure that the created disk uses the key of the image recipient.</p>
+         * <p>Notice: When you use a shared encrypted image to create a disk based on an encrypted snapshot, you must set the request parameter Encrypted=true for the disk to ensure that the disk uses the key of the account with which the image is shared.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2026,24 +2026,24 @@ public class RunInstancesRequest extends TeaModel {
         public String encrypted;
 
         /**
-         * <p>The ID of the KMS key for the system disk.</p>
+         * <p>The ID of the KMS key used for the system disk.</p>
          * <blockquote>
-         * <p>If Encrypted is set to true and KMSKeyId is not specified, the default key is used for encryption. The KMSKeyId value is returned after the instance is created.</p>
+         * <p>If Encrypted is set to true and KMSKeyId is not specified, the default key is used for encryption. The KMSKeyId value is returned after the instance is created successfully.</p>
          * <ul>
          * <li><ul>
-         * <li>If the disk is created from a non-shared encrypted snapshot, the encryption key used by the snapshot is used by default.</li>
+         * <li>Disk created from a non-shared encrypted snapshot: The encryption key used by the snapshot is used by default.</li>
          * </ul>
          * </li>
          * <li><ul>
-         * <li>If the disk is created from a shared encrypted snapshot, the service key is used by default.</li>
+         * <li>Disk created from a shared encrypted snapshot: The service key is used by default.</li>
          * </ul>
          * </li>
          * <li><ul>
-         * <li>If account-level default encryption for block storage is enabled in the region, the specified account-level key is used by default.</li>
+         * <li>Disk created in a region where account-level default encryption for block storage is enabled: The specified account-level key is used by default.</li>
          * </ul>
          * </li>
          * <li><ul>
-         * <li>In other cases, the service key is used by default.</li>
+         * <li>All other cases: The service key is used by default.</li>
          * </ul>
          * </li>
          * </ul>
@@ -2056,10 +2056,10 @@ public class RunInstancesRequest extends TeaModel {
         public String KMSKeyId;
 
         /**
-         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1000 × Capacity - Baseline Performance}.</p>
-         * <p>Baseline Performance = min{1,800 + 50 × Capacity, 50,000}.</p>
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × capacity − baseline performance}.</p>
+         * <p>Baseline performance = min{1,800 + 50 × capacity, 50,000}.</p>
          * <blockquote>
-         * <p>This parameter is available only when <code>SystemDisk.Category</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disk</a>.</p>
+         * <p>This parameter is valid only when <code>SystemDisk.Category</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disk</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2069,7 +2069,7 @@ public class RunInstancesRequest extends TeaModel {
         public Long provisionedIops;
 
         /**
-         * <p>The ID of the dedicated block storage cluster. If you want to use a disk in a dedicated block storage cluster as the system disk when you create an ECS instance, set this parameter.</p>
+         * <p>The ID of the dedicated block storage cluster. If you want to use a disk from a dedicated block storage cluster as the system disk when creating an ECS instance, set this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>dbsc-j5e1sf2vaf5he8m2****</p>
@@ -2183,7 +2183,7 @@ public class RunInstancesRequest extends TeaModel {
     public static class RunInstancesRequestArn extends TeaModel {
         /**
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available for use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2194,7 +2194,7 @@ public class RunInstancesRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available for use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2205,7 +2205,7 @@ public class RunInstancesRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available for use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2279,7 +2279,7 @@ public class RunInstancesRequest extends TeaModel {
 
     public static class RunInstancesRequestDataDisk extends TeaModel {
         /**
-         * <p>The ID of the automatic snapshot policy to apply to the data disk.</p>
+         * <p>The ID of the automatic snapshot policy applied to the data disk.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-bp67acfmxazb4p****</p>
@@ -2288,13 +2288,13 @@ public class RunInstancesRequest extends TeaModel {
         public String autoSnapshotPolicyId;
 
         /**
-         * <p>Specifies whether to enable the performance burst feature. Valid values:</p>
+         * <p>Specifies whether to enable the burst feature (performance burst). Valid values:</p>
          * <ul>
-         * <li>true: enables the performance burst feature.</li>
-         * <li>false: does not enable the performance burst feature.</li>
+         * <li>true: yes.</li>
+         * <li>false: no.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is available only when DiskCategory is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disk</a>.</p>
+         * <p>This parameter is valid only when DiskCategory is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disk</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2308,22 +2308,22 @@ public class RunInstancesRequest extends TeaModel {
          * <ul>
          * <li>cloud_efficiency: ultra disk.</li>
          * <li>cloud_ssd: standard SSD.</li>
-         * <li>cloud_essd: enterprise SSD (ESSD).</li>
+         * <li>cloud_essd: enterprise SSD.</li>
          * <li>cloud: basic disk.</li>
          * <li>cloud_auto: ESSD AutoPL disk.</li>
-         * <li>cloud_regional_disk_auto: regional ESSD.</li>
+         * <li>cloud_regional_disk_auto: regional Enterprise SSD (ESSD).</li>
          * <li>cloud_essd_entry: ESSD Entry disk.<blockquote>
-         * <p>The <code>cloud_essd_entry</code> value is supported only when <code>InstanceType</code> is set to an instance type in the <code>ecs.u1</code> or <code>ecs.e</code> instance family.</p>
+         * <p>This value is supported only when <code>InstanceType</code> is set to an instance type in the <code>ecs.u1</code> or <code>ecs.e</code> instance family.</p>
          * </blockquote>
          * </li>
-         * <li>elastic_ephemeral_disk_standard: elastic ephemeral disk - Standard.</li>
-         * <li>elastic_ephemeral_disk_premium: elastic ephemeral disk - Premium.</li>
+         * <li>elastic_ephemeral_disk_standard: elastic ephemeral disk - standard edition.</li>
+         * <li>elastic_ephemeral_disk_premium: elastic ephemeral disk - premium edition.</li>
          * </ul>
          * <p>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.
          * Default value description:</p>
          * <ul>
-         * <li>If InstanceType is set to a retired instance type that is non-I/O optimized, the default value is <code>cloud</code>.</li>
-         * <li>In other cases, the default value is <code>cloud_efficiency</code>.&lt;props=&quot;china&quot;&gt;After January 30, 2026, if the I/O optimized instance type does not support cloud_auto, the default value is cloud_efficiency. Otherwise, the default value is cloud_auto, and the performance burst feature is enabled by default (which incurs additional fees. For more information, see <a href="~~368372#p_75k_2hp_7gp~~">Billing examples</a>). For more information, see <a href="https://www.aliyun.com/notice/117844">Change notice</a>.</li>
+         * <li>If InstanceType is a retired non-I/O optimized instance type, the default value is <code>cloud</code>.</li>
+         * <li>In all other cases, the default value is <code>cloud_efficiency</code>.&lt;props=&quot;china&quot;&gt; After January 30, 2026, if the I/O optimized instance type does not support cloud_auto, the default value is cloud_efficiency. Otherwise, the default value is cloud_auto, and performance burst is enabled by default (additional fees apply; for details, see <a href="~~368372#p_75k_2hp_7gp~~">Billing examples</a>). For more information, see the <a href="https://www.aliyun.com/notice/117844">change notice</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2335,8 +2335,8 @@ public class RunInstancesRequest extends TeaModel {
         /**
          * <p>Specifies whether to release the data disk when the instance is released. Valid values:</p>
          * <ul>
-         * <li>true: releases the data disk when the instance is released.</li>
-         * <li>false: does not release the data disk when the instance is released.</li>
+         * <li>true: The data disk is released when the instance is released.</li>
+         * <li>false: The data disk is not released when the instance is released.</li>
          * </ul>
          * <p>Default value: true.</p>
          * 
@@ -2356,17 +2356,17 @@ public class RunInstancesRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The mount point of the data disk. The naming conventions for mount points vary based on the number of data disks attached:</p>
+         * <p>The mount point of the data disk. The naming convention for mount points varies based on the number of data disks attached:</p>
          * <ul>
          * <li><p>1 to 25 data disks: /dev/xvd<code>[b-z]</code></p>
          * </li>
-         * <li><p>More than 25 data disks: /dev/xvd<code>[aa-zz]</code>. For example, the 26th data disk is named /dev/xvdaa, the 27th data disk is named /dev/xvdab, and so on.</p>
+         * <li><p>More than 25 data disks: /dev/xvd<code>[aa-zz]</code>. For example, the 26th data disk is named /dev/xvdaa, the 27th is /dev/xvdab, and so on.</p>
          * </li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>This parameter is applicable only to full image (system image) scenarios. You can set this parameter to the mount point of a data disk in the full image and modify the corresponding <code>DataDisk.N.Size</code> and <code>DataDisk.N.Category</code> parameters to change the category and size of the data disk in the full image.</li>
-         * <li>When you use a full image to create an instance, the data disks in the full image are created as the first 1 to N data disks of the ECS instance.</li>
+         * <li>This parameter is used only for full images (system images). You can set this parameter to the mount point of a data disk in the full image, and modify the corresponding <code>DataDisk.N.Size</code> and <code>DataDisk.N.Category</code> parameters to change the category and size of that data disk.</li>
+         * <li>When you create an instance from a full image, the data disks in the full image are created as the first 1 to n data disks of the ECS instance.</li>
          * </ul>
          * </blockquote>
          * 
@@ -2377,7 +2377,7 @@ public class RunInstancesRequest extends TeaModel {
         public String device;
 
         /**
-         * <p>The name of the data disk. The name must be 2 to 128 characters in length and can contain letters, digits, and characters categorized as letter in Unicode, including Chinese characters. The name can contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
+         * <p>The name of the data disk. The name must be 2 to 128 characters in length and can contain Unicode characters in the letter category, including letters in English, Chinese, and digits. It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssdData</p>
@@ -2387,7 +2387,7 @@ public class RunInstancesRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available for use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2404,7 +2404,7 @@ public class RunInstancesRequest extends TeaModel {
          * </ul>
          * <p>Default value: false.</p>
          * <blockquote>
-         * <p>Notice: When you use a shared encrypted image to create a disk based on an encrypted snapshot, you must specify the request parameter Encrypted=true for the disk to ensure that the created disk uses the key of the image recipient.</p>
+         * <p>Notice: When you use a shared encrypted image to create a disk based on an encrypted snapshot, you must set the request parameter Encrypted=true for the disk to ensure that the disk uses the key of the account with which the image is shared.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2414,24 +2414,24 @@ public class RunInstancesRequest extends TeaModel {
         public String encrypted;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key for the data disk.</p>
+         * <p>The ID of the KMS key used for the data disk.</p>
          * <blockquote>
-         * <p>If Encrypted is set to true and KMSKeyId is not specified, the default key is used for encryption. The KMSKeyId value is returned after the instance is created.</p>
+         * <p>If Encrypted is set to true and KMSKeyId is not specified, the default key is used for encryption. The KMSKeyId value is returned after the instance is created successfully.</p>
          * <ul>
          * <li><ul>
-         * <li>If the disk is created from a non-shared encrypted snapshot, the encryption key used by the snapshot is used by default.</li>
+         * <li>Disk created from a non-shared encrypted snapshot: The encryption key used by the snapshot is used by default.</li>
          * </ul>
          * </li>
          * <li><ul>
-         * <li>If the disk is created from a shared encrypted snapshot, the service key is used by default.</li>
+         * <li>Disk created from a shared encrypted snapshot: The service key is used by default.</li>
          * </ul>
          * </li>
          * <li><ul>
-         * <li>If account-level default encryption for block storage is enabled in the region, the specified account-level key is used by default.</li>
+         * <li>Disk created in a region where account-level default encryption for block storage is enabled: The specified account-level key is used by default.</li>
          * </ul>
          * </li>
          * <li><ul>
-         * <li>In other cases, the service key is used by default.</li>
+         * <li>All other cases: The service key is used by default.</li>
          * </ul>
          * </li>
          * </ul>
@@ -2444,14 +2444,14 @@ public class RunInstancesRequest extends TeaModel {
         public String KMSKeyId;
 
         /**
-         * <p>When you create an enterprise SSD (ESSD) as a data disk, set the performance level of the disk. The value of N must be the same as that in <code>DataDisk.N.Category=cloud_essd</code>. Valid values:</p>
+         * <p>Settings for the performance level of the enterprise SSD (ESSD) used as the data disk. The value of N must match the N in <code>DataDisk.N.Category=cloud_essd</code>. Valid values:</p>
          * <ul>
-         * <li>PL0: a single disk can deliver up to 10,000 random read/write IOPS.</li>
-         * <li>PL1 (default): a single disk can deliver up to 50,000 random read/write IOPS.</li>
-         * <li>PL2: a single disk can deliver up to 100,000 random read/write IOPS.</li>
-         * <li>PL3: a single disk can deliver up to 1,000,000 random read/write IOPS.</li>
+         * <li>PL0: maximum random read/write IOPS of 10,000 per disk.</li>
+         * <li>PL1 (default): maximum random read/write IOPS of 50,000 per disk.</li>
+         * <li>PL2: maximum random read/write IOPS of 100,000 per disk.</li>
+         * <li>PL3: maximum random read/write IOPS of 1,000,000 per disk.</li>
          * </ul>
-         * <p>For information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</p>
+         * <p>For information about how to choose an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -2460,10 +2460,10 @@ public class RunInstancesRequest extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1000 × Capacity - Baseline Performance}.</p>
-         * <p>Baseline Performance = min{1,800 + 50 × Capacity, 50,000}.</p>
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × capacity − baseline performance}.</p>
+         * <p>Baseline performance = min{1,800 + 50 × capacity, 50,000}.</p>
          * <blockquote>
-         * <p>This parameter is available only when DiskCategory is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disk</a>.</p>
+         * <p>This parameter is valid only when DiskCategory is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disk</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2473,23 +2473,23 @@ public class RunInstancesRequest extends TeaModel {
         public Long provisionedIops;
 
         /**
-         * <p>The size of data disk N. Unit: GiB. Valid values of N: 1 to 16. Valid values of Size:</p>
+         * <p>The size of data disk N, in GiB. The valid values of N range from 1 to 16. Valid values:</p>
          * <ul>
          * <li>cloud_efficiency: 20 to 32768.</li>
          * <li>cloud_ssd: 20 to 32768.</li>
-         * <li>cloud_essd: varies based on the value of <code>DataDisk.N.PerformanceLevel</code>. <ul>
+         * <li>cloud_essd: The valid range depends on the value of <code>DataDisk.N.PerformanceLevel</code>. <ul>
          * <li>PL0: 1 to 65,536.</li>
          * <li>PL1: 20 to 65,536.</li>
          * <li>PL2: 461 to 65,536.</li>
-         * <li>PL3: 1261 to 65,536.</li>
+         * <li>PL3: 1,261 to 65,536.</li>
          * </ul>
          * </li>
-         * <li>cloud: 5 to 2000.</li>
+         * <li>cloud: 5 to 2,000.</li>
          * <li>cloud_auto: 1 to 65,536.</li>
-         * <li>cloud_essd_entry: 10 to 32768.</li>
+         * <li>cloud_essd_entry: 10 to 32,768.</li>
          * </ul>
          * <blockquote>
-         * <p>The value of this parameter must be greater than or equal to the size of the snapshot specified by the <code>SnapshotId</code> parameter.</p>
+         * <p>The value of this parameter must be greater than or equal to the size of the snapshot specified by <code>SnapshotId</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2499,8 +2499,8 @@ public class RunInstancesRequest extends TeaModel {
         public Integer size;
 
         /**
-         * <p>The ID of the snapshot used to create data disk N. Valid values of N: 1 to 16.</p>
-         * <p>After you specify <code>DataDisk.N.SnapshotId</code>, <code>DataDisk.N.Size</code> is ignored and the disk is created with the size of the specified snapshot. Snapshots created on or before July 15, 2013 cannot be used. Requests that use such snapshots are rejected.</p>
+         * <p>The snapshot used to create data disk N. The valid values of N range from 1 to 16.</p>
+         * <p>If <code>DataDisk.N.SnapshotId</code> is specified, <code>DataDisk.N.Size</code> is ignored. The size of the created disk equals the size of the specified snapshot. Snapshots created on or before July 15, 2013 are not supported. Requests that use such snapshots are rejected.</p>
          * 
          * <strong>example:</strong>
          * <p>s-bp17441ohwka0yuh****</p>
@@ -2509,7 +2509,7 @@ public class RunInstancesRequest extends TeaModel {
         public String snapshotId;
 
         /**
-         * <p>The ID of the dedicated block storage cluster. If you want to use a disk in a dedicated block storage cluster as the data disk when you create an ECS instance, set this parameter.</p>
+         * <p>The ID of the dedicated block storage cluster. If you want to use a disk from a dedicated block storage cluster as a data disk when creating an ECS instance, set this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>dbsc-j5e1sf2vaf5he8m2****</p>
@@ -2646,11 +2646,11 @@ public class RunInstancesRequest extends TeaModel {
 
     public static class RunInstancesRequestImageOptions extends TeaModel {
         /**
-         * <p>Specifies whether the instance that uses this image supports logon with the ecs-user user. Valid values:</p>
+         * <p>Specifies whether the instance that uses this image supports logon as the ecs-user user. Valid values:</p>
          * <ul>
-         * <li><p>true: supported.</p>
+         * <li><p>true: yes.</p>
          * </li>
-         * <li><p>false: not supported.</p>
+         * <li><p>false: no.</p>
          * </li>
          * </ul>
          * 
@@ -2679,9 +2679,9 @@ public class RunInstancesRequest extends TeaModel {
         /**
          * <p>Specifies whether to retain the ENI when the instance is released. Valid values:</p>
          * <ul>
-         * <li><p>true: does not retain the ENI.</p>
+         * <li><p>true: The ENI is not retained.</p>
          * </li>
-         * <li><p>false: retains the ENI.</p>
+         * <li><p>false: The ENI is retained.</p>
          * </li>
          * </ul>
          * <p>Default value: true.</p>
@@ -2697,9 +2697,9 @@ public class RunInstancesRequest extends TeaModel {
 
         /**
          * <p>The description of the Elastic Network Interface (ENI).</p>
-         * <p>Take note of the following items:</p>
+         * <p>Note:</p>
          * <ul>
-         * <li>The valid values of N cannot exceed the maximum number of network interface controllers (NICs) supported by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the maximum number of NICs supported by the target instance type.</li>
+         * <li>The valid values of N must not exceed the maximum number of ENIs supported by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or invoke <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the maximum number of ENIs supported by the target instance type.</li>
          * <li>The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</li>
          * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you do not need to set this parameter.</li>
          * </ul>
@@ -2711,7 +2711,7 @@ public class RunInstancesRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The type of the Elastic Network Interface (ENI). The valid values of N cannot exceed the maximum number of network interface controllers (NICs) supported by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the maximum number of NICs supported by the target instance type.</p>
+         * <p>The type of the Elastic Network Interface (ENI). The valid values of N must not exceed the maximum number of ENIs supported by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or invoke <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the maximum number of ENIs supported by the target instance type.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>Primary: primary ENI.</li>
@@ -2726,13 +2726,13 @@ public class RunInstancesRequest extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The IPv6 addresses to assign to the primary ENI. You can specify up to 10 IPv6 addresses. The valid values of the second N: 1 to 10.</p>
-         * <p>Example: <code>Ipv6Address.1=2001:db8:1234:1a00::***</code>.</p>
-         * <p>Take note of the following items:</p>
+         * <p>One or more IPv6 addresses assigned to the primary ENI. You can specify up to 10 IPv6 addresses. The valid values of the second N range from 1 to 10.</p>
+         * <p>Example: <code>Ipv6Address.1=2001:db8:1234:1a00::***</code></p>
+         * <p>Note:</p>
          * <ul>
          * <li><p>This parameter takes effect only when <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>. If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, you cannot set this parameter.</p>
          * </li>
-         * <li><p>After you set this parameter, the value of <code>Amount</code> can only be 1, and you cannot set <code>Ipv6AddressCount</code>, <code>Ipv6Address.N</code>, or <code>NetworkInterface.N.Ipv6AddressCount</code>.</p>
+         * <li><p>If this parameter is set, <code>Amount</code> can only be set to 1, and you cannot set <code>Ipv6AddressCount</code>, <code>Ipv6Address.N</code>, or <code>NetworkInterface.N.Ipv6AddressCount</code> at the same time.</p>
          * </li>
          * </ul>
          */
@@ -2740,12 +2740,12 @@ public class RunInstancesRequest extends TeaModel {
         public java.util.List<String> ipv6Address;
 
         /**
-         * <p>The number of randomly generated IPv6 addresses to assign to the primary ENI. Valid values: 1 to 10.</p>
-         * <p>Take note of the following items:</p>
+         * <p>The number of randomly generated IPv6 addresses assigned to the primary ENI. Valid values: 1 to 10.</p>
+         * <p>Note:</p>
          * <ul>
          * <li><p>This parameter takes effect only when <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>. If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, you cannot set this parameter.</p>
          * </li>
-         * <li><p>After you set this parameter, you cannot set <code>Ipv6AddressCount</code>, <code>Ipv6Address.N</code>, or <code>NetworkInterface.N.Ipv6Address.N</code>.</p>
+         * <li><p>If this parameter is set, you cannot set <code>Ipv6AddressCount</code>, <code>Ipv6Address.N</code>, or <code>NetworkInterface.N.Ipv6Address.N</code> at the same time.</p>
          * </li>
          * </ul>
          * 
@@ -2756,12 +2756,12 @@ public class RunInstancesRequest extends TeaModel {
         public Long ipv6AddressCount;
 
         /**
-         * <p>The index of the network card to which the ENI is attached.</p>
-         * <p>Take note of the following items:</p>
+         * <p>The index of the physical network card assigned to the ENI.</p>
+         * <p>Note:</p>
          * <ul>
-         * <li>Only specific instance types support specifying a network card index.</li>
-         * <li>If NetworkInterface.N.InstanceType is set to Primary, for instance types that support network cards, this parameter can only be set to 0.</li>
-         * <li>If NetworkInterface.N.InstanceType is set to Secondary or left empty, for instance types that support network cards, this parameter can be set based on the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</li>
+         * <li>Only specific instance types support specifying a physical network card index.</li>
+         * <li>If NetworkInterface.N.InstanceType is set to Primary, and the instance type supports physical network cards, you can only set this parameter to 0.</li>
+         * <li>If NetworkInterface.N.InstanceType is set to Secondary or left empty, and the instance type supports physical network cards, you can set this parameter based on the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2771,10 +2771,10 @@ public class RunInstancesRequest extends TeaModel {
         public Integer networkCardIndex;
 
         /**
-         * <p>The ID of an existing ENI to attach to the instance.</p>
-         * <p>After you set this parameter, the value of <code>Amount</code> can only be 1.</p>
+         * <p>The ID of the Elastic Network Interface (ENI) to attach to the instance.</p>
+         * <p>If this parameter is set, <code>Amount</code> can only be set to 1.</p>
          * <blockquote>
-         * <p>This parameter takes effect only for secondary ENIs. After you specify an existing secondary ENI, you cannot configure other ENI creation parameters.</p>
+         * <p>This parameter takes effect only for secondary ENIs. After you specify an existing secondary ENI, you cannot configure other network interface controller (NIC) creation parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2784,10 +2784,10 @@ public class RunInstancesRequest extends TeaModel {
         public String networkInterfaceId;
 
         /**
-         * <p>The name of the ENI. The name must be 2 to 128 characters in length and can contain letters, digits, and characters categorized as letter in Unicode, including Chinese characters. The name can contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
-         * <p>Take note of the following items:</p>
+         * <p>The name of the Elastic Network Interface (ENI). The name must be 2 to 128 characters in length and can contain Unicode characters in the letter categorization, including letters in English, Chinese, and digits. It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>Note:</p>
          * <ul>
-         * <li><p>The valid values of N cannot exceed the maximum number of network interface controllers (NICs) supported by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the maximum number of NICs supported by the target instance type.</p>
+         * <li><p>The valid values of N must not exceed the maximum number of ENIs supported by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or invoke <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the maximum number of ENIs supported by the target instance type.</p>
          * </li>
          * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you do not need to set this parameter.</p>
          * </li>
@@ -2800,14 +2800,14 @@ public class RunInstancesRequest extends TeaModel {
         public String networkInterfaceName;
 
         /**
-         * <p>The communication mode of the ENI. Valid values:</p>
+         * <p>The communication pattern of the Elastic Network Interface (ENI). Valid values:</p>
          * <ul>
          * <li>Standard: uses the TCP communication mode.</li>
          * <li>HighPerformance: enables the Elastic RDMA Interface (ERI) and uses the RDMA communication mode.</li>
          * </ul>
          * <p>Default value: Standard.</p>
          * <blockquote>
-         * <p>The number of RDMA-mode Elastic Network Interfaces (ENIs) cannot exceed the limit of the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+         * <p>The number of ENIs in RDMA mode cannot exceed the limit for the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2817,25 +2817,22 @@ public class RunInstancesRequest extends TeaModel {
         public String networkInterfaceTrafficMode;
 
         /**
-         * <p>Adds an ENI and sets the primary IP address.</p>
-         * <p>Take note of the following items:</p>
+         * <p>The primary IP address of the Elastic Network Interface (ENI) to add.</p>
+         * <p>Note:</p>
          * <ul>
-         * <li><p>The valid values of N cannot exceed the maximum number of network interface controllers (NICs) supported by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the maximum number of NICs supported by the target instance type.</p>
+         * <li><p>The valid values of N must not exceed the maximum number of ENIs supported by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or invoke <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the maximum number of ENIs supported by the target instance type.</p>
          * <ul>
-         * <li>When you set one ENI, you can set one primary ENI or one secondary ENI. If the value of <code>Amount</code> is greater than 1 and you set the primary ENI with this parameter specified, consecutive primary IP addresses starting from the specified IP address are allocated to multiple ECS instances during batch creation. In this case, you cannot attach secondary NICs to the instances.</li>
-         * <li>If the value of <code>Amount</code> is greater than 1 and this parameter is set for the primary ENI, you cannot set a secondary ENI (that is, you cannot set <code>NetworkInterface.2.InstanceType=Secondary</code>).</li>
+         * <li>When you add one ENI, you can add one primary ENI or one secondary ENI. If <code>Amount</code> is greater than 1 and you configure a primary ENI with this parameter, the system assigns consecutive primary IP addresses to multiple ECS instances starting from the specified IP address in batch. In this case, you cannot attach a secondary ENI to the instances.</li>
+         * <li>If <code>Amount</code> is greater than 1 and this parameter is set for the primary ENI, you cannot configure a secondary ENI (that is, you cannot set <code>NetworkInterface.2.InstanceType=Secondary</code>).</li>
          * </ul>
          * </li>
-         * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, this parameter has the same effect as <code>PrivateIpAddress</code>. You cannot set both this parameter and <code>PrivateIpAddress</code>.</p>
+         * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, this parameter has the same effect as <code>PrivateIpAddress</code>. However, you cannot set both <code>PrivateIpAddress</code> and this parameter at the same time.</p>
          * </li>
-         * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, this parameter specifies the primary IP address of the secondary ENI. By default, an IP address is randomly selected from the CIDR block of the vSwitch to which the ENI belongs.</p>
+         * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, this parameter specifies the primary IP address of the secondary ENI. By default, a random IP address is allocated from the CIDR block of the vSwitch to which the ENI belongs.</p>
          * </li>
          * </ul>
          * <blockquote>
-         * <ul>
-         * <li>The first IP address and the last three IP addresses of each vSwitch CIDR block are system reserved IP addresses and cannot be specified.
-         * For example, if the CIDR block of a vSwitch is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are system reserved IP addresses.</li>
-         * </ul>
+         * <p>The first and last three IP addresses of each vSwitch CIDR block are system reserved IP addresses and cannot be specified. For example, if the vSwitch CIDR block is 192.168.1.0/24, the addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2845,16 +2842,16 @@ public class RunInstancesRequest extends TeaModel {
         public String primaryIpAddress;
 
         /**
-         * <p>The number of queues for the ENI.</p>
-         * <p>Take note of the following items:</p>
+         * <p>The number of queues for the Elastic Network Interface (ENI).</p>
+         * <p>Note:</p>
          * <ul>
-         * <li><p>The valid values of N cannot exceed the maximum number of network interface controllers (NICs) supported by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the maximum number of NICs supported by the target instance type.</p>
+         * <li><p>The valid values of N must not exceed the maximum number of ENIs supported by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or invoke <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the maximum number of ENIs supported by the target instance type.</p>
          * </li>
-         * <li><p>The value cannot exceed the maximum number of queues per NIC allowed by the instance type.</p>
+         * <li><p>The value cannot exceed the maximum number of queues per ENI allowed by the instance type.</p>
          * </li>
-         * <li><p>The total number of queues across all NICs on the instance cannot exceed the total queue quota allowed by the instance type. You can call <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the <code>MaximumQueueNumberPerEni</code> and <code>TotalEniQueueQuantity</code> fields for the maximum number of queues per NIC and the total queue quota.</p>
+         * <li><p>The total number of queues across all ENIs on the instance cannot exceed the total queue quota for the instance type. You can call <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the <code>MaximumQueueNumberPerEni</code> and <code>TotalEniQueueQuantity</code> fields for the maximum number of queues per ENI and the total queue quota.</p>
          * </li>
-         * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code> and this parameter is set, you cannot set the <code>NetworkInterfaceQueueNumber</code> parameter.</p>
+         * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code> and this parameter is set, you cannot set <code>NetworkInterfaceQueueNumber</code> at the same time.</p>
          * </li>
          * </ul>
          * 
@@ -2866,9 +2863,9 @@ public class RunInstancesRequest extends TeaModel {
 
         /**
          * <p>The number of queue pairs for the RDMA ENI.</p>
-         * <p>If you want to attach multiple RDMA ENIs to the instance, we recommend that you manually specify QueuePairNumber for each ENI based on the upper limit of QueuePairNumber supported by the instance type and the number of ENIs you plan to use. Make sure that the total QueuePairNumber across all ENIs does not exceed the maximum value allowed by the instance type. Call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the upper limit for the instance type.</p>
+         * <p>If you plan to attach multiple RDMA ENIs to the instance, set QueuePairNumber for each ENI based on the maximum QueuePairNumber supported by the instance type and the number of ENIs you plan to use. Make sure the total QueuePairNumber across all ENIs does not exceed the maximum allowed for the instance type. Call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the limit for the instance type.</p>
          * <blockquote>
-         * <p>Notice: If QueuePairNumber is not specified for an RDMA ENI, the upper limit of QueuePairNumber supported by the instance type is used by default. Therefore, after you attach one RDMA ENI without specifying QueuePairNumber, you cannot attach more RDMA ENIs. This restriction does not apply to regular ENIs.</notice></p>
+         * <p>Notice: If QueuePairNumber is not specified for an RDMA ENI, the maximum QueuePairNumber supported by the instance type is used by default. Therefore, once you attach an RDMA ENI without specifying QueuePairNumber, you cannot attach additional RDMA ENIs (this restriction does not apply to standard ENIs).</notice></p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2878,22 +2875,22 @@ public class RunInstancesRequest extends TeaModel {
         public Long queuePairNumber;
 
         /**
-         * <p>The inbound queue depth of the ENI.</p>
+         * <p>The inbound queue depth of the Elastic Network Interface (ENI).</p>
          * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available. To use this parameter, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a> to request access.</p>
+         * <p>This parameter is in invitational preview and is not available for general use. To use this parameter, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</p>
          * </blockquote>
          * <p>&lt;props=&quot;intl&quot;&gt;</p>
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available. To use this parameter, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a> to request access.</p>
+         * <p>This parameter is in invitational preview and is not available for general use. To use this parameter, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
          * </blockquote>
-         * <p>Take note of the following items when you use this parameter:</p>
+         * <p>Note:</p>
          * <ul>
-         * <li><p>This parameter is applicable only to seventh-generation and later ECS instance types.</p>
+         * <li><p>This parameter applies only to seventh-generation and later ECS instance types.</p>
          * </li>
-         * <li><p>This parameter is currently applicable only to Linux images.</p>
+         * <li><p>This parameter currently applies only to Linux images.</p>
          * </li>
-         * <li><p>A larger inbound queue depth can improve inbound throughput and reduce packet loss, but consumes more memory.</p>
+         * <li><p>A larger inbound queue depth improves inbound throughput and reduces packet loss, but consumes more memory.</p>
          * </li>
          * </ul>
          * 
@@ -2904,10 +2901,10 @@ public class RunInstancesRequest extends TeaModel {
         public Integer rxQueueSize;
 
         /**
-         * <p>The number of secondary private IPv4 addresses to allocate to the network interface controller (NIC). Valid values: 1 to 49.</p>
+         * <p>The number of secondary private IPv4 addresses to assign to the network interface controller (NIC). Valid values: 1 to 49.</p>
          * <ul>
-         * <li>The value cannot exceed the IP address limit for the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</li>
-         * <li><code>NetworkInterface.N.SecondaryPrivateIpAddressCount</code> specifies the number of secondary private IPv4 addresses to allocate to the NIC (excluding the primary private IP address of the NIC). The system randomly allocates IP addresses from the available CIDR block of the vSwitch (<code>NetworkInterface.N.VSwitchId</code>) to which the NIC belongs.</li>
+         * <li>The value cannot exceed the IP address limit for the instance type. For more information, see <a href="~~~25378~~">Instance families</a>.</li>
+         * <li><code>NetworkInterface.N.SecondaryPrivateIpAddressCount</code> specifies the number of secondary private IPv4 addresses to allocate to the ENI (excluding the primary private IP address of the ENI). The system randomly allocates the addresses from the available CIDR block of the vSwitch (<code>NetworkInterface.N.VSwitchId</code>) to which the ENI belongs.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2917,12 +2914,12 @@ public class RunInstancesRequest extends TeaModel {
         public Integer secondaryPrivateIpAddressCount;
 
         /**
-         * <p>The ID of the security group to which the ENI belongs.</p>
-         * <p>Take note of the following items:</p>
+         * <p>The ID of the security group to which the Elastic Network Interface (ENI) belongs.</p>
+         * <p>Note:</p>
          * <ul>
-         * <li><p>The valid values of N cannot exceed the maximum number of network interface controllers (NICs) supported by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the maximum number of NICs supported by the target instance type.</p>
+         * <li><p>The valid values of N must not exceed the maximum number of ENIs supported by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or invoke <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the maximum number of ENIs supported by the target instance type.</p>
          * </li>
-         * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you must set this parameter. This parameter has the same effect as <code>SecurityGroupId</code>. You cannot set <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupIds.N</code>.</p>
+         * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, this parameter is required. It has the same effect as <code>SecurityGroupId</code>. However, you cannot set <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupIds.N</code> at the same time.</p>
          * </li>
          * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, this parameter is optional. The default value is the security group of the ECS instance.</p>
          * </li>
@@ -2935,14 +2932,14 @@ public class RunInstancesRequest extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The IDs of one or more security groups to which the ENI belongs.</p>
+         * <p>The IDs of one or more security groups to which the Elastic Network Interface (ENI) belongs.</p>
          * <ul>
-         * <li>The valid values of N cannot exceed the maximum number of network interface controllers (NICs) supported by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the maximum number of NICs supported by the target instance type.</li>
-         * <li>The second N specifies one or more security group IDs. The valid values of N depend on the maximum number of security groups to which an instance can belong. For more information, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</li>
+         * <li>The valid values of N must not exceed the maximum number of ENIs supported by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or invoke <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the maximum number of ENIs supported by the target instance type.</li>
+         * <li>The second N indicates that you can specify one or more security group IDs. The valid values of the second N depend on the maximum number of security groups to which an instance can belong. For more information, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</li>
          * </ul>
-         * <p>Take note of the following items:</p>
+         * <p>Note:</p>
          * <ul>
-         * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you must set this parameter or <code>NetworkInterface.N.SecurityGroupId</code>. This parameter has the same effect as <code>SecurityGroupIds.N</code>. You cannot set <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupId</code>.</p>
+         * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you must set this parameter or <code>NetworkInterface.N.SecurityGroupId</code>. This parameter has the same effect as <code>SecurityGroupIds.N</code>. However, you cannot set <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupId</code> at the same time.</p>
          * </li>
          * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, this parameter is optional. The default value is the security group of the ECS instance.</p>
          * </li>
@@ -2957,14 +2954,14 @@ public class RunInstancesRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable source/destination checking. We recommend that you enable this feature to improve network security. Valid values:</p>
          * <ul>
-         * <li><p>true: enables source/destination checking.</p>
+         * <li><p>true: yes.</p>
          * </li>
-         * <li><p>false: disables source/destination checking.</p>
+         * <li><p>false: no.</p>
          * </li>
          * </ul>
          * <p>Default value: false.</p>
          * <blockquote>
-         * <p>This feature is supported only in specific regions. Before you use this feature, read <a href="https://help.aliyun.com/document_detail/2863210.html">Source/destination checking</a>.</p>
+         * <p>This feature is supported only in certain regions. Before using it, read <a href="https://help.aliyun.com/document_detail/2863210.html">Source/destination checking</a> carefully.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2974,22 +2971,22 @@ public class RunInstancesRequest extends TeaModel {
         public Boolean sourceDestCheck;
 
         /**
-         * <p>The outbound queue depth of the ENI.</p>
+         * <p>The outbound queue depth of the Elastic Network Interface (ENI).</p>
          * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available. To use this parameter, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a> to request access.</p>
+         * <p>This parameter is in invitational preview and is not available for general use. To use this parameter, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</p>
          * </blockquote>
          * <p>&lt;props=&quot;intl&quot;&gt;</p>
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available. To use this parameter, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a> to request access.</p>
+         * <p>This parameter is in invitational preview and is not available for general use. To use this parameter, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
          * </blockquote>
-         * <p>Take note of the following items when you use this parameter:</p>
+         * <p>Note:</p>
          * <ul>
-         * <li><p>This parameter is applicable only to seventh-generation and later ECS instance types.</p>
+         * <li><p>This parameter applies only to seventh-generation and later ECS instance types.</p>
          * </li>
-         * <li><p>This parameter is currently applicable only to Linux images.</p>
+         * <li><p>This parameter currently applies only to Linux images.</p>
          * </li>
-         * <li><p>A larger outbound queue depth can improve outbound throughput and reduce packet loss, but consumes more memory.</p>
+         * <li><p>A larger outbound queue depth improves outbound throughput and reduces packet loss, but consumes more memory.</p>
          * </li>
          * </ul>
          * 
@@ -3000,12 +2997,12 @@ public class RunInstancesRequest extends TeaModel {
         public Integer txQueueSize;
 
         /**
-         * <p>The ID of the vSwitch to which the ENI belongs.</p>
-         * <p>Take note of the following items:</p>
+         * <p>The ID of the vSwitch to which the Elastic Network Interface (ENI) belongs.</p>
+         * <p>Note:</p>
          * <ul>
-         * <li><p>The valid values of N cannot exceed the maximum number of network interface controllers (NICs) supported by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the maximum number of NICs supported by the target instance type.  </p>
+         * <li><p>The valid values of N must not exceed the maximum number of ENIs supported by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or invoke <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the maximum number of ENIs supported by the target instance type.</p>
          * </li>
-         * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you must set this parameter. This parameter has the same effect as <code>VSwitchId</code>. You cannot set both this parameter and <code>VSwitchId</code>.</p>
+         * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, this parameter is required. It has the same effect as <code>VSwitchId</code>. However, you cannot set <code>VSwitchId</code> at the same time.</p>
          * </li>
          * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, this parameter is optional. The default value is the vSwitch of the ECS instance.</p>
          * </li>
@@ -3178,7 +3175,7 @@ public class RunInstancesRequest extends TeaModel {
 
     public static class RunInstancesRequestNetworkOptions extends TeaModel {
         /**
-         * <p>The bandwidth weight value of the instance. Different instance types support different value ranges. You can call DescribeInstanceTypes to query the supported bandwidth weight tiers for a specific instance type. The BandwidthWeighting field in the response contains the supported tiers. Use the name field from the returned values as the dictionary value, such as Vpc-L1 or Ebs-L1.</p>
+         * <p>The bandwidth weight of the instance. The valid values vary by instance type. To query the bandwidth weight tiers supported by a specific instance type, call DescribeInstanceTypes. The BandwidthWeighting field in the response lists the supported tiers. You can use the name field values from the response, such as Vpc-L1 and Ebs-L1.</p>
          * 
          * <strong>example:</strong>
          * <p>Default</p>
@@ -3187,16 +3184,16 @@ public class RunInstancesRequest extends TeaModel {
         public String bandwidthWeighting;
 
         /**
-         * <p>Specifies whether to enable the Jumbo frame feature for the instance. Valid values:</p>
+         * <p>Specifies whether to enable the Jumbo Frame feature for the instance. Valid values:</p>
          * <ul>
-         * <li><p>false: disables Jumbo frame. The MTU of all ENIs (including the primary ENI and secondary ENIs) on the instance is set to 1500.</p>
+         * <li><p>false: disables Jumbo Frame. The MTU of all ENIs on the instance (including the primary ENI and secondary ENIs) is set to 1500.</p>
          * </li>
-         * <li><p>true: enables Jumbo frame. The MTU of all ENIs (including the primary ENI and secondary ENIs) on the instance is set to 8500.</p>
+         * <li><p>true: enables Jumbo Frame. The MTU of all ENIs on the instance (including the primary ENI and secondary ENIs) is set to 8500.</p>
          * </li>
          * </ul>
          * <p>Default value: true.</p>
          * <blockquote>
-         * <p>Only specific eighth-generation and later instance types support the Jumbo frame feature. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">ECS instance MTU</a>.</p>
+         * <p>Only some eighth-generation and later instance types support the Jumbo Frame feature. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">ECS instance MTU</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -3207,7 +3204,7 @@ public class RunInstancesRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in invitational preview and is not available for general use.</p>
          * </blockquote>
          */
         @NameInMap("EnableNetworkEncryption")
@@ -3246,11 +3243,11 @@ public class RunInstancesRequest extends TeaModel {
 
     public static class RunInstancesRequestPrivateDnsNameOptions extends TeaModel {
         /**
-         * <p>Specifies whether to enable DNS resolution from instance ID-based domain names to IPv6 addresses. Valid values:</p>
+         * <p>Specifies whether to enable DNS resolution from the instance ID-based domain name to an IPv6 address. Valid values:</p>
          * <ul>
-         * <li><p>true: enables the resolution.</p>
+         * <li><p>true: enabled.</p>
          * </li>
-         * <li><p>false: disables the resolution.</p>
+         * <li><p>false: disabled.</p>
          * </li>
          * </ul>
          * <p>Default value: false.</p>
@@ -3262,11 +3259,11 @@ public class RunInstancesRequest extends TeaModel {
         public Boolean enableInstanceIdDnsAAAARecord;
 
         /**
-         * <p>Specifies whether to enable DNS resolution from instance ID-based domain names to IPv4 addresses. Valid values:</p>
+         * <p>Specifies whether to enable DNS resolution from the instance ID-based domain name to an IPv4 address. Valid values:</p>
          * <ul>
-         * <li><p>true: enables the resolution.</p>
+         * <li><p>true: enabled.</p>
          * </li>
-         * <li><p>false: disables the resolution.</p>
+         * <li><p>false: disabled.</p>
          * </li>
          * </ul>
          * <p>Default value: false.</p>
@@ -3278,10 +3275,10 @@ public class RunInstancesRequest extends TeaModel {
         public Boolean enableInstanceIdDnsARecord;
 
         /**
-         * <p>Specifies whether to enable DNS resolution from IP-based domain names to IPv4 addresses. Valid values:</p>
+         * <p>Specifies whether to enable DNS resolution from the IP-based domain name to an IPv4 address. Valid values:</p>
          * <ul>
-         * <li>true: enables the resolution.</li>
-         * <li>false: disables the resolution.</li>
+         * <li>true: enabled.</li>
+         * <li>false: disabled.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -3292,10 +3289,10 @@ public class RunInstancesRequest extends TeaModel {
         public Boolean enableIpDnsARecord;
 
         /**
-         * <p>Specifies whether to enable reverse DNS resolution from IPv4 addresses to IP-based domain names. Valid values:</p>
+         * <p>Specifies whether to enable reverse DNS resolution from an IPv4 address to the IP-based domain name. Valid values:</p>
          * <ul>
-         * <li>true: enables the resolution.</li>
-         * <li>false: disables the resolution.</li>
+         * <li>true: enabled.</li>
+         * <li>false: disabled.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -3308,7 +3305,7 @@ public class RunInstancesRequest extends TeaModel {
         /**
          * <p>The hostname type. Valid values:</p>
          * <ul>
-         * <li>Custom: custom.</li>
+         * <li>Custom: custom hostname.</li>
          * <li>IpBased: IP-based hostname.</li>
          * <li>InstanceIdBased: instance ID-based hostname.</li>
          * </ul>
@@ -3369,7 +3366,7 @@ public class RunInstancesRequest extends TeaModel {
 
     public static class RunInstancesRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
+         * <p>The tag key of the instance, disk, and primary ENI. Valid values of N: 1 to 20. If this parameter is specified, it cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -3378,7 +3375,7 @@ public class RunInstancesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
+         * <p>The tag value of the instance, disk, and primary ENI. Valid values of N: 1 to 20. If this parameter is specified, it can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
