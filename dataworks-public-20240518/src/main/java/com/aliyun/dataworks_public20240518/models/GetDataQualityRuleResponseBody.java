@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetDataQualityRuleResponseBody extends TeaModel {
     /**
-     * <p>The details of the rule.</p>
+     * <p>The rule details.</p>
      */
     @NameInMap("DataQualityRule")
     public GetDataQualityRuleResponseBodyDataQualityRule dataQualityRule;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The API request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>691CA452-D37A-4ED0-****</p>
@@ -51,7 +51,7 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
         public String expression;
 
         /**
-         * <p>The comparison operator:</p>
+         * <p>The comparison operator. Valid values:</p>
          * <ul>
          * <li>\&gt;</li>
          * <li>\&gt;=</li>
@@ -119,7 +119,7 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
         public String expression;
 
         /**
-         * <p>The comparison operator:</p>
+         * <p>The comparison operator. Valid values:</p>
          * <ul>
          * <li>\&gt;</li>
          * <li>\&gt;=</li>
@@ -187,7 +187,7 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
         public String expression;
 
         /**
-         * <p>The comparison operator:</p>
+         * <p>The comparison operator. Valid values:</p>
          * <ul>
          * <li>\&gt;</li>
          * <li>\&gt;=</li>
@@ -296,7 +296,7 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
 
     public static class GetDataQualityRuleResponseBodyDataQualityRuleCheckingConfig extends TeaModel {
         /**
-         * <p>Some types of thresholds require querying reference samples and then aggregating the values of the reference samples to derive the threshold used for comparison. An expression is used here to indicate the way in which the reference samples are queried.</p>
+         * <p>Some types of thresholds require querying reference samples and then aggregating the values of the reference samples to derive the threshold for comparison. This field uses an expression to specify how to query the reference samples.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
@@ -311,7 +311,7 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
         public GetDataQualityRuleResponseBodyDataQualityRuleCheckingConfigThresholds thresholds;
 
         /**
-         * <p>The threshold calculation method:</p>
+         * <p>The threshold calculation method. Valid values:</p>
          * <ul>
          * <li>Fixed</li>
          * <li>Fluctation</li>
@@ -360,7 +360,7 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
 
     public static class GetDataQualityRuleResponseBodyDataQualityRuleErrorHandlers extends TeaModel {
         /**
-         * <p>If the rule is a custom SQL rule, you must specify an SQL statement to filter the problem data.</p>
+         * <p>The SQL statement specified by the user to filter error data. This is required for custom SQL rules.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT * FROM tb_api_log WHERE id IS NULL</p>
@@ -369,7 +369,7 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
         public String errorDataFilter;
 
         /**
-         * <p>The handler type:</p>
+         * <p>The handler type. Valid values:</p>
          * <ul>
          * <li>SaveErrorData</li>
          * </ul>
@@ -405,23 +405,23 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
 
     public static class GetDataQualityRuleResponseBodyDataQualityRuleSamplingConfig extends TeaModel {
         /**
-         * <p>The name of the sampling metric:</p>
+         * <p>The name of the sampling metric. Valid values:</p>
          * <ul>
-         * <li>Count: the number of table rows</li>
-         * <li>Min: the minimum value of the field</li>
-         * <li>Max: the maximum value of the field</li>
-         * <li>Avg: the average value of the field</li>
-         * <li>DistinctCount: the number of distinct values of the field</li>
-         * <li>DistinctPercent: the ratio of the number of distinct values of the field to the number of data rows</li>
-         * <li>DuplicatedCount: the number of duplicate values of the field</li>
-         * <li>DuplicatedPercent: the ratio of the number of duplicate values of the field to the number of data rows</li>
-         * <li>TableSize: the size of the table</li>
-         * <li>NullValueCount: the number of rows in which the field is null</li>
-         * <li>NullValuePercent: the proportion of rows in which the field is null</li>
-         * <li>GroupCount: the number of data rows corresponding to each value after aggregation by field value</li>
-         * <li>CountNotIn: the number of rows in which the enum value does not match</li>
-         * <li>CountDistinctNotIn: the number of distinct values in which the enum value does not match</li>
-         * <li>UserDefinedSql: performs sample collection by using a custom SQL statement</li>
+         * <li>Count: the number of table rows.</li>
+         * <li>Min: the minimum value of a field.</li>
+         * <li>Max: the maximum value of a field.</li>
+         * <li>Avg: the average value of a field.</li>
+         * <li>DistinctCount: the number of unique values of a field.</li>
+         * <li>DistinctPercent: the ratio of the number of unique values of a field to the number of data rows.</li>
+         * <li>DuplicatedCount: the number of duplicate values of a field.</li>
+         * <li>DuplicatedPercent: the ratio of the number of duplicate values of a field to the number of data rows.</li>
+         * <li>TableSize: the table size.</li>
+         * <li>NullValueCount: the number of rows in which the field is null.</li>
+         * <li>NullValuePercent: the ratio of rows in which the field is null.</li>
+         * <li>GroupCount: the number of data rows for each value after aggregation by field value.</li>
+         * <li>CountNotIn: the number of rows with mismatched enumeration values.</li>
+         * <li>CountDistinctNotIn: the number of unique values with mismatched enumeration values.</li>
+         * <li>UserDefinedSql: sample collection through custom SQL.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -440,7 +440,7 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
         public String metricParameters;
 
         /**
-         * <p>The condition used to perform secondary filtering on data that you do not focus on during sampling. The maximum length is 16,777,215 characters.</p>
+         * <p>The filter condition used to perform secondary filtering on irrelevant data during sampling. The value can be up to 16,777,215 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>id IS NULL</p>
@@ -449,7 +449,7 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
         public String samplingFilter;
 
         /**
-         * <p>The runtime parameter setting statements that are inserted and executed before the specific sampling statement is executed. The maximum length is 1,000 characters. Currently, only MaxCompute is supported.</p>
+         * <p>The runtime parameter setting statements that are executed before the sampling statement. The value can be up to 1,000 characters in length. Only MaxCompute is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>SET odps.sql.udf.timeout=600s; 
@@ -499,7 +499,7 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
 
     public static class GetDataQualityRuleResponseBodyDataQualityRuleTarget extends TeaModel {
         /**
-         * <p>For a Table-type dataset, the type of database to which the table belongs.</p>
+         * <p>The database type of the table for a table-type dataset. Valid values:</p>
          * <ul>
          * <li>maxcompute</li>
          * <li>emr</li>
@@ -526,7 +526,7 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
         public String partitionSpec;
 
         /**
-         * <p>The unique ID of the table on which the rule takes effect in Data Map.</p>
+         * <p>The unique ID of the table in Data Map that the rule applies to.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.unit_test.tb_unit_test</p>
@@ -535,7 +535,7 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
         public String tableGuid;
 
         /**
-         * <p>The type of the monitored object.</p>
+         * <p>The monitored object type. Valid values:</p>
          * <ul>
          * <li>Table</li>
          * </ul>
@@ -593,7 +593,7 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
         public GetDataQualityRuleResponseBodyDataQualityRuleCheckingConfig checkingConfig;
 
         /**
-         * <p>The description of the rule. The maximum length is 500 characters.</p>
+         * <p>The rule description. The description can be up to 500 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>this is a odps _sql task</p>
@@ -602,7 +602,7 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Specifies whether the rule is enabled.</p>
+         * <p>Indicates whether the rule is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -611,7 +611,7 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The list of issue handlers for quality rule checks.</p>
+         * <p>The list of quality rule check error handlers.</p>
          */
         @NameInMap("ErrorHandlers")
         public java.util.List<GetDataQualityRuleResponseBodyDataQualityRuleErrorHandlers> errorHandlers;
@@ -626,7 +626,7 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>The table cannot be empty.</p>
@@ -650,7 +650,7 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
         public GetDataQualityRuleResponseBodyDataQualityRuleSamplingConfig samplingConfig;
 
         /**
-         * <p>The severity of the rule for the business (corresponds to strong/weak rules on the page). Valid values:</p>
+         * <p>The severity level of the rule for business (corresponding to strong and weak rules on the page). Valid values:</p>
          * <ul>
          * <li>Normal</li>
          * <li>High</li>

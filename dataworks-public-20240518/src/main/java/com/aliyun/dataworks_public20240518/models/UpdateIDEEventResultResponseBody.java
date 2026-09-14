@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateIDEEventResultResponseBody extends TeaModel {
     /**
-     * <p>The request ID. Used for troubleshooting errors.</p>
+     * <p>The unique ID of the request, which is used for subsequent error troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>8abcb91f-d266-4073-b907-2ed670378ed1</p>

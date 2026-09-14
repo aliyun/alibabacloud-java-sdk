@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteProjectRequest extends TeaModel {
     /**
-     * <p>The ID of the DataWorks workspace. You can obtain the workspace ID from the Workspace Management page in the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a>.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
+     * <p>This parameter specifies the DataWorks workspace for this API call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -7,12 +7,9 @@ public class UpdateIDEEventResultRequest extends TeaModel {
     /**
      * <p>The check status of the extension for this extension point event. Valid values:</p>
      * <ul>
-     * <li><p>OK: The extension passed the check for this event.</p>
-     * </li>
-     * <li><p>FAIL: The extension failed the check for this event. You need to review and resolve the error promptly to avoid affecting subsequent program execution.</p>
-     * </li>
-     * <li><p>WARN: The extension passed the check for this event, but with warnings.</p>
-     * </li>
+     * <li>OK: The extension check for this extension point event passed.</li>
+     * <li>FAIL: The extension check for this extension point event failed. View and resolve the error promptly to avoid affecting the normal execution of subsequent programs.</li>
+     * <li>WARN: The extension check for this extension point event passed, but warnings exist.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,7 +19,8 @@ public class UpdateIDEEventResultRequest extends TeaModel {
     public String checkResult;
 
     /**
-     * <p>A summary of the check result for this extension point event. This message is displayed on your current development page. When the check fails or has warnings, you can use this summary to quickly identify the cause.</p>
+     * <p>The summary of the check performed by the extension on this extension point event.
+     * This information is displayed on your current development page. If the check has warnings or fails, you can use this summary to quickly identify the cause.</p>
      * 
      * <strong>example:</strong>
      * <p>Succeeded</p>
@@ -31,7 +29,8 @@ public class UpdateIDEEventResultRequest extends TeaModel {
     public String checkResultTip;
 
     /**
-     * <p>The unique identifier of the extension. You can obtain the identifier from the Extensions tab on Open Platform in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+     * <p>The unique identifier of the extension.
+     * You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and view the identifier on the Extensions tab of the Open Platform page.</p>
      * 
      * <strong>example:</strong>
      * <p>8abcb91f-d266-4073-b907-2ed670378ed1</p>
@@ -40,7 +39,8 @@ public class UpdateIDEEventResultRequest extends TeaModel {
     public String extensionCode;
 
     /**
-     * <p>The OpenEvent message ID from DataWorks. When an extension point event is triggered, you can obtain the message ID from the event message.</p>
+     * <p>The message ID of the DataWorks open message. After an extension point event is triggered, you can obtain the message ID from the received event message.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about the message format, see <a href="https://help.aliyun.com/document_detail/215367.html">Message format</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>8abcb91f-d266-4073-b907-2ed670378ed1</p>

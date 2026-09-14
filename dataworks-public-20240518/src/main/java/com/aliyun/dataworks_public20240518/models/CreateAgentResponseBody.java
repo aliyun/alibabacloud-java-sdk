@@ -42,7 +42,7 @@ public class CreateAgentResponseBody extends TeaModel {
 
     public static class CreateAgentResponseBodyAgent extends TeaModel {
         /**
-         * <p>The creation time, in milliseconds (UNIX timestamp).</p>
+         * <p>The creation time, in millisecond-precision UNIX timestamp.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class CreateAgentResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The last modification time, in milliseconds (UNIX timestamp).</p>
+         * <p>The last modification time, in millisecond-precision UNIX timestamp.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>

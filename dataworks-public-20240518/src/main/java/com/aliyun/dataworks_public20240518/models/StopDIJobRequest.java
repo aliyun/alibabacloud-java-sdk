@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopDIJobRequest extends TeaModel {
     /**
-     * <p>This parameter is deprecated and is replaced by the Id parameter.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated. Use the Id parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>11668</p>
@@ -15,7 +15,7 @@ public class StopDIJobRequest extends TeaModel {
     public Long DIJobId;
 
     /**
-     * <p>The ID of the synchronization task.</p>
+     * <p>The ID of the sync task.</p>
      * 
      * <strong>example:</strong>
      * <p>11668</p>
@@ -24,7 +24,7 @@ public class StopDIJobRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>

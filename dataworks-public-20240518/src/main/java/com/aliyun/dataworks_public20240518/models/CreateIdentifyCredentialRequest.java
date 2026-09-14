@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateIdentifyCredentialRequest extends TeaModel {
     /**
-     * <p>The user credential object.</p>
+     * <p>The user identity credential object.</p>
      */
     @NameInMap("IdentifyCredential")
     public IdentifyCredential identifyCredential;

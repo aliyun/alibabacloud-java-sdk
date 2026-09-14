@@ -1,3 +1,20 @@
+2026-09-14 Version: 9.7.0
+- Support API AbolishCrossProjectPipelineRun.
+- Support API CreateCrossProjectPipelineRun.
+- Support API ExecCrossProjectPipelineRun.
+- Support API GetComputeResourceAuthUserMappings.
+- Support API GetCrossProjectPipelineRun.
+- Support API GetUpdateTaskResult.
+- Support API ListCrossProjectDeploymentCandidates.
+- Support API ListCrossProjectDeploymentEnvironments.
+- Support API ListCrossProjectPipelineRunItems.
+- Support API ListCrossProjectPipelineRuns.
+- Support API UpdateComputeResourceAuthUserMappings.
+- Support API UpdateTaskAsync.
+- Update API GetTaskInstance: add response parameters Body.TaskInstance.OperationType.
+- Update API ListTaskInstances: add response parameters Body.PagingInfo.TaskInstances.$.OperationType.
+
+
 2026-09-02 Version: 9.6.0
 - Support API GetBatchChangeTableOwnerStatus.
 - Support API SubmitBatchChangeTableOwner.

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataQualityScanRunLogRequest extends TeaModel {
     /**
-     * <p>The ID of the data quality monitor run record.</p>
+     * <p>The ID of the data quality monitoring run record.</p>
      * 
      * <strong>example:</strong>
      * <p>10001</p>
@@ -14,7 +14,7 @@ public class GetDataQualityScanRunLogRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The starting position of the log, in bytes, relative to the beginning of the file. Each query returns a maximum of 512 KB of content.</p>
+     * <p>The start position of the log, which is the offset relative to the beginning of the file. Unit: bytes. Each query returns a maximum of 512 KB of content.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class ApplyResourceAccessPermissionRequest extends TeaModel {
     /**
-     * <p>The list of resource permission application contents.</p>
+     * <p>The list of resource permission request entries.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ApplyContents")
     public java.util.List<ApplyResourceAccessPermissionRequestApplyContents> applyContents;
 
     /**
-     * <p>The idempotency parameter. Used to prevent duplicate operations caused by multiple calls.</p>
+     * <p>The idempotency token. Used to prevent duplicate operations caused by multiple calls.</p>
      * 
      * <strong>example:</strong>
      * <p>ABFUOEUOTRTRJKE</p>
@@ -21,11 +21,11 @@ public class ApplyResourceAccessPermissionRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The reason for the application.</p>
+     * <p>The reason for the request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>业务发展需要</p>
+     * <p>Business development needs</p>
      */
     @NameInMap("Reason")
     public String reason;
@@ -61,11 +61,11 @@ public class ApplyResourceAccessPermissionRequest extends TeaModel {
 
     public static class ApplyResourceAccessPermissionRequestApplyContentsGrantee extends TeaModel {
         /**
-         * <p>The grantee ID. The ID has different semantics depending on the grantee type:</p>
+         * <p>The principal ID. The ID has different meanings depending on the principal type:</p>
          * <ul>
-         * <li><p>RamUser: Dataworks UserId</p>
+         * <li><p>RamUser: DataWorks UserId</p>
          * </li>
-         * <li><p>RamRole: Dataworks UserId prefixed with &quot;ROLE_&quot;</p>
+         * <li><p>RamRole: DataWorks UserId prefixed with &quot;ROLE_&quot;</p>
          * </li>
          * <li><p>DlfRole: DlfNext role name</p>
          * </li>
@@ -79,7 +79,7 @@ public class ApplyResourceAccessPermissionRequest extends TeaModel {
         public String principalId;
 
         /**
-         * <p>The grantee type. Valid values:</p>
+         * <p>The principal type. Valid values:</p>
          * <ul>
          * <li>RamRole</li>
          * <li>RamUser</li>
@@ -119,8 +119,8 @@ public class ApplyResourceAccessPermissionRequest extends TeaModel {
     public static class ApplyResourceAccessPermissionRequestApplyContentsResource extends TeaModel {
         /**
          * <p>The resource type.</p>
-         * <p><strong>Note</strong>: The resource types supported for application are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
-         * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for international site</a></p>
+         * <p><strong>Note</strong>: The resource types that can be requested are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
+         * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,8 +130,8 @@ public class ApplyResourceAccessPermissionRequest extends TeaModel {
         public String defSchema;
 
         /**
-         * <p>The resource parsing version, which is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.version.</p>
-         * <p><a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for international site</a></p>
+         * <p>The resource parsing version, constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.version.</p>
+         * <p><a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></p>
          * 
          * <strong>example:</strong>
          * <p>v1.0.0</p>
@@ -141,8 +141,8 @@ public class ApplyResourceAccessPermissionRequest extends TeaModel {
 
         /**
          * <p>The resource metadata declaration.</p>
-         * <p><strong>Note</strong>: The metadata is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources. A valid resource declaration must include full-path metadata declarations from level 0 to validLeaf.</p>
-         * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for international site</a></p>
+         * <p><strong>Note</strong>: The metadata is constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources. A valid resource declaration must include the full-path metadata declaration from level 0 to the validLeaf level.</p>
+         * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></p>
          */
         @NameInMap("MetaData")
         public java.util.Map<String, ?> metaData;
@@ -180,18 +180,18 @@ public class ApplyResourceAccessPermissionRequest extends TeaModel {
 
     public static class ApplyResourceAccessPermissionRequestApplyContents extends TeaModel {
         /**
-         * <p>The list of permissions to apply for.</p>
-         * <p><strong>Note</strong>: Different resource levels support different permission types. They are uniformly constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.isValidLeaf, accessTypeRestrictions, and authMethodAccessTypes.</p>
-         * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for international site</a></p>
+         * <p>The list of requested access types.</p>
+         * <p><strong>Note</strong>: Different resource levels support different access types. All access types are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.isValidLeaf, accessTypeRestrictions, and authMethodAccessTypes.</p>
+         * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("AccessTypes")
         public java.util.List<String> accessTypes;
 
         /**
-         * <p>The authorization method. Currently, only SEVERLESS_STARROCKS supports specifying the authorization method: ranger or starrocksManager.</p>
-         * <p><strong>Note</strong>: Different resources support different authorization methods, which are uniformly constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authMethods.</p>
-         * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for international site</a></p>
+         * <p>The authorization method. Currently, only SEVERLESS_STARROCKS supports specifying an authorization method: ranger or starrocksManager.</p>
+         * <p><strong>Note</strong>: Different resources support different authorization methods. All authorization methods are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authMethods.</p>
+         * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></p>
          * 
          * <strong>example:</strong>
          * <p>ranger</p>
@@ -200,7 +200,7 @@ public class ApplyResourceAccessPermissionRequest extends TeaModel {
         public String authMethod;
 
         /**
-         * <p>The permission expiration time, in milliseconds timestamp.</p>
+         * <p>The permission expiration time, in millisecond-level timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>1785835708000</p>
@@ -210,8 +210,8 @@ public class ApplyResourceAccessPermissionRequest extends TeaModel {
 
         /**
          * <p>The grantee description.</p>
-         * <p><strong>Note</strong>: The supported grantee types are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authPrincipal.</p>
-         * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for international site</a></p>
+         * <p><strong>Note</strong>: The supported principal types are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authPrincipal.</p>
+         * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Grantee")

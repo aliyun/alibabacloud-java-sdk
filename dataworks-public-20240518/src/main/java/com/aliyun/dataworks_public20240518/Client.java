@@ -193,6 +193,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Stops a cross-workspace publish flow.</p>
+     * 
+     * @param request AbolishCrossProjectPipelineRunRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AbolishCrossProjectPipelineRunResponse
+     */
+    public AbolishCrossProjectPipelineRunResponse abolishCrossProjectPipelineRunWithOptions(AbolishCrossProjectPipelineRunRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pipelineRunId)) {
+            body.put("PipelineRunId", request.pipelineRunId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reason)) {
+            body.put("Reason", request.reason);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AbolishCrossProjectPipelineRun"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AbolishCrossProjectPipelineRunResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Stops a cross-workspace publish flow.</p>
+     * 
+     * @param request AbolishCrossProjectPipelineRunRequest
+     * @return AbolishCrossProjectPipelineRunResponse
+     */
+    public AbolishCrossProjectPipelineRunResponse abolishCrossProjectPipelineRun(AbolishCrossProjectPipelineRunRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.abolishCrossProjectPipelineRunWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>Notice: This operation may not be available in earlier versions of the SDK. In this case, use the AbolishDeployment operation. The parameters are the same as those described in this document.</p>
@@ -314,21 +366,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request Description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li><strong>Reason</strong>: The reason for the application. This parameter is required.</li>
-     * <li><strong>ApplyContents</strong>: Contains multiple resource permission application contents, each including the resource description (Resource), grantee description (Grantee), permission types (AccessTypes), and permission expiration time (ExpirationTime). The maximum limit per request is 400 entries.</li>
-     * <li><strong>Resource</strong>: The resource description. You need to specify the ResourceSchema.name and version that the resource parsing depends on, as well as the resource metadata MetaData.</li>
-     * <li><strong>Grantee</strong>: The grantee description. You need to specify the grantee type (PrincipalType) and the principal ID (PrincipalId).</li>
-     * <li><strong>AccessTypes</strong>: The list of permission types. Multiple permission combinations are supported.</li>
-     * <li><strong>ExpirationTime</strong>: The permission expiration time, provided as a milliseconds timestamp.</li>
-     * <li><strong>AuthMethod</strong>: An optional parameter that specifies the authorization method. The system uses the built-in default authorization method if not specified.</li>
+     * <li><strong>Reason</strong>: The reason for the request. This parameter is required.</li>
+     * <li><strong>ApplyContents</strong>: Contains multiple resource permission request entries. Each entry includes a resource description (Resource), a grantee description (Grantee), access types (AccessTypes), and a permission expiration time (ExpirationTime). A maximum of 400 entries can be submitted in a single request.</li>
+     * <li><strong>Resource</strong>: The resource description. You must specify the ResourceSchema.name and version on which the resource parsing depends, as well as the resource metadata (MetaData).</li>
+     * <li><strong>Grantee</strong>: The grantee description. You must specify the principal type (PrincipalType) and principal ID (PrincipalId).</li>
+     * <li><strong>AccessTypes</strong>: The list of access types. Multiple access type combinations are supported.</li>
+     * <li><strong>ExpirationTime</strong>: The permission expiration time, provided as a millisecond-level timestamp.</li>
+     * <li><strong>AuthMethod</strong>: Optional. Specifies the authorization method. The system uses the built-in default authorization method if this parameter is not specified.</li>
      * <li><strong>ClientToken</strong>: The client token used to prevent duplicate requests. This parameter is optional.
-     * Ensure all required fields are filled in correctly and comply with the corresponding constraints. For example, <code>DefVersion</code> and <code>MetaData</code> in <code>Resource</code> should match the selected <code>DefSchema</code>.</li>
+     * Make sure that all required fields are correctly specified and meet the corresponding constraints. For example, the DefVersion and MetaData in Resource must match the selected DefSchema.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits an application for access permissions on a specific resource.</p>
+     * <p>Commits an access permissions request for specific resources.</p>
      * 
      * @param tmpReq ApplyResourceAccessPermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -374,21 +426,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request Description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li><strong>Reason</strong>: The reason for the application. This parameter is required.</li>
-     * <li><strong>ApplyContents</strong>: Contains multiple resource permission application contents, each including the resource description (Resource), grantee description (Grantee), permission types (AccessTypes), and permission expiration time (ExpirationTime). The maximum limit per request is 400 entries.</li>
-     * <li><strong>Resource</strong>: The resource description. You need to specify the ResourceSchema.name and version that the resource parsing depends on, as well as the resource metadata MetaData.</li>
-     * <li><strong>Grantee</strong>: The grantee description. You need to specify the grantee type (PrincipalType) and the principal ID (PrincipalId).</li>
-     * <li><strong>AccessTypes</strong>: The list of permission types. Multiple permission combinations are supported.</li>
-     * <li><strong>ExpirationTime</strong>: The permission expiration time, provided as a milliseconds timestamp.</li>
-     * <li><strong>AuthMethod</strong>: An optional parameter that specifies the authorization method. The system uses the built-in default authorization method if not specified.</li>
+     * <li><strong>Reason</strong>: The reason for the request. This parameter is required.</li>
+     * <li><strong>ApplyContents</strong>: Contains multiple resource permission request entries. Each entry includes a resource description (Resource), a grantee description (Grantee), access types (AccessTypes), and a permission expiration time (ExpirationTime). A maximum of 400 entries can be submitted in a single request.</li>
+     * <li><strong>Resource</strong>: The resource description. You must specify the ResourceSchema.name and version on which the resource parsing depends, as well as the resource metadata (MetaData).</li>
+     * <li><strong>Grantee</strong>: The grantee description. You must specify the principal type (PrincipalType) and principal ID (PrincipalId).</li>
+     * <li><strong>AccessTypes</strong>: The list of access types. Multiple access type combinations are supported.</li>
+     * <li><strong>ExpirationTime</strong>: The permission expiration time, provided as a millisecond-level timestamp.</li>
+     * <li><strong>AuthMethod</strong>: Optional. Specifies the authorization method. The system uses the built-in default authorization method if this parameter is not specified.</li>
      * <li><strong>ClientToken</strong>: The client token used to prevent duplicate requests. This parameter is optional.
-     * Ensure all required fields are filled in correctly and comply with the corresponding constraints. For example, <code>DefVersion</code> and <code>MetaData</code> in <code>Resource</code> should match the selected <code>DefSchema</code>.</li>
+     * Make sure that all required fields are correctly specified and meet the corresponding constraints. For example, the DefVersion and MetaData in Resource must match the selected DefSchema.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits an application for access permissions on a specific resource.</p>
+     * <p>Commits an access permissions request for specific resources.</p>
      * 
      * @param request ApplyResourceAccessPermissionRequest
      * @return ApplyResourceAccessPermissionResponse
@@ -477,8 +529,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or later to use this operation.</li>
-     * <li><strong>Ensure the AliyunServiceRoleForDataWorks service-linked role is created before you call this operation.</strong></li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li><strong>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</strong></li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -519,8 +571,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or later to use this operation.</li>
-     * <li><strong>Ensure the AliyunServiceRoleForDataWorks service-linked role is created before you call this operation.</strong></li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li><strong>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</strong></li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -537,11 +589,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This operation requires DataWorks Basic Edition or a more advanced edition.</li>
-     * <li>You must have one of the following roles in the DataWorks workspace:</li>
+     * <li>You must have purchased DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
      * </ol>
      * <ul>
-     * <li>tenant owner, workspace administrator, project owner, or operator</li>
+     * <li>Tenant Owner, Storage Management Administrator, Project Owner, or O&amp;M Engineer</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -582,11 +634,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This operation requires DataWorks Basic Edition or a more advanced edition.</li>
-     * <li>You must have one of the following roles in the DataWorks workspace:</li>
+     * <li>You must have purchased DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
      * </ol>
      * <ul>
-     * <li>tenant owner, workspace administrator, project owner, or operator</li>
+     * <li>Tenant Owner, Storage Management Administrator, Project Owner, or O&amp;M Engineer</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1116,9 +1168,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li><strong>Agent name</strong>: Must be unique within the current account.</li>
      * <li><strong>Model configuration</strong>: An optional parameter that specifies the model used by the Agent and its related settings.</li>
-     * <li><strong>Visibility level</strong>: Defines who can access the Agent. Supported levels include account-wide, project-specific, or user-specific visibility.</li>
+     * <li><strong>Visibility level</strong>: Defines who can access the Agent. The Agent can be visible within the account, to a specific project, or to specific users.</li>
      * <li><strong>Visibility scope</strong>: When you set the visibility level to <code>PROJECT</code> or <code>USER</code>, you must specify the list of project IDs or user IDs.</li>
-     * <li><strong>Other parameters</strong>: Parameters such as display name and description are optional. Set them as needed.</li>
+     * <li><strong>Other parameters</strong>: Optional parameters such as display name and description. Set them as needed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1224,9 +1276,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li><strong>Agent name</strong>: Must be unique within the current account.</li>
      * <li><strong>Model configuration</strong>: An optional parameter that specifies the model used by the Agent and its related settings.</li>
-     * <li><strong>Visibility level</strong>: Defines who can access the Agent. Supported levels include account-wide, project-specific, or user-specific visibility.</li>
+     * <li><strong>Visibility level</strong>: Defines who can access the Agent. The Agent can be visible within the account, to a specific project, or to specific users.</li>
      * <li><strong>Visibility scope</strong>: When you set the visibility level to <code>PROJECT</code> or <code>USER</code>, you must specify the list of project IDs or user IDs.</li>
-     * <li><strong>Other parameters</strong>: Parameters such as display name and description are optional. Set them as needed.</li>
+     * <li><strong>Other parameters</strong>: Optional parameters such as display name and description. Set them as needed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1711,6 +1763,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates and persists a cross-workspace deployment flow. The ObjectIds parameter must contain exactly one top-level object ID from the source project. Child objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call ListCrossProjectDeploymentCandidates to query candidate objects, call ExecCrossProjectPipelineRun to execute the deployment after creation, and call GetCrossProjectPipelineRun to query the deployment status.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a cross-workspace deployment flow.</p>
+     * 
+     * @param tmpReq CreateCrossProjectPipelineRunRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCrossProjectPipelineRunResponse
+     */
+    public CreateCrossProjectPipelineRunResponse createCrossProjectPipelineRunWithOptions(CreateCrossProjectPipelineRunRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateCrossProjectPipelineRunShrinkRequest request = new CreateCrossProjectPipelineRunShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.objectIds)) {
+            request.objectIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.objectIds, "ObjectIds", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deploymentEnvironmentId)) {
+            body.put("DeploymentEnvironmentId", request.deploymentEnvironmentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectIdsShrink)) {
+            body.put("ObjectIds", request.objectIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCrossProjectPipelineRun"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCrossProjectPipelineRunResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates and persists a cross-workspace deployment flow. The ObjectIds parameter must contain exactly one top-level object ID from the source project. Child objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call ListCrossProjectDeploymentCandidates to query candidate objects, call ExecCrossProjectPipelineRun to execute the deployment after creation, and call GetCrossProjectPipelineRun to query the deployment status.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a cross-workspace deployment flow.</p>
+     * 
+     * @param request CreateCrossProjectPipelineRunRequest
+     * @return CreateCrossProjectPipelineRunResponse
+     */
+    public CreateCrossProjectPipelineRunResponse createCrossProjectPipelineRun(CreateCrossProjectPipelineRunRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCrossProjectPipelineRunWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Creates a custom attribute definition.</p>
      * 
@@ -1994,10 +2118,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available only for DataWorks Enterprise Edition or a more advanced edition.</p>
+     * <p>You must purchase DataWorks Enterprise Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a tag.</p>
+     * <p>Creates a label.</p>
      * 
      * @param tmpReq CreateDataAssetTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2055,10 +2179,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available only for DataWorks Enterprise Edition or a more advanced edition.</p>
+     * <p>You must purchase DataWorks Enterprise Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a tag.</p>
+     * <p>Creates a label.</p>
      * 
      * @param request CreateDataAssetTagRequest
      * @return CreateDataAssetTagResponse
@@ -2718,10 +2842,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or a higher edition is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a data quality template.</p>
+     * <p>Creates a data quality rule template in a specified project.</p>
      * 
      * @param request CreateDataQualityTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2761,10 +2885,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or a higher edition is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a data quality template.</p>
+     * <p>Creates a data quality rule template in a specified project.</p>
      * 
      * @param request CreateDataQualityTemplateRequest
      * @return CreateDataQualityTemplateResponse
@@ -3363,8 +3487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: 
-     * This operation does not support batch processing. If you specify multiple entities in the request parameters, only the first entity is processed and the rest are ignored.</p>
+     * <p>Notice: This operation does not support batch operations. If you specify multiple publish entities in the parameters, all entities except the first one are ignored.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -3407,8 +3530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: 
-     * This operation does not support batch processing. If you specify multiple entities in the request parameters, only the first entity is processed and the rest are ignored.</p>
+     * <p>Notice: This operation does not support batch operations. If you specify multiple publish entities in the parameters, all entities except the first one are ignored.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -6718,7 +6840,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a dataset version. Only non-v1 DataWorks datasets are supported. To delete v1 datasets, use the DeleteDataset operation. Requires dataset creator or workspace administrator permissions.</p>
+     * <p>Deletes a dataset version. Only non-v1 DataWorks dataset versions can be deleted by using this operation. To delete a v1 dataset version, use the DeleteDataset operation. The operator must be the creator of the dataset or an administrator of the workspace to which the dataset belongs.</p>
      * 
      * @param request DeleteDatasetVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6750,7 +6872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a dataset version. Only non-v1 DataWorks datasets are supported. To delete v1 datasets, use the DeleteDataset operation. Requires dataset creator or workspace administrator permissions.</p>
+     * <p>Deletes a dataset version. Only non-v1 DataWorks dataset versions can be deleted by using this operation. To delete a v1 dataset version, use the DeleteDataset operation. The operator must be the creator of the dataset or an administrator of the workspace to which the dataset belongs.</p>
      * 
      * @param request DeleteDatasetVersionRequest
      * @return DeleteDatasetVersionResponse
@@ -7259,12 +7381,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: 
-     * After a node is published, it cannot be deleted. You must unpublish the node before you can delete it.</p>
+     * <p>Notice: After a node is published, it cannot be deleted. You must offline the node before deleting it.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a node from DataStudio.</p>
+     * <p>Deletes a specified data development node.</p>
      * 
      * @param request DeleteNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7301,12 +7422,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: 
-     * After a node is published, it cannot be deleted. You must unpublish the node before you can delete it.</p>
+     * <p>Notice: After a node is published, it cannot be deleted. You must offline the node before deleting it.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a node from DataStudio.</p>
+     * <p>Deletes a specified data development node.</p>
      * 
      * @param request DeleteNodeRequest
      * @return DeleteNodeResponse
@@ -7428,8 +7548,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>To call this API, you must purchase DataWorks Basic Edition or a higher edition.
-     * Note: When you delete a workspace, the system moves it to the Recycle Bin. After a 14-day retention period, the system permanently purges the workspace. During this time, you cannot create a new workspace with the same name. You can find the deleted workspace in the Recycle Bin on the Workspace page in the console.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <blockquote>
+     * <p>Note: After a workspace is deleted, it is moved to the recycle bin on the <strong>Workspaces</strong> page in the console. The workspace is permanently removed after a 14-day cool-down period. During this period, you cannot create a workspace with the same name.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
      * <p>Deletes a DataWorks workspace.</p>
@@ -7464,8 +7586,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>To call this API, you must purchase DataWorks Basic Edition or a higher edition.
-     * Note: When you delete a workspace, the system moves it to the Recycle Bin. After a 14-day retention period, the system permanently purges the workspace. During this time, you cannot create a new workspace with the same name. You can find the deleted workspace in the Recycle Bin on the Workspace page in the console.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <blockquote>
+     * <p>Note: After a workspace is deleted, it is moved to the recycle bin on the <strong>Workspaces</strong> page in the console. The workspace is permanently removed after a 14-day cool-down period. During this period, you cannot create a workspace with the same name.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
      * <p>Deletes a DataWorks workspace.</p>
@@ -8781,6 +8905,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Executes a cross-workspace publish flow.</p>
+     * 
+     * @param request ExecCrossProjectPipelineRunRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecCrossProjectPipelineRunResponse
+     */
+    public ExecCrossProjectPipelineRunResponse execCrossProjectPipelineRunWithOptions(ExecCrossProjectPipelineRunRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pipelineRunId)) {
+            body.put("PipelineRunId", request.pipelineRunId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExecCrossProjectPipelineRun"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecCrossProjectPipelineRunResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Executes a cross-workspace publish flow.</p>
+     * 
+     * @param request ExecCrossProjectPipelineRunRequest
+     * @return ExecCrossProjectPipelineRunResponse
+     */
+    public ExecCrossProjectPipelineRunResponse execCrossProjectPipelineRun(ExecCrossProjectPipelineRunRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.execCrossProjectPipelineRunWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>Notice: The stages of a publish flow are sequential. For more information, see the response of GetPipelineRun. You cannot skip or repeat a stage.
@@ -9282,7 +9454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询批量转交表Owner状态</p>
+     * <p>Queries the status of a batch table owner transfer task.</p>
      * 
      * @param request GetBatchChangeTableOwnerStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9314,7 +9486,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询批量转交表Owner状态</p>
+     * <p>Queries the status of a batch table owner transfer task.</p>
      * 
      * @param request GetBatchChangeTableOwnerStatusRequest
      * @return GetBatchChangeTableOwnerStatusResponse
@@ -9654,6 +9826,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Storage Management Administrator, Deployment, Developer, Project Owner, or O&amp;M Engineer</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the user mappings of a compute resource. Supports EMR and Serverless Spark resource types.</p>
+     * 
+     * @param request GetComputeResourceAuthUserMappingsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetComputeResourceAuthUserMappingsResponse
+     */
+    public GetComputeResourceAuthUserMappingsResponse getComputeResourceAuthUserMappingsWithOptions(GetComputeResourceAuthUserMappingsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.computeResourceId)) {
+            query.put("ComputeResourceId", request.computeResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetComputeResourceAuthUserMappings"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetComputeResourceAuthUserMappingsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Storage Management Administrator, Deployment, Developer, Project Owner, or O&amp;M Engineer</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the user mappings of a compute resource. Supports EMR and Serverless Spark resource types.</p>
+     * 
+     * @param request GetComputeResourceAuthUserMappingsRequest
+     * @return GetComputeResourceAuthUserMappingsResponse
+     */
+    public GetComputeResourceAuthUserMappingsResponse getComputeResourceAuthUserMappings(GetComputeResourceAuthUserMappingsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getComputeResourceAuthUserMappingsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Scenarios</h2>
      * <p>Queries the configuration, availability status, and latest run information of a specified metadata crawler.</p>
      * <h2>Recommended workflow</h2>
@@ -9831,6 +10069,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetCreateWorkflowInstancesResultResponse getCreateWorkflowInstancesResult(GetCreateWorkflowInstancesResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getCreateWorkflowInstancesResultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a cross-workspace deployment flow.</p>
+     * 
+     * @param request GetCrossProjectPipelineRunRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCrossProjectPipelineRunResponse
+     */
+    public GetCrossProjectPipelineRunResponse getCrossProjectPipelineRunWithOptions(GetCrossProjectPipelineRunRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pipelineRunId)) {
+            body.put("PipelineRunId", request.pipelineRunId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCrossProjectPipelineRun"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCrossProjectPipelineRunResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a cross-workspace deployment flow.</p>
+     * 
+     * @param request GetCrossProjectPipelineRunRequest
+     * @return GetCrossProjectPipelineRunResponse
+     */
+    public GetCrossProjectPipelineRunResponse getCrossProjectPipelineRun(GetCrossProjectPipelineRunRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCrossProjectPipelineRunWithOptions(request, runtime);
     }
 
     /**
@@ -10129,7 +10415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or above to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of a data quality rule.</p>
@@ -10164,7 +10450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or above to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of a data quality rule.</p>
@@ -10337,10 +10623,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or a higher edition is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the log of a specific task instance that monitors data quality.</p>
+     * <p>Queries the log content of a specified data quality monitoring task instance.</p>
      * 
      * @param request GetDataQualityScanRunLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10376,10 +10662,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or a higher edition is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the log of a specific task instance that monitors data quality.</p>
+     * <p>Queries the log content of a specified data quality monitoring task instance.</p>
      * 
      * @param request GetDataQualityScanRunLogRequest
      * @return GetDataQualityScanRunLogResponse
@@ -12542,7 +12828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about an instance.</p>
+     * <p>Retrieves the details of a specified task instance.</p>
      * 
      * @param request GetTaskInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12573,7 +12859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about an instance.</p>
+     * <p>Retrieves the details of a specified task instance.</p>
      * 
      * @param request GetTaskInstanceRequest
      * @return GetTaskInstanceResponse
@@ -12627,6 +12913,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetTaskInstanceLogResponse getTaskInstanceLog(GetTaskInstanceLogRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTaskInstanceLogWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>DataWorks Basic Edition or a more advanced edition is required.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the result of asynchronously creating a workflow instance.</p>
+     * 
+     * @param request GetUpdateTaskResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetUpdateTaskResultResponse
+     */
+    public GetUpdateTaskResultResponse getUpdateTaskResultWithOptions(GetUpdateTaskResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.operationId)) {
+            query.put("OperationId", request.operationId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUpdateTaskResult"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUpdateTaskResultResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>DataWorks Basic Edition or a more advanced edition is required.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the result of asynchronously creating a workflow instance.</p>
+     * 
+     * @param request GetUpdateTaskResultRequest
+     * @return GetUpdateTaskResultResponse
+     */
+    public GetUpdateTaskResultResponse getUpdateTaskResult(GetUpdateTaskResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getUpdateTaskResultWithOptions(request, runtime);
     }
 
     /**
@@ -13203,17 +13539,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>Specify at least one of <code>agentName</code> or <code>sessionSourceList</code>.</li>
-     * <li>You can use the <code>tagList</code>, <code>sessionId</code>, and <code>sessionTitle</code> parameters for combined filtering.</li>
-     * <li>The response follows the Alibaba Cloud OpenAPI pagination specification and includes the <code>totalCount</code>, <code>maxResults</code>, <code>nextToken</code>, and <code>sessionList</code> fields.</li>
-     * <li>If you provide an invalid string for <code>nextToken</code>, its value defaults to <code>1</code>.</li>
-     * <li>By default, this operation returns 50 records per page. You can use the <code>maxResults</code> parameter to adjust this number.</li>
+     * <li>At least one of <code>agentName</code> and <code>sessionSourceList</code> must be provided.</li>
+     * <li>Supports combined filtering by <code>tagList</code>, <code>sessionId</code>, and <code>sessionTitle</code>.</li>
+     * <li>The response conforms to the Alibaba Cloud OpenAPI paging specification, including <code>totalCount</code>, <code>maxResults</code>, <code>nextToken</code>, and <code>sessionList</code>.</li>
+     * <li>If <code>nextToken</code> is an invalid character string, it defaults to 1.</li>
+     * <li>By default, 50 records are returned per page. Adjust this by using the <code>maxResults</code> parameter.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the conversation history for the agent session.</p>
+     * <p>Loads the conversation history list of an Agent Session.</p>
      * 
      * @param tmpReq ListAgentSessionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13259,17 +13595,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>Specify at least one of <code>agentName</code> or <code>sessionSourceList</code>.</li>
-     * <li>You can use the <code>tagList</code>, <code>sessionId</code>, and <code>sessionTitle</code> parameters for combined filtering.</li>
-     * <li>The response follows the Alibaba Cloud OpenAPI pagination specification and includes the <code>totalCount</code>, <code>maxResults</code>, <code>nextToken</code>, and <code>sessionList</code> fields.</li>
-     * <li>If you provide an invalid string for <code>nextToken</code>, its value defaults to <code>1</code>.</li>
-     * <li>By default, this operation returns 50 records per page. You can use the <code>maxResults</code> parameter to adjust this number.</li>
+     * <li>At least one of <code>agentName</code> and <code>sessionSourceList</code> must be provided.</li>
+     * <li>Supports combined filtering by <code>tagList</code>, <code>sessionId</code>, and <code>sessionTitle</code>.</li>
+     * <li>The response conforms to the Alibaba Cloud OpenAPI paging specification, including <code>totalCount</code>, <code>maxResults</code>, <code>nextToken</code>, and <code>sessionList</code>.</li>
+     * <li>If <code>nextToken</code> is an invalid character string, it defaults to 1.</li>
+     * <li>By default, 50 records are returned per page. Adjust this by using the <code>maxResults</code> parameter.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the conversation history for the agent session.</p>
+     * <p>Loads the conversation history list of an Agent Session.</p>
      * 
      * @param request ListAgentSessionsRequest
      * @return ListAgentSessionsResponse
@@ -14038,6 +14374,282 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListCrawlersResponse listCrawlers(ListCrawlersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCrawlersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries cross-workspace deployment candidate objects.</p>
+     * 
+     * @param request ListCrossProjectDeploymentCandidatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCrossProjectDeploymentCandidatesResponse
+     */
+    public ListCrossProjectDeploymentCandidatesResponse listCrossProjectDeploymentCandidatesWithOptions(ListCrossProjectDeploymentCandidatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.changeType)) {
+            body.put("ChangeType", request.changeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.commitTimeFrom)) {
+            body.put("CommitTimeFrom", request.commitTimeFrom);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.commitTimeTo)) {
+            body.put("CommitTimeTo", request.commitTimeTo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.commitUser)) {
+            body.put("CommitUser", request.commitUser);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deploymentEnvironmentId)) {
+            body.put("DeploymentEnvironmentId", request.deploymentEnvironmentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            body.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectId)) {
+            body.put("ObjectId", request.objectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectType)) {
+            body.put("ObjectType", request.objectType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCrossProjectDeploymentCandidates"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCrossProjectDeploymentCandidatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries cross-workspace deployment candidate objects.</p>
+     * 
+     * @param request ListCrossProjectDeploymentCandidatesRequest
+     * @return ListCrossProjectDeploymentCandidatesResponse
+     */
+    public ListCrossProjectDeploymentCandidatesResponse listCrossProjectDeploymentCandidates(ListCrossProjectDeploymentCandidatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCrossProjectDeploymentCandidatesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries cross-workspace deployment environments.</p>
+     * 
+     * @param request ListCrossProjectDeploymentEnvironmentsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCrossProjectDeploymentEnvironmentsResponse
+     */
+    public ListCrossProjectDeploymentEnvironmentsResponse listCrossProjectDeploymentEnvironmentsWithOptions(ListCrossProjectDeploymentEnvironmentsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCrossProjectDeploymentEnvironments"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCrossProjectDeploymentEnvironmentsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries cross-workspace deployment environments.</p>
+     * 
+     * @param request ListCrossProjectDeploymentEnvironmentsRequest
+     * @return ListCrossProjectDeploymentEnvironmentsResponse
+     */
+    public ListCrossProjectDeploymentEnvironmentsResponse listCrossProjectDeploymentEnvironments(ListCrossProjectDeploymentEnvironmentsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCrossProjectDeploymentEnvironmentsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the publish items of a cross-workspace publish pipeline.</p>
+     * 
+     * @param request ListCrossProjectPipelineRunItemsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCrossProjectPipelineRunItemsResponse
+     */
+    public ListCrossProjectPipelineRunItemsResponse listCrossProjectPipelineRunItemsWithOptions(ListCrossProjectPipelineRunItemsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pipelineRunId)) {
+            body.put("PipelineRunId", request.pipelineRunId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCrossProjectPipelineRunItems"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCrossProjectPipelineRunItemsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the publish items of a cross-workspace publish pipeline.</p>
+     * 
+     * @param request ListCrossProjectPipelineRunItemsRequest
+     * @return ListCrossProjectPipelineRunItemsResponse
+     */
+    public ListCrossProjectPipelineRunItemsResponse listCrossProjectPipelineRunItems(ListCrossProjectPipelineRunItemsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCrossProjectPipelineRunItemsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of cross-workspace publish flows.</p>
+     * 
+     * @param request ListCrossProjectPipelineRunsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCrossProjectPipelineRunsResponse
+     */
+    public ListCrossProjectPipelineRunsResponse listCrossProjectPipelineRunsWithOptions(ListCrossProjectPipelineRunsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createTimeFrom)) {
+            body.put("CreateTimeFrom", request.createTimeFrom);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createTimeTo)) {
+            body.put("CreateTimeTo", request.createTimeTo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.creator)) {
+            body.put("Creator", request.creator);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deploymentEnvironmentId)) {
+            body.put("DeploymentEnvironmentId", request.deploymentEnvironmentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.executor)) {
+            body.put("Executor", request.executor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectId)) {
+            body.put("ObjectId", request.objectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectType)) {
+            body.put("ObjectType", request.objectType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCrossProjectPipelineRuns"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCrossProjectPipelineRunsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of cross-workspace publish flows.</p>
+     * 
+     * @param request ListCrossProjectPipelineRunsRequest
+     * @return ListCrossProjectPipelineRunsResponse
+     */
+    public ListCrossProjectPipelineRunsResponse listCrossProjectPipelineRuns(ListCrossProjectPipelineRunsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCrossProjectPipelineRunsWithOptions(request, runtime);
     }
 
     /**
@@ -16964,7 +17576,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets a paginated list of dependent nodes for a specified data development node.</p>
+     * <p>Retrieves the dependency nodes of a specified DataStudio node with pagination.</p>
      * 
      * @param request ListNodeDependenciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16992,7 +17604,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets a paginated list of dependent nodes for a specified data development node.</p>
+     * <p>Retrieves the dependency nodes of a specified DataStudio node with pagination.</p>
      * 
      * @param request ListNodeDependenciesRequest
      * @return ListNodeDependenciesResponse
@@ -18832,10 +19444,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of instances. You can also specify filter conditions to query specific instances.</p>
+     * <p>Lists node instances by paging and supports filtered query by conditions.</p>
      * 
      * @param tmpReq ListTaskInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18961,10 +19573,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of instances. You can also specify filter conditions to query specific instances.</p>
+     * <p>Lists node instances by paging and supports filtered query by conditions.</p>
      * 
      * @param request ListTaskInstancesRequest
      * @return ListTaskInstancesResponse
@@ -20819,16 +21431,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Description</h2>
-     * <p>Loads a saved semantic job definition by <code>Name</code> and submits a new analysis run to the executor. This operation does not accept runtime <code>Source</code>, resource group, or reference file overrides. The execution always uses the configuration saved by <code>CreateSemanticJob</code>.</p>
+     * <p>Loads a saved semantic job definition by <code>Name</code> and submits a new analysis run to the executor. This operation does not accept runtime overrides for <code>Source</code>, resource groups, or reference files. The execution always uses the configuration saved by <code>CreateSemanticJob</code>.</p>
      * <h2>Pre-execution validation</h2>
-     * <p>The service validates the existence and access permissions of the job, and re-validates whether the associated files still exist. For files associated through <code>ReferenceFileIds</code>, the service resolves them to temporary addresses readable by the current run before submission. Deleting a file after upload or specifying an invalid file ID causes the submission to fail.</p>
+     * <p>The service validates the existence and access permissions of the job, and re-validates whether the associated files still exist. For files associated through <code>ReferenceFileIds</code>, the service resolves them into temporary addresses readable by the current run before submission. If a file is deleted after upload or an invalid file ID is specified, the submission fails.</p>
      * <h2>Response and What to do next</h2>
-     * <p><code>Data.JobRunId</code> is the identity of the current semantics node run and is used by <code>DownloadSemanticResults</code> to download the exact output of this run. <code>Data.ExecutorJobId</code> is the identity of the executor node and is used by <code>GetSemanticJobDetail</code>, <code>GetSemanticJobLog</code>, and <code>KillSemanticJob</code>. A successful response indicates that the executor has accepted the submission, not that the model analysis or result files are complete.</p>
+     * <p><code>Data.JobRunId</code> is the identity of the current semantics job run and is used by <code>DownloadSemanticResults</code> to download the exact output of this run. <code>Data.ExecutorJobId</code> is the identity of the executor job and is used by <code>GetSemanticJobDetail</code>, <code>GetSemanticJobLog</code>, and <code>KillSemanticJob</code>. A successful response indicates that the executor has accepted the submission, not that the model analysis or result files are complete.</p>
      * <h2>Billing</h2>
      * <p><strong>Before using this operation, make sure that you fully understand the billing method and pricing of the <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">model calls</a> used by semantic construction.</strong></p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a saved semantic job for execution by name and returns the run identifier and executor job identifier. A successful call indicates that the job has been submitted, not that the semantic model results have been generated.</p>
+     * <p>Submits a saved semantic job for execution by name and returns the run and executor identifiers. A successful call indicates that the job has been submitted, not that the semantic model results have been generated.</p>
      * 
      * @param request RunSemanticJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20861,16 +21473,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Description</h2>
-     * <p>Loads a saved semantic job definition by <code>Name</code> and submits a new analysis run to the executor. This operation does not accept runtime <code>Source</code>, resource group, or reference file overrides. The execution always uses the configuration saved by <code>CreateSemanticJob</code>.</p>
+     * <p>Loads a saved semantic job definition by <code>Name</code> and submits a new analysis run to the executor. This operation does not accept runtime overrides for <code>Source</code>, resource groups, or reference files. The execution always uses the configuration saved by <code>CreateSemanticJob</code>.</p>
      * <h2>Pre-execution validation</h2>
-     * <p>The service validates the existence and access permissions of the job, and re-validates whether the associated files still exist. For files associated through <code>ReferenceFileIds</code>, the service resolves them to temporary addresses readable by the current run before submission. Deleting a file after upload or specifying an invalid file ID causes the submission to fail.</p>
+     * <p>The service validates the existence and access permissions of the job, and re-validates whether the associated files still exist. For files associated through <code>ReferenceFileIds</code>, the service resolves them into temporary addresses readable by the current run before submission. If a file is deleted after upload or an invalid file ID is specified, the submission fails.</p>
      * <h2>Response and What to do next</h2>
-     * <p><code>Data.JobRunId</code> is the identity of the current semantics node run and is used by <code>DownloadSemanticResults</code> to download the exact output of this run. <code>Data.ExecutorJobId</code> is the identity of the executor node and is used by <code>GetSemanticJobDetail</code>, <code>GetSemanticJobLog</code>, and <code>KillSemanticJob</code>. A successful response indicates that the executor has accepted the submission, not that the model analysis or result files are complete.</p>
+     * <p><code>Data.JobRunId</code> is the identity of the current semantics job run and is used by <code>DownloadSemanticResults</code> to download the exact output of this run. <code>Data.ExecutorJobId</code> is the identity of the executor job and is used by <code>GetSemanticJobDetail</code>, <code>GetSemanticJobLog</code>, and <code>KillSemanticJob</code>. A successful response indicates that the executor has accepted the submission, not that the model analysis or result files are complete.</p>
      * <h2>Billing</h2>
      * <p><strong>Before using this operation, make sure that you fully understand the billing method and pricing of the <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">model calls</a> used by semantic construction.</strong></p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a saved semantic job for execution by name and returns the run identifier and executor job identifier. A successful call indicates that the job has been submitted, not that the semantic model results have been generated.</p>
+     * <p>Submits a saved semantic job for execution by name and returns the run and executor identifiers. A successful call indicates that the job has been submitted, not that the semantic model results have been generated.</p>
      * 
      * @param request RunSemanticJobRequest
      * @return RunSemanticJobResponse
@@ -21176,10 +21788,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Stops a synchronization task.</p>
+     * <p>Aborts a data integration task.</p>
      * 
      * @param request StopDIJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21207,10 +21819,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Stops a synchronization task.</p>
+     * <p>Aborts a data integration task.</p>
      * 
      * @param request StopDIJobRequest
      * @return StopDIJobResponse
@@ -21456,7 +22068,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交批量转交表Owner</p>
+     * <p>Submits a batch request to transfer table ownership.</p>
      * 
      * @param tmpReq SubmitBatchChangeTableOwnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21502,7 +22114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交批量转交表Owner</p>
+     * <p>Submits a batch request to transfer table ownership.</p>
      * 
      * @param request SubmitBatchChangeTableOwnerRequest
      * @return SubmitBatchChangeTableOwnerResponse
@@ -22254,6 +22866,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateComputeResourceResponse updateComputeResource(UpdateComputeResourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateComputeResourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
+     * <li>Tenant owner, tenant administrator, storage management administrator, project owner, or O&amp;M engineer.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the account mapping of a compute resource. Currently supports EMR and Serverless Spark resource types.</p>
+     * 
+     * @param tmpReq UpdateComputeResourceAuthUserMappingsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateComputeResourceAuthUserMappingsResponse
+     */
+    public UpdateComputeResourceAuthUserMappingsResponse updateComputeResourceAuthUserMappingsWithOptions(UpdateComputeResourceAuthUserMappingsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateComputeResourceAuthUserMappingsShrinkRequest request = new UpdateComputeResourceAuthUserMappingsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.removeUserIds)) {
+            request.removeUserIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.removeUserIds, "RemoveUserIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.upserts)) {
+            request.upsertsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.upserts, "Upserts", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.computeResourceId)) {
+            body.put("ComputeResourceId", request.computeResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.removeUserIdsShrink)) {
+            body.put("RemoveUserIds", request.removeUserIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.upsertsShrink)) {
+            body.put("Upserts", request.upsertsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateComputeResourceAuthUserMappings"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateComputeResourceAuthUserMappingsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
+     * <li>Tenant owner, tenant administrator, storage management administrator, project owner, or O&amp;M engineer.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the account mapping of a compute resource. Currently supports EMR and Serverless Spark resource types.</p>
+     * 
+     * @param request UpdateComputeResourceAuthUserMappingsRequest
+     * @return UpdateComputeResourceAuthUserMappingsResponse
+     */
+    public UpdateComputeResourceAuthUserMappingsResponse updateComputeResourceAuthUserMappings(UpdateComputeResourceAuthUserMappingsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateComputeResourceAuthUserMappingsWithOptions(request, runtime);
     }
 
     /**
@@ -23686,7 +24378,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Recalls the check result of the message of an extension point event.</p>
+     * <p>Returns the check result of an extension point event message.</p>
      * 
      * @param request UpdateIDEEventResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23730,7 +24422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Recalls the check result of the message of an extension point event.</p>
+     * <p>Returns the check result of an extension point event message.</p>
      * 
      * @param request UpdateIDEEventResultRequest
      * @return UpdateIDEEventResultResponse
@@ -25274,6 +25966,172 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateTaskResponse updateTask(UpdateTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This API operation updates the information of a specified node, including but not limited to the node name, description, and owner.</li>
+     * <li>The changes are synchronized to DataStudio, and DataStudio creates a new saved version.</li>
+     * <li>You can set detailed parameters such as the trigger method, runtime environment configuration, and dependencies of the node.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a specified node and synchronizes the changes to DataStudio to create a new saved version.</p>
+     * 
+     * @param tmpReq UpdateTaskAsyncRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateTaskAsyncResponse
+     */
+    public UpdateTaskAsyncResponse updateTaskAsyncWithOptions(UpdateTaskAsyncRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateTaskAsyncShrinkRequest request = new UpdateTaskAsyncShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dataSource)) {
+            request.dataSourceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dataSource, "DataSource", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dependencies)) {
+            request.dependenciesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dependencies, "Dependencies", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.inputs)) {
+            request.inputsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.inputs, "Inputs", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.outputs)) {
+            request.outputsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.outputs, "Outputs", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.runtimeResource)) {
+            request.runtimeResourceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.runtimeResource, "RuntimeResource", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.script)) {
+            request.scriptShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.script, "Script", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.trigger)) {
+            request.triggerShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.trigger, "Trigger", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientUniqueCode)) {
+            body.put("ClientUniqueCode", request.clientUniqueCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceShrink)) {
+            body.put("DataSource", request.dataSourceShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dependenciesShrink)) {
+            body.put("Dependencies", request.dependenciesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.envType)) {
+            body.put("EnvType", request.envType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputsShrink)) {
+            body.put("Inputs", request.inputsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceMode)) {
+            body.put("InstanceMode", request.instanceMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputsShrink)) {
+            body.put("Outputs", request.outputsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
+            body.put("Owner", request.owner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rerunInterval)) {
+            body.put("RerunInterval", request.rerunInterval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rerunMode)) {
+            body.put("RerunMode", request.rerunMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rerunTimes)) {
+            body.put("RerunTimes", request.rerunTimes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runtimeResourceShrink)) {
+            body.put("RuntimeResource", request.runtimeResourceShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scriptShrink)) {
+            body.put("Script", request.scriptShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            body.put("Tags", request.tagsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
+            body.put("Timeout", request.timeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.triggerShrink)) {
+            body.put("Trigger", request.triggerShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateTaskAsync"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTaskAsyncResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This API operation updates the information of a specified node, including but not limited to the node name, description, and owner.</li>
+     * <li>The changes are synchronized to DataStudio, and DataStudio creates a new saved version.</li>
+     * <li>You can set detailed parameters such as the trigger method, runtime environment configuration, and dependencies of the node.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a specified node and synchronizes the changes to DataStudio to create a new saved version.</p>
+     * 
+     * @param request UpdateTaskAsyncRequest
+     * @return UpdateTaskAsyncResponse
+     */
+    public UpdateTaskAsyncResponse updateTaskAsync(UpdateTaskAsyncRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateTaskAsyncWithOptions(request, runtime);
     }
 
     /**

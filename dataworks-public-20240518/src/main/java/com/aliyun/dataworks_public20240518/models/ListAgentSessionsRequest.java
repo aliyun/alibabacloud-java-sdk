@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentSessionsRequest extends TeaModel {
     /**
-     * <p>The ID provided by the caller. The value is returned as-is.</p>
+     * <p>The ID passed in by the requester. The value is returned as-is.</p>
      * 
      * <strong>example:</strong>
      * <p>676303114031776</p>
@@ -14,7 +14,7 @@ public class ListAgentSessionsRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The JSON-RPC version. The value must be <code>2.0</code>.</p>
+     * <p>The JSON-RPC version. Fixed value: 2.0.</p>
      * 
      * <strong>example:</strong>
      * <p>2.0</p>
@@ -23,7 +23,7 @@ public class ListAgentSessionsRequest extends TeaModel {
     public String jsonrpc;
 
     /**
-     * <p>Business parameters.</p>
+     * <p>The business parameters.</p>
      */
     @NameInMap("Params")
     public ListAgentSessionsRequestParams params;
@@ -59,7 +59,7 @@ public class ListAgentSessionsRequest extends TeaModel {
 
     public static class ListAgentSessionsRequestParams extends TeaModel {
         /**
-         * <p>Filters sessions by the <strong>agent name</strong>. You must specify at least one of this parameter and <code>SessionSourceList</code>.</p>
+         * <p><strong>Agent name</strong> for exact filtering. At least one of this parameter and <code>SessionSourceList</code> must be specified.</p>
          * 
          * <strong>example:</strong>
          * <p>chat_cli_chatbi</p>
@@ -68,7 +68,7 @@ public class ListAgentSessionsRequest extends TeaModel {
         public String agentName;
 
         /**
-         * <p>The maximum number of results to return per page. Default value: 50.</p>
+         * <p>The number of entries per page. Default value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -77,7 +77,7 @@ public class ListAgentSessionsRequest extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token for the next page of results. Set this parameter to <code>1</code> to retrieve the first page of results.</p>
+         * <p>The token for the next page. Set this parameter to 1 for the first page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -86,7 +86,7 @@ public class ListAgentSessionsRequest extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>Filters sessions by session ID.</p>
+         * <p>The session ID for exact matching.</p>
          * 
          * <strong>example:</strong>
          * <p>sess_0f12abc34</p>
@@ -95,13 +95,13 @@ public class ListAgentSessionsRequest extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>Filters sessions by the <strong>list of session sources</strong>. You must specify at least one of this parameter and <code>AgentName</code>.</p>
+         * <p><strong>Session source list</strong> for filtering. At least one of this parameter and <code>AgentName</code> must be specified.</p>
          */
         @NameInMap("SessionSourceList")
         public java.util.List<String> sessionSourceList;
 
         /**
-         * <p>Filters sessions by session title using a fuzzy match.</p>
+         * <p>The session title for fuzzy match filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>Sales in the last 30 days</p>
@@ -110,7 +110,7 @@ public class ListAgentSessionsRequest extends TeaModel {
         public String sessionTitle;
 
         /**
-         * <p>Filters sessions by a list of session tag codes.</p>
+         * <p>The list of session tag codes for filtering.</p>
          */
         @NameInMap("TagList")
         public java.util.List<String> tagList;

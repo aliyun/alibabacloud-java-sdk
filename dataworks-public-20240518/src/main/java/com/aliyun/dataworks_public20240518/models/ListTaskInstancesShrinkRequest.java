@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTaskInstancesShrinkRequest extends TeaModel {
     /**
-     * <p>The data timestamp. The value of this parameter is 00:00:00 of the day before the scheduling time of the instance. The value is a UNIX timestamp. Unit: milliseconds. Example: 1743350400000.</p>
+     * <p>The business date. This is typically 00:00:00 of the day before the scheduled time of the periodic instance. The value is a millisecond-level timestamp, such as 1743350400000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListTaskInstancesShrinkRequest extends TeaModel {
     public Long bizdate;
 
     /**
-     * <p>The filter. It is in JSON format, and multiple filter conditions are combined with a logical AND. Currently supported fields include: <code>startedTimeStart</code>, <code>startedTimeEnd</code>, <code>finishedTimeStart</code>, <code>finishedTimeEnd</code>, <code>createTimeStart</code>, <code>createTimeEnd</code>.</p>
+     * <p>The filter. The value is in JSON format. Multiple filter conditions are combined with AND logic. Currently supported fields: <code>startedTimeStart, startedTimeEnd, finishedTimeStart, finishedTimeEnd, createTimeStart, createTimeEnd</code></p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -31,7 +31,7 @@ public class ListTaskInstancesShrinkRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>The ID of the instance. The instance may be rerun. If the instance is rerun and you configure this parameter, the system returns the historical information of the instance, including the rerun information. You can use the RunNumber parameter to distinguish each entry in the historical information.</p>
+     * <p>The instance ID. If an instance has been rerun, specifying this parameter returns the historical information including reruns. You can use RunNumber to distinguish each historical record.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>
@@ -40,13 +40,13 @@ public class ListTaskInstancesShrinkRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The IDs of the instances. You can query multiple instances at a time by instance ID.</p>
+     * <p>The list of instance IDs. You can use this parameter to query multiple instances in a batch.</p>
      */
     @NameInMap("Ids")
     public String idsShrink;
 
     /**
-     * <p>The account ID of the task owner.</p>
+     * <p>The account ID of the node owner.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -55,7 +55,7 @@ public class ListTaskInstancesShrinkRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -64,7 +64,7 @@ public class ListTaskInstancesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 500.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -73,12 +73,10 @@ public class ListTaskInstancesShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The environment of the workspace. Valid values:</p>
+     * <p>The project environment. Valid values:</p>
      * <ul>
-     * <li><p>Prod: production environment</p>
-     * </li>
-     * <li><p>Dev: development environment</p>
-     * </li>
+     * <li>Prod: production.</li>
+     * <li>Dev: development.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -88,7 +86,7 @@ public class ListTaskInstancesShrinkRequest extends TeaModel {
     public String projectEnv;
 
     /**
-     * <p>The DataWorks workspace ID.</p>
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,7 +96,7 @@ public class ListTaskInstancesShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The information about the resource group. Set this parameter to the identifier of a resource group for scheduling.</p>
+     * <p>The schedule resource information. Specify the identifier of the schedule resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
@@ -107,7 +105,7 @@ public class ListTaskInstancesShrinkRequest extends TeaModel {
     public String runtimeResource;
 
     /**
-     * <p>The field used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</p>
+     * <p>The sort field. Supports fields such as scheduled time and start time. The format is &quot;sort field + sort order (Desc/Asc)&quot;. Asc can be omitted. Valid values:</p>
      * <ul>
      * <li><p><code>TriggerTime (Desc/Asc)</code></p>
      * </li>
@@ -118,7 +116,7 @@ public class ListTaskInstancesShrinkRequest extends TeaModel {
      * <li><p><code>CreateTime (Desc/Asc)</code></p>
      * </li>
      * <li><p><code>Id (Desc/Asc)</code></p>
-     * <p>Default value: <code>Id Desc</code>.</p>
+     * <p>Default value: <code>Id Desc</code></p>
      * </li>
      * </ul>
      * 
@@ -129,20 +127,14 @@ public class ListTaskInstancesShrinkRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The status of the task instance.</p>
+     * <p>The status of the instance. Valid values:</p>
      * <ul>
-     * <li><p><code>NotRun</code>: Not started</p>
-     * </li>
-     * <li><p><code>Running</code></p>
-     * </li>
-     * <li><p><code>Failure</code></p>
-     * </li>
-     * <li><p><code>Success</code></p>
-     * </li>
-     * <li><p><code>WaitTime</code>: Awaiting scheduled time</p>
-     * </li>
-     * <li><p><code>WaitResource</code>: Awaiting resources</p>
-     * </li>
+     * <li><code>NotRun</code>: not run.</li>
+     * <li><code>Running</code>: running.</li>
+     * <li><code>Failure</code>: failed.</li>
+     * <li><code>Success</code>: succeeded.</li>
+     * <li><code>WaitTime</code>: waiting for the scheduled time.</li>
+     * <li><code>WaitResource</code>: waiting for resources.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -152,7 +144,7 @@ public class ListTaskInstancesShrinkRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the task for which the instance is generated.</p>
+     * <p>The ID of the corresponding node.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>
@@ -161,13 +153,13 @@ public class ListTaskInstancesShrinkRequest extends TeaModel {
     public Long taskId;
 
     /**
-     * <p>The IDs of the tasks. You can query multiple instances at a time by task ID.</p>
+     * <p>The list of node IDs. You can use this parameter to query instances of multiple nodes in a batch.</p>
      */
     @NameInMap("TaskIds")
     public String taskIdsShrink;
 
     /**
-     * <p>The name of the task. Fuzzy match is supported.</p>
+     * <p>The name of the corresponding node. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>SQL node</p>
@@ -176,7 +168,7 @@ public class ListTaskInstancesShrinkRequest extends TeaModel {
     public String taskName;
 
     /**
-     * <p>The type of the task for which the instance is generated.</p>
+     * <p>The node type. For the TaskType values of each node, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ODPS_SQL</p>
@@ -185,14 +177,11 @@ public class ListTaskInstancesShrinkRequest extends TeaModel {
     public String taskType;
 
     /**
-     * <p>The running mode of the instance after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler. Valid values:</p>
+     * <p>The run mode at the time of triggering. This parameter takes effect only when TriggerType is set to Scheduler. Valid values:</p>
      * <ul>
-     * <li><p>Pause</p>
-     * </li>
-     * <li><p>Skip</p>
-     * </li>
-     * <li><p>Normal</p>
-     * </li>
+     * <li>Pause: paused.</li>
+     * <li>Skip: dry run.</li>
+     * <li>Normal: normal run.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -204,10 +193,8 @@ public class ListTaskInstancesShrinkRequest extends TeaModel {
     /**
      * <p>The trigger type. Valid values:</p>
      * <ul>
-     * <li><p>Scheduler: scheduling cycle-based trigger</p>
-     * </li>
-     * <li><p>Manual: manual trigger</p>
-     * </li>
+     * <li>Scheduler: triggered by periodic scheduling.</li>
+     * <li>Manual: manually triggered.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -217,7 +204,7 @@ public class ListTaskInstancesShrinkRequest extends TeaModel {
     public String triggerType;
 
     /**
-     * <p>The unified workflow instance ID. For all task instances under a specific data timestamp within a single trigger, this field has the same value.</p>
+     * <p>The unified workflow instance ID. All instances within the same business date under a single trigger share the same value for this field.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>
@@ -235,7 +222,7 @@ public class ListTaskInstancesShrinkRequest extends TeaModel {
     public Long workflowId;
 
     /**
-     * <p>The workflow instance ID.</p>
+     * <p>The ID of the workflow instance to which the instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>
@@ -244,20 +231,14 @@ public class ListTaskInstancesShrinkRequest extends TeaModel {
     public Long workflowInstanceId;
 
     /**
-     * <p>The type of the workflow instance. Valid values:</p>
+     * <p>The type of the workflow instance to which the instance belongs. Valid values:</p>
      * <ul>
-     * <li><p>SmokeTest: Testing</p>
-     * </li>
-     * <li><p>Manual: Manually triggered node</p>
-     * </li>
-     * <li><p>SupplementData: Data backfill</p>
-     * </li>
-     * <li><p>ManualWorkflow: Manually triggered workflow</p>
-     * </li>
-     * <li><p>Normal: Scheduled execution</p>
-     * </li>
-     * <li><p>TriggerWorkflow: Triggered Workflow</p>
-     * </li>
+     * <li>SmokeTest: test.</li>
+     * <li>Manual: manual node.</li>
+     * <li>SupplementData: data backfill.</li>
+     * <li>ManualWorkflow: manual workflow.</li>
+     * <li>Normal: periodic scheduling.</li>
+     * <li>TriggerWorkflow: trigger-based workflow.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,11 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListNodeDependenciesRequest extends TeaModel {
     /**
-     * <p>The ID of the node.</p>
+     * <p>The unique identifier of the DataStudio node.</p>
      * <blockquote>
-     * <p>Notice: </p>
+     * <p>Notice: This field was of the Long type in SDK versions earlier than 8.0.0 and was changed to the String type in SDK 8.0.0 and later. <strong>This change does not affect normal SDK usage, and the parameter is still returned in the type defined in the SDK</strong>. Only when you upgrade across SDK version 8.0.0, the type change may cause project compilation failures, and you must manually correct the data type.</p>
      * </blockquote>
-     * <p>The data type of this parameter is Long in SDKs earlier than V8.0.0, and is String in SDKs of V8.0.0 and later versions. <strong>The change does not affect the normal use of the SDKs. The parameter is still returned as the type defined in the SDKs.</strong> When you upgrade an SDK to a version later than V8.0.0, a compilation error may occur due to the type change. In this case, you must manually change the data type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,7 +18,7 @@ public class ListNodeDependenciesRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The number of the page to return. The value of this parameter must be a positive integer. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -28,7 +27,7 @@ public class ListNodeDependenciesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -37,8 +36,8 @@ public class ListNodeDependenciesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can go to the Workspace Management page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> to obtain the workspace ID.</p>
-     * <p>This parameter is used to specify the DataWorks workspace for the API call.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace settings page to obtain the workspace ID.</p>
+     * <p>This parameter specifies the DataWorks workspace for this API call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

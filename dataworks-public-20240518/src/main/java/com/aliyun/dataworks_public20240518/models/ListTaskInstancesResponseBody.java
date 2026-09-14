@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListTaskInstancesResponseBody extends TeaModel {
     /**
-     * <p>Pagination information.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PagingInfo")
     public ListTaskInstancesResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
@@ -67,7 +67,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
 
     public static class ListTaskInstancesResponseBodyPagingInfoTaskInstancesRuntime extends TeaModel {
         /**
-         * <p>The host for running.</p>
+         * <p>The machine on which the instance runs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai.1.2</p>
@@ -76,7 +76,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public String gateway;
 
         /**
-         * <p>The instance run ID.</p>
+         * <p>The unique run ID.</p>
          * 
          * <strong>example:</strong>
          * <p>T3_123</p>
@@ -109,7 +109,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
 
     public static class ListTaskInstancesResponseBodyPagingInfoTaskInstancesRuntimeResource extends TeaModel {
         /**
-         * <p>The default number of CUs configured for task running.</p>
+         * <p>The compute unit (CU) consumption configured for the node.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -118,7 +118,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public String cu;
 
         /**
-         * <p>The ID of the image configured for task running.</p>
+         * <p>The image ID configured for the node.</p>
          * 
          * <strong>example:</strong>
          * <p>i-xxxxxx</p>
@@ -127,7 +127,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public String image;
 
         /**
-         * <p>The ID of the resource group for scheduling configured for task running.</p>
+         * <p>The identifier of the schedule resource group configured for the node.</p>
          * 
          * <strong>example:</strong>
          * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
@@ -177,7 +177,8 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Long baselineId;
 
         /**
-         * <p>The data timestamp.</p>
+         * <p>The business date.</p>
+         * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -187,6 +188,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The creation time.</p>
+         * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -195,7 +197,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The account ID of the user who creates the instance.</p>
+         * <p>The account ID of the user who created the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -204,7 +206,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public String createUser;
 
         /**
-         * <p>The information about the associated data source.</p>
+         * <p>The data source information associated with the instance.</p>
          */
         @NameInMap("DataSource")
         public ListTaskInstancesResponseBodyPagingInfoTaskInstancesDataSource dataSource;
@@ -220,6 +222,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The time when the instance finished running.</p>
+         * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -228,7 +231,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Long finishedTime;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The unique identifier of the task instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -238,6 +241,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The modification time.</p>
+         * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -246,7 +250,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The account ID of the user who modifies the instance.</p>
+         * <p>The account ID of the user who last modified the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -255,7 +259,16 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public String modifyUser;
 
         /**
-         * <p>The account ID of the task owner.</p>
+         * <p>The type of the most recent operation on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TriggerDqc</p>
+         */
+        @NameInMap("OperationType")
+        public String operationType;
+
+        /**
+         * <p>The account ID of the node owner.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -264,7 +277,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The sequence number of the cycle. This parameter indicates the cycle of the task instance on the current day.</p>
+         * <p>The period number. Indicates which scheduling cycle of the day the instance belongs to.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -273,7 +286,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Integer periodNumber;
 
         /**
-         * <p>The priority of the task. Minimum value: 1. Maximum value: 8. A larger value indicates a higher priority. Default value: 1.</p>
+         * <p>The run priority of the node. Minimum value: 1. Maximum value: 8. A larger value indicates a higher priority. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -282,13 +295,10 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The environment of the workspace.</p>
-         * <p>Valid values:</p>
+         * <p>The project environment. Valid values:</p>
          * <ul>
-         * <li><p>Prod: production environment</p>
-         * </li>
-         * <li><p>Dev: development environment</p>
-         * </li>
+         * <li>Prod: production.</li>
+         * <li>Dev: development.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -298,7 +308,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public String projectEnv;
 
         /**
-         * <p>The DataWorks workspace ID.</p>
+         * <p>The project ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -307,15 +317,11 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The rerun mode</p>
-         * <p>Valid values:</p>
+         * <p>The rerun configuration for the node. Valid values:</p>
          * <ul>
-         * <li><p>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</p>
-         * </li>
-         * <li><p>FailureAllowed: The task can be rerun only after it fails to run.</p>
-         * </li>
-         * <li><p>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to run.</p>
-         * </li>
+         * <li>AllDenied: rerun is not allowed regardless of success or failure.</li>
+         * <li>FailureAllowed: rerun is allowed only upon failure.</li>
+         * <li>AllAllowed: rerun is allowed regardless of success or failure.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -325,7 +331,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public String rerunMode;
 
         /**
-         * <p>The number of times the task is run. By default, the value starts from 1.</p>
+         * <p>The current run number, starting from 1 by default.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -334,19 +340,19 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Integer runNumber;
 
         /**
-         * <p>The runtime information about the instance.</p>
+         * <p>The runtime information of the instance.</p>
          */
         @NameInMap("Runtime")
         public ListTaskInstancesResponseBodyPagingInfoTaskInstancesRuntime runtime;
 
         /**
-         * <p>The information about the resource group with which the instance is associated.</p>
+         * <p>The resource group information associated with the instance.</p>
          */
         @NameInMap("RuntimeResource")
         public ListTaskInstancesResponseBodyPagingInfoTaskInstancesRuntimeResource runtimeResource;
 
         /**
-         * <p>The script parameter list.</p>
+         * <p>The list of script parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>para1=val1 para2=val2</p>
@@ -355,7 +361,8 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public String scriptParameters;
 
         /**
-         * <p>The time when the instance started to run.</p>
+         * <p>The time when the instance started running.</p>
+         * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -364,25 +371,17 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Long startedTime;
 
         /**
-         * <p>The status of the instance.</p>
-         * <p>Valid values:</p>
+         * <p>The run status of the instance. Valid values:</p>
          * <ul>
-         * <li><p>NotRun: The instance is not run.</p>
-         * </li>
-         * <li><p>Running: The instance is running.</p>
-         * </li>
-         * <li><p>WaitTime: The instance is waiting for the scheduling time to arrive.</p>
-         * </li>
-         * <li><p>CheckingCondition: Branch conditions are being checked for the instance.</p>
-         * </li>
-         * <li><p>WaitResource: The instance is waiting for resources.</p>
-         * </li>
-         * <li><p>Failure: The instance fails to be run.</p>
-         * </li>
-         * <li><p>Success: The instance is successfully run.</p>
-         * </li>
-         * <li><p>Checking: Data quality is being checked for the instance.</p>
-         * </li>
+         * <li>NotRun: not run.</li>
+         * <li>Running: running.</li>
+         * <li>WaitTime: waiting for the TriggerTime to arrive.</li>
+         * <li>CheckingCondition: checking branch conditions.</li>
+         * <li>WaitResource: waiting for resources.</li>
+         * <li>Failure: execution failed.</li>
+         * <li>Success: execution succeeded.</li>
+         * <li>Checking: submitted for qualityrule check.</li>
+         * <li>WaitTrigger: waiting for an external trigger. Trigger-based nodes enter this status after the waiting period.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -392,7 +391,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the task for which the instance is generated.</p>
+         * <p>The ID of the corresponding node.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -401,7 +400,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Long taskId;
 
         /**
-         * <p>The name of the task for which the instance is generated.</p>
+         * <p>The name of the corresponding node.</p>
          * 
          * <strong>example:</strong>
          * <p>SQL node</p>
@@ -410,7 +409,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>The type of the task for which the instance is generated.</p>
+         * <p>The type of the corresponding node.</p>
          * 
          * <strong>example:</strong>
          * <p>ODPS_SQL</p>
@@ -419,8 +418,8 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The timeout period of task running. Unit: seconds.</p>
-         * <p>Note: The value of this parameter is rounded up by hour.</p>
+         * <p>The timeout period for node execution, in seconds.</p>
+         * <p>Note: The scheduling system rounds the configured value to the nearest hour.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -429,15 +428,11 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Integer timeout;
 
         /**
-         * <p>The running mode of the instance after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler.</p>
-         * <p>Valid values:</p>
+         * <p>The run mode at the time of triggering. This parameter takes effect when TriggerType is set to Scheduler. Valid values:</p>
          * <ul>
-         * <li><p>Pause</p>
-         * </li>
-         * <li><p>Skip</p>
-         * </li>
-         * <li><p>Normal</p>
-         * </li>
+         * <li>Pause: paused.</li>
+         * <li>Skip: dry run.</li>
+         * <li>Normal: normal run.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -447,7 +442,8 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public String triggerRecurrence;
 
         /**
-         * <p>The scheduling time.</p>
+         * <p>The scheduled trigger time.</p>
+         * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -456,13 +452,10 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Long triggerTime;
 
         /**
-         * <p>The trigger type.</p>
-         * <p>Valid values:</p>
+         * <p>The trigger type. Valid values:</p>
          * <ul>
-         * <li><p>Scheduler: scheduling cycle-based trigger</p>
-         * </li>
-         * <li><p>Manual: manual trigger</p>
-         * </li>
+         * <li>Scheduler: triggered by a scheduling cycle.</li>
+         * <li>Manual: manually triggered.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -472,7 +465,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public String triggerType;
 
         /**
-         * <p>Unified workflow instance ID. All task instances triggered under the same data timestamp share the same value for this field.</p>
+         * <p>The unified workflow instance ID. All instances within the same business date under a single trigger share the same value for this field.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -481,7 +474,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Long unifiedWorkflowInstanceId;
 
         /**
-         * <p>The timestamp for when it started waiting for resources.</p>
+         * <p>The time when the instance entered the waiting-for-resource state.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -490,7 +483,8 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Long waitingResourceTime;
 
         /**
-         * <p>The timestamp for when it started waiting for the scheduled time.</p>
+         * <p>The time when the instance entered the waiting-for-scheduled-time state.</p>
+         * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -508,7 +502,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Long workflowId;
 
         /**
-         * <p>The workflow instance ID.</p>
+         * <p>The ID of the workflow instance to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -517,21 +511,14 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Long workflowInstanceId;
 
         /**
-         * <p>The type of the workflow instance.</p>
-         * <p>Valid values:</p>
+         * <p>The type of the workflow instance to which the instance belongs. Valid values:</p>
          * <ul>
-         * <li><p>SmokeTest</p>
-         * </li>
-         * <li><p>SupplementData</p>
-         * </li>
-         * <li><p>Manual</p>
-         * </li>
-         * <li><p>ManualWorkflow</p>
-         * </li>
-         * <li><p>Normal</p>
-         * </li>
-         * <li><p>ManualFlow</p>
-         * </li>
+         * <li>SmokeTest: smoke test.</li>
+         * <li>SupplementData: data backfill.</li>
+         * <li>Manual: manually triggered.</li>
+         * <li>ManualWorkflow: manual workflow.</li>
+         * <li>Normal: periodic scheduling.</li>
+         * <li>ManualFlow: manually triggered workflow.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -632,6 +619,14 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         }
         public String getModifyUser() {
             return this.modifyUser;
+        }
+
+        public ListTaskInstancesResponseBodyPagingInfoTaskInstances setOperationType(String operationType) {
+            this.operationType = operationType;
+            return this;
+        }
+        public String getOperationType() {
+            return this.operationType;
         }
 
         public ListTaskInstancesResponseBodyPagingInfoTaskInstances setOwner(String owner) {
@@ -870,7 +865,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public java.util.List<ListTaskInstancesResponseBodyPagingInfoTaskInstances> taskInstances;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

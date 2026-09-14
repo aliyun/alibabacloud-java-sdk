@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataAssetTagRequest extends TeaModel {
     /**
-     * <p>The description of the tag.</p>
+     * <p>The label description.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a description</p>
@@ -14,7 +14,7 @@ public class CreateDataAssetTagRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The tag key.</p>
+     * <p>The label key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,22 +24,18 @@ public class CreateDataAssetTagRequest extends TeaModel {
     public String key;
 
     /**
-     * <p>The tag administrators.</p>
+     * <p>The list of label administrators.</p>
      */
     @NameInMap("Managers")
     public java.util.List<String> managers;
 
     /**
-     * <p>The type of the tag value. Valid values:</p>
+     * <p>The label value type. Valid values:</p>
      * <ul>
-     * <li><p>Boolean</p>
-     * </li>
-     * <li><p>Int</p>
-     * </li>
-     * <li><p>String</p>
-     * </li>
-     * <li><p>Double</p>
-     * </li>
+     * <li>Boolean</li>
+     * <li>Int</li>
+     * <li>String</li>
+     * <li>Double</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +45,7 @@ public class CreateDataAssetTagRequest extends TeaModel {
     public String valueType;
 
     /**
-     * <p>The tag values.</p>
+     * <p>The list of label values.</p>
      */
     @NameInMap("Values")
     public java.util.List<String> values;

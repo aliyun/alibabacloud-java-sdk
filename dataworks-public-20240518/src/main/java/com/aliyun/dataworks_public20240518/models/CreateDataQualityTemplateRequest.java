@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataQualityTemplateRequest extends TeaModel {
     /**
-     * <p>The owner ID.</p>
+     * <p>The ID of the owner.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000000001</p>
@@ -23,7 +23,7 @@ public class CreateDataQualityTemplateRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>Detailed configuration Spec code of the rule template. For more information, see <a href="~2963394~">Data quality Spec configuration description</a>.</p>
+     * <p>The Spec code for the detailed configuration of the rule template. For more information, see <a href="https://help.aliyun.com/document_detail/2963394.html">Data quality Spec configuration</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{

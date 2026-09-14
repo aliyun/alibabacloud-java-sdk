@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopDIJobResponseBody extends TeaModel {
     /**
-     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>92F778C7-8F00-53B1-AE1A-B3B17101247D</p>
@@ -16,10 +16,8 @@ public class StopDIJobResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>True: The request was successful.</li>
+     * <li>False: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

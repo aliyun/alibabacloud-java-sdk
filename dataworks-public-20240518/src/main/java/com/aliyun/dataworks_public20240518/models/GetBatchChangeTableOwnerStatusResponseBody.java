@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
+    /**
+     * <p>The execution status of the batch table owner transfer task.</p>
+     */
     @NameInMap("Data")
     public GetBatchChangeTableOwnerStatusResponseBodyData data;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>01A017D3-207E-582C-A683-BE991E54051D</p>
      */
@@ -15,6 +20,8 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +59,8 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
 
     public static class GetBatchChangeTableOwnerStatusResponseBodyDataDetails extends TeaModel {
         /**
+         * <p>The error message returned when the table transfer fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>Forbidden: You are not a member of this project</p>
          */
@@ -59,6 +68,8 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The transfer status of the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -66,6 +77,8 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The metadata entity ID of the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>maxcompute-table:123:project_a::table_1</p>
          */
@@ -105,16 +118,23 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
 
     public static class GetBatchChangeTableOwnerStatusResponseBodyData extends TeaModel {
         /**
+         * <p>The batch transfer task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>524257_openapi-req-abc123</p>
          */
         @NameInMap("BatchId")
         public String batchId;
 
+        /**
+         * <p>The transfer result details for each table.</p>
+         */
         @NameInMap("Details")
         public java.util.List<GetBatchChangeTableOwnerStatusResponseBodyDataDetails> details;
 
         /**
+         * <p>The number of tables that failed to transfer.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -122,6 +142,8 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
         public Integer failedCount;
 
         /**
+         * <p>The number of tables that are still being processed.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -129,6 +151,8 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
         public Integer ongoingCount;
 
         /**
+         * <p>The overall status of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -136,6 +160,8 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The number of tables that were successfully transferred.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -143,6 +169,8 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
         public Integer successCount;
 
         /**
+         * <p>The total number of tables in the batch.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */

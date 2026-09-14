@@ -28,7 +28,7 @@ public class CreateAgentShrinkRequest extends TeaModel {
      * <p>The display name of the Agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>MyAssistant.</p>
+     * <p>MyAssistant</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
@@ -97,7 +97,7 @@ public class CreateAgentShrinkRequest extends TeaModel {
     /**
      * <p>The visibility level.<br>
      * <code>TENANT</code>: Visible within the account.<br>
-     * <code>PROJECT</code>: Visible to specified projects.<br>
+     * <code>PROJECT</code>: Visible to a specified project.<br>
      * <code>USER</code>: Visible to specified users.</p>
      * 
      * <strong>example:</strong>

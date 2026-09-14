@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataAssetTagResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>0bc1ec92159376</p>
@@ -14,7 +14,7 @@ public class CreateDataAssetTagResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

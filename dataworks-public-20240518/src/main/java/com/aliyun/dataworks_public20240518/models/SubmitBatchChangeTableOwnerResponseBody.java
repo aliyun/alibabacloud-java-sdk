@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class SubmitBatchChangeTableOwnerResponseBody extends TeaModel {
+    /**
+     * <p>The submit result of the batch table ownership transfer task.</p>
+     */
     @NameInMap("Data")
     public SubmitBatchChangeTableOwnerResponseBodyData data;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>824F80BA-1778-5D8A-BAFF-668A4D9C4CC7</p>
      */
@@ -15,6 +20,8 @@ public class SubmitBatchChangeTableOwnerResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +59,8 @@ public class SubmitBatchChangeTableOwnerResponseBody extends TeaModel {
 
     public static class SubmitBatchChangeTableOwnerResponseBodyData extends TeaModel {
         /**
+         * <p>The batch transfer task ID. You can use this ID to call GetBatchChangeTableOwnerStatus to query the task progress.</p>
+         * 
          * <strong>example:</strong>
          * <p>524257_xxxxx</p>
          */
@@ -59,6 +68,8 @@ public class SubmitBatchChangeTableOwnerResponseBody extends TeaModel {
         public String batchId;
 
         /**
+         * <p>The initial status of the task after submission.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUBMITTED</p>
          */
@@ -66,6 +77,8 @@ public class SubmitBatchChangeTableOwnerResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The total number of tables submitted in this batch.</p>
+         * 
          * <strong>example:</strong>
          * <p>13</p>
          */

@@ -28,7 +28,7 @@ public class CreateAgentRequest extends TeaModel {
      * <p>The display name of the Agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>MyAssistant.</p>
+     * <p>MyAssistant</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
@@ -97,7 +97,7 @@ public class CreateAgentRequest extends TeaModel {
     /**
      * <p>The visibility level.<br>
      * <code>TENANT</code>: Visible within the account.<br>
-     * <code>PROJECT</code>: Visible to specified projects.<br>
+     * <code>PROJECT</code>: Visible to a specified project.<br>
      * <code>USER</code>: Visible to specified users.</p>
      * 
      * <strong>example:</strong>
@@ -282,13 +282,13 @@ public class CreateAgentRequest extends TeaModel {
 
     public static class CreateAgentRequestVisibilityScope extends TeaModel {
         /**
-         * <p>The list of project IDs that have visibility. This parameter takes effect when Visibility is set to <code>PROJECT</code>.</p>
+         * <p>The list of project IDs to which the Agent is visible. This parameter takes effect only when Visibility is set to <code>PROJECT</code>.</p>
          */
         @NameInMap("ProjectIds")
         public java.util.List<String> projectIds;
 
         /**
-         * <p>The list of user IDs that have visibility. This parameter takes effect when Visibility is set to <code>USER</code>.</p>
+         * <p>The list of user IDs to which the Agent is visible. This parameter takes effect only when Visibility is set to <code>USER</code>.</p>
          */
         @NameInMap("UserIds")
         public java.util.List<String> userIds;

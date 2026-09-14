@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteProjectResponseBody extends TeaModel {
     /**
-     * <p>The Request ID. Use this ID to locate logs and troubleshoot issues.</p>
+     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AFBB799F-8578-51C5-A766-E922EDB8XXXX</p>
