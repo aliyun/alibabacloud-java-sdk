@@ -30,7 +30,7 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public Boolean autoScale;
 
     /**
-     * <p>The idempotency token. Ensures that repeated requests do not execute the same operation more than once.</p>
+     * <p>The idempotency token. Ensures that duplicate requests do not result in duplicate operations.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -72,7 +72,7 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public Boolean lightweight;
 
     /**
-     * <p>The billing method. If this parameter is not specified, the default value Free is used.</p>
+     * <p>The billing type. If this parameter is not specified, the default value Free is used.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>Free: Free tier.</li>
@@ -146,7 +146,7 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String securityIPList;
 
     /**
-     * <p>The storage size. Unit: GB. If this parameter is not specified for non-Free billing types, the default value is 1 GB.</p>
+     * <p>The storage size, in GB. If this parameter is not specified for non-Free billing types, the default value is 1 GB.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

@@ -18,6 +18,9 @@ public class ModifySupabaseAutoScalePolicyRequest extends TeaModel {
     @NameInMap("AutoScale")
     public Boolean autoScale;
 
+    @NameInMap("IdleTimeHours")
+    public String idleTimeHours;
+
     /**
      * <p>The ID of the Supabase project. You can obtain the workspace ID from the Supabase page in the console.</p>
      * <p>This parameter is required.</p>
@@ -48,6 +51,14 @@ public class ModifySupabaseAutoScalePolicyRequest extends TeaModel {
     }
     public Boolean getAutoScale() {
         return this.autoScale;
+    }
+
+    public ModifySupabaseAutoScalePolicyRequest setIdleTimeHours(String idleTimeHours) {
+        this.idleTimeHours = idleTimeHours;
+        return this;
+    }
+    public String getIdleTimeHours() {
+        return this.idleTimeHours;
     }
 
     public ModifySupabaseAutoScalePolicyRequest setProjectId(String projectId) {

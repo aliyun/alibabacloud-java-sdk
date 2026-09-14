@@ -8,7 +8,7 @@ public class ResetSupabaseProjectPasswordRequest extends TeaModel {
      * <p>The password of the database account.</p>
      * <ul>
      * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
-     * <li>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></li>
+     * <li>The following special characters are supported: <code>!@#$%^&amp;*()_+-=</code></li>
      * <li>The password must be 8 to 32 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -19,8 +19,11 @@ public class ResetSupabaseProjectPasswordRequest extends TeaModel {
     @NameInMap("AccountPassword")
     public String accountPassword;
 
+    @NameInMap("DashboardPassword")
+    public String dashboardPassword;
+
     /**
-     * <p>Supabase Instance ID</p>
+     * <p>The Supabase instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +52,14 @@ public class ResetSupabaseProjectPasswordRequest extends TeaModel {
     }
     public String getAccountPassword() {
         return this.accountPassword;
+    }
+
+    public ResetSupabaseProjectPasswordRequest setDashboardPassword(String dashboardPassword) {
+        this.dashboardPassword = dashboardPassword;
+        return this;
+    }
+    public String getDashboardPassword() {
+        return this.dashboardPassword;
     }
 
     public ResetSupabaseProjectPasswordRequest setProjectId(String projectId) {

@@ -51,31 +51,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-zhangjiakou-na62-a01", "gpdb.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "gpdb.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "gpdb.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "gpdb.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "gpdb.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "gpdb.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "gpdb.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "gpdb.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "gpdb.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "gpdb.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "gpdb.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "gpdb.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "gpdb.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "gpdb.cn-chengdu.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "gpdb.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "gpdb.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "gpdb.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "gpdb.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "gpdb.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("us-east-1", "gpdb.us-east-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "gpdb.eu-west-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "gpdb.us-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "gpdb.eu-central-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "gpdb.me-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "gpdb.me-central-1.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "gpdb.cn-shenzhen-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "gpdb.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "gpdb.cn-north-2-gov-1.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "gpdb.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("gpdb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -3595,7 +3571,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a Supabase project in a specified region and zone. This operation supports Free, pay-as-you-go, and subscription billing methods. You can specify the network, specifications, storage, access IP address whitelist, DPI engine version, and auto start/stop configurations.</p>
+     * <p>Creates a Supabase project in a specified region and zone. This operation supports the Free, pay-as-you-go, and subscription billing methods. You can specify the network, specifications, storage, access IP address whitelist, DPI engine version, and auto start/stop configurations.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a Supabase project.</p>
@@ -3698,7 +3674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a Supabase project in a specified region and zone. This operation supports Free, pay-as-you-go, and subscription billing methods. You can specify the network, specifications, storage, access IP address whitelist, DPI engine version, and auto start/stop configurations.</p>
+     * <p>Creates a Supabase project in a specified region and zone. This operation supports the Free, pay-as-you-go, and subscription billing methods. You can specify the network, specifications, storage, access IP address whitelist, DPI engine version, and auto start/stop configurations.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a Supabase project.</p>
@@ -7583,6 +7559,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDBResourceManagementModeResponse describeDBResourceManagementMode(DescribeDBResourceManagementModeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDBResourceManagementModeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the kernel update version information.</p>
+     * 
+     * @param request DescribeDBVersionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDBVersionResponse
+     */
+    public DescribeDBVersionResponse describeDBVersionWithOptions(DescribeDBVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDBVersion"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBVersionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the kernel update version information.</p>
+     * 
+     * @param request DescribeDBVersionRequest
+     * @return DescribeDBVersionResponse
+     */
+    public DescribeDBVersionResponse describeDBVersion(DescribeDBVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDBVersionWithOptions(request, runtime);
     }
 
     /**
@@ -11773,10 +11797,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Gets the details of a Supabase instance.</p>
+     * <p>Queries the details of a Supabase instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves details of a Supabase instance.</p>
+     * <p>Queries the details of a Supabase instance.</p>
      * 
      * @param request GetSupabaseProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11812,10 +11836,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Gets the details of a Supabase instance.</p>
+     * <p>Queries the details of a Supabase instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves details of a Supabase instance.</p>
+     * <p>Queries the details of a Supabase instance.</p>
      * 
      * @param request GetSupabaseProjectRequest
      * @return GetSupabaseProjectResponse
@@ -16331,6 +16355,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AutoScale", request.autoScale);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.idleTimeHours)) {
+            query.put("IdleTimeHours", request.idleTimeHours);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
             query.put("ProjectId", request.projectId);
         }
@@ -17675,10 +17703,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Call this API to reset the password of the Supabase database.</p>
+     * <p>Resets the password of a Supabase database.</p>
      * 
      * <b>summary</b> : 
-     * <p>Reset the password of a Supabase database</p>
+     * <p>Resets the password of a Supabase database.</p>
      * 
      * @param request ResetSupabaseProjectPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17689,6 +17717,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.accountPassword)) {
             query.put("AccountPassword", request.accountPassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dashboardPassword)) {
+            query.put("DashboardPassword", request.dashboardPassword);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
@@ -17718,10 +17750,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Call this API to reset the password of the Supabase database.</p>
+     * <p>Resets the password of a Supabase database.</p>
      * 
      * <b>summary</b> : 
-     * <p>Reset the password of a Supabase database</p>
+     * <p>Resets the password of a Supabase database.</p>
      * 
      * @param request ResetSupabaseProjectPasswordRequest
      * @return ResetSupabaseProjectPasswordResponse

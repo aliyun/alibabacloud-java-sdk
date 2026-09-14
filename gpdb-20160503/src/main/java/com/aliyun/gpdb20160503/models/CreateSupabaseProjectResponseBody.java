@@ -14,7 +14,7 @@ public class CreateSupabaseProjectResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The Supabase instance ID.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>spb-xxxx</p>
