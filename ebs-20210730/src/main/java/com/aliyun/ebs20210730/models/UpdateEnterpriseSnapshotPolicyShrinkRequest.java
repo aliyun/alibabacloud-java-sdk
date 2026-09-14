@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>Ensures the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique across different requests. The ClientToken value supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -14,13 +14,13 @@ public class UpdateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Snapshot replication destination information.</p>
+     * <p>The cross-region copy destination information.</p>
      */
     @NameInMap("CrossRegionCopyInfo")
     public String crossRegionCopyInfoShrink;
 
     /**
-     * <p>The description of the policy.</p>
+     * <p>The description of the snapshot policy.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -29,7 +29,7 @@ public class UpdateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
     public String desc;
 
     /**
-     * <p>The name of the policy.</p>
+     * <p>The ID of the policy to modify.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -38,7 +38,7 @@ public class UpdateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The id of the policy.</p>
+     * <p>The snapshot policy ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class UpdateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
     public String policyId;
 
     /**
-     * <p>The region ID . You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which snapshot policy is supported.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,28 +58,28 @@ public class UpdateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Snapshot retention rule.</p>
+     * <p>The retention rule.</p>
      */
     @NameInMap("RetainRule")
     public String retainRuleShrink;
 
     /**
-     * <p>The rule for scheduling.</p>
+     * <p>The schedule rule.</p>
      */
     @NameInMap("Schedule")
     public String scheduleShrink;
 
     /**
-     * <p>The special snapshot retention rules.</p>
+     * <p>The special retention rules.</p>
      */
     @NameInMap("SpecialRetainRules")
     public String specialRetainRulesShrink;
 
     /**
-     * <p>The status of the policy. Valid values:</p>
+     * <p>The status of the snapshot policy. Valid values:</p>
      * <ul>
-     * <li><strong>ENABLED</strong>: Enable snapshot policy execution.</li>
-     * <li><strong>DISABLED</strong>: Disable snapshot policy execution.</li>
+     * <li>ENABLED</li>
+     * <li>DISABLED</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class UpdateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
     public String state;
 
     /**
-     * <p>Advanced snapshot features.</p>
+     * <p>The advanced snapshot feature.</p>
      */
     @NameInMap("StorageRule")
     public String storageRuleShrink;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetReportResponseBody extends TeaModel {
     /**
-     * <p>Data Details.</p>
+     * <p>The data details.</p>
      */
     @NameInMap("Datas")
     public java.util.List<GetReportResponseBodyDatas> datas;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C123F94F-4E38-19AE-942A-A8D6F44F****</p>
@@ -42,7 +42,7 @@ public class GetReportResponseBody extends TeaModel {
 
     public static class GetReportResponseBodyDatasData extends TeaModel {
         /**
-         * <p>Data Points.</p>
+         * <p>The data points.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -60,7 +60,7 @@ public class GetReportResponseBody extends TeaModel {
         public java.util.Map<String, ?> dataPoints;
 
         /**
-         * <p>Data Labels.</p>
+         * <p>The data labels.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -95,13 +95,13 @@ public class GetReportResponseBody extends TeaModel {
 
     public static class GetReportResponseBodyDatas extends TeaModel {
         /**
-         * <p>Data.</p>
+         * <p>The data.</p>
          */
         @NameInMap("Data")
         public java.util.List<GetReportResponseBodyDatasData> data;
 
         /**
-         * <p>Data Title.</p>
+         * <p>The data title.</p>
          * 
          * <strong>example:</strong>
          * <p>disk_count_percent_by_category</p>

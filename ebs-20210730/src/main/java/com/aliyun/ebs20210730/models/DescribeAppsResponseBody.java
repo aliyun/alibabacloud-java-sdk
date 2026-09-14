@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeAppsResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The application information.</p>
+     */
     @NameInMap("AppInfos")
     public java.util.List<DescribeAppsResponseBodyAppInfos> appInfos;
 
     /**
+     * <p>The internal error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class DescribeAppsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -29,6 +38,8 @@ public class DescribeAppsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message, which is used to replace the %s variable in the ErrMessage error message.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -38,6 +49,8 @@ public class DescribeAppsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -45,6 +58,8 @@ public class DescribeAppsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -52,6 +67,8 @@ public class DescribeAppsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A1C00637-AC84-5EFD-89B5-D5CE39F0F2B1</p>
      */
@@ -59,6 +76,8 @@ public class DescribeAppsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -66,6 +85,8 @@ public class DescribeAppsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The user error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -159,6 +180,8 @@ public class DescribeAppsResponseBody extends TeaModel {
 
     public static class DescribeAppsResponseBodyAppInfosAppTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>ebs</p>
          */
@@ -166,6 +189,8 @@ public class DescribeAppsResponseBody extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -197,6 +222,8 @@ public class DescribeAppsResponseBody extends TeaModel {
 
     public static class DescribeAppsResponseBodyAppInfos extends TeaModel {
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>app-bd5e3533</p>
          */
@@ -204,6 +231,8 @@ public class DescribeAppsResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>The application name. This parameter takes effect only when ReportType is set to present.</p>
+         * 
          * <strong>example:</strong>
          * <p>app1</p>
          */
@@ -211,6 +240,8 @@ public class DescribeAppsResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The tags contained in the user application.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -218,39 +249,62 @@ public class DescribeAppsResponseBody extends TeaModel {
         public java.util.List<DescribeAppsResponseBodyAppInfosAppTags> appTags;
 
         /**
+         * <p>The default time zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Default")
         public Boolean _default;
 
+        /**
+         * <p>The event description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This app is used to collect cloud disk usage statistics across the network</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates whether delivery to EventBridge is enabled.</p>
+         */
         @NameInMap("EventBridgeSendEnabled")
         public Boolean eventBridgeSendEnabled;
 
         /**
+         * <p>The modification time in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-11-14T02:11:32Z</p>
          */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
+        /**
+         * <p>Indicates whether delivery to CloudMonitor is enabled.</p>
+         */
         @NameInMap("MonitorSendEnabled")
         public Boolean monitorSendEnabled;
 
         /**
+         * <p>Indicates whether report sending is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("ReportSendEnabled")
         public Boolean reportSendEnabled;
 
+        /**
+         * <p>Indicates whether delivery to Simple Log Service (SLS) is enabled.</p>
+         */
         @NameInMap("SlsSendEnabled")
         public Boolean slsSendEnabled;
 
         /**
+         * <p>The report subscription period.</p>
+         * 
          * <strong>example:</strong>
          * <p>Weekly</p>
          */
@@ -258,6 +312,12 @@ public class DescribeAppsResponseBody extends TeaModel {
         public String subscribePeriod;
 
         /**
+         * <p>The subscription status. Valid values:</p>
+         * <ul>
+         * <li>Subscribe: subscribed.</li>
+         * <li>UnSubscribe: not subscribed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Subscribe</p>
          */

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeLensMonitorDisksResponseBody extends TeaModel {
     /**
-     * <p>The information about the disks.</p>
+     * <p>The list of cloud disk information.</p>
      */
     @NameInMap("DiskInfos")
     public java.util.List<DescribeLensMonitorDisksResponseBodyDiskInfos> diskInfos;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -20,7 +20,7 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. A request ID is returned regardless of whether the API call succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
@@ -118,7 +118,7 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
 
     public static class DescribeLensMonitorDisksResponseBodyDiskInfos extends TeaModel {
         /**
-         * <p>The BPS.</p>
+         * <p>The maximum data throughput for read/write (I/O) operations per second. Unit: MB/s.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -127,12 +127,12 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         public Integer bps;
 
         /**
-         * <p>Indicates whether the performance burst feature is enabled. Valid values:</p>
+         * <p>Indicates whether burst (performance bursting) is enabled. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
-         * <p>This parameter is available only if you set <code>DiskCategory</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+         * <p>This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disk</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -141,14 +141,14 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         public Boolean burstingEnabled;
 
         /**
-         * <p>The type of the disk. Valid values:</p>
+         * <p>The cloud disk type. Valid values:</p>
          * <ul>
-         * <li>cloud</li>
-         * <li>cloud_efficiency</li>
-         * <li>cloud_ssd</li>
-         * <li>cloud_essd</li>
-         * <li>cloud_auto</li>
-         * <li>cloud_essd_entry</li>
+         * <li>cloud: basic cloud disk.</li>
+         * <li>cloud_efficiency: ultra cloud disk.</li>
+         * <li>cloud_ssd: standard SSD.</li>
+         * <li>cloud_essd: Enterprise SSD (ESSD).</li>
+         * <li>cloud_auto: ESSD AutoPL cloud disk.</li>
+         * <li>cloud_essd_entry: ESSD Entry disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         public String diskCategory;
 
         /**
-         * <p>The ID of the disk.</p>
+         * <p>The cloud disk ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-cd401****</p>
@@ -167,7 +167,7 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         public String diskId;
 
         /**
-         * <p>The name of the disk.</p>
+         * <p>The cloud disk name.</p>
          * 
          * <strong>example:</strong>
          * <p>disk-28c6b****</p>
@@ -176,10 +176,10 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         public String diskName;
 
         /**
-         * <p>The disk status. Valid values:</p>
+         * <p>The cloud disk status. Valid values:</p>
          * <ul>
-         * <li>Available</li>
-         * <li>Deleted</li>
+         * <li>Available: in use.</li>
+         * <li>Deleted: deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,10 +189,10 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         public String diskStatus;
 
         /**
-         * <p>The disk type. Valid values:</p>
+         * <p>The cloud disk type. Valid values:</p>
          * <ul>
-         * <li>system: system disk</li>
-         * <li>data: data disk</li>
+         * <li>system: system cloud disk.</li>
+         * <li>data: data cloud disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -202,7 +202,7 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The IOPS.</p>
+         * <p>The maximum number of read/write (I/O) operations per second. Unit: operations/s.</p>
          * 
          * <strong>example:</strong>
          * <p>4000</p>
@@ -211,18 +211,18 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         public Integer iops;
 
         /**
-         * <p>Event tags of the disk.</p>
+         * <p>The collection of event tags for the cloud disk. Event tags display events that occurred on the cloud disk within the last 24 hours, with a delay of up to 1 hour compared to the actual events.</p>
          */
         @NameInMap("LensTags")
         public java.util.List<String> lensTags;
 
         /**
-         * <p>The new performance level of the ESSD. Valid values:</p>
+         * <p>The performance level (PL) of the ESSD cloud disk. Valid values:</p>
          * <ul>
-         * <li>PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</li>
-         * <li>PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</li>
-         * <li>PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</li>
-         * <li>PL3: An ESSD delivers up to 1,000,000 random read/write IOPS.</li>
+         * <li>PL0: maximum random read/write IOPS of 10,000 per standard SSD.</li>
+         * <li>PL1: maximum random read/write IOPS of 50,000 per standard SSD.</li>
+         * <li>PL2: maximum random read/write IOPS of 100,000 per standard SSD.</li>
+         * <li>PL3: maximum random read/write IOPS of 1,000,000 per standard SSD.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,9 +232,9 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
-         * <p>Baseline performance = min{1,800 + 50 × Capacity, 50,000}</p>
-         * <p>This parameter is available only if you set <code>DiskCategory</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL cloud disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline performance}.</p>
+         * <p>Baseline performance = min{1,800 + 50 × Capacity, 50,000}.</p>
+         * <p>This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disk</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>4000</p>
@@ -243,7 +243,7 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         public Integer provisionedIops;
 
         /**
-         * <p>The region ID of the disk.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -251,11 +251,17 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Indicates whether the cloud disk is a shared cloud disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SharingEnabled")
         public String sharingEnabled;
 
         /**
-         * <p>The size of the disk. Unit: GiB.</p>
+         * <p>The cloud disk size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>64</p>
@@ -264,13 +270,13 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         public Integer size;
 
         /**
-         * <p>Tags of the disk.</p>
+         * <p>The collection of tags for the cloud disk.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeLensMonitorDisksResponseBodyDiskInfosTags> tags;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The zone ID of the cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-j</p>

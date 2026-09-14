@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaModel {
     /**
-     * <p>Details about the cloud disks.</p>
+     * <p>The collection of cloud disk information.</p>
      */
     @NameInMap("Disks")
     public DescribeDedicatedBlockStorageClusterDisksResponseBodyDisks disks;
 
     /**
-     * <p>The query token returned in this call.</p>
+     * <p>The pagination token returned in this call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>
@@ -20,7 +20,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>11B55F58-D3A4-4A9B-9596-342420D0****</p>
@@ -59,7 +59,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
 
     public static class DescribeDedicatedBlockStorageClusterDisksResponseBodyDisksDiskTags extends TeaModel {
         /**
-         * <p>The tag key of the cloud disk.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -68,7 +68,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public String tagKey;
 
         /**
-         * <p>The tag value of the cloud disk.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
@@ -101,7 +101,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
 
     public static class DescribeDedicatedBlockStorageClusterDisksResponseBodyDisksDisk extends TeaModel {
         /**
-         * <p>The time when the cloud disk was last attached. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</p>
+         * <p>The time when the cloud disk was last attached. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-06-07T06:08:56Z</p>
@@ -110,7 +110,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public String attachedTime;
 
         /**
-         * <p>This parameter is currently in invitational preview and unavailable for general users.</p>
+         * <p>This parameter is in invitational preview and is not publicly available.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -119,16 +119,21 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public String bdfId;
 
         /**
-         * <p>Whether the ESSD AutoPL disk is enabled burst IOPS / BPS. This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+         * <p>Indicates whether the burst (performance burst) feature is enabled. Valid values:</p>
+         * <ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
+         * </ul>
+         * <p>This parameter is supported only when <code>DiskCategory</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disks</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>false</p>
          */
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
 
         /**
-         * <p>The category of the disk. A value of cloud_essd indicates that the disk is an ESSD.</p>
+         * <p>The category of the cloud disk or local disk is cloud_essd, which indicates an ESSD.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_essd</p>
@@ -137,12 +142,12 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public String category;
 
         /**
-         * <p>Indicates whether the automatic snapshots of the cloud disk are deleted when the disk is released. Valid values:</p>
+         * <p>Indicates whether automatic snapshots are deleted when the cloud disk is released. Valid values:</p>
          * <ul>
-         * <li>true: The automatic snapshots of the cloud disk are deleted when the disk is released.</li>
-         * <li>false: The automatic snapshots of the cloud disk are retained when the disk is released.</li>
+         * <li>true: Automatic snapshots are deleted when the cloud disk is released.</li>
+         * <li>false: Automatic snapshots are retained when the cloud disk is released.</li>
          * </ul>
-         * <p>Snapshots that are created by calling the <a href="https://help.aliyun.com/document_detail/25524.html">CreateSnapshot</a> operation or by using the Elastic Compute Service (ECS) console are retained and not affected by this parameter.</p>
+         * <p>Snapshots created by calling <a href="https://help.aliyun.com/document_detail/25524.html">CreateSnapshot</a> or by using the console are not affected by this parameter and are always retained.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -151,10 +156,10 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public Boolean deleteAutoSnapshot;
 
         /**
-         * <p>Indicates whether the cloud disk is released when its associated instance is released. Valid values:</p>
+         * <p>Indicates whether the cloud disk is released when the instance is released. Valid values:</p>
          * <ul>
-         * <li>true: The cloud disk is released when its associated instance is released.</li>
-         * <li>false: The cloud disk is retained when its associated instance is released.</li>
+         * <li>true: The cloud disk is released when the instance is released.</li>
+         * <li>false: The cloud disk is retained when the instance is released.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -164,7 +169,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public Boolean deleteWithInstance;
 
         /**
-         * <p>The description of the cloud disk.</p>
+         * <p>The cloud disk description.</p>
          * 
          * <strong>example:</strong>
          * <p>testDescription</p>
@@ -182,13 +187,15 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public String detachedTime;
 
         /**
-         * <p>The device name of the cloud disk on its associated instance. Example: /dev/xvdb. Take note of the following items:</p>
+         * <p>The device name of the instance to which the cloud disk is attached, such as /dev/xvdb. Note the following items:</p>
          * <ul>
-         * <li>This parameter has a value only when the <code>Status</code> value is <code>In_use</code>.</li>
-         * <li>This parameter is empty for cloud disks that have the multi-attach feature enabled. You can query the attachment information of the cloud disk based on the <code>Attachment</code> values.</li>
+         * <li><p>This parameter has a value only when the <code>Status</code> parameter is set to <code>In_use</code>. This parameter is empty in other states.</p>
+         * </li>
+         * <li><p>For cloud disks with the multi-attach feature enabled, this value is always empty. You can view all attachment information of the cloud disk from the returned <code>Attachment</code> list.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         * <p>This parameter will be deprecated. To ensure code compatibility, do not use this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -200,8 +207,8 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         /**
          * <p>The billing method of the cloud disk. Valid values:</p>
          * <ul>
-         * <li>PrePaid: subscription</li>
-         * <li>PostPaid: pay-as-you-go</li>
+         * <li>PrePaid: subscription.</li>
+         * <li>PostPaid: pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -211,7 +218,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public String diskChargeType;
 
         /**
-         * <p>The ID of the cloud disk.</p>
+         * <p>The cloud disk ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-bp67acfmxazb4p****</p>
@@ -220,7 +227,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public String diskId;
 
         /**
-         * <p>The name of the cloud disk.</p>
+         * <p>The cloud disk name.</p>
          * 
          * <strong>example:</strong>
          * <p>testDiskName</p>
@@ -230,6 +237,9 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
 
         /**
          * <p>Indicates whether the automatic snapshot policy feature is enabled for the cloud disk.</p>
+         * <blockquote>
+         * <p>This parameter is deprecated. After a cloud disk is created, the automatic snapshot policy feature is enabled by default. You only need to associate an automatic snapshot policy with the cloud disk.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -247,7 +257,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public Boolean encrypted;
 
         /**
-         * <p>The maximum number of IOPS.</p>
+         * <p>The maximum number of read/write (I/O) operations per second. Unit: operations/s.</p>
          * 
          * <strong>example:</strong>
          * <p>4000</p>
@@ -256,7 +266,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public Long IOPS;
 
         /**
-         * <p>The ID of the image that was used to create the instance. This parameter is empty unless the cloud disk was created from an image. The value of this parameter remains unchanged throughout the lifecycle of the cloud disk.</p>
+         * <p>The ID of the image used to create the ECS instance. This parameter has a value only for cloud disks created from an image. Otherwise, this value is empty. This value remains unchanged throughout the lifecycle of the cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>m-bp13aqm171qynt3u***</p>
@@ -265,10 +275,12 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public String imageId;
 
         /**
-         * <p>The ID of the instance to which the cloud disk is attached. Take note of the following items:</p>
+         * <p>The instance ID of the instance to which the cloud disk is mounted. Note the following items:</p>
          * <ul>
-         * <li>This parameter has a value only when the <code>Status</code> value is <code>In_use</code>.</li>
-         * <li>This parameter is empty for cloud disks that have the multi-attach feature enabled. You can query the attachment information of the cloud disk based on the <code>Attachment</code> values.</li>
+         * <li><p>This parameter has a value only when the <code>Status</code> parameter is set to <code>In_use</code>. This parameter is empty in other states.</p>
+         * </li>
+         * <li><p>For cloud disks with the multi-attach attribute enabled, this value is always empty. You can view all mount information of the cloud disk from the returned <code>Attachment</code> list.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -278,7 +290,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public String instanceId;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key used by the cloud disk.</p>
+         * <p>The KMS key ID used by the cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
@@ -287,7 +299,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public String KMSKeyId;
 
         /**
-         * <p>The number of instances to which the Shared Block Storage device is attached.</p>
+         * <p>The number of instances to which the shared storage is attached.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -296,7 +308,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public Integer mountInstanceNum;
 
         /**
-         * <p>Indicates whether the multi-attach feature was enabled for the cloud disk.</p>
+         * <p>Indicates whether the multi-attach feature is enabled for the cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>Disabled</p>
@@ -305,12 +317,12 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public String multiAttach;
 
         /**
-         * <p>The performance level of the enhanced SSD (ESSD). Valid values:</p>
+         * <p>The performance level of the ESSD. Valid values:</p>
          * <ul>
-         * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
-         * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
-         * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
-         * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+         * <li>PL0: a maximum of 10,000 random read/write IOPS per cloud disk.</li>
+         * <li>PL1: a maximum of 50,000 random read/write IOPS per cloud disk.</li>
+         * <li>PL2: a maximum of 100,000 random read/write IOPS per cloud disk.</li>
+         * <li>PL3: a maximum of 1,000,000 random read/write IOPS per cloud disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -329,19 +341,18 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public Boolean portable;
 
         /**
-         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. </p>
-         * <blockquote>
-         * <p> This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance configurations of an ESSD AutoPL disk</a>.</p>
-         * </blockquote>
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL cloud disk. Valid values: 0 to min{50000, 1000 × Capacity - Baseline performance}.</p>
+         * <p>Baseline performance = min{1,800 + 50 × Capacity, 50,000}.</p>
+         * <p>This parameter is supported only when <code>DiskCategory</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disks</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>50000</p>
+         * <p>40000</p>
          */
         @NameInMap("ProvisionedIops")
         public Long provisionedIops;
 
         /**
-         * <p>The region ID of cloud disk.</p>
+         * <p>The region ID of the cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-heyuan</p>
@@ -350,7 +361,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public String regionId;
 
         /**
-         * <p>The size of the disk. Unit: GiB.</p>
+         * <p>The cloud disk size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -359,8 +370,8 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public Integer size;
 
         /**
-         * <p>The ID of the snapshot that was used to create the cloud disk.</p>
-         * <p>This parameter is empty unless the cloud disk was created from a snapshot. The value of this parameter remains unchanged throughout the lifecycle of the cloud disk.</p>
+         * <p>The ID of the snapshot used to create the cloud disk.</p>
+         * <p>If no snapshot was specified when the cloud disk was created, this value is empty. This value remains unchanged throughout the lifecycle of the cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>s-bp67acfmxazb4p****</p>
@@ -369,14 +380,14 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public String sourceSnapshotId;
 
         /**
-         * <p>The state of the cloud disk. For more information, see <a href="https://help.aliyun.com/document_detail/25689.html">Disk states</a>. Valid values:</p>
+         * <p>The cloud disk status. For more information, see <a href="https://help.aliyun.com/document_detail/25689.html">Cloud disk status</a>. Valid values:</p>
          * <ul>
-         * <li>In_use</li>
-         * <li>Available</li>
-         * <li>Attaching</li>
-         * <li>Detaching</li>
-         * <li>Creating</li>
-         * <li>ReIniting</li>
+         * <li>In_use.</li>
+         * <li>Available.</li>
+         * <li>Attaching.</li>
+         * <li>Detaching.</li>
+         * <li>Creating.</li>
+         * <li>ReIniting.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -386,7 +397,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public String status;
 
         /**
-         * <p>The ID of the dedicated block storage cluster to which the cloud disk belongs. If your cloud disk belongs to the public block storage cluster, an empty value is returned.</p>
+         * <p>The ID of the dedicated block storage cluster to which the cloud disk belongs. If the cloud disk belongs to a public cloud block storage cluster, this value is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>dbsc-j5e1sf2vaf5he8m2****</p>
@@ -395,7 +406,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public String storageClusterId;
 
         /**
-         * <p>The ID of the storage set.</p>
+         * <p>The storage set ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ss-i-bp1j4i2jdf3owlhe****</p>
@@ -419,29 +430,29 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public java.util.List<DescribeDedicatedBlockStorageClusterDisksResponseBodyDisksDiskTags> tags;
 
         /**
-         * <p>The maximum number of BPS.</p>
+         * <p>The amount of data that can be transferred per unit of time. Unit: MB/s.</p>
          * 
          * <strong>example:</strong>
-         * <p>350</p>
+         * <p>100</p>
          */
         @NameInMap("Throughput")
         public Long throughput;
 
         /**
-         * <p>The type of the disk. Valid values:</p>
+         * <p>The type of the cloud disk. Valid values:</p>
          * <ul>
-         * <li>system: system disk</li>
-         * <li>data: data disk</li>
+         * <li>system: system cloud disk.</li>
+         * <li>data: data cloud disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>all</p>
+         * <p>system</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The zone ID of cloud disk.</p>
+         * <p>The zone ID of the cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-heyuan-i</p>
@@ -730,7 +741,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
 
     public static class DescribeDedicatedBlockStorageClusterDisksResponseBodyDisks extends TeaModel {
         /**
-         * <p>Details about the cloud disks.</p>
+         * <p>The collection of cloud disk information.</p>
          */
         @NameInMap("Disk")
         public java.util.List<DescribeDedicatedBlockStorageClusterDisksResponseBodyDisksDisk> disk;

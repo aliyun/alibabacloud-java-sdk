@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListReplicaEdgeSupportedResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of entries to return on each page.</p>
+     * <p>Valid values: 1 to 500.</p>
+     * <p>Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +16,8 @@ public class ListReplicaEdgeSupportedResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to start the next query. If NextToken is empty, no more results are available.</p>
+     * 
      * <strong>example:</strong>
      * <p>e71d8a535bd9c****</p>
      */
@@ -19,12 +25,17 @@ public class ListReplicaEdgeSupportedResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>17EE62D8-064E-5404-8B0D-72122478****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The set of region information.</p>
+     */
     @NameInMap("SupportedRegions")
     public java.util.List<ListReplicaEdgeSupportedResponseBodySupportedRegions> supportedRegions;
 
@@ -66,10 +77,18 @@ public class ListReplicaEdgeSupportedResponseBody extends TeaModel {
     }
 
     public static class ListReplicaEdgeSupportedResponseBodySupportedRegionsZones extends TeaModel {
+        /**
+         * <p>Indicates whether replication time control is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SupportRtc")
         public Boolean supportRtc;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
          */
@@ -101,12 +120,17 @@ public class ListReplicaEdgeSupportedResponseBody extends TeaModel {
 
     public static class ListReplicaEdgeSupportedResponseBodySupportedRegions extends TeaModel {
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The set of zone information.</p>
+         */
         @NameInMap("Zones")
         public java.util.List<ListReplicaEdgeSupportedResponseBodySupportedRegionsZones> zones;
 

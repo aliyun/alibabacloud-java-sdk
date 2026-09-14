@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnoseReportResponseBody extends TeaModel {
     /**
+     * <p>The pagination token returned in this call.</p>
+     * 
      * <strong>example:</strong>
      * <p>f07b150eadfa1d7a</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The list of diagnostic reports.</p>
+     */
     @NameInMap("Reports")
     public java.util.List<DescribeDiagnoseReportResponseBodyReports> reports;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAA478A0-BEE6-1D42-BEB6-A9CFEAD6****</p>
      */
@@ -22,6 +29,8 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -66,10 +75,32 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnoseReportResponseBodyReportsEvents extends TeaModel {
+        /**
+         * <p>The event description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The issue name. Valid values:</p>
+         * <ul>
+         * <li>NoSnapshot: data protection</li>
+         * <li>BurstIOTriggered: I/O burst</li>
+         * <li>CostOptimizationNeeded: cost optimization</li>
+         * <li>DiskSpecNotMatchedWithInstance: instance and cloud disk specification mismatch</li>
+         * <li>DiskIONo4kAligned: non-4K-aligned read/write</li>
+         * <li>DiskIOHang: IOHang occurred on the cloud disk</li>
+         * <li>InstanceIOPSExceedInstanceMaxLimit: instance IOPS reached the upper limit</li>
+         * <li>InstanceBPSExceedInstanceMaxLimit: instance BPS reached the upper limit</li>
+         * <li>DiskIOPSExceedInstanceMaxLimit: cloud disk IOPS reached the instance upper limit</li>
+         * <li>DiskBPSExceedInstanceMaxLimit: cloud disk BPS reached the instance upper limit</li>
+         * <li>DiskIOPSExceedDiskMaxLimit: cloud disk IOPS reached the cloud disk upper limit</li>
+         * <li>DiskBPSExceedDiskMaxLimit: cloud disk BPS reached the cloud disk upper limit</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DiskIOPSExceedDiskMaxLimit</p>
          */
@@ -77,6 +108,15 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         public String eventName;
 
         /**
+         * <p>The recommended action after the event occurs. Valid values:</p>
+         * <ul>
+         * <li>ModifyDiskSpec: change cloud disk specifications</li>
+         * <li>CreateSnapshot: create a snapshot</li>
+         * <li>ResizeDisk: expand the cloud disk</li>
+         * <li>AdjustProvision: adjust provisioned performance</li>
+         * <li>ModifyInstanceSpec: change instance specifications</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ResizeDisk</p>
          */
@@ -84,6 +124,8 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         public String recommendAction;
 
         /**
+         * <p>The parameters for the recommended action after the event occurs.</p>
+         * 
          * <strong>example:</strong>
          * <p>4096</p>
          */
@@ -91,12 +133,25 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         public String recommendParams;
 
         /**
+         * <p>The severity level of the diagnosed issue. The severity levels in ascending order are:</p>
+         * <ul>
+         * <li>Info: Associated information that may be related to an anomaly.</li>
+         * <li>Warn: Associated information that may cause an anomaly.</li>
+         * <li>Critical: A critical anomaly exists.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Warn</p>
          */
         @NameInMap("Severity")
         public String severity;
 
+        /**
+         * <p>The start timestamp of the event, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1755756214000</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
@@ -157,6 +212,8 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
 
     public static class DescribeDiagnoseReportResponseBodyReports extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>196380451****</p>
          */
@@ -164,6 +221,8 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
+         * <p>The time when the diagnostic report was created, in Unix/POSIX timestamp (seconds).</p>
+         * 
          * <strong>example:</strong>
          * <p>1727239294</p>
          */
@@ -171,6 +230,8 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         public Long creationTime;
 
         /**
+         * <p>The end timestamp of the resource diagnosis.</p>
+         * 
          * <strong>example:</strong>
          * <p>1727239294</p>
          */
@@ -178,6 +239,8 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         public Long diagnoseEndTime;
 
         /**
+         * <p>The start timestamp of the resource diagnosis.</p>
+         * 
          * <strong>example:</strong>
          * <p>1727229294</p>
          */
@@ -185,16 +248,23 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         public Long diagnoseStartTime;
 
         /**
+         * <p>The type of diagnosis.</p>
+         * 
          * <strong>example:</strong>
          * <p>Performance</p>
          */
         @NameInMap("DiagnoseType")
         public String diagnoseType;
 
+        /**
+         * <p>The list of diagnosed issues.</p>
+         */
         @NameInMap("Events")
         public java.util.List<DescribeDiagnoseReportResponseBodyReportsEvents> events;
 
         /**
+         * <p>The time when the diagnostic report was completed, in Unix/POSIX timestamp (seconds).</p>
+         * 
          * <strong>example:</strong>
          * <p>1727239295</p>
          */
@@ -202,6 +272,8 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         public Long finishedTime;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou</p>
          */
@@ -209,6 +281,8 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The diagnostic report ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>report-sag8d****</p>
          */
@@ -216,6 +290,8 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         public String reportId;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d-wz95ycu****</p>
          */
@@ -223,6 +299,11 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>Disk</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Disk</p>
          */
@@ -230,6 +311,13 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The severity level of the diagnosis. The severity levels in ascending order are:</p>
+         * <ul>
+         * <li>Info: Associated information that may be related to an anomaly.</li>
+         * <li>Warn: Associated information that may cause an anomaly.</li>
+         * <li>Critical: A critical anomaly exists.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Warn</p>
          */
@@ -237,6 +325,15 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         public String severity;
 
         /**
+         * <p>The status of the diagnostic report. Valid values:</p>
+         * <ul>
+         * <li>Running</li>
+         * <li>Success</li>
+         * <li>TimeOut</li>
+         * <li>Fail</li>
+         * </ul>
+         * <p>The Severity and Events fields are valid only when Status is set to Success.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */

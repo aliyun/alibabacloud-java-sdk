@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskReplicaPairRequest extends TeaModel {
     /**
-     * <p>The bandwidth value. Unit: Kbit/s.</p>
+     * <p>The bandwidth for async replication, in Kbps.</p>
      * <blockquote>
-     * <p> This parameter is not publicly available.</p>
+     * <p>This parameter is not yet available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class ModifyDiskReplicaPairRequest extends TeaModel {
     public Long bandwidth;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>A client token to ensure the idempotence of the request. Generate a value for this parameter from your client. Make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -35,7 +35,17 @@ public class ModifyDiskReplicaPairRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Whether to enable replication time control.</p>
+     * <p>Specifies whether to enable replication time control (RTC). Valid values:</p>
+     * <ul>
+     * <li><p>false: Disables RTC.</p>
+     * </li>
+     * <li><p>true: Enables RTC.</p>
+     * </li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * <blockquote>
+     * <p>If a replication pair is part of a replication group, its RTC setting is the same as the setting of the group.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -53,7 +63,7 @@ public class ModifyDiskReplicaPairRequest extends TeaModel {
     public String pairName;
 
     /**
-     * <p>The recovery point objective (RPO) of the replication pair-consistent group. Unit: seconds. Valid value: 900.</p>
+     * <p>The recovery point objective (RPO) of the replication pair-consistent group. Unit: seconds. Currently, only a value of 900 is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>900</p>
@@ -62,7 +72,7 @@ public class ModifyDiskReplicaPairRequest extends TeaModel {
     public Long RPO;
 
     /**
-     * <p>The region ID of the primary or secondary disk in the replication pair. You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which async replication is supported.</p>
+     * <p>The region ID of the primary or secondary disk in the replication pair. You can call <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> to query the regions that support async replication.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

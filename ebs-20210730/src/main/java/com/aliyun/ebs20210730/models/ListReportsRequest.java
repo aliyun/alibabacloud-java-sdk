@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListReportsRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
      * 
      * <strong>example:</strong>
      * <p>app-xxx</p>
@@ -14,7 +14,7 @@ public class ListReportsRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>Maximum number of items for Token-based pagination.</p>
+     * <p>The maximum number of entries to return when using token-based pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListReportsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Query token (Token), the value is the NextToken parameter value returned from the previous API call.</p>
+     * <p>The pagination token. Set this parameter to the value of NextToken returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>a6792e832ff0XXXXX</p>
@@ -32,7 +32,7 @@ public class ListReportsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Page number for paginated queries.</p>
+     * <p>The page number in paged queries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class ListReportsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Number of rows per page when performing paginated queries.</p>
+     * <p>The number of entries per page set in Settings for a paged query during paging.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -50,7 +50,7 @@ public class ListReportsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Region ID. You can call <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> to query the list of regions supported by Block Storage Data Insights.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> to query the regions supported by EBS Lens.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

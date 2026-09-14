@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAppResponseBody extends TeaModel {
     /**
+     * <p>The detailed reason why access was denied.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,6 +14,8 @@ public class CreateAppResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The app ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>app-bd5e3533</p>
      */
@@ -19,6 +23,8 @@ public class CreateAppResponseBody extends TeaModel {
     public String appId;
 
     /**
+     * <p>The app name.</p>
+     * 
      * <strong>example:</strong>
      * <p>TestApp_g5t</p>
      */
@@ -26,6 +32,8 @@ public class CreateAppResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>The status code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -33,6 +41,8 @@ public class CreateAppResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -40,13 +50,19 @@ public class CreateAppResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
+     * 
      * <strong>example:</strong>
-     * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/j6if7e3w217z31q/j6if7e3w217z31q.sql.zip?Expires=1753331032&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=vOXj4E1%2FCqncWcDtu3UxxuOcyh0%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/j6if7e3w217z31q/j6if7e3w217z31q.sql.zip?Expires=1753331032&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=vOXj4E1%2FCqncWcDtu3UxxuOcyh0%3D</a></p>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
+     * <p>The error code description.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -54,6 +70,8 @@ public class CreateAppResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The additional information. If the request is successful, &quot;success&quot; is returned. If the request fails, a specific error code is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -61,6 +79,8 @@ public class CreateAppResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E604ABBF-FD0F-5080-BE2B-BCF674A9E941</p>
      */
@@ -68,6 +88,8 @@ public class CreateAppResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the app was created successfully. Valid values: true: The app was created successfully. false: The app failed to be created.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -75,6 +97,8 @@ public class CreateAppResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */

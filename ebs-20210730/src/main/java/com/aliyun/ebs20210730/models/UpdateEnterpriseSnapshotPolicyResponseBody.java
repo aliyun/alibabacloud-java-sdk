@@ -8,7 +8,7 @@ public class UpdateEnterpriseSnapshotPolicyResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>BA903E56-48CE-5B81-9611-ED7962EED3DF</p>
+     * <p>FED145A8-7D5F-5C60-B054-4EB2899A5996</p>
      */
     @NameInMap("RequestId")
     public String requestId;

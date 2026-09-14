@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetReportRequest extends TeaModel {
     /**
-     * <p>Optional, AppName only takes effect when ReportType=present.</p>
+     * <p>Optional. This parameter takes effect only when ReportType is set to present.</p>
      * 
      * <strong>example:</strong>
      * <p>App1</p>
@@ -14,7 +14,7 @@ public class GetReportRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>Region name.</p>
+     * <p>The region ID. This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -23,7 +23,7 @@ public class GetReportRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>When ReportType=history, ReportId is required to query historical reports based on ReportId.</p>
+     * <p>When ReportType is set to history, this parameter is required. The system queries the historical report based on the specified ReportId.</p>
      * 
      * <strong>example:</strong>
      * <p>report-74fbea80e802xxxx</p>
@@ -32,7 +32,11 @@ public class GetReportRequest extends TeaModel {
     public String reportId;
 
     /**
-     * <p>Optional values: history/present.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>history</li>
+     * <li>present</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>history</p>

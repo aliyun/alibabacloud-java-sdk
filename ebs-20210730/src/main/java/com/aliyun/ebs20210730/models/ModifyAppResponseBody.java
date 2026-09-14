@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyAppResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,6 +14,8 @@ public class ModifyAppResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,6 +23,8 @@ public class ModifyAppResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,13 +32,19 @@ public class ModifyAppResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic message. This parameter is not in use. Ignore it.</p>
+     * 
      * <strong>example:</strong>
-     * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gcqe6nn722rw1g5/gcqe6nn722rw1g5.diff.zip?Expires=1750651377&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=55f4Rcml1vjydPgiv5c9KRdSGQo%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gcqe6nn722rw1g5/gcqe6nn722rw1g5.diff.zip?Expires=1750651377&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=55f4Rcml1vjydPgiv5c9KRdSGQo%3D</a></p>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -40,6 +52,8 @@ public class ModifyAppResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -47,6 +61,8 @@ public class ModifyAppResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
@@ -54,6 +70,8 @@ public class ModifyAppResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -61,6 +79,8 @@ public class ModifyAppResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The user code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */

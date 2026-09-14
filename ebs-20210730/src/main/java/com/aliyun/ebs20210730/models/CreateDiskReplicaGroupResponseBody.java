@@ -14,7 +14,7 @@ public class CreateDiskReplicaGroupResponseBody extends TeaModel {
     public String replicaGroupId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C123F94F-4E38-19AE-942A-A8D6F44F****</p>

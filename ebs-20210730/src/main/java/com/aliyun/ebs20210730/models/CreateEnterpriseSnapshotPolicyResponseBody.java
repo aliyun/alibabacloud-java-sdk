@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEnterpriseSnapshotPolicyResponseBody extends TeaModel {
     /**
-     * <p>The id of a policy.</p>
+     * <p>The snapshot policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>esp-xxx</p>
@@ -17,7 +17,7 @@ public class CreateEnterpriseSnapshotPolicyResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>7A8959DA-1E04-5724-8288-58334031454E</p>
+     * <p>F13483A9-17E2-5085-9B2E-2155B0487FF7</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
     /**
-     * <p>A pagination token.</p>
+     * <p>The query token returned in this call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -110,7 +110,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
 
     public static class DescribeDiskReplicaGroupsResponseBodyReplicaGroupsTags extends TeaModel {
         /**
-         * <p>The tag key of the replication pair-consistent group.</p>
+         * <p>The key of the tag of the replication group.</p>
          * 
          * <strong>example:</strong>
          * <p>testKey</p>
@@ -119,7 +119,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value of the replication pair-consistent group.</p>
+         * <p>The value of the tag of the replication group.</p>
          * 
          * <strong>example:</strong>
          * <p>testValue</p>
@@ -152,7 +152,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
 
     public static class DescribeDiskReplicaGroupsResponseBodyReplicaGroups extends TeaModel {
         /**
-         * <p>The bandwidth value. Unit: Kbit/s. This parameter is not publicly available and has a system-preset value.</p>
+         * <p>The bandwidth. Unit: Kbit/s. This parameter is not yet available. The return value is preset by the system.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -170,7 +170,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the region in which the secondary site is deployed.</p>
+         * <p>The region ID of the disaster recovery site.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -179,7 +179,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         public String destinationRegionId;
 
         /**
-         * <p>The ID of the zone in which the secondary site is deployed.</p>
+         * <p>The zone ID of the disaster recovery site.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai-e</p>
@@ -188,7 +188,16 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         public String destinationZoneId;
 
         /**
-         * <p>Indicates whether to enable replication time control.</p>
+         * <p>Specifies whether to enable replication time control (RTC). Valid values:</p>
+         * <ul>
+         * <li><p>false: Disables RTC.</p>
+         * </li>
+         * <li><p>true: Enables RTC.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>If you set this parameter to true, RTC is enabled for the replication pair-consistent group and all asynchronous replication pairs that are added to the group.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -206,7 +215,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The time when data was last replicated from the primary disks to the secondary disks in the replication pair-consistent group. The value of this parameter is a timestamp. Unit: seconds.</p>
+         * <p>The time when the last asynchronous replication was completed for the replication pair-consistent group. This parameter is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1637835114</p>
@@ -215,13 +224,13 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         public Long lastRecoverPoint;
 
         /**
-         * <p>The IDs of replication pairs that belong to the replication pair-consistent group.</p>
+         * <p>The list of replication pair IDs in the replication pair-consistent group.</p>
          */
         @NameInMap("PairIds")
         public java.util.List<byte[]> pairIds;
 
         /**
-         * <p>The number of replication pairs that belong to the replication pair-consistent group.</p>
+         * <p>The number of replication pairs in the replication pair-consistent group.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -230,7 +239,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         public Long pairNumber;
 
         /**
-         * <p>The initial source region (primary region) of the replication pair-consistent group.</p>
+         * <p>The initial source region of the replication group.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -239,7 +248,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         public String primaryRegion;
 
         /**
-         * <p>The initial source zone (primary zone) of the replication pair-consistent group.</p>
+         * <p>The initial source zone of the replication group.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-h</p>
@@ -257,7 +266,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         public Long RPO;
 
         /**
-         * <p>The IDs of the replication pair-consistent groups.</p>
+         * <p>The ID of the replication pair-consistent group.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-myreplica****</p>
@@ -266,7 +275,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         public String replicaGroupId;
 
         /**
-         * <p>The ID of the resource group to which the replication pair-consistent group belongs.</p>
+         * <p>The ID of the resource group to which the replication group belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek2a*******</p>
@@ -275,10 +284,12 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The type of the site from which the information about the replication pairs and replication pair-consistent group was obtained. Valid values:</p>
+         * <p>The site of the replication pair and the replication pair-consistent group. Valid values:</p>
          * <ul>
-         * <li>production: primary site</li>
-         * <li>backup: secondary site</li>
+         * <li><p>production: The production site.</p>
+         * </li>
+         * <li><p>backup: The disaster recovery site.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -288,7 +299,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         public String site;
 
         /**
-         * <p>The ID of the region in which the primary site is deployed.</p>
+         * <p>The region ID of the production site.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -297,7 +308,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         public String sourceRegionId;
 
         /**
-         * <p>The ID of the zone in which the primary site is deployed.</p>
+         * <p>The zone ID of the production site.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-f</p>
@@ -306,7 +317,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         public String sourceZoneId;
 
         /**
-         * <p>The initial destination region (secondary region) of the replication pair-consistent group.</p>
+         * <p>The initial destination region of the replication group.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -315,7 +326,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         public String standbyRegion;
 
         /**
-         * <p>The initial destination zone (secondary zone) of the replication pair-consistent group.</p>
+         * <p>The initial destination zone of the replication group.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai-e</p>
@@ -326,24 +337,42 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         /**
          * <p>The status of the replication pair-consistent group. Valid values:</p>
          * <ul>
-         * <li>invalid: The replication pair-consistent group is invalid, which indicates that abnormal replication pairs are present in the replication pair-consistent group.</li>
-         * <li>creating: The replication pair-consistent group is being created.</li>
-         * <li>created: The replication pair-consistent group was created.</li>
-         * <li>create_failed: The replication pair-consistent group failed to be created.</li>
-         * <li>manual_syncing: Data was being manually synchronized between the disks in the replication pair-consistent group. When data was being manually synchronized for the first time, the replication pair is in this state.</li>
-         * <li>syncing: Data was being synchronized between the disks. When data is being asynchronously replicated from the primary disk to the secondary disk again in subsequent operations, the replication pair is in this state.</li>
-         * <li>normal: The replication pair was working as expected. When the system finishes replicating data from the primary disk to the secondary disk within the current replication cycle, the replication pair enters this state.</li>
-         * <li>stopping: The replication pair was being stopped.</li>
-         * <li>stopped: The replication pair was stopped.</li>
-         * <li>stop_failed: The replication pair failed to be stopped.</li>
-         * <li>failovering: A failover was being performed.</li>
-         * <li>failovered: A failover was performed.</li>
-         * <li>failover_failed: A failover failed to be performed.</li>
-         * <li>reprotecting: A reverse replication was being performed.</li>
-         * <li>reprotect_failed: A reverse replication failed to be performed.</li>
-         * <li>deleting: The replication pair was being deleted.</li>
-         * <li>delete_failed: The replication pair failed to be deleted.</li>
-         * <li>deleted: The replication pair was deleted.</li>
+         * <li><p>invalid: The replication pair-consistent group is invalid. This status indicates that a replication pair in the group is abnormal.</p>
+         * </li>
+         * <li><p>creating: The replication pair-consistent group is being created.</p>
+         * </li>
+         * <li><p>created: The replication pair-consistent group is created.</p>
+         * </li>
+         * <li><p>create_failed: The replication pair-consistent group failed to be created.</p>
+         * </li>
+         * <li><p>manual_syncing: The replication pair-consistent group is performing a one-time synchronization. The group is also in this state during the first one-time synchronization.</p>
+         * </li>
+         * <li><p>syncing: The replication pair-consistent group is synchronizing data. The group is in this state when data is asynchronously replicated from the primary disk to the secondary disk for a subsequent time.</p>
+         * </li>
+         * <li><p>normal: Normal. When data replication is complete in the current asynchronous replication cycle, the group is in this state.</p>
+         * </li>
+         * <li><p>stopping: The replication pair-consistent group is being stopped.</p>
+         * </li>
+         * <li><p>stopped: The replication pair-consistent group is stopped.</p>
+         * </li>
+         * <li><p>stop_failed: The replication pair-consistent group failed to be stopped.</p>
+         * </li>
+         * <li><p>failovering: A failover is being performed.</p>
+         * </li>
+         * <li><p>failovered: The failover is complete.</p>
+         * </li>
+         * <li><p>failover_failed: The failover failed.</p>
+         * </li>
+         * <li><p>reprotecting: A reverse replication is being performed.</p>
+         * </li>
+         * <li><p>reprotect_failed: The reverse replication failed.</p>
+         * </li>
+         * <li><p>deleting: The replication pair-consistent group is being deleted.</p>
+         * </li>
+         * <li><p>delete_failed: The replication pair-consistent group failed to be deleted.</p>
+         * </li>
+         * <li><p>deleted: The replication pair-consistent group is deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -353,7 +382,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tags of the replication pair-consistent group.</p>
+         * <p>The tags of the replication group.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeDiskReplicaGroupsResponseBodyReplicaGroupsTags> tags;

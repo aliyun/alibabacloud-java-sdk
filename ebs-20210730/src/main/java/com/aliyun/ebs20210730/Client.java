@@ -8,7 +8,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("ebs", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -103,12 +103,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Cancels Elastic Block Storage data insight (CloudLens for EBS).</p>
+     * <p>Activates EBS Lens (CloudLens for EBS).</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return ApplyLensServiceResponse
@@ -130,12 +126,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Cancels Elastic Block Storage data insight (CloudLens for EBS).</p>
+     * <p>Activates EBS Lens (CloudLens for EBS).</p>
      * @return ApplyLensServiceResponse
      */
     public ApplyLensServiceResponse applyLensService() throws Exception {
@@ -200,12 +192,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Cancels Elastic Block Storage data insight (CloudLens for EBS).</p>
+     * <p>Cancels EBS Lens.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return CancelLensServiceResponse
@@ -227,12 +215,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Cancels Elastic Block Storage data insight (CloudLens for EBS).</p>
+     * <p>Cancels EBS Lens.</p>
      * @return CancelLensServiceResponse
      */
     public CancelLensServiceResponse cancelLensService() throws Exception {
@@ -406,7 +390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>中心化角色：创建App</p>
+     * <p>Creates an app with the centralized role.</p>
      * 
      * @param request CreateAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -470,7 +454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>中心化角色：创建App</p>
+     * <p>Creates an app with the centralized role.</p>
      * 
      * @param request CreateAppRequest
      * @return CreateAppResponse
@@ -482,16 +466,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>Dedicated block storage clusters are physically isolated from public block storage clusters. The owner of each dedicated block storage cluster has exclusive access to all resources in the cluster.</li>
-     * <li>Disks created in a dedicated block storage cluster can be attached only to Elastic Compute Service (ECS) instances that reside in the same zone as the cluster. Before you create a dedicated block storage cluster, decide the regions and zones in which to deploy your cloud resources.</li>
-     * <li>Dedicated block storage clusters are classified into basic and performance types. When you create a dedicated block storage cluster, select a cluster type based on your business requirements.</li>
-     * <li>You are charged for creating dedicated block storage clusters.</li>
+     * <li>Dedicated Block Storage Cluster is a block storage service that is physically isolated from other public cloud block storage clusters and provides exclusive access to all cluster resources for the owner.&lt;props=&quot;china&quot;&gt; For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">What is Dedicated Block Storage Cluster</a>.</li>
+     * <li>Cloud disks created on a dedicated block storage cluster can be attached only to ECS instances in the same zone. Before you create a dedicated block storage cluster, plan the region and zone for the resources.</li>
+     * <li>Dedicated block storage clusters are classified into basic and performance types. Select the appropriate cluster performance type based on your business requirements when you create a cluster.</li>
+     * <li>You are charged for creating a dedicated block storage cluster.&lt;props=&quot;china&quot;&gt; For more information, see <a href="https://help.aliyun.com/document_detail/208884.html">Billing</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a dedicated block storage cluster. When you call this operation, you can specify parameters, such as Azone, Capacity, Type, and PeriodUnit, in the request.</p>
+     * <p>Creates a dedicated block storage cluster by calling the CreateDedicatedBlockStorageCluster operation with parameters such as Azone, Capacity, Type, and PeriodUnit.</p>
      * 
      * @param request CreateDedicatedBlockStorageClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -559,16 +543,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>Dedicated block storage clusters are physically isolated from public block storage clusters. The owner of each dedicated block storage cluster has exclusive access to all resources in the cluster.</li>
-     * <li>Disks created in a dedicated block storage cluster can be attached only to Elastic Compute Service (ECS) instances that reside in the same zone as the cluster. Before you create a dedicated block storage cluster, decide the regions and zones in which to deploy your cloud resources.</li>
-     * <li>Dedicated block storage clusters are classified into basic and performance types. When you create a dedicated block storage cluster, select a cluster type based on your business requirements.</li>
-     * <li>You are charged for creating dedicated block storage clusters.</li>
+     * <li>Dedicated Block Storage Cluster is a block storage service that is physically isolated from other public cloud block storage clusters and provides exclusive access to all cluster resources for the owner.&lt;props=&quot;china&quot;&gt; For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">What is Dedicated Block Storage Cluster</a>.</li>
+     * <li>Cloud disks created on a dedicated block storage cluster can be attached only to ECS instances in the same zone. Before you create a dedicated block storage cluster, plan the region and zone for the resources.</li>
+     * <li>Dedicated block storage clusters are classified into basic and performance types. Select the appropriate cluster performance type based on your business requirements when you create a cluster.</li>
+     * <li>You are charged for creating a dedicated block storage cluster.&lt;props=&quot;china&quot;&gt; For more information, see <a href="https://help.aliyun.com/document_detail/208884.html">Billing</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a dedicated block storage cluster. When you call this operation, you can specify parameters, such as Azone, Capacity, Type, and PeriodUnit, in the request.</p>
+     * <p>Creates a dedicated block storage cluster by calling the CreateDedicatedBlockStorageCluster operation with parameters such as Azone, Capacity, Type, and PeriodUnit.</p>
      * 
      * @param request CreateDedicatedBlockStorageClusterRequest
      * @return CreateDedicatedBlockStorageClusterResponse
@@ -580,7 +564,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Triggers a diagnostic.</p>
+     * <p>Creates a diagnostic report for a specified resource.</p>
      * 
      * @param request CreateDiagnoseReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -636,7 +620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Triggers a diagnostic.</p>
+     * <p>Creates a diagnostic report for a specified resource.</p>
      * 
      * @param request CreateDiagnoseReportRequest
      * @return CreateDiagnoseReportResponse
@@ -648,14 +632,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>The replication pair-consistent group feature allows you to batch manage multiple disks in disaster recovery scenarios. You can restore the data of all disks in the same replication pair-consistent group to the same point in time to allow for disaster recovery of instances.
-     * Take note of the following items:</p>
+     * <h2>Operation Description</h2>
+     * <p>Replication pair-consistent groups help you manage asynchronous replication for multiple disks in disaster recovery scenarios. You can centrally manage operations for these disks. The groups ensure that data on all disks can be recovered to the same point in time. This provides disaster recovery protection for one or more instances.
+     * When you create a replication pair-consistent group, note the following:</p>
      * <ul>
-     * <li>For information about the regions in which the replication pair-consistent group feature is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
-     * <li>Replication pair-consistent groups can be used to implement disaster recovery across zones within the same region and disaster recovery across regions.</li>
-     * <li>A replication pair and a replication pair-consistent group can replicate in the same direction if they have the same primary region (production region), primary zone (production zone), secondary region (disaster recovery region), and secondary zone (disaster recovery zone). A replication pair can be added to only a replication pair-consistent group that replicates in the same direction as the replication pair.</li>
-     * <li>After replication pairs are added to a replication pair-consistent group, the recovery point objective (RPO) of the group takes effect on the pairs instead of their original RPOs.</li>
+     * <li>For information about the regions that support replication pair-consistent groups, see <a href="https://help.aliyun.com/document_detail/314563.html">Async replication overview</a>.</li>
+     * <li>Replication pair-consistent groups support asynchronous disaster recovery across zones in the same region or across regions.</li>
+     * <li>A replication pair can be added to a replication pair-consistent group only if the pair and the group have the same data replication direction. This means their production regions, production zones, disaster recovery regions, and disaster recovery zones must be the same.</li>
+     * <li>After a replication pair is added to a replication pair-consistent group, the original Recovery Point Object (RPO) of the pair becomes invalid. Data is then replicated based on the RPO of the group.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -735,14 +719,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>The replication pair-consistent group feature allows you to batch manage multiple disks in disaster recovery scenarios. You can restore the data of all disks in the same replication pair-consistent group to the same point in time to allow for disaster recovery of instances.
-     * Take note of the following items:</p>
+     * <h2>Operation Description</h2>
+     * <p>Replication pair-consistent groups help you manage asynchronous replication for multiple disks in disaster recovery scenarios. You can centrally manage operations for these disks. The groups ensure that data on all disks can be recovered to the same point in time. This provides disaster recovery protection for one or more instances.
+     * When you create a replication pair-consistent group, note the following:</p>
      * <ul>
-     * <li>For information about the regions in which the replication pair-consistent group feature is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
-     * <li>Replication pair-consistent groups can be used to implement disaster recovery across zones within the same region and disaster recovery across regions.</li>
-     * <li>A replication pair and a replication pair-consistent group can replicate in the same direction if they have the same primary region (production region), primary zone (production zone), secondary region (disaster recovery region), and secondary zone (disaster recovery zone). A replication pair can be added to only a replication pair-consistent group that replicates in the same direction as the replication pair.</li>
-     * <li>After replication pairs are added to a replication pair-consistent group, the recovery point objective (RPO) of the group takes effect on the pairs instead of their original RPOs.</li>
+     * <li>For information about the regions that support replication pair-consistent groups, see <a href="https://help.aliyun.com/document_detail/314563.html">Async replication overview</a>.</li>
+     * <li>Replication pair-consistent groups support asynchronous disaster recovery across zones in the same region or across regions.</li>
+     * <li>A replication pair can be added to a replication pair-consistent group only if the pair and the group have the same data replication direction. This means their production regions, production zones, disaster recovery regions, and disaster recovery zones must be the same.</li>
+     * <li>After a replication pair is added to a replication pair-consistent group, the original Recovery Point Object (RPO) of the pair becomes invalid. Data is then replicated based on the RPO of the group.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -758,18 +742,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>Async replication is a feature that protects data across regions by using the data replication capability of Elastic Block Storage (EBS). This feature can be used to asynchronously replicate data from a disk in one region to a disk in another region for disaster recovery purposes. You can use this feature to implement disaster recovery for critical business to protect data in your databases and improve business continuity. You are charged on a subscription basis for the bandwidth that is used by the async replication feature.
-     * Currently, the async replication feature can asynchronously replicate data only between enhanced SSDs (ESSDs). The functionality of disks in replication pairs is limited.
-     * Take note of the following items:</p>
+     * <h2>Description</h2>
+     * <p>&lt;props=&quot;china&quot;&gt;
+     * Asynchronous replication is a feature that provides cross-region data protection using the data replication capabilities of Elastic Block Storage. The feature asynchronously replicates data from a disk in one region to another disk in a different region to provide cross-region disaster recovery and backup for your data. You can use this feature to build disaster recovery capabilities for critical services, protect database data, and improve business continuity. For more information about the feature notes and billing, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview of asynchronous replication for disks</a>. The asynchronous replication feature is billed for bandwidth on a subscription basis. Pay-as-you-go billing for traffic is also supported.
+     * &lt;props=&quot;intl&quot;&gt;
+     * Async replication is a feature that provides cross-region data protection based on the data replication capabilities of Elastic Block Storage (EBS). The feature asynchronously replicates data from a disk in one region to a disk in another region for disaster recovery. You can use this feature to build disaster recovery capabilities for critical services, protect database data, and improve business continuity. The async replication feature is billed for bandwidth on a subscription basis.
+     * Currently, the asynchronous replication feature is available only for Enhanced SSD (ESSD) disks and has certain limitations.
+     * Before you create a replication pair, note the following:</p>
      * <ul>
-     * <li>Make sure that the source disk (primary disk) from which to replicate data and the destination disk (secondary disk) to which to replicate data are created. You can call the <a href="https://help.aliyun.com/document_detail/25513.html">CreateDisk</a> operation to create disks.</li>
-     * <li>The secondary disk cannot reside in the same region as the primary disk. For information about the regions that support async replication, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
-     * <li>After you call this operation to create a replication pair for the primary disk and the secondary disk, you must call the <a href="https://help.aliyun.com/document_detail/354205.html">StartDiskReplicaPair</a> operation to enable async replication to replicate data from the primary disk to the secondary disk cross regions on a periodic basis.</li>
+     * <li>Prepare a source disk (primary disk) and a destination disk (secondary disk). The source disk is the disk that you want to protect with disaster recovery, and the destination disk is the replication target. You can call the <a href="https://help.aliyun.com/document_detail/25513.html">CreateDisk</a> operation to create the disks.</li>
+     * <li>The secondary disk must be in a different region from the primary disk. For more information about the regions that support asynchronous replication, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview of asynchronous replication for disks</a>.</li>
+     * <li>This operation creates a replication pair between the primary and secondary disks. After you create the pair, you must call the <a href="https://help.aliyun.com/document_detail/354205.html">StartDiskReplicaPair</a> operation to activate it. Activating the replication pair starts the periodic, cross-region data replication from the primary disk to the secondary disk.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a replication pair to asynchronously replicate data between disks.</p>
+     * <p>Creates a disk replication pair.</p>
      * 
      * @param request CreateDiskReplicaPairRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -865,18 +852,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>Async replication is a feature that protects data across regions by using the data replication capability of Elastic Block Storage (EBS). This feature can be used to asynchronously replicate data from a disk in one region to a disk in another region for disaster recovery purposes. You can use this feature to implement disaster recovery for critical business to protect data in your databases and improve business continuity. You are charged on a subscription basis for the bandwidth that is used by the async replication feature.
-     * Currently, the async replication feature can asynchronously replicate data only between enhanced SSDs (ESSDs). The functionality of disks in replication pairs is limited.
-     * Take note of the following items:</p>
+     * <h2>Description</h2>
+     * <p>&lt;props=&quot;china&quot;&gt;
+     * Asynchronous replication is a feature that provides cross-region data protection using the data replication capabilities of Elastic Block Storage. The feature asynchronously replicates data from a disk in one region to another disk in a different region to provide cross-region disaster recovery and backup for your data. You can use this feature to build disaster recovery capabilities for critical services, protect database data, and improve business continuity. For more information about the feature notes and billing, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview of asynchronous replication for disks</a>. The asynchronous replication feature is billed for bandwidth on a subscription basis. Pay-as-you-go billing for traffic is also supported.
+     * &lt;props=&quot;intl&quot;&gt;
+     * Async replication is a feature that provides cross-region data protection based on the data replication capabilities of Elastic Block Storage (EBS). The feature asynchronously replicates data from a disk in one region to a disk in another region for disaster recovery. You can use this feature to build disaster recovery capabilities for critical services, protect database data, and improve business continuity. The async replication feature is billed for bandwidth on a subscription basis.
+     * Currently, the asynchronous replication feature is available only for Enhanced SSD (ESSD) disks and has certain limitations.
+     * Before you create a replication pair, note the following:</p>
      * <ul>
-     * <li>Make sure that the source disk (primary disk) from which to replicate data and the destination disk (secondary disk) to which to replicate data are created. You can call the <a href="https://help.aliyun.com/document_detail/25513.html">CreateDisk</a> operation to create disks.</li>
-     * <li>The secondary disk cannot reside in the same region as the primary disk. For information about the regions that support async replication, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
-     * <li>After you call this operation to create a replication pair for the primary disk and the secondary disk, you must call the <a href="https://help.aliyun.com/document_detail/354205.html">StartDiskReplicaPair</a> operation to enable async replication to replicate data from the primary disk to the secondary disk cross regions on a periodic basis.</li>
+     * <li>Prepare a source disk (primary disk) and a destination disk (secondary disk). The source disk is the disk that you want to protect with disaster recovery, and the destination disk is the replication target. You can call the <a href="https://help.aliyun.com/document_detail/25513.html">CreateDisk</a> operation to create the disks.</li>
+     * <li>The secondary disk must be in a different region from the primary disk. For more information about the regions that support asynchronous replication, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview of asynchronous replication for disks</a>.</li>
+     * <li>This operation creates a replication pair between the primary and secondary disks. After you create the pair, you must call the <a href="https://help.aliyun.com/document_detail/354205.html">StartDiskReplicaPair</a> operation to activate it. Activating the replication pair starts the periodic, cross-region data replication from the primary disk to the secondary disk.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a replication pair to asynchronously replicate data between disks.</p>
+     * <p>Creates a disk replication pair.</p>
      * 
      * @param request CreateDiskReplicaPairRequest
      * @return CreateDiskReplicaPairResponse
@@ -888,7 +878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an enterprise-level snapshot policy</p>
+     * <p>Creates an enterprise-level snapshot policy by calling CreateEnterpriseSnapshotPolicy.</p>
      * 
      * @param tmpReq CreateEnterpriseSnapshotPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -990,7 +980,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an enterprise-level snapshot policy</p>
+     * <p>Creates an enterprise-level snapshot policy by calling CreateEnterpriseSnapshotPolicy.</p>
      * 
      * @param request CreateEnterpriseSnapshotPolicyRequest
      * @return CreateEnterpriseSnapshotPolicyResponse
@@ -1002,7 +992,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>中心化角色：删除App</p>
+     * <p>Deletes an application using the centralized role.</p>
      * 
      * @param request DeleteAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1046,7 +1036,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>中心化角色：删除App</p>
+     * <p>Deletes an application using the centralized role.</p>
      * 
      * @param request DeleteAppRequest
      * @return DeleteAppResponse
@@ -1245,8 +1235,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the tag keys and values of cloud disks and snapshots contained in a user-defined application. You can use filterTagKey to narrow the query scope.</p>
+     * 
      * <b>summary</b> : 
-     * <p>中心化角色：查询App信息</p>
+     * <p>Queries application information as a centralized role.</p>
      * 
      * @param request DescribeAppsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1293,8 +1287,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the tag keys and values of cloud disks and snapshots contained in a user-defined application. You can use filterTagKey to narrow the query scope.</p>
+     * 
      * <b>summary</b> : 
-     * <p>中心化角色：查询App信息</p>
+     * <p>Queries application information as a centralized role.</p>
      * 
      * @param request DescribeAppsRequest
      * @return DescribeAppsResponse
@@ -1306,17 +1304,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can use one of the following methods to check the responses:
-     *     *   Method 1: Use <code>NextToken</code> to configure the query token. Set the value to the <code>NextToken</code> value that is returned in the last call to the DescribeDisks operation. Then, use <code>MaxResults</code> to specify the maximum number of entries to return on each page.
-     *     *   Method 2: Use <code>PageSize</code> to specify the number of entries to return on each page and then use <code>PageNumber</code> to specify the number of the page to return.
-     *         You can use only one of the preceding methods. If a large number of entries are to be returned, we recommend that you use method 1. When <code>NextToken</code> is specified, <code>PageSize</code> and <code>PageNumber</code> do not take effect and <code>TotalCount</code> in the response is invalid.</p>
      * <ul>
-     * <li>A disk that has the multi-attach feature enabled can be attached to multiple instances. You can query the attachment information of the disk based on the <code>Attachment</code> values in the response.
-     * When you call an API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in the required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format overview</a>.</li>
+     * <li>The following two methods are supported to view returned data:<ul>
+     * <li>Method 1: Use <code>NextToken</code> to set a query token. Set its value to the <code>NextToken</code> value returned by the previous call to DescribeDisks, and use <code>MaxResults</code> to set the maximum number of entries per page.</li>
+     * <li>Method 2: Use <code>PageSize</code> to set the number of entries per page, and use <code>PageNumber</code> to set the page number.
+     * You can use only one of the preceding methods. When a large number of entries are returned, we recommend that you use Method 1. If you set <code>NextToken</code>, the <code>PageSize</code> and <code>PageNumber</code> request parameters do not take effect, and <code>TotalCount</code> in the returned data is invalid.</li>
+     * </ul>
+     * </li>
+     * <li>Cloud disks with the multi-attach feature enabled can be attached to multiple instances. You can view all attachment information of a cloud disk based on the <code>Attachment</code> list in the response.
+     * When you invoke an API operation by using Cloud Assistant CLI, specify request parameters of different data types in the required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format of CLI</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about cloud disks in a dedicated block storage cluster.</p>
+     * <p>Queries information about one or more cloud disks that you have created in a dedicated block storage cluster.</p>
      * 
      * @param request DescribeDedicatedBlockStorageClusterDisksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1360,17 +1360,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can use one of the following methods to check the responses:
-     *     *   Method 1: Use <code>NextToken</code> to configure the query token. Set the value to the <code>NextToken</code> value that is returned in the last call to the DescribeDisks operation. Then, use <code>MaxResults</code> to specify the maximum number of entries to return on each page.
-     *     *   Method 2: Use <code>PageSize</code> to specify the number of entries to return on each page and then use <code>PageNumber</code> to specify the number of the page to return.
-     *         You can use only one of the preceding methods. If a large number of entries are to be returned, we recommend that you use method 1. When <code>NextToken</code> is specified, <code>PageSize</code> and <code>PageNumber</code> do not take effect and <code>TotalCount</code> in the response is invalid.</p>
      * <ul>
-     * <li>A disk that has the multi-attach feature enabled can be attached to multiple instances. You can query the attachment information of the disk based on the <code>Attachment</code> values in the response.
-     * When you call an API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in the required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format overview</a>.</li>
+     * <li>The following two methods are supported to view returned data:<ul>
+     * <li>Method 1: Use <code>NextToken</code> to set a query token. Set its value to the <code>NextToken</code> value returned by the previous call to DescribeDisks, and use <code>MaxResults</code> to set the maximum number of entries per page.</li>
+     * <li>Method 2: Use <code>PageSize</code> to set the number of entries per page, and use <code>PageNumber</code> to set the page number.
+     * You can use only one of the preceding methods. When a large number of entries are returned, we recommend that you use Method 1. If you set <code>NextToken</code>, the <code>PageSize</code> and <code>PageNumber</code> request parameters do not take effect, and <code>TotalCount</code> in the returned data is invalid.</li>
+     * </ul>
+     * </li>
+     * <li>Cloud disks with the multi-attach feature enabled can be attached to multiple instances. You can view all attachment information of a cloud disk based on the <code>Attachment</code> list in the response.
+     * When you invoke an API operation by using Cloud Assistant CLI, specify request parameters of different data types in the required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format of CLI</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about cloud disks in a dedicated block storage cluster.</p>
+     * <p>Queries information about one or more cloud disks that you have created in a dedicated block storage cluster.</p>
      * 
      * @param request DescribeDedicatedBlockStorageClusterDisksRequest
      * @return DescribeDedicatedBlockStorageClusterDisksResponse
@@ -1652,12 +1654,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>To perform a paged query, specify the MaxResults and NextToken parameters.
-     * During a paged query, when you call the DescribeDiskReplicaGroups operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDiskReplicaGroups operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.</p>
+     * <h2>Description</h2>
+     * <p>To perform a paged query, you can use the MaxResults and NextToken parameters.
+     * When you query the first page, set <code>MaxResults</code> to specify the number of entries to return. The <code>NextToken</code> value in the response is the token used to query subsequent pages. To query a subsequent page, set <code>NextToken</code> to the value from the previous response and set MaxResults to specify the number of entries for the current page.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of replication pair-consistent groups in a specific region.</p>
+     * <p>Queries information about one or more replication pair-consistent groups in a specified region.</p>
      * 
      * @param request DescribeDiskReplicaGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1725,12 +1727,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>To perform a paged query, specify the MaxResults and NextToken parameters.
-     * During a paged query, when you call the DescribeDiskReplicaGroups operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDiskReplicaGroups operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.</p>
+     * <h2>Description</h2>
+     * <p>To perform a paged query, you can use the MaxResults and NextToken parameters.
+     * When you query the first page, set <code>MaxResults</code> to specify the number of entries to return. The <code>NextToken</code> value in the response is the token used to query subsequent pages. To query a subsequent page, set <code>NextToken</code> to the value from the previous response and set MaxResults to specify the number of entries for the current page.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of replication pair-consistent groups in a specific region.</p>
+     * <p>Queries information about one or more replication pair-consistent groups in a specified region.</p>
      * 
      * @param request DescribeDiskReplicaGroupsRequest
      * @return DescribeDiskReplicaGroupsResponse
@@ -1790,15 +1792,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <h2>Description</h2>
      * <ul>
-     * <li>For information about the regions in which async replication is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
-     * <li>When you call this operation for a specific region, if the primary disk (source disk) or secondary disk (destination disk) of a replication pair resides in the region, information about the replication pair is displayed in the response.</li>
-     * <li>If you want to perform a paged query, configure the <code>NextToken</code> and <code>MaxResults</code> parameters. During a paged query, when you call the DescribeDiskReplicaPairs operation to retrieve the first page of results, set <code>MaxResults</code> to limit the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDiskReplicaPairs operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.</li>
+     * <li>For information about the regions that support asynchronous replication, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview of asynchronous replication for disks</a>.</li>
+     * <li>If the primary or secondary disk of an asynchronous replication pair is in the specified region, the query returns information about that replication pair.</li>
+     * <li>To perform a paged query, use the MaxResults and NextToken parameters. For the first page, set MaxResults to limit the number of entries returned. The <code>NextToken</code> value in the response is the token for the next page. For subsequent pages, set <code>NextToken</code> to the value from the previous response and set <code>MaxResults</code> to limit the number of entries.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about replication pairs in a specific region.</p>
+     * <p>Queries information about one or more replication pairs in a specified region.</p>
      * 
      * @param request DescribeDiskReplicaPairsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1870,15 +1872,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <h2>Description</h2>
      * <ul>
-     * <li>For information about the regions in which async replication is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
-     * <li>When you call this operation for a specific region, if the primary disk (source disk) or secondary disk (destination disk) of a replication pair resides in the region, information about the replication pair is displayed in the response.</li>
-     * <li>If you want to perform a paged query, configure the <code>NextToken</code> and <code>MaxResults</code> parameters. During a paged query, when you call the DescribeDiskReplicaPairs operation to retrieve the first page of results, set <code>MaxResults</code> to limit the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDiskReplicaPairs operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.</li>
+     * <li>For information about the regions that support asynchronous replication, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview of asynchronous replication for disks</a>.</li>
+     * <li>If the primary or secondary disk of an asynchronous replication pair is in the specified region, the query returns information about that replication pair.</li>
+     * <li>To perform a paged query, use the MaxResults and NextToken parameters. For the first page, set MaxResults to limit the number of entries returned. The <code>NextToken</code> value in the response is the token for the next page. For subsequent pages, set <code>NextToken</code> to the value from the previous response and set <code>MaxResults</code> to limit the number of entries.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about replication pairs in a specific region.</p>
+     * <p>Queries information about one or more replication pairs in a specified region.</p>
      * 
      * @param request DescribeDiskReplicaPairsRequest
      * @return DescribeDiskReplicaPairsResponse
@@ -1890,7 +1892,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about enterprise-level snapshot policies. When you call this operation, you can specify parameters, such as PolicyIds, ResourceGroupId, and Tag, in the request.</p>
+     * <p>Queries enterprise-level snapshot policies by specifying parameters such as PolicyIds, ResourceGroupId, and Tag.</p>
      * 
      * @param request DescribeEnterpriseSnapshotPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1958,7 +1960,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about enterprise-level snapshot policies. When you call this operation, you can specify parameters, such as PolicyIds, ResourceGroupId, and Tag, in the request.</p>
+     * <p>Queries enterprise-level snapshot policies by specifying parameters such as PolicyIds, ResourceGroupId, and Tag.</p>
      * 
      * @param request DescribeEnterpriseSnapshotPolicyRequest
      * @return DescribeEnterpriseSnapshotPolicyResponse
@@ -1970,7 +1972,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the risk events of a disk.</p>
+     * <p>Queries cloud disk risk events.</p>
      * 
      * @param request DescribeEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2038,7 +2040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the risk events of a disk.</p>
+     * <p>Queries cloud disk risk events.</p>
      * 
      * @param request DescribeEventsRequest
      * @return DescribeEventsResponse
@@ -2050,7 +2052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries one or more Elastic Block Storage (EBS) devices that you created.</p>
+     * <p>Queries one or more block storage cloud disks that you have created.</p>
      * 
      * @param request DescribeLensMonitorDisksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2069,6 +2071,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.diskIds)) {
             query.put("DiskIds", request.diskIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecsInstanceId)) {
+            query.put("EcsInstanceId", request.ecsInstanceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.lensTags)) {
@@ -2106,7 +2112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries one or more Elastic Block Storage (EBS) devices that you created.</p>
+     * <p>Queries one or more block storage cloud disks that you have created.</p>
      * 
      * @param request DescribeLensMonitorDisksRequest
      * @return DescribeLensMonitorDisksResponse
@@ -2117,12 +2123,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Queries the status of CloudLens for EBS.</p>
+     * <p>Queries the status of the EBS Lens service activated by the user.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeLensServiceStatusResponse
@@ -2144,12 +2146,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Queries the status of CloudLens for EBS.</p>
+     * <p>Queries the status of the EBS Lens service activated by the user.</p>
      * @return DescribeLensServiceStatusResponse
      */
     public DescribeLensServiceStatusResponse describeLensServiceStatus() throws Exception {
@@ -2159,7 +2157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query single metric monitoring information</p>
+     * <p>Queries the monitoring metrics of a resource.</p>
      * 
      * @param tmpReq DescribeMetricDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2229,7 +2227,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query single metric monitoring information</p>
+     * <p>Queries the monitoring metrics of a resource.</p>
      * 
      * @param request DescribeMetricDataRequest
      * @return DescribeMetricDataResponse
@@ -2309,7 +2307,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of regions in which Elastic Block Storage (EBS) features (such as async replication, CloudLens for EBS, and Dedicated Block Storage Cluster) are supported.</p>
+     * <p>Queries the regions supported by Elastic Block Storage (EBS) features, including asynchronous replication, EBS Lens, and dedicated block storage clusters.</p>
      * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2349,7 +2347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of regions in which Elastic Block Storage (EBS) features (such as async replication, CloudLens for EBS, and Dedicated Block Storage Cluster) are supported.</p>
+     * <p>Queries the regions supported by Elastic Block Storage (EBS) features, including asynchronous replication, EBS Lens, and dedicated block storage clusters.</p>
      * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -2767,7 +2765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Centralized Role: Obtain User Usage Report with reportId</p>
+     * <p>Retrieves a user usage report by report ID using the centralized role.</p>
      * 
      * @param request GetReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2813,7 +2811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Centralized Role: Obtain User Usage Report with reportId</p>
+     * <p>Retrieves a user usage report by report ID using the centralized role.</p>
      * 
      * @param request GetReportRequest
      * @return GetReportResponse
@@ -2825,7 +2823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询异步复制支持的目的地域和可用区</p>
+     * <p>Queries the destination regions and zones that support asynchronous replication for a specified zone.</p>
      * 
      * @param request ListReplicaEdgeSupportedRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2869,7 +2867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询异步复制支持的目的地域和可用区</p>
+     * <p>Queries the destination regions and zones that support asynchronous replication for a specified zone.</p>
      * 
      * @param request ListReplicaEdgeSupportedRequest
      * @return ListReplicaEdgeSupportedResponse
@@ -2881,7 +2879,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries historical reports of a specific application.</p>
+     * <p>Queries the historical report list for a specified application using a centralized role.</p>
      * 
      * @param request ListReportsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2935,7 +2933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries historical reports of a specific application.</p>
+     * <p>Queries the historical report list for a specified application using a centralized role.</p>
      * 
      * @param request ListReportsRequest
      * @return ListReportsResponse
@@ -3027,7 +3025,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>中心化角色：修改App</p>
+     * <p>Modifies an app from a centralized role.</p>
      * 
      * @param request ModifyAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3095,7 +3093,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>中心化角色：修改App</p>
+     * <p>Modifies an app from a centralized role.</p>
      * 
      * @param request ModifyAppRequest
      * @return ModifyAppResponse
@@ -3173,14 +3171,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <h2>Description</h2>
      * <ul>
-     * <li>For information about the regions in which the replication pair-consistent group feature is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>For information about the regions that support the replication pair-consistent group feature, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview of asynchronous replication</a>.</li>
      * <li>The replication pair-consistent group must be in the <strong>Created</strong> (<code>created</code>) or <strong>Stopped</strong> (<code>stopped</code>) state.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the name, description, or recovery point objective (RPO) of a replication pair-consistent group.</p>
+     * <p>Modifies the name, description, or Recovery Point Objective (RPO) of a replication pair-consistent group.</p>
      * 
      * @param request ModifyDiskReplicaGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3240,14 +3238,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <h2>Description</h2>
      * <ul>
-     * <li>For information about the regions in which the replication pair-consistent group feature is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
+     * <li>For information about the regions that support the replication pair-consistent group feature, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview of asynchronous replication</a>.</li>
      * <li>The replication pair-consistent group must be in the <strong>Created</strong> (<code>created</code>) or <strong>Stopped</strong> (<code>stopped</code>) state.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the name, description, or recovery point objective (RPO) of a replication pair-consistent group.</p>
+     * <p>Modifies the name, description, or Recovery Point Objective (RPO) of a replication pair-consistent group.</p>
      * 
      * @param request ModifyDiskReplicaGroupRequest
      * @return ModifyDiskReplicaGroupResponse
@@ -3259,14 +3257,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <h2>Description</h2>
      * <ul>
-     * <li>For information about the regions in which async replication is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
-     * <li>Only replication pairs that are in the <strong>Created</strong> (<code>created</code>) or <strong>Stopped</strong> (<code>stopped</code>) state can have their names or descriptions modified.</li>
+     * <li>For information about the regions that support the asynchronous replication feature, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview of asynchronous replication</a>.</li>
+     * <li>You can modify the name or description of a replication pair only when the pair is in the <strong>Created</strong> (<code>created</code>) or <strong>Stopped</strong> (<code>stopped</code>) state.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a replication pair.</p>
+     * <p>Modifies an async replication pair.</p>
      * 
      * @param request ModifyDiskReplicaPairRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3326,14 +3324,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <h2>Description</h2>
      * <ul>
-     * <li>For information about the regions in which async replication is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
-     * <li>Only replication pairs that are in the <strong>Created</strong> (<code>created</code>) or <strong>Stopped</strong> (<code>stopped</code>) state can have their names or descriptions modified.</li>
+     * <li>For information about the regions that support the asynchronous replication feature, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview of asynchronous replication</a>.</li>
+     * <li>You can modify the name or description of a replication pair only when the pair is in the <strong>Created</strong> (<code>created</code>) or <strong>Stopped</strong> (<code>stopped</code>) state.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a replication pair.</p>
+     * <p>Modifies an async replication pair.</p>
      * 
      * @param request ModifyDiskReplicaPairRequest
      * @return ModifyDiskReplicaPairResponse
@@ -4345,7 +4343,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Search for a enterprise-level snapshot policy.</p>
+     * <p>Modifies the configuration of an enterprise-level snapshot policy.</p>
      * 
      * @param tmpReq UpdateEnterpriseSnapshotPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4439,7 +4437,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Search for a enterprise-level snapshot policy.</p>
+     * <p>Modifies the configuration of an enterprise-level snapshot policy.</p>
      * 
      * @param request UpdateEnterpriseSnapshotPolicyRequest
      * @return UpdateEnterpriseSnapshotPolicyResponse

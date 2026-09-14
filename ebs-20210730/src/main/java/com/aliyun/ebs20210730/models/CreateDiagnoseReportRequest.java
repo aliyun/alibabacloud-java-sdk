@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDiagnoseReportRequest extends TeaModel {
     /**
+     * <p>A client-generated token to ensure request idempotency. This lets you safely retry the request without creating a duplicate diagnostic report. The token can contain a maximum of 64 ASCII characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
@@ -12,6 +14,10 @@ public class CreateDiagnoseReportRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The diagnosis type. The only valid value is:</p>
+     * <ul>
+     * <li>Performance: performance diagnosis</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +27,8 @@ public class CreateDiagnoseReportRequest extends TeaModel {
     public String diagnoseType;
 
     /**
+     * <p>The end time for the diagnosis, in UTC. The time must be in the ISO 8601 format (yyyy-MM-ddTHH:mm:ssZ).</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-09-07T16:49:25Z</p>
      */
@@ -28,6 +36,8 @@ public class CreateDiagnoseReportRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The region ID. Call the <a href="https://help.aliyun.com/zh/ecs/developer-reference/api-ebs-2021-07-30-describeregions?spm=a2c4g.11186623.0.i7">DescribeRegions</a> operation to find all regions supported by EBS Data Insight.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-zhangjiakou</p>
      */
@@ -35,6 +45,8 @@ public class CreateDiagnoseReportRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>d-asb1s8***</p>
      */
@@ -42,6 +54,11 @@ public class CreateDiagnoseReportRequest extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The resource type. The only valid value is:</p>
+     * <ul>
+     * <li>Disk: a cloud disk</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Disk</p>
      */
@@ -49,6 +66,8 @@ public class CreateDiagnoseReportRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The start time for the diagnosis, in UTC. The time must be in the ISO 8601 format (yyyy-MM-ddTHH:mm:ssZ).</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-09-01T02:26:00Z</p>
      */

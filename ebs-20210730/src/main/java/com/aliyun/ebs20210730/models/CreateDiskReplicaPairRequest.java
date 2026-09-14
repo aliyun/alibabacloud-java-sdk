@@ -5,14 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateDiskReplicaPairRequest extends TeaModel {
     /**
-     * <p>The bandwidth to use to asynchronously replicate data from the primary disk to the secondary disk. Unit: Kbit/s. Valid values:</p>
+     * <p>The bandwidth for asynchronous data replication between disks. The unit is Kbps. Valid values:</p>
      * <ul>
-     * <li>10240</li>
-     * <li>20480</li>
-     * <li>51200</li>
-     * <li>102400</li>
+     * <li><p>10240</p>
+     * </li>
+     * <li><p>20480</p>
+     * </li>
+     * <li><p>51200</p>
+     * </li>
+     * <li><p>102400</p>
+     * </li>
      * </ul>
-     * <p>Default value: 10240. When you set the ChargeType parameter to POSTPAY, the Bandwidth parameter is automatically set to 0 and cannot be modified. The value 0 indicates that bandwidth is dynamically allocated based on the volume of data that is asynchronously replicated from the primary disk to the secondary disk.</p>
+     * <p>Default value: 10240.
+     * When ChargeType is set to POSTPAY, you cannot specify this parameter. The system uses a value of 0, which means that the bandwidth is dynamically allocated based on data writes.</p>
      * 
      * <strong>example:</strong>
      * <p>10240</p>
@@ -23,8 +28,10 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     /**
      * <p>The billing method of the replication pair. Valid values:</p>
      * <ul>
-     * <li>PREPAY: subscription</li>
-     * <li>POSTPAY: pay-as-you-go</li>
+     * <li><p>PREPAY: subscription.</p>
+     * </li>
+     * <li><p>POSTPAY: pay-as-you-go.</p>
+     * </li>
      * </ul>
      * <p>Default value: POSTPAY.</p>
      * 
@@ -35,7 +42,7 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The client token to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>A client token to ensure the idempotence of the request. Generate a value from your client to make sure that the value is unique among different requests. The ClientToken parameter can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -44,7 +51,7 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the replication pair. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description of the replication pair. The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>This is description.</p>
@@ -53,7 +60,7 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the secondary disk.</p>
+     * <p>The ID of the destination disk (secondary disk).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +70,7 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     public String destinationDiskId;
 
     /**
-     * <p>The region ID of the secondary disk. You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which async replication is supported.</p>
+     * <p>The region ID of the destination disk (secondary disk). You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the regions that support asynchronous replication.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +80,7 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     public String destinationRegionId;
 
     /**
-     * <p>The zone ID of the secondary disk.</p>
+     * <p>The zone ID of the destination disk (secondary disk).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,7 +90,7 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     public String destinationZoneId;
 
     /**
-     * <p>The ID of the primary disk.</p>
+     * <p>The ID of the source disk (primary disk).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -93,7 +100,17 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>Whether to enable replication time control. By default, this parameter is disabled.</p>
+     * <p>Specifies whether to enable replication time control (RTC). Valid values:</p>
+     * <ul>
+     * <li><p>false: Disables RTC.</p>
+     * </li>
+     * <li><p>true: Enables RTC.</p>
+     * </li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * <blockquote>
+     * <p>If the replication pair is added to a replication group, the setting of this parameter is the same as that of the replication group.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -102,7 +119,7 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     public Boolean enableRtc;
 
     /**
-     * <p>The name of the replication pair. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the replication pair. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>TestReplicaPair</p>
@@ -111,7 +128,7 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     public String pairName;
 
     /**
-     * <p>The subscription duration of the replication pair. When <code>ChargeType</code> is set to PREPAY, this parameter must be specified. Valid values: 1, 2, 3, 6, 12, 24, 36, and 60. The subscription duration unit is specified by <code>PeriodUnit</code>.</p>
+     * <p>The subscription duration of the replication pair. This parameter is required when <code>ChargeType</code> is set to PREPAY. The unit of the duration is specified by <code>PeriodUnit</code>. Valid values: 1, 2, 3, 6, 12, 24, 36, and 60.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -120,7 +137,7 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     public Long period;
 
     /**
-     * <p>The unit of the subscription duration of the replication pair. Set the value to Month. Valid value: Month</p>
+     * <p>The unit of the subscription duration. Valid value: Month.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -129,7 +146,7 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The recovery point objective (RPO) of the replication pair. Unit: seconds. Valid value: 900.</p>
+     * <p>The recovery point objective (RPO) of the replication pair. The unit is seconds. Currently, only 900 is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>900</p>
@@ -138,7 +155,7 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     public Long RPO;
 
     /**
-     * <p>The ID of the region in which to create the replication pair.</p>
+     * <p>The region ID of the replication pair.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -157,7 +174,7 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The zone ID of the primary disk.</p>
+     * <p>The zone ID of the source disk (primary disk).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -167,7 +184,7 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     public String sourceZoneId;
 
     /**
-     * <p>The tags to add to the replication pair-consistent group. You can specify up to 20 tags.</p>
+     * <p>The list of tags. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateDiskReplicaPairRequestTag> tag;

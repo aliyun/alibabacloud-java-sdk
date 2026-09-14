@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDiskReplicaPairsRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries per page. You can use this parameter together with NextToken.</p>
+     * <p>The maximum number of entries to return on each page. Use this parameter with NextToken.</p>
      * <p>Valid values: 1 to 500.</p>
      * <p>Default value: 10.</p>
      * 
@@ -16,7 +16,7 @@ public class DescribeDiskReplicaPairsRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The name of the replication pair. Fuzzy search is supported.</p>
+     * <p>The name of the replication pair. Fuzzy matching is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>name***</p>
@@ -25,7 +25,7 @@ public class DescribeDiskReplicaPairsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken. If you specify NextToken, the PageSize and PageNumber request parameters do not take effect, and the TotalCount response parameter is invalid.</p>
+     * <p>The query token. Set this parameter to the NextToken value returned from the previous call to this operation. You do not need to set this parameter for the first call. If you set NextToken, the PageSize and PageNumber parameters are ignored, and the TotalCount value in the response is invalid.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -43,7 +43,8 @@ public class DescribeDiskReplicaPairsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     * <p>The number of entries per page.
+     * Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -52,8 +53,8 @@ public class DescribeDiskReplicaPairsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The IDs of replication pairs. You can specify the IDs of one or more replication pairs and separate the IDs with commas (,). Example: <code>pair-cn-dsa****,pair-cn-asd****</code>.</p>
-     * <p>This parameter is empty by default, which indicates that all replication pairs in the specified region are queried. You can specify a maximum of 100 replication pair IDs.</p>
+     * <p>The IDs of replication pairs. Specify one or more replication pair IDs. The IDs must be in the <code>pair-cn-dsa****,pair-cn-asd****</code> format.</p>
+     * <p>If you leave this parameter empty, all replication pairs in the current region are queried. You can specify up to 100 replication pair IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>pair-cn-dsa****</p>
@@ -62,7 +63,7 @@ public class DescribeDiskReplicaPairsRequest extends TeaModel {
     public String pairIds;
 
     /**
-     * <p>The region ID of the primary or secondary disk in the replication pair. You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which async replication is supported.</p>
+     * <p>The ID of the region where the primary or secondary disk of the replication pair resides. Call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the regions that support asynchronous replication.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,10 +73,10 @@ public class DescribeDiskReplicaPairsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the replication pair-consistent group. You can specify the ID of a replication pair-consistent group to query the replication pairs in the group. Example: <code>pg-****</code>.</p>
-     * <p>This parameter is empty by default, which indicates that all replication pairs in the specified region are queried.</p>
+     * <p>The ID of the replication pair-consistent group. Specify the ID of a replication pair-consistent group to query the replication pairs in the group. The ID must be in the <code>pg-****</code> format.</p>
+     * <p>If you leave this parameter empty, all replication pairs in the current region are queried.</p>
      * <blockquote>
-     * <p> If this parameter is set to<code>-</code>, replication pairs that are not added to any replication pair-consistent groups are returned.</p>
+     * <p>If you set this parameter to <code>-</code>, replication pairs that are not in any replication pair-consistent group are returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -94,10 +95,12 @@ public class DescribeDiskReplicaPairsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The type of the site from which the information of replication pairs is retrieved. Valid value:</p>
+     * <p>The site from which to query data. Query data from the production site or the disaster recovery site. Valid values:</p>
      * <ul>
-     * <li>production: primary site</li>
-     * <li>backup: secondary site</li>
+     * <li><p>production: the production site.</p>
+     * </li>
+     * <li><p>backup: the disaster recovery site.</p>
+     * </li>
      * </ul>
      * <p>Default value: production.</p>
      * 
@@ -108,7 +111,7 @@ public class DescribeDiskReplicaPairsRequest extends TeaModel {
     public String site;
 
     /**
-     * <p>The tags. Up to 20 tags are supported.</p>
+     * <p>The tags. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDiskReplicaPairsRequestTag> tag;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDiagnoseReportResponseBody extends TeaModel {
     /**
+     * <p>The report ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>report-qe2s****</p>
      */
@@ -12,6 +14,8 @@ public class CreateDiagnoseReportResponseBody extends TeaModel {
     public String reportId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */

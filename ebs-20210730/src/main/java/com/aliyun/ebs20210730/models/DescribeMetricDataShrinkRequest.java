@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricDataShrinkRequest extends TeaModel {
     /**
-     * <p>Aggregation method over time. Possible values include:</p>
+     * <p>The method for aggregating data over time. Valid values:</p>
      * <ul>
      * <li>SUM_OVER_TIME</li>
      * <li>COUNT_OVER_TIME</li>
      * <li>AVG_OVER_TIME</li>
      * <li>MAX_OVER_TIME</li>
      * <li>MIN_OVER_TIME</li>
-     * <li>SUM_OVER_TIME_LCRO: Sum over a left-closed, right-open interval</li>
-     * <li>AVG_OVER_TIME_LCRO: Average over a left-closed, right-open interval</li>
-     * <li>SUM_OVER_TIME_LORC: Sum over a left-open, right-closed interval</li>
-     * <li>AVG_OVER_TIME_LORC: Average over a left-open, right-closed interval</li>
+     * <li>SUM_OVER_TIME_LCRO: The sum of values in a left-closed, right-open interval.</li>
+     * <li>AVG_OVER_TIME_LCRO: The average of values in a left-closed, right-open interval.</li>
+     * <li>SUM_OVER_TIME_LORC: The sum of values in a left-open, right-closed interval.</li>
+     * <li>AVG_OVER_TIME_LORC: The average of values in a left-open, right-closed interval.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -25,14 +25,14 @@ public class DescribeMetricDataShrinkRequest extends TeaModel {
     public String aggreOps;
 
     /**
-     * <p>Aggregation method between lines. Possible values include:</p>
+     * <p>The method for aggregating data across different lines. Valid values:</p>
      * <ul>
-     * <li>NON: No aggregation</li>
-     * <li>SUM: Sum</li>
-     * <li>AVG: Average</li>
-     * <li>COUNT: Count</li>
-     * <li>MAX: Maximum</li>
-     * <li>MIN: Minimum</li>
+     * <li>NON: No aggregation is performed.</li>
+     * <li>SUM: The sum of values.</li>
+     * <li>AVG: The average of values.</li>
+     * <li>COUNT: The number of values.</li>
+     * <li>MAX: The maximum value.</li>
+     * <li>MIN: The minimum value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,15 +42,15 @@ public class DescribeMetricDataShrinkRequest extends TeaModel {
     public String aggreOverLineOps;
 
     /**
-     * <p>The dimension map, in the JSON format. Valid values:</p>
+     * <p>A map of dimensions in the JSON format. The map specifies the dimensions to query. The following keys are supported:</p>
      * <ul>
-     * <li>DiskId: the disk name. Example: d-xxx.</li>
-     * <li>DeviceType: the disk type. system indicates the system disk, and data indicates the data disk.</li>
-     * <li>DeviceCategory: the disk category. Example: cloud_essd.</li>
-     * <li>EcsInstanceId: the ECS instance name. Example: i-xxx.</li>
-     * <li>Azone: the zone, such as cn-hangzhou-a.</li>
+     * <li>DiskId: The disk name, such as d-xxx.</li>
+     * <li>DeviceType: The disk category. \<code>system\\</code> indicates a system disk and \<code>data\\</code> indicates a data disk.</li>
+     * <li>DeviceCategory: The disk type, such as cloud_essd.</li>
+     * <li>EcsInstanceId: The name of the ECS instance to which the disk is attached, such as i-xxx.</li>
+     * <li>Azone: The zone, such as cn-hangzhou-a.</li>
      * </ul>
-     * <p>The returned result is the intersection of all dimension filtering conditions.</p>
+     * <p>The returned results are the intersection of all specified dimension-based filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;DiskId&quot;:[&quot;d-bp14xxxx&quot;,&quot;d-bp11xxxx&quot;], &quot;DeviceCategory&quot;: [&quot;cloud_essd&quot;]}</p>
@@ -59,7 +59,7 @@ public class DescribeMetricDataShrinkRequest extends TeaModel {
     public String dimensions;
 
     /**
-     * <p>The end time point for obtaining metric data. It should not be later than the current moment. Represented according to the ISO 8601 standard, using UTC +0 time, in the format yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The end of the time range to query metric data. The time cannot be later than the current time. The time must be in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-11-21T02:00:00Z</p>
@@ -68,13 +68,13 @@ public class DescribeMetricDataShrinkRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The list of fields used for grouping and aggregation.</p>
+     * <p>A list of fields for grouping and aggregation.</p>
      */
     @NameInMap("GroupByLabels")
     public String groupByLabelsShrink;
 
     /**
-     * <p>Metric name. Possible values include:</p>
+     * <p>The name of the metric. Valid values:</p>
      * <ul>
      * <li>disk_bps_percent</li>
      * <li>disk_iops_percent</li>
@@ -94,14 +94,14 @@ public class DescribeMetricDataShrinkRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The granularity at which data is collected for the metric. Unit: seconds. Default value: 5. Valid values:</p>
+     * <p>The interval at which to query metric data. Unit: seconds. The default value is 5. Valid values:</p>
      * <ul>
-     * <li>5: 5 seconds. The query time range can be up to 12 hours.</li>
-     * <li>10: 10 seconds. The query time range can be up to 24 hours.</li>
-     * <li>60: 60 seconds. The query time range can be up to 7 days.</li>
-     * <li>300: 300 seconds. The query time range can be up to 30 days.</li>
-     * <li>600: 600 seconds. The query time range can be up to 30 days.</li>
-     * <li>3600: 3,600 seconds. The query time range can be up to 30 days.</li>
+     * <li>5: 5-second precision. You can query data within a 12-hour time range.</li>
+     * <li>10: 10-second precision. You can query data within a 24-hour time range.</li>
+     * <li>60: 60-second precision. You can query data within a 7-day time range.</li>
+     * <li>300: 300-second precision. You can query data within a 30-day time range.</li>
+     * <li>600: 600-second precision. You can query data within a 30-day time range.</li>
+     * <li>3600: 3600-second precision. You can query data within a 30-day time range.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class DescribeMetricDataShrinkRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -120,7 +120,7 @@ public class DescribeMetricDataShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. You can specify a point in time that is up to 30 days before the current time. If both StartTime and EndTime are left empty, the monitoring metric data of the most recent statistical period is queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query metric data. The start time can be up to 30 days before the current time. If you leave both the StartTime and EndTime parameters empty, the system queries the metrics for the most recent period. The time must be in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-11-21T01:50:00Z</p>

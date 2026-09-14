@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventsRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end time of the event. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-01T04:00:00Z</p>
@@ -14,11 +14,11 @@ public class DescribeEventsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The severity level of the event. Valid values:</p>
+     * <p>The event level. Valid values:</p>
      * <ul>
-     * <li><strong>INFO</strong></li>
-     * <li><strong>WARN</strong></li>
-     * <li><strong>CRITICAL</strong></li>
+     * <li><strong>INFO</strong>: Notification.</li>
+     * <li><strong>WARN</strong>: Warning.</li>
+     * <li><strong>CRITICAL</strong>: Critical.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,20 +28,20 @@ public class DescribeEventsRequest extends TeaModel {
     public String eventLevel;
 
     /**
-     * <p>The name of the event. Valid values:</p>
+     * <p>The event name. Valid values:</p>
      * <ul>
-     * <li>NoSnapshot: indicates the event that is triggered because no snapshot is created for a disk to protect data on the disk.</li>
-     * <li>BurstIOTriggered: indicates the event that is triggered when a burst I/O operation is performed on a disk.</li>
-     * <li>CostOptimizationNeeded: indicates the event that is triggered when cost optimization is required.</li>
-     * <li>DiskSpecNotMatchedWithInstance: indicates the event that is triggered because the specifications of a disk do not match the instance to which the disk is attached.</li>
-     * <li>DiskIONo4kAligned: indicates the event that is triggered because the physical and logical sectors involved in a read or write operation are not 4K aligned.</li>
-     * <li>DiskIOHang: indicates the event that is triggered when an I/O hang occurs on a disk.</li>
-     * <li>InstanceIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on an instance reaches the upper limit.</li>
-     * <li>InstanceBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on an instance reaches the upper limit.</li>
-     * <li>DiskIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the associated instance.</li>
-     * <li>DiskBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the associated instance.</li>
-     * <li>DiskIOPSExceedDiskMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the disk.</li>
-     * <li>DiskBPSExceedDiskMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the disk.</li>
+     * <li>NoSnapshot: data protection</li>
+     * <li>BurstIOTriggered: burst I/O</li>
+     * <li>CostOptimizationNeeded: cost optimization</li>
+     * <li>DiskSpecNotMatchedWithInstance: instance and disk specification mismatch</li>
+     * <li>DiskIONo4kAligned: non-4K aligned read/write</li>
+     * <li>DiskIOHang: disk IOHang occurred</li>
+     * <li>InstanceIOPSExceedInstanceMaxLimit: instance IOPS reached the upper limit</li>
+     * <li>InstanceBPSExceedInstanceMaxLimit: instance BPS reached the upper limit</li>
+     * <li>DiskIOPSExceedInstanceMaxLimit: disk IOPS reached the instance upper limit</li>
+     * <li>DiskBPSExceedInstanceMaxLimit: disk BPS reached the instance upper limit</li>
+     * <li>DiskIOPSExceedDiskMaxLimit: disk IOPS reached the disk upper limit</li>
+     * <li>DiskBPSExceedDiskMaxLimit: disk BPS reached the disk upper limit</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,9 +51,9 @@ public class DescribeEventsRequest extends TeaModel {
     public String eventName;
 
     /**
-     * <p>The number of entries to return on each page. If you specify MaxResults, <code>MaxResults</code> and <code>NextToken</code> are used for a paged query.</p>
+     * <p>The maximum number of entries per page for a paged query. If you specify this parameter, the <code>MaxResults</code> and <code>NextToken</code> parameters are used together for the query.</p>
      * <p>Valid values: 1 to 100.</p>
-     * <p>Default value: 10</p>
+     * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -62,7 +62,7 @@ public class DescribeEventsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -71,7 +71,7 @@ public class DescribeEventsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID . You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions supported.</p>
+     * <p>The region ID. You can call DescribeRegions to query the list of regions supported by EBS Lens.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -90,11 +90,10 @@ public class DescribeEventsRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The type of resource. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li>disk.</li>
+     * <li>disk: cloud disk</li>
      * </ul>
-     * <p>Default value: disk.</p>
      * 
      * <strong>example:</strong>
      * <p>disk</p>
@@ -103,7 +102,7 @@ public class DescribeEventsRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The start time of the event. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-01T03:00:00Z</p>
@@ -112,14 +111,14 @@ public class DescribeEventsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The status of event. Valid values:</p>
+     * <p>The event status. Valid values:</p>
      * <ul>
-     * <li>WillExecute</li>
-     * <li>Executing</li>
-     * <li>Executed</li>
-     * <li>Ignore</li>
-     * <li>Expired</li>
-     * <li>Deleted</li>
+     * <li>WillExecute: pending </li>
+     * <li>Executing: processing</li>
+     * <li>Executed: processed</li>
+     * <li>Ignore: ignored</li>
+     * <li>Expired: expired</li>
+     * <li>Deleted: deleted</li>
      * </ul>
      * 
      * <strong>example:</strong>

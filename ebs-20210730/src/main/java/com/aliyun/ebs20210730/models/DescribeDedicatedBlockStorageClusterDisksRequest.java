@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedBlockStorageClusterDisksRequest extends TeaModel {
     /**
-     * <p>The ID of the dedicated block storage cluster.</p>
+     * <p>The dedicated block storage cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeDedicatedBlockStorageClusterDisksRequest extends TeaModel {
     public String dbscId;
 
     /**
-     * <p>The maximum number of entries to return on each page. Maximum value: 500.</p>
+     * <p>The maximum number of entries per page for a paged query. Maximum value: 500.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeDedicatedBlockStorageClusterDisksRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The query token. Set the value to the NextToken value returned in the previous call to the DescribeDedicatedBlockStorageClusterDisks operation. Leave this parameter empty the first time you call this operation.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>
@@ -34,7 +34,7 @@ public class DescribeDedicatedBlockStorageClusterDisksRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region where the dedicated block storage cluster resides. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the dedicated block storage cluster. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

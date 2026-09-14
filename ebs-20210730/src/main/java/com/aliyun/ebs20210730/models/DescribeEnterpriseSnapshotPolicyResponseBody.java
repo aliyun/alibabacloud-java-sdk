@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * <p>The pagination token (Token) returned for the next query.</p>
      * 
      * <strong>example:</strong>
-     * <p>AAAAAdDWBF2</p>
+     * <p>AAAAAdDWBF2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number for paged queries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page for paged queries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The returned snapshot policies.</p>
+     * <p>The list of policies.</p>
      */
     @NameInMap("Policies")
     public java.util.List<DescribeEnterpriseSnapshotPolicyResponseBodyPolicies> policies;
@@ -41,13 +41,13 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>5CA35A83-8D8A-5B67-BAA0-2E124F194DA4</p>
+     * <p>549BB71F-6778-53CE-AA73-E94ACE802AB4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -110,7 +110,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
 
     public static class DescribeEnterpriseSnapshotPolicyResponseBodyPoliciesCrossRegionCopyInfoRegions extends TeaModel {
         /**
-         * <p>The ID of the destination region.</p>
+         * <p>The snapshot copy destination region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -119,7 +119,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The retention period of snapshot copies in the destination region. Unit: day.</p>
+         * <p>The number of days to retain snapshots at the destination region.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -152,7 +152,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
 
     public static class DescribeEnterpriseSnapshotPolicyResponseBodyPoliciesCrossRegionCopyInfo extends TeaModel {
         /**
-         * <p>Indicates whether the cross-region replication feature is enabled.</p>
+         * <p>Indicates whether cross-region copy is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -161,7 +161,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The destination regions that store snapshot copies.</p>
+         * <p>The destination region information.</p>
          */
         @NameInMap("Regions")
         public java.util.List<DescribeEnterpriseSnapshotPolicyResponseBodyPoliciesCrossRegionCopyInfoRegions> regions;
@@ -191,7 +191,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
 
     public static class DescribeEnterpriseSnapshotPolicyResponseBodyPoliciesRetainRule extends TeaModel {
         /**
-         * <p>The maximum number of snapshots that can be retained.</p>
+         * <p>The retention count.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -200,7 +200,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         public Integer number;
 
         /**
-         * <p>The value of the retention period of snapshots.</p>
+         * <p>The time interval of the retention rule. The unit is specified by the TimeUnit parameter. The value must be greater than 1.</p>
          * 
          * <strong>example:</strong>
          * <p>14</p>
@@ -209,7 +209,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         public Integer timeInterval;
 
         /**
-         * <p>The unit of the retention period of snapshots.</p>
+         * <p>The retention time unit.</p>
          * 
          * <strong>example:</strong>
          * <p>DAYS</p>
@@ -250,7 +250,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
 
     public static class DescribeEnterpriseSnapshotPolicyResponseBodyPoliciesSchedule extends TeaModel {
         /**
-         * <p>The cron expression of the enterprise-level snapshot policy.</p>
+         * <p>The cron expression.</p>
          */
         @NameInMap("CronExpression")
         public String cronExpression;
@@ -272,7 +272,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
 
     public static class DescribeEnterpriseSnapshotPolicyResponseBodyPoliciesSpecialRetainRulesRules extends TeaModel {
         /**
-         * <p>The unit of the special retention period.</p>
+         * <p>The special period unit.</p>
          * 
          * <strong>example:</strong>
          * <p>WEEKS</p>
@@ -281,7 +281,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         public String specialPeriodUnit;
 
         /**
-         * <p>The value of the retention period.</p>
+         * <p>The time interval of the retention rule. The unit is specified by the TimeUnit parameter. The value must be greater than 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -290,7 +290,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         public Integer timeInterval;
 
         /**
-         * <p>The unit of the retention period.</p>
+         * <p>The retention time unit.</p>
          * 
          * <strong>example:</strong>
          * <p>WEEKS</p>
@@ -331,7 +331,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
 
     public static class DescribeEnterpriseSnapshotPolicyResponseBodyPoliciesSpecialRetainRules extends TeaModel {
         /**
-         * <p>Indicates whether the special retention period is enabled.</p>
+         * <p>Indicates whether special retention is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -370,7 +370,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
 
     public static class DescribeEnterpriseSnapshotPolicyResponseBodyPoliciesStorageRule extends TeaModel {
         /**
-         * <p>Indicates whether the instant access feature is enabled.</p>
+         * <p>Indicates whether instant access is enabled for snapshots.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -395,7 +395,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
 
     public static class DescribeEnterpriseSnapshotPolicyResponseBodyPoliciesTags extends TeaModel {
         /**
-         * <p>The key of the tag of the enterprise-level snapshot policy.</p>
+         * <p>The tag key of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>key</p>
@@ -404,7 +404,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of the tag of the enterprise-level snapshot policy.</p>
+         * <p>The tag value of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>value</p>
@@ -437,7 +437,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
 
     public static class DescribeEnterpriseSnapshotPolicyResponseBodyPolicies extends TeaModel {
         /**
-         * <p>The time when the enterprise-level snapshot policy was created.</p>
+         * <p>The creation time in UTC ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-06-24T06:03:35Z</p>
@@ -446,13 +446,13 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The replication rule of snapshots in the enterprise-level snapshot policy.</p>
+         * <p>The snapshot cross-region copy information.</p>
          */
         @NameInMap("CrossRegionCopyInfo")
         public DescribeEnterpriseSnapshotPolicyResponseBodyPoliciesCrossRegionCopyInfo crossRegionCopyInfo;
 
         /**
-         * <p>The description of the enterprise-level snapshot policy.</p>
+         * <p>The snapshot policy description.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -461,13 +461,13 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         public String desc;
 
         /**
-         * <p>The disks that are associated with the snapshot policy.</p>
+         * <p>The list of bound cloud disk IDs.</p>
          */
         @NameInMap("DiskIds")
         public java.util.List<String> diskIds;
 
         /**
-         * <p>Indicates whether snapshots are managed.</p>
+         * <p>The snapshot managed status.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -476,7 +476,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         public Boolean managedForEcs;
 
         /**
-         * <p>The name of the enterprise-level snapshot policy.</p>
+         * <p>The snapshot policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -485,7 +485,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the enterprise-level snapshot policy.</p>
+         * <p>The snapshot policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>esp-xxx</p>
@@ -503,25 +503,29 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The retention rule of the enterprise-level snapshot policy.</p>
+         * <p>The snapshot policy retention rule.</p>
          */
         @NameInMap("RetainRule")
         public DescribeEnterpriseSnapshotPolicyResponseBodyPoliciesRetainRule retainRule;
 
         /**
-         * <p>The scheduling rule of the enterprise-level snapshot policy.</p>
+         * <p>The snapshot policy schedule rule.</p>
          */
         @NameInMap("Schedule")
         public DescribeEnterpriseSnapshotPolicyResponseBodyPoliciesSchedule schedule;
 
         /**
-         * <p>The special retention rules of the enterprise-level snapshot policy.</p>
+         * <p>The special retention rules for the snapshot policy.</p>
          */
         @NameInMap("SpecialRetainRules")
         public DescribeEnterpriseSnapshotPolicyResponseBodyPoliciesSpecialRetainRules specialRetainRules;
 
         /**
-         * <p>The status of the enterprise-level snapshot policy.</p>
+         * <p>The status. Valid values:</p>
+         * <ul>
+         * <li>DISABLED</li>
+         * <li>ENABLED</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>DISABLED</p>
@@ -530,7 +534,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The storage rule of snapshots in the enterprise-level snapshot policy.</p>
+         * <p>The snapshot policy storage rule.</p>
          */
         @NameInMap("StorageRule")
         public DescribeEnterpriseSnapshotPolicyResponseBodyPoliciesStorageRule storageRule;
@@ -542,7 +546,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         public java.util.List<DescribeEnterpriseSnapshotPolicyResponseBodyPoliciesTags> tags;
 
         /**
-         * <p>The number of objects that are associated with the enterprise-level snapshot policy.</p>
+         * <p>The number of bound targets.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -551,7 +555,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         public Integer targetCount;
 
         /**
-         * <p>The type of the enterprise-level snapshot policy.</p>
+         * <p>The type. Valid values:</p>
+         * <ul>
+         * <li>DISK</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>DISK</p>

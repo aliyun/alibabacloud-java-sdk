@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>Ensures the idempotence of the request. Generate a parameter value from your client that is unique across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -14,13 +14,13 @@ public class CreateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Snapshot replication destination information.</p>
+     * <p>The snapshot replication information.</p>
      */
     @NameInMap("CrossRegionCopyInfo")
     public String crossRegionCopyInfoShrink;
 
     /**
-     * <p>The description of the policy.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -29,7 +29,7 @@ public class CreateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
     public String desc;
 
     /**
-     * <p>The name of the policy.</p>
+     * <p>The Policy Name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class CreateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The region ID . You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which snapshot policy is supported.</p>
+     * <p>The region ID. You can call DescribeRegions to query the regions that support asynchronous replication.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class CreateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which to assign the snapshot policy.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -58,32 +58,30 @@ public class CreateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The snapshot retention rule.</p>
+     * <p>The retention rule.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RetainRule")
     public String retainRuleShrink;
 
     /**
-     * <p>The rule for scheduling.</p>
+     * <p>The schedule rule.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Schedule")
     public String scheduleShrink;
 
     /**
-     * <p>The special snapshot retention rules.</p>
+     * <p>The special retention rules.</p>
      */
     @NameInMap("SpecialRetainRules")
     public String specialRetainRulesShrink;
 
     /**
-     * <p>The status of the policy. Valid values:</p>
+     * <p>The status. Valid values:</p>
      * <ul>
-     * <li><p>ENABLED: Enable snapshot policy execution.</p>
-     * </li>
-     * <li><p>DISABLED: Disable snapshot policy execution.</p>
-     * </li>
+     * <li>DISABLED</li>
+     * <li>ENABLED</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,19 +91,19 @@ public class CreateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
     public String state;
 
     /**
-     * <p>Advanced snapshot features.</p>
+     * <p>The advanced snapshot feature.</p>
      */
     @NameInMap("StorageRule")
     public String storageRuleShrink;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tag key-value pairs. Valid values of n: 1 to 20.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateEnterpriseSnapshotPolicyShrinkRequestTag> tag;
 
     /**
-     * <p>Binding target type, valid value:</p>
+     * <p>The type. Valid values:</p>
      * <ul>
      * <li>DISK</li>
      * </ul>
@@ -228,7 +226,7 @@ public class CreateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
 
     public static class CreateEnterpriseSnapshotPolicyShrinkRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,9 +236,7 @@ public class CreateEnterpriseSnapshotPolicyShrinkRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
-         * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>The tag value of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

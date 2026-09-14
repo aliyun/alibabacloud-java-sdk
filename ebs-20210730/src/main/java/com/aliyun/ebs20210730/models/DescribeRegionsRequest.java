@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
-     * <p>The language in which the regions and zones are named. This parameter corresponds to the <code>LocalName</code> response parameter. Valid values:</p>
+     * <p>The language type for region and zone names. This parameter determines the value of <code>LocalName</code> in the response. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US: English</li>
-     * <li>ja: Japanese</li>
+     * <li>zh-CN: Chinese.</li>
+     * <li>en-US: English.</li>
+     * <li>ja: Japanese.</li>
      * </ul>
      * <p>Default value: zh-CN.</p>
      * 
@@ -20,7 +20,7 @@ public class DescribeRegionsRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID of the user access endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -29,13 +29,16 @@ public class DescribeRegionsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The type of resource. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li>ear: async replication</li>
-     * <li>lens: CloudLens for EBS</li>
-     * <li>dbsc: Dedicated Block Storage Cluster</li>
+     * <li><p>ear: asynchronous replication.</p>
+     * </li>
+     * <li><p>lens: EBS Lens.</p>
+     * </li>
+     * <li><p>dbsc: dedicated block storage cluster.</p>
+     * </li>
      * </ul>
-     * <p>Default value: ear.</p>
+     * <p>If you do not specify a resource type, region information for all resource types is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>ear</p>
