@@ -2354,7 +2354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can obtain the count for each event type.</p>
+     * <p>Retrieves the count of events by type.</p>
      * 
      * @param request DescribeEventCountByThreatLevelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2402,7 +2402,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can obtain the count for each event type.</p>
+     * <p>Retrieves the count of events by type.</p>
      * 
      * @param request DescribeEventCountByThreatLevelRequest
      * @return DescribeEventCountByThreatLevelResponse
@@ -3002,6 +3002,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the purchase status of a user\&quot;s SIEM.</p>
+     * 
+     * @param request DescribeUserSiemOrderStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeUserSiemOrderStatusResponse
+     */
+    public DescribeUserSiemOrderStatusResponse describeUserSiemOrderStatusWithOptions(DescribeUserSiemOrderStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleFor)) {
+            body.put("RoleFor", request.roleFor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleType)) {
+            body.put("RoleType", request.roleType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeUserSiemOrderStatus"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUserSiemOrderStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the purchase status of a user\&quot;s SIEM.</p>
+     * 
+     * @param request DescribeUserSiemOrderStatusRequest
+     * @return DescribeUserSiemOrderStatusResponse
+     */
+    public DescribeUserSiemOrderStatusResponse describeUserSiemOrderStatus(DescribeUserSiemOrderStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeUserSiemOrderStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves the list of domain names protected by Web Application Firewall (WAF) instances.</p>
      * 
      * @param request DescribeWafScopeRequest
@@ -3286,7 +3338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the details of user data storage on the Log Management page.</p>
@@ -3329,7 +3381,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the details of user data storage on the Log Management page.</p>

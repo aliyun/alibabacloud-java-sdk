@@ -240,8 +240,8 @@ public class GetDataStorageResponseBody extends TeaModel {
         /**
          * <p>The group to which the log belongs. Valid values:</p>
          * <ul>
-         * <li>host: host logs.</li>
-         * <li>security: security logs.</li>
+         * <li>host: Host logs.</li>
+         * <li>security: Security logs.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -251,7 +251,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logDeliveryGroup;
 
         /**
-         * <p>Indicates whether log delivery is allowed. Log delivery is not available if the service is not purchased. Valid values:</p>
+         * <p>Indicates whether log delivery can be toggled. Log delivery cannot be enabled if the service is not purchased. Valid values:</p>
          * <ul>
          * <li>allow: Allowed.</li>
          * <li>deny: Not allowed.</li>
@@ -277,7 +277,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logDeliveryStatus;
 
         /**
-         * <p>The time of the most recent log delivery operation.</p>
+         * <p>The time when the log delivery was last modified. The time is in the YYYY-MM-DDTHH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-16T15:10:29</p>
@@ -441,7 +441,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String dataStorageRegionId;
 
         /**
-         * <p>Indicates whether the storage region can be modified. By default, the storage region cannot be modified. Contact your product manager to reset the region. The region can be reset only once. Valid values:</p>
+         * <p>Indicates whether the storage region can be modified. By default, the storage region cannot be modified. Contact the product manager to reset the region. The region can be reset only once. Valid values:</p>
          * <ul>
          * <li>allow: The storage region can be modified.</li>
          * <li>deny: The storage region cannot be modified.</li>
@@ -454,7 +454,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String dataStorageRegionPermission;
 
         /**
-         * <p>The storage capacity purchased in the upfront billing scenario.</p>
+         * <p>The storage capacity purchased in the prepaid scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

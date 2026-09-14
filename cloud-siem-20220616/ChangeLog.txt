@@ -1,3 +1,7 @@
+2026-09-14 Version: 6.3.0
+- Support API DescribeUserSiemOrderStatus.
+
+
 2026-09-04 Version: 6.2.7
 - Update API DescribeAlertsWithEvent: add response parameters Body.Data.ResponseData.$.AlertStatus.
 - Update API PostEventDisposeAndWhiteruleList: add request parameters SyncAlertStatus.

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventCountByThreatLevelRequest extends TeaModel {
     /**
-     * <p>End time of the query, in milliseconds.</p>
+     * <p>The end time of the query, in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1577808000000</p>
@@ -14,12 +14,10 @@ public class DescribeEventCountByThreatLevelRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>Region where the Data Management Center for threat analysis is located. Select a region based on the location of your assets. Valid values:</p>
+     * <p>The region where the threat analysis data management center resides. Select the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: Assets are in the Chinese mainland or Hong Kong (China).</p>
-     * </li>
-     * <li><p>ap-southeast-1: Assets are outside China.</p>
-     * </li>
+     * <li>cn-hangzhou: Your assets belong to the Chinese mainland or Hong Kong (China).</li>
+     * <li>ap-southeast-1: Your assets belong to regions outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +27,7 @@ public class DescribeEventCountByThreatLevelRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource directory member account ID.</p>
+     * <p>The ID of the member account in the resource directory.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -38,12 +36,10 @@ public class DescribeEventCountByThreatLevelRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>View type.</p>
+     * <p>The view type. Valid values:</p>
      * <ul>
-     * <li><p>0: View for the current Alibaba Cloud account.</p>
-     * </li>
-     * <li><p>1: View for all accounts in your enterprise.</p>
-     * </li>
+     * <li>0: the view of the current Alibaba Cloud account.</li>
+     * <li>1: the view of all accounts in the enterprise.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +49,7 @@ public class DescribeEventCountByThreatLevelRequest extends TeaModel {
     public Integer roleType;
 
     /**
-     * <p>Start time of the query, in milliseconds.</p>
+     * <p>The start time of the query, in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1577808000000</p>
