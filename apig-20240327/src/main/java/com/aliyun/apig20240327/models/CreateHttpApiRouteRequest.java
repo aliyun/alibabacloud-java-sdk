@@ -42,7 +42,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>The route match rule.</p>
+     * <p>The route match rules.</p>
      */
     @NameInMap("match")
     public HttpRouteMatch match;
@@ -148,7 +148,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
 
     public static class CreateHttpApiRouteRequestBackendConfigServices extends TeaModel {
         /**
-         * <p>The service group. Used in the HTTP-to-Dubbo conversion scenario.</p>
+         * <p>The service group. Used in HTTP-to-Dubbo transcoding scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT_GROUP</p>
@@ -157,7 +157,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The HTTP-to-Dubbo protocol conversion configuration. Only supported for SingleService MSE_NACOS DUBBO backends of HTTP APIs.</p>
+         * <p>The HTTP-to-Dubbo protocol transcoding configuration. Only supported for SingleService MSE_NACOS DUBBO backends of HTTP APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;dubboServiceName&quot;:&quot;com.alibaba.nacos.example.dubbo.service.DemoService&quot;,&quot;dubboServiceVersion&quot;:&quot;1.0.0&quot;,&quot;dubboServiceGroup&quot;:&quot;DEV&quot;,&quot;methodMapList&quot;:[{&quot;dubboMethodName&quot;:&quot;sayName&quot;,&quot;httpMethod&quot;:&quot;ALL_GET&quot;,&quot;methodPath&quot;:&quot;/dubbo/sayName&quot;,&quot;passThroughAllHeaders&quot;:&quot;PASS_ALL&quot;}]}</p>
@@ -166,7 +166,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public HttpDubboTranscoder httpDubboTranscoder;
 
         /**
-         * <p>The target model name. This field is shared by multiple model backend scenarios. The specific routing or model rewrite semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If not specified in the AiAutoRouter scenario, the default model of the AI service is used.</p>
+         * <p>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewrite semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If this field is not specified for the AiAutoRouter scenario, the default model of the AI service is used.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
@@ -175,7 +175,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String modelName;
 
         /**
-         * <p>The service namespace. Used in the HTTP-to-Dubbo conversion scenario.</p>
+         * <p>The service namespace. Used in HTTP-to-Dubbo transcoding scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>public</p>
@@ -215,7 +215,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String serviceId;
 
         /**
-         * <p>The service source type. Used in the HTTP-to-Dubbo conversion scenario.</p>
+         * <p>The service source type. Used in HTTP-to-Dubbo transcoding scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>MSE_NACOS</p>
@@ -224,7 +224,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The service version. This parameter is valid only in the tag-based scenario.</p>
+         * <p>The service version. This parameter takes effect only in the tag-based scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -233,7 +233,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String version;
 
         /**
-         * <p>The traffic ratio percentage value.</p>
+         * <p>The percentage value of the traffic ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>49</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePolicyAttachmentRequest extends TeaModel {
     /**
-     * <p>The ID of the resource to which the policy is attached.</p>
+     * <p>The ID of the resource to mount.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreatePolicyAttachmentRequest extends TeaModel {
     public String attachResourceId;
 
     /**
-     * <p>The type of the resource to which the policy is attached. Valid values: HttpApi, GatewayRoute, Operation, GatewayService, GatewayServicePort, Gateway, and Domain.</p>
+     * <p>The type of the resource to mount. Valid values: HttpApi, GatewayRoute, Operation, GatewayService, GatewayServicePort, Gateway, Domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

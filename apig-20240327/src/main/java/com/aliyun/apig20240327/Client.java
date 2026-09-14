@@ -38,10 +38,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response returns a conflict preview that contains the conflictHash value.</li>
+     * <li>The response returns a conflict preview that contains conflictHash.</li>
      * </ul>
      * </li>
-     * <li>Step 2: Submit the request after confirmation.</li>
+     * <li>Step 2: Submit the rule after confirmation.</li>
      * <li><ul>
      * <li>No conflicts: Set dryRun to false and overwrite to false.</li>
      * </ul>
@@ -146,10 +146,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response returns a conflict preview that contains the conflictHash value.</li>
+     * <li>The response returns a conflict preview that contains conflictHash.</li>
      * </ul>
      * </li>
-     * <li>Step 2: Submit the request after confirmation.</li>
+     * <li>Step 2: Submit the rule after confirmation.</li>
      * <li><ul>
      * <li>No conflicts: Set dryRun to false and overwrite to false.</li>
      * </ul>
@@ -859,6 +859,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public CreateConsumerResponse createConsumerWithOptions(CreateConsumerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("dryRun", request.dryRun);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.akSkIdentityConfigs)) {
             body.put("akSkIdentityConfigs", request.akSkIdentityConfigs);
@@ -890,6 +899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -1496,7 +1506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates operations for an HTTP API.</p>
+     * <p>Creates an operation for an HTTP API.</p>
      * 
      * @param request CreateHttpApiOperationRequest
      * @param headers map
@@ -1530,7 +1540,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates operations for an HTTP API.</p>
+     * <p>Creates an operation for an HTTP API.</p>
      * 
      * @param request CreateHttpApiOperationRequest
      * @return CreateHttpApiOperationResponse
@@ -2121,7 +2131,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a policy attachment to a resource.</p>
+     * <p>Creates a policy resource mount.</p>
      * 
      * @param request CreatePolicyAttachmentRequest
      * @param headers map
@@ -2171,7 +2181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a policy attachment to a resource.</p>
+     * <p>Creates a policy resource mount.</p>
      * 
      * @param request CreatePolicyAttachmentRequest
      * @return CreatePolicyAttachmentResponse
@@ -2793,10 +2803,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation deletes a consumer-based or consumer group-based quota rule from an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</p>
+     * <p>Deletes a quota rule based on an API consumer or consumer group for an AI gateway. This operation only takes effect on AI gateways with a version later than 2.1.19.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a quota throttling rule from a gateway.</p>
+     * <p>Deletes a quota throttling rule for a gateway.</p>
      * 
      * @param request DeleteGatewayQuotaRuleRequest
      * @param headers map
@@ -2824,10 +2834,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation deletes a consumer-based or consumer group-based quota rule from an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</p>
+     * <p>Deletes a quota rule based on an API consumer or consumer group for an AI gateway. This operation only takes effect on AI gateways with a version later than 2.1.19.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a quota throttling rule from a gateway.</p>
+     * <p>Deletes a quota throttling rule for a gateway.</p>
      * 
      * @param request DeleteGatewayQuotaRuleRequest
      * @return DeleteGatewayQuotaRuleResponse
@@ -4325,7 +4335,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves HTTP API information.</p>
+     * <p>Retrieves the information of an HTTP API.</p>
      * 
      * @param request GetHttpApiRequest
      * @param headers map
@@ -4359,7 +4369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves HTTP API information.</p>
+     * <p>Retrieves the information of an HTTP API.</p>
      * 
      * @param request GetHttpApiRequest
      * @return GetHttpApiResponse
@@ -4372,7 +4382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves operation information.</p>
+     * <p>Retrieves the API operation information.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4398,7 +4408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves operation information.</p>
+     * <p>Retrieves the API operation information.</p>
      * @return GetHttpApiOperationResponse
      */
     public GetHttpApiOperationResponse getHttpApiOperation(String httpApiId, String operationId) throws Exception {
@@ -5065,7 +5075,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</p>
+     * <p>Imports an HTTP API. Supports importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST-type APIs.</p>
      * 
      * @param request ImportHttpApiRequest
      * @param headers map
@@ -5151,7 +5161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</p>
+     * <p>Imports an HTTP API. Supports importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST-type APIs.</p>
      * 
      * @param request ImportHttpApiRequest
      * @return ImportHttpApiResponse
@@ -5471,7 +5481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of consumer authorization rules.</p>
+     * <p>Retrieves a list of consumer authorization rules.</p>
      * 
      * @param request ListConsumerAuthorizationRulesRequest
      * @param headers map
@@ -5513,7 +5523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of consumer authorization rules.</p>
+     * <p>Retrieves a list of consumer authorization rules.</p>
      * 
      * @param request ListConsumerAuthorizationRulesRequest
      * @return ListConsumerAuthorizationRulesResponse
@@ -7138,7 +7148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of plugin mounts.</p>
+     * <p>Retrieves the plug-in mount list.</p>
      * 
      * @param request ListPluginAttachmentsRequest
      * @param headers map
@@ -7204,7 +7214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of plugin mounts.</p>
+     * <p>Retrieves the plug-in mount list.</p>
      * 
      * @param request ListPluginAttachmentsRequest
      * @return ListPluginAttachmentsResponse
@@ -9183,7 +9193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该 API 已被 UpdateAuthorizationRule 替代，新路径为 /v1/authorization-rules/{consumerAuthorizationRuleId}</p>
+     * <p>This API has been replaced by UpdateAuthorizationRule. The new operation path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When calling the new operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a consumer authorization rule.</p>
@@ -9228,7 +9238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该 API 已被 UpdateAuthorizationRule 替代，新路径为 /v1/authorization-rules/{consumerAuthorizationRuleId}</p>
+     * <p>This API has been replaced by UpdateAuthorizationRule. The new operation path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When calling the new operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a consumer authorization rule.</p>

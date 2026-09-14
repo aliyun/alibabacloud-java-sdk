@@ -124,11 +124,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public EnvironmentInfo environmentInfo;
 
         /**
-         * <p>The expiration mode. Valid values:</p>
-         * <ul>
-         * <li>LongTerm</li>
-         * <li>ShortTerm</li>
-         * </ul>
+         * <p>The expiration mode. Valid values: LongTerm, ShortTerm.</p>
          * 
          * <strong>example:</strong>
          * <p>ShortTerm</p>
@@ -146,7 +142,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String expireStatus;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The expiration timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>172086834548</p>

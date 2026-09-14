@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HttpApiDeployConfig extends TeaModel {
     /**
-     * <p>Specifies whether to automatically deploy.</p>
+     * <p>Specifies whether to automatically deploy the API.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class HttpApiDeployConfig extends TeaModel {
     public Boolean autoDeploy;
 
     /**
-     * <p>The deployment scenario.</p>
+     * <p>The publishing scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>SingleService</p>
@@ -35,13 +35,13 @@ public class HttpApiDeployConfig extends TeaModel {
     public java.util.List<String> customDomainIds;
 
     /**
-     * <p>The list of custom domain name details.</p>
+     * <p>The list of custom domain name information.</p>
      */
     @NameInMap("customDomainInfos")
     public java.util.List<HttpApiDeployConfigCustomDomainInfos> customDomainInfos;
 
     /**
-     * <p>Specifies whether to enable gateway system models. This parameter takes effect only when the deployment scenario is AiAutoRouter. Default value: false. If enabled, built-in Qwen candidates from the platform are merged with the user\&quot;s own candidates.</p>
+     * <p>Specifies whether to enable gateway system models. This parameter takes effect only when the publishing scenario is AiAutoRouter. Default value: false. This field is used for backward compatibility with older clients. If systemModelTiers is not submitted, true indicates that all three tiers of system models are enabled, and false indicates that all are disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -56,7 +56,7 @@ public class HttpApiDeployConfig extends TeaModel {
     public java.util.List<String> envDomainIds;
 
     /**
-     * <p>The list of environment domain name details.</p>
+     * <p>The list of environment domain name information.</p>
      */
     @NameInMap("envDomainInfos")
     public java.util.List<HttpApiDeployConfigEnvDomainInfos> envDomainInfos;
@@ -113,7 +113,7 @@ public class HttpApiDeployConfig extends TeaModel {
     public java.util.List<HttpApiPolicyConfigs> policyConfigs;
 
     /**
-     * <p>The current online routing mode of the REST API. ordinary indicates per-Operation routing. compressed indicates single-prefix routing for the API. This field is not returned for non-REST APIs.</p>
+     * <p>The current online routing mode of the REST API. ordinary indicates per-operation routing, and compressed indicates single-prefix routing for the API. This field is not returned for non-REST APIs.</p>
      * 
      * <strong>example:</strong>
      * <p>ordinary</p>
@@ -137,10 +137,19 @@ public class HttpApiDeployConfig extends TeaModel {
     public java.util.List<HttpApiDeployConfigServiceConfigs> serviceConfigs;
 
     /**
-     * <p>The list of subdomain contents.</p>
+     * <p>The list of subdomain content.</p>
      */
     @NameInMap("subDomains")
     public java.util.List<HttpApiDeployConfigSubDomains> subDomains;
+
+    /**
+     * <p>The set of explicitly enabled gateway system model capability tiers. Takes effect only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, premium. An explicit empty array indicates that no system model is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;economy&quot;,&quot;standard&quot;,&quot;premium&quot;]</p>
+     */
+    @NameInMap("systemModelTiers")
+    public java.util.List<String> systemModelTiers;
 
     public static HttpApiDeployConfig build(java.util.Map<String, ?> map) throws Exception {
         HttpApiDeployConfig self = new HttpApiDeployConfig();
@@ -289,6 +298,14 @@ public class HttpApiDeployConfig extends TeaModel {
     }
     public java.util.List<HttpApiDeployConfigSubDomains> getSubDomains() {
         return this.subDomains;
+    }
+
+    public HttpApiDeployConfig setSystemModelTiers(java.util.List<String> systemModelTiers) {
+        this.systemModelTiers = systemModelTiers;
+        return this;
+    }
+    public java.util.List<String> getSystemModelTiers() {
+        return this.systemModelTiers;
     }
 
     public static class HttpApiDeployConfigCustomDomainInfos extends TeaModel {
@@ -470,6 +487,15 @@ public class HttpApiDeployConfig extends TeaModel {
 
     public static class HttpApiDeployConfigServiceConfigs extends TeaModel {
         /**
+         * <p>The capability tier of the intelligent routing candidate. Specify this parameter only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, and premium.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
+         */
+        @NameInMap("capabilityTier")
+        public String capabilityTier;
+
+        /**
          * <p>The gateway service ID.</p>
          * 
          * <strong>example:</strong>
@@ -521,7 +547,7 @@ public class HttpApiDeployConfig extends TeaModel {
         public String multiServiceRouteStrategy;
 
         /**
-         * <p>The service display name.</p>
+         * <p>The display name of the service.</p>
          * 
          * <strong>example:</strong>
          * <p>Qwen-Max-Service</p>
@@ -530,7 +556,7 @@ public class HttpApiDeployConfig extends TeaModel {
         public String name;
 
         /**
-         * <p>The observability metric routing configuration.</p>
+         * <p>The observability metric-based routing configuration.</p>
          * 
          * <strong>if can be null:</strong>
          * <p>true</p>
@@ -586,6 +612,14 @@ public class HttpApiDeployConfig extends TeaModel {
         public static HttpApiDeployConfigServiceConfigs build(java.util.Map<String, ?> map) throws Exception {
             HttpApiDeployConfigServiceConfigs self = new HttpApiDeployConfigServiceConfigs();
             return TeaModel.build(map, self);
+        }
+
+        public HttpApiDeployConfigServiceConfigs setCapabilityTier(String capabilityTier) {
+            this.capabilityTier = capabilityTier;
+            return this;
+        }
+        public String getCapabilityTier() {
+            return this.capabilityTier;
         }
 
         public HttpApiDeployConfigServiceConfigs setGatewayServiceId(String gatewayServiceId) {

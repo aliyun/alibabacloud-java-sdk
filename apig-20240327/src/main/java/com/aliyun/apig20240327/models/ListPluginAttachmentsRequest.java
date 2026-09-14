@@ -14,7 +14,7 @@ public class ListPluginAttachmentsRequest extends TeaModel {
     public String attachResourceId;
 
     /**
-     * <p>The plugin mount point type. This parameter is not yet enabled.</p>
+     * <p>The plug-in mount point type. Not enabled yet.</p>
      * 
      * <strong>example:</strong>
      * <p>GatewayRoute</p>
@@ -23,7 +23,7 @@ public class ListPluginAttachmentsRequest extends TeaModel {
     public String attachResourceType;
 
     /**
-     * <p>The mount point types. Separate multiple types with commas.</p>
+     * <p>The mount point types. Separate multiple values with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>GatewayRoute</p>
@@ -68,7 +68,7 @@ public class ListPluginAttachmentsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The plugin ID.</p>
+     * <p>The plug-in ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pl-ct8181um1hkiqns9f6e0</p>
@@ -77,7 +77,7 @@ public class ListPluginAttachmentsRequest extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>Specifies whether to return parent resource mounts.</p>
+     * <p>Specifies whether to return the parent resource mount.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
