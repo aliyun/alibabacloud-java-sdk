@@ -299,9 +299,73 @@ public class SubmitDocParserJobRequest extends TeaModel {
 
     }
 
+    public static class SubmitDocParserJobRequestMultimediaParametersFrameExtraction extends TeaModel {
+        @NameInMap("FrameRate")
+        public Float frameRate;
+
+        @NameInMap("Mode")
+        public String mode;
+
+        @NameInMap("OutputImageHeight")
+        public Long outputImageHeight;
+
+        @NameInMap("OutputImageWidth")
+        public Long outputImageWidth;
+
+        public static SubmitDocParserJobRequestMultimediaParametersFrameExtraction build(java.util.Map<String, ?> map) throws Exception {
+            SubmitDocParserJobRequestMultimediaParametersFrameExtraction self = new SubmitDocParserJobRequestMultimediaParametersFrameExtraction();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitDocParserJobRequestMultimediaParametersFrameExtraction setFrameRate(Float frameRate) {
+            this.frameRate = frameRate;
+            return this;
+        }
+        public Float getFrameRate() {
+            return this.frameRate;
+        }
+
+        public SubmitDocParserJobRequestMultimediaParametersFrameExtraction setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
+        public SubmitDocParserJobRequestMultimediaParametersFrameExtraction setOutputImageHeight(Long outputImageHeight) {
+            this.outputImageHeight = outputImageHeight;
+            return this;
+        }
+        public Long getOutputImageHeight() {
+            return this.outputImageHeight;
+        }
+
+        public SubmitDocParserJobRequestMultimediaParametersFrameExtraction setOutputImageWidth(Long outputImageWidth) {
+            this.outputImageWidth = outputImageWidth;
+            return this;
+        }
+        public Long getOutputImageWidth() {
+            return this.outputImageWidth;
+        }
+
+    }
+
     public static class SubmitDocParserJobRequestMultimediaParameters extends TeaModel {
+        @NameInMap("EnableDiarization")
+        public Boolean enableDiarization;
+
         @NameInMap("EnableSynopsisParse")
         public Boolean enableSynopsisParse;
+
+        @NameInMap("EnableSynopsisSegments")
+        public Boolean enableSynopsisSegments;
+
+        @NameInMap("EnableSynopsisSummary")
+        public Boolean enableSynopsisSummary;
+
+        @NameInMap("FrameExtraction")
+        public SubmitDocParserJobRequestMultimediaParametersFrameExtraction frameExtraction;
 
         @NameInMap("VlParsePrompt")
         public String vlParsePrompt;
@@ -311,12 +375,44 @@ public class SubmitDocParserJobRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public SubmitDocParserJobRequestMultimediaParameters setEnableDiarization(Boolean enableDiarization) {
+            this.enableDiarization = enableDiarization;
+            return this;
+        }
+        public Boolean getEnableDiarization() {
+            return this.enableDiarization;
+        }
+
         public SubmitDocParserJobRequestMultimediaParameters setEnableSynopsisParse(Boolean enableSynopsisParse) {
             this.enableSynopsisParse = enableSynopsisParse;
             return this;
         }
         public Boolean getEnableSynopsisParse() {
             return this.enableSynopsisParse;
+        }
+
+        public SubmitDocParserJobRequestMultimediaParameters setEnableSynopsisSegments(Boolean enableSynopsisSegments) {
+            this.enableSynopsisSegments = enableSynopsisSegments;
+            return this;
+        }
+        public Boolean getEnableSynopsisSegments() {
+            return this.enableSynopsisSegments;
+        }
+
+        public SubmitDocParserJobRequestMultimediaParameters setEnableSynopsisSummary(Boolean enableSynopsisSummary) {
+            this.enableSynopsisSummary = enableSynopsisSummary;
+            return this;
+        }
+        public Boolean getEnableSynopsisSummary() {
+            return this.enableSynopsisSummary;
+        }
+
+        public SubmitDocParserJobRequestMultimediaParameters setFrameExtraction(SubmitDocParserJobRequestMultimediaParametersFrameExtraction frameExtraction) {
+            this.frameExtraction = frameExtraction;
+            return this;
+        }
+        public SubmitDocParserJobRequestMultimediaParametersFrameExtraction getFrameExtraction() {
+            return this.frameExtraction;
         }
 
         public SubmitDocParserJobRequestMultimediaParameters setVlParsePrompt(String vlParsePrompt) {

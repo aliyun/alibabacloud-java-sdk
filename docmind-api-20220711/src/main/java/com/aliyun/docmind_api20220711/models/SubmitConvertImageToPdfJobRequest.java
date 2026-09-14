@@ -9,7 +9,7 @@ public class SubmitConvertImageToPdfJobRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>JPG</p>
+     * <p>jpg</p>
      */
     @NameInMap("ImageNameExtension")
     public String imageNameExtension;
