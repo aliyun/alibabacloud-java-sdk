@@ -93,7 +93,7 @@ public class AssetOptimizeLiteResponseBody extends TeaModel {
 
     public static class AssetOptimizeLiteResponseBodyData extends TeaModel {
         /**
-         * <p>The asynchronous task ID, used to query results later.</p>
+         * <p>The asynchronous task ID, which is used to query the result later.</p>
          * 
          * <strong>example:</strong>
          * <p>task-xxxxxx</p>

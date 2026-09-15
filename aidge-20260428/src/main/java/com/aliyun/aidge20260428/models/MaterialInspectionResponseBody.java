@@ -97,12 +97,7 @@ public class MaterialInspectionResponseBody extends TeaModel {
 
     public static class MaterialInspectionResponseBodyDataResultSteps extends TeaModel {
         /**
-         * <p>The determination result of the step. Valid values:</p>
-         * <ul>
-         * <li>PASS: The step is compliant.</li>
-         * <li>FAIL: The step is non-compliant.</li>
-         * <li>UNABLE_TO_JUDGE: The system cannot determine the result.</li>
-         * </ul>
+         * <p>The determination result of the step. Valid values: PASS, FAIL, and UNABLE_TO_JUDGE.</p>
          * 
          * <strong>example:</strong>
          * <p>PASS</p>
@@ -144,20 +139,16 @@ public class MaterialInspectionResponseBody extends TeaModel {
 
     public static class MaterialInspectionResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The natural language summary of the inspection result, such as &quot;1 rule: 1 PASS, all inspection items are compliant.&quot;</p>
+         * <p>The natural language summary, such as &quot;1 rule: 1 PASS, all inspection items are compliant.&quot;</p>
          * 
          * <strong>example:</strong>
-         * <p>1项规则：1 PASS，所有检测项合规</p>
+         * <p>1 rule: 1 PASS, all inspection items are compliant</p>
          */
         @NameInMap("Evidence")
         public String evidence;
 
         /**
-         * <p>The overall determination result. Valid values:</p>
-         * <ul>
-         * <li>PASS: All inspection items are compliant.</li>
-         * <li>FAIL: One or more inspection items are non-compliant.</li>
-         * </ul>
+         * <p>The overall determination result. Valid values: PASS and FAIL.</p>
          * 
          * <strong>example:</strong>
          * <p>PASS</p>
@@ -166,7 +157,7 @@ public class MaterialInspectionResponseBody extends TeaModel {
         public String overallResult;
 
         /**
-         * <p>The request ID returned as-is from the input.</p>
+         * <p>The request ID returned as-is from the request.</p>
          * 
          * <strong>example:</strong>
          * <p>req-001</p>
@@ -181,7 +172,7 @@ public class MaterialInspectionResponseBody extends TeaModel {
         public java.util.List<MaterialInspectionResponseBodyDataResultSteps> steps;
 
         /**
-         * <p>The detection type that indicates the identified material category.</p>
+         * <p>The detection type.</p>
          * 
          * <strong>example:</strong>
          * <p>Stamp</p>

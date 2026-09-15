@@ -38,7 +38,7 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -174,7 +174,7 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
 
     public static class DiduiAreaDeductionResponseBodyData extends TeaModel {
         /**
-         * <p>The number of downstream call attempts.</p>
+         * <p>The number of downstream calls.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -210,7 +210,7 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
         public Long latencyMs;
 
         /**
-         * <p>The workflow description message.</p>
+         * <p>The workflow description.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -252,7 +252,7 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The workflow business status.</p>
+         * <p>Indicates whether the workflow execution is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

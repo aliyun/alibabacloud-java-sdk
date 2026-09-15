@@ -14,7 +14,7 @@ public class ImageRemovalProResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The intelligent removal Pro result.</p>
+     * <p>The Intelligent Eraser Pro result.</p>
      */
     @NameInMap("Data")
     public ImageRemovalProResponseBodyData data;
@@ -97,7 +97,7 @@ public class ImageRemovalProResponseBody extends TeaModel {
 
     public static class ImageRemovalProResponseBodyData extends TeaModel {
         /**
-         * <p>The URL of the result image. This parameter is returned in synchronous mode.</p>
+         * <p>The URL of the erasure result image. This parameter is returned in synchronous mode.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://aib-image.oss-ap-southeast-1.aliyuncs.com/ai_desc%2F250cc947-9cd5-4df0-9c23-44eba5d0dfc30.jpg?OSSAccessKeyId=LTAI5tSEGjGp5wixZgHLc3bV&Expires=4999655814&Signature=shvGNDmkyv9MLTw4%2BOxYglJCpAE%3D">https://aib-image.oss-ap-southeast-1.aliyuncs.com/ai_desc%2F250cc947-9cd5-4df0-9c23-44eba5d0dfc30.jpg?OSSAccessKeyId=LTAI5tSEGjGp5wixZgHLc3bV&amp;Expires=4999655814&amp;Signature=shvGNDmkyv9MLTw4%2BOxYglJCpAE%3D</a></p>
@@ -106,7 +106,7 @@ public class ImageRemovalProResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
-         * <p>The asynchronous task ID. This parameter is returned in asynchronous mode and is used to query the task result.</p>
+         * <p>The asynchronous task ID. This parameter is returned in asynchronous mode and is used to query task results.</p>
          * 
          * <strong>example:</strong>
          * <p>ed9d8504-6141-9fbb-8345-4fa36433483f</p>

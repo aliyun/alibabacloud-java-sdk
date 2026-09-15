@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PrepaidTextTranslateShrinkRequest extends TeaModel {
     /**
-     * <p>The business scenario identifier. This parameter is optional. Valid values: e-commerce-title, e-commerce-description, e-commerce-chat, e-commerce-cpv, novel, game. If not specified or an invalid value is passed, the general translation strategy is used by default.</p>
+     * <p>The business scenario identifier. This parameter is optional. Valid values: e-commerce-title, e-commerce-description, e-commerce-chat, e-commerce-cpv, novel, game. If not specified or an invalid value is passed, the general translation policy is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>Alibaba-商品</p>
@@ -14,7 +14,7 @@ public class PrepaidTextTranslateShrinkRequest extends TeaModel {
     public String bizName;
 
     /**
-     * <p>The format type of the source text. This parameter is optional. Supports text (plain text format) and html (web page format, preserving HTML tags).</p>
+     * <p>The format type of the source text. This parameter is optional. Valid values: text (plain text format) and html (web page format that preserves HTML tags).</p>
      * 
      * <strong>example:</strong>
      * <p>text</p>
@@ -61,7 +61,7 @@ public class PrepaidTextTranslateShrinkRequest extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <p>The format of the translation text. html (web page format. This setting processes both the source text and translated text in HTML format) or text (text format. This setting processes both the source text and translated result as plain text without format processing).</p>
+     * <p>The format of the translation text. html (web page format. This setting processes the source text and translated text in HTML format). text (text format. This setting processes the source text and translated text as plain text without any format processing).</p>
      * 
      * <strong>example:</strong>
      * <p>e-commerce-title</p>

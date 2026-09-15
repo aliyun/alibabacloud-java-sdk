@@ -14,13 +14,13 @@ public class ImageTranslationProResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The translation result data. ResultList contains the URL of the translation result. EditInfo in GenFiles contains the recognized text information.</p>
+     * <p>The translation result data. ResultList contains the URLs of the translation results. GenFiles contains EditInfo, which includes the recognized text information.</p>
      */
     @NameInMap("Data")
     public ImageTranslationProResponseBodyData data;
 
     /**
-     * <p>The error message. Returns &quot;Success&quot; for a successful call. Returns a specific error message for an exception, such as &quot;The content contains sensitive data. Try other input.&quot;</p>
+     * <p>The error message. &quot;Success&quot; is returned for successful calls. A specific error message is returned for failed calls, such as &quot;The content contains sensitive data. Try other input.&quot;</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -29,7 +29,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID. Used to uniquely identify a request.</p>
+     * <p>The request ID, which uniquely identifies the request.</p>
      * 
      * <strong>example:</strong>
      * <p>61785C32-80C2-19A3-9E55-2C3702C84B40</p>
@@ -372,7 +372,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
 
     public static class ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTexts extends TeaModel {
         /**
-         * <p>The color of the translated text.</p>
+         * <p>The text color after translation.</p>
          * 
          * <strong>example:</strong>
          * <p>#515151</p>
@@ -390,7 +390,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
         public Integer fontsize;
 
         /**
-         * <p>The horizontal layout. Valid values: center, left, right.</p>
+         * <p>The horizontal layout mode. Valid values: center, left, right.</p>
          * 
          * <strong>example:</strong>
          * <p>center</p>
@@ -399,7 +399,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
         public String horizontalLayout;
 
         /**
-         * <p>The coordinates of the image inpainting area.</p>
+         * <p>The coordinates of the image repair area.</p>
          */
         @NameInMap("ImageRect")
         public ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTextsImageRect imageRect;
@@ -429,7 +429,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
         public ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTextsTextRect textRect;
 
         /**
-         * <p>Indicates whether the TextItem is valid. The item is invalid if this value does not exist or is set to false.</p>
+         * <p>Indicates whether the TextItem is valid. The TextItem is invalid if this value does not exist or is set to false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -447,7 +447,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
         public String value;
 
         /**
-         * <p>The vertical layout. Valid values: center, top, down.</p>
+         * <p>The vertical layout mode. Valid values: center, top, and down.</p>
          * 
          * <strong>example:</strong>
          * <p>center</p>
@@ -556,7 +556,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
          * <p>The original text before translation.</p>
          * 
          * <strong>example:</strong>
-         * <p>Cute Design · Crisp Bell</p>
+         * <p>萌趣造型·清脆响铃</p>
          */
         @NameInMap("Content")
         public String content;
@@ -571,7 +571,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
         public Integer fontsize;
 
         /**
-         * <p>The horizontal layout. Valid values: center, left, right.</p>
+         * <p>The horizontal layout mode. Valid values: center, left, right.</p>
          * 
          * <strong>example:</strong>
          * <p>left</p>
@@ -595,7 +595,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
         public java.util.List<ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTexts> texts;
 
         /**
-         * <p>The vertical layout. Valid values: center, top, down.</p>
+         * <p>The vertical layout mode. Valid values: center, top, and down.</p>
          * 
          * <strong>example:</strong>
          * <p>center</p>
@@ -695,7 +695,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
         public String repairedUrl;
 
         /**
-         * <p>The collection of global IDs of translated images.</p>
+         * <p>The collection of global IDs for the translated images.</p>
          */
         @NameInMap("ResultImageIds")
         public java.util.List<String> resultImageIds;
@@ -858,7 +858,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
 
     public static class ImageTranslationProResponseBodyDataResultList extends TeaModel {
         /**
-         * <p>The URL of the image translation result image.</p>
+         * <p>The URL of the translated result image.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg</a></p>
@@ -921,7 +921,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The usage information, including the number of processed images.</p>
+         * <p>The usage information, such as the number of processed images.</p>
          */
         @NameInMap("UsageMap")
         public java.util.Map<String, Long> usageMap;

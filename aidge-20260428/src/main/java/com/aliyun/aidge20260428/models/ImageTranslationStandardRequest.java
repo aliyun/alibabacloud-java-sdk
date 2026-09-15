@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageTranslationStandardRequest extends TeaModel {
     /**
-     * <p>The intervention glossary ID. Optional. Create the glossary separately in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</p>
+     * <p>The intervention glossary ID. Optional. You must create the glossary separately in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</p>
      * 
      * <strong>example:</strong>
      * <p>glossary_1</p>
@@ -29,7 +29,7 @@ public class ImageTranslationStandardRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>Specifies whether to translate text on the image subject. Optional. Default value: false. This helps protect information by avoiding translation of embedded information such as product names.</p>
+     * <p>Specifies whether to translate text on the product area of an image. Optional. Default value: false. This helps protect information by avoiding translation of embedded information such as product names.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

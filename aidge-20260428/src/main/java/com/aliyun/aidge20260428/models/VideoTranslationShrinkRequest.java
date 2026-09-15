@@ -31,7 +31,7 @@ public class VideoTranslationShrinkRequest extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <p>The video URL (MP4/MOV, ≤ 200 MB).</p>
+     * <p>The URL of the video (MP4/MOV, ≤ 200 MB).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

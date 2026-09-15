@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MerchandisePlacementDetectionRequest extends TeaModel {
     /**
-     * <p>Specifies a custom API version. If you created a &quot;My API&quot; during the trial phase, you can find the corresponding ApiId in the product console under &quot;Intelligent Inspection &gt; API Management &gt; My API&quot;.</p>
+     * <p>Specify this parameter to use a custom API version. If you created a custom API during the trial phase, you can find the corresponding ApiId in the product console under <strong>Intelligent Inspection &gt; API Management &gt; My APIs</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>api_xxx</p>
@@ -14,7 +14,7 @@ public class MerchandisePlacementDetectionRequest extends TeaModel {
     public String apiId;
 
     /**
-     * <p>The URL of the shelf or floor-stack image to be recognized (accessible over the public network or from OSS).</p>
+     * <p>The URL of the shelf or floor-stack photo to be recognized (accessible over the Internet or from OSS).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class MerchandisePlacementDetectionRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>The ID of the customer\&quot;s dedicated SKU vector library, which determines which library is used for retrieval. The library must be created in advance through the library creation process.</p>
+     * <p>The ID of the customer-specific SKU vector library, which determines which library is used for recall. The library must be created in advance through the library creation process.</p>
      * 
      * <strong>example:</strong>
      * <p>rag_xxx</p>
@@ -33,10 +33,10 @@ public class MerchandisePlacementDetectionRequest extends TeaModel {
     public String ragId;
 
     /**
-     * <p>The business type (reserved for future routing by business line). The current phase supports skincare &amp; lotion.</p>
+     * <p>The business type (reserved for future routing by business line). The current release supports skincare.</p>
      * 
      * <strong>example:</strong>
-     * <p>水乳</p>
+     * <p>skincare</p>
      */
     @NameInMap("Type")
     public String type;

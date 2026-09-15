@@ -38,9 +38,9 @@ public class SizeChartDetectResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call is successful.</li>
+     * <li>true: The call was successful.</li>
      * <li>false: The call failed.</li>
      * </ul>
      * 
@@ -106,7 +106,7 @@ public class SizeChartDetectResponseBody extends TeaModel {
         public Boolean isSizeChart;
 
         /**
-         * <p>The usage information. The key is the usage name, and the value is the count.</p>
+         * <p>The usage information. The key is the usage name and the value is the count.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;ProcessedImageCount&quot;:1}</p>

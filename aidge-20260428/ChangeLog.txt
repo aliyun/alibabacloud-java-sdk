@@ -1,3 +1,7 @@
+2026-09-15 Version: 5.6.0
+- Support API SubmitProductMatch.
+
+
 2026-09-03 Version: 5.5.0
 - Support API VirtualTryOn.
 

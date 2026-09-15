@@ -7,8 +7,8 @@ public class ImageRemovalProRequest extends TeaModel {
     /**
      * <p>The call type. Valid values:</p>
      * <ul>
-     * <li>true: asynchronous.</li>
-     * <li>false: synchronous.</li>
+     * <li>true: Asynchronous.</li>
+     * <li>false: Synchronous.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 

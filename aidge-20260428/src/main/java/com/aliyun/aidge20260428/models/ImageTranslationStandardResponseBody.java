@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageTranslationStandardResponseBody extends TeaModel {
     /**
-     * <p>The response code. 200 indicates success. For other response codes, refer to the error code information.</p>
+     * <p>The response code. A value of 200 indicates a successful call. For other response codes, refer to the error code information.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, used to uniquely identify a request.</p>
+     * <p>The request ID, which uniquely identifies the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1CEC4D94-905A-1ED1-A7B4-1BFEFFB3D850</p>
@@ -38,7 +38,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. true indicates success. false indicates failure.</p>
+     * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -632,7 +632,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         public java.util.List<String> font;
 
         /**
-         * <p>The product area rectangle.</p>
+         * <p>The product area rectangles.</p>
          */
         @NameInMap("GoodsRects")
         public ImageTranslationStandardResponseBodyDataEditInfoGoodsRects goodsRects;
@@ -656,7 +656,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         public java.util.List<String> languages;
 
         /**
-         * <p>The URL of the original image.</p>
+         * <p>The original image URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xiuxiu-pro.meitudata.com/posters/34d78f9157e5560a4d612949ca6f6485.jpg">https://xiuxiu-pro.meitudata.com/posters/34d78f9157e5560a4d612949ca6f6485.jpg</a></p>
@@ -665,7 +665,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         public String pictUrl;
 
         /**
-         * <p>The URL of the repaired image.</p>
+         * <p>The repaired image URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.png">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.png</a></p>
@@ -801,7 +801,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         public ImageTranslationStandardResponseBodyDataEditInfo editInfo;
 
         /**
-         * <p>The URL of the image generated from the image translation result.</p>
+         * <p>The URL of the image generated after image translation.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg</a></p>

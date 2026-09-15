@@ -93,7 +93,7 @@ public class ImageRemoveResponseBody extends TeaModel {
 
     public static class ImageRemoveResponseBodyData extends TeaModel {
         /**
-         * <p>The height of the result image in pixels.</p>
+         * <p>The height of the result image, in pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>
@@ -121,7 +121,7 @@ public class ImageRemoveResponseBody extends TeaModel {
         public java.util.Map<String, Long> usageMap;
 
         /**
-         * <p>The width of the result image in pixels.</p>
+         * <p>The width of the result image, in pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>

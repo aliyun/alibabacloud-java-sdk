@@ -14,7 +14,7 @@ public class CategoryAttributeMatchShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The product image URLs (up to 10 images are supported).</p>
+     * <p>The product image URLs. A maximum of 10 images are supported.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://frametour-assets.oss-cn-shanghai.aliyuncs.com/user-faces/viid_face/dd0dd06c-9351-4e5f-bc70-24166a754d7f.jpg">https://frametour-assets.oss-cn-shanghai.aliyuncs.com/user-faces/viid_face/dd0dd06c-9351-4e5f-bc70-24166a754d7f.jpg</a></p>
@@ -37,7 +37,7 @@ public class CategoryAttributeMatchShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>0:0:颜色:黑(不含定位器);0:1:颜色:智能定位(不含项圈);0:2:颜色:范围定位(不含项圈);0:3:颜色:蓝(不含定位器);0:4:颜色:橙(不含定位器);0:5:颜色:粉(不含定位器);0:6:颜色:红(不含定位器);0:7:颜色:黄(不含定位器);0:8:颜色:紫(不含定位器)</p>
+     * <p>0:0:Color:Black (without locator);0:1:Color:Smart Locator (without collar);0:2:Color:Range Locator (without collar);0:3:Color:Blue (without locator);0:4:Color:Orange (without locator);0:5:Color:Pink (without locator);0:6:Color:Red (without locator);0:7:Color:Yellow (without locator);0:8:Color:Purple (without locator)</p>
      */
     @NameInMap("Sku")
     public String sku;
@@ -53,7 +53,7 @@ public class CategoryAttributeMatchShrinkRequest extends TeaModel {
     public String sourceCategory;
 
     /**
-     * <p>The source platform where the product originates.</p>
+     * <p>The source platform from which the product originates.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class CategoryAttributeMatchShrinkRequest extends TeaModel {
     public String sourcePlatform;
 
     /**
-     * <p>The target listing platform. Currently only temu is supported.</p>
+     * <p>The target listing platform. Currently, only temu is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,7 +77,7 @@ public class CategoryAttributeMatchShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Women\&quot;s new spring clothing</p>
+     * <p>Women\&quot;s New Spring Clothing</p>
      */
     @NameInMap("Title")
     public String title;

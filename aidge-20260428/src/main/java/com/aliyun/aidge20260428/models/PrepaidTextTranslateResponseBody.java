@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PrepaidTextTranslateResponseBody extends TeaModel {
     /**
-     * <p>The response code. Returns &quot;success&quot; for normal calls.</p>
+     * <p>The response code. The value &quot;success&quot; is returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -20,7 +20,7 @@ public class PrepaidTextTranslateResponseBody extends TeaModel {
     public PrepaidTextTranslateResponseBodyData data;
 
     /**
-     * <p>The error message. Returns &quot;Success&quot; for normal calls. Returns specific error information for exceptions, such as &quot;The parameters contain sensitive information. Try other input.&quot;</p>
+     * <p>The error message. The value &quot;Success&quot; is returned for successful calls. For exceptions, a specific error message is returned, such as &quot;The parameters contain sensitive information. Try other input.&quot;</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -29,7 +29,7 @@ public class PrepaidTextTranslateResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, used to identify a unique request call.</p>
+     * <p>The request ID, used to uniquely identify a request.</p>
      * 
      * <strong>example:</strong>
      * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
@@ -38,7 +38,7 @@ public class PrepaidTextTranslateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. true indicates success. false indicates failure.</p>
+     * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -93,7 +93,7 @@ public class PrepaidTextTranslateResponseBody extends TeaModel {
 
     public static class PrepaidTextTranslateResponseBodyDataTranslations extends TeaModel {
         /**
-         * <p>The character count of the source text.</p>
+         * <p>The number of characters in the source text.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -158,7 +158,7 @@ public class PrepaidTextTranslateResponseBody extends TeaModel {
         public java.util.List<PrepaidTextTranslateResponseBodyDataTranslations> translations;
 
         /**
-         * <p>The usage information, including the input character count.</p>
+         * <p>The usage information, including the number of input characters.</p>
          */
         @NameInMap("UsageMap")
         public java.util.Map<String, Long> usageMap;

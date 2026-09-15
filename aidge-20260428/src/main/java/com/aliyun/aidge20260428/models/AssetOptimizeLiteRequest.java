@@ -8,7 +8,7 @@ public class AssetOptimizeLiteRequest extends TeaModel {
      * <p>The custom glossary for term intervention.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Test</p>
      */
     @NameInMap("Glossary")
     public String glossary;
@@ -23,7 +23,7 @@ public class AssetOptimizeLiteRequest extends TeaModel {
     public Boolean includingProductArea;
 
     /**
-     * <p>Specifies whether translation is needed.</p>
+     * <p>Specifies whether translation is required.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

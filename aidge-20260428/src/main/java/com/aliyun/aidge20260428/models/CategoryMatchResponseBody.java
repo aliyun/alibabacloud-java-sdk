@@ -29,7 +29,7 @@ public class CategoryMatchResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which uniquely identifies the API call.</p>
+     * <p>The request ID, which uniquely identifies the request.</p>
      * 
      * <strong>example:</strong>
      * <p>2157065A-D6C8-1F3E-A4D0-B1234567890</p>
@@ -93,7 +93,7 @@ public class CategoryMatchResponseBody extends TeaModel {
 
     public static class CategoryMatchResponseBodyData extends TeaModel {
         /**
-         * <p>The matched category ID.</p>
+         * <p>The ID of the matched category.</p>
          * 
          * <strong>example:</strong>
          * <p>1522</p>
@@ -102,7 +102,7 @@ public class CategoryMatchResponseBody extends TeaModel {
         public String categoryId;
 
         /**
-         * <p>The matched category name.</p>
+         * <p>The name of the matched category.</p>
          * 
          * <strong>example:</strong>
          * <p>位置和活动跟踪器</p>
@@ -111,7 +111,7 @@ public class CategoryMatchResponseBody extends TeaModel {
         public String categoryName;
 
         /**
-         * <p>The full path of the category, separated by &quot;/&quot;.</p>
+         * <p>The full path of the category, separated by forward slashes (/).</p>
          * 
          * <strong>example:</strong>
          * <p>宠物用品/猫用品/猫挂饰、项圈、牵引带/位置和活动跟踪器</p>
@@ -120,7 +120,7 @@ public class CategoryMatchResponseBody extends TeaModel {
         public String categoryPath;
 
         /**
-         * <p>The matching confidence score, ranging from 0 to 100.</p>
+         * <p>The match confidence score. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>96</p>
@@ -129,7 +129,7 @@ public class CategoryMatchResponseBody extends TeaModel {
         public Integer confidence;
 
         /**
-         * <p>Indicates whether the matching is successful.</p>
+         * <p>Indicates whether the category matching is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -138,10 +138,10 @@ public class CategoryMatchResponseBody extends TeaModel {
         public Boolean matchSuccessful;
 
         /**
-         * <p>The explanation of the matching reason.</p>
+         * <p>The reason for the category match.</p>
          * 
          * <strong>example:</strong>
-         * <p>The product core is a cat collar with AirTag positioning function, belonging to the \&quot;Location and Activity Trackers\&quot; category, with leaf node semantics precisely matching its tracking function and cat-use attributes</p>
+         * <p>The core product is a cat collar with AirTag positioning functionality, belonging to the \&quot;Location and Activity Trackers\&quot; category. The leaf node semantically matches its tracking functionality and cat-use attributes precisely</p>
          */
         @NameInMap("Reason")
         public String reason;

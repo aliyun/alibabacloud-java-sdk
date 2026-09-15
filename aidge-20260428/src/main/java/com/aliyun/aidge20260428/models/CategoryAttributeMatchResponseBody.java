@@ -14,7 +14,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public CategoryAttributeMatchResponseBodyData data;
@@ -114,7 +114,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
          * <p>The attribute input type.</p>
          * 
          * <strong>example:</strong>
-         * <p>单选下拉</p>
+         * <p>Single-select dropdown</p>
          */
         @NameInMap("InputType")
         public String inputType;
@@ -291,7 +291,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
          * <p>The category name.</p>
          * 
          * <strong>example:</strong>
-         * <p>猫项圈</p>
+         * <p>Cat Collars</p>
          */
         @NameInMap("CategoryName")
         public String categoryName;
@@ -300,7 +300,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
          * <p>The full path of the category, separated by &quot;/&quot;.</p>
          * 
          * <strong>example:</strong>
-         * <p>宠物用品/猫用品/猫挂饰、项圈、牵引带/猫项圈</p>
+         * <p>Pet Supplies/Cat Supplies/Cat Charms, Collars &amp; Leashes/Cat Collars</p>
          */
         @NameInMap("CategoryPath")
         public String categoryPath;
@@ -333,7 +333,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
         public Integer totalAttributes;
 
         /**
-         * <p>The usage information.</p>
+         * <p>The usage fields.</p>
          */
         @NameInMap("UsageMap")
         public CategoryAttributeMatchResponseBodyDataUsageMap usageMap;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageRecognitionResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter is not returned for successful calls.</p>
+     * <p>The error code. This parameter is not returned if the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class ImageRecognitionResponseBody extends TeaModel {
     public ImageRecognitionResponseBodyData data;
 
     /**
-     * <p>The error message. This parameter is not returned for successful calls.</p>
+     * <p>The error message. This parameter is not returned if the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -174,7 +174,7 @@ public class ImageRecognitionResponseBody extends TeaModel {
         public Boolean objWatermark;
 
         /**
-         * <p>The product count.</p>
+         * <p>The number of products.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -183,7 +183,7 @@ public class ImageRecognitionResponseBody extends TeaModel {
         public Integer pdNum;
 
         /**
-         * <p>The product proportion.</p>
+         * <p>The proportion of the product area in the image.</p>
          * 
          * <strong>example:</strong>
          * <p>74.15%</p>
@@ -198,7 +198,7 @@ public class ImageRecognitionResponseBody extends TeaModel {
         public java.util.List<String> recText;
 
         /**
-         * <p>The text proportion.</p>
+         * <p>The proportion of the text area in the image.</p>
          * 
          * <strong>example:</strong>
          * <p>7.52%</p>

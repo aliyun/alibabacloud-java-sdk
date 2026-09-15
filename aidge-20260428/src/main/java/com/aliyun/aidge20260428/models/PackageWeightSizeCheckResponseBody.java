@@ -20,7 +20,7 @@ public class PackageWeightSizeCheckResponseBody extends TeaModel {
     public PackageWeightSizeCheckResponseBodyData data;
 
     /**
-     * <p>The error message. &quot;Success&quot; is returned for a successful call. A specific error message is returned for a failed call.</p>
+     * <p>The error message. &quot;Success&quot; is returned for successful calls. A specific error message is returned for failed calls.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -29,7 +29,7 @@ public class PackageWeightSizeCheckResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which uniquely identifies the API call.</p>
+     * <p>The request ID, which uniquely identifies the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F93D82E4-D0B6-1043-AC58-282597BC3C10</p>
@@ -38,7 +38,7 @@ public class PackageWeightSizeCheckResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
+     * <p>Indicates whether the call is successful. Valid values: true and false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class PackageWeightSizeCheckResponseBody extends TeaModel {
 
     public static class PackageWeightSizeCheckResponseBodyData extends TeaModel {
         /**
-         * <p>The asynchronous task ID, which is used to query the review result by calling QueryAsyncTaskResult.</p>
+         * <p>The asynchronous task ID used to query the review result later by calling QueryAsyncTaskResult.</p>
          * 
          * <strong>example:</strong>
          * <p>a8323ada-a196-9061-976f-90e38b27323a</p>

@@ -20,7 +20,7 @@ public class TextTranslateResponseBody extends TeaModel {
     public TextTranslateResponseBodyData data;
 
     /**
-     * <p>The error message. The value &quot;Success&quot; is returned for successful calls. For exceptions, a specific error message is returned, such as &quot;The parameters contain sensitive information. Try other input.&quot;</p>
+     * <p>The error message. The value &quot;Success&quot; is returned for successful calls. For failed calls, a specific error message is returned, such as &quot;The parameters contain sensitive information. Try other input.&quot;</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageTranslationProRequest extends TeaModel {
     /**
-     * <p>Specifies whether to use asynchronous mode. Default value: false (synchronous mode). When set to true, the API immediately returns a TaskId. Use the query translation result API to retrieve the final result.</p>
+     * <p>Specifies whether to use asynchronous mode. Default value: false (synchronous mode). If you set this parameter to true, the API immediately returns a TaskId. Use the query translation result API to retrieve the final result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public Boolean async;
 
     /**
-     * <p>The ID of the intervention glossary. This parameter is optional. Create the glossary separately in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</p>
+     * <p>The ID of the intervention glossary. This parameter is optional. Create the glossary in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</p>
      * 
      * <strong>example:</strong>
      * <p>glossary_1</p>
@@ -28,7 +28,7 @@ public class ImageTranslationProRequest extends TeaModel {
      * <ul>
      * <li>Image URL: Must be publicly accessible.</li>
      * <li>Format: png, jpeg, jpg, bmp, or webp.</li>
-     * <li>Pixels: The width and height must not exceed 4000 pixels each.</li>
+     * <li>Pixels: Width and height must not exceed 4000 pixels each.</li>
      * <li>File size: The original file must be 10 MB or smaller.</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -40,7 +40,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>Specifies whether to translate text on the image subject. This parameter is optional. Default value: false. Setting this parameter to false helps protect information such as embedded product names from being translated.</p>
+     * <p>Specifies whether to translate text on the image subject. This parameter is optional. Default value: false. This helps protect information such as embedded product names from being translated.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -69,7 +69,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <p>Specifies whether to translate brand names on the image. This parameter is optional. Default value: false. Setting this parameter to false helps protect brand name information from being translated.</p>
+     * <p>Specifies whether to translate brand names on the image. This parameter is optional. Default value: false. This helps protect brand name information from being translated.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -78,7 +78,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public Boolean translatingBrandInTheProduct;
 
     /**
-     * <p>Specifies whether to return layout information such as text position, font, and color. When set to true, layer information is returned for secondary editing with an image editor. Default value: false.</p>
+     * <p>Specifies whether to return layout information such as text position, font, and color. Set this parameter to true to retrieve layer information for secondary editing with an image editor. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

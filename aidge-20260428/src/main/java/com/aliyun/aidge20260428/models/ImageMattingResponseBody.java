@@ -106,7 +106,7 @@ public class ImageMattingResponseBody extends TeaModel {
         public Integer height;
 
         /**
-         * <p>The URL of the matting result image.</p>
+         * <p>The URL of the image matting result.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg">http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg</a></p>
@@ -115,7 +115,7 @@ public class ImageMattingResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
-         * <p>The matting quality score.</p>
+         * <p>The quality score of the image matting result.</p>
          * 
          * <strong>example:</strong>
          * <p>0.11</p>

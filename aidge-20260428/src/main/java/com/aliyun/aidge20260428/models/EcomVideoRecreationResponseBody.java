@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EcomVideoRecreationResponseBody extends TeaModel {
     /**
-     * <p>The result code. <code>success</code> indicates success. An error code is returned upon failure.</p>
+     * <p>The result code. A value of <code>success</code> indicates success. An error code is returned upon failure.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -93,7 +93,7 @@ public class EcomVideoRecreationResponseBody extends TeaModel {
 
     public static class EcomVideoRecreationResponseBodyData extends TeaModel {
         /**
-         * <p>The asynchronous task ID for QueryAsyncTaskResult queries.</p>
+         * <p>The asynchronous task ID used to query results with QueryAsyncTaskResult.</p>
          * 
          * <strong>example:</strong>
          * <p>task_778fa8bd21804828a5d147050e30edac</p>

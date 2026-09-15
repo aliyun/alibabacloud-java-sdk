@@ -3,7 +3,7 @@ package com.aliyun.aidge20260428.models;
 
 import com.aliyun.tea.*;
 
-public class ImageTranslationPlusResponseBody extends TeaModel {
+public class SubmitProductMatchResponseBody extends TeaModel {
     /**
      * <p>The error code. This parameter is not returned if the call is successful.</p>
      * 
@@ -14,10 +14,10 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The asynchronous task submit status.</p>
+     * <p>The submit result of the matching product identification asynchronous task.</p>
      */
     @NameInMap("Data")
-    public ImageTranslationPlusResponseBodyData data;
+    public SubmitProductMatchResponseBodyData data;
 
     /**
      * <p>The error message. This parameter is not returned if the call is successful.</p>
@@ -50,12 +50,12 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static ImageTranslationPlusResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ImageTranslationPlusResponseBody self = new ImageTranslationPlusResponseBody();
+    public static SubmitProductMatchResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        SubmitProductMatchResponseBody self = new SubmitProductMatchResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ImageTranslationPlusResponseBody setCode(String code) {
+    public SubmitProductMatchResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -63,15 +63,15 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ImageTranslationPlusResponseBody setData(ImageTranslationPlusResponseBodyData data) {
+    public SubmitProductMatchResponseBody setData(SubmitProductMatchResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public ImageTranslationPlusResponseBodyData getData() {
+    public SubmitProductMatchResponseBodyData getData() {
         return this.data;
     }
 
-    public ImageTranslationPlusResponseBody setMessage(String message) {
+    public SubmitProductMatchResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -79,7 +79,7 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ImageTranslationPlusResponseBody setRequestId(String requestId) {
+    public SubmitProductMatchResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -87,7 +87,7 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ImageTranslationPlusResponseBody setSuccess(Boolean success) {
+    public SubmitProductMatchResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -95,22 +95,39 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class ImageTranslationPlusResponseBodyData extends TeaModel {
+    public static class SubmitProductMatchResponseBodyData extends TeaModel {
         /**
-         * <p>The asynchronous task ID. Use this ID to poll for results through the queryTaskResult API operation.</p>
+         * <p>The task acceptance time in ISO 8601 UTC format.</p>
          * 
          * <strong>example:</strong>
-         * <p>task-abc123</p>
+         * <p>2026-08-20T09:30:00Z</p>
+         */
+        @NameInMap("SubmittedAt")
+        public String submittedAt;
+
+        /**
+         * <p>The asynchronous task ID used for QueryAsyncTaskResult queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b7ea15cb609f47b7999d2d68dfbf3c90</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
-        public static ImageTranslationPlusResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            ImageTranslationPlusResponseBodyData self = new ImageTranslationPlusResponseBodyData();
+        public static SubmitProductMatchResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            SubmitProductMatchResponseBodyData self = new SubmitProductMatchResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public ImageTranslationPlusResponseBodyData setTaskId(String taskId) {
+        public SubmitProductMatchResponseBodyData setSubmittedAt(String submittedAt) {
+            this.submittedAt = submittedAt;
+            return this;
+        }
+        public String getSubmittedAt() {
+            return this.submittedAt;
+        }
+
+        public SubmitProductMatchResponseBodyData setTaskId(String taskId) {
             this.taskId = taskId;
             return this;
         }
