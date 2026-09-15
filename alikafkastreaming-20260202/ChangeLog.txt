@@ -1,3 +1,7 @@
+2026-09-15 Version: 2.0.1
+- Update API GetComputeInstance: add response parameters Body.Data.ResourceGroupId.
+
+
 2026-09-15 Version: 2.0.0
 - Update API CreateComputeInstance: delete request parameters ResourceType.
 - Update API CreateComputeJob: delete request parameters ClientToken.

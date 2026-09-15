@@ -135,6 +135,13 @@ public class GetComputeInstanceResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>rg-aek53bg4tl6fgma</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <strong>example:</strong>
          * <p>RUNNING</p>
          */
         @NameInMap("ServiceStatus")
@@ -239,6 +246,14 @@ public class GetComputeInstanceResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetComputeInstanceResponseBodyData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public GetComputeInstanceResponseBodyData setServiceStatus(String serviceStatus) {
