@@ -47,7 +47,7 @@ public class GetAiAppTraceDetailResponseBody extends TeaModel {
     public java.util.List<GetAiAppTraceDetailResponseBodyLabels> labels;
 
     /**
-     * <p>The backend-assigned ID that uniquely identifies a request. You can use this ID for troubleshooting.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -56,7 +56,7 @@ public class GetAiAppTraceDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The trace ID used to correlate and track alert events.</p>
+     * <p>The trace ID, which is used to correlate and track alert events.</p>
      * 
      * <strong>example:</strong>
      * <p>0abb7ee117615311812886711e0a15</p>
@@ -65,7 +65,7 @@ public class GetAiAppTraceDetailResponseBody extends TeaModel {
     public String traceId;
 
     /**
-     * <p>The alert time.</p>
+     * <p>The alert time. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-01 16:08:38</p>

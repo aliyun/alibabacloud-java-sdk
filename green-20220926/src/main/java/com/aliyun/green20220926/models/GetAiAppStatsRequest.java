@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAiAppStatsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to aggregate by month. Default value: false.</p>
+     * <p>Specifies whether to aggregate statistics by month. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +14,7 @@ public class GetAiAppStatsRequest extends TeaModel {
     public Boolean byMonth;
 
     /**
-     * <p>The query end date.</p>
+     * <p>The end date of the query. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-02 00:00:00</p>
@@ -41,7 +41,7 @@ public class GetAiAppStatsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The query start date.</p>
+     * <p>The start date of the query. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-01 00:00:00</p>

@@ -256,7 +256,7 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
         public Long warningCount;
 
         /**
-         * <p>The time when the alert was triggered.</p>
+         * <p>The alert time in the format of YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01 00:00:00</p>

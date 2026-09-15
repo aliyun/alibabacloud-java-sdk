@@ -11,7 +11,7 @@ public class ListAiAppRiskEventResponseBody extends TeaModel {
     public java.util.List<ListAiAppRiskEventResponseBodyData> data;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify a request. This ID can be used for troubleshooting.</p>
+     * <p>The ID assigned by the backend that uniquely identifies a request. This ID can be used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>

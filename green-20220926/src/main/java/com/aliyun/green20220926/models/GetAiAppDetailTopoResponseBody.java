@@ -61,7 +61,7 @@ public class GetAiAppDetailTopoResponseBody extends TeaModel {
         public String nodeCategory;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idxxx</p>
@@ -70,7 +70,7 @@ public class GetAiAppDetailTopoResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The name of the node.</p>
+         * <p>The node name.</p>
          * 
          * <strong>example:</strong>
          * <p>namexxx</p>
@@ -111,7 +111,7 @@ public class GetAiAppDetailTopoResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
-         * <p>The number of alerts.</p>
+         * <p>The alert count.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

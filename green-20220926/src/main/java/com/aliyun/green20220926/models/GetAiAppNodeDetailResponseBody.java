@@ -236,7 +236,7 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
-         * <p>The time when the event occurred.</p>
+         * <p>The time when the event occurred. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01 16:08:38</p>

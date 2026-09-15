@@ -44,7 +44,7 @@ public class InitAiAppScanResponseBody extends TeaModel {
     public String readyStatus;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify a request. Used for troubleshooting.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>

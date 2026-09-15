@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MarkOssV2ResultRequest extends TeaModel {
     /**
-     * <p>The end time.</p>
+     * <p>The end time. The time format is YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-10-21 16:08:38 +0800</p>
@@ -17,7 +17,7 @@ public class MarkOssV2ResultRequest extends TeaModel {
      * <p>The freeze type. This parameter is required when Operation is set to freeze. Valid values:</p>
      * <ul>
      * <li>ACL: Modify file permissions.</li>
-     * <li>COPY: Move the file to a directory. The destination directory is determined as follows: 1. The directory selected when the task was created takes priority. 2. If automatic freezing was not enabled during creation, or ACL freezing was configured, the directory selected during freezing in the console is used. 3. The default directory is alicip_riskfile_backup/.</li>
+     * <li>COPY: Move the file directory. Description of the destination directory: 1. The file directory selected when the task was created takes priority. 2. If automatic freezing was not enabled during creation, or ACL freezing was configured, the directory selected during freezing in the console is used. 3. The default directory is alicip_riskfile_backup/.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,10 +29,10 @@ public class MarkOssV2ResultRequest extends TeaModel {
     /**
      * <p>The processing operation. Valid values:</p>
      * <ul>
-     * <li>freeze: freeze.</li>
-     * <li>unfreeze: unfreeze.</li>
-     * <li>misreport: false positive (not in violation).</li>
-     * <li>missOut: missed violation.</li>
+     * <li>freeze: Freeze.</li>
+     * <li>unfreeze: Unfreeze.</li>
+     * <li>misreport: Non-violation false positive.</li>
+     * <li>missOut: Violation missed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class MarkOssV2ResultRequest extends TeaModel {
     public String requestIds;
 
     /**
-     * <p>The start time.</p>
+     * <p>The start time. The time format is YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-08-21 16:08:38 +0800</p>

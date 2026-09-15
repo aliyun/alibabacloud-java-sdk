@@ -14,7 +14,7 @@ public class GetRiskStatsRequest extends TeaModel {
     public String classify;
 
     /**
-     * <p>The end time.</p>
+     * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-02 00:00:00</p>
@@ -32,7 +32,7 @@ public class GetRiskStatsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start time.</p>
+     * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-01 00:00:00</p>

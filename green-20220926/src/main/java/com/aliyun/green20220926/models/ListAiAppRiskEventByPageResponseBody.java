@@ -29,7 +29,7 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page. An empty value indicates that no more pages exist.</p>
+     * <p>The token for the next page. An empty value indicates that no more pages exist.</p>
      * 
      * <strong>example:</strong>
      * <p>1a320d468c75e987f297484532c16e34d0ab6e7e43f8b73d</p>
@@ -47,7 +47,7 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -154,7 +154,7 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
         public String channel;
 
         /**
-         * <p>The end time that indicates when the event was resolved.</p>
+         * <p>The time when the event was resolved. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-10 11:42:31</p>
@@ -199,7 +199,7 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
         public String eventId;
 
         /**
-         * <p>The brief name that describes the risk event.</p>
+         * <p>The name that briefly describes the risk event.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>
@@ -208,7 +208,7 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>The time when the event was handled.</p>
+         * <p>The time when the event was handled. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-10 11:42:31</p>
@@ -217,7 +217,7 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
         public String handleTime;
 
         /**
-         * <p>The label used to mark or categorize the event.</p>
+         * <p>The label used to tag or categorize the event.</p>
          * 
          * <strong>example:</strong>
          * <p>label-03</p>
@@ -244,7 +244,7 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>The start time that indicates when the event occurred.</p>
+         * <p>The time when the event occurred. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-21 15:30:19</p>
@@ -253,7 +253,7 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The event status that indicates the current processing state of the event, such as pending or resolved.</p>
+         * <p>The event status that indicates the current processing state, such as pending or resolved.</p>
          * 
          * <strong>example:</strong>
          * <p>resolved</p>

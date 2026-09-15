@@ -14,7 +14,7 @@ public class ListAiAppRiskEventByPageRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The maximum number of results to return per request.</p>
+     * <p>The maximum number of results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListAiAppRiskEventByPageRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>1a320d468c75e987765861ec6d10f8cd3aea63fac9610c5c</p>

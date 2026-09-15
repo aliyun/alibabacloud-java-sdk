@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAiAppTraceDetailRequest extends TeaModel {
     /**
-     * <p>The AI application ID that identifies a specific AI application instance.</p>
+     * <p>The AI application ID, which identifies a specific AI application instance.</p>
      * 
      * <strong>example:</strong>
      * <p>id-xxx</p>
@@ -14,7 +14,7 @@ public class GetAiAppTraceDetailRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The end time of the query.</p>
+     * <p>The end time of the query. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-02 16:08:38</p>
@@ -32,7 +32,7 @@ public class GetAiAppTraceDetailRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start time of the query.</p>
+     * <p>The start time of the query. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-01 16:08:38</p>
@@ -41,7 +41,7 @@ public class GetAiAppTraceDetailRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The trace ID used to track and correlate a specific request chain.</p>
+     * <p>The trace ID, which is used to track and correlate a specific request chain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -23,7 +23,7 @@ public class DescribeOssV2ResultRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end time.</p>
+     * <p>The end time. Format: yyyy-MM-dd HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-09-14 16:08:38</p>
@@ -32,7 +32,7 @@ public class DescribeOssV2ResultRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,7 +50,7 @@ public class DescribeOssV2ResultRequest extends TeaModel {
     public String riskLevel;
 
     /**
-     * <p>The start time.</p>
+     * <p>The start time. Format: yyyy-MM-dd HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-09-14 16:08:38</p>
@@ -62,7 +62,7 @@ public class DescribeOssV2ResultRequest extends TeaModel {
      * <p>The task name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Image stock task 20240914100517757</p>
+     * <p>Image batch task 20240914100517757</p>
      */
     @NameInMap("TaskName")
     public String taskName;

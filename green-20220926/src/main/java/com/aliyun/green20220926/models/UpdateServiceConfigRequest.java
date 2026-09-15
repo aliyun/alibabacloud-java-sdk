@@ -5,6 +5,21 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceConfigRequest extends TeaModel {
     /**
+     * <p>The client-generated idempotency token used to prevent duplicate operations caused by network retries. The token must be unique across requests and contain only printable ASCII characters (ASCII 32-126).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>550e8400-e29b-41d4-a716-446655440000</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
+     * <p>Specifies whether to perform a dry run. When set to true, only parameter validation and business logic checks are performed without actually creating or updating resources.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>The document configuration.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +47,7 @@ public class UpdateServiceConfigRequest extends TeaModel {
     public String keywordHitLibs;
 
     /**
-     * <p>The machine-assisted moderation configuration.</p>
+     * <p>The human-machine moderation configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -106,6 +121,22 @@ public class UpdateServiceConfigRequest extends TeaModel {
     public static UpdateServiceConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateServiceConfigRequest self = new UpdateServiceConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateServiceConfigRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public UpdateServiceConfigRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public UpdateServiceConfigRequest setFileConfig(String fileConfig) {

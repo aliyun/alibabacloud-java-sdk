@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCipStatsResponseBody extends TeaModel {
     /**
-     * <p>The error code, which is the same as the HTTP status code.</p>
+     * <p>The error code, which is consistent with the HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -38,7 +38,7 @@ public class GetCipStatsResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>The request ID assigned by the backend. You can use this ID to troubleshoot issues.</p>
+     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -113,7 +113,7 @@ public class GetCipStatsResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>未检测出风险</p>
+         * <p>No risk detected</p>
          */
         @NameInMap("Description")
         public String description;
@@ -172,7 +172,7 @@ public class GetCipStatsResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>未检测出风险</p>
+         * <p>No risk detected</p>
          */
         @NameInMap("Description")
         public String description;
@@ -231,7 +231,7 @@ public class GetCipStatsResponseBody extends TeaModel {
          * <p>The label description.</p>
          * 
          * <strong>example:</strong>
-         * <p>疑似政治人物</p>
+         * <p>Suspected political figure</p>
          */
         @NameInMap("Description")
         public String description;
@@ -290,7 +290,7 @@ public class GetCipStatsResponseBody extends TeaModel {
          * <p>The label description.</p>
          * 
          * <strong>example:</strong>
-         * <p>疑似特定歌曲</p>
+         * <p>Suspected specific song</p>
          */
         @NameInMap("Description")
         public String description;
@@ -415,13 +415,13 @@ public class GetCipStatsResponseBody extends TeaModel {
         public Long totalCount;
 
         /**
-         * <p>The tree view.</p>
+         * <p>The tree chart.</p>
          */
         @NameInMap("TreeChart")
         public java.util.List<GetCipStatsResponseBodyDataLabelStatChartTreeChart> treeChart;
 
         /**
-         * <p>The audio tree view.</p>
+         * <p>The audio tree chart.</p>
          */
         @NameInMap("VoiceTreeChart")
         public java.util.List<GetCipStatsResponseBodyDataLabelStatChartVoiceTreeChart> voiceTreeChart;

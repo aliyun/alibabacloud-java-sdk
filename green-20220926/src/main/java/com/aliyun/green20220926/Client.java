@@ -1861,7 +1861,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>API operation is used together with the Image Moderation Enhanced API. After you call the Image Moderation Enhanced API, you can call API operation to obtain more moderation information. API operation is free of charge.</p>
+     * <p>API operation is used together with the Image Moderation Enhanced API. After you call the Image Moderation Enhanced API, you can call API operation to obtain more moderation details. API operation is free of charge.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves OSS moderation results v2.</p>
@@ -1920,7 +1920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>API operation is used together with the Image Moderation Enhanced API. After you call the Image Moderation Enhanced API, you can call API operation to obtain more moderation information. API operation is free of charge.</p>
+     * <p>API operation is used together with the Image Moderation Enhanced API. After you call the Image Moderation Enhanced API, you can call API operation to obtain more moderation details. API operation is free of charge.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves OSS moderation results v2.</p>
@@ -2459,7 +2459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves statistics for AI application details.</p>
+     * <p>Retrieves statistics for the details of an AI application.</p>
      * 
      * @param request GetAiAppDetailStatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2503,7 +2503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves statistics for AI application details.</p>
+     * <p>Retrieves statistics for the details of an AI application.</p>
      * 
      * @param request GetAiAppDetailStatRequest
      * @return GetAiAppDetailStatResponse
@@ -2693,7 +2693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves statistics data for AI applications.</p>
+     * <p>Retrieves statistics for AI application risk reports.</p>
      * 
      * @param request GetAiAppStatsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2745,7 +2745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves statistics data for AI applications.</p>
+     * <p>Retrieves statistics for AI application risk reports.</p>
      * 
      * @param request GetAiAppStatsRequest
      * @return GetAiAppStatsResponse
@@ -3109,7 +3109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the call volume.</p>
+     * <p>Queries the call volume statistics.</p>
      * 
      * @param request GetCipStatsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3179,7 +3179,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the call volume.</p>
+     * <p>Queries the call volume statistics.</p>
      * 
      * @param request GetCipStatsRequest
      * @return GetCipStatsResponse
@@ -3305,7 +3305,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public GetGuardLogStatsResponse getGuardLogStatsWithOptions(GetGuardLogStatsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.commodityCode)) {
+            query.put("CommodityCode", request.commodityCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetGuardLogStats"),
             new TeaPair("version", "2022-09-26"),
@@ -4932,7 +4939,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of risk events for AI applications.</p>
+     * <p>Retrieves the list of risk events for an AI application.</p>
      * 
      * @param request ListAiAppRiskEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4976,7 +4983,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of risk events for AI applications.</p>
+     * <p>Retrieves the list of risk events for an AI application.</p>
      * 
      * @param request ListAiAppRiskEventRequest
      * @return ListAiAppRiskEventResponse
@@ -5762,7 +5769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting an asynchronous detection task). The maximum interval cannot exceed 24 hours. Otherwise, results are automatically deleted.</p>
+     * <p>This operation is free of charge. Set the query interval to 30 seconds (that is, query results 30 seconds after you submit an asynchronous detection task). The maximum interval cannot exceed 24 hours. Otherwise, the results are automatically deleted.</p>
      * 
      * <b>summary</b> : 
      * <p>Provides feedback on OSS detection results.</p>
@@ -5817,7 +5824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting an asynchronous detection task). The maximum interval cannot exceed 24 hours. Otherwise, results are automatically deleted.</p>
+     * <p>This operation is free of charge. Set the query interval to 30 seconds (that is, query results 30 seconds after you submit an asynchronous detection task). The maximum interval cannot exceed 24 hours. Otherwise, the results are automatically deleted.</p>
      * 
      * <b>summary</b> : 
      * <p>Provides feedback on OSS detection results.</p>
@@ -6480,7 +6487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Message notification.</p>
+     * <p>Queries the list of message notifications by paging.</p>
      * 
      * @param request QueryCallbackByPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6522,7 +6529,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Message notification.</p>
+     * <p>Queries the list of message notifications by paging.</p>
      * 
      * @param request QueryCallbackByPageRequest
      * @return QueryCallbackByPageResponse
@@ -7436,6 +7443,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            body.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fileConfig)) {
             body.put("FileConfig", request.fileConfig);
         }

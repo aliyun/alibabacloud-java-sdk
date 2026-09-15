@@ -90,14 +90,7 @@ public class GetCipStatsRequest extends TeaModel {
     public String subUid;
 
     /**
-     * <p>The type. Valid values:</p>
-     * <ul>
-     * <li><strong>cip</strong>: Content Moderation invocation usage statistics.</li>
-     * <li><strong>risk_level</strong>: Content Moderation risk level statistics.</li>
-     * <li><strong>content_moderation</strong>: AI safety guardrail content compliance risk level and tag statistics.</li>
-     * <li><strong>sensitive_data</strong>: AI safety guardrail sensitive data risk level and tag statistics.</li>
-     * <li><strong>prompt_attack</strong>: AI safety guardrail prompt risk level and tag statistics.</li>
-     * </ul>
+     * <p>The type. Valid values: <strong>cip</strong>: Content Moderation invoke volume statistics. <strong>risk_level</strong>: Content Moderation risk level statistics. <strong>content_moderation</strong>: AI security guardrail content compliance risk level and tag statistics. <strong>sensitive_data</strong>: AI security guardrail sensitive data risk level and tag statistics. <strong>prompt_attack</strong>: AI security guardrail prompt risk level and tag statistics.</p>
      * 
      * <strong>example:</strong>
      * <p>risk_level</p>

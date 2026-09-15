@@ -15,7 +15,7 @@ public class GetAiAppDetailStatRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The end time of the query.</p>
+     * <p>The end time of the query. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-07-09 10:30:00</p>
@@ -33,7 +33,7 @@ public class GetAiAppDetailStatRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start time of the query.</p>
+     * <p>The start time of the query. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-09-10 14:48:01</p>

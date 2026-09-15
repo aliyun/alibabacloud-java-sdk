@@ -193,8 +193,8 @@ public class ListAiAppByPageResponseBody extends TeaModel {
         /**
          * <p>The event status. Valid values:</p>
          * <ul>
-         * <li><strong>unhandled</strong>: Not handled.</li>
-         * <li><strong>resolved</strong>: Handled.</li>
+         * <li><strong>unhandled</strong>: Unhandled.</li>
+         * <li><strong>resolved</strong>: Resolved.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -310,7 +310,7 @@ public class ListAiAppByPageResponseBody extends TeaModel {
         public String channel;
 
         /**
-         * <p>The last active time.</p>
+         * <p>The last active time. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01 00:00:00</p>

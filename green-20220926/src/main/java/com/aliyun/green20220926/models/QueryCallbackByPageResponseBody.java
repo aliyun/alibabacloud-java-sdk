@@ -23,13 +23,13 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
      * <p>The page size.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify a request. This ID can be used to troubleshoot issues.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -105,7 +105,7 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
          * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
-         * <p>2024-06-03 15:20:14</p>
+         * <p>2025-06-03 15:20:14</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
@@ -114,7 +114,7 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
          * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
-         * <p>2024-06-03 15:20:14</p>
+         * <p>2025-06-03 15:20:14</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
@@ -123,7 +123,7 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
          * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>1697</p>
+         * <p>1554</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -132,7 +132,7 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>消息通知</p>
+         * <p>callback_name</p>
          */
         @NameInMap("Name")
         public String name;
@@ -150,7 +150,7 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
          * <p>Seed。</p>
          * 
          * <strong>example:</strong>
-         * <p>cb6gYS8GXj4Vn4Y4FN0Y8R5M-1x46Mq</p>
+         * <p>cb6gYS*******x46Mq</p>
          */
         @NameInMap("Seed")
         public String seed;
@@ -159,7 +159,7 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
          * <p>UID。</p>
          * 
          * <strong>example:</strong>
-         * <p>12161*****398900</p>
+         * <p>12*****00</p>
          */
         @NameInMap("Uid")
         public String uid;

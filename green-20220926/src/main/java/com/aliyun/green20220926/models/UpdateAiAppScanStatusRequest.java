@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAiAppScanStatusRequest extends TeaModel {
     /**
-     * <p>The application IDs.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,8 +26,8 @@ public class UpdateAiAppScanStatusRequest extends TeaModel {
     /**
      * <p>The status. Valid values:</p>
      * <ul>
-     * <li>enable: enabled.</li>
-     * <li>disable: disabled.</li>
+     * <li>enable: enabled</li>
+     * <li>disable: disabled</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

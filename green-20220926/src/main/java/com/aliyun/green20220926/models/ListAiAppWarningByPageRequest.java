@@ -34,7 +34,7 @@ public class ListAiAppWarningByPageRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The query condition. This parameter is required and cannot be empty.</p>
+     * <p>The query condition. This parameter is required.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

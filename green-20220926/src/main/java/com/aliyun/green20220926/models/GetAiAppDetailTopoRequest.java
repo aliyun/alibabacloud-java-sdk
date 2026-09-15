@@ -69,7 +69,7 @@ public class GetAiAppDetailTopoRequest extends TeaModel {
         public String dimension;
 
         /**
-         * <p>The end time.</p>
+         * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-28 17:04:08</p>
@@ -78,7 +78,7 @@ public class GetAiAppDetailTopoRequest extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-22 17:04:08</p>

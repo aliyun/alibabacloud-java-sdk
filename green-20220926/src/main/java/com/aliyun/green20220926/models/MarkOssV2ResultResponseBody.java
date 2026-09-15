@@ -11,7 +11,7 @@ public class MarkOssV2ResultResponseBody extends TeaModel {
     public java.util.List<String> failureRequestIds;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+     * <p>The request ID assigned by the backend to uniquely identify a request. You can use this ID for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>

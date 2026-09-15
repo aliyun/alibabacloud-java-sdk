@@ -20,7 +20,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
     public java.util.List<DescribeOssV2ResultResponseBodyItems> items;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -93,7 +93,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
 
     public static class DescribeOssV2ResultResponseBodyItemsLabelDetails extends TeaModel {
         /**
-         * <p>The confidence score.</p>
+         * <p>The confidence level.</p>
          * 
          * <strong>example:</strong>
          * <p>50.00</p>
@@ -105,7 +105,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
          * <p>The label description.</p>
          * 
          * <strong>example:</strong>
-         * <p>涉政</p>
+         * <p>Political sensitivity</p>
          */
         @NameInMap("Description")
         public String description;
@@ -152,7 +152,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
 
     public static class DescribeOssV2ResultResponseBodyItemsLabelDetails2 extends TeaModel {
         /**
-         * <p>The confidence score.</p>
+         * <p>The confidence level.</p>
          * 
          * <strong>example:</strong>
          * <p>90.00</p>
@@ -164,7 +164,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
          * <p>The label description.</p>
          * 
          * <strong>example:</strong>
-         * <p>涉政</p>
+         * <p>Political sensitivity</p>
          */
         @NameInMap("Description")
         public String description;
@@ -211,7 +211,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
 
     public static class DescribeOssV2ResultResponseBodyItems extends TeaModel {
         /**
-         * <p>The storage bucket.</p>
+         * <p>The OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>buckect_test</p>
@@ -298,7 +298,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
         public String manualFreezeAction;
 
         /**
-         * <p>The disposition time.</p>
+         * <p>The disposition time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-08-09 12:00:00</p>
@@ -388,7 +388,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
         public String serviceCode;
 
         /**
-         * <p>The automatic system freeze operation.</p>
+         * <p>The automatic freeze operation performed by the system.</p>
          * 
          * <strong>example:</strong>
          * <p>COPY</p>

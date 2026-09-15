@@ -17,7 +17,7 @@ public class QueryCallbackByPageRequest extends TeaModel {
      * <p>The page size.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
