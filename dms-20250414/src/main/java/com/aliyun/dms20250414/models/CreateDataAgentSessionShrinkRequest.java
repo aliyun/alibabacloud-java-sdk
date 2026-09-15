@@ -29,10 +29,10 @@ public class CreateDataAgentSessionShrinkRequest extends TeaModel {
     public String sessionConfigShrink;
 
     /**
-     * <p>The session title. Supports Chinese and English. Maximum length: 128 characters.</p>
+     * <p>The title. Chinese and English characters are supported. Maximum length: 128 characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>帮我分析一下这份数据，给出报告。</p>
+     * <p>Help me analyze this data and generate a report</p>
      */
     @NameInMap("Title")
     public String title;

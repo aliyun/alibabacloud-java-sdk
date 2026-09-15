@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataAgentThemeRequest extends TeaModel {
     /**
-     * <p>The common scenarios. Valid values: report, infographic, and others.</p>
+     * <p>The common scenario of the theme. Valid values: report, infographic, and others.</p>
      * 
      * <strong>example:</strong>
      * <p>report</p>
@@ -14,7 +14,7 @@ public class ListDataAgentThemeRequest extends TeaModel {
     public String category;
 
     /**
-     * <p><strong>[Not supported]</strong> The page size. Maximum value: 100.</p>
+     * <p><strong>[Not currently supported]</strong> The maximum number of entries per page. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,10 +23,10 @@ public class ListDataAgentThemeRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p><strong>[Not supported]</strong> The pagination token for the next query. Valid values:</p>
+     * <p><strong>[Not currently supported]</strong> The pagination token for the next query. Valid values:</p>
      * <ul>
      * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
-     * <li>If <strong>NextToken</strong> has a return value, the value indicates the token for the next query.</li>
+     * <li>If <strong>NextToken</strong> has a return value, the value is the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ListDataAgentThemeRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The current page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -70,8 +70,8 @@ public class ListDataAgentThemeRequest extends TeaModel {
     /**
      * <p>The theme stage. Valid values:</p>
      * <ul>
-     * <li>design: contains only design.md.</li>
-     * <li>template: complete and renderable.</li>
+     * <li>design: The theme contains only design.md.</li>
+     * <li>template: The theme is complete and renderable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,6 +79,15 @@ public class ListDataAgentThemeRequest extends TeaModel {
      */
     @NameInMap("ThemeType")
     public String themeType;
+
+    /**
+     * <p>The workspace context. If this parameter is left empty or set to personal, the personal workspace is used. To query themes in a collaborative workspace, specify the workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>99fad*******6c0l4nlacu</p>
+     */
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
 
     public static ListDataAgentThemeRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDataAgentThemeRequest self = new ListDataAgentThemeRequest();
@@ -139,6 +148,14 @@ public class ListDataAgentThemeRequest extends TeaModel {
     }
     public String getThemeType() {
         return this.themeType;
+    }
+
+    public ListDataAgentThemeRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

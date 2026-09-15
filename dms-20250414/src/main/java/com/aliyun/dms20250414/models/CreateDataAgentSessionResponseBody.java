@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataAgentSessionResponseBody extends TeaModel {
     /**
-     * <p>The response structure.</p>
+     * <p>The response struct.</p>
      */
     @NameInMap("Data")
     public CreateDataAgentSessionResponseBodyData data;
@@ -20,7 +20,7 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The error message returned when the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
@@ -29,7 +29,7 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>1CB***********3F1A</p>
@@ -40,10 +40,8 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -110,10 +108,8 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         /**
          * <p>The stage of the custom agent. Valid values:</p>
          * <ul>
-         * <li><p><strong>debug</strong>: Debug stage</p>
-         * </li>
-         * <li><p><strong>prod</strong>: Production stage</p>
-         * </li>
+         * <li><strong>debug</strong>: Debug stage.</li>
+         * <li><strong>prod</strong>: Production stage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,7 +119,7 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         public String customAgentStage;
 
         /**
-         * <p>Indicates whether web search is enabled.</p>
+         * <p>Specifies whether to enable web search.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -131,22 +127,35 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         @NameInMap("EnableSearch")
         public Boolean enableSearch;
 
+        /**
+         * <p>The encryption key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("EncryptKey")
         public String encryptKey;
 
+        /**
+         * <p>The encryption type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("EncryptType")
         public String encryptType;
 
+        /**
+         * <p>The list of knowledge base IDs.</p>
+         */
         @NameInMap("KbUuidList")
         public java.util.List<String> kbUuidList;
 
         /**
          * <p>The language. Valid values:</p>
          * <ul>
-         * <li><p><strong>CHINESE</strong>: Chinese</p>
-         * </li>
-         * <li><p><strong>ENGLISH</strong>: English</p>
-         * </li>
+         * <li><strong>CHINESE</strong>: Chinese.</li>
+         * <li><strong>ENGLISH</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -156,7 +165,7 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>A list of MCP server IDs.</p>
+         * <p>The list of MCP server IDs in the session configuration.</p>
          */
         @NameInMap("McpServerIds")
         public java.util.List<String> mcpServerIds;
@@ -164,12 +173,9 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         /**
          * <p>The mode. Valid values:</p>
          * <ul>
-         * <li><p><strong>ASK_DATA</strong>: Quick Inquiry Mode</p>
-         * </li>
-         * <li><p><strong>ANALYSIS</strong>: Analysis Mode</p>
-         * </li>
-         * <li><p><strong>INSIGHT</strong>: Insight Mode</p>
-         * </li>
+         * <li><strong>ASK_DATA</strong>: Ask data mode.</li>
+         * <li><strong>ANALYSIS</strong>: Analysis mode.</li>
+         * <li><strong>INSIGHT</strong>: Insight mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,16 +184,28 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The report page width.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ReportPageWidth")
         public Long reportPageWidth;
 
+        /**
+         * <p>The report watermark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ReportWaterMark")
         public String reportWaterMark;
 
         /**
-         * <p>The name of the user\&quot;s OSS bucket.</p>
+         * <p>The name of the user OSS bucket.</p>
          * <ul>
-         * <li>Analysis files and report artifacts can be uploaded to this OSS bucket.</li>
+         * <li>Analysis process files and report artifacts can be uploaded to the specified OSS bucket.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -301,7 +319,7 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
 
     public static class CreateDataAgentSessionResponseBodyData extends TeaModel {
         /**
-         * <p>The agent ID.</p>
+         * <p>Agent Id</p>
          * 
          * <strong>example:</strong>
          * <p>cu0cs*******mf</p>
@@ -319,7 +337,7 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         public String agentStatus;
 
         /**
-         * <p>The time when the session was created, in Unix milliseconds.</p>
+         * <p>The time when the session was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1765262307992</p>
@@ -328,7 +346,7 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the associated file.</p>
+         * <p>The basic information about the file.</p>
          * 
          * <strong>example:</strong>
          * <p>f-8*******01m</p>
@@ -337,7 +355,7 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         public String file;
 
         /**
-         * <p>Indicates whether the current user has favorited the session.</p>
+         * <p>Indicates whether the session is saved to the favorites of the current user.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -370,10 +388,10 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         public String sessionStatus;
 
         /**
-         * <p>The session title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
-         * <p>帮我分析一下这份数据，给出报告。</p>
+         * <p>Help me analyze this data and generate a report</p>
          */
         @NameInMap("Title")
         public String title;

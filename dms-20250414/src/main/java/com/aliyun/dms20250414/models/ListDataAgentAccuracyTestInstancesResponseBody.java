@@ -221,6 +221,12 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <p>The data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Datasource")
         public String datasource;
 
@@ -282,13 +288,13 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
          * <p>The custom agent name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Agent测试名称</p>
+         * <p>AgentTestName</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Specifies whether sessions are displayed after analysis. This parameter is not supported.</p>
+         * <p>Specifies whether sessions are displayed after analysis. This feature is not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

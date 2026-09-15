@@ -11,7 +11,7 @@ public class CreateDataAgentThemeResponseBody extends TeaModel {
     public CreateDataAgentThemeResponseBodyData data;
 
     /**
-     * <p>The error code returned when the request is abnormal.</p>
+     * <p>The error code returned when the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
@@ -20,7 +20,7 @@ public class CreateDataAgentThemeResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned when the call fails.</p>
+     * <p>The error message returned when the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
