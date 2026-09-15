@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class CreateHttpApiRequest extends TeaModel {
     /**
-     * <p>The list of protocols supported by the agent. Required when type is Agent. This field is not required for other types.</p>
+     * <p>The list of protocols supported by the agent. This parameter is required when type is set to Agent. You do not need to specify this parameter for other types.</p>
      */
     @NameInMap("agentProtocols")
     public java.util.List<String> agentProtocols;
 
     /**
-     * <p>The list of AI API protocols. Required when type is LLM (only one protocol allowed) or Ai (multiple protocols allowed). Not required for other types. Example protocol: OpenAI/v1.</p>
+     * <p>The list of AI API protocols. This parameter is required when type is set to LLM, and only one protocol can be specified. This parameter is required when type is set to Ai, and multiple protocols can be specified. You do not need to specify this parameter for other types. Example protocol entry: OpenAI/v1.</p>
      */
     @NameInMap("aiProtocols")
     public java.util.List<String> aiProtocols;
 
     /**
-     * <p>The authentication configuration. Required when enableAuth is set to true.</p>
+     * <p>The authentication configuration. This parameter is required when enableAuth is set to true.</p>
      */
     @NameInMap("authConfig")
     public AuthConfig authConfig;
 
     /**
-     * <p>The base path of the API. Must start with a forward slash (/), cannot exceed 256 bytes in length, and cannot contain spaces. Required when type is Rest. Optional when type is LLM, Ai, or Agent. Defaults to /.</p>
+     * <p>The base path of the API. The value must start with a forward slash (/), cannot exceed 256 bytes in length, and cannot contain spaces. This parameter is required when type is set to Rest. When type is set to LLM, Ai, or Agent, this parameter is optional and defaults to /.</p>
      * 
      * <strong>example:</strong>
      * <p>/v1</p>
@@ -41,13 +41,13 @@ public class CreateHttpApiRequest extends TeaModel {
     public String belongGatewayId;
 
     /**
-     * <p>The list of deployment configurations for the HTTP API. Required when type is LLM or Ai (only one deployment configuration allowed). Not validated at the request level for other types.</p>
+     * <p>The list of deployment configurations for the HTTP API. This parameter is required when type is set to LLM or Ai, and only one deployment configuration can be specified. This parameter is not validated at the request level for other types.</p>
      */
     @NameInMap("deployConfigs")
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
     /**
-     * <p>The API description.</p>
+     * <p>The description of the API.</p>
      * 
      * <strong>example:</strong>
      * <p>Test API for integration</p>
@@ -56,7 +56,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to preview only without executing.</p>
+     * <p>Specifies whether to perform a dry run without executing the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -66,7 +66,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to enable authentication. Validated when type is LLM, Ai, or Agent. Not validated at the request level when type is Rest.</p>
+     * <p>Specifies whether to enable authentication. This parameter is validated when type is set to LLM, Ai, or Agent. This parameter is not validated at the request level when type is set to Rest.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -75,7 +75,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public Boolean enableAuth;
 
     /**
-     * <p>The timeout period for waiting for the backend to return the first byte.</p>
+     * <p>The timeout period for waiting for the first byte from the backend.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -84,22 +84,22 @@ public class CreateHttpApiRequest extends TeaModel {
     public Integer firstByteTimeout;
 
     /**
-     * <p>The HTTP Ingress API configuration. Required when type is HttpIngress and cannot be null. Not required for other types.</p>
+     * <p>The HTTP Ingress API configuration. This parameter is required and cannot be nil when type is set to HttpIngress. You do not need to specify this parameter for other types.</p>
      */
     @NameInMap("ingressConfig")
     public CreateHttpApiRequestIngressConfig ingressConfig;
 
     /**
-     * <p>The AI model category. Optional when type is LLM or Ai. Not required for other types. Valid values:</p>
+     * <p>The AI model category. This parameter is optional when type is set to LLM or Ai. You do not need to specify this parameter for other types. Valid values:</p>
      * <ul>
      * <li>Text: text generation.</li>
      * <li>Image: image generation.</li>
      * <li>Audio: audio processing.</li>
-     * <li>Video: video generation.</li>
+     * <li>Video: AI video generation.</li>
      * <li>MultiModal: multimodal.</li>
-     * <li>Embedding: vector embedding.</li>
+     * <li>Embedding: embedding.</li>
      * <li>Rerank: reranking.</li>
-     * <li>Others: others.</li>
+     * <li>Others: other.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,7 +109,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public String modelCategory;
 
     /**
-     * <p>The name of the HTTP API, used to identify the current API resource. For example, test-api.</p>
+     * <p>The name of the HTTP API, which identifies the API resource. Example: test-api.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The conflict resolution strategy for imports.</p>
+     * <p>The conflict merge strategy for import.</p>
      * 
      * <strong>example:</strong>
      * <p>ExistFirst</p>
@@ -159,7 +159,7 @@ public class CreateHttpApiRequest extends TeaModel {
      * <li>WebSocket: a WebSocket API.</li>
      * <li>HttpIngress: an HTTP API accessed through Ingress.</li>
      * <li>LLM: a large language model API.</li>
-     * <li>Agent: an Agent proxy API.</li>
+     * <li>Agent: an agent proxy API.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -174,6 +174,15 @@ public class CreateHttpApiRequest extends TeaModel {
      */
     @NameInMap("versionConfig")
     public HttpApiVersionConfig versionConfig;
+
+    /**
+     * <p>The idempotency token, which is a globally unique value generated by the caller. We recommend that you use a UUID. The value cannot exceed 64 characters in length. Within approximately 24 hours after the first successful request, a duplicate request that carries the same ClientToken and identical request parameters directly returns the httpApiId created by the first request without creating a duplicate HTTP API. If the same ClientToken is carried but the request parameters are different, the IdempotentParameterMismatch error is returned. If the first request is still being processed, the IdempotentProcessing error is returned. If this parameter is not specified, idempotency control is not enabled, and the behavior is consistent with the existing version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5f7a2c1e-9b3d-4e8f-a1c6-0d2b8e4f7a13</p>
+     */
+    @NameInMap("clientToken")
+    public String clientToken;
 
     public static CreateHttpApiRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateHttpApiRequest self = new CreateHttpApiRequest();
@@ -331,6 +340,14 @@ public class CreateHttpApiRequest extends TeaModel {
     }
     public HttpApiVersionConfig getVersionConfig() {
         return this.versionConfig;
+    }
+
+    public CreateHttpApiRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public static class CreateHttpApiRequestIngressConfig extends TeaModel {

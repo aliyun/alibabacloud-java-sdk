@@ -137,13 +137,13 @@ public class HttpApiDeployConfig extends TeaModel {
     public java.util.List<HttpApiDeployConfigServiceConfigs> serviceConfigs;
 
     /**
-     * <p>The list of subdomain content.</p>
+     * <p>The list of second-level domain name content.</p>
      */
     @NameInMap("subDomains")
     public java.util.List<HttpApiDeployConfigSubDomains> subDomains;
 
     /**
-     * <p>The set of explicitly enabled gateway system model capability tiers. Takes effect only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, premium. An explicit empty array indicates that no system model is enabled.</p>
+     * <p>The set of explicitly enabled gateway system model capability tiers. Takes effect only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, and premium. An explicitly empty array indicates that no system models are enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;economy&quot;,&quot;standard&quot;,&quot;premium&quot;]</p>
@@ -487,7 +487,7 @@ public class HttpApiDeployConfig extends TeaModel {
 
     public static class HttpApiDeployConfigServiceConfigs extends TeaModel {
         /**
-         * <p>The capability tier of the intelligent routing candidate. Specify this parameter only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, and premium.</p>
+         * <p>The capability tier for intelligent routing candidates. Specify this parameter only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, and premium.</p>
          * 
          * <strong>example:</strong>
          * <p>standard</p>

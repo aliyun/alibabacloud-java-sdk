@@ -39,7 +39,7 @@ public class UpdateHttpApiRequest extends TeaModel {
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
     /**
-     * <p>The description of the API.</p>
+     * <p>The API description.</p>
      * 
      * <strong>example:</strong>
      * <p>Update API description</p>
@@ -96,13 +96,13 @@ public class UpdateHttpApiRequest extends TeaModel {
     public Boolean removeBasePathOnForward;
 
     /**
-     * <p>The versioning configuration of the API.</p>
+     * <p>The API versioning configuration.</p>
      */
     @NameInMap("versionConfig")
     public HttpApiVersionConfig versionConfig;
 
     /**
-     * <p>Specifies whether to perform only a dry run. If set to true, all synchronous validations identical to a real update are performed without updating any configurations or producing side effects. If not specified or set to false, the behavior is the same as the existing version.</p>
+     * <p>Specifies whether to perform only a dry run. If set to true, all synchronous validations identical to an actual update are performed, but no configurations are modified and no side effects are produced. If set to false or left empty, the behavior is the same as the existing version.</p>
      */
     @NameInMap("dryRun")
     public Boolean dryRun;
@@ -235,7 +235,7 @@ public class UpdateHttpApiRequest extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>The Ingress Class to listen on.</p>
+         * <p>The Ingress class to listen on.</p>
          * 
          * <strong>example:</strong>
          * <p>mse</p>
@@ -244,7 +244,7 @@ public class UpdateHttpApiRequest extends TeaModel {
         public String ingressClass;
 
         /**
-         * <p>Specifies whether to update the address in the Ingress Status.</p>
+         * <p>Specifies whether to update the address in the Ingress status.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

@@ -110,7 +110,7 @@ public class GetDashboardResponseBody extends TeaModel {
 
     public static class GetDashboardResponseBodyData extends TeaModel {
         /**
-         * <p>The unique identifier of the gateway.</p>
+         * <p>The unique ID of the gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-co370icmjeu****</p>
@@ -137,7 +137,7 @@ public class GetDashboardResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>The dashboard URL.</p>
+         * <p>The URL of the dashboard.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://sls.console.aliyun.com/lognext/project/xxxxx">https://sls.console.aliyun.com/lognext/project/xxxxx</a></p>

@@ -76,7 +76,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
 
     public static class QueryConsumerAuthorizationRulesResponseBodyDataItemsResourceInfo extends TeaModel {
         /**
-         * <p>The operation information.</p>
+         * <p>The API operation information.</p>
          */
         @NameInMap("operationInfo")
         public HttpApiOperationInfo operationInfo;
@@ -112,7 +112,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
 
     public static class QueryConsumerAuthorizationRulesResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The API information details.</p>
+         * <p>The API information.</p>
          */
         @NameInMap("apiInfo")
         public HttpApiApiInfo apiInfo;
@@ -151,7 +151,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String consumerId;
 
         /**
-         * <p>The consumer information details.</p>
+         * <p>The consumer information.</p>
          */
         @NameInMap("consumerInfo")
         public ConsumerInfo consumerInfo;
@@ -166,7 +166,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The publish status of the API in the current environment.</p>
+         * <p>The deployment status of the API in the current environment.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -181,11 +181,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public EnvironmentInfo environmentInfo;
 
         /**
-         * <p>The expiration mode. Valid values:</p>
-         * <ul>
-         * <li>LongTerm</li>
-         * <li>ShortTerm</li>
-         * </ul>
+         * <p>The expiration mode. Valid values: LongTerm and ShortTerm.</p>
          * 
          * <strong>example:</strong>
          * <p>ShortTerm</p>
@@ -218,7 +214,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public GatewayInfo gatewayInfo;
 
         /**
-         * <p>The principal type. Valid values: Consumer or ConsumerGroup.</p>
+         * <p>The principal type. Valid values: Consumer and ConsumerGroup.</p>
          * 
          * <strong>example:</strong>
          * <p>ConsumerGroup</p>
@@ -236,7 +232,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The resource information details.</p>
+         * <p>The resource information.</p>
          */
         @NameInMap("resourceInfo")
         public QueryConsumerAuthorizationRulesResponseBodyDataItemsResourceInfo resourceInfo;
@@ -412,7 +408,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
 
     public static class QueryConsumerAuthorizationRulesResponseBodyData extends TeaModel {
         /**
-         * <p>The list of consumer rules.</p>
+         * <p>The list of consumer authorization rules.</p>
          */
         @NameInMap("items")
         public java.util.List<QueryConsumerAuthorizationRulesResponseBodyDataItems> items;

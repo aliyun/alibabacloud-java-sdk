@@ -14,7 +14,7 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     public String apiNameLike;
 
     /**
-     * <p>The consumer group ID. If specified, the authorization rules of this consumer group are queried.</p>
+     * <p>The consumer group ID. If specified, the authorization rules of the consumer group are queried. At least one of the following parameters must be specified: resourceId, parentResourceId, consumerId, and consumerGroupId.</p>
      * 
      * <strong>example:</strong>
      * <p>csg-8c13d2b4f8a1</p>
@@ -32,7 +32,7 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     public String consumerGroupNameLike;
 
     /**
-     * <p>The consumer ID.</p>
+     * <p>The consumer ID. At least one of the following parameters must be specified: resourceId, parentResourceId, consumerId, and consumerGroupId.</p>
      * 
      * <strong>example:</strong>
      * <p>cs-ct21c16m1hkp64hk6qmg</p>
@@ -86,7 +86,7 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The parent resource ID.</p>
+     * <p>The parent resource ID. At least one of the following parameters must be specified: resourceId, parentResourceId, consumerId, and consumerGroupId.</p>
      * 
      * <strong>example:</strong>
      * <p>ha-cn-li942gy8p01</p>
@@ -95,7 +95,7 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     public String parentResourceId;
 
     /**
-     * <p>The principal type. Valid values: Consumer or ConsumerGroup.</p>
+     * <p>The principal type. Valid values: Consumer and ConsumerGroup.</p>
      * 
      * <strong>example:</strong>
      * <p>ConsumerGroup</p>
@@ -104,7 +104,7 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     public String principalType;
 
     /**
-     * <p>The resource ID.</p>
+     * <p>The resource ID. At least one of the following parameters must be specified: resourceId, parentResourceId, consumerId, and consumerGroupId.</p>
      * 
      * <strong>example:</strong>
      * <p>ha-cn-li942gy8p03</p>
@@ -122,7 +122,7 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The service source types.</p>
+     * <p>The service source type.</p>
      * 
      * <strong>example:</strong>
      * <p>K8S</p>

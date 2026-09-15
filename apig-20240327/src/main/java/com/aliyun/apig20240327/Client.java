@@ -1396,6 +1396,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public CreateHttpApiResponse createHttpApiWithOptions(CreateHttpApiRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.agentProtocols)) {
             body.put("agentProtocols", request.agentProtocols);
@@ -1475,6 +1480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -1506,7 +1512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an operation for an HTTP API.</p>
+     * <p>Creates operations for an HTTP API.</p>
      * 
      * @param request CreateHttpApiOperationRequest
      * @param headers map
@@ -1540,7 +1546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an operation for an HTTP API.</p>
+     * <p>Creates operations for an HTTP API.</p>
      * 
      * @param request CreateHttpApiOperationRequest
      * @return CreateHttpApiOperationResponse
@@ -2803,7 +2809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a quota rule based on an API consumer or consumer group for an AI gateway. This operation only takes effect on AI gateways with a version later than 2.1.19.</p>
+     * <p>Deletes a quota rule based on an API consumer or consumer group from an AI gateway. This operation only takes effect on AI gateways with a version later than 2.1.19.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a quota throttling rule for a gateway.</p>
@@ -2834,7 +2840,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a quota rule based on an API consumer or consumer group for an AI gateway. This operation only takes effect on AI gateways with a version later than 2.1.19.</p>
+     * <p>Deletes a quota rule based on an API consumer or consumer group from an AI gateway. This operation only takes effect on AI gateways with a version later than 2.1.19.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a quota throttling rule for a gateway.</p>
@@ -4382,7 +4388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the API operation information.</p>
+     * <p>Retrieves operation information.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4408,7 +4414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the API operation information.</p>
+     * <p>Retrieves operation information.</p>
      * @return GetHttpApiOperationResponse
      */
     public GetHttpApiOperationResponse getHttpApiOperation(String httpApiId, String operationId) throws Exception {

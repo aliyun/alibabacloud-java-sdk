@@ -55,8 +55,8 @@ public class GetConsumerAuthorizationRuleResponseBody extends TeaModel {
     /**
      * <p>The expiration mode. Valid values:</p>
      * <ul>
-     * <li>LongTerm</li>
-     * <li>ShortTerm</li>
+     * <li>LongTerm: long-term</li>
+     * <li>ShortTerm: short-term</li>
      * </ul>
      * 
      * <strong>example:</strong>
