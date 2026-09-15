@@ -110,7 +110,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
 
     public static class GetWorkspaceResponseBodyDataNetworkConfigurationVpc extends TeaModel {
         /**
-         * <p>Indicates whether the VPC network is enabled.</p>
+         * <p>Indicates whether VPC networking is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -166,7 +166,16 @@ public class GetWorkspaceResponseBody extends TeaModel {
 
     public static class GetWorkspaceResponseBodyDataNetworkConfiguration extends TeaModel {
         /**
-         * <p>The user VPC network configuration.</p>
+         * <p>The public egress IP address allocated to the workspace. You can use this IP address to configure IP address whitelists for external services. This field is returned only when the public egress resource is attached and an address is allocated. The field is empty if no address is allocated, the attachment is failed, or the address is being released. This address is independent of whether VPC networking is active.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.0.113.10</p>
+         */
+        @NameInMap("publicEgressIp")
+        public String publicEgressIp;
+
+        /**
+         * <p>The VPC network configuration of the user.</p>
          */
         @NameInMap("vpc")
         public GetWorkspaceResponseBodyDataNetworkConfigurationVpc vpc;
@@ -174,6 +183,14 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public static GetWorkspaceResponseBodyDataNetworkConfiguration build(java.util.Map<String, ?> map) throws Exception {
             GetWorkspaceResponseBodyDataNetworkConfiguration self = new GetWorkspaceResponseBodyDataNetworkConfiguration();
             return TeaModel.build(map, self);
+        }
+
+        public GetWorkspaceResponseBodyDataNetworkConfiguration setPublicEgressIp(String publicEgressIp) {
+            this.publicEgressIp = publicEgressIp;
+            return this;
+        }
+        public String getPublicEgressIp() {
+            return this.publicEgressIp;
         }
 
         public GetWorkspaceResponseBodyDataNetworkConfiguration setVpc(GetWorkspaceResponseBodyDataNetworkConfigurationVpc vpc) {
@@ -188,7 +205,19 @@ public class GetWorkspaceResponseBody extends TeaModel {
 
     public static class GetWorkspaceResponseBodyData extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The OSS storage authorization status.</p>
+         */
+        @NameInMap("authorizationStatus")
+        public String authorizationStatus;
+
+        /**
+         * <p>The name of the private OSS bucket.</p>
+         */
+        @NameInMap("bucketName")
+        public String bucketName;
+
+        /**
+         * <p>The time when the workspace was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-06T03:56:56Z</p>
@@ -206,7 +235,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The workspace network configuration.</p>
+         * <p>The network configuration of the workspace.</p>
          */
         @NameInMap("networkConfiguration")
         public GetWorkspaceResponseBodyDataNetworkConfiguration networkConfiguration;
@@ -221,7 +250,14 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The workspace status. Valid values: Initializing, InitializationFailed, Initialized, Deleting, Deleted.</p>
+         * <p>The workspace status. Valid values:</p>
+         * <ul>
+         * <li>Initializing</li>
+         * <li>InitializationFailed</li>
+         * <li>Initialized</li>
+         * <li>Deleting</li>
+         * <li>Deleted</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Initialized</p>
@@ -237,6 +273,12 @@ public class GetWorkspaceResponseBody extends TeaModel {
          */
         @NameInMap("statusReason")
         public String statusReason;
+
+        /**
+         * <p>The storage type of the workspace.</p>
+         */
+        @NameInMap("storageType")
+        public String storageType;
 
         /**
          * <p>The ID of the tenant to which the workspace belongs.</p>
@@ -259,6 +301,22 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public static GetWorkspaceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetWorkspaceResponseBodyData self = new GetWorkspaceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetWorkspaceResponseBodyData setAuthorizationStatus(String authorizationStatus) {
+            this.authorizationStatus = authorizationStatus;
+            return this;
+        }
+        public String getAuthorizationStatus() {
+            return this.authorizationStatus;
+        }
+
+        public GetWorkspaceResponseBodyData setBucketName(String bucketName) {
+            this.bucketName = bucketName;
+            return this;
+        }
+        public String getBucketName() {
+            return this.bucketName;
         }
 
         public GetWorkspaceResponseBodyData setCreateTime(String createTime) {
@@ -307,6 +365,14 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
         public String getStatusReason() {
             return this.statusReason;
+        }
+
+        public GetWorkspaceResponseBodyData setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
         }
 
         public GetWorkspaceResponseBodyData setTenantId(String tenantId) {

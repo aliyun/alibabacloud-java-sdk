@@ -4,12 +4,17 @@ package com.aliyun.agentcore20260804.models;
 import com.aliyun.tea.*;
 
 public class UpdateTeamRequest extends TeaModel {
+    /**
+     * <p>The request body for updating the team.</p>
+     */
     @NameInMap("body")
     public UpdateTeamRequestBody body;
 
     /**
+     * <p>Not supported.</p>
+     * 
      * <strong>example:</strong>
-     * <p>暂不支持</p>
+     * <p>Not supported</p>
      */
     @NameInMap("clientToken")
     public String clientToken;
@@ -37,6 +42,8 @@ public class UpdateTeamRequest extends TeaModel {
 
     public static class UpdateTeamRequestBodyAgents extends TeaModel {
         /**
+         * <p>The agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent-123456</p>
          */
@@ -44,6 +51,12 @@ public class UpdateTeamRequest extends TeaModel {
         public String agentId;
 
         /**
+         * <p>The role of the agent in the team. Valid values:</p>
+         * <ul>
+         * <li>LEADER</li>
+         * <li>WORKER</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>WORKER</p>
          */
@@ -75,6 +88,13 @@ public class UpdateTeamRequest extends TeaModel {
 
     public static class UpdateTeamRequestBodyUsers extends TeaModel {
         /**
+         * <p>The role of the user in the team. Valid values:</p>
+         * <ul>
+         * <li>ADMIN</li>
+         * <li>MEMBER</li>
+         * </ul>
+         * <p>Each team must have exactly one ADMIN.</p>
+         * 
          * <strong>example:</strong>
          * <p>ADMIN</p>
          */
@@ -82,6 +102,8 @@ public class UpdateTeamRequest extends TeaModel {
         public String teamRole;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>usr-123456</p>
          */
@@ -112,16 +134,24 @@ public class UpdateTeamRequest extends TeaModel {
     }
 
     public static class UpdateTeamRequestBody extends TeaModel {
+        /**
+         * <p>The new agent member list. Replaces the existing agent members using full overwrite semantics. If not specified, the existing agent members remain unchanged.</p>
+         */
         @NameInMap("agents")
         public java.util.List<UpdateTeamRequestBodyAgents> agents;
 
         /**
+         * <p>The new team description. If not specified, the existing description remains unchanged.</p>
+         * 
          * <strong>example:</strong>
-         * <p>负责智能客服业务的团队</p>
+         * <p>A team responsible for intelligent customer service</p>
          */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The new user member list. Replaces the existing user members using full overwrite semantics. When specified, the list must contain exactly one member with the ADMIN role. If not specified, the existing user members remain unchanged.</p>
+         */
         @NameInMap("users")
         public java.util.List<UpdateTeamRequestBodyUsers> users;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListExternalAgentsResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value SUCCESS indicates success.</p>
+     * <p>The business status code. The value SUCCESS is returned for a successful request.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,7 +14,7 @@ public class ListExternalAgentsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code. The value 200 indicates success.</p>
+     * <p>The HTTP status code. The value 200 is returned for a successful request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,7 +41,7 @@ public class ListExternalAgentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The message returned for the request.</p>
+     * <p>The message that indicates the result of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -50,7 +50,7 @@ public class ListExternalAgentsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The token for the next page. An empty value indicates the last page.</p>
+     * <p>The token for the next page. An empty value indicates that the last page has been reached.</p>
      * 
      * <strong>example:</strong>
      * <p>next-token-1</p>
@@ -200,22 +200,13 @@ public class ListExternalAgentsResponseBody extends TeaModel {
         public String deployType;
 
         /**
-         * <p>The external agent description.</p>
+         * <p>The description of the external agent.</p>
          * 
          * <strong>example:</strong>
          * <p>A code review agent running in the user environment</p>
          */
         @NameInMap("description")
         public String description;
-
-        /**
-         * <p>The currently effective specification version number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("effectiveSpecVersion")
-        public Long effectiveSpecVersion;
 
         /**
          * <p>The latest specification version number.</p>
@@ -227,7 +218,7 @@ public class ListExternalAgentsResponseBody extends TeaModel {
         public Long latestSpecVersion;
 
         /**
-         * <p>The external agent name.</p>
+         * <p>The name of the external agent.</p>
          * 
          * <strong>example:</strong>
          * <p>my-external-agent</p>
@@ -245,7 +236,7 @@ public class ListExternalAgentsResponseBody extends TeaModel {
         public String runtime;
 
         /**
-         * <p>The external agent status. Valid values:</p>
+         * <p>The status of the external agent. Valid values:</p>
          * <ul>
          * <li>Creating: The agent is being created.</li>
          * <li>Running: The agent is running.</li>
@@ -322,14 +313,6 @@ public class ListExternalAgentsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
-        }
-
-        public ListExternalAgentsResponseBodyItems setEffectiveSpecVersion(Long effectiveSpecVersion) {
-            this.effectiveSpecVersion = effectiveSpecVersion;
-            return this;
-        }
-        public Long getEffectiveSpecVersion() {
-            return this.effectiveSpecVersion;
         }
 
         public ListExternalAgentsResponseBodyItems setLatestSpecVersion(Long latestSpecVersion) {

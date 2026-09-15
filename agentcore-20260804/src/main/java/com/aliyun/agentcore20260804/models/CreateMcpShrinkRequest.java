@@ -11,7 +11,7 @@ public class CreateMcpShrinkRequest extends TeaModel {
     public String bodyShrink;
 
     /**
-     * <p>The client idempotency token.</p>
+     * <p>The client token that ensures idempotency of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426614174000</p>

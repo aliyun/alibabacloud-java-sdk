@@ -4,12 +4,17 @@ package com.aliyun.agentcore20260804.models;
 import com.aliyun.tea.*;
 
 public class UpdateTeamShrinkRequest extends TeaModel {
+    /**
+     * <p>The request body for updating the team.</p>
+     */
     @NameInMap("body")
     public String bodyShrink;
 
     /**
+     * <p>Not supported.</p>
+     * 
      * <strong>example:</strong>
-     * <p>暂不支持</p>
+     * <p>Not supported</p>
      */
     @NameInMap("clientToken")
     public String clientToken;

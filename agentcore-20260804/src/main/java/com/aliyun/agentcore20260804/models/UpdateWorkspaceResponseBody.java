@@ -125,7 +125,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The ID of the user VPC.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1234567890</p>
@@ -166,7 +166,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
 
     public static class UpdateWorkspaceResponseBodyDataNetworkConfiguration extends TeaModel {
         /**
-         * <p>The user VPC network configuration.</p>
+         * <p>The VPC network configuration.</p>
          */
         @NameInMap("vpc")
         public UpdateWorkspaceResponseBodyDataNetworkConfigurationVpc vpc;
@@ -188,6 +188,18 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
 
     public static class UpdateWorkspaceResponseBodyData extends TeaModel {
         /**
+         * <p>The OSS storage authorization status.</p>
+         */
+        @NameInMap("authorizationStatus")
+        public String authorizationStatus;
+
+        /**
+         * <p>The name of the private OSS bucket.</p>
+         */
+        @NameInMap("bucketName")
+        public String bucketName;
+
+        /**
          * <p>The workspace name.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +209,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The workspace network configuration.</p>
+         * <p>The network configuration of the workspace.</p>
          */
         @NameInMap("networkConfiguration")
         public UpdateWorkspaceResponseBodyDataNetworkConfiguration networkConfiguration;
@@ -221,6 +233,12 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The storage type of the workspace.</p>
+         */
+        @NameInMap("storageType")
+        public String storageType;
+
+        /**
          * <p>The ID of the tenant to which the workspace belongs.</p>
          * 
          * <strong>example:</strong>
@@ -241,6 +259,22 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         public static UpdateWorkspaceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             UpdateWorkspaceResponseBodyData self = new UpdateWorkspaceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateWorkspaceResponseBodyData setAuthorizationStatus(String authorizationStatus) {
+            this.authorizationStatus = authorizationStatus;
+            return this;
+        }
+        public String getAuthorizationStatus() {
+            return this.authorizationStatus;
+        }
+
+        public UpdateWorkspaceResponseBodyData setBucketName(String bucketName) {
+            this.bucketName = bucketName;
+            return this;
+        }
+        public String getBucketName() {
+            return this.bucketName;
         }
 
         public UpdateWorkspaceResponseBodyData setName(String name) {
@@ -273,6 +307,14 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public UpdateWorkspaceResponseBodyData setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
         }
 
         public UpdateWorkspaceResponseBodyData setTenantId(String tenantId) {

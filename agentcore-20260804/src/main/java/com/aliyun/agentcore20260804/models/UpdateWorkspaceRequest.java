@@ -51,13 +51,13 @@ public class UpdateWorkspaceRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The list of vSwitch IDs. When VPC networking is enabled, at least one vSwitch must be included, and all vSwitches must belong to the VPC specified by VpcId.</p>
+         * <p>The list of vSwitch IDs. When VPC networking is enabled, at least one vSwitch must be specified, and all vSwitches must belong to the VPC specified by VpcId.</p>
          */
         @NameInMap("vSwitchIds")
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The ID of the user VPC.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1234567890</p>
@@ -98,7 +98,7 @@ public class UpdateWorkspaceRequest extends TeaModel {
 
     public static class UpdateWorkspaceRequestBodyNetworkConfiguration extends TeaModel {
         /**
-         * <p>The user VPC network configuration.</p>
+         * <p>The VPC network configuration.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("vpc")
@@ -130,7 +130,7 @@ public class UpdateWorkspaceRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The updated workspace network configuration.</p>
+         * <p>The updated network configuration of the workspace.</p>
          */
         @NameInMap("networkConfiguration")
         public UpdateWorkspaceRequestBodyNetworkConfiguration networkConfiguration;

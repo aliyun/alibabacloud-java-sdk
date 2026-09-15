@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAgentSpecVersionResponseBody extends TeaModel {
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public Boolean data;

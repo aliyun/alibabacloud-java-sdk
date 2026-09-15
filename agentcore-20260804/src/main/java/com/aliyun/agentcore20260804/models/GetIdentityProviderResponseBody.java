@@ -29,7 +29,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message. An error description is returned if the request fails.</p>
+     * <p>The response message. An error description is returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -175,7 +175,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The event subscription callback URL. Configure this URL in the application on the external identity provider side to receive organization change events. An empty string is returned if the user pool has not been provisioned.</p>
+         * <p>The event subscription callback URL. Configure this URL in the external identity provider application to receive organization change events. An empty string is returned if the user pool has not been activated.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://auth.cn-hangzhou.agentteams.aliyuncs.com/roa/dingtalk/event/up-123456">http://auth.cn-hangzhou.agentteams.aliyuncs.com/roa/dingtalk/event/up-123456</a></p>
@@ -193,7 +193,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public String identityProviderType;
 
         /**
-         * <p>The logon callback URL. Configure this URL in the application on the external identity provider side. An empty string is returned if the user pool has not been provisioned.</p>
+         * <p>The logon callback URL. Configure this URL in the external identity provider application. An empty string is returned if the user pool has not been activated.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://signin-cn-hangzhou.aliyunagentid.com/up-123456/dingtalk/callback">https://signin-cn-hangzhou.aliyunagentid.com/up-123456/dingtalk/callback</a></p>
@@ -216,7 +216,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         /**
          * <p>The status. Valid values:</p>
          * <ul>
-         * <li>CONFIGURED: The configuration has been accepted and is waiting for the user pool to be provisioned.</li>
+         * <li>CONFIGURED: The configuration has been accepted and is waiting for user pool activation.</li>
          * <li>SYNCING: Organization members are being synchronized.</li>
          * <li>SYNCED: Organization member synchronization is complete.</li>
          * <li>READY: The binding is active.</li>

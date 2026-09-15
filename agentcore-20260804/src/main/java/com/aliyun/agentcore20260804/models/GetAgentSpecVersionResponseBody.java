@@ -45,7 +45,7 @@ public class GetAgentSpecVersionResponseBody extends TeaModel {
          * <p>The business tags.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sample property value</p>
+         * <p>SamplePropertyValue</p>
          */
         @NameInMap("bizTags")
         public String bizTags;
@@ -54,7 +54,7 @@ public class GetAgentSpecVersionResponseBody extends TeaModel {
          * <p>The content.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sample content</p>
+         * <p>SampleContent</p>
          */
         @NameInMap("content")
         public String content;

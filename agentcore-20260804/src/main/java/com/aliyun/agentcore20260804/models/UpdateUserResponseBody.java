@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateUserResponseBody extends TeaModel {
     /**
+     * <p>The business status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The updated user information.</p>
+     */
     @NameInMap("data")
     public UpdateUserResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class UpdateUserResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message. An error description is returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,12 +38,17 @@ public class UpdateUserResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>request-123456</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class UpdateUserResponseBody extends TeaModel {
 
     public static class UpdateUserResponseBodyData extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>usr-123456</p>
          */
@@ -100,6 +116,8 @@ public class UpdateUserResponseBody extends TeaModel {
         public String agentCoreUserId;
 
         /**
+         * <p>The authentication method of the user. password indicates local password authentication within the workspace. dingtalk and feishu indicate that the user is synchronized and authenticated by the corresponding external identity provider.</p>
+         * 
          * <strong>example:</strong>
          * <p>password</p>
          */
@@ -107,6 +125,8 @@ public class UpdateUserResponseBody extends TeaModel {
         public String authMethod;
 
         /**
+         * <p>The creation time in UTC, formatted in RFC 3339.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
          */
@@ -114,13 +134,17 @@ public class UpdateUserResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>The display name of the user. The name is 1 to 32 characters in length.</p>
+         * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>John</p>
          */
         @NameInMap("displayName")
         public String displayName;
 
         /**
+         * <p>The email address of the user. The address can be up to 256 characters in length.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:user-01@example.com">user-01@example.com</a></p>
          */
@@ -128,6 +152,8 @@ public class UpdateUserResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>The username. The name must be unique within the workspace and can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit. The name must be 1 to 32 characters in length.</p>
+         * 
          * <strong>example:</strong>
          * <p>user-01</p>
          */
@@ -135,13 +161,17 @@ public class UpdateUserResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The note for the user. The note can be up to 1,024 characters in length.</p>
+         * 
          * <strong>example:</strong>
-         * <p>智能体运营组成员</p>
+         * <p>Agent operations team member</p>
          */
         @NameInMap("note")
         public String note;
 
         /**
+         * <p>The region ID of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -149,6 +179,8 @@ public class UpdateUserResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The user status. Valid values: Creating, Active, Updating, Deleting, Failed, and DeleteFailed.</p>
+         * 
          * <strong>example:</strong>
          * <p>Active</p>
          */
@@ -156,6 +188,8 @@ public class UpdateUserResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The time of the last modification in UTC, formatted in RFC 3339.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
          */
@@ -163,6 +197,8 @@ public class UpdateUserResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ws-123456</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMcpsRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return per page.</p>
+     * <p>The maximum number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,6 +14,8 @@ public class ListMcpsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The MCP service name or service ID. Used together with SearchType.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-mcp-server</p>
      */
@@ -30,11 +32,33 @@ public class ListMcpsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Filters results by official usage tag.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>KNOWLEDGE_BASE</p>
+     */
+    @NameInMap("officialTag")
+    public String officialTag;
+
+    /**
+     * <p>The name matching method. Takes effect only when Name is specified. Valid values:</p>
+     * <ul>
+     * <li>accurate: exact match.</li>
+     * <li>blur: fuzzy match.</li>
+     * </ul>
+     * <p>Default value: blur.</p>
+     * 
      * <strong>example:</strong>
      * <p>blur</p>
      */
     @NameInMap("searchType")
     public String searchType;
+
+    /**
+     * <p>Specifies whether the service is still bound by the official template usage constraint.</p>
+     */
+    @NameInMap("usageActive")
+    public Boolean usageActive;
 
     public static ListMcpsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMcpsRequest self = new ListMcpsRequest();
@@ -65,12 +89,28 @@ public class ListMcpsRequest extends TeaModel {
         return this.nextToken;
     }
 
+    public ListMcpsRequest setOfficialTag(String officialTag) {
+        this.officialTag = officialTag;
+        return this;
+    }
+    public String getOfficialTag() {
+        return this.officialTag;
+    }
+
     public ListMcpsRequest setSearchType(String searchType) {
         this.searchType = searchType;
         return this;
     }
     public String getSearchType() {
         return this.searchType;
+    }
+
+    public ListMcpsRequest setUsageActive(Boolean usageActive) {
+        this.usageActive = usageActive;
+        return this;
+    }
+    public Boolean getUsageActive() {
+        return this.usageActive;
     }
 
 }

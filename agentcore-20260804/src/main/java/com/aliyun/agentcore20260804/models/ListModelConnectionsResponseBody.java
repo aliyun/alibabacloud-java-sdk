@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListModelConnectionsResponseBody extends TeaModel {
     /**
+     * <p>The business status code. A value of SUCCESS indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -12,16 +14,23 @@ public class ListModelConnectionsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The list of model connections.</p>
+     */
     @NameInMap("items")
     public java.util.List<ListModelConnectionsResponseBodyItems> items;
 
     /**
+     * <p>The number of records per page. Valid values: 0 to 100. If this parameter is not set or is set to 0, the default value 10 is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +38,8 @@ public class ListModelConnectionsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The request processing result message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -36,6 +47,8 @@ public class ListModelConnectionsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The pagination token. Pass the token returned in the previous query. An empty response indicates that no more pages are available.</p>
+     * 
      * <strong>example:</strong>
      * <p>bW9kZWwtbWFuYWdlbWVudC1vZmZzZXQ6bW9kZWwtY29ubmVjdGlvbjoxMA</p>
      */
@@ -43,16 +56,23 @@ public class ListModelConnectionsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>request-1</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
+     * <p>The total number of resources that match the query conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -138,6 +158,8 @@ public class ListModelConnectionsResponseBody extends TeaModel {
 
     public static class ListModelConnectionsResponseBodyItemsModels extends TeaModel {
         /**
+         * <p>The model ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>model-1</p>
          */
@@ -145,6 +167,8 @@ public class ListModelConnectionsResponseBody extends TeaModel {
         public String modelId;
 
         /**
+         * <p>The upstream model name.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-max</p>
          */
@@ -176,6 +200,8 @@ public class ListModelConnectionsResponseBody extends TeaModel {
 
     public static class ListModelConnectionsResponseBodyItems extends TeaModel {
         /**
+         * <p>The number of API keys configured for the model connection.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -183,6 +209,8 @@ public class ListModelConnectionsResponseBody extends TeaModel {
         public Integer apiKeyCount;
 
         /**
+         * <p>The model connection ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mc-1</p>
          */
@@ -190,16 +218,23 @@ public class ListModelConnectionsResponseBody extends TeaModel {
         public String connectionId;
 
         /**
+         * <p>The time when the resource was created, in RFC 3339 UTC format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-08-09T00:00:00Z</p>
          */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <p>Indicates whether access credentials have been configured for the model connection.</p>
+         */
         @NameInMap("credentialConfigured")
         public Boolean credentialConfigured;
 
         /**
+         * <p>The description of the model connection. Maximum length: 255 characters.</p>
+         * 
          * <strong>example:</strong>
          * <p>description</p>
          */
@@ -207,16 +242,23 @@ public class ListModelConnectionsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The absolute HTTP or HTTPS address of the upstream model service. Maximum length: 1024 characters.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
          */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <p>The list of model summaries associated with the model connection.</p>
+         */
         @NameInMap("models")
         public java.util.List<ListModelConnectionsResponseBodyItemsModels> models;
 
         /**
+         * <p>The model connection name. The name must be 1 to 128 non-whitespace characters in length.</p>
+         * 
          * <strong>example:</strong>
          * <p>name</p>
          */
@@ -224,6 +266,8 @@ public class ListModelConnectionsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The model invocation protocol. Currently only OpenAI/v1 is supported. If not configured in Settings when the model connection is created, this default value is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>OpenAI/v1</p>
          */
@@ -231,6 +275,8 @@ public class ListModelConnectionsResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The model provider type.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen</p>
          */
@@ -238,6 +284,8 @@ public class ListModelConnectionsResponseBody extends TeaModel {
         public String providerType;
 
         /**
+         * <p>The resource status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Active</p>
          */
@@ -245,6 +293,8 @@ public class ListModelConnectionsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The failure summary returned when the model connection fails to be published or fails to be deleted but remains in the Deleting state. This value is empty for other states.</p>
+         * 
          * <strong>example:</strong>
          * <p>GatewayOperationException</p>
          */
@@ -252,6 +302,8 @@ public class ListModelConnectionsResponseBody extends TeaModel {
         public String statusReason;
 
         /**
+         * <p>The time when the resource was last updated, in RFC 3339 UTC format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-08-09T00:00:00Z</p>
          */
@@ -259,6 +311,8 @@ public class ListModelConnectionsResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ws-1</p>
          */

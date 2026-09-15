@@ -4,6 +4,9 @@ package com.aliyun.agentcore20260804.models;
 import com.aliyun.tea.*;
 
 public class DebugModelRequest extends TeaModel {
+    /**
+     * <p>The request body.</p>
+     */
     @NameInMap("body")
     public DebugModelRequestBody body;
 
@@ -22,6 +25,7 @@ public class DebugModelRequest extends TeaModel {
 
     public static class DebugModelRequestBody extends TeaModel {
         /**
+         * <p>The prompt used to verify the model call chain.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

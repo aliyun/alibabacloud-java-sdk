@@ -41,7 +41,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The message returned for the request.</p>
+     * <p>The result message of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -50,7 +50,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The token for the next page. An empty value indicates that no more pages are available.</p>
+     * <p>The token for the next page. An empty value indicates that the last page has been reached.</p>
      * 
      * <strong>example:</strong>
      * <p>next-token-1</p>
@@ -162,6 +162,87 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListManagedAgentsResponseBodyItemsHarnessConfiguration extends TeaModel {
+        /**
+         * <p>Binds a Service Account Key of the QoderCLI Connector by Key ID. This parameter can be omitted when only one key exists, but is required when multiple keys exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-xxxx</p>
+         */
+        @NameInMap("connectorServiceAccountKey")
+        public String connectorServiceAccountKey;
+
+        /**
+         * <p>The Connector Key name populated during queries. This parameter is not used as a binding reference during writes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-connector-key</p>
+         */
+        @NameInMap("connectorServiceAccountName")
+        public String connectorServiceAccountName;
+
+        public static ListManagedAgentsResponseBodyItemsHarnessConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            ListManagedAgentsResponseBodyItemsHarnessConfiguration self = new ListManagedAgentsResponseBodyItemsHarnessConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public ListManagedAgentsResponseBodyItemsHarnessConfiguration setConnectorServiceAccountKey(String connectorServiceAccountKey) {
+            this.connectorServiceAccountKey = connectorServiceAccountKey;
+            return this;
+        }
+        public String getConnectorServiceAccountKey() {
+            return this.connectorServiceAccountKey;
+        }
+
+        public ListManagedAgentsResponseBodyItemsHarnessConfiguration setConnectorServiceAccountName(String connectorServiceAccountName) {
+            this.connectorServiceAccountName = connectorServiceAccountName;
+            return this;
+        }
+        public String getConnectorServiceAccountName() {
+            return this.connectorServiceAccountName;
+        }
+
+    }
+
+    public static class ListManagedAgentsResponseBodyItemsHarness extends TeaModel {
+        /**
+         * <p>The Connector binding configuration for the qodercli framework.</p>
+         */
+        @NameInMap("configuration")
+        public ListManagedAgentsResponseBodyItemsHarnessConfiguration configuration;
+
+        /**
+         * <p>The runtime framework type. Valid values: qwenpaw and qodercli. The qodercli type binds by configuration.connectorServiceAccountKey, and the name is also populated during queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qodercli</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        public static ListManagedAgentsResponseBodyItemsHarness build(java.util.Map<String, ?> map) throws Exception {
+            ListManagedAgentsResponseBodyItemsHarness self = new ListManagedAgentsResponseBodyItemsHarness();
+            return TeaModel.build(map, self);
+        }
+
+        public ListManagedAgentsResponseBodyItemsHarness setConfiguration(ListManagedAgentsResponseBodyItemsHarnessConfiguration configuration) {
+            this.configuration = configuration;
+            return this;
+        }
+        public ListManagedAgentsResponseBodyItemsHarnessConfiguration getConfiguration() {
+            return this.configuration;
+        }
+
+        public ListManagedAgentsResponseBodyItemsHarness setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class ListManagedAgentsResponseBodyItems extends TeaModel {
         /**
          * <p>The managed agent ID.</p>
@@ -209,13 +290,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The effective specification version number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * <p>The agent runtime framework.</p>
          */
-        @NameInMap("effectiveSpecVersion")
-        public Long effectiveSpecVersion;
+        @NameInMap("harness")
+        public ListManagedAgentsResponseBodyItemsHarness harness;
 
         /**
          * <p>The latest specification version number.</p>
@@ -227,7 +305,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         public Long latestSpecVersion;
 
         /**
-         * <p>The managed agent name.</p>
+         * <p>The name of the managed agent.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent</p>
@@ -245,7 +323,15 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         public String runtime;
 
         /**
-         * <p>The status of the managed agent.</p>
+         * <p>The status of the managed agent. Valid values:</p>
+         * <ul>
+         * <li>Creating: Being created.</li>
+         * <li>Failed: Failed.</li>
+         * <li>Running: Running.</li>
+         * <li>Updating: Being updated.</li>
+         * <li>Deleted: Deleted.</li>
+         * <li>Deleting: Being deleted.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -316,12 +402,12 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListManagedAgentsResponseBodyItems setEffectiveSpecVersion(Long effectiveSpecVersion) {
-            this.effectiveSpecVersion = effectiveSpecVersion;
+        public ListManagedAgentsResponseBodyItems setHarness(ListManagedAgentsResponseBodyItemsHarness harness) {
+            this.harness = harness;
             return this;
         }
-        public Long getEffectiveSpecVersion() {
-            return this.effectiveSpecVersion;
+        public ListManagedAgentsResponseBodyItemsHarness getHarness() {
+            return this.harness;
         }
 
         public ListManagedAgentsResponseBodyItems setLatestSpecVersion(Long latestSpecVersion) {

@@ -29,7 +29,7 @@ public class UpdateAgentIMChannelResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The result message of the request.</p>
+     * <p>The request processing result message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -223,7 +223,7 @@ public class UpdateAgentIMChannelResponseBody extends TeaModel {
         public UpdateAgentIMChannelResponseBodyDataCredentialSummary credentialSummary;
 
         /**
-         * <p>Specifies whether to enable the IM channel. Default value: true (when created).</p>
+         * <p>Specifies whether to enable the IM channel. Default value upon creation: true.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
@@ -247,7 +247,7 @@ public class UpdateAgentIMChannelResponseBody extends TeaModel {
         public String imChannelId;
 
         /**
-         * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public endpoint address.</p>
+         * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>se-1</p>
@@ -273,7 +273,7 @@ public class UpdateAgentIMChannelResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The reason for the current status of the IM channel.</p>
+         * <p>The reason for the current IM channel status.</p>
          * 
          * <strong>example:</strong>
          * <p>AppFlow creation failed</p>

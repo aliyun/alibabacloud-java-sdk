@@ -4,6 +4,9 @@ package com.aliyun.agentcore20260804.models;
 import com.aliyun.tea.*;
 
 public class ResetUserPasswordRequest extends TeaModel {
+    /**
+     * <p>The request body for resetting the user password.</p>
+     */
     @NameInMap("body")
     public ResetUserPasswordRequestBody body;
 
@@ -22,6 +25,8 @@ public class ResetUserPasswordRequest extends TeaModel {
 
     public static class ResetUserPasswordRequestBody extends TeaModel {
         /**
+         * <p>The user ID. At least one of agentCoreUserId and username must be specified. If both are specified, agentCoreUserId takes precedence.</p>
+         * 
          * <strong>example:</strong>
          * <p>usr-123456</p>
          */
@@ -29,6 +34,8 @@ public class ResetUserPasswordRequest extends TeaModel {
         public String agentCoreUserId;
 
         /**
+         * <p>The new password after the reset. The password must be 8 to 32 characters in length and must contain uppercase letters, lowercase letters, digits, and special characters. The password cannot contain the username. If this parameter is not specified, the server generates a random password.</p>
+         * 
          * <strong>example:</strong>
          * <p>Example@2026</p>
          */
@@ -36,6 +43,8 @@ public class ResetUserPasswordRequest extends TeaModel {
         public String password;
 
         /**
+         * <p>The username. At least one of username and agentCoreUserId must be specified.</p>
+         * 
          * <strong>example:</strong>
          * <p>user-01</p>
          */

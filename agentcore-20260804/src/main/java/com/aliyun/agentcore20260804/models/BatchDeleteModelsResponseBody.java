@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class BatchDeleteModelsResponseBody extends TeaModel {
     /**
+     * <p>The business status code. The value SUCCESS indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The batch deletion result.</p>
+     */
     @NameInMap("data")
     public BatchDeleteModelsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code. The value 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class BatchDeleteModelsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request processing result message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,12 +38,17 @@ public class BatchDeleteModelsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>request-1</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -92,10 +106,15 @@ public class BatchDeleteModelsResponseBody extends TeaModel {
     }
 
     public static class BatchDeleteModelsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of model IDs.</p>
+         */
         @NameInMap("modelIds")
         public java.util.List<String> modelIds;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ws-1</p>
          */

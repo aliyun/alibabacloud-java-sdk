@@ -57,7 +57,7 @@ public class CreateWorkspaceRequest extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The ID of the user VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1234567890</p>
@@ -136,6 +136,9 @@ public class CreateWorkspaceRequest extends TeaModel {
         @NameInMap("networkConfiguration")
         public CreateWorkspaceRequestBodyNetworkConfiguration networkConfiguration;
 
+        @NameInMap("storageType")
+        public String storageType;
+
         public static CreateWorkspaceRequestBody build(java.util.Map<String, ?> map) throws Exception {
             CreateWorkspaceRequestBody self = new CreateWorkspaceRequestBody();
             return TeaModel.build(map, self);
@@ -155,6 +158,14 @@ public class CreateWorkspaceRequest extends TeaModel {
         }
         public CreateWorkspaceRequestBodyNetworkConfiguration getNetworkConfiguration() {
             return this.networkConfiguration;
+        }
+
+        public CreateWorkspaceRequestBody setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
         }
 
     }

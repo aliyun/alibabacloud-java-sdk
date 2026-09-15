@@ -11,7 +11,7 @@ public class UpdateAgentIMChannelRequest extends TeaModel {
     public UpdateAgentIMChannelRequestBody body;
 
     /**
-     * <p>The reserved idempotency token. The backend does not provide persistent idempotency guarantees in this phase.</p>
+     * <p>The reserved idempotency token. The backend does not provide persistent idempotency guarantees in the current phase.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-1</p>
@@ -78,19 +78,19 @@ public class UpdateAgentIMChannelRequest extends TeaModel {
 
     public static class UpdateAgentIMChannelRequestBody extends TeaModel {
         /**
-         * <p>The channel behavior configuration. When provided, the entire configuration is replaced. An empty object restores default values.</p>
+         * <p>The channel behavior configuration. When specified, the entire configuration is replaced. An empty object restores default values.</p>
          */
         @NameInMap("channelConfig")
         public UpdateAgentIMChannelRequestBodyChannelConfig channelConfig;
 
         /**
-         * <p>Specifies whether to enable the IM channel. Default value: true (when created).</p>
+         * <p>Specifies whether to enable the IM channel. Default value upon creation: true.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public endpoint address.</p>
+         * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>se-1</p>

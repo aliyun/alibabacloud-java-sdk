@@ -11,7 +11,7 @@ public class CreateExternalAgentRequest extends TeaModel {
     public CreateExternalAgentRequestBody body;
 
     /**
-     * <p>The reserved idempotency token. The backend does not guarantee idempotence in the current version.</p>
+     * <p>The reserved idempotency token. The backend does not provide idempotency guarantees in the current version.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-1</p>
@@ -140,6 +140,7 @@ public class CreateExternalAgentRequest extends TeaModel {
 
         /**
          * <p>The version of the template in AI Registry.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -259,7 +260,7 @@ public class CreateExternalAgentRequest extends TeaModel {
         public String instruction;
 
         /**
-         * <p>The model configuration. This parameter is available only when modelSource is set to PLATFORM.</p>
+         * <p>The model configuration. Available only when modelSource is set to PLATFORM.</p>
          */
         @NameInMap("model")
         public CreateExternalAgentRequestBodyModel model;
@@ -267,8 +268,8 @@ public class CreateExternalAgentRequest extends TeaModel {
         /**
          * <p>The source of the model configuration. Valid values:</p>
          * <ul>
-         * <li>PLATFORM: The platform parses and delivers the model configuration. You can specify the model parameter.</li>
-         * <li>RUNTIME: The external runtime manages the model on its own. You cannot specify the model parameter at the same time.</li>
+         * <li>PLATFORM: The platform parses and delivers the model configuration.</li>
+         * <li>RUNTIME: The external runtime manages the model on its own. You cannot specify model at the same time.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -4,10 +4,15 @@ package com.aliyun.agentcore20260804.models;
 import com.aliyun.tea.*;
 
 public class BatchDeleteModelsRequest extends TeaModel {
+    /**
+     * <p>The request body.</p>
+     */
     @NameInMap("body")
     public BatchDeleteModelsRequestBody body;
 
     /**
+     * <p>The client token used for idempotence. Not supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>client-token-1</p>
      */
@@ -37,6 +42,7 @@ public class BatchDeleteModelsRequest extends TeaModel {
 
     public static class BatchDeleteModelsRequestBody extends TeaModel {
         /**
+         * <p>The list of model IDs.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("modelIds")

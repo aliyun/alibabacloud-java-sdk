@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DeleteUserResponseBody extends TeaModel {
     /**
+     * <p>The business status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The information about the deleted user.</p>
+     */
     @NameInMap("data")
     public DeleteUserResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class DeleteUserResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message. An error description is returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,12 +38,17 @@ public class DeleteUserResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>request-123456</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class DeleteUserResponseBody extends TeaModel {
 
     public static class DeleteUserResponseBodyData extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>usr-123456</p>
          */
@@ -100,6 +116,8 @@ public class DeleteUserResponseBody extends TeaModel {
         public String agentCoreUserId;
 
         /**
+         * <p>The username. The username must be unique within the workspace. It can contain only lowercase letters, digits, and hyphens (-), and must start and end with a lowercase letter or digit. The username must be 1 to 32 characters in length.</p>
+         * 
          * <strong>example:</strong>
          * <p>user-01</p>
          */
@@ -107,6 +125,8 @@ public class DeleteUserResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ws-123456</p>
          */

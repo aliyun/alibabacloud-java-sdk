@@ -11,7 +11,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
     public UpdateManagedAgentRequestBody body;
 
     /**
-     * <p>The reserved idempotency token. The backend does not provide idempotency guarantees in the current phase.</p>
+     * <p>The reserved idempotency token. The backend does not guarantee idempotence in the current phase.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-1</p>
@@ -68,7 +68,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBodyEnvironmentVariables extends TeaModel {
         /**
-         * <p>The environment variable name.</p>
+         * <p>The name of the environment variable.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The environment variable value.</p>
+         * <p>The value of the environment variable.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,6 +146,87 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     }
 
+    public static class UpdateManagedAgentRequestBodyHarnessConfiguration extends TeaModel {
+        /**
+         * <p>The Key ID used to bind a Service Account Key of the QoderCLI Connector. This parameter can be omitted when only one key exists, but is required when multiple keys exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-xxxx</p>
+         */
+        @NameInMap("connectorServiceAccountKey")
+        public String connectorServiceAccountKey;
+
+        /**
+         * <p>The Connector Key name that is populated during queries. This value is not used as a binding reference during writes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-connector-key</p>
+         */
+        @NameInMap("connectorServiceAccountName")
+        public String connectorServiceAccountName;
+
+        public static UpdateManagedAgentRequestBodyHarnessConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            UpdateManagedAgentRequestBodyHarnessConfiguration self = new UpdateManagedAgentRequestBodyHarnessConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateManagedAgentRequestBodyHarnessConfiguration setConnectorServiceAccountKey(String connectorServiceAccountKey) {
+            this.connectorServiceAccountKey = connectorServiceAccountKey;
+            return this;
+        }
+        public String getConnectorServiceAccountKey() {
+            return this.connectorServiceAccountKey;
+        }
+
+        public UpdateManagedAgentRequestBodyHarnessConfiguration setConnectorServiceAccountName(String connectorServiceAccountName) {
+            this.connectorServiceAccountName = connectorServiceAccountName;
+            return this;
+        }
+        public String getConnectorServiceAccountName() {
+            return this.connectorServiceAccountName;
+        }
+
+    }
+
+    public static class UpdateManagedAgentRequestBodyHarness extends TeaModel {
+        /**
+         * <p>The Connector binding configuration for the qodercli harness.</p>
+         */
+        @NameInMap("configuration")
+        public UpdateManagedAgentRequestBodyHarnessConfiguration configuration;
+
+        /**
+         * <p>The type of the runtime harness. Valid values: qwenpaw and qodercli. When the type is qodercli, binding is performed based on configuration.connectorServiceAccountKey, and the name is also populated during queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qodercli</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        public static UpdateManagedAgentRequestBodyHarness build(java.util.Map<String, ?> map) throws Exception {
+            UpdateManagedAgentRequestBodyHarness self = new UpdateManagedAgentRequestBodyHarness();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateManagedAgentRequestBodyHarness setConfiguration(UpdateManagedAgentRequestBodyHarnessConfiguration configuration) {
+            this.configuration = configuration;
+            return this;
+        }
+        public UpdateManagedAgentRequestBodyHarnessConfiguration getConfiguration() {
+            return this.configuration;
+        }
+
+        public UpdateManagedAgentRequestBodyHarness setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class UpdateManagedAgentRequestBodyModel extends TeaModel {
         /**
          * <p>The model connection ID.</p>
@@ -159,7 +240,6 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
         /**
          * <p>The upstream model name.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-max</p>
@@ -192,8 +272,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBodyNetworkAccessInternet extends TeaModel {
         /**
-         * <p>Specifies whether to allow access to the Internet.</p>
-         * <p>This parameter is required.</p>
+         * <p>Specifies whether public network access is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -218,8 +297,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBodyNetworkAccessVpc extends TeaModel {
         /**
-         * <p>Specifies whether to allow access to the VPC.</p>
-         * <p>This parameter is required.</p>
+         * <p>Specifies whether VPC access is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -278,6 +356,70 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     }
 
+    public static class UpdateManagedAgentRequestBodyOssMounts extends TeaModel {
+        /**
+         * <p>The OSS bucket name. Each mount item is validated as required by the backend.</p>
+         */
+        @NameInMap("bucketName")
+        public String bucketName;
+
+        /**
+         * <p>The absolute mount path in the container. Each mount item is validated as required by the backend.</p>
+         */
+        @NameInMap("mountPath")
+        public String mountPath;
+
+        /**
+         * <p>The relative object prefix in the bucket. If not specified, the entire bucket is mounted.</p>
+         */
+        @NameInMap("path")
+        public String path;
+
+        /**
+         * <p>Specifies whether to mount as read-only. Default value: false.</p>
+         */
+        @NameInMap("readOnly")
+        public Boolean readOnly;
+
+        public static UpdateManagedAgentRequestBodyOssMounts build(java.util.Map<String, ?> map) throws Exception {
+            UpdateManagedAgentRequestBodyOssMounts self = new UpdateManagedAgentRequestBodyOssMounts();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateManagedAgentRequestBodyOssMounts setBucketName(String bucketName) {
+            this.bucketName = bucketName;
+            return this;
+        }
+        public String getBucketName() {
+            return this.bucketName;
+        }
+
+        public UpdateManagedAgentRequestBodyOssMounts setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        public UpdateManagedAgentRequestBodyOssMounts setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public UpdateManagedAgentRequestBodyOssMounts setReadOnly(Boolean readOnly) {
+            this.readOnly = readOnly;
+            return this;
+        }
+        public Boolean getReadOnly() {
+            return this.readOnly;
+        }
+
+    }
+
     public static class UpdateManagedAgentRequestBodyRuntimeCompute extends TeaModel {
         /**
          * <p>The compute specification.</p>
@@ -304,9 +446,87 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     }
 
+    public static class UpdateManagedAgentRequestBodyRuntimeHpa extends TeaModel {
+        /**
+         * <p>Specifies whether to enable auto scaling. Required when hpa is present as validated by the backend.</p>
+         */
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        /**
+         * <p>The maximum number of active sessions per Sandbox. Required when hpa is present as validated by the backend.</p>
+         */
+        @NameInMap("maxConcurrentSessionsPerSandbox")
+        public Integer maxConcurrentSessionsPerSandbox;
+
+        /**
+         * <p>The maximum number of Sandboxes. Required when HPA is enabled and must be no less than the minimum value.</p>
+         */
+        @NameInMap("maxSandboxCount")
+        public Integer maxSandboxCount;
+
+        /**
+         * <p>The minimum number of Sandboxes. Required when HPA is enabled.</p>
+         */
+        @NameInMap("minSandboxCount")
+        public Integer minSandboxCount;
+
+        /**
+         * <p>The session reclamation time after inactivity, in seconds. Required when hpa is present as validated by the backend.</p>
+         */
+        @NameInMap("sessionTtlSeconds")
+        public Integer sessionTtlSeconds;
+
+        public static UpdateManagedAgentRequestBodyRuntimeHpa build(java.util.Map<String, ?> map) throws Exception {
+            UpdateManagedAgentRequestBodyRuntimeHpa self = new UpdateManagedAgentRequestBodyRuntimeHpa();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateManagedAgentRequestBodyRuntimeHpa setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public UpdateManagedAgentRequestBodyRuntimeHpa setMaxConcurrentSessionsPerSandbox(Integer maxConcurrentSessionsPerSandbox) {
+            this.maxConcurrentSessionsPerSandbox = maxConcurrentSessionsPerSandbox;
+            return this;
+        }
+        public Integer getMaxConcurrentSessionsPerSandbox() {
+            return this.maxConcurrentSessionsPerSandbox;
+        }
+
+        public UpdateManagedAgentRequestBodyRuntimeHpa setMaxSandboxCount(Integer maxSandboxCount) {
+            this.maxSandboxCount = maxSandboxCount;
+            return this;
+        }
+        public Integer getMaxSandboxCount() {
+            return this.maxSandboxCount;
+        }
+
+        public UpdateManagedAgentRequestBodyRuntimeHpa setMinSandboxCount(Integer minSandboxCount) {
+            this.minSandboxCount = minSandboxCount;
+            return this;
+        }
+        public Integer getMinSandboxCount() {
+            return this.minSandboxCount;
+        }
+
+        public UpdateManagedAgentRequestBodyRuntimeHpa setSessionTtlSeconds(Integer sessionTtlSeconds) {
+            this.sessionTtlSeconds = sessionTtlSeconds;
+            return this;
+        }
+        public Integer getSessionTtlSeconds() {
+            return this.sessionTtlSeconds;
+        }
+
+    }
+
     public static class UpdateManagedAgentRequestBodyRuntimeSessionPolicy extends TeaModel {
         /**
-         * <p>The HTTP header name used for session affinity. This parameter takes effect only when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
+         * <p>The HTTP header name used for session affinity. Takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
          * 
          * <strong>example:</strong>
          * <p>X-Session-Id</p>
@@ -356,6 +576,12 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public UpdateManagedAgentRequestBodyRuntimeCompute compute;
 
         /**
+         * <p>The Sandbox auto scaling and session configuration.</p>
+         */
+        @NameInMap("hpa")
+        public UpdateManagedAgentRequestBodyRuntimeHpa hpa;
+
+        /**
          * <p>The session policy configuration.</p>
          * <p>This parameter is required.</p>
          */
@@ -373,6 +599,14 @@ public class UpdateManagedAgentRequest extends TeaModel {
         }
         public UpdateManagedAgentRequestBodyRuntimeCompute getCompute() {
             return this.compute;
+        }
+
+        public UpdateManagedAgentRequestBodyRuntime setHpa(UpdateManagedAgentRequestBodyRuntimeHpa hpa) {
+            this.hpa = hpa;
+            return this;
+        }
+        public UpdateManagedAgentRequestBodyRuntimeHpa getHpa() {
+            return this.hpa;
         }
 
         public UpdateManagedAgentRequestBodyRuntime setSessionPolicy(UpdateManagedAgentRequestBodyRuntimeSessionPolicy sessionPolicy) {
@@ -434,7 +668,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Please review the code</p>
+         * <p>Review the code</p>
          */
         @NameInMap("instruction")
         public String instruction;
@@ -485,6 +719,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
         /**
          * <p>The version of the template in the AI registry.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -598,6 +833,12 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public UpdateManagedAgentRequestBodyEnvironment environment;
 
         /**
+         * <p>The runtime harness of the managed agent. Valid values: qwenpaw and qodercli.</p>
+         */
+        @NameInMap("harness")
+        public UpdateManagedAgentRequestBodyHarness harness;
+
+        /**
          * <p>The agent instruction that guides the behavior of the agent.</p>
          * 
          * <strong>example:</strong>
@@ -626,6 +867,12 @@ public class UpdateManagedAgentRequest extends TeaModel {
          */
         @NameInMap("network")
         public UpdateManagedAgentRequestBodyNetwork network;
+
+        /**
+         * <p>The OSS mount list. A maximum of 10 items are supported. Pass an empty array to clear existing mounts.</p>
+         */
+        @NameInMap("ossMounts")
+        public java.util.List<UpdateManagedAgentRequestBodyOssMounts> ossMounts;
 
         /**
          * <p>The runtime configuration.</p>
@@ -678,6 +925,14 @@ public class UpdateManagedAgentRequest extends TeaModel {
             return this.environment;
         }
 
+        public UpdateManagedAgentRequestBody setHarness(UpdateManagedAgentRequestBodyHarness harness) {
+            this.harness = harness;
+            return this;
+        }
+        public UpdateManagedAgentRequestBodyHarness getHarness() {
+            return this.harness;
+        }
+
         public UpdateManagedAgentRequestBody setInstruction(String instruction) {
             this.instruction = instruction;
             return this;
@@ -708,6 +963,14 @@ public class UpdateManagedAgentRequest extends TeaModel {
         }
         public UpdateManagedAgentRequestBodyNetwork getNetwork() {
             return this.network;
+        }
+
+        public UpdateManagedAgentRequestBody setOssMounts(java.util.List<UpdateManagedAgentRequestBodyOssMounts> ossMounts) {
+            this.ossMounts = ossMounts;
+            return this;
+        }
+        public java.util.List<UpdateManagedAgentRequestBodyOssMounts> getOssMounts() {
+            return this.ossMounts;
         }
 
         public UpdateManagedAgentRequestBody setRuntime(UpdateManagedAgentRequestBodyRuntime runtime) {

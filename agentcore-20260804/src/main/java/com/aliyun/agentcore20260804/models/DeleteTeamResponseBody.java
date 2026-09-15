@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DeleteTeamResponseBody extends TeaModel {
     /**
+     * <p>The business status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The information about the deleted team.</p>
+     */
     @NameInMap("data")
     public DeleteTeamResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class DeleteTeamResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message. An error description is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,12 +38,17 @@ public class DeleteTeamResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>request-123456</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class DeleteTeamResponseBody extends TeaModel {
 
     public static class DeleteTeamResponseBodyData extends TeaModel {
         /**
+         * <p>The team name. The name can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit and must be 1 to 128 characters in length.</p>
+         * 
          * <strong>example:</strong>
          * <p>team-01</p>
          */
@@ -100,6 +116,16 @@ public class DeleteTeamResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The team status. Valid values:</p>
+         * <ul>
+         * <li>Creating</li>
+         * <li>Active</li>
+         * <li>Updating</li>
+         * <li>Deleting</li>
+         * <li>Failed</li>
+         * <li>Deleted</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Active</p>
          */
@@ -107,6 +133,8 @@ public class DeleteTeamResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The team ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>tm-123456</p>
          */
@@ -114,6 +142,8 @@ public class DeleteTeamResponseBody extends TeaModel {
         public String teamId;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ws-123456</p>
          */

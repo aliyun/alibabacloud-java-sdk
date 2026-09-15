@@ -4,12 +4,17 @@ package com.aliyun.agentcore20260804.models;
 import com.aliyun.tea.*;
 
 public class CreateTeamRequest extends TeaModel {
+    /**
+     * <p>The request body for creating a team.</p>
+     */
     @NameInMap("body")
     public CreateTeamRequestBody body;
 
     /**
+     * <p>Not supported.</p>
+     * 
      * <strong>example:</strong>
-     * <p>暂不支持</p>
+     * <p>Not supported</p>
      */
     @NameInMap("clientToken")
     public String clientToken;
@@ -37,6 +42,8 @@ public class CreateTeamRequest extends TeaModel {
 
     public static class CreateTeamRequestBodyAgents extends TeaModel {
         /**
+         * <p>The agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent-123456</p>
          */
@@ -44,6 +51,8 @@ public class CreateTeamRequest extends TeaModel {
         public String agentId;
 
         /**
+         * <p>The role of the agent in the team. Valid values: LEADER, WORKER.</p>
+         * 
          * <strong>example:</strong>
          * <p>WORKER</p>
          */
@@ -75,6 +84,8 @@ public class CreateTeamRequest extends TeaModel {
 
     public static class CreateTeamRequestBodyUsers extends TeaModel {
         /**
+         * <p>The role of the user in the team. Valid values: ADMIN, MEMBER. Each team must include exactly one ADMIN.</p>
+         * 
          * <strong>example:</strong>
          * <p>ADMIN</p>
          */
@@ -82,6 +93,8 @@ public class CreateTeamRequest extends TeaModel {
         public String teamRole;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>usr-123456</p>
          */
@@ -112,17 +125,23 @@ public class CreateTeamRequest extends TeaModel {
     }
 
     public static class CreateTeamRequestBody extends TeaModel {
+        /**
+         * <p>The list of agent members in the team.</p>
+         */
         @NameInMap("agents")
         public java.util.List<CreateTeamRequestBodyAgents> agents;
 
         /**
+         * <p>The team description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>负责智能客服业务的团队</p>
+         * <p>A team responsible for intelligent customer service</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>The team name. The name can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit. The name must be 1 to 128 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,6 +150,9 @@ public class CreateTeamRequest extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The list of user members in the team. The list must include exactly one member with the ADMIN role.</p>
+         */
         @NameInMap("users")
         public java.util.List<CreateTeamRequestBodyUsers> users;
 

@@ -4,6 +4,9 @@ package com.aliyun.agentcore20260804.models;
 import com.aliyun.tea.*;
 
 public class ResetUserPasswordShrinkRequest extends TeaModel {
+    /**
+     * <p>The request body for resetting the user password.</p>
+     */
     @NameInMap("body")
     public String bodyShrink;
 

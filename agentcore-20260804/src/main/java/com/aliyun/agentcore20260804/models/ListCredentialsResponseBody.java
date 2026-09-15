@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCredentialsResponseBody extends TeaModel {
     /**
+     * <p>The business status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -12,16 +14,23 @@ public class ListCredentialsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The list of credentials.</p>
+     */
     @NameInMap("items")
     public java.util.List<ListCredentialsResponseBodyItems> items;
 
     /**
+     * <p>The maximum number of records per page that took effect for this query.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +38,8 @@ public class ListCredentialsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The response message. An error description is returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -36,6 +47,8 @@ public class ListCredentialsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The pagination token for the next page. This value is empty if there is no next page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,16 +56,23 @@ public class ListCredentialsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>request-123456</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
+     * <p>The total number of credentials that match the query conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>42</p>
      */
@@ -136,8 +156,69 @@ public class ListCredentialsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListCredentialsResponseBodyItemsResourceRefs extends TeaModel {
+        /**
+         * <p>The unique identifier of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent-xxxx</p>
+         */
+        @NameInMap("resourceId")
+        public String resourceId;
+
+        /**
+         * <p>The resource name. This value is empty if the resource has been deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent</p>
+         */
+        @NameInMap("resourceName")
+        public String resourceName;
+
+        /**
+         * <p>The resource type, such as agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent</p>
+         */
+        @NameInMap("resourceType")
+        public String resourceType;
+
+        public static ListCredentialsResponseBodyItemsResourceRefs build(java.util.Map<String, ?> map) throws Exception {
+            ListCredentialsResponseBodyItemsResourceRefs self = new ListCredentialsResponseBodyItemsResourceRefs();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCredentialsResponseBodyItemsResourceRefs setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        public ListCredentialsResponseBodyItemsResourceRefs setResourceName(String resourceName) {
+            this.resourceName = resourceName;
+            return this;
+        }
+        public String getResourceName() {
+            return this.resourceName;
+        }
+
+        public ListCredentialsResponseBodyItemsResourceRefs setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+    }
+
     public static class ListCredentialsResponseBodyItems extends TeaModel {
         /**
+         * <p>The number of agents bound to this credential.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -145,6 +226,8 @@ public class ListCredentialsResponseBody extends TeaModel {
         public Integer boundAgentsCounts;
 
         /**
+         * <p>The creation time in UTC, formatted according to RFC 3339.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
          */
@@ -152,6 +235,8 @@ public class ListCredentialsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>The credential ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cred-123456</p>
          */
@@ -159,6 +244,8 @@ public class ListCredentialsResponseBody extends TeaModel {
         public String credentialId;
 
         /**
+         * <p>The masked content of the credential. When credentialType is apiKey, the apiKey value is returned as asterisks (*) of equal length.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;apiKey&quot;:&quot;****************&quot;}</p>
          */
@@ -166,6 +253,8 @@ public class ListCredentialsResponseBody extends TeaModel {
         public String credentialMetadata;
 
         /**
+         * <p>The credential type. Currently, only apiKey is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>apiKey</p>
          */
@@ -173,13 +262,17 @@ public class ListCredentialsResponseBody extends TeaModel {
         public String credentialType;
 
         /**
+         * <p>The credential description. The description can be up to 256 characters in length.</p>
+         * 
          * <strong>example:</strong>
-         * <p>线上环境调用模型服务使用的 API Key</p>
+         * <p>API Key used for calling model services in the production environment</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>The credential name. The name must be unique within the workspace and can contain only letters, digits, periods (.), underscores (_), and hyphens (-). The name must be 3 to 128 characters in length and cannot use runtime reserved names.</p>
+         * 
          * <strong>example:</strong>
          * <p>model-api-key</p>
          */
@@ -187,6 +280,8 @@ public class ListCredentialsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The region ID where the resource resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -194,6 +289,23 @@ public class ListCredentialsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The list of resources to which the credential can be applied.</p>
+         */
+        @NameInMap("resourceRefs")
+        public java.util.List<ListCredentialsResponseBodyItemsResourceRefs> resourceRefs;
+
+        /**
+         * <p>The scope of resources to which the credential can be applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
+         */
+        @NameInMap("resourceScope")
+        public String resourceScope;
+
+        /**
+         * <p>The time of the last modification in UTC, formatted according to RFC 3339.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
          */
@@ -201,6 +313,8 @@ public class ListCredentialsResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ws-123456</p>
          */
@@ -274,6 +388,22 @@ public class ListCredentialsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListCredentialsResponseBodyItems setResourceRefs(java.util.List<ListCredentialsResponseBodyItemsResourceRefs> resourceRefs) {
+            this.resourceRefs = resourceRefs;
+            return this;
+        }
+        public java.util.List<ListCredentialsResponseBodyItemsResourceRefs> getResourceRefs() {
+            return this.resourceRefs;
+        }
+
+        public ListCredentialsResponseBodyItems setResourceScope(String resourceScope) {
+            this.resourceScope = resourceScope;
+            return this;
+        }
+        public String getResourceScope() {
+            return this.resourceScope;
         }
 
         public ListCredentialsResponseBodyItems setUpdatedAt(String updatedAt) {

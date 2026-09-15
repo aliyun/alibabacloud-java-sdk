@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateManagedAgentResponseBody extends TeaModel {
     /**
-     * <p>The business status code. A value of SUCCESS indicates success.</p>
+     * <p>The business status code. The value is SUCCESS if the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,13 +14,13 @@ public class CreateManagedAgentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information about the managed agent after creation.</p>
+     * <p>The information about the created managed agent.</p>
      */
     @NameInMap("data")
     public CreateManagedAgentResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. A value of 200 indicates success.</p>
+     * <p>The HTTP status code. The value 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The result message of the request.</p>
+     * <p>The message returned for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -136,7 +136,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
 
     public static class CreateManagedAgentResponseBodyDataEnvironmentVariables extends TeaModel {
         /**
-         * <p>The environment variable name.</p>
+         * <p>The name of the environment variable.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The environment variable value.</p>
+         * <p>The value of the environment variable.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,6 +214,87 @@ public class CreateManagedAgentResponseBody extends TeaModel {
 
     }
 
+    public static class CreateManagedAgentResponseBodyDataHarnessConfiguration extends TeaModel {
+        /**
+         * <p>The Key ID used to bind a Service Account Key of the QoderCLI Connector. This parameter is optional when only one key exists, but required when multiple keys exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-xxxx</p>
+         */
+        @NameInMap("connectorServiceAccountKey")
+        public String connectorServiceAccountKey;
+
+        /**
+         * <p>The Connector Key name that is populated during queries. This parameter is not used as a binding reference during writes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-connector-key</p>
+         */
+        @NameInMap("connectorServiceAccountName")
+        public String connectorServiceAccountName;
+
+        public static CreateManagedAgentResponseBodyDataHarnessConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            CreateManagedAgentResponseBodyDataHarnessConfiguration self = new CreateManagedAgentResponseBodyDataHarnessConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateManagedAgentResponseBodyDataHarnessConfiguration setConnectorServiceAccountKey(String connectorServiceAccountKey) {
+            this.connectorServiceAccountKey = connectorServiceAccountKey;
+            return this;
+        }
+        public String getConnectorServiceAccountKey() {
+            return this.connectorServiceAccountKey;
+        }
+
+        public CreateManagedAgentResponseBodyDataHarnessConfiguration setConnectorServiceAccountName(String connectorServiceAccountName) {
+            this.connectorServiceAccountName = connectorServiceAccountName;
+            return this;
+        }
+        public String getConnectorServiceAccountName() {
+            return this.connectorServiceAccountName;
+        }
+
+    }
+
+    public static class CreateManagedAgentResponseBodyDataHarness extends TeaModel {
+        /**
+         * <p>The Connector binding configuration for the qodercli harness.</p>
+         */
+        @NameInMap("configuration")
+        public CreateManagedAgentResponseBodyDataHarnessConfiguration configuration;
+
+        /**
+         * <p>The runtime harness type. Valid values: qwenpaw and qodercli. When the type is qodercli, binding is performed based on configuration.connectorServiceAccountKey, and the name is also populated during queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qodercli</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        public static CreateManagedAgentResponseBodyDataHarness build(java.util.Map<String, ?> map) throws Exception {
+            CreateManagedAgentResponseBodyDataHarness self = new CreateManagedAgentResponseBodyDataHarness();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateManagedAgentResponseBodyDataHarness setConfiguration(CreateManagedAgentResponseBodyDataHarnessConfiguration configuration) {
+            this.configuration = configuration;
+            return this;
+        }
+        public CreateManagedAgentResponseBodyDataHarnessConfiguration getConfiguration() {
+            return this.configuration;
+        }
+
+        public CreateManagedAgentResponseBodyDataHarness setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class CreateManagedAgentResponseBodyDataModel extends TeaModel {
         /**
          * <p>The model connection ID.</p>
@@ -227,7 +308,6 @@ public class CreateManagedAgentResponseBody extends TeaModel {
 
         /**
          * <p>The upstream model name.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-max</p>
@@ -260,8 +340,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
 
     public static class CreateManagedAgentResponseBodyDataNetworkAccessInternet extends TeaModel {
         /**
-         * <p>Specifies whether to allow access to the Internet.</p>
-         * <p>This parameter is required.</p>
+         * <p>Specifies whether to allow public network access.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -286,8 +365,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
 
     public static class CreateManagedAgentResponseBodyDataNetworkAccessVpc extends TeaModel {
         /**
-         * <p>Specifies whether to allow access to the VPC.</p>
-         * <p>This parameter is required.</p>
+         * <p>Specifies whether to allow VPC access.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -346,6 +424,70 @@ public class CreateManagedAgentResponseBody extends TeaModel {
 
     }
 
+    public static class CreateManagedAgentResponseBodyDataOssMounts extends TeaModel {
+        /**
+         * <p>The OSS bucket name. This parameter is required for each mount entry as validated by the backend.</p>
+         */
+        @NameInMap("bucketName")
+        public String bucketName;
+
+        /**
+         * <p>The absolute mount path in the container. This parameter is required for each mount entry as validated by the backend.</p>
+         */
+        @NameInMap("mountPath")
+        public String mountPath;
+
+        /**
+         * <p>The relative object prefix in the bucket. If this parameter is not specified, the entire bucket is mounted.</p>
+         */
+        @NameInMap("path")
+        public String path;
+
+        /**
+         * <p>Specifies whether to mount as read-only. Default value: false.</p>
+         */
+        @NameInMap("readOnly")
+        public Boolean readOnly;
+
+        public static CreateManagedAgentResponseBodyDataOssMounts build(java.util.Map<String, ?> map) throws Exception {
+            CreateManagedAgentResponseBodyDataOssMounts self = new CreateManagedAgentResponseBodyDataOssMounts();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateManagedAgentResponseBodyDataOssMounts setBucketName(String bucketName) {
+            this.bucketName = bucketName;
+            return this;
+        }
+        public String getBucketName() {
+            return this.bucketName;
+        }
+
+        public CreateManagedAgentResponseBodyDataOssMounts setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        public CreateManagedAgentResponseBodyDataOssMounts setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public CreateManagedAgentResponseBodyDataOssMounts setReadOnly(Boolean readOnly) {
+            this.readOnly = readOnly;
+            return this;
+        }
+        public Boolean getReadOnly() {
+            return this.readOnly;
+        }
+
+    }
+
     public static class CreateManagedAgentResponseBodyDataRuntimeCompute extends TeaModel {
         /**
          * <p>The compute specification.</p>
@@ -372,9 +514,87 @@ public class CreateManagedAgentResponseBody extends TeaModel {
 
     }
 
+    public static class CreateManagedAgentResponseBodyDataRuntimeHpa extends TeaModel {
+        /**
+         * <p>Specifies whether to enable auto-scaling. This parameter is required when hpa is present as validated by the backend.</p>
+         */
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        /**
+         * <p>The maximum number of active sessions per Sandbox. This parameter is required when hpa is present as validated by the backend.</p>
+         */
+        @NameInMap("maxConcurrentSessionsPerSandbox")
+        public Integer maxConcurrentSessionsPerSandbox;
+
+        /**
+         * <p>The maximum number of Sandboxes. This parameter is required when HPA is enabled and must be no less than the minimum value.</p>
+         */
+        @NameInMap("maxSandboxCount")
+        public Integer maxSandboxCount;
+
+        /**
+         * <p>The minimum number of Sandboxes. This parameter is required when HPA is enabled.</p>
+         */
+        @NameInMap("minSandboxCount")
+        public Integer minSandboxCount;
+
+        /**
+         * <p>The session reclamation time after inactivity, in seconds. This parameter is required when hpa is present as validated by the backend.</p>
+         */
+        @NameInMap("sessionTtlSeconds")
+        public Integer sessionTtlSeconds;
+
+        public static CreateManagedAgentResponseBodyDataRuntimeHpa build(java.util.Map<String, ?> map) throws Exception {
+            CreateManagedAgentResponseBodyDataRuntimeHpa self = new CreateManagedAgentResponseBodyDataRuntimeHpa();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateManagedAgentResponseBodyDataRuntimeHpa setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public CreateManagedAgentResponseBodyDataRuntimeHpa setMaxConcurrentSessionsPerSandbox(Integer maxConcurrentSessionsPerSandbox) {
+            this.maxConcurrentSessionsPerSandbox = maxConcurrentSessionsPerSandbox;
+            return this;
+        }
+        public Integer getMaxConcurrentSessionsPerSandbox() {
+            return this.maxConcurrentSessionsPerSandbox;
+        }
+
+        public CreateManagedAgentResponseBodyDataRuntimeHpa setMaxSandboxCount(Integer maxSandboxCount) {
+            this.maxSandboxCount = maxSandboxCount;
+            return this;
+        }
+        public Integer getMaxSandboxCount() {
+            return this.maxSandboxCount;
+        }
+
+        public CreateManagedAgentResponseBodyDataRuntimeHpa setMinSandboxCount(Integer minSandboxCount) {
+            this.minSandboxCount = minSandboxCount;
+            return this;
+        }
+        public Integer getMinSandboxCount() {
+            return this.minSandboxCount;
+        }
+
+        public CreateManagedAgentResponseBodyDataRuntimeHpa setSessionTtlSeconds(Integer sessionTtlSeconds) {
+            this.sessionTtlSeconds = sessionTtlSeconds;
+            return this;
+        }
+        public Integer getSessionTtlSeconds() {
+            return this.sessionTtlSeconds;
+        }
+
+    }
+
     public static class CreateManagedAgentResponseBodyDataRuntimeSessionPolicy extends TeaModel {
         /**
-         * <p>The HTTP header name used for session affinity. This parameter takes effect only when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
+         * <p>The HTTP header name used for session affinity. This parameter takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
          * 
          * <strong>example:</strong>
          * <p>X-Session-Id</p>
@@ -424,6 +644,12 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public CreateManagedAgentResponseBodyDataRuntimeCompute compute;
 
         /**
+         * <p>The Sandbox auto-scaling and session configuration.</p>
+         */
+        @NameInMap("hpa")
+        public CreateManagedAgentResponseBodyDataRuntimeHpa hpa;
+
+        /**
          * <p>The session policy configuration.</p>
          * <p>This parameter is required.</p>
          */
@@ -441,6 +667,14 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         }
         public CreateManagedAgentResponseBodyDataRuntimeCompute getCompute() {
             return this.compute;
+        }
+
+        public CreateManagedAgentResponseBodyDataRuntime setHpa(CreateManagedAgentResponseBodyDataRuntimeHpa hpa) {
+            this.hpa = hpa;
+            return this;
+        }
+        public CreateManagedAgentResponseBodyDataRuntimeHpa getHpa() {
+            return this.hpa;
         }
 
         public CreateManagedAgentResponseBodyDataRuntime setSessionPolicy(CreateManagedAgentResponseBodyDataRuntimeSessionPolicy sessionPolicy) {
@@ -502,7 +736,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Please review the code</p>
+         * <p>Review the code</p>
          */
         @NameInMap("instruction")
         public String instruction;
@@ -553,6 +787,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
 
         /**
          * <p>The version of the template in the AI registry.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -702,6 +937,12 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public CreateManagedAgentResponseBodyDataEnvironment environment;
 
         /**
+         * <p>The runtime harness of the managed agent. Valid values: qwenpaw and qodercli.</p>
+         */
+        @NameInMap("harness")
+        public CreateManagedAgentResponseBodyDataHarness harness;
+
+        /**
          * <p>The agent instruction that guides the behavior of the agent.</p>
          * 
          * <strong>example:</strong>
@@ -720,7 +961,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public Long latestSpecVersion;
 
         /**
-         * <p>The status of the latest version.</p>
+         * <p>The latest version status.</p>
          * 
          * <strong>example:</strong>
          * <p>succeeded</p>
@@ -750,6 +991,12 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public CreateManagedAgentResponseBodyDataNetwork network;
 
         /**
+         * <p>The OSS mount list. A maximum of 10 entries are supported.</p>
+         */
+        @NameInMap("ossMounts")
+        public java.util.List<CreateManagedAgentResponseBodyDataOssMounts> ossMounts;
+
+        /**
          * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
@@ -765,13 +1012,19 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public CreateManagedAgentResponseBodyDataRuntime runtime;
 
         /**
+         * <p>The instance count of the managed agent grouped by sandbox phase. Current keys: PENDING (being created or initialized), RUNNING (running), HIBERNATING (entering hibernation), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (being terminated), and FAILED (runtime failure). Only phases that actually occur are returned. A missing key is treated as 0. This field is a dynamic map and new keys may be added in the future. You can use FAILED &gt; 0 on the frontend to determine whether abnormal instances exist.</p>
+         */
+        @NameInMap("sandboxPhaseCounts")
+        public java.util.Map<String, Long> sandboxPhaseCounts;
+
+        /**
          * <p>The list of skill configurations.</p>
          */
         @NameInMap("skills")
         public java.util.List<CreateManagedAgentResponseBodyDataSkills> skills;
 
         /**
-         * <p>The status of the managed agent.</p>
+         * <p>The managed agent status.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -868,6 +1121,14 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             return this.environment;
         }
 
+        public CreateManagedAgentResponseBodyData setHarness(CreateManagedAgentResponseBodyDataHarness harness) {
+            this.harness = harness;
+            return this;
+        }
+        public CreateManagedAgentResponseBodyDataHarness getHarness() {
+            return this.harness;
+        }
+
         public CreateManagedAgentResponseBodyData setInstruction(String instruction) {
             this.instruction = instruction;
             return this;
@@ -916,6 +1177,14 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             return this.network;
         }
 
+        public CreateManagedAgentResponseBodyData setOssMounts(java.util.List<CreateManagedAgentResponseBodyDataOssMounts> ossMounts) {
+            this.ossMounts = ossMounts;
+            return this;
+        }
+        public java.util.List<CreateManagedAgentResponseBodyDataOssMounts> getOssMounts() {
+            return this.ossMounts;
+        }
+
         public CreateManagedAgentResponseBodyData setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -930,6 +1199,14 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         }
         public CreateManagedAgentResponseBodyDataRuntime getRuntime() {
             return this.runtime;
+        }
+
+        public CreateManagedAgentResponseBodyData setSandboxPhaseCounts(java.util.Map<String, Long> sandboxPhaseCounts) {
+            this.sandboxPhaseCounts = sandboxPhaseCounts;
+            return this;
+        }
+        public java.util.Map<String, Long> getSandboxPhaseCounts() {
+            return this.sandboxPhaseCounts;
         }
 
         public CreateManagedAgentResponseBodyData setSkills(java.util.List<CreateManagedAgentResponseBodyDataSkills> skills) {

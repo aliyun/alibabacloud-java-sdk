@@ -4,10 +4,15 @@ package com.aliyun.agentcore20260804.models;
 import com.aliyun.tea.*;
 
 public class CreateModelConnectionShrinkRequest extends TeaModel {
+    /**
+     * <p>The request body.</p>
+     */
     @NameInMap("body")
     public String bodyShrink;
 
     /**
+     * <p>The client token used for idempotence. Not supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>client-token-1</p>
      */

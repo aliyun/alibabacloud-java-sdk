@@ -61,7 +61,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String corpId;
 
         /**
-         * <p>The data encryption key for event subscriptions. The value must be consistent with the one configured in the external identity provider application. This parameter is write-only and is not returned by query operations.</p>
+         * <p>The data encryption key for event subscriptions. The value must match the one configured in the external identity provider application. This parameter is write-only and is not returned by query operations.</p>
          * 
          * <strong>example:</strong>
          * <p>example-encrypt-key</p>
@@ -70,7 +70,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String encryptKey;
 
         /**
-         * <p>The verification token for event subscriptions. The value must be consistent with the one configured in the external identity provider application. This parameter is write-only and is not returned by query operations.</p>
+         * <p>The verification token for event subscriptions. The value must match the one configured in the external identity provider application. This parameter is write-only and is not returned by query operations.</p>
          * 
          * <strong>example:</strong>
          * <p>example-verification-token</p>
@@ -147,7 +147,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public UpdateIdentityProviderRequestBodyMetadata metadata;
 
         /**
-         * <p>Specifies whether to enable organization member synchronization. After this feature is enabled, the external identity provider synchronizes organization members as workspace users.</p>
+         * <p>Specifies whether to enable organization member synchronization. When enabled, the external identity provider synchronizes organization members as workspace users.</p>
          */
         @NameInMap("syncEnabled")
         public Boolean syncEnabled;

@@ -4,12 +4,17 @@ package com.aliyun.agentcore20260804.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserRequest extends TeaModel {
+    /**
+     * <p>The request body for updating a user.</p>
+     */
     @NameInMap("body")
     public UpdateUserRequestBody body;
 
     /**
+     * <p>Not supported.</p>
+     * 
      * <strong>example:</strong>
-     * <p>暂不支持</p>
+     * <p>Not supported</p>
      */
     @NameInMap("clientToken")
     public String clientToken;
@@ -37,13 +42,17 @@ public class UpdateUserRequest extends TeaModel {
 
     public static class UpdateUserRequestBody extends TeaModel {
         /**
+         * <p>The display name of the user. The name must be 1 to 32 characters in length. At least one of displayName, email, and note must be specified.</p>
+         * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>John</p>
          */
         @NameInMap("displayName")
         public String displayName;
 
         /**
+         * <p>The email address of the user. The address can be up to 256 characters in length.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:user-01@example.com">user-01@example.com</a></p>
          */
@@ -51,8 +60,10 @@ public class UpdateUserRequest extends TeaModel {
         public String email;
 
         /**
+         * <p>The note for the user. The note can be up to 1,024 characters in length.</p>
+         * 
          * <strong>example:</strong>
-         * <p>智能体运营组成员</p>
+         * <p>Agent operations team member</p>
          */
         @NameInMap("note")
         public String note;

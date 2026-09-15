@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteUserRequest extends TeaModel {
     /**
+     * <p>Not supported.</p>
+     * 
      * <strong>example:</strong>
-     * <p>暂不支持</p>
+     * <p>Not supported</p>
      */
     @NameInMap("clientToken")
     public String clientToken;

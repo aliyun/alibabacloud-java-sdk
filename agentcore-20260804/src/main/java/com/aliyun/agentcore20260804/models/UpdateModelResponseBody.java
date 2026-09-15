@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateModelResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value SUCCESS indicates success.</p>
+     * <p>The business status code. The value is SUCCESS when the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -20,7 +20,7 @@ public class UpdateModelResponseBody extends TeaModel {
     public UpdateModelResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. The value 200 indicates success.</p>
+     * <p>The HTTP status code. The value is 200 when the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class UpdateModelResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message of the request processing result.</p>
+     * <p>The request processing result message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -119,25 +119,25 @@ public class UpdateModelResponseBody extends TeaModel {
         public Boolean document;
 
         /**
-         * <p>Indicates whether the model is able to invoke multiple tool calling requests in a single response.</p>
+         * <p>Indicates whether the model supports invoking multiple tools in a single response.</p>
          */
         @NameInMap("multiToolCall")
         public Boolean multiToolCall;
 
         /**
-         * <p>Indicates whether the model supports reasoning capabilities.</p>
+         * <p>Indicates whether the model supports reasoning.</p>
          */
         @NameInMap("reasoning")
         public Boolean reasoning;
 
         /**
-         * <p>Indicates whether the model supports streaming tool calling.</p>
+         * <p>Indicates whether the model supports streaming tool invocation.</p>
          */
         @NameInMap("streamToolCall")
         public Boolean streamToolCall;
 
         /**
-         * <p>Indicates whether the model supports tool calling.</p>
+         * <p>Indicates whether the model supports tool invocation.</p>
          */
         @NameInMap("toolCall")
         public Boolean toolCall;
@@ -227,7 +227,7 @@ public class UpdateModelResponseBody extends TeaModel {
 
     public static class UpdateModelResponseBodyData extends TeaModel {
         /**
-         * <p>The model capability configurations.</p>
+         * <p>The model capability configuration.</p>
          */
         @NameInMap("capabilities")
         public UpdateModelResponseBodyDataCapabilities capabilities;
@@ -242,7 +242,7 @@ public class UpdateModelResponseBody extends TeaModel {
         public String connectionId;
 
         /**
-         * <p>The model context window size, in tokens. Must be a positive integer.</p>
+         * <p>The model context window size, in tokens. The value must be a positive integer.</p>
          * 
          * <strong>example:</strong>
          * <p>128000</p>
@@ -260,7 +260,7 @@ public class UpdateModelResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The model description. Maximum length: 255 characters.</p>
+         * <p>The model description. The maximum length is 255 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>description</p>
@@ -269,7 +269,7 @@ public class UpdateModelResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The maximum number of output tokens supported per model generation.</p>
+         * <p>The maximum number of output tokens supported per generation.</p>
          * 
          * <strong>example:</strong>
          * <p>131072</p>

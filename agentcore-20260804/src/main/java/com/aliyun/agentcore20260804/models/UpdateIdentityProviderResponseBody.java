@@ -29,7 +29,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message. An error description is returned if the request fails.</p>
+     * <p>The response message. An error description is returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -142,7 +142,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Specifies whether to enable organization member synchronization. After this feature is enabled, the external identity provider synchronizes organization members as workspace users.</p>
+         * <p>Specifies whether to enable organization member synchronization. When enabled, the external identity provider synchronizes organization members as workspace users.</p>
          */
         @NameInMap("syncEnabled")
         public Boolean syncEnabled;

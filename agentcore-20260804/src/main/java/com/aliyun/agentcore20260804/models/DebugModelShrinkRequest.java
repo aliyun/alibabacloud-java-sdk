@@ -4,6 +4,9 @@ package com.aliyun.agentcore20260804.models;
 import com.aliyun.tea.*;
 
 public class DebugModelShrinkRequest extends TeaModel {
+    /**
+     * <p>The request body.</p>
+     */
     @NameInMap("body")
     public String bodyShrink;
 

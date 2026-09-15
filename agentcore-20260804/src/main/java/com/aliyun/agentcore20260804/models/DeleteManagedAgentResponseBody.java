@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteManagedAgentResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value SUCCESS indicates success.</p>
+     * <p>The business status code. The value SUCCESS is returned if the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,13 +14,13 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The summary information of the managed agent after deletion.</p>
+     * <p>The summary information of the deleted managed agent.</p>
      */
     @NameInMap("data")
     public DeleteManagedAgentResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. The value 200 indicates success.</p>
+     * <p>The HTTP status code. The value 200 is returned if the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The result message of the request.</p>
+     * <p>The message returned for the request processing result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -155,15 +155,6 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The effective specification version number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("effectiveSpecVersion")
-        public Long effectiveSpecVersion;
-
-        /**
          * <p>The latest specification version number.</p>
          * 
          * <strong>example:</strong>
@@ -260,14 +251,6 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
-        }
-
-        public DeleteManagedAgentResponseBodyData setEffectiveSpecVersion(Long effectiveSpecVersion) {
-            this.effectiveSpecVersion = effectiveSpecVersion;
-            return this;
-        }
-        public Long getEffectiveSpecVersion() {
-            return this.effectiveSpecVersion;
         }
 
         public DeleteManagedAgentResponseBodyData setLatestSpecVersion(Long latestSpecVersion) {

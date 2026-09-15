@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DebugModelResponseBody extends TeaModel {
     /**
+     * <p>The business status code. The value SUCCESS indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The model debugging result.</p>
+     */
     @NameInMap("data")
     public DebugModelResponseBodyData data;
 
     /**
+     * <p>The HTTP status code. The value 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class DebugModelResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request processing result message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,12 +38,17 @@ public class DebugModelResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>request-1</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -93,17 +107,22 @@ public class DebugModelResponseBody extends TeaModel {
 
     public static class DebugModelResponseBodyData extends TeaModel {
         /**
+         * <p>The model connection ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mc-1</p>
          */
         @NameInMap("connectionId")
         public String connectionId;
 
+        /**
+         * <p>Indicates whether the model debugging was successful.</p>
+         */
         @NameInMap("debugSuccess")
         public Boolean debugSuccess;
 
         /**
-         * <p>调试失败时的错误码。取值：MODEL_CONNECTION_NOT_READY（模型连接尚未发布就绪）、MODEL_CONNECTION_TEST_FAILED（平台调用网关失败）、UPSTREAM_MODEL_NOT_FOUND（模型服务商侧不存在该模型）、UPSTREAM_UNAUTHORIZED（模型服务商拒绝所配置的凭证）、UPSTREAM_RATE_LIMITED（模型服务商限流）、UPSTREAM_SERVER_ERROR（模型服务商服务端错误）、UPSTREAM_HTTP_ERROR（模型服务商返回其它非成功状态）、UPSTREAM_EMPTY_RESPONSE（模型服务商返回空响应）、UPSTREAM_INVALID_RESPONSE（模型服务商响应格式非法）、UPSTREAM_MODEL_ERROR（模型服务商拒绝本次请求）、MODEL_RESPONSE_INVALID（响应解析失败）。</p>
+         * <p>The error code returned when debugging fails.</p>
          * 
          * <strong>example:</strong>
          * <p>UPSTREAM_MODEL_ERROR</p>
@@ -112,7 +131,7 @@ public class DebugModelResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>调试失败时的错误描述，为固定脱敏文案，不透传模型服务商的原始错误详情。</p>
+         * <p>The error message returned when debugging fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The model endpoint rejected the debug request.</p>
@@ -121,6 +140,8 @@ public class DebugModelResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The number of input tokens consumed by this model debugging request.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -128,6 +149,8 @@ public class DebugModelResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>The time consumed by this model debugging call, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -135,6 +158,8 @@ public class DebugModelResponseBody extends TeaModel {
         public Long latencyMs;
 
         /**
+         * <p>The model ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>model-1</p>
          */
@@ -142,6 +167,8 @@ public class DebugModelResponseBody extends TeaModel {
         public String modelId;
 
         /**
+         * <p>The number of output tokens consumed by this model debugging response.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -149,6 +176,8 @@ public class DebugModelResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>The text response returned by the model when debugging succeeds. This value is empty when debugging fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>ok</p>
          */
@@ -156,7 +185,7 @@ public class DebugModelResponseBody extends TeaModel {
         public String response;
 
         /**
-         * <p>调试结果状态。取值：NORMAL（正常）、ABNORMAL（异常）。</p>
+         * <p>The debug result status.</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>

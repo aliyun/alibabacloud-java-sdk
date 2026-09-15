@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateModelShrinkRequest extends TeaModel {
     /**
-     * <p>The request body.</p>
+     * <p>The model update request body. At least one non-null parameter must be provided among description, contextSize, maxTokens, and capabilities.</p>
      */
     @NameInMap("body")
     public String bodyShrink;
 
     /**
-     * <p>The client token for idempotence. Not currently supported.</p>
+     * <p>The client token for idempotency. Not currently supported.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-1</p>

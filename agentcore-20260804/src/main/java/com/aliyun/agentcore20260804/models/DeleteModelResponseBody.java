@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DeleteModelResponseBody extends TeaModel {
     /**
+     * <p>The business status code. The value SUCCESS indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The identifier of the model that has been accepted for deletion.</p>
+     */
     @NameInMap("data")
     public DeleteModelResponseBodyData data;
 
     /**
+     * <p>The HTTP status code. The value 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class DeleteModelResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request processing result message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,12 +38,17 @@ public class DeleteModelResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>request-1</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class DeleteModelResponseBody extends TeaModel {
 
     public static class DeleteModelResponseBodyData extends TeaModel {
         /**
+         * <p>The model ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>model-1</p>
          */
@@ -100,6 +116,8 @@ public class DeleteModelResponseBody extends TeaModel {
         public String modelId;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ws-1</p>
          */

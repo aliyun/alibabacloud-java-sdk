@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetTeamResponseBody extends TeaModel {
     /**
+     * <p>The business status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The team details.</p>
+     */
     @NameInMap("data")
     public GetTeamResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetTeamResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message. An error description is returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,12 +38,17 @@ public class GetTeamResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>request-123456</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class GetTeamResponseBody extends TeaModel {
 
     public static class GetTeamResponseBodyDataAgents extends TeaModel {
         /**
+         * <p>The agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent-123456</p>
          */
@@ -100,6 +116,8 @@ public class GetTeamResponseBody extends TeaModel {
         public String agentId;
 
         /**
+         * <p>The creation mode of the agent. CUSTOM indicates custom creation. TEMPLATE indicates creation from a template.</p>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOM</p>
          */
@@ -107,6 +125,8 @@ public class GetTeamResponseBody extends TeaModel {
         public String createMode;
 
         /**
+         * <p>The creation time in UTC, formatted in RFC 3339.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
          */
@@ -114,6 +134,8 @@ public class GetTeamResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>The deployment type of the agent. MANAGED indicates platform-managed deployment. SELF_HOSTED indicates self-hosted deployment.</p>
+         * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
          */
@@ -121,20 +143,17 @@ public class GetTeamResponseBody extends TeaModel {
         public String deployType;
 
         /**
+         * <p>The agent description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>处理售后咨询的智能体</p>
+         * <p>An agent that handles after-sales inquiries</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("effectiveSpecVersion")
-        public Long effectiveSpecVersion;
-
-        /**
+         * <p>The latest configuration version number of the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -142,6 +161,8 @@ public class GetTeamResponseBody extends TeaModel {
         public Long latestSpecVersion;
 
         /**
+         * <p>The agent name.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent-01</p>
          */
@@ -149,6 +170,8 @@ public class GetTeamResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The runtime type of the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwenpaw</p>
          */
@@ -156,6 +179,8 @@ public class GetTeamResponseBody extends TeaModel {
         public String runtime;
 
         /**
+         * <p>The agent status. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -163,6 +188,8 @@ public class GetTeamResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The role of the agent in the team. Valid values: LEADER and WORKER.</p>
+         * 
          * <strong>example:</strong>
          * <p>WORKER</p>
          */
@@ -170,6 +197,8 @@ public class GetTeamResponseBody extends TeaModel {
         public String teamRole;
 
         /**
+         * <p>The time of the last modification in UTC, formatted in RFC 3339.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
          */
@@ -177,6 +206,8 @@ public class GetTeamResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ws-123456</p>
          */
@@ -226,14 +257,6 @@ public class GetTeamResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
-        }
-
-        public GetTeamResponseBodyDataAgents setEffectiveSpecVersion(Long effectiveSpecVersion) {
-            this.effectiveSpecVersion = effectiveSpecVersion;
-            return this;
-        }
-        public Long getEffectiveSpecVersion() {
-            return this.effectiveSpecVersion;
         }
 
         public GetTeamResponseBodyDataAgents setLatestSpecVersion(Long latestSpecVersion) {
@@ -296,6 +319,8 @@ public class GetTeamResponseBody extends TeaModel {
 
     public static class GetTeamResponseBodyDataUsers extends TeaModel {
         /**
+         * <p>The authentication method of the user. password indicates local password authentication in the workspace. dingtalk and feishu indicate synchronization and authentication by the corresponding external identity provider.</p>
+         * 
          * <strong>example:</strong>
          * <p>password</p>
          */
@@ -303,6 +328,8 @@ public class GetTeamResponseBody extends TeaModel {
         public String authMethod;
 
         /**
+         * <p>The creation time in UTC, formatted in RFC 3339.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
          */
@@ -310,13 +337,17 @@ public class GetTeamResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>The display name of the user. The name must be 1 to 32 characters in length.</p>
+         * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>John Doe</p>
          */
         @NameInMap("displayName")
         public String displayName;
 
         /**
+         * <p>The email address of the user. The address can be up to 256 characters in length.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:user-01@example.com">user-01@example.com</a></p>
          */
@@ -324,6 +355,8 @@ public class GetTeamResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>The initial password of the user. If a password was specified during creation, that password is returned. If no password was specified, a random password generated by the server is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>Example@2026</p>
          */
@@ -331,6 +364,8 @@ public class GetTeamResponseBody extends TeaModel {
         public String initialPassword;
 
         /**
+         * <p>The username. The name must be unique within the workspace. It can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit. The name must be 1 to 32 characters in length.</p>
+         * 
          * <strong>example:</strong>
          * <p>user-01</p>
          */
@@ -338,13 +373,17 @@ public class GetTeamResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The user note. The note can be up to 1024 characters in length.</p>
+         * 
          * <strong>example:</strong>
-         * <p>智能体运营组成员</p>
+         * <p>Member of the agent operations group</p>
          */
         @NameInMap("note")
         public String note;
 
         /**
+         * <p>The user status. Valid values: Creating, Active, Updating, Deleting, Failed, and DeleteFailed.</p>
+         * 
          * <strong>example:</strong>
          * <p>Active</p>
          */
@@ -352,6 +391,8 @@ public class GetTeamResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The role of the user in the team. Valid values: ADMIN and MEMBER. Each team must have exactly one ADMIN.</p>
+         * 
          * <strong>example:</strong>
          * <p>ADMIN</p>
          */
@@ -359,6 +400,8 @@ public class GetTeamResponseBody extends TeaModel {
         public String teamRole;
 
         /**
+         * <p>The time of the last modification in UTC, formatted in RFC 3339.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
          */
@@ -366,6 +409,8 @@ public class GetTeamResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>usr-123456</p>
          */
@@ -373,6 +418,8 @@ public class GetTeamResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ws-123456</p>
          */
@@ -483,10 +530,15 @@ public class GetTeamResponseBody extends TeaModel {
     }
 
     public static class GetTeamResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of agent members in the team.</p>
+         */
         @NameInMap("agents")
         public java.util.List<GetTeamResponseBodyDataAgents> agents;
 
         /**
+         * <p>The creation time in UTC, formatted in RFC 3339.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
          */
@@ -494,13 +546,17 @@ public class GetTeamResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>The team description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>负责智能客服业务的团队</p>
+         * <p>A team responsible for intelligent customer service operations</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>The team name. The name can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit. The name must be 1 to 128 characters in length.</p>
+         * 
          * <strong>example:</strong>
          * <p>team-01</p>
          */
@@ -508,6 +564,8 @@ public class GetTeamResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The region ID of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -515,6 +573,8 @@ public class GetTeamResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The team status. Valid values: Creating, Active, Updating, Deleting, Failed, and Deleted.</p>
+         * 
          * <strong>example:</strong>
          * <p>Active</p>
          */
@@ -522,6 +582,8 @@ public class GetTeamResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The team ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>tm-123456</p>
          */
@@ -529,16 +591,23 @@ public class GetTeamResponseBody extends TeaModel {
         public String teamId;
 
         /**
+         * <p>The time of the last modification in UTC, formatted in RFC 3339.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
          */
         @NameInMap("updatedAt")
         public String updatedAt;
 
+        /**
+         * <p>The list of user members in the team.</p>
+         */
         @NameInMap("users")
         public java.util.List<GetTeamResponseBodyDataUsers> users;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ws-123456</p>
          */

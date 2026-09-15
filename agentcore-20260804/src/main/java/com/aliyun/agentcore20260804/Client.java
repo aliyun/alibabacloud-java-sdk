@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量删除模型</p>
+     * <p>Deletes models in a specified workspace in batches. If any model is in use, the entire batch request fails.</p>
      * 
      * @param tmpReq BatchDeleteModelsRequest
      * @param headers map
@@ -74,7 +74,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量删除模型</p>
+     * <p>Deletes models in a specified workspace in batches. If any model is in use, the entire batch request fails.</p>
      * 
      * @param request BatchDeleteModelsRequest
      * @return BatchDeleteModelsResponse
@@ -144,6 +144,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.batchUploadSkillsViaOssWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Disables template usage constraints. After the conversion, the MCP retains its source and tags but no longer appears on the usage page.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Converts an MCP to free editing.</p>
+     * 
+     * @param request ConvertMcpToFreeEditRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConvertMcpToFreeEditResponse
+     */
+    public ConvertMcpToFreeEditResponse convertMcpToFreeEditWithOptions(String workspaceId, String mcpServerId, ConvertMcpToFreeEditRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ConvertMcpToFreeEdit"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/mcp-servers/" + com.aliyun.openapiutil.Client.getEncodeParam(mcpServerId) + "/convert-to-free-edit"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ConvertMcpToFreeEditResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Disables template usage constraints. After the conversion, the MCP retains its source and tags but no longer appears on the usage page.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Converts an MCP to free editing.</p>
+     * 
+     * @param request ConvertMcpToFreeEditRequest
+     * @return ConvertMcpToFreeEditResponse
+     */
+    public ConvertMcpToFreeEditResponse convertMcpToFreeEdit(String workspaceId, String mcpServerId, ConvertMcpToFreeEditRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.convertMcpToFreeEditWithOptions(workspaceId, mcpServerId, request, headers, runtime);
     }
 
     /**
@@ -334,8 +387,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a credential in a workspace for authentication of services such as Connector.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建凭证</p>
+     * <p>Creates a credential in a specified workspace for authentication when an agent accesses external services. Currently, only the apiKey type is supported. The credential content is passed in as a JSON string through credentialMetadata and can only be queried in masked form after being written.</p>
      * 
      * @param tmpReq CreateCredentialRequest
      * @param headers map
@@ -380,8 +436,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a credential in a workspace for authentication of services such as Connector.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建凭证</p>
+     * <p>Creates a credential in a specified workspace for authentication when an agent accesses external services. Currently, only the apiKey type is supported. The credential content is passed in as a JSON string through credentialMetadata and can only be queried in masked form after being written.</p>
      * 
      * @param request CreateCredentialRequest
      * @return CreateCredentialResponse
@@ -750,7 +809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建模型连接</p>
+     * <p>Creates a model connection in a specified workspace and configures the upstream model service address, invoke protocol, and access credentials.</p>
      * 
      * @param tmpReq CreateModelConnectionRequest
      * @param headers map
@@ -796,7 +855,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建模型连接</p>
+     * <p>Creates a model connection in a specified workspace and configures the upstream model service address, invoke protocol, and access credentials.</p>
      * 
      * @param request CreateModelConnectionRequest
      * @return CreateModelConnectionResponse
@@ -870,7 +929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建团队</p>
+     * <p>Creates a team in a specified workspace and sets user members and agent members at the same time. The user members must include exactly one member with the ADMIN role. Agent members can only have the LEADER or WORKER role.</p>
      * 
      * @param tmpReq CreateTeamRequest
      * @param headers map
@@ -916,7 +975,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建团队</p>
+     * <p>Creates a team in a specified workspace and sets user members and agent members at the same time. The user members must include exactly one member with the ADMIN role. Agent members can only have the LEADER or WORKER role.</p>
      * 
      * @param request CreateTeamRequest
      * @return CreateTeamResponse
@@ -929,7 +988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建用户</p>
+     * <p>Creates a user in a specified workspace. The username must be unique within the workspace and can contain only lowercase letters, digits, and hyphens. Reserved names such as manager, admin, or names starting with worker- cannot be used. If password is not specified, the server generates an initial password and returns it in the initialPassword field of the response.</p>
      * 
      * @param tmpReq CreateUserRequest
      * @param headers map
@@ -975,7 +1034,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建用户</p>
+     * <p>Creates a user in a specified workspace. The username must be unique within the workspace and can contain only lowercase letters, digits, and hyphens. Reserved names such as manager, admin, or names starting with worker- cannot be used. If password is not specified, the server generates an initial password and returns it in the initialPassword field of the response.</p>
      * 
      * @param request CreateUserRequest
      * @return CreateUserResponse
@@ -1053,7 +1112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>调试模型</p>
+     * <p>Calls a specified model through a published model connection to verify whether the model call chain is available.</p>
      * 
      * @param tmpReq DebugModelRequest
      * @param headers map
@@ -1093,7 +1152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>调试模型</p>
+     * <p>Calls a specified model through a published model connection to verify whether the model call chain is available.</p>
      * 
      * @param request DebugModelRequest
      * @return DebugModelResponse
@@ -1256,8 +1315,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes an access credential from a specified workspace. A credential cannot be deleted while it is still bound to an MCP service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除凭证</p>
+     * <p>Deletes a credential from a specified workspace and removes the ciphertext hosted in the credential service. After deletion, agents that are bound to this credential can no longer retrieve the credential content.</p>
      * 
      * @param request DeleteCredentialRequest
      * @param headers map
@@ -1290,8 +1352,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes an access credential from a specified workspace. A credential cannot be deleted while it is still bound to an MCP service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除凭证</p>
+     * <p>Deletes a credential from a specified workspace and removes the ciphertext hosted in the credential service. After deletion, agents that are bound to this credential can no longer retrieve the credential content.</p>
      * 
      * @param request DeleteCredentialRequest
      * @return DeleteCredentialResponse
@@ -1351,7 +1416,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unbinds the external identity provider from a specified workspace and cleans up users synchronized by that identity provider. The unbinding is an asynchronous operation. After the API returns, you can track the progress by querying the status through GetIdentityProvider.</p>
+     * <p>Unbinds the external identity provider from a specified workspace and cleans up users synchronized by that identity provider. The unbinding is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</p>
      * 
      * @param request DeleteIdentityProviderRequest
      * @param headers map
@@ -1385,7 +1450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unbinds the external identity provider from a specified workspace and cleans up users synchronized by that identity provider. The unbinding is an asynchronous operation. After the API returns, you can track the progress by querying the status through GetIdentityProvider.</p>
+     * <p>Unbinds the external identity provider from a specified workspace and cleans up users synchronized by that identity provider. The unbinding is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</p>
      * 
      * @param request DeleteIdentityProviderRequest
      * @return DeleteIdentityProviderResponse
@@ -1439,7 +1504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <p>Deletes a specified MCP service. The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</p>
      * 
      * <b>summary</b> : 
@@ -1471,7 +1536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <p>Deletes a specified MCP service. The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</p>
      * 
      * <b>summary</b> : 
@@ -1488,7 +1553,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除模型</p>
+     * <p>Deletes a model from a specified workspace. Models that are currently in use cannot be deleted.</p>
      * 
      * @param request DeleteModelRequest
      * @param headers map
@@ -1522,7 +1587,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除模型</p>
+     * <p>Deletes a model from a specified workspace. Models that are currently in use cannot be deleted.</p>
      * 
      * @param request DeleteModelRequest
      * @return DeleteModelResponse
@@ -1535,7 +1600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除模型连接</p>
+     * <p>Submits an asynchronous deletion task for a specified model connection. The connection cannot be deleted if it has associated models or runtime references.</p>
      * 
      * @param request DeleteModelConnectionRequest
      * @param headers map
@@ -1569,7 +1634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除模型连接</p>
+     * <p>Submits an asynchronous deletion task for a specified model connection. The connection cannot be deleted if it has associated models or runtime references.</p>
      * 
      * @param request DeleteModelConnectionRequest
      * @return DeleteModelConnectionResponse
@@ -1680,7 +1745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除团队</p>
+     * <p>Deletes a team from a specified workspace. Deleting a team does not delete the users or agents within it. Only the membership associations are removed.</p>
      * 
      * @param request DeleteTeamRequest
      * @param headers map
@@ -1714,7 +1779,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除团队</p>
+     * <p>Deletes a team from a specified workspace. Deleting a team does not delete the users or agents within it. Only the membership associations are removed.</p>
      * 
      * @param request DeleteTeamRequest
      * @return DeleteTeamResponse
@@ -1727,7 +1792,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除用户</p>
+     * <p>Deletes a user from a specified workspace. A user cannot be deleted while the user is still a member of any team. Remove the user from all teams before deleting the user.</p>
      * 
      * @param request DeleteUserRequest
      * @param headers map
@@ -1761,7 +1826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除用户</p>
+     * <p>Deletes a user from a specified workspace. A user cannot be deleted while the user is still a member of any team. Remove the user from all teams before deleting the user.</p>
      * 
      * @param request DeleteUserRequest
      * @return DeleteUserResponse
@@ -1817,6 +1882,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteWorkspaceWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Disables a specified Connector in a workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables a Connector.</p>
+     * 
+     * @param request DisableConnectorRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableConnectorResponse
+     */
+    public DisableConnectorResponse disableConnectorWithOptions(String workspaceId, String connectorName, DisableConnectorRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableConnector"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/connectors/" + com.aliyun.openapiutil.Client.getEncodeParam(connectorName) + "/actions/disable"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableConnectorResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Disables a specified Connector in a workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables a Connector.</p>
+     * 
+     * @param request DisableConnectorRequest
+     * @return DisableConnectorResponse
+     */
+    public DisableConnectorResponse disableConnector(String workspaceId, String connectorName, DisableConnectorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.disableConnectorWithOptions(workspaceId, connectorName, request, headers, runtime);
     }
 
     /**
@@ -1921,6 +2033,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.downloadSkillVersionViaOssWithOptions(workspaceId, skillName, skillVersion, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Enables a Connector in a specified workspace. Credential verification is required before enabling.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables a Connector.</p>
+     * 
+     * @param tmpReq EnableConnectorRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableConnectorResponse
+     */
+    public EnableConnectorResponse enableConnectorWithOptions(String workspaceId, String connectorName, EnableConnectorRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        EnableConnectorShrinkRequest request = new EnableConnectorShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableConnector"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/connectors/" + com.aliyun.openapiutil.Client.getEncodeParam(connectorName) + "/actions/enable"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableConnectorResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Enables a Connector in a specified workspace. Credential verification is required before enabling.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables a Connector.</p>
+     * 
+     * @param request EnableConnectorRequest
+     * @return EnableConnectorResponse
+     */
+    public EnableConnectorResponse enableConnector(String workspaceId, String connectorName, EnableConnectorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.enableConnectorWithOptions(workspaceId, connectorName, request, headers, runtime);
     }
 
     /**
@@ -2083,10 +2254,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</p>
+     * <p>Retrieves the OSS pre-signed upload URL and object name required to import an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</p>
+     * <p>Retrieves the OSS pre-signed upload URL and object name required to import an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</p>
      * 
      * @param request GetAgentSpecImportFileUrlRequest
      * @param headers map
@@ -2121,10 +2292,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</p>
+     * <p>Retrieves the OSS pre-signed upload URL and object name required to import an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</p>
+     * <p>Retrieves the OSS pre-signed upload URL and object name required to import an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</p>
      * 
      * @param request GetAgentSpecImportFileUrlRequest
      * @return GetAgentSpecImportFileUrlResponse
@@ -2234,8 +2405,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a single credential. Sensitive fields are not returned.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询凭证</p>
+     * <p>Queries the details of a specified credential and returns the list of agents bound to the credential. The credential content is returned in masked form.</p>
      * 
      * @param request GetCredentialRequest
      * @param headers map
@@ -2262,8 +2436,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a single credential. Sensitive fields are not returned.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询凭证</p>
+     * <p>Queries the details of a specified credential and returns the list of agents bound to the credential. The credential content is returned in masked form.</p>
      * 
      * @param request GetCredentialRequest
      * @return GetCredentialResponse
@@ -2453,10 +2630,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</p>
+     * <p>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</p>
+     * <p>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</p>
      * 
      * @param request GetMcpRequest
      * @param headers map
@@ -2485,10 +2662,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</p>
+     * <p>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</p>
+     * <p>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</p>
      * 
      * @param request GetMcpRequest
      * @return GetMcpResponse
@@ -2497,6 +2674,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getMcpWithOptions(workspaceId, mcpServerId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Returns the current template version and installation form schema.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an MCP marketplace template.</p>
+     * 
+     * @param request GetMcpMarketItemRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMcpMarketItemResponse
+     */
+    public GetMcpMarketItemResponse getMcpMarketItemWithOptions(String workspaceId, String marketItemId, GetMcpMarketItemRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMcpMarketItem"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/mcp-market/items/" + com.aliyun.openapiutil.Client.getEncodeParam(marketItemId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMcpMarketItemResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Returns the current template version and installation form schema.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an MCP marketplace template.</p>
+     * 
+     * @param request GetMcpMarketItemRequest
+     * @return GetMcpMarketItemResponse
+     */
+    public GetMcpMarketItemResponse getMcpMarketItem(String workspaceId, String marketItemId, GetMcpMarketItemRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMcpMarketItemWithOptions(workspaceId, marketItemId, request, headers, runtime);
     }
 
     /**
@@ -2542,7 +2766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询模型连接</p>
+     * <p>Queries the detailed configuration, credential configuration status, publish status, and region of a specified model connection.</p>
      * 
      * @param request GetModelConnectionRequest
      * @param headers map
@@ -2570,7 +2794,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询模型连接</p>
+     * <p>Queries the detailed configuration, credential configuration status, publish status, and region of a specified model connection.</p>
      * 
      * @param request GetModelConnectionRequest
      * @return GetModelConnectionResponse
@@ -2830,7 +3054,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询团队</p>
+     * <p>Queries the details of a specified team. The response includes the complete attributes and team roles of each user member and agent member in the team.</p>
      * 
      * @param request GetTeamRequest
      * @param headers map
@@ -2858,7 +3082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询团队</p>
+     * <p>Queries the details of a specified team. The response includes the complete attributes and team roles of each user member and agent member in the team.</p>
      * 
      * @param request GetTeamRequest
      * @return GetTeamResponse
@@ -2871,7 +3095,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户</p>
+     * <p>Queries the details of a specified user in a workspace. Returns an error if the user does not exist.</p>
      * 
      * @param request GetUserRequest
      * @param headers map
@@ -2899,7 +3123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户</p>
+     * <p>Queries the details of a specified user in a workspace. Returns an error if the user does not exist.</p>
      * 
      * @param request GetUserRequest
      * @return GetUserResponse
@@ -2912,10 +3136,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description\nQueries workspace details by workspace ID, including lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.\n.</h2>
+     * <h2>Operation description\nQueries the details of a workspace by workspace ID, including the lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.\n.</h2>
      * 
      * <b>summary</b> : 
-     * <p>Queries workspace details by workspace ID, including lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.</p>
+     * <p>Queries the details of a workspace by workspace ID, including the lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.</p>
      * 
      * @param request GetWorkspaceRequest
      * @param headers map
@@ -2943,10 +3167,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description\nQueries workspace details by workspace ID, including lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.\n.</h2>
+     * <h2>Operation description\nQueries the details of a workspace by workspace ID, including the lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.\n.</h2>
      * 
      * <b>summary</b> : 
-     * <p>Queries workspace details by workspace ID, including lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.</p>
+     * <p>Queries the details of a workspace by workspace ID, including the lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.</p>
      * 
      * @param request GetWorkspaceRequest
      * @return GetWorkspaceResponse
@@ -3002,6 +3226,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getWorkspacePluginWithOptions(workspaceId, pluginName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Validates input based on the specified template version and creates an MCP in the workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Installs an MCP marketplace template.</p>
+     * 
+     * @param tmpReq InstallMcpMarketItemRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InstallMcpMarketItemResponse
+     */
+    public InstallMcpMarketItemResponse installMcpMarketItemWithOptions(String workspaceId, String marketItemId, InstallMcpMarketItemRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        InstallMcpMarketItemShrinkRequest request = new InstallMcpMarketItemShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateVersion)) {
+            query.put("templateVersion", request.templateVersion);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InstallMcpMarketItem"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/mcp-market/items/" + com.aliyun.openapiutil.Client.getEncodeParam(marketItemId) + "/install"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InstallMcpMarketItemResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Validates input based on the specified template version and creates an MCP in the workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Installs an MCP marketplace template.</p>
+     * 
+     * @param request InstallMcpMarketItemRequest
+     * @return InstallMcpMarketItemResponse
+     */
+    public InstallMcpMarketItemResponse installMcpMarketItem(String workspaceId, String marketItemId, InstallMcpMarketItemRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.installMcpMarketItemWithOptions(workspaceId, marketItemId, request, headers, runtime);
     }
 
     /**
@@ -3275,8 +3568,129 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of available models for a specified connector. Pagination is supported.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询凭证列表</p>
+     * <p>Queries the list of models for a connector.</p>
+     * 
+     * @param request ListConnectorModelsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListConnectorModelsResponse
+     */
+    public ListConnectorModelsResponse listConnectorModelsWithOptions(String workspaceId, String connectorName, ListConnectorModelsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connectorKeyId)) {
+            query.put("connectorKeyId", request.connectorKeyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListConnectorModels"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/connectors/" + com.aliyun.openapiutil.Client.getEncodeParam(connectorName) + "/models"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListConnectorModelsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of available models for a specified connector. Pagination is supported.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of models for a connector.</p>
+     * 
+     * @param request ListConnectorModelsRequest
+     * @return ListConnectorModelsResponse
+     */
+    public ListConnectorModelsResponse listConnectorModels(String workspaceId, String connectorName, ListConnectorModelsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listConnectorModelsWithOptions(workspaceId, connectorName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of connectors in a specified workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of connectors.</p>
+     * 
+     * @param request ListConnectorsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListConnectorsResponse
+     */
+    public ListConnectorsResponse listConnectorsWithOptions(String workspaceId, ListConnectorsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListConnectors"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/connectors"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListConnectorsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of connectors in a specified workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of connectors.</p>
+     * 
+     * @param request ListConnectorsRequest
+     * @return ListConnectorsResponse
+     */
+    public ListConnectorsResponse listConnectors(String workspaceId, ListConnectorsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listConnectorsWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of credentials in a workspace with paging. Supports filtering by type and name.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries credentials in a specified workspace with paging. Filter by type using credentialType, perform a fuzzy match on credential names using nameLike, specify the maximum number of records per page using maxResults, and retrieve the next page using nextToken. If maxResults is not specified, the server returns 10 records by default.</p>
      * 
      * @param request ListCredentialsRequest
      * @param headers map
@@ -3292,6 +3706,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nameLike)) {
@@ -3321,8 +3739,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of credentials in a workspace with paging. Supports filtering by type and name.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询凭证列表</p>
+     * <p>Queries credentials in a specified workspace with paging. Filter by type using credentialType, perform a fuzzy match on credential names using nameLike, specify the maximum number of records per page using maxResults, and retrieve the next page using nextToken. If maxResults is not specified, the server returns 10 records by default.</p>
      * 
      * @param request ListCredentialsRequest
      * @return ListCredentialsResponse
@@ -3443,7 +3864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of managed agents in a specified workspace by using paging. Returns summary information for each agent, including the identity, name, status, template, and specifications.</p>
+     * <p>Performs a paged query for the list of managed agents in a specified workspace. Returns summary information for each agent, including the identity, name, status, template, and specifications. Use paging parameters to navigate through results.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of managed agents in a specified workspace.</p>
@@ -3484,7 +3905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of managed agents in a specified workspace by using paging. Returns summary information for each agent, including the identity, name, status, template, and specifications.</p>
+     * <p>Performs a paged query for the list of managed agents in a specified workspace. Returns summary information for each agent, including the identity, name, status, template, and specifications. Use paging parameters to navigate through results.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of managed agents in a specified workspace.</p>
@@ -3496,6 +3917,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listManagedAgentsWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries all online official MCP templates. You can filter results by keyword, usage tag, and MCP type.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries MCP marketplace templates.</p>
+     * 
+     * @param request ListMcpMarketItemsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMcpMarketItemsResponse
+     */
+    public ListMcpMarketItemsResponse listMcpMarketItemsWithOptions(String workspaceId, ListMcpMarketItemsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mcpType)) {
+            query.put("mcpType", request.mcpType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.officialTag)) {
+            query.put("officialTag", request.officialTag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMcpMarketItems"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/mcp-market/items"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMcpMarketItemsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries all online official MCP templates. You can filter results by keyword, usage tag, and MCP type.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries MCP marketplace templates.</p>
+     * 
+     * @param request ListMcpMarketItemsRequest
+     * @return ListMcpMarketItemsResponse
+     */
+    public ListMcpMarketItemsResponse listMcpMarketItems(String workspaceId, ListMcpMarketItemsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMcpMarketItemsWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
@@ -3585,8 +4075,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("nextToken", request.nextToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.officialTag)) {
+            query.put("officialTag", request.officialTag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.searchType)) {
             query.put("searchType", request.searchType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usageActive)) {
+            query.put("usageActive", request.usageActive);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3626,10 +4124,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询指定 AgentCore 工作空间中的模型连接。支持通过 <code>Name</code> 按名称筛选，并通过 <code>SearchType</code> 选择精确匹配或模糊匹配；支持按模型提供商类型和调用协议筛选，并支持分页查询。</p>
+     * <p>Queries model connections in a specified AgentCore workspace. Supports filtering by name through <code>Name</code> and selecting exact match or fuzzy match through <code>SearchType</code>. Also supports filtering by model provider type and invoke protocol, and supports paging.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询模型连接列表</p>
+     * <p>Queries model connections in a specified workspace with paging. Supports filtering by name, provider type, and invoke protocol.</p>
      * 
      * @param request ListModelConnectionsRequest
      * @param headers map
@@ -3687,10 +4185,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询指定 AgentCore 工作空间中的模型连接。支持通过 <code>Name</code> 按名称筛选，并通过 <code>SearchType</code> 选择精确匹配或模糊匹配；支持按模型提供商类型和调用协议筛选，并支持分页查询。</p>
+     * <p>Queries model connections in a specified AgentCore workspace. Supports filtering by name through <code>Name</code> and selecting exact match or fuzzy match through <code>SearchType</code>. Also supports filtering by model provider type and invoke protocol, and supports paging.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询模型连接列表</p>
+     * <p>Queries model connections in a specified workspace with paging. Supports filtering by name, provider type, and invoke protocol.</p>
      * 
      * @param request ListModelConnectionsRequest
      * @return ListModelConnectionsResponse
@@ -3840,6 +4338,128 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listPredefinedModelsWithOptions(providerType, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of active sessions in the Sandbox of a specified managed agent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of Sandbox sessions.</p>
+     * 
+     * @param request ListSandboxSessionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSandboxSessionsResponse
+     */
+    public ListSandboxSessionsResponse listSandboxSessionsWithOptions(String workspaceId, String agentId, String sandboxId, ListSandboxSessionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSandboxSessions"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/managed-agents/" + com.aliyun.openapiutil.Client.getEncodeParam(agentId) + "/sandboxes/" + com.aliyun.openapiutil.Client.getEncodeParam(sandboxId) + "/sessions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSandboxSessionsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of active sessions in the Sandbox of a specified managed agent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of Sandbox sessions.</p>
+     * 
+     * @param request ListSandboxSessionsRequest
+     * @return ListSandboxSessionsResponse
+     */
+    public ListSandboxSessionsResponse listSandboxSessions(String workspaceId, String agentId, String sandboxId, ListSandboxSessionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listSandboxSessionsWithOptions(workspaceId, agentId, sandboxId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the sandbox list of a specified managed agent. The searchText parameter performs a fuzzy match on Sandbox ID fragments, and the sessionId parameter performs a fuzzy match on currently active Session ID fragments. Both parameters can be specified simultaneously and are combined with AND logic.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of sandboxes.</p>
+     * 
+     * @param request ListSandboxesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSandboxesResponse
+     */
+    public ListSandboxesResponse listSandboxesWithOptions(String workspaceId, String agentId, ListSandboxesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchText)) {
+            query.put("searchText", request.searchText);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("sessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSandboxes"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/managed-agents/" + com.aliyun.openapiutil.Client.getEncodeParam(agentId) + "/sandboxes"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSandboxesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the sandbox list of a specified managed agent. The searchText parameter performs a fuzzy match on Sandbox ID fragments, and the sessionId parameter performs a fuzzy match on currently active Session ID fragments. Both parameters can be specified simultaneously and are combined with AND logic.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of sandboxes.</p>
+     * 
+     * @param request ListSandboxesRequest
+     * @return ListSandboxesResponse
+     */
+    public ListSandboxesResponse listSandboxes(String workspaceId, String agentId, ListSandboxesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listSandboxesWithOptions(workspaceId, agentId, request, headers, runtime);
     }
 
     /**
@@ -4012,7 +4632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询团队列表</p>
+     * <p>Queries teams in a specified workspace by paging. Use nameLike to filter by team name with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default. Member information in the list includes only the member identity, name, and team role.</p>
      * 
      * @param request ListTeamsRequest
      * @param headers map
@@ -4054,7 +4674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询团队列表</p>
+     * <p>Queries teams in a specified workspace by paging. Use nameLike to filter by team name with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default. Member information in the list includes only the member identity, name, and team role.</p>
      * 
      * @param request ListTeamsRequest
      * @return ListTeamsResponse
@@ -4126,10 +4746,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description\nQueries workspaces under the current tenant with paging. The list does not return soft-deleted records with a status of <code>Deleted</code> by default. Results are stably sorted by creation order on the server side. Use <code>nextToken</code> to retrieve the next page, <code>skip</code> to skip a specified number of workspaces, <code>maxResults</code> to specify the maximum number of records per page, and <code>nameLike</code> to filter workspaces by name using fuzzy match. If <code>maxResults</code> is not specified or is set to 0, the server returns 20 records by default.\n</h2>
+     * <h2>Operation description\nQueries workspaces under the current tenant by paging. The list does not return soft-deleted records with a status of <code>Deleted</code> by default. Results are stably sorted by creation order on the server side. Use <code>nextToken</code> to retrieve the next page, <code>skip</code> to skip a specified number of workspaces, <code>maxResults</code> to specify the maximum number of records per paging request, and <code>nameLike</code> to filter workspaces by name using fuzzy match. If <code>maxResults</code> is not specified or is set to 0, the server returns 20 records by default.\n</h2>
      * 
      * <b>summary</b> : 
-     * <p>Queries workspaces under the current tenant with paging. The list does not return soft-deleted records with a status of Deleted by default. Results are stably sorted by creation order on the server side.</p>
+     * <p>Queries workspaces under the current tenant by paging. The list does not return soft-deleted records with a status of Deleted by default. Results are stably sorted by creation order on the server side.</p>
      * 
      * @param request ListWorkspacesRequest
      * @param headers map
@@ -4171,10 +4791,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description\nQueries workspaces under the current tenant with paging. The list does not return soft-deleted records with a status of <code>Deleted</code> by default. Results are stably sorted by creation order on the server side. Use <code>nextToken</code> to retrieve the next page, <code>skip</code> to skip a specified number of workspaces, <code>maxResults</code> to specify the maximum number of records per page, and <code>nameLike</code> to filter workspaces by name using fuzzy match. If <code>maxResults</code> is not specified or is set to 0, the server returns 20 records by default.\n</h2>
+     * <h2>Operation description\nQueries workspaces under the current tenant by paging. The list does not return soft-deleted records with a status of <code>Deleted</code> by default. Results are stably sorted by creation order on the server side. Use <code>nextToken</code> to retrieve the next page, <code>skip</code> to skip a specified number of workspaces, <code>maxResults</code> to specify the maximum number of records per paging request, and <code>nameLike</code> to filter workspaces by name using fuzzy match. If <code>maxResults</code> is not specified or is set to 0, the server returns 20 records by default.\n</h2>
      * 
      * <b>summary</b> : 
-     * <p>Queries workspaces under the current tenant with paging. The list does not return soft-deleted records with a status of Deleted by default. Results are stably sorted by creation order on the server side.</p>
+     * <p>Queries workspaces under the current tenant by paging. The list does not return soft-deleted records with a status of Deleted by default. Results are stably sorted by creation order on the server side.</p>
      * 
      * @param request ListWorkspacesRequest
      * @return ListWorkspacesResponse
@@ -4492,7 +5112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重置用户密码</p>
+     * <p>Resets the logon password of a specified user. Specify the user by agentCoreUserId or username. At least one of the two parameters must be specified. Only users who use workspace local password authentication can be reset. If password is not specified, the server generates a random password and returns it in the response.</p>
      * 
      * @param tmpReq ResetUserPasswordRequest
      * @param headers map
@@ -4532,7 +5152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重置用户密码</p>
+     * <p>Resets the logon password of a specified user. Specify the user by agentCoreUserId or username. At least one of the two parameters must be specified. Only users who use workspace local password authentication can be reset. If password is not specified, the server generates a random password and returns it in the response.</p>
      * 
      * @param request ResetUserPasswordRequest
      * @return ResetUserPasswordResponse
@@ -4857,8 +5477,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the sensitive configuration of a specified Connector and aligns the Service Account Key by ID.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新凭证</p>
+     * <p>Updates the credentials of a Connector.</p>
+     * 
+     * @param tmpReq UpdateConnectorRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateConnectorResponse
+     */
+    public UpdateConnectorResponse updateConnectorWithOptions(String workspaceId, String connectorName, UpdateConnectorRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateConnectorShrinkRequest request = new UpdateConnectorShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateConnector"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/connectors/" + com.aliyun.openapiutil.Client.getEncodeParam(connectorName) + "/actions/update"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateConnectorResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the sensitive configuration of a specified Connector and aligns the Service Account Key by ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the credentials of a Connector.</p>
+     * 
+     * @param request UpdateConnectorRequest
+     * @return UpdateConnectorResponse
+     */
+    public UpdateConnectorResponse updateConnector(String workspaceId, String connectorName, UpdateConnectorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateConnectorWithOptions(workspaceId, connectorName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the metadata or resource scope of a specified credential.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the content or description of a specified credential. At least one of credentialMetadata and description must be specified. Unspecified properties remain unchanged. The credential name and credential type cannot be modified after creation.</p>
      * 
      * @param tmpReq UpdateCredentialRequest
      * @param headers map
@@ -4903,8 +5585,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the metadata or resource scope of a specified credential.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新凭证</p>
+     * <p>Updates the content or description of a specified credential. At least one of credentialMetadata and description must be specified. Unspecified properties remain unchanged. The credential name and credential type cannot be modified after creation.</p>
      * 
      * @param request UpdateCredentialRequest
      * @return UpdateCredentialResponse
@@ -4982,7 +5667,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the login switch, member synchronization switch, or application configuration of a specified external identity provider in a workspace. Unspecified properties remain unchanged. The update is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track progress.</p>
+     * <p>Updates the login toggle, member synchronization toggle, or application configuration of a specified external identity provider in a workspace. Unspecified properties remain unchanged. The update is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track progress.</p>
      * 
      * @param tmpReq UpdateIdentityProviderRequest
      * @param headers map
@@ -5022,7 +5707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the login switch, member synchronization switch, or application configuration of a specified external identity provider in a workspace. Unspecified properties remain unchanged. The update is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track progress.</p>
+     * <p>Updates the login toggle, member synchronization toggle, or application configuration of a specified external identity provider in a workspace. Unspecified properties remain unchanged. The update is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track progress.</p>
      * 
      * @param request UpdateIdentityProviderRequest
      * @return UpdateIdentityProviderResponse
@@ -5160,8 +5845,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the schema-exposed parameters by using the same template version that was bound when the MCP was created. This operation does not upgrade the template version.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates the description of a specified model. Other model configurations cannot be modified through this operation.</p>
+     * <p>Updates MCP parameters by template.</p>
+     * 
+     * @param tmpReq UpdateMcpTemplateConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMcpTemplateConfigResponse
+     */
+    public UpdateMcpTemplateConfigResponse updateMcpTemplateConfigWithOptions(String workspaceId, String mcpServerId, UpdateMcpTemplateConfigRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateMcpTemplateConfigShrinkRequest request = new UpdateMcpTemplateConfigShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateVersion)) {
+            query.put("templateVersion", request.templateVersion);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMcpTemplateConfig"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/mcp-servers/" + com.aliyun.openapiutil.Client.getEncodeParam(mcpServerId) + "/template-config"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMcpTemplateConfigResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the schema-exposed parameters by using the same template version that was bound when the MCP was created. This operation does not upgrade the template version.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates MCP parameters by template.</p>
+     * 
+     * @param request UpdateMcpTemplateConfigRequest
+     * @return UpdateMcpTemplateConfigResponse
+     */
+    public UpdateMcpTemplateConfigResponse updateMcpTemplateConfig(String workspaceId, String mcpServerId, UpdateMcpTemplateConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateMcpTemplateConfigWithOptions(workspaceId, mcpServerId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation supports updating description, contextSize, maxTokens, and capabilities. At least one non-null parameter must be provided. Parameters that are not provided or set to null retain their original values. The capabilities object is replaced as a whole. Capability fields not included in the object are treated as false.
+     * Modifying only description does not refresh the model configuration of associated Agents. When contextSize, maxTokens, or capabilities actually change, the system asynchronously refreshes managed Agents that reference the model within the same workspace, as well as external Agents whose model source is PLATFORM. External Agents whose model source is RUNTIME are not affected. Submitting the same configuration repeatedly does not trigger a new model configuration refresh.
+     * A successful response indicates that the model configuration has been saved. It does not indicate that associated Agents have completed the configuration refresh or that the runtime has loaded the new configuration. Call GetModel to query the saved model configuration.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the description, context token limit, maximum output token count, or capability configuration of a specified model.</p>
      * 
      * @param tmpReq UpdateModelRequest
      * @param headers map
@@ -5206,8 +5965,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation supports updating description, contextSize, maxTokens, and capabilities. At least one non-null parameter must be provided. Parameters that are not provided or set to null retain their original values. The capabilities object is replaced as a whole. Capability fields not included in the object are treated as false.
+     * Modifying only description does not refresh the model configuration of associated Agents. When contextSize, maxTokens, or capabilities actually change, the system asynchronously refreshes managed Agents that reference the model within the same workspace, as well as external Agents whose model source is PLATFORM. External Agents whose model source is RUNTIME are not affected. Submitting the same configuration repeatedly does not trigger a new model configuration refresh.
+     * A successful response indicates that the model configuration has been saved. It does not indicate that associated Agents have completed the configuration refresh or that the runtime has loaded the new configuration. Call GetModel to query the saved model configuration.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates the description of a specified model. Other model configurations cannot be modified through this operation.</p>
+     * <p>Updates the description, context token limit, maximum output token count, or capability configuration of a specified model.</p>
      * 
      * @param request UpdateModelRequest
      * @return UpdateModelResponse
@@ -5462,7 +6226,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新团队</p>
+     * <p>Updates the description and members of a specified team. When users or agents are passed in, the corresponding member list is replaced using full overwrite semantics. Member lists that are not passed in remain unchanged. The team name cannot be modified after creation.</p>
      * 
      * @param tmpReq UpdateTeamRequest
      * @param headers map
@@ -5508,7 +6272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新团队</p>
+     * <p>Updates the description and members of a specified team. When users or agents are passed in, the corresponding member list is replaced using full overwrite semantics. Member lists that are not passed in remain unchanged. The team name cannot be modified after creation.</p>
      * 
      * @param request UpdateTeamRequest
      * @return UpdateTeamResponse
@@ -5521,7 +6285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新用户</p>
+     * <p>Updates the display name, email address, or note of a specified user. At least one of displayName, email, and note must be specified. Unspecified properties remain unchanged. The username cannot be modified after creation.</p>
      * 
      * @param tmpReq UpdateUserRequest
      * @param headers map
@@ -5567,7 +6331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新用户</p>
+     * <p>Updates the display name, email address, or note of a specified user. At least one of displayName, email, and note must be specified. Unspecified properties remain unchanged. The username cannot be modified after creation.</p>
      * 
      * @param request UpdateUserRequest
      * @return UpdateUserResponse
@@ -5580,10 +6344,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <code>Initialized</code> status can be updated. <code>Status</code>, <code>TenantId</code>, and <code>RegionId</code> are maintained by the server and cannot be modified through this operation. The network configuration uses <code>Enabled</code> to specify whether to enable VPC networking. When enabled, you must also provide <code>VpcId</code> and at least one <code>VSwitchIds</code>.\n.</h2>
+     * <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <code>Initialized</code> state can be updated. <code>Status</code>, <code>TenantId</code>, and <code>RegionId</code> are maintained by the server and cannot be modified through this operation. The network configuration uses <code>Enabled</code> to specify whether to enable VPC networking. When enabled, you must also provide <code>VpcId</code> and at least one <code>VSwitchIds</code>.\n.</h2>
      * 
      * <b>summary</b> : 
-     * <p>Updates the name or network configuration of a workspace. Only workspaces in the Initialized status can be updated. Status, TenantId, and RegionId are maintained by the server and cannot be modified through this operation.</p>
+     * <p>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</p>
      * 
      * @param tmpReq UpdateWorkspaceRequest
      * @param headers map
@@ -5629,10 +6393,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <code>Initialized</code> status can be updated. <code>Status</code>, <code>TenantId</code>, and <code>RegionId</code> are maintained by the server and cannot be modified through this operation. The network configuration uses <code>Enabled</code> to specify whether to enable VPC networking. When enabled, you must also provide <code>VpcId</code> and at least one <code>VSwitchIds</code>.\n.</h2>
+     * <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <code>Initialized</code> state can be updated. <code>Status</code>, <code>TenantId</code>, and <code>RegionId</code> are maintained by the server and cannot be modified through this operation. The network configuration uses <code>Enabled</code> to specify whether to enable VPC networking. When enabled, you must also provide <code>VpcId</code> and at least one <code>VSwitchIds</code>.\n.</h2>
      * 
      * <b>summary</b> : 
-     * <p>Updates the name or network configuration of a workspace. Only workspaces in the Initialized status can be updated. Status, TenantId, and RegionId are maintained by the server and cannot be modified through this operation.</p>
+     * <p>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</p>
      * 
      * @param request UpdateWorkspaceRequest
      * @return UpdateWorkspaceResponse
@@ -5763,5 +6527,117 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.uploadSkillViaOssWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Validates whether the credentials of a specified Connector are valid and returns a list of invalid Service Account Keys.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Validates the credentials of a Connector.</p>
+     * 
+     * @param tmpReq VerifyConnectorRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VerifyConnectorResponse
+     */
+    public VerifyConnectorResponse verifyConnectorWithOptions(String workspaceId, String connectorName, VerifyConnectorRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        VerifyConnectorShrinkRequest request = new VerifyConnectorShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VerifyConnector"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/connectors/" + com.aliyun.openapiutil.Client.getEncodeParam(connectorName) + "/actions/verify"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VerifyConnectorResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Validates whether the credentials of a specified Connector are valid and returns a list of invalid Service Account Keys.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Validates the credentials of a Connector.</p>
+     * 
+     * @param request VerifyConnectorRequest
+     * @return VerifyConnectorResponse
+     */
+    public VerifyConnectorResponse verifyConnector(String workspaceId, String connectorName, VerifyConnectorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.verifyConnectorWithOptions(workspaceId, connectorName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries whether the OSS mount role of a workspace is bound to the custom RAM policy for the target bucket. Returns AUTHORIZED or UNAUTHORIZED. If bucketName is not specified, the existing user-managed OSS binding of the workspace is used and the authorization status is saved. If bucketName is specified, only the authorization status of the specified bucket is queried without modifying the workspace OSS binding. This operation does not verify OSS data plane access permissions or resume workspace initialization tasks.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Verifies the RAM authorization for an OSS mount in a workspace.</p>
+     * 
+     * @param request VerifyWorkspaceOssMountRamAuthorizationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VerifyWorkspaceOssMountRamAuthorizationResponse
+     */
+    public VerifyWorkspaceOssMountRamAuthorizationResponse verifyWorkspaceOssMountRamAuthorizationWithOptions(String workspaceId, VerifyWorkspaceOssMountRamAuthorizationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bucketName)) {
+            query.put("bucketName", request.bucketName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VerifyWorkspaceOssMountRamAuthorization"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/oss-mount/authorize/verify"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VerifyWorkspaceOssMountRamAuthorizationResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries whether the OSS mount role of a workspace is bound to the custom RAM policy for the target bucket. Returns AUTHORIZED or UNAUTHORIZED. If bucketName is not specified, the existing user-managed OSS binding of the workspace is used and the authorization status is saved. If bucketName is specified, only the authorization status of the specified bucket is queried without modifying the workspace OSS binding. This operation does not verify OSS data plane access permissions or resume workspace initialization tasks.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Verifies the RAM authorization for an OSS mount in a workspace.</p>
+     * 
+     * @param request VerifyWorkspaceOssMountRamAuthorizationRequest
+     * @return VerifyWorkspaceOssMountRamAuthorizationResponse
+     */
+    public VerifyWorkspaceOssMountRamAuthorizationResponse verifyWorkspaceOssMountRamAuthorization(String workspaceId, VerifyWorkspaceOssMountRamAuthorizationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.verifyWorkspaceOssMountRamAuthorizationWithOptions(workspaceId, request, headers, runtime);
     }
 }

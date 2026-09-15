@@ -47,7 +47,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -125,7 +125,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The ID of the user VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1234567890</p>
@@ -186,7 +186,97 @@ public class CreateWorkspaceResponseBody extends TeaModel {
 
     }
 
+    public static class CreateWorkspaceResponseBodyDataTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>environment</p>
+         */
+        @NameInMap("key")
+        public String key;
+
+        /**
+         * <p>The tag value.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>development</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static CreateWorkspaceResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateWorkspaceResponseBodyDataTags self = new CreateWorkspaceResponseBodyDataTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWorkspaceResponseBodyDataTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateWorkspaceResponseBodyDataTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class CreateWorkspaceResponseBodyData extends TeaModel {
+        /**
+         * <p>The AI Registry namespace ID. This value is returned after the related resource binding is complete and may be empty during initialization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespace-0123456789abcdef</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("aiRegistryNamespaceId")
+        public String aiRegistryNamespaceId;
+
+        /**
+         * <p>The OSS storage authorization status.</p>
+         */
+        @NameInMap("authorizationStatus")
+        public String authorizationStatus;
+
+        /**
+         * <p>The name of the private OSS bucket.</p>
+         */
+        @NameInMap("bucketName")
+        public String bucketName;
+
+        /**
+         * <p>The CloudMonitor workspace ID. This value is returned after the related resource binding is complete and may be empty during initialization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cms-ws-0123456789abcdef</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("cmsWorkspaceId")
+        public String cmsWorkspaceId;
+
+        /**
+         * <p>The time when the workspace was created, in ISO-8601 format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-28T10:00:00+08:00</p>
+         */
+        @NameInMap("createTime")
+        public String createTime;
+
         /**
          * <p>The workspace name.</p>
          * 
@@ -212,6 +302,18 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The ID of the resource group to which the workspace belongs. This value may be empty if no resource group is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm1234567890</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("resourceGroupId")
+        public String resourceGroupId;
+
+        /**
          * <p>The workspace status.</p>
          * 
          * <strong>example:</strong>
@@ -219,6 +321,31 @@ public class CreateWorkspaceResponseBody extends TeaModel {
          */
         @NameInMap("status")
         public String status;
+
+        /**
+         * <p>The supplementary reason for the current workspace status. This value is used to display the specific reason when initialization fails or authorization is pending, and may be empty under normal conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Waiting for OSS RAM authorization</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("statusReason")
+        public String statusReason;
+
+        /**
+         * <p>The storage type of the workspace.</p>
+         */
+        @NameInMap("storageType")
+        public String storageType;
+
+        /**
+         * <p>The list of workspace tags. An empty array is returned if no tags are set.</p>
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("tags")
+        public java.util.List<CreateWorkspaceResponseBodyDataTags> tags;
 
         /**
          * <p>The ID of the tenant to which the workspace belongs.</p>
@@ -241,6 +368,46 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public static CreateWorkspaceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateWorkspaceResponseBodyData self = new CreateWorkspaceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public CreateWorkspaceResponseBodyData setAiRegistryNamespaceId(String aiRegistryNamespaceId) {
+            this.aiRegistryNamespaceId = aiRegistryNamespaceId;
+            return this;
+        }
+        public String getAiRegistryNamespaceId() {
+            return this.aiRegistryNamespaceId;
+        }
+
+        public CreateWorkspaceResponseBodyData setAuthorizationStatus(String authorizationStatus) {
+            this.authorizationStatus = authorizationStatus;
+            return this;
+        }
+        public String getAuthorizationStatus() {
+            return this.authorizationStatus;
+        }
+
+        public CreateWorkspaceResponseBodyData setBucketName(String bucketName) {
+            this.bucketName = bucketName;
+            return this;
+        }
+        public String getBucketName() {
+            return this.bucketName;
+        }
+
+        public CreateWorkspaceResponseBodyData setCmsWorkspaceId(String cmsWorkspaceId) {
+            this.cmsWorkspaceId = cmsWorkspaceId;
+            return this;
+        }
+        public String getCmsWorkspaceId() {
+            return this.cmsWorkspaceId;
+        }
+
+        public CreateWorkspaceResponseBodyData setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public CreateWorkspaceResponseBodyData setName(String name) {
@@ -267,12 +434,44 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public CreateWorkspaceResponseBodyData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public CreateWorkspaceResponseBodyData setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public CreateWorkspaceResponseBodyData setStatusReason(String statusReason) {
+            this.statusReason = statusReason;
+            return this;
+        }
+        public String getStatusReason() {
+            return this.statusReason;
+        }
+
+        public CreateWorkspaceResponseBodyData setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
+        }
+
+        public CreateWorkspaceResponseBodyData setTags(java.util.List<CreateWorkspaceResponseBodyDataTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<CreateWorkspaceResponseBodyDataTags> getTags() {
+            return this.tags;
         }
 
         public CreateWorkspaceResponseBodyData setTenantId(String tenantId) {

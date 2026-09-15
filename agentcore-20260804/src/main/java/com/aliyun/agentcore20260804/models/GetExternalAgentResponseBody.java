@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetExternalAgentResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value SUCCESS indicates success.</p>
+     * <p>The business status code. The value SUCCESS is returned when the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,13 +14,13 @@ public class GetExternalAgentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The external agent details.</p>
+     * <p>The details of the external agent.</p>
      */
     @NameInMap("data")
     public GetExternalAgentResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. The value 200 indicates success.</p>
+     * <p>The HTTP status code. The value 200 is returned when the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request processing result message.</p>
+     * <p>The message that indicates the result of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -105,123 +105,13 @@ public class GetExternalAgentResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GetExternalAgentResponseBodyDataEffectiveResult extends TeaModel {
-        /**
-         * <p>The user ID of the agent in Matrix.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>@agent-1:matrix.example.com</p>
-         */
-        @NameInMap("matrixUserId")
-        public String matrixUserId;
-
-        /**
-         * <p>The Matrix personal room ID of the agent.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>!room:matrix.example.com</p>
-         */
-        @NameInMap("personalRoomId")
-        public String personalRoomId;
-
-        /**
-         * <p>The acceptance status of the runtime for the current request version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ACCEPTED</p>
-         */
-        @NameInMap("runtimeAcceptStatus")
-        public String runtimeAcceptStatus;
-
-        /**
-         * <p>The runtime instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>runtime-123</p>
-         */
-        @NameInMap("runtimeId")
-        public String runtimeId;
-
-        /**
-         * <p>The runtime request version number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
-        @NameInMap("runtimeRequestVersion")
-        public Long runtimeRequestVersion;
-
-        /**
-         * <p>The storage prefix of the agent in the workspace.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>agents/agent-1</p>
-         */
-        @NameInMap("workspacePrefix")
-        public String workspacePrefix;
-
-        public static GetExternalAgentResponseBodyDataEffectiveResult build(java.util.Map<String, ?> map) throws Exception {
-            GetExternalAgentResponseBodyDataEffectiveResult self = new GetExternalAgentResponseBodyDataEffectiveResult();
-            return TeaModel.build(map, self);
-        }
-
-        public GetExternalAgentResponseBodyDataEffectiveResult setMatrixUserId(String matrixUserId) {
-            this.matrixUserId = matrixUserId;
-            return this;
-        }
-        public String getMatrixUserId() {
-            return this.matrixUserId;
-        }
-
-        public GetExternalAgentResponseBodyDataEffectiveResult setPersonalRoomId(String personalRoomId) {
-            this.personalRoomId = personalRoomId;
-            return this;
-        }
-        public String getPersonalRoomId() {
-            return this.personalRoomId;
-        }
-
-        public GetExternalAgentResponseBodyDataEffectiveResult setRuntimeAcceptStatus(String runtimeAcceptStatus) {
-            this.runtimeAcceptStatus = runtimeAcceptStatus;
-            return this;
-        }
-        public String getRuntimeAcceptStatus() {
-            return this.runtimeAcceptStatus;
-        }
-
-        public GetExternalAgentResponseBodyDataEffectiveResult setRuntimeId(String runtimeId) {
-            this.runtimeId = runtimeId;
-            return this;
-        }
-        public String getRuntimeId() {
-            return this.runtimeId;
-        }
-
-        public GetExternalAgentResponseBodyDataEffectiveResult setRuntimeRequestVersion(Long runtimeRequestVersion) {
-            this.runtimeRequestVersion = runtimeRequestVersion;
-            return this;
-        }
-        public Long getRuntimeRequestVersion() {
-            return this.runtimeRequestVersion;
-        }
-
-        public GetExternalAgentResponseBodyDataEffectiveResult setWorkspacePrefix(String workspacePrefix) {
-            this.workspacePrefix = workspacePrefix;
-            return this;
-        }
-        public String getWorkspacePrefix() {
-            return this.workspacePrefix;
-        }
-
-    }
-
     public static class GetExternalAgentResponseBodyDataExternalAgentStatus extends TeaModel {
         /**
-         * <p>The heartbeat status. Valid values:</p>
+         * <p>The heartbeat status. ONLINE indicates that the most recent heartbeat has not exceeded the configured timeout threshold. STALE indicates that the heartbeat has timed out. UNKNOWN indicates that the heartbeat is missing or has an invalid format. Valid values:</p>
          * <ul>
-         * <li>ONLINE: The latest heartbeat has not exceeded the configured timeout threshold.</li>
-         * <li>STALE: The heartbeat has timed out.</li>
-         * <li>UNKNOWN: The heartbeat is missing or has an invalid format.</li>
+         * <li>ONLINE: Online.</li>
+         * <li>STALE: Heartbeat expired.</li>
+         * <li>UNKNOWN: Unknown.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -231,7 +121,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public String heartbeatStatus;
 
         /**
-         * <p>The time when the external agent was last active in RFC 3339 format.</p>
+         * <p>The last active time of the external agent in RFC 3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01T00:00:00Z</p>
@@ -240,7 +130,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public String lastActiveAt;
 
         /**
-         * <p>The time of the last heartbeat from the external agent in RFC 3339 format.</p>
+         * <p>The last heartbeat time of the external agent in RFC 3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01T00:00:00Z</p>
@@ -413,6 +303,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
 
         /**
          * <p>The version of the template in AI Registry.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -550,28 +441,13 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public String deployType;
 
         /**
-         * <p>The external agent description.</p>
+         * <p>The description of the external agent.</p>
          * 
          * <strong>example:</strong>
          * <p>A code review agent running in the user environment</p>
          */
         @NameInMap("description")
         public String description;
-
-        /**
-         * <p>The runtime result corresponding to the currently effective specification.</p>
-         */
-        @NameInMap("effectiveResult")
-        public GetExternalAgentResponseBodyDataEffectiveResult effectiveResult;
-
-        /**
-         * <p>The currently effective specification version number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("effectiveSpecVersion")
-        public Long effectiveSpecVersion;
 
         /**
          * <p>The runtime status information reported by the external agent.</p>
@@ -600,8 +476,8 @@ public class GetExternalAgentResponseBody extends TeaModel {
         /**
          * <p>The processing status of the latest specification version. Valid values:</p>
          * <ul>
-         * <li>pending: Pending processing.</li>
-         * <li>processing: Being processed.</li>
+         * <li>pending: Pending.</li>
+         * <li>processing: Processing.</li>
          * <li>waiting_retry: Waiting for retry.</li>
          * <li>succeeded: Succeeded.</li>
          * <li>failed: Failed.</li>
@@ -615,16 +491,16 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public String latestVersionStatus;
 
         /**
-         * <p>The model configuration. Available only when modelSource is set to PLATFORM.</p>
+         * <p>The model configuration. This parameter is available only when modelSource is set to PLATFORM.</p>
          */
         @NameInMap("model")
         public GetExternalAgentResponseBodyDataModel model;
 
         /**
-         * <p>The model configuration source. Valid values:</p>
+         * <p>The source of the model configuration. PLATFORM indicates that the model configuration is parsed and delivered by the platform. RUNTIME indicates that the model is managed by the external runtime, and the model parameter cannot be specified at the same time. Valid values:</p>
          * <ul>
-         * <li>PLATFORM: The model configuration is parsed and delivered by the platform.</li>
-         * <li>RUNTIME: The model is managed by the external runtime. The model parameter cannot be specified at the same time.</li>
+         * <li>PLATFORM: Platform model.</li>
+         * <li>RUNTIME: Runtime model.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -634,7 +510,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public String modelSource;
 
         /**
-         * <p>The external agent name.</p>
+         * <p>The name of the external agent.</p>
          * 
          * <strong>example:</strong>
          * <p>my-external-agent</p>
@@ -667,14 +543,14 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public java.util.List<GetExternalAgentResponseBodyDataSkills> skills;
 
         /**
-         * <p>The external agent status. Valid values:</p>
+         * <p>The status of the external agent. Valid values:</p>
          * <ul>
-         * <li>Creating: The agent is being created.</li>
-         * <li>Running: The agent is running.</li>
-         * <li>Failed: The agent has failed.</li>
-         * <li>Updating: The agent is being updated.</li>
-         * <li>Deleting: The agent is being deleted.</li>
-         * <li>Deleted: The agent has been deleted.</li>
+         * <li>Creating: Being created.</li>
+         * <li>Running: Running.</li>
+         * <li>Failed: Failed.</li>
+         * <li>Updating: Being updated.</li>
+         * <li>Deleting: Being deleted.</li>
+         * <li>Deleted: Deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -756,22 +632,6 @@ public class GetExternalAgentResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
-        }
-
-        public GetExternalAgentResponseBodyData setEffectiveResult(GetExternalAgentResponseBodyDataEffectiveResult effectiveResult) {
-            this.effectiveResult = effectiveResult;
-            return this;
-        }
-        public GetExternalAgentResponseBodyDataEffectiveResult getEffectiveResult() {
-            return this.effectiveResult;
-        }
-
-        public GetExternalAgentResponseBodyData setEffectiveSpecVersion(Long effectiveSpecVersion) {
-            this.effectiveSpecVersion = effectiveSpecVersion;
-            return this;
-        }
-        public Long getEffectiveSpecVersion() {
-            return this.effectiveSpecVersion;
         }
 
         public GetExternalAgentResponseBodyData setExternalAgentStatus(GetExternalAgentResponseBodyDataExternalAgentStatus externalAgentStatus) {

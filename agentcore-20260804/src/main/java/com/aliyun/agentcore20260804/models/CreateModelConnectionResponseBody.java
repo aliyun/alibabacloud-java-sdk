@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateModelConnectionResponseBody extends TeaModel {
     /**
+     * <p>The business status code. The value SUCCESS indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The model connection information after creation.</p>
+     */
     @NameInMap("data")
     public CreateModelConnectionResponseBodyData data;
 
     /**
+     * <p>The HTTP status code. The value 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class CreateModelConnectionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request processing result message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,12 +38,17 @@ public class CreateModelConnectionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>request-1</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class CreateModelConnectionResponseBody extends TeaModel {
 
     public static class CreateModelConnectionResponseBodyData extends TeaModel {
         /**
+         * <p>The number of API keys configured in the model connection.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -100,6 +116,8 @@ public class CreateModelConnectionResponseBody extends TeaModel {
         public Integer apiKeyCount;
 
         /**
+         * <p>The model connection ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mc-1</p>
          */
@@ -107,16 +125,23 @@ public class CreateModelConnectionResponseBody extends TeaModel {
         public String connectionId;
 
         /**
+         * <p>The time when the resource was created, in RFC 3339 UTC format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-08-09T00:00:00Z</p>
          */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <p>Indicates whether access credentials have been configured for the model connection.</p>
+         */
         @NameInMap("credentialConfigured")
         public Boolean credentialConfigured;
 
         /**
+         * <p>The description of the model connection. The description can be up to 255 characters in length.</p>
+         * 
          * <strong>example:</strong>
          * <p>description</p>
          */
@@ -124,6 +149,8 @@ public class CreateModelConnectionResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The absolute HTTP or HTTPS address of the upstream model service. The address can be up to 1024 characters in length.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
          */
@@ -131,6 +158,8 @@ public class CreateModelConnectionResponseBody extends TeaModel {
         public String endpoint;
 
         /**
+         * <p>The model connection name. The name must be 1 to 128 non-whitespace characters in length.</p>
+         * 
          * <strong>example:</strong>
          * <p>name</p>
          */
@@ -138,6 +167,8 @@ public class CreateModelConnectionResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The model invoke protocol. Currently, only OpenAI/v1 is supported. If this parameter is not configured in Settings during model creation, this default value is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>OpenAI/v1</p>
          */
@@ -145,6 +176,8 @@ public class CreateModelConnectionResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The model provider type.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen</p>
          */
@@ -152,6 +185,8 @@ public class CreateModelConnectionResponseBody extends TeaModel {
         public String providerType;
 
         /**
+         * <p>The resource status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Active</p>
          */
@@ -159,6 +194,8 @@ public class CreateModelConnectionResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The failure summary returned when the model connection fails to be published or fails to be deleted but remains in the Deleting state. This parameter is empty for other states.</p>
+         * 
          * <strong>example:</strong>
          * <p>GatewayOperationException</p>
          */
@@ -166,6 +203,8 @@ public class CreateModelConnectionResponseBody extends TeaModel {
         public String statusReason;
 
         /**
+         * <p>The time when the resource was last updated, in RFC 3339 UTC format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-08-09T00:00:00Z</p>
          */
@@ -173,6 +212,8 @@ public class CreateModelConnectionResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ws-1</p>
          */

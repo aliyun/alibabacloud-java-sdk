@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DeleteCredentialResponseBody extends TeaModel {
     /**
+     * <p>The business status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The information about the deleted credential.</p>
+     */
     @NameInMap("data")
     public DeleteCredentialResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class DeleteCredentialResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message. An error description is returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,12 +38,17 @@ public class DeleteCredentialResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>request-123456</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class DeleteCredentialResponseBody extends TeaModel {
 
     public static class DeleteCredentialResponseBodyData extends TeaModel {
         /**
+         * <p>The credential ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cred-123456</p>
          */
@@ -100,6 +116,8 @@ public class DeleteCredentialResponseBody extends TeaModel {
         public String credentialId;
 
         /**
+         * <p>The credential name. The name must be unique within the workspace and can contain only letters, digits, periods (.), underscores (_), and hyphens (-). The name must be 3 to 128 characters in length and cannot use runtime reserved names.</p>
+         * 
          * <strong>example:</strong>
          * <p>model-api-key</p>
          */
@@ -107,6 +125,8 @@ public class DeleteCredentialResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ws-123456</p>
          */
