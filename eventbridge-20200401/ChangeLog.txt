@@ -1,3 +1,27 @@
+2026-09-15 Version: 7.6.0
+- Support API GetLumaCatalog.
+- Support API GetLumaChunk.
+- Support API GetLumaDocument.
+- Support API GetLumaDocumentDownloadUrl.
+- Support API GetLumaKnowledgeBase.
+- Support API GetLumaNamespace.
+- Support API GetLumaTable.
+- Support API ListLumaCatalogs.
+- Support API ListLumaChunks.
+- Support API ListLumaDocuments.
+- Support API ListLumaKnowledgeBases.
+- Support API ListLumaNamespaces.
+- Support API ListLumaTables.
+- Support API QueryLumaWithSQL.
+- Support API SearchLumaKnowledgeBase.
+- Update API CreateEventStreaming: add request parameters Sink.SinkKnowledgeBaseParameters.
+- Update API CreateEventStreaming: add request parameters Source.SourceOSSParameters.FileExtensions.
+- Update API GetEventStreaming: add response parameters Body.Data.Sink.SinkKnowledgeBaseParameters.
+- Update API ListEventStreamings: add response parameters Body.Data.EventStreamings.$.Sink.SinkKnowledgeBaseParameters.
+- Update API UpdateEventStreaming: add request parameters Sink.SinkKnowledgeBaseParameters.
+- Update API UpdateEventStreaming: add request parameters Source.SourceOSSParameters.FileExtensions.
+
+
 2026-09-08 Version: 7.5.0
 - Support API PutEvents.
 

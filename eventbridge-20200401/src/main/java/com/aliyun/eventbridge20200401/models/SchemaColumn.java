@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SchemaColumn extends TeaModel {
     /**
-     * <p>Column name</p>
+     * <p>The column name.</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -14,7 +14,7 @@ public class SchemaColumn extends TeaModel {
     public String name;
 
     /**
-     * <p>Column type</p>
+     * <p>The column type.</p>
      * 
      * <strong>example:</strong>
      * <p>VARCHAR</p>

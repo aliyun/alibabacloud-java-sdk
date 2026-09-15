@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecutionResult extends TeaModel {
     /**
-     * <p>Whether truncated due to the maxRows limit</p>
+     * <p>Indicates whether the result is truncated because of the maxRows limit.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +14,7 @@ public class ExecutionResult extends TeaModel {
     public Boolean isTruncated;
 
     /**
-     * <p>Number of rows returned this time</p>
+     * <p>The number of rows returned in this response.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -23,22 +23,25 @@ public class ExecutionResult extends TeaModel {
     public Integer rowCount;
 
     /**
-     * <p>Two-dimensional array, one array per row</p>
+     * <p>A two-dimensional array where each row is an array.</p>
      * 
      * <strong>example:</strong>
-     * <p>[[&quot;北京&quot;,120],[&quot;上海&quot;,98]]</p>
+     * <p>[[&quot;Beijing&quot;,120],[&quot;Shanghai&quot;,98]]</p>
      */
     @NameInMap("Rows")
     public String rows;
 
     /**
-     * <p>Schema information</p>
+     * <p>The schema information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;Name&quot;:&quot;event_date&quot;,&quot;Type&quot;:&quot;varchar&quot;}]</p>
      */
     @NameInMap("Schema")
     public java.util.List<SchemaColumn> schema;
 
     /**
-     * <p>Total number of rows that meet the criteria. Different from RowCount when IsTruncated=true</p>
+     * <p>The total number of rows that match the condition. This value differs from RowCount when IsTruncated is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

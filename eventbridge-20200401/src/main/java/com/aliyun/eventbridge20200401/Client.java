@@ -56,7 +56,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries data by using natural language.</p>
+     * <p>Queries data using natural language.</p>
      * 
      * @param request AskLumaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -100,7 +100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries data by using natural language.</p>
+     * <p>Queries data using natural language.</p>
      * 
      * @param request AskLumaRequest
      * @return AskLumaResponse
@@ -1334,7 +1334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Namespace</p>
+     * <p>Deletes a namespace.</p>
      * 
      * @param request DeleteNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1376,7 +1376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Namespace</p>
+     * <p>Deletes a namespace.</p>
      * 
      * @param request DeleteNamespaceRequest
      * @return DeleteNamespaceResponse
@@ -2261,6 +2261,448 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified data catalog bound to a Luma Agent. You can only query data catalogs that are already bound to the Agent. A ResourceNotFound error is returned for unbound catalogs.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a specified data catalog bound to a Luma Agent. You can only query data catalogs that are already bound to the Agent. A ResourceNotFound error is returned for unbound catalogs.</p>
+     * 
+     * @param request GetLumaCatalogRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetLumaCatalogResponse
+     */
+    public GetLumaCatalogResponse getLumaCatalogWithOptions(GetLumaCatalogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLumaCatalog"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLumaCatalogResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified data catalog bound to a Luma Agent. You can only query data catalogs that are already bound to the Agent. A ResourceNotFound error is returned for unbound catalogs.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a specified data catalog bound to a Luma Agent. You can only query data catalogs that are already bound to the Agent. A ResourceNotFound error is returned for unbound catalogs.</p>
+     * 
+     * @param request GetLumaCatalogRequest
+     * @return GetLumaCatalogResponse
+     */
+    public GetLumaCatalogResponse getLumaCatalog(GetLumaCatalogRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getLumaCatalogWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the full content of a specified text chunk from a knowledge base bound to a Luma Agent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the full content of a specified text chunk from a knowledge base bound to a Luma Agent.</p>
+     * 
+     * @param request GetLumaChunkRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetLumaChunkResponse
+     */
+    public GetLumaChunkResponse getLumaChunkWithOptions(GetLumaChunkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            body.put("Catalog", request.catalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chunkSeq)) {
+            body.put("ChunkSeq", request.chunkSeq);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentId)) {
+            body.put("DocumentId", request.documentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseName)) {
+            body.put("KnowledgeBaseName", request.knowledgeBaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLumaChunk"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLumaChunkResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the full content of a specified text chunk from a knowledge base bound to a Luma Agent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the full content of a specified text chunk from a knowledge base bound to a Luma Agent.</p>
+     * 
+     * @param request GetLumaChunkRequest
+     * @return GetLumaChunkResponse
+     */
+    public GetLumaChunkResponse getLumaChunk(GetLumaChunkRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getLumaChunkWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified document in the knowledge base bound to a Luma Agent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a specified document in the knowledge base bound to a Luma Agent.</p>
+     * 
+     * @param request GetLumaDocumentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetLumaDocumentResponse
+     */
+    public GetLumaDocumentResponse getLumaDocumentWithOptions(GetLumaDocumentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            body.put("Catalog", request.catalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentId)) {
+            body.put("DocumentId", request.documentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseName)) {
+            body.put("KnowledgeBaseName", request.knowledgeBaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLumaDocument"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLumaDocumentResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified document in the knowledge base bound to a Luma Agent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a specified document in the knowledge base bound to a Luma Agent.</p>
+     * 
+     * @param request GetLumaDocumentRequest
+     * @return GetLumaDocumentResponse
+     */
+    public GetLumaDocumentResponse getLumaDocument(GetLumaDocumentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getLumaDocumentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves a temporary download URL for a specified document in the knowledge base bound to a Luma Agent. The URL is valid for one hour by default.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a temporary download URL for a specified document in the knowledge base bound to a Luma Agent. The URL is valid for one hour by default.</p>
+     * 
+     * @param request GetLumaDocumentDownloadUrlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetLumaDocumentDownloadUrlResponse
+     */
+    public GetLumaDocumentDownloadUrlResponse getLumaDocumentDownloadUrlWithOptions(GetLumaDocumentDownloadUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            body.put("Catalog", request.catalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentId)) {
+            body.put("DocumentId", request.documentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseName)) {
+            body.put("KnowledgeBaseName", request.knowledgeBaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkType)) {
+            body.put("NetworkType", request.networkType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLumaDocumentDownloadUrl"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLumaDocumentDownloadUrlResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves a temporary download URL for a specified document in the knowledge base bound to a Luma Agent. The URL is valid for one hour by default.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a temporary download URL for a specified document in the knowledge base bound to a Luma Agent. The URL is valid for one hour by default.</p>
+     * 
+     * @param request GetLumaDocumentDownloadUrlRequest
+     * @return GetLumaDocumentDownloadUrlResponse
+     */
+    public GetLumaDocumentDownloadUrlResponse getLumaDocumentDownloadUrl(GetLumaDocumentDownloadUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getLumaDocumentDownloadUrlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified knowledge base bound to a Luma Agent, including the vector model, chunking configuration, and retrieval configuration.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a specified knowledge base bound to a Luma Agent, including the vector model, chunking configuration, and retrieval configuration.</p>
+     * 
+     * @param request GetLumaKnowledgeBaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetLumaKnowledgeBaseResponse
+     */
+    public GetLumaKnowledgeBaseResponse getLumaKnowledgeBaseWithOptions(GetLumaKnowledgeBaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            body.put("Catalog", request.catalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseName)) {
+            body.put("KnowledgeBaseName", request.knowledgeBaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLumaKnowledgeBase"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLumaKnowledgeBaseResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified knowledge base bound to a Luma Agent, including the vector model, chunking configuration, and retrieval configuration.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a specified knowledge base bound to a Luma Agent, including the vector model, chunking configuration, and retrieval configuration.</p>
+     * 
+     * @param request GetLumaKnowledgeBaseRequest
+     * @return GetLumaKnowledgeBaseResponse
+     */
+    public GetLumaKnowledgeBaseResponse getLumaKnowledgeBase(GetLumaKnowledgeBaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getLumaKnowledgeBaseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified namespace bound to a Luma Agent. Only namespaces that are already bound to the Agent can be queried.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a specified namespace bound to a Luma Agent. Only namespaces that are already bound to the Agent can be queried.</p>
+     * 
+     * @param request GetLumaNamespaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetLumaNamespaceResponse
+     */
+    public GetLumaNamespaceResponse getLumaNamespaceWithOptions(GetLumaNamespaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            body.put("Catalog", request.catalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLumaNamespace"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLumaNamespaceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified namespace bound to a Luma Agent. Only namespaces that are already bound to the Agent can be queried.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a specified namespace bound to a Luma Agent. Only namespaces that are already bound to the Agent can be queried.</p>
+     * 
+     * @param request GetLumaNamespaceRequest
+     * @return GetLumaNamespaceResponse
+     */
+    public GetLumaNamespaceResponse getLumaNamespace(GetLumaNamespaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getLumaNamespaceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified event table bound to a Luma Agent, including column definitions and the data retention policy. Only event tables that are already bound to the Agent can be queried.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a specified event table bound to a Luma Agent, including column definitions and the data retention policy. Only event tables that are already bound to the Agent can be queried.</p>
+     * 
+     * @param request GetLumaTableRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetLumaTableResponse
+     */
+    public GetLumaTableResponse getLumaTableWithOptions(GetLumaTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            body.put("Catalog", request.catalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLumaTable"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLumaTableResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified event table bound to a Luma Agent, including column definitions and the data retention policy. Only event tables that are already bound to the Agent can be queried.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a specified event table bound to a Luma Agent, including column definitions and the data retention policy. Only event tables that are already bound to the Agent can be queried.</p>
+     * 
+     * @param request GetLumaTableRequest
+     * @return GetLumaTableResponse
+     */
+    public GetLumaTableResponse getLumaTable(GetLumaTableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getLumaTableWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Get namespace</p>
      * 
@@ -2866,6 +3308,386 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists all data catalogs bound to a Luma Agent. Returns the complete set of bindings without pagination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists all data catalogs bound to a Luma Agent. Returns the complete set of bindings without pagination.</p>
+     * 
+     * @param request ListLumaCatalogsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListLumaCatalogsResponse
+     */
+    public ListLumaCatalogsResponse listLumaCatalogsWithOptions(ListLumaCatalogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("AgentName", request.agentName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListLumaCatalogs"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLumaCatalogsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists all data catalogs bound to a Luma Agent. Returns the complete set of bindings without pagination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists all data catalogs bound to a Luma Agent. Returns the complete set of bindings without pagination.</p>
+     * 
+     * @param request ListLumaCatalogsRequest
+     * @return ListLumaCatalogsResponse
+     */
+    public ListLumaCatalogsResponse listLumaCatalogs(ListLumaCatalogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listLumaCatalogsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists text chunks in a knowledge base bound to a Luma Agent, with support for filtering by document, keyword, and enabled status.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists text chunks in a knowledge base bound to a Luma Agent, with support for filtering by document, keyword, and enabled status.</p>
+     * 
+     * @param request ListLumaChunksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListLumaChunksResponse
+     */
+    public ListLumaChunksResponse listLumaChunksWithOptions(ListLumaChunksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            body.put("Catalog", request.catalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentId)) {
+            body.put("DocumentId", request.documentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            body.put("Enabled", request.enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            body.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseName)) {
+            body.put("KnowledgeBaseName", request.knowledgeBaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListLumaChunks"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLumaChunksResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists text chunks in a knowledge base bound to a Luma Agent, with support for filtering by document, keyword, and enabled status.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists text chunks in a knowledge base bound to a Luma Agent, with support for filtering by document, keyword, and enabled status.</p>
+     * 
+     * @param request ListLumaChunksRequest
+     * @return ListLumaChunksResponse
+     */
+    public ListLumaChunksResponse listLumaChunks(ListLumaChunksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listLumaChunksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists documents in a knowledge base bound to a Luma Agent, with support for filtering by file name prefix and processing status.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists documents in a knowledge base bound to a Luma Agent, with support for filtering by file name prefix and processing status.</p>
+     * 
+     * @param request ListLumaDocumentsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListLumaDocumentsResponse
+     */
+    public ListLumaDocumentsResponse listLumaDocumentsWithOptions(ListLumaDocumentsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            body.put("Catalog", request.catalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileNamePrefix)) {
+            body.put("FileNamePrefix", request.fileNamePrefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseName)) {
+            body.put("KnowledgeBaseName", request.knowledgeBaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListLumaDocuments"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLumaDocumentsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists documents in a knowledge base bound to a Luma Agent, with support for filtering by file name prefix and processing status.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists documents in a knowledge base bound to a Luma Agent, with support for filtering by file name prefix and processing status.</p>
+     * 
+     * @param request ListLumaDocumentsRequest
+     * @return ListLumaDocumentsResponse
+     */
+    public ListLumaDocumentsResponse listLumaDocuments(ListLumaDocumentsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listLumaDocumentsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists all knowledge bases bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists all knowledge bases bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</p>
+     * 
+     * @param request ListLumaKnowledgeBasesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListLumaKnowledgeBasesResponse
+     */
+    public ListLumaKnowledgeBasesResponse listLumaKnowledgeBasesWithOptions(ListLumaKnowledgeBasesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            body.put("Catalog", request.catalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListLumaKnowledgeBases"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLumaKnowledgeBasesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists all knowledge bases bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists all knowledge bases bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</p>
+     * 
+     * @param request ListLumaKnowledgeBasesRequest
+     * @return ListLumaKnowledgeBasesResponse
+     */
+    public ListLumaKnowledgeBasesResponse listLumaKnowledgeBases(ListLumaKnowledgeBasesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listLumaKnowledgeBasesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists all namespaces bound to a Luma Agent under a specified data catalog. Returns the complete set of bindings without pagination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists all namespaces bound to a Luma Agent under a specified data catalog. Returns the complete set of bindings without pagination.</p>
+     * 
+     * @param request ListLumaNamespacesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListLumaNamespacesResponse
+     */
+    public ListLumaNamespacesResponse listLumaNamespacesWithOptions(ListLumaNamespacesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            body.put("Catalog", request.catalog);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListLumaNamespaces"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLumaNamespacesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists all namespaces bound to a Luma Agent under a specified data catalog. Returns the complete set of bindings without pagination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists all namespaces bound to a Luma Agent under a specified data catalog. Returns the complete set of bindings without pagination.</p>
+     * 
+     * @param request ListLumaNamespacesRequest
+     * @return ListLumaNamespacesResponse
+     */
+    public ListLumaNamespacesResponse listLumaNamespaces(ListLumaNamespacesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listLumaNamespacesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists all event tables bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists all event tables bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</p>
+     * 
+     * @param request ListLumaTablesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListLumaTablesResponse
+     */
+    public ListLumaTablesResponse listLumaTablesWithOptions(ListLumaTablesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            body.put("Catalog", request.catalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListLumaTables"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLumaTablesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists all event tables bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists all event tables bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</p>
+     * 
+     * @param request ListLumaTablesRequest
+     * @return ListLumaTablesResponse
+     */
+    public ListLumaTablesResponse listLumaTables(ListLumaTablesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listLumaTablesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Query namespace list</p>
      * 
@@ -3209,7 +4031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Polls for natural language query results.</p>
+     * <p>Polls for the result of a natural language query.</p>
      * 
      * @param request PollAskResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3245,7 +4067,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Polls for natural language query results.</p>
+     * <p>Polls for the result of a natural language query.</p>
      * 
      * @param request PollAskResultRequest
      * @return PollAskResultResponse
@@ -3655,6 +4477,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Executes an SQL query directly on the EventHouse associated with a Luma Agent and returns structured results. Unlike AskLuma, this operation executes the SQL provided by the caller without natural language rewriting.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Executes an SQL query directly on the EventHouse associated with a Luma Agent and returns structured results. Unlike AskLuma, this operation executes the SQL provided by the caller without natural language rewriting.</p>
+     * 
+     * @param request QueryLumaWithSQLRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryLumaWithSQLResponse
+     */
+    public QueryLumaWithSQLResponse queryLumaWithSQLWithOptions(QueryLumaWithSQLRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxRows)) {
+            body.put("MaxRows", request.maxRows);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sql)) {
+            body.put("Sql", request.sql);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryLumaWithSQL"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryLumaWithSQLResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Executes an SQL query directly on the EventHouse associated with a Luma Agent and returns structured results. Unlike AskLuma, this operation executes the SQL provided by the caller without natural language rewriting.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Executes an SQL query directly on the EventHouse associated with a Luma Agent and returns structured results. Unlike AskLuma, this operation executes the SQL provided by the caller without natural language rewriting.</p>
+     * 
+     * @param request QueryLumaWithSQLRequest
+     * @return QueryLumaWithSQLResponse
+     */
+    public QueryLumaWithSQLResponse queryLumaWithSQL(QueryLumaWithSQLRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryLumaWithSQLWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>You can call this API operation to query event traces by event ID.</p>
      * 
      * <b>summary</b> : 
@@ -3869,6 +4749,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SaveAgentDataSemanticsResponse saveAgentDataSemantics(SaveAgentDataSemanticsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.saveAgentDataSemanticsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves content from a knowledge base bound to a Luma Agent and returns relevant text chunks along with their relevance scores.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves content from a knowledge base bound to a Luma Agent and returns relevant text chunks along with their relevance scores.</p>
+     * 
+     * @param request SearchLumaKnowledgeBaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchLumaKnowledgeBaseResponse
+     */
+    public SearchLumaKnowledgeBaseResponse searchLumaKnowledgeBaseWithOptions(SearchLumaKnowledgeBaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            body.put("Catalog", request.catalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseName)) {
+            body.put("KnowledgeBaseName", request.knowledgeBaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metadataFilter)) {
+            body.put("MetadataFilter", request.metadataFilter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            body.put("Mode", request.mode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            body.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rerank)) {
+            body.put("Rerank", request.rerank);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topK)) {
+            body.put("TopK", request.topK);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchLumaKnowledgeBase"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchLumaKnowledgeBaseResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves content from a knowledge base bound to a Luma Agent and returns relevant text chunks along with their relevance scores.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves content from a knowledge base bound to a Luma Agent and returns relevant text chunks along with their relevance scores.</p>
+     * 
+     * @param request SearchLumaKnowledgeBaseRequest
+     * @return SearchLumaKnowledgeBaseResponse
+     */
+    public SearchLumaKnowledgeBaseResponse searchLumaKnowledgeBase(SearchLumaKnowledgeBaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchLumaKnowledgeBaseWithOptions(request, runtime);
     }
 
     /**

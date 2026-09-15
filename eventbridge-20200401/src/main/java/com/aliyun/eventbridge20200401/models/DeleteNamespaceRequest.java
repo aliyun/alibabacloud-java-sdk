@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteNamespaceRequest extends TeaModel {
     /**
-     * <p>Data catalog</p>
+     * <p>The data catalog to which the namespace belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>my_catalog</p>
@@ -14,7 +14,7 @@ public class DeleteNamespaceRequest extends TeaModel {
     public String catalog;
 
     /**
-     * <p>Idempotent Token</p>
+     * <p>The idempotency token.</p>
      * 
      * <strong>example:</strong>
      * <p>1e9b8f60-3a2c-4d7e-9f1b-8c3d5e7a2b4f</p>
@@ -23,7 +23,7 @@ public class DeleteNamespaceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Namespace name</p>
+     * <p>The name of the namespace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

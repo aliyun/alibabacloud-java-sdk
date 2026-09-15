@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEventStreamingsRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries returned per request. You can use this parameter together with NextToken to implement paging.</p>
+     * <p>The maximum number of entries to return per request. You can use this parameter together with NextToken to implement paging.</p>
      * <blockquote>
      * <p>Notice: The maximum number of entries returned per request cannot exceed 100.</p>
      * </blockquote>
@@ -26,7 +26,7 @@ public class ListEventStreamingsRequest extends TeaModel {
     public String namePrefix;
 
     /**
-     * <p>If the number of entries exceeds the value of Limit, a NextToken is returned.</p>
+     * <p>If the number of entries that match the specified conditions exceeds the value of Limit, a NextToken is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -44,7 +44,7 @@ public class ListEventStreamingsRequest extends TeaModel {
     public String sinkArn;
 
     /**
-     * <p>The ARN of the event source.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the event source.</p>
      */
     @NameInMap("SourceArn")
     public String sourceArn;
