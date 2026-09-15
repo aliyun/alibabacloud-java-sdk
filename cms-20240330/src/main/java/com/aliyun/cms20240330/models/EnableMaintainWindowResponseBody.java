@@ -5,14 +5,16 @@ import com.aliyun.tea.*;
 
 public class EnableMaintainWindowResponseBody extends TeaModel {
     /**
+     * <p>The ID of the enabled silence policy.</p>
+     * 
      * <strong>example:</strong>
-     * <p>123-12-312-31-23123</p>
+     * <p>3ff3fbd0-8a0b-4b31-9b1c-8e3f0a2c5d71</p>
      */
     @NameInMap("maintainWindowId")
     public String maintainWindowId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The unique ID of the request. You can use this ID for troubleshooting and ticket diagnostics.</p>
      * 
      * <strong>example:</strong>
      * <p>0CEC5375-C554-562B-A65F-9A629907C1F0</p>

@@ -1,3 +1,7 @@
+2026-09-15 Version: 10.5.1
+- Update API ListPrometheusDashboards: add response parameters Body.prometheusDashboards.$.folderUid.
+
+
 2026-09-10 Version: 10.5.0
 - Support API CreateMaintainWindow.
 - Support API DeleteMaintainWindow.

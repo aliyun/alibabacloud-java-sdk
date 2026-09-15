@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusInstancesShrinkRequest extends TeaModel {
     /**
-     * <p>The region IDs for filtering, separated by commas.</p>
+     * <p>The region IDs for filtering, separated by commas. Currently, only a single region ID is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
@@ -14,6 +14,7 @@ public class ListPrometheusInstancesShrinkRequest extends TeaModel {
      * <p>true</p>
      */
     @NameInMap("filterRegionIds")
+    @Deprecated
     public String filterRegionIds;
 
     /**
@@ -83,6 +84,7 @@ public class ListPrometheusInstancesShrinkRequest extends TeaModel {
      * <p>true</p>
      */
     @NameInMap("resourceType")
+    @Deprecated
     public String resourceType;
 
     /**
@@ -92,11 +94,7 @@ public class ListPrometheusInstancesShrinkRequest extends TeaModel {
     public String tagShrink;
 
     /**
-     * <p>The instance version. Valid values:</p>
-     * <ul>
-     * <li>V1: V1 version.</li>
-     * <li>V2: V2 version.</li>
-     * </ul>
+     * <p>The instance version. Valid values: V1 and V2.</p>
      * 
      * <strong>example:</strong>
      * <p>V2</p>
@@ -124,6 +122,7 @@ public class ListPrometheusInstancesShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public ListPrometheusInstancesShrinkRequest setFilterRegionIds(String filterRegionIds) {
         this.filterRegionIds = filterRegionIds;
         return this;
@@ -172,6 +171,7 @@ public class ListPrometheusInstancesShrinkRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
+    @Deprecated
     public ListPrometheusInstancesShrinkRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;

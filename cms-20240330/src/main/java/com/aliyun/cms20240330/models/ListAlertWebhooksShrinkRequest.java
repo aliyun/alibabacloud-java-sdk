@@ -37,6 +37,12 @@ public class ListAlertWebhooksShrinkRequest extends TeaModel {
     @NameInMap("webhookIds")
     public String webhookIdsShrink;
 
+    /**
+     * <p>The workspace name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default-cms-0000000000000000-cn-hangzhou</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusDashboardsResponseBody extends TeaModel {
     /**
-     * <p>A list of dashboards for the Prometheus instance.</p>
+     * <p>The list of dashboards for the Managed Service for Prometheus instance.</p>
      */
     @NameInMap("prometheusDashboards")
     public java.util.List<ListPrometheusDashboardsResponseBodyPrometheusDashboards> prometheusDashboards;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -59,6 +59,15 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
 
     public static class ListPrometheusDashboardsResponseBodyPrometheusDashboards extends TeaModel {
         /**
+         * <p>The UID of the dashboard folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
+        @NameInMap("folderUid")
+        public String folderUid;
+
+        /**
          * <p>The dashboard ID.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +110,7 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
         public String uid;
 
         /**
-         * <p>The URL of the dashboard.</p>
+         * <p>The dashboard URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://gnew.console.aliyun.com/d/xxx-17460385-807-7-6/cs-cost-application">https://gnew.console.aliyun.com/d/xxx-17460385-807-7-6/cs-cost-application</a></p>
@@ -112,6 +121,14 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
         public static ListPrometheusDashboardsResponseBodyPrometheusDashboards build(java.util.Map<String, ?> map) throws Exception {
             ListPrometheusDashboardsResponseBodyPrometheusDashboards self = new ListPrometheusDashboardsResponseBodyPrometheusDashboards();
             return TeaModel.build(map, self);
+        }
+
+        public ListPrometheusDashboardsResponseBodyPrometheusDashboards setFolderUid(String folderUid) {
+            this.folderUid = folderUid;
+            return this;
+        }
+        public String getFolderUid() {
+            return this.folderUid;
         }
 
         public ListPrometheusDashboardsResponseBodyPrometheusDashboards setId(String id) {

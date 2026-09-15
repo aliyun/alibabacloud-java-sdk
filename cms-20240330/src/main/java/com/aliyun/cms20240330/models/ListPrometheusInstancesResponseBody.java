@@ -128,12 +128,12 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The billing method. Valid values:</p>
+         * <p>The payment type. Valid values:</p>
          * <ul>
-         * <li>POSTPAY: pay-as-you-go by metric volume.</li>
-         * <li>POSTPAY_GB: pay-as-you-go by write volume.</li>
-         * <li>PREPAY: subscription.</li>
-         * <li>FREE: free.</li>
+         * <li>POSTPAY: Pay-as-you-go by metric volume.</li>
+         * <li>POSTPAY_GB: Pay-as-you-go by write volume.</li>
+         * <li>PREPAY: Subscription.</li>
+         * <li>FREE: Free.</li>
          * </ul>
          * 
          * <strong>example:</strong>

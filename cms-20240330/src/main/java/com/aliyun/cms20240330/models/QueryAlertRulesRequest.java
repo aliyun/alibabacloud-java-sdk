@@ -37,6 +37,12 @@ public class QueryAlertRulesRequest extends TeaModel {
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The query filter condition. The value is a JSON string whose fields have the same semantics as the request body. Supported fields include filter (uuid, displayName, labels, status, enabled, and more. Fields at the same level have an AND relationship), pagination (pageNumber and pageSize), and workspace. Specify either this parameter or the request body. If both are specified, the request body takes precedence.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;filter&quot;:{&quot;displayName&quot;:{&quot;contains&quot;:&quot;my-rule&quot;}},&quot;pagination&quot;:{&quot;pageNumber&quot;:1,&quot;pageSize&quot;:20}}</p>
+     */
     @NameInMap("queryJson")
     public String queryJson;
 

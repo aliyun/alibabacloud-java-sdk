@@ -167,6 +167,12 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
         @NameInMap("webhookId")
         public String webhookId;
 
+        /**
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-0000000000000000-cn-hangzhou</p>
+         */
         @NameInMap("workspace")
         public String workspace;
 

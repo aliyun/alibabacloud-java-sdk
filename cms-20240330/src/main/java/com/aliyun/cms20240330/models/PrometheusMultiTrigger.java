@@ -60,7 +60,7 @@ public class PrometheusMultiTrigger extends TeaModel {
     public String queryName;
 
     /**
-     * <p>The alert severity level. Severity levels in descending priority: CRITICAL &gt; ERROR &gt; WARN / WARNING &gt; INFO. When multiple triggers are configured, they are sorted by this priority, and the first match fires the alert.</p>
+     * <p>The alert severity level. The priority order is CRITICAL &gt; ERROR &gt; WARN / WARNING &gt; INFO. When multiple triggers are defined, they are sorted by this priority, and the first match fires the alert.</p>
      * 
      * <strong>example:</strong>
      * <p>INFO</p>

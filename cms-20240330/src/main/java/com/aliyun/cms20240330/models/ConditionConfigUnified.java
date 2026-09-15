@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConditionConfigUnified extends TeaModel {
     /**
-     * <p>The dynamic baseline minimum deviation or absolute deviation dead zone (UMODEL_METRICSET_CONDITION / APM_SIMPLE_CONDITION). Takes effect only for baseline operators. If |current value − boundary| &lt; absDeviation, no alert is fired. The unit is the same as the metric. The value must be &gt;= 0. A value of 0 means no restriction.</p>
+     * <p>The minimum deviation or absolute deviation dead zone for the dynamic baseline (UMODEL_METRICSET_CONDITION / APM_SIMPLE_CONDITION). Takes effect only for baseline operators. If |current value − boundary| &lt; absDeviation, no alert is fired. The unit is the same as the metric unit. The value must be &gt;= 0. A value of 0 means no restriction.</p>
      * 
      * <strong>example:</strong>
      * <p>0.0</p>
@@ -23,7 +23,7 @@ public class ConditionConfigUnified extends TeaModel {
     public String aggregate;
 
     /**
-     * <p>The consecutive trigger count threshold (type=SLS_MULTI_CONDITION). An alert is fired only after the condition is met N times. Default value: 1.</p>
+     * <p>The consecutive trigger count threshold (type=SLS_MULTI_CONDITION). An alert is fired only after the condition is met N consecutive times. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ConditionConfigUnified extends TeaModel {
     public Integer alertCount;
 
     /**
-     * <p>The baseline period. Takes effect only for baseline operators. Valid values: AUTO (automatic detection), DAILY (daily), WEEKLY (weekly), and NONE (no period). When set to WEEKLY, the backend automatically expands the historical training window to at least 14 days. Automatic detection does not return the specific detection result.</p>
+     * <p>The baseline period. Takes effect only for baseline operators. Valid values: AUTO (automatic detection), DAILY (daily), WEEKLY (weekly), and NONE (no period). When set to WEEKLY, the backend automatically expands the historical training window to at least 14 days. The automatic detection result cannot be displayed.</p>
      * 
      * <strong>example:</strong>
      * <p>AUTO</p>
@@ -47,7 +47,7 @@ public class ConditionConfigUnified extends TeaModel {
     public java.util.List<CompareList> compareList;
 
     /**
-     * <p>The multi-metric composite trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is set to COMPOSITE. Required fields: relation, severity, times, and escalations.</p>
+     * <p>The multi-metric composite trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is COMPOSITE. Required fields: relation, severity, times, and escalations.</p>
      */
     @NameInMap("compositeEscalation")
     public CloudMonitoringCompositeEscalation compositeEscalation;
@@ -98,13 +98,13 @@ public class ConditionConfigUnified extends TeaModel {
     public String escalationType;
 
     /**
-     * <p>The expression-based trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is set to EXPRESS. This field is output only in read paths.</p>
+     * <p>The expression-based trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is EXPRESS. This field is output only in read paths.</p>
      */
     @NameInMap("expressEscalation")
     public CloudMonitoringExpressEscalation expressEscalation;
 
     /**
-     * <p>The raw V1 condition JSON string returned when type is set to UNKNOWN_CONDITION and the read path fails to parse the condition. When the frontend detects that this field is not empty, display it as read-only.</p>
+     * <p>The raw V1 condition JSON string returned when type is UNKNOWN_CONDITION and the read path fails to parse the condition. If this field is not empty, the frontend displays it as read-only.</p>
      * 
      * <strong>example:</strong>
      * <p>Sample value</p>
@@ -113,7 +113,7 @@ public class ConditionConfigUnified extends TeaModel {
     public String legacyRaw;
 
     /**
-     * <p>Returned when type is set to UNKNOWN_CONDITION. Indicates that this rule cannot be edited through the new API. Submit a ticket to contact the CloudMonitor team.</p>
+     * <p>Returned when type is UNKNOWN_CONDITION. Indicates that this rule cannot be edited through the new API. Submit a ticket to contact the CloudMonitor product team.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -122,7 +122,7 @@ public class ConditionConfigUnified extends TeaModel {
     public String legacyType;
 
     /**
-     * <p>The log field name (used when type is set to UMODEL_LOGSET_CONDITION and matchOperator is set to CONTAINS, EQUALS, or REGEX).</p>
+     * <p>The log field name (used when type is UMODEL_LOGSET_CONDITION and matchOperator is CONTAINS, EQUALS, or REGEX).</p>
      * 
      * <strong>example:</strong>
      * <p>Sample value</p>
@@ -140,7 +140,7 @@ public class ConditionConfigUnified extends TeaModel {
     public String matchOperator;
 
     /**
-     * <p>The log match value (used when type is set to UMODEL_LOGSET_CONDITION and matchOperator is set to CONTAINS, EQUALS, or REGEX).</p>
+     * <p>The log match value (used when type is UMODEL_LOGSET_CONDITION and matchOperator is CONTAINS, EQUALS, or REGEX).</p>
      * 
      * <strong>example:</strong>
      * <p>Sample value</p>
@@ -149,7 +149,7 @@ public class ConditionConfigUnified extends TeaModel {
     public String matchValue;
 
     /**
-     * <p>The upper bound of the range (used when UMODEL_METRICSET_CONDITION operator is set to IN_RANGE or OUT_OF_RANGE).</p>
+     * <p>The upper bound of the range (used by UMODEL_METRICSET_CONDITION when operator is IN_RANGE or OUT_OF_RANGE).</p>
      * 
      * <strong>example:</strong>
      * <p>1.0</p>
@@ -158,7 +158,7 @@ public class ConditionConfigUnified extends TeaModel {
     public Double max;
 
     /**
-     * <p>The lower bound of the range (used when UMODEL_METRICSET_CONDITION operator is set to IN_RANGE or OUT_OF_RANGE).</p>
+     * <p>The lower bound of the range (used by UMODEL_METRICSET_CONDITION when operator is IN_RANGE or OUT_OF_RANGE).</p>
      * 
      * <strong>example:</strong>
      * <p>1.0</p>
@@ -176,7 +176,7 @@ public class ConditionConfigUnified extends TeaModel {
     public String noDataAlertLevel;
 
     /**
-     * <p>The no-data alert severity level (PROMETHEUS_SIMPLE_CONDITION / PROMETHEUS_MULTI_CONDITION). Takes effect only when noDataPolicy is set to NO_DATA_TO_ALERT. SLS_MULTI_CONDITION still uses noDataAlertLevel.</p>
+     * <p>The no-data alert severity level (PROMETHEUS_SIMPLE_CONDITION / PROMETHEUS_MULTI_CONDITION). Takes effect when noDataPolicy is NO_DATA_TO_ALERT. SLS_MULTI_CONDITION still uses noDataAlertLevel.</p>
      * 
      * <strong>example:</strong>
      * <p>INFO</p>
@@ -212,7 +212,7 @@ public class ConditionConfigUnified extends TeaModel {
     public String operator;
 
     /**
-     * <p>The PromQL-based trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is set to PROMETHEUS. This field is output only in read paths.</p>
+     * <p>The PromQL trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is PROMETHEUS. This field is output only in read paths.</p>
      */
     @NameInMap("prometheus")
     public CloudMonitoringPrometheusEscalation prometheus;
@@ -227,7 +227,7 @@ public class ConditionConfigUnified extends TeaModel {
     public String relation;
 
     /**
-     * <p>The dynamic baseline sensitivity (UMODEL_METRICSET_CONDITION / APM_SIMPLE_CONDITION). Takes effect only when operator is set to ABOVE_UPPER, BELOW_LOWER, or OUT_OF_BAND. Valid values: HIGH (narrowest band, most sensitive), MEDIUM, and LOW (widest band, least sensitive).</p>
+     * <p>The dynamic baseline sensitivity (UMODEL_METRICSET_CONDITION / APM_SIMPLE_CONDITION). Takes effect only when operator is ABOVE_UPPER, BELOW_LOWER, or OUT_OF_BAND. Valid values: HIGH (narrowest band, most sensitive), MEDIUM, and LOW (widest band, least sensitive).</p>
      * 
      * <strong>example:</strong>
      * <p>MEDIUM</p>
@@ -245,7 +245,7 @@ public class ConditionConfigUnified extends TeaModel {
     public String severity;
 
     /**
-     * <p>The single-metric multi-level trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is set to SIMPLE. Required fields: metricName, period, and escalations.</p>
+     * <p>The single-metric multi-level trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is SIMPLE. Required fields: metricName, period, and escalations.</p>
      */
     @NameInMap("simpleEscalation")
     public CloudMonitoringSimpleEscalation simpleEscalation;
@@ -266,7 +266,7 @@ public class ConditionConfigUnified extends TeaModel {
     public java.util.List<ThresholdList> thresholdList;
 
     /**
-     * <p>The trigger list. This field is polymorphic based on type. CLOUD_MONITORING_CONDITION does not use this field. Use simpleEscalation.escalations or compositeEscalation.escalations instead. For SLS_MULTI_CONDITION, each case contains matchField, matchOperator, matchValue, countOperator, countThreshold, and severity. At least one case is required. For UMODEL_METRICSET_MULTI_CONDITION, each trigger contains severity, durationSecs, and an expression (SIMPLE or COMPOSITE). For PROMETHEUS_MULTI_CONDITION, each trigger contains severity, durationSecs, and an expression (SIMPLE or COMPOSITE). Triggers are sorted by severity priority, and the first match fires.</p>
+     * <p>The trigger list. The structure is polymorphic based on type. CLOUD_MONITORING_CONDITION does not use this field. Use simpleEscalation.escalations or compositeEscalation.escalations instead. For SLS_MULTI_CONDITION, each case contains matchField, matchOperator, matchValue, countOperator, countThreshold, and severity. At least one case is required. For UMODEL_METRICSET_MULTI_CONDITION, each trigger contains severity, durationSecs, and an expression (SIMPLE or COMPOSITE). For PROMETHEUS_MULTI_CONDITION, each trigger contains severity, durationSecs, and an expression (SIMPLE or COMPOSITE). Triggers are sorted by severity priority. The first match fires the alert.</p>
      */
     @NameInMap("triggers")
     public java.util.List<Triggers> triggers;
@@ -282,7 +282,7 @@ public class ConditionConfigUnified extends TeaModel {
     public String type;
 
     /**
-     * <p>The year-over-year time unit (APM_SIMPLE_CONDITION). Takes effect only when operator is set to YOY_UP or YOY_DOWN.</p>
+     * <p>The year-over-year time unit (APM_SIMPLE_CONDITION). Takes effect only when operator is YOY_UP or YOY_DOWN.</p>
      * 
      * <strong>example:</strong>
      * <p>minute</p>
@@ -291,7 +291,7 @@ public class ConditionConfigUnified extends TeaModel {
     public String yoyTimeUnit;
 
     /**
-     * <p>The year-over-year time value (APM_SIMPLE_CONDITION). Takes effect only when operator is set to YOY_UP or YOY_DOWN.</p>
+     * <p>The year-over-year time value (APM_SIMPLE_CONDITION). Takes effect only when operator is YOY_UP or YOY_DOWN.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

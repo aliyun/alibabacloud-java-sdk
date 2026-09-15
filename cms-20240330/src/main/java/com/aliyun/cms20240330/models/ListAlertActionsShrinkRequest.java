@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAlertActionsShrinkRequest extends TeaModel {
     /**
-     * <p>The unique IDs of the alert action integrations.</p>
+     * <p>The unique IDs of the action integrations.</p>
      */
     @NameInMap("alertActionIds")
     public String alertActionIdsShrink;
 
     /**
-     * <p>The name of the alert action integration.</p>
+     * <p>The name of the action integration.</p>
      * 
      * <strong>example:</strong>
      * <p>testName</p>
@@ -38,7 +38,7 @@ public class ListAlertActionsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The type of the alert action integration.</p>
+     * <p>The type of the action integration.</p>
      * 
      * <strong>example:</strong>
      * <p>FC</p>

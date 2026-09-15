@@ -5,17 +5,19 @@ import com.aliyun.tea.*;
 
 public class DeleteMaintainWindowResponseBody extends TeaModel {
     /**
+     * <p>The ID of the deleted silence policy.</p>
+     * 
      * <strong>example:</strong>
-     * <p>123-12-312-31-23123</p>
+     * <p>3ff3fbd0-8a0b-4b31-9b1c-8e3f0a2c5d71</p>
      */
     @NameInMap("maintainWindowId")
     public String maintainWindowId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The unique ID of the request. You can use this ID for troubleshooting and ticket tracking.</p>
      * 
      * <strong>example:</strong>
-     * <p>8FDE2569-626B-5176-9844-28877A*****</p>
+     * <p>8FDE2569-626B-5176-9844-28877A0D1C36</p>
      */
     @NameInMap("requestId")
     public String requestId;
