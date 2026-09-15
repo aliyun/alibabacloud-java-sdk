@@ -89,6 +89,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>取消生成任务接口</p>
+     * 
+     * @param request CancelGenerationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelGenerationJobResponse
+     */
+    public CancelGenerationJobResponse cancelGenerationJobWithOptions(CancelGenerationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelGenerationJob"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelGenerationJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消生成任务接口</p>
+     * 
+     * @param request CancelGenerationJobRequest
+     * @return CancelGenerationJobResponse
+     */
+    public CancelGenerationJobResponse cancelGenerationJob(CancelGenerationJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cancelGenerationJobWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Categories support up to three levels, and each level supports up to 100 subcategories.</p>
      * 
@@ -934,7 +978,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the status, input, parameters, and desired state results of a video translation job based on the <code>JobId</code>.</p>
+     * <p>Queries the status, input, parameters, and final results of a video translation job by <code>JobId</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the status, input parameters, and multilingual outputs of a video translation job.</p>
@@ -969,7 +1013,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the status, input, parameters, and desired state results of a video translation job based on the <code>JobId</code>.</p>
+     * <p>Queries the status, input, parameters, and final results of a video translation job by <code>JobId</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the status, input parameters, and multilingual outputs of a video translation job.</p>
@@ -1631,10 +1675,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Submits an asynchronous video text erasure task. The input can be an accessible video URL or a Yike video media asset ID. You can configure the erasure time range and text regions.</p>
+     * <p>Submits an asynchronous video text removal job. The input can be an accessible video URL or a Yike media asset ID. You can configure the removal time range and text regions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits an asynchronous video text erasure task that supports full-video erasure, time range-based erasure, and region-specific erasure.</p>
+     * <p>Submits an asynchronous video text removal job. Supports full-frame removal, time range–based removal, and region-based removal.</p>
      * 
      * @param request SubmitVideoDetextJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1682,10 +1726,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Submits an asynchronous video text erasure task. The input can be an accessible video URL or a Yike video media asset ID. You can configure the erasure time range and text regions.</p>
+     * <p>Submits an asynchronous video text removal job. The input can be an accessible video URL or a Yike media asset ID. You can configure the removal time range and text regions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits an asynchronous video text erasure task that supports full-video erasure, time range-based erasure, and region-specific erasure.</p>
+     * <p>Submits an asynchronous video text removal job. Supports full-frame removal, time range–based removal, and region-based removal.</p>
      * 
      * @param request SubmitVideoDetextJobRequest
      * @return SubmitVideoDetextJobResponse

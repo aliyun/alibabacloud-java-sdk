@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitVideoDetextJobResponseBody extends TeaModel {
     /**
-     * <p>The video text erasure job ID. Use this ID to call GetVideoDetextJob to query the job.</p>
+     * <p>The ID of the video text removal job. Use this ID to call GetVideoDetextJob to query the job.</p>
      * 
      * <strong>example:</strong>
      * <p>vdt_0123456789abcdef0123456789abcdef</p>
@@ -14,7 +14,7 @@ public class SubmitVideoDetextJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The request ID, which is used for Tracing Analysis and troubleshooting.</p>
+     * <p>The request ID, used for Tracing Analysis and troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>req-detext-20260820-001</p>

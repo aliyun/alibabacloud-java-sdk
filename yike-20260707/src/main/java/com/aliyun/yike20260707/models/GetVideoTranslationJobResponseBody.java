@@ -42,7 +42,7 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
 
     public static class GetVideoTranslationJobResponseBodyJob extends TeaModel {
         /**
-         * <p>The input video duration, in seconds.</p>
+         * <p>The duration of the input video, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>60.5</p>
@@ -51,7 +51,7 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         public Double duration;
 
         /**
-         * <p>The editing project ID for a single-target-language job. For multi-target-language results, retrieve the ID from Output.AiResult.ResultMap.</p>
+         * <p>The editing project ID for single-target-language jobs. For multi-target-language results, retrieve the value from Output.AiResult.ResultMap.</p>
          * 
          * <strong>example:</strong>
          * <p>editing-project-001</p>
@@ -60,7 +60,7 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         public String editingProjectId;
 
         /**
-         * <p>The business error code returned when the job fails. This field is typically not returned for non-failed states.</p>
+         * <p>The business error code returned when the job fails. This field is not returned when the job is not in a failed state.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidInput</p>
@@ -69,7 +69,7 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The business error message returned when the job fails. This field is typically not returned for non-failed states.</p>
+         * <p>The business error message returned when the job fails. This field is not returned when the job is not in a failed state.</p>
          * 
          * <strong>example:</strong>
          * <p>Input video is invalid.</p>
@@ -114,7 +114,7 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         public String jobType;
 
         /**
-         * <p>The job output JSON string. When the job succeeds, AiResult.ResultMap organizes the final video, subtitle, and audio outputs by target language.</p>
+         * <p>The job output JSON string. On success, AiResult.ResultMap organizes the final video, subtitle, and audio outputs by target language.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;AiResult&quot;:{&quot;ResultMap&quot;:{&quot;en&quot;:{&quot;EditingProjectId&quot;:&quot;editing-project-001&quot;,&quot;MediaURL&quot;:&quot;<a href="https://example.com/video-translation/en/result.mp4%22,%22MediaId%22:%22media-output-001%22%7D%7D%7D%7D">https://example.com/video-translation/en/result.mp4&quot;,&quot;MediaId&quot;:&quot;media-output-001&quot;}}}}</a></p>

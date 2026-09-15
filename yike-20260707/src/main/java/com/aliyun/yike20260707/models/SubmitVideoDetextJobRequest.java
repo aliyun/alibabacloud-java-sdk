@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitVideoDetextJobRequest extends TeaModel {
     /**
-     * <p>The user-level idempotency token. Maximum length: 40 characters. If the same user submits a request with the same token, the original task is returned.</p>
+     * <p>The user-level idempotency token. Maximum length: 40 characters. If the same user submits a request with the same token, the original job is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>detext-client-20260820-001</p>
@@ -14,7 +14,7 @@ public class SubmitVideoDetextJobRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The input configuration JSON string. You must specify either VideoUrl or VideoMediaId, but not both.</p>
+     * <p>The input configuration JSON string. You must provide exactly one of VideoUrl or VideoMediaId.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,16 +24,16 @@ public class SubmitVideoDetextJobRequest extends TeaModel {
     public String input;
 
     /**
-     * <p>The text erasure parameter JSON string. This string can contain EraseAllText, TimeRanges, TextTargets, FullEraseTargets, and Config.</p>
+     * <p>The text removal parameters JSON string. TextTargets detects and removes text within specified regions. FullEraseTargets repairs entire rectangular regions regardless of text detection. EraseAllText controls only text filtering and does not expand the removal region. For parameter details, default behavior, and combination examples, see the supplementary request parameter description.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;EraseAllText&quot;:false,&quot;TextTargets&quot;:[{&quot;Box&quot;:[0.1,0.8,0.8,0.15],&quot;TimeRanges&quot;:[[0,30]]}]}</p>
+     * <p>{&quot;EraseAllText&quot;:true,&quot;TimeRanges&quot;:[[12,15]],&quot;TextTargets&quot;:[{&quot;Box&quot;:[0.1,0.8,0.8,0.15]}]}</p>
      */
     @NameInMap("JobParameters")
     public String jobParameters;
 
     /**
-     * <p>The output configuration JSON string. OssUri specifies an OSS directory or MP4 file path and cannot contain query parameters or fragments. For directory paths, detext.mp4 is automatically appended. Paths ending with .mp4 without a trailing / are used directly as the target file. If not specified, a signed URL of the processing result is returned in the query result.</p>
+     * <p>The output configuration JSON string. OssUri specifies an OSS directory or MP4 file path in the format oss://bucket/path. It cannot contain query parameters or fragments. A directory path automatically appends detext.mp4. A path ending in .mp4 without a trailing slash is used directly as the target file. If not specified, a signed URL for the result is returned in the query response.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;OssUri&quot;:&quot;oss://example-bucket/video-detext/job-001/&quot;}</p>
@@ -42,7 +42,7 @@ public class SubmitVideoDetextJobRequest extends TeaModel {
     public String output;
 
     /**
-     * <p>The custom data JSON string for pass-through in desired state notifications. For MNS callbacks, use NotifyAddress to specify a queue name prefixed with yike-callback, and use NotifyMnsEndpoint to specify an MNS endpoint under the same account. For HTTP(S) callbacks, use NotifyAddress to specify the full URL.</p>
+     * <p>The custom data JSON string used for pass-through in desired-state notifications. For MNS callbacks, use NotifyAddress to specify a queue name prefixed with yike-callback, and use NotifyMnsEndpoint to specify the MNS endpoint of the same account. For HTTP(S) callbacks, use NotifyAddress to specify the full URL.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;NotifyAddress&quot;:&quot;yike-callback-example&quot;,&quot;NotifyMnsEndpoint&quot;:&quot;http://<AccountId>.mns.cn-shanghai.aliyuncs.com/&quot;}</p>
