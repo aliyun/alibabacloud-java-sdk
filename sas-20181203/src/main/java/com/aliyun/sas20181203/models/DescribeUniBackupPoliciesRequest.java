@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUniBackupPoliciesRequest extends TeaModel {
     /**
-     * <p>The page number from which to start displaying query results. Default value: <strong>1</strong>, which indicates that query results are displayed starting from page 1.</p>
+     * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,9 +14,9 @@ public class DescribeUniBackupPoliciesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The maximum number of entries to display per page for a paginated query. The default number of entries per page is 20. If the PageSize parameter is left empty, 20 entries are returned by default.</p>
+     * <p>The maximum number of entries per page in a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
      * <blockquote>
-     * <p>We recommend that you do not leave PageSize empty.</p>
+     * <p>Set PageSize to a non-empty value.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DescribeUniBackupPoliciesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the database anti-ransomware backup policy.</p>
+     * <p>The name of the anti-ransomware backup policy for databases.</p>
      * 
      * <strong>example:</strong>
      * <p>auto_oracle_Hpm</p>

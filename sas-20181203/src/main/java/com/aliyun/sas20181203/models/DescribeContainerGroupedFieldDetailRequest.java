@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeContainerGroupedFieldDetailRequest extends TeaModel {
     /**
-     * <p>The search conditions that are used to query assets. The value of this parameter is in the JSON format. Separate multiple search conditions with commas (,). Example: <code>[{&quot;name&quot;:&quot;riskStatus&quot;,&quot;value&quot;:&quot;YES&quot;},{&quot;name&quot;:&quot;riskLevel&quot;,&quot;value&quot;:&quot;2&quot;}]</code>.</p>
+     * <p>The conditions for searching assets. This parameter is in JSON format. Separate multiple conditions with commas (,). Example: <code>[{&quot;name&quot;:&quot;riskStatus&quot;,&quot;value&quot;:&quot;YES&quot;},{&quot;name&quot;:&quot;riskLevel&quot;,&quot;value&quot;:&quot;2&quot;}]</code>.</p>
      * <blockquote>
-     * <p> Supported search conditions include the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
+     * <p>You can search for assets by conditions such as instance ID, instance name, VPC ID, region, and public IP address. Call <a href="~~DescribeCriteria~~">DescribeCriteria</a> to query the supported search conditions.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,14 +18,14 @@ public class DescribeContainerGroupedFieldDetailRequest extends TeaModel {
     public String criteria;
 
     /**
-     * <p>The filter condition for a grouping and aggregation query. Valid values:</p>
+     * <p>The search item. Valid values:</p>
      * <ul>
-     * <li><strong>pod</strong></li>
-     * <li><strong>appName</strong></li>
-     * <li><strong>clusterId</strong></li>
-     * <li><strong>namespace</strong></li>
-     * <li><strong>image</strong></li>
-     * <li><strong>containerScan</strong></li>
+     * <li><strong>pod</strong>: pod.</li>
+     * <li><strong>appName</strong>: application name.</li>
+     * <li><strong>clusterId</strong>: cluster ID.</li>
+     * <li><strong>namespace</strong>: namespace.</li>
+     * <li><strong>image</strong>: image.</li>
+     * <li><strong>containerScan</strong>: container scan.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

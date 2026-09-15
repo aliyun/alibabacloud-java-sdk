@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyRequest extends TeaModel {
     /**
-     * <p>The ID of the anti-ransomware mitigation policy to modify.</p>
+     * <p>The ID of the anti-ransomware policy to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The name of the anti-ransomware mitigation policy to modify.</p>
+     * <p>The name of the anti-ransomware policy to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,26 +25,26 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The content of the mitigation policy to modify. The value is a JSON-format string that contains the following fields:</p>
+     * <p>The content of the policy to modify. The value is a JSON format character string that contains the following fields:</p>
      * <ul>
      * <li><p><strong>Source</strong>: The server folder to protect. To protect all folders, set this field to [].</p>
      * </li>
      * <li><p><strong>Include</strong>: The file types to protect. Examples: &quot;\<em>.jpg&quot; and &quot;\</em>.doc&quot;.</p>
      * </li>
-     * <li><p><strong>Exclude</strong>: The custom folders to exclude. For example, exclude the folder &quot;/home/user&quot;. Invoke the DescribeExcludeSystemPath operation to obtain all folders, and then add the folders that you want to exclude.</p>
+     * <li><p><strong>Exclude</strong>: The custom folders to exclude. For example, &quot;/home/user&quot; excludes the /home/user folder. Invoke the DescribeExcludeSystemPath operation to obtain all folders, and then add the folders that you want to exclude.</p>
      * </li>
-     * <li><p><strong>Schedule</strong>: The start time and interval of the data backup task. Specify a non-hourly time during off-peak hours.</p>
+     * <li><p><strong>Schedule</strong>: The start time and interval of the data backup node. Specify a non-hourly time during off-peak hours.</p>
      * <ul>
-     * <li><p>Example 1: I|1583216092|P21D indicates that the start time is 2020-03-03 14:14:52 and the interval is 3 weeks.</p>
+     * <li><p>Example 1: I|1583216092|P21D indicates that the execute start time is 2020-03-03 14:14:52 and the interval is 3 weeks.</p>
      * </li>
-     * <li><p>Example 2: I|1583216092|PT24H indicates that the start time is 2020-03-03 14:14:52 and the interval is 24 hours.</p>
+     * <li><p>Example 2: I|1583216092|PT24H indicates that the execute start time is 2020-03-03 14:14:52 and the interval is 24 hours.</p>
      * </li>
      * </ul>
      * </li>
      * <li><p><strong>Retention</strong>: The retention period of backup data. Unit: days. 7 indicates 1 week, 365 indicates 1 year, and -1 indicates permanent retention.</p>
      * </li>
-     * <li><p><strong>SpeedLimiter</strong>: The network bandwidth throttling for backup. Example: 12:15:15360|6:12:5120 indicates 15 MB from 12:00 to 15:00 and 5 MB from 6:00 to 12:00.
-     * Cloud-hosted servers connect through the internal network. Do not limit the backup network bandwidth. To remove the bandwidth limit, set this parameter to an empty string (&quot;&quot;).</p>
+     * <li><p><strong>SpeedLimiter</strong>: The network bandwidth throttling for backup. For example, 12:15:15360|6:12:5120 indicates 15 MB from 12:00 to 15:00 and 5 MB from 6:00 to 12:00.
+     * For cloud-based servers connected to the internal network, do not limit the backup network bandwidth. To remove the network bandwidth throttling, set this parameter to an empty character string (&quot;&quot;).</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -56,7 +56,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public java.util.Map<String, ?> policy;
 
     /**
-     * <p>The region of the server for which you want to modify the mitigation policy.</p>
+     * <p>The region of the server for which you want to modify the policy.</p>
      * <p>You can invoke the <a href="~~DescribeSupportRegion~~">DescribeSupportRegion</a> operation to query the regions supported by the anti-ransomware feature.</p>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String policyRegionId;
 
     /**
-     * <p>The version of the mitigation policy. You can invoke the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the version.</p>
+     * <p>The version of the policy. You can invoke the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the version.</p>
      * <ul>
      * <li><strong>1.0.0</strong></li>
      * <li><strong>2.0.0</strong></li>
@@ -79,8 +79,36 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String policyVersion;
 
     /**
-     * <p>The UUIDs of the servers protected by the mitigation policy.</p>
-     * <p>This parameter is required.</p>
+     * <p>The method used to select assets. Valid values:</p>
+     * <ul>
+     * <li><strong>ALL_MACHINE</strong>: all assets<blockquote>
+     * <p>To cover all assets of the specified type, set this parameter to <strong>ALL_MACHINE</strong>. In this case, <strong>UuidList</strong> is invalid. Only one policy that covers all assets can exist for each server type.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL_MACHINE</p>
+     */
+    @NameInMap("SelectType")
+    public String selectType;
+
+    /**
+     * <p>The server type. Valid values:</p>
+     * <ul>
+     * <li><strong>ALIYUN</strong>: Alibaba Cloud server</li>
+     * <li><strong>OUT_CLOUD</strong>: non-Alibaba Cloud server</li>
+     * <li><strong>TRIPARTITE</strong>: simple application server</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIYUN</p>
+     */
+    @NameInMap("ServerType")
+    public String serverType;
+
+    /**
+     * <p>The list of UUIDs of the servers protected by the policy.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;3bb30859-b3b5-4f28-868f-b0892c98****&quot;, &quot;3bb30859-b3b5-4f28-868f-b0892c98****&quot;]</p>
@@ -131,6 +159,22 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     }
     public String getPolicyVersion() {
         return this.policyVersion;
+    }
+
+    public ModifyBackupPolicyRequest setSelectType(String selectType) {
+        this.selectType = selectType;
+        return this;
+    }
+    public String getSelectType() {
+        return this.selectType;
+    }
+
+    public ModifyBackupPolicyRequest setServerType(String serverType) {
+        this.serverType = serverType;
+        return this;
+    }
+    public String getServerType() {
+        return this.serverType;
     }
 
     public ModifyBackupPolicyRequest setUuidList(java.util.List<String> uuidList) {

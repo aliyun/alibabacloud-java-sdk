@@ -16,7 +16,7 @@ public class GetLocalDefaultRegionResponseBody extends TeaModel {
     /**
      * <p>The access type of the multi-cloud site. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: No default site exists. You can select one.</li>
+     * <li><strong>0</strong>: No default site exists. You can select a site as the default site.</li>
      * <li><strong>1</strong>: The current site is already the default site.</li>
      * <li><strong>2</strong>: Another site is already set as the default site.</li>
      * </ul>

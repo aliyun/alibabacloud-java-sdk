@@ -11,7 +11,7 @@ public class ListFileProtectEventRequest extends TeaModel {
     public java.util.List<Integer> alertLevels;
 
     /**
-     * <p>The page number of the current page in a paging query.</p>
+     * <p>The number of the page to return in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -67,11 +67,11 @@ public class ListFileProtectEventRequest extends TeaModel {
     /**
      * <p>The type of operation performed on the file. Valid values:</p>
      * <ul>
-     * <li><strong>DELETE</strong>: deletes the file.</li>
-     * <li><strong>WRITE</strong>: writes to the file.</li>
-     * <li><strong>READ</strong>: reads the file.</li>
-     * <li><strong>RENAME</strong>: renames the file.</li>
-     * <li><strong>CHOWN</strong>: changes the file owner and associated group.</li>
+     * <li><strong>DELETE</strong>: Delete the file.</li>
+     * <li><strong>WRITE</strong>: Write to the file.</li>
+     * <li><strong>READ</strong>: Read the file.</li>
+     * <li><strong>RENAME</strong>: Rename the file.</li>
+     * <li><strong>CHOWN</strong>: Change the file owner and associated group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,7 +81,7 @@ public class ListFileProtectEventRequest extends TeaModel {
     public String operation;
 
     /**
-     * <p>The maximum number of entries to return on each page in a paging query.</p>
+     * <p>The maximum number of entries to return on each page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

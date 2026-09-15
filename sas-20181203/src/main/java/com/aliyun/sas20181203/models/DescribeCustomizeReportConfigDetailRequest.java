@@ -19,7 +19,7 @@ public class DescribeCustomizeReportConfigDetailRequest extends TeaModel {
 
     /**
      * <p>The report ID.\
-     * The ReportId returned by calling the <a href="https://help.aliyun.com/document_detail/271655.html">DescribeCustomizeReportList</a> operation.</p>
+     * Call the <a href="https://help.aliyun.com/document_detail/271655.html">DescribeCustomizeReportList</a> operation to obtain the value of ReportId from the response.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +28,12 @@ public class DescribeCustomizeReportConfigDetailRequest extends TeaModel {
     @NameInMap("ReportId")
     public Long reportId;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
+     * <blockquote>
+     * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 

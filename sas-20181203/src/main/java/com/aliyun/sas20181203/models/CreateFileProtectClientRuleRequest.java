@@ -7,10 +7,14 @@ public class CreateFileProtectClientRuleRequest extends TeaModel {
     /**
      * <p>The alert notification level. Valid values:</p>
      * <ul>
-     * <li>0: no alert</li>
-     * <li>1: reminder</li>
-     * <li>2: suspicious</li>
-     * <li>3: high-risk.</li>
+     * <li><p>0: No alert.</p>
+     * </li>
+     * <li><p>1: Reminder.</p>
+     * </li>
+     * <li><p>2: Suspicious.</p>
+     * </li>
+     * <li><p>3: High-risk.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,13 +98,13 @@ public class CreateFileProtectClientRuleRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>规则****</p>
+     * <p>Rule****</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
-     * <p>The status of the rule. Valid values:</p>
+     * <p>The rule status. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: Disabled.</li>
      * <li><strong>1</strong>: Enabled.</li>
@@ -114,7 +118,7 @@ public class CreateFileProtectClientRuleRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The switch ID associated with the rule.</p>
+     * <p>The switch ID that corresponds to the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>FILE_PROTECT_RULE_SWITCH_TYPE_0000</p>

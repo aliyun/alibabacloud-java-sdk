@@ -10,19 +10,25 @@ public class ModifyStartVulScanRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
+     * <blockquote>
+     * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>Settings for the types of vulnerabilities to detect by using the one-click scan feature. Valid values:</p>
+     * <p>Settings for the vulnerability types to detect by using the one-click scan feature. Valid values:</p>
      * <ul>
      * <li><strong>cve</strong>: Linux software vulnerability.</li>
      * <li><strong>sys</strong>: Windows system vulnerability.</li>
      * <li><strong>cms</strong>: Web-CMS vulnerability.</li>
-     * <li><strong>app</strong>: application vulnerability detected by the web scanner.</li>
-     * <li><strong>emg</strong>: urgent vulnerability.</li>
-     * <li><strong>image</strong>: container image vulnerability.</li>
-     * <li><strong>sca</strong>: application vulnerability detected by software constituency parsing.<blockquote>
+     * <li><strong>app</strong>: Application vulnerability detected by the web scanner.</li>
+     * <li><strong>emg</strong>: Emergency vulnerability.</li>
+     * <li><strong>image</strong>: Container image vulnerability.</li>
+     * <li><strong>sca</strong>: Application vulnerability detected by software constituency parsing.<blockquote>
      * <p>If this parameter is left empty, all vulnerability types are detected.</p>
      * </blockquote>
      * </li>

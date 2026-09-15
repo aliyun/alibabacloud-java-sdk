@@ -4,10 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeUuidVulNumClassifyStatisticResponseBody extends TeaModel {
+    /**
+     * <p>The vulnerability statistics returned by asset unique identifier. The key of the map is the host UUID or image ID specified in the request.</p>
+     */
     @NameInMap("Data")
     public java.util.Map<String, DataValue> data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FDF7B8D9-8493-4B90-8D13-E0C1FFCE5F97</p>
      */

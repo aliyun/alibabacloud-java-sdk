@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DataValue extends TeaModel {
     /**
+     * <p>The number of Linux software vulnerabilities.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DataValue extends TeaModel {
     public Integer cveNum;
 
     /**
+     * <p>The number of emergency vulnerabilities. This field is 0 when ImageVul is set to true.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -19,6 +23,8 @@ public class DataValue extends TeaModel {
     public Integer emgNum;
 
     /**
+     * <p>The number of Windows system vulnerabilities. This field is 0 when ImageVul is set to true.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -26,6 +32,8 @@ public class DataValue extends TeaModel {
     public Integer sysNum;
 
     /**
+     * <p>The number of Web-CMS vulnerabilities. This field is 0 when ImageVul is set to true.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -33,6 +41,8 @@ public class DataValue extends TeaModel {
     public Integer cmsNum;
 
     /**
+     * <p>The number of application vulnerabilities. This field is 0 when ImageVul is set to true.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -40,6 +50,8 @@ public class DataValue extends TeaModel {
     public Integer appNum;
 
     /**
+     * <p>The number of software composition analysis (SCA) vulnerabilities.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -47,6 +59,8 @@ public class DataValue extends TeaModel {
     public Integer scaNum;
 
     /**
+     * <p>The number of high-priority vulnerabilities.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -54,6 +68,8 @@ public class DataValue extends TeaModel {
     public Integer vulAsapSum;
 
     /**
+     * <p>The number of medium-priority vulnerabilities.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -61,6 +77,8 @@ public class DataValue extends TeaModel {
     public Integer vulLaterSum;
 
     /**
+     * <p>The number of low-priority vulnerabilities.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -68,6 +86,8 @@ public class DataValue extends TeaModel {
     public Integer vulNntfSum;
 
     /**
+     * <p>The number of high-priority system vulnerabilities among Linux software vulnerabilities and Windows system vulnerabilities.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

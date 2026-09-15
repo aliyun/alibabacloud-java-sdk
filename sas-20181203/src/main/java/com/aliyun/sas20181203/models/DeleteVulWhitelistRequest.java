@@ -7,7 +7,7 @@ public class DeleteVulWhitelistRequest extends TeaModel {
     /**
      * <p>The ID of the vulnerability whitelist.</p>
      * <blockquote>
-     * <p>To delete a vulnerability whitelist, provide the vulnerability whitelist ID. You can obtain this ID by calling the <a href="~~DescribeVulWhitelist~~">DescribeVulWhitelist</a> operation.</p>
+     * <p>To delete a vulnerability whitelist, provide the vulnerability whitelist ID. You can call the <a href="~~DescribeVulWhitelist~~">DescribeVulWhitelist</a> operation to obtain this ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -16,6 +16,12 @@ public class DeleteVulWhitelistRequest extends TeaModel {
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member account in the resource directory.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 

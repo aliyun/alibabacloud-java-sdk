@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePropertyProcDetailRequest extends TeaModel {
     /**
-     * <p>The startup parameter of the process.</p>
+     * <p>The startup parameters of the process.</p>
      * 
      * <strong>example:</strong>
      * <p>./8888</p>
@@ -14,7 +14,7 @@ public class DescribePropertyProcDetailRequest extends TeaModel {
     public String cmdline;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribePropertyProcDetailRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Specifies whether fuzzy search by process name is supported. If you want to use fuzzy search, set the parameter to 1. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.</p>
+     * <p>Specifies whether fuzzy match is supported for the process name. Set this parameter to 1 to enable fuzzy match. Other values or an empty value indicate that fuzzy match is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class DescribePropertyProcDetailRequest extends TeaModel {
     public String extend;
 
     /**
-     * <p>The name of the process.</p>
+     * <p>The process name.</p>
      * 
      * <strong>example:</strong>
      * <p>8888</p>
@@ -41,7 +41,10 @@ public class DescribePropertyProcDetailRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The value of NextToken that is returned when the NextToken method is used. You do not need to specify this parameter for the first request.</p>
+     * <p>The token that marks the current position from which to start reading. Leave this parameter empty to start reading from the beginning.</p>
+     * <blockquote>
+     * <p>You do not need to specify this parameter for the first call. The NextToken value for the second call is included in the response of the first call. Each subsequent response contains the NextToken value for the next call.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6k+AtdhNE3kgQEK36GujZ5on+tWdc+4WoaoMP/kUNxxxx</p>
@@ -50,7 +53,7 @@ public class DescribePropertyProcDetailRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>, which indicates that 10 entries of process Asset Fingerprints information are displayed per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +62,7 @@ public class DescribePropertyProcDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The timestamp when the process ends. Unit: milliseconds.</p>
+     * <p>The end timestamp of the process startup time range. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1649587453000</p>
@@ -68,7 +71,7 @@ public class DescribePropertyProcDetailRequest extends TeaModel {
     public Long procTimeEnd;
 
     /**
-     * <p>The timestamp when the process starts. Unit: milliseconds.</p>
+     * <p>The start timestamp of the process startup time range. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1648809853000</p>
@@ -77,7 +80,7 @@ public class DescribePropertyProcDetailRequest extends TeaModel {
     public Long procTimeStart;
 
     /**
-     * <p>The name or IP address of the server.</p>
+     * <p>The name or IP address of the server that you want to query.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -86,9 +89,9 @@ public class DescribePropertyProcDetailRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the account ID.</p>
+     * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -98,10 +101,10 @@ public class DescribePropertyProcDetailRequest extends TeaModel {
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>Specifies whether to use the NextToken method to retrieve a new page of results. If you set UseNextToken to true, the value of TotalCount is not returned. Valid values:</p>
+     * <p>Specifies whether to use the NextToken method to retrieve the vulnerability list data. If this parameter is used, TotalCount is no longer returned. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The NextToken method is used.</li>
-     * <li><strong>false</strong>: The NextToken method is not used.</li>
+     * <li><strong>true</strong>: Use the NextToken method.</li>
+     * <li><strong>false</strong>: Do not use the NextToken method.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -111,7 +114,7 @@ public class DescribePropertyProcDetailRequest extends TeaModel {
     public Boolean useNextToken;
 
     /**
-     * <p>The user who runs the process.</p>
+     * <p>The information about the user that runs the process.</p>
      * 
      * <strong>example:</strong>
      * <p>root</p>
@@ -120,7 +123,7 @@ public class DescribePropertyProcDetailRequest extends TeaModel {
     public String user;
 
     /**
-     * <p>The UUID of the server.</p>
+     * <p>The UUID of the server that you want to query.</p>
      * 
      * <strong>example:</strong>
      * <p>50d213b4-3a35-427a-b8a5-04b0c7e1****</p>

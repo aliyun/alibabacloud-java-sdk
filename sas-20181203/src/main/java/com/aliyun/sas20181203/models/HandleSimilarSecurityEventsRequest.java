@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HandleSimilarSecurityEventsRequest extends TeaModel {
     /**
-     * <p>The rule for adding items to the whitelist. For example, to add a whitelist rule based on file MD5 where the file contains the string &quot;a&quot;, set this parameter to {&quot;field&quot;:&quot;md5&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;aa&quot;}.</p>
+     * <p>The rule for adding to the whitelist. For example, to add a whitelist rule based on file MD5 where the file contains the string &quot;a&quot;, set this parameter to {&quot;field&quot;:&quot;md5&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;aa&quot;}.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;field&quot;:&quot;md5&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;aa&quot;}</p>
@@ -14,7 +14,7 @@ public class HandleSimilarSecurityEventsRequest extends TeaModel {
     public String markMissParam;
 
     /**
-     * <p>The type of operation for batch processing alert events of the same type.</p>
+     * <p>The operation type for batch processing similar alert events.</p>
      * <blockquote>
      * <p>Call the <a href="~~DescribeSecurityEventOperations~~">DescribeSecurityEventOperations</a> operation to obtain this parameter.</p>
      * </blockquote>
@@ -27,7 +27,7 @@ public class HandleSimilarSecurityEventsRequest extends TeaModel {
     public String operationCode;
 
     /**
-     * <p>The configuration of the sub-operation for handling alerting events. The value is in JSON format.</p>
+     * <p>The configuration of the sub-operation for alerting event handling. The value is in JSON format.</p>
      * <blockquote>
      * <p>This parameter is required when <strong>OperationCode</strong> is set to <strong>kill_and_quara</strong>, <strong>block_ip</strong>, or <strong>virus_quara</strong>. For other values of <strong>OperationCode</strong>, this parameter can be left empty.</p>
      * </blockquote>
@@ -38,16 +38,16 @@ public class HandleSimilarSecurityEventsRequest extends TeaModel {
      * </ul>
      * <p>When <strong>OperationCode</strong> is set to <strong>kill_and_quara</strong>, the following field is included:</p>
      * <ul>
-     * <li><strong>subOperation</strong>: the method used to scan and remove threats. Valid values:<ul>
-     * <li><strong>killAndQuaraFileByMd5andPath</strong>: terminates the process and moves the file to the quarantined file.</li>
+     * <li><strong>subOperation</strong>: the scan method. Valid values:<ul>
+     * <li><strong>killAndQuaraFileByMd5andPath</strong>: terminates the process and quarantines the quarantined file.</li>
      * <li><strong>killByMd5andPath</strong>: terminates the running process.</li>
      * </ul>
      * </li>
      * </ul>
      * <p>When <strong>OperationCode</strong> is set to <strong>virus_quara</strong>, the following field is included:</p>
      * <ul>
-     * <li><strong>subOperation</strong>: the method used to scan and remove threats. Valid values:<ul>
-     * <li><strong>quaraFileByMd5andPath</strong>: moves the source file of the process to the quarantined file.</li>
+     * <li><strong>subOperation</strong>: the scan method. Valid values:<ul>
+     * <li><strong>quaraFileByMd5andPath</strong>: quarantines the source file of the process.</li>
      * </ul>
      * </li>
      * </ul>
@@ -68,6 +68,12 @@ public class HandleSimilarSecurityEventsRequest extends TeaModel {
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account of member accounts in the resource folder.</p>
+     * <blockquote>
+     * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 

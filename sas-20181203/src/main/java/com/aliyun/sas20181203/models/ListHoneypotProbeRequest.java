@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHoneypotProbeRequest extends TeaModel {
     /**
-     * <p>The page number of the page to return. Minimum value: <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the page to return. Minimum value: <strong>1</strong>. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListHoneypotProbeRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The name of the probe.</p>
+     * <p>The probe name.</p>
      * 
      * <strong>example:</strong>
      * <p>probe-test</p>
@@ -26,7 +26,7 @@ public class ListHoneypotProbeRequest extends TeaModel {
      * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class ListHoneypotProbeRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries to return on each page in a paged query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page during paging.</p>
+     * <p>The maximum number of entries per page for a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
      * <blockquote>
      * <p>Do not leave PageSize empty.</p>
      * </blockquote>
@@ -72,7 +72,7 @@ public class ListHoneypotProbeRequest extends TeaModel {
      * <p>The probe type. Valid values:</p>
      * <ul>
      * <li><strong>host_probe</strong>: host probe</li>
-     * <li><strong>vpc_black_hole_probe</strong>: VPC blackhole probe.</li>
+     * <li><strong>vpc_black_hole_probe</strong>: VPC blackhole probe</li>
      * </ul>
      * 
      * <strong>example:</strong>

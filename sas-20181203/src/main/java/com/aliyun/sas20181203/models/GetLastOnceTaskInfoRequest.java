@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLastOnceTaskInfoRequest extends TeaModel {
     /**
-     * <p>The source that initiated the task.</p>
+     * <p>The source from which the task was added.</p>
      * 
      * <strong>example:</strong>
      * <p>console_batch</p>
@@ -14,28 +14,18 @@ public class GetLastOnceTaskInfoRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The name of the task. Valid values:</p>
+     * <p>The task name. Valid values:</p>
      * <ul>
-     * <li><p><code>CLIENT_PROBLEM_CHECK</code>: client troubleshooting task</p>
-     * </li>
-     * <li><p><code>CLIENT_DEV_OPS</code>: O\&amp;M task</p>
-     * </li>
-     * <li><p><code>ASSET_SECURITY_CHECK</code>: asset collection task</p>
-     * </li>
-     * <li><p><code>ASSETS_COLLECTION</code>: asset fingerprint collection task</p>
-     * </li>
-     * <li><p><code>IMAGE_SCAN</code>: container image scan task</p>
-     * </li>
-     * <li><p><code>AI_SECURITY_CHECK</code>: AI asset synchronization task</p>
-     * </li>
-     * <li><p><code>IDC_PROBE_SCAN</code>: IDC probe scan task</p>
-     * </li>
-     * <li><p><code>ATTACK_SURFACE_SCAN</code>: attack surface boundary asset scan task</p>
-     * </li>
-     * <li><p><code>ASSET_EXPOSURE_SCAN</code>: asset exposure scan task</p>
-     * </li>
-     * <li><p><code>VUL_CHECK_TASK</code>: vulnerability scan task</p>
-     * </li>
+     * <li><strong>CLIENT_PROBLEM_CHECK</strong>: client problem troubleshooting task</li>
+     * <li><strong>CLIENT_DEV_OPS</strong>: cloud O&amp;M task</li>
+     * <li><strong>ASSET_SECURITY_CHECK</strong>: asset collection task</li>
+     * <li><strong>ASSETS_COLLECTION</strong>: Asset Fingerprints collection task</li>
+     * <li><strong>IMAGE_SCAN</strong>: container image scan task</li>
+     * <li><strong>AI_SECURITY_CHECK</strong>: AI asset synchronization task</li>
+     * <li><strong>IDC_PROBE_SCAN</strong>: IDC probe scan task</li>
+     * <li><strong>ATTACK_SURFACE_SCAN</strong>: attack surface boundary asset scan task</li>
+     * <li><strong>ASSET_EXPOSURE_SCAN</strong>: asset exposure scan task</li>
+     * <li><strong>VUL_CHECK_TASK</strong>: vulnerability scanning task</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -46,28 +36,18 @@ public class GetLastOnceTaskInfoRequest extends TeaModel {
     public String taskName;
 
     /**
-     * <p>The type of the task. Valid values:</p>
+     * <p>The task type. Valid values:</p>
      * <ul>
-     * <li><p><code>CLIENT_PROBLEM_CHECK</code>: client troubleshooting task</p>
-     * </li>
-     * <li><p><code>CLIENT_DEV_OPS</code>: O\&amp;M task</p>
-     * </li>
-     * <li><p><code>ASSET_SECURITY_CHECK</code>: asset collection task</p>
-     * </li>
-     * <li><p><code>ASSETS_COLLECTION</code>: asset fingerprint collection task</p>
-     * </li>
-     * <li><p><code>IMAGE_SCAN</code>: container image scan task</p>
-     * </li>
-     * <li><p><code>AI_SECURITY_CHECK</code>: AI asset synchronization task</p>
-     * </li>
-     * <li><p><code>IDC_PROBE_SCAN</code>: IDC probe scan task</p>
-     * </li>
-     * <li><p><code>ATTACK_SURFACE_SCAN</code>: attack surface boundary asset scan task</p>
-     * </li>
-     * <li><p><code>ASSET_EXPOSURE_SCAN</code>: asset exposure scan task</p>
-     * </li>
-     * <li><p><code>VUL_CHECK_TASK</code>: vulnerability scan task</p>
-     * </li>
+     * <li><strong>CLIENT_PROBLEM_CHECK</strong>: client problem troubleshooting task</li>
+     * <li><strong>CLIENT_DEV_OPS</strong>: cloud O&amp;M task</li>
+     * <li><strong>ASSET_SECURITY_CHECK</strong>: asset collection task</li>
+     * <li><strong>ASSETS_COLLECTION</strong>: Asset Fingerprints collection task</li>
+     * <li><strong>IMAGE_SCAN</strong>: container image scan task</li>
+     * <li><strong>AI_SECURITY_CHECK</strong>: AI asset synchronization task</li>
+     * <li><strong>IDC_PROBE_SCAN</strong>: IDC probe scan task</li>
+     * <li><strong>ATTACK_SURFACE_SCAN</strong>: attack surface boundary asset scan task</li>
+     * <li><strong>ASSET_EXPOSURE_SCAN</strong>: asset exposure scan task</li>
+     * <li><strong>VUL_CHECK_TASK</strong>: vulnerability scanning task</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

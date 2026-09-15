@@ -14,7 +14,7 @@ public class GetAttackEventDetailResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public GetAttackEventDetailResponseBodyData data;
@@ -29,7 +29,7 @@ public class GetAttackEventDetailResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The result message. The value is fixed as <strong>success</strong>, which indicates that the export was successful.</p>
+     * <p>The result message. Fixed value: <strong>success</strong>. This value indicates that the operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -49,8 +49,8 @@ public class GetAttackEventDetailResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The API call was successful.</li>
-     * <li><strong>false</strong>: The API call failed.</li>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class GetAttackEventDetailResponseBody extends TeaModel {
          * <p>The name of the CVE vulnerability.</p>
          * 
          * <strong>example:</strong>
-         * <p>1Panel loadfile 后台文件读取漏洞</p>
+         * <p>1Panel loadfile backend file read vulnerability</p>
          */
         @NameInMap("Name")
         public String name;

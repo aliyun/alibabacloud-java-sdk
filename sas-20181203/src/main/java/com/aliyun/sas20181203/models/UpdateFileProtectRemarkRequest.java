@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateFileProtectRemarkRequest extends TeaModel {
     /**
-     * <p>Alert notification level list.</p>
+     * <p>The list of alert notification levels.</p>
      */
     @NameInMap("AlertLevels")
     public java.util.List<Integer> alertLevels;
 
     /**
-     * <p>End time timestamp.</p>
+     * <p>The timestamp of the end time.</p>
      * 
      * <strong>example:</strong>
      * <p>1649040221</p>
@@ -20,7 +20,7 @@ public class UpdateFileProtectRemarkRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The ID of the event.</p>
+     * <p>The event ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1764</p>
@@ -29,13 +29,13 @@ public class UpdateFileProtectRemarkRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Event ID list.</p>
+     * <p>The list of event IDs.</p>
      */
     @NameInMap("IdList")
     public java.util.List<Long> idList;
 
     /**
-     * <p>Asset instance ID.</p>
+     * <p>The ID of the asset instance.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp1g6wxdwps7s9dz****</p>
@@ -44,7 +44,7 @@ public class UpdateFileProtectRemarkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Asset instance name.</p>
+     * <p>The name of the asset instance.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -53,7 +53,7 @@ public class UpdateFileProtectRemarkRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>Public IP.</p>
+     * <p>The public IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>101.132.XX.XX</p>
@@ -62,7 +62,7 @@ public class UpdateFileProtectRemarkRequest extends TeaModel {
     public String internetIp;
 
     /**
-     * <p>Private IP.</p>
+     * <p>The internal IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>172.26.XX.XX</p>
@@ -71,13 +71,13 @@ public class UpdateFileProtectRemarkRequest extends TeaModel {
     public String intranetIp;
 
     /**
-     * <p>File operation type. Values:</p>
+     * <p>The type of operation performed on the file. Valid values:</p>
      * <ul>
-     * <li><strong>DELETE</strong>: File deletion operation.</li>
-     * <li><strong>WRITE</strong>: File write operation.</li>
-     * <li><strong>READ</strong>: File read operation.</li>
-     * <li><strong>RENAME</strong>: File rename operation.</li>
-     * <li><strong>CHOWN</strong>: Set file owner and associated group operation.</li>
+     * <li><strong>DELETE</strong>: Delete the file.</li>
+     * <li><strong>WRITE</strong>: Write to the file.</li>
+     * <li><strong>READ</strong>: Read the file.</li>
+     * <li><strong>RENAME</strong>: Rename the file.</li>
+     * <li><strong>CHOWN</strong>: Change the file owner and file group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,7 +93,7 @@ public class UpdateFileProtectRemarkRequest extends TeaModel {
     public java.util.List<String> remark;
 
     /**
-     * <p>Rule name.</p>
+     * <p>The rule name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-rule-1</p>
@@ -102,10 +102,10 @@ public class UpdateFileProtectRemarkRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>Cross-page select all indicator. Values:</p>
+     * <p>Specifies whether to select all items across pages. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Yes</li>
-     * <li><strong>false</strong>: No</li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class UpdateFileProtectRemarkRequest extends TeaModel {
     public Boolean selectAllAcrossPages;
 
     /**
-     * <p>Start time timestamp.</p>
+     * <p>The timestamp of the start time.</p>
      * 
      * <strong>example:</strong>
      * <p>1651290987000</p>
@@ -124,7 +124,7 @@ public class UpdateFileProtectRemarkRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>Server UUID.</p>
+     * <p>The UUID of the server.</p>
      * 
      * <strong>example:</strong>
      * <p>5d55af3c-35f3-4d4d-8ccc-8c5443b0****</p>

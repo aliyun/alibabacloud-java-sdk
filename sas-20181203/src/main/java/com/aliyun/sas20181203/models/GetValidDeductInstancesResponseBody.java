@@ -42,7 +42,7 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
 
     public static class GetValidDeductInstancesResponseBodyDataDeductPackageList extends TeaModel {
         /**
-         * <p>The number of consumed quotas in the current metering cycle.</p>
+         * <p>The number of consumed authorizations in the current metering cycle.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -51,7 +51,7 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
         public Long currentPeriodUsed;
 
         /**
-         * <p>The end time.</p>
+         * <p>The end time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1737734400000</p>
@@ -69,7 +69,7 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
         public Double initCapacity;
 
         /**
-         * <p>The resource plan instance ID.</p>
+         * <p>The instance ID of the resource plan.</p>
          * 
          * <strong>example:</strong>
          * <p>sas_**_dp_cn-2***</p>
@@ -80,9 +80,9 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
         /**
          * <p>The module code. Valid values:</p>
          * <ul>
-         * <li><strong>POST_HOST</strong>: host and container protection</li>
-         * <li><strong>CSPM</strong>: cloud product configuration check</li>
-         * <li><strong>VUL</strong>: vulnerability scanning</li>
+         * <li><strong>POST_HOST</strong>: Host and container protection.</li>
+         * <li><strong>CSPM</strong>: Cloud product configuration check.</li>
+         * <li><strong>VUL</strong>: Vulnerability scanning.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -92,7 +92,7 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
         public String module;
 
         /**
-         * <p>The number of consumed quotas up to the previous billing cycle.</p>
+         * <p>The number of consumed authorizations up to the end of the previous billing cycle.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -213,6 +213,9 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
         @NameInMap("DeductPackageList")
         public java.util.List<GetValidDeductInstancesResponseBodyDataDeductPackageList> deductPackageList;
 
+        /**
+         * <p>The trial version.</p>
+         */
         @NameInMap("TrialVersion")
         public Integer trialVersion;
 

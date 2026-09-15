@@ -7,7 +7,7 @@ public class FindContainerNetworkConnectShrinkRequest extends TeaModel {
     /**
      * <p>The query type of the element to query. Valid values:</p>
      * <ul>
-     * <li><strong>EDGE</strong>: connection information.</li>
+     * <li><strong>EDGE</strong>: connection information</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class FindContainerNetworkConnectShrinkRequest extends TeaModel {
     public String criteriaType;
 
     /**
-     * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
+     * <p>The page number of the page to return in a paged query. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class FindContainerNetworkConnectShrinkRequest extends TeaModel {
     public String dstNodeShrink;
 
     /**
-     * <p>The end time of the network connectivity.</p>
+     * <p>The end time of the network connectivity. Specify a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1649260799999</p>
@@ -59,7 +59,7 @@ public class FindContainerNetworkConnectShrinkRequest extends TeaModel {
     public String srcNodeShrink;
 
     /**
-     * <p>The start time of the network connectivity.</p>
+     * <p>The start time of the network connectivity. Specify a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1666886400000</p>

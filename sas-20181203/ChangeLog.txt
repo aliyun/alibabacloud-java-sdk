@@ -1,3 +1,22 @@
+2026-09-15 Version: 10.1.1
+- Update API ChangeCheckScopeConfigInstance: add request parameters SelectionKey.
+- Update API CreateAgentlessScanTask: add request parameters From.
+- Update API CreateAgentlessScanTask: add request parameters ResourceRegionId.
+- Update API CreateAgentlessScanTask: add request parameters Targets.
+- Update API CreateBackupPolicy: add request parameters SelectType.
+- Update API CreateBackupPolicy: add request parameters ServerType.
+- Update API DescribeBackupPolicies: add response parameters Body.Policies.$.SelectType.
+- Update API DescribeImageGroupedVulList: add request parameters AgentlessCanFix.
+- Update API DescribeImageGroupedVulList: add response parameters Body.GroupedVulItems.$.AgentlessCanFix.
+- Update API DescribeImageGroupedVulList: add response parameters Body.GroupedVulItems.$.CveScore.
+- Update API DescribeImageGroupedVulList: add response parameters Body.GroupedVulItems.$.Related.
+- Update API DescribeImageVulList: add request parameters GroupByAsset.
+- Update API DescribeImageVulList: add response parameters Body.VulRecords.$.AgentlessCanFix.
+- Update API ListAgentlessTask: add response parameters Body.List.$.Extension.
+- Update API ModifyBackupPolicy: add request parameters SelectType.
+- Update API ModifyBackupPolicy: add request parameters ServerType.
+
+
 2026-09-02 Version: 10.1.0
 - Support API DescribeUuidVulNumClassifyStatistic.
 - Update API DescribeVersionConfig: add response parameters Body.SdkAiPostPaidGray.

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateJenkinsImageScanTaskResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public CreateJenkinsImageScanTaskResponseBodyData data;
@@ -42,7 +42,7 @@ public class CreateJenkinsImageScanTaskResponseBody extends TeaModel {
 
     public static class CreateJenkinsImageScanTaskResponseBodyData extends TeaModel {
         /**
-         * <p>The quota for image scan.</p>
+         * <p>The number of scan authorizations.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -51,7 +51,7 @@ public class CreateJenkinsImageScanTaskResponseBody extends TeaModel {
         public Long imageScanCapacity;
 
         /**
-         * <p>The ID of the image repository.</p>
+         * <p>The repository ID.</p>
          * 
          * <strong>example:</strong>
          * <p>crr-upze3gcopm9c****</p>
@@ -60,7 +60,7 @@ public class CreateJenkinsImageScanTaskResponseBody extends TeaModel {
         public String repoId;
 
         /**
-         * <p>The instance ID of the image repository.</p>
+         * <p>The repository instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-0gkaatghnmnt****</p>
@@ -69,7 +69,7 @@ public class CreateJenkinsImageScanTaskResponseBody extends TeaModel {
         public String repoInstanceId;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -78,7 +78,7 @@ public class CreateJenkinsImageScanTaskResponseBody extends TeaModel {
         public String repoRegionId;
 
         /**
-         * <p>The ID of the scan task.</p>
+         * <p>The scan node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>fc98d58eb56f699d49bf7ebbd6d7****</p>

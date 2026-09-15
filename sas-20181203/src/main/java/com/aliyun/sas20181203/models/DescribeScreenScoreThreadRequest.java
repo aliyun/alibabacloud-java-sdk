@@ -14,11 +14,17 @@ public class DescribeScreenScoreThreadRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member accounts in the resource directory folder.</p>
+     * <blockquote>
+     * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>The source of the security score. If left empty, the default value is Security Center. Valid values:</p>
+     * <p>The source of the security score. If this parameter is left empty, the default value is Security Center. Valid values:</p>
      * <p>0: Security Center.</p>
      * <p>1: Alibaba Cloud ApsaraDB console.</p>
      * 

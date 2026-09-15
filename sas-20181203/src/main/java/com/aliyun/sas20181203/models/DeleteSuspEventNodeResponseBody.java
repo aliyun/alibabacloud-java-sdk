@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSuspEventNodeResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. You can use this field to determine the cause of a failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DeleteSuspEventNodeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The additional information that is returned.</p>
+     * <p>The additional message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -23,7 +23,7 @@ public class DeleteSuspEventNodeResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A57C711B-AA15-55B2-8F61-4D09CEXXXXX</p>
@@ -34,8 +34,8 @@ public class DeleteSuspEventNodeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

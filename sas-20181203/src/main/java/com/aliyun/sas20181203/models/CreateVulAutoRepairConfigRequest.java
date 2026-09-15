@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateVulAutoRepairConfigRequest extends TeaModel {
     /**
-     * <p>The reason why the vulnerability can be automatically fixed.</p>
+     * <p>The reason for adding the vulnerabilities that can be automatically fixed.</p>
      * 
      * <strong>example:</strong>
      * <p>TestAutoRepair</p>
@@ -14,7 +14,11 @@ public class CreateVulAutoRepairConfigRequest extends TeaModel {
     public String reason;
 
     /**
-     * <p>The type of the vulnerability. Valid values: -<strong>cve</strong>: Linux software vulnerability -<strong>sys</strong>: Windows system vulnerability</p>
+     * <p>The type of the vulnerability. Valid values:</p>
+     * <ul>
+     * <li><strong>cve</strong>: Linux software vulnerability.</li>
+     * <li><strong>sys</strong>: Windows system vulnerability.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +28,7 @@ public class CreateVulAutoRepairConfigRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The vulnerabilities that can be automatically fixed.</p>
+     * <p>The list of vulnerabilities that can be automatically fixed.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("VulAutoRepairConfigList")

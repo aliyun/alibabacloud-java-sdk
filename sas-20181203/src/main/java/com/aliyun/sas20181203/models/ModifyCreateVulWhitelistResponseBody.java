@@ -16,7 +16,7 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
     /**
      * <p>The vulnerability whitelist information.</p>
      * <blockquote>
-     * <p>Notice: This data is not returned when you add or update vulnerability whitelists in batches. It is returned only when you add or update a single vulnerability whitelist entry.</p>
+     * <p>Notice: This data is not returned when you add or update vulnerability whitelists in batches. This data is returned only when you add or update a single vulnerability whitelist entry.</p>
      * </blockquote>
      */
     @NameInMap("VulWhitelistList")

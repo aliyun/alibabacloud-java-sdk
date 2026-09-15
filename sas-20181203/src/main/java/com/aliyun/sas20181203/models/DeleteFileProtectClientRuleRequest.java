@@ -7,13 +7,13 @@ public class DeleteFileProtectClientRuleRequest extends TeaModel {
     /**
      * <p>The alert notification level. Valid values:</p>
      * <ul>
-     * <li><p>0: no alert</p>
+     * <li><p>0: No alerts.</p>
      * </li>
-     * <li><p>1: reminder</p>
+     * <li><p>1: Reminder.</p>
      * </li>
-     * <li><p>2: suspicious</p>
+     * <li><p>2: Suspicious.</p>
      * </li>
-     * <li><p>3: high-risk.</p>
+     * <li><p>3: High-risk.</p>
      * </li>
      * </ul>
      * 
@@ -38,7 +38,7 @@ public class DeleteFileProtectClientRuleRequest extends TeaModel {
     /**
      * <p>The type of the operating system. Valid values:</p>
      * <ul>
-     * <li><strong>windows</strong>: Windows</li>
+     * <li><strong>windows</strong>: Windows.</li>
      * <li><strong>linux</strong>: Linux.</li>
      * </ul>
      * 
@@ -49,7 +49,7 @@ public class DeleteFileProtectClientRuleRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p>The action to take when the rule is triggered. Valid values:</p>
+     * <p>The action of the policy. Valid values:</p>
      * <ul>
      * <li><strong>monitor</strong>: Alert.</li>
      * <li><strong>block</strong>: Block.</li>
@@ -72,7 +72,7 @@ public class DeleteFileProtectClientRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>Specifies whether to select all rules.</p>
+     * <p>Specifies whether to select all.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

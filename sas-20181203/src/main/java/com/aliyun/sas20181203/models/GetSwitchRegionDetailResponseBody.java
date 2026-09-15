@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetSwitchRegionDetailResponseBody extends TeaModel {
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public GetSwitchRegionDetailResponseBodyData data;
 
     /**
-     * <p>The ID of the request. The China Chinese mainland generates a unique identifier for each request, which can be used for troubleshooting and diagnostics.</p>
+     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>30CBF632-109F-596F-97F2-451C8B2A****</p>
@@ -51,7 +51,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
         public Integer ecsCount;
 
         /**
-         * <p>The planned migration time.</p>
+         * <p>The planned migration time. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1692858597000</p>
@@ -72,7 +72,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
          * <p>The migration status. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: waiting for migration</li>
-         * <li><strong>1</strong>: switchover succeeded.</li>
+         * <li><strong>1</strong>: switchover succeeded</li>
          * </ul>
          * 
          * <strong>example:</strong>

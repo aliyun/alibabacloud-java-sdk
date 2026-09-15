@@ -14,7 +14,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The operation performed on the alert event.</p>
+     * <p>The operation types for handling alert events.</p>
      */
     @NameInMap("SecurityEventOperationsResponse")
     public java.util.List<AdvanceSecurityEventOperationsResponseBodySecurityEventOperationsResponse> securityEventOperationsResponse;
@@ -42,7 +42,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
 
     public static class AdvanceSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField extends TeaModel {
         /**
-         * <p>The alias of the field that is used in the whitelist rule.</p>
+         * <p>The name of the whitelist field in the configured whitelist rule.</p>
          * 
          * <strong>example:</strong>
          * <p>file path</p>
@@ -51,7 +51,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
         public String filedAliasName;
 
         /**
-         * <p>The field that is used in the whitelist rule.</p>
+         * <p>The whitelist field in the configured whitelist rule.</p>
          * 
          * <strong>example:</strong>
          * <p>filePath</p>
@@ -60,7 +60,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
         public String filedName;
 
         /**
-         * <p>The operation that is used in the whitelist rule. Valid values:</p>
+         * <p>The wildcard in the configured whitelist rule. Valid values:</p>
          * <ul>
          * <li><strong>contains</strong>: contains</li>
          * <li><strong>notContains</strong>: does not contain</li>
@@ -76,7 +76,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
         public String markMisType;
 
         /**
-         * <p>The value of the field that is used in the whitelist rule.</p>
+         * <p>The rule value of the configured whitelist rule.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-25 10:11:04</p>
@@ -85,7 +85,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
         public String markMisValue;
 
         /**
-         * <p>The operation that is used and can be modified in the whitelist rule. Valid values:</p>
+         * <p>The wildcard types that can be modified in the configured whitelist rule. Valid values:</p>
          * <ul>
          * <li><strong>contains</strong>: contains</li>
          * <li><strong>notContains</strong>: does not contain</li>
@@ -146,7 +146,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
 
     public static class AdvanceSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkFieldsSource extends TeaModel {
         /**
-         * <p>The alias of the field that can be used in the whitelist rule.</p>
+         * <p>The name of the whitelist field that can be configured in a whitelist rule.</p>
          * 
          * <strong>example:</strong>
          * <p>file path</p>
@@ -155,7 +155,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
         public String filedAliasName;
 
         /**
-         * <p>The field that can be used in the whitelist rule.</p>
+         * <p>The whitelist field that can be configured in a whitelist rule.</p>
          * 
          * <strong>example:</strong>
          * <p>filePath</p>
@@ -164,7 +164,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
         public String filedName;
 
         /**
-         * <p>The value of the field that can be used in the whitelist rule.</p>
+         * <p>The rule value of the whitelist rule.</p>
          * 
          * <strong>example:</strong>
          * <p>contains</p>
@@ -173,7 +173,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
         public String markMisValue;
 
         /**
-         * <p>The operation that is supported in the whitelist rule. Valid values:</p>
+         * <p>The supported wildcards in the whitelist rule. Valid values:</p>
          * <ul>
          * <li><strong>contains</strong>: contains</li>
          * <li><strong>notContains</strong>: does not contain</li>
@@ -226,30 +226,30 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
 
     public static class AdvanceSecurityEventOperationsResponseBodySecurityEventOperationsResponse extends TeaModel {
         /**
-         * <p>The object on which the operation is performed. This parameter is required when you set the OperationCode parameter to <strong>advance_mark_mis_info</strong>.</p>
+         * <p>The configuration information when the handling method is <strong>advance_mark_mis_info</strong>.</p>
          */
         @NameInMap("MarkField")
         public java.util.List<AdvanceSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField> markField;
 
         /**
-         * <p>The metadata configuration returned by the advanced whitelist rule.</p>
+         * <p>The metadata configuration information returned for the advanced whitelist.</p>
          */
         @NameInMap("MarkFieldsSource")
         public java.util.List<AdvanceSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkFieldsSource> markFieldsSource;
 
         /**
-         * <p>The operation performed to handle the alert. Valid values:</p>
+         * <p>The handling method for the alert. Valid values:</p>
          * <ul>
-         * <li><strong>block_ip</strong>: blocks the alert.</li>
-         * <li><strong>advance_mark_mis_info</strong>: adds the alert to the whitelist.</li>
-         * <li><strong>ignore</strong>: ignores the alert.</li>
-         * <li><strong>manual_handled</strong>: marks the alert as manually handled.</li>
-         * <li><strong>kill_process</strong>: terminates the malicious process.</li>
-         * <li><strong>cleanup</strong>: performs in-depth virus detection and removal.</li>
-         * <li><strong>kill_and_quara</strong>: performs virus detection and removal.</li>
-         * <li><strong>disable_malicious_defense</strong>: turns off malicious defense behavior.</li>
-         * <li><strong>client_problem_check</strong>: performs troubleshooting.</li>
-         * <li><strong>quara</strong>: performs quarantine operations.</li>
+         * <li><strong>block_ip</strong>: Block.</li>
+         * <li><strong>advance_mark_mis_info</strong>: Add to whitelist.</li>
+         * <li><strong>ignore</strong>: Ignore.</li>
+         * <li><strong>manual_handled</strong>: Manually handled.</li>
+         * <li><strong>kill_process</strong>: Terminate process.</li>
+         * <li><strong>cleanup</strong>: Deep scan and removal.</li>
+         * <li><strong>kill_and_quara</strong>: Virus scan and quarantine.</li>
+         * <li><strong>disable_malicious_defense</strong>: Disable malicious behavior defense.</li>
+         * <li><strong>client_problem_check</strong>: Troubleshoot.</li>
+         * <li><strong>quara</strong>: Quarantine.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -259,7 +259,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
         public String operationCode;
 
         /**
-         * <p>The configuration of the operation performed to handle the alert event.</p>
+         * <p>The configuration of the sub-operation for the alert event handling method.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;subOperation\&quot;:\&quot;killByMd5andPath\&quot;}</p>
@@ -268,10 +268,10 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
         public String operationParams;
 
         /**
-         * <p>Indicates whether the operation can be performed.</p>
+         * <p>Indicates whether the operation is available.</p>
          * <ul>
-         * <li><strong>true</strong>: The operation can be performed.</li>
-         * <li><strong>false</strong>: The operation cannot be performed.</li>
+         * <li><strong>true</strong>: Available.</li>
+         * <li><strong>false</strong>: Not available.</li>
          * </ul>
          * 
          * <strong>example:</strong>

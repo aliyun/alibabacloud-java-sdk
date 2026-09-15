@@ -17,7 +17,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
     public ListFileProtectEventResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>23AD0BD2-8771-5647-819E-6BA51E212F80</p>
@@ -58,13 +58,13 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         /**
          * <p>The alert notification level. Valid values:</p>
          * <ul>
-         * <li><p>0: no alert</p>
+         * <li><p>0: No alert.</p>
          * </li>
-         * <li><p>1: reminder</p>
+         * <li><p>1: Reminder.</p>
          * </li>
-         * <li><p>2: suspicious</p>
+         * <li><p>2: Suspicious.</p>
          * </li>
-         * <li><p>3: high-risk.</p>
+         * <li><p>3: High-risk.</p>
          * </li>
          * </ul>
          * 
@@ -84,7 +84,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         public String cmdLine;
 
         /**
-         * <p>The file path on which the process operates.</p>
+         * <p>The file path on which the process operated.</p>
          * 
          * <strong>example:</strong>
          * <p>/etc/pam.d/su</p>
@@ -93,7 +93,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         public String filePath;
 
         /**
-         * <p>The time when the event was handled.</p>
+         * <p>The time when the event was handled. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1694576692000</p>
@@ -138,7 +138,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
-         * <p>The most recent time when the event occurred.</p>
+         * <p>The most recent time when the event occurred. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1694576692000</p>
@@ -158,7 +158,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         /**
          * <p>The operating system type. Valid values:</p>
          * <ul>
-         * <li><strong>windows</strong>: Windows</li>
+         * <li><strong>windows</strong>: Windows.</li>
          * <li><strong>linux</strong>: Linux.</li>
          * </ul>
          * 
@@ -390,7 +390,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
 
     public static class ListFileProtectEventResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The page number of the current page in a paging query.</p>
+         * <p>The number of the page to return in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -399,7 +399,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The maximum number of entries returned per page in a paging query.</p>
+         * <p>The maximum number of entries returned per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

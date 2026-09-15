@@ -28,7 +28,7 @@ public class GetValidDeductInstancesRequest extends TeaModel {
     public String modules;
 
     /**
-     * <p>The status of the resource plan. The default value is valid. This parameter does not support modification.</p>
+     * <p>The status of the resource plan. Default value: valid. This parameter does not support modification.</p>
      * 
      * <strong>example:</strong>
      * <p>Available</p>

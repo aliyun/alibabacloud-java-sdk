@@ -5,11 +5,17 @@ import com.aliyun.tea.*;
 
 public class DeleteSecurityEventMarkMissListRequest extends TeaModel {
     /**
-     * <p>The IDs of custom defense rule.</p>
+     * <p>The list of alert whitelisting rule IDs.</p>
      */
     @NameInMap("Ids")
     public java.util.List<Long> ids;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
+     * <blockquote>
+     * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 

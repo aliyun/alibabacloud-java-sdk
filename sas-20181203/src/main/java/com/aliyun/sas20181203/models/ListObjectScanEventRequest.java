@@ -4,13 +4,20 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListObjectScanEventRequest extends TeaModel {
+    /**
+     * <p>Specifies whether the alert was detected by AI. Valid values:</p>
+     * <ul>
+     * <li>true: The alert was detected by AI.</li>
+     * <li>false: The alert was not detected by AI.</li>
+     * </ul>
+     */
     @NameInMap("AiDetect")
     public Boolean aiDetect;
 
     /**
      * <p>The batch operation type. Valid values:</p>
      * <ul>
-     * <li><p><strong>sha256</strong>: same file content</p>
+     * <li><p><strong>sha256</strong>: same file content.</p>
      * </li>
      * <li><p><strong>eventName</strong>: same alerting type.</p>
      * </li>
@@ -32,7 +39,7 @@ public class ListObjectScanEventRequest extends TeaModel {
     public String bucketName;
 
     /**
-     * <p>The page number of the current page when you perform a paged query.</p>
+     * <p>The page number of the current page in a paging query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,9 +67,9 @@ public class ListObjectScanEventRequest extends TeaModel {
     public String eventName;
 
     /**
-     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>zh</strong>: Chinese.</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
@@ -91,7 +98,7 @@ public class ListObjectScanEventRequest extends TeaModel {
     public String ossKey;
 
     /**
-     * <p>The maximum number of entries to return on each page when you perform a paged query.</p>
+     * <p>The maximum number of entries to return on each page in a paging query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -117,11 +124,11 @@ public class ListObjectScanEventRequest extends TeaModel {
     /**
      * <p>The risk level. Valid values:</p>
      * <ul>
-     * <li><p><strong>high</strong>: high risk</p>
+     * <li><p><strong>high</strong>: High risk.</p>
      * </li>
-     * <li><p><strong>medium</strong>: medium risk</p>
+     * <li><p><strong>medium</strong>: Medium risk.</p>
      * </li>
-     * <li><p><strong>low</strong>: low risk.</p>
+     * <li><p><strong>low</strong>: Low risk.</p>
      * </li>
      * </ul>
      * 
@@ -134,8 +141,8 @@ public class ListObjectScanEventRequest extends TeaModel {
     /**
      * <p>The data source. Valid values:</p>
      * <ul>
-     * <li><strong>API</strong>: API detection</li>
-     * <li><strong>OSS</strong>: OSS detection.</li>
+     * <li><strong>API</strong>: API-based detection.</li>
+     * <li><strong>OSS</strong>: OSS-based detection.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -147,11 +154,11 @@ public class ListObjectScanEventRequest extends TeaModel {
     /**
      * <p>The event status. Valid values:</p>
      * <ul>
-     * <li>0: unhandled </li>
-     * <li>1: manually handled</li>
-     * <li>2: whitelisted</li>
-     * <li>3: ignored</li>
-     * <li>4: access denied.</li>
+     * <li>0: Unhandled. </li>
+     * <li>1: Manually handled.</li>
+     * <li>2: Whitelisted.</li>
+     * <li>3: Ignored.</li>
+     * <li>4: Access blocked.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -161,7 +168,7 @@ public class ListObjectScanEventRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The end time of the time range during which the exception event occurred.</p>
+     * <p>The end time of the time range during which the anomalous event occurred.</p>
      * 
      * <strong>example:</strong>
      * <p>1683862286000</p>
@@ -170,7 +177,7 @@ public class ListObjectScanEventRequest extends TeaModel {
     public Long timeEnd;
 
     /**
-     * <p>The start time of the time range during which the exception event occurred.</p>
+     * <p>The start time of the time range during which the anomalous event occurred.</p>
      * 
      * <strong>example:</strong>
      * <p>1683603086000</p>

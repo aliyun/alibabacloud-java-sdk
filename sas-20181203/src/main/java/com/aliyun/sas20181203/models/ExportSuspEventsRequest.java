@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class ExportSuspEventsRequest extends TeaModel {
     /**
-     * <p>The types of assets.</p>
+     * <p>The collection of asset types.</p>
      */
     @NameInMap("AssetsTypeList")
     public java.util.List<String> assetsTypeList;
 
     /**
-     * <p>The ID of the cluster that you want to query.</p>
+     * <p>The ID of the cluster to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,20 +23,20 @@ public class ExportSuspEventsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The key of the condition that is used to query alert events on containers. Valid values:</p>
+     * <p>The container search field. Valid values:</p>
      * <ul>
-     * <li><strong>instanceId</strong>: the ID of the asset</li>
-     * <li><strong>appName</strong>: the name of the application</li>
-     * <li><strong>clusterId</strong>: the ID of the cluster</li>
-     * <li><strong>regionId</strong>: the ID of the region</li>
-     * <li><strong>nodeName</strong>: the name of the node</li>
-     * <li><strong>namespace</strong>: the namespace</li>
-     * <li><strong>clusterName</strong>: the name of the cluster</li>
-     * <li><strong>image</strong>: the name of the image</li>
-     * <li><strong>imageRepoName</strong>: the name of the image repository</li>
-     * <li><strong>imageRepoNamespace</strong>: the namespace to which the image repository belongs</li>
-     * <li><strong>imageRepoTag</strong>: the tag that is added to the image</li>
-     * <li><strong>imageDigest</strong>: the digest of the image</li>
+     * <li><strong>instanceId</strong>: instance ID</li>
+     * <li><strong>appName</strong>: application name</li>
+     * <li><strong>clusterId</strong>: cluster ID</li>
+     * <li><strong>regionId</strong>: region</li>
+     * <li><strong>nodeName</strong>: node name</li>
+     * <li><strong>namespace</strong>: namespace</li>
+     * <li><strong>clusterName</strong>: cluster name</li>
+     * <li><strong>image</strong>: image name</li>
+     * <li><strong>imageRepoName</strong>: image repository name</li>
+     * <li><strong>imageRepoNamespace</strong>: image repository namespace</li>
+     * <li><strong>imageRepoTag</strong>: image tag</li>
+     * <li><strong>imageDigest</strong>: image digest</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class ExportSuspEventsRequest extends TeaModel {
     public String containerFieldName;
 
     /**
-     * <p>The value of the condition that is used to query alert events on containers.</p>
+     * <p>The value of the container search field.</p>
      * 
      * <strong>example:</strong>
      * <p>c819391d2d520485fa3e81e2dc2ea****</p>
@@ -55,7 +55,7 @@ public class ExportSuspEventsRequest extends TeaModel {
     public String containerFieldValue;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the current page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -64,10 +64,10 @@ public class ExportSuspEventsRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The status of the alert event. Valid values:</p>
+     * <p>Specifies whether the alert event is handled. Valid values:</p>
      * <ul>
-     * <li><strong>N</strong>: unhandled</li>
-     * <li><strong>Y</strong>: handled</li>
+     * <li><strong>N</strong>: Unhandled.</li>
+     * <li><strong>Y</strong>: Handled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,7 +77,7 @@ public class ExportSuspEventsRequest extends TeaModel {
     public String dealed;
 
     /**
-     * <p>The data source of the exception. Set the value to sas.</p>
+     * <p>The data source identifier of the anomaly event. Set the value to sas.</p>
      * 
      * <strong>example:</strong>
      * <p>sas</p>
@@ -95,7 +95,7 @@ public class ExportSuspEventsRequest extends TeaModel {
     public Long groupId;
 
     /**
-     * <p>The unique ID of the alert event.</p>
+     * <p>The unique ID of the alert event record.</p>
      * 
      * <strong>example:</strong>
      * <p>17821</p>
@@ -104,10 +104,10 @@ public class ExportSuspEventsRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -117,11 +117,11 @@ public class ExportSuspEventsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The severity of the alert event. Separate multiple severities with commas (,). Valid values:</p>
+     * <p>The severity levels of the alert events to query. Separate multiple severity levels with commas (,). The severity levels are listed in descending order. Valid values:</p>
      * <ul>
-     * <li><strong>serious</strong></li>
-     * <li><strong>suspicious</strong></li>
-     * <li><strong>remind</strong></li>
+     * <li><strong>serious</strong>: Urgent.</li>
+     * <li><strong>suspicious</strong>: Suspicious.</li>
+     * <li><strong>remind</strong>: Reminder.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class ExportSuspEventsRequest extends TeaModel {
     public String levels;
 
     /**
-     * <p>The complete name of the exception.</p>
+     * <p>The full name of the anomaly event.</p>
      * 
      * <strong>example:</strong>
      * <p>WEBSHELL</p>
@@ -140,13 +140,13 @@ public class ExportSuspEventsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The status codes of alert events.</p>
+     * <p>The collection of alert event handling result codes.</p>
      */
     @NameInMap("OperateErrorCodeList")
     public java.util.List<String> operateErrorCodeList;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * <p>The maximum number of entries per page in a paged query. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -155,31 +155,31 @@ public class ExportSuspEventsRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The alert type of the alert event. Valid values:</p>
+     * <p>The Alarm Metric of the alerting events to query. Valid values:</p>
      * <ul>
-     * <li><strong>Suspicious process</strong></li>
-     * <li><strong>Webshell</strong></li>
+     * <li><strong>Abnormal process behavior</strong></li>
+     * <li><strong>Web shell</strong></li>
      * <li><strong>Unusual logon</strong></li>
-     * <li><strong>Exception</strong></li>
+     * <li><strong>Anomaly event</strong></li>
      * <li><strong>Sensitive file tampering</strong></li>
-     * <li><strong>Malicious process (cloud threat detection)</strong></li>
+     * <li><strong>Malicious process (cloud scan)</strong></li>
      * <li><strong>Suspicious network connection</strong></li>
-     * <li><strong>Suspicious account</strong></li>
+     * <li><strong>Abnormal account</strong></li>
      * <li><strong>Application intrusion event</strong></li>
-     * <li><strong>Cloud threat detection</strong></li>
+     * <li><strong>Cloud service threat detection</strong></li>
      * <li><strong>Precise defense</strong></li>
      * <li><strong>Application whitelist</strong></li>
-     * <li><strong>Persistent webshell</strong></li>
+     * <li><strong>Persistent backdoor</strong></li>
      * <li><strong>Web application threat detection</strong></li>
      * <li><strong>Malicious script</strong></li>
      * <li><strong>Threat intelligence</strong></li>
-     * <li><strong>Malicious network activity</strong></li>
-     * <li><strong>Cluster exception</strong></li>
-     * <li><strong>Webshell (on-premises threat detection)</strong></li>
-     * <li><strong>Vulnerability exploitation</strong></li>
-     * <li><strong>Malicious process (on-premises threat detection)</strong></li>
+     * <li><strong>Malicious network connectivity behavior</strong></li>
+     * <li><strong>Container cluster exception</strong></li>
+     * <li><strong>Web shell (local scan)</strong></li>
+     * <li><strong>Vulnerability exploits</strong></li>
+     * <li><strong>Malicious process (local scan)</strong></li>
      * <li><strong>Trusted exception</strong></li>
-     * <li><strong>Others</strong></li>
+     * <li><strong>Other</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -197,11 +197,17 @@ public class ExportSuspEventsRequest extends TeaModel {
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account of the member accounts in the resource directory.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>The source IP address of the request. The value of this parameter is specified by the system.</p>
+     * <p>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains this value.</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.XX.XX</p>
@@ -210,17 +216,17 @@ public class ExportSuspEventsRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The handling status of the exception. Valid values:</p>
+     * <p>The handling status of the anomaly event. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: all status</li>
-     * <li><strong>1</strong>: pending handling</li>
-     * <li><strong>2</strong>: ignored</li>
-     * <li><strong>4</strong>: confirmed</li>
-     * <li><strong>8</strong>: marked as false positive</li>
-     * <li><strong>16</strong>: handling</li>
-     * <li><strong>32</strong>: handled</li>
-     * <li><strong>64</strong>: expired</li>
-     * <li><strong>128</strong>: deleted</li>
+     * <li><strong>0</strong>: All.</li>
+     * <li><strong>1</strong>: Unhandled.</li>
+     * <li><strong>2</strong>: Ignored.</li>
+     * <li><strong>4</strong>: Confirmed.</li>
+     * <li><strong>8</strong>: Marked as false positive.</li>
+     * <li><strong>16</strong>: Handling.</li>
+     * <li><strong>32</strong>: Handled.</li>
+     * <li><strong>64</strong>: Expired.</li>
+     * <li><strong>128</strong>: Deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -230,11 +236,11 @@ public class ExportSuspEventsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The dimension from which you want to configure the feature. Valid values:</p>
+     * <p>The dimension of the target switch configuration. Valid values:</p>
      * <ul>
-     * <li><strong>uuid</strong>: the UUID of the asset</li>
-     * <li><strong>image_repo</strong>: the ID of the image repository</li>
-     * <li><strong>Cluster</strong>: the ID of the cluster</li>
+     * <li><strong>uuid</strong>: asset UUID</li>
+     * <li><strong>image_repo</strong>: image repository ID</li>
+     * <li><strong>Cluster</strong>: cluster ID</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -244,7 +250,7 @@ public class ExportSuspEventsRequest extends TeaModel {
     public String targetType;
 
     /**
-     * <p>The end of the time range during which the exception is detected.</p>
+     * <p>The end time of the anomaly event. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-12-05 00:00:00</p>
@@ -253,7 +259,7 @@ public class ExportSuspEventsRequest extends TeaModel {
     public String timeEnd;
 
     /**
-     * <p>The beginning of the time range during which the exception is detected.</p>
+     * <p>The start time of the anomaly event occurrence. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-10-01 00:00:00</p>
@@ -262,7 +268,7 @@ public class ExportSuspEventsRequest extends TeaModel {
     public String timeStart;
 
     /**
-     * <p>The unique key of the alert event.</p>
+     * <p>The unique key of the security alert.</p>
      * 
      * <strong>example:</strong>
      * <p>1fbe8d16727f61d1478a674d6fa0****</p>
@@ -271,7 +277,7 @@ public class ExportSuspEventsRequest extends TeaModel {
     public String uniqueInfo;
 
     /**
-     * <p>The unique ID of the associated instance.</p>
+     * <p>The unique identifier of the associated instance.</p>
      * 
      * <strong>example:</strong>
      * <p>18b7336e-d469-473b-af83-8e5420f9****</p>

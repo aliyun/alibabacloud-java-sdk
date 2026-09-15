@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddContainerDefenseRuleRequest extends TeaModel {
     /**
-     * <p>The description of the rule.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>test-proc-defense</p>
@@ -14,10 +14,12 @@ public class AddContainerDefenseRuleRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The action that is performed when the rule is hit. Valid values:</p>
+     * <p>The action to take when the rule is matched. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: alert</li>
-     * <li><strong>2</strong>: block</li>
+     * <li><p><strong>1</strong>: Alert.</p>
+     * </li>
+     * <li><p><strong>2</strong>: Block.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class AddContainerDefenseRuleRequest extends TeaModel {
     public Integer ruleAction;
 
     /**
-     * <p>The ID of the rule. You do not need to manually specify the ID.</p>
+     * <p>The rule ID. You do not need to specify this parameter when creating a rule.</p>
      * 
      * <strong>example:</strong>
      * <p>500018</p>
@@ -36,7 +38,7 @@ public class AddContainerDefenseRuleRequest extends TeaModel {
     public Long ruleId;
 
     /**
-     * <p>The name of the rule.</p>
+     * <p>The rule name.</p>
      * 
      * <strong>example:</strong>
      * <p>auto-test-rule-lt9umq</p>
@@ -45,10 +47,12 @@ public class AddContainerDefenseRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The switch of the rule. Valid values:</p>
+     * <p>The rule switch. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: off</li>
-     * <li><strong>1</strong>: on</li>
+     * <li><p><strong>0</strong>: Disabled.</p>
+     * </li>
+     * <li><p><strong>1</strong>: Enabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,10 +64,10 @@ public class AddContainerDefenseRuleRequest extends TeaModel {
     /**
      * <p>The rule type. Valid values:</p>
      * <ul>
-     * <li>2: user-defined rules</li>
+     * <li>2: user rule</li>
      * </ul>
      * <blockquote>
-     * <p>Only the value 2 is supported.</p>
+     * <p>Notice: Only the value 2 is supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -73,7 +77,7 @@ public class AddContainerDefenseRuleRequest extends TeaModel {
     public Integer ruleType;
 
     /**
-     * <p>The scope.</p>
+     * <p>The scope. This parameter is required. Specify at least one Scope entry, such as Scope.1.AllNamespace=1, which indicates that the rule applies to all namespaces. If this parameter is not specified, the API returns a 400 error.</p>
      */
     @NameInMap("Scope")
     public java.util.List<AddContainerDefenseRuleRequestScope> scope;
@@ -157,8 +161,10 @@ public class AddContainerDefenseRuleRequest extends TeaModel {
         /**
          * <p>Specifies whether to include all namespaces. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: You can use the Namespaces parameter to specify the namespaces to include.</li>
-         * <li><strong>1</strong>: All namespaces are included.</li>
+         * <li><p><strong>0</strong>: Specifies the namespaces to include by using the Namespaces parameter.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Includes all namespaces.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -168,9 +174,9 @@ public class AddContainerDefenseRuleRequest extends TeaModel {
         public Integer allNamespace;
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -180,7 +186,7 @@ public class AddContainerDefenseRuleRequest extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The namespaces to include.</p>
+         * <p>The list of included namespaces.</p>
          */
         @NameInMap("Namespaces")
         public java.util.List<String> namespaces;
@@ -218,23 +224,20 @@ public class AddContainerDefenseRuleRequest extends TeaModel {
 
     public static class AddContainerDefenseRuleRequestWhitelist extends TeaModel {
         /**
-         * <p>The hash values of the files that need to be added to the whitelist.</p>
-         * <blockquote>
-         * <p>This parameter is not supported.</p>
-         * </blockquote>
+         * <p>The file hash.&gt;Notice: This parameter is not supported.</p>
          */
         @NameInMap("Hash")
         @Deprecated
         public java.util.List<String> hash;
 
         /**
-         * <p>The images that need to be added to the whitelist.</p>
+         * <p>The list of images to whitelist.</p>
          */
         @NameInMap("Image")
         public java.util.List<String> image;
 
         /**
-         * <p>The paths to the files that need to be added to the whitelist.</p>
+         * <p>The list of file paths to whitelist.</p>
          */
         @NameInMap("Path")
         public java.util.List<String> path;

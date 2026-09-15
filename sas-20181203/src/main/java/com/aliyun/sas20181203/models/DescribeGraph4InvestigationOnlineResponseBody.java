@@ -20,7 +20,7 @@ public class DescribeGraph4InvestigationOnlineResponseBody extends TeaModel {
     public DescribeGraph4InvestigationOnlineResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -38,10 +38,10 @@ public class DescribeGraph4InvestigationOnlineResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the API call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The call was successful.</li>
-     * <li><strong>false</strong>: The call failed.</li>
+     * <li><strong>true</strong>: The API call was successful.</li>
+     * <li><strong>false</strong>: The API call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,7 +112,7 @@ public class DescribeGraph4InvestigationOnlineResponseBody extends TeaModel {
          * <li><strong>file</strong>: file</li>
          * <li><strong>alert</strong>: alert</li>
          * <li><strong>ip</strong>: IP address</li>
-         * <li><strong>domain</strong>: domain name.</li>
+         * <li><strong>domain</strong>: domain name</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class DescribeGraph4InvestigationOnlineResponseBody extends TeaModel {
          * <li><strong>file</strong>: file</li>
          * <li><strong>alert</strong>: alert</li>
          * <li><strong>ip</strong>: IP address</li>
-         * <li><strong>domain</strong>: domain name.</li>
+         * <li><strong>domain</strong>: domain name</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -156,7 +156,7 @@ public class DescribeGraph4InvestigationOnlineResponseBody extends TeaModel {
         public String startType;
 
         /**
-         * <p>The time when the edge was created.</p>
+         * <p>The time when the edge was established. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-01 15:25:46</p>
@@ -334,7 +334,7 @@ public class DescribeGraph4InvestigationOnlineResponseBody extends TeaModel {
          * <p>The direction of the edge. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: forward</li>
-         * <li><strong>0</strong>: reverse.</li>
+         * <li><strong>0</strong>: reverse</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -494,7 +494,7 @@ public class DescribeGraph4InvestigationOnlineResponseBody extends TeaModel {
         public String properties;
 
         /**
-         * <p>The time.</p>
+         * <p>The time. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-02 16:14:01</p>

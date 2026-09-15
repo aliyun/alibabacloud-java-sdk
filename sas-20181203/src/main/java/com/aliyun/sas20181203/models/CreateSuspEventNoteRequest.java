@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSuspEventNoteRequest extends TeaModel {
     /**
-     * <p>The ID of the security alert event to which you want to add a note. Call <a href="https://help.aliyun.com/document_detail/251497.html">DescribeSuspEvents</a> to obtain the ID of the alert event.</p>
+     * <p>The ID of the alert event for which you want to add a note. Call <a href="https://help.aliyun.com/document_detail/251497.html">DescribeSuspEvents</a> to obtain the alert event ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +24,12 @@ public class CreateSuspEventNoteRequest extends TeaModel {
     @NameInMap("Note")
     public String note;
 
+    /**
+     * <p>The ID of the member accounts in the resource folder.</p>
+     * <blockquote>
+     * <p>Invoke <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> to obtain this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 

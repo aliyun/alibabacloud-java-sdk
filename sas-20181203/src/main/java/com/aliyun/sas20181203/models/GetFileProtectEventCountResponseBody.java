@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFileProtectEventCountResponseBody extends TeaModel {
     /**
-     * <p>The data returned if the request is successful.</p>
+     * <p>The data returned when the API call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>16</p>
@@ -14,7 +14,7 @@ public class GetFileProtectEventCountResponseBody extends TeaModel {
     public Integer data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>9B28EC81-2FA7-5097-80D9-0DBE1A3DBD59</p>

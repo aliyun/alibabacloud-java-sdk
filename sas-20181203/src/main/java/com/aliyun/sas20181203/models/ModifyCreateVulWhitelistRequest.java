@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyCreateVulWhitelistRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The reason for adding the vulnerability to the whitelist.</p>
+     * <p>The reason for adding the vulnerability whitelist.</p>
      * 
      * <strong>example:</strong>
      * <p>This vulnerability is not harmful</p>
@@ -19,20 +19,26 @@ public class ModifyCreateVulWhitelistRequest extends TeaModel {
     @NameInMap("Reason")
     public String reason;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
+     * <blockquote>
+     * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
      * <p>The scope in which the whitelist takes effect. The value is a JSON string that contains the following fields:</p>
      * <ul>
-     * <li><strong>type</strong>: The scope type. Valid values:<ul>
+     * <li><strong>type</strong>: The type of the scope. Valid values:<ul>
      * <li><strong>GroupId</strong>: server group</li>
      * <li><strong>Uuid</strong>: host asset</li>
      * </ul>
      * </li>
      * <li><strong>uuids</strong>: The collection of host asset UUIDs. The field type is String.</li>
      * <li><strong>groupIds</strong>: The collection of server group IDs. The field type is Long.<blockquote>
-     * <p>If this parameter is left empty, the whitelist takes effect on all hosts. If <strong>type</strong> is set to <strong>GroupId</strong>, <strong>groupIds</strong> cannot be empty. If <strong>type</strong> is set to <strong>Uuid</strong>, <strong>uuids</strong> cannot be empty.</p>
+     * <p>If this value is empty, the whitelist applies to all hosts. If <strong>type</strong> is set to <strong>GroupId</strong>, <strong>groupIds</strong> cannot be empty. If <strong>type</strong> is set to <strong>Uuid</strong>, <strong>uuids</strong> cannot be empty.</p>
      * </blockquote>
      * </li>
      * </ul>

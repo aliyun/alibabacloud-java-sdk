@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeContainerServiceK8sClusterNamespacesRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the cluster. Note: This parameter is required. If this parameter is not specified, the API returns InvalidParam (400).</p>
      * 
      * <strong>example:</strong>
      * <p>cf4435fefd45d4b1b8643f3a0bea3****</p>
@@ -17,7 +17,7 @@ public class DescribeContainerServiceK8sClusterNamespacesRequest extends TeaMode
     public Long resourceOwnerId;
 
     /**
-     * <p>The source IP address.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>140.205.XXX.XXX</p>

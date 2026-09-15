@@ -18,9 +18,9 @@ public class DescribeAccessKeyLeakDetailRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The ID of the member account in the resource directory (Alibaba Cloud account).</p>
+     * <p>The ID of the member accounts in the resource folder (Alibaba Cloud account).</p>
      * <blockquote>
-     * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

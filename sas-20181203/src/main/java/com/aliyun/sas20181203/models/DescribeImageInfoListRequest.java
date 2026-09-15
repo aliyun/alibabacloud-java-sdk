@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageInfoListRequest extends TeaModel {
     /**
-     * <p>The UUID of the server. Separate multiple UUIDs with commas (,).</p>
+     * <p>The UUIDs of the servers. Separate multiple UUIDs with commas (,).</p>
      * <blockquote>
      * <p>Call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
      * </blockquote>

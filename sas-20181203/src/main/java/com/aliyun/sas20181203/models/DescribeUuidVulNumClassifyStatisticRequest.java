@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeUuidVulNumClassifyStatisticRequest extends TeaModel {
     /**
+     * <p>Specifies whether to query image vulnerability statistics. Valid values:</p>
+     * <ul>
+     * <li>true: The Uuids parameter specifies image IDs.</li>
+     * <li>false: The Uuids parameter specifies host UUIDs.</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +19,7 @@ public class DescribeUuidVulNumClassifyStatisticRequest extends TeaModel {
     public Boolean imageVul;
 
     /**
+     * <p>The unique identifier of the asset. If ImageVul is set to false, specify the host UUID. If ImageVul is set to true, specify the image ID. Separate multiple values with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -61,7 +61,7 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     public java.util.List<String> bindAppList;
 
     /**
-     * <p>The Asset Type for the operation. Valid values:</p>
+     * <p>The Asset Type. Valid values:</p>
      * <ul>
      * <li><strong>INSTANCE</strong>: Instance.</li>
      * <li><strong>APP</strong>: Application.</li>
@@ -86,7 +86,7 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The search conditions for assets. This parameter is in JSON format. Pay attention to letter case when you specify this parameter.</p>
+     * <p>The search conditions for assets. This parameter is in JSON format. Pay attention to the letter case when you enter the parameter.</p>
      * <blockquote>
      * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. Call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
      * </blockquote>
@@ -100,8 +100,8 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     /**
      * <p>The logical relationship among multiple search conditions. Valid values:</p>
      * <ul>
-     * <li><strong>OR</strong>: The search conditions are evaluated with a logical OR.</li>
-     * <li><strong>AND</strong>: The search conditions are evaluated with a logical AND.</li>
+     * <li><strong>OR</strong>: Multiple conditions are evaluated using a logical OR.</li>
+     * <li><strong>AND</strong>: Multiple conditions are evaluated using a logical AND.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -120,13 +120,13 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     public String ntmVersion;
 
     /**
-     * <p>Specifies whether to enable pre-binding. Valid values:</p>
+     * <p>Specifies whether to perform a pre-binding operation. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: No.</li>
      * <li><strong>1</strong>: Yes.</li>
      * </ul>
      * <blockquote>
-     * <p>After pre-binding is enabled, the corresponding authorization quota is automatically bound to the specified servers after the purchase is completed.</p>
+     * <p>After pre-binding is enabled, the corresponding number of authorization licenses are automatically bound to the specified servers after the purchase is completed.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

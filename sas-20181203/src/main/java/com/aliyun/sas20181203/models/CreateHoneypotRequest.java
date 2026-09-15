@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateHoneypotRequest extends TeaModel {
     /**
-     * <p>The ID of the honeypot image.</p>
+     * <p>The honeypot image ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~ListAvailableHoneypot~~">ListAvailableHoneypot</a> operation to query the IDs of images from the <strong>HoneypotImageId</strong> response parameter.</p>
+     * <p>You can obtain this value from the <strong>HoneypotImageId</strong> field returned by the <a href="~~ListAvailableHoneypot~~">ListAvailableHoneypot</a> operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class CreateHoneypotRequest extends TeaModel {
     public String honeypotImageId;
 
     /**
-     * <p>The name of the honeypot image.</p>
+     * <p>The honeypot image name.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~ListAvailableHoneypot~~">ListAvailableHoneypot</a> operation to query the names of images from the <strong>HoneypotImageName</strong> response parameter.</p>
+     * <p>You can obtain this value from the <strong>HoneypotImageName</strong> field returned by the <a href="~~ListAvailableHoneypot~~">ListAvailableHoneypot</a> operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -41,29 +41,24 @@ public class CreateHoneypotRequest extends TeaModel {
     public String honeypotName;
 
     /**
-     * <p>The custom configuration of the honeypot in the JSON format. The value contains the following fields:</p>
+     * <p>The custom configuration of the honeypot in JSON format. The following fields are included:</p>
      * <ul>
-     * <li><p><strong>trojan_git</strong>: Git-specific Defense. Valid values:</p>
-     * <ul>
-     * <li><strong>zip</strong>: Git Source Code Package</li>
-     * <li><strong>web</strong>: Git Directory Leak</li>
-     * <li><strong>close</strong>: Disabled</li>
+     * <li><strong>trojan_git</strong>: The Git counter-intelligence method. Valid values:<ul>
+     * <li><strong>zip</strong>: Git source code package.</li>
+     * <li><strong>web</strong>: .git folder leak.</li>
+     * <li><strong>close</strong>: Shutdown.</li>
      * </ul>
      * </li>
-     * <li><p><strong>trojan_git_addr</strong>: Git Trojan Address.</p>
-     * </li>
-     * <li><p><strong>trojan_git.zip</strong>: Git Trojan.</p>
-     * </li>
-     * <li><p><strong>burp</strong>: Burp-specific Defense. Valid values:</p>
-     * <ul>
-     * <li><strong>open</strong>: Enable</li>
-     * <li><strong>close</strong>: Disable</li>
+     * <li><strong>trojan_git_addr</strong>: The Git counter-intelligence endpoint.</li>
+     * <li><strong>trojan_git.zip</strong>: The Git counter-intelligence trojan package.</li>
+     * <li><strong>burp</strong>: The Burp counter-intelligence method. Valid values:<ul>
+     * <li><strong>open</strong>: Enabled.</li>
+     * <li><strong>close</strong>: Shutdown.</li>
      * </ul>
      * </li>
-     * <li><p><strong>portrait_option</strong>: Source Tracing Configuration. Valid values:</p>
-     * <ul>
-     * <li><strong>false</strong>: Disable</li>
-     * <li><strong>true</strong>: Enable</li>
+     * <li><strong>portrait_option</strong>: The tracing configuration. Valid values:<ul>
+     * <li><strong>false</strong>: Shutdown.</li>
+     * <li><strong>true</strong>: Enabled.</li>
      * </ul>
      * </li>
      * </ul>
@@ -75,9 +70,9 @@ public class CreateHoneypotRequest extends TeaModel {
     public String meta;
 
     /**
-     * <p>The ID of the management node.</p>
+     * <p>The ID of the honeypot management node.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to query the IDs of management nodes.</p>
+     * <p>Call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain this value.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

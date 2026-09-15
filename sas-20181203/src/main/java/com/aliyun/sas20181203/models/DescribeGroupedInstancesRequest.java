@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupedInstancesRequest extends TeaModel {
     /**
-     * <p>The page number from which query results start to be displayed. Default value: <strong>1</strong>, indicating that query results are displayed starting from page 1.</p>
+     * <p>The page number of the first page to return. Default value: <strong>1</strong>, which indicates that the query results are returned starting from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The name of the asset group to query. Fuzzy search is supported.</p>
+     * <p>The name of the asset group to query. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test-01</p>
@@ -25,9 +25,9 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     /**
      * <p>The filter condition for querying assets. Valid values:</p>
      * <ul>
-     * <li><strong>groupId</strong>: queries assets by group.</li>
+     * <li><strong>groupId</strong>: queries assets by asset group.</li>
      * <li><strong>regionId</strong>: queries assets by region.</li>
-     * <li><strong>vpcInstanceId</strong>: queries assets by Virtual Private Cloud (VPC).</li>
+     * <li><strong>vpcInstanceId</strong>: queries assets by virtual private cloud (VPC).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -38,7 +38,7 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     public String groupField;
 
     /**
-     * <p>The language type for requests and responses. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -51,7 +51,7 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The type of assets to query. Fixed value: <strong>ecs</strong>, indicating Elastic Compute Service (ECS) instances.</p>
+     * <p>The type of assets to query. Set the value to <strong>ecs</strong>, which indicates Elastic Compute Service (ECS) instances.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs</p>
@@ -60,10 +60,10 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     public String machineTypes;
 
     /**
-     * <p>Specifies whether to enable paginated queries. Default value: <strong>true</strong>. Valid values:</p>
+     * <p>Settings for whether to enable paged query. Default value: <strong>true</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables paginated queries.</li>
-     * <li><strong>false</strong>: disables paginated queries.</li>
+     * <li><strong>true</strong>: Paged query is enabled.</li>
+     * <li><strong>false</strong>: Paged query is disabled. Paging is not performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     public Boolean noPage;
 
     /**
-     * <p>The number of entries per page in a paginated query. Default value: <strong>20</strong>, indicating that 20 entries of asset information are displayed per page.</p>
+     * <p>The number of entries per page in a paged query. Default value: <strong>20</strong>, which indicates that 20 entries of asset information are displayed per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -81,17 +81,23 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account that is added as a member of a resource folder for member accounts.</p>
+     * <blockquote>
+     * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>The edition filter for querying assets. Valid values:</p>
+     * <p>The edition-based filter condition for querying assets. Valid values:</p>
      * <ul>
-     * <li><strong>sas_gte_advanced</strong>: Advanced edition or higher</li>
-     * <li><strong>sas_gte_enterprise</strong>: Enterprise edition or higher</li>
-     * <li><strong>sas_gt_basic</strong>: paid editions</li>
-     * <li><strong>sas_eq_advanced</strong>: Advanced edition only</li>
-     * <li><strong>sas_gt_anti_virus</strong>: editions higher than Anti-virus edition</li>
+     * <li><strong>sas_gte_advanced</strong>: Advanced Edition or higher</li>
+     * <li><strong>sas_gte_enterprise</strong>: Enterprise Edition or higher</li>
+     * <li><strong>sas_gt_basic</strong>: paid edition</li>
+     * <li><strong>sas_eq_advanced</strong>: Advanced Edition</li>
+     * <li><strong>sas_gt_anti_virus</strong>: higher than Anti-virus Edition</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -103,11 +109,11 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     /**
      * <p>The server vendor. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Alibaba Cloud assets</li>
-     * <li><strong>1</strong>: non-cloud assets</li>
-     * <li><strong>2</strong>: IDC assets</li>
-     * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>: assets from other cloud providers</li>
-     * <li><strong>8</strong>: lightweight assets</li>
+     * <li><strong>0</strong>: Alibaba Cloud asset</li>
+     * <li><strong>1</strong>: non-cloud asset</li>
+     * <li><strong>2</strong>: IDC asset</li>
+     * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>: third-party cloud asset</li>
+     * <li><strong>8</strong>: lightweight asset</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -119,11 +125,11 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     /**
      * <p>The server vendors. Separate multiple vendors with commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Alibaba Cloud assets</li>
-     * <li><strong>1</strong>: non-cloud assets</li>
-     * <li><strong>2</strong>: IDC assets</li>
-     * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>: assets from other cloud providers</li>
-     * <li><strong>8</strong>: lightweight assets</li>
+     * <li><strong>0</strong>: Alibaba Cloud asset</li>
+     * <li><strong>1</strong>: non-cloud asset</li>
+     * <li><strong>2</strong>: IDC asset</li>
+     * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>: third-party cloud asset</li>
+     * <li><strong>8</strong>: lightweight asset</li>
      * </ul>
      * 
      * <strong>example:</strong>

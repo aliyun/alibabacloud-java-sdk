@@ -22,8 +22,8 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
     /**
      * <p>The service binding type. Valid values:</p>
      * <ul>
-     * <li><strong>forward_honey</strong>: forward to honeypot</li>
-     * <li><strong>scan_port</strong>: listen for scans.</li>
+     * <li><strong>forward_honey</strong>: forwards traffic to the honeypot.</li>
+     * <li><strong>scan_port</strong>: listens for scans.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
     public String bindType;
 
     /**
-     * <p>The page number of the page to return. Minimum value: <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the page to return. The value starts from <strong>1</strong>. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -65,7 +65,7 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
     /**
      * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>zh</strong>: Chinese.</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
@@ -76,7 +76,7 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries to return on each page when using paged query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page by paging.</p>
+     * <p>The maximum number of entries to return on each page in a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page by default.</p>
      * <blockquote>
      * <p>Do not leave PageSize empty.</p>
      * </blockquote>
@@ -255,7 +255,7 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>false</p>
          */
         @NameInMap("Fixed")
         public Boolean fixed;
@@ -273,7 +273,7 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
          * <p>The protocol type. Valid values:</p>
          * <ul>
          * <li><strong>tcp</strong></li>
-         * <li><strong>udp</strong>.</li>
+         * <li><strong>udp</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>

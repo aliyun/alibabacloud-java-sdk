@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAssetInfoPublishResponseBody extends TeaModel {
     /**
-     * <p>The servers.</p>
+     * <p>The server list information.</p>
      */
     @NameInMap("AssetList")
     public java.util.List<ListAssetInfoPublishResponseBodyAssetList> assetList;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>3956048F-9D73-5EDB-834B-4827BB483977</p>
@@ -42,7 +42,7 @@ public class ListAssetInfoPublishResponseBody extends TeaModel {
 
     public static class ListAssetInfoPublishResponseBodyAssetList extends TeaModel {
         /**
-         * <p>The version of the Security Center agent.</p>
+         * <p>The current client version.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.8</p>
@@ -51,7 +51,7 @@ public class ListAssetInfoPublishResponseBody extends TeaModel {
         public String curVersion;
 
         /**
-         * <p>The time when the Security Center agent was last upgraded.</p>
+         * <p>The time of the last upgrade. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1724522400000</p>
@@ -60,13 +60,13 @@ public class ListAssetInfoPublishResponseBody extends TeaModel {
         public Long lastUpgradeTime;
 
         /**
-         * <p>The publish status of the Security Center agent. Valid values:</p>
+         * <p>The client release status. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: not started.</li>
-         * <li><strong>1</strong>: publishing.</li>
-         * <li><strong>2</strong>: published.</li>
-         * <li><strong>3</strong>: publish suspended.</li>
-         * <li><strong>4</strong>: forcibly upgrading.</li>
+         * <li><strong>0</strong>: Not started.</li>
+         * <li><strong>1</strong>: Publishing.</li>
+         * <li><strong>2</strong>: Publishing completed.</li>
+         * <li><strong>3</strong>: Publishing paused.</li>
+         * <li><strong>4</strong>: Force upgrading.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -76,10 +76,10 @@ public class ListAssetInfoPublishResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>Indicates whether automatic upgrade is enabled. Valid values:</p>
+         * <p>Indicates whether the upgrade is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class ListAssetInfoPublishResponseBody extends TeaModel {
         public Boolean upgradeEnable;
 
         /**
-         * <p>The UUID of the asset.</p>
+         * <p>The UUID of the Security Center asset.</p>
          * 
          * <strong>example:</strong>
          * <p>2a98f149-0256-414c-a29a-a69f8a75****</p>

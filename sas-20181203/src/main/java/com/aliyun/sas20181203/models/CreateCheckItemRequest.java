@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateCheckItemRequest extends TeaModel {
     /**
-     * <p>Help information for the check item.</p>
+     * <p>The help information of the check item.</p>
      */
     @NameInMap("AssistInfo")
     public CreateCheckItemRequestAssistInfo assistInfo;
 
     /**
-     * <p>Definition rule for the custom check item.</p>
+     * <p>The rule definition of the custom check item.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class CreateCheckItemRequest extends TeaModel {
     public String checkRule;
 
     /**
-     * <p>Name of the custom check item.</p>
+     * <p>The name of the custom check item.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,15 +31,15 @@ public class CreateCheckItemRequest extends TeaModel {
     public String checkShowName;
 
     /**
-     * <p>Description information of the check item.</p>
+     * <p>The description of the check item.</p>
      */
     @NameInMap("Description")
     public CreateCheckItemRequestDescription description;
 
     /**
-     * <p>Sub-asset type of the cloud product.</p>
+     * <p>The asset subtype of the cloud service.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~ListCloudAssetSchemas~~">ListCloudAssetSchemas</a> API to get this parameter.</p>
+     * <p>You can call the <a href="~~ListCloudAssetSchemas~~">ListCloudAssetSchemas</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -50,9 +50,9 @@ public class CreateCheckItemRequest extends TeaModel {
     public String instanceSubType;
 
     /**
-     * <p>Asset type of the cloud product.</p>
+     * <p>The asset type of the cloud service.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~ListCloudAssetSchemas~~">ListCloudAssetSchemas</a> API to get this parameter.</p>
+     * <p>You can call the <a href="~~ListCloudAssetSchemas~~">ListCloudAssetSchemas</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -63,7 +63,7 @@ public class CreateCheckItemRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>Remark information.</p>
+     * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
      * <p>remark</p>
@@ -72,11 +72,11 @@ public class CreateCheckItemRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>Risk level of the check item. Values:</p>
+     * <p>The risk level of the check item. Valid values:</p>
      * <ul>
-     * <li><strong>HIGH</strong>: High risk</li>
-     * <li><strong>MEDIUM</strong>: Medium risk</li>
-     * <li><strong>LOW</strong>: Low risk</li>
+     * <li><strong>HIGH</strong>: High risk.</li>
+     * <li><strong>MEDIUM</strong>: Medium risk.</li>
+     * <li><strong>LOW</strong>: Low risk.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -87,28 +87,28 @@ public class CreateCheckItemRequest extends TeaModel {
     public String riskLevel;
 
     /**
-     * <p>Array of section IDs associated with the check item.</p>
+     * <p>The IDs of the sections associated with the check item.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SectionIds")
     public java.util.List<Long> sectionIds;
 
     /**
-     * <p>Solution information for the check item.</p>
+     * <p>The solution information of the check item.</p>
      */
     @NameInMap("Solution")
     public CreateCheckItemRequestSolution solution;
 
     /**
-     * <p>Status of the check item. Values:</p>
+     * <p>The status of the check item. Valid values:</p>
      * <ul>
-     * <li><strong>EDIT</strong>: In editing</li>
-     * <li><strong>RELEASE</strong>: Released</li>
+     * <li><strong>EDIT</strong>: Being edited.</li>
+     * <li><strong>RELEASE</strong>: Published.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>Changing from <strong>Released</strong> to <strong>In editing</strong> will clear all historical records</li>
-     * <li>Only the <strong>Released</strong> status allows the use of the check item for inspection.</li>
+     * <li>Changing the status from <strong>Published</strong> to <strong>Being edited</strong> will purge all historical records.</li>
+     * <li>Only check items in the <strong>Published</strong> status can be used for checks.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
@@ -120,9 +120,9 @@ public class CreateCheckItemRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>Cloud asset vendor.</p>
+     * <p>The cloud asset vendor.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~ListCloudAssetSchemas~~">ListCloudAssetSchemas</a> API to get the available vendors.</p>
+     * <p>You can call the <a href="~~ListCloudAssetSchemas~~">ListCloudAssetSchemas</a> operation to obtain the available vendors.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -235,9 +235,9 @@ public class CreateCheckItemRequest extends TeaModel {
 
     public static class CreateCheckItemRequestAssistInfo extends TeaModel {
         /**
-         * <p>Type of the help information for the check item risk. Values:</p>
+         * <p>The type of the help information for the check item risk. Valid values:</p>
          * <ul>
-         * <li><strong>text</strong>: Text</li>
+         * <li><strong>text</strong>: text</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,7 +247,7 @@ public class CreateCheckItemRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>Content of the help information for the check item risk.</p>
+         * <p>The content of the help information for the check item risk.</p>
          * 
          * <strong>example:</strong>
          * <p>custom assistInfo.</p>
@@ -280,9 +280,9 @@ public class CreateCheckItemRequest extends TeaModel {
 
     public static class CreateCheckItemRequestDescription extends TeaModel {
         /**
-         * <p>Type of the check item description information. Values:</p>
+         * <p>The type of the check item description. Valid values:</p>
          * <ul>
-         * <li><strong>text</strong>: Text</li>
+         * <li><strong>text</strong>: text</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -292,7 +292,7 @@ public class CreateCheckItemRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>Specific content of the description.</p>
+         * <p>The content of the description.</p>
          * 
          * <strong>example:</strong>
          * <p>custom description.</p>
@@ -325,9 +325,9 @@ public class CreateCheckItemRequest extends TeaModel {
 
     public static class CreateCheckItemRequestSolution extends TeaModel {
         /**
-         * <p>Type of the solution information for the check item. Values:</p>
+         * <p>The type of the check item solution information. Valid values:</p>
          * <ul>
-         * <li><strong>text</strong>: Text</li>
+         * <li><strong>text</strong>: text</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -337,7 +337,7 @@ public class CreateCheckItemRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>Content of the solution for the check item risk.</p>
+         * <p>The content of the solution for the check item risk.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>

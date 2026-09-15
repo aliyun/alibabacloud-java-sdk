@@ -60,7 +60,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         public Integer finish;
 
         /**
-         * <p>The time when the task ended. This parameter is returned only when the task status is Finished. Otherwise, an empty value is returned.</p>
+         * <p>The time when the task ended. This parameter is returned only when the task status is Finished. Otherwise, an empty value is returned. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1669693430977</p>
@@ -96,10 +96,10 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The creation method. Valid values:</p>
+         * <p>The creation method. The task can be created from the console or by calling an API operation. Valid values:</p>
          * <ul>
          * <li><strong>console_batch</strong>: console</li>
-         * <li><strong>openapi</strong>: API.</li>
+         * <li><strong>openapi</strong>: API</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,7 +109,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The time when the task started.</p>
+         * <p>The time when the task started. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1668614400000</p>
@@ -147,7 +147,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         /**
          * <p>The scan target type. Valid values:</p>
          * <ul>
-         * <li><strong>IMAGE</strong>: image.</li>
+         * <li><strong>IMAGE</strong>: image</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         /**
          * <p>The task type. Valid values:</p>
          * <ul>
-         * <li><strong>IMAGE_SCAN</strong>: image scan.</li>
+         * <li><strong>IMAGE_SCAN</strong>: image scan</li>
          * </ul>
          * 
          * <strong>example:</strong>

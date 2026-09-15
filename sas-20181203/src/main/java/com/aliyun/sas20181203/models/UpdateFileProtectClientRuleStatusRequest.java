@@ -7,13 +7,13 @@ public class UpdateFileProtectClientRuleStatusRequest extends TeaModel {
     /**
      * <p>The alert notification level. Valid values:</p>
      * <ul>
-     * <li><p>0: no alert</p>
+     * <li><p>0: No alert.</p>
      * </li>
-     * <li><p>1: reminder</p>
+     * <li><p>1: Reminder.</p>
      * </li>
-     * <li><p>2: suspicious</p>
+     * <li><p>2: Suspicious.</p>
      * </li>
-     * <li><p>3: high-risk.</p>
+     * <li><p>3: High-risk.</p>
      * </li>
      * </ul>
      * 
@@ -38,7 +38,7 @@ public class UpdateFileProtectClientRuleStatusRequest extends TeaModel {
     /**
      * <p>The operating system type. Valid values:</p>
      * <ul>
-     * <li><strong>windows</strong>: Windows</li>
+     * <li><strong>windows</strong>: Windows.</li>
      * <li><strong>linux</strong>: Linux.</li>
      * </ul>
      * 
@@ -87,8 +87,8 @@ public class UpdateFileProtectClientRuleStatusRequest extends TeaModel {
     /**
      * <p>The policy status. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: disabled.</li>
-     * <li><strong>1</strong>: enabled.</li>
+     * <li><strong>0</strong>: Disabled.</li>
+     * <li><strong>1</strong>: Enabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

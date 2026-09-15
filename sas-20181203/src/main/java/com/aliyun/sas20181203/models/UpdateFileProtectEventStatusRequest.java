@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateFileProtectEventStatusRequest extends TeaModel {
     /**
-     * <p>The severities of alerts.</p>
+     * <p>The list of alert notification levels.</p>
      */
     @NameInMap("AlertLevels")
     public java.util.List<Integer> alertLevels;
 
     /**
-     * <p>The end of the time range to query. Unit: milliseconds.</p>
+     * <p>The end timestamp of the query.</p>
      * 
      * <strong>example:</strong>
      * <p>1649040221</p>
@@ -20,13 +20,13 @@ public class UpdateFileProtectEventStatusRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The IDs of the events.</p>
+     * <p>The list of event IDs.</p>
      */
     @NameInMap("Id")
     public java.util.List<Long> id;
 
     /**
-     * <p>The instance ID of the asset.</p>
+     * <p>The ID of the asset instance.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp1g6wxdwps7s9dz****</p>
@@ -35,7 +35,7 @@ public class UpdateFileProtectEventStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the server.</p>
+     * <p>The name of the asset instance.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -44,7 +44,7 @@ public class UpdateFileProtectEventStatusRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The public IP address of the server.</p>
+     * <p>The public IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>120.27.XX.XX</p>
@@ -53,7 +53,7 @@ public class UpdateFileProtectEventStatusRequest extends TeaModel {
     public String internetIp;
 
     /**
-     * <p>The private IP address of the server.</p>
+     * <p>The internal IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>172.26.XX.XX</p>
@@ -62,13 +62,13 @@ public class UpdateFileProtectEventStatusRequest extends TeaModel {
     public String intranetIp;
 
     /**
-     * <p>Type of operation on a file. eg:</p>
+     * <p>The type of operation performed on the file. Valid values:</p>
      * <ul>
-     * <li><strong>DELETE</strong>: delete the file.</li>
-     * <li><strong>WRITE</strong>: write the file.</li>
-     * <li><strong>READ</strong>: read the file.</li>
-     * <li><strong>RENAME</strong>: rename the file.</li>
-     * <li><strong>CHOWN</strong>: set the file owner and file association group operations.</li>
+     * <li><strong>DELETE</strong>: Deletes a file.</li>
+     * <li><strong>WRITE</strong>: Writes to a file.</li>
+     * <li><strong>READ</strong>: Reads a file.</li>
+     * <li><strong>RENAME</strong>: Renames a file.</li>
+     * <li><strong>CHOWN</strong>: Changes the file owner and associated file group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class UpdateFileProtectEventStatusRequest extends TeaModel {
     public String operation;
 
     /**
-     * <p>The name of the defense rule.</p>
+     * <p>The rule name.</p>
      * 
      * <strong>example:</strong>
      * <p>tetsRule</p>
@@ -87,20 +87,17 @@ public class UpdateFileProtectEventStatusRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>Whether to choose all fields across industries.</p>
+     * <p>Specifies whether to select all items across pages. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><strong>true</strong>: Selected.</li>
+     * <li><strong>false</strong>: Not selected.</li>
      * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
      */
     @NameInMap("SelectAllAcrossPages")
     public Boolean selectAllAcrossPages;
 
     /**
-     * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     * <p>The start timestamp of the query.</p>
      * 
      * <strong>example:</strong>
      * <p>1680919232000</p>
@@ -109,11 +106,12 @@ public class UpdateFileProtectEventStatusRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The handling status of the event. Valid values:</p>
+     * <p>The event handling status.</p>
      * <ul>
-     * <li><strong>0</strong>: unhandled</li>
-     * <li><strong>1</strong>: handled</li>
-     * <li><strong>2</strong>: added to the whitelist</li>
+     * <li><strong>0</strong>: Unhandled</li>
+     * <li><strong>1</strong>: Manually handled</li>
+     * <li><strong>2</strong>: Added to whitelist</li>
+     * <li><strong>3</strong>: Ignored</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -124,9 +122,6 @@ public class UpdateFileProtectEventStatusRequest extends TeaModel {
 
     /**
      * <p>The UUID of the server.</p>
-     * <blockquote>
-     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>eb2c782e-64f2-4590-a86c-d90164df****</p>

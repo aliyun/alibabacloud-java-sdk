@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOperationProcessDetailRequest extends TeaModel {
     /**
-     * <p>The page number in a paged query. Default value: 1.</p>
+     * <p>The page number of the current page in a paged query. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListOperationProcessDetailRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The query end time based on the task completion time, in milliseconds.</p>
+     * <p>The end time of the query based on the task completion time. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1731555850000</p>
@@ -23,10 +23,10 @@ public class ListOperationProcessDetailRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ListOperationProcessDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The query start time based on the task creation time, in milliseconds.</p>
+     * <p>The start time of the query based on the task creation time. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1731469330000</p>
@@ -60,7 +60,7 @@ public class ListOperationProcessDetailRequest extends TeaModel {
     public java.util.List<Integer> statusCodes;
 
     /**
-     * <p>The list of operation task IDs.</p>
+     * <p>The list of operation task IDs. You can call the ListOperationProcess operation to obtain valid values. This parameter is required. If this parameter is not specified, the API returns 400 CspmParamIllegal.</p>
      */
     @NameInMap("TaskIds")
     public java.util.List<String> taskIds;

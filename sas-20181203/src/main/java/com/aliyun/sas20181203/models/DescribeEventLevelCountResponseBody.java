@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventLevelCountResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The response code. The value <strong>200</strong> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The statistics of alerts by risk level.</p>
+     * <p>The statistics of security alerts by severity level.</p>
      */
     @NameInMap("EventLevels")
     public DescribeEventLevelCountResponseBodyEventLevels eventLevels;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -29,7 +29,7 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CE8CA5EA-24EF-5D41-B735-53ACE7XXXXX</p>
@@ -97,7 +97,7 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
 
     public static class DescribeEventLevelCountResponseBodyEventLevels extends TeaModel {
         /**
-         * <p>The number of alerts whose Emergency level is Reminder.</p>
+         * <p>The number of security alerts with the Reminder severity level.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -106,7 +106,7 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
         public Integer remind;
 
         /**
-         * <p>The number of alerts whose Emergency level is Urgent.</p>
+         * <p>The number of security alerts with the Urgent severity level.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -115,7 +115,7 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
         public Integer serious;
 
         /**
-         * <p>The number of alerts whose Emergency level is Suspicious.</p>
+         * <p>The number of security alerts with the Suspicious severity level.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

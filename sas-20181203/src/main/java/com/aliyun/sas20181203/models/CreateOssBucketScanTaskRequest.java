@@ -14,14 +14,14 @@ public class CreateOssBucketScanTaskRequest extends TeaModel {
     public Boolean allKeyPrefix;
 
     /**
-     * <p>The list of bucket names.</p>
+     * <p>The list of bucket names. The specified buckets must already exist in OSS and must have been synchronized to Security Center by calling the RefreshOssBucketScanInfo operation. You can call the ListOssBucket operation to obtain the list of managed buckets.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BucketNameList")
     public java.util.List<String> bucketNameList;
 
     /**
-     * <p>The maximum number of files to decompress. The minimum value is 1 and the maximum value is 1000. When the maximum number of decompressed files is exceeded, the decompression operation ends immediately. The detection of files that have already been decompressed is not affected.</p>
+     * <p>The maximum number of files to decompress. The minimum value is 1 and the maximum value is 1000. When the maximum number of decompressed files is exceeded, the decompression operation stops immediately. The scanning of files that have already been decompressed is not affected.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -30,7 +30,7 @@ public class CreateOssBucketScanTaskRequest extends TeaModel {
     public Integer decompressMaxFileCount;
 
     /**
-     * <p>The maximum number of decompression layers when multiple levels of compressed packages are nested. The minimum value is 1 and the maximum value is 5. When the maximum number of decompression layers is exceeded, the decompression operation ends immediately. The detection of files that have already been decompressed is not affected.</p>
+     * <p>The maximum number of decompression layers when multiple levels of nested compressed files exist. The minimum value is 1 and the maximum value is 5. When the maximum number of decompression layers is exceeded, the decompression operation stops immediately. The scanning of files that have already been decompressed is not affected.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,7 +45,7 @@ public class CreateOssBucketScanTaskRequest extends TeaModel {
     public java.util.List<String> decryptionList;
 
     /**
-     * <p>The list of file suffixes to exclude from detection.</p>
+     * <p>The list of file suffixes to exclude from scanning.</p>
      */
     @NameInMap("ExcludeKeySuffixList")
     public java.util.List<String> excludeKeySuffixList;
@@ -63,7 +63,7 @@ public class CreateOssBucketScanTaskRequest extends TeaModel {
     public java.util.List<String> keySuffixList;
 
     /**
-     * <p>Specifies that only files whose last modification time is after the specified timestamp are detected. Unit: milliseconds.</p>
+     * <p>Specifies that only files whose last modification time is after the specified timestamp are scanned. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1724301769834</p>
@@ -72,11 +72,11 @@ public class CreateOssBucketScanTaskRequest extends TeaModel {
     public Long lastModifiedStartTime;
 
     /**
-     * <p>The detection mode. Valid values:</p>
+     * <p>The scan mode. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: Full file detection.</p>
+     * <li><p><strong>1</strong>: Full file scan.</p>
      * </li>
-     * <li><p><strong>2</strong>: Incremental file detection.</p>
+     * <li><p><strong>2</strong>: Incremental file scan.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -90,8 +90,8 @@ public class CreateOssBucketScanTaskRequest extends TeaModel {
     /**
      * <p>The business source. Valid values:</p>
      * <ul>
-     * <li><strong>OSS</strong>: OSS</li>
-     * <li><strong>NAS</strong>: NAS</li>
+     * <li><strong>OSS</strong>: OSS.</li>
+     * <li><strong>NAS</strong>: NAS.</li>
      * </ul>
      * 
      * <strong>example:</strong>

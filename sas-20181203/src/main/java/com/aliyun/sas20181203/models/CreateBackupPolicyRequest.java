@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBackupPolicyRequest extends TeaModel {
     /**
-     * <p>The name of the anti-ransomware policy.</p>
+     * <p>The name of the protection policy to create. Set this parameter to the desired policy name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,39 +16,30 @@ public class CreateBackupPolicyRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li><p><strong>IsDefault</strong>: the type of the anti-ransomware policy. Valid values:</p>
-     * <ul>
-     * <li><strong>1</strong>: recommended policy</li>
-     * <li><strong>0</strong>: custom policy</li>
+     * <li><strong>IsDefault</strong>: The type of the protection policy to create. Valid values:<ul>
+     * <li><strong>1</strong>: Recommended policy.</li>
+     * <li><strong>0</strong>: Custom policy.</li>
      * </ul>
      * </li>
-     * <li><p><strong>Include</strong>: the format of the files that you want to protect. If you want to protect the files in all formats, set this field to [].</p>
-     * </li>
-     * <li><p><strong>Source</strong>: the directory that you want to protect. If you want to protect all directories, set this field to [].</p>
-     * </li>
-     * <li><p><strong>ExcludeSystemPath</strong>: specifies whether to exclude a specific directory from the anti-ransomware policy. If you want to exclude a directory, set this field to <strong>true</strong>. If you do not want to exclude a directory, leave this field empty.</p>
-     * </li>
-     * <li><p><strong>Exclude</strong>: the directory that you want to exclude from the anti-ransomware policy. If you do not want to exclude a directory, set this field to [].</p>
-     * </li>
-     * <li><p><strong>Schedule</strong>: the start time and interval of a data backup task. We recommend that you specify a start time that begins during off-peak hours but does not start on the hour. Examples:</p>
-     * <ul>
-     * <li>If you set this field to I|1583216092|P21D, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of three weeks.</li>
-     * <li>If you set this field to I|1583216092|PT24H, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of 24 hours.</li>
+     * <li><strong>Include</strong>: The file types to protect. To protect all file types, set this parameter to [].</li>
+     * <li><strong>Source</strong>: The server folders to protect. To protect all folders, set this parameter to [].</li>
+     * <li><strong>ExcludeSystemPath</strong>: Specifies whether to exclude specified folders. Set this parameter to <strong>true</strong> to exclude folders. If you do not want to exclude folders, you do not need to set this parameter.</li>
+     * <li><strong>Exclude</strong>: The specified protection folder addresses. If you do not want to specify protection folder addresses, set this parameter to [].</li>
+     * <li><strong>Schedule</strong>: The time and interval at which the data backup task is scheduled to run. Specify a non-peak hour that is not on the hour. Examples:<ul>
+     * <li>Example 1: I|1583216092|P21D indicates that the data backup starts at 2020-03-03 14:14:52 and the backup policy runs at an interval of 3 weeks.</li>
+     * <li>Example 2: I|1583216092|PT24H indicates that the data backup starts at 2020-03-03 14:14:52 and the backup policy runs at an interval of 24 hours.</li>
      * </ul>
      * </li>
-     * <li><p><strong>Retention</strong>: the period during which backup data is retained. Unit: days. If you set this field to 7, backup data is retained for a week. If you set this field to 365, backup data is retained for a year. If you set this field to -1, backup data is permanently retained.</p>
-     * </li>
-     * <li><p><strong>SpeedLimiter</strong>: the limit on the network bandwidth for data backup tasks. If you set this field to 0:24:30720, the maximum bandwidth for a data backup task is 30 MB/s from 00:00 to 24:00.</p>
-     * </li>
-     * <li><p><strong>UseVss</strong>: specifies whether to enable the VSS feature. The feature is available only for Windows servers. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><strong>Retention</strong>: The retention period of backup data, in days. The value 7 indicates 1 week, 365 indicates 1 year, and -1 indicates permanent retention.</li>
+     * <li><strong>SpeedLimiter</strong>: The network bandwidth throttling for backup. For example, 0:24:30720 indicates that the network bandwidth throttling for backup is 30 MB/s from 00:00 to 24:00.</li>
+     * <li><strong>UseVss</strong>: Specifies whether to enable the Volume Shadow Copy Service (VSS) feature for Windows. Valid values:<ul>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Not enabled.</li>
      * </ul>
      * </li>
      * </ul>
      * <blockquote>
-     * <p> The VSS feature is available only if you create the anti-ransomware policy for Windows servers. After you enable the feature, the number of backup failures due to running processes is significantly reduced. We recommend that you enable the VSS feature. After you enable the feature, the data of disks that are in the exFAT and FAT32 formats cannot be backed up.</p>
+     * <p>The VSS (Windows) feature applies only to Windows systems. After this feature is enabled, the issue of individual file backup failures due to process occupation is effectively reduced. We recommend that you enable this feature. After this feature is enabled, file backup for exFAT and FAT32 disk formats is not supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -59,9 +50,9 @@ public class CreateBackupPolicyRequest extends TeaModel {
     public java.util.Map<String, ?> policy;
 
     /**
-     * <p>The region ID of the server that is not deployed on Alibaba Cloud.</p>
+     * <p>The region ID of the non-Alibaba Cloud server.</p>
      * <blockquote>
-     * <p> We recommend that you specify the ID of the supported region that is the nearest to the location of the server. You can call the <a href="~~DescribeSupportRegion~~">DescribeSupportRegion</a> operation to query the supported regions of the anti-ransomware feature.</p>
+     * <p>Call the <a href="~~DescribeSupportRegion~~">DescribeSupportRegion</a> operation to query the regions supported by the anti-ransomware feature, and then select the supported region closest to the region where your non-Alibaba Cloud server resides.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -71,7 +62,7 @@ public class CreateBackupPolicyRequest extends TeaModel {
     public String policyRegionId;
 
     /**
-     * <p>The version of the anti-ransomware policy. Set the value to <strong>2.0.0</strong>.</p>
+     * <p>The version of the protection policy. Set the value to <strong>2.0.0</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,8 +72,36 @@ public class CreateBackupPolicyRequest extends TeaModel {
     public String policyVersion;
 
     /**
-     * <p>The UUIDs of the servers that you want to protect.</p>
-     * <p>This parameter is required.</p>
+     * <p>The method used to cover assets. Valid values:</p>
+     * <ul>
+     * <li><strong>ALL_MACHINE</strong>: All assets.<blockquote>
+     * <p>To cover all assets of this type, set this parameter to <strong>ALL_MACHINE</strong>. In this case, <strong>UuidList</strong> is invalid. Only one policy that covers all assets can exist for each server type.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL_MACHINE</p>
+     */
+    @NameInMap("SelectType")
+    public String selectType;
+
+    /**
+     * <p>The server type. Valid values:</p>
+     * <ul>
+     * <li><strong>ALIYUN</strong>: Alibaba Cloud server.</li>
+     * <li><strong>OUT_CLOUD</strong>: Non-Alibaba Cloud server.</li>
+     * <li><strong>TRIPARTITE</strong>: Simple application server.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIYUN</p>
+     */
+    @NameInMap("ServerType")
+    public String serverType;
+
+    /**
+     * <p>The UUIDs of the servers to protect.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;3bb30859-b3b5-4f28-868f-b0892c98****&quot;, &quot;3bb30859-b3b5-4f28-868f-b0892c98****&quot;]</p>
@@ -125,6 +144,22 @@ public class CreateBackupPolicyRequest extends TeaModel {
     }
     public String getPolicyVersion() {
         return this.policyVersion;
+    }
+
+    public CreateBackupPolicyRequest setSelectType(String selectType) {
+        this.selectType = selectType;
+        return this;
+    }
+    public String getSelectType() {
+        return this.selectType;
+    }
+
+    public CreateBackupPolicyRequest setServerType(String serverType) {
+        this.serverType = serverType;
+        return this;
+    }
+    public String getServerType() {
+        return this.serverType;
     }
 
     public CreateBackupPolicyRequest setUuidList(java.util.List<String> uuidList) {

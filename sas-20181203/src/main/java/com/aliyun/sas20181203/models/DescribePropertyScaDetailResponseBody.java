@@ -17,7 +17,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
     public java.util.List<DescribePropertyScaDetailResponseBodyPropertys> propertys;
 
     /**
-     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
+     * <p>The ID of the request. The China Chinese Cloud generates a unique identifier for the request, which can be used to troubleshoot and locate issues.</p>
      * 
      * <strong>example:</strong>
      * <p>F9146867-16C8-4AAB-BB4FB8C2A4</p>
@@ -83,7 +83,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The number of entries per page in the paged query for Asset Fingerprints information. Default value: <strong>10</strong>, which indicates that 10 entries of Asset Fingerprints information are displayed per page.</p>
+         * <p>The number of entries per page in the paged query. Default value: <strong>10</strong>, which indicates that 10 entries of Asset Fingerprints information are displayed per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -223,7 +223,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         public String containerName;
 
         /**
-         * <p>The timestamp of the latest scan, which indicates the most recent time when Security Center collected middleware, database, or web service information. Unit: milliseconds.</p>
+         * <p>The timestamp of the latest scan, which is the most recent time when Security Center collected the middleware, database, or web service information. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1597987834000</p>
@@ -310,8 +310,8 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         /**
          * <p>The listening status of the process. Valid values:</p>
          * <ul>
-         * <li><strong>NONE</strong>: not listening</li>
-         * <li><strong>LISTEN</strong>: listening</li>
+         * <li><strong>NONE</strong>: Not listening.</li>
+         * <li><strong>LISTEN</strong>: Listening.</li>
          * </ul>
          * 
          * <strong>example:</strong>

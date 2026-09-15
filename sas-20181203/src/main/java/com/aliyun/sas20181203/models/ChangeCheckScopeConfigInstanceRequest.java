@@ -29,6 +29,15 @@ public class ChangeCheckScopeConfigInstanceRequest extends TeaModel {
     @NameInMap("DeleteAssetUuids")
     public java.util.List<String> deleteAssetUuids;
 
+    /**
+     * <p>The key for cross-page select-all.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b6d1a39a-f020-4782-af2c-c4b6522*****</p>
+     */
+    @NameInMap("SelectionKey")
+    public String selectionKey;
+
     public static ChangeCheckScopeConfigInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ChangeCheckScopeConfigInstanceRequest self = new ChangeCheckScopeConfigInstanceRequest();
         return TeaModel.build(map, self);
@@ -56,6 +65,14 @@ public class ChangeCheckScopeConfigInstanceRequest extends TeaModel {
     }
     public java.util.List<String> getDeleteAssetUuids() {
         return this.deleteAssetUuids;
+    }
+
+    public ChangeCheckScopeConfigInstanceRequest setSelectionKey(String selectionKey) {
+        this.selectionKey = selectionKey;
+        return this;
+    }
+    public String getSelectionKey() {
+        return this.selectionKey;
     }
 
 }

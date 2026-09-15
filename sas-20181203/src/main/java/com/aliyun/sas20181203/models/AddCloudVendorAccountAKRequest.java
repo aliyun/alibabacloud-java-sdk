@@ -5,10 +5,14 @@ import com.aliyun.tea.*;
 
 public class AddCloudVendorAccountAKRequest extends TeaModel {
     /**
-     * <p>The type of the account to which the AccessKey pair belongs. Valid values:</p>
+     * <p>The AccessKey (AK) type. Valid values:</p>
      * <ul>
-     * <li><strong>primary</strong>: a primary account</li>
-     * <li><strong>sub</strong>: a sub-account</li>
+     * <li><strong>primary</strong>: Primary account.</li>
+     * <li><strong>sub</strong>: Sub-account.</li>
+     * <li><strong>ctdr</strong>: Agentic SOC.<blockquote>
+     * <p>Warning: When the vendor is <strong>CHAITIN</strong>, <strong>FORTINET</strong>, <strong>THREATBOOK</strong>, or <strong>WIZ</strong>, set this parameter to ctdr.</warning></p>
+     * </blockquote>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,13 +23,16 @@ public class AddCloudVendorAccountAKRequest extends TeaModel {
     public String akType;
 
     /**
-     * <p>The modules that are associated with the AccessKey pair.</p>
+     * <p>The list of AK-associated modules.</p>
      */
     @NameInMap("AuthModules")
     public java.util.List<String> authModules;
 
     /**
-     * <p>Account ID. &gt; The account ID of the cloud provider, required when permissions include threat analysis and response.</p>
+     * <p>The account ID.</p>
+     * <blockquote>
+     * <p>The account ID of the connected cloud vendor. This parameter is required when the permission description includes Cloud Threat Detection and Response (CTDR).</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>azure_demo_1</p>
@@ -34,11 +41,15 @@ public class AddCloudVendorAccountAKRequest extends TeaModel {
     public String ctdrCloudUserId;
 
     /**
-     * <p>The Active Directory (AD) domain. This parameter takes effect only when Vendor is set to Azure. Valid values:</p>
+     * <p>The account domain for access. Valid values:</p>
      * <ul>
-     * <li><strong>china</strong></li>
-     * <li><strong>global</strong></li>
+     * <li><strong>china</strong>: China</li>
+     * <li><strong>global</strong>: Global</li>
+     * <li><strong>europe</strong>: Huawei Cloud Europe</li>
      * </ul>
+     * <blockquote>
+     * <p>This parameter is valid only when <strong>Vendor</strong> is set to <strong>HUAWEICLOUD</strong>, <strong>Azure</strong>, <strong>AWS</strong>, <strong>VOLCENGINE</strong>, <strong>KingsoftCloud</strong>, <strong>UCloud</strong>, or <strong>BaiduCloud</strong>, and is required. Set this parameter to <strong>china</strong> for KingsoftCloud and BaiduCloud, and to <strong>global</strong> for UCloud.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>global</p>
@@ -47,9 +58,10 @@ public class AddCloudVendorAccountAKRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>Extended information.</p>
+     * <p>The extended information.</p>
      * <blockquote>
-     * <p>Used to record extended information from different vendors. &gt; For Google Cloud, which is accessed via a service account, ExtendInfo stores the service key file in JSON format, excluding the private_key_id and zprivate_key fields. The file includes the following fields: type, project_id, client_email, client_id, auth_uri, token_uri, auth_provider_x509_cert_url, client_x509_cert_url, universe_domain.</p>
+     * <p>Used to record extended information for different vendors.
+     * Google Cloud is accessed through a service account. ExtendInfo stores the JSON-formatted service key file, excluding the private_key_id and private_key fields. The file contains the following fields: type, project_id, client_email, client_id, auth_uri, token_uri, auth_provider_x509_cert_url, client_x509_cert_url, and universe_domain.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,7 +71,7 @@ public class AddCloudVendorAccountAKRequest extends TeaModel {
     public String extendInfo;
 
     /**
-     * <p>The language of the content in the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -72,30 +84,40 @@ public class AddCloudVendorAccountAKRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The regions that are examined during AccessKey pair authentication. This parameter takes effect only when Vendor is set to AWS.</p>
+     * <p>The list of regions used for AK information verification. This parameter is valid only when Vendor is set to AWS.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~ListCloudVendorRegions~~">ListCloudVendorRegions</a> operation to query regions.</p>
+     * <p>Call the <a href="~~ListCloudVendorRegions~~">ListCloudVendorRegions</a> operation to obtain this parameter.</p>
      * </blockquote>
      */
     @NameInMap("Regions")
     public java.util.List<String> regions;
 
     /**
-     * <p>The AccessKey ID. Valid values:</p>
-     * <p>1\. If AkType is set to primary, specify this parameter based on the following description:</p>
+     * <p>The AK parameter ID. Valid values:</p>
+     * <ol>
+     * <li>When AkType is set to primary:</li>
+     * </ol>
      * <ul>
-     * <li><strong>Tencent</strong>: Enter the AccessKey ID of a primary account on Tencent Cloud.</li>
-     * <li><strong>HUAWEICLOUD</strong>: Enter the AccessKey ID of a primary account on Huawei Cloud.</li>
-     * <li><strong>Azure</strong>: Enter the AccessKey ID of a primary account on Microsoft Azure.</li>
-     * <li><strong>AWS</strong>: Enter the AccessKey ID of a primary account on AWS.</li>
+     * <li><strong>Tencent</strong>: AccessKeyId of the primary account</li>
+     * <li><strong>HUAWEICLOUD</strong>: AccessKeyId of the primary account</li>
+     * <li><strong>Azure</strong>: ClientId</li>
+     * <li><strong>AWS</strong>: AccessKeyId of the primary account</li>
+     * <li><strong>VOLCENGINE</strong>: AccessKeyId of the primary account</li>
      * </ul>
-     * <p>2\. If AkType is set to sub, specify this parameter based on the following description:</p>
+     * <ol start="2">
+     * <li>When AkType is set to sub:</li>
+     * </ol>
      * <ul>
-     * <li><strong>Tencent</strong>: Enter the AccessKey ID of a sub-account on Tencent Cloud.</li>
-     * <li><strong>HUAWEICLOUD</strong>: Enter the AccessKey ID of a sub-account on Huawei Cloud.</li>
-     * <li><strong>Azure</strong>: Enter the AccessKey ID of a sub-account on Microsoft Azure.</li>
-     * <li><strong>AWS</strong>: Enter the AccessKey ID of a sub-account on AWS.</li>
+     * <li><strong>Tencent</strong>: AccessKeyId of the sub-account</li>
+     * <li><strong>HUAWEICLOUD</strong>: AccessKeyId of the sub-account</li>
+     * <li><strong>Azure</strong>: ClientId</li>
+     * <li><strong>AWS</strong>: AccessKeyId of the sub-account</li>
+     * <li><strong>VOLCENGINE</strong>: AccessKeyId of the sub-account</li>
+     * <li><strong>google</strong>: private_key_id</li>
      * </ul>
+     * <blockquote>
+     * <p>If AkType is set to <strong>primary</strong>, this value is the SecretID of the primary account on the third-party cloud. If AkType is set to <strong>sub</strong>, this value is the Access Key ID of the sub-account on the third-party cloud. For <strong>Azure</strong>, no distinction is made, and this value is the <strong>appId</strong> in the authentication information. Google Cloud is accessed through a service account. AkType defaults to sub, and this value is the private_key_id property value from the JSON-formatted service key file.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -105,20 +127,28 @@ public class AddCloudVendorAccountAKRequest extends TeaModel {
     public String secretId;
 
     /**
-     * <p>The AccessKey secret. Valid values:</p>
-     * <p>1\. If AkType is set to primary, specify this parameter based on the following description:</p>
+     * <p>The AK parameter secret. Valid values:</p>
+     * <ol>
+     * <li>When AkType is set to primary:</li>
+     * </ol>
      * <ul>
-     * <li><strong>Tencent</strong>: Enter the AccessKey secret of a primary account on Tencent Cloud.</li>
-     * <li><strong>HUAWEICLOUD</strong>: Enter the AccessKey secret of a primary account on Huawei Cloud.</li>
-     * <li><strong>Azure</strong>: Enter the AccessKey secret of a primary account on Microsoft Azure.</li>
-     * <li><strong>AWS</strong>: Enter the AccessKey secret of a primary account on AWS.</li>
+     * <li><strong>Tencent</strong>: SecretAccessKey of the primary account</li>
+     * <li><strong>HUAWEICLOUD</strong>: SecretAccessKey of the primary account</li>
+     * <li><strong>Azure</strong>: ClientSecret</li>
+     * <li><strong>AWS</strong>: SecretAccessKey of the primary account</li>
      * </ul>
-     * <p>2\. If AkType is set to sub, specify this parameter based on the following description:</p>
+     * <ol start="2">
+     * <li>When AkType is set to sub:</li>
+     * </ol>
      * <ul>
-     * <li><strong>Tencent</strong>: Enter the AccessKey secret of a sub-account on Tencent Cloud.</li>
-     * <li><strong>HUAWEICLOUD</strong>: Enter the AccessKey secret of a sub-account on Huawei Cloud.</li>
-     * <li><strong>Azure</strong>: Enter the AccessKey secret of a sub-account on Microsoft Azure.</li>
-     * <li><strong>AWS</strong>: Enter the AccessKey secret of a sub-account on AWS.</li>
+     * <li><strong>Tencent</strong>: SecretAccessKey of the sub-account</li>
+     * <li><strong>HUAWEICLOUD</strong>: SecretAccessKey of the sub-account</li>
+     * <li><strong>Azure</strong>: ClientSecret</li>
+     * <li><strong>AWS</strong>: SecretAccessKey of the sub-account</li>
+     * <li><strong>google</strong>: private_key<blockquote>
+     * <p>If AkType is set to <strong>primary</strong>, this value is the Secret Access Key of the primary account on the third-party cloud. If AkType is set to <strong>sub</strong>, this value is the Secret Access Key of the sub-account on the third-party cloud. For <strong>Azure</strong>, no distinction is made, and this value is the <strong>password</strong> in the authentication information. Google Cloud is accessed through a service account. AkType defaults to sub, and this value is the private_key property value from the JSON-formatted service key file.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -129,13 +159,16 @@ public class AddCloudVendorAccountAKRequest extends TeaModel {
     public String secretKey;
 
     /**
-     * <p>The subscription IDs. This parameter takes effect only when Vendor is set to Azure.</p>
+     * <p>The list of subscription IDs.</p>
+     * <blockquote>
+     * <p>This parameter is no longer valid.</p>
+     * </blockquote>
      */
     @NameInMap("SubscriptionIds")
     public java.util.List<String> subscriptionIds;
 
     /**
-     * <p>The tenant ID. This parameter takes effect only when Vendor is set to Azure.</p>
+     * <p>The tenant ID. This parameter is valid only when Vendor is set to Azure.</p>
      * 
      * <strong>example:</strong>
      * <p>95304a97-339b-4de5-9a7d-cdbffaf****</p>
@@ -144,12 +177,21 @@ public class AddCloudVendorAccountAKRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The cloud service provider. Valid values:</p>
+     * <p>The cloud asset vendor. Valid values:</p>
      * <ul>
      * <li><strong>Tencent</strong>: Tencent Cloud</li>
      * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud</li>
-     * <li><strong>Azure</strong>: Microsoft Azure</li>
-     * <li><strong>AWS</strong>: Amazon Web Services (AWS)</li>
+     * <li><strong>Azure</strong>: Azure</li>
+     * <li><strong>AWS</strong>: AWS</li>
+     * <li><strong>VOLCENGINE</strong>: Volcengine</li>
+     * <li><strong>google</strong>: Google Cloud</li>
+     * <li><strong>CHAITIN</strong>: Chaitin Technology</li>
+     * <li><strong>FORTINET</strong>: Fortinet</li>
+     * <li><strong>THREATBOOK</strong>: ThreatBook</li>
+     * <li><strong>KingsoftCloud</strong>: Kingsoft Cloud</li>
+     * <li><strong>UCloud</strong>: UCloud</li>
+     * <li><strong>BaiduCloud</strong>: Baidu AI Cloud</li>
+     * <li><strong>WIZ</strong>: Wiz Security</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -160,9 +202,9 @@ public class AddCloudVendorAccountAKRequest extends TeaModel {
     public String vendor;
 
     /**
-     * <p>The name of the AccessKey pair.</p>
+     * <p>The AK account name.</p>
      * <blockquote>
-     * <p> The account information of the third-party cloud servers.</p>
+     * <p>Used to identify the account to which third-party host assets belong.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class OperateBucketScanTaskRequest extends TeaModel {
     /**
      * <p>The bucket name.</p>
+     * <blockquote>
+     * <p>Note: This parameter is required. If this parameter is not specified, the API returns the InvalidBucketName (400) error.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>iboxpublic****</p>
@@ -16,7 +19,7 @@ public class OperateBucketScanTaskRequest extends TeaModel {
     /**
      * <p>The operation to perform on the bucket. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Cancel detection.</li>
+     * <li><strong>1</strong>: Cancel the scan task.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCompressFileDetectResultRequest extends TeaModel {
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number of the current page in a paging query. Default value: 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListCompressFileDetectResultRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The unique identifier for the file.</p>
+     * <p>The unique identifier of the file. This parameter is required in practice. If this parameter is not specified, the API returns ServerError(400). The value must be the MD5 or SHA-256 hash of the file.</p>
      * 
      * <strong>example:</strong>
      * <p>0a212417e65c26ff133cfff28f6c****</p>
@@ -24,7 +24,7 @@ public class ListCompressFileDetectResultRequest extends TeaModel {
     public String hashKey;
 
     /**
-     * <p>The number of entries per page. Default value: 20.</p>
+     * <p>The maximum number of entries per page in a paging query. Default value: 20.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

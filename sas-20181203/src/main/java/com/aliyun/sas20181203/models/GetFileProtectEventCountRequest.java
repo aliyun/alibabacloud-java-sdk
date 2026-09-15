@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetFileProtectEventCountRequest extends TeaModel {
     /**
-     * <p>The status of the event. Valid values:</p>
+     * <p>The event filter status. Valid values:</p>
      * <ul>
-     * <li>0: unhandled</li>
-     * <li>1: handled</li>
+     * <li><p>0: Unhandled.</p>
+     * </li>
+     * <li><p>1: Handled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -11,7 +11,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
     public java.util.List<ListObjectScanEventResponseBodyData> data;
 
     /**
-     * <p>The pagination information for the paged query.</p>
+     * <p>The paging information for the paging query.</p>
      */
     @NameInMap("PageInfo")
     public ListObjectScanEventResponseBodyPageInfo pageInfo;
@@ -148,6 +148,13 @@ public class ListObjectScanEventResponseBody extends TeaModel {
     }
 
     public static class ListObjectScanEventResponseBodyData extends TeaModel {
+        /**
+         * <p>Specifies whether the alert was detected by AI. Valid values:</p>
+         * <ul>
+         * <li>true: The alert was detected by AI.</li>
+         * <li>false: The alert was not detected by AI.</li>
+         * </ul>
+         */
         @NameInMap("AiDetect")
         public Boolean aiDetect;
 
@@ -292,11 +299,11 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         public String remark;
 
         /**
-         * <p>The risk level of the scanned alert. Valid values:</p>
+         * <p>The risk level of the detected alert. Valid values:</p>
          * <ul>
-         * <li><strong>high</strong>: high risk.</li>
-         * <li><strong>medium</strong>: medium risk.</li>
-         * <li><strong>low</strong>: low risk.</li>
+         * <li><strong>high</strong>: High risk.</li>
+         * <li><strong>medium</strong>: Medium risk.</li>
+         * <li><strong>low</strong>: Low risk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -326,8 +333,8 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         /**
          * <p>The data source. Valid values:</p>
          * <ul>
-         * <li><strong>API</strong>: API detection</li>
-         * <li><strong>OSS</strong>: OSS detection.</li>
+         * <li><strong>API</strong>: API-based detection.</li>
+         * <li><strong>OSS</strong>: OSS-based detection.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -339,11 +346,11 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         /**
          * <p>The event status. Valid values:</p>
          * <ul>
-         * <li>0: unhandled </li>
-         * <li>1: manually handled</li>
-         * <li>2: whitelisted</li>
-         * <li>3: ignored</li>
-         * <li>4: access denied.</li>
+         * <li>0: Unhandled. </li>
+         * <li>1: Manually handled.</li>
+         * <li>2: Whitelisted.</li>
+         * <li>3: Ignored.</li>
+         * <li>4: Access blocked.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -529,7 +536,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
 
     public static class ListObjectScanEventResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The page number of the current page in the paged query.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -538,7 +545,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The maximum number of entries displayed on each page in the paged query.</p>
+         * <p>The maximum number of entries returned per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

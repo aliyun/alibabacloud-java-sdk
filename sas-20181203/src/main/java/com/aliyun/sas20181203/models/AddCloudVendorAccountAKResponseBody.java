@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddCloudVendorAccountAKResponseBody extends TeaModel {
     /**
-     * <p>The information about the AccessKey pair that is added.</p>
+     * <p>The information about the added AK.</p>
      */
     @NameInMap("Data")
     public AddCloudVendorAccountAKResponseBodyData data;
@@ -42,7 +42,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
 
     public static class AddCloudVendorAccountAKResponseBodyDataAuthModules extends TeaModel {
         /**
-         * <p>The error message of the module.</p>
+         * <p>The module exception information.</p>
          * 
          * <strong>example:</strong>
          * <p>ak_domain_error</p>
@@ -51,12 +51,12 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The code of the module. Valid values:</p>
+         * <p>The module code. Valid values:</p>
          * <ul>
-         * <li><strong>HOST</strong>: host</li>
-         * <li><strong>CSPM</strong>: configuration assessment</li>
+         * <li><strong>HOST</strong>: Host</li>
+         * <li><strong>CSPM</strong>: Cloud product configuration check</li>
          * <li><strong>SIEM</strong>: CloudSiem</li>
-         * <li><strong>TRIAL</strong>: log audit</li>
+         * <li><strong>TRIAL</strong>: Log audit</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public String module;
 
         /**
-         * <p>The cloud asset that is associated with the module.</p>
+         * <p>The cloud asset description associated with the module.</p>
          * 
          * <strong>example:</strong>
          * <p>Cloud server or virtual machine</p>
@@ -84,12 +84,12 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public String moduleDisp;
 
         /**
-         * <p>The service status of the module. Valid values:</p>
+         * <p>The module status. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: being used</li>
-         * <li><strong>1</strong>: exception occurred</li>
-         * <li><strong>2</strong>: being validated</li>
-         * <li><strong>3</strong>: validation timed out</li>
+         * <li><strong>0</strong>: In use.</li>
+         * <li><strong>1</strong>: Usage exception.</li>
+         * <li><strong>2</strong>: Validity verification in progress.</li>
+         * <li><strong>3</strong>: Validity verification timed out.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -99,7 +99,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public Integer moduleServiceStatus;
 
         /**
-         * <p>The permission description of the module.</p>
+         * <p>The description of permissions associated with the module.</p>
          * 
          * <strong>example:</strong>
          * <p>Read permission of the cloud server or virtual machine</p>
@@ -164,10 +164,10 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
 
     public static class AddCloudVendorAccountAKResponseBodyData extends TeaModel {
         /**
-         * <p>The type of the account to which the AccessKey pair belongs. Valid values:</p>
+         * <p>The AK type. Valid values:</p>
          * <ul>
-         * <li><strong>primary</strong>: a primary account</li>
-         * <li><strong>sub</strong>: a sub-account</li>
+         * <li><strong>primary</strong>: Primary account.</li>
+         * <li><strong>sub</strong>: Sub-account.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -177,7 +177,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public String akType;
 
         /**
-         * <p>The unique ID of the AccessKey pair.</p>
+         * <p>The unique ID of the AK.</p>
          * 
          * <strong>example:</strong>
          * <p>2158</p>
@@ -186,15 +186,15 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public Long authId;
 
         /**
-         * <p>The modules that are associated with the AccessKey pair.</p>
+         * <p>The list of AK-associated modules.</p>
          */
         @NameInMap("AuthModules")
         public java.util.List<AddCloudVendorAccountAKResponseBodyDataAuthModules> authModules;
 
         /**
-         * <p>Account ID. </p>
+         * <p>The account ID.</p>
          * <blockquote>
-         * <p>The account ID of the cloud provider being integrated.</p>
+         * <p>The account ID of the connected cloud vendor.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -204,7 +204,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public String ctdrCloudUserId;
 
         /**
-         * <p>The error message of the AccessKey pair.</p>
+         * <p>The AK exception information.</p>
          * 
          * <strong>example:</strong>
          * <p>The IAM user is forbidden in the currently selected region</p>
@@ -213,7 +213,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The AccessKey ID.</p>
+         * <p>The AK parameter ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AE6SLd****</p>
@@ -222,12 +222,12 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public String secretId;
 
         /**
-         * <p>The service status of the AccessKey pair. Valid values:</p>
+         * <p>The AK usage status. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: being used</li>
-         * <li><strong>1</strong>: exception occurred</li>
-         * <li><strong>2</strong>: being validated</li>
-         * <li><strong>3</strong>: validation timed out</li>
+         * <li><strong>0</strong>: In use.</li>
+         * <li><strong>1</strong>: Usage exception.</li>
+         * <li><strong>2</strong>: Validity verification in progress.</li>
+         * <li><strong>3</strong>: Validity verification timed out.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -237,10 +237,10 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public Integer serviceStatus;
 
         /**
-         * <p>The status of the AccessKey pair. Valid values:</p>
+         * <p>The AK status. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: enabled</li>
-         * <li><strong>1</strong>: disabled</li>
+         * <li><strong>0</strong>: Enabled.</li>
+         * <li><strong>1</strong>: Not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -250,12 +250,17 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The cloud service provider. Valid values:</p>
+         * <p>The cloud asset vendor. Valid values:</p>
          * <ul>
          * <li><strong>Tencent</strong>: Tencent Cloud</li>
          * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud</li>
-         * <li><strong>Azure</strong>: Microsoft Azure</li>
+         * <li><strong>Azure</strong>: Azure</li>
          * <li><strong>AWS</strong>: AWS</li>
+         * <li><strong>VOLCENGINE</strong>: Volcengine</li>
+         * <li><strong>google</strong>: Google Cloud</li>
+         * <li><strong>CHAITIN</strong>: Chaitin Technology</li>
+         * <li><strong>FORTINET</strong>: Fortinet</li>
+         * <li><strong>THREATBOOK</strong>: ThreatBook</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -265,9 +270,9 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public String vendor;
 
         /**
-         * <p>The name of the AccessKey pair.</p>
+         * <p>The AK account name.</p>
          * <blockquote>
-         * <p> The account information of the third-party cloud servers.</p>
+         * <p>Used to identify the account to which third-party host assets belong.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

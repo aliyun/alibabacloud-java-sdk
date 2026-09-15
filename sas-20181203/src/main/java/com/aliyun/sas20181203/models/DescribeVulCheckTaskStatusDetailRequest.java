@@ -4,23 +4,29 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulCheckTaskStatusDetailRequest extends TeaModel {
+    /**
+     * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
+     * <blockquote>
+     * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>The task IDs.</p>
+     * <p>The list of task IDs.</p>
      */
     @NameInMap("TaskIds")
     public java.util.List<String> taskIds;
 
     /**
-     * <p>The types of the vulnerabilities that are detected by the tasks.</p>
+     * <p>The list of vulnerability types for the one-click scan.</p>
      */
     @NameInMap("Types")
     public java.util.List<String> types;
 
     /**
-     * <p>The UUID of the server.</p>
+     * <p>The UUID of the server to query.</p>
      * 
      * <strong>example:</strong>
      * <p>5d55af3c-35f3-4d4d-8ccc-8c5443b0****</p>

@@ -5,15 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateAttackPathWhitelistRequest extends TeaModel {
     /**
-     * <p>List of cloud product assets in the attack path.</p>
+     * <p>The list of cloud service assets in the attack path.</p>
      */
     @NameInMap("AttackPathAssetList")
     public java.util.List<CreateAttackPathWhitelistRequestAttackPathAssetList> attackPathAssetList;
 
     /**
-     * <p>Path name.</p>
+     * <p>The path name.</p>
      * <blockquote>
-     * <p>You can call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query the path name.</p>
+     * <p>You can call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query the path name.
+     * This parameter is required. If this parameter is not specified, the API returns a 400 InvalidParam error.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,7 +24,7 @@ public class CreateAttackPathWhitelistRequest extends TeaModel {
     public String pathName;
 
     /**
-     * <p>Path type.</p>
+     * <p>The path type.</p>
      * <blockquote>
      * <p>You can call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query the path type.</p>
      * </blockquote>
@@ -36,7 +37,7 @@ public class CreateAttackPathWhitelistRequest extends TeaModel {
     public String pathType;
 
     /**
-     * <p>Remark information.</p>
+     * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -45,7 +46,7 @@ public class CreateAttackPathWhitelistRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>Whitelist name.</p>
+     * <p>The whitelist name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,10 +56,10 @@ public class CreateAttackPathWhitelistRequest extends TeaModel {
     public String whitelistName;
 
     /**
-     * <p>Whitelist type. Values:</p>
+     * <p>The whitelist type. Valid values:</p>
      * <ul>
-     * <li><strong>ALL_ASSET</strong>: All assets</li>
-     * <li><strong>PART_ASSET</strong>: Partial assets</li>
+     * <li><strong>ALL_ASSET</strong>: all assets.</li>
+     * <li><strong>PART_ASSET</strong>: partial assets.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -123,9 +124,9 @@ public class CreateAttackPathWhitelistRequest extends TeaModel {
 
     public static class CreateAttackPathWhitelistRequestAttackPathAssetList extends TeaModel {
         /**
-         * <p>Subtype of the cloud product asset.</p>
+         * <p>The subtype of the cloud service asset.</p>
          * <blockquote>
-         * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the subtype of the cloud product asset.</p>
+         * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the subtype of the cloud service asset.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -135,9 +136,9 @@ public class CreateAttackPathWhitelistRequest extends TeaModel {
         public Integer assetSubType;
 
         /**
-         * <p>Type of the cloud product asset.</p>
+         * <p>The type of the cloud service asset.</p>
          * <blockquote>
-         * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the type of the cloud product asset.</p>
+         * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the type of the cloud service asset.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -147,9 +148,9 @@ public class CreateAttackPathWhitelistRequest extends TeaModel {
         public Integer assetType;
 
         /**
-         * <p>Cloud product asset instance ID.</p>
+         * <p>The instance ID of the cloud service asset.</p>
          * <blockquote>
-         * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the cloud product asset instance ID.</p>
+         * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the instance ID of the cloud service asset.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -159,10 +160,10 @@ public class CreateAttackPathWhitelistRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Node type, with values:</p>
+         * <p>The node type. Valid values:</p>
          * <ul>
-         * <li><strong>start</strong>: Start point.</li>
-         * <li><strong>end</strong>: End point.</li>
+         * <li><strong>start</strong>: start node.</li>
+         * <li><strong>end</strong>: end node.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,9 +173,9 @@ public class CreateAttackPathWhitelistRequest extends TeaModel {
         public String nodeType;
 
         /**
-         * <p>Region ID of the cloud product asset instance.</p>
+         * <p>The region ID of the cloud service asset instance.</p>
          * <blockquote>
-         * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the region ID of the cloud product asset instance.</p>
+         * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the region ID of the cloud service asset instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -184,9 +185,9 @@ public class CreateAttackPathWhitelistRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Vendor of the cloud product asset.</p>
+         * <p>The vendor of the cloud service asset.</p>
          * <blockquote>
-         * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the vendor of the cloud product asset.</p>
+         * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the vendor of the cloud service asset.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

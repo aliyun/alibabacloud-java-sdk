@@ -42,13 +42,13 @@ public class DescribeScreenScoreThreadResponseBody extends TeaModel {
 
     public static class DescribeScreenScoreThreadResponseBodyData extends TeaModel {
         /**
-         * <p>The security score trend list.</p>
+         * <p>The list of security score trends.</p>
          */
         @NameInMap("SocreThread")
         public java.util.List<String> socreThread;
 
         /**
-         * <p>The security score trend date list.</p>
+         * <p>The list of dates for security score trends.</p>
          */
         @NameInMap("SocreThreadDate")
         public java.util.List<String> socreThreadDate;

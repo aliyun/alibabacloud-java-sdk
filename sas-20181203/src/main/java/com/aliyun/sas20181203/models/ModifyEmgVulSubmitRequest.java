@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class ModifyEmgVulSubmitRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong>: Chinese</p>
+     * <li><p><strong>zh</strong>: Chinese.</p>
      * </li>
-     * <li><p><strong>en</strong>: English</p>
+     * <li><p><strong>en</strong>: English.</p>
      * </li>
      * </ul>
      * 
@@ -36,9 +36,9 @@ public class ModifyEmgVulSubmitRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the member accounts in the resource directory (Alibaba Cloud account).</p>
+     * <p>The ID of the member account in the resource directory (Alibaba Cloud account).</p>
      * <blockquote>
-     * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

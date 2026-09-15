@@ -15,10 +15,11 @@ public class ModifyCustomBlockRecordRequest extends TeaModel {
     public String blockIp;
 
     /**
-     * <p>The direction in which the brute-force attacks blocking policy blocks the IP address on the server. Valid values:</p>
+     * <p>The direction in which the server brute-force attacks blocking policy blocks the IP address.</p>
+     * <p>Valid values:</p>
      * <ul>
      * <li><strong>in</strong>: inbound</li>
-     * <li><strong>out</strong>: outbound.</li>
+     * <li><strong>out</strong>: outbound</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -29,7 +30,7 @@ public class ModifyCustomBlockRecordRequest extends TeaModel {
     public String bound;
 
     /**
-     * <p>The expiration time of the blocking record.</p>
+     * <p>The expiration time of the blocking record. The value is a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

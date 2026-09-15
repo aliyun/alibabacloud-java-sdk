@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFileProtectRuleResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>EC7C8984-D108-516F-9D36-3DF1D1228CCA</p>
@@ -14,7 +14,7 @@ public class CreateFileProtectRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>

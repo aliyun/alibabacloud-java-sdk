@@ -5,49 +5,56 @@ import com.aliyun.tea.*;
 
 public class AdvanceSecurityEventOperationsRequest extends TeaModel {
     /**
-     * <p>The alert name.</p>
+     * <p>The alert name. The EventName and EventType parameters must be specified together. If only one of them is specified, the API returns a 400 error.</p>
      * 
      * <strong>example:</strong>
-     * <p>恶意脚本代码执行</p>
+     * <p>Malicious script code execution</p>
      */
     @NameInMap("EventName")
     public String eventName;
 
     /**
-     * <p>The alert event type. Valid values:</p>
+     * <p>The type of the alerting event. Valid values:</p>
      * <ul>
-     * <li>Suspicious process</li>
-     * <li>Webshell</li>
+     * <li>Abnormal process behavior</li>
+     * <li>Web shell</li>
      * <li>Unusual logon</li>
-     * <li>Exception</li>
+     * <li>Abnormal event</li>
      * <li>Sensitive file tampering</li>
-     * <li>Malicious process (cloud threat detection)</li>
-     * <li>Unusual network connection</li>
+     * <li>Malicious process (cloud scan)</li>
+     * <li>Suspicious network connection</li>
      * <li>Abnormal account</li>
      * <li>Application intrusion event</li>
-     * <li>Cloud threat detection</li>
-     * <li>Precision defense</li>
+     * <li>Cloud service threat detection</li>
+     * <li>Precise defense</li>
      * <li>Application whitelist</li>
-     * <li>Persistent webshell</li>
+     * <li>Persistent backdoor</li>
      * <li>Web application threat detection</li>
      * <li>Malicious script</li>
      * <li>Threat intelligence</li>
-     * <li>Malicious network activity</li>
-     * <li>Cluster exception</li>
-     * <li>Webshell (on-premises threat detection)</li>
-     * <li>Vulnerability exploitation</li>
-     * <li>Malicious process (on-premises threat detection)</li>
+     * <li>Malicious network behavior</li>
+     * <li>Container cluster exception</li>
+     * <li>Web shell (local scan)</li>
+     * <li>Vulnerability exploits</li>
+     * <li>Malicious process (local scan)</li>
      * <li>Trusted exception</li>
-     * <li>Others</li>
+     * <li>Other</li>
      * </ul>
-     * <p>For more information about alert types, see <a href="https://help.aliyun.com/document_detail/68388.html">Alerts</a>.</p>
+     * <p>For more information about alert types, see <a href="https://help.aliyun.com/document_detail/68388.html">Security alert check items</a>.</p>
+     * <p>The EventName and EventType parameters must be specified together. If only one of them is specified, the API returns a 400 error.</p>
      * 
      * <strong>example:</strong>
-     * <p>恶意脚本</p>
+     * <p>Malicious script</p>
      */
     @NameInMap("EventType")
     public String eventType;
 
+    /**
+     * <p>The member account ID in the resource directory (Alibaba Cloud account).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1232428423234****</p>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 

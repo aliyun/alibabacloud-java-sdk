@@ -64,7 +64,7 @@ public class ListFileProtectClientEventResponseBody extends TeaModel {
          * </li>
          * <li><p>2: suspicious</p>
          * </li>
-         * <li><p>3: high-risk.</p>
+         * <li><p>3: high-risk</p>
          * </li>
          * </ul>
          * 
@@ -111,7 +111,7 @@ public class ListFileProtectClientEventResponseBody extends TeaModel {
         public Long firstTime;
 
         /**
-         * <p>The time when the event was handled.</p>
+         * <p>The time when the event was handled. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1694576692000</p>
@@ -156,7 +156,7 @@ public class ListFileProtectClientEventResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
-         * <p>The most recent time the event occurred.</p>
+         * <p>The most recent time when the event occurred. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1694576692000</p>
@@ -167,11 +167,11 @@ public class ListFileProtectClientEventResponseBody extends TeaModel {
         /**
          * <p>The type of operation performed on the file. Valid values:</p>
          * <ul>
-         * <li><strong>DELETE</strong>: deletes the file.</li>
-         * <li><strong>WRITE</strong>: writes to the file.</li>
-         * <li><strong>READ</strong>: reads the file.</li>
-         * <li><strong>RENAME</strong>: renames the file.</li>
-         * <li><strong>CHOWN</strong>: changes the file owner and associated group.</li>
+         * <li><strong>DELETE</strong>: File deletion.</li>
+         * <li><strong>WRITE</strong>: File write.</li>
+         * <li><strong>READ</strong>: File read.</li>
+         * <li><strong>RENAME</strong>: File rename.</li>
+         * <li><strong>CHOWN</strong>: Setting the file owner and file group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class ListFileProtectClientEventResponseBody extends TeaModel {
         /**
          * <p>The operating system type. Valid values:</p>
          * <ul>
-         * <li><strong>windows</strong>: Windows</li>
+         * <li><strong>windows</strong>: Windows.</li>
          * <li><strong>linux</strong>: Linux.</li>
          * </ul>
          * 
@@ -256,9 +256,9 @@ public class ListFileProtectClientEventResponseBody extends TeaModel {
         /**
          * <p>The event status. Valid values:</p>
          * <ul>
-         * <li>0: unhandled </li>
-         * <li>1: handled</li>
-         * <li>2: whitelisted.</li>
+         * <li>0: Unhandled. </li>
+         * <li>1: Handled.</li>
+         * <li>2: Whitelisted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -453,7 +453,7 @@ public class ListFileProtectClientEventResponseBody extends TeaModel {
 
     public static class ListFileProtectClientEventResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The page number of the current page when paging is used in a paged query.</p>
+         * <p>The number of the page to return in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -462,7 +462,7 @@ public class ListFileProtectClientEventResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The maximum number of entries per page when paging is used in a paged query.</p>
+         * <p>The maximum number of entries to return on each page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

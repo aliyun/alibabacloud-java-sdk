@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ExportCustomizeReportRequest extends TeaModel {
     /**
-     * <p>The type of the security report that you want to export. Valid values:</p>
+     * <p>The type of the export. Valid values:</p>
      * <ul>
      * <li><strong>HTML</strong></li>
      * <li><strong>PDF</strong></li>
      * </ul>
      * <blockquote>
-     * <p> The default value is HTML. PDF is supported only for security reports in version 2.0.0.</p>
+     * <p>Default value: HTML. PDF is supported only for security reports of version 2.0.0.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,7 +23,7 @@ public class ExportCustomizeReportRequest extends TeaModel {
     /**
      * <p>The ID of the security report.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> operation to query the ID.</p>
+     * <p>You can call <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> to obtain this value.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -33,6 +33,12 @@ public class ExportCustomizeReportRequest extends TeaModel {
     @NameInMap("ReportId")
     public Long reportId;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member accounts in the resource directory.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 

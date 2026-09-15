@@ -7,8 +7,8 @@ public class DescribeDomainSecureScoreRequest extends TeaModel {
     /**
      * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese.</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,11 +17,17 @@ public class DescribeDomainSecureScoreRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member account in the resource directory.</p>
+     * <blockquote>
+     * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>The source IP address of the visitor.</p>
+     * <p>The source IP address of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>123.113.<em>.</em></p>

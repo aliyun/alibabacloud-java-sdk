@@ -41,10 +41,10 @@ public class CreateSuspEventNoteResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of processing the alert event. Valid values:</p>
+     * <p>The result of the alert event processing. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Succeeded.</li>
-     * <li><strong>false</strong>: Failed.</li>
+     * <li><strong>true</strong>: The processing was successful.</li>
+     * <li><strong>false</strong>: The processing failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

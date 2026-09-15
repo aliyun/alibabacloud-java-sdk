@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeContainerAppsRequest extends TeaModel {
     /**
-     * <p>The ID of the container cluster.</p>
+     * <p>The ID of the container cluster. Note: This parameter is required. If this parameter is not specified, the service returns a 400 error.</p>
      * 
      * <strong>example:</strong>
      * <p>ca0a686115432429ca26cf780f5e9fff5</p>
@@ -14,7 +14,7 @@ public class DescribeContainerAppsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number for a paged query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeContainerAppsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The application value that you want to query. Fuzzy match is supported.</p>
+     * <p>The application value to query. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>cas-adad-qeqwe</p>
@@ -33,9 +33,9 @@ public class DescribeContainerAppsRequest extends TeaModel {
     public String fieldValue;
 
     /**
-     * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The maximum number of entries per page for a paged query. Default value: 20. If you leave this parameter empty, 20 entries are returned.</p>
      * <blockquote>
-     * <p> We recommend that you do not leave this parameter empty.</p>
+     * <p>Do not leave PageSize empty.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

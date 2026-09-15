@@ -26,7 +26,7 @@ public class CreateUniRestorePlanRequest extends TeaModel {
     public String instanceUuid;
 
     /**
-     * <p>The ID of the database anti-ransomware backup policy.</p>
+     * <p>The ID of the anti-ransomware backup policy for the database.</p>
      * <blockquote>
      * <p>Call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to obtain this parameter.</p>
      * </blockquote>
@@ -53,7 +53,7 @@ public class CreateUniRestorePlanRequest extends TeaModel {
     /**
      * <p>The <strong>reset_time</strong> value of the selected record from the recoverable points in time when you query backups for an Oracle database.</p>
      * <blockquote>
-     * <p>Call the <a href="~~DescribeUniRecoverableList~~">DescribeUniRecoverableList</a> operation to obtain this parameter.</p>
+     * <p>Call the <a href="~~DescribeUniRecoverableList~~">DescribeUniRecoverableList</a> operation to obtain this parameter. Format: YYYY-MM-DD HH:mm:ss.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -82,7 +82,7 @@ public class CreateUniRestorePlanRequest extends TeaModel {
     /**
      * <p>The point in time to which you want to restore the database.</p>
      * <blockquote>
-     * <p>Call the <a href="~~DescribeRestorePlans~~">DescribeRestorePlans</a> operation to obtain this parameter.</p>
+     * <p>Call the <a href="~~DescribeRestorePlans~~">DescribeRestorePlans</a> operation to obtain this parameter. The value is a UNIX timestamp. Unit: milliseconds.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

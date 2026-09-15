@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BE120DAB-F4E7-4C53-ADC3-A97578ABF384</p>
@@ -14,13 +14,13 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of the status information about the vulnerability scan tasks on the server.</p>
+     * <p>The list of vulnerability task statuses for the server.</p>
      */
     @NameInMap("TaskStatuses")
     public java.util.List<DescribeVulCheckTaskStatusDetailResponseBodyTaskStatuses> taskStatuses;
 
     /**
-     * <p>The total number of vulnerability scan tasks on the server.</p>
+     * <p>The total number of vulnerability subtasks for the server.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
 
     public static class DescribeVulCheckTaskStatusDetailResponseBodyTaskStatusesTaskStatusList extends TeaModel {
         /**
-         * <p>The error code returned.</p>
+         * <p>The failure code.</p>
          * 
          * <strong>example:</strong>
          * <p>push_command_failed</p>
@@ -68,13 +68,13 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The status of the subtask. Valid values:</p>
+         * <p>The completion status of the check. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: unhandled</li>
-         * <li><strong>1</strong>: collecting</li>
-         * <li><strong>2</strong>: collected</li>
-         * <li><strong>3</strong>: matching</li>
-         * <li><strong>4</strong>: complete</li>
+         * <li><strong>0</strong>: Unprocessed.</li>
+         * <li><strong>1</strong>: Collecting.</li>
+         * <li><strong>2</strong>: Collection completed.</li>
+         * <li><strong>3</strong>: Matching.</li>
+         * <li><strong>4</strong>: Completed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -84,12 +84,12 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the vulnerability. Valid values:</p>
+         * <p>The vulnerability type. Valid values:</p>
          * <ul>
          * <li><strong>cve</strong>: Linux software vulnerability</li>
          * <li><strong>sys</strong>: Windows system vulnerability</li>
          * <li><strong>cms</strong>: Web-CMS vulnerability</li>
-         * <li><strong>sca</strong>: vulnerability that is detected based on software component analysis</li>
+         * <li><strong>sca</strong>: sca vulnerability</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
 
     public static class DescribeVulCheckTaskStatusDetailResponseBodyTaskStatuses extends TeaModel {
         /**
-         * <p>The ID of the main task.</p>
+         * <p>The main task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>16190385</p>
@@ -140,7 +140,7 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>An array that consists of status information about the vulnerability scan subtask.</p>
+         * <p>The list of vulnerability detection task statuses.</p>
          */
         @NameInMap("TaskStatusList")
         public java.util.List<DescribeVulCheckTaskStatusDetailResponseBodyTaskStatusesTaskStatusList> taskStatusList;

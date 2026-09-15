@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeEventLevelCountRequest extends TeaModel {
     /**
-     * <p>The ID of the container cluster.</p>
+     * <p>The ID of the container cluster that you want to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,20 +17,20 @@ public class DescribeEventLevelCountRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The key of the condition that is used to query alert events on containers. Valid values:</p>
+     * <p>The container search field. Valid values:</p>
      * <ul>
-     * <li><strong>instanceId</strong>: the ID of the asset</li>
-     * <li><strong>appName</strong>: the name of the application</li>
-     * <li><strong>clusterId</strong>: the ID of the cluster</li>
-     * <li><strong>regionId</strong>: the ID of the region</li>
-     * <li><strong>nodeName</strong>: the name of the node</li>
-     * <li><strong>namespace</strong>: the namespace</li>
-     * <li><strong>clusterName</strong>: the name of the cluster</li>
-     * <li><strong>image</strong>: the name of the image</li>
-     * <li><strong>imageRepoName</strong>: the name of the image repository</li>
-     * <li><strong>imageRepoNamespace</strong>: the namespace to which the image repository belongs</li>
-     * <li><strong>imageRepoTag</strong>: the tag that is added to the image</li>
-     * <li><strong>imageDigest</strong>: the digest of the image</li>
+     * <li><strong>instanceId</strong>: instance ID</li>
+     * <li><strong>appName</strong>: application name</li>
+     * <li><strong>clusterId</strong>: cluster ID</li>
+     * <li><strong>regionId</strong>: region</li>
+     * <li><strong>nodeName</strong>: node name</li>
+     * <li><strong>namespace</strong>: namespace</li>
+     * <li><strong>clusterName</strong>: cluster name</li>
+     * <li><strong>image</strong>: image name</li>
+     * <li><strong>imageRepoName</strong>: image repository name</li>
+     * <li><strong>imageRepoNamespace</strong>: image repository namespace</li>
+     * <li><strong>imageRepoTag</strong>: image tag</li>
+     * <li><strong>imageDigest</strong>: image digest</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class DescribeEventLevelCountRequest extends TeaModel {
     public String containerFieldName;
 
     /**
-     * <p>The value of the condition that is used to query alert events on containers. If you specify multiple values, separate them with commas (,).</p>
+     * <p>The value of the field that you want to query. Separate multiple values with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>c951761046a9c4afe92be0a7b5bexxxxx</p>
@@ -49,7 +49,7 @@ public class DescribeEventLevelCountRequest extends TeaModel {
     public String containerFieldValue;
 
     /**
-     * <p>The ID of the container.</p>
+     * <p>The container IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxxx30389a10c28f6d38f2398f0dcexxxxxxx922b9e8290dc7c3019d4a8,48b87f2c0662e334820f436cb9133f1ae4e053d39b6fad42xxxxxxxxxx</p>
@@ -58,7 +58,7 @@ public class DescribeEventLevelCountRequest extends TeaModel {
     public String containerIds;
 
     /**
-     * <p>The ID of the request source. Set the value to <strong>sas</strong>.</p>
+     * <p>The source identifier of the request. Set this parameter to <strong>sas</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>sas</p>
@@ -67,10 +67,10 @@ public class DescribeEventLevelCountRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The type of the accounts that you want to query. Default value: <strong>0</strong>. Valid values:</p>
+     * <p>The multi-account query type. Default value: <strong>0</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: the current account.</li>
-     * <li><strong>1</strong>: all accounts.</li>
+     * <li><strong>0</strong>: Query data of the current account.</li>
+     * <li><strong>1</strong>: Query data of all accounts.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,14 +79,20 @@ public class DescribeEventLevelCountRequest extends TeaModel {
     @NameInMap("MultiAccountActionType")
     public Integer multiAccountActionType;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
+     * <blockquote>
+     * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>The type of the query condition. Valid values:</p>
+     * <p>The query type. Valid values:</p>
      * <ul>
-     * <li><strong>containerId</strong>: the ID of the container</li>
-     * <li><strong>uuid</strong>: the UUID of the asset</li>
+     * <li><strong>containerId</strong>: container ID</li>
+     * <li><strong>uuid</strong>: asset ID</li>
      * </ul>
      * 
      * <strong>example:</strong>

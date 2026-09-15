@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteSuspEventNodeRequest extends TeaModel {
     /**
-     * <p>The ID of the description.</p>
+     * <p>The ID of the note.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to obtain the ID of the description by using the EventNotes field.</p>
+     * <p>Call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to obtain this parameter from the EventNotes field.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -17,6 +17,12 @@ public class DeleteSuspEventNodeRequest extends TeaModel {
     @NameInMap("NoteId")
     public Long noteId;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member account in the resource directory.</p>
+     * <blockquote>
+     * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 

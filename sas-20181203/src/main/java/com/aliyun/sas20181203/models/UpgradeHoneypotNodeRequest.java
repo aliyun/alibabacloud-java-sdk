@@ -20,7 +20,7 @@ public class UpgradeHoneypotNodeRequest extends TeaModel {
     /**
      * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>zh</strong>: Chinese.</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
@@ -33,7 +33,8 @@ public class UpgradeHoneypotNodeRequest extends TeaModel {
     /**
      * <p>The ID of the management node to upgrade.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain this parameter.</p>
+     * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain this parameter.
+     * Note: This parameter is actually required. If it is not provided, the API returns InvalidParam (400).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

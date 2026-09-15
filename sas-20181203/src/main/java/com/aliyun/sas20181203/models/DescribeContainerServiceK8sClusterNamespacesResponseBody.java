@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeContainerServiceK8sClusterNamespacesResponseBody extends TeaModel {
     /**
-     * <p>The namespaces.</p>
+     * <p>The list of namespaces.</p>
      */
     @NameInMap("K8sClusterNamespaces")
     public java.util.List<DescribeContainerServiceK8sClusterNamespacesResponseBodyK8sClusterNamespaces> k8sClusterNamespaces;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0C8487EF-50C2-54BB-8634-10F8C35D****</p>

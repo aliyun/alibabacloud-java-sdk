@@ -150,7 +150,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
         public String noteId;
 
         /**
-         * <p>The time of the remark record.</p>
+         * <p>The time of the remark record. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-27 14:49:21</p>
@@ -215,7 +215,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
         public Long filePath;
 
         /**
-         * <p>The timestamp of the first scan, in milliseconds.</p>
+         * <p>The timestamp of the first scan. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>168257753****</p>
@@ -269,7 +269,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
-         * <p>The timestamp of the latest scan, in milliseconds.</p>
+         * <p>The timestamp of the latest scan. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>168257753****</p>
@@ -282,7 +282,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
          * <ul>
          * <li>serious: urgent</li>
          * <li>suspicious: suspicious</li>
-         * <li>remind: reminder.</li>
+         * <li>remind: reminder</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -334,7 +334,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
         public String operateResult;
 
         /**
-         * <p>The timestamp when the alert was handled, in milliseconds.</p>
+         * <p>The timestamp when the alert was handled. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>168257753****</p>
@@ -372,7 +372,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
         /**
          * <p>The object type of the scan target. Valid values:</p>
          * <ul>
-         * <li>2: image.</li>
+         * <li>2: image</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -575,7 +575,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
 
     public static class ListAgentlessMaliciousFilesResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of malicious file entries displayed on the current page in a paging query.</p>
+         * <p>The number of malicious files displayed on the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -593,7 +593,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The maximum number of entries returned per page in a paging query.</p>
+         * <p>The maximum number of entries to return per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

@@ -7,7 +7,8 @@ public class ValidateHcWarningsRequest extends TeaModel {
     /**
      * <p>The IDs of the check items. Separate multiple check item IDs with commas (,).</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/116179.html">DescribeCheckWarningSummary</a> operation to obtain check item IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/116179.html">DescribeCheckWarningSummary</a> operation to obtain check item IDs.
+     * Note: You must specify at least one of RiskIds and CheckIds. Otherwise, the API returns the HcIllegalParameter error.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +20,8 @@ public class ValidateHcWarningsRequest extends TeaModel {
     /**
      * <p>The IDs of the risk items to verify. Separate multiple IDs with commas (,).</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeCheckWarnings~~">DescribeCheckWarnings</a> operation to obtain this parameter.</p>
+     * <p> You can call the <a href="~~DescribeCheckWarnings~~">DescribeCheckWarnings</a> operation to obtain this parameter.
+     * Note: You must specify at least one of RiskIds and CheckIds. Otherwise, the API returns the HcIllegalParameter error.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,11 +31,14 @@ public class ValidateHcWarningsRequest extends TeaModel {
     public String riskIds;
 
     /**
-     * <p>The status of the check item to verify. Valid values:</p>
+     * <p>The status of the check items to verify.</p>
      * <ul>
-     * <li>1: not passed</li>
-     * <li>3: passed</li>
-     * <li>5: expired.</li>
+     * <li><p>1: Not passed</p>
+     * </li>
+     * <li><p>3: Passed</p>
+     * </li>
+     * <li><p>5: Expired</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

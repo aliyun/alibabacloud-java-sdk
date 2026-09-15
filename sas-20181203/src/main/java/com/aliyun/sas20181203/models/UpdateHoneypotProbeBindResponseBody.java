@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateHoneypotProbeBindResponseBody extends TeaModel {
     /**
-     * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure.</p>
+     * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class UpdateHoneypotProbeBindResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code of the response.</p>
+     * <p>The HTTP status code of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class UpdateHoneypotProbeBindResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The detailed error message.</p>
+     * <p>The detailed information about the error code.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>

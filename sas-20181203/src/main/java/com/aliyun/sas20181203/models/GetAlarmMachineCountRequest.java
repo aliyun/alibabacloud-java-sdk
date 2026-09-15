@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAlarmMachineCountRequest extends TeaModel {
     /**
-     * <p>The source identifier of the request. Set this parameter to sas.</p>
+     * <p>The request source identifier. Set this parameter to sas.</p>
      * 
      * <strong>example:</strong>
      * <p>sas</p>
@@ -13,6 +13,12 @@ public class GetAlarmMachineCountRequest extends TeaModel {
     @NameInMap("From")
     public String from;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member account in the resource directory.</p>
+     * <blockquote>
+     * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 

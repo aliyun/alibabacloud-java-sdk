@@ -27,7 +27,7 @@ public class DescribeTraceInfoNodeRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The time when the event was first detected.</p>
+     * <p>The time when the event was first detected. This value is a UNIX timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1635978934000</p>
@@ -39,7 +39,7 @@ public class DescribeTraceInfoNodeRequest extends TeaModel {
      * <p>The language type of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class DescribeTraceInfoNodeRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains the value.</p>
+     * <p>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains this value.</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.XX.XX</p>
@@ -58,7 +58,7 @@ public class DescribeTraceInfoNodeRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The vertex type. You can call the <a href="~~DescribeTraceInfoDetail~~">DescribeTraceInfoDetail</a> operation to obtain this parameter.</p>
+     * <p>The vertex type. You can obtain this value by calling the <a href="~~DescribeTraceInfoDetail~~">DescribeTraceInfoDetail</a> operation. Valid values: <strong>SAS_ASSET</strong>: indicates a server asset. In this case, VertexId is the UUID of the server, which can be obtained by calling the DescribeCloudCenterInstances operation. If no security events exist for the account, you can obtain the VertexId by calling the DescribeCloudCenterInstances operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,7 +68,7 @@ public class DescribeTraceInfoNodeRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The UUID of the server to query. You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to obtain this parameter.</p>
+     * <p>The UUID of the server to query. You can obtain this parameter by calling the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

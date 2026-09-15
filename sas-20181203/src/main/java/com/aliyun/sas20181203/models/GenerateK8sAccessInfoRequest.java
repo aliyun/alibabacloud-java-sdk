@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateK8sAccessInfoRequest extends TeaModel {
     /**
-     * <p>This parameter is deprecated and does not need to be specified.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,7 +14,7 @@ public class GenerateK8sAccessInfoRequest extends TeaModel {
     public String aliyunYundunGatewayApiName;
 
     /**
-     * <p>This parameter is deprecated and does not need to be specified.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -23,7 +23,7 @@ public class GenerateK8sAccessInfoRequest extends TeaModel {
     public String aliyunYundunGatewayPopName;
 
     /**
-     * <p>This parameter is deprecated and does not need to be specified.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -32,7 +32,7 @@ public class GenerateK8sAccessInfoRequest extends TeaModel {
     public String aliyunYundunGatewayProjectName;
 
     /**
-     * <p>The SLS Logstore of the audit log.</p>
+     * <p>The SLS Logstore for audit logs.</p>
      * 
      * <strong>example:</strong>
      * <p>audit-cf6baf6afa106eca665296fdf68b65bf</p>
@@ -41,7 +41,7 @@ public class GenerateK8sAccessInfoRequest extends TeaModel {
     public String auditLogStore;
 
     /**
-     * <p>The SLS project of the audit log.</p>
+     * <p>The Simple Log Service (SLS) project for audit logs.</p>
      * 
      * <strong>example:</strong>
      * <p>k8s-log-custom-huxintest1018-2</p>
@@ -69,7 +69,7 @@ public class GenerateK8sAccessInfoRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The CPU architecture, which can be ARM or x86.</p>
+     * <p>The CPU architecture, which can be ARM architecture or x86 architecture.</p>
      * 
      * <strong>example:</strong>
      * <p>arm</p>
@@ -78,7 +78,7 @@ public class GenerateK8sAccessInfoRequest extends TeaModel {
     public String cpuArch;
 
     /**
-     * <p>The expiration time for container access.</p>
+     * <p>The expiration time for container access. This value is a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GenerateK8sAccessInfoRequest extends TeaModel {
     public Long expireDate;
 
     /**
-     * <p>The queried group ID.</p>
+     * <p>The ID of the server group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

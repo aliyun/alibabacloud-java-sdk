@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateContainerScanTaskByAppNameRequest extends TeaModel {
     /**
-     * <p>The name of the container application.</p>
+     * <p>The container application name.</p>
      * 
      * <strong>example:</strong>
      * <p>app-centos-01</p>
@@ -23,7 +23,7 @@ public class CreateContainerScanTaskByAppNameRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The language of the content within the request and response.</p>
+     * <p>The language type of the request and response.</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>

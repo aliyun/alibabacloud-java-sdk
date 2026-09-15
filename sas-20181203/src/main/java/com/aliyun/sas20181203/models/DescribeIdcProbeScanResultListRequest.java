@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeIdcProbeScanResultListRequest extends TeaModel {
     /**
-     * <p>The search conditions for assets. This parameter is in JSON format. Parameter names are case-sensitive.</p>
+     * <p>The search conditions for assets. This parameter is in JSON format. The parameter names are case-sensitive.</p>
      * <blockquote>
      * <p>You can search for assets by instance ID, instance name, VPC ID, region, or public IP address.</p>
      * </blockquote>
@@ -17,7 +17,7 @@ public class DescribeIdcProbeScanResultListRequest extends TeaModel {
     public String criteria;
 
     /**
-     * <p>The page number of the current page in a paged query.</p>
+     * <p>The page number in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class DescribeIdcProbeScanResultListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end time of the scan discovery period.</p>
+     * <p>The end time of the scan discovery. Specify a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1720006819000</p>
@@ -35,7 +35,7 @@ public class DescribeIdcProbeScanResultListRequest extends TeaModel {
     public Long foundEndTime;
 
     /**
-     * <p>The start time of the scan discovery period.</p>
+     * <p>The start time of the scan discovery. Specify a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1720006818000</p>
@@ -44,7 +44,7 @@ public class DescribeIdcProbeScanResultListRequest extends TeaModel {
     public Long foundStartTime;
 
     /**
-     * <p>The logical relationship between multiple search conditions. Valid values:</p>
+     * <p>The logical relationship among multiple search conditions. Valid values:</p>
      * <ul>
      * <li><strong>OR</strong>: The search conditions are in a logical <strong>OR</strong> relationship.</li>
      * <li><strong>AND</strong>: The search conditions are in a logical <strong>AND</strong> relationship.</li>
@@ -57,9 +57,9 @@ public class DescribeIdcProbeScanResultListRequest extends TeaModel {
     public String logicalExp;
 
     /**
-     * <p>The maximum number of entries per page in a paged query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
+     * <p>The maximum number of entries per page in a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
      * <blockquote>
-     * <p>Do not leave PageSize empty.</p>
+     * <p>Specify a value for PageSize.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -75,7 +75,7 @@ public class DescribeIdcProbeScanResultListRequest extends TeaModel {
      * <li><strong>1</strong>: ignored</li>
      * <li><strong>2</strong>: invalid</li>
      * <li><strong>3</strong>: expired</li>
-     * <li><strong>4</strong>: probe does not exist.</li>
+     * <li><strong>4</strong>: probe does not exist</li>
      * </ul>
      * 
      * <strong>example:</strong>

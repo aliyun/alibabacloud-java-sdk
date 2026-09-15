@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateFileProtectRuleRequest extends TeaModel {
     /**
-     * <p>The severity of alerts. Valid values:</p>
+     * <p>The alert notification level. Valid values:</p>
      * <ul>
-     * <li>0: does not generate alerts</li>
-     * <li>1: sends notifications</li>
-     * <li>2: suspicious</li>
-     * <li>3: high-risk</li>
+     * <li><p>0: no alert</p>
+     * </li>
+     * <li><p>1: reminder</p>
+     * </li>
+     * <li><p>2: suspicious</p>
+     * </li>
+     * <li><p>3: high-risk</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,21 +24,21 @@ public class UpdateFileProtectRuleRequest extends TeaModel {
     public Integer alertLevel;
 
     /**
-     * <p>The operations that you want to perform on the files.</p>
+     * <p>The list of operations performed on files.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FileOps")
     public java.util.List<String> fileOps;
 
     /**
-     * <p>The paths to the monitored files. Wildcard characters are supported.</p>
+     * <p>The list of monitored file paths. Wildcards are supported.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FilePaths")
     public java.util.List<String> filePaths;
 
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1062</p>
@@ -43,17 +47,19 @@ public class UpdateFileProtectRuleRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The paths to the monitored processes.</p>
+     * <p>The list of process listening paths.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ProcPaths")
     public java.util.List<String> procPaths;
 
     /**
-     * <p>The handling method of the rule. Valid values:</p>
+     * <p>The behavior of the rule on the client. Valid values:</p>
      * <ul>
-     * <li>pass: allow</li>
-     * <li>alert</li>
+     * <li><p>pass: allow</p>
+     * </li>
+     * <li><p>alert: alert</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +69,7 @@ public class UpdateFileProtectRuleRequest extends TeaModel {
     public String ruleAction;
 
     /**
-     * <p>The name of the rule.</p>
+     * <p>The rule name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +79,7 @@ public class UpdateFileProtectRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The status of the rule. Valid values:</p>
+     * <p>The rule status. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: disabled</li>
      * <li><strong>1</strong>: enabled</li>

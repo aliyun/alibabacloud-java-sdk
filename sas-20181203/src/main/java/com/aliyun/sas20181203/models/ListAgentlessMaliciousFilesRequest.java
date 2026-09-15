@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentlessMaliciousFilesRequest extends TeaModel {
     /**
-     * <p>The page number of the current page in a paging query.</p>
+     * <p>The page number of the current page in a paged query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ListAgentlessMaliciousFilesRequest extends TeaModel {
      * <p>Specifies whether the alert has been handled. Valid values:</p>
      * <ul>
      * <li>Y: handled</li>
-     * <li>N: not handled.</li>
+     * <li>N: not handled</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class ListAgentlessMaliciousFilesRequest extends TeaModel {
      * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class ListAgentlessMaliciousFilesRequest extends TeaModel {
      * <ul>
      * <li>serious: urgent</li>
      * <li>suspicious: suspicious</li>
-     * <li>remind: reminder.</li>
+     * <li>remind: reminder</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,7 +85,7 @@ public class ListAgentlessMaliciousFilesRequest extends TeaModel {
     public String maliciousMd5;
 
     /**
-     * <p>The Alarm Metric.</p>
+     * <p>The alerting type.</p>
      * <p>If Lang is set to zh, valid values:</p>
      * <ul>
      * <li>WebShell: WebShell</li>
@@ -96,7 +96,7 @@ public class ListAgentlessMaliciousFilesRequest extends TeaModel {
      * <ul>
      * <li>WebShell: WebShell</li>
      * <li>Malicious Software: malware</li>
-     * <li>Malicious Script: malicious script.</li>
+     * <li>Malicious Script: malicious script</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class ListAgentlessMaliciousFilesRequest extends TeaModel {
     public String maliciousType;
 
     /**
-     * <p>The maximum number of entries to return per page in a paging query.</p>
+     * <p>The maximum number of entries to return per page in a paged query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -125,7 +125,7 @@ public class ListAgentlessMaliciousFilesRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The file source.</p>
+     * <p>The file sources.</p>
      */
     @NameInMap("ScanRange")
     public java.util.List<String> scanRange;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyOperateVulRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. Only ASCII characters are supported. The token can be up to 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -32,17 +32,17 @@ public class ModifyOperateVulRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>For other vulnerability types, call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to obtain vulnerability information.</p>
+     * <p>For other vulnerability types, call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to obtain the vulnerability information.</p>
      * </blockquote>
      * <ul>
-     * <li><strong>isFront</strong>: Specifies whether the Windows patch is a prerequisite patch. This parameter is required only when you handle Windows system vulnerabilities. You can ignore this parameter for other vulnerability types. Valid values:<ul>
+     * <li><strong>isFront</strong>: Specifies whether the Windows patch is a prerequisite patch. This field is required only when handling Windows system vulnerabilities and can be ignored for other vulnerability types. Valid values:<ul>
      * <li><strong>0</strong>: No.</li>
      * <li><strong>1</strong>: Yes.</li>
      * </ul>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>Batch processing of vulnerabilities is supported. Separate multiple vulnerability entries with commas (,). Call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to obtain vulnerability information.</p>
+     * <p>Batch processing of vulnerabilities is supported. Separate multiple vulnerability entries with commas (,). Call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to obtain the vulnerability information.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -55,11 +55,11 @@ public class ModifyOperateVulRequest extends TeaModel {
     /**
      * <p>The operation to perform on the vulnerability. Valid values:</p>
      * <ul>
-     * <li><strong>vul_fix</strong>: fixes the vulnerability.</li>
-     * <li><strong>vul_verify</strong>: verifies the vulnerability.</li>
-     * <li><strong>vul_ignore</strong>: ignores the vulnerability.</li>
-     * <li><strong>vul_undo_ignore</strong>: cancels ignoring the vulnerability.</li>
-     * <li><strong>vul_delete</strong>: deletes the vulnerability.</li>
+     * <li><strong>vul_fix</strong>: Fix the vulnerability.</li>
+     * <li><strong>vul_verify</strong>: Verify the vulnerability.</li>
+     * <li><strong>vul_ignore</strong>: Ignore the vulnerability.</li>
+     * <li><strong>vul_undo_ignore</strong>: Cancel ignoring the vulnerability.</li>
+     * <li><strong>vul_delete</strong>: Delete the vulnerability.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -81,6 +81,12 @@ public class ModifyOperateVulRequest extends TeaModel {
     @NameInMap("Reason")
     public String reason;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
+     * <blockquote>
+     * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 

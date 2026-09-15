@@ -7,7 +7,7 @@ public class GetServerlessAppAuthDetailRequest extends TeaModel {
     /**
      * <p>The SAE application ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~ListMachineApps~~">ListMachineApps</a> operation to obtain the ID.</p>
+     * <p>You can call the <a href="~~ListMachineApps~~">ListMachineApps</a> operation to obtain this value.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class GetServerlessAppAuthDetailRequest extends TeaModel {
      * <p>The server type. Valid values:</p>
      * <ul>
      * <li><strong>RunD</strong></li>
-     * <li><strong>ECI</strong>.</li>
+     * <li><strong>ECI</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class GetServerlessAppAuthDetailRequest extends TeaModel {
      * <ul>
      * <li><strong>ASK</strong></li>
      * <li><strong>SAE</strong></li>
-     * <li><strong>ACS</strong>.</li>
+     * <li><strong>ACS</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>

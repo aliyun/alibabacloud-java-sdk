@@ -19,7 +19,7 @@ public class CreateFileDetectRequest extends TeaModel {
 
     /**
      * <p>The maximum number of files to decompress. Maximum value: 1000.</p>
-     * <p>This parameter is required when Decompress is set to true.</p>
+     * <p>This parameter is required if Decompress is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -29,7 +29,7 @@ public class CreateFileDetectRequest extends TeaModel {
 
     /**
      * <p>The maximum number of decompression layers when compressed files are nested within a compressed package. Maximum value: 5.</p>
-     * <p>This parameter is required when Decompress is set to true.</p>
+     * <p>This parameter is required if Decompress is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +47,7 @@ public class CreateFileDetectRequest extends TeaModel {
     public String downloadUrl;
 
     /**
-     * <p>The unique identifier of the file. This parameter is required and must be the MD5 or SHA-256 of the file.</p>
+     * <p>The unique identifier of the file. This parameter is required and must be the MD5 or SHA-256 hash of the file.</p>
      * 
      * <strong>example:</strong>
      * <p>0a212417e65c26ff133cfff28f6c****</p>
@@ -57,7 +57,8 @@ public class CreateFileDetectRequest extends TeaModel {
 
     /**
      * <p>The storage key of the file in the OSS bucket.</p>
-     * <p>If you push the file for detection by using DownloadUrl, this parameter is optional. This parameter is obtained from the <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> operation.</p>
+     * <p>If you push the file for detection by using DownloadUrl, this parameter is optional. You can obtain this parameter by calling the <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> operation.</p>
+     * <p>Note: If Type is set to 0 and DownloadUrl is not provided, this parameter is required and must be obtained by calling the CreateFileDetectUploadUrl operation.</p>
      * 
      * <strong>example:</strong>
      * <p>1/2022/06/23/15/41/16559701077444693a0c6-33b2-4cc2-a99f-9f38b8b8****</p>
@@ -75,7 +76,7 @@ public class CreateFileDetectRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The type of file to detect. Valid values:</p>
+     * <p>The type of the file to be detected. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: malicious file detection</li>
      * </ul>

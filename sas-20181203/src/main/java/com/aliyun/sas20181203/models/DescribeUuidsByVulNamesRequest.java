@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeUuidsByVulNamesRequest extends TeaModel {
     /**
-     * <p>Specifies whether the vulnerability has been handled. Valid values:</p>
+     * <p>Specifies whether the vulnerability is handled. Valid values:</p>
      * <ul>
-     * <li><strong>y</strong>: handled</li>
-     * <li><strong>n</strong>: not handled.</li>
+     * <li><strong>y</strong>: Handled.</li>
+     * <li><strong>n</strong>: Not handled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeUuidsByVulNamesRequest extends TeaModel {
     public String dealed;
 
     /**
-     * <p>The container search field name.</p>
+     * <p>The name of the container search field.</p>
      * 
      * <strong>example:</strong>
      * <p>namespace</p>
@@ -27,7 +27,7 @@ public class DescribeUuidsByVulNamesRequest extends TeaModel {
     public String fieldName;
 
     /**
-     * <p>The container search field value.</p>
+     * <p>The value of the container search field.</p>
      * 
      * <strong>example:</strong>
      * <p>cas-adad-qeqwe</p>
@@ -48,7 +48,7 @@ public class DescribeUuidsByVulNamesRequest extends TeaModel {
      * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,9 +60,9 @@ public class DescribeUuidsByVulNamesRequest extends TeaModel {
     /**
      * <p>The vulnerability level. Separate multiple levels with commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>high</strong>: high</li>
-     * <li><strong>medium</strong>: medium</li>
-     * <li><strong>low</strong>: low.</li>
+     * <li><strong>high</strong>: High.</li>
+     * <li><strong>medium</strong>: Medium.</li>
+     * <li><strong>low</strong>: Low.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,11 +72,11 @@ public class DescribeUuidsByVulNamesRequest extends TeaModel {
     public String level;
 
     /**
-     * <p>The priority level of vulnerability fixing. Separate multiple levels with commas (,). Valid values:</p>
+     * <p>The priority level of the vulnerability fix. Separate multiple levels with commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>asap</strong>: high</li>
-     * <li><strong>later</strong>: medium</li>
-     * <li><strong>nntf</strong>: low.</li>
+     * <li><strong>asap</strong>: High.</li>
+     * <li><strong>later</strong>: Medium.</li>
+     * <li><strong>nntf</strong>: Low.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,6 +94,12 @@ public class DescribeUuidsByVulNamesRequest extends TeaModel {
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member accounts in the resource directory.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
@@ -109,8 +115,8 @@ public class DescribeUuidsByVulNamesRequest extends TeaModel {
     /**
      * <p>The fix status of the vulnerability. Separate multiple statuses with commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: unfixed</li>
-     * <li><strong>2</strong>: fix failed.</li>
+     * <li><strong>1</strong>: Unfixed.</li>
+     * <li><strong>2</strong>: Fix failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -132,7 +138,7 @@ public class DescribeUuidsByVulNamesRequest extends TeaModel {
      * <p>The query type. Valid values:</p>
      * <ul>
      * <li><strong>containerId</strong>: container ID</li>
-     * <li><strong>uuid</strong>: asset ID.</li>
+     * <li><strong>uuid</strong>: asset ID</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -145,7 +151,7 @@ public class DescribeUuidsByVulNamesRequest extends TeaModel {
      * <p>The type of vulnerability to query. Valid values:</p>
      * <ul>
      * <li><strong>cve</strong>: Linux software vulnerability</li>
-     * <li><strong>sys</strong>: Windows system vulnerability.</li>
+     * <li><strong>sys</strong>: Windows system vulnerability</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -7,7 +7,7 @@ public class UploadedHoneyPotFileRequest extends TeaModel {
     /**
      * <p>The FileKey used to upload the file.</p>
      * <blockquote>
-     * <p>Format: HONEYPOT_FILE/{timestamp}_{custom_file_name}.</p>
+     * <p>Format: HONEYPOT_FILE/{timestamp}_{custom_file_name}</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -51,7 +51,7 @@ public class UploadedHoneyPotFileRequest extends TeaModel {
      * <p>The language type of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,8 @@ public class UploadedHoneyPotFileRequest extends TeaModel {
     /**
      * <p>The ID of the honeypot management node.</p>
      * <blockquote>
-     * <p>Call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain this value.</p>
+     * <p>Call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain this value.
+     * Note: This parameter is required. If this parameter is not specified, the API returns InvalidParam (400). Call ListHoneypotNode to obtain a valid NodeId.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -73,7 +74,7 @@ public class UploadedHoneyPotFileRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The template prompt corresponding to the uploaded file.</p>
+     * <p>The template prompt for the uploaded file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

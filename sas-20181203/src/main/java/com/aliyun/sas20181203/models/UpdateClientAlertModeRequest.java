@@ -7,8 +7,8 @@ public class UpdateClientAlertModeRequest extends TeaModel {
     /**
      * <p>The protection mode. Valid values:</p>
      * <ul>
-     * <li><strong>strict</strong>: The strict mode. False positives may be generated. We recommend that you enable this mode during major events.</li>
-     * <li><strong>balance</strong>: The balanced mode. More risks can be detected with less false positives in this mode.</li>
+     * <li><strong>strict</strong>: Strict mode. Defense mode has a risk of false positives. Use Defense mode during critical event protection periods.</li>
+     * <li><strong>balance</strong>: Balanced mode. Defense mode detects more suspicious risks while reducing false positives.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdateClientAlertModeRequest extends TeaModel {
     public String mode;
 
     /**
-     * <p>The UUIDs of servers.</p>
+     * <p>The list of server UUIDs.</p>
      */
     @NameInMap("Uuids")
     public java.util.List<String> uuids;

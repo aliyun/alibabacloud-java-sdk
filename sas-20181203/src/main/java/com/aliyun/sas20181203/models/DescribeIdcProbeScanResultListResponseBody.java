@@ -69,10 +69,10 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
         public String clientStatus;
 
         /**
-         * <p>The name of the IDC server room.</p>
+         * <p>The IDC name.</p>
          * 
          * <strong>example:</strong>
-         * <p>3K机房广州</p>
+         * <p>3K IDC Guangzhou</p>
          */
         @NameInMap("IdcName")
         public String idcName;
@@ -87,7 +87,7 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
         public String ipSegment;
 
         /**
-         * <p>The timestamp of the latest scan, in milliseconds.</p>
+         * <p>The timestamp of the latest scan. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1720006818000</p>
@@ -99,7 +99,7 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
          * <p>The operating system type of the asset. Valid values:</p>
          * <ul>
          * <li><strong>windows</strong></li>
-         * <li><strong>linux</strong>.</li>
+         * <li><strong>linux</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -285,7 +285,7 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number of the current page in a paged query.</p>
+         * <p>The page number in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

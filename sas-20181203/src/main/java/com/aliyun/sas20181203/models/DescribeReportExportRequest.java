@@ -7,7 +7,7 @@ public class DescribeReportExportRequest extends TeaModel {
     /**
      * <p>The ID of the export task.</p>
      * <blockquote>
-     * <p>Call <a href="~~ExportCustomizeReport~~">ExportCustomizeReport</a> to obtain this parameter.</p>
+     * <p>You can call <a href="~~ExportCustomizeReport~~">ExportCustomizeReport</a> to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class DescribeReportExportRequest extends TeaModel {
     /**
      * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>zh</strong>: Chinese.</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
@@ -30,6 +30,12 @@ public class DescribeReportExportRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member accounts in the resource directory.</p>
+     * <blockquote>
+     * <p>You can call <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> to obtain this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 

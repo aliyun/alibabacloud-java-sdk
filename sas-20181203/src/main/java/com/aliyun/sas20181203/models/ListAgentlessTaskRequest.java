@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentlessTaskRequest extends TeaModel {
     /**
-     * <p>The page number of the current page in a paged query. Paging starts from page 1.</p>
+     * <p>The page number of the current page in a paged query. This parameter implements paging.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +44,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
      * <p>The language type. Valid values:  </p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
     public String machineName;
 
     /**
-     * <p>The maximum number of entries per page in a paged query. Paging is performed based on this value.</p>
+     * <p>The maximum number of entries per page in a paged query. This parameter implements paging.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -130,7 +130,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
      * <p>The scan object type. Valid values:</p>
      * <ul>
      * <li><strong>1</strong>: snapshot </li>
-     * <li><strong>2</strong>: image.</li>
+     * <li><strong>2</strong>: image</li>
      * </ul>
      * 
      * <strong>example:</strong>

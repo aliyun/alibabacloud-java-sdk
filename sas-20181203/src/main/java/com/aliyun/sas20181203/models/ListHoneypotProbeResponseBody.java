@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHoneypotProbeResponseBody extends TeaModel {
     /**
-     * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. You can use this field to determine the cause of a failure.</p>
+     * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -55,8 +55,8 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The call was successful.</li>
-     * <li><strong>false</strong>: The call failed.</li>
+     * <li><strong>true</strong>: Successful.</li>
+     * <li><strong>false</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -193,7 +193,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
         public ListHoneypotProbeResponseBodyListControlNode controlNode;
 
         /**
-         * <p>The deployment time.</p>
+         * <p>The deployment time. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1669363825000</p>
@@ -211,7 +211,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The local IP address bound to the probe.</p>
+         * <p>The local address bound to the probe.</p>
          * 
          * <strong>example:</strong>
          * <p>33.53.XX.XX</p>
@@ -245,7 +245,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
          * <p>The probe type. Valid values:</p>
          * <ul>
          * <li><strong>host_probe</strong>: host probe</li>
-         * <li><strong>vpc_black_hole_probe</strong>: VPC blackhole probe.</li>
+         * <li><strong>vpc_black_hole_probe</strong>: VPC blackhole probe</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -285,7 +285,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The UUID of the asset instance where the host probe is deployed.</p>
+         * <p>The UUID of the asset instance where the host probe resides.</p>
          * 
          * <strong>example:</strong>
          * <p>49e25e0f-bb51-4a5a-a1b3-13a4ddaa****</p>
@@ -294,7 +294,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
         public String uuid;
 
         /**
-         * <p>The ID of the VPC-connected instance where the VPC probe is deployed.</p>
+         * <p>The ID of the VPC-connected instance where the VPC probe resides.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-5gu8iu68w9b472jbb****</p>
@@ -399,7 +399,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
 
     public static class ListHoneypotProbeResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of honeypot probes displayed on the current page.</p>
+         * <p>The number of honeypot probes on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -408,7 +408,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The current page number returned in the paged query during paging.</p>
+         * <p>The page number of the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -417,7 +417,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of honeypot probes displayed per page in the paged query during paging. Default value: <strong>20</strong>.</p>
+         * <p>The number of honeypot probes per page in a paged query. Default value: <strong>20</strong>, which indicates that 20 honeypot probes are displayed per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

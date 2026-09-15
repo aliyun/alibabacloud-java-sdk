@@ -41,7 +41,7 @@ public class DescribeImageVulListRequest extends TeaModel {
     public String containerId;
 
     /**
-     * <p>The page number of the page to return in a paginated query. Default value: <strong>1</strong>, which indicates the first page.</p>
+     * <p>The page number of the page to return in the query results. Default value: <strong>1</strong>, which indicates the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -52,8 +52,8 @@ public class DescribeImageVulListRequest extends TeaModel {
     /**
      * <p>Specifies whether the vulnerability has been handled. Valid values:</p>
      * <ul>
-     * <li><strong>y</strong>: handled</li>
-     * <li><strong>n</strong>: not handled.</li>
+     * <li><strong>y</strong>: Handled.</li>
+     * <li><strong>n</strong>: Not handled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,6 +70,12 @@ public class DescribeImageVulListRequest extends TeaModel {
      */
     @NameInMap("Digest")
     public String digest;
+
+    /**
+     * <p>Specifies whether to group results by image asset before pagination. If set to true, one vulnerability record is returned for each asset, and TotalCount indicates the total number of assets. If set to false or not specified, results are paginated by vulnerability record. Asset grouping is not applied when MaxId is specified.</p>
+     */
+    @NameInMap("GroupByAsset")
+    public Boolean groupByAsset;
 
     /**
      * <p>The name of the container image.</p>
@@ -90,10 +96,10 @@ public class DescribeImageVulListRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language type of the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -121,11 +127,11 @@ public class DescribeImageVulListRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The priority level of vulnerability fixing. Valid values:</p>
+     * <p>The priority level for fixing the vulnerability. Valid values:</p>
      * <ul>
-     * <li><strong>asap</strong>: high-priority vulnerability</li>
-     * <li><strong>later</strong>: medium-priority vulnerability</li>
-     * <li><strong>nntf</strong>: low-priority vulnerability.</li>
+     * <li><strong>asap</strong>: High-priority vulnerability that must be fixed as soon as possible.</li>
+     * <li><strong>later</strong>: Medium-priority vulnerability that can be fixed later.</li>
+     * <li><strong>nntf</strong>: Low-priority vulnerability that does not need to be fixed for now.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -135,7 +141,7 @@ public class DescribeImageVulListRequest extends TeaModel {
     public String necessity;
 
     /**
-     * <p>Settings for the number of vulnerabilities to display on each page in a paged query. Default value: <strong>10</strong>, which indicates that 10 vulnerabilities are displayed on each page.</p>
+     * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>, which indicates 10 vulnerability entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -206,13 +212,19 @@ public class DescribeImageVulListRequest extends TeaModel {
     @NameInMap("RepoRegionId")
     public String repoRegionId;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member accounts in the resource directory.</p>
+     * <blockquote>
+     * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
      * <p>The vulnerability tag. Valid values:</p>
      * <ul>
-     * <li><strong>AI</strong>: vulnerability related to AI components.</li>
+     * <li><strong>AI</strong>: vulnerabilities related to AI components</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -230,9 +242,9 @@ public class DescribeImageVulListRequest extends TeaModel {
     /**
      * <p>The fix status of the vulnerability. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: unfixed</li>
-     * <li><strong>4</strong>: being fixed</li>
-     * <li><strong>7</strong>: fixed.</li>
+     * <li><strong>1</strong>: Unfixed.</li>
+     * <li><strong>4</strong>: Being fixed.</li>
+     * <li><strong>7</strong>: Fixed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -328,6 +340,14 @@ public class DescribeImageVulListRequest extends TeaModel {
     }
     public String getDigest() {
         return this.digest;
+    }
+
+    public DescribeImageVulListRequest setGroupByAsset(Boolean groupByAsset) {
+        this.groupByAsset = groupByAsset;
+        return this;
+    }
+    public Boolean getGroupByAsset() {
+        return this.groupByAsset;
     }
 
     public DescribeImageVulListRequest setImage(String image) {

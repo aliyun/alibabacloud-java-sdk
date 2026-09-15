@@ -14,7 +14,7 @@ public class ExportSuspEventsResponseBody extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The ID of the export record of the anomalous event.</p>
+     * <p>The export record ID of the anomaly event.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ExportSuspEventsResponseBody extends TeaModel {
     public Integer id;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EF145C20-6A19-529A-8BDD-0671DXXXXXX</p>

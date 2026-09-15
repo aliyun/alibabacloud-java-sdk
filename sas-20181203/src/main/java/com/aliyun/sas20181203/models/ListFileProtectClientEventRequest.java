@@ -11,7 +11,7 @@ public class ListFileProtectClientEventRequest extends TeaModel {
     public java.util.List<Integer> alertLevels;
 
     /**
-     * <p>The page number of the current page when paging is used in a paged query.</p>
+     * <p>The number of the page to return in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -76,11 +76,11 @@ public class ListFileProtectClientEventRequest extends TeaModel {
     /**
      * <p>The type of operation performed on the file. Valid values:</p>
      * <ul>
-     * <li><strong>DELETE</strong>: deletes the file.</li>
-     * <li><strong>WRITE</strong>: writes to the file.</li>
-     * <li><strong>READ</strong>: reads the file.</li>
-     * <li><strong>RENAME</strong>: renames the file.</li>
-     * <li><strong>CHOWN</strong>: changes the file owner and associated group.</li>
+     * <li><strong>DELETE</strong>: File deletion.</li>
+     * <li><strong>WRITE</strong>: File write.</li>
+     * <li><strong>READ</strong>: File read.</li>
+     * <li><strong>RENAME</strong>: File rename.</li>
+     * <li><strong>CHOWN</strong>: Setting the file owner and file group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class ListFileProtectClientEventRequest extends TeaModel {
     public String operation;
 
     /**
-     * <p>The maximum number of entries per page when paging is used in a paged query.</p>
+     * <p>The maximum number of entries to return on each page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -117,7 +117,7 @@ public class ListFileProtectClientEventRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The start time.</p>
+     * <p>The start time. This value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1650470399999</p>
@@ -142,7 +142,7 @@ public class ListFileProtectClientEventRequest extends TeaModel {
     /**
      * <p>The UUID of the server to query.</p>
      * <blockquote>
-     * <p>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
+     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

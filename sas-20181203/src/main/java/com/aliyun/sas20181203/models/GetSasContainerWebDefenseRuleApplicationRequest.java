@@ -7,7 +7,8 @@ public class GetSasContainerWebDefenseRuleApplicationRequest extends TeaModel {
     /**
      * <p>The rule ID.</p>
      * <blockquote>
-     * <p>You can call the ListSasContainerWebDefenseRule operation to obtain this parameter.</p>
+     * <p>Call the ListSasContainerWebDefenseRule operation to obtain this parameter.
+     * Note: This parameter is required. If this parameter is not specified, the API returns a 400 error. Call the ListSasContainerWebDefenseRule operation to obtain valid RuleId values.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

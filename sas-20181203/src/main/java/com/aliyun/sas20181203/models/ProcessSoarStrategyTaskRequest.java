@@ -21,7 +21,7 @@ public class ProcessSoarStrategyTaskRequest extends TeaModel {
      * <p>The action status of the task. Valid values:</p>
      * <ul>
      * <li>SCHEDULE: scheduling</li>
-     * <li>PAUSE: pause.</li>
+     * <li>PAUSE: pause</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -7,7 +7,7 @@ public class DescribeSuspEventsShrinkRequest extends TeaModel {
     /**
      * <p>The unique ID of the alert event.</p>
      * <blockquote>
-     * <p>To query the exception information of a single alert event, provide the unique ID of the alert event. You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to obtain the ID.</p>
+     * <p>To query the exception information of a single alert event, provide the unique ID of the alert event. You can obtain this ID by calling the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,7 +23,7 @@ public class DescribeSuspEventsShrinkRequest extends TeaModel {
     public java.util.List<String> assetsTypeList;
 
     /**
-     * <p>The ID of the cluster for which you want to query alert events.</p>
+     * <p>The cluster ID for which you want to query alert events.</p>
      * 
      * <strong>example:</strong>
      * <p>c4af4fdf38a98496a9b63c2be5dae****</p>
@@ -64,7 +64,7 @@ public class DescribeSuspEventsShrinkRequest extends TeaModel {
     public String containerFieldValue;
 
     /**
-     * <p>The page number of the results to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the page to return in a paged query. Default value: <strong>1</strong>, which indicates that the results start from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -74,6 +74,10 @@ public class DescribeSuspEventsShrinkRequest extends TeaModel {
 
     /**
      * <p>Specifies whether the alert events to query have been handled. Valid values:</p>
+     * <ul>
+     * <li><strong>N</strong>: Unhandled.</li>
+     * <li><strong>Y</strong>: Handled.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>N</p>
@@ -82,7 +86,7 @@ public class DescribeSuspEventsShrinkRequest extends TeaModel {
     public String dealed;
 
     /**
-     * <p>The discovery source. This parameter is invalid.</p>
+     * <p>The discovery source. This is an invalid field.</p>
      * 
      * <strong>example:</strong>
      * <p>linux</p>
@@ -129,8 +133,8 @@ public class DescribeSuspEventsShrinkRequest extends TeaModel {
     /**
      * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -140,11 +144,11 @@ public class DescribeSuspEventsShrinkRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The severity levels of the security alerts that you want to query. Separate multiple severity levels with commas (,). The severity levels are listed in descending order. Valid values:</p>
+     * <p>The severity levels of the alert events to query. Separate multiple severity levels with commas (,). The severity levels are listed in descending order. Valid values:</p>
      * <ul>
-     * <li><strong>serious</strong>: Critical.</li>
+     * <li><strong>serious</strong>: Urgent.</li>
      * <li><strong>suspicious</strong>: Suspicious.</li>
-     * <li><strong>remind</strong>: Informational.</li>
+     * <li><strong>remind</strong>: Reminder.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -156,8 +160,8 @@ public class DescribeSuspEventsShrinkRequest extends TeaModel {
     /**
      * <p>The multi-account query type. Default value: <strong>0</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Queries data of the current account.</li>
-     * <li><strong>1</strong>: Queries data of all accounts.</li>
+     * <li><strong>0</strong>: Query data of the current account.</li>
+     * <li><strong>1</strong>: Query data of all accounts.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -200,7 +204,7 @@ public class DescribeSuspEventsShrinkRequest extends TeaModel {
     public String operateTimeStart;
 
     /**
-     * <p>The number of alert events to display on each page in a paged query. Default value: <strong>20</strong>. Maximum value: 100.</p>
+     * <p>The number of alert events to display on each page in a paged query. Default value: <strong>20</strong>, which indicates that 20 alert events are displayed on each page. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -209,7 +213,32 @@ public class DescribeSuspEventsShrinkRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The Alarm Metric of the alerting events to query. Valid values:</p>
+     * <p>The alerting type of the alert events to query. Valid values:</p>
+     * <ul>
+     * <li><strong>Abnormal process behavior</strong></li>
+     * <li><strong>Web shell</strong></li>
+     * <li><strong>Unusual logon</strong></li>
+     * <li><strong>Abnormal event</strong></li>
+     * <li><strong>Sensitive file tampering</strong></li>
+     * <li><strong>Malicious process (cloud scan)</strong></li>
+     * <li><strong>Suspicious network connectivity</strong></li>
+     * <li><strong>Abnormal account</strong></li>
+     * <li><strong>Application intrusion event</strong></li>
+     * <li><strong>Cloud service threat detection</strong></li>
+     * <li><strong>Precise defense</strong></li>
+     * <li><strong>Application whitelist</strong></li>
+     * <li><strong>Persistent backdoor</strong></li>
+     * <li><strong>Web application threat detection</strong></li>
+     * <li><strong>Malicious script</strong></li>
+     * <li><strong>Threat intelligence</strong></li>
+     * <li><strong>Malicious network behavior</strong></li>
+     * <li><strong>Container cluster exception</strong></li>
+     * <li><strong>Web shell (local scan)</strong></li>
+     * <li><strong>Vulnerability exploits</strong></li>
+     * <li><strong>Malicious process (local scan)</strong></li>
+     * <li><strong>Trusted exception</strong></li>
+     * <li><strong>Other</strong></li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>other</p>
@@ -219,6 +248,9 @@ public class DescribeSuspEventsShrinkRequest extends TeaModel {
 
     /**
      * <p>The alert name or asset information to query.</p>
+     * <blockquote>
+     * <p>Fuzzy match is supported. Asset information includes the asset name, public IP address, and private IP address.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -227,7 +259,7 @@ public class DescribeSuspEventsShrinkRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The China site (Chinese mainland) account ID of the member account in the resource directory.</p>
+     * <p>The Alibaba Cloud account ID of the member accounts in the resource directory.</p>
      * <blockquote>
      * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
@@ -241,8 +273,8 @@ public class DescribeSuspEventsShrinkRequest extends TeaModel {
     /**
      * <p>The custom sort field. Default value: <strong>operateTime</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>lastTime</strong>: the most recent occurrence time.</li>
-     * <li><strong>operateTime</strong>: the processing time.</li>
+     * <li><strong>lastTime</strong>: Latest occurrence time.</li>
+     * <li><strong>operateTime</strong>: Handling time.</li>
      * </ul>
      * <blockquote>
      * <p>This field takes effect only when <strong>Dealed</strong> is set to Y.</p>
@@ -255,13 +287,13 @@ public class DescribeSuspEventsShrinkRequest extends TeaModel {
     public String sortColumn;
 
     /**
-     * <p>The custom sort type. Default value: <strong>desc</strong>. Valid values:</p>
+     * <p>The custom sort order. Default value: <strong>desc</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>asc</strong>: ascending order.</li>
-     * <li><strong>desc</strong>: descending order.</li>
+     * <li><strong>asc</strong>: Ascending order.</li>
+     * <li><strong>desc</strong>: Descending order.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter takes effect only when <strong>Dealed</strong> is set to Y.</p>
+     * <p>This field takes effect only when <strong>Dealed</strong> is set to Y.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -296,6 +328,19 @@ public class DescribeSuspEventsShrinkRequest extends TeaModel {
 
     /**
      * <p>The status of the alert events to query. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: All.</li>
+     * <li><strong>1</strong>: Unhandled.</li>
+     * <li><strong>2</strong>: Ignored.</li>
+     * <li><strong>4</strong>: Confirmed.</li>
+     * <li><strong>8</strong>: Marked as false positive.</li>
+     * <li><strong>16</strong>: Handling.</li>
+     * <li><strong>32</strong>: Handled.</li>
+     * <li><strong>64</strong>: Expired.</li>
+     * <li><strong>128</strong>: Deleted.</li>
+     * <li><strong>512</strong>: Automatic blocking in progress.</li>
+     * <li><strong>513</strong>: Automatic blocking completed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -304,7 +349,11 @@ public class DescribeSuspEventsShrinkRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>Specifies whether the alert is identified in strict mode.</p>
+     * <p>Specifies whether the alert is in strict mode. Valid values:</p>
+     * <ul>
+     * <li>N: No.</li>
+     * <li>Y: Yes.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Y</p>
@@ -319,7 +368,7 @@ public class DescribeSuspEventsShrinkRequest extends TeaModel {
     public java.util.List<String> supportOperateCodeList;
 
     /**
-     * <p>The tactic ID in ATT&amp;CK.</p>
+     * <p>The ATT&amp;CK tactic ID.</p>
      * 
      * <strong>example:</strong>
      * <p>TA0001</p>
@@ -328,11 +377,11 @@ public class DescribeSuspEventsShrinkRequest extends TeaModel {
     public String tacticId;
 
     /**
-     * <p>The type of the container search target. Valid values:</p>
+     * <p>The target type for container search. Valid values:</p>
      * <ul>
-     * <li><strong>containerId</strong>: container ID.</li>
-     * <li><strong>uuid</strong>: server UUID.</li>
-     * <li><strong>imageUuid</strong>: image UUID.</li>
+     * <li><strong>containerId</strong>: container ID</li>
+     * <li><strong>uuid</strong>: server UUID</li>
+     * <li><strong>imageUuid</strong>: image UUID</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -342,7 +391,7 @@ public class DescribeSuspEventsShrinkRequest extends TeaModel {
     public String targetType;
 
     /**
-     * <p>The end time of the latest occurrence time range.</p>
+     * <p>The end time of the latest occurrence. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-06 13:50:38</p>
@@ -351,7 +400,7 @@ public class DescribeSuspEventsShrinkRequest extends TeaModel {
     public String timeEnd;
 
     /**
-     * <p>The start time of the latest occurrence time range.</p>
+     * <p>The start time of the latest occurrence. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-05 13:50:38</p>

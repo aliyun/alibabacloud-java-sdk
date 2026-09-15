@@ -62,7 +62,7 @@ public class DescribeOnceTaskLeafRecordPageRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The list of statuses.</p>
+     * <p>The status list.</p>
      */
     @NameInMap("StatusList")
     public java.util.List<String> statusList;
@@ -79,7 +79,7 @@ public class DescribeOnceTaskLeafRecordPageRequest extends TeaModel {
     /**
      * <p>The task type. Valid values:</p>
      * <ul>
-     * <li><strong>IMAGE_SCAN</strong>: image scanning</li>
+     * <li><strong>IMAGE_SCAN</strong>: image scanning.</li>
      * <li><strong>IMAGE_REGISTRY_PULL</strong>: image asset synchronization.</li>
      * </ul>
      * <p>This parameter is required.</p>

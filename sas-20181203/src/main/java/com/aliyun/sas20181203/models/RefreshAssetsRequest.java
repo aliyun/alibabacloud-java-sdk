@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class RefreshAssetsRequest extends TeaModel {
     /**
-     * <p>The type of the asset that you want to synchronize. Valid values:</p>
+     * <p>The type of asset to synchronize. Default value: <strong>ecs</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>cloud_product</strong>: Alibaba Cloud service</li>
-     * <li><strong>ecs</strong>: Elastic Compute Service (ECS) instance</li>
+     * <li><strong>cloud_product</strong>: cloud product</li>
+     * <li><strong>ecs</strong>: server</li>
      * <li><strong>container_image</strong>: container image</li>
      * </ul>
      * 
@@ -19,9 +19,9 @@ public class RefreshAssetsRequest extends TeaModel {
     public String assetType;
 
     /**
-     * <p>The subtype of the cloud service.</p>
+     * <p>The subtype of the cloud product.</p>
      * <blockquote>
-     * <p> The following list describes the subtypes of cloud services.</p>
+     * <p>Refer to the following list for valid values.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,30 +31,30 @@ public class RefreshAssetsRequest extends TeaModel {
     public Integer cloudAssetSubType;
 
     /**
-     * <p>The type of the cloud service. Valid values:</p>
+     * <p>The type of cloud product. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: ECS</li>
-     * <li><strong>1</strong>: Server Load Balancer (SLB)</li>
-     * <li><strong>3</strong>: ApsaraDB RDS</li>
-     * <li><strong>4</strong>: ApsaraDB for MongoDB (MongoDB)</li>
-     * <li><strong>5</strong>: ApsaraDB for Redis (Redis)</li>
+     * <li><strong>0</strong>: server</li>
+     * <li><strong>1</strong>: load balancing</li>
+     * <li><strong>3</strong>: ApsaraDB RDS database</li>
+     * <li><strong>4</strong>: ApsaraDB for MongoDB database</li>
+     * <li><strong>5</strong>: Tair (Redis® OSS-Compatible) database</li>
      * <li><strong>6</strong>: Container Registry</li>
-     * <li><strong>8</strong>: Container Service for Kubernetes (ACK)</li>
-     * <li><strong>9</strong>: Virtual Private Cloud (VPC)</li>
+     * <li><strong>8</strong>: container service for Kubernetes</li>
+     * <li><strong>9</strong>: VPC</li>
      * <li><strong>11</strong>: ActionTrail</li>
-     * <li><strong>12</strong>: Alibaba Cloud CDN (CDN)</li>
+     * <li><strong>12</strong>: CDN</li>
      * <li><strong>13</strong>: Certificate Management Service (formerly SSL Certificates Service)</li>
      * <li><strong>14</strong>: Apsara Devops</li>
-     * <li><strong>15</strong>: Resource Access Management (RAM)</li>
+     * <li><strong>15</strong>: access control</li>
      * <li><strong>16</strong>: Anti-DDoS</li>
-     * <li><strong>17</strong>: Web Application Firewall (WAF)</li>
-     * <li><strong>18</strong>: Object Storage Service (OSS)</li>
-     * <li><strong>19</strong>: PolarDB</li>
-     * <li><strong>20</strong>: ApsaraDB RDS for PostgreSQL</li>
-     * <li><strong>21</strong>: Microservices Engine (MSE)</li>
-     * <li><strong>22</strong>: File Storage NAS (NAS)</li>
-     * <li><strong>23</strong>: Data Security Center (DSC)</li>
-     * <li><strong>24</strong>: Elastic IP Address (EIP)</li>
+     * <li><strong>17</strong>: Web Application Firewall</li>
+     * <li><strong>18</strong>: OSS</li>
+     * <li><strong>19</strong>: cloud-native relational database PolarDB</li>
+     * <li><strong>20</strong>: ApsaraDB RDS for PostgreSQL database</li>
+     * <li><strong>21</strong>: Microservices Engine</li>
+     * <li><strong>22</strong>: File Storage NAS</li>
+     * <li><strong>23</strong>: Data Security Center</li>
+     * <li><strong>24</strong>: EIP</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,17 +63,23 @@ public class RefreshAssetsRequest extends TeaModel {
     @NameInMap("CloudAssetType")
     public Integer cloudAssetType;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account of the member accounts in the resource directory.</p>
+     * <blockquote>
+     * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>The type of the server. Valid values:</p>
+     * <p>The server vendor. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: an asset provided by Alibaba Cloud</li>
-     * <li><strong>1</strong>: a third-party cloud asset</li>
-     * <li><strong>2</strong>: an asset in a data center</li>
-     * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: an asset provided by another cloud</li>
-     * <li><strong>8</strong>: a lightweight asset</li>
+     * <li><strong>0</strong>: Alibaba Cloud asset</li>
+     * <li><strong>1</strong>: asset outside the cloud</li>
+     * <li><strong>2</strong>: IDC asset</li>
+     * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>: third-party cloud asset</li>
+     * <li><strong>8</strong>: lightweight asset</li>
      * </ul>
      * 
      * <strong>example:</strong>

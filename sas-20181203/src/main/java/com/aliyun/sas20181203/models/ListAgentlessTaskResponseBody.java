@@ -65,6 +65,12 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>The extended information of the task. For image security fix subtasks, this field returns the selected vulnerability identifiers and the name of the fixed image. The keys include vulnerabilityIds and outputImageName.</p>
+         */
+        @NameInMap("Extension")
+        public java.util.Map<String, String> extension;
+
+        /**
          * <p>The instance ID of the asset.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +107,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
-         * <p>The amount of detected data, in MB.</p>
+         * <p>The amount of data scanned, in MB.</p>
          * 
          * <strong>example:</strong>
          * <p>154.11</p>
@@ -153,7 +159,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
         public String reportStatus;
 
         /**
-         * <p>The detection result.</p>
+         * <p>The check result.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -198,7 +204,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
          * <p>The object type. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: snapshot</li>
-         * <li><strong>2</strong>: image.</li>
+         * <li><strong>2</strong>: image</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -245,6 +251,14 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
         }
         public Long getEndTime() {
             return this.endTime;
+        }
+
+        public ListAgentlessTaskResponseBodyList setExtension(java.util.Map<String, String> extension) {
+            this.extension = extension;
+            return this;
+        }
+        public java.util.Map<String, String> getExtension() {
+            return this.extension;
         }
 
         public ListAgentlessTaskResponseBodyList setInstanceId(String instanceId) {
@@ -387,7 +401,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
 
     public static class ListAgentlessTaskResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The page number of the current page in a paged query. Paging starts from page 1.</p>
+         * <p>The page number of the current page in a paged query. This parameter implements paging.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -396,7 +410,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The maximum number of entries per page in a paged query. Paging is performed based on this value.</p>
+         * <p>The maximum number of entries per page in a paged query. This parameter implements paging.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

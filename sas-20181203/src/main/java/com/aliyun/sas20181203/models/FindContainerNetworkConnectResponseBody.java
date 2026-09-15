@@ -11,7 +11,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
     public java.util.List<FindContainerNetworkConnectResponseBodyConnects> connects;
 
     /**
-     * <p>The paging information for the query.</p>
+     * <p>The pagination information for a paged query.</p>
      */
     @NameInMap("PageInfo")
     public FindContainerNetworkConnectResponseBodyPageInfo pageInfo;
@@ -108,7 +108,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
         /**
          * <p>The destination container information.</p>
          * <blockquote>
-         * <p>Notice: This parameter is not supported..</p>
+         * <p>Notice: Not supported.</notice></p>
          * </blockquote>
          */
         @NameInMap("DstContainer")
@@ -151,7 +151,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The timestamp when the connection most recently occurred. Unit: milliseconds.</p>
+         * <p>The timestamp when the connection last occurred. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1636595679174</p>
@@ -162,7 +162,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
         /**
          * <p>The source container information.</p>
          * <blockquote>
-         * <p>Notice: This parameter is not supported..</p>
+         * <p>Notice: Not supported.</notice></p>
          * </blockquote>
          */
         @NameInMap("SrcContainer")
@@ -267,7 +267,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
 
     public static class FindContainerNetworkConnectResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries returned on the current page in the paging query.</p>
+         * <p>The number of entries returned on the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -276,7 +276,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The current page number in the paging query.</p>
+         * <p>The current page number in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -285,7 +285,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
         public Long currentPage;
 
         /**
-         * <p>The number of entries per page in the paging query. Default value: <strong>20</strong>, which indicates that 20 network connectivity entries are displayed per page.</p>
+         * <p>The number of container asset entries per page in a paged query. Default value: <strong>20</strong>, which indicates that 20 network connectivity entries are displayed per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

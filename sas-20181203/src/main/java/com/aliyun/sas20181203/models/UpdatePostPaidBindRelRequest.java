@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdatePostPaidBindRelRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic binding for new assets. Valid values:</p>
+     * <p>Specifies whether to automatically bind new assets. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: disabled</li>
-     * <li><strong>1</strong>: enabled</li>
+     * <li><strong>0</strong>: Disabled.</li>
+     * <li><strong>1</strong>: Enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,11 +40,17 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
     public java.util.List<UpdatePostPaidBindRelRequestBindAction> bindAction;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The abbreviated name of the cloud service. Valid values:</p>
+     * <ul>
+     * <li><strong>sas</strong>: Security Center</li>
+     * </ul>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
@@ -114,8 +120,8 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
         /**
          * <p>Specifies whether to bind all servers. Default value: <strong>false</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><strong>true</strong>: Bind all servers.</li>
+         * <li><strong>false</strong>: Do not bind all servers.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -124,6 +130,9 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
         @NameInMap("BindAll")
         public Boolean bindAll;
 
+        /**
+         * <p>The free quota type.</p>
+         */
         @NameInMap("FreeType")
         public String freeType;
 

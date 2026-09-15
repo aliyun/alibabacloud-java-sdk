@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class HandleObjectScanEventRequest extends TeaModel {
     /**
-     * <p>Specifies the type for batch processing of similar alerts. Valid values:</p>
+     * <p>The type for batch handling of similar alerts. Valid values:</p>
      * <ul>
-     * <li><strong>sha256</strong>: by file content</li>
+     * <li><strong>sha256</strong>: by file content.</li>
      * <li><strong>eventName</strong>: by alert name.</li>
      * </ul>
      * 
@@ -18,7 +18,7 @@ public class HandleObjectScanEventRequest extends TeaModel {
     public String batchType;
 
     /**
-     * <p>The event ID.</p>
+     * <p>The event ID. You must specify at least one of EventId and EventIdList to identify the target scan events to handle.</p>
      * 
      * <strong>example:</strong>
      * <p>81****</p>
@@ -27,15 +27,15 @@ public class HandleObjectScanEventRequest extends TeaModel {
     public String eventId;
 
     /**
-     * <p>The list of event IDs.</p>
+     * <p>The list of event IDs. You must specify at least one of EventId and EventIdList to identify the target scan events to handle.</p>
      */
     @NameInMap("EventIdList")
     public java.util.List<Long> eventIdList;
 
     /**
-     * <p>The language of the content in the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>zh</strong>: Chinese.</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
@@ -55,7 +55,7 @@ public class HandleObjectScanEventRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The list of whitelist rules. This parameter takes effect only when the alert is whitelisted.</p>
+     * <p>The list of whitelisting rules. This parameter takes effect only when the alert is whitelisted.</p>
      */
     @NameInMap("RuleConditionList")
     public java.util.List<HandleObjectScanEventRequestRuleConditionList> ruleConditionList;
@@ -139,11 +139,11 @@ public class HandleObjectScanEventRequest extends TeaModel {
 
     public static class HandleObjectScanEventRequestRuleConditionList extends TeaModel {
         /**
-         * <p>The whitelist field. Valid values:</p>
+         * <p>The whitelisting field. Valid values:</p>
          * <ul>
-         * <li><strong>ossKey</strong>: file path</li>
-         * <li><strong>bucketName</strong>: bucket name</li>
-         * <li><strong>md5</strong>: file MD5</li>
+         * <li><strong>ossKey</strong>: file path.</li>
+         * <li><strong>bucketName</strong>: bucket name.</li>
+         * <li><strong>md5</strong>: file MD5.</li>
          * <li><strong>sha256</strong>: file SHA-256.</li>
          * </ul>
          * 
@@ -156,11 +156,11 @@ public class HandleObjectScanEventRequest extends TeaModel {
         /**
          * <p>The operator. Valid values:</p>
          * <ul>
-         * <li><strong>contains</strong>: Contains.</li>
-         * <li><strong>not_contains</strong>: Does not contain.</li>
-         * <li><strong>str_equal</strong>: Equals.</li>
-         * <li><strong>str_not_equal</strong>: Does not equal.</li>
-         * <li><strong>regex</strong>: Regular expression.</li>
+         * <li><strong>contains</strong>: contains.</li>
+         * <li><strong>not_contains</strong>: does not contain.</li>
+         * <li><strong>str_equal</strong>: equals.</li>
+         * <li><strong>str_not_equal</strong>: does not equal.</li>
+         * <li><strong>regex</strong>: regular expression.</li>
          * </ul>
          * 
          * <strong>example:</strong>

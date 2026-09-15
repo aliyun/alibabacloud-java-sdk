@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVulWhitelistResponseBody extends TeaModel {
     /**
-     * <p>The number of entries on the current page in paging.</p>
+     * <p>The number of entries on the current page when paging.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,7 +14,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The page number of the current page in paging.</p>
+     * <p>The current page number when paging.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of entries per page in paging.</p>
+     * <p>The number of entries per page when paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,7 +50,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The list of whitelisted vulnerabilities.</p>
+     * <p>The list of vulnerability whitelist entries.</p>
      */
     @NameInMap("VulWhitelists")
     public java.util.List<DescribeVulWhitelistResponseBodyVulWhitelists> vulWhitelists;

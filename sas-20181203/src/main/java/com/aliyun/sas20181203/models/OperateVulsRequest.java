@@ -14,6 +14,12 @@ public class OperateVulsRequest extends TeaModel {
     @NameInMap("OperateType")
     public String operateType;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member accounts in the resource directory.</p>
+     * <blockquote>
+     * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
@@ -28,7 +34,7 @@ public class OperateVulsRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The UUIDs of the servers on which you want to fix the vulnerabilities.</p>
+     * <p>The UUIDs of the servers on which you want to fix vulnerabilities.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Uuids")

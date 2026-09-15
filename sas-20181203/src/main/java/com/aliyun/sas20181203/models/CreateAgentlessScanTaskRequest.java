@@ -14,7 +14,7 @@ public class CreateAgentlessScanTaskRequest extends TeaModel {
     public String assetSelectionType;
 
     /**
-     * <p>The image retention period, in days. This parameter takes effect only for host detection and does not take effect for user snapshot detection or user custom image detection.</p>
+     * <p>The image retention period, in days. This parameter takes effect only for host detection. It does not take effect for user snapshot detection or user custom image detection.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,14 +32,19 @@ public class CreateAgentlessScanTaskRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The region ID of the instance to query. Valid values:</p>
-     * <ul>
-     * <li><strong>cn-hangzhou</strong> (default): China.</li>
-     * <li><strong>ap-southeast-1</strong>: outside China.</li>
-     * </ul>
+     * <p>The source of the API call, which is used to collect statistics on scan task volume and scan data volume by source. If this parameter is not specified, the value is empty.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
+     * <p>image-console</p>
+     */
+    @NameInMap("From")
+    public String from;
+
+    /**
+     * <p>The region ID, which is usually automatically populated by the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -56,6 +61,15 @@ public class CreateAgentlessScanTaskRequest extends TeaModel {
      */
     @NameInMap("ReleaseAfterScan")
     public Boolean releaseAfterScan;
+
+    /**
+     * <p>The region ID of the resource to be detected, such as cn-hangzhou.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
+    @NameInMap("ResourceRegionId")
+    public String resourceRegionId;
 
     /**
      * <p>Specifies whether to detect data cloud disks. Valid values:</p>
@@ -85,6 +99,12 @@ public class CreateAgentlessScanTaskRequest extends TeaModel {
      */
     @NameInMap("TargetType")
     public Integer targetType;
+
+    /**
+     * <p>The list of targets for image security remediation. Each target specifies the source image, the region, the name of the remediated image, and the vulnerability identifiers to be fixed.</p>
+     */
+    @NameInMap("Targets")
+    public java.util.List<CreateAgentlessScanTaskRequestTargets> targets;
 
     /**
      * <p>The UUIDs of the assets to be detected.</p>
@@ -124,6 +144,14 @@ public class CreateAgentlessScanTaskRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public CreateAgentlessScanTaskRequest setFrom(String from) {
+        this.from = from;
+        return this;
+    }
+    public String getFrom() {
+        return this.from;
+    }
+
     public CreateAgentlessScanTaskRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -138,6 +166,14 @@ public class CreateAgentlessScanTaskRequest extends TeaModel {
     }
     public Boolean getReleaseAfterScan() {
         return this.releaseAfterScan;
+    }
+
+    public CreateAgentlessScanTaskRequest setResourceRegionId(String resourceRegionId) {
+        this.resourceRegionId = resourceRegionId;
+        return this;
+    }
+    public String getResourceRegionId() {
+        return this.resourceRegionId;
     }
 
     public CreateAgentlessScanTaskRequest setScanDataDisk(Boolean scanDataDisk) {
@@ -156,12 +192,110 @@ public class CreateAgentlessScanTaskRequest extends TeaModel {
         return this.targetType;
     }
 
+    public CreateAgentlessScanTaskRequest setTargets(java.util.List<CreateAgentlessScanTaskRequestTargets> targets) {
+        this.targets = targets;
+        return this;
+    }
+    public java.util.List<CreateAgentlessScanTaskRequestTargets> getTargets() {
+        return this.targets;
+    }
+
     public CreateAgentlessScanTaskRequest setUuidList(java.util.List<String> uuidList) {
         this.uuidList = uuidList;
         return this;
     }
     public java.util.List<String> getUuidList() {
         return this.uuidList;
+    }
+
+    public static class CreateAgentlessScanTaskRequestTargets extends TeaModel {
+        /**
+         * <p>The ID of the source ECS custom image to be remediated. The image must be located in the region specified by RegionId of this target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp1example123456789</p>
+         */
+        @NameInMap("ImageId")
+        public String imageId;
+
+        /**
+         * <p>The name of the source ECS custom image to be remediated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>source-image</p>
+         */
+        @NameInMap("OriginImageName")
+        public String originImageName;
+
+        /**
+         * <p>The name of the ECS image generated after remediation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>patched-image-20260909</p>
+         */
+        @NameInMap("OutputImageName")
+        public String outputImageName;
+
+        /**
+         * <p>The region ID of the source image to be remediated, such as cn-hangzhou.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        @NameInMap("RegionId")
+        public String regionId;
+
+        /**
+         * <p>The list of vulnerability identifiers to be fixed. At least one vulnerability identifier must be specified, and each identifier must be unique and non-empty.</p>
+         */
+        @NameInMap("VulnerabilityIds")
+        public java.util.List<String> vulnerabilityIds;
+
+        public static CreateAgentlessScanTaskRequestTargets build(java.util.Map<String, ?> map) throws Exception {
+            CreateAgentlessScanTaskRequestTargets self = new CreateAgentlessScanTaskRequestTargets();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAgentlessScanTaskRequestTargets setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        public CreateAgentlessScanTaskRequestTargets setOriginImageName(String originImageName) {
+            this.originImageName = originImageName;
+            return this;
+        }
+        public String getOriginImageName() {
+            return this.originImageName;
+        }
+
+        public CreateAgentlessScanTaskRequestTargets setOutputImageName(String outputImageName) {
+            this.outputImageName = outputImageName;
+            return this;
+        }
+        public String getOutputImageName() {
+            return this.outputImageName;
+        }
+
+        public CreateAgentlessScanTaskRequestTargets setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public CreateAgentlessScanTaskRequestTargets setVulnerabilityIds(java.util.List<String> vulnerabilityIds) {
+            this.vulnerabilityIds = vulnerabilityIds;
+            return this;
+        }
+        public java.util.List<String> getVulnerabilityIds() {
+            return this.vulnerabilityIds;
+        }
+
     }
 
 }

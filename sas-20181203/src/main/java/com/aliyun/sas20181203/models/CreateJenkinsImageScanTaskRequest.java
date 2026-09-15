@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateJenkinsImageScanTaskRequest extends TeaModel {
     /**
-     * <p>The digest of the image.</p>
+     * <p>The image summary.</p>
      * 
      * <strong>example:</strong>
      * <p>a8c9f3765684cd8d9053db9523eab58878e99a199217500efd9ae2a860a7****</p>
@@ -14,7 +14,7 @@ public class CreateJenkinsImageScanTaskRequest extends TeaModel {
     public String digest;
 
     /**
-     * <p>The time when the image was created.</p>
+     * <p>The image creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>1717430400000</p>
@@ -23,7 +23,7 @@ public class CreateJenkinsImageScanTaskRequest extends TeaModel {
     public Long imageCreate;
 
     /**
-     * <p>The ID of the image.</p>
+     * <p>The image ID.</p>
      * 
      * <strong>example:</strong>
      * <p>b10ef7b245c34a0822055c74fc4a0e8b5baf0279306316b2c517a501ed25****</p>
@@ -32,7 +32,7 @@ public class CreateJenkinsImageScanTaskRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The size of the image. Unit: bytes.</p>
+     * <p>The image size. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>6120340</p>
@@ -41,7 +41,7 @@ public class CreateJenkinsImageScanTaskRequest extends TeaModel {
     public Long imageSize;
 
     /**
-     * <p>The time when the image was updated.</p>
+     * <p>The image update time. The value is a UNIX timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1717430498600</p>
@@ -50,7 +50,7 @@ public class CreateJenkinsImageScanTaskRequest extends TeaModel {
     public Long imageUpdate;
 
     /**
-     * <p>The information about the Jenkins environment.</p>
+     * <p>The Jenkins environment context. Leave this parameter empty or set it to the fixed value: <strong>release</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>release</p>
@@ -68,7 +68,7 @@ public class CreateJenkinsImageScanTaskRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The name of the image repository.</p>
+     * <p>The repository name.</p>
      * 
      * <strong>example:</strong>
      * <p>sdk</p>
@@ -77,7 +77,7 @@ public class CreateJenkinsImageScanTaskRequest extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The access source IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>119.136.XX.XX</p>
@@ -86,7 +86,7 @@ public class CreateJenkinsImageScanTaskRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The tag of the image.</p>
+     * <p>The image label.</p>
      * 
      * <strong>example:</strong>
      * <p>00f597223f-20210831-1</p>
@@ -95,7 +95,7 @@ public class CreateJenkinsImageScanTaskRequest extends TeaModel {
     public String tag;
 
     /**
-     * <p>The token that is used to access the Jenkins image repository.</p>
+     * <p>The access token for the Jenkins image repository. Obtain the token from the homepage of the Chinese documentation center &gt; Security Center &gt; User Guide &gt; Container Protection &gt; CI/CD Access Settings. You can also invoke CreateJenkinsImageRegistry to create a CI/CD image repository and obtain the token from the response parameter Data.Token. For an existing repository, invoke PageImageRegistry to query the token.</p>
      * 
      * <strong>example:</strong>
      * <p>c3de8326-273e-11fc-a0e3-d012435c****</p>

@@ -32,7 +32,7 @@ public class RollbackSuspEventQuaraFileRequest extends TeaModel {
      * <p>The source IP address of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.168.XX.XX</p>
+     * <p>1.2.3.4</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

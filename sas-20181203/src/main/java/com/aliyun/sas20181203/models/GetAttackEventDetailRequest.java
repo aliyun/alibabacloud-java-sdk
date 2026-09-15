@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class GetAttackEventDetailRequest extends TeaModel {
     /**
      * <p>The unique ID of the alert event.</p>
+     * <p>Note: This parameter is required. If this parameter is not specified, the API returns a 400 error.</p>
      * 
      * <strong>example:</strong>
      * <p>18825544674********</p>
