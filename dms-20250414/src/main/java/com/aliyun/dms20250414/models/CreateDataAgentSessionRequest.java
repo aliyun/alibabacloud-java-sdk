@@ -91,6 +91,87 @@ public class CreateDataAgentSessionRequest extends TeaModel {
         return this.workspaceId;
     }
 
+    public static class CreateDataAgentSessionRequestSessionConfigMcpHeadersMcpHeader extends TeaModel {
+        /**
+         * <p>The key to add to the header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserId</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The value to add to the header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>421****571</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateDataAgentSessionRequestSessionConfigMcpHeadersMcpHeader build(java.util.Map<String, ?> map) throws Exception {
+            CreateDataAgentSessionRequestSessionConfigMcpHeadersMcpHeader self = new CreateDataAgentSessionRequestSessionConfigMcpHeadersMcpHeader();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDataAgentSessionRequestSessionConfigMcpHeadersMcpHeader setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateDataAgentSessionRequestSessionConfigMcpHeadersMcpHeader setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateDataAgentSessionRequestSessionConfigMcpHeaders extends TeaModel {
+        /**
+         * <p>The MCP header configuration.</p>
+         */
+        @NameInMap("McpHeader")
+        public java.util.List<CreateDataAgentSessionRequestSessionConfigMcpHeadersMcpHeader> mcpHeader;
+
+        /**
+         * <p>The ID of the MCP server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1fl4r*****1qi</p>
+         */
+        @NameInMap("McpServerId")
+        public String mcpServerId;
+
+        public static CreateDataAgentSessionRequestSessionConfigMcpHeaders build(java.util.Map<String, ?> map) throws Exception {
+            CreateDataAgentSessionRequestSessionConfigMcpHeaders self = new CreateDataAgentSessionRequestSessionConfigMcpHeaders();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDataAgentSessionRequestSessionConfigMcpHeaders setMcpHeader(java.util.List<CreateDataAgentSessionRequestSessionConfigMcpHeadersMcpHeader> mcpHeader) {
+            this.mcpHeader = mcpHeader;
+            return this;
+        }
+        public java.util.List<CreateDataAgentSessionRequestSessionConfigMcpHeadersMcpHeader> getMcpHeader() {
+            return this.mcpHeader;
+        }
+
+        public CreateDataAgentSessionRequestSessionConfigMcpHeaders setMcpServerId(String mcpServerId) {
+            this.mcpServerId = mcpServerId;
+            return this;
+        }
+        public String getMcpServerId() {
+            return this.mcpServerId;
+        }
+
+    }
+
     public static class CreateDataAgentSessionRequestSessionConfig extends TeaModel {
         /**
          * <p>The custom agent ID.</p>
@@ -104,8 +185,8 @@ public class CreateDataAgentSessionRequest extends TeaModel {
         /**
          * <p>The stage of the custom agent. Valid values:</p>
          * <ul>
-         * <li><strong>debug</strong>: Debug stage.</li>
-         * <li><strong>prod</strong>: Production stage.</li>
+         * <li><strong>debug</strong>: the debugging stage.</li>
+         * <li><strong>prod</strong>: the production stage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -161,6 +242,12 @@ public class CreateDataAgentSessionRequest extends TeaModel {
         public String language;
 
         /**
+         * <p>The list of MCP header configurations.</p>
+         */
+        @NameInMap("McpHeaders")
+        public java.util.List<CreateDataAgentSessionRequestSessionConfigMcpHeaders> mcpHeaders;
+
+        /**
          * <p>The list of MCP server IDs in the session configuration.</p>
          */
         @NameInMap("McpServerIds")
@@ -169,9 +256,9 @@ public class CreateDataAgentSessionRequest extends TeaModel {
         /**
          * <p>The mode. Valid values:</p>
          * <ul>
-         * <li><strong>ASK_DATA</strong>: Ask data mode.</li>
-         * <li><strong>ANALYSIS</strong>: Analysis mode.</li>
-         * <li><strong>INSIGHT</strong>: Insight mode.</li>
+         * <li><strong>ASK_DATA</strong>: the data query mode.</li>
+         * <li><strong>ANALYSIS</strong>: the analysis mode.</li>
+         * <li><strong>INSIGHT</strong>: the insight mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,10 +286,7 @@ public class CreateDataAgentSessionRequest extends TeaModel {
         public String reportWaterMark;
 
         /**
-         * <p>The name of the user OSS bucket.</p>
-         * <ul>
-         * <li>Analysis process files and report artifacts can be uploaded to the specified OSS bucket.</li>
-         * </ul>
+         * <p>The name of the user OSS bucket. Analysis process files and report artifacts can be uploaded to the specified OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>user-oss-bucket</p>
@@ -269,6 +353,14 @@ public class CreateDataAgentSessionRequest extends TeaModel {
         }
         public String getLanguage() {
             return this.language;
+        }
+
+        public CreateDataAgentSessionRequestSessionConfig setMcpHeaders(java.util.List<CreateDataAgentSessionRequestSessionConfigMcpHeaders> mcpHeaders) {
+            this.mcpHeaders = mcpHeaders;
+            return this;
+        }
+        public java.util.List<CreateDataAgentSessionRequestSessionConfigMcpHeaders> getMcpHeaders() {
+            return this.mcpHeaders;
         }
 
         public CreateDataAgentSessionRequestSessionConfig setMcpServerIds(java.util.List<String> mcpServerIds) {

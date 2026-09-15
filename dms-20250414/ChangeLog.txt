@@ -1,3 +1,7 @@
+2026-09-15 Version: 2.1.1
+- Update API CreateDataAgentSession: add request parameters SessionConfig.McpHeaders.
+
+
 2026-09-15 Version: 2.1.0
 - Support API CreateAgent.
 - Update API CreateDataAgentTheme: add request parameters WorkspaceId.

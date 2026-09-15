@@ -528,7 +528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 Agent</p>
+     * <p>Creates a Database Gateway agent identity.</p>
      * 
      * @param request CreateAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -572,7 +572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 Agent</p>
+     * <p>Creates a Database Gateway agent identity.</p>
      * 
      * @param request CreateAgentRequest
      * @return CreateAgentResponse
@@ -3655,7 +3655,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Calls the GetDataAgentThemeUploadSignature operation to obtain OSS direct upload credentials for uploading a DataAgent theme file. After obtaining the credentials, use the PostObject method to upload the theme file directly to OSS. After the upload is complete, call the CreateDataAgentTheme operation with the returned ThemeId to complete theme creation.
-     * Refer to <a href="https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/">https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/</a> for instructions on uploading the theme file.</p>
+     * For more information, see <a href="https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/">https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/</a>.</p>
      * 
      * @param request GetDataAgentThemeUploadSignatureRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3688,7 +3688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Calls the GetDataAgentThemeUploadSignature operation to obtain OSS direct upload credentials for uploading a DataAgent theme file. After obtaining the credentials, use the PostObject method to upload the theme file directly to OSS. After the upload is complete, call the CreateDataAgentTheme operation with the returned ThemeId to complete theme creation.
-     * Refer to <a href="https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/">https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/</a> for instructions on uploading the theme file.</p>
+     * For more information, see <a href="https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/">https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/</a>.</p>
      * 
      * @param request GetDataAgentThemeUploadSignatureRequest
      * @return GetDataAgentThemeUploadSignatureResponse
@@ -7162,7 +7162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the ModifyDataAgentTheme operation to modify the display name and description of a DataAgent theme. Passing null for a parameter value indicates that the corresponding field is not modified. Passing an empty string clears the field.</p>
+     * <p>Modifies the display name and description of a DataAgent theme. A null parameter value indicates that the corresponding field is not modified, and an empty string clears the field.</p>
      * 
      * @param request ModifyDataAgentThemeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7202,7 +7202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the ModifyDataAgentTheme operation to modify the display name and description of a DataAgent theme. Passing null for a parameter value indicates that the corresponding field is not modified. Passing an empty string clears the field.</p>
+     * <p>Modifies the display name and description of a DataAgent theme. A null parameter value indicates that the corresponding field is not modified, and an empty string clears the field.</p>
      * 
      * @param request ModifyDataAgentThemeRequest
      * @return ModifyDataAgentThemeResponse
