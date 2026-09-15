@@ -4,6 +4,9 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class E2BVolume extends TeaModel {
+    /**
+     * <p>The AgenticBucket configuration.</p>
+     */
     @NameInMap("agenticBucketVolumeConfig")
     public AgenticBucketVolumeConfig agenticBucketVolumeConfig;
 
@@ -14,7 +17,7 @@ public class E2BVolume extends TeaModel {
     public AgenticFSVolumeConfig agenticFSVolumeConfig;
 
     /**
-     * <p>The time when the volume was created.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-07-10T11:05:55Z</p>
@@ -59,7 +62,7 @@ public class E2BVolume extends TeaModel {
     public String status;
 
     /**
-     * <p>The reason for the status.</p>
+     * <p>The status reason.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -90,7 +93,7 @@ public class E2BVolume extends TeaModel {
     public String teamID;
 
     /**
-     * <p>The time when the volume was last updated.</p>
+     * <p>The update time.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-07-10T11:05:55Z</p>
@@ -259,7 +262,7 @@ public class E2BVolume extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2ze4l2vyhej6a6dwapm4q</p>
@@ -300,7 +303,7 @@ public class E2BVolume extends TeaModel {
 
     public static class E2BVolumeMountConfig extends TeaModel {
         /**
-         * <p>The RAM role that the user grants to the sandboxed container. After this role is set, the sandboxed container assumes the role to generate temporary access credentials. You can use the temporary access credentials of this role to mount storage in the sandboxed container, such as OSS and AgenticFS.</p>
+         * <p>The RAM role that the user grants to the cloud sandbox. After this role is set, the cloud sandbox assumes the role to generate temporary access credentials. You can use the temporary access credentials of this role to mount storage in the cloud sandbox, such as OSS and AgenticFS.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::1673427197867277:role/aliyunfcdefaultrole</p>
@@ -309,7 +312,7 @@ public class E2BVolume extends TeaModel {
         public String role;
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>The VPC ID.</p>
          */
         @NameInMap("vpcConfig")
         public E2BVolumeMountConfigVpcConfig vpcConfig;

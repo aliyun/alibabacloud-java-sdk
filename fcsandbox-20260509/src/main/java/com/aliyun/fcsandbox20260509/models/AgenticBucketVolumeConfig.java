@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AgenticBucketVolumeConfig extends TeaModel {
     /**
+     * <p>AgenticBucket</p>
+     * 
      * <strong>example:</strong>
      * <p>absx9f61c8a-1311999136518149-cn-hangzhou-ab-apsr</p>
      */
@@ -12,6 +14,8 @@ public class AgenticBucketVolumeConfig extends TeaModel {
     public String agenticBucket;
 
     /**
+     * <p>The BucketSpace of the agentic child.</p>
+     * 
      * <strong>example:</strong>
      * <p>bs429pop1-1311999136518149-cn-hangzhou-bs-apsr</p>
      */
@@ -19,6 +23,8 @@ public class AgenticBucketVolumeConfig extends TeaModel {
     public String bucketName;
 
     /**
+     * <p>The file path under the BucketSpace.</p>
+     * 
      * <strong>example:</strong>
      * <p>/test/</p>
      * 
@@ -29,6 +35,8 @@ public class AgenticBucketVolumeConfig extends TeaModel {
     public String bucketPath;
 
     /**
+     * <p>Agentic Bucket Endpoint</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://oss-cn-hangzhou-internal.aliyuncs.com">https://oss-cn-hangzhou-internal.aliyuncs.com</a>&quot;</p>
      */
@@ -36,6 +44,8 @@ public class AgenticBucketVolumeConfig extends TeaModel {
     public String endpoint;
 
     /**
+     * <p>Indicates whether the bucket is read-only.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      * 
