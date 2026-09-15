@@ -14,14 +14,17 @@ public class CreateJobRequest extends TeaModel {
     public Integer attemptInterval;
 
     /**
-     * <p>The custom calendar. This parameter is available for the cron time type.</p>
+     * <p>The custom calendar. This parameter is optional for the cron time type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workday</p>
      */
     @NameInMap("Calendar")
     public String calendar;
 
     /**
      * <p>The full path of the node interface class.</p>
-     * <p>This field is required only when you select the Java node type. Specify the full path.</p>
+     * <p>This field is available and required only when you select the Java node type. Specify the full path.</p>
      * 
      * <strong>example:</strong>
      * <p>com.alibaba.schedulerx.test.helloworld</p>
@@ -30,7 +33,7 @@ public class CreateJobRequest extends TeaModel {
     public String className;
 
     /**
-     * <p>The advanced configuration for parallel grid nodes. The number of threads triggered for a single execution on a single machine. Default value: 5.</p>
+     * <p>Advanced configuration for parallel grid nodes. The number of threads for a single trigger on a single machine. Default value: 5.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -41,7 +44,7 @@ public class CreateJobRequest extends TeaModel {
     /**
      * <p>The node contact information.</p>
      * <blockquote>
-     * <p>Notice: This field is deprecated.</notice></p>
+     * <p>Notice: This parameter is deprecated.</p>
      * </blockquote>
      */
     @NameInMap("ContactInfo")
@@ -60,7 +63,7 @@ public class CreateJobRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>The time offset. Unit: seconds. This parameter is available for the cron time type.</p>
+     * <p>The time offset for the cron time type. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>2400</p>
@@ -78,13 +81,22 @@ public class CreateJobRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The advanced configuration for parallel grid nodes. The number of subtask dispatch threads. Default value: 5.</p>
+     * <p>Advanced configuration for parallel grid nodes. The number of threads for subtask dispatching. Default value: 5.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
      */
     @NameInMap("DispatcherSize")
     public Integer dispatcherSize;
+
+    /**
+     * <p>The node expiration timestamp in milliseconds. The value must be greater than the current time and the start time. A value of -1 indicates no expiration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1789454134000</p>
+     */
+    @NameInMap("EndTime")
+    public Long endTime;
 
     /**
      * <p>The node execution mode. The following execution modes are supported:</p>
@@ -166,7 +178,7 @@ public class CreateJobRequest extends TeaModel {
     public Integer maxAttempt;
 
     /**
-     * <p>The maximum number of concurrently running instances. Default value: 1. This means that if the previous trigger has not finished running, the next trigger is not performed even if the scheduled time arrives.</p>
+     * <p>The maximum number of concurrently running instances. Default value: 1. A value of 1 indicates that if the previous trigger has not finished running, the next trigger is skipped even if the scheduled time has arrived.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -217,7 +229,7 @@ public class CreateJobRequest extends TeaModel {
     public String namespaceSource;
 
     /**
-     * <p>The advanced configuration for parallel grid nodes. The number of subtasks pulled in a single request. Default value: 100.</p>
+     * <p>Advanced configuration for parallel grid nodes. The number of subtasks pulled per request. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -250,7 +262,7 @@ public class CreateJobRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The advanced configuration for parallel grid nodes. The maximum cache size of the subtask queue. Default value: 10000.</p>
+     * <p>Advanced configuration for parallel grid nodes. The maximum number of subtasks that can be cached in the queue. Default value: 10000.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -272,7 +284,7 @@ public class CreateJobRequest extends TeaModel {
      * <p>The alert notification channel.</p>
      * <ul>
      * <li>Use the default channel of the application group: default.</li>
-     * <li>Specify a notification channel for the node: sms, mail, phone, or webhook.</li>
+     * <li>Specify the notification channel for the node: sms,mail,phone,webhook.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -281,11 +293,17 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("SendChannel")
     public String sendChannel;
 
+    /**
+     * <p>The start timestamp in milliseconds. The value must be greater than the current time. A value of -1 indicates immediate start.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1789454134000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
     /**
-     * <p>The node status. Valid values: 0: disabled. 1: enabled. Default value: 1 (enabled).</p>
+     * <p>The node status. 0: disabled. 1: enabled. Default value: enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -303,7 +321,7 @@ public class CreateJobRequest extends TeaModel {
     public Boolean successNoticeEnable;
 
     /**
-     * <p>The advanced configuration for parallel grid nodes. The retry interval for a failed subtask. Default value: 0.</p>
+     * <p>Advanced configuration for parallel grid nodes. The retry interval for a subtask on failure. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -312,7 +330,7 @@ public class CreateJobRequest extends TeaModel {
     public Integer taskAttemptInterval;
 
     /**
-     * <p>The advanced configuration for parallel grid nodes. The number of retries for a failed subtask. Default value: 0.</p>
+     * <p>Advanced configuration for parallel grid nodes. The maximum number of retries for a subtask on failure. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -326,8 +344,8 @@ public class CreateJobRequest extends TeaModel {
      * <li><strong>cron</strong>: Specify a standard cron expression. Online verification is supported.</li>
      * <li><strong>api</strong>: No time expression is required.</li>
      * <li><strong>fixed_rate</strong>: Specify a fixed frequency value in seconds. For example, 30 indicates that the node is triggered every 30 seconds.</li>
-     * <li><strong>second_delay</strong>: Specify a fixed delay in seconds before each execution (1s to 60s).</li>
-     * <li><strong>one_time</strong>: Specify a time in the format of yyyy-MM-dd HH:mm:ss or a timestamp in milliseconds. For example, &quot;2022-10-10 10:10:00&quot;.</li>
+     * <li><strong>second_delay</strong>: Specify a fixed delay in seconds before each execution (valid values: 1 to 60).</li>
+     * <li><strong>one_time</strong>: Specify a time in the yyyy-MM-dd HH:mm:ss format or a timestamp in milliseconds. For example, &quot;2022-10-10 10:10:00&quot;.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -484,6 +502,14 @@ public class CreateJobRequest extends TeaModel {
     }
     public Integer getDispatcherSize() {
         return this.dispatcherSize;
+    }
+
+    public CreateJobRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     public CreateJobRequest setExecuteMode(String executeMode) {
@@ -720,7 +746,7 @@ public class CreateJobRequest extends TeaModel {
 
     public static class CreateJobRequestContactInfo extends TeaModel {
         /**
-         * <p>The webhook URL of the DingTalk chatbot for the alert contact\&quot;s DingTalk group. References: <a href="https://open.dingtalk.com/document/org/application-types">DingTalk development documentation</a>.</p>
+         * <p>The webhook URL of the DingTalk chatbot in the DingTalk group for alert contacts. References: <a href="https://open.dingtalk.com/document/org/application-types">DingTalk development documentation</a>.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>**********</p>
@@ -747,7 +773,7 @@ public class CreateJobRequest extends TeaModel {
         public String userName;
 
         /**
-         * <p>The mobile phone number of the alert recipient.</p>
+         * <p>The phone number for receiving alerts.</p>
          * 
          * <strong>example:</strong>
          * <p>1381111****</p>

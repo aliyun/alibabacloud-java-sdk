@@ -38,9 +38,9 @@ public class CreateJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the node was created successfully. Valid values:</p>
+     * <p>Indicates whether the node was created. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The node was created successfully.</li>
+     * <li><strong>true</strong>: The node was created.</li>
      * <li><strong>false</strong>: The node failed to be created.</li>
      * </ul>
      * 

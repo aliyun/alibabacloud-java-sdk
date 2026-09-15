@@ -14,26 +14,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-hangzhou", "schedulerx.cn-hangzhou.aliyuncs.com"),
             new TeaPair("cn-shanghai", "schedulerx.cn-shanghai.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "schedulerx.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "schedulerx.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "schedulerx.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "schedulerx.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "schedulerx.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "schedulerx.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "schedulerx.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "schedulerx.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "schedulerx.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "schedulerx.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "schedulerx.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "schedulerx.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "schedulerx.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "schedulerx.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "schedulerx.aliyuncs.com"),
             new TeaPair("us-west-1", "schedulerx.aliyuncs.com"),
             new TeaPair("us-east-1", "schedulerx.aliyuncs.com"),
-            new TeaPair("public", "schedulerx.aliyuncs.com"),
-            new TeaPair("eu-west-1", "schedulerx.aliyuncs.com"),
             new TeaPair("eu-central-1", "schedulerx.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "schedulerx.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "schedulerx.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "schedulerx.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "schedulerx.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "schedulerx.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "schedulerx.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "schedulerx.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "schedulerx.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "schedulerx.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "schedulerx.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "schedulerx.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "schedulerx.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "schedulerx.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "schedulerx.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "schedulerx.aliyuncs.com")
+            new TeaPair("eu-west-1", "schedulerx.aliyuncs.com"),
+            new TeaPair("public", "schedulerx.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "schedulerx.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("schedulerx2", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -444,6 +444,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dispatcherSize)) {
             body.put("DispatcherSize", request.dispatcherSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("EndTime", request.endTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.executeMode)) {
@@ -1638,7 +1642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a job based on the job ID. In most cases, the obtained information is used to update jobs.</p>
+     * <p>Retrieves the details of a specified node by job ID. This operation is typically used to update a node.</p>
      * 
      * @param request GetJobInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1666,7 +1670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a job based on the job ID. In most cases, the obtained information is used to update jobs.</p>
+     * <p>Retrieves the details of a specified node by job ID. This operation is typically used to update a node.</p>
      * 
      * @param request GetJobInfoRequest
      * @return GetJobInfoResponse
@@ -2201,7 +2205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of nodes.</p>
+     * <p>Retrieves a list of jobs.</p>
      * 
      * @param request ListJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2238,7 +2242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of nodes.</p>
+     * <p>Retrieves a list of jobs.</p>
      * 
      * @param request ListJobsRequest
      * @return ListJobsResponse
@@ -3312,7 +3316,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration of a node. By default, call the get node operation first to find the corresponding fields to modify.</p>
+     * <p>Updates the configuration of a node. By default, call the get node operation first to find the corresponding fields before making modifications.</p>
      * 
      * @param request UpdateJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3364,6 +3368,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dispatcherSize)) {
             body.put("DispatcherSize", request.dispatcherSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("EndTime", request.endTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.executeMode)) {
@@ -3498,7 +3506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration of a node. By default, call the get node operation first to find the corresponding fields to modify.</p>
+     * <p>Updates the configuration of a node. By default, call the get node operation first to find the corresponding fields before making modifications.</p>
      * 
      * @param request UpdateJobRequest
      * @return UpdateJobResponse

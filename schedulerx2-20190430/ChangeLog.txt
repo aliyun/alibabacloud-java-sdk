@@ -1,3 +1,10 @@
+2026-09-15 Version: 2.4.3
+- Update API CreateJob: add request parameters EndTime.
+- Update API GetJobInfo: add response parameters Body.Data.JobConfigInfo.EndTime.
+- Update API ListJobs: add response parameters Body.Data.Jobs.$.EndTime.
+- Update API UpdateJob: add request parameters EndTime.
+
+
 2026-07-15 Version: 2.4.2
 - Update API CreateJob: add request parameters StartTime.
 - Update API ListJobs: add response parameters Body.Data.Jobs.$.StartTime.

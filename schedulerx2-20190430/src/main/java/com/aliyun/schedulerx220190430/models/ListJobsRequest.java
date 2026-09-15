@@ -15,7 +15,7 @@ public class ListJobsRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The node name.</p>
+     * <p>The job name.</p>
      * 
      * <strong>example:</strong>
      * <p>helloword</p>
@@ -44,12 +44,18 @@ public class ListJobsRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
      * <p>The number of records per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -65,7 +71,7 @@ public class ListJobsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The node status.</p>
+     * <p>The job status. Valid values:</p>
      * <ul>
      * <li><p><strong>0</strong>: disabled</p>
      * </li>

@@ -24,7 +24,7 @@ public class UpdateJobRequest extends TeaModel {
 
     /**
      * <p>The full path of the node interface class.</p>
-     * <p>This field is required only for Java node types, and the full path must be specified.</p>
+     * <p>This field is required and must contain the full path only for Java node types.</p>
      * 
      * <strong>example:</strong>
      * <p>com.alibaba.test.helloworld</p>
@@ -33,7 +33,7 @@ public class UpdateJobRequest extends TeaModel {
     public String className;
 
     /**
-     * <p>The advanced configuration for parallel grid tasks. The number of threads for a single trigger on a single machine. Default value: 5.</p>
+     * <p>Advanced configuration for parallel grid tasks. The number of threads for a single trigger on a single machine. Default value: 5.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -44,7 +44,7 @@ public class UpdateJobRequest extends TeaModel {
     /**
      * <p>The contact information for the node.</p>
      * <blockquote>
-     * <p>Notice: This field is deprecated.</notice></p>
+     * <p>Notice: This parameter is deprecated.</notice></p>
      * </blockquote>
      */
     @NameInMap("ContactInfo")
@@ -81,7 +81,7 @@ public class UpdateJobRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The advanced configuration for parallel grid tasks. The number of subtask dispatch threads. Default value: 5.</p>
+     * <p>Advanced configuration for parallel grid tasks. The number of subtask dispatch threads. Default value: 5.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -90,13 +90,20 @@ public class UpdateJobRequest extends TeaModel {
     public Integer dispatcherSize;
 
     /**
-     * <p>The node execution mode. Valid values:</p>
+     * <strong>example:</strong>
+     * <p>1789454134000</p>
+     */
+    @NameInMap("EndTime")
+    public Long endTime;
+
+    /**
+     * <p>The node execution mode. The following execution modes are supported:</p>
      * <ul>
-     * <li><strong>standalone</strong>: standalone</li>
-     * <li><strong>broadcatst</strong>: broadcast</li>
-     * <li><strong>parallel</strong>: visual MapReduce</li>
-     * <li><strong>batch</strong>: MapReduce</li>
-     * <li><strong>shard</strong>: shard</li>
+     * <li><strong>Standalone</strong>: standalone</li>
+     * <li><strong>Broadcast</strong>: broadcatst</li>
+     * <li><strong>Visual MapReduce</strong>: parallel</li>
+     * <li><strong>MapReduce</strong>: batch</li>
+     * <li><strong>Sharding</strong>: shard</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -108,8 +115,8 @@ public class UpdateJobRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the failure alert. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Enabled.</li>
-     * <li><strong>false</strong>: Disabled.</li>
+     * <li><strong>true</strong>: enables the failure alert.</li>
+     * <li><strong>false</strong>: disables the failure alert.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -157,7 +164,7 @@ public class UpdateJobRequest extends TeaModel {
     public Integer maxAttempt;
 
     /**
-     * <p>The maximum number of concurrently running instances. Default value: 1. This means that if the previous trigger has not finished running, the next trigger is not performed even if the scheduled time has arrived.</p>
+     * <p>The maximum number of concurrently running instances. Default value: 1. This means that if the previous trigger has not finished running, the next trigger is skipped even if the scheduled time has arrived.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -168,8 +175,8 @@ public class UpdateJobRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the no-available-machine alert. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Enabled.</li>
-     * <li><strong>false</strong>: Disabled.</li>
+     * <li><strong>true</strong>: enables the no-available-machine alert.</li>
+     * <li><strong>false</strong>: disables the no-available-machine alert.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -207,7 +214,7 @@ public class UpdateJobRequest extends TeaModel {
     public String namespaceSource;
 
     /**
-     * <p>The advanced configuration for parallel grid tasks. The number of subtasks pulled per request. Default value: 100.</p>
+     * <p>Advanced configuration for parallel grid tasks. The number of subtasks pulled per request. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -240,7 +247,7 @@ public class UpdateJobRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The advanced configuration for parallel grid tasks. The maximum cache size of the subtask queue. Default value: 10000.</p>
+     * <p>Advanced configuration for parallel grid tasks. The maximum cache size of the subtask queue. Default value: 10000.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -267,6 +274,12 @@ public class UpdateJobRequest extends TeaModel {
     @NameInMap("SendChannel")
     public String sendChannel;
 
+    /**
+     * <p>The start timestamp in milliseconds. The value must be greater than the current time. A value of -1 indicates immediate start.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1789454134000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
@@ -280,7 +293,7 @@ public class UpdateJobRequest extends TeaModel {
     public Boolean successNoticeEnable;
 
     /**
-     * <p>The advanced configuration for parallel grid tasks. The retry interval for failed subtasks.</p>
+     * <p>Advanced configuration for parallel grid tasks. The retry interval for failed subtasks.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -289,7 +302,7 @@ public class UpdateJobRequest extends TeaModel {
     public Integer taskAttemptInterval;
 
     /**
-     * <p>The advanced configuration for parallel grid tasks. Specifies the push model or pull model.</p>
+     * <p>Advanced configuration for parallel grid tasks. Specifies the push model or pull model.</p>
      * 
      * <strong>example:</strong>
      * <p>push</p>
@@ -298,7 +311,7 @@ public class UpdateJobRequest extends TeaModel {
     public String taskDispatchMode;
 
     /**
-     * <p>The advanced configuration for parallel grid tasks. The number of retries for failed subtasks.</p>
+     * <p>Advanced configuration for parallel grid tasks. The number of retries for failed subtasks.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -345,10 +358,10 @@ public class UpdateJobRequest extends TeaModel {
     /**
      * <p>The time expression. Set the time expression based on the selected time type.</p>
      * <ul>
-     * <li><strong>cron</strong>: Specify a standard cron expression. Online verification is supported.</li>
-     * <li><strong>api</strong>: No time expression is required.</li>
-     * <li><strong>fixed_rate</strong>: Specify a fixed frequency value in seconds. For example, 30 indicates that the node is triggered every 30 seconds.</li>
-     * <li><strong>second_delay</strong>: Specify a fixed delay in seconds before each execution (1s to 60s).</li>
+     * <li><strong>cron</strong>: specify a standard cron expression, which supports online verification.</li>
+     * <li><strong>api</strong>: no time expression is required.</li>
+     * <li><strong>fixed_rate</strong>: specify a fixed frequency value in seconds. For example, 30 indicates that the node is triggered every 30 seconds.</li>
+     * <li><strong>second_delay</strong>: specify a fixed delay in seconds before each execution (1s to 60s).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -358,13 +371,13 @@ public class UpdateJobRequest extends TeaModel {
     public String timeExpression;
 
     /**
-     * <p>The time configuration type. Valid values:</p>
+     * <p>The time configuration type. The following configuration types are supported:</p>
      * <ul>
-     * <li><strong>1</strong>: cron</li>
-     * <li><strong>3</strong>: fix_rate</li>
-     * <li><strong>4</strong>: second_delay</li>
-     * <li><strong>5</strong>: one_time</li>
-     * <li><strong>100</strong>: api</li>
+     * <li><strong>cron</strong>: 1</li>
+     * <li><strong>fix_rate</strong>: 3</li>
+     * <li><strong>second_delay</strong>: 4</li>
+     * <li><strong>one_time</strong>: 5</li>
+     * <li><strong>api</strong>: 100</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -385,8 +398,8 @@ public class UpdateJobRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the timeout alert. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Enabled.</li>
-     * <li><strong>false</strong>: Disabled.</li>
+     * <li><strong>true</strong>: enables the timeout alert.</li>
+     * <li><strong>false</strong>: disables the timeout alert.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -398,8 +411,8 @@ public class UpdateJobRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the timeout termination for the current trigger. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Enabled.</li>
-     * <li><strong>false</strong>: Disabled.</li>
+     * <li><strong>true</strong>: enables the timeout termination.</li>
+     * <li><strong>false</strong>: disables the timeout termination.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -418,7 +431,7 @@ public class UpdateJobRequest extends TeaModel {
     public String timezone;
 
     /**
-     * <p>The parameter that must be configured for k8s node types.
+     * <p>The extended attributes. This parameter is required for k8s node types.
      * Job task: {&quot;resource&quot;:&quot;job&quot;}
      * Shell task: {&quot;image&quot;:&quot;busybox&quot;,&quot;resource&quot;:&quot;shell&quot;}</p>
      * 
@@ -503,6 +516,14 @@ public class UpdateJobRequest extends TeaModel {
     }
     public Integer getDispatcherSize() {
         return this.dispatcherSize;
+    }
+
+    public UpdateJobRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     public UpdateJobRequest setExecuteMode(String executeMode) {

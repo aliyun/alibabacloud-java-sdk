@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetJobInfoRequest extends TeaModel {
     /**
-     * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
+     * <p>The application ID. You can obtain the ID on the Application Management page in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetJobInfoRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The job ID. You can obtain the job ID on the Task Management page in the SchedulerX console.</p>
+     * <p>The node ID. You can obtain the ID on the Task Management page in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetJobInfoRequest extends TeaModel {
     public Long jobId;
 
     /**
-     * <p>The job name.</p>
+     * <p>The node name.</p>
      * 
      * <strong>example:</strong>
      * <p>simpleJob</p>
@@ -34,7 +34,7 @@ public class GetJobInfoRequest extends TeaModel {
     public String jobName;
 
     /**
-     * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+     * <p>The namespace ID. You can obtain the ID on the Namespace page in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class GetJobInfoRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The namespace source. This parameter is required only for a special third party.</p>
+     * <p>This parameter is required only for special third-party users.</p>
      * 
      * <strong>example:</strong>
      * <p>schedulerx</p>
