@@ -615,7 +615,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteDigitalEmployeeUmodelCommonSchemaRef"),
             new TeaPair("version", "2026-04-28"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/digital-employee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/umodel/common-schema-refs/" + com.aliyun.openapiutil.Client.getEncodeParam(group) + ""),
+            new TeaPair("pathname", "/digitalEmployee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/umodel/commonSchemaRefs/" + com.aliyun.openapiutil.Client.getEncodeParam(group) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -979,7 +979,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetDigitalEmployeeEntityData"),
             new TeaPair("version", "2026-04-28"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/digital-employee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/entities/query"),
+            new TeaPair("pathname", "/digitalEmployee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/entities/query"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1073,7 +1073,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetDigitalEmployeeUmodel"),
             new TeaPair("version", "2026-04-28"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/digital-employee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/umodel"),
+            new TeaPair("pathname", "/digitalEmployee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/umodel"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1431,6 +1431,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
+            query.put("channel", request.channel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
             query.put("displayName", request.displayName);
         }
@@ -1797,7 +1801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "UpdateDigitalEmployeeUmodel"),
             new TeaPair("version", "2026-04-28"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/digital-employee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/umodel"),
+            new TeaPair("pathname", "/digitalEmployee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/umodel"),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1972,7 +1976,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "UpsertDigitalEmployeeUmodelCommonSchemaRef"),
             new TeaPair("version", "2026-04-28"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/digital-employee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/umodel/common-schema-refs/" + com.aliyun.openapiutil.Client.getEncodeParam(group) + ""),
+            new TeaPair("pathname", "/digitalEmployee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/umodel/commonSchemaRefs/" + com.aliyun.openapiutil.Client.getEncodeParam(group) + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),

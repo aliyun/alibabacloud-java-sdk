@@ -356,7 +356,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
 
     public static class CreateDigitalEmployeeRequestToolPolicyAliyunStatements extends TeaModel {
         /**
-         * <p>The list of Aliyun OpenAPI actions. Format: product:ApiName, product:Prefix*, or product:*.</p>
+         * <p>The list of Aliyun OpenAPI actions in the format of product:ApiName, product:Prefix*, or product:*.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]</p>
@@ -375,7 +375,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
         public String apiVersion;
 
         /**
-         * <p>The execution policy when the API is matched.</p>
+         * <p>The execution policy when this API is matched.</p>
          * 
          * <strong>example:</strong>
          * <p>user_ack</p>
@@ -434,7 +434,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
 
     public static class CreateDigitalEmployeeRequestToolPolicyAliyun extends TeaModel {
         /**
-         * <p>The auto-pass policy. Entries are RAM Action strings in the format of product:ApiName, product:Prefix*, or product:<em>. Matched requests are automatically passed without human confirmation. If this parameter is empty or not configured, built-in read-only actions (Get</em>, List*, Describe*) are automatically passed. Unmatched requests require human-in-the-loop (HIL) confirmation.</p>
+         * <p>The auto-pass policy. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:<em>. Matched actions are automatically approved without human confirmation. If this parameter is empty or not configured, built-in read-only actions (Get</em>, List*, Describe*) are automatically approved. Unmatched actions require human-in-the-loop (HIL) confirmation.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;log:Get*&quot;,&quot;log:List*&quot;]</p>
@@ -443,7 +443,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
         public java.util.List<String> autoPassPolicy;
 
         /**
-         * <p>The explicit deny policy with the highest priority. Entries are RAM Action strings in the format of product:ApiName, product:Prefix*, or product:*. If this parameter is empty or not configured, no operations are actively denied. When matched by STAROps, the request is directly denied. Pop performs a secondary fallback check.</p>
+         * <p>The explicit deny policy with the highest priority. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:*. If this parameter is empty or not configured, no actions are actively denied. STAROps directly denies matched actions. The Pop side performs secondary fallback enforcement.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;]</p>

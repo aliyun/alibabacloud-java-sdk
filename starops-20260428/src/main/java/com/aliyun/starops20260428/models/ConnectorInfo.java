@@ -68,7 +68,7 @@ public class ConnectorInfo extends TeaModel {
     public String displayName;
 
     /**
-     * <p>Indicates whether the Connector is enabled.</p>
+     * <p>Specifies whether the Connector is enabled.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("enabled")

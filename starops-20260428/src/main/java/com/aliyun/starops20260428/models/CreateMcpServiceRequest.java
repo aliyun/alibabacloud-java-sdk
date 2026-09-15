@@ -15,7 +15,7 @@ public class CreateMcpServiceRequest extends TeaModel {
      * <p>The description of the MCP service.</p>
      * 
      * <strong>example:</strong>
-     * <p>通过 MCP 调用日志查询工具。</p>
+     * <p>Call the log query tool through MCP</p>
      */
     @NameInMap("description")
     public String description;
@@ -24,7 +24,7 @@ public class CreateMcpServiceRequest extends TeaModel {
      * <p>The display name of the MCP service.</p>
      * 
      * <strong>example:</strong>
-     * <p>日志查询</p>
+     * <p>Log Query</p>
      */
     @NameInMap("displayName")
     public String displayName;
@@ -186,6 +186,9 @@ public class CreateMcpServiceRequest extends TeaModel {
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <p>The custom headers.</p>
+         */
         @NameInMap("headers")
         public java.util.Map<String, String> headers;
 
@@ -458,7 +461,7 @@ public class CreateMcpServiceRequest extends TeaModel {
          * <p>The description of the MCP tool.</p>
          * 
          * <strong>example:</strong>
-         * <p>查询指定日志库中的日志。</p>
+         * <p>Query logs in a specified Logstore</p>
          */
         @NameInMap("description")
         public String description;
@@ -467,7 +470,7 @@ public class CreateMcpServiceRequest extends TeaModel {
          * <p>The display name of the MCP tool.</p>
          * 
          * <strong>example:</strong>
-         * <p>日志查询工具</p>
+         * <p>Log Query Tool</p>
          */
         @NameInMap("displayName")
         public String displayName;
@@ -532,7 +535,7 @@ public class CreateMcpServiceRequest extends TeaModel {
          * <p>The title of the MCP tool.</p>
          * 
          * <strong>example:</strong>
-         * <p>查询日志</p>
+         * <p>Query Logs</p>
          */
         @NameInMap("title")
         public String title;

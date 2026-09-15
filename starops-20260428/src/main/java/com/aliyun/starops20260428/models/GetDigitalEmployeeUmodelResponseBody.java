@@ -29,7 +29,7 @@ public class GetDigitalEmployeeUmodelResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The unique identifier of the request.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0A1B2C3D-4E5F-6789-ABCD-1234567890AB</p>

@@ -93,7 +93,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
 
     public static class ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledgesBailian extends TeaModel {
         /**
-         * <p>The attributes of the knowledge base.</p>
+         * <p>The knowledge base attributes.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -204,8 +204,20 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
     }
 
     public static class ListDigitalEmployeesResponseBodyDigitalEmployees extends TeaModel {
+        /**
+         * <p>The attributes.</p>
+         */
         @NameInMap("attributes")
         public java.util.Map<String, String> attributes;
+
+        /**
+         * <p>The channel type of the digital employee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
+        @NameInMap("channel")
+        public String channel;
 
         /**
          * <p>The creation time.</p>
@@ -293,7 +305,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         public java.util.List<Tag> tags;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -313,6 +325,14 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         }
         public java.util.Map<String, String> getAttributes() {
             return this.attributes;
+        }
+
+        public ListDigitalEmployeesResponseBodyDigitalEmployees setChannel(String channel) {
+            this.channel = channel;
+            return this;
+        }
+        public String getChannel() {
+            return this.channel;
         }
 
         public ListDigitalEmployeesResponseBodyDigitalEmployees setCreateTime(String createTime) {

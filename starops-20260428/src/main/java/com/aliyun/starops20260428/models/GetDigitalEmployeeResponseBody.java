@@ -11,6 +11,15 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     public java.util.Map<String, String> attributes;
 
     /**
+     * <p>The channel type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
+    @NameInMap("channel")
+    public String channel;
+
+    /**
      * <p>The creation time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
@@ -108,7 +117,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     public String roleArn;
 
     /**
-     * <p>The sandbox network ACL policy configuration for the digital employee.</p>
+     * <p>The sandbox network ACL policy configuration of the digital employee.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;allowFqdns&quot;:[&quot;api.example.com&quot;],&quot;allowCidrs&quot;:[&quot;1.2.3.0/24&quot;,&quot;8.8.8.8&quot;],&quot;enableAcl&quot;:false}</p>
@@ -132,7 +141,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     public GetDigitalEmployeeResponseBodyToolPolicy toolPolicy;
 
     /**
-     * <p>The update time.</p>
+     * <p>The modification time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -152,6 +161,14 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     }
     public java.util.Map<String, String> getAttributes() {
         return this.attributes;
+    }
+
+    public GetDigitalEmployeeResponseBody setChannel(String channel) {
+        this.channel = channel;
+        return this;
+    }
+    public String getChannel() {
+        return this.channel;
     }
 
     public GetDigitalEmployeeResponseBody setCreateTime(String createTime) {
@@ -520,7 +537,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
 
     public static class GetDigitalEmployeeResponseBodyToolPolicyAliyun extends TeaModel {
         /**
-         * <p>The auto-pass policy. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:<em>. Matched requests are automatically approved without human confirmation. If empty or not configured, built-in read-only operations (Get</em>, List*, Describe*) are automatically approved. Unmatched requests require human-in-the-loop (HIL) confirmation.</p>
+         * <p>The auto-pass policy. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:<em>. Matched actions are automatically approved without human confirmation. If this parameter is empty or not configured, built-in read-only actions (Get</em>, List*, Describe*) are automatically approved. Unmatched actions require human-in-the-loop (HIL) confirmation.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;log:Get*&quot;,&quot;log:List*&quot;]</p>
@@ -529,7 +546,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         public java.util.List<String> autoPassPolicy;
 
         /**
-         * <p>The explicit deny policy with the highest priority. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:*. If empty or not configured, no operations are actively denied. STAROps directly rejects matched requests. The Pop side performs a secondary fallback check.</p>
+         * <p>The explicit deny policy with the highest priority. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:*. If this parameter is empty or not configured, no actions are actively denied. STAROps directly denies matched actions. The Pop side performs secondary fallback enforcement.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;]</p>
@@ -547,7 +564,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The list of Aliyun CLI tool policy statements.</p>
+         * <p>The list of Alibaba Cloud CLI tool policy statements.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]</p>
@@ -598,7 +615,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
 
     public static class GetDigitalEmployeeResponseBodyToolPolicy extends TeaModel {
         /**
-         * <p>The security policy configuration for Aliyun CLI tool calling.</p>
+         * <p>The security policy configuration for Alibaba Cloud CLI tool calling invokes.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}</p>

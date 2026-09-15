@@ -1,3 +1,9 @@
+2026-09-15 Version: 1.4.1
+- Update API GetDigitalEmployee: add response parameters Body.channel.
+- Update API ListDigitalEmployees: add request parameters channel.
+- Update API ListDigitalEmployees: add response parameters Body.digitalEmployees.$.channel.
+
+
 2026-09-09 Version: 1.4.0
 - Support API DeleteDigitalEmployeeUmodelCommonSchemaRef.
 - Support API GetDigitalEmployeeEntityData.

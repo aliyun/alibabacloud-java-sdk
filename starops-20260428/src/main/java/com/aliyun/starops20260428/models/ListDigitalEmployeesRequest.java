@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListDigitalEmployeesRequest extends TeaModel {
     /**
+     * <p>Filters digital employees by channel type. If this parameter is not specified, the default channel is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
+    @NameInMap("channel")
+    public String channel;
+
+    /**
      * <p>The display name of the digital employee.</p>
      * 
      * <strong>example:</strong>
@@ -67,6 +76,14 @@ public class ListDigitalEmployeesRequest extends TeaModel {
     public static ListDigitalEmployeesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDigitalEmployeesRequest self = new ListDigitalEmployeesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDigitalEmployeesRequest setChannel(String channel) {
+        this.channel = channel;
+        return this;
+    }
+    public String getChannel() {
+        return this.channel;
     }
 
     public ListDigitalEmployeesRequest setDisplayName(String displayName) {

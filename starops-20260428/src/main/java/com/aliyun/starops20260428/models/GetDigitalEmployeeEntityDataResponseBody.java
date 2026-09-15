@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetDigitalEmployeeEntityDataResponseBody extends TeaModel {
     /**
-     * <p>The query result in the form of a two-dimensional array. Each cell is returned as a string.</p>
+     * <p>The query results in the form of a two-dimensional array. Each cell is returned as a string.</p>
      */
     @NameInMap("data")
     public java.util.List<java.util.List<String>> data;
 
     /**
-     * <p>The name of each column in the query result.</p>
+     * <p>The name of each column in the query results.</p>
      */
     @NameInMap("header")
     public java.util.List<String> header;
