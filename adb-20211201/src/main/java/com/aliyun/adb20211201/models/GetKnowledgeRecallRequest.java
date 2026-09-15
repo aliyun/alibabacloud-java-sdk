@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKnowledgeRecallRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL cluster.</p>
+     * <p>The ID of the ADB MySQL cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +13,15 @@ public class GetKnowledgeRecallRequest extends TeaModel {
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
+
+    /**
+     * <p>The file path prefix. Only files that match the specified path prefix are recalled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://bucketName/path/prefix/</p>
+     */
+    @NameInMap("Path")
+    public String path;
 
     /**
      * <p>The question for knowledge base recall.</p>
@@ -25,7 +34,16 @@ public class GetKnowledgeRecallRequest extends TeaModel {
     public String question;
 
     /**
-     * <p>The top K number of related files to recall.</p>
+     * <p>The list of tags in JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{   &quot;tag_key1&quot;: [&quot;tag_key1_value1&quot;, &quot;tag_key1_value2&quot;],   &quot;tag_key2&quot;: [&quot;tag_key2_value&quot;] }</p>
+     */
+    @NameInMap("Tags")
+    public String tags;
+
+    /**
+     * <p>The top K associated files to recall.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -34,7 +52,7 @@ public class GetKnowledgeRecallRequest extends TeaModel {
     public Integer topk;
 
     /**
-     * <p>The username. Only files that this user has permission to access are recalled.</p>
+     * <p>The username. Only files that the specified user has permission to access are recalled.</p>
      * 
      * <strong>example:</strong>
      * <p>user_name1</p>
@@ -55,12 +73,28 @@ public class GetKnowledgeRecallRequest extends TeaModel {
         return this.DBClusterId;
     }
 
+    public GetKnowledgeRecallRequest setPath(String path) {
+        this.path = path;
+        return this;
+    }
+    public String getPath() {
+        return this.path;
+    }
+
     public GetKnowledgeRecallRequest setQuestion(String question) {
         this.question = question;
         return this;
     }
     public String getQuestion() {
         return this.question;
+    }
+
+    public GetKnowledgeRecallRequest setTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    public String getTags() {
+        return this.tags;
     }
 
     public GetKnowledgeRecallRequest setTopk(Integer topk) {

@@ -1,3 +1,9 @@
+2026-09-15 Version: 5.3.0
+- Support API RemoveKnowledgeUploadUser.
+- Update API GetKnowledgeRecall: add request parameters Path.
+- Update API GetKnowledgeRecall: add request parameters Tags.
+
+
 2026-09-07 Version: 5.2.0
 - Support API AddKnowledgeTags.
 - Support API AddKnowledgeUploadUser.

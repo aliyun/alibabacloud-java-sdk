@@ -24,7 +24,7 @@ public class ModifyMaterializedViewRecommendRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The minimum number of slow queries matched by a pattern.</p>
+     * <p>The minimum number of slow queries that a pattern must match.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -63,7 +63,7 @@ public class ModifyMaterializedViewRecommendRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The scan time range, in days. Default value: 3.</p>
+     * <p>The time range to scan, in days. Default value: 3.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -93,8 +93,8 @@ public class ModifyMaterializedViewRecommendRequest extends TeaModel {
     /**
      * <p>The recommendation policy. Valid values: </p>
      * <ul>
-     * <li>daliy: scheduled on a daily basis.</li>
-     * <li>weekly: scheduled on a weekly basis.</li>
+     * <li>daily: schedules the task on a daily basis.</li>
+     * <li>weekly: schedules the task on a weekly basis.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class ModifyMaterializedViewRecommendRequest extends TeaModel {
     public Integer slowQueryThreshold;
 
     /**
-     * <p>The execution time of the task in the format HH:MM:SS.</p>
+     * <p>The execution time of the task in HH:MM:SS format.</p>
      * 
      * <strong>example:</strong>
      * <p>10:00:00</p>

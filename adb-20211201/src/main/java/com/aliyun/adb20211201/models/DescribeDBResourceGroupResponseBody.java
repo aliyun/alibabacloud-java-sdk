@@ -51,7 +51,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String authNodeNum;
 
         /**
-         * <p>The authentication node specifications.</p>
+         * <p>The node specifications of authentication nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>8ACU</p>
@@ -69,7 +69,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String insertNodeNum;
 
         /**
-         * <p>The write node specifications.</p>
+         * <p>The node specifications of write nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>8ACU</p>
@@ -96,7 +96,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String selectNodeNum;
 
         /**
-         * <p>The query node specifications.</p>
+         * <p>The node specifications of query nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>8ACU</p>
@@ -132,7 +132,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String storageNodeNum;
 
         /**
-         * <p>The storage node specifications.</p>
+         * <p>The node specifications of storage nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>8ACU</p>
@@ -237,7 +237,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
 
     public static class DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlanRules extends TeaModel {
         /**
-         * <p>The end time in Cron expression format. The interval must be at least 1 hour.</p>
+         * <p>The end time in cron expression format. The interval must be at least 1 hour.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 3 * * ?</p>
@@ -246,7 +246,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String endCronExpression;
 
         /**
-         * <p>The start time in Cron expression format. The interval must be at least 1 hour.</p>
+         * <p>The start time in cron expression format. The interval must be at least 1 hour.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 2 * * ?</p>
@@ -498,7 +498,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String allocateUnit;
 
         /**
-         * <p>The Ray worker group name.</p>
+         * <p>The name of the Ray worker group.</p>
          * 
          * <strong>example:</strong>
          * <p>g01</p>
@@ -627,9 +627,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         /**
          * <p>The Ray cluster type. Valid values:</p>
          * <ul>
-         * <li><p>BASIC: basic type, non-high-availability</p>
+         * <li><p>BASIC: basic type, non-high-availability.</p>
          * </li>
-         * <li><p>HIGH_AVAILABILITY: high-availability type</p>
+         * <li><p>HIGH_AVAILABILITY: high-availability type.</p>
          * </li>
          * </ul>
          * 
@@ -981,7 +981,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String elasticMinComputeResource;
 
         /**
-         * <p>Indicates whether the spot instance feature is enabled for the resource group. When the spot instance feature is enabled, the unit price of resources is reduced, but instances may be released. Valid values:</p>
+         * <p>Indicates whether the spot instance feature is enabled for the resource group. After the spot instance feature is enabled, the unit price of resources is reduced, but the resources may be released. Valid values:</p>
          * <ul>
          * <li><strong>True</strong>: The spot instance feature is enabled.</li>
          * <li><strong>False</strong>: The spot instance feature is disabled.</li>
@@ -1029,7 +1029,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
          * <ul>
          * <li><strong>Interactive</strong></li>
          * <li><strong>Job</strong><blockquote>
-         * <p>For more information about resource groups in Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group introduction (Data Lakehouse Edition)</a>.</p>
+         * <p>For more information about resource groups of the Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group introduction (Data Lakehouse Edition)</a>.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -1160,13 +1160,15 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         /**
          * <p>The resource group status. Valid values:</p>
          * <ul>
-         * <li><strong>creating</strong>: being created</li>
-         * <li><strong>ok</strong>: created</li>
-         * <li><strong>pendingdelete</strong>: pending deletion</li>
+         * <li><strong>Pending</strong>: being created.</li>
+         * <li><strong>Running</strong>: running.</li>
+         * <li><strong>Scaling</strong>: being scaled.</li>
+         * <li><strong>Deleting</strong>: being deleted.</li>
+         * <li><strong>Deleted</strong>: deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>ok</p>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;

@@ -11526,7 +11526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a knowledge base document.</p>
+     * <p>Performs knowledge base recall.</p>
      * 
      * @param request GetKnowledgeRecallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11539,8 +11539,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBClusterId", request.DBClusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            query.put("Path", request.path);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.question)) {
             query.put("Question", request.question);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.topk)) {
@@ -11570,7 +11578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a knowledge base document.</p>
+     * <p>Performs knowledge base recall.</p>
      * 
      * @param request GetKnowledgeRecallRequest
      * @return GetKnowledgeRecallResponse
@@ -16056,7 +16064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an automatic materialized view recommendation task.</p>
+     * <p>Modifies a materialized view automatic recommendation task.</p>
      * 
      * @param request ModifyMaterializedViewRecommendRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16144,7 +16152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an automatic materialized view recommendation task.</p>
+     * <p>Modifies a materialized view automatic recommendation task.</p>
      * 
      * @param request ModifyMaterializedViewRecommendRequest
      * @return ModifyMaterializedViewRecommendResponse
@@ -16774,6 +16782,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RemoveKnowledgeTagsResponse removeKnowledgeTags(RemoveKnowledgeTagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeKnowledgeTagsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes authorized users from a knowledge base document.</p>
+     * 
+     * @param request RemoveKnowledgeUploadUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveKnowledgeUploadUserResponse
+     */
+    public RemoveKnowledgeUploadUserResponse removeKnowledgeUploadUserWithOptions(RemoveKnowledgeUploadUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileLocation)) {
+            query.put("FileLocation", request.fileLocation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.users)) {
+            query.put("Users", request.users);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveKnowledgeUploadUser"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveKnowledgeUploadUserResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes authorized users from a knowledge base document.</p>
+     * 
+     * @param request RemoveKnowledgeUploadUserRequest
+     * @return RemoveKnowledgeUploadUserResponse
+     */
+    public RemoveKnowledgeUploadUserResponse removeKnowledgeUploadUser(RemoveKnowledgeUploadUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removeKnowledgeUploadUserWithOptions(request, runtime);
     }
 
     /**
