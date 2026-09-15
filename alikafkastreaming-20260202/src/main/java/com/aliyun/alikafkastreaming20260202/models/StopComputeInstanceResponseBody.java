@@ -4,15 +4,31 @@ package com.aliyun.alikafkastreaming20260202.models;
 import com.aliyun.tea.*;
 
 public class StopComputeInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B353C700-D3F6-5325-8A1C-376CE8E04DC4</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

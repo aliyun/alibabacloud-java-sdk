@@ -4,24 +4,48 @@ package com.aliyun.alikafkastreaming20260202.models;
 import com.aliyun.tea.*;
 
 public class ListComputeJobsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
     @NameInMap("Data")
     public java.util.List<ListComputeJobsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eyJvZmZzZXQiOjIwfQ==</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>062D8E8B-8D47-5DCC-BB12-5A1D93C3A66B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -89,37 +113,80 @@ public class ListComputeJobsResponseBody extends TeaModel {
     public static class ListComputeJobsResponseBodyData extends TeaModel {
         /**
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-09-02T16:00:00Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.0</p>
+         */
         @NameInMap("CuLimit")
         public Double cuLimit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("CuReserved")
         public Double cuReserved;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.5</p>
+         */
         @NameInMap("CuUsed")
         public Double cuUsed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DebugMode")
         public Integer debugMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>alikafka_streaming-cn-a1b2c3d4</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>order_enrichment</p>
+         */
         @NameInMap("JobName")
         public String jobName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234567890123456</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>订单流实时清洗</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("Status")
         public String status;
 

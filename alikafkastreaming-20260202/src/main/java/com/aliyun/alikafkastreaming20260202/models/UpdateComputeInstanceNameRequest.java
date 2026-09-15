@@ -4,23 +4,29 @@ package com.aliyun.alikafkastreaming20260202.models;
 import com.aliyun.tea.*;
 
 public class UpdateComputeInstanceNameRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_streaming-cn-pe333xxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>streaming-prod</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -28,14 +34,6 @@ public class UpdateComputeInstanceNameRequest extends TeaModel {
     public static UpdateComputeInstanceNameRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateComputeInstanceNameRequest self = new UpdateComputeInstanceNameRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateComputeInstanceNameRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public UpdateComputeInstanceNameRequest setInstanceId(String instanceId) {

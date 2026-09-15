@@ -4,24 +4,48 @@ package com.aliyun.alikafkastreaming20260202.models;
 import com.aliyun.tea.*;
 
 public class ListComputeInstancesInPageResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     @NameInMap("Data")
     public java.util.List<ListComputeInstancesInPageResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9079DD86-09F1-5303-A64F-D9089F96BC16</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -87,66 +111,115 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
     }
 
     public static class ListComputeInstancesInPageResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("AutoRenewFlag")
         public Boolean autoRenewFlag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>POST_PAID</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
-        @NameInMap("CommodityCode")
-        public String commodityCode;
-
         /**
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-09-02T16:00:00Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("Cu")
-        public Integer cu;
-
+        /**
+         * <strong>example:</strong>
+         * <p>4.0</p>
+         */
         @NameInMap("CuLimitSum")
         public Double cuLimitSum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.0</p>
+         */
         @NameInMap("CuReservedSum")
         public Double cuReservedSum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.5</p>
+         */
         @NameInMap("CuUsedSum")
         public Double cuUsedSum;
 
         /**
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2027-09-02T16:00:00Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>alikafka_streaming-cn-xxxxxxx</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>streaming-prod</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234567890123456</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("ServiceStatus")
         public String serviceStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TotalJobs")
         public Long totalJobs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("TotalRunningJobs")
         public Long totalRunningJobs;
 
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
-        @NameInMap("Version")
-        public String version;
-
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-bp1abcdefg</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -171,28 +244,12 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
             return this.chargeType;
         }
 
-        public ListComputeInstancesInPageResponseBodyData setCommodityCode(String commodityCode) {
-            this.commodityCode = commodityCode;
-            return this;
-        }
-        public String getCommodityCode() {
-            return this.commodityCode;
-        }
-
         public ListComputeInstancesInPageResponseBodyData setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
         public String getCreateTime() {
             return this.createTime;
-        }
-
-        public ListComputeInstancesInPageResponseBodyData setCu(Integer cu) {
-            this.cu = cu;
-            return this;
-        }
-        public Integer getCu() {
-            return this.cu;
         }
 
         public ListComputeInstancesInPageResponseBodyData setCuLimitSum(Double cuLimitSum) {
@@ -289,14 +346,6 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         }
         public java.util.List<String> getVSwitchIds() {
             return this.vSwitchIds;
-        }
-
-        public ListComputeInstancesInPageResponseBodyData setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
         }
 
         public ListComputeInstancesInPageResponseBodyData setVpcId(String vpcId) {

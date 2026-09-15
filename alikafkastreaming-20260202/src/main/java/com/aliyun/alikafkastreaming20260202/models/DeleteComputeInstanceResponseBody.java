@@ -4,15 +4,31 @@ package com.aliyun.alikafkastreaming20260202.models;
 import com.aliyun.tea.*;
 
 public class DeleteComputeInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2834B42F-FBAD-516B-94FA-95E675A5D6CC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

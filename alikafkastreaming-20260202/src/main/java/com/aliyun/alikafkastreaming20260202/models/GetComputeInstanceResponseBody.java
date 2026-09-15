@@ -4,15 +4,27 @@ package com.aliyun.alikafkastreaming20260202.models;
 import com.aliyun.tea.*;
 
 public class GetComputeInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
     @NameInMap("Data")
     public GetComputeInstanceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>019F5939-507B-57C1-B82C-E55821456FA6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,57 +66,101 @@ public class GetComputeInstanceResponseBody extends TeaModel {
     }
 
     public static class GetComputeInstanceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>POST_PAID</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-09-02T16:00:00Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4.0</p>
+         */
         @NameInMap("CuLimitSum")
         public Double cuLimitSum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.0</p>
+         */
         @NameInMap("CuReservedSum")
         public Double cuReservedSum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.5</p>
+         */
         @NameInMap("CuUsedSum")
         public Double cuUsedSum;
 
         /**
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2027-09-02T16:00:00Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>alikafka_streaming-cn-pe333xxxxxx</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>streaming-prod</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        @NameInMap("OrderId")
-        public String orderId;
-
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("ServiceStatus")
         public String serviceStatus;
 
-        @NameInMap("ServiceVersion")
-        public String serviceVersion;
-
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TotalJobs")
         public Long totalJobs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("TotalRunningJobs")
         public Long totalRunningJobs;
 
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-bp1abcdefg</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -177,14 +233,6 @@ public class GetComputeInstanceResponseBody extends TeaModel {
             return this.instanceName;
         }
 
-        public GetComputeInstanceResponseBodyData setOrderId(String orderId) {
-            this.orderId = orderId;
-            return this;
-        }
-        public String getOrderId() {
-            return this.orderId;
-        }
-
         public GetComputeInstanceResponseBodyData setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -199,14 +247,6 @@ public class GetComputeInstanceResponseBody extends TeaModel {
         }
         public String getServiceStatus() {
             return this.serviceStatus;
-        }
-
-        public GetComputeInstanceResponseBodyData setServiceVersion(String serviceVersion) {
-            this.serviceVersion = serviceVersion;
-            return this;
-        }
-        public String getServiceVersion() {
-            return this.serviceVersion;
         }
 
         public GetComputeInstanceResponseBodyData setTotalJobs(Long totalJobs) {

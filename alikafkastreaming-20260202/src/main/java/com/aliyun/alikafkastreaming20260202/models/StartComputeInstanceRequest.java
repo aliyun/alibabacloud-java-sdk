@@ -4,29 +4,30 @@ package com.aliyun.alikafkastreaming20260202.models;
 import com.aliyun.tea.*;
 
 public class StartComputeInstanceRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_streaming-cn-pe333xxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>streaming-prod</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
-
-    @NameInMap("SelectedZones")
-    public String selectedZones;
-
-    @NameInMap("ServiceVersion")
-    public String serviceVersion;
 
     /**
      * <p>This parameter is required.</p>
@@ -36,6 +37,9 @@ public class StartComputeInstanceRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1abcdefg</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -43,14 +47,6 @@ public class StartComputeInstanceRequest extends TeaModel {
     public static StartComputeInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         StartComputeInstanceRequest self = new StartComputeInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public StartComputeInstanceRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public StartComputeInstanceRequest setInstanceId(String instanceId) {
@@ -75,22 +71,6 @@ public class StartComputeInstanceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public StartComputeInstanceRequest setSelectedZones(String selectedZones) {
-        this.selectedZones = selectedZones;
-        return this;
-    }
-    public String getSelectedZones() {
-        return this.selectedZones;
-    }
-
-    public StartComputeInstanceRequest setServiceVersion(String serviceVersion) {
-        this.serviceVersion = serviceVersion;
-        return this;
-    }
-    public String getServiceVersion() {
-        return this.serviceVersion;
     }
 
     public StartComputeInstanceRequest setVSwitchIds(java.util.List<String> vSwitchIds) {

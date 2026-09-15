@@ -6,15 +6,18 @@ import com.aliyun.tea.*;
 public class GetComputeInstanceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_streaming-cn-xxxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("OrderId")
-    public String orderId;
-
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -30,14 +33,6 @@ public class GetComputeInstanceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public GetComputeInstanceRequest setOrderId(String orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public String getOrderId() {
-        return this.orderId;
     }
 
     public GetComputeInstanceRequest setRegionId(String regionId) {

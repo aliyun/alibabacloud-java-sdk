@@ -4,29 +4,47 @@ package com.aliyun.alikafkastreaming20260202.models;
 import com.aliyun.tea.*;
 
 public class UpdateComputeJobCuRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2.0</p>
+     */
     @NameInMap("CuLimit")
     public Double cuLimit;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0</p>
+     */
     @NameInMap("CuReserved")
     public Double cuReserved;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_streaming-cn-a1b2c3d4</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>order_enrichment</p>
      */
     @NameInMap("JobName")
     public String jobName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -34,14 +52,6 @@ public class UpdateComputeJobCuRequest extends TeaModel {
     public static UpdateComputeJobCuRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateComputeJobCuRequest self = new UpdateComputeJobCuRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateComputeJobCuRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public UpdateComputeJobCuRequest setCuLimit(Double cuLimit) {

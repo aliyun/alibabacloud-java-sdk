@@ -4,59 +4,61 @@ package com.aliyun.alikafkastreaming20260202.models;
 import com.aliyun.tea.*;
 
 public class CreateComputeJobRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2.0</p>
+     */
     @NameInMap("CuLimit")
     public Double cuLimit;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0</p>
+     */
     @NameInMap("CuReserved")
     public Double cuReserved;
 
-    @NameInMap("DraftSql")
-    public String draftSql;
-
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_streaming-cn-pe333xxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("JobConfig")
-    public String jobConfig;
-
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>order_enrichment</p>
      */
     @NameInMap("JobName")
     public String jobName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>订单流实时清洗</p>
+     */
     @NameInMap("Remark")
     public String remark;
-
-    @NameInMap("UpgradeMode")
-    public String upgradeMode;
-
-    @NameInMap("UserId")
-    public String userId;
 
     public static CreateComputeJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateComputeJobRequest self = new CreateComputeJobRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateComputeJobRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public CreateComputeJobRequest setCuLimit(Double cuLimit) {
@@ -75,28 +77,12 @@ public class CreateComputeJobRequest extends TeaModel {
         return this.cuReserved;
     }
 
-    public CreateComputeJobRequest setDraftSql(String draftSql) {
-        this.draftSql = draftSql;
-        return this;
-    }
-    public String getDraftSql() {
-        return this.draftSql;
-    }
-
     public CreateComputeJobRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public CreateComputeJobRequest setJobConfig(String jobConfig) {
-        this.jobConfig = jobConfig;
-        return this;
-    }
-    public String getJobConfig() {
-        return this.jobConfig;
     }
 
     public CreateComputeJobRequest setJobName(String jobName) {
@@ -121,22 +107,6 @@ public class CreateComputeJobRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
-    }
-
-    public CreateComputeJobRequest setUpgradeMode(String upgradeMode) {
-        this.upgradeMode = upgradeMode;
-        return this;
-    }
-    public String getUpgradeMode() {
-        return this.upgradeMode;
-    }
-
-    public CreateComputeJobRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
 }

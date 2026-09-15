@@ -4,50 +4,62 @@ package com.aliyun.alikafkastreaming20260202.models;
 import com.aliyun.tea.*;
 
 public class ListComputeJobsRequest extends TeaModel {
-    @NameInMap("CurrentPage")
-    public Long currentPage;
-
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_streaming-cn-a1b2c3d4</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eyJvZmZzZXQiOjIwfQ==</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("PageSize")
-    public Long pageSize;
-
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>order</p>
+     */
     @NameInMap("Search")
     public String search;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DESC</p>
+     */
     @NameInMap("SortDirection")
     public String sortDirection;
 
+    /**
+     * <strong>example:</strong>
+     * <p>createTime</p>
+     */
     @NameInMap("SortField")
     public String sortField;
 
     public static ListComputeJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListComputeJobsRequest self = new ListComputeJobsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListComputeJobsRequest setCurrentPage(Long currentPage) {
-        this.currentPage = currentPage;
-        return this;
-    }
-    public Long getCurrentPage() {
-        return this.currentPage;
     }
 
     public ListComputeJobsRequest setInstanceId(String instanceId) {
@@ -72,14 +84,6 @@ public class ListComputeJobsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    public ListComputeJobsRequest setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
     }
 
     public ListComputeJobsRequest setRegionId(String regionId) {

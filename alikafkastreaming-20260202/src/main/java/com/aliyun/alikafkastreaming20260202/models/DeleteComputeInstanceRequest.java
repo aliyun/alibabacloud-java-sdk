@@ -6,18 +6,21 @@ import com.aliyun.tea.*;
 public class DeleteComputeInstanceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_streaming-cn-pe333xxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
-
-    @NameInMap("ResourceType")
-    public String resourceType;
 
     public static DeleteComputeInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteComputeInstanceRequest self = new DeleteComputeInstanceRequest();
@@ -38,14 +41,6 @@ public class DeleteComputeInstanceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public DeleteComputeInstanceRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
     }
 
 }

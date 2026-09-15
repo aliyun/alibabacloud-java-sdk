@@ -4,15 +4,27 @@ package com.aliyun.alikafkastreaming20260202.models;
 import com.aliyun.tea.*;
 
 public class CheckSqlContentResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
     @NameInMap("Data")
     public CheckSqlContentResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>062D8E8B-8D47-5DCC-BB12-5A1D93C3A66B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,24 +66,52 @@ public class CheckSqlContentResponseBody extends TeaModel {
     }
 
     public static class CheckSqlContentResponseBodyDataErrorList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>SELECT FROM source_table</p>
+         */
         @NameInMap("CodeSnippet")
         public String codeSnippet;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("ColumnNumber")
         public Integer columnNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("EndColumnNumber")
         public Integer endColumnNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("EndLineNumber")
         public Integer endLineNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SYNTAX_ERROR</p>
+         */
         @NameInMap("ErrorType")
         public String errorType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("LineNumber")
         public Integer lineNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SQL parse failed near FROM</p>
+         */
         @NameInMap("Message")
         public String message;
 
@@ -142,6 +182,10 @@ public class CheckSqlContentResponseBody extends TeaModel {
         @NameInMap("ErrorList")
         public java.util.List<CheckSqlContentResponseBodyDataErrorList> errorList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Valid")
         public Boolean valid;
 

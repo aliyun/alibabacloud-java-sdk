@@ -4,26 +4,38 @@ package com.aliyun.alikafkastreaming20260202.models;
 import com.aliyun.tea.*;
 
 public class ListComputeInstancesInPageShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
 
     @NameInMap("InstanceIds")
     public String instanceIdsShrink;
 
-    @NameInMap("OrderId")
-    public String orderId;
-
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfm2pz25js****</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     public static ListComputeInstancesInPageShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListComputeInstancesInPageShrinkRequest self = new ListComputeInstancesInPageShrinkRequest();
@@ -38,28 +50,12 @@ public class ListComputeInstancesInPageShrinkRequest extends TeaModel {
         return this.currentPage;
     }
 
-    public ListComputeInstancesInPageShrinkRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
     public ListComputeInstancesInPageShrinkRequest setInstanceIdsShrink(String instanceIdsShrink) {
         this.instanceIdsShrink = instanceIdsShrink;
         return this;
     }
     public String getInstanceIdsShrink() {
         return this.instanceIdsShrink;
-    }
-
-    public ListComputeInstancesInPageShrinkRequest setOrderId(String orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public String getOrderId() {
-        return this.orderId;
     }
 
     public ListComputeInstancesInPageShrinkRequest setPageSize(Integer pageSize) {
@@ -76,6 +72,14 @@ public class ListComputeInstancesInPageShrinkRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListComputeInstancesInPageShrinkRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

@@ -4,17 +4,20 @@ package com.aliyun.alikafkastreaming20260202.models;
 import com.aliyun.tea.*;
 
 public class StopComputeInstanceRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_streaming-cn-pe333xxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -22,14 +25,6 @@ public class StopComputeInstanceRequest extends TeaModel {
     public static StopComputeInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         StopComputeInstanceRequest self = new StopComputeInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public StopComputeInstanceRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public StopComputeInstanceRequest setInstanceId(String instanceId) {

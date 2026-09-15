@@ -4,15 +4,27 @@ package com.aliyun.alikafkastreaming20260202.models;
 import com.aliyun.tea.*;
 
 public class GetComputeJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
     @NameInMap("Data")
     public GetComputeJobResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>062D8E8B-8D47-5DCC-BB12-5A1D93C3A66B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -56,52 +68,117 @@ public class GetComputeJobResponseBody extends TeaModel {
     public static class GetComputeJobResponseBodyData extends TeaModel {
         /**
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-09-02T16:00:00Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.0</p>
+         */
         @NameInMap("CuLimit")
         public Double cuLimit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("CuReserved")
         public Double cuReserved;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.5</p>
+         */
         @NameInMap("CuUsed")
         public Double cuUsed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DebugMode")
         public Integer debugMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INSERT INTO sink_table SELECT * FROM source_table;</p>
+         */
         @NameInMap("DeployedSql")
         public String deployedSql;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INSERT INTO sink_table SELECT * FROM source_table;</p>
+         */
         @NameInMap("DraftSql")
         public String draftSql;
 
-        @NameInMap("HistoryInfos")
-        public String historyInfos;
+        /**
+         * <strong>example:</strong>
+         * <p>SQL 校验或编译失败：Column \&quot;xxx\&quot; not found</p>
+         */
+        @NameInMap("ErrorMsg")
+        public String errorMsg;
 
+        /**
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-09-11T04:33:03Z</p>
+         */
+        @NameInMap("ExpirationTime")
+        public String expirationTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>alikafka_streaming-cn-hangzhou-a1b2c3d4</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("JobConfig")
-        public String jobConfig;
-
+        /**
+         * <strong>example:</strong>
+         * <p>order_enrichment</p>
+         */
         @NameInMap("JobName")
         public String jobName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234567890123456</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>订单流实时清洗</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>savepoint</p>
+         */
         @NameInMap("UpgradeMode")
         public String upgradeMode;
 
@@ -166,12 +243,20 @@ public class GetComputeJobResponseBody extends TeaModel {
             return this.draftSql;
         }
 
-        public GetComputeJobResponseBodyData setHistoryInfos(String historyInfos) {
-            this.historyInfos = historyInfos;
+        public GetComputeJobResponseBodyData setErrorMsg(String errorMsg) {
+            this.errorMsg = errorMsg;
             return this;
         }
-        public String getHistoryInfos() {
-            return this.historyInfos;
+        public String getErrorMsg() {
+            return this.errorMsg;
+        }
+
+        public GetComputeJobResponseBodyData setExpirationTime(String expirationTime) {
+            this.expirationTime = expirationTime;
+            return this;
+        }
+        public String getExpirationTime() {
+            return this.expirationTime;
         }
 
         public GetComputeJobResponseBodyData setInstanceId(String instanceId) {
@@ -180,14 +265,6 @@ public class GetComputeJobResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
-        }
-
-        public GetComputeJobResponseBodyData setJobConfig(String jobConfig) {
-            this.jobConfig = jobConfig;
-            return this;
-        }
-        public String getJobConfig() {
-            return this.jobConfig;
         }
 
         public GetComputeJobResponseBodyData setJobName(String jobName) {

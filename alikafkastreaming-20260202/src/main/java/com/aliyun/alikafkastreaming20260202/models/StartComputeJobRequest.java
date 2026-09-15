@@ -4,38 +4,57 @@ package com.aliyun.alikafkastreaming20260202.models;
 import com.aliyun.tea.*;
 
 public class StartComputeJobRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
+    /**
+     * <strong>example:</strong>
+     * <p>2.0</p>
+     */
     @NameInMap("CuLimit")
     public Double cuLimit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.0</p>
+     */
     @NameInMap("CuReserved")
     public Double cuReserved;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CREATE TEMPORARY TABLE src (id BIGINT) WITH (\&quot;connector\&quot; = \&quot;datagen\&quot;); CREATE TEMPORARY TABLE sink (id BIGINT) WITH (\&quot;connector\&quot; = \&quot;print\&quot;); INSERT INTO sink SELECT id FROM src;</p>
+     */
     @NameInMap("DraftSql")
     public String draftSql;
 
-    @NameInMap("DraftSqlStart")
-    public Boolean draftSqlStart;
-
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_streaming-cn-pe333xxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>order_enrichment</p>
      */
     @NameInMap("JobName")
     public String jobName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>savepoint</p>
+     */
     @NameInMap("RecoveryMode")
     public String recoveryMode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -43,14 +62,6 @@ public class StartComputeJobRequest extends TeaModel {
     public static StartComputeJobRequest build(java.util.Map<String, ?> map) throws Exception {
         StartComputeJobRequest self = new StartComputeJobRequest();
         return TeaModel.build(map, self);
-    }
-
-    public StartComputeJobRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public StartComputeJobRequest setCuLimit(Double cuLimit) {
@@ -75,14 +86,6 @@ public class StartComputeJobRequest extends TeaModel {
     }
     public String getDraftSql() {
         return this.draftSql;
-    }
-
-    public StartComputeJobRequest setDraftSqlStart(Boolean draftSqlStart) {
-        this.draftSqlStart = draftSqlStart;
-        return this;
-    }
-    public Boolean getDraftSqlStart() {
-        return this.draftSqlStart;
     }
 
     public StartComputeJobRequest setInstanceId(String instanceId) {

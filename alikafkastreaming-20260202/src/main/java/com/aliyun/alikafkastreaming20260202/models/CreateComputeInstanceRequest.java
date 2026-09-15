@@ -6,21 +6,28 @@ import com.aliyun.tea.*;
 public class CreateComputeInstanceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("PaidType")
     public Long paidType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfm2pz25js****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
-
-    @NameInMap("ResourceType")
-    public String resourceType;
 
     public static CreateComputeInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateComputeInstanceRequest self = new CreateComputeInstanceRequest();
@@ -49,14 +56,6 @@ public class CreateComputeInstanceRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public CreateComputeInstanceRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
     }
 
 }

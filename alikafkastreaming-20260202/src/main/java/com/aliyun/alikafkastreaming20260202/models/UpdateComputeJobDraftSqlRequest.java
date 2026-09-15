@@ -4,29 +4,38 @@ package com.aliyun.alikafkastreaming20260202.models;
 import com.aliyun.tea.*;
 
 public class UpdateComputeJobDraftSqlRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSERT INTO sink_table SELECT * FROM source_table;</p>
      */
     @NameInMap("DraftSql")
     public String draftSql;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_streaming-cn-a1b2c3d4</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>order_enrichment</p>
      */
     @NameInMap("JobName")
     public String jobName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -34,14 +43,6 @@ public class UpdateComputeJobDraftSqlRequest extends TeaModel {
     public static UpdateComputeJobDraftSqlRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateComputeJobDraftSqlRequest self = new UpdateComputeJobDraftSqlRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateComputeJobDraftSqlRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public UpdateComputeJobDraftSqlRequest setDraftSql(String draftSql) {

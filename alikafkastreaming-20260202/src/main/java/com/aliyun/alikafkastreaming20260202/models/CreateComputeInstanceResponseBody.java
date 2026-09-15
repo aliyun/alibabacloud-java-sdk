@@ -4,15 +4,27 @@ package com.aliyun.alikafkastreaming20260202.models;
 import com.aliyun.tea.*;
 
 public class CreateComputeInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
     @NameInMap("Data")
     public CreateComputeInstanceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>062D8E8B-8D47-5DCC-BB12-5A1D93C3A66B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,9 +66,17 @@ public class CreateComputeInstanceResponseBody extends TeaModel {
     }
 
     public static class CreateComputeInstanceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>alikafka_streaming-cn-pe333xxxxxx</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234567890</p>
+         */
         @NameInMap("OrderId")
         public String orderId;
 
