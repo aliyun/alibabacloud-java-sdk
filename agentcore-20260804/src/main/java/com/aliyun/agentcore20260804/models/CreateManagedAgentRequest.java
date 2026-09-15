@@ -11,7 +11,7 @@ public class CreateManagedAgentRequest extends TeaModel {
     public CreateManagedAgentRequestBody body;
 
     /**
-     * <p>The reserved idempotency token. The backend does not provide idempotency guarantees in the current phase.</p>
+     * <p>The reserved idempotency token. The backend does not provide idempotency guarantees in the current version.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-1</p>
@@ -148,7 +148,7 @@ public class CreateManagedAgentRequest extends TeaModel {
 
     public static class CreateManagedAgentRequestBodyHarnessConfiguration extends TeaModel {
         /**
-         * <p>The Key ID used to bind a Service Account Key of the QoderCLI Connector. This parameter is optional when only one key exists, but required when multiple keys exist.</p>
+         * <p>The Key ID used to bind a Service Account Key of the QoderCLI Connector. This parameter can be omitted when only one key exists, but is required when multiple keys exist.</p>
          * 
          * <strong>example:</strong>
          * <p>key-xxxx</p>
@@ -157,7 +157,7 @@ public class CreateManagedAgentRequest extends TeaModel {
         public String connectorServiceAccountKey;
 
         /**
-         * <p>The Connector Key name that is populated during queries. This parameter is not used as a binding reference during writes.</p>
+         * <p>The Connector Key name that is populated during queries. This parameter is not used as a binding criterion during writes.</p>
          * 
          * <strong>example:</strong>
          * <p>my-connector-key</p>
@@ -196,7 +196,7 @@ public class CreateManagedAgentRequest extends TeaModel {
         public CreateManagedAgentRequestBodyHarnessConfiguration configuration;
 
         /**
-         * <p>The runtime harness type. Valid values: qwenpaw and qodercli. When the type is qodercli, binding is performed based on configuration.connectorServiceAccountKey, and the name is also populated during queries.</p>
+         * <p>The harness type. Valid values: qwenpaw and qodercli. When the type is qodercli, binding is performed based on configuration.connectorServiceAccountKey, and the name is also populated during queries.</p>
          * 
          * <strong>example:</strong>
          * <p>qodercli</p>
@@ -227,6 +227,86 @@ public class CreateManagedAgentRequest extends TeaModel {
 
     }
 
+    public static class CreateManagedAgentRequestBodyModelQuota extends TeaModel {
+        /**
+         * <p>Specifies whether to enable the token quota. Default value: true. If you set this parameter to false, the token quota is disabled and existing quota rules are deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        /**
+         * <p>The quota limit type. This parameter is required by backend validation when the quota is enabled. Fixed value: token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>token</p>
+         */
+        @NameInMap("limitType")
+        public String limitType;
+
+        /**
+         * <p>The quota statistical period. This parameter is required by backend validation when the quota is enabled. Valid values:</p>
+         * <ul>
+         * <li>day: daily.</li>
+         * <li>month: monthly.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>day</p>
+         */
+        @NameInMap("periodType")
+        public String periodType;
+
+        /**
+         * <p>The maximum number of tokens that can be consumed within a single period. This parameter is required by backend validation when the quota is enabled. The value must be greater than 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000</p>
+         */
+        @NameInMap("usageLimit")
+        public Long usageLimit;
+
+        public static CreateManagedAgentRequestBodyModelQuota build(java.util.Map<String, ?> map) throws Exception {
+            CreateManagedAgentRequestBodyModelQuota self = new CreateManagedAgentRequestBodyModelQuota();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateManagedAgentRequestBodyModelQuota setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public CreateManagedAgentRequestBodyModelQuota setLimitType(String limitType) {
+            this.limitType = limitType;
+            return this;
+        }
+        public String getLimitType() {
+            return this.limitType;
+        }
+
+        public CreateManagedAgentRequestBodyModelQuota setPeriodType(String periodType) {
+            this.periodType = periodType;
+            return this;
+        }
+        public String getPeriodType() {
+            return this.periodType;
+        }
+
+        public CreateManagedAgentRequestBodyModelQuota setUsageLimit(Long usageLimit) {
+            this.usageLimit = usageLimit;
+            return this;
+        }
+        public Long getUsageLimit() {
+            return this.usageLimit;
+        }
+
+    }
+
     public static class CreateManagedAgentRequestBodyModel extends TeaModel {
         /**
          * <p>The model connection ID.</p>
@@ -247,6 +327,12 @@ public class CreateManagedAgentRequest extends TeaModel {
         @NameInMap("modelName")
         public String modelName;
 
+        /**
+         * <p>The model token quota configuration. If this parameter is not specified, no quota is configured.</p>
+         */
+        @NameInMap("quota")
+        public CreateManagedAgentRequestBodyModelQuota quota;
+
         public static CreateManagedAgentRequestBodyModel build(java.util.Map<String, ?> map) throws Exception {
             CreateManagedAgentRequestBodyModel self = new CreateManagedAgentRequestBodyModel();
             return TeaModel.build(map, self);
@@ -266,6 +352,14 @@ public class CreateManagedAgentRequest extends TeaModel {
         }
         public String getModelName() {
             return this.modelName;
+        }
+
+        public CreateManagedAgentRequestBodyModel setQuota(CreateManagedAgentRequestBodyModelQuota quota) {
+            this.quota = quota;
+            return this;
+        }
+        public CreateManagedAgentRequestBodyModelQuota getQuota() {
+            return this.quota;
         }
 
     }
@@ -358,25 +452,25 @@ public class CreateManagedAgentRequest extends TeaModel {
 
     public static class CreateManagedAgentRequestBodyOssMounts extends TeaModel {
         /**
-         * <p>The OSS bucket name. This parameter is required for each mount entry as validated by the backend.</p>
+         * <p>The OSS bucket name. This parameter is required by backend validation for each mount entry.</p>
          */
         @NameInMap("bucketName")
         public String bucketName;
 
         /**
-         * <p>The absolute mount path in the container. This parameter is required for each mount entry as validated by the backend.</p>
+         * <p>The absolute mount path inside the container. This parameter is required by backend validation for each mount entry.</p>
          */
         @NameInMap("mountPath")
         public String mountPath;
 
         /**
-         * <p>The relative object prefix in the bucket. If this parameter is not specified, the entire bucket is mounted.</p>
+         * <p>The relative object prefix within the bucket. If this parameter is not specified, the entire bucket is mounted.</p>
          */
         @NameInMap("path")
         public String path;
 
         /**
-         * <p>Specifies whether to mount as read-only. Default value: false.</p>
+         * <p>Specifies whether to mount in read-only mode. Default value: false.</p>
          */
         @NameInMap("readOnly")
         public Boolean readOnly;
@@ -422,7 +516,7 @@ public class CreateManagedAgentRequest extends TeaModel {
 
     public static class CreateManagedAgentRequestBodyRuntimeCompute extends TeaModel {
         /**
-         * <p>The compute specification.</p>
+         * <p>The compute class.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -448,31 +542,31 @@ public class CreateManagedAgentRequest extends TeaModel {
 
     public static class CreateManagedAgentRequestBodyRuntimeHpa extends TeaModel {
         /**
-         * <p>Specifies whether to enable auto-scaling. This parameter is required when hpa is present as validated by the backend.</p>
+         * <p>Specifies whether to enable auto scaling. This parameter is required by backend validation when hpa is present.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>The maximum number of active sessions per Sandbox. This parameter is required when hpa is present as validated by the backend.</p>
+         * <p>The maximum number of active sessions per sandbox. This parameter is required by backend validation when hpa is present.</p>
          */
         @NameInMap("maxConcurrentSessionsPerSandbox")
         public Integer maxConcurrentSessionsPerSandbox;
 
         /**
-         * <p>The maximum number of Sandboxes. This parameter is required when HPA is enabled and must be no less than the minimum value.</p>
+         * <p>The maximum number of sandboxes. This parameter is required when HPA is enabled and the value must be no less than the minimum value.</p>
          */
         @NameInMap("maxSandboxCount")
         public Integer maxSandboxCount;
 
         /**
-         * <p>The minimum number of Sandboxes. This parameter is required when HPA is enabled.</p>
+         * <p>The minimum number of sandboxes. This parameter is required when HPA is enabled.</p>
          */
         @NameInMap("minSandboxCount")
         public Integer minSandboxCount;
 
         /**
-         * <p>The session reclamation time after inactivity, in seconds. This parameter is required when hpa is present as validated by the backend.</p>
+         * <p>The session reclamation time after inactivity, in seconds. This parameter is required by backend validation when hpa is present.</p>
          */
         @NameInMap("sessionTtlSeconds")
         public Integer sessionTtlSeconds;
@@ -526,7 +620,7 @@ public class CreateManagedAgentRequest extends TeaModel {
 
     public static class CreateManagedAgentRequestBodyRuntimeSessionPolicy extends TeaModel {
         /**
-         * <p>The HTTP header name used for session affinity. This parameter takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
+         * <p>The name of the HTTP header used for session affinity. This parameter takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
          * 
          * <strong>example:</strong>
          * <p>X-Session-Id</p>
@@ -576,7 +670,7 @@ public class CreateManagedAgentRequest extends TeaModel {
         public CreateManagedAgentRequestBodyRuntimeCompute compute;
 
         /**
-         * <p>The Sandbox auto-scaling and session configuration.</p>
+         * <p>The sandbox auto scaling and session configuration.</p>
          */
         @NameInMap("hpa")
         public CreateManagedAgentRequestBodyRuntimeHpa hpa;
@@ -833,7 +927,7 @@ public class CreateManagedAgentRequest extends TeaModel {
         public CreateManagedAgentRequestBodyEnvironment environment;
 
         /**
-         * <p>The runtime harness of the managed agent. Valid values: qwenpaw and qodercli.</p>
+         * <p>The harness for the managed agent. Valid values: qwenpaw and qodercli.</p>
          */
         @NameInMap("harness")
         public CreateManagedAgentRequestBodyHarness harness;
@@ -871,7 +965,7 @@ public class CreateManagedAgentRequest extends TeaModel {
         public CreateManagedAgentRequestBodyNetwork network;
 
         /**
-         * <p>The OSS mount list. A maximum of 10 entries are supported.</p>
+         * <p>The list of OSS mounts. A maximum of 10 entries are supported.</p>
          */
         @NameInMap("ossMounts")
         public java.util.List<CreateManagedAgentRequestBodyOssMounts> ossMounts;
@@ -902,7 +996,7 @@ public class CreateManagedAgentRequest extends TeaModel {
         public CreateManagedAgentRequestBodyTemplate template;
 
         /**
-         * <p>The list of tool configurations.</p>
+         * <p>The tool configuration list.</p>
          */
         @NameInMap("tools")
         public java.util.List<CreateManagedAgentRequestBodyTools> tools;

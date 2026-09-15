@@ -29,7 +29,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message that indicates the result of the request.</p>
+     * <p>The request processing result message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -203,10 +203,136 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
 
     }
 
+    public static class UpdateExternalAgentResponseBodyDataModelQuota extends TeaModel {
+        /**
+         * <p>Indicates whether the quota is enabled. This field is not returned if no quota is configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        /**
+         * <p>The quota limit type. Currently, only token is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>token</p>
+         */
+        @NameInMap("limitType")
+        public String limitType;
+
+        /**
+         * <p>Indicates whether the quota has been exceeded in the current cycle. This is a read-only field returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("overLimit")
+        public Boolean overLimit;
+
+        /**
+         * <p>The quota statistical period. day indicates a daily period. month indicates a monthly period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>day</p>
+         */
+        @NameInMap("periodType")
+        public String periodType;
+
+        /**
+         * <p>The gateway quota rule status. This is a read-only field returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
+         */
+        @NameInMap("ruleStatus")
+        public String ruleStatus;
+
+        /**
+         * <p>The maximum number of tokens that can be consumed within a single cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000</p>
+         */
+        @NameInMap("usageLimit")
+        public Long usageLimit;
+
+        /**
+         * <p>The number of tokens consumed in the current cycle. This is a read-only field returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
+        @NameInMap("usedAmount")
+        public Long usedAmount;
+
+        public static UpdateExternalAgentResponseBodyDataModelQuota build(java.util.Map<String, ?> map) throws Exception {
+            UpdateExternalAgentResponseBodyDataModelQuota self = new UpdateExternalAgentResponseBodyDataModelQuota();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateExternalAgentResponseBodyDataModelQuota setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public UpdateExternalAgentResponseBodyDataModelQuota setLimitType(String limitType) {
+            this.limitType = limitType;
+            return this;
+        }
+        public String getLimitType() {
+            return this.limitType;
+        }
+
+        public UpdateExternalAgentResponseBodyDataModelQuota setOverLimit(Boolean overLimit) {
+            this.overLimit = overLimit;
+            return this;
+        }
+        public Boolean getOverLimit() {
+            return this.overLimit;
+        }
+
+        public UpdateExternalAgentResponseBodyDataModelQuota setPeriodType(String periodType) {
+            this.periodType = periodType;
+            return this;
+        }
+        public String getPeriodType() {
+            return this.periodType;
+        }
+
+        public UpdateExternalAgentResponseBodyDataModelQuota setRuleStatus(String ruleStatus) {
+            this.ruleStatus = ruleStatus;
+            return this;
+        }
+        public String getRuleStatus() {
+            return this.ruleStatus;
+        }
+
+        public UpdateExternalAgentResponseBodyDataModelQuota setUsageLimit(Long usageLimit) {
+            this.usageLimit = usageLimit;
+            return this;
+        }
+        public Long getUsageLimit() {
+            return this.usageLimit;
+        }
+
+        public UpdateExternalAgentResponseBodyDataModelQuota setUsedAmount(Long usedAmount) {
+            this.usedAmount = usedAmount;
+            return this;
+        }
+        public Long getUsedAmount() {
+            return this.usedAmount;
+        }
+
+    }
+
     public static class UpdateExternalAgentResponseBodyDataModel extends TeaModel {
         /**
          * <p>The model connection ID.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>mc-1</p>
@@ -216,13 +342,18 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
 
         /**
          * <p>The upstream model name.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-max</p>
          */
         @NameInMap("modelName")
         public String modelName;
+
+        /**
+         * <p>The model token quota configuration and the quota usage status in the current cycle. This field is empty if no quota is configured.</p>
+         */
+        @NameInMap("quota")
+        public UpdateExternalAgentResponseBodyDataModelQuota quota;
 
         public static UpdateExternalAgentResponseBodyDataModel build(java.util.Map<String, ?> map) throws Exception {
             UpdateExternalAgentResponseBodyDataModel self = new UpdateExternalAgentResponseBodyDataModel();
@@ -243,6 +374,14 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
         }
         public String getModelName() {
             return this.modelName;
+        }
+
+        public UpdateExternalAgentResponseBodyDataModel setQuota(UpdateExternalAgentResponseBodyDataModelQuota quota) {
+            this.quota = quota;
+            return this;
+        }
+        public UpdateExternalAgentResponseBodyDataModelQuota getQuota() {
+            return this.quota;
         }
 
     }
@@ -497,10 +636,10 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
         public UpdateExternalAgentResponseBodyDataModel model;
 
         /**
-         * <p>The source of the model configuration. Valid values:</p>
+         * <p>The model configuration source. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model independently, and the model parameter cannot be specified at the same time. Valid values:</p>
          * <ul>
-         * <li>PLATFORM: The platform parses and delivers the model configuration.</li>
-         * <li>RUNTIME: The external runtime manages the model on its own. You cannot specify model at the same time.</li>
+         * <li>PLATFORM: platform model.</li>
+         * <li>RUNTIME: runtime model.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -203,10 +203,122 @@ public class GetExternalAgentResponseBody extends TeaModel {
 
     }
 
+    public static class GetExternalAgentResponseBodyDataModelQuota extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        /**
+         * <strong>example:</strong>
+         * <p>token</p>
+         */
+        @NameInMap("limitType")
+        public String limitType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("overLimit")
+        public Boolean overLimit;
+
+        /**
+         * <strong>example:</strong>
+         * <p>day</p>
+         */
+        @NameInMap("periodType")
+        public String periodType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
+         */
+        @NameInMap("ruleStatus")
+        public String ruleStatus;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1000000</p>
+         */
+        @NameInMap("usageLimit")
+        public Long usageLimit;
+
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
+        @NameInMap("usedAmount")
+        public Long usedAmount;
+
+        public static GetExternalAgentResponseBodyDataModelQuota build(java.util.Map<String, ?> map) throws Exception {
+            GetExternalAgentResponseBodyDataModelQuota self = new GetExternalAgentResponseBodyDataModelQuota();
+            return TeaModel.build(map, self);
+        }
+
+        public GetExternalAgentResponseBodyDataModelQuota setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public GetExternalAgentResponseBodyDataModelQuota setLimitType(String limitType) {
+            this.limitType = limitType;
+            return this;
+        }
+        public String getLimitType() {
+            return this.limitType;
+        }
+
+        public GetExternalAgentResponseBodyDataModelQuota setOverLimit(Boolean overLimit) {
+            this.overLimit = overLimit;
+            return this;
+        }
+        public Boolean getOverLimit() {
+            return this.overLimit;
+        }
+
+        public GetExternalAgentResponseBodyDataModelQuota setPeriodType(String periodType) {
+            this.periodType = periodType;
+            return this;
+        }
+        public String getPeriodType() {
+            return this.periodType;
+        }
+
+        public GetExternalAgentResponseBodyDataModelQuota setRuleStatus(String ruleStatus) {
+            this.ruleStatus = ruleStatus;
+            return this;
+        }
+        public String getRuleStatus() {
+            return this.ruleStatus;
+        }
+
+        public GetExternalAgentResponseBodyDataModelQuota setUsageLimit(Long usageLimit) {
+            this.usageLimit = usageLimit;
+            return this;
+        }
+        public Long getUsageLimit() {
+            return this.usageLimit;
+        }
+
+        public GetExternalAgentResponseBodyDataModelQuota setUsedAmount(Long usedAmount) {
+            this.usedAmount = usedAmount;
+            return this;
+        }
+        public Long getUsedAmount() {
+            return this.usedAmount;
+        }
+
+    }
+
     public static class GetExternalAgentResponseBodyDataModel extends TeaModel {
         /**
          * <p>The model connection ID.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>mc-1</p>
@@ -216,13 +328,15 @@ public class GetExternalAgentResponseBody extends TeaModel {
 
         /**
          * <p>The upstream model name.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-max</p>
          */
         @NameInMap("modelName")
         public String modelName;
+
+        @NameInMap("quota")
+        public GetExternalAgentResponseBodyDataModelQuota quota;
 
         public static GetExternalAgentResponseBodyDataModel build(java.util.Map<String, ?> map) throws Exception {
             GetExternalAgentResponseBodyDataModel self = new GetExternalAgentResponseBodyDataModel();
@@ -243,6 +357,14 @@ public class GetExternalAgentResponseBody extends TeaModel {
         }
         public String getModelName() {
             return this.modelName;
+        }
+
+        public GetExternalAgentResponseBodyDataModel setQuota(GetExternalAgentResponseBodyDataModelQuota quota) {
+            this.quota = quota;
+            return this;
+        }
+        public GetExternalAgentResponseBodyDataModelQuota getQuota() {
+            return this.quota;
         }
 
     }

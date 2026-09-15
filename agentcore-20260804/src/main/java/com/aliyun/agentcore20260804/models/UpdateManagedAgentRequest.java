@@ -227,6 +227,74 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     }
 
+    public static class UpdateManagedAgentRequestBodyModelQuota extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        /**
+         * <strong>example:</strong>
+         * <p>token</p>
+         */
+        @NameInMap("limitType")
+        public String limitType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>day</p>
+         */
+        @NameInMap("periodType")
+        public String periodType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1000000</p>
+         */
+        @NameInMap("usageLimit")
+        public Long usageLimit;
+
+        public static UpdateManagedAgentRequestBodyModelQuota build(java.util.Map<String, ?> map) throws Exception {
+            UpdateManagedAgentRequestBodyModelQuota self = new UpdateManagedAgentRequestBodyModelQuota();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateManagedAgentRequestBodyModelQuota setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public UpdateManagedAgentRequestBodyModelQuota setLimitType(String limitType) {
+            this.limitType = limitType;
+            return this;
+        }
+        public String getLimitType() {
+            return this.limitType;
+        }
+
+        public UpdateManagedAgentRequestBodyModelQuota setPeriodType(String periodType) {
+            this.periodType = periodType;
+            return this;
+        }
+        public String getPeriodType() {
+            return this.periodType;
+        }
+
+        public UpdateManagedAgentRequestBodyModelQuota setUsageLimit(Long usageLimit) {
+            this.usageLimit = usageLimit;
+            return this;
+        }
+        public Long getUsageLimit() {
+            return this.usageLimit;
+        }
+
+    }
+
     public static class UpdateManagedAgentRequestBodyModel extends TeaModel {
         /**
          * <p>The model connection ID.</p>
@@ -247,6 +315,9 @@ public class UpdateManagedAgentRequest extends TeaModel {
         @NameInMap("modelName")
         public String modelName;
 
+        @NameInMap("quota")
+        public UpdateManagedAgentRequestBodyModelQuota quota;
+
         public static UpdateManagedAgentRequestBodyModel build(java.util.Map<String, ?> map) throws Exception {
             UpdateManagedAgentRequestBodyModel self = new UpdateManagedAgentRequestBodyModel();
             return TeaModel.build(map, self);
@@ -266,6 +337,14 @@ public class UpdateManagedAgentRequest extends TeaModel {
         }
         public String getModelName() {
             return this.modelName;
+        }
+
+        public UpdateManagedAgentRequestBodyModel setQuota(UpdateManagedAgentRequestBodyModelQuota quota) {
+            this.quota = quota;
+            return this;
+        }
+        public UpdateManagedAgentRequestBodyModelQuota getQuota() {
+            return this.quota;
         }
 
     }

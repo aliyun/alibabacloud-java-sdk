@@ -11,7 +11,7 @@ public class UpdateExternalAgentRequest extends TeaModel {
     public UpdateExternalAgentRequestBody body;
 
     /**
-     * <p>The reserved idempotency token. The backend does not guarantee idempotence in the current phase.</p>
+     * <p>The reserved idempotency token. The backend does not provide idempotency guarantees in the current phase.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-1</p>
@@ -40,6 +40,82 @@ public class UpdateExternalAgentRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public static class UpdateExternalAgentRequestBodyModelQuota extends TeaModel {
+        /**
+         * <p>Specifies whether to enable token quota. Defaults to true if not specified. Set to false to disable and delete existing quota rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        /**
+         * <p>The quota limit type. Required by backend validation when quota is enabled. Fixed value: token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>token</p>
+         */
+        @NameInMap("limitType")
+        public String limitType;
+
+        /**
+         * <p>The quota statistical period. Required by backend validation when quota is enabled. Valid values: day (daily) and month (monthly).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>day</p>
+         */
+        @NameInMap("periodType")
+        public String periodType;
+
+        /**
+         * <p>The maximum number of tokens that can be consumed within a single period. Required by backend validation when quota is enabled. The value must be greater than 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000</p>
+         */
+        @NameInMap("usageLimit")
+        public Long usageLimit;
+
+        public static UpdateExternalAgentRequestBodyModelQuota build(java.util.Map<String, ?> map) throws Exception {
+            UpdateExternalAgentRequestBodyModelQuota self = new UpdateExternalAgentRequestBodyModelQuota();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateExternalAgentRequestBodyModelQuota setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public UpdateExternalAgentRequestBodyModelQuota setLimitType(String limitType) {
+            this.limitType = limitType;
+            return this;
+        }
+        public String getLimitType() {
+            return this.limitType;
+        }
+
+        public UpdateExternalAgentRequestBodyModelQuota setPeriodType(String periodType) {
+            this.periodType = periodType;
+            return this;
+        }
+        public String getPeriodType() {
+            return this.periodType;
+        }
+
+        public UpdateExternalAgentRequestBodyModelQuota setUsageLimit(Long usageLimit) {
+            this.usageLimit = usageLimit;
+            return this;
+        }
+        public Long getUsageLimit() {
+            return this.usageLimit;
+        }
+
+    }
+
     public static class UpdateExternalAgentRequestBodyModel extends TeaModel {
         /**
          * <p>The model connection ID.</p>
@@ -61,6 +137,12 @@ public class UpdateExternalAgentRequest extends TeaModel {
         @NameInMap("modelName")
         public String modelName;
 
+        /**
+         * <p>The model token quota configuration. If not specified, no quota is configured.</p>
+         */
+        @NameInMap("quota")
+        public UpdateExternalAgentRequestBodyModelQuota quota;
+
         public static UpdateExternalAgentRequestBodyModel build(java.util.Map<String, ?> map) throws Exception {
             UpdateExternalAgentRequestBodyModel self = new UpdateExternalAgentRequestBodyModel();
             return TeaModel.build(map, self);
@@ -80,6 +162,14 @@ public class UpdateExternalAgentRequest extends TeaModel {
         }
         public String getModelName() {
             return this.modelName;
+        }
+
+        public UpdateExternalAgentRequestBodyModel setQuota(UpdateExternalAgentRequestBodyModelQuota quota) {
+            this.quota = quota;
+            return this;
+        }
+        public UpdateExternalAgentRequestBodyModelQuota getQuota() {
+            return this.quota;
         }
 
     }
@@ -266,10 +356,10 @@ public class UpdateExternalAgentRequest extends TeaModel {
         public UpdateExternalAgentRequestBodyModel model;
 
         /**
-         * <p>The source of the model configuration. Valid values:</p>
+         * <p>The model configuration source. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model independently, and the model parameter cannot be specified at the same time. Valid values:</p>
          * <ul>
-         * <li>PLATFORM: The platform parses and delivers the model configuration.</li>
-         * <li>RUNTIME: The external runtime manages the model on its own. You cannot specify model at the same time.</li>
+         * <li>PLATFORM: platform model.</li>
+         * <li>RUNTIME: runtime model.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -1,3 +1,16 @@
+2026-09-15 Version: 2.0.1
+- Update API CreateExternalAgent: add request parameters body.model.quota.
+- Update API CreateExternalAgent: add response parameters Body.data.model.quota.
+- Update API CreateManagedAgent: add request parameters body.model.quota.
+- Update API CreateManagedAgent: add response parameters Body.data.model.quota.
+- Update API GetExternalAgent: add response parameters Body.data.model.quota.
+- Update API GetManagedAgent: add response parameters Body.data.model.quota.
+- Update API UpdateExternalAgent: add request parameters body.model.quota.
+- Update API UpdateExternalAgent: add response parameters Body.data.model.quota.
+- Update API UpdateManagedAgent: add request parameters body.model.quota.
+- Update API UpdateManagedAgent: add response parameters Body.data.model.quota.
+
+
 2026-09-15 Version: 2.0.0
 - Support API ConvertMcpToFreeEdit.
 - Support API DisableConnector.

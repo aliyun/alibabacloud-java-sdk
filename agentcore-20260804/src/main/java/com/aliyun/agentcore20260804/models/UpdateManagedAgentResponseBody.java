@@ -295,10 +295,122 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
 
     }
 
+    public static class UpdateManagedAgentResponseBodyDataModelQuota extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        /**
+         * <strong>example:</strong>
+         * <p>token</p>
+         */
+        @NameInMap("limitType")
+        public String limitType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("overLimit")
+        public Boolean overLimit;
+
+        /**
+         * <strong>example:</strong>
+         * <p>day</p>
+         */
+        @NameInMap("periodType")
+        public String periodType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
+         */
+        @NameInMap("ruleStatus")
+        public String ruleStatus;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1000000</p>
+         */
+        @NameInMap("usageLimit")
+        public Long usageLimit;
+
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
+        @NameInMap("usedAmount")
+        public Long usedAmount;
+
+        public static UpdateManagedAgentResponseBodyDataModelQuota build(java.util.Map<String, ?> map) throws Exception {
+            UpdateManagedAgentResponseBodyDataModelQuota self = new UpdateManagedAgentResponseBodyDataModelQuota();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateManagedAgentResponseBodyDataModelQuota setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public UpdateManagedAgentResponseBodyDataModelQuota setLimitType(String limitType) {
+            this.limitType = limitType;
+            return this;
+        }
+        public String getLimitType() {
+            return this.limitType;
+        }
+
+        public UpdateManagedAgentResponseBodyDataModelQuota setOverLimit(Boolean overLimit) {
+            this.overLimit = overLimit;
+            return this;
+        }
+        public Boolean getOverLimit() {
+            return this.overLimit;
+        }
+
+        public UpdateManagedAgentResponseBodyDataModelQuota setPeriodType(String periodType) {
+            this.periodType = periodType;
+            return this;
+        }
+        public String getPeriodType() {
+            return this.periodType;
+        }
+
+        public UpdateManagedAgentResponseBodyDataModelQuota setRuleStatus(String ruleStatus) {
+            this.ruleStatus = ruleStatus;
+            return this;
+        }
+        public String getRuleStatus() {
+            return this.ruleStatus;
+        }
+
+        public UpdateManagedAgentResponseBodyDataModelQuota setUsageLimit(Long usageLimit) {
+            this.usageLimit = usageLimit;
+            return this;
+        }
+        public Long getUsageLimit() {
+            return this.usageLimit;
+        }
+
+        public UpdateManagedAgentResponseBodyDataModelQuota setUsedAmount(Long usedAmount) {
+            this.usedAmount = usedAmount;
+            return this;
+        }
+        public Long getUsedAmount() {
+            return this.usedAmount;
+        }
+
+    }
+
     public static class UpdateManagedAgentResponseBodyDataModel extends TeaModel {
         /**
          * <p>The model connection ID.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>mc-1</p>
@@ -314,6 +426,9 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
          */
         @NameInMap("modelName")
         public String modelName;
+
+        @NameInMap("quota")
+        public UpdateManagedAgentResponseBodyDataModelQuota quota;
 
         public static UpdateManagedAgentResponseBodyDataModel build(java.util.Map<String, ?> map) throws Exception {
             UpdateManagedAgentResponseBodyDataModel self = new UpdateManagedAgentResponseBodyDataModel();
@@ -334,6 +449,14 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         }
         public String getModelName() {
             return this.modelName;
+        }
+
+        public UpdateManagedAgentResponseBodyDataModel setQuota(UpdateManagedAgentResponseBodyDataModelQuota quota) {
+            this.quota = quota;
+            return this;
+        }
+        public UpdateManagedAgentResponseBodyDataModelQuota getQuota() {
+            return this.quota;
         }
 
     }
