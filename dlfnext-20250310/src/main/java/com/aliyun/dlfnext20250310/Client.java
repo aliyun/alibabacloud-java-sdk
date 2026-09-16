@@ -2518,7 +2518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists partitions.</p>
+     * <p>Lists the partitions of a data table.</p>
      * 
      * @param request ListPartitionsRequest
      * @param headers map
@@ -2560,7 +2560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists partitions.</p>
+     * <p>Lists the partitions of a data table.</p>
      * 
      * @param request ListPartitionsRequest
      * @return ListPartitionsResponse

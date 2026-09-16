@@ -58,6 +58,9 @@ public class Partition extends TeaModel {
     @NameInMap("lastFileCreationTime")
     public Long lastFileCreationTime;
 
+    @NameInMap("options")
+    public java.util.Map<String, String> options;
+
     /**
      * <p>The number of records.</p>
      * 
@@ -181,6 +184,14 @@ public class Partition extends TeaModel {
     }
     public Long getLastFileCreationTime() {
         return this.lastFileCreationTime;
+    }
+
+    public Partition setOptions(java.util.Map<String, String> options) {
+        this.options = options;
+        return this;
+    }
+    public java.util.Map<String, String> getOptions() {
+        return this.options;
     }
 
     public Partition setRecordCount(Long recordCount) {
