@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRepoSyncTaskResponseBody extends TeaModel {
     /**
-     * <p>The return code.</p>
+     * <p>The return value.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,7 +14,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +50,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of sync tasks.</p>
+     * <p>The list of synchronization tasks.</p>
      */
     @NameInMap("SyncTasks")
     public java.util.List<ListRepoSyncTaskResponseBodySyncTasks> syncTasks;
@@ -136,7 +136,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         public String imageTag;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-kmsiwlxxdcva****</p>
@@ -145,7 +145,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -229,7 +229,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         public String imageTag;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-k77rd2eo9zttneqo</p>
@@ -238,7 +238,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
@@ -313,7 +313,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
 
     public static class ListRepoSyncTaskResponseBodySyncTasks extends TeaModel {
         /**
-         * <p>The creation time of the task.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1572839126000</p>
@@ -322,7 +322,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>Whether the image is synchronized across accounts. Valid values:</p>
+         * <p>Indicates whether the image is synchronized across accounts. Valid values:</p>
          * <ul>
          * <li><p><code>true</code>: The image is synchronized across accounts.</p>
          * </li>
@@ -338,7 +338,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         public Boolean crossUser;
 
         /**
-         * <p>Whether a custom sync link is used.</p>
+         * <p>Indicates whether a custom synchronization link is used.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -359,13 +359,16 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         public ListRepoSyncTaskResponseBodySyncTasksImageTo imageTo;
 
         /**
-         * <p>The ID of the custom sync link.</p>
+         * <p>The custom synchronization link ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stl-b3fpik5nq6oy7***</p>
          */
         @NameInMap("LinkId")
         public String linkId;
 
         /**
-         * <p>This parameter is deprecated due to a typo. Use <code>ModifiedTime</code> instead.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1572839133000</p>
@@ -375,18 +378,29 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         public Long modifedTime;
 
         /**
-         * <p>The modification time of the task.</p>
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1572839133000</p>
          */
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
+        /**
+         * <p>The execution priority of the synchronization task. Synchronization tasks are executed in descending order of priority. Tasks with the same priority are executed in random order.</p>
+         * <p>Valid values: 1 to 5.</p>
+         * <p>Default value: 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
-         * <p>The ID of the batch sync task. This ID is the same as the sync record ID (<code>SyncRecordId</code>).</p>
+         * <p>The batch synchronization task ID for images, which corresponds to the SyncRecordId (synchronization task record ID) in the request parameters.</p>
          * <blockquote>
-         * <p>If an image matches multiple sync rules, multiple sync tasks are generated. These tasks share the same <code>SyncBatchTaskId</code>.</p>
+         * <p>When an image matches multiple synchronization rules and generates multiple synchronization tasks, these tasks share the same SyncBatchTaskId.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -396,7 +410,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         public String syncBatchTaskId;
 
         /**
-         * <p>The ID of the sync rule.</p>
+         * <p>The synchronization rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>crsr-7lph66uloi6h****</p>
@@ -405,7 +419,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         public String syncRuleId;
 
         /**
-         * <p>The ID of the sync task.</p>
+         * <p>The synchronization task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rst-4kfd7fk6pohk****</p>
@@ -414,7 +428,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         public String syncTaskId;
 
         /**
-         * <p>Whether transfer acceleration is enabled for the sync task.</p>
+         * <p>The synchronization transfer acceleration status.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -425,7 +439,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         /**
          * <p>The task failure information.</p>
          * <blockquote>
-         * <p>If the sync task fails, this field returns details about the failure.</p>
+         * <p>When a synchronization task fails, this field returns information about the failure.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -446,9 +460,9 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         /**
          * <p>The trigger policy. Valid values:</p>
          * <ul>
-         * <li><p><code>PASSIVE</code>: The sync task is automatically triggered.</p>
+         * <li><p><code>PASSIVE</code>: Synchronization is automatically triggered.</p>
          * </li>
-         * <li><p><code>INITIATIVE</code>: The sync task is manually triggered.</p>
+         * <li><p><code>INITIATIVE</code>: Synchronization is manually triggered.</p>
          * </li>
          * </ul>
          * <p>Default value: <code>PASSIVE</code></p>

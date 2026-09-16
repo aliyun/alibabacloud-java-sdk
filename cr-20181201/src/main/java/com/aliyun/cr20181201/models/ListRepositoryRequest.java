@@ -14,9 +14,23 @@ public class ListRepositoryRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The maximum number of entries to return.</p>
+     * <p>Use this parameter together with NextToken. This parameter takes priority over PageNo and PageSize.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token. If a next page exists, the service returns a NextToken value. Pass this value in the next request.</p>
+     * <p>Use this parameter together with MaxResults. This parameter takes priority over PageNo and PageSize.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>*****V3MpHK1AP0pfERHZN5pu6lESTRpd5hnHNnmKOP/+w9F</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -27,6 +41,7 @@ public class ListRepositoryRequest extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("PageNo")
+    @Deprecated
     public Integer pageNo;
 
     /**
@@ -36,6 +51,7 @@ public class ListRepositoryRequest extends TeaModel {
      * <p>30</p>
      */
     @NameInMap("PageSize")
+    @Deprecated
     public Integer pageSize;
 
     /**
@@ -104,6 +120,7 @@ public class ListRepositoryRequest extends TeaModel {
         return this.nextToken;
     }
 
+    @Deprecated
     public ListRepositoryRequest setPageNo(Integer pageNo) {
         this.pageNo = pageNo;
         return this;
@@ -112,6 +129,7 @@ public class ListRepositoryRequest extends TeaModel {
         return this.pageNo;
     }
 
+    @Deprecated
     public ListRepositoryRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;

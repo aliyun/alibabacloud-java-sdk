@@ -42,7 +42,7 @@ public class ListRepoSyncTaskRequest extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The name of the repository namespace.</p>
+     * <p>The name of the namespace to which the repository belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>ns</p>
@@ -51,9 +51,9 @@ public class ListRepoSyncTaskRequest extends TeaModel {
     public String repoNamespaceName;
 
     /**
-     * <p>The ID of the sync task. This ID is also the <code>SyncBatchTaskId</code> returned in the response, which identifies the image\&quot;s sync batch task.</p>
+     * <p>The synchronization task record ID, which corresponds to the SyncBatchTaskId (batch synchronization task ID for images) in the response.</p>
      * <blockquote>
-     * <p>An image that matches multiple sync rules generates multiple sync tasks, each with the same <code>SyncBatchTaskId</code>.</p>
+     * <p>When an image matches multiple synchronization rules and generates multiple synchronization tasks, these tasks share the same SyncBatchTaskId.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class ListRepoSyncTaskRequest extends TeaModel {
     public String syncRecordId;
 
     /**
-     * <p>The image tag.</p>
+     * <p>The image version.</p>
      * 
      * <strong>example:</strong>
      * <p>nginx</p>

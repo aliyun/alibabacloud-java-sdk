@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetArtifactBuildRuleRequest extends TeaModel {
     /**
-     * <p>The type of the artifact.</p>
+     * <p>The type of the accelerated image. Valid values:</p>
      * <ul>
-     * <li><code>ACCELERATED_IMAGE</code>: accelerated images.</li>
+     * <li><code>ACCELERATED_IMAGE</code>: generates an accelerated image.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class GetArtifactBuildRuleRequest extends TeaModel {
     public String artifactType;
 
     /**
-     * <p>The ID of the artifact building rule.</p>
+     * <p>The build rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>crabr-o2670wqz2n70****</p>
@@ -26,7 +26,7 @@ public class GetArtifactBuildRuleRequest extends TeaModel {
     public String buildRuleId;
 
     /**
-     * <p>The ID of the Container Registry instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,9 +36,9 @@ public class GetArtifactBuildRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the effective range of the artifact building rule.</p>
+     * <p>The ID of the scope in which the rule takes effect. Valid values:</p>
      * <ul>
-     * <li>Set the value to the ID of the image repository.</li>
+     * <li>ScopeId: the image repository ID.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,9 +48,9 @@ public class GetArtifactBuildRuleRequest extends TeaModel {
     public String scopeId;
 
     /**
-     * <p>The effective range of the artifact building rule. Valid values:</p>
+     * <p>The scope of the rule. Valid values:</p>
      * <ul>
-     * <li><code>REPOSITORY</code>: The artifact building rule is effective in the repository level.</li>
+     * <li><code>REPOSITORY</code>: repository level.</li>
      * </ul>
      * 
      * <strong>example:</strong>

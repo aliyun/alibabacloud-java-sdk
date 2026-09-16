@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetArtifactLifecycleRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetArtifactLifecycleRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

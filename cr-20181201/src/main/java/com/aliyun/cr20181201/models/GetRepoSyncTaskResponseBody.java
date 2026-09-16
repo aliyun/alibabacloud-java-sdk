@@ -14,7 +14,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the synchronization task is performed across Alibaba Cloud accounts.</p>
+     * <p>Indicates whether the synchronization is cross-account.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,13 +23,13 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     public Boolean crossUser;
 
     /**
-     * <p>The source address of the image.</p>
+     * <p>The source image.</p>
      */
     @NameInMap("ImageFrom")
     public GetRepoSyncTaskResponseBodyImageFrom imageFrom;
 
     /**
-     * <p>The destination address of the image.</p>
+     * <p>The destination image.</p>
      */
     @NameInMap("ImageTo")
     public GetRepoSyncTaskResponseBodyImageTo imageTo;
@@ -44,19 +44,29 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The synchronization tasks for the image layer.</p>
+     * <p>The list of image layer synchronization tasks.</p>
      */
     @NameInMap("LayerTasks")
     public java.util.List<GetRepoSyncTaskResponseBodyLayerTasks> layerTasks;
 
+    /**
+     * <p>The execution priority of the synchronization task. Synchronization tasks are executed in descending order of priority. Tasks with the same priority are executed in random order.</p>
+     * <p>Valid values: 1 to 5.</p>
+     * <p>Default value: 3.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
     /**
      * <p>The synchronization progress. Valid values:</p>
      * <ul>
-     * <li><code>0</code>: The synchronization starts or failed.</li>
-     * <li><code>1</code>: The synchronization is successful.</li>
+     * <li><p><code>0</code>: The synchronization has just started or failed.</p>
+     * </li>
+     * <li><p><code>1</code>: The synchronization succeeded.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +76,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     public Long progress;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A6DEF8B0-5D45-46D6-867D-8C7FF0966B07</p>
@@ -75,7 +85,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the synchronization task in which multiple images are synchronized at a time.</p>
+     * <p>The synchronization batch task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>a9434731-95ef-4087-9cf4-369c8e90****</p>
@@ -84,7 +94,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     public String syncBatchTaskId;
 
     /**
-     * <p>The ID of the synchronization rule.</p>
+     * <p>The synchronization rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>crsr-cllro6ho3wne****</p>
@@ -93,7 +103,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     public String syncRuleId;
 
     /**
-     * <p>The ID of the synchronization task.</p>
+     * <p>The synchronization task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rst-zxjkiv5oil6f****</p>
@@ -102,7 +112,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     public String syncTaskId;
 
     /**
-     * <p>Indicates whether transfer acceleration is enabled in the synchronization process.</p>
+     * <p>Indicates whether transfer acceleration is enabled for synchronization.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -111,7 +121,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     public Boolean syncTransAccelerate;
 
     /**
-     * <p>The size of the image layer that is synchronized. Unit: bytes.</p>
+     * <p>The synchronized size, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>23655489</p>
@@ -120,19 +130,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     public Long syncedSize;
 
     /**
-     * <p>The error message that is returned if the synchronization task fails.</p>
+     * <p>The task failure information.</p>
      * <blockquote>
-     * <p> The system uses this parameter to return an error message if the synchronization task fails.</p>
+     * <p>When the synchronization task fails, this field returns information about the failure.</p>
      * </blockquote>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>OSS_POLICY_UNAUTHORIZED: Container Registry is not granted permissions to use Object Storage Service (OSS).</li>
-     * <li>TAG_CONFLICT: The destination repository contains an image that has the same tag as the source image, and image tag immutability is enabled for the destination repository.</li>
-     * <li>UNSUPPORTED_FORMAT: The manifest and config formats of the image to be synchronized are not supported.</li>
-     * <li>INTERNAL_ERROR: The synchronization task failed due to internal issues on the server.</li>
-     * <li>NETWORK_ERROR: The synchronization task failed due to unstable network connection.</li>
-     * <li>DATA_LENGTH_EXCEEDED: The manifest or config of the image is oversized.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>NETWORK_ERROR</p>
@@ -141,7 +142,12 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     public String taskIssue;
 
     /**
-     * <p>The status of the task. Valid values:</p>
+     * <p>The task status. Valid values:</p>
+     * <p><code>PENDING</code>: The synchronization is pending.</p>
+     * <p><code>SYNCHRONIZING</code>: The synchronization is in progress.</p>
+     * <p><code>SUCCESS</code>: The synchronization succeeded.</p>
+     * <p><code>ERROR</code>: The synchronization failed.</p>
+     * <p><code>CANCELED</code>: The synchronization task is canceled.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -150,10 +156,12 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     public String taskStatus;
 
     /**
-     * <p>The policy that is used to trigger the synchronization task.</p>
+     * <p>The trigger type of the synchronization task. Valid values:</p>
+     * <p><code>PASSIVE</code>: The synchronization task is automatically triggered.</p>
+     * <p><code>INITIATIVE</code>: The synchronization task is manually triggered.</p>
      * 
      * <strong>example:</strong>
-     * <p>null</p>
+     * <p>PASSIVE</p>
      */
     @NameInMap("TaskTrigger")
     public String taskTrigger;
@@ -301,7 +309,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
 
     public static class GetRepoSyncTaskResponseBodyImageFrom extends TeaModel {
         /**
-         * <p>The tag of the image.</p>
+         * <p>The image tag.</p>
          * 
          * <strong>example:</strong>
          * <p>master</p>
@@ -310,7 +318,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         public String imageTag;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-sgedpenzw80e****</p>
@@ -319,7 +327,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -328,7 +336,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The name of the image repository.</p>
+         * <p>The repository name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -337,7 +345,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         public String repoName;
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -394,7 +402,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
 
     public static class GetRepoSyncTaskResponseBodyImageTo extends TeaModel {
         /**
-         * <p>The tag of the image.</p>
+         * <p>The image tag.</p>
          * 
          * <strong>example:</strong>
          * <p>master</p>
@@ -403,7 +411,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         public String imageTag;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-leqzomz5vijc****</p>
@@ -412,7 +420,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>eu-west-1</p>
@@ -421,7 +429,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The name of the image repository.</p>
+         * <p>The repository name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -430,7 +438,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         public String repoName;
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -487,7 +495,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
 
     public static class GetRepoSyncTaskResponseBodyLayerTasks extends TeaModel {
         /**
-         * <p>The digest of the artifact.</p>
+         * <p>The digest value of the artifact.</p>
          * 
          * <strong>example:</strong>
          * <p>sha256:36fb85fcb5e919cb60e782397a6be04201868fe7b38ef7669fc01caec1c8fc4e</p>
@@ -496,7 +504,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         public String artifactDigest;
 
         /**
-         * <p>The digest of the image layer.</p>
+         * <p>The image digest value.</p>
          * 
          * <strong>example:</strong>
          * <p>sha256:36fb85fcb5e919cb60e782397a6be04201868fe7b38ef7669fc01caec1c8fc4e</p>
@@ -505,7 +513,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         public String digest;
 
         /**
-         * <p>The size of synchronized image layers.</p>
+         * <p>The size.</p>
          * 
          * <strong>example:</strong>
          * <p>23655489</p>
@@ -514,7 +522,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>The ID of the synchronization task for the image layer.</p>
+         * <p>The synchronization layer task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rslt-074x4q20fx2d****</p>
@@ -523,7 +531,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         public String syncLayerTaskId;
 
         /**
-         * <p>The size of the image layer that is synchronized.</p>
+         * <p>The synchronized size.</p>
          * 
          * <strong>example:</strong>
          * <p>23655489</p>
@@ -532,7 +540,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         public Long syncedSize;
 
         /**
-         * <p>The status of the synchronization task. Valid values:</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>

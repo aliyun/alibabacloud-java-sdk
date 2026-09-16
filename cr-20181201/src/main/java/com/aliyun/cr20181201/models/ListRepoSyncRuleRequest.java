@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRepoSyncRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListRepoSyncRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the namespace.</p>
+     * <p>The namespace name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-namespace</p>
@@ -24,7 +24,7 @@ public class ListRepoSyncRuleRequest extends TeaModel {
     public String namespaceName;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class ListRepoSyncRuleRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -42,7 +42,7 @@ public class ListRepoSyncRuleRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the image repository.</p>
+     * <p>The image repository name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-repo</p>
@@ -51,7 +51,7 @@ public class ListRepoSyncRuleRequest extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The ID of the target instance.</p>
+     * <p>The target instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cri-k77rd2eo9ztt****</p>
@@ -60,7 +60,7 @@ public class ListRepoSyncRuleRequest extends TeaModel {
     public String targetInstanceId;
 
     /**
-     * <p>The ID of the target region.</p>
+     * <p>The target region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>

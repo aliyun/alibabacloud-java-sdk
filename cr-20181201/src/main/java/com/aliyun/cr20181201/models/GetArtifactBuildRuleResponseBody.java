@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetArtifactBuildRuleResponseBody extends TeaModel {
     /**
-     * <p>The type of the artifact. Valid values:</p>
+     * <p>The type of the accelerated image. Valid values:</p>
      * <ul>
-     * <li><code>ACCELERATED_IMAGE</code>: accelerated images.</li>
+     * <li><code>ACCELERATED_IMAGE</code>: generates an accelerated image.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
     public String artifactType;
 
     /**
-     * <p>The ID of the artifact building rule.</p>
+     * <p>The build rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>crabr-o2670wqz2n70****</p>
@@ -26,10 +26,10 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
     public String buildRuleId;
 
     /**
-     * <p>The API return code:</p>
+     * <p>The response code. Valid values:</p>
      * <ul>
-     * <li><strong>200</strong>: Indicates success.</li>
-     * <li>Others: Indicate error codes.</li>
+     * <li><strong>200</strong>: success.</li>
+     * <li>Other values: error codes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,10 +39,12 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the API request is successful. Valid values:</p>
+     * <p>Indicates whether the API call is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request is successful.</li>
-     * <li><code>false</code>: The request fails.</li>
+     * <li><p><code>true</code>: The API call is successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The API call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +54,7 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>Additional parameters.</p>
+     * <p>The additional parameters.</p>
      */
     @NameInMap("Parameters")
     public GetArtifactBuildRuleResponseBodyParameters parameters;
@@ -67,9 +69,9 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the effective range of the artifact building rule.</p>
+     * <p>The ID of the scope in which the rule takes effect. Valid values:</p>
      * <ul>
-     * <li>The parameter value is the ID of the image repository.</li>
+     * <li>ScopeId: the image repository ID.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,9 +81,9 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
     public String scopeId;
 
     /**
-     * <p>The effective range of the artifact building rule. Valid values:</p>
+     * <p>The scope of the rule. Valid values:</p>
      * <ul>
-     * <li><code>REPOSITORY</code>: The artifact building rule is effective in the repository level.</li>
+     * <li><code>REPOSITORY</code>: repository level.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -170,7 +172,16 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
         public Boolean imageIndexOnly;
 
         /**
-         * <p>The list of files that you want to prefetch when you use the image acceleration feature. Each entry contains the Base64-encoded absolute path of a file.</p>
+         * <p>The task priority. Valid values: [1, 5].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        @NameInMap("Priority")
+        public Integer priority;
+
+        /**
+         * <p>The list of prefetch files for the accelerated image. Each line contains an absolute path. The list is Base64-encoded.</p>
          * 
          * <strong>example:</strong>
          * <p>L2hvbWUvdGVzdC8=</p>
@@ -189,6 +200,14 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
         }
         public Boolean getImageIndexOnly() {
             return this.imageIndexOnly;
+        }
+
+        public GetArtifactBuildRuleResponseBodyParameters setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
         }
 
         public GetArtifactBuildRuleResponseBodyParameters setPriorityFile(String priorityFile) {

@@ -14,11 +14,11 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the request succeeded. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The request succeeded.</p>
+     * <li><p><code>true</code>: The call was successful.</p>
      * </li>
-     * <li><p><code>false</code>: The request failed.</p>
+     * <li><p><code>false</code>: The call failed.</p>
      * </li>
      * </ul>
      * 
@@ -38,7 +38,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -56,13 +56,13 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of lifecycle management rules.</p>
+     * <p>The list of rules.</p>
      */
     @NameInMap("Rules")
     public java.util.List<ListArtifactLifecycleRuleResponseBodyRules> rules;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>39</p>
@@ -132,12 +132,30 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
     }
 
     public static class ListArtifactLifecycleRuleResponseBodyRulesPoliciesCondition extends TeaModel {
+        /**
+         * <p>The number of days since the last pull.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("LastPullOlderThanDays")
         public Integer lastPullOlderThanDays;
 
+        /**
+         * <p>The number of days since the last push.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("LastPushOlderThanDays")
         public Integer lastPushOlderThanDays;
 
+        /**
+         * <p>The number of latest image versions to retain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("LatestTagCount")
         public Integer latestTagCount;
 
@@ -173,6 +191,9 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
     }
 
     public static class ListArtifactLifecycleRuleResponseBodyRulesPoliciesFilter extends TeaModel {
+        /**
+         * <p>The wildcard used to match image versions.</p>
+         */
         @NameInMap("TagWildcard")
         public String tagWildcard;
 
@@ -192,12 +213,21 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
     }
 
     public static class ListArtifactLifecycleRuleResponseBodyRulesPolicies extends TeaModel {
+        /**
+         * <p>The trigger condition of the lifecycle policy.</p>
+         */
         @NameInMap("Condition")
         public ListArtifactLifecycleRuleResponseBodyRulesPoliciesCondition condition;
 
+        /**
+         * <p>The image version filter condition.</p>
+         */
         @NameInMap("Filter")
         public ListArtifactLifecycleRuleResponseBodyRulesPoliciesFilter filter;
 
+        /**
+         * <p>The lifecycle policy type.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -234,7 +264,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
 
     public static class ListArtifactLifecycleRuleResponseBodyRules extends TeaModel {
         /**
-         * <p>Indicates whether the rule runs automatically.</p>
+         * <p>Indicates whether the rule is automatically executed.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -243,7 +273,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         public Boolean auto;
 
         /**
-         * <p>The creation time of the rule.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1638187989000</p>
@@ -252,13 +282,33 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>Indicates whether the rule is configured to delete tags.</p>
+         * <p>Indicates whether DryRun mode is enabled. When DryRun mode is enabled, only lifecycle task scanning is performed and no actual data cleanup is executed. This mode is disabled by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("DryRun")
+        public Boolean dryRun;
+
+        /**
+         * <p>Indicates whether lifecycle management is enabled.</p>
+         * <p>Only one of this parameter and EnableDeleteUntaggedManifest can be set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("EnableDeleteTag")
         public Boolean enableDeleteTag;
+
+        /**
+         * <p>Indicates whether artifact cleanup is enabled.</p>
+         * <p>Only one of this parameter and EnableDeleteTag can be set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("EnableDeleteUntaggedManifest")
+        public Boolean enableDeleteUntaggedManifest;
 
         /**
          * <p>The instance ID.</p>
@@ -270,7 +320,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The last modification time of the rule.</p>
+         * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1678341923385</p>
@@ -288,7 +338,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         public String namespaceName;
 
         /**
-         * <p>The next execution time.</p>
+         * <p>The next execution time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1638187989000</p>
@@ -296,6 +346,9 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         @NameInMap("NextTime")
         public Long nextTime;
 
+        /**
+         * <p>The list of lifecycle policies.</p>
+         */
         @NameInMap("Policies")
         public java.util.List<ListArtifactLifecycleRuleResponseBodyRulesPolicies> policies;
 
@@ -309,7 +362,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         public String repoName;
 
         /**
-         * <p>The number of image tags to retain.</p>
+         * <p>The number of retained images.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -327,7 +380,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         public String ruleId;
 
         /**
-         * <p>The execution schedule.</p>
+         * <p>The execution cycle.</p>
          * 
          * <strong>example:</strong>
          * <p>WEEK</p>
@@ -336,7 +389,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         public String scheduleTime;
 
         /**
-         * <p>The scope of the rule.</p>
+         * <p>The cleanup scope.</p>
          * 
          * <strong>example:</strong>
          * <p>INSTANCE</p>
@@ -345,7 +398,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>The regular expression that matches image tags to retain.</p>
+         * <p>The regular expression for retaining image versions.</p>
          * 
          * <strong>example:</strong>
          * <p>.*-alpine</p>
@@ -374,12 +427,28 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public ListArtifactLifecycleRuleResponseBodyRules setDryRun(Boolean dryRun) {
+            this.dryRun = dryRun;
+            return this;
+        }
+        public Boolean getDryRun() {
+            return this.dryRun;
+        }
+
         public ListArtifactLifecycleRuleResponseBodyRules setEnableDeleteTag(Boolean enableDeleteTag) {
             this.enableDeleteTag = enableDeleteTag;
             return this;
         }
         public Boolean getEnableDeleteTag() {
             return this.enableDeleteTag;
+        }
+
+        public ListArtifactLifecycleRuleResponseBodyRules setEnableDeleteUntaggedManifest(Boolean enableDeleteUntaggedManifest) {
+            this.enableDeleteUntaggedManifest = enableDeleteUntaggedManifest;
+            return this;
+        }
+        public Boolean getEnableDeleteUntaggedManifest() {
+            return this.enableDeleteUntaggedManifest;
         }
 
         public ListArtifactLifecycleRuleResponseBodyRules setInstanceId(String instanceId) {

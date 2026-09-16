@@ -14,7 +14,7 @@ public class ListRepositoryResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -22,9 +22,21 @@ public class ListRepositoryResponseBody extends TeaModel {
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The maximum number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token. If a next page exists, the service returns a NextToken value. Pass this value in the next request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>*****V3MpHK1AP0pfERHZN5pu6lESTRpd5hnHNnmKOP/+w9F</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -149,7 +161,7 @@ public class ListRepositoryResponseBody extends TeaModel {
 
     public static class ListRepositoryResponseBodyRepositories extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the repository was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1564153576000</p>
@@ -167,7 +179,7 @@ public class ListRepositoryResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The last modification time.</p>
+         * <p>The time when the repository was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1564153576000</p>
@@ -251,7 +263,7 @@ public class ListRepositoryResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The summary information.</p>
+         * <p>The summary.</p>
          * 
          * <strong>example:</strong>
          * <p>test OK</p>
@@ -260,7 +272,7 @@ public class ListRepositoryResponseBody extends TeaModel {
         public String summary;
 
         /**
-         * <p>The image tag immutability.</p>
+         * <p>The tag immutability of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

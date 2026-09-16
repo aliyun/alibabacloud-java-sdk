@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateArtifactLifecycleRuleRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically execute the lifecycle management rule.</p>
+     * <p>Specifies whether to automatically execute the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,13 +14,33 @@ public class UpdateArtifactLifecycleRuleRequest extends TeaModel {
     public Boolean auto;
 
     /**
-     * <p>Specifies whether to enable lifecycle management for the artifact.</p>
+     * <p>Specifies whether to enable DryRun mode. If DryRun mode is enabled, only the lifecycle task scan is performed and no actual data cleanup is performed. DryRun mode is disabled by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>Specifies whether to enable lifecycle management.</p>
+     * <p>Only one of this parameter and EnableDeleteUntaggedManifest can be set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("EnableDeleteTag")
     public Boolean enableDeleteTag;
+
+    /**
+     * <p>Specifies whether to enable artifact cleanup.</p>
+     * <p>Only one of this parameter and EnableDeleteTag can be set to true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("EnableDeleteUntaggedManifest")
+    public Boolean enableDeleteUntaggedManifest;
 
     /**
      * <p>The instance ID.</p>
@@ -33,7 +53,7 @@ public class UpdateArtifactLifecycleRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the namespace.</p>
+     * <p>The namespace name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-ns</p>
@@ -42,7 +62,7 @@ public class UpdateArtifactLifecycleRuleRequest extends TeaModel {
     public String namespaceName;
 
     /**
-     * <p>The name of the image repository.</p>
+     * <p>The image repository name.</p>
      * 
      * <strong>example:</strong>
      * <p>test_1</p>
@@ -51,7 +71,7 @@ public class UpdateArtifactLifecycleRuleRequest extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The number of images that you want to retain.</p>
+     * <p>The number of images to retain.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -70,7 +90,7 @@ public class UpdateArtifactLifecycleRuleRequest extends TeaModel {
     public String ruleId;
 
     /**
-     * <p>The execution cycle of the lifecycle management rule.</p>
+     * <p>The execution cycle.</p>
      * 
      * <strong>example:</strong>
      * <p>WEEK</p>
@@ -79,7 +99,7 @@ public class UpdateArtifactLifecycleRuleRequest extends TeaModel {
     public String scheduleTime;
 
     /**
-     * <p>The deletion scope of artifacts.</p>
+     * <p>The cleanup scope.</p>
      * 
      * <strong>example:</strong>
      * <p>REPO</p>
@@ -88,7 +108,7 @@ public class UpdateArtifactLifecycleRuleRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>The regular expression that indicates which image tags you want to retain.</p>
+     * <p>The regular expression used to retain image versions.</p>
      * 
      * <strong>example:</strong>
      * <p>.<em>production_.</em></p>
@@ -109,12 +129,28 @@ public class UpdateArtifactLifecycleRuleRequest extends TeaModel {
         return this.auto;
     }
 
+    public UpdateArtifactLifecycleRuleRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public UpdateArtifactLifecycleRuleRequest setEnableDeleteTag(Boolean enableDeleteTag) {
         this.enableDeleteTag = enableDeleteTag;
         return this;
     }
     public Boolean getEnableDeleteTag() {
         return this.enableDeleteTag;
+    }
+
+    public UpdateArtifactLifecycleRuleRequest setEnableDeleteUntaggedManifest(Boolean enableDeleteUntaggedManifest) {
+        this.enableDeleteUntaggedManifest = enableDeleteUntaggedManifest;
+        return this;
+    }
+    public Boolean getEnableDeleteUntaggedManifest() {
+        return this.enableDeleteUntaggedManifest;
     }
 
     public UpdateArtifactLifecycleRuleRequest setInstanceId(String instanceId) {

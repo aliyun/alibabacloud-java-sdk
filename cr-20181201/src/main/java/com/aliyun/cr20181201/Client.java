@@ -9,49 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("us-west-1", "cr.us-west-1.aliyuncs.com"),
-            new TeaPair("us-southeast-1", "cr.us-southeast-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "cr.us-east-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "cr.na-south-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "cr.me-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "cr.me-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-2", "cr.eu-west-2.aliyuncs.com"),
-            new TeaPair("eu-west-1", "cr.eu-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "cr.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhongwei", "cr.cn-zhongwei.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-jva", "cr.cn-zhengzhou-jva.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "cr.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu-gic-1", "cr.cn-wulanchabu-gic-1.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "cr.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-wuhan-lr", "cr.cn-wuhan-lr.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "cr.cn-shenzhen-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "cr.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "cr.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "cr.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "cr.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "cr.cn-north-2-gov-1.aliyuncs.com"),
-            new TeaPair("cn-nanjing", "cr.cn-nanjing.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "cr.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "cr.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-heyuan-acdr-1", "cr.cn-heyuan-acdr-1.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "cr.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "cr.cn-hangzhou-finance.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "cr.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "cr.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-fuzhou", "cr.cn-fuzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "cr.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "cr.cn-beijing-finance-1.aliyuncs.com"),
-            new TeaPair("cn-beijing", "cr.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "cr.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "cr.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "cr.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "cr.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "cr.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "cr.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "cr.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "cr.ap-northeast-1.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("cr", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -358,8 +315,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Auto", request.auto);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enableDeleteTag)) {
             query.put("EnableDeleteTag", request.enableDeleteTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableDeleteUntaggedManifest)) {
+            query.put("EnableDeleteUntaggedManifest", request.enableDeleteUntaggedManifest);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
@@ -1251,7 +1216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an image synchronization rule for an image repository.</p>
+     * <p>Creates a synchronization rule for an image repository.</p>
      * 
      * @param request CreateRepoSyncRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1343,7 +1308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an image synchronization rule for an image repository.</p>
+     * <p>Creates a synchronization rule for an image repository.</p>
      * 
      * @param request CreateRepoSyncRuleRequest
      * @return CreateRepoSyncRuleResponse
@@ -1355,7 +1320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Manually create a sync task.</p>
+     * <p>Manually creates a synchronization task.</p>
      * 
      * @param request CreateRepoSyncTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1427,7 +1392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Manually create a sync task.</p>
+     * <p>Manually creates a synchronization task.</p>
      * 
      * @param request CreateRepoSyncTaskRequest
      * @return CreateRepoSyncTaskResponse
@@ -1439,7 +1404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an image replication task based on a manual replication rule.</p>
+     * <p>Creates a synchronization task for an image repository based on a synchronization rule (manual synchronization rules only).</p>
      * 
      * @param request CreateRepoSyncTaskByRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1487,7 +1452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an image replication task based on a manual replication rule.</p>
+     * <p>Creates a synchronization task for an image repository based on a synchronization rule (manual synchronization rules only).</p>
      * 
      * @param request CreateRepoSyncTaskByRuleRequest
      * @return CreateRepoSyncTaskByRuleResponse
@@ -2871,7 +2836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an artifact building rule.</p>
+     * <p>Retrieves an artifact build rule.</p>
      * 
      * @param request GetArtifactBuildRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2899,7 +2864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an artifact building rule.</p>
+     * <p>Retrieves an artifact build rule.</p>
      * 
      * @param request GetArtifactBuildRuleRequest
      * @return GetArtifactBuildRuleResponse
@@ -2911,7 +2876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of an artifact build task.</p>
+     * <p>Retrieves the build task of an artifact.</p>
      * 
      * @param request GetArtifactBuildTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2939,7 +2904,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of an artifact build task.</p>
+     * <p>Retrieves the build task of an artifact.</p>
      * 
      * @param request GetArtifactBuildTaskRequest
      * @return GetArtifactBuildTaskResponse
@@ -2951,7 +2916,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists artifact lifecycle management rules.</p>
+     * <p>Queries the lifecycle management rules of artifacts.</p>
      * 
      * @param request GetArtifactLifecycleRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2979,7 +2944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists artifact lifecycle management rules.</p>
+     * <p>Queries the lifecycle management rules of artifacts.</p>
      * 
      * @param request GetArtifactLifecycleRuleRequest
      * @return GetArtifactLifecycleRuleResponse
@@ -3802,7 +3767,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an image synchronization task in an instance.</p>
+     * <p>Queries a repository synchronization task.</p>
      * 
      * @param request GetRepoSyncTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3838,7 +3803,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an image synchronization task in an instance.</p>
+     * <p>Queries a repository synchronization task.</p>
      * 
      * @param request GetRepoSyncTaskRequest
      * @return GetRepoSyncTaskResponse
@@ -5110,7 +5075,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns a list of repository synchronization rules.</p>
+     * <p>Queries the list of repository synchronization rules.</p>
      * 
      * @param request ListRepoSyncRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5166,7 +5131,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns a list of repository synchronization rules.</p>
+     * <p>Queries the list of repository synchronization rules.</p>
      * 
      * @param request ListRepoSyncRuleRequest
      * @return ListRepoSyncRuleResponse
@@ -5178,7 +5143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists repository synchronization tasks.</p>
+     * <p>Queries the list of repository synchronization tasks.</p>
      * 
      * @param request ListRepoSyncTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5234,7 +5199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists repository synchronization tasks.</p>
+     * <p>Queries the list of repository synchronization tasks.</p>
      * 
      * @param request ListRepoSyncTaskRequest
      * @return ListRepoSyncTaskResponse
@@ -5896,7 +5861,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a lifecycle management rule of an artifact.</p>
+     * <p>Updates an artifact lifecycle management rule.</p>
      * 
      * @param request UpdateArtifactLifecycleRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5909,8 +5874,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Auto", request.auto);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enableDeleteTag)) {
             query.put("EnableDeleteTag", request.enableDeleteTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableDeleteUntaggedManifest)) {
+            query.put("EnableDeleteUntaggedManifest", request.enableDeleteUntaggedManifest);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
@@ -5964,7 +5937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a lifecycle management rule of an artifact.</p>
+     * <p>Updates an artifact lifecycle management rule.</p>
      * 
      * @param request UpdateArtifactLifecycleRuleRequest
      * @return UpdateArtifactLifecycleRuleResponse

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRepoSyncRuleResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,7 +14,7 @@ public class CreateRepoSyncRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

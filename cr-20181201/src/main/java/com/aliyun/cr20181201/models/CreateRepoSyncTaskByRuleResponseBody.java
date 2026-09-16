@@ -14,10 +14,12 @@ public class CreateRepoSyncTaskByRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the API call is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request is successful.</li>
-     * <li><code>false</code>: The request fails.</li>
+     * <li><p><code>true</code>: The API call is successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The API call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class CreateRepoSyncTaskByRuleResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>17A4C658-AE8F-4A08-821F-EDCB5FC74EE8</p>
@@ -36,7 +38,7 @@ public class CreateRepoSyncTaskByRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the synchronization task.</p>
+     * <p>The synchronization task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rst-biu4u4pm4it5****</p>

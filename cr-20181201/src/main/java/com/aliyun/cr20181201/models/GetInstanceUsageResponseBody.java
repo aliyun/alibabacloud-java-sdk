@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceUsageResponseBody extends TeaModel {
     /**
-     * <p>The quota of chart namespaces.</p>
+     * <p>The quota of Chart namespaces.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,7 +14,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
     public String chartNamespaceQuota;
 
     /**
-     * <p>The number of chart namespaces that are created in the instance.</p>
+     * <p>The number of Chart namespaces created.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -23,7 +23,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
     public String chartNamespaceUsage;
 
     /**
-     * <p>The quota of chart repositories for the instance.</p>
+     * <p>The quota of Chart repositories.</p>
      * 
      * <strong>example:</strong>
      * <p>5000</p>
@@ -32,7 +32,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
     public String chartRepoQuota;
 
     /**
-     * <p>The number of chart repositories that are created.</p>
+     * <p>The number of Chart repositories created.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -50,10 +50,12 @@ public class GetInstanceUsageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request is successful.</li>
-     * <li><code>false</code>: The request fails.</li>
+     * <li><p><code>true</code>: The call was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +65,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The quota of image namespaces for the instance.</p>
+     * <p>The quota of image namespaces.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -72,7 +74,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
     public String namespaceQuota;
 
     /**
-     * <p>The number of image namespaces that are created in the instance.</p>
+     * <p>The number of image namespaces used.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -81,7 +83,16 @@ public class GetInstanceUsageResponseBody extends TeaModel {
     public String namespaceUsage;
 
     /**
-     * <p>The quota of image repositories for the instance.</p>
+     * <p>The number of performance units, which indicates the additional instance capacity purchased on top of the Advanced Edition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
+    @NameInMap("PerformanceUnits")
+    public Integer performanceUnits;
+
+    /**
+     * <p>The quota of image repositories.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -90,7 +101,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
     public String repoQuota;
 
     /**
-     * <p>The number of image repositories that are created in the instance.</p>
+     * <p>The number of image repositories used.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -99,7 +110,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
     public String repoUsage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A726E801-7FCF-43F9-AF1C-51B3E65D3E7A</p>
@@ -108,7 +119,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>VPC quota</p>
+     * <p>The VPC quota.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -117,7 +128,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
     public String vpcQuota;
 
     /**
-     * <p>Number of bound VPCs</p>
+     * <p>The number of bound VPCs.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -192,6 +203,14 @@ public class GetInstanceUsageResponseBody extends TeaModel {
     }
     public String getNamespaceUsage() {
         return this.namespaceUsage;
+    }
+
+    public GetInstanceUsageResponseBody setPerformanceUnits(Integer performanceUnits) {
+        this.performanceUnits = performanceUnits;
+        return this;
+    }
+    public Integer getPerformanceUnits() {
+        return this.performanceUnits;
     }
 
     public GetInstanceUsageResponseBody setRepoQuota(String repoQuota) {

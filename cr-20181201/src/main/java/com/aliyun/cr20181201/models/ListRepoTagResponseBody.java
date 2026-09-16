@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRepoTagResponseBody extends TeaModel {
     /**
-     * <p>The return code.</p>
+     * <p>The return value.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,13 +14,13 @@ public class ListRepoTagResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The image list.</p>
+     * <p>The list of images.</p>
      */
     @NameInMap("Images")
     public java.util.List<ListRepoTagResponseBodyImages> images;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -28,9 +28,21 @@ public class ListRepoTagResponseBody extends TeaModel {
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The maximum number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token for the next page. If a next page exists, the service returns a NextToken value. Pass this value in the next request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>*****V3MpHK1AP0pfERHZN5pu6lESTRpd5hnHNnmKOP/+w9F</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -185,7 +197,7 @@ public class ListRepoTagResponseBody extends TeaModel {
         public Long imageSize;
 
         /**
-         * <p>The time when the image was updated.</p>
+         * <p>The time when the image was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1572875608000</p>

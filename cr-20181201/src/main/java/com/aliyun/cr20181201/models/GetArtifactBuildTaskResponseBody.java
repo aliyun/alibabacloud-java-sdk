@@ -7,9 +7,9 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
     /**
      * <p>The artifact build type. Valid values:</p>
      * <ul>
-     * <li><p><code>IMAGE_TO_ACCELERATED_IMAGE</code>: an accelerated image for ACK.</p>
+     * <li><p><code>IMAGE_TO_ACCELERATED_IMAGE</code>: Accelerated image creation optimized for ACK scenarios.</p>
      * </li>
-     * <li><p><code>IMAGE_TO_ECI_ACCELERATED_IMAGE</code>: an accelerated image for ECI.</p>
+     * <li><p><code>IMAGE_TO_ECI_ACCELERATED_IMAGE</code>: Accelerated image artifact optimized for ECI scenarios.</p>
      * </li>
      * </ul>
      * 
@@ -18,6 +18,12 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
      */
     @NameInMap("ArtifactBuildType")
     public String artifactBuildType;
+
+    /**
+     * <p>The artifact compression parameters.</p>
+     */
+    @NameInMap("ArtifactCompression")
+    public GetArtifactBuildTaskResponseBodyArtifactCompression artifactCompression;
 
     /**
      * <p>The ID of the artifact build task.</p>
@@ -29,7 +35,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
     public String buildTaskId;
 
     /**
-     * <p>The response code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -38,7 +44,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The Unix timestamp in seconds when the task ended.</p>
+     * <p>The end time. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1685415871</p>
@@ -46,11 +52,14 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public Integer endTime;
 
+    /**
+     * <p>The reserved field list of the artifact build task. The list elements should be empty.</p>
+     */
     @NameInMap("Instructions")
     public java.util.List<String> instructions;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,7 +68,14 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The ID of the request.</p>
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
+    @NameInMap("Priority")
+    public Integer priority;
+
+    /**
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C4C7DD0C-C9D6-437A-A7EE-121EFD70D002</p>
@@ -74,7 +90,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
     public GetArtifactBuildTaskResponseBodySourceArtifact sourceArtifact;
 
     /**
-     * <p>The Unix timestamp in seconds when the task started.</p>
+     * <p>The start time. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1685437471</p>
@@ -89,15 +105,15 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
     public GetArtifactBuildTaskResponseBodyTargetArtifact targetArtifact;
 
     /**
-     * <p>The status of the artifact build task. Valid values:</p>
+     * <p>The artifact build status. Valid values:</p>
      * <ul>
-     * <li><p><code>PENDING</code>: The task is being scheduled.</p>
+     * <li><p><code>PENDING</code>: Scheduling in progress.</p>
      * </li>
-     * <li><p><code>BUILDING</code>: The task is in progress.</p>
+     * <li><p><code>BUILDING</code>: Building in progress.</p>
      * </li>
-     * <li><p><code>SUCCESS</code>: The task is successful.</p>
+     * <li><p><code>SUCCESS</code>: Build succeeded.</p>
      * </li>
-     * <li><p><code>FAILED</code>: The task failed.</p>
+     * <li><p><code>FAILED</code>: Build failed.</p>
      * </li>
      * </ul>
      * 
@@ -118,6 +134,14 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
     }
     public String getArtifactBuildType() {
         return this.artifactBuildType;
+    }
+
+    public GetArtifactBuildTaskResponseBody setArtifactCompression(GetArtifactBuildTaskResponseBodyArtifactCompression artifactCompression) {
+        this.artifactCompression = artifactCompression;
+        return this;
+    }
+    public GetArtifactBuildTaskResponseBodyArtifactCompression getArtifactCompression() {
+        return this.artifactCompression;
     }
 
     public GetArtifactBuildTaskResponseBody setBuildTaskId(String buildTaskId) {
@@ -160,6 +184,14 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         return this.isSuccess;
     }
 
+    public GetArtifactBuildTaskResponseBody setPriority(Integer priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Integer getPriority() {
+        return this.priority;
+    }
+
     public GetArtifactBuildTaskResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -200,9 +232,68 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         return this.taskStatus;
     }
 
+    public static class GetArtifactBuildTaskResponseBodyArtifactCompression extends TeaModel {
+        /**
+         * <p>The operating system and architecture.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>linux/arm64</p>
+         */
+        @NameInMap("Platform")
+        public String platform;
+
+        /**
+         * <p>The number of layers to retain after compression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("SquashKeepLayers")
+        public Integer squashKeepLayers;
+
+        /**
+         * <p>The digest of the starting layer for compression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sha256:xxxxx</p>
+         */
+        @NameInMap("StartLayerDigest")
+        public String startLayerDigest;
+
+        public static GetArtifactBuildTaskResponseBodyArtifactCompression build(java.util.Map<String, ?> map) throws Exception {
+            GetArtifactBuildTaskResponseBodyArtifactCompression self = new GetArtifactBuildTaskResponseBodyArtifactCompression();
+            return TeaModel.build(map, self);
+        }
+
+        public GetArtifactBuildTaskResponseBodyArtifactCompression setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        public GetArtifactBuildTaskResponseBodyArtifactCompression setSquashKeepLayers(Integer squashKeepLayers) {
+            this.squashKeepLayers = squashKeepLayers;
+            return this;
+        }
+        public Integer getSquashKeepLayers() {
+            return this.squashKeepLayers;
+        }
+
+        public GetArtifactBuildTaskResponseBodyArtifactCompression setStartLayerDigest(String startLayerDigest) {
+            this.startLayerDigest = startLayerDigest;
+            return this;
+        }
+        public String getStartLayerDigest() {
+            return this.startLayerDigest;
+        }
+
+    }
+
     public static class GetArtifactBuildTaskResponseBodySourceArtifact extends TeaModel {
         /**
-         * <p>The artifact type. Currently, only <code>IMAGE</code> is supported.</p>
+         * <p>The artifact type. Only IMAGE is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>IMAGE</p>
@@ -211,7 +302,16 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         public String artifactType;
 
         /**
-         * <p>The repository ID. Currently, only image repositories are supported.</p>
+         * <p>The number of artifact layers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("LayerCount")
+        public Integer layerCount;
+
+        /**
+         * <p>The repository ID. Only image repositories are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-shac42yvqzvq****</p>
@@ -220,7 +320,16 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         public String repoId;
 
         /**
-         * <p>The artifact version. Currently, only image versions are supported.</p>
+         * <p>The artifact size, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        @NameInMap("Size")
+        public Long size;
+
+        /**
+         * <p>The artifact version. Only image versions are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>latest</p>
@@ -241,12 +350,28 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
             return this.artifactType;
         }
 
+        public GetArtifactBuildTaskResponseBodySourceArtifact setLayerCount(Integer layerCount) {
+            this.layerCount = layerCount;
+            return this;
+        }
+        public Integer getLayerCount() {
+            return this.layerCount;
+        }
+
         public GetArtifactBuildTaskResponseBodySourceArtifact setRepoId(String repoId) {
             this.repoId = repoId;
             return this;
         }
         public String getRepoId() {
             return this.repoId;
+        }
+
+        public GetArtifactBuildTaskResponseBodySourceArtifact setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
         }
 
         public GetArtifactBuildTaskResponseBodySourceArtifact setVersion(String version) {
@@ -261,7 +386,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
 
     public static class GetArtifactBuildTaskResponseBodyTargetArtifact extends TeaModel {
         /**
-         * <p>The artifact type. Currently, only <code>IMAGE</code> is supported.</p>
+         * <p>The artifact type. Only IMAGE is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>IMAGE</p>
@@ -270,7 +395,16 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         public String artifactType;
 
         /**
-         * <p>The repository ID. It must be the same as the repository ID of the source artifact. Only image repositories are supported.</p>
+         * <p>The number of artifact layers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        @NameInMap("LayerCount")
+        public Integer layerCount;
+
+        /**
+         * <p>The repository ID. Only image repositories are supported. The repository ID of the target artifact must be the same as that of the source artifact.</p>
          * 
          * <strong>example:</strong>
          * <p>crr-1234567</p>
@@ -279,7 +413,16 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         public String repoId;
 
         /**
-         * <p>The artifact version. Currently, only image versions are supported.</p>
+         * <p>The artifact size, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("Size")
+        public Long size;
+
+        /**
+         * <p>The artifact version. Only images are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>latest_accelerated</p>
@@ -300,12 +443,28 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
             return this.artifactType;
         }
 
+        public GetArtifactBuildTaskResponseBodyTargetArtifact setLayerCount(Integer layerCount) {
+            this.layerCount = layerCount;
+            return this;
+        }
+        public Integer getLayerCount() {
+            return this.layerCount;
+        }
+
         public GetArtifactBuildTaskResponseBodyTargetArtifact setRepoId(String repoId) {
             this.repoId = repoId;
             return this;
         }
         public String getRepoId() {
             return this.repoId;
+        }
+
+        public GetArtifactBuildTaskResponseBodyTargetArtifact setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
         }
 
         public GetArtifactBuildTaskResponseBodyTargetArtifact setVersion(String version) {

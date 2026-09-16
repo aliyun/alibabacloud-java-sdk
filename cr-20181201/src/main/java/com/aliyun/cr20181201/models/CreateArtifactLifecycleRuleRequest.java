@@ -13,6 +13,9 @@ public class CreateArtifactLifecycleRuleRequest extends TeaModel {
     @NameInMap("Auto")
     public Boolean auto;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>Specify whether to enable lifecycle management for the artifact.</p>
      * 
@@ -21,6 +24,9 @@ public class CreateArtifactLifecycleRuleRequest extends TeaModel {
      */
     @NameInMap("EnableDeleteTag")
     public Boolean enableDeleteTag;
+
+    @NameInMap("EnableDeleteUntaggedManifest")
+    public Boolean enableDeleteUntaggedManifest;
 
     /**
      * <p>The instance ID.</p>
@@ -99,12 +105,28 @@ public class CreateArtifactLifecycleRuleRequest extends TeaModel {
         return this.auto;
     }
 
+    public CreateArtifactLifecycleRuleRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public CreateArtifactLifecycleRuleRequest setEnableDeleteTag(Boolean enableDeleteTag) {
         this.enableDeleteTag = enableDeleteTag;
         return this;
     }
     public Boolean getEnableDeleteTag() {
         return this.enableDeleteTag;
+    }
+
+    public CreateArtifactLifecycleRuleRequest setEnableDeleteUntaggedManifest(Boolean enableDeleteUntaggedManifest) {
+        this.enableDeleteUntaggedManifest = enableDeleteUntaggedManifest;
+        return this;
+    }
+    public Boolean getEnableDeleteUntaggedManifest() {
+        return this.enableDeleteUntaggedManifest;
     }
 
     public CreateArtifactLifecycleRuleRequest setInstanceId(String instanceId) {
