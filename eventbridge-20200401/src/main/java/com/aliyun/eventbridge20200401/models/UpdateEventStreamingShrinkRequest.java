@@ -49,7 +49,7 @@ public class UpdateEventStreamingShrinkRequest extends TeaModel {
     public String filterPattern;
 
     /**
-     * <p>The generic JSON configurations for the event provider. This parameter is mutually exclusive with Source.</p>
+     * <p>The generic JSON Configurations for the event source. This parameter is mutually exclusive with Source.</p>
      */
     @NameInMap("Metadata")
     public String metadata;
@@ -73,7 +73,7 @@ public class UpdateEventStreamingShrinkRequest extends TeaModel {
     public String sourceShrink;
 
     /**
-     * <p>The event transformer configurations.</p>
+     * <p>The transform-related configurations.</p>
      */
     @NameInMap("Transforms")
     public String transformsShrink;

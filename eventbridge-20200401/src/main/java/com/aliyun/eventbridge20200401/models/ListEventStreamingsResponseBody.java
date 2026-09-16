@@ -7,7 +7,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
     /**
      * <p>The response code. Valid values:</p>
      * <p>Success: The request was successful.    </p>
-     * <p>Other values: An error occurred. For more information about error codes, see error codes.</p>
+     * <p>Other values: An error occurred. For more information about error codes, see Error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -40,7 +40,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. The value true indicates success.</p>
+     * <p>Indicates whether the operation was successful. The value true is returned if the operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -296,7 +296,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     public static class ListEventStreamingsResponseBodyDataEventStreamingsRunOptions extends TeaModel {
         /**
-         * <p>The batch window.</p>
+         * <p>The batching window.</p>
          */
         @NameInMap("BatchWindow")
         public ListEventStreamingsResponseBodyDataEventStreamingsRunOptionsBatchWindow batchWindow;
@@ -305,7 +305,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public ListEventStreamingsResponseBodyDataEventStreamingsRunOptionsBusinessOption businessOption;
 
         /**
-         * <p>Specifies whether to enable the dead-letter queue. By default, the dead-letter queue is disabled, and messages that exceed the retry policy are discarded.</p>
+         * <p>Indicates whether the dead-letter queue is enabled. By default, the dead-letter queue is disabled, and messages that exceed the retry policy are discarded.</p>
          */
         @NameInMap("DeadLetterQueue")
         public ListEventStreamingsResponseBodyDataEventStreamingsRunOptionsDeadLetterQueue deadLetterQueue;
@@ -1381,7 +1381,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The BLOB type record content template.</p>
+         * <p>The BLOB type. The record content template.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -1490,7 +1490,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>To grant authorization to the event bus EventBridge to use this role to read SLS log content, the following conditions must be met: when you create the role used by the service in the Resource Access Management (RAM) console, set the trusted entity type to Alibaba Cloud Service and set the trusted service to event bus.</p>
+         * <p>To grant authorization to the event bus EventBridge to use this role to read Simple Log Service (SLS) log content, the following conditions must be met: when you create the role used by the service in the Resource Access Management (RAM) console, set the trusted entity type to &quot;Alibaba Cloud Service&quot; and set the trusted service to &quot;event bus&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>testRole</p>
@@ -1602,7 +1602,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The content schema of the topic. This parameter is of the TUPLE type.</p>
+         * <p>The content schema of the topic. This parameter applies to the TUPLE type.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;k1&quot;:&quot;value1&quot;,&quot;k2&quot;:&quot;value2&quot;}</p>
@@ -1658,7 +1658,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The topic type. Valid values:</p>
+         * <p>The type of the topic. Valid values:</p>
          * <ul>
          * <li>TUPLE</li>
          * <li>BLOB</li>
@@ -1703,7 +1703,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     public static class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkDataHubParameters extends TeaModel {
         /**
-         * <p>The BLOB type record content template.</p>
+         * <p>The BLOB type. The record content template.</p>
          */
         @NameInMap("Body")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkDataHubParametersBody body;
@@ -1715,7 +1715,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkDataHubParametersProject project;
 
         /**
-         * <p>To grant authorization to the event bus EventBridge to use this role to read SLS log content, the following conditions must be met: when you create the role used by the service in the Resource Access Management (RAM) console, set the trusted entity type to Alibaba Cloud Service and set the trusted service to event bus.</p>
+         * <p>To grant authorization to the event bus EventBridge to use this role to read Simple Log Service (SLS) log content, the following conditions must be met: when you create the role used by the service in the Resource Access Management (RAM) console, set the trusted entity type to &quot;Alibaba Cloud Service&quot; and set the trusted service to &quot;event bus&quot;.</p>
          */
         @NameInMap("RoleName")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkDataHubParametersRoleName roleName;
@@ -1727,13 +1727,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkDataHubParametersTopic topic;
 
         /**
-         * <p>The content schema of the topic. This parameter is of the TUPLE type.</p>
+         * <p>The content schema of the topic. This parameter applies to the TUPLE type.</p>
          */
         @NameInMap("TopicSchema")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkDataHubParametersTopicSchema topicSchema;
 
         /**
-         * <p>The topic type. Valid values:</p>
+         * <p>The type of the topic. Valid values:</p>
          * <ul>
          * <li>TUPLE</li>
          * <li>BLOB</li>
@@ -3440,9 +3440,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         /**
          * <p>The acknowledgment mode for writing to Kafka:</p>
          * <ul>
-         * <li>acks=0: No response is required from the server. This mode offers high performance but a high risk of data loss.</li>
-         * <li>acks=1: A response is returned after the primary node on the server writes the data. This mode offers moderate performance and a moderate risk of data loss. Data loss may occur if the primary node goes down.</li>
-         * <li>acks=all: A response is returned only after the primary node writes the data and the secondary nodes complete synchronization. This mode offers lower performance but higher data safety. Data loss occurs only if both the primary and secondary nodes go down.</li>
+         * <li>acks=0: No response is required from the server. This mode delivers high performance but has a high risk of data loss.</li>
+         * <li>acks=1: A response is returned after the primary node on the server successfully writes the data. This mode delivers moderate performance and has a moderate risk of data loss. Data loss may occur if the primary node goes down.</li>
+         * <li>acks=all: A response is returned only after the primary node successfully writes the data and the secondary nodes complete synchronization. This mode delivers lower performance but provides higher data safety. Data loss occurs only if both the primary and secondary nodes go down.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -3484,11 +3484,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     public static class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParametersDynamicTopic extends TeaModel {
         /**
-         * <p>The transformation type. Valid values:</p>
-         * <ul>
-         * <li>CONSTANT: constant</li>
-         * <li>JSONPATH: extracts a value from the upstream event based on a JSONPath expression</li>
-         * </ul>
+         * <p>The transformation type.
+         * CONSTANT: a constant.
+         * JSONPATH: extracts a value from the upstream source based on a path.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -3769,9 +3767,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         /**
          * <p>The acknowledgment mode for writing to Kafka:</p>
          * <ul>
-         * <li>acks=0: No response is required from the server. This mode offers high performance but a high risk of data loss.</li>
-         * <li>acks=1: A response is returned after the primary node on the server writes the data. This mode offers moderate performance and a moderate risk of data loss. Data loss may occur if the primary node goes down.</li>
-         * <li>acks=all: A response is returned only after the primary node writes the data and the secondary nodes complete synchronization. This mode offers lower performance but higher data safety. Data loss occurs only if both the primary and secondary nodes go down.</li>
+         * <li>acks=0: No response is required from the server. This mode delivers high performance but has a high risk of data loss.</li>
+         * <li>acks=1: A response is returned after the primary node on the server successfully writes the data. This mode delivers moderate performance and has a moderate risk of data loss. Data loss may occur if the primary node goes down.</li>
+         * <li>acks=all: A response is returned only after the primary node successfully writes the data and the secondary nodes complete synchronization. This mode delivers lower performance but provides higher data safety. Data loss occurs only if both the primary and secondary nodes go down.</li>
          * </ul>
          */
         @NameInMap("Acks")
@@ -3789,7 +3787,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParametersDynamicTopic dynamicTopic;
 
         /**
-         * <p>The target service type is ApsaraMQ for Kafka.</p>
+         * <p>The target service type is MSMQ for Apache Kafka.</p>
          */
         @NameInMap("InstanceId")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParametersInstanceId instanceId;
@@ -4009,7 +4007,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The name of the queue in Simple Message Queue (formerly MNS).</p>
+         * <p>The name of the Simple MSMQ (formerly MNS) queue.</p>
          * 
          * <strong>example:</strong>
          * <p>MyQueue</p>
@@ -4056,13 +4054,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkMNSParametersBody body;
 
         /**
-         * <p>Specifies whether to enable Base64 encoding.</p>
+         * <p>Indicates whether Base64 encoding is enabled.</p>
          */
         @NameInMap("IsBase64Encode")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkMNSParametersIsBase64Encode isBase64Encode;
 
         /**
-         * <p>The target service type is Simple Message Queue (formerly MNS).</p>
+         * <p>The target service type is Simple MSMQ (formerly MNS).</p>
          */
         @NameInMap("QueueName")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkMNSParametersQueueName queueName;
@@ -4357,7 +4355,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkOpenSourceRabbitMQParametersBody body;
 
         /**
-         * <p>The endpoint of the RabbitMQ instance.</p>
+         * <p>The RabbitMQ instance endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.1:9876</p>
@@ -4390,7 +4388,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public String networkType;
 
         /**
-         * <p>The username and password used for authentication.</p>
+         * <p>The username and password used for identity verification.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -4742,7 +4740,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The instance ID of the ApsaraMQ for RabbitMQ instance.</p>
+         * <p>The instance ID of ApsaraMQ for RabbitMQ.</p>
          * 
          * <strong>example:</strong>
          * <p>si-296cd57939a1421b****</p>
@@ -5032,9 +5030,11 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The target type. Valid values:
-         * Exchange: Exchange mode.
-         * Queue: Queue mode.</p>
+         * <p>The target type. Valid values:</p>
+         * <ul>
+         * <li>Exchange: Exchange mode.</li>
+         * <li>Queue: Queue mode.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Queue</p>
@@ -5137,7 +5137,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkRabbitMQParametersBody body;
 
         /**
-         * <p>The Exchange mode. This parameter is required only when TargetType is set to Exchange.</p>
+         * <p>The Exchange mode. This parameter is required only when the TargetType parameter is set to Exchange.</p>
          */
         @NameInMap("Exchange")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkRabbitMQParametersExchange exchange;
@@ -5161,13 +5161,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkRabbitMQParametersProperties properties;
 
         /**
-         * <p>The Queue mode. This parameter is required only when TargetType is set to Queue.</p>
+         * <p>The Queue mode. This parameter is required only when the TargetType parameter is set to Queue.</p>
          */
         @NameInMap("QueueName")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkRabbitMQParametersQueueName queueName;
 
         /**
-         * <p>The routing rule of the message. This parameter is required only when TargetType is set to Exchange.</p>
+         * <p>The routing rule for messages. This parameter is required only when the TargetType parameter is set to Exchange.</p>
          */
         @NameInMap("RoutingKey")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkRabbitMQParametersRoutingKey routingKey;
@@ -5445,7 +5445,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkRocketMQCheckpointParametersGroup group;
 
         /**
-         * <p>The instance ID of the RocketMQ instance.</p>
+         * <p>The instance ID of ApsaraMQ for RocketMQ.</p>
          * 
          * <strong>example:</strong>
          * <p>MQ_INST_1825725063814405_BZ******</p>
@@ -5705,7 +5705,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The instance ID of the ApsaraMQ for RocketMQ instance.</p>
+         * <p>The instance ID of ApsaraMQ for RocketMQ.</p>
          * 
          * <strong>example:</strong>
          * <p>MQ_INST_164901546557****_BAAN****</p>
@@ -5821,7 +5821,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
          * <ul>
          * <li>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance (default).</li>
          * <li>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance.</li>
-         * <li>SelfBuilt: Self-managed Apache RocketMQ cluster.</li>
+         * <li>SelfBuilt: self-managed Apache RocketMQ cluster.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -6289,7 +6289,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The topic of the MSMQ RocketMQ instance.</p>
+         * <p>The topic of the MSMQ for RocketMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>topic</p>
@@ -6448,7 +6448,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkRocketMQParametersBody body;
 
         /**
-         * <p>The delivery order type of the message.</p>
+         * <p>The delivery order type of messages.</p>
          */
         @NameInMap("DeliveryOrderType")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkRocketMQParametersDeliveryOrderType deliveryOrderType;
@@ -6524,7 +6524,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkRocketMQParametersTags tags;
 
         /**
-         * <p>The topic of the MSMQ RocketMQ instance.</p>
+         * <p>The topic of the MSMQ for RocketMQ instance.</p>
          */
         @NameInMap("Topic")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkRocketMQParametersTopic topic;
@@ -6810,7 +6810,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The data format of SLS. You can use the default format or specify key-value pairs. Valid values:</p>
+         * <p>The SLS data format. You can use the default format or specify key-value pairs. Valid values:</p>
          * <ul>
          * <li>JSON</li>
          * <li>KeyValue</li>
@@ -6982,7 +6982,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The role that grants authorization to the event bus EventBridge to read SLS log content. To use this role, the following conditions must be met: when you create the role in the Resource Access Management (RAM) console, select Alibaba Cloud Service as the trusted entity, and select event bus as the trusted service.</p>
+         * <p>The role used for authorization of EventBridge to read SLS log content. To use this role, the following conditions must be met: when you create the role used by the service in the Resource Access Management (RAM) console, select Alibaba Cloud Service, and set the trusted service to EventBridge.</p>
          * 
          * <strong>example:</strong>
          * <p>test-role</p>
@@ -7091,7 +7091,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkSLSParametersContentSchema contentSchema;
 
         /**
-         * <p>The data format of SLS. You can use the default format or specify key-value pairs. Valid values:</p>
+         * <p>The SLS data format. You can use the default format or specify key-value pairs. Valid values:</p>
          * <ul>
          * <li>JSON</li>
          * <li>KeyValue</li>
@@ -7113,7 +7113,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkSLSParametersProject project;
 
         /**
-         * <p>The role that grants authorization to the event bus EventBridge to read SLS log content. To use this role, the following conditions must be met: when you create the role in the Resource Access Management (RAM) console, select Alibaba Cloud Service as the trusted entity, and select event bus as the trusted service.</p>
+         * <p>The role used for authorization of EventBridge to read SLS log content. To use this role, the following conditions must be met: when you create the role used by the service in the Resource Access Management (RAM) console, select Alibaba Cloud Service, and set the trusted service to EventBridge.</p>
          */
         @NameInMap("RoleName")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkSLSParametersRoleName roleName;
@@ -7255,25 +7255,25 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParameters sinkFnfParameters;
 
         /**
-         * <p>The HTTPS event target parameters.</p>
+         * <p>The HTTPS target parameters.</p>
          */
         @NameInMap("SinkHttpsParameters")
         public SinkHttpsParameters sinkHttpsParameters;
 
         /**
-         * <p>The Sink Kafka parameters.</p>
+         * <p>The sink Kafka parameters.</p>
          */
         @NameInMap("SinkKafkaParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParameters sinkKafkaParameters;
 
         /**
-         * <p>The parameters for delivering the event stream to an EventHouse knowledge base. Specify this parameter only when the Sink type is knowledge base.</p>
+         * <p>The target parameters for delivering event streams to an EventHouse knowledge base. Specify this parameter only when the sink type is knowledge base.</p>
          */
         @NameInMap("SinkKnowledgeBaseParameters")
         public SinkKnowledgeBaseParameters sinkKnowledgeBaseParameters;
 
         /**
-         * <p>The Simple Message Queue (formerly MNS) event target.</p>
+         * <p>The Simple MSMQ (formerly MNS) event target.</p>
          */
         @NameInMap("SinkMNSParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkMNSParameters sinkMNSParameters;
@@ -7285,7 +7285,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public SinkOSSParameters sinkOSSParameters;
 
         /**
-         * <p>The Sink open source RabbitMQ parameters.</p>
+         * <p>The sink open-source RabbitMQ parameters.</p>
          */
         @NameInMap("SinkOpenSourceRabbitMQParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkOpenSourceRabbitMQParameters sinkOpenSourceRabbitMQParameters;
@@ -7309,7 +7309,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkRocketMQCheckpointParameters sinkRocketMQCheckpointParameters;
 
         /**
-         * <p>The parameters for the sink ApsaraMQ for RocketMQ.</p>
+         * <p>The parameters for the sink RocketMQ source.</p>
          */
         @NameInMap("SinkRocketMQParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkRocketMQParameters sinkRocketMQParameters;
@@ -8073,7 +8073,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public String valueDataType;
 
         /**
-         * <p>The VPC ID of the user.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-wz9ki1qdlx3cx5cbf****</p>
@@ -8170,7 +8170,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     public static class ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceMNSParameters extends TeaModel {
         /**
-         * <p>Specifies whether to enable Base64 encoding.</p>
+         * <p>Indicates whether Base64 encoding is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -8179,7 +8179,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public Boolean isBase64Decode;
 
         /**
-         * <p>The name of the Simple Message Queue (formerly MNS) queue.</p>
+         * <p>The name of the Simple Message Queue (formerly MNS) message queue.</p>
          * 
          * <strong>example:</strong>
          * <p>work4</p>
@@ -8282,7 +8282,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public String topic;
 
         /**
-         * <p>The vSwitch IDs.</p>
+         * <p>The vSwitch ID.</p>
          */
         @NameInMap("VSwitchIds")
         public String vSwitchIds;
@@ -8375,7 +8375,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The delimiter used in chunked loading mode as the text chunk identifier. By default, the newline character 
+         * <p>The delimiter. In chunked loading mode, this delimiter is used as the chunk identifier for the text. By default, the newline character 
          *  is used as the delimiter.</p>
          * 
          * <strong>example:</strong>
@@ -8791,7 +8791,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The name of the queue on the ApsaraMQ for RabbitMQ instance.</p>
+         * <p>The queue name of the ApsaraMQ for RabbitMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>liuyang</p>
@@ -8809,7 +8809,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The name of the vhost on the ApsaraMQ for RabbitMQ instance.</p>
+         * <p>The vhost name of the ApsaraMQ for RabbitMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>eb-connect</p>
@@ -8999,7 +8999,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The network type of the instance. Valid values:</p>
+         * <p>The instance network information. Valid values:</p>
          * <ul>
          * <li>PublicNetwork</li>
          * <li>PrivateNetwork</li>
@@ -9034,7 +9034,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
          * <ul>
          * <li>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance (default).</li>
          * <li>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance.</li>
-         * <li>SelfBuilt: Self-managed Apache RocketMQ cluster.</li>
+         * <li>SelfBuilt: self-managed Apache RocketMQ cluster.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -9143,7 +9143,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public String topic;
 
         /**
-         * <p>The vSwitch IDs.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-m5ev8asdc6h12345****</p>
@@ -9389,7 +9389,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public String project;
 
         /**
-         * <p>The role name for authorization of the event bus EventBridge to read Simple Log Service log content. To use this role, create a role for the service in the Resource Access Management (RAM) console, select &quot;Alibaba Cloud Service&quot;, and set &quot;Trusted Service&quot; to &quot;event bus&quot;.</p>
+         * <p>The role name for authorization of the event bus EventBridge to read Simple Log Service log content. To use this role, create a role in the Resource Access Management (RAM) console, select &quot;Alibaba Cloud Service&quot; as the trusted entity, and select &quot;event bus&quot; as the trusted service.</p>
          * 
          * <strong>example:</strong>
          * <p>testRole</p>
@@ -9446,7 +9446,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     public static class ListEventStreamingsResponseBodyDataEventStreamingsSource extends TeaModel {
         /**
-         * <p>The Source RocketMQ checkpoint.</p>
+         * <p>The Source RocketMQ checkpoint parameters.</p>
          */
         @NameInMap("SourceApacheRocketMQCheckpointParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheRocketMQCheckpointParameters sourceApacheRocketMQCheckpointParameters;
@@ -9470,7 +9470,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceDTSParameters sourceDTSParameters;
 
         /**
-         * <p>The Source EventBus event source.</p>
+         * <p>The Source event bus event source.</p>
          */
         @NameInMap("SourceEventBusParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceEventBusParameters sourceEventBusParameters;
@@ -9488,7 +9488,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceKafkaParameters sourceKafkaParameters;
 
         /**
-         * <p>The Source Simple Message Queue (formerly MNS) event source.</p>
+         * <p>The Source Simple Message Queue (formerly MNS) message event source.</p>
          */
         @NameInMap("SourceMNSParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceMNSParameters sourceMNSParameters;
@@ -9539,7 +9539,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceRabbitMQParameters sourceRabbitMQParameters;
 
         /**
-         * <p>The Source RocketMQ checkpoint.</p>
+         * <p>The Source RocketMQ checkpoint parameters.</p>
          */
         @NameInMap("SourceRocketMQCheckpointParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceRocketMQCheckpointParameters sourceRocketMQCheckpointParameters;
@@ -9733,6 +9733,66 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     public static class ListEventStreamingsResponseBodyDataEventStreamingsTransforms extends TeaModel {
         /**
+         * <p>The AI local text chunking parameters.</p>
+         */
+        @NameInMap("AiChunkTransformParameters")
+        public AiChunkTransformParameters aiChunkTransformParameters;
+
+        /**
+         * <p>The AI text classification parameters.</p>
+         */
+        @NameInMap("AiClassifyTransformParameters")
+        public AiClassifyTransformParameters aiClassifyTransformParameters;
+
+        /**
+         * <p>The AI embedding parameters.</p>
+         */
+        @NameInMap("AiEmbedTransformParameters")
+        public AiEmbedTransformParameters aiEmbedTransformParameters;
+
+        /**
+         * <p>The AI information extraction parameters.</p>
+         */
+        @NameInMap("AiExtractTransformParameters")
+        public AiExtractTransformParameters aiExtractTransformParameters;
+
+        /**
+         * <p>The AI conditional filtering parameters.</p>
+         */
+        @NameInMap("AiFilterTransformParameters")
+        public AiFilterTransformParameters aiFilterTransformParameters;
+
+        /**
+         * <p>The AI semantic chunking parameters.</p>
+         */
+        @NameInMap("AiPrepSearchTransformParameters")
+        public AiPrepSearchTransformParameters aiPrepSearchTransformParameters;
+
+        /**
+         * <p>The AI data masking parameters.</p>
+         */
+        @NameInMap("AiRedactTransformParameters")
+        public AiRedactTransformParameters aiRedactTransformParameters;
+
+        /**
+         * <p>The AI emotion analysis parameters.</p>
+         */
+        @NameInMap("AiSentimentAnalysisTransformParameters")
+        public AiSentimentAnalysisTransformParameters aiSentimentAnalysisTransformParameters;
+
+        /**
+         * <p>The AI summarization parameters.</p>
+         */
+        @NameInMap("AiSummarizeTransformParameters")
+        public AiSummarizeTransformParameters aiSummarizeTransformParameters;
+
+        /**
+         * <p>The AI translation parameters.</p>
+         */
+        @NameInMap("AiTranslateTransformParameters")
+        public AiTranslateTransformParameters aiTranslateTransformParameters;
+
+        /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the cloud service, such as the ARN of a function in Function Compute.</p>
          * 
          * <strong>example:</strong>
@@ -9750,6 +9810,86 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public static ListEventStreamingsResponseBodyDataEventStreamingsTransforms build(java.util.Map<String, ?> map) throws Exception {
             ListEventStreamingsResponseBodyDataEventStreamingsTransforms self = new ListEventStreamingsResponseBodyDataEventStreamingsTransforms();
             return TeaModel.build(map, self);
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsTransforms setAiChunkTransformParameters(AiChunkTransformParameters aiChunkTransformParameters) {
+            this.aiChunkTransformParameters = aiChunkTransformParameters;
+            return this;
+        }
+        public AiChunkTransformParameters getAiChunkTransformParameters() {
+            return this.aiChunkTransformParameters;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsTransforms setAiClassifyTransformParameters(AiClassifyTransformParameters aiClassifyTransformParameters) {
+            this.aiClassifyTransformParameters = aiClassifyTransformParameters;
+            return this;
+        }
+        public AiClassifyTransformParameters getAiClassifyTransformParameters() {
+            return this.aiClassifyTransformParameters;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsTransforms setAiEmbedTransformParameters(AiEmbedTransformParameters aiEmbedTransformParameters) {
+            this.aiEmbedTransformParameters = aiEmbedTransformParameters;
+            return this;
+        }
+        public AiEmbedTransformParameters getAiEmbedTransformParameters() {
+            return this.aiEmbedTransformParameters;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsTransforms setAiExtractTransformParameters(AiExtractTransformParameters aiExtractTransformParameters) {
+            this.aiExtractTransformParameters = aiExtractTransformParameters;
+            return this;
+        }
+        public AiExtractTransformParameters getAiExtractTransformParameters() {
+            return this.aiExtractTransformParameters;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsTransforms setAiFilterTransformParameters(AiFilterTransformParameters aiFilterTransformParameters) {
+            this.aiFilterTransformParameters = aiFilterTransformParameters;
+            return this;
+        }
+        public AiFilterTransformParameters getAiFilterTransformParameters() {
+            return this.aiFilterTransformParameters;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsTransforms setAiPrepSearchTransformParameters(AiPrepSearchTransformParameters aiPrepSearchTransformParameters) {
+            this.aiPrepSearchTransformParameters = aiPrepSearchTransformParameters;
+            return this;
+        }
+        public AiPrepSearchTransformParameters getAiPrepSearchTransformParameters() {
+            return this.aiPrepSearchTransformParameters;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsTransforms setAiRedactTransformParameters(AiRedactTransformParameters aiRedactTransformParameters) {
+            this.aiRedactTransformParameters = aiRedactTransformParameters;
+            return this;
+        }
+        public AiRedactTransformParameters getAiRedactTransformParameters() {
+            return this.aiRedactTransformParameters;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsTransforms setAiSentimentAnalysisTransformParameters(AiSentimentAnalysisTransformParameters aiSentimentAnalysisTransformParameters) {
+            this.aiSentimentAnalysisTransformParameters = aiSentimentAnalysisTransformParameters;
+            return this;
+        }
+        public AiSentimentAnalysisTransformParameters getAiSentimentAnalysisTransformParameters() {
+            return this.aiSentimentAnalysisTransformParameters;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsTransforms setAiSummarizeTransformParameters(AiSummarizeTransformParameters aiSummarizeTransformParameters) {
+            this.aiSummarizeTransformParameters = aiSummarizeTransformParameters;
+            return this;
+        }
+        public AiSummarizeTransformParameters getAiSummarizeTransformParameters() {
+            return this.aiSummarizeTransformParameters;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsTransforms setAiTranslateTransformParameters(AiTranslateTransformParameters aiTranslateTransformParameters) {
+            this.aiTranslateTransformParameters = aiTranslateTransformParameters;
+            return this;
+        }
+        public AiTranslateTransformParameters getAiTranslateTransformParameters() {
+            return this.aiTranslateTransformParameters;
         }
 
         public ListEventStreamingsResponseBodyDataEventStreamingsTransforms setArn(String arn) {
@@ -9834,7 +9974,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The transformation configurations.</p>
+         * <p>The event transformer configurations.</p>
          */
         @NameInMap("Transforms")
         public java.util.List<ListEventStreamingsResponseBodyDataEventStreamingsTransforms> transforms;
@@ -9926,7 +10066,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public java.util.List<ListEventStreamingsResponseBodyDataEventStreamings> eventStreamings;
 
         /**
-         * <p>Indicates the position from which the current call starts to read data. A value of empty string indicates that all data has been read. Set this value to the NextToken request parameter in the next call.</p>
+         * <p>Indicates whether there is more data to return. A value of empty string indicates that all data has been returned. If the value is not empty, set this value to the NextToken request parameter in the next call.</p>
          * 
          * <strong>example:</strong>
          * <p>177</p>

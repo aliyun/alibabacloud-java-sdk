@@ -3087,6 +3087,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ConnectionNamePrefix", request.connectionNamePrefix);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeType)) {
+            body.put("ExcludeType", request.excludeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             body.put("MaxResults", request.maxResults);
         }
@@ -3325,6 +3329,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AgentName", request.agentName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -3519,10 +3531,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists all knowledge bases bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</p>
+     * <p>Lists the knowledge bases bound to a Luma Agent in a specified namespace. Results are returned in pages. To retrieve the next page, pass the NextToken value from the previous response. An empty NextToken indicates that no more data is available. Expired bindings are skipped, so the number of entries on a single page may be less than MaxResults. Do not determine whether the last page is reached based on an insufficient number of entries on the current page.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists all knowledge bases bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</p>
+     * <p>Lists all knowledge bases bound to a Luma Agent in a specified namespace. Returns the complete set of bindings without pagination.</p>
      * 
      * @param request ListLumaKnowledgeBasesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3539,8 +3551,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Catalog", request.catalog);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
             body.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3562,10 +3582,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists all knowledge bases bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</p>
+     * <p>Lists the knowledge bases bound to a Luma Agent in a specified namespace. Results are returned in pages. To retrieve the next page, pass the NextToken value from the previous response. An empty NextToken indicates that no more data is available. Expired bindings are skipped, so the number of entries on a single page may be less than MaxResults. Do not determine whether the last page is reached based on an insufficient number of entries on the current page.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists all knowledge bases bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</p>
+     * <p>Lists all knowledge bases bound to a Luma Agent in a specified namespace. Returns the complete set of bindings without pagination.</p>
      * 
      * @param request ListLumaKnowledgeBasesRequest
      * @return ListLumaKnowledgeBasesResponse
@@ -3595,6 +3615,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
             body.put("Catalog", request.catalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3631,10 +3659,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists all event tables bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</p>
+     * <p>Lists the event tables bound to a Luma Agent in a specified namespace. Results are returned in pages. Pass the NextToken from the previous response to retrieve the next page. An empty NextToken indicates that no more data is available. Expired bindings are skipped, so the number of entries on a single page may be less than the Limit value. Do not use an insufficient number of entries on the current page to determine that the last page has been reached.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists all event tables bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</p>
+     * <p>Lists all event tables bound to a Luma Agent in a specified namespace. Returns the complete set of bindings without pagination.</p>
      * 
      * @param request ListLumaTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3651,8 +3679,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Catalog", request.catalog);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("Limit", request.limit);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
             body.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3674,10 +3710,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists all event tables bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</p>
+     * <p>Lists the event tables bound to a Luma Agent in a specified namespace. Results are returned in pages. Pass the NextToken from the previous response to retrieve the next page. An empty NextToken indicates that no more data is available. Expired bindings are skipped, so the number of entries on a single page may be less than the Limit value. Do not use an insufficient number of entries on the current page to determine that the last page has been reached.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists all event tables bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</p>
+     * <p>Lists all event tables bound to a Luma Agent in a specified namespace. Returns the complete set of bindings without pagination.</p>
      * 
      * @param request ListLumaTablesRequest
      * @return ListLumaTablesResponse
@@ -5016,6 +5052,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mcpServerId)) {
+            body.put("McpServerId", request.mcpServerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mcpServerName)) {
+            body.put("McpServerName", request.mcpServerName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.metadataShrink)) {

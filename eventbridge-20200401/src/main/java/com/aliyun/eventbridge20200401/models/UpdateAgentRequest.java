@@ -23,6 +23,20 @@ public class UpdateAgentRequest extends TeaModel {
     public String description;
 
     /**
+     * <strong>example:</strong>
+     * <p>bGXX51ULuGl10xrr</p>
+     */
+    @NameInMap("McpServerId")
+    public String mcpServerId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>eventhouse-agentbridge</p>
+     */
+    @NameInMap("McpServerName")
+    public String mcpServerName;
+
+    /**
      * <p>The associated metadata.</p>
      */
     @NameInMap("Metadata")
@@ -66,6 +80,22 @@ public class UpdateAgentRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateAgentRequest setMcpServerId(String mcpServerId) {
+        this.mcpServerId = mcpServerId;
+        return this;
+    }
+    public String getMcpServerId() {
+        return this.mcpServerId;
+    }
+
+    public UpdateAgentRequest setMcpServerName(String mcpServerName) {
+        this.mcpServerName = mcpServerName;
+        return this;
+    }
+    public String getMcpServerName() {
+        return this.mcpServerName;
     }
 
     public UpdateAgentRequest setMetadata(UpdateAgentRequestMetadata metadata) {

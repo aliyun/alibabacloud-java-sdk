@@ -61,13 +61,13 @@ public class CreateEventStreamingRequest extends TeaModel {
     public CreateEventStreamingRequestRunOptions runOptions;
 
     /**
-     * <p>The event target. You must specify exactly one type of Sink.</p>
+     * <p>The event target. You must select exactly one type of Sink.</p>
      */
     @NameInMap("Sink")
     public CreateEventStreamingRequestSink sink;
 
     /**
-     * <p>The event provider. You must specify one Source, and you can specify only one Source.</p>
+     * <p>The event provider. You must select exactly one Source type.</p>
      */
     @NameInMap("Source")
     public CreateEventStreamingRequestSource source;
@@ -79,7 +79,7 @@ public class CreateEventStreamingRequest extends TeaModel {
     public java.util.List<CreateEventStreamingRequestTags> tags;
 
     /**
-     * <p>The transform configurations.</p>
+     * <p>The Transform-related configurations.</p>
      */
     @NameInMap("Transforms")
     public java.util.List<CreateEventStreamingRequestTransforms> transforms;
@@ -163,7 +163,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestRunOptionsBatchWindow extends TeaModel {
         /**
-         * <p>The maximum number of events that the window can contain. When this threshold is reached, the data in the window is pushed downstream. If multiple windows exist, the push is triggered when any window meets the threshold.</p>
+         * <p>The maximum number of events that the window can contain. When this threshold is reached, the data in the window is pushed downstream. If multiple windows exist, a push is triggered when any one window meets the condition.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -172,7 +172,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public Integer countBasedWindow;
 
         /**
-         * <p>The maximum time range, in seconds, of events that the window can contain. When this threshold is reached, the data in the window is pushed downstream. If multiple windows exist, the push is triggered when any window meets the threshold.</p>
+         * <p>The maximum time range (in seconds) of events that the window can contain. When this threshold is reached, the data in the window is pushed downstream. If multiple windows exist, a push is triggered when any one window meets the condition.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -378,7 +378,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestRunOptions extends TeaModel {
         /**
-         * <p>The batch window.</p>
+         * <p>The batching window.</p>
          */
         @NameInMap("BatchWindow")
         public CreateEventStreamingRequestRunOptionsBatchWindow batchWindow;
@@ -395,8 +395,8 @@ public class CreateEventStreamingRequest extends TeaModel {
         /**
          * <p>The error tolerance policy. Valid values:</p>
          * <ul>
-         * <li>NONE: No tolerance for errors.</li>
-         * <li>ALL: Tolerate all errors.</li>
+         * <li>NONE: No errors are tolerated.</li>
+         * <li>ALL: All errors are tolerated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -406,7 +406,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String errorsTolerance;
 
         /**
-         * <p>The concurrency.</p>
+         * <p>The concurrency level.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -489,7 +489,7 @@ public class CreateEventStreamingRequest extends TeaModel {
     public static class CreateEventStreamingRequestSinkSinkApacheKafkaParametersDynamicTopic extends TeaModel {
         /**
          * <p>The transformation type.
-         * CONSTANT: a constant value.
+         * CONSTANT: a fixed value.
          * JSONPATH: extracts content from the upstream based on a path.</p>
          */
         @NameInMap("Form")
@@ -704,13 +704,13 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkApacheKafkaParametersSslKeystoreKey extends TeaModel {
         /**
-         * <p>[Required] The KMS resource ARN that stores the SSL private key. This parameter is used to locate the Key Management Service instance that stores the client private key. Format example: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-keystore-key-xxxx\&quot;. You can view the ARN information of the corresponding key in the KMS console.</p>
+         * <p>[Required] The Alibaba Cloud Resource Name (ARN) of the KMS resource that stores the SSL private key. This parameter is used to locate the Key Management Service instance that stores the client private key. Format example: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-keystore-key-xxxx\&quot;. You can view the ARN information of the corresponding key in the KMS console.</p>
          */
         @NameInMap("KmsArn")
         public String kmsArn;
 
         /**
-         * <p>[KMS KV mode] The key name in the KMS credential. If the KMS credential is stored as a key-value (KV) structure, specify this parameter to indicate the key that corresponds to the SSL private key. Example: if the KMS credential is \&quot;{&quot;ssl_keystore_key&quot;:&quot;-----BEGIN PRIVATE KEY-----...&quot;,&quot;ssl_truststore_key&quot;:&quot;...&quot;}\&quot;, set this parameter to \&quot;ssl_keystore_key\&quot;. If the KMS credential is in plaintext mode (the PEM content of the private key is stored directly), leave this parameter empty.</p>
+         * <p>[KMS KV mode] The key name in the KMS credential. If the KMS credential is stored as a key-value (KV) structure, specify this parameter to indicate the key that corresponds to the SSL private key. Example: if the KMS credential is \&quot;{&quot;ssl_keystore_key&quot;:&quot;-----BEGIN PRIVATE KEY-----...&quot;,&quot;ssl_truststore_key&quot;:&quot;...&quot;}\&quot;, set this parameter to \&quot;ssl_keystore_key\&quot;. If the KMS credential is in plain text mode (the PEM content of the private key is stored directly), leave this parameter empty.</p>
          */
         @NameInMap("KmsSecretValueKey")
         public String kmsSecretValueKey;
@@ -913,7 +913,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String sslKeyPassword;
 
         /**
-         * <p>[Required for mutual authentication] The Kafka client certificate chain. If the Kafka server enables mutual SSL authentication (ssl.client.auth=required), provide this parameter. Format: Base64-encoded PEM format, containing the client certificate and the complete certificate chain (client certificate first, followed by intermediate CA certificates, with the root CA certificate being optional). Ensure that each PEM file content starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;, then Base64-encode the concatenated content.</p>
+         * <p>[Required for mutual authentication] The Kafka client certificate chain. This parameter is required when the Kafka server enables mutual SSL authentication (ssl.client.auth=required). Format: Base64-encoded PEM format that contains the client certificate and the complete certificate chain (client certificate first, followed by intermediate CA certificates, with the root CA certificate being optional). Make sure that each PEM file starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;, and then Base64-encode the concatenated content.</p>
          */
         @NameInMap("SslKeystoreCertificateChain")
         public String sslKeystoreCertificateChain;
@@ -925,7 +925,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public CreateEventStreamingRequestSinkSinkApacheKafkaParametersSslKeystoreKey sslKeystoreKey;
 
         /**
-         * <p>[Required for SSL scenarios] The Kafka server trust certificate. This certificate is used to authenticate the validity of the SSL certificate of the Kafka broker and prevent man-in-the-middle attacks. Format requirement: Base64 encoding in PEM format. This typically contains the CA certificate or the signing certificate of the Kafka server. Example: Base64-encode the content of the CA certificate PEM file (make sure the content starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;). If Kafka uses a self-signed certificate, provide the CA certificate that issued the certificate.</p>
+         * <p>[Required for SSL scenarios] The Kafka server trust certificate. This certificate is used to authenticate the validity of the SSL certificate of the Kafka broker and prevent man-in-the-middle attacks. Format requirement: Base64-encoded PEM format, which typically contains the CA certificate or the server certificate of the Kafka server. Example: Base64-encode the content of the CA certificate PEM file (make sure the content starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;). If Kafka uses a self-signed certificate, provide the CA certificate that issued the certificate.</p>
          */
         @NameInMap("SslTruststoreCertificates")
         public String sslTruststoreCertificates;
@@ -1727,7 +1727,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         /**
          * <ul>
          * <li>If Form is set to CONSTANT: a constant value.</li>
-         * <li>If Form is set to JSONPATH: the JSONPath expression used to extract content.<blockquote>
+         * <li>If Form is set to JSONPATH: JSONPath-extracted content.<blockquote>
          * <p>The Value field cannot exceed 10,240 characters.</p>
          * </blockquote>
          * </li>
@@ -1791,8 +1791,8 @@ public class CreateEventStreamingRequest extends TeaModel {
 
         /**
          * <ul>
-         * <li>If Form is set to JSONPATH: the JSONPath expression used to extract content.</li>
-         * <li>If Form is set to TEMPLATE: the template variable.<blockquote>
+         * <li>If Form is set to JSONPATH: JSONPath-extracted content.</li>
+         * <li>If Form is set to TEMPLATE: template variable.<blockquote>
          * <p>The Value field cannot exceed 10,240 characters.</p>
          * </blockquote>
          * </li>
@@ -1855,7 +1855,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The JSONPath expression used to extract content.</p>
+         * <p>The JSONPath-extracted content.</p>
          * <blockquote>
          * <p>The Value field cannot exceed 10,240 characters.</p>
          * </blockquote>
@@ -1917,7 +1917,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String collection;
 
         /**
-         * <p>The schema field definition for table entries when inserting data into DashVector. The event content must be in JSON format after transformation.</p>
+         * <p>The schema field definition for table entries when inserting data into DashVector. The result after event content transformation must be in JSON format.</p>
          */
         @NameInMap("DashVectorSchemaParameters")
         public java.util.List<CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters> dashVectorSchemaParameters;
@@ -1956,7 +1956,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public CreateEventStreamingRequestSinkSinkDashVectorParametersPartition partition;
 
         /**
-         * <p>The primary key ID used when inserting or deleting records.</p>
+         * <p>The primary key ID for inserting or deleting records.</p>
          * <blockquote>
          * <p>If this field is not specified, a random primary key ID is used.</p>
          * </blockquote>
@@ -1965,7 +1965,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public CreateEventStreamingRequestSinkSinkDashVectorParametersPrimaryKeyId primaryKeyId;
 
         /**
-         * <p>The vector for the DashVector record to be inserted.</p>
+         * <p>The vector of the DashVector record to insert.</p>
          */
         @NameInMap("Vector")
         public CreateEventStreamingRequestSinkSinkDashVectorParametersVector vector;
@@ -2066,7 +2066,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The Record content template for the BLOB type.</p>
+         * <p>The record content template for the BLOB type.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -2175,7 +2175,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The role name for the task.</p>
+         * <p>The role name of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>test-role</p>
@@ -2391,7 +2391,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkDataHubParameters extends TeaModel {
         /**
-         * <p>The Record content template for the BLOB type.</p>
+         * <p>The record content template for the BLOB type.</p>
          */
         @NameInMap("Body")
         public CreateEventStreamingRequestSinkSinkDataHubParametersBody body;
@@ -2403,7 +2403,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public CreateEventStreamingRequestSinkSinkDataHubParametersProject project;
 
         /**
-         * <p>The role name for the task.</p>
+         * <p>The role name of the task.</p>
          */
         @NameInMap("RoleName")
         public CreateEventStreamingRequestSinkSinkDataHubParametersRoleName roleName;
@@ -3393,7 +3393,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The delivery concurrency. The minimum value is 1.</p>
+         * <p>The delivery concurrency. Minimum value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -3554,8 +3554,8 @@ public class CreateEventStreamingRequest extends TeaModel {
         /**
          * <p>Specifies whether the invocation is synchronous or asynchronous. Valid values:</p>
          * <ul>
-         * <li>Sync: synchronous.</li>
-         * <li>Async: asynchronous.</li>
+         * <li>Sync: synchronous</li>
+         * <li>Async: asynchronous</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -3721,7 +3721,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public CreateEventStreamingRequestSinkSinkFcParametersBody body;
 
         /**
-         * <p>The delivery concurrency. The minimum value is 1.</p>
+         * <p>The delivery concurrency. Minimum value: 1.</p>
          */
         @NameInMap("Concurrency")
         public CreateEventStreamingRequestSinkSinkFcParametersConcurrency concurrency;
@@ -3738,8 +3738,8 @@ public class CreateEventStreamingRequest extends TeaModel {
         /**
          * <p>Specifies whether the invocation is synchronous or asynchronous. Valid values:</p>
          * <ul>
-         * <li>Sync: synchronous.</li>
-         * <li>Async: asynchronous.</li>
+         * <li>Sync: synchronous</li>
+         * <li>Async: asynchronous</li>
          * </ul>
          */
         @NameInMap("InvocationType")
@@ -4145,8 +4145,8 @@ public class CreateEventStreamingRequest extends TeaModel {
          * <p>The acknowledgment mode for writing to Kafka:</p>
          * <ul>
          * <li>acks=0: No response is required from the server. This mode delivers high performance but has a high risk of data loss.</li>
-         * <li>acks=1: A response is returned after the primary node on the server writes data. This mode delivers moderate performance and has a moderate risk of data loss. Data loss may occur if the primary node goes down.</li>
-         * <li>acks=all: A response is returned only after the primary node on the server writes data and the secondary nodes complete synchronization. This mode delivers lower performance but provides higher data security. Data loss occurs only if both the primary and secondary nodes go down.</li>
+         * <li>acks=1: A response is returned after the primary node on the server writes the data. This mode delivers moderate performance and has a moderate risk of data loss. Data loss may occur if the primary node goes down.</li>
+         * <li>acks=all: A response is returned only after the primary node on the server writes the data and the secondary nodes synchronize the data. This mode delivers lower performance but provides higher data security. Data loss occurs only if both the primary and secondary nodes go down.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4189,7 +4189,7 @@ public class CreateEventStreamingRequest extends TeaModel {
     public static class CreateEventStreamingRequestSinkSinkKafkaParametersDynamicTopic extends TeaModel {
         /**
          * <p>The transformation type.
-         * CONSTANT: a constant value.
+         * CONSTANT: a fixed value.
          * JSONPATH: extracts content from the upstream based on a path.</p>
          */
         @NameInMap("Form")
@@ -4522,8 +4522,8 @@ public class CreateEventStreamingRequest extends TeaModel {
          * <p>The acknowledgment mode for writing to Kafka:</p>
          * <ul>
          * <li>acks=0: No response is required from the server. This mode delivers high performance but has a high risk of data loss.</li>
-         * <li>acks=1: A response is returned after the primary node on the server writes data. This mode delivers moderate performance and has a moderate risk of data loss. Data loss may occur if the primary node goes down.</li>
-         * <li>acks=all: A response is returned only after the primary node on the server writes data and the secondary nodes complete synchronization. This mode delivers lower performance but provides higher data security. Data loss occurs only if both the primary and secondary nodes go down.</li>
+         * <li>acks=1: A response is returned after the primary node on the server writes the data. This mode delivers moderate performance and has a moderate risk of data loss. Data loss may occur if the primary node goes down.</li>
+         * <li>acks=all: A response is returned only after the primary node on the server writes the data and the secondary nodes synchronize the data. This mode delivers lower performance but provides higher data security. Data loss occurs only if both the primary and secondary nodes go down.</li>
          * </ul>
          */
         @NameInMap("Acks")
@@ -5273,7 +5273,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkPrometheusParametersData extends TeaModel {
         /**
-         * <p>The format of the transformation. Default value: JSONPATH.</p>
+         * <p>The transformation format. Default value: JSONPATH.</p>
          * 
          * <strong>example:</strong>
          * <p>JSAONPATH</p>
@@ -5338,7 +5338,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String form;
 
         /**
-         * <p>The HTTP request header template. Specify this parameter when Form is set to TEMPLATE. The result after event content transformation must be in JSON format.</p>
+         * <p>The HTTP request header template. Specify this parameter when Form is set to TEMPLATE. The transformed event content must be in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -5351,10 +5351,12 @@ public class CreateEventStreamingRequest extends TeaModel {
         /**
          * <ul>
          * <li>If Form is set to CONSTANT: the constant value.</li>
-         * <li>If Form is set to JSONPATH: the content extracted by using JSONPath.</li>
+         * <li>If Form is set to JSONPATH: the JSONPath expression used to extract content.</li>
          * <li>If Form is set to TEMPLATE: the template variable.</li>
          * </ul>
+         * <blockquote>
          * <p>Note: The Value field cannot exceed 10,240 characters.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -6011,7 +6013,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The name of the Exchange in the MSMQ RabbitMQ message instance.</p>
+         * <p>The name of the Exchange in the ApsaraMQ for RabbitMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>a_exchange</p>
@@ -6070,7 +6072,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The instance ID of the MSMQ RabbitMQ message instance.</p>
+         * <p>The instance ID of the ApsaraMQ for RabbitMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>a5ff91ad4f3f24947887fe184fc2****</p>
@@ -6552,7 +6554,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The name of the Vhost in the MSMQ RabbitMQ message instance.</p>
+         * <p>The name of the Vhost in the ApsaraMQ for RabbitMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rabbit-host</p>
@@ -6646,7 +6648,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public CreateEventStreamingRequestSinkSinkRabbitMQParametersExchange exchange;
 
         /**
-         * <p>The event target type is MSMQ RabbitMQ message.</p>
+         * <p>The event target type is ApsaraMQ for RabbitMQ.</p>
          */
         @NameInMap("InstanceId")
         public CreateEventStreamingRequestSinkSinkRabbitMQParametersInstanceId instanceId;
@@ -6691,7 +6693,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public CreateEventStreamingRequestSinkSinkRabbitMQParametersVSwitchIds vSwitchIds;
 
         /**
-         * <p>The name of the Vhost in the MSMQ RabbitMQ message instance.</p>
+         * <p>The name of the Vhost in the ApsaraMQ for RabbitMQ instance.</p>
          */
         @NameInMap("VirtualHostName")
         public CreateEventStreamingRequestSinkSinkRabbitMQParametersVirtualHostName virtualHostName;
@@ -7288,8 +7290,8 @@ public class CreateEventStreamingRequest extends TeaModel {
         /**
          * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li>Cloud_4: Alibaba Cloud RocketMQ 4.0 instance (default).</li>
-         * <li>Cloud_5: Alibaba Cloud RocketMQ 5.0 instance.</li>
+         * <li>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance (default).</li>
+         * <li>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance.</li>
          * <li>SelfBuilt: self-managed Apache RocketMQ cluster.</li>
          * </ul>
          * 
@@ -8429,7 +8431,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The role used for authorization of the event bus EventBridge to read SLS log content. To use this role, the following conditions must be met: when you create the role for the service in the Resource Access Management (RAM) console, select &quot;Alibaba Cloud Service&quot; as the trusted entity, and select &quot;event bus&quot; as the trusted service.</p>
+         * <p>The role used for authorization of the event bus EventBridge to read SLS log content. When you create the role in the Resource Access Management (RAM) console, set the trusted entity type to Alibaba Cloud Service and set the trusted service to event bus.</p>
          * 
          * <strong>example:</strong>
          * <p>testRole</p>
@@ -8485,7 +8487,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The topic of the log, which corresponds to the SLS reserved field &quot;<strong>topic</strong>&quot;.</p>
+         * <p>The topic of the log, which corresponds to the SLS reserved field <strong>topic</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>testTopic</p>
@@ -8560,13 +8562,13 @@ public class CreateEventStreamingRequest extends TeaModel {
         public CreateEventStreamingRequestSinkSinkSLSParametersProject project;
 
         /**
-         * <p>The role used for authorization of the event bus EventBridge to read SLS log content. To use this role, the following conditions must be met: when you create the role for the service in the Resource Access Management (RAM) console, select &quot;Alibaba Cloud Service&quot; as the trusted entity, and select &quot;event bus&quot; as the trusted service.</p>
+         * <p>The role used for authorization of the event bus EventBridge to read SLS log content. When you create the role in the Resource Access Management (RAM) console, set the trusted entity type to Alibaba Cloud Service and set the trusted service to event bus.</p>
          */
         @NameInMap("RoleName")
         public CreateEventStreamingRequestSinkSinkSLSParametersRoleName roleName;
 
         /**
-         * <p>The topic of the log, which corresponds to the SLS reserved field &quot;<strong>topic</strong>&quot;.</p>
+         * <p>The topic of the log, which corresponds to the SLS reserved field <strong>topic</strong>.</p>
          */
         @NameInMap("Topic")
         public CreateEventStreamingRequestSinkSinkSLSParametersTopic topic;
@@ -8702,7 +8704,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public CreateEventStreamingRequestSinkSinkFcParameters sinkFcParameters;
 
         /**
-         * <p>The Sink FnF parameters.</p>
+         * <p>The Sink Fnf parameters.</p>
          */
         @NameInMap("SinkFnfParameters")
         public CreateEventStreamingRequestSinkSinkFnfParameters sinkFnfParameters;
@@ -9006,13 +9008,13 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSourceSourceApacheKafkaParametersSslKeystoreKey extends TeaModel {
         /**
-         * <p>[Required] The KMS resource ARN that stores the SSL private key. This parameter is used to locate the Key Management Service instance that stores the client private key. Format example: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-keystore-key-xxxx\&quot;. You can view the ARN information of the corresponding key in the KMS console.</p>
+         * <p>[Required] The Alibaba Cloud Resource Name (ARN) of the KMS resource that stores the SSL private key. This parameter is used to locate the Key Management Service instance that stores the client private key. Format example: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-keystore-key-xxxx\&quot;. You can view the ARN information of the corresponding key in the KMS console.</p>
          */
         @NameInMap("KmsArn")
         public String kmsArn;
 
         /**
-         * <p>[KMS KV mode] The key name in the KMS credential. If the KMS credential is stored as a key-value (KV) structure, specify this parameter to indicate the key that corresponds to the SSL private key. Example: if the KMS credential is \&quot;{&quot;ssl_keystore_key&quot;:&quot;-----BEGIN PRIVATE KEY-----...&quot;,&quot;ssl_truststore_key&quot;:&quot;...&quot;}\&quot;, set this parameter to \&quot;ssl_keystore_key\&quot;. If the KMS credential is in plaintext mode (the PEM content of the private key is stored directly), leave this parameter empty.</p>
+         * <p>[KMS KV mode] The key name in the KMS credential. If the KMS credential is stored as a key-value (KV) structure, specify this parameter to indicate the key that corresponds to the SSL private key. Example: if the KMS credential is \&quot;{&quot;ssl_keystore_key&quot;:&quot;-----BEGIN PRIVATE KEY-----...&quot;,&quot;ssl_truststore_key&quot;:&quot;...&quot;}\&quot;, set this parameter to \&quot;ssl_keystore_key\&quot;. If the KMS credential is in plain text mode (the PEM content of the private key is stored directly), leave this parameter empty.</p>
          */
         @NameInMap("KmsSecretValueKey")
         public String kmsSecretValueKey;
@@ -9060,10 +9062,10 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String networkType;
 
         /**
-         * <p>The consumer offset. Valid values:</p>
+         * <p>The offset reset policy. Valid values:</p>
          * <ul>
          * <li>latest: The system reads data from the latest offset.</li>
-         * <li>earliest: The system reads data from the earliest offset. This configuration is supported only for the first initialization of an unused group.</li>
+         * <li>earliest: The system reads data from the earliest offset. This value is supported only for the first initialization of an unused consumer group.</li>
          * </ul>
          */
         @NameInMap("OffsetReset")
@@ -9111,19 +9113,19 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String sslKeyPassword;
 
         /**
-         * <p>[Required for mutual authentication] The Kafka client certificate chain. If the Kafka server enables mutual SSL authentication (ssl.client.auth=required), provide this parameter. Format: Base64-encoded PEM format, containing the client certificate and the complete certificate chain (client certificate first, followed by intermediate CA certificates, with the root CA certificate being optional). Ensure that each PEM file content starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;, then Base64-encode the concatenated content.</p>
+         * <p>[Required for mutual authentication] The Kafka client certificate chain. This parameter is required when the Kafka server enables mutual SSL authentication (ssl.client.auth=required). Format: Base64-encoded PEM format that contains the client certificate and the complete certificate chain (client certificate first, followed by intermediate CA certificates, with the root CA certificate being optional). Make sure that each PEM file starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;, and then Base64-encode the concatenated content.</p>
          */
         @NameInMap("SslKeystoreCertificateChain")
         public String sslKeystoreCertificateChain;
 
         /**
-         * <p>[Required for bidirectional authentication] The SSL private key configuration object. If the Kafka server enables bidirectional SSL authentication, provide the client private key. Only KMS pattern is supported: specify the Key Management Service EPS resource that stores the private key by using KmsArn. The system retrieves the private key content from KMS only in memory, which provides higher security. Configuration example: {\&quot;KmsArn\&quot;: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-key-xxxx\&quot;, \&quot;KmsSecretValueKey\&quot;: \&quot;keystore_private_key\&quot;}</p>
+         * <p>[Required for bidirectional authentication] The SSL private key configuration object. When the Kafka server enables bidirectional SSL authentication, you must provide the client private key. Only KMS pattern is supported: specify the Key Management Service EPS resource that stores the private key by using KmsArn. The system retrieves the private key content from KMS only in memory, which provides higher security. Configuration example: {\&quot;KmsArn\&quot;: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-key-xxxx\&quot;, \&quot;KmsSecretValueKey\&quot;: \&quot;keystore_private_key\&quot;}</p>
          */
         @NameInMap("SslKeystoreKey")
         public CreateEventStreamingRequestSourceSourceApacheKafkaParametersSslKeystoreKey sslKeystoreKey;
 
         /**
-         * <p>[Required for SSL] The Kafka server trust certificate. This parameter is used to authenticate the legitimacy of the Kafka broker SSL certificate and prevent man-in-the-middle attacks. Format: Base64 encoding of PEM format, typically containing the CA certificate of the Kafka server or the server certificate itself. Example: Base64-encode the PEM file content of the CA certificate (ensure it starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;). If Kafka uses a self-signed certificate, provide the CA certificate that issued the certificate.</p>
+         * <p>[Required for SSL] The Kafka server trust certificate. This certificate is used to authenticate the SSL certificate of the Kafka broker and prevent man-in-the-middle attacks. Format: Base64-encoded PEM format that typically contains the CA certificate or the server certificate of the Kafka server. Example: Base64-encode the PEM file content of the CA certificate (make sure that it starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;). If Kafka uses a self-signed certificate, provide the CA certificate that issued the certificate.</p>
          */
         @NameInMap("SslTruststoreCertificates")
         public String sslTruststoreCertificates;
@@ -9576,7 +9578,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String brokerUrl;
 
         /**
-         * <p>The consumer offset, which is the timestamp of the first data record consumed by the SDK client. The value is a UNIX timestamp.</p>
+         * <p>The consumer offset, which is the timestamp when the SDK client consumes the first data record. The value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1620962769</p>
@@ -9742,7 +9744,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The network configuration. Default value: Default. The value for VPC networks is PublicNetwork.</p>
+         * <p>The network configuration. The default value is Default. For VPC networks, the value is PublicNetwork.</p>
          * 
          * <strong>example:</strong>
          * <p>Default</p>
@@ -10100,8 +10102,8 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The delimiter. In chunked loading mode, this delimiter is used as the text chunk identifier. By default, the newline character 
-         *  is used as the delimiter.</p>
+         * <p>The delimiter. In chunked loading mode, this delimiter is used as the text chunk identifier. The default delimiter is the newline character 
+         * .</p>
          * 
          * <strong>example:</strong>
          * <p>\n</p>
@@ -10448,7 +10450,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSourceSourceRabbitMQParameters extends TeaModel {
         /**
-         * <p>The instance ID of the ApsaraMQ for RabbitMQ instance.</p>
+         * <p>The instance ID of the MSMQ for RabbitMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>gtm-cn-k2c2yfg****</p>
@@ -10460,7 +10462,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String networkType;
 
         /**
-         * <p>The name of the queue in the ApsaraMQ for RabbitMQ instance.</p>
+         * <p>The name of the queue in the MSMQ for RabbitMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -10484,7 +10486,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String vSwitchIds;
 
         /**
-         * <p>The name of the vhost in the ApsaraMQ for RabbitMQ instance.</p>
+         * <p>The name of the vhost in the MSMQ for RabbitMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>eb-connect</p>
@@ -10673,7 +10675,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String filterType;
 
         /**
-         * <p>The Group ID of ApsaraMQ for RocketMQ.</p>
+         * <p>The Group ID of the MSMQ for RocketMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>GID_group1</p>
@@ -10691,7 +10693,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String instanceEndpoint;
 
         /**
-         * <p>The region where the ApsaraMQ for RocketMQ instance resides.</p>
+         * <p>The region where the MSMQ for RocketMQ instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>default_C56C36026****</p>
@@ -10733,8 +10735,8 @@ public class CreateEventStreamingRequest extends TeaModel {
         /**
          * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li>Cloud_4: Alibaba Cloud RocketMQ 4.0 instance (default).</li>
-         * <li>Cloud_5: Alibaba Cloud RocketMQ 5.0 instance.</li>
+         * <li>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance (default).</li>
+         * <li>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance.</li>
          * <li>SelfBuilt: self-managed Apache RocketMQ cluster.</li>
          * </ul>
          * 
@@ -10787,9 +10789,9 @@ public class CreateEventStreamingRequest extends TeaModel {
         /**
          * <p>The consumption offset of the message. Valid values:</p>
          * <ul>
-         * <li>CONSUME_FROM_LAST_OFFSET: Consumption starts from the latest offset.</li>
-         * <li>CONSUME_FROM_FIRST_OFFSET: Consumption starts from the earliest offset.</li>
-         * <li>CONSUME_FROM_TIMESTAMP: Consumption starts from the offset at a specified point in time.</li>
+         * <li>CONSUME_FROM_LAST_OFFSET: Start consuming from the latest offset.</li>
+         * <li>CONSUME_FROM_FIRST_OFFSET: Start consuming from the earliest offset.</li>
+         * <li>CONSUME_FROM_TIMESTAMP: Start consuming from the offset at a specified point in time.</li>
          * </ul>
          * <p>Default value: CONSUME_FROM_LAST_OFFSET.</p>
          * 
@@ -11055,7 +11057,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSourceSourceSLSParameters extends TeaModel {
         /**
-         * <p>The initial consumption offset. You can select the earliest or latest offset, which corresponds to &quot;begin&quot; and &quot;end&quot; respectively. You can also start consumption from a specified time, in seconds.</p>
+         * <p>The initial consumption offset. You can select the earliest or latest offset, which corresponds to &quot;begin&quot; and &quot;end&quot; respectively. You can also start consuming from a specified time in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>end</p>
@@ -11082,7 +11084,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String project;
 
         /**
-         * <p>The role that provides authorization for the event bus EventBridge to read SLS log content. When you create the role used by the service in the Resource Access Management (RAM) console, select &quot;Alibaba Cloud Service&quot; and set &quot;Trusted Service&quot; to &quot;event bus&quot;.</p>
+         * <p>The role that provides authorization for the event bus EventBridge to read SLS log content. When you create the role used by the service in the Resource Access Management (RAM) console, select Alibaba Cloud Service as the trusted entity and select event bus as the trusted service.</p>
          * 
          * <strong>example:</strong>
          * <p>testRole</p>
@@ -11459,7 +11461,67 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestTransforms extends TeaModel {
         /**
-         * <p>The ARN of the Alibaba Cloud service, such as the ARN of a function in Function Compute.</p>
+         * <p>The AI local text chunking parameters.</p>
+         */
+        @NameInMap("AiChunkTransformParameters")
+        public AiChunkTransformParameters aiChunkTransformParameters;
+
+        /**
+         * <p>The AI text classification parameters.</p>
+         */
+        @NameInMap("AiClassifyTransformParameters")
+        public AiClassifyTransformParameters aiClassifyTransformParameters;
+
+        /**
+         * <p>The AI embedding parameters.</p>
+         */
+        @NameInMap("AiEmbedTransformParameters")
+        public AiEmbedTransformParameters aiEmbedTransformParameters;
+
+        /**
+         * <p>The AI information extraction parameters.</p>
+         */
+        @NameInMap("AiExtractTransformParameters")
+        public AiExtractTransformParameters aiExtractTransformParameters;
+
+        /**
+         * <p>The AI conditional filtering parameters.</p>
+         */
+        @NameInMap("AiFilterTransformParameters")
+        public AiFilterTransformParameters aiFilterTransformParameters;
+
+        /**
+         * <p>The AI semantic chunking parameters.</p>
+         */
+        @NameInMap("AiPrepSearchTransformParameters")
+        public AiPrepSearchTransformParameters aiPrepSearchTransformParameters;
+
+        /**
+         * <p>The AI data masking parameters.</p>
+         */
+        @NameInMap("AiRedactTransformParameters")
+        public AiRedactTransformParameters aiRedactTransformParameters;
+
+        /**
+         * <p>The AI emotion analysis parameters.</p>
+         */
+        @NameInMap("AiSentimentAnalysisTransformParameters")
+        public AiSentimentAnalysisTransformParameters aiSentimentAnalysisTransformParameters;
+
+        /**
+         * <p>The AI summarization parameters.</p>
+         */
+        @NameInMap("AiSummarizeTransformParameters")
+        public AiSummarizeTransformParameters aiSummarizeTransformParameters;
+
+        /**
+         * <p>The AI translation parameters.</p>
+         */
+        @NameInMap("AiTranslateTransformParameters")
+        public AiTranslateTransformParameters aiTranslateTransformParameters;
+
+        /**
+         * <p>The ARN of the cloud service, such as the ARN of a function in Function Compute.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:fc:cn-hangzhou:*****:services/demo-service.LATEST/functions/demo-func</p>
@@ -11479,6 +11541,86 @@ public class CreateEventStreamingRequest extends TeaModel {
         public static CreateEventStreamingRequestTransforms build(java.util.Map<String, ?> map) throws Exception {
             CreateEventStreamingRequestTransforms self = new CreateEventStreamingRequestTransforms();
             return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestTransforms setAiChunkTransformParameters(AiChunkTransformParameters aiChunkTransformParameters) {
+            this.aiChunkTransformParameters = aiChunkTransformParameters;
+            return this;
+        }
+        public AiChunkTransformParameters getAiChunkTransformParameters() {
+            return this.aiChunkTransformParameters;
+        }
+
+        public CreateEventStreamingRequestTransforms setAiClassifyTransformParameters(AiClassifyTransformParameters aiClassifyTransformParameters) {
+            this.aiClassifyTransformParameters = aiClassifyTransformParameters;
+            return this;
+        }
+        public AiClassifyTransformParameters getAiClassifyTransformParameters() {
+            return this.aiClassifyTransformParameters;
+        }
+
+        public CreateEventStreamingRequestTransforms setAiEmbedTransformParameters(AiEmbedTransformParameters aiEmbedTransformParameters) {
+            this.aiEmbedTransformParameters = aiEmbedTransformParameters;
+            return this;
+        }
+        public AiEmbedTransformParameters getAiEmbedTransformParameters() {
+            return this.aiEmbedTransformParameters;
+        }
+
+        public CreateEventStreamingRequestTransforms setAiExtractTransformParameters(AiExtractTransformParameters aiExtractTransformParameters) {
+            this.aiExtractTransformParameters = aiExtractTransformParameters;
+            return this;
+        }
+        public AiExtractTransformParameters getAiExtractTransformParameters() {
+            return this.aiExtractTransformParameters;
+        }
+
+        public CreateEventStreamingRequestTransforms setAiFilterTransformParameters(AiFilterTransformParameters aiFilterTransformParameters) {
+            this.aiFilterTransformParameters = aiFilterTransformParameters;
+            return this;
+        }
+        public AiFilterTransformParameters getAiFilterTransformParameters() {
+            return this.aiFilterTransformParameters;
+        }
+
+        public CreateEventStreamingRequestTransforms setAiPrepSearchTransformParameters(AiPrepSearchTransformParameters aiPrepSearchTransformParameters) {
+            this.aiPrepSearchTransformParameters = aiPrepSearchTransformParameters;
+            return this;
+        }
+        public AiPrepSearchTransformParameters getAiPrepSearchTransformParameters() {
+            return this.aiPrepSearchTransformParameters;
+        }
+
+        public CreateEventStreamingRequestTransforms setAiRedactTransformParameters(AiRedactTransformParameters aiRedactTransformParameters) {
+            this.aiRedactTransformParameters = aiRedactTransformParameters;
+            return this;
+        }
+        public AiRedactTransformParameters getAiRedactTransformParameters() {
+            return this.aiRedactTransformParameters;
+        }
+
+        public CreateEventStreamingRequestTransforms setAiSentimentAnalysisTransformParameters(AiSentimentAnalysisTransformParameters aiSentimentAnalysisTransformParameters) {
+            this.aiSentimentAnalysisTransformParameters = aiSentimentAnalysisTransformParameters;
+            return this;
+        }
+        public AiSentimentAnalysisTransformParameters getAiSentimentAnalysisTransformParameters() {
+            return this.aiSentimentAnalysisTransformParameters;
+        }
+
+        public CreateEventStreamingRequestTransforms setAiSummarizeTransformParameters(AiSummarizeTransformParameters aiSummarizeTransformParameters) {
+            this.aiSummarizeTransformParameters = aiSummarizeTransformParameters;
+            return this;
+        }
+        public AiSummarizeTransformParameters getAiSummarizeTransformParameters() {
+            return this.aiSummarizeTransformParameters;
+        }
+
+        public CreateEventStreamingRequestTransforms setAiTranslateTransformParameters(AiTranslateTransformParameters aiTranslateTransformParameters) {
+            this.aiTranslateTransformParameters = aiTranslateTransformParameters;
+            return this;
+        }
+        public AiTranslateTransformParameters getAiTranslateTransformParameters() {
+            return this.aiTranslateTransformParameters;
         }
 
         public CreateEventStreamingRequestTransforms setArn(String arn) {

@@ -93,6 +93,15 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
 
     public static class ListLumaNamespacesResponseBodyData extends TeaModel {
         /**
+         * <p>本次请求实际生效的每页数量。未传 Limit 时为服务端默认值，超出上限时为收敛后的值</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("Limit")
+        public Integer limit;
+
+        /**
          * <p>The list of namespaces bound to the Agent.</p>
          * 
          * <strong>example:</strong>
@@ -101,9 +110,35 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         @NameInMap("Namespaces")
         public java.util.List<Namespace> namespaces;
 
+        /**
+         * <p>下一页起始Token，传入下次请求的 NextToken 可获取下一页；为空表示已无更多数据</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("NextToken")
+        public String nextToken;
+
+        /**
+         * <p>Agent 绑定的命名空间总数，与本页返回条数无关</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("TotalCount")
+        public Integer totalCount;
+
         public static ListLumaNamespacesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListLumaNamespacesResponseBodyData self = new ListLumaNamespacesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListLumaNamespacesResponseBodyData setLimit(Integer limit) {
+            this.limit = limit;
+            return this;
+        }
+        public Integer getLimit() {
+            return this.limit;
         }
 
         public ListLumaNamespacesResponseBodyData setNamespaces(java.util.List<Namespace> namespaces) {
@@ -112,6 +147,22 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         }
         public java.util.List<Namespace> getNamespaces() {
             return this.namespaces;
+        }
+
+        public ListLumaNamespacesResponseBodyData setNextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+        public String getNextToken() {
+            return this.nextToken;
+        }
+
+        public ListLumaNamespacesResponseBodyData setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

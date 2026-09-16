@@ -23,6 +23,20 @@ public class UpdateAgentShrinkRequest extends TeaModel {
     public String description;
 
     /**
+     * <strong>example:</strong>
+     * <p>bGXX51ULuGl10xrr</p>
+     */
+    @NameInMap("McpServerId")
+    public String mcpServerId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>eventhouse-agentbridge</p>
+     */
+    @NameInMap("McpServerName")
+    public String mcpServerName;
+
+    /**
      * <p>The associated metadata.</p>
      */
     @NameInMap("Metadata")
@@ -66,6 +80,22 @@ public class UpdateAgentShrinkRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateAgentShrinkRequest setMcpServerId(String mcpServerId) {
+        this.mcpServerId = mcpServerId;
+        return this;
+    }
+    public String getMcpServerId() {
+        return this.mcpServerId;
+    }
+
+    public UpdateAgentShrinkRequest setMcpServerName(String mcpServerName) {
+        this.mcpServerName = mcpServerName;
+        return this;
+    }
+    public String getMcpServerName() {
+        return this.mcpServerName;
     }
 
     public UpdateAgentShrinkRequest setMetadataShrink(String metadataShrink) {

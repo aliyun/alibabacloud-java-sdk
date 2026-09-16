@@ -61,13 +61,13 @@ public class CreateEventStreamingShrinkRequest extends TeaModel {
     public String runOptionsShrink;
 
     /**
-     * <p>The event target. You must specify exactly one type of Sink.</p>
+     * <p>The event target. You must select exactly one type of Sink.</p>
      */
     @NameInMap("Sink")
     public String sinkShrink;
 
     /**
-     * <p>The event provider. You must specify one Source, and you can specify only one Source.</p>
+     * <p>The event provider. You must select exactly one Source type.</p>
      */
     @NameInMap("Source")
     public String sourceShrink;
@@ -79,7 +79,7 @@ public class CreateEventStreamingShrinkRequest extends TeaModel {
     public java.util.List<CreateEventStreamingShrinkRequestTags> tags;
 
     /**
-     * <p>The transform configurations.</p>
+     * <p>The Transform-related configurations.</p>
      */
     @NameInMap("Transforms")
     public String transformsShrink;

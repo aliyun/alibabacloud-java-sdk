@@ -14,6 +14,15 @@ public class ListConnectionsRequest extends TeaModel {
     public String connectionNamePrefix;
 
     /**
+     * <p>排除单个连接类型，取值范围与 Type 相同。传入单个类型名称，不支持数组或逗号分隔的多个值。例如传入 Http 可排除 HTTP 类型的连接。未传或传入空字符串时不排除任何类型；与 Type 相同时返回空列表。分页与总数均在过滤后计算。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Http</p>
+     */
+    @NameInMap("ExcludeType")
+    public String excludeType;
+
+    /**
      * <p>The maximum number of entries to return per request. You can use this parameter together with NextToken to implement paging.</p>
      * <ul>
      * <li>Default value: 10.</li>
@@ -57,6 +66,14 @@ public class ListConnectionsRequest extends TeaModel {
     }
     public String getConnectionNamePrefix() {
         return this.connectionNamePrefix;
+    }
+
+    public ListConnectionsRequest setExcludeType(String excludeType) {
+        this.excludeType = excludeType;
+        return this;
+    }
+    public String getExcludeType() {
+        return this.excludeType;
     }
 
     public ListConnectionsRequest setMaxResults(Long maxResults) {

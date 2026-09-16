@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLumaKnowledgeBasesResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of Success indicates a successful call. Otherwise, a specific error code is returned.</p>
+     * <p>The response code. A value of Success indicates that the call was successful. If the call fails, a specific error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class ListLumaKnowledgeBasesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The list of knowledge bases bound to the agent. All results are returned at once without pagination.</p>
+     * <p>The list of knowledge bases bound to the agent, including entries and pagination information.</p>
      */
     @NameInMap("Data")
     public ListLumaKnowledgeBasesResponseBodyData data;
 
     /**
-     * <p>The message returned by the operation. The value is Operation success if the call succeeds, or a specific error description if the call fails.</p>
+     * <p>The message returned by the operation. The value Operation success is returned if the call was successful. A specific error description is returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>Operation success</p>
@@ -29,7 +29,7 @@ public class ListLumaKnowledgeBasesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique identifier of the request, used for troubleshooting and ticket feedback.</p>
+     * <p>The unique ID of the request. Use this ID for troubleshooting and when you submit a ticket.</p>
      * 
      * <strong>example:</strong>
      * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
@@ -38,7 +38,7 @@ public class ListLumaKnowledgeBasesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. A value of true indicates success.</p>
+     * <p>Indicates whether the call was successful. A value of true indicates that the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -101,6 +101,33 @@ public class ListLumaKnowledgeBasesResponseBody extends TeaModel {
         @NameInMap("KnowledgeBases")
         public java.util.List<KnowledgeBase> knowledgeBases;
 
+        /**
+         * <p>The maximum number of results per page that takes effect for this request. If MaxResults is not specified, this value is the server default. If the specified value exceeds the upper limit, this value is the adjusted value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        @NameInMap("MaxResults")
+        public Integer maxResults;
+
+        /**
+         * <p>The pagination token for the next page (an opaque string). Pass this value as the NextToken parameter in the next request to retrieve the next page. An empty value indicates that no more data is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca1eb85f5d99c7d6a97e6****</p>
+         */
+        @NameInMap("NextToken")
+        public String nextToken;
+
+        /**
+         * <p>The total number of knowledge bases bound to the agent, regardless of the number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("TotalCount")
+        public Integer totalCount;
+
         public static ListLumaKnowledgeBasesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListLumaKnowledgeBasesResponseBodyData self = new ListLumaKnowledgeBasesResponseBodyData();
             return TeaModel.build(map, self);
@@ -112,6 +139,30 @@ public class ListLumaKnowledgeBasesResponseBody extends TeaModel {
         }
         public java.util.List<KnowledgeBase> getKnowledgeBases() {
             return this.knowledgeBases;
+        }
+
+        public ListLumaKnowledgeBasesResponseBodyData setMaxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+        public Integer getMaxResults() {
+            return this.maxResults;
+        }
+
+        public ListLumaKnowledgeBasesResponseBodyData setNextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+        public String getNextToken() {
+            return this.nextToken;
+        }
+
+        public ListLumaKnowledgeBasesResponseBodyData setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

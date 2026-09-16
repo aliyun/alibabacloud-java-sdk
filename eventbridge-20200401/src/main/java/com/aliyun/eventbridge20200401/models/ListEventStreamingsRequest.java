@@ -7,7 +7,7 @@ public class ListEventStreamingsRequest extends TeaModel {
     /**
      * <p>The maximum number of entries to return per request. You can use this parameter together with NextToken to implement paging.</p>
      * <blockquote>
-     * <p>Notice: The maximum number of entries returned per request cannot exceed 100.</p>
+     * <p>Notice: The maximum number of entries to return per request cannot exceed 100.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

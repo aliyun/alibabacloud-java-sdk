@@ -10,6 +10,20 @@ public class Agent extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8vHW4mDRxxxxx</p>
+     */
+    @NameInMap("McpServerId")
+    public String mcpServerId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>data-analyze-agent</p>
+     */
+    @NameInMap("McpServerName")
+    public String mcpServerName;
+
     @NameInMap("Metadata")
     public Metadata metadata;
 
@@ -41,6 +55,22 @@ public class Agent extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public Agent setMcpServerId(String mcpServerId) {
+        this.mcpServerId = mcpServerId;
+        return this;
+    }
+    public String getMcpServerId() {
+        return this.mcpServerId;
+    }
+
+    public Agent setMcpServerName(String mcpServerName) {
+        this.mcpServerName = mcpServerName;
+        return this;
+    }
+    public String getMcpServerName() {
+        return this.mcpServerName;
     }
 
     public Agent setMetadata(Metadata metadata) {
