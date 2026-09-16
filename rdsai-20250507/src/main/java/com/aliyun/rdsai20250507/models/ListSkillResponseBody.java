@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSkillResponseBody extends TeaModel {
     /**
-     * <p>The list of skills.</p>
+     * <p>The skill list.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListSkillResponseBodyData> data;
@@ -20,7 +20,7 @@ public class ListSkillResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of records returned on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListSkillResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
@@ -38,7 +38,7 @@ public class ListSkillResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned records.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -93,16 +93,34 @@ public class ListSkillResponseBody extends TeaModel {
 
     public static class ListSkillResponseBodyData extends TeaModel {
         /**
-         * <p>The content of the skill.</p>
+         * <p>The ID of the currently active version.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;MySQL&quot;: &quot;MySQL 优化指南...&quot;,&quot;PostgreSQL&quot;: &quot;PostgreSQL 优化指南...&quot;}</p>
+         * <p>version-example</p>
+         */
+        @NameInMap("ActiveVersionId")
+        public String activeVersionId;
+
+        /**
+         * <p>The skill category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>productivity</p>
+         */
+        @NameInMap("Category")
+        public String category;
+
+        /**
+         * <p>The data content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;MySQL&quot;: &quot;MySQL optimization guide...&quot;,&quot;PostgreSQL&quot;: &quot;PostgreSQL optimization guide...&quot;}</p>
          */
         @NameInMap("Content")
         public java.util.Map<String, ?> content;
 
         /**
-         * <p>The creation time of the skill.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-02-04T21:14:45Z</p>
@@ -111,19 +129,40 @@ public class ListSkillResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The list of database engines.</p>
+         * <p>The list of database types.</p>
          */
         @NameInMap("Dbtypes")
         public java.util.List<String> dbtypes;
 
         /**
-         * <p>The description of the skill.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>SQL审查专家：全面审核SQL的安全性、性能与规范性，识别风险并提供优化建议。用户提交SQL或询问“SQL审核”“SQL Review”“有风险吗”“如何优化”时，立即启用。</p>
+         * <p>SQL Review Expert: Comprehensively reviews SQL for security, performance, and compliance, identifies risks, and provides optimization suggestions. Activated immediately when a user submits SQL or asks about &quot;SQL review&quot;, &quot;SQL Review&quot;, &quot;any risks&quot;, or &quot;how to optimize&quot;</p>
          */
         @NameInMap("Description")
         public String description;
+
+        /**
+         * <p>The display name of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Example Skill</p>
+         */
+        @NameInMap("DisplayName")
+        public String displayName;
+
+        /**
+         * <p>The public HTTPS URL of the current icon. Empty if not configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/skill-icon.png">https://example.com/skill-icon.png</a></p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("Icon")
+        public String icon;
 
         /**
          * <p>The unique identifier of the skill.</p>
@@ -135,7 +174,13 @@ public class ListSkillResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the skill.</p>
+         * <p>Indicates whether the skill is deleted.</p>
+         */
+        @NameInMap("IsDeleted")
+        public Boolean isDeleted;
+
+        /**
+         * <p>The skill name.</p>
          * 
          * <strong>example:</strong>
          * <p>sql-review</p>
@@ -144,7 +189,16 @@ public class ListSkillResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The type of the skill.</p>
+         * <p>The visibility scope of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
+         */
+        @NameInMap("Scope")
+        public String scope;
+
+        /**
+         * <p>The skill type.</p>
          * 
          * <strong>example:</strong>
          * <p>system</p>
@@ -153,7 +207,16 @@ public class ListSkillResponseBody extends TeaModel {
         public String skillType;
 
         /**
-         * <p>The update time of the skill.</p>
+         * <p>The stable identifier of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-skill</p>
+         */
+        @NameInMap("Slug")
+        public String slug;
+
+        /**
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-02-04T21:14:45Z</p>
@@ -164,6 +227,22 @@ public class ListSkillResponseBody extends TeaModel {
         public static ListSkillResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListSkillResponseBodyData self = new ListSkillResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListSkillResponseBodyData setActiveVersionId(String activeVersionId) {
+            this.activeVersionId = activeVersionId;
+            return this;
+        }
+        public String getActiveVersionId() {
+            return this.activeVersionId;
+        }
+
+        public ListSkillResponseBodyData setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
         }
 
         public ListSkillResponseBodyData setContent(java.util.Map<String, ?> content) {
@@ -198,12 +277,36 @@ public class ListSkillResponseBody extends TeaModel {
             return this.description;
         }
 
+        public ListSkillResponseBodyData setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        public ListSkillResponseBodyData setIcon(String icon) {
+            this.icon = icon;
+            return this;
+        }
+        public String getIcon() {
+            return this.icon;
+        }
+
         public ListSkillResponseBodyData setId(String id) {
             this.id = id;
             return this;
         }
         public String getId() {
             return this.id;
+        }
+
+        public ListSkillResponseBodyData setIsDeleted(Boolean isDeleted) {
+            this.isDeleted = isDeleted;
+            return this;
+        }
+        public Boolean getIsDeleted() {
+            return this.isDeleted;
         }
 
         public ListSkillResponseBodyData setName(String name) {
@@ -214,12 +317,28 @@ public class ListSkillResponseBody extends TeaModel {
             return this.name;
         }
 
+        public ListSkillResponseBodyData setScope(String scope) {
+            this.scope = scope;
+            return this;
+        }
+        public String getScope() {
+            return this.scope;
+        }
+
         public ListSkillResponseBodyData setSkillType(String skillType) {
             this.skillType = skillType;
             return this;
         }
         public String getSkillType() {
             return this.skillType;
+        }
+
+        public ListSkillResponseBodyData setSlug(String slug) {
+            this.slug = slug;
+            return this;
+        }
+        public String getSlug() {
+            return this.slug;
         }
 
         public ListSkillResponseBodyData setUpdatedAt(String updatedAt) {

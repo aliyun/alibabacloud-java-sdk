@@ -23,7 +23,7 @@ public class GetConversationsRequest extends TeaModel {
     public String limit;
 
     /**
-     * <p>The favorite pinning flag for the application.</p>
+     * <p>The pinned bookmark flag for the application.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -39,6 +39,15 @@ public class GetConversationsRequest extends TeaModel {
      */
     @NameInMap("SortBy")
     public String sortBy;
+
+    /**
+     * <p>The ContextDB workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00000000-0000-4000-8000-000000000001</p>
+     */
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
 
     public static GetConversationsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetConversationsRequest self = new GetConversationsRequest();
@@ -75,6 +84,14 @@ public class GetConversationsRequest extends TeaModel {
     }
     public String getSortBy() {
         return this.sortBy;
+    }
+
+    public GetConversationsRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

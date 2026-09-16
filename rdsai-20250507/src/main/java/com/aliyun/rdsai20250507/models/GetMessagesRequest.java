@@ -26,13 +26,22 @@ public class GetMessagesRequest extends TeaModel {
     public String firstId;
 
     /**
-     * <p>The number of entries per page in a paging query. Valid values: 1 to 100. Default value: 100.</p>
+     * <p>The number of entries per page for a paged query. Valid values: 1 to 100. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("Limit")
     public Long limit;
+
+    /**
+     * <p>The ContextDB workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00000000-0000-4000-8000-000000000001</p>
+     */
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
 
     public static GetMessagesRequest build(java.util.Map<String, ?> map) throws Exception {
         GetMessagesRequest self = new GetMessagesRequest();
@@ -69,6 +78,14 @@ public class GetMessagesRequest extends TeaModel {
     }
     public Long getLimit() {
         return this.limit;
+    }
+
+    public GetMessagesRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSkillRequest extends TeaModel {
     /**
-     * <p>The languages supported by the skill. Valid values:</p>
+     * <p>The supported languages. Valid values:</p>
      * <ul>
      * <li>zh-CN: Simplified Chinese</li>
      * <li>zh-TW: Traditional Chinese</li>
@@ -20,7 +20,7 @@ public class GetSkillRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The unique identifier of the skill.</p>
+     * <p>The unique identifier of the Skill.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +28,15 @@ public class GetSkillRequest extends TeaModel {
      */
     @NameInMap("SkillId")
     public String skillId;
+
+    /**
+     * <p>The ContextDB workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00000000-0000-4000-8000-000000000001</p>
+     */
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
 
     public static GetSkillRequest build(java.util.Map<String, ?> map) throws Exception {
         GetSkillRequest self = new GetSkillRequest();
@@ -48,6 +57,14 @@ public class GetSkillRequest extends TeaModel {
     }
     public String getSkillId() {
         return this.skillId;
+    }
+
+    public GetSkillRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

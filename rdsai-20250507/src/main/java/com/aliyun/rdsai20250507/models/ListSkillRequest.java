@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSkillRequest extends TeaModel {
     /**
-     * <p>The languages supported by the skills.</p>
+     * <p>The supported languages. Valid values:</p>
      * <ul>
      * <li>zh-CN: Simplified Chinese</li>
      * <li>zh-TW: Traditional Chinese</li>
@@ -20,7 +20,7 @@ public class ListSkillRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,13 +29,22 @@ public class ListSkillRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of records to return on each page. Default value: 20. Maximum value: 100.</p>
+     * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
+
+    /**
+     * <p>The ContextDB workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00000000-0000-4000-8000-000000000001</p>
+     */
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
 
     public static ListSkillRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSkillRequest self = new ListSkillRequest();
@@ -64,6 +73,14 @@ public class ListSkillRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListSkillRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

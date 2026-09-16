@@ -123,6 +123,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskId", request.taskId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -968,7 +972,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a user-defined skill.</p>
+     * <p>Creates a user-defined Skill.</p>
      * 
      * @param tmpReq CreateSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1003,6 +1007,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadId)) {
+            query.put("UploadId", request.uploadId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadToken)) {
+            query.put("UploadToken", request.uploadToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1022,7 +1038,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a user-defined skill.</p>
+     * <p>Creates a user-defined Skill.</p>
      * 
      * @param request CreateSkillRequest
      * @return CreateSkillResponse
@@ -1270,7 +1286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the dedicated agent created by a user.</p>
+     * <p>Deletes a dedicated agent created by the user.</p>
      * 
      * @param request DeleteCustomAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1302,7 +1318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the dedicated agent created by a user.</p>
+     * <p>Deletes a dedicated agent created by the user.</p>
      * 
      * @param request DeleteCustomAgentRequest
      * @return DeleteCustomAgentResponse
@@ -1422,7 +1438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the specified skill.</p>
+     * <p>Deletes a specified Skill.</p>
      * 
      * @param request DeleteSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1433,6 +1449,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.skillId)) {
             query.put("SkillId", request.skillId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1454,7 +1474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the specified skill.</p>
+     * <p>Deletes a specified Skill.</p>
      * 
      * @param request DeleteSkillRequest
      * @return DeleteSkillResponse
@@ -2862,6 +2882,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SortBy", request.sortBy);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -3012,6 +3036,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
             query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3209,7 +3237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the details of a specified skill. You can obtain the details of user-defined skills or the system preset skills.</p>
+     * <p>Retrieves the details of a specified Skill. You can retrieve your own Skills or system preset Skills.</p>
      * 
      * @param request GetSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3224,6 +3252,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.skillId)) {
             query.put("SkillId", request.skillId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3245,7 +3277,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the details of a specified skill. You can obtain the details of user-defined skills or the system preset skills.</p>
+     * <p>Retrieves the details of a specified Skill. You can retrieve your own Skills or system preset Skills.</p>
      * 
      * @param request GetSkillRequest
      * @return GetSkillResponse
@@ -3760,7 +3792,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the user-defined skills and all system preset skills of the current user.</p>
+     * <p>Retrieves the custom skills of the current user and all system-preset skills.</p>
      * 
      * @param request ListSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3779,6 +3811,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3800,7 +3836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the user-defined skills and all system preset skills of the current user.</p>
+     * <p>Retrieves the custom skills of the current user and all system-preset skills.</p>
      * 
      * @param request ListSkillRequest
      * @return ListSkillResponse
@@ -4432,7 +4468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the returned messages.</p>
+     * <p>Modifies message feedback.</p>
      * 
      * @param request ModifyMessagesFeedbacksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4472,7 +4508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the returned messages.</p>
+     * <p>Modifies message feedback.</p>
      * 
      * @param request ModifyMessagesFeedbacksRequest
      * @return ModifyMessagesFeedbacksResponse
@@ -5606,7 +5642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the information about a specified skill.</p>
+     * <p>Updates the information of a specified skill.</p>
      * 
      * @param tmpReq UpdateSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5664,7 +5700,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the information about a specified skill.</p>
+     * <p>Updates the information of a specified skill.</p>
      * 
      * @param request UpdateSkillRequest
      * @return UpdateSkillResponse

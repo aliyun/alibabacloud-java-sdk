@@ -75,6 +75,75 @@ public class GetMessagesResponseBody extends TeaModel {
     }
 
     public static class GetMessagesResponseBodyDataEvents extends TeaModel {
+        /**
+         * <p>The approval status of the tool calling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pending</p>
+         */
+        @NameInMap("ApprovalStatus")
+        public String approvalStatus;
+
+        /**
+         * <p>The tool calling ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>call-example</p>
+         */
+        @NameInMap("CallId")
+        public String callId;
+
+        /**
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>conversation-example</p>
+         */
+        @NameInMap("ConversationId")
+        public String conversationId;
+
+        /**
+         * <p>The description of the tool calling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Search ContextDB records</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>The message ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message-example</p>
+         */
+        @NameInMap("MessageId")
+        public String messageId;
+
+        /**
+         * <p>The tool approval round ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>round-example</p>
+         */
+        @NameInMap("RoundId")
+        public String roundId;
+
+        /**
+         * <p>The parameters of the tool calling.</p>
+         */
+        @NameInMap("ToolArguments")
+        public java.util.Map<String, ?> toolArguments;
+
+        /**
+         * <p>The tool name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>contextdb.search</p>
+         */
+        @NameInMap("ToolName")
+        public String toolName;
+
         @NameInMap("answer")
         public String answer;
 
@@ -84,6 +153,70 @@ public class GetMessagesResponseBody extends TeaModel {
         public static GetMessagesResponseBodyDataEvents build(java.util.Map<String, ?> map) throws Exception {
             GetMessagesResponseBodyDataEvents self = new GetMessagesResponseBodyDataEvents();
             return TeaModel.build(map, self);
+        }
+
+        public GetMessagesResponseBodyDataEvents setApprovalStatus(String approvalStatus) {
+            this.approvalStatus = approvalStatus;
+            return this;
+        }
+        public String getApprovalStatus() {
+            return this.approvalStatus;
+        }
+
+        public GetMessagesResponseBodyDataEvents setCallId(String callId) {
+            this.callId = callId;
+            return this;
+        }
+        public String getCallId() {
+            return this.callId;
+        }
+
+        public GetMessagesResponseBodyDataEvents setConversationId(String conversationId) {
+            this.conversationId = conversationId;
+            return this;
+        }
+        public String getConversationId() {
+            return this.conversationId;
+        }
+
+        public GetMessagesResponseBodyDataEvents setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetMessagesResponseBodyDataEvents setMessageId(String messageId) {
+            this.messageId = messageId;
+            return this;
+        }
+        public String getMessageId() {
+            return this.messageId;
+        }
+
+        public GetMessagesResponseBodyDataEvents setRoundId(String roundId) {
+            this.roundId = roundId;
+            return this;
+        }
+        public String getRoundId() {
+            return this.roundId;
+        }
+
+        public GetMessagesResponseBodyDataEvents setToolArguments(java.util.Map<String, ?> toolArguments) {
+            this.toolArguments = toolArguments;
+            return this;
+        }
+        public java.util.Map<String, ?> getToolArguments() {
+            return this.toolArguments;
+        }
+
+        public GetMessagesResponseBodyDataEvents setToolName(String toolName) {
+            this.toolName = toolName;
+            return this;
+        }
+        public String getToolName() {
+            return this.toolName;
         }
 
         public GetMessagesResponseBodyDataEvents setAnswer(String answer) {
@@ -114,6 +247,15 @@ public class GetMessagesResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The upload file ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file-example</p>
+         */
+        @NameInMap("UploadFileId")
+        public String uploadFileId;
+
         public static GetMessagesResponseBodyDataMessageFiles build(java.util.Map<String, ?> map) throws Exception {
             GetMessagesResponseBodyDataMessageFiles self = new GetMessagesResponseBodyDataMessageFiles();
             return TeaModel.build(map, self);
@@ -143,6 +285,14 @@ public class GetMessagesResponseBody extends TeaModel {
             return this.type;
         }
 
+        public GetMessagesResponseBodyDataMessageFiles setUploadFileId(String uploadFileId) {
+            this.uploadFileId = uploadFileId;
+            return this;
+        }
+        public String getUploadFileId() {
+            return this.uploadFileId;
+        }
+
     }
 
     public static class GetMessagesResponseBodyData extends TeaModel {
@@ -150,13 +300,13 @@ public class GetMessagesResponseBody extends TeaModel {
          * <p>The answer.</p>
          * 
          * <strong>example:</strong>
-         * <p>The disk usage of instance rm-bp14as9914vd3**** is 23%, and scaling is not required for now. If you need to view the detailed configurations or performance monitoring of a specific instance, or perform other operations, let me know your specific requirements!</p>
+         * <p>The disk usage of the instance rm-bp14as9914vd3**** you queried is 23%, and no capacity expansion is needed at this time. If you need to view the detailed configurations or performance monitoring of a specific instance, or perform other operations, let me know your specific requirements!</p>
          */
         @NameInMap("Answer")
         public String answer;
 
         /**
-         * <p>The conversation ID.</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9cbbe885-b240-4803-9d15-6781a3fd****</p>
@@ -213,7 +363,7 @@ public class GetMessagesResponseBody extends TeaModel {
          * <p>The query statement.</p>
          * 
          * <strong>example:</strong>
-         * <p>What is the disk usage of instance rm-bp14as9914vd3****, and is scaling required?</p>
+         * <p>Disk usage of instance rm-bp14as9914vd3****, is capacity expansion needed</p>
          */
         @NameInMap("Query")
         public String query;

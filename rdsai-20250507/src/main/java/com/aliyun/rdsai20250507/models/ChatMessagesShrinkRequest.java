@@ -14,7 +14,7 @@ public class ChatMessagesShrinkRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>The event output type. Valid values: inline and separate. Default value: inline. When set to inline, tool invocation events, sub-node events, and document events are included in the answer field of event = message. When set to separate, tool invocation events, sub-node events, and document events each have their own event.</p>
+     * <p>The event output type. Valid values: inline and separate. Default value: inline. When set to inline, tool invocation events, sub-node events, and document events are included in the answer field of the event = message response. When set to separate, tool invocation events, sub-node events, and document events each have their own event.</p>
      * 
      * <strong>example:</strong>
      * <p>inline</p>
@@ -26,7 +26,7 @@ public class ChatMessagesShrinkRequest extends TeaModel {
     public String filesShrink;
 
     /**
-     * <p>The task input.</p>
+     * <p>The task inputs.</p>
      */
     @NameInMap("Inputs")
     public String inputsShrink;
@@ -42,10 +42,9 @@ public class ChatMessagesShrinkRequest extends TeaModel {
 
     /**
      * <p>The query content.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Disk usage of instance rm-bp14as9914vd3****, is capacity expansion needed</p>
+     * <p>Check the disk usage of instance rm-bp14as9914vd3**** and whether storage expansion is needed</p>
      */
     @NameInMap("Query")
     public String query;

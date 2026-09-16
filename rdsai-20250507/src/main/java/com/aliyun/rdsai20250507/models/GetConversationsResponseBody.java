@@ -85,7 +85,7 @@ public class GetConversationsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The ID of the historical conversation.</p>
+         * <p>The historical conversation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>60b335ca-124d-4ee1-864b-de554987****</p>
@@ -97,7 +97,7 @@ public class GetConversationsResponseBody extends TeaModel {
          * <p>The conversation introduction.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试搜索RDS资源</p>
+         * <p>Test searching for RDS resources</p>
          */
         @NameInMap("Introduction")
         public String introduction;
@@ -106,13 +106,28 @@ public class GetConversationsResponseBody extends TeaModel {
         public Boolean isRunning;
 
         /**
-         * <p>The name of the historical conversation.</p>
+         * <p>The historical conversation name.</p>
          * 
          * <strong>example:</strong>
-         * <p>搜索RDS资源。</p>
+         * <p>Search for RDS resources</p>
          */
         @NameInMap("Name")
         public String name;
+
+        /**
+         * <p>The session status. Valid values:</p>
+         * <ul>
+         * <li>idle: The session is idle.</li>
+         * <li>running: The session is generating a response.</li>
+         * <li>pending_approval: The session is waiting for approval or manual review.</li>
+         * </ul>
+         * <p>If both pending_approval and running conditions are met, pending_approval is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idle</p>
+         */
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("UpdatedAt")
         public String updatedAt;
@@ -160,6 +175,14 @@ public class GetConversationsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetConversationsResponseBodyData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public GetConversationsResponseBodyData setUpdatedAt(String updatedAt) {

@@ -5,21 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyMessagesFeedbacksRequest extends TeaModel {
     /**
-     * <p>The rating of the message.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>like</li>
-     * <li>dislike</li>
-     * </ul>
+     * <p>The feedback content.</p>
      * 
      * <strong>example:</strong>
-     * <p>无法理解上下文；答非所问</p>
+     * <p>Unable to understand context; irrelevant answer</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>ModifyMessagesFeedbacks</strong>.</p>
+     * <p>The message ID.</p>
      * 
      * <strong>example:</strong>
      * <p>yy9rkn6q-js75-0dka-0cc2-6b5o86uj****</p>
@@ -28,7 +23,7 @@ public class ModifyMessagesFeedbacksRequest extends TeaModel {
     public String messageId;
 
     /**
-     * <p>The message ID.</p>
+     * <p>The rating.</p>
      * 
      * <strong>example:</strong>
      * <p>like</p>

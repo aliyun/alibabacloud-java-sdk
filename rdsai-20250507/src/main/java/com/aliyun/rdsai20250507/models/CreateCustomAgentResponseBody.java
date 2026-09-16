@@ -35,7 +35,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
      * <p>The name of the agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>查询实例列表Agent</p>
+     * <p>QueryInstanceListAgent</p>
      */
     @NameInMap("Name")
     public String name;
@@ -56,7 +56,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
      * <p>The system prompt.</p>
      * 
      * <strong>example:</strong>
-     * <p>我是您用来查询实例列表的专属Agent</p>
+     * <p>I am your dedicated agent for querying instance lists</p>
      */
     @NameInMap("SystemPrompt")
     public String systemPrompt;

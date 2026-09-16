@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomAgentResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether tools are enabled.</p>
+     * <p>Specifies whether to enable tools.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
     public String enableTools;
 
     /**
-     * <p>AgentId.</p>
+     * <p>AgentId。</p>
      * 
      * <strong>example:</strong>
      * <p>82cf3d62-0add-47bd-869f-877131f7****</p>
@@ -23,10 +23,10 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The name of the custom agent.</p>
+     * <p>The name of the dedicated agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>查询实例列表Agent</p>
+     * <p>QueryInstanceListAgent</p>
      */
     @NameInMap("Name")
     public String name;
@@ -40,6 +40,9 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of associated skill details.</p>
+     */
     @NameInMap("Skills")
     public java.util.List<UpdateCustomAgentResponseBodySkills> skills;
 
@@ -47,13 +50,13 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
      * <p>The system prompt.</p>
      * 
      * <strong>example:</strong>
-     * <p>我是您用来查询实例列表的专属Agent</p>
+     * <p>I am your dedicated agent for querying instance lists</p>
      */
     @NameInMap("SystemPrompt")
     public String systemPrompt;
 
     /**
-     * <p>The tools that the custom agent can use.</p>
+     * <p>The tool information.</p>
      */
     @NameInMap("Tools")
     public java.util.List<String> tools;

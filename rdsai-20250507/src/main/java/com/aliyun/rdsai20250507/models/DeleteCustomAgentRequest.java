@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomAgentRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>DeleteCustomAgent</strong>.</p>
+     * <p>AgentId。</p>
      * 
      * <strong>example:</strong>
      * <p>ebe44453-3b41-4c74-94d1-01d088d7****</p>

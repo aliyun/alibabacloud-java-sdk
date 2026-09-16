@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomAgentRequest extends TeaModel {
     /**
-     * <p>The agent ID.</p>
+     * <p>AgentId。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,10 +24,10 @@ public class UpdateCustomAgentRequest extends TeaModel {
     public Boolean enableTools;
 
     /**
-     * <p>The name of the custom agent.</p>
+     * <p>The name of the dedicated agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>查询实例列表Agent</p>
+     * <p>QueryInstanceListAgent</p>
      */
     @NameInMap("Name")
     public String name;
@@ -39,13 +39,13 @@ public class UpdateCustomAgentRequest extends TeaModel {
      * <p>The system prompt.</p>
      * 
      * <strong>example:</strong>
-     * <p>我是您用来查询实例列表的专属Agent</p>
+     * <p>I am your dedicated agent for querying instance lists</p>
      */
     @NameInMap("SystemPrompt")
     public String systemPrompt;
 
     /**
-     * <p>The tools that the custom agent can use.</p>
+     * <p>The tool information.</p>
      */
     @NameInMap("Tools")
     public java.util.List<String> tools;

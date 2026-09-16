@@ -14,7 +14,7 @@ public class ModifyMessagesFeedbacksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned results.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

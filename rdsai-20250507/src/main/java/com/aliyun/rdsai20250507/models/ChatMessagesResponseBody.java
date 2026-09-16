@@ -8,10 +8,28 @@ public class ChatMessagesResponseBody extends TeaModel {
      * <p>The answer content.</p>
      * 
      * <strong>example:</strong>
-     * <p>The disk usage of instance rm-bp14as9914vd3**** is 23%, and capacity expansion is not needed at this time. If you need to view the detailed configuration, performance monitoring, or perform other operations for a specific instance, please let me know your specific requirements!</p>
+     * <p>The disk usage of instance rm-bp14as9914vd3**** is 23%, and storage expansion is not needed at this time. If you need to view the detailed configuration, performance monitoring, or perform other operations for an instance, let me know your specific requirements!</p>
      */
     @NameInMap("Answer")
     public String answer;
+
+    /**
+     * <p>The tool invocation approval status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pending</p>
+     */
+    @NameInMap("ApprovalStatus")
+    public String approvalStatus;
+
+    /**
+     * <p>The tool invocation ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>call-example</p>
+     */
+    @NameInMap("CallId")
+    public String callId;
 
     /**
      * <p>The conversation ID.</p>
@@ -30,6 +48,15 @@ public class ChatMessagesResponseBody extends TeaModel {
      */
     @NameInMap("CreatedAt")
     public Long createdAt;
+
+    /**
+     * <p>The tool invocation description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Search ContextDB records</p>
+     */
+    @NameInMap("Description")
+    public String description;
 
     /**
      * <p>The event.</p>
@@ -62,7 +89,7 @@ public class ChatMessagesResponseBody extends TeaModel {
      * <p>The query mode.</p>
      * 
      * <strong>example:</strong>
-     * <p>Will be deprecated in the future, no need to pay attention</p>
+     * <p>This field will be deprecated in the future. Ignore it</p>
      */
     @NameInMap("Mode")
     public String mode;
@@ -77,6 +104,15 @@ public class ChatMessagesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The tool approval round ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>round-example</p>
+     */
+    @NameInMap("RoundId")
+    public String roundId;
+
+    /**
      * <p>The asynchronous task ID.</p>
      * 
      * <strong>example:</strong>
@@ -84,6 +120,21 @@ public class ChatMessagesResponseBody extends TeaModel {
      */
     @NameInMap("TaskId")
     public String taskId;
+
+    /**
+     * <p>The tool invocation parameters.</p>
+     */
+    @NameInMap("ToolArguments")
+    public java.util.Map<String, ?> toolArguments;
+
+    /**
+     * <p>The tool name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>contextdb.search</p>
+     */
+    @NameInMap("ToolName")
+    public String toolName;
 
     public static ChatMessagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ChatMessagesResponseBody self = new ChatMessagesResponseBody();
@@ -96,6 +147,22 @@ public class ChatMessagesResponseBody extends TeaModel {
     }
     public String getAnswer() {
         return this.answer;
+    }
+
+    public ChatMessagesResponseBody setApprovalStatus(String approvalStatus) {
+        this.approvalStatus = approvalStatus;
+        return this;
+    }
+    public String getApprovalStatus() {
+        return this.approvalStatus;
+    }
+
+    public ChatMessagesResponseBody setCallId(String callId) {
+        this.callId = callId;
+        return this;
+    }
+    public String getCallId() {
+        return this.callId;
     }
 
     public ChatMessagesResponseBody setConversationId(String conversationId) {
@@ -112,6 +179,14 @@ public class ChatMessagesResponseBody extends TeaModel {
     }
     public Long getCreatedAt() {
         return this.createdAt;
+    }
+
+    public ChatMessagesResponseBody setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public ChatMessagesResponseBody setEvent(String event) {
@@ -154,12 +229,36 @@ public class ChatMessagesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ChatMessagesResponseBody setRoundId(String roundId) {
+        this.roundId = roundId;
+        return this;
+    }
+    public String getRoundId() {
+        return this.roundId;
+    }
+
     public ChatMessagesResponseBody setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public ChatMessagesResponseBody setToolArguments(java.util.Map<String, ?> toolArguments) {
+        this.toolArguments = toolArguments;
+        return this;
+    }
+    public java.util.Map<String, ?> getToolArguments() {
+        return this.toolArguments;
+    }
+
+    public ChatMessagesResponseBody setToolName(String toolName) {
+        this.toolName = toolName;
+        return this;
+    }
+    public String getToolName() {
+        return this.toolName;
     }
 
 }

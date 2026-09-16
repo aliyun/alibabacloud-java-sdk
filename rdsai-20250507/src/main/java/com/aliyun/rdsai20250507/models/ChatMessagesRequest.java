@@ -14,7 +14,7 @@ public class ChatMessagesRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>The event output type. Valid values: inline and separate. Default value: inline. When set to inline, tool invocation events, sub-node events, and document events are included in the answer field of event = message. When set to separate, tool invocation events, sub-node events, and document events each have their own event.</p>
+     * <p>The event output type. Valid values: inline and separate. Default value: inline. When set to inline, tool invocation events, sub-node events, and document events are included in the answer field of the event = message response. When set to separate, tool invocation events, sub-node events, and document events each have their own event.</p>
      * 
      * <strong>example:</strong>
      * <p>inline</p>
@@ -26,7 +26,7 @@ public class ChatMessagesRequest extends TeaModel {
     public java.util.List<ChatMessagesRequestFiles> files;
 
     /**
-     * <p>The task input.</p>
+     * <p>The task inputs.</p>
      */
     @NameInMap("Inputs")
     public ChatMessagesRequestInputs inputs;
@@ -42,10 +42,9 @@ public class ChatMessagesRequest extends TeaModel {
 
     /**
      * <p>The query content.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Disk usage of instance rm-bp14as9914vd3****, is capacity expansion needed</p>
+     * <p>Check the disk usage of instance rm-bp14as9914vd3**** and whether storage expansion is needed</p>
      */
     @NameInMap("Query")
     public String query;
@@ -191,6 +190,15 @@ public class ChatMessagesRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The tool approval call ID for resuming execution. Pass this parameter after all decisions in the current approval round are completed in the console to continue the interrupted ChatMessage Loop. Do not pass this parameter for regular conversations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>call-example</p>
+         */
+        @NameInMap("ResumeCallId")
+        public String resumeCallId;
+
+        /**
          * <p>The thinking depth.</p>
          * 
          * <strong>example:</strong>
@@ -207,6 +215,24 @@ public class ChatMessagesRequest extends TeaModel {
          */
         @NameInMap("Timezone")
         public String timezone;
+
+        /**
+         * <p>The tool approval mode for the current conversation. Valid values: read_only (read-only, write tools are rejected), manual (write tools require manual approval), and auto (the approval sub-agent automatically determines the action. If the result is needs_human, the approval is escalated to manual review). When this parameter is passed, the approval mode of the current conversation is updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>manual</p>
+         */
+        @NameInMap("ToolApprovalMode")
+        public String toolApprovalMode;
+
+        /**
+         * <p>The ContextDB workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00000000-0000-4000-8000-000000000001</p>
+         */
+        @NameInMap("WorkspaceId")
+        public String workspaceId;
 
         public static ChatMessagesRequestInputs build(java.util.Map<String, ?> map) throws Exception {
             ChatMessagesRequestInputs self = new ChatMessagesRequestInputs();
@@ -253,6 +279,14 @@ public class ChatMessagesRequest extends TeaModel {
             return this.regionId;
         }
 
+        public ChatMessagesRequestInputs setResumeCallId(String resumeCallId) {
+            this.resumeCallId = resumeCallId;
+            return this;
+        }
+        public String getResumeCallId() {
+            return this.resumeCallId;
+        }
+
         public ChatMessagesRequestInputs setThinkEffort(String thinkEffort) {
             this.thinkEffort = thinkEffort;
             return this;
@@ -267,6 +301,22 @@ public class ChatMessagesRequest extends TeaModel {
         }
         public String getTimezone() {
             return this.timezone;
+        }
+
+        public ChatMessagesRequestInputs setToolApprovalMode(String toolApprovalMode) {
+            this.toolApprovalMode = toolApprovalMode;
+            return this;
+        }
+        public String getToolApprovalMode() {
+            return this.toolApprovalMode;
+        }
+
+        public ChatMessagesRequestInputs setWorkspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
+            return this;
+        }
+        public String getWorkspaceId() {
+            return this.workspaceId;
         }
 
     }

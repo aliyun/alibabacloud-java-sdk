@@ -5,40 +5,64 @@ import com.aliyun.tea.*;
 
 public class CreateSkillRequest extends TeaModel {
     /**
-     * <p>The content of the skill.</p>
+     * <p>The content.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;MySQL&quot;: &quot;MySQL 优化指南...&quot;,&quot;PostgreSQL&quot;: &quot;PostgreSQL 优化指南...&quot;}</p>
+     * <p>{&quot;MySQL&quot;: &quot;MySQL optimization guide...&quot;,&quot;PostgreSQL&quot;: &quot;PostgreSQL optimization guide...&quot;}</p>
      */
     @NameInMap("Content")
     public java.util.Map<String, ?> content;
 
     /**
-     * <p>The list of database engines.</p>
-     * <p>This parameter is required.</p>
+     * <p>The list of database types.</p>
      */
     @NameInMap("Dbtypes")
     public java.util.List<String> dbtypes;
 
     /**
-     * <p>The description of the skill. It can be up to 1000 characters in length.</p>
-     * <p>This parameter is required.</p>
+     * <p>The Skill description. The description can be up to 1000 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>SQL 查询优化技能。</p>
+     * <p>SQL query optimization skill</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The name of the skill, which can contain only lowercase letters, numbers, and hyphens.</p>
-     * <p>This parameter is required.</p>
+     * <p>The Skill name. The name can contain only lowercase letters, digits, and hyphens.</p>
      * 
      * <strong>example:</strong>
      * <p>query-optimization</p>
      */
     @NameInMap("Name")
     public String name;
+
+    /**
+     * <p>The Skill upload session ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>upload-example</p>
+     */
+    @NameInMap("UploadId")
+    public String uploadId;
+
+    /**
+     * <p>The Skill upload session token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>token-example</p>
+     */
+    @NameInMap("UploadToken")
+    public String uploadToken;
+
+    /**
+     * <p>The ContextDB workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00000000-0000-4000-8000-000000000001</p>
+     */
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
 
     public static CreateSkillRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSkillRequest self = new CreateSkillRequest();
@@ -75,6 +99,30 @@ public class CreateSkillRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateSkillRequest setUploadId(String uploadId) {
+        this.uploadId = uploadId;
+        return this;
+    }
+    public String getUploadId() {
+        return this.uploadId;
+    }
+
+    public CreateSkillRequest setUploadToken(String uploadToken) {
+        this.uploadToken = uploadToken;
+        return this;
+    }
+    public String getUploadToken() {
+        return this.uploadToken;
+    }
+
+    public CreateSkillRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }
