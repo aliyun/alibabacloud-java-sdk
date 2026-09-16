@@ -51,7 +51,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
         public Long dailyCallCount;
 
         /**
-         * <p>The date.</p>
+         * <p>The date. Format: YYYY-MM-DD, such as 2025-10-10.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-10</p>
@@ -136,7 +136,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
         public String idFakeRate;
 
         /**
-         * <p>The data items in the response.</p>
+         * <p>The data items of the returned result.</p>
          */
         @NameInMap("Items")
         public java.util.List<DescribeVerifyDeviceRiskStatisticsResponseBodyResultObjectItems> items;

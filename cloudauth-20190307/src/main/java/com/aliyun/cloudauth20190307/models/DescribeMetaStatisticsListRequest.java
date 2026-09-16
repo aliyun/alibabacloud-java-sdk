@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMetaStatisticsListRequest extends TeaModel {
     /**
-     * <p>The commodity code. Valid values:</p>
+     * <p>The product code. Valid values:</p>
      * <ul>
      * <li><strong>ID_CARD_2_META</strong>: ID card two-element verification</li>
      * <li><strong>ID_PERIOD</strong>: ID card validity period verification</li>
@@ -15,12 +15,12 @@ public class DescribeMetaStatisticsListRequest extends TeaModel {
      * <li><strong>MOBILE_3_META</strong>: mobile number three-element verification (detailed edition)</li>
      * <li><strong>MOBILE_2_META</strong>: mobile number two-element verification</li>
      * <li><strong>BANK_CARD_N_META</strong>: bank card verification (detailed edition)</li>
-     * <li><strong>MOBILE_DETECT</strong>: phone number detection</li>
+     * <li><strong>MOBILE_DETECT</strong>: number detection</li>
      * <li><strong>VEHICLE_N_META</strong>: vehicle element verification (enhanced edition)</li>
      * <li><strong>VEHICLE_PENTA_INFO</strong>: vehicle five-element information recognition</li>
      * <li><strong>VEHICLE_LICENSE_INFO</strong>: vehicle information recognition</li>
      * <li><strong>VEHICLE_INSURE_DATE</strong>: vehicle insurance date query</li>
-     * <li><strong>VEHICLE_CHECK</strong>: vehicle element verification.</li>
+     * <li><strong>VEHICLE_CHECK</strong>: vehicle element verification</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

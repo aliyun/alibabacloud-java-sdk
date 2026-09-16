@@ -146,10 +146,10 @@ public class DescribeListFaceVerifyInfosResponseBody extends TeaModel {
         public String certifyId;
 
         /**
-         * <p>The creation time of the facial recognition record.</p>
+         * <p>The creation time of the facial recognition record. The value is a UNIX timestamp in milliseconds (ms), such as 1740389697000.</p>
          * 
          * <strong>example:</strong>
-         * <p>2022-10-02T11:16:06Z</p>
+         * <p>1740389697000</p>
          */
         @NameInMap("CreateTime")
         public String createTime;

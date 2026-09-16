@@ -47,7 +47,7 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -122,7 +122,7 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
          * <p>The name of the data transfer plan.</p>
          * 
          * <strong>example:</strong>
-         * <p>实人认证流量包</p>
+         * <p>ID Verification data transfer plan</p>
          */
         @NameInMap("CommodityName")
         public String commodityName;
@@ -146,12 +146,10 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
         public String currProportion;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The expiration time. Format: YYYY-MM-DD HH:mm:ss, for example, 2025-10-10 00:00:00.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>2025-10-10 00:00:00</p>
          */
         @NameInMap("ExpireDate")
         public String expireDate;
@@ -177,12 +175,10 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The effective period.</p>
+         * <p>The effective period. Format: YYYY-MM-DD HH:mm:ss, for example, 2025-10-10 00:00:00.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>2025-10-10 00:00:00</p>
          */
         @NameInMap("TakeEffectDate")
         public String takeEffectDate;
@@ -263,7 +259,7 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
          * <p>The name of the resource plan.</p>
          * 
          * <strong>example:</strong>
-         * <p>实人认证流量包</p>
+         * <p>ID Verification data transfer plan</p>
          */
         @NameInMap("CommodityName")
         public String commodityName;
@@ -287,7 +283,7 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
         public String currProportion;
 
         /**
-         * <p>The data transfer plan details.</p>
+         * <p>The details of the data transfer plan.</p>
          */
         @NameInMap("FlowDetails")
         public java.util.List<QueryVerifyFlowPackageResponseBodyItemsFlowDetails> flowDetails;

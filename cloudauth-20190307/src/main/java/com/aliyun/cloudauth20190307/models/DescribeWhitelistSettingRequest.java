@@ -33,7 +33,7 @@ public class DescribeWhitelistSettingRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The language of the query result. Valid values:</p>
+     * <p>The language of the query results. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese.</li>
      * <li><strong>en</strong>: English.</li>
@@ -67,8 +67,8 @@ public class DescribeWhitelistSettingRequest extends TeaModel {
     /**
      * <p>The service code. Valid values:</p>
      * <ul>
-     * <li><strong>cloudauthst</strong>: enhanced financial-grade edition.</li>
-     * <li><strong>antcloudauth</strong>: financial-grade edition.</li>
+     * <li><strong>cloudauthst</strong>: Enhanced Finance Edition.</li>
+     * <li><strong>antcloudauth</strong>: Finance Edition.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -102,7 +102,7 @@ public class DescribeWhitelistSettingRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The end time of the validity period.</p>
+     * <p>The end time of the validity period. Format: UNIX timestamp. Unit: milliseconds. Example: 1730304000000.</p>
      * 
      * <strong>example:</strong>
      * <p>1730304000000</p>
@@ -111,7 +111,7 @@ public class DescribeWhitelistSettingRequest extends TeaModel {
     public Long validEndDate;
 
     /**
-     * <p>The start time of the validity period. The value is a UNIX timestamp in seconds.</p>
+     * <p>The start time of the validity period. Format: UNIX timestamp. Unit: milliseconds. Example: 1759939200000.</p>
      * 
      * <strong>example:</strong>
      * <p>1759939200000</p>
@@ -120,6 +120,8 @@ public class DescribeWhitelistSettingRequest extends TeaModel {
     public Long validStartDate;
 
     /**
+     * <p>The whitelist type.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUPER</p>
      */

@@ -14,7 +14,7 @@ public class DescribeInfoCheckExportRecordRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end time of the query.</p>
+     * <p>The query end time. Format: YYYY-MM-DD HH:mm:ss, for example, 2025-10-11 21:24:48.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-10-11 21:24:48</p>
@@ -36,18 +36,18 @@ public class DescribeInfoCheckExportRecordRequest extends TeaModel {
      * <ul>
      * <li><strong>ID_CARD_2_META</strong>: ID card two-element verification.</li>
      * <li><strong>ID_PERIOD</strong>: ID card validity period verification.</li>
-     * <li><strong>MOBILE_ONLINE_LENGTH</strong>: mobile number online duration.</li>
-     * <li><strong>MOBILE_ONLINE_STATUS</strong>: mobile number online status.</li>
-     * <li><strong>MOBILE_3_META_SIMPLE</strong>: mobile number three-element verification (simple edition).</li>
-     * <li><strong>MOBILE_3_META</strong>: mobile number three-element verification (detailed edition).</li>
-     * <li><strong>MOBILE_2_META</strong>: mobile number two-element verification.</li>
-     * <li><strong>BANK_CARD_N_META</strong>: bank card verification (detailed edition).</li>
-     * <li><strong>MOBILE_DETECT</strong>: phone number detection.</li>
-     * <li><strong>VEHICLE_N_META</strong>: vehicle element verification (enhanced edition).</li>
-     * <li><strong>VEHICLE_PENTA_INFO</strong>: vehicle five-element information recognition.</li>
-     * <li><strong>VEHICLE_LICENSE_INFO</strong>: vehicle information recognition.</li>
-     * <li><strong>VEHICLE_INSURE_DATE</strong>: vehicle insurance date query.</li>
-     * <li><strong>VEHICLE_CHECK</strong>: vehicle element verification.</li>
+     * <li><strong>MOBILE_ONLINE_LENGTH</strong>: Mobile number online duration.</li>
+     * <li><strong>MOBILE_ONLINE_STATUS</strong>: Mobile number online status.</li>
+     * <li><strong>MOBILE_3_META_SIMPLE</strong>: Mobile number three-element verification (simple edition).</li>
+     * <li><strong>MOBILE_3_META</strong>: Mobile number three-element verification (detailed edition).</li>
+     * <li><strong>MOBILE_2_META</strong>: Mobile number two-element verification.</li>
+     * <li><strong>BANK_CARD_N_META</strong>: Bank card verification (detailed edition).</li>
+     * <li><strong>MOBILE_DETECT</strong>: Number detection.</li>
+     * <li><strong>VEHICLE_N_META</strong>: Vehicle element verification (enhanced edition).</li>
+     * <li><strong>VEHICLE_PENTA_INFO</strong>: Vehicle five-element information recognition.</li>
+     * <li><strong>VEHICLE_LICENSE_INFO</strong>: Vehicle information recognition.</li>
+     * <li><strong>VEHICLE_INSURE_DATE</strong>: Vehicle insurance date query.</li>
+     * <li><strong>VEHICLE_CHECK</strong>: Vehicle element verification.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class DescribeInfoCheckExportRecordRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The start time of the query.</p>
+     * <p>The query start time. Format: YYYY-MM-DD HH:mm:ss, for example, 2025-10-11 21:24:48.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-10-11 21:24:48</p>

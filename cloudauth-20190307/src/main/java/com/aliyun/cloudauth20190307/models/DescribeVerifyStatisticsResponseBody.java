@@ -51,7 +51,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public String date;
 
         /**
-         * <p>The client-side initialization pass rate.</p>
+         * <p>The client-side init pass rate.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -60,7 +60,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public String initDevicePassRate;
 
         /**
-         * <p>The number of server-side initializations.</p>
+         * <p>The number of server-side init requests.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -69,7 +69,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long initService;
 
         /**
-         * <p>The server-side initialization conversion rate.</p>
+         * <p>The server-side init conversion rate.</p>
          * 
          * <strong>example:</strong>
          * <p>26.67</p>
@@ -78,7 +78,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public String initServiceConversionRate;
 
         /**
-         * <p>The server-side initialization pass rate.</p>
+         * <p>The server-side init pass rate.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -152,7 +152,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
 
     public static class DescribeVerifyStatisticsResponseBodyResultObject extends TeaModel {
         /**
-         * <p>The number of client-side initializations.</p>
+         * <p>The number of client-side init attempts.</p>
          * 
          * <strong>example:</strong>
          * <p>73</p>
@@ -161,7 +161,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long initDevice;
 
         /**
-         * <p>The number of client-side initializations for identity deduplication.</p>
+         * <p>The number of identity deduplication client-side init requests.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -170,7 +170,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long initDeviceId;
 
         /**
-         * <p>The number of successful client-side initializations for identity deduplication.</p>
+         * <p>The number of successful identity deduplication client-side init requests.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -179,7 +179,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long initDeviceIdSuccess;
 
         /**
-         * <p>The number of successful client-side initialization calls.</p>
+         * <p>The number of client-side init calls.</p>
          * 
          * <strong>example:</strong>
          * <p>73</p>
@@ -188,7 +188,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long initDeviceSuccess;
 
         /**
-         * <p>The number of server-side initializations.</p>
+         * <p>The number of server-side init attempts.</p>
          * 
          * <strong>example:</strong>
          * <p>73</p>
@@ -197,7 +197,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long initService;
 
         /**
-         * <p>The total number of server-side initialization requests for identity deduplication.</p>
+         * <p>The total number of identity deduplication server-side init requests.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -206,7 +206,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long initServiceId;
 
         /**
-         * <p>The number of successful server-side initializations for identity deduplication.</p>
+         * <p>The number of successful identity deduplication server-side init requests.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -215,7 +215,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long initServiceIdSuccess;
 
         /**
-         * <p>The number of successful server-side initialization authentications.</p>
+         * <p>The number of successful server-side init authentications.</p>
          * 
          * <strong>example:</strong>
          * <p>134</p>
@@ -224,13 +224,13 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long initServiceSuccess;
 
         /**
-         * <p>The daily pass/conversion rates (PV).</p>
+         * <p>The daily pass rate and conversion rate statistics (PV).</p>
          */
         @NameInMap("Items")
         public java.util.List<DescribeVerifyStatisticsResponseBodyResultObjectItems> items;
 
         /**
-         * <p>The number of client-side verifications.</p>
+         * <p>The number of client-side verification attempts.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -239,7 +239,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long verifyDevice;
 
         /**
-         * <p>The number of client-side authentication attempts for identity deduplication.</p>
+         * <p>The number of identity deduplication client-side authentication attempts.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -248,7 +248,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long verifyDeviceId;
 
         /**
-         * <p>The number of successful client-side verifications for identity deduplication.</p>
+         * <p>The number of successful identity deduplication client-side verifications.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -257,7 +257,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long verifyDeviceIdSuccess;
 
         /**
-         * <p>The number of successful client-side authentications for identity deduplication.</p>
+         * <p>The number of successful identity deduplication client-side authentications.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

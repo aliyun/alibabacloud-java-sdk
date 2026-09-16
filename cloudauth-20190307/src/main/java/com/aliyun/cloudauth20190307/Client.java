@@ -14,32 +14,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "regional";
+        this._endpointRule = "central";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("us-west-1", "cloudauth.aliyuncs.com"),
-            new TeaPair("us-east-1", "cloudauth.aliyuncs.com"),
-            new TeaPair("me-east-1", "cloudauth.aliyuncs.com"),
-            new TeaPair("eu-west-1", "cloudauth.aliyuncs.com"),
-            new TeaPair("eu-central-1", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "cloudauth.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-beijing", "cloudauth.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "cloudauth.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "cloudauth.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "cloudauth.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "cloudauth.aliyuncs.com"),
-            new TeaPair("ap-south-1", "cloudauth.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "cloudauth.aliyuncs.com")
+            new TeaPair("cn-beijing", "cloudauth.cn-beijing.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("cloudauth", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -812,6 +789,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CheckFileName", request.checkFileName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.degradeAppScheme)) {
+            query.put("DegradeAppScheme", request.degradeAppScheme);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.degradeSubCodes)) {
+            query.put("DegradeSubCodes", request.degradeSubCodes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.degradeType)) {
+            query.put("DegradeType", request.degradeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deviceRiskPlus)) {
             query.put("DeviceRiskPlus", request.deviceRiskPlus);
         }
@@ -838,6 +827,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.storeImage)) {
             query.put("StoreImage", request.storeImage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useDegrade)) {
+            query.put("UseDegrade", request.useDegrade);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1148,7 +1141,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Request method: Only HTTPS POST requests are supported.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an authentication whitelist.</p>
+     * <p>Creates a whitelist for ID Verification.</p>
      * 
      * @param request CreateWhitelistSettingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1215,7 +1208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Request method: Only HTTPS POST requests are supported.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an authentication whitelist.</p>
+     * <p>Creates a whitelist for ID Verification.</p>
      * 
      * @param request CreateWhitelistSettingRequest
      * @return CreateWhitelistSettingResponse
@@ -2664,7 +2657,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>After the China site (Chinese mainland) mobile client receives a callback, the China site (Chinese mainland) server can call this operation to obtain the corresponding verification status and verification materials.</p>
+     * <p>Retrieves the verification status and verification materials after the China-based mobile client receives a callback.</p>
      * 
      * @param request DescribeFaceVerifyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2710,7 +2703,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>After the China site (Chinese mainland) mobile client receives a callback, the China site (Chinese mainland) server can call this operation to obtain the corresponding verification status and verification materials.</p>
+     * <p>Retrieves the verification status and verification materials after the China-based mobile client receives a callback.</p>
      * 
      * @param request DescribeFaceVerifyRequest
      * @return DescribeFaceVerifyResponse
@@ -2722,10 +2715,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Request method: Supports sending requests by using the HTTPS POST and GET methods.</p>
+     * <p>Request method: Supports sending requests by using HTTPS POST and GET methods.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries information verification export tasks by page.</p>
+     * <p>Queries export tasks for information verification in a paged manner.</p>
      * 
      * @param request DescribeInfoCheckExportRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2773,10 +2766,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Request method: Supports sending requests by using the HTTPS POST and GET methods.</p>
+     * <p>Request method: Supports sending requests by using HTTPS POST and GET methods.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries information verification export tasks by page.</p>
+     * <p>Queries export tasks for information verification in a paged manner.</p>
      * 
      * @param request DescribeInfoCheckExportRecordRequest
      * @return DescribeInfoCheckExportRecordResponse
@@ -2788,13 +2781,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Request method: Supports HTTPS POST and GET methods.</p>
+     * <p>Request method: Supports sending requests by using HTTPS POST and GET methods.</p>
      * <blockquote>
      * <p>The authorization key is valid for 30 minutes and cannot be reused. Obtain a new key before each activation.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries a specified.</p>
+     * <p>Queries the list of financial-grade authentication scenarios.</p>
      * 
      * @param request DescribeListAntCloudAuthScenesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2826,13 +2819,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Request method: Supports HTTPS POST and GET methods.</p>
+     * <p>Request method: Supports sending requests by using HTTPS POST and GET methods.</p>
      * <blockquote>
      * <p>The authorization key is valid for 30 minutes and cannot be reused. Obtain a new key before each activation.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries a specified.</p>
+     * <p>Queries the list of financial-grade authentication scenarios.</p>
      * 
      * @param request DescribeListAntCloudAuthScenesRequest
      * @return DescribeListAntCloudAuthScenesResponse
@@ -2993,7 +2986,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service endpoint: cloudauth.aliyuncs.com.</li>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
      * <li>Request method: HTTPS POST and GET.</li>
      * </ul>
      * 
@@ -3083,7 +3076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service endpoint: cloudauth.aliyuncs.com.</li>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
      * <li>Request method: HTTPS POST and GET.</li>
      * </ul>
      * 
@@ -3101,12 +3094,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Request method: HTTPS POST and GET methods are supported.</li>
+     * <li>Request method: Supports sending requests by using HTTPS POST and GET methods.</li>
      * <li>Service address: cloudauth.aliyuncs.com.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries statistics information for information verification and authentication.</p>
+     * <p>Queries statistics information for information verification authentication.</p>
      * 
      * @param request DescribeMetaStatisticsListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3147,12 +3140,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Request method: HTTPS POST and GET methods are supported.</li>
+     * <li>Request method: Supports sending requests by using HTTPS POST and GET methods.</li>
      * <li>Service address: cloudauth.aliyuncs.com.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries statistics information for information verification and authentication.</p>
+     * <p>Queries statistics information for information verification authentication.</p>
      * 
      * @param request DescribeMetaStatisticsListRequest
      * @return DescribeMetaStatisticsListResponse
@@ -3165,12 +3158,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Request method: Supports sending requests using HTTPS POST and GET methods.</li>
+     * <li>Request method: HTTPS POST and GET methods are supported.</li>
      * <li>Service address: cloudauth.aliyuncs.com.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries information verification and authentication data with pagination.</p>
+     * <p>Queries information verification data by paging.</p>
      * 
      * @param request DescribeMetaStatisticsPageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3219,12 +3212,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Request method: Supports sending requests using HTTPS POST and GET methods.</li>
+     * <li>Request method: HTTPS POST and GET methods are supported.</li>
      * <li>Service address: cloudauth.aliyuncs.com.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries information verification and authentication data with pagination.</p>
+     * <p>Queries information verification data by paging.</p>
      * 
      * @param request DescribeMetaStatisticsPageListRequest
      * @return DescribeMetaStatisticsPageListResponse
@@ -3385,7 +3378,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries financial-grade ID Verification call statistics by using a paging query operation.</p>
+     * <p>Queries the paging statistics of financial-grade ID Verification invocations.</p>
      * 
      * @param request DescribePageFaceVerifyDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3437,7 +3430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries financial-grade ID Verification call statistics by using a paging query operation.</p>
+     * <p>Queries the paging statistics of financial-grade ID Verification invocations.</p>
      * 
      * @param request DescribePageFaceVerifyDataRequest
      * @return DescribePageFaceVerifyDataResponse
@@ -3592,7 +3585,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service endpoint: cloudauth.aliyuncs.com.</li>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
      * <li>Request method: HTTPS POST and GET.</li>
      * </ul>
      * 
@@ -3646,7 +3639,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service endpoint: cloudauth.aliyuncs.com.</li>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
      * <li>Request method: HTTPS POST and GET.</li>
      * </ul>
      * 
@@ -3812,12 +3805,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service endpoint: cloudauth.aliyuncs.com.</li>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
      * <li>Request method: HTTPS POST and GET.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the distribution data of ID Verification devices.</p>
+     * <p>Queries the distribution data of authenticated devices.</p>
      * 
      * @param request DescribeVerifyPersonasOsStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3862,12 +3855,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service endpoint: cloudauth.aliyuncs.com.</li>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
      * <li>Request method: HTTPS POST and GET.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the distribution data of ID Verification devices.</p>
+     * <p>Queries the distribution data of authenticated devices.</p>
      * 
      * @param request DescribeVerifyPersonasOsStatisticsRequest
      * @return DescribeVerifyPersonasOsStatisticsResponse
@@ -3880,12 +3873,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service endpoint: cloudauth.aliyuncs.com.</li>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
      * <li>Request method: HTTPS POST and GET.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries authentication statistics by province of the individual.</p>
+     * <p>Queries authentication statistics by province where individuals are located.</p>
      * 
      * @param request DescribeVerifyPersonasProvinceStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3930,12 +3923,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service endpoint: cloudauth.aliyuncs.com.</li>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
      * <li>Request method: HTTPS POST and GET.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries authentication statistics by province of the individual.</p>
+     * <p>Queries authentication statistics by province where individuals are located.</p>
      * 
      * @param request DescribeVerifyPersonasProvinceStatisticsRequest
      * @return DescribeVerifyPersonasProvinceStatisticsResponse
@@ -3948,7 +3941,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service endpoint: cloudauth.aliyuncs.com.</li>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
      * <li>Request method: HTTPS POST and GET.</li>
      * </ul>
      * 
@@ -3998,7 +3991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service endpoint: cloudauth.aliyuncs.com.</li>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
      * <li>Request method: HTTPS POST and GET.</li>
      * </ul>
      * 
@@ -4135,11 +4128,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Service endpoint: cloudauth.aliyuncs.com.</li>
-     * <li>Request methods: HTTPS POST and GET.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Query authentication details by page with conditions.</p>
+     * <p>Queries the details of authentication records with paging and conditional query.</p>
      * 
      * @param request DescribeVerifySearchPageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4257,11 +4250,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Service endpoint: cloudauth.aliyuncs.com.</li>
-     * <li>Request methods: HTTPS POST and GET.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Query authentication details by page with conditions.</p>
+     * <p>Queries the details of authentication records with paging and conditional query.</p>
      * 
      * @param request DescribeVerifySearchPageListRequest
      * @return DescribeVerifySearchPageListResponse
@@ -4476,7 +4469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Request method: Only HTTPS POST requests are supported.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the whitelist of a scenario.</p>
+     * <p>Queries the whitelist of a specified scenario.</p>
      * 
      * @param request DescribeWhitelistSettingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4555,7 +4548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Request method: Only HTTPS POST requests are supported.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the whitelist of a scenario.</p>
+     * <p>Queries the whitelist of a specified scenario.</p>
      * 
      * @param request DescribeWhitelistSettingRequest
      * @return DescribeWhitelistSettingResponse
@@ -5225,10 +5218,182 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Submits images of the front and back of an ID card and returns the verification result of the three facial elements from an authoritative data source.</p>
+     * <p>Verifies the authenticity and consistency of a name, ID card number, and facial photo against an authoritative source.</p>
      * 
      * <b>summary</b> : 
-     * <p>Accepts images of the front and back of an ID card, extracts the name, ID number, and facial photo by using OCR, and verifies the authenticity and consistency of the three facial elements against an authoritative source.</p>
+     * <p>Three-factor verification (premium edition).</p>
+     * 
+     * @param request Id3MetaVerifyPRORequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return Id3MetaVerifyPROResponse
+     */
+    public Id3MetaVerifyPROResponse id3MetaVerifyPROWithOptions(Id3MetaVerifyPRORequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableFallback)) {
+            query.put("EnableFallback", request.enableFallback);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.crop)) {
+            body.put("Crop", request.crop);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceFile)) {
+            body.put("FaceFile", request.faceFile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.facePicture)) {
+            body.put("FacePicture", request.facePicture);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceUrl)) {
+            body.put("FaceUrl", request.faceUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.identifyNum)) {
+            body.put("IdentifyNum", request.identifyNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.livenessCheck)) {
+            body.put("LivenessCheck", request.livenessCheck);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramType)) {
+            body.put("ParamType", request.paramType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            body.put("UserName", request.userName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "Id3MetaVerifyPRO"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new Id3MetaVerifyPROResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Verifies the authenticity and consistency of a name, ID card number, and facial photo against an authoritative source.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Three-factor verification (premium edition).</p>
+     * 
+     * @param request Id3MetaVerifyPRORequest
+     * @return Id3MetaVerifyPROResponse
+     */
+    public Id3MetaVerifyPROResponse id3MetaVerifyPRO(Id3MetaVerifyPRORequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.id3MetaVerifyPROWithOptions(request, runtime);
+    }
+
+    public Id3MetaVerifyPROResponse id3MetaVerifyPROAdvance(Id3MetaVerifyPROAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        // Step 0: init client
+        com.aliyun.credentials.models.CredentialModel credentialModel = null;
+        if (com.aliyun.teautil.Common.isUnset(_credential)) {
+            throw new TeaException(TeaConverter.buildMap(
+                new TeaPair("code", "InvalidCredentials"),
+                new TeaPair("message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details.")
+            ));
+        }
+
+        credentialModel = _credential.getCredential();
+        String accessKeyId = credentialModel.accessKeyId;
+        String accessKeySecret = credentialModel.accessKeySecret;
+        String securityToken = credentialModel.securityToken;
+        String credentialType = credentialModel.type;
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
+        if (com.aliyun.teautil.Common.isUnset(credentialType)) {
+            credentialType = "access_key";
+        }
+
+        com.aliyun.teaopenapi.models.Config authConfig = com.aliyun.teaopenapi.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("securityToken", securityToken),
+            new TeaPair("type", credentialType),
+            new TeaPair("endpoint", openPlatformEndpoint),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.teaopenapi.Client authClient = new com.aliyun.teaopenapi.Client(authConfig);
+        java.util.Map<String, String> authRequest = TeaConverter.buildMap(
+            new TeaPair("Product", "Cloudauth"),
+            new TeaPair("RegionId", _regionId)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest authReq = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(authRequest))
+        ));
+        com.aliyun.teaopenapi.models.Params authParams = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AuthorizeFileUpload"),
+            new TeaPair("version", "2019-12-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        java.util.Map<String, Object> authResponse = new java.util.HashMap<>();
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        java.util.Map<String, Object> ossHeader = new java.util.HashMap<>();
+        java.util.Map<String, Object> tmpBody = new java.util.HashMap<>();
+        Boolean useAccelerate = false;
+        java.util.Map<String, String> authResponseBody = new java.util.HashMap<>();
+        Id3MetaVerifyPRORequest id3MetaVerifyPROReq = new Id3MetaVerifyPRORequest();
+        com.aliyun.openapiutil.Client.convert(request, id3MetaVerifyPROReq);
+        if (!com.aliyun.teautil.Common.isUnset(request.faceFileObject)) {
+            Object tmpResp0 = authClient.callApi(authParams, authReq, runtime);
+            authResponse = com.aliyun.teautil.Common.assertAsMap(tmpResp0);
+            tmpBody = com.aliyun.teautil.Common.assertAsMap(authResponse.get("body"));
+            useAccelerate = com.aliyun.teautil.Common.assertAsBoolean(tmpBody.get("UseAccelerate"));
+            authResponseBody = com.aliyun.teautil.Common.stringifyMapValue(tmpBody);
+            fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponseBody.get("ObjectKey")),
+                new TeaPair("content", request.faceFileObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = TeaConverter.buildMap(
+                new TeaPair("host", com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType)),
+                new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
+                new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
+                new TeaPair("Signature", authResponseBody.get("Signature")),
+                new TeaPair("key", authResponseBody.get("ObjectKey")),
+                new TeaPair("file", fileObj),
+                new TeaPair("success_action_status", "201")
+            );
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
+            id3MetaVerifyPROReq.faceFile = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
+        }
+
+        Id3MetaVerifyPROResponse id3MetaVerifyPROResp = this.id3MetaVerifyPROWithOptions(id3MetaVerifyPROReq, runtime);
+        return id3MetaVerifyPROResp;
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Accepts front and back images of an ID card and returns the verification result of the facial recognition three-factor elements from an authoritative data source.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Verifies the authenticity and consistency of facial recognition three-factor elements by accepting front and back images of an ID card, extracting the name, ID number, and facial photo through OCR, and checking them against an authoritative source.</p>
      * 
      * @param request Id3MetaVerifyWithOCRRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5272,10 +5437,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Submits images of the front and back of an ID card and returns the verification result of the three facial elements from an authoritative data source.</p>
+     * <p>Accepts front and back images of an ID card and returns the verification result of the facial recognition three-factor elements from an authoritative data source.</p>
      * 
      * <b>summary</b> : 
-     * <p>Accepts images of the front and back of an ID card, extracts the name, ID number, and facial photo by using OCR, and verifies the authenticity and consistency of the three facial elements against an authoritative source.</p>
+     * <p>Verifies the authenticity and consistency of facial recognition three-factor elements by accepting front and back images of an ID card, extracting the name, ID number, and facial photo through OCR, and checking them against an authoritative source.</p>
      * 
      * @param request Id3MetaVerifyWithOCRRequest
      * @return Id3MetaVerifyWithOCRResponse
@@ -5573,15 +5738,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h4>Image format requirements</h4>
      * <p>When performing ID Verification, submit images that meet all of the following conditions:</p>
      * <ul>
-     * <li>A recent photo with a complete, clear, and unobstructed face, a natural expression, and the subject facing the camera directly.</li>
-     * <li>A clear photo with normal exposure. The face must not be too dark, too bright, or have glare, and the angle must not deviate significantly.</li>
-     * <li>Resolution must not exceed 1920×1080 and must be at least 640×480. Scale the short side to 720 pixels and use a compression ratio greater than 0.9.</li>
+     * <li>A recent photo with a complete, clear, and unobstructed face, natural expression, and facing the camera directly.</li>
+     * <li>Clear photo with normal exposure. The face must not be too dark, too bright, or have glare, and the angle must not deviate significantly.</li>
+     * <li>Resolution must not exceed 1920×1080, must be at least 640×480. We recommend scaling the short edge to 720 pixels with a compression ratio greater than 0.9.</li>
      * <li>Photo size: &lt; 1 MB.</li>
-     * <li>Photos rotated 90, 180, and 270 degrees are supported. For photos with multiple faces, the largest face is selected.</li>
+     * <li>Photos rotated 90, 180, and 270 degrees are supported. For multiple faces, the largest face is selected.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtains a CertifyId before each authentication to link the interfaces in the authentication request.</p>
+     * <p>Obtains a CertifyId before each authentication session, which is used to correlate the various API operations in the authentication request.</p>
      * 
      * @param request InitFaceVerifyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5779,15 +5944,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h4>Image format requirements</h4>
      * <p>When performing ID Verification, submit images that meet all of the following conditions:</p>
      * <ul>
-     * <li>A recent photo with a complete, clear, and unobstructed face, a natural expression, and the subject facing the camera directly.</li>
-     * <li>A clear photo with normal exposure. The face must not be too dark, too bright, or have glare, and the angle must not deviate significantly.</li>
-     * <li>Resolution must not exceed 1920×1080 and must be at least 640×480. Scale the short side to 720 pixels and use a compression ratio greater than 0.9.</li>
+     * <li>A recent photo with a complete, clear, and unobstructed face, natural expression, and facing the camera directly.</li>
+     * <li>Clear photo with normal exposure. The face must not be too dark, too bright, or have glare, and the angle must not deviate significantly.</li>
+     * <li>Resolution must not exceed 1920×1080, must be at least 640×480. We recommend scaling the short edge to 720 pixels with a compression ratio greater than 0.9.</li>
      * <li>Photo size: &lt; 1 MB.</li>
-     * <li>Photos rotated 90, 180, and 270 degrees are supported. For photos with multiple faces, the largest face is selected.</li>
+     * <li>Photos rotated 90, 180, and 270 degrees are supported. For multiple faces, the largest face is selected.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtains a CertifyId before each authentication to link the interfaces in the authentication request.</p>
+     * <p>Obtains a CertifyId before each authentication session, which is used to correlate the various API operations in the authentication request.</p>
      * 
      * @param request InitFaceVerifyRequest
      * @return InitFaceVerifyResponse
@@ -6761,7 +6926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries ID Verification whitelist configurations by using paging.</p>
+     * <p>Queries ID Verification whitelist configurations by paging.</p>
      * 
      * @param request PageQueryWhiteListSettingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6825,7 +6990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries ID Verification whitelist configurations by using paging.</p>
+     * <p>Queries ID Verification whitelist configurations by paging.</p>
      * 
      * @param request PageQueryWhiteListSettingRequest
      * @return PageQueryWhiteListSettingResponse
@@ -7146,7 +7311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>Service endpoint: cloudauth.aliyuncs.com</li>
      * <li>Request method: HTTPS POST and GET.</li>
-     * <li>This operation uses different parameters for different product plans. For more information, see <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/product-overview/introduction/">official documentation</a>.</li>
+     * <li>This operation uses different parameters for different product plans. For more information, refer to the <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/product-overview/introduction/">official documentation</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7185,7 +7350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>Service endpoint: cloudauth.aliyuncs.com</li>
      * <li>Request method: HTTPS POST and GET.</li>
-     * <li>This operation uses different parameters for different product plans. For more information, see <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/product-overview/introduction/">official documentation</a>.</li>
+     * <li>This operation uses different parameters for different product plans. For more information, refer to the <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/product-overview/introduction/">official documentation</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7204,7 +7369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>Request endpoint: cloudauth.aliyuncs.com</li>
      * <li>Request method: HTTPS POST and GET.<blockquote>
-     * <p>ID Verification counts call volume by CertifyId. To facilitate reconciliation, retain the CertifyId field in your system.</p>
+     * <p>ID Verification products use CertifyId to calculate call volume. To facilitate reconciliation, retain the CertifyId field in your system.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -7273,7 +7438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>Request endpoint: cloudauth.aliyuncs.com</li>
      * <li>Request method: HTTPS POST and GET.<blockquote>
-     * <p>ID Verification counts call volume by CertifyId. To facilitate reconciliation, retain the CertifyId field in your system.</p>
+     * <p>ID Verification products use CertifyId to calculate call volume. To facilitate reconciliation, retain the CertifyId field in your system.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -7345,14 +7510,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the information of a China Finance Certification Initiative (CFCI) scenario based on the scenario ID.</p>
+     * <p>Updates the information of a China Finance Certification scenario based on the scenario ID.</p>
      * <ul>
      * <li>Service endpoint: cloudauth.aliyuncs.com.</li>
      * <li>Request method: HTTPS POST.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates a China Finance Certification Initiative (CFCI) scenario.</p>
+     * <p>Updates a China Finance Certification scenario.</p>
      * 
      * @param request UpdateAntCloudAuthSceneRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7371,6 +7536,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.checkFileName)) {
             query.put("CheckFileName", request.checkFileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.degradeAppScheme)) {
+            query.put("DegradeAppScheme", request.degradeAppScheme);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.degradeSubCodes)) {
+            query.put("DegradeSubCodes", request.degradeSubCodes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.degradeType)) {
+            query.put("DegradeType", request.degradeType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.deviceRiskPlus)) {
@@ -7409,6 +7586,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StoreImage", request.storeImage);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.useDegrade)) {
+            query.put("UseDegrade", request.useDegrade);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -7428,14 +7609,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the information of a China Finance Certification Initiative (CFCI) scenario based on the scenario ID.</p>
+     * <p>Updates the information of a China Finance Certification scenario based on the scenario ID.</p>
      * <ul>
      * <li>Service endpoint: cloudauth.aliyuncs.com.</li>
      * <li>Request method: HTTPS POST.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates a China Finance Certification Initiative (CFCI) scenario.</p>
+     * <p>Updates a China Finance Certification scenario.</p>
      * 
      * @param request UpdateAntCloudAuthSceneRequest
      * @return UpdateAntCloudAuthSceneResponse

@@ -42,7 +42,7 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
 
     public static class DescribeMetaStatisticsListResponseBodyItems extends TeaModel {
         /**
-         * <p>The commodity (product) code.</p>
+         * <p>The product code.</p>
          * 
          * <strong>example:</strong>
          * <p>MOBILE_ONLINE_LENGTH</p>
@@ -61,16 +61,16 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
          * <li><strong>MOBILE_3_META</strong>: mobile number three-element verification (detailed edition)</li>
          * <li><strong>MOBILE_2_META</strong>: mobile number two-element verification</li>
          * <li><strong>BANK_CARD_N_META</strong>: bank card verification (detailed edition)</li>
-         * <li><strong>MOBILE_DETECT</strong>: phone number detection</li>
+         * <li><strong>MOBILE_DETECT</strong>: number detection</li>
          * <li><strong>VEHICLE_N_META</strong>: vehicle element verification (enhanced edition)</li>
          * <li><strong>VEHICLE_PENTA_INFO</strong>: vehicle five-element information recognition</li>
          * <li><strong>VEHICLE_LICENSE_INFO</strong>: vehicle information recognition</li>
          * <li><strong>VEHICLE_INSURE_DATE</strong>: vehicle insurance date query</li>
-         * <li><strong>VEHICLE_CHECK</strong>: vehicle element verification.</li>
+         * <li><strong>VEHICLE_CHECK</strong>: vehicle element verification</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>身份证二要素</p>
+         * <p>ID card two-element verification</p>
          */
         @NameInMap("ApiName")
         public String apiName;
@@ -94,7 +94,7 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
         public String billRate;
 
         /**
-         * <p>The number of successful phone number queries (exclusive to phone number detection).</p>
+         * <p>The number of successful mobile number queries (exclusive to number detection).</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -103,20 +103,20 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
         public Long chargeCount;
 
         /**
-         * <p>The date.</p>
+         * <p>The date. Format: YYYY-MM-DD, such as 2015-08-24.</p>
          * 
          * <strong>example:</strong>
-         * <p>11/8</p>
+         * <p>2015-08-24</p>
          */
         @NameInMap("Date")
         public String date;
 
         /**
-         * <p>The name of the telecommunications service provider. Valid values:</p>
+         * <p>The carrier name. Valid values:</p>
          * <ul>
          * <li><strong>CMCC</strong>: China Mobile</li>
          * <li><strong>CUCC</strong>: China Unicom</li>
-         * <li><strong>CTCC</strong>: China Telecom.</li>
+         * <li><strong>CTCC</strong>: China Telecom</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
         public String ispName;
 
         /**
-         * <p>The number of calls with no education information found.</p>
+         * <p>The number of calls with no education record information.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

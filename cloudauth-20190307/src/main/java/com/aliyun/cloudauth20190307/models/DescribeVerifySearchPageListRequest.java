@@ -14,7 +14,7 @@ public class DescribeVerifySearchPageListRequest extends TeaModel {
     public String certNo;
 
     /**
-     * <p>The certification ID.</p>
+     * <p>The authentication ID.</p>
      * 
      * <strong>example:</strong>
      * <p>shadbdd3dbacd001cfa892a5e2b98dxx</p>
@@ -33,16 +33,16 @@ public class DescribeVerifySearchPageListRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The query end time. The format is a Unix timestamp in milliseconds.</p>
+     * <p>The end time of the query. Format: YYYY-MM-DD HH:mm:ss, such as 2025-10-16 23:59:59.</p>
      * 
      * <strong>example:</strong>
-     * <p>2025-10-16 23:59:59 +0800</p>
+     * <p>2025-10-16 23:59:59</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
-     * <p>Specifies whether there is a device risk. Setting this parameter to true indicates that root = 1, simulator = 1, or virtual_video = 1.</p>
+     * <p>Specifies whether device risk exists. Set this parameter to true to indicate root = 1, simulator = 1, or virtual_video = 1.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -60,7 +60,7 @@ public class DescribeVerifySearchPageListRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>The unique identifier for the customer request.</p>
+     * <p>The unique identifier of the customer request.</p>
      * 
      * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
@@ -79,10 +79,10 @@ public class DescribeVerifySearchPageListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Specifies whether the authentication passed:</p>
+     * <p>Indicates whether the authentication is passed. Valid values:</p>
      * <ul>
      * <li><strong>T</strong>: Passed.</li>
-     * <li><strong>F</strong>: Failed.</li>
+     * <li><strong>F</strong>: Not passed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,10 +101,10 @@ public class DescribeVerifySearchPageListRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The business scenario risk:</p>
+     * <p>The business scenario risk. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: No risk.</li>
-     * <li><strong>1</strong>: Risk detected.</li>
+     * <li><strong>1</strong>: Risk exists.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,10 +114,10 @@ public class DescribeVerifySearchPageListRequest extends TeaModel {
     public Integer riskBizScenario;
 
     /**
-     * <p>The device risk:</p>
+     * <p>The device risk. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: No risk.</li>
-     * <li><strong>1</strong>: Risk detected.</li>
+     * <li><strong>1</strong>: Risk exists.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -127,10 +127,10 @@ public class DescribeVerifySearchPageListRequest extends TeaModel {
     public Integer riskDevice;
 
     /**
-     * <p>The DeviceToken risk:</p>
+     * <p>The DeviceToken risk. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: No risk.</li>
-     * <li><strong>1</strong>: Risk detected.</li>
+     * <li><strong>1</strong>: Risk exists.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -140,10 +140,10 @@ public class DescribeVerifySearchPageListRequest extends TeaModel {
     public Integer riskDeviceToken;
 
     /**
-     * <p>The generic risk:</p>
+     * <p>The generic risk. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: No risk.</li>
-     * <li><strong>1</strong>: Risk detected.</li>
+     * <li><strong>1</strong>: Risk exists.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -153,10 +153,10 @@ public class DescribeVerifySearchPageListRequest extends TeaModel {
     public Integer riskGeneric;
 
     /**
-     * <p>The large model mining risk:</p>
+     * <p>The large model mining risk. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: No risk.</li>
-     * <li><strong>1</strong>: Risk detected.</li>
+     * <li><strong>1</strong>: Risk exists.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -166,7 +166,7 @@ public class DescribeVerifySearchPageListRequest extends TeaModel {
     public Integer riskModelMining;
 
     /**
-     * <p>Specifies whether the device is rooted. Set to 1 if selected; otherwise, do not pass this parameter. This parameter corresponds to the identity tag risk type.</p>
+     * <p>Specifies whether the device is rooted. Set this parameter to 1 if selected. Otherwise, do not pass this parameter. This corresponds to the identity tag risk type.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -184,7 +184,7 @@ public class DescribeVerifySearchPageListRequest extends TeaModel {
     public String sceneId;
 
     /**
-     * <p>Specifies whether the device is a simulator. Set to 1 if selected; otherwise, do not pass this parameter. This parameter corresponds to the device tag risk type.</p>
+     * <p>Specifies whether the device is a simulator. Set this parameter to 1 if selected. Otherwise, do not pass this parameter. This corresponds to the device tag risk type.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -193,16 +193,16 @@ public class DescribeVerifySearchPageListRequest extends TeaModel {
     public Integer simulator;
 
     /**
-     * <p>The query start time.</p>
+     * <p>The start time of the query. Format: YYYY-MM-DD HH:mm:ss, such as 2025-10-10 00:00:00.</p>
      * 
      * <strong>example:</strong>
-     * <p>2025-10-10 00:00:00 +0800</p>
+     * <p>2025-10-10 00:00:00</p>
      */
     @NameInMap("StartDate")
     public String startDate;
 
     /**
-     * <p>The result code. For details, see <a href="https://help.aliyun.com/zh/id-verification/financial-grade-id-verification/error-code-person-verify?spm=a2c4g.11186623.0.0.6015566ebArcFw#d88910e172fgg">SubCode Description</a>.</p>
+     * <p>The result code. For more information about valid values, see <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/error-code-person-verify#d88910e172fgg">SubCode description</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>201</p>
@@ -211,7 +211,7 @@ public class DescribeVerifySearchPageListRequest extends TeaModel {
     public String subCode;
 
     /**
-     * <p>Comma-separated result codes. For details, see <a href="https://help.aliyun.com/zh/id-verification/financial-grade-id-verification/error-code-person-verify?spm=a2c4g.11186623.0.0.6015566ebArcFw#d88910e172fgg">SubCode Description</a>.</p>
+     * <p>Comma-separated result codes. For more information about valid values, see <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/error-code-person-verify#d88910e172fgg">SubCode description</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>201,202</p>
@@ -220,7 +220,7 @@ public class DescribeVerifySearchPageListRequest extends TeaModel {
     public String subCodes;
 
     /**
-     * <p>Specifies whether virtual video is used. Set to 1 if selected; otherwise, do not pass this parameter. This parameter corresponds to the behavior tag risk type.</p>
+     * <p>Specifies whether virtual video adaptation is used. Set this parameter to 1 if selected. Otherwise, do not pass this parameter. This corresponds to the behavior tag risk type.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

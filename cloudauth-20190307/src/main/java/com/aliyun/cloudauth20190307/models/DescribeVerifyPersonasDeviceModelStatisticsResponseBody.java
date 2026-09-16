@@ -60,7 +60,7 @@ public class DescribeVerifyPersonasDeviceModelStatisticsResponseBody extends Tea
         public String deviceModel;
 
         /**
-         * <p>The ratio of devices of this model to the total number of devices.</p>
+         * <p>The ratio of this device model to the total number of devices.</p>
          * 
          * <strong>example:</strong>
          * <p>16.13</p>
@@ -110,7 +110,7 @@ public class DescribeVerifyPersonasDeviceModelStatisticsResponseBody extends Tea
         public Long allDeviceCnt;
 
         /**
-         * <p>The list of data for different phone models.</p>
+         * <p>The data list of different phone models.</p>
          */
         @NameInMap("Items")
         public java.util.List<DescribeVerifyPersonasDeviceModelStatisticsResponseBodyResultObjectItems> items;

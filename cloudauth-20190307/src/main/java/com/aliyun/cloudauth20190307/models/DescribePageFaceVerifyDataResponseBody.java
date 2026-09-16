@@ -47,7 +47,7 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of this request.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-A***B-A3DC0DE3C83E</p>
@@ -161,7 +161,7 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
 
     public static class DescribePageFaceVerifyDataResponseBodyItems extends TeaModel {
         /**
-         * <p>The date.</p>
+         * <p>The date. The value is in ISO 8601/RFC 3339 format, UTC time zone (Z indicates +00:00), with millisecond precision, such as 2024-03-24T00:00:00.000Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-24T00:00:00.000Z</p>
@@ -191,7 +191,7 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
          * <p>The scene name.</p>
          * 
          * <strong>example:</strong>
-         * <p>****实名认证</p>
+         * <p>****Real-name verification</p>
          */
         @NameInMap("SceneName")
         public String sceneName;

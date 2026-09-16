@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class Id3MetaVerifyResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of 200 indicates success. Other values indicate failure.</p>
+     * <p>The response code. 200 indicates success. Other values indicate failure.</p>
      * <p><strong>Important</strong></p>
      * <ul>
-     * <li>This parameter indicates only whether the API call is successful. For more information about return codes, see error codes.</li>
-     * <li>Check the fields in ResultObject for the business verification result.</li>
+     * <li>This parameter indicates whether the API call is successful. For more information about return codes, see error codes.</li>
+     * <li>Check the business verification result in the fields of ResultObject.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,9 +19,9 @@ public class Id3MetaVerifyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message of the API call.</p>
+     * <p>The response message.</p>
      * <p><strong>Important</strong></p>
-     * <p>This parameter indicates only whether the API call is abnormal.</p>
+     * <p>This parameter only indicates whether the API call is abnormal.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -85,9 +85,9 @@ public class Id3MetaVerifyResponseBody extends TeaModel {
         /**
          * <p>The identity verification result. Valid values:</p>
          * <ul>
-         * <li>1: Consistent.</li>
-         * <li>2: Inconsistent.</li>
-         * <li>3: No record found.</li>
+         * <li>1: verification is consistent.</li>
+         * <li>2: verification is inconsistent.</li>
+         * <li>3: no record found.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,6 +108,32 @@ public class Id3MetaVerifyResponseBody extends TeaModel {
         public String faceDetail;
 
         /**
+         * <p>The authoritative source verification details. Valid values:</p>
+         * <ul>
+         * <li><p>101: authentication passed.</p>
+         * </li>
+         * <li><p>201: authentication failed. The name does not match the ID card number.</p>
+         * </li>
+         * <li><p>202: authentication failed. The person is suspected to be the ID holder.</p>
+         * </li>
+         * <li><p>203: authentication failed. No photo exists in the database.</p>
+         * </li>
+         * <li><p>204: authentication failed. The person is not the same individual.</p>
+         * </li>
+         * <li><p>205: authentication failed. Modeling of the image to be compared failed.</p>
+         * </li>
+         * <li><p>206: authentication failed. The image format is incorrect.</p>
+         * </li>
+         * <li><p>207: authentication failed. The uploaded image is too small. Upload a new image.</p>
+         * </li>
+         * <li><p>208: authentication failed. The quality of the uploaded portrait photo is poor. Upload a new photo.</p>
+         * </li>
+         * <li><p>301: no record found. The ID number does not exist in the database.</p>
+         * </li>
+         * <li><p>302: no record found. Verification cannot be performed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>101</p>
          */

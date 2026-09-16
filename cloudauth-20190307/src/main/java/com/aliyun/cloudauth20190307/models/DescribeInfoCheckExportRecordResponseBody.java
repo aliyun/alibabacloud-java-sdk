@@ -23,13 +23,13 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The list of results.</p>
+     * <p>The result list.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeInfoCheckExportRecordResponseBodyItems> items;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -56,7 +56,7 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the response is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -161,7 +161,7 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
 
     public static class DescribeInfoCheckExportRecordResponseBodyItems extends TeaModel {
         /**
-         * <p>The download date.</p>
+         * <p>The download time. The value is a UNIX timestamp in milliseconds (ms), for example, 1758250979000.</p>
          * 
          * <strong>example:</strong>
          * <p>1758250979000</p>
@@ -212,22 +212,22 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
          * <ul>
          * <li><strong>ID_CARD_2_META</strong>: ID card two-element verification.</li>
          * <li><strong>ID_PERIOD</strong>: ID card validity period verification.</li>
-         * <li><strong>MOBILE_ONLINE_LENGTH</strong>: mobile number online duration.</li>
-         * <li><strong>MOBILE_ONLINE_STATUS</strong>: mobile number online status.</li>
-         * <li><strong>MOBILE_3_META_SIMPLE</strong>: mobile number three-element verification (simple edition).</li>
-         * <li><strong>MOBILE_3_META</strong>: mobile number three-element verification (detailed edition).</li>
-         * <li><strong>MOBILE_2_META</strong>: mobile number two-element verification.</li>
-         * <li><strong>BANK_CARD_N_META</strong>: bank card verification (detailed edition).</li>
-         * <li><strong>MOBILE_DETECT</strong>: phone number detection.</li>
-         * <li><strong>VEHICLE_N_META</strong>: vehicle element verification (enhanced edition).</li>
-         * <li><strong>VEHICLE_PENTA_INFO</strong>: vehicle five-element information recognition.</li>
-         * <li><strong>VEHICLE_LICENSE_INFO</strong>: vehicle information recognition.</li>
-         * <li><strong>VEHICLE_INSURE_DATE</strong>: vehicle insurance date query.</li>
-         * <li><strong>VEHICLE_CHECK</strong>: vehicle element verification.</li>
+         * <li><strong>MOBILE_ONLINE_LENGTH</strong>: Mobile number online duration.</li>
+         * <li><strong>MOBILE_ONLINE_STATUS</strong>: Mobile number online status.</li>
+         * <li><strong>MOBILE_3_META_SIMPLE</strong>: Mobile number three-element verification (simple edition).</li>
+         * <li><strong>MOBILE_3_META</strong>: Mobile number three-element verification (detailed edition).</li>
+         * <li><strong>MOBILE_2_META</strong>: Mobile number two-element verification.</li>
+         * <li><strong>BANK_CARD_N_META</strong>: Bank card verification (detailed edition).</li>
+         * <li><strong>MOBILE_DETECT</strong>: Number detection.</li>
+         * <li><strong>VEHICLE_N_META</strong>: Vehicle element verification (enhanced edition).</li>
+         * <li><strong>VEHICLE_PENTA_INFO</strong>: Vehicle five-element information recognition.</li>
+         * <li><strong>VEHICLE_LICENSE_INFO</strong>: Vehicle information recognition.</li>
+         * <li><strong>VEHICLE_INSURE_DATE</strong>: Vehicle insurance date query.</li>
+         * <li><strong>VEHICLE_CHECK</strong>: Vehicle element verification.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>身份证二要素</p>
+         * <p>ID_CARD_2_META</p>
          */
         @NameInMap("ProductType")
         public String productType;
@@ -235,9 +235,9 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: The file is being generated.</li>
-         * <li><strong>2</strong>: The file has been generated.</li>
-         * <li><strong>3</strong>: The file failed to be generated.</li>
+         * <li><strong>1</strong>: File is being generated.</li>
+         * <li><strong>2</strong>: File generation is complete.</li>
+         * <li><strong>3</strong>: File generation failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

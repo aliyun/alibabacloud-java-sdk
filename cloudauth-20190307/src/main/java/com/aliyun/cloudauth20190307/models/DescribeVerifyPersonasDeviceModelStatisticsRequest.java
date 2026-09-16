@@ -26,7 +26,7 @@ public class DescribeVerifyPersonasDeviceModelStatisticsRequest extends TeaModel
      * <p>The service type. Valid values:</p>
      * <ul>
      * <li><strong>antcloudauth</strong>: financial-grade ID Verification.</li>
-     * <li><strong>cloudauthst</strong> (discontinued): enhanced ID Verification.</li>
+     * <li><strong>cloudauthst</strong> (discontinued): ID Verification enhanced edition.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -37,7 +37,7 @@ public class DescribeVerifyPersonasDeviceModelStatisticsRequest extends TeaModel
     public String serviceCode;
 
     /**
-     * <p>The time range for the query, specified as the number of preceding days.</p>
+     * <p>The time range for the query, indicating the number of preceding days. Format: a numeric string. Unit: days (d). A value of 30 indicates the preceding 30 days.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

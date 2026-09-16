@@ -54,7 +54,7 @@ public class DescribeVerifyPersonasProvinceStatisticsResponseBody extends TeaMod
          * <p>The province name.</p>
          * 
          * <strong>example:</strong>
-         * <p>浙江</p>
+         * <p>Zhejiang</p>
          */
         @NameInMap("ProvinceName")
         public String provinceName;

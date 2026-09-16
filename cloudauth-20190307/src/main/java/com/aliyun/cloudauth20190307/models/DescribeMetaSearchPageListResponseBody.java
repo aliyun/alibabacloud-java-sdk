@@ -121,29 +121,29 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
         /**
          * <p>The vehicle type. Valid values:</p>
          * <ul>
-         * <li><strong>01</strong>: large vehicle  </li>
-         * <li><strong>02</strong>: small vehicle  </li>
-         * <li><strong>03</strong>: embassy vehicle  </li>
-         * <li><strong>04</strong>: consulate vehicle  </li>
-         * <li><strong>05</strong>: overseas vehicle  </li>
-         * <li><strong>06</strong>: foreign vehicle  </li>
-         * <li><strong>07</strong>: standard motorcycle  </li>
-         * <li><strong>08</strong>: light motorcycle  </li>
-         * <li><strong>09</strong>: embassy motorcycle  </li>
-         * <li><strong>10</strong>: consulate motorcycle  </li>
-         * <li><strong>11</strong>: overseas motorcycle  </li>
-         * <li><strong>12</strong>: foreign motorcycle  </li>
-         * <li><strong>13</strong>: low-speed vehicle  </li>
-         * <li><strong>14</strong>: tractor  </li>
-         * <li><strong>15</strong>: trailer  </li>
-         * <li><strong>16</strong>: training vehicle  </li>
-         * <li><strong>17</strong>: training motorcycle  </li>
-         * <li><strong>20</strong>: temporary entry vehicle  </li>
-         * <li><strong>21</strong>: temporary entry motorcycle  </li>
-         * <li><strong>22</strong>: temporary driving vehicle  </li>
-         * <li><strong>23</strong>: police vehicle  </li>
-         * <li><strong>24</strong>: police motorcycle  </li>
-         * <li><strong>51</strong>: new energy large vehicle  </li>
+         * <li><strong>01</strong>: large vehicle.  </li>
+         * <li><strong>02</strong>: small vehicle.  </li>
+         * <li><strong>03</strong>: embassy vehicle.  </li>
+         * <li><strong>04</strong>: consulate vehicle.  </li>
+         * <li><strong>05</strong>: overseas vehicle.  </li>
+         * <li><strong>06</strong>: foreign vehicle.  </li>
+         * <li><strong>07</strong>: standard motorcycle.  </li>
+         * <li><strong>08</strong>: light motorcycle.  </li>
+         * <li><strong>09</strong>: embassy motorcycle.  </li>
+         * <li><strong>10</strong>: consulate motorcycle.  </li>
+         * <li><strong>11</strong>: overseas motorcycle.  </li>
+         * <li><strong>12</strong>: foreign motorcycle.  </li>
+         * <li><strong>13</strong>: low-speed vehicle.  </li>
+         * <li><strong>14</strong>: tractor.  </li>
+         * <li><strong>15</strong>: trailer.  </li>
+         * <li><strong>16</strong>: training vehicle.  </li>
+         * <li><strong>17</strong>: training motorcycle.  </li>
+         * <li><strong>20</strong>: temporary entry vehicle.  </li>
+         * <li><strong>21</strong>: temporary entry motorcycle.  </li>
+         * <li><strong>22</strong>: temporary driving vehicle.  </li>
+         * <li><strong>23</strong>: police vehicle.  </li>
+         * <li><strong>24</strong>: police motorcycle.  </li>
+         * <li><strong>51</strong>: new energy large vehicle.  </li>
          * <li><strong>52</strong>: new energy small vehicle.</li>
          * </ul>
          * 
@@ -157,7 +157,7 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
          * <p>The vehicle type name.</p>
          * 
          * <strong>example:</strong>
-         * <p>新能源小型车</p>
+         * <p>New energy small vehicle</p>
          */
         @NameInMap("VehicleTypeName")
         public String vehicleTypeName;
@@ -240,10 +240,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
         public String bankCard;
 
         /**
-         * <p>The verification status. Valid values:</p>
+         * <p>The authentication status. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Verification passed.</li>
-         * <li><strong>2</strong>: Verification failed.</li>
+         * <li><strong>1</strong>: Authentication passed.</li>
+         * <li><strong>2</strong>: Authentication failed.</li>
          * <li><strong>3</strong>: No record found.</li>
          * </ul>
          * 
@@ -257,16 +257,16 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
          * <p>The brand name.</p>
          * 
          * <strong>example:</strong>
-         * <p>奔驰</p>
+         * <p>Mercedes-Benz</p>
          */
         @NameInMap("Brand")
         public String brand;
 
         /**
-         * <p>The body color.</p>
+         * <p>The vehicle body color.</p>
          * 
          * <strong>example:</strong>
-         * <p>白</p>
+         * <p>White</p>
          */
         @NameInMap("Color")
         public String color;
@@ -311,13 +311,13 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
          * <p>The fuel type.</p>
          * 
          * <strong>example:</strong>
-         * <p>电</p>
+         * <p>Electric</p>
          */
         @NameInMap("FuelType")
         public String fuelType;
 
         /**
-         * <p>The inspection validity expiration date.</p>
+         * <p>The inspection validity expiration date. Format: YYYY-MM-DD HH:mm:ss, for example, 2026-07-31 00:00:00.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-07-31 00:00:00</p>
@@ -344,7 +344,7 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
         public String power;
 
         /**
-         * <p>The initial registration date.</p>
+         * <p>The initial registration date. Format: YYYY-MM-DD HH:mm:ss, for example, 2015-08-24 00:00:00.</p>
          * 
          * <strong>example:</strong>
          * <p>2015-08-24 00:00:00</p>
@@ -353,7 +353,7 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
         public String registrationDate;
 
         /**
-         * <p>The manufacturing date.</p>
+         * <p>The manufacturing date. Format: YYYY-MM-DD HH:mm:ss, for example, 2022-08-13 00:00:00.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-13 00:00:00</p>
@@ -362,7 +362,7 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
         public String releaseDate;
 
         /**
-         * <p>The mandatory retirement date.</p>
+         * <p>The mandatory retirement date. Format: YYYY-MM-DD HH:mm:ss, for example, 2099-12-31 00:00:00.</p>
          * 
          * <strong>example:</strong>
          * <p>2099-12-31 00:00:00</p>
@@ -371,7 +371,7 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
         public String retirementDate;
 
         /**
-         * <p>The gross mass.</p>
+         * <p>The total mass.</p>
          * 
          * <strong>example:</strong>
          * <p>2350</p>
@@ -383,7 +383,7 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
          * <p>The vehicle type.</p>
          * 
          * <strong>example:</strong>
-         * <p>小型轿车</p>
+         * <p>Small sedan</p>
          */
         @NameInMap("Type")
         public String type;
@@ -410,7 +410,7 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
          * <p>The motor vehicle status.</p>
          * 
          * <strong>example:</strong>
-         * <p>正常</p>
+         * <p>Normal</p>
          */
         @NameInMap("VehicleState")
         public String vehicleState;
@@ -708,19 +708,19 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
         /**
          * <p>The product API. Valid values:</p>
          * <ul>
-         * <li><strong>ID_CARD_2_META</strong>: ID card two-element verification</li>
-         * <li><strong>ID_PERIOD</strong>: ID card validity period verification</li>
-         * <li><strong>MOBILE_ONLINE_LENGTH</strong>: mobile number online duration</li>
-         * <li><strong>MOBILE_ONLINE_STATUS</strong>: mobile number online status</li>
-         * <li><strong>MOBILE_3_META_SIMPLE</strong>: mobile number three-element verification (simple edition)</li>
-         * <li><strong>MOBILE_3_META</strong>: mobile number three-element verification (detailed edition)</li>
-         * <li><strong>MOBILE_2_META</strong>: mobile number two-element verification</li>
-         * <li><strong>BANK_CARD_N_META</strong>: bank card verification (detailed edition)</li>
-         * <li><strong>MOBILE_DETECT</strong>: phone number detection </li>
-         * <li><strong>VEHICLE_N_META</strong>: vehicle element verification (enhanced edition)</li>
-         * <li><strong>VEHICLE_PENTA_INFO</strong>: vehicle five-element information recognition</li>
-         * <li><strong>VEHICLE_LICENSE_INFO</strong>: vehicle information recognition</li>
-         * <li><strong>VEHICLE_INSURE_DATE</strong>: vehicle insurance date query</li>
+         * <li><strong>ID_CARD_2_META</strong>: ID card two-element verification.</li>
+         * <li><strong>ID_PERIOD</strong>: ID card validity period verification.</li>
+         * <li><strong>MOBILE_ONLINE_LENGTH</strong>: mobile number online duration.</li>
+         * <li><strong>MOBILE_ONLINE_STATUS</strong>: mobile number online status.</li>
+         * <li><strong>MOBILE_3_META_SIMPLE</strong>: mobile number three-element verification (simple edition).</li>
+         * <li><strong>MOBILE_3_META</strong>: mobile number three-element verification (detailed edition).</li>
+         * <li><strong>MOBILE_2_META</strong>: mobile number two-element verification.</li>
+         * <li><strong>BANK_CARD_N_META</strong>: bank card verification (detailed edition).</li>
+         * <li><strong>MOBILE_DETECT</strong>: phone number detection. </li>
+         * <li><strong>VEHICLE_N_META</strong>: vehicle element verification (enhanced edition).</li>
+         * <li><strong>VEHICLE_PENTA_INFO</strong>: vehicle five-element information recognition.</li>
+         * <li><strong>VEHICLE_LICENSE_INFO</strong>: vehicle information recognition.</li>
+         * <li><strong>VEHICLE_INSURE_DATE</strong>: vehicle insurance date query.</li>
          * <li><strong>VEHICLE_CHECK</strong>: vehicle element verification.</li>
          * </ul>
          * 
@@ -733,24 +733,24 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
         /**
          * <p>The name corresponding to the API. Valid values:</p>
          * <ul>
-         * <li><strong>ID_CARD_2_META</strong>: ID card two-element verification</li>
-         * <li><strong>ID_PERIOD</strong>: ID card validity period verification</li>
-         * <li><strong>MOBILE_ONLINE_LENGTH</strong>: mobile number online duration</li>
-         * <li><strong>MOBILE_ONLINE_STATUS</strong>: mobile number online status</li>
-         * <li><strong>MOBILE_3_META_SIMPLE</strong>: mobile number three-element verification (simple edition)</li>
-         * <li><strong>MOBILE_3_META</strong>: mobile number three-element verification (detailed edition)</li>
-         * <li><strong>MOBILE_2_META</strong>: mobile number two-element verification</li>
-         * <li><strong>BANK_CARD_N_META</strong>: bank card verification (detailed edition)</li>
-         * <li><strong>MOBILE_DETECT</strong>: phone number detection </li>
-         * <li><strong>VEHICLE_N_META</strong>: vehicle element verification (enhanced edition)</li>
-         * <li><strong>VEHICLE_PENTA_INFO</strong>: vehicle five-element information recognition</li>
-         * <li><strong>VEHICLE_LICENSE_INFO</strong>: vehicle information recognition</li>
-         * <li><strong>VEHICLE_INSURE_DATE</strong>: vehicle insurance date query</li>
-         * <li><strong>VEHICLE_CHECK</strong>: vehicle element verification.</li>
+         * <li><strong>ID_CARD_2_META</strong>: ID card two-element verification.</li>
+         * <li><strong>ID_PERIOD</strong>: ID card validity period verification.</li>
+         * <li><strong>MOBILE_ONLINE_LENGTH</strong>: Mobile number online duration.</li>
+         * <li><strong>MOBILE_ONLINE_STATUS</strong>: Mobile number online status.</li>
+         * <li><strong>MOBILE_3_META_SIMPLE</strong>: Mobile number three-element verification (simple edition).</li>
+         * <li><strong>MOBILE_3_META</strong>: Mobile number three-element verification (detailed edition).</li>
+         * <li><strong>MOBILE_2_META</strong>: Mobile number two-element verification.</li>
+         * <li><strong>BANK_CARD_N_META</strong>: Bank card verification (detailed edition).</li>
+         * <li><strong>MOBILE_DETECT</strong>: Number detection. </li>
+         * <li><strong>VEHICLE_N_META</strong>: Vehicle element verification (enhanced edition).</li>
+         * <li><strong>VEHICLE_PENTA_INFO</strong>: Vehicle five-element information recognition.</li>
+         * <li><strong>VEHICLE_LICENSE_INFO</strong>: Vehicle information recognition.</li>
+         * <li><strong>VEHICLE_INSURE_DATE</strong>: Vehicle insurance date query.</li>
+         * <li><strong>VEHICLE_CHECK</strong>: Vehicle element verification.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>身份证二要素</p>
+         * <p>ID card two-element verification</p>
          */
         @NameInMap("ApiName")
         public String apiName;
@@ -765,10 +765,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
         public String bankCard;
 
         /**
-         * <p>The verification status. Valid values:</p>
+         * <p>The authentication status. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Verification passed.</li>
-         * <li><strong>2</strong>: Verification failed.</li>
+         * <li><strong>1</strong>: Authentication passed.</li>
+         * <li><strong>2</strong>: Authentication failed.</li>
          * <li><strong>3</strong>: No record found.</li>
          * </ul>
          * 
@@ -779,7 +779,7 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>The verification date.</p>
+         * <p>The authentication date. Format: YYYY-MM-DD HH:mm:ss, for example, 2025-10-17 10:00:11.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-17 10:00:11</p>
@@ -797,10 +797,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
         public String identifyNum;
 
         /**
-         * <p>The name of the telecommunications service provider. Valid values:</p>
+         * <p>The telecommunications service provider name. Valid values:</p>
          * <ul>
-         * <li><strong>CMCC</strong>: China Mobile</li>
-         * <li><strong>CUCC</strong>: China Unicom</li>
+         * <li><strong>CMCC</strong>: China Mobile.</li>
+         * <li><strong>CUCC</strong>: China Unicom.</li>
          * <li><strong>CTCC</strong>: China Telecom.</li>
          * </ul>
          * 
@@ -853,13 +853,13 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
          * <p>The response content.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;code\&quot;:\&quot;200\&quot;,\&quot;data\&quot;:{\&quot;bizCode\&quot;:\&quot;1\&quot;,\&quot;ispName\&quot;:\&quot;CMCC\&quot;,\&quot;subCode\&quot;:\&quot;101\&quot;},\&quot;message\&quot;:\&quot;调用成功\&quot;}</p>
+         * <p>{\&quot;code\&quot;:\&quot;200\&quot;,\&quot;data\&quot;:{\&quot;bizCode\&quot;:\&quot;1\&quot;,\&quot;ispName\&quot;:\&quot;CMCC\&quot;,\&quot;subCode\&quot;:\&quot;101\&quot;},\&quot;message\&quot;:\&quot;Call successful\&quot;}</p>
          */
         @NameInMap("ResponseJson")
         public String responseJson;
 
         /**
-         * <p>The result code. For more information, see <a href="https://www.alibabacloud.com/help/en/id-verification/information-verification/">official documentation</a>.</p>
+         * <p>The result code. For more information, refer to the <a href="https://www.alibabacloud.com/help/en/id-verification/information-verification/">official documentation</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>207</p>

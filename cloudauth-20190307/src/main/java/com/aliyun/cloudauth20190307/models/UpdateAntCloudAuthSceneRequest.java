@@ -9,7 +9,7 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
      * <ul>
      * <li><strong>Y</strong>: enabled.</li>
      * <li><strong>N (default)</strong>: disabled.<blockquote>
-     * <p>Notice: If you enable mini program binding, make sure that you specify all parameters related to the mini program binding..</p>
+     * <p>Notice: If you enable mini program binding, make sure that you specify all parameters related to the mini program binding.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -33,10 +33,37 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
      * <p>The name of the uploaded verification file.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试.txt</p>
+     * <p>test.txt</p>
      */
     @NameInMap("CheckFileName")
     public String checkFileName;
+
+    /**
+     * <p>The iOS app scheme for degradation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloudauth://callback</p>
+     */
+    @NameInMap("DegradeAppScheme")
+    public String degradeAppScheme;
+
+    /**
+     * <p>The SubCode that triggers degradation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>201,202</p>
+     */
+    @NameInMap("DegradeSubCodes")
+    public String degradeSubCodes;
+
+    /**
+     * <p>Specifies whether to enable degraded authentication.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIPAY</p>
+     */
+    @NameInMap("DegradeType")
+    public String degradeType;
 
     /**
      * <p>Specifies whether to enable enhanced device risk detection. Valid values:</p>
@@ -55,7 +82,7 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
      * <p>The name of the mini program.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试APP</p>
+     * <p>TestApp</p>
      */
     @NameInMap("MiniProgramName")
     public String miniProgramName;
@@ -65,7 +92,7 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
      * <ul>
      * <li><strong>WECHAT</strong>: WeChat</li>
      * <li><strong>ALIPAY</strong>: Alipay</li>
-     * <li><strong>TIKTOK</strong>: TikTok.</li>
+     * <li><strong>TIKTOK</strong>: TikTok</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,7 +102,7 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p>The number of returned photos (1 to 5). This parameter takes effect only after StoreImage is enabled for certification file retention.</p>
+     * <p>The number of returned photos (1 to 5). This parameter takes effect after StoreImage is enabled for authentication file retention.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -84,7 +111,7 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     public Long returnPicCount;
 
     /**
-     * <p>The duration of the returned video (1 to 2 seconds). This parameter takes effect only after StoreImage is enabled.</p>
+     * <p>The duration of the returned video (1 to 2 seconds). This parameter takes effect after StoreImage is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -112,18 +139,16 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     public String sceneName;
 
     /**
-     * <p>This parameter is not used. You do not need to specify this parameter.</p>
+     * <p>This parameter has no effect. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>0</p>
      */
     @NameInMap("Status")
     public Integer status;
 
     /**
-     * <p>Specifies whether to deliver certification files generated during the certification process to the user\&quot;s OSS bucket. Valid values:</p>
+     * <p>Specifies whether to deliver authentication files generated during the authentication process to your OSS bucket. Valid values:</p>
      * <ul>
      * <li><strong>Y</strong>: enabled.</li>
      * <li><strong>N (default)</strong>: disabled.</li>
@@ -134,6 +159,15 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
      */
     @NameInMap("StoreImage")
     public String storeImage;
+
+    /**
+     * <p>Specifies whether to enable degraded authentication.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
+    @NameInMap("UseDegrade")
+    public String useDegrade;
 
     public static UpdateAntCloudAuthSceneRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAntCloudAuthSceneRequest self = new UpdateAntCloudAuthSceneRequest();
@@ -162,6 +196,30 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     }
     public String getCheckFileName() {
         return this.checkFileName;
+    }
+
+    public UpdateAntCloudAuthSceneRequest setDegradeAppScheme(String degradeAppScheme) {
+        this.degradeAppScheme = degradeAppScheme;
+        return this;
+    }
+    public String getDegradeAppScheme() {
+        return this.degradeAppScheme;
+    }
+
+    public UpdateAntCloudAuthSceneRequest setDegradeSubCodes(String degradeSubCodes) {
+        this.degradeSubCodes = degradeSubCodes;
+        return this;
+    }
+    public String getDegradeSubCodes() {
+        return this.degradeSubCodes;
+    }
+
+    public UpdateAntCloudAuthSceneRequest setDegradeType(String degradeType) {
+        this.degradeType = degradeType;
+        return this;
+    }
+    public String getDegradeType() {
+        return this.degradeType;
     }
 
     public UpdateAntCloudAuthSceneRequest setDeviceRiskPlus(String deviceRiskPlus) {
@@ -234,6 +292,14 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     }
     public String getStoreImage() {
         return this.storeImage;
+    }
+
+    public UpdateAntCloudAuthSceneRequest setUseDegrade(String useDegrade) {
+        this.useDegrade = useDegrade;
+        return this;
+    }
+    public String getUseDegrade() {
+        return this.useDegrade;
     }
 
 }

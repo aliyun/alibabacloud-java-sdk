@@ -76,7 +76,7 @@ public class InitFaceVerifyResponseBody extends TeaModel {
 
     public static class InitFaceVerifyResponseBodyResultObject extends TeaModel {
         /**
-         * <p>The unique identifier for ID Verification.</p>
+         * <p>The unique identifier of the ID Verification session.</p>
          * 
          * <strong>example:</strong>
          * <p>91707dc296d469ad38e4c5efa6a0f24b</p>
@@ -85,21 +85,20 @@ public class InitFaceVerifyResponseBody extends TeaModel {
         public String certifyId;
 
         /**
-         * <p>The URL for performing ID Verification in a web browser. After authentication is complete, the page redirects based on the ReturnUrl parameter.</p>
+         * <p>The URL for performing ID Verification in a web browser. After authentication ends, the page redirects based on the ReturnUrl input parameter.</p>
          * <blockquote>
          * <p>Notice: </p>
          * </blockquote>
          * <ul>
-         * <li><p>The CertifyUrl returned by the initialization operation is <strong>valid for 30 minutes and can be submitted for authentication only once</strong>. Use it within the validity period and do not reuse it.</p>
+         * <li><p>The CertifyUrl returned by the initialization operation is <strong>valid for 30 minutes and can only be submitted once for authentication</strong>. Use it within the validity period and avoid reuse.</p>
          * </li>
-         * <li><p>This parameter requires the <strong>MetaInfo</strong> parameter to be correctly passed in to return a CertifyUrl that matches the client. If the URL cannot be obtained, check whether <strong>MetaInfo</strong> and other input parameters are correct.</p>
+         * <li><p>This parameter requires the correct <strong>MetaInfo</strong> input to return a CertifyUrl that matches the client. If it cannot be obtained, check whether <strong>MetaInfo</strong> and other input parameters are correct.</p>
          * </li>
          * <li><p>The domain name of this URL may change with service updates. To ensure normal service availability, do not apply access control to this domain name.</p>
          * </li>
-         * <li><p>Do not use incognito mode or modify the URL during browser redirection. Otherwise, a <strong>signature exception</strong> error may occur.</p>
+         * <li><p>When redirecting in a browser, do not use incognito mode or modify the URL. Otherwise, a <strong>signature exception</strong> error may occur.</p>
          * </li>
          * </ul>
-         * <p>.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://t.aliyun.com/">https://t.aliyun.com/</a>****</p>

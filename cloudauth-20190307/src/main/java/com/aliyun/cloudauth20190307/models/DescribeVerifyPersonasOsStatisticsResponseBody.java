@@ -42,7 +42,7 @@ public class DescribeVerifyPersonasOsStatisticsResponseBody extends TeaModel {
 
     public static class DescribeVerifyPersonasOsStatisticsResponseBodyResultObject extends TeaModel {
         /**
-         * <p>The total number of devices used for ID Verification.</p>
+         * <p>The total number of authenticated devices.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>
@@ -51,7 +51,7 @@ public class DescribeVerifyPersonasOsStatisticsResponseBody extends TeaModel {
         public Long allDeviceCnt;
 
         /**
-         * <p>The number of Android devices used for ID Verification.</p>
+         * <p>The number of authenticated Android devices.</p>
          * 
          * <strong>example:</strong>
          * <p>14</p>
@@ -69,7 +69,7 @@ public class DescribeVerifyPersonasOsStatisticsResponseBody extends TeaModel {
         public String deviceAndroidRate;
 
         /**
-         * <p>The number of iOS devices used for ID Verification.</p>
+         * <p>The number of authenticated iOS devices.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

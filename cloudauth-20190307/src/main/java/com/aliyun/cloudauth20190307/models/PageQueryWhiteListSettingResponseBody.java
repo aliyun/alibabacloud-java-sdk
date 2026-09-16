@@ -170,7 +170,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         public String certNo;
 
         /**
-         * <p>The unique identifier of the ID Verification request.</p>
+         * <p>The unique identifier of the ID Verification.</p>
          * 
          * <strong>example:</strong>
          * <p>sha43d9cabd52d370d9f4cca9468f71e</p>
@@ -237,7 +237,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
          * <ul>
          * <li>DELETE: Deleted.</li>
          * <li>VALID: Not deleted and within the validity period (valid).</li>
-         * <li>INVALID: Not deleted but outside the validity period (invalid).</li>
+         * <li>INVALID: Not deleted but not within the validity period (invalid).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,7 +247,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The end date of the validity period.</p>
+         * <p>The end date of the validity period. Format: YYYY-MM-DD HH:mm:ss, for example, 2024-09-02 13:57:51.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-02 13:57:51</p>
@@ -256,7 +256,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         public String validEndDate;
 
         /**
-         * <p>The start date of the validity period.</p>
+         * <p>The start date of the validity period. Format: YYYY-MM-DD HH:mm:ss, for example, 2024-08-30 13:57:51.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-08-30 13:57:51</p>

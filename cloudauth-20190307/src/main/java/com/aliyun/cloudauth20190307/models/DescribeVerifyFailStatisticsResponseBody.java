@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C2C596D1-B14B-5D79-9672-61D7686912B2</p>
@@ -158,7 +158,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The date.</p>
+         * <p>The date. Format: YYYY-MM-DD, such as 2025-10-16.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-16</p>
@@ -208,7 +208,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The returned count data.</p>
+         * <p>The count data returned.</p>
          */
         @NameInMap("Data")
         public java.util.List<DescribeVerifyFailStatisticsResponseBodyResultObjectLineItemsData> data;

@@ -7,8 +7,8 @@ public class CreateAntCloudAuthSceneRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable mini program binding. Valid values:</p>
      * <ul>
-     * <li><strong>Y</strong>: enabled</li>
-     * <li><strong>N (default)</strong>: disabled.</li>
+     * <li><strong>Y</strong>: Enabled.</li>
+     * <li><strong>N (default)</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,16 +30,43 @@ public class CreateAntCloudAuthSceneRequest extends TeaModel {
      * <p>The name of the uploaded verification file.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试.txt</p>
+     * <p>test.txt</p>
      */
     @NameInMap("CheckFileName")
     public String checkFileName;
 
     /**
+     * <p>The iOS app scheme for degradation redirect.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloudauth://callback</p>
+     */
+    @NameInMap("DegradeAppScheme")
+    public String degradeAppScheme;
+
+    /**
+     * <p>The SubCode that triggers degradation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>201,202</p>
+     */
+    @NameInMap("DegradeSubCodes")
+    public String degradeSubCodes;
+
+    /**
+     * <p>The degradation verification type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIPAY</p>
+     */
+    @NameInMap("DegradeType")
+    public String degradeType;
+
+    /**
      * <p>Specifies whether to enable enhanced device risk detection. Valid values:</p>
      * <ul>
-     * <li><strong>Y</strong>: enabled</li>
-     * <li><strong>N</strong>: disabled.</li>
+     * <li><strong>Y</strong>: Enabled.</li>
+     * <li><strong>N</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +79,7 @@ public class CreateAntCloudAuthSceneRequest extends TeaModel {
      * <p>The mini program name.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试APP</p>
+     * <p>TestApp</p>
      */
     @NameInMap("MiniProgramName")
     public String miniProgramName;
@@ -60,8 +87,8 @@ public class CreateAntCloudAuthSceneRequest extends TeaModel {
     /**
      * <p>The mini program platform to bind. Valid values:</p>
      * <ul>
-     * <li><strong>WECHAT</strong>: WeChat</li>
-     * <li><strong>ALIPAY</strong>: Alipay</li>
+     * <li><strong>WECHAT</strong>: WeChat.</li>
+     * <li><strong>ALIPAY</strong>: Alipay.</li>
      * <li><strong>TIKTOK</strong>: TikTok.</li>
      * </ul>
      * 
@@ -94,13 +121,13 @@ public class CreateAntCloudAuthSceneRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试场景</p>
+     * <p>TestScenario</p>
      */
     @NameInMap("SceneName")
     public String sceneName;
 
     /**
-     * <p>Specifies whether to deliver the files generated during authentication to the customer\&quot;s OSS. Valid values:</p>
+     * <p>Specifies whether to deliver files generated during verification to the customer\&quot;s OSS. Valid values:</p>
      * <ul>
      * <li><strong>Y</strong>: Yes.</li>
      * <li><strong>N</strong>: No.</li>
@@ -111,6 +138,15 @@ public class CreateAntCloudAuthSceneRequest extends TeaModel {
      */
     @NameInMap("StoreImage")
     public String storeImage;
+
+    /**
+     * <p>Specifies whether to enable degradation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
+    @NameInMap("UseDegrade")
+    public String useDegrade;
 
     public static CreateAntCloudAuthSceneRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAntCloudAuthSceneRequest self = new CreateAntCloudAuthSceneRequest();
@@ -139,6 +175,30 @@ public class CreateAntCloudAuthSceneRequest extends TeaModel {
     }
     public String getCheckFileName() {
         return this.checkFileName;
+    }
+
+    public CreateAntCloudAuthSceneRequest setDegradeAppScheme(String degradeAppScheme) {
+        this.degradeAppScheme = degradeAppScheme;
+        return this;
+    }
+    public String getDegradeAppScheme() {
+        return this.degradeAppScheme;
+    }
+
+    public CreateAntCloudAuthSceneRequest setDegradeSubCodes(String degradeSubCodes) {
+        this.degradeSubCodes = degradeSubCodes;
+        return this;
+    }
+    public String getDegradeSubCodes() {
+        return this.degradeSubCodes;
+    }
+
+    public CreateAntCloudAuthSceneRequest setDegradeType(String degradeType) {
+        this.degradeType = degradeType;
+        return this;
+    }
+    public String getDegradeType() {
+        return this.degradeType;
     }
 
     public CreateAntCloudAuthSceneRequest setDeviceRiskPlus(String deviceRiskPlus) {
@@ -195,6 +255,14 @@ public class CreateAntCloudAuthSceneRequest extends TeaModel {
     }
     public String getStoreImage() {
         return this.storeImage;
+    }
+
+    public CreateAntCloudAuthSceneRequest setUseDegrade(String useDegrade) {
+        this.useDegrade = useDegrade;
+        return this;
+    }
+    public String getUseDegrade() {
+        return this.useDegrade;
     }
 
 }

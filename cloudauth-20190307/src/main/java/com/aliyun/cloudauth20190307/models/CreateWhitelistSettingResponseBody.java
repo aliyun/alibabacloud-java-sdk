@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWhitelistSettingResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of this request.</p>
      * 
      * <strong>example:</strong>
      * <p>CF4979D3-060F-5336-BD9F-0D46ECB66B22</p>

@@ -14,7 +14,7 @@ public class PageQueryWhiteListSettingRequest extends TeaModel {
     public String certNo;
 
     /**
-     * <p>The unique identifier of the ID Verification request.</p>
+     * <p>The unique identifier of the ID Verification.</p>
      * 
      * <strong>example:</strong>
      * <p>sha75b4e19a1ddda059b920757b0e12b</p>
@@ -41,7 +41,7 @@ public class PageQueryWhiteListSettingRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The verification scenario ID. This ID is automatically generated after you create a verification scenario in the console. For more information about how to create a verification scenario, refer to Add a verification scenario.</p>
+     * <p>The verification scenario ID. This ID is automatically generated after you create a verification scenario in the console. For information about how to create a verification scenario, see Add a verification scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000xxx</p>
@@ -63,7 +63,7 @@ public class PageQueryWhiteListSettingRequest extends TeaModel {
      * <ul>
      * <li>DELETE: Deleted.</li>
      * <li>VALID: Not deleted and within the validity period (valid).</li>
-     * <li>INVALID: Not deleted but outside the validity period (invalid).</li>
+     * <li>INVALID: Not deleted but not within the validity period (invalid).</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -23,7 +23,7 @@ public class DescribeFaceVerifyRequest extends TeaModel {
     public String pictureReturnType;
 
     /**
-     * <p>The ID of the verification scenario.</p>
+     * <p>The verification scenario ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000006</p>

@@ -42,7 +42,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
 
     public static class DescribeVerifyPersonasSexStatisticsResponseBodyResultObject extends TeaModel {
         /**
-         * <p>The number of authenticated users aged 14 and under.</p>
+         * <p>The number of users aged 14 and under.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -51,7 +51,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
         public Long age0To14Cnt;
 
         /**
-         * <p>The proportion of authenticated users aged 14 and under.</p>
+         * <p>The proportion of users aged 14 and under.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -60,7 +60,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
         public String age0To14Rate;
 
         /**
-         * <p>The number of authenticated users aged 14 to 18.</p>
+         * <p>The number of users aged 14 to 18.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -69,7 +69,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
         public Long age14To18Cnt;
 
         /**
-         * <p>The proportion of authenticated users aged 14 to 18.</p>
+         * <p>The proportion of users aged 14 to 18.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -78,7 +78,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
         public String age14To18Rate;
 
         /**
-         * <p>The number of authenticated users aged 18 to 35.</p>
+         * <p>The number of verified users aged 18 to 35.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -87,7 +87,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
         public Long age18To35Cnt;
 
         /**
-         * <p>The proportion of authenticated users aged 18 to 35.</p>
+         * <p>The proportion of verified users aged 18 to 35.</p>
          * 
          * <strong>example:</strong>
          * <p>64.29</p>
@@ -96,7 +96,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
         public String age18To35Rate;
 
         /**
-         * <p>The number of authenticated users aged 35 to 50.</p>
+         * <p>The number of verified users aged 35 to 50.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -105,7 +105,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
         public Long age35To50Cnt;
 
         /**
-         * <p>The proportion of authenticated users aged 35 to 50.</p>
+         * <p>The proportion of verified users aged 35 to 50.</p>
          * 
          * <strong>example:</strong>
          * <p>35.71</p>
@@ -114,7 +114,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
         public String age35To50Rate;
 
         /**
-         * <p>The number of authenticated users aged 50 and over.</p>
+         * <p>The number of verified users aged 50 and over.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -123,7 +123,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
         public Long age50To999Cnt;
 
         /**
-         * <p>The number of authenticated users aged 50 and over.</p>
+         * <p>The number of verified users aged 50 and over.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -132,7 +132,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
         public String age50To999Rate;
 
         /**
-         * <p>The total number of authenticated users.</p>
+         * <p>The total number of verified users.</p>
          * 
          * <strong>example:</strong>
          * <p>14</p>
@@ -141,7 +141,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
         public Long allUserCnt;
 
         /**
-         * <p>The number of female authenticated users.</p>
+         * <p>The number of female users.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -150,7 +150,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
         public Long femaleCnt;
 
         /**
-         * <p>The proportion of female authenticated users.</p>
+         * <p>The proportion of female verified users.</p>
          * 
          * <strong>example:</strong>
          * <p>28.57</p>
@@ -159,7 +159,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
         public String femaleRate;
 
         /**
-         * <p>The number of male authenticated users.</p>
+         * <p>The number of male users.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -168,7 +168,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
         public Long maleCnt;
 
         /**
-         * <p>The proportion of male authenticated users.</p>
+         * <p>The proportion of male users.</p>
          * 
          * <strong>example:</strong>
          * <p>71.43</p>

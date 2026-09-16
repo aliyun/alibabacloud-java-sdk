@@ -53,7 +53,7 @@ public class AIGCFaceVerifyRequest extends TeaModel {
     public String ossObjectName;
 
     /**
-     * <p>The custom business unique identifier on the client side, used for subsequent troubleshooting. The value can contain up to 32 characters, including letters and digits. Make sure the value is unique.</p>
+     * <p>The custom business unique identifier on the client side, which is used for subsequent troubleshooting. The value can contain up to 32 characters, including letters and digits. Make sure the value is unique.</p>
      * 
      * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
@@ -62,7 +62,7 @@ public class AIGCFaceVerifyRequest extends TeaModel {
     public String outerOrderNo;
 
     /**
-     * <p>The product plan.</p>
+     * <p>The product solution.</p>
      * 
      * <strong>example:</strong>
      * <p>LR_FR_AIGC</p>

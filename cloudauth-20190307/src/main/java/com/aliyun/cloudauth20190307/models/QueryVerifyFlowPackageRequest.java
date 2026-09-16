@@ -7,8 +7,8 @@ public class QueryVerifyFlowPackageRequest extends TeaModel {
     /**
      * <p>The product type. Valid values:</p>
      * <ul>
-     * <li><strong>FINANCE_VERIFY</strong>: Financial-Grade ID Verification</li>
-     * <li><strong>SMART_VERIFY</strong>: Enhanced ID Verification (discontinued)</li>
+     * <li><strong>FINANCE_VERIFY</strong>: Financial-grade ID Verification.</li>
+     * <li><strong>SMART_VERIFY</strong>: Enhanced ID Verification (discontinued).</li>
      * <li><strong>FACE_VERIFY</strong>: ID Verification (discontinued).</li>
      * </ul>
      * <p>This parameter is required.</p>

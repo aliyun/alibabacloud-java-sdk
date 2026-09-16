@@ -120,7 +120,7 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The update time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-16 17:28:03</p>
@@ -141,7 +141,7 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
          * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试白名单</p>
+         * <p>Test whitelist</p>
          */
         @NameInMap("Remark")
         public String remark;
@@ -170,7 +170,7 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The expiration date.</p>
+         * <p>The effective end date. Format: YYYY-MM-DD HH:mm:ss. Example: 2025-10-16 17:28:03.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-16 17:28:03</p>
@@ -188,6 +188,8 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
         public String validStartDate;
 
         /**
+         * <p>The whitelist type.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUPER</p>
          */

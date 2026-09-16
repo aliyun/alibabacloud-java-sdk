@@ -14,7 +14,7 @@ public class QueryVerifyInvokeSatisticRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The end time of the query.</p>
+     * <p>The query end time. Format: UNIX timestamp. Unit: milliseconds. Example: 1761926399999.</p>
      * 
      * <strong>example:</strong>
      * <p>1761926399999</p>
@@ -32,7 +32,7 @@ public class QueryVerifyInvokeSatisticRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The list of product codes to query. For more information, refer to the productCode under the corresponding ProductType.</p>
+     * <p>The list of product codes to query. For specific values, refer to the productCode under the corresponding ProductType.</p>
      * 
      * <strong>example:</strong>
      * <p>ID_PRO</p>
@@ -43,8 +43,8 @@ public class QueryVerifyInvokeSatisticRequest extends TeaModel {
     /**
      * <p>The product type. Valid values:</p>
      * <ul>
-     * <li><strong>FINANCE_VERIFY</strong>: financial-grade ID Verification</li>
-     * <li><strong>SMART_VERIFY</strong>: enhanced ID Verification (discontinued)</li>
+     * <li><strong>FINANCE_VERIFY</strong>: Finance-grade ID Verification.</li>
+     * <li><strong>SMART_VERIFY</strong>: Enhanced ID Verification (discontinued).</li>
      * <li><strong>FACE_VERIFY</strong>: ID Verification (discontinued).</li>
      * </ul>
      * 
@@ -64,7 +64,7 @@ public class QueryVerifyInvokeSatisticRequest extends TeaModel {
     public String sceneIdList;
 
     /**
-     * <p>The start time of the query.</p>
+     * <p>The query start time. Format: UNIX timestamp. Unit: milliseconds. Example: 1743436800000.</p>
      * 
      * <strong>example:</strong>
      * <p>1743436800000</p>
@@ -73,9 +73,9 @@ public class QueryVerifyInvokeSatisticRequest extends TeaModel {
     public Long startDate;
 
     /**
-     * <p>The statistical dimension. Valid values:</p>
+     * <p>The statistics dimension. Valid values:</p>
      * <ul>
-     * <li><strong>day</strong>: daily</li>
+     * <li><strong>day</strong>: daily.</li>
      * <li><strong>month</strong>: monthly.</li>
      * </ul>
      * 

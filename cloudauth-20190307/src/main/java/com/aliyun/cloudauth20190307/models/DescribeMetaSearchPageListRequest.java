@@ -7,19 +7,19 @@ public class DescribeMetaSearchPageListRequest extends TeaModel {
     /**
      * <p>The product API. Valid values:</p>
      * <ul>
-     * <li><strong>ID_CARD_2_META</strong>: ID card two-element verification</li>
-     * <li><strong>ID_PERIOD</strong>: ID card validity period verification</li>
-     * <li><strong>MOBILE_ONLINE_LENGTH</strong>: mobile number online duration</li>
-     * <li><strong>MOBILE_ONLINE_STATUS</strong>: mobile number online status</li>
-     * <li><strong>MOBILE_3_META_SIMPLE</strong>: mobile number three-element verification (simple edition)</li>
-     * <li><strong>MOBILE_3_META</strong>: mobile number three-element verification (detailed edition)</li>
-     * <li><strong>MOBILE_2_META</strong>: mobile number two-element verification</li>
-     * <li><strong>BANK_CARD_N_META</strong>: bank card verification (detailed edition)</li>
-     * <li><strong>MOBILE_DETECT</strong>: phone number detection </li>
-     * <li><strong>VEHICLE_N_META</strong>: vehicle element verification (enhanced edition)</li>
-     * <li><strong>VEHICLE_PENTA_INFO</strong>: vehicle five-element information recognition</li>
-     * <li><strong>VEHICLE_LICENSE_INFO</strong>: vehicle information recognition</li>
-     * <li><strong>VEHICLE_INSURE_DATE</strong>: vehicle insurance date query</li>
+     * <li><strong>ID_CARD_2_META</strong>: ID card two-element verification.</li>
+     * <li><strong>ID_PERIOD</strong>: ID card validity period verification.</li>
+     * <li><strong>MOBILE_ONLINE_LENGTH</strong>: mobile number online duration.</li>
+     * <li><strong>MOBILE_ONLINE_STATUS</strong>: mobile number online status.</li>
+     * <li><strong>MOBILE_3_META_SIMPLE</strong>: mobile number three-element verification (simple edition).</li>
+     * <li><strong>MOBILE_3_META</strong>: mobile number three-element verification (detailed edition).</li>
+     * <li><strong>MOBILE_2_META</strong>: mobile number two-element verification.</li>
+     * <li><strong>BANK_CARD_N_META</strong>: bank card verification (detailed edition).</li>
+     * <li><strong>MOBILE_DETECT</strong>: phone number detection. </li>
+     * <li><strong>VEHICLE_N_META</strong>: vehicle element verification (enhanced edition).</li>
+     * <li><strong>VEHICLE_PENTA_INFO</strong>: vehicle five-element information recognition.</li>
+     * <li><strong>VEHICLE_LICENSE_INFO</strong>: vehicle information recognition.</li>
+     * <li><strong>VEHICLE_INSURE_DATE</strong>: vehicle insurance date query.</li>
      * <li><strong>VEHICLE_CHECK</strong>: vehicle element verification.</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -40,10 +40,10 @@ public class DescribeMetaSearchPageListRequest extends TeaModel {
     public String bankCard;
 
     /**
-     * <p>The verification status. Valid values:</p>
+     * <p>The authentication status. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Verification passed.</li>
-     * <li><strong>2</strong>: Verification failed.</li>
+     * <li><strong>1</strong>: Authentication passed.</li>
+     * <li><strong>2</strong>: Authentication failed.</li>
      * <li><strong>3</strong>: No record found.</li>
      * </ul>
      * 
@@ -83,10 +83,10 @@ public class DescribeMetaSearchPageListRequest extends TeaModel {
     public String identifyNum;
 
     /**
-     * <p>The name of the telecommunications service provider. Valid values:</p>
+     * <p>The telecommunications service provider name. Valid values:</p>
      * <ul>
-     * <li><strong>CMCC</strong>: China Mobile</li>
-     * <li><strong>CUCC</strong>: China Unicom</li>
+     * <li><strong>CMCC</strong>: China Mobile.</li>
+     * <li><strong>CUCC</strong>: China Unicom.</li>
      * <li><strong>CTCC</strong>: China Telecom.</li>
      * </ul>
      * 
@@ -97,7 +97,7 @@ public class DescribeMetaSearchPageListRequest extends TeaModel {
     public String ispName;
 
     /**
-     * <p>The mobile phone number.</p>
+     * <p>The mobile number.</p>
      * 
      * <strong>example:</strong>
      * <p>19127612221</p>
@@ -135,7 +135,7 @@ public class DescribeMetaSearchPageListRequest extends TeaModel {
     public Long startDate;
 
     /**
-     * <p>The result code. For more information, see <a href="https://www.alibabacloud.com/help/en/id-verification/information-verification/">official documentation</a>.</p>
+     * <p>The result code. For more information, refer to the <a href="https://www.alibabacloud.com/help/en/id-verification/information-verification/">official documentation</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>205</p>
@@ -147,7 +147,7 @@ public class DescribeMetaSearchPageListRequest extends TeaModel {
      * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>张三</p>
+     * <p>John Smith</p>
      */
     @NameInMap("UserName")
     public String userName;

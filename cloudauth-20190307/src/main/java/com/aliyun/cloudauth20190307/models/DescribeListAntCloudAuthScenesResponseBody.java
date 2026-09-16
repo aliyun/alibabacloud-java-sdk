@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CC1AB3F5-22A2-589F-ABDD-B766694AA671</p>
@@ -14,7 +14,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of scenes.</p>
+     * <p>The list of scenarios.</p>
      */
     @NameInMap("Scenes")
     public java.util.List<DescribeListAntCloudAuthScenesResponseBodyScenes> scenes;
@@ -64,10 +64,10 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         public String bindMiniProgram;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds (ms), such as 1740389697000.</p>
          * 
          * <strong>example:</strong>
-         * <p>1260051251634779</p>
+         * <p>1740389697000</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -80,6 +80,33 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
          */
         @NameInMap("Creator")
         public String creator;
+
+        /**
+         * <p>The iOS scheme for degradation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloudauth://callback</p>
+         */
+        @NameInMap("DegradeAppScheme")
+        public String degradeAppScheme;
+
+        /**
+         * <p>The list of SubCodes that trigger degradation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>201,202</p>
+         */
+        @NameInMap("DegradeSubCodes")
+        public String degradeSubCodes;
+
+        /**
+         * <p>The degraded authentication type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIPAY</p>
+         */
+        @NameInMap("DegradeType")
+        public String degradeType;
 
         /**
          * <p>Specifies whether to enable enhanced device risk detection. Valid values:</p>
@@ -107,7 +134,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
          * <p>The mini program name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试APP</p>
+         * <p>TestApp</p>
          */
         @NameInMap("MiniProgramName")
         public String miniProgramName;
@@ -124,8 +151,8 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         /**
          * <p>The mini program platform. Valid values:</p>
          * <ul>
-         * <li><strong>WECHAT</strong>: WeChat</li>
-         * <li><strong>ALIPAY</strong>: Alipay</li>
+         * <li><strong>WECHAT</strong>: WeChat.</li>
+         * <li><strong>ALIPAY</strong>: Alipay.</li>
          * <li><strong>TIKTOK</strong>: TikTok.</li>
          * </ul>
          * 
@@ -136,7 +163,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         public String platform;
 
         /**
-         * <p>The number of evidence face photos (1 to 5).</p>
+         * <p>The number of evidence face photos (1-5).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -145,7 +172,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         public Long returnPicCount;
 
         /**
-         * <p>The duration of the evidence video, in seconds.</p>
+         * <p>The evidence video duration in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -154,7 +181,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         public Long returnVideoLength;
 
         /**
-         * <p>The scene ID.</p>
+         * <p>The scenario ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100001xxxx</p>
@@ -163,16 +190,16 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         public Long sceneId;
 
         /**
-         * <p>The scene name.</p>
+         * <p>The scenario name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试场景</p>
+         * <p>TestScenario</p>
          */
         @NameInMap("SceneName")
         public String sceneName;
 
         /**
-         * <p>Indicates whether the scene is enabled. The value 1 indicates enabled.</p>
+         * <p>Indicates whether the scenario is enabled. The value is 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -194,13 +221,22 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         public String storeImage;
 
         /**
-         * <p>The time when the instance was last updated.</p>
+         * <p>The last update time of the instance. The value is a UNIX timestamp in milliseconds (ms), such as 1740541510000.</p>
          * 
          * <strong>example:</strong>
-         * <p>1260051251634779</p>
+         * <p>1740541510000</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
+
+        /**
+         * <p>Specifies whether to enable degraded authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
+        @NameInMap("UseDegrade")
+        public String useDegrade;
 
         public static DescribeListAntCloudAuthScenesResponseBodyScenes build(java.util.Map<String, ?> map) throws Exception {
             DescribeListAntCloudAuthScenesResponseBodyScenes self = new DescribeListAntCloudAuthScenesResponseBodyScenes();
@@ -237,6 +273,30 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         }
         public String getCreator() {
             return this.creator;
+        }
+
+        public DescribeListAntCloudAuthScenesResponseBodyScenes setDegradeAppScheme(String degradeAppScheme) {
+            this.degradeAppScheme = degradeAppScheme;
+            return this;
+        }
+        public String getDegradeAppScheme() {
+            return this.degradeAppScheme;
+        }
+
+        public DescribeListAntCloudAuthScenesResponseBodyScenes setDegradeSubCodes(String degradeSubCodes) {
+            this.degradeSubCodes = degradeSubCodes;
+            return this;
+        }
+        public String getDegradeSubCodes() {
+            return this.degradeSubCodes;
+        }
+
+        public DescribeListAntCloudAuthScenesResponseBodyScenes setDegradeType(String degradeType) {
+            this.degradeType = degradeType;
+            return this;
+        }
+        public String getDegradeType() {
+            return this.degradeType;
         }
 
         public DescribeListAntCloudAuthScenesResponseBodyScenes setDeviceRiskPlus(String deviceRiskPlus) {
@@ -333,6 +393,14 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         }
         public String getUpdateTime() {
             return this.updateTime;
+        }
+
+        public DescribeListAntCloudAuthScenesResponseBodyScenes setUseDegrade(String useDegrade) {
+            this.useDegrade = useDegrade;
+            return this;
+        }
+        public String getUseDegrade() {
+            return this.useDegrade;
         }
 
     }

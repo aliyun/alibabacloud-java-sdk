@@ -32,7 +32,7 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result information.</p>
+     * <p>The result information.</p>
      */
     @NameInMap("ResultObject")
     public DescribeFaceVerifyResponseBodyResultObject resultObject;
@@ -76,6 +76,15 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
 
     public static class DescribeFaceVerifyResponseBodyResultObject extends TeaModel {
         /**
+         * <p>The result of degraded verification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;certifyId\&quot;:\&quot;ab110b7bbfea6631b37bc472797ac923\&quot;,\&quot;degradeType\&quot;:\&quot;ALIPAY\&quot;,\&quot;passed\&quot;:\&quot;T\&quot;}</p>
+         */
+        @NameInMap("DegradeInfo")
+        public String degradeInfo;
+
+        /**
          * <p>The device risk label.</p>
          * 
          * <strong>example:</strong>
@@ -94,7 +103,7 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
         public String deviceToken;
 
         /**
-         * <p>The identity information of the verification subject. This field is empty in common verification scenarios.</p>
+         * <p>The identity information of the verification subject. This field is empty for common verification scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -139,13 +148,13 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
         public String success;
 
         /**
-         * <p>The identity information and corresponding encoding entered by the user in rare character mode. The value is a JSON-formatted string. An empty string is returned if the name does not contain rare characters.</p>
+         * <p>Records the identity information and corresponding encoding entered by the user in rare character mode. The return data is a JSON-formatted string. An empty string is returned if the name does not contain rare characters.</p>
          * <ul>
          * <li><p>name: the name entered by the user.</p>
          * </li>
-         * <li><p>verifyName: the final name encoding that passed verification. For example, if a rare character is verified through transcoding: &quot;王先生&quot;, the actual verified name is &quot;王先升&quot;.</p>
+         * <li><p>verifyName: the final name encoding that passed verification. For example, if a rare character is verified through transcoding: &quot;Wang Xiansheng&quot;, the actual verified name is &quot;Wang Xiansheng&quot; (with a different character).</p>
          * </li>
-         * <li><p>number: the ID number entered by the user.</p>
+         * <li><p>number: the ID card number entered by the user.</p>
          * </li>
          * </ul>
          * 
@@ -162,6 +171,14 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
         public static DescribeFaceVerifyResponseBodyResultObject build(java.util.Map<String, ?> map) throws Exception {
             DescribeFaceVerifyResponseBodyResultObject self = new DescribeFaceVerifyResponseBodyResultObject();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeFaceVerifyResponseBodyResultObject setDegradeInfo(String degradeInfo) {
+            this.degradeInfo = degradeInfo;
+            return this;
+        }
+        public String getDegradeInfo() {
+            return this.degradeInfo;
         }
 
         public DescribeFaceVerifyResponseBodyResultObject setDeviceRisk(String deviceRisk) {

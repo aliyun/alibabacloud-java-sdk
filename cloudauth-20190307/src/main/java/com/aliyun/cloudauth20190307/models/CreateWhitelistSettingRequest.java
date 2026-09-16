@@ -35,7 +35,7 @@ public class CreateWhitelistSettingRequest extends TeaModel {
      * <p>The remarks for the whitelist.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试白名单。</p>
+     * <p>Test whitelist</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -83,6 +83,8 @@ public class CreateWhitelistSettingRequest extends TeaModel {
     public Integer validDay;
 
     /**
+     * <p>The whitelist type.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUPER</p>
      */

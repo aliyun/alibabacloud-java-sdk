@@ -14,7 +14,7 @@ public class DescribePageFaceVerifyDataRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>Required. The end time in the yyyy-MM-dd format. The default value is yyyy-MM-dd 00:00:00. The maximum query interval is 90 days.</p>
+     * <p>Required. The end time in the format of yyyy-MM-dd. The default time is yyyy-MM-dd 00:00:00. The maximum query interval is 90 days.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-04-30</p>
@@ -50,7 +50,7 @@ public class DescribePageFaceVerifyDataRequest extends TeaModel {
     public Long sceneId;
 
     /**
-     * <p>Required. The start time in the yyyy-MM-dd format. The default value is yyyy-MM-dd 00:00:00. The maximum query interval is 90 days.</p>
+     * <p>Required. The start time in the format of yyyy-MM-dd. The default time is yyyy-MM-dd 00:00:00. The maximum query interval is 90 days.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-04-10</p>

@@ -38,7 +38,7 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>53</p>
@@ -110,7 +110,7 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
 
     public static class DescribeVerifySearchPageListResponseBodyItemsExtInfo extends TeaModel {
         /**
-         * <p>The desensitized name.</p>
+         * <p>The masked name.</p>
          * 
          * <strong>example:</strong>
          * <p>何*</p>
@@ -119,7 +119,7 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         public String certName;
 
         /**
-         * <p>The Face Guard tags.</p>
+         * <p>The face guard label.</p>
          * 
          * <strong>example:</strong>
          * <p>HOOK,ROOT</p>
@@ -128,7 +128,7 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         public String deviceRisk;
 
         /**
-         * <p>Specifies whether a face attack is detected:</p>
+         * <p>Indicates whether a face attack is detected. Valid values:</p>
          * <ul>
          * <li><strong>T</strong>: Yes.</li>
          * <li><strong>F</strong>: No.</li>
@@ -141,7 +141,7 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         public String faceAttack;
 
         /**
-         * <p>The face attack score. The value ranges from 0 to 1. A value closer to 1 indicates a higher likelihood of an attack.</p>
+         * <p>The face attack score. Valid values: 0 to 1. A value closer to 1 indicates a higher likelihood of an attack.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0000445161</p>
@@ -150,7 +150,7 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         public Float faceAttackScore;
 
         /**
-         * <p>Specifies whether the face is occluded. T indicates occlusion detected. F indicates no occlusion.</p>
+         * <p>Indicates whether the face is occluded. T indicates occluded. F indicates not occluded.</p>
          * 
          * <strong>example:</strong>
          * <p>T</p>
@@ -159,7 +159,7 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         public String faceOcclusion;
 
         /**
-         * <p>The face-to-ID card comparison score.</p>
+         * <p>The face-to-ID-card comparison score.</p>
          * 
          * <strong>example:</strong>
          * <p>0.9</p>
@@ -177,7 +177,7 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         public String ossBucketName;
 
         /**
-         * <p>The file name of the OCR ID card face image.</p>
+         * <p>The OSS file name of the OCR ID card face image.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -188,7 +188,7 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         public String ossIdFaceObjectName;
 
         /**
-         * <p>The file name of the OCR ID card national emblem image.</p>
+         * <p>The OSS file name of the OCR ID card national emblem image.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -208,7 +208,7 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         public String ossObjectName;
 
         /**
-         * <p>The liveness face quality score.</p>
+         * <p>The face quality score from liveness detection.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -382,7 +382,7 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
 
     public static class DescribeVerifySearchPageListResponseBodyItems extends TeaModel {
         /**
-         * <p>The desensitized ID card number.</p>
+         * <p>The masked ID card number.</p>
          * 
          * <strong>example:</strong>
          * <p>3****************2</p>
@@ -391,7 +391,7 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         public String certNo;
 
         /**
-         * <p>The certification ID.</p>
+         * <p>The authentication ID.</p>
          * 
          * <strong>example:</strong>
          * <p>shad861465f2aaeeb805b519e1a93ab2</p>
@@ -406,7 +406,7 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         public DescribeVerifySearchPageListResponseBodyItemsExtInfo extInfo;
 
         /**
-         * <p>The verification time of this authentication record.</p>
+         * <p>The verification time of the authentication record.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-14 15:40:13</p>
@@ -424,7 +424,7 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         public String model;
 
         /**
-         * <p>The unique identifier for the customer request.</p>
+         * <p>The unique identifier of the customer request.</p>
          * 
          * <strong>example:</strong>
          * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
@@ -433,10 +433,10 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         public String outerOrderNo;
 
         /**
-         * <p>Specifies whether the authentication passed. Valid values:</p>
+         * <p>Indicates whether the authentication is passed. Valid values:</p>
          * <ul>
          * <li><strong>T</strong>: Passed.</li>
-         * <li><strong>F</strong>: Failed.</li>
+         * <li><strong>F</strong>: Not passed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -455,10 +455,10 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The business scenario risk:</p>
+         * <p>The business scenario risk. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: No risk.</li>
-         * <li><strong>1</strong>: Risk detected.</li>
+         * <li><strong>1</strong>: Risk exists.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -468,10 +468,10 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         public Integer riskBizScenario;
 
         /**
-         * <p>The device risk:</p>
+         * <p>The device risk. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: No risk.</li>
-         * <li><strong>1</strong>: Risk detected.</li>
+         * <li><strong>1</strong>: Risk exists.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -481,10 +481,10 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         public Integer riskDevice;
 
         /**
-         * <p>The DeviceToken risk:</p>
+         * <p>The DeviceToken risk. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: No risk.</li>
-         * <li><strong>1</strong>: Risk detected.</li>
+         * <li><strong>1</strong>: Risk exists.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -494,10 +494,10 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         public Integer riskDeviceToken;
 
         /**
-         * <p>The generic risk:</p>
+         * <p>The generic risk. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: No risk.</li>
-         * <li><strong>1</strong>: Risk detected.</li>
+         * <li><strong>1</strong>: Risk exists.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -507,10 +507,10 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         public Integer riskGeneric;
 
         /**
-         * <p>The large model mining risk:</p>
+         * <p>The large model mining risk. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: No risk.</li>
-         * <li><strong>1</strong>: Risk detected.</li>
+         * <li><strong>1</strong>: Risk exists.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -520,7 +520,7 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         public Integer riskModelMining;
 
         /**
-         * <p>Specifies whether the device is rooted. Set to 1 if selected; otherwise, do not pass this parameter. This parameter corresponds to the identity tag risk type.</p>
+         * <p>Specifies whether the device is rooted. Set this parameter to 1 if selected. Otherwise, do not pass this parameter. This corresponds to the identity tag risk type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -538,7 +538,7 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         public Long sceneId;
 
         /**
-         * <p>Specifies whether the device is a simulator. Set to 1 if selected; otherwise, do not pass this parameter. This parameter corresponds to the device tag risk type.</p>
+         * <p>Specifies whether the device is a simulator. Set this parameter to 1 if selected. Otherwise, do not pass this parameter. This corresponds to the device tag risk type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -565,7 +565,7 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>Specifies whether virtual video is used. Set to 1 if selected; otherwise, do not pass this parameter. This parameter corresponds to the behavior tag risk type.</p>
+         * <p>Specifies whether virtual video adaptation is used. Set this parameter to 1 if selected. Otherwise, do not pass this parameter. This corresponds to the behavior tag risk type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

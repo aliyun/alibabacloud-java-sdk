@@ -47,7 +47,7 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the response is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -144,7 +144,7 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
 
     public static class QueryVerifyInvokeSatisticResponseBodyItemsData extends TeaModel {
         /**
-         * <p>The count of the statistical value.</p>
+         * <p>The count of the statistics value.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -192,7 +192,7 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
         public java.util.List<QueryVerifyInvokeSatisticResponseBodyItemsData> data;
 
         /**
-         * <p>The statistics date.</p>
+         * <p>The statistics date. Format: YYYY-MM-DD. Example: 2025-10-16.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-16</p>
