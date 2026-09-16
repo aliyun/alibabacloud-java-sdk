@@ -1437,6 +1437,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>拥有RAM权限的账号可以到RAM控制台查询阿里云主账号下管理的所有RAM子账号，RAM控制台地址：<a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>假期工作日检查</p>
+     * 
+     * @param request CheckBusinessHoursRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckBusinessHoursResponse
+     */
+    public CheckBusinessHoursResponse checkBusinessHoursWithOptions(CheckBusinessHoursRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.time)) {
+            query.put("Time", request.time);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckBusinessHours"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckBusinessHoursResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>拥有RAM权限的账号可以到RAM控制台查询阿里云主账号下管理的所有RAM子账号，RAM控制台地址：<a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>假期工作日检查</p>
+     * 
+     * @param request CheckBusinessHoursRequest
+     * @return CheckBusinessHoursResponse
+     */
+    public CheckBusinessHoursResponse checkBusinessHours(CheckBusinessHoursRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkBusinessHoursWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Call the <code>ClaimCall</code> API to assign a call to an agent.</p>
      * 
