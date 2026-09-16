@@ -72,7 +72,7 @@ public class UpdateHttpApiRequest extends TeaModel {
     public UpdateHttpApiRequestIngressConfig ingressConfig;
 
     /**
-     * <p>Specifies whether to only modify the configuration. If set to true, only the configuration is modified without triggering a redeployment.</p>
+     * <p>Specifies whether to only modify the configuration. If this parameter is set to true, only the configuration is modified without triggering redeployment.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -102,7 +102,16 @@ public class UpdateHttpApiRequest extends TeaModel {
     public HttpApiVersionConfig versionConfig;
 
     /**
-     * <p>Specifies whether to perform only a dry run. If set to true, all synchronous validations identical to an actual update are performed, but no configurations are modified and no side effects are produced. If set to false or left empty, the behavior is the same as the existing version.</p>
+     * <p>The idempotent request identifier. If you call this operation for the same HTTP API with the same clientToken value and request parameters, the result of the first successful call is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>update-http-api-client-token-001</p>
+     */
+    @NameInMap("clientToken")
+    public String clientToken;
+
+    /**
+     * <p>Specifies whether to perform only a dry run. If this parameter is set to true, all synchronous validations identical to an actual update are performed, but no configurations are updated and no side effects are produced. If this parameter is not specified or is set to false, the behavior is the same as the existing version.</p>
      */
     @NameInMap("dryRun")
     public Boolean dryRun;
@@ -214,6 +223,14 @@ public class UpdateHttpApiRequest extends TeaModel {
     }
     public HttpApiVersionConfig getVersionConfig() {
         return this.versionConfig;
+    }
+
+    public UpdateHttpApiRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public UpdateHttpApiRequest setDryRun(Boolean dryRun) {

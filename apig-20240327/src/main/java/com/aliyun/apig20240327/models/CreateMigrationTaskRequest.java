@@ -23,6 +23,7 @@ public class CreateMigrationTaskRequest extends TeaModel {
      * <p>env-xxxx</p>
      */
     @NameInMap("environmentId")
+    @Deprecated
     public String environmentId;
 
     /**
@@ -81,6 +82,7 @@ public class CreateMigrationTaskRequest extends TeaModel {
         return this.description;
     }
 
+    @Deprecated
     public CreateMigrationTaskRequest setEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
