@@ -1,3 +1,7 @@
+2026-09-16 Version: 5.4.0
+- Support API ListKnowledgeFiles.
+
+
 2026-09-15 Version: 5.3.0
 - Support API RemoveKnowledgeUploadUser.
 - Update API GetKnowledgeRecall: add request parameters Path.
