@@ -30,6 +30,10 @@ public class CreateInstanceRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
+     * <ul>
+     * <li>true: Automatic payment is enabled.</li>
+     * <li>false: Only an order is generated. No payment is made.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -38,7 +42,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when the payment type is set to Subscription.</p>
+     * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when the billing method of the instance is Subscription.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -70,7 +74,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String configuration;
 
     /**
-     * <p>The database administrator password.</p>
+     * <p>The database password.</p>
      * 
      * <strong>example:</strong>
      * <p>test12</p>
@@ -98,7 +102,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean encrypted;
 
     /**
-     * <p>Specifies whether to enable high availability.</p>
+     * <p>Specifies whether to enable high availability (HA).</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -149,6 +153,15 @@ public class CreateInstanceRequest extends TeaModel {
     public String multiZoneMode;
 
     /**
+     * <p>The node type. Valid values for Milvus standalone: perf, enhanced, and cap. Default value: perf.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>perf</p>
+     */
+    @NameInMap("nodeType")
+    public String nodeType;
+
+    /**
      * <p>The payment duration.</p>
      * 
      * <strong>example:</strong>
@@ -158,7 +171,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer paymentDuration;
 
     /**
-     * <p>The payment duration unit.</p>
+     * <p>The unit of the payment duration.</p>
      * 
      * <strong>example:</strong>
      * <p>month</p>
@@ -379,6 +392,14 @@ public class CreateInstanceRequest extends TeaModel {
         return this.multiZoneMode;
     }
 
+    public CreateInstanceRequest setNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    public String getNodeType() {
+        return this.nodeType;
+    }
+
     public CreateInstanceRequest setPaymentDuration(Integer paymentDuration) {
         this.paymentDuration = paymentDuration;
         return this;
@@ -479,7 +500,7 @@ public class CreateInstanceRequest extends TeaModel {
         public String backupName;
 
         /**
-         * <p>The ID of the source backup cluster.</p>
+         * <p>The ID of the source cluster for the backup.</p>
          * 
          * <strong>example:</strong>
          * <p>c-xxxxxxx</p>
@@ -520,6 +541,8 @@ public class CreateInstanceRequest extends TeaModel {
 
     public static class CreateInstanceRequestComponentsDataDisk extends TeaModel {
         /**
+         * <p>Specifies whether to enable the QueryNode data cloud disk.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -527,6 +550,8 @@ public class CreateInstanceRequest extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p>The ESSD performance level (PL). Valid values: PL0, PL1, PL2, and PL3. If StorageClass is not specified, this parameter is used for parsing.</p>
+         * 
          * <strong>example:</strong>
          * <p>PL1</p>
          */
@@ -534,6 +559,8 @@ public class CreateInstanceRequest extends TeaModel {
         public String performanceLevel;
 
         /**
+         * <p>The data cloud disk capacity. Unit: GiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -541,6 +568,8 @@ public class CreateInstanceRequest extends TeaModel {
         public Integer size;
 
         /**
+         * <p>The StorageClass of the data cloud disk. Valid values: alicloud-disk-essd-pl0, alicloud-disk-essd-pl1, alicloud-disk-essd-pl2, and alicloud-disk-essd-pl3.</p>
+         * 
          * <strong>example:</strong>
          * <p>alicloud-disk-essd-pl1</p>
          */
@@ -606,11 +635,14 @@ public class CreateInstanceRequest extends TeaModel {
         @NameInMap("cuType")
         public String cuType;
 
+        /**
+         * <p>The QueryNode data cloud disk configuration. This parameter is supported only when type is set to query.</p>
+         */
         @NameInMap("dataDisk")
         public CreateInstanceRequestComponentsDataDisk dataDisk;
 
         /**
-         * <p>The disk size type for Query Node. Set to Large for storage-optimized, and Normal for compute-optimized or other configurations.</p>
+         * <p>The disk size type for the Query Node. Set this parameter to Large for storage-optimized instances, and to Normal for compute-optimized and other instance types.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>

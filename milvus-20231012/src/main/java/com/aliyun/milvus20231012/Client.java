@@ -9,17 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("eu-central-1", "milvus.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "milvus.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "milvus.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "milvus.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "milvus.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "milvus.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "milvus.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-beijing", "milvus.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "milvus.ap-southeast-1.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("milvus", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -279,6 +268,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.multiZoneMode)) {
             body.put("multiZoneMode", request.multiZoneMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeType)) {
+            body.put("nodeType", request.nodeType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.paymentDuration)) {
