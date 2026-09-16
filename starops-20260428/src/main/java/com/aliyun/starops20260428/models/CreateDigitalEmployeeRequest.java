@@ -11,6 +11,15 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
     public java.util.Map<String, String> attributes;
 
     /**
+     * <p>数字员工渠道类型。不填时使用默认渠道。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
+    @NameInMap("channel")
+    public String channel;
+
+    /**
      * <p>The default rule of the digital employee.</p>
      * 
      * <strong>example:</strong>
@@ -107,6 +116,14 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
     }
     public java.util.Map<String, String> getAttributes() {
         return this.attributes;
+    }
+
+    public CreateDigitalEmployeeRequest setChannel(String channel) {
+        this.channel = channel;
+        return this;
+    }
+    public String getChannel() {
+        return this.channel;
     }
 
     public CreateDigitalEmployeeRequest setDefaultRule(String defaultRule) {

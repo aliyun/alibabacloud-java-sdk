@@ -167,6 +167,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("attributes", request.attributes);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
+            body.put("channel", request.channel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.defaultRule)) {
             body.put("defaultRule", request.defaultRule);
         }

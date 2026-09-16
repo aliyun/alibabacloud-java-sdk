@@ -1,3 +1,7 @@
+2026-09-16 Version: 1.4.2
+- Update API CreateDigitalEmployee: add request parameters body.channel.
+
+
 2026-09-15 Version: 1.4.1
 - Update API GetDigitalEmployee: add response parameters Body.channel.
 - Update API ListDigitalEmployees: add request parameters channel.
