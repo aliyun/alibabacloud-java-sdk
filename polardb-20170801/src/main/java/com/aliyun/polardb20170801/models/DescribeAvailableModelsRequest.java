@@ -14,6 +14,15 @@ public class DescribeAvailableModelsRequest extends TeaModel {
     public String kubeType;
 
     /**
+     * <p>The model type. Valid values: custom or public. If this parameter is not specified, all models are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>custom</p>
+     */
+    @NameInMap("ModelType")
+    public String modelType;
+
+    /**
      * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +42,14 @@ public class DescribeAvailableModelsRequest extends TeaModel {
     }
     public String getKubeType() {
         return this.kubeType;
+    }
+
+    public DescribeAvailableModelsRequest setModelType(String modelType) {
+        this.modelType = modelType;
+        return this;
+    }
+    public String getModelType() {
+        return this.modelType;
     }
 
     public DescribeAvailableModelsRequest setRegionId(String regionId) {

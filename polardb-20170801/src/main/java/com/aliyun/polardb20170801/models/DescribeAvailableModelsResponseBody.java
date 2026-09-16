@@ -29,6 +29,15 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
     public java.util.List<DescribeAvailableModelsResponseBodyItems> items;
 
     /**
+     * <p>The model type corresponding to the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>custom</p>
+     */
+    @NameInMap("ModelType")
+    public String modelType;
+
+    /**
      * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +45,15 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    /**
+     * <p>The model fine-tuning architecture.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>swift</p>
+     */
+    @NameInMap("TuneArch")
+    public String tuneArch;
 
     public static DescribeAvailableModelsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAvailableModelsResponseBody self = new DescribeAvailableModelsResponseBody();
@@ -66,12 +84,28 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         return this.items;
     }
 
+    public DescribeAvailableModelsResponseBody setModelType(String modelType) {
+        this.modelType = modelType;
+        return this;
+    }
+    public String getModelType() {
+        return this.modelType;
+    }
+
     public DescribeAvailableModelsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeAvailableModelsResponseBody setTuneArch(String tuneArch) {
+        this.tuneArch = tuneArch;
+        return this;
+    }
+    public String getTuneArch() {
+        return this.tuneArch;
     }
 
     public static class DescribeAvailableModelsResponseBodyItemsGpuRequired extends TeaModel {
@@ -118,6 +152,33 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
 
     public static class DescribeAvailableModelsResponseBodyItems extends TeaModel {
         /**
+         * <p>The custom model registration key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qwen3-32B</p>
+         */
+        @NameInMap("CustomModelName")
+        public String customModelName;
+
+        /**
+         * <p>The display name of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My Qwen3 32B</p>
+         */
+        @NameInMap("DisplayModelName")
+        public String displayModelName;
+
+        /**
+         * <p>The last modified time of the registration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-09-07 20:57:20</p>
+         */
+        @NameInMap("GmtModified")
+        public String gmtModified;
+
+        /**
          * <p>The supported GPU types.</p>
          */
         @NameInMap("GpuRequired")
@@ -160,6 +221,24 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         public String modelSeries;
 
         /**
+         * <p>The model type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
+         */
+        @NameInMap("ModelType")
+        public String modelType;
+
+        /**
+         * <p>The OSS path of the custom model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/my-model-bucket/models</p>
+         */
+        @NameInMap("OssPath")
+        public String ossPath;
+
+        /**
          * <p>The supported GPU models.</p>
          */
         @NameInMap("SupportedGpuModels")
@@ -171,6 +250,30 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         public static DescribeAvailableModelsResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableModelsResponseBodyItems self = new DescribeAvailableModelsResponseBodyItems();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAvailableModelsResponseBodyItems setCustomModelName(String customModelName) {
+            this.customModelName = customModelName;
+            return this;
+        }
+        public String getCustomModelName() {
+            return this.customModelName;
+        }
+
+        public DescribeAvailableModelsResponseBodyItems setDisplayModelName(String displayModelName) {
+            this.displayModelName = displayModelName;
+            return this;
+        }
+        public String getDisplayModelName() {
+            return this.displayModelName;
+        }
+
+        public DescribeAvailableModelsResponseBodyItems setGmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public String getGmtModified() {
+            return this.gmtModified;
         }
 
         public DescribeAvailableModelsResponseBodyItems setGpuRequired(java.util.List<DescribeAvailableModelsResponseBodyItemsGpuRequired> gpuRequired) {
@@ -211,6 +314,22 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         }
         public String getModelSeries() {
             return this.modelSeries;
+        }
+
+        public DescribeAvailableModelsResponseBodyItems setModelType(String modelType) {
+            this.modelType = modelType;
+            return this;
+        }
+        public String getModelType() {
+            return this.modelType;
+        }
+
+        public DescribeAvailableModelsResponseBodyItems setOssPath(String ossPath) {
+            this.ossPath = ossPath;
+            return this;
+        }
+        public String getOssPath() {
+            return this.ossPath;
         }
 
         public DescribeAvailableModelsResponseBodyItems setSupportedGpuModels(java.util.List<String> supportedGpuModels) {
