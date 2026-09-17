@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDashboardRequest extends TeaModel {
     /**
-     * <p>The language. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
      * <li>zh: Chinese</li>
      * <li>en: English</li>
@@ -33,11 +33,14 @@ public class GetDashboardRequest extends TeaModel {
     public GetDashboardRequestFilter filter;
 
     /**
-     * <p>The dashboard name. Valid values:</p>
+     * <p>The name of the dashboard. Valid values:</p>
      * <ul>
-     * <li>LOG: access log</li>
-     * <li>PLUGIN: plugin log</li>
+     * <li>LOG: Access log.</li>
+     * <li>PLUGIN: Plugin log.</li>
      * </ul>
+     * <blockquote>
+     * <p>Note: This parameter is required. If this parameter is not specified, the API returns InvalidParameter.IsEmpty (400).</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>PLUGIN</p>
@@ -73,10 +76,13 @@ public class GetDashboardRequest extends TeaModel {
     public String routeId;
 
     /**
-     * <p>The dashboard source. Valid values:</p>
+     * <p>The source of the dashboard. Valid values:</p>
      * <ul>
-     * <li>SLS: log dashboard</li>
+     * <li>SLS: Log dashboard.</li>
      * </ul>
+     * <blockquote>
+     * <p>Note: This parameter is required. If this parameter is not specified, the API returns InvalidParameter.IsEmpty (400).</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>SLS</p>

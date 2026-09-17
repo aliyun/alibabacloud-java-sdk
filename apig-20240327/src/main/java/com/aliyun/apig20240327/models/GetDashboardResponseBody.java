@@ -119,7 +119,7 @@ public class GetDashboardResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
-         * <p>The dashboard name.</p>
+         * <p>The name of the dashboard.</p>
          * 
          * <strong>example:</strong>
          * <p>PLUGIN</p>
@@ -128,7 +128,7 @@ public class GetDashboardResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The dashboard title.</p>
+         * <p>The title of the dashboard.</p>
          * 
          * <strong>example:</strong>
          * <p>APIG Plugin</p>
