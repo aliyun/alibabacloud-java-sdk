@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RebootRenderingServerResponseBody extends TeaModel {
     /**
-     * <p>Number of cloud application service instances that failed to restart</p>
+     * <p>The number of cloud application service instances that failed to restart.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,7 @@ public class RebootRenderingServerResponseBody extends TeaModel {
     public Integer failedInstanceCount;
 
     /**
-     * <p>Cloud application service instance IDs and their failure details</p>
+     * <p>The cloud application service instance IDs and the associated failure information.</p>
      */
     @NameInMap("FailedInstances")
     public java.util.List<RebootRenderingServerResponseBodyFailedInstances> failedInstances;
@@ -29,7 +29,7 @@ public class RebootRenderingServerResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Number of successful cloud application service instances</p>
+     * <p>The number of cloud application service instances that were successfully restarted.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -38,7 +38,7 @@ public class RebootRenderingServerResponseBody extends TeaModel {
     public Integer successInstanceCount;
 
     /**
-     * <p>The instance ID of the cloud application service and the description of the result.</p>
+     * <p>The cloud application service instance IDs and the associated result descriptions.</p>
      */
     @NameInMap("SuccessInstances")
     public java.util.List<RebootRenderingServerResponseBodySuccessInstances> successInstances;
@@ -90,7 +90,7 @@ public class RebootRenderingServerResponseBody extends TeaModel {
 
     public static class RebootRenderingServerResponseBodyFailedInstances extends TeaModel {
         /**
-         * <p>Error code</p>
+         * <p>The error code of the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>300000</p>
@@ -99,7 +99,7 @@ public class RebootRenderingServerResponseBody extends TeaModel {
         public Integer errCode;
 
         /**
-         * <p>Reason for failure</p>
+         * <p>The error message of the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>Rejected due to timeout</p>
@@ -108,7 +108,7 @@ public class RebootRenderingServerResponseBody extends TeaModel {
         public String errMessage;
 
         /**
-         * <p>Cloud application service instance ID</p>
+         * <p>The instance ID of the cloud application service instance.</p>
          * 
          * <strong>example:</strong>
          * <p>render-421cd2a1125947c19fcd5c7dd2c7d31e</p>
@@ -149,7 +149,7 @@ public class RebootRenderingServerResponseBody extends TeaModel {
 
     public static class RebootRenderingServerResponseBodySuccessInstances extends TeaModel {
         /**
-         * <p>Cloud application service instance ID</p>
+         * <p>The instance ID of the cloud application service instance.</p>
          * 
          * <strong>example:</strong>
          * <p>render-e6cf423c787e4e43b460a788da254fe3</p>

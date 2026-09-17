@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCloudAppInfoShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud application, which corresponds to a unique application package.</p>
+     * <p>The cloud application ID, which corresponds to a unique application package.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,42 +18,40 @@ public class UpdateCloudAppInfoShrinkRequest extends TeaModel {
      * <p>The description of the application.</p>
      * 
      * <strong>example:</strong>
-     * <p>用于测试使用</p>
+     * <p>For testing purposes</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>Information about the patch package to upload.</p>
+     * <p>The information about the patch package to upload.</p>
      * <ol>
-     * <li><p>This parameter is not supported when PkgType is android.</p>
-     * </li>
-     * <li><p>For the same AppId, only one patch can be in the process of uploading at a time. This means only one patch can be in a state other than its desired state.</p>
-     * </li>
+     * <li>Not supported when PkgType is set to android.</li>
+     * <li>Only one patch can be in the uploading state at a time for the same AppId (only one patch in a non-final state is allowed per AppId).</li>
      * </ol>
      */
     @NameInMap("Patch")
     public String patchShrink;
 
     /**
-     * <p>The tags for the cloud application. You can select multiple tags. This action resets all existing tags for the cloud application.</p>
+     * <p>The cloud application labels. You can select multiple labels. This operation resets the cloud application labels.</p>
      * <ol>
-     * <li><p>Valid values:
-     * hot, game, and app.</p>
-     * </li>
-     * <li><p>Special case:
-     * To delete all tags, enter [&quot;NULL&quot;].</p>
-     * </li>
+     * <li>Valid values:
+     *   a. hot
+     *   b. game
+     *   c. app</li>
+     * <li>Special cases:
+     *   a. To delete all labels, set this parameter to [&quot;NULL&quot;].</li>
      * </ol>
      */
     @NameInMap("PkgLabels")
     public String pkgLabelsShrink;
 
     /**
-     * <p>The ID of the stable patch. This patch is used by default if you do not specify a PatchId when the application is in use, such as during a session startup. This parameter is not supported when PkgType is android.
-     * Special value:</p>
+     * <p>The stable PatchId. When a PatchId is not specified during business operations (such as session startup), this PatchId is used by default. Not supported when PkgType is set to android.
+     * Special values:</p>
      * <ol>
-     * <li>If you set this parameter to origin, the patch version is removed and the initial version is used.</li>
+     * <li>origin: cancels the patch version and uses the initial version by default.</li>
      * </ol>
      * 
      * <strong>example:</strong>

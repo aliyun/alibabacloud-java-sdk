@@ -96,7 +96,7 @@ public class ListSpecificationsResponseBody extends TeaModel {
          * <p>The specification family.</p>
          * 
          * <strong>example:</strong>
-         * <p>4090CU</p>
+         * <p>G49\G59</p>
          */
         @NameInMap("Class")
         public String _class;
@@ -120,7 +120,7 @@ public class ListSpecificationsResponseBody extends TeaModel {
         public Integer memory;
 
         /**
-         * <p>The number of cards per single load.</p>
+         * <p>The number of cards per workload.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -129,10 +129,10 @@ public class ListSpecificationsResponseBody extends TeaModel {
         public Integer shard;
 
         /**
-         * <p><code>RenderingSpec</code></p>
+         * <p>The specification.</p>
          * 
          * <strong>example:</strong>
-         * <p>crs.xic.s1</p>
+         * <p>ew.gn8t6xlarge-rb.x1p</p>
          */
         @NameInMap("Specification")
         public String specification;

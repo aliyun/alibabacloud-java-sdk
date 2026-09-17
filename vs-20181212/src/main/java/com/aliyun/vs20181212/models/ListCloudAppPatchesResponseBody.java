@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCloudAppPatchesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number of the query list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries per page for the paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The list of cloud application patches.</p>
+     * <p>The list of patches for the cloud application.</p>
      */
     @NameInMap("Patches")
     public java.util.List<ListCloudAppPatchesResponseBodyPatches> patches;
@@ -111,20 +111,32 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
         public String patchName;
 
         /**
-         * <p>The upload status of the application. Valid values:</p>
+         * <p>The relative path of the post-command within the application package. Only Windows-type applications are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>install.ps1</p>
+         */
+        @NameInMap("PostCommandPath")
+        public String postCommandPath;
+
+        /**
+         * <p>The timeout period for the post-command execution, in seconds. Only Windows-type applications are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("PostCommandTimeoutSec")
+        public Integer postCommandTimeoutSec;
+
+        /**
+         * <p>The application upload status. Valid values:</p>
          * <ol>
-         * <li><p>Created</p>
-         * </li>
-         * <li><p>Doing</p>
-         * </li>
-         * <li><p>Success: A final state.</p>
-         * </li>
-         * <li><p>Failed: A final state.</p>
-         * </li>
-         * <li><p>Deleting</p>
-         * </li>
-         * <li><p>DeleteFailed: A final state.</p>
-         * </li>
+         * <li>Created</li>
+         * <li>Doing</li>
+         * <li>Success: desired state.</li>
+         * <li>Failed: desired state.</li>
+         * <li>Deleting</li>
+         * <li>DeleteFailed: desired state.</li>
          * </ol>
          * 
          * <strong>example:</strong>
@@ -134,7 +146,7 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The description of the status.</p>
+         * <p>The status description.</p>
          * 
          * <strong>example:</strong>
          * <p>Uploading</p>
@@ -143,7 +155,7 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
         public String statusDescription;
 
         /**
-         * <p>The time when the status was last updated.</p>
+         * <p>The most recent time when the status was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-23T02:12:28</p>
@@ -179,6 +191,22 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
         }
         public String getPatchName() {
             return this.patchName;
+        }
+
+        public ListCloudAppPatchesResponseBodyPatches setPostCommandPath(String postCommandPath) {
+            this.postCommandPath = postCommandPath;
+            return this;
+        }
+        public String getPostCommandPath() {
+            return this.postCommandPath;
+        }
+
+        public ListCloudAppPatchesResponseBodyPatches setPostCommandTimeoutSec(Integer postCommandTimeoutSec) {
+            this.postCommandTimeoutSec = postCommandTimeoutSec;
+            return this;
+        }
+        public Integer getPostCommandTimeoutSec() {
+            return this.postCommandTimeoutSec;
         }
 
         public ListCloudAppPatchesResponseBodyPatches setStatus(String status) {

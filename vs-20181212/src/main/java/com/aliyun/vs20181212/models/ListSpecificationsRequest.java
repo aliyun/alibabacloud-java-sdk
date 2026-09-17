@@ -14,7 +14,7 @@ public class ListSpecificationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for paging. Maximum value: 100. Default value: 10.</p>
+     * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

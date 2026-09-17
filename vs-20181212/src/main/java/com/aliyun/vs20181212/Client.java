@@ -7997,11 +7997,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Specify at least one of the template ID or the template type.</p>
+     * <p>You must specify at least one of the template ID and templatetype.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of patches for a cloud application.</p>
+     * <p>Queries the patch list of a cloud application.</p>
      * 
      * @param request ListCloudAppPatchesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8058,11 +8058,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Specify at least one of the template ID or the template type.</p>
+     * <p>You must specify at least one of the template ID and templatetype.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of patches for a cloud application.</p>
+     * <p>Queries the patch list of a cloud application.</p>
      * 
      * @param request ListCloudAppPatchesRequest
      * @return ListCloudAppPatchesResponse
@@ -8074,7 +8074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of cloud applications. This operation supports paged queries.</p>
+     * <p>Queries a list of cloud applications. Paging is supported.</p>
      * 
      * @param request ListCloudAppsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8102,7 +8102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of cloud applications. This operation supports paged queries.</p>
+     * <p>Queries a list of cloud applications. Paging is supported.</p>
      * 
      * @param request ListCloudAppsRequest
      * @return ListCloudAppsResponse
@@ -8500,6 +8500,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation supports filtering and paged query of rendering session lists by using various parameter combinations.</li>
+     * <li>You must specify at least one of the <code>SessionId</code> and <code>ClientId</code> parameters, but neither is required. If both parameters are specified, more precise matching is performed based on the two parameters.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of images.</p>
+     * 
+     * @param request ListRenderingImagesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRenderingImagesResponse
+     */
+    public ListRenderingImagesResponse listRenderingImagesWithOptions(ListRenderingImagesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            query.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRenderingImages"),
+            new TeaPair("version", "2018-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRenderingImagesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation supports filtering and paged query of rendering session lists by using various parameter combinations.</li>
+     * <li>You must specify at least one of the <code>SessionId</code> and <code>ClientId</code> parameters, but neither is required. If both parameters are specified, more precise matching is performed based on the two parameters.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of images.</p>
+     * 
+     * @param request ListRenderingImagesRequest
+     * @return ListRenderingImagesResponse
+     */
+    public ListRenderingImagesResponse listRenderingImages(ListRenderingImagesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listRenderingImagesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <blockquote>
      * <p>Specify at least the template ID or the template type.</p>
      * </blockquote>
@@ -8878,7 +8944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries all cloud application service specification information. Paging is supported.</p>
+     * <p>Queries the specifications of all cloud application services. Paging is supported.</p>
      * 
      * @param request ListSpecificationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8926,7 +8992,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries all cloud application service specification information. Paging is supported.</p>
+     * <p>Queries the specifications of all cloud application services. Paging is supported.</p>
      * 
      * @param request ListSpecificationsRequest
      * @return ListSpecificationsResponse
@@ -10189,7 +10255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restarts the host of a cloud application service instance.</p>
+     * <p>Restarts the hosts of cloud application service instances.</p>
      * 
      * @param tmpReq RebootRenderingServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10204,6 +10270,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.precheck)) {
+            query.put("Precheck", request.precheck);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.renderingInstanceIdsShrink)) {
             query.put("RenderingInstanceIds", request.renderingInstanceIdsShrink);
         }
@@ -10227,7 +10297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restarts the host of a cloud application service instance.</p>
+     * <p>Restarts the hosts of cloud application service instances.</p>
      * 
      * @param request RebootRenderingServerRequest
      * @return RebootRenderingServerResponse
@@ -12107,7 +12177,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates information for a cloud application, such as its description and tags. You can upload patch or hotfix packages and create hotfix packages for the Android cloud application marketplace. A cloud application supports up to 20 patch packages, but only one package can be in the uploading state at a time.</p>
+     * <p>Updates the information of a cloud application, such as the description, application labels, and patches.
+     * You can upload patches or hot update packages, and create hot update packages for Android cloud application marketplace applications. Each cloud application supports up to 20 patches, and only one patch can be in the uploading state at a time for a single cloud application.</p>
      * 
      * @param tmpReq UpdateCloudAppInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12167,7 +12238,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates information for a cloud application, such as its description and tags. You can upload patch or hotfix packages and create hotfix packages for the Android cloud application marketplace. A cloud application supports up to 20 patch packages, but only one package can be in the uploading state at a time.</p>
+     * <p>Updates the information of a cloud application, such as the description, application labels, and patches.
+     * You can upload patches or hot update packages, and create hot update packages for Android cloud application marketplace applications. Each cloud application supports up to 20 patches, and only one patch can be in the uploading state at a time for a single cloud application.</p>
      * 
      * @param request UpdateCloudAppInfoRequest
      * @return UpdateCloudAppInfoResponse
@@ -12475,7 +12547,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upload or list a cloud application package. This is an asynchronous API. Use the ListCloudApps API to check upload progress.</p>
+     * <p>Upgrades instance images in batch.</p>
+     * 
+     * @param tmpReq UpgradeRenderingInstanceImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpgradeRenderingInstanceImageResponse
+     */
+    public UpgradeRenderingInstanceImageResponse upgradeRenderingInstanceImageWithOptions(UpgradeRenderingInstanceImageRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpgradeRenderingInstanceImageShrinkRequest request = new UpgradeRenderingInstanceImageShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.renderingInstanceIds)) {
+            request.renderingInstanceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.renderingInstanceIds, "RenderingInstanceIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            query.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.renderingInstanceIdsShrink)) {
+            query.put("RenderingInstanceIds", request.renderingInstanceIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpgradeRenderingInstanceImage"),
+            new TeaPair("version", "2018-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradeRenderingInstanceImageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Upgrades instance images in batch.</p>
+     * 
+     * @param request UpgradeRenderingInstanceImageRequest
+     * @return UpgradeRenderingInstanceImageResponse
+     */
+    public UpgradeRenderingInstanceImageResponse upgradeRenderingInstanceImage(UpgradeRenderingInstanceImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.upgradeRenderingInstanceImageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Uploads a cloud application package for listing. This is an asynchronous operation. You can call the ListCloudApps operation to query the upload progress.</p>
      * 
      * @param tmpReq UploadCloudAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12522,6 +12648,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PkgType", request.pkgType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.postCommandPath)) {
+            query.put("PostCommandPath", request.postCommandPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.postCommandTimeoutSec)) {
+            query.put("PostCommandTimeoutSec", request.postCommandTimeoutSec);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -12541,7 +12675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upload or list a cloud application package. This is an asynchronous API. Use the ListCloudApps API to check upload progress.</p>
+     * <p>Uploads a cloud application package for listing. This is an asynchronous operation. You can call the ListCloudApps operation to query the upload progress.</p>
      * 
      * @param request UploadCloudAppRequest
      * @return UploadCloudAppResponse

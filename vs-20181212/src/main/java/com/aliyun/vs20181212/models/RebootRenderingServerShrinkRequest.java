@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class RebootRenderingServerShrinkRequest extends TeaModel {
     /**
-     * <p>List of cloud application service instance IDs</p>
+     * <p>Specifies whether to perform only an admission check without actually restarting the hosts. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Precheck")
+    public Boolean precheck;
+
+    /**
+     * <p>The list of cloud application service instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RenderingInstanceIds")
@@ -14,6 +23,14 @@ public class RebootRenderingServerShrinkRequest extends TeaModel {
     public static RebootRenderingServerShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         RebootRenderingServerShrinkRequest self = new RebootRenderingServerShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RebootRenderingServerShrinkRequest setPrecheck(Boolean precheck) {
+        this.precheck = precheck;
+        return this;
+    }
+    public Boolean getPrecheck() {
+        return this.precheck;
     }
 
     public RebootRenderingServerShrinkRequest setRenderingInstanceIdsShrink(String renderingInstanceIdsShrink) {
