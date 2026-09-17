@@ -15,12 +15,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-hongkong", "cloudauth-intl.cn-hongkong.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "cloudauth-intl.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "cloudauth-intl.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "cloudauth-intl.ap-southeast-1.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("cloudauth-intl", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -845,10 +839,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Uses AI technology to detect whether credentials (such as water, electricity, gas, and credit card electronic bills) are forged, and extracts key information from the credentials.</p>
+     * <p>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) has been forged, and extracts key information from the credential.</p>
      * 
      * <b>summary</b> : 
-     * <p>An API operation that uploads credential images, including utility bills and credit card statements, and uses Qwen-VL to intelligently fetch billing addresses and names.</p>
+     * <p>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</p>
      * 
      * @param request CredentialRecognitionIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -859,6 +853,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.docType)) {
             query.put("DocType", request.docType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileInputType)) {
+            query.put("FileInputType", request.fileInputType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fraudCheck)) {
@@ -918,10 +916,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Uses AI technology to detect whether credentials (such as water, electricity, gas, and credit card electronic bills) are forged, and extracts key information from the credentials.</p>
+     * <p>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) has been forged, and extracts key information from the credential.</p>
      * 
      * <b>summary</b> : 
-     * <p>An API operation that uploads credential images, including utility bills and credit card statements, and uses Qwen-VL to intelligently fetch billing addresses and names.</p>
+     * <p>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</p>
      * 
      * @param request CredentialRecognitionIntlRequest
      * @return CredentialRecognitionIntlResponse
@@ -933,7 +931,191 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Initializes the credential recognition OCR operation and returns a transactionId.</p>
+     * <p>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) is forged, and extracts key information from the credential.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</p>
+     * 
+     * @param request CredentialRecognitionIntlV2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CredentialRecognitionIntlV2Response
+     */
+    public CredentialRecognitionIntlV2Response credentialRecognitionIntlV2WithOptions(CredentialRecognitionIntlV2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialOcrPictureFile)) {
+            query.put("CredentialOcrPictureFile", request.credentialOcrPictureFile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.docType)) {
+            query.put("DocType", request.docType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileInputType)) {
+            query.put("FileInputType", request.fileInputType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fraudCheck)) {
+            query.put("FraudCheck", request.fraudCheck);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idQuality)) {
+            query.put("IdQuality", request.idQuality);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ocrArea)) {
+            query.put("OcrArea", request.ocrArea);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ocrTranslation)) {
+            query.put("OcrTranslation", request.ocrTranslation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ocrValueStandard)) {
+            query.put("OcrValueStandard", request.ocrValueStandard);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.checkRuleConfig)) {
+            body.put("CheckRuleConfig", request.checkRuleConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialOcrPictureBase64)) {
+            body.put("CredentialOcrPictureBase64", request.credentialOcrPictureBase64);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialOcrPictureUrl)) {
+            body.put("CredentialOcrPictureUrl", request.credentialOcrPictureUrl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CredentialRecognitionIntlV2"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CredentialRecognitionIntlV2Response());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) is forged, and extracts key information from the credential.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</p>
+     * 
+     * @param request CredentialRecognitionIntlV2Request
+     * @return CredentialRecognitionIntlV2Response
+     */
+    public CredentialRecognitionIntlV2Response credentialRecognitionIntlV2(CredentialRecognitionIntlV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.credentialRecognitionIntlV2WithOptions(request, runtime);
+    }
+
+    public CredentialRecognitionIntlV2Response credentialRecognitionIntlV2Advance(CredentialRecognitionIntlV2AdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        // Step 0: init client
+        com.aliyun.credentials.models.CredentialModel credentialModel = null;
+        if (com.aliyun.teautil.Common.isUnset(_credential)) {
+            throw new TeaException(TeaConverter.buildMap(
+                new TeaPair("code", "InvalidCredentials"),
+                new TeaPair("message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details.")
+            ));
+        }
+
+        credentialModel = _credential.getCredential();
+        String accessKeyId = credentialModel.accessKeyId;
+        String accessKeySecret = credentialModel.accessKeySecret;
+        String securityToken = credentialModel.securityToken;
+        String credentialType = credentialModel.type;
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
+        if (com.aliyun.teautil.Common.isUnset(credentialType)) {
+            credentialType = "access_key";
+        }
+
+        com.aliyun.teaopenapi.models.Config authConfig = com.aliyun.teaopenapi.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("securityToken", securityToken),
+            new TeaPair("type", credentialType),
+            new TeaPair("endpoint", openPlatformEndpoint),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.teaopenapi.Client authClient = new com.aliyun.teaopenapi.Client(authConfig);
+        java.util.Map<String, String> authRequest = TeaConverter.buildMap(
+            new TeaPair("Product", "Cloudauth-intl"),
+            new TeaPair("RegionId", _regionId)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest authReq = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(authRequest))
+        ));
+        com.aliyun.teaopenapi.models.Params authParams = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AuthorizeFileUpload"),
+            new TeaPair("version", "2019-12-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        java.util.Map<String, Object> authResponse = new java.util.HashMap<>();
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        java.util.Map<String, Object> ossHeader = new java.util.HashMap<>();
+        java.util.Map<String, Object> tmpBody = new java.util.HashMap<>();
+        Boolean useAccelerate = false;
+        java.util.Map<String, String> authResponseBody = new java.util.HashMap<>();
+        CredentialRecognitionIntlV2Request credentialRecognitionIntlV2Req = new CredentialRecognitionIntlV2Request();
+        com.aliyun.openapiutil.Client.convert(request, credentialRecognitionIntlV2Req);
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialOcrPictureFileObject)) {
+            Object tmpResp0 = authClient.callApi(authParams, authReq, runtime);
+            authResponse = com.aliyun.teautil.Common.assertAsMap(tmpResp0);
+            tmpBody = com.aliyun.teautil.Common.assertAsMap(authResponse.get("body"));
+            useAccelerate = com.aliyun.teautil.Common.assertAsBoolean(tmpBody.get("UseAccelerate"));
+            authResponseBody = com.aliyun.teautil.Common.stringifyMapValue(tmpBody);
+            fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponseBody.get("ObjectKey")),
+                new TeaPair("content", request.credentialOcrPictureFileObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = TeaConverter.buildMap(
+                new TeaPair("host", com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType)),
+                new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
+                new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
+                new TeaPair("Signature", authResponseBody.get("Signature")),
+                new TeaPair("key", authResponseBody.get("ObjectKey")),
+                new TeaPair("file", fileObj),
+                new TeaPair("success_action_status", "201")
+            );
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
+            credentialRecognitionIntlV2Req.credentialOcrPictureFile = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
+        }
+
+        CredentialRecognitionIntlV2Response credentialRecognitionIntlV2Resp = this.credentialRecognitionIntlV2WithOptions(credentialRecognitionIntlV2Req, runtime);
+        return credentialRecognitionIntlV2Resp;
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Initializes the credential recognition OCR operation and retrieves a transactionId through this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Submits credential recognition information.</p>
@@ -947,6 +1129,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.docType)) {
             query.put("DocType", request.docType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileInputType)) {
+            query.put("FileInputType", request.fileInputType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fraudCheck)) {
@@ -1014,7 +1200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Initializes the credential recognition OCR operation and returns a transactionId.</p>
+     * <p>Initializes the credential recognition OCR operation and retrieves a transactionId through this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Submits credential recognition information.</p>
@@ -1025,6 +1211,198 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CredentialSubmitIntlResponse credentialSubmitIntl(CredentialSubmitIntlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.credentialSubmitIntlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Initializes the credential recognition OCR operation. Call this operation to obtain a transactionId.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Submits a credential recognition request.</p>
+     * 
+     * @param request CredentialSubmitIntlV2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CredentialSubmitIntlV2Response
+     */
+    public CredentialSubmitIntlV2Response credentialSubmitIntlV2WithOptions(CredentialSubmitIntlV2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialOcrPictureFile)) {
+            query.put("CredentialOcrPictureFile", request.credentialOcrPictureFile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.docType)) {
+            query.put("DocType", request.docType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileInputType)) {
+            query.put("FileInputType", request.fileInputType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fraudCheck)) {
+            query.put("FraudCheck", request.fraudCheck);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idQuality)) {
+            query.put("IdQuality", request.idQuality);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
+            query.put("MerchantBizId", request.merchantBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ocrArea)) {
+            query.put("OcrArea", request.ocrArea);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ocrTranslation)) {
+            query.put("OcrTranslation", request.ocrTranslation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ocrValueStandard)) {
+            query.put("OcrValueStandard", request.ocrValueStandard);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneCode)) {
+            query.put("SceneCode", request.sceneCode);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.checkRuleConfig)) {
+            body.put("CheckRuleConfig", request.checkRuleConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialOcrPictureBase64)) {
+            body.put("CredentialOcrPictureBase64", request.credentialOcrPictureBase64);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialOcrPictureUrl)) {
+            body.put("CredentialOcrPictureUrl", request.credentialOcrPictureUrl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CredentialSubmitIntlV2"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CredentialSubmitIntlV2Response());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Initializes the credential recognition OCR operation. Call this operation to obtain a transactionId.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Submits a credential recognition request.</p>
+     * 
+     * @param request CredentialSubmitIntlV2Request
+     * @return CredentialSubmitIntlV2Response
+     */
+    public CredentialSubmitIntlV2Response credentialSubmitIntlV2(CredentialSubmitIntlV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.credentialSubmitIntlV2WithOptions(request, runtime);
+    }
+
+    public CredentialSubmitIntlV2Response credentialSubmitIntlV2Advance(CredentialSubmitIntlV2AdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        // Step 0: init client
+        com.aliyun.credentials.models.CredentialModel credentialModel = null;
+        if (com.aliyun.teautil.Common.isUnset(_credential)) {
+            throw new TeaException(TeaConverter.buildMap(
+                new TeaPair("code", "InvalidCredentials"),
+                new TeaPair("message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details.")
+            ));
+        }
+
+        credentialModel = _credential.getCredential();
+        String accessKeyId = credentialModel.accessKeyId;
+        String accessKeySecret = credentialModel.accessKeySecret;
+        String securityToken = credentialModel.securityToken;
+        String credentialType = credentialModel.type;
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
+        if (com.aliyun.teautil.Common.isUnset(credentialType)) {
+            credentialType = "access_key";
+        }
+
+        com.aliyun.teaopenapi.models.Config authConfig = com.aliyun.teaopenapi.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("securityToken", securityToken),
+            new TeaPair("type", credentialType),
+            new TeaPair("endpoint", openPlatformEndpoint),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.teaopenapi.Client authClient = new com.aliyun.teaopenapi.Client(authConfig);
+        java.util.Map<String, String> authRequest = TeaConverter.buildMap(
+            new TeaPair("Product", "Cloudauth-intl"),
+            new TeaPair("RegionId", _regionId)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest authReq = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(authRequest))
+        ));
+        com.aliyun.teaopenapi.models.Params authParams = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AuthorizeFileUpload"),
+            new TeaPair("version", "2019-12-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        java.util.Map<String, Object> authResponse = new java.util.HashMap<>();
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        java.util.Map<String, Object> ossHeader = new java.util.HashMap<>();
+        java.util.Map<String, Object> tmpBody = new java.util.HashMap<>();
+        Boolean useAccelerate = false;
+        java.util.Map<String, String> authResponseBody = new java.util.HashMap<>();
+        CredentialSubmitIntlV2Request credentialSubmitIntlV2Req = new CredentialSubmitIntlV2Request();
+        com.aliyun.openapiutil.Client.convert(request, credentialSubmitIntlV2Req);
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialOcrPictureFileObject)) {
+            Object tmpResp0 = authClient.callApi(authParams, authReq, runtime);
+            authResponse = com.aliyun.teautil.Common.assertAsMap(tmpResp0);
+            tmpBody = com.aliyun.teautil.Common.assertAsMap(authResponse.get("body"));
+            useAccelerate = com.aliyun.teautil.Common.assertAsBoolean(tmpBody.get("UseAccelerate"));
+            authResponseBody = com.aliyun.teautil.Common.stringifyMapValue(tmpBody);
+            fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponseBody.get("ObjectKey")),
+                new TeaPair("content", request.credentialOcrPictureFileObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = TeaConverter.buildMap(
+                new TeaPair("host", com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType)),
+                new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
+                new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
+                new TeaPair("Signature", authResponseBody.get("Signature")),
+                new TeaPair("key", authResponseBody.get("ObjectKey")),
+                new TeaPair("file", fileObj),
+                new TeaPair("success_action_status", "201")
+            );
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
+            credentialSubmitIntlV2Req.credentialOcrPictureFile = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
+        }
+
+        CredentialSubmitIntlV2Response credentialSubmitIntlV2Resp = this.credentialSubmitIntlV2WithOptions(credentialSubmitIntlV2Req, runtime);
+        return credentialSubmitIntlV2Resp;
     }
 
     /**

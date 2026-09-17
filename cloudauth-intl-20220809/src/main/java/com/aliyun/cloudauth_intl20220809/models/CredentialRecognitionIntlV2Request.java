@@ -3,15 +3,15 @@ package com.aliyun.cloudauth_intl20220809.models;
 
 import com.aliyun.tea.*;
 
-public class CredentialRecognitionIntlRequest extends TeaModel {
+public class CredentialRecognitionIntlV2Request extends TeaModel {
     /**
-     * <p>The field check rule configuration, in JSON string format.</p>
+     * <p>The field validation rule configuration, in JSON string format.</p>
      * 
      * <strong>example:</strong>
      * <p>{
-     *     &quot;address_rule&quot;: &quot;Includes Address Hangzhou ***&quot;,
-     *     &quot;name_rule&quot;: &quot;Includes Name Zhang*&quot;,
-     *     &quot;date_of_issue_rule&quot;: &quot;Within 2026.05.20&quot;
+     *     &quot;address_rule&quot;: &quot;Includes Adrress Hangzhou***&quot;,
+     *     &quot;name_rule&quot;: &quot;Includes Name  Zhang*&quot;,
+     *     &quot;date_of_issue_rule&quot;: &quot;Whthin 2026.05.20&quot;
      * }</p>
      */
     @NameInMap("CheckRuleConfig")
@@ -27,6 +27,15 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     public String credentialOcrPictureBase64;
 
     /**
+     * <p>The image file stream.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InputStream</p>
+     */
+    @NameInMap("CredentialOcrPictureFile")
+    public String credentialOcrPictureFile;
+
+    /**
      * <p>The URL of the image. The URL must be a publicly accessible HTTP or HTTPS link.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +47,10 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     /**
      * <p>The credential type. Valid values:</p>
      * <ul>
-     * <li>01: transaction credential (including electronic bill images for water, electricity, gas, credit card, and other types)</li>
+     * <li>01: transaction credential (including electronic bill images for water, electricity, gas, credit cards, and other types)</li>
+     * <li>02: vehicle registration certificate</li>
+     * <li>03: transfer transaction record</li>
+     * <li>04: POA address proof</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -49,12 +61,10 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     public String docType;
 
     /**
-     * <p>The input file type. Valid values:</p>
+     * <p>The input material type. Valid values:</p>
      * <ul>
-     * <li><p>IMAGE (default): image.</p>
-     * </li>
-     * <li><p>PDF: PDF format.</p>
-     * </li>
+     * <li>IMAGE (default): image</li>
+     * <li>PDF: PDF format</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,17 +82,13 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>false</p>
      */
     @NameInMap("FraudCheck")
     public String fraudCheck;
 
     /**
-     * <p>Specifies whether to enable quality detection. Valid values:</p>
-     * <ul>
-     * <li>Y: Enabled.</li>
-     * <li>N: Disabled.</li>
-     * </ul>
+     * <p>Specifies whether to enable quality detection. Valid values: Y (enabled) and N (disabled).</p>
      * 
      * <strong>example:</strong>
      * <p>Y</p>
@@ -93,7 +99,10 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     /**
      * <p>The extraction type. Valid values:</p>
      * <ul>
-     * <li>0101: electronic bill address and name module (extracts the address and name module through intelligent analysis)</li>
+     * <li>0101: electronic bill address and name module (extracts address and name modules through intelligent analysis)</li>
+     * <li>0201: Thailand vehicle registration certificate</li>
+     * <li>0301: transfer transaction amount information</li>
+     * <li>0401: POA credential extraction information</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -104,11 +113,7 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     public String ocrArea;
 
     /**
-     * <p>Specifies whether to enable translation. Valid values:</p>
-     * <ul>
-     * <li>0: Disabled.</li>
-     * <li>1: Enabled.</li>
-     * </ul>
+     * <p>Specifies whether to enable translation. Valid values: 0 (disabled) and 1 (enabled).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -117,14 +122,10 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     public String ocrTranslation;
 
     /**
-     * <p>Specifies whether to enable OCR result normalization. Valid values:</p>
-     * <ul>
-     * <li>0: Disabled.</li>
-     * <li>1: Enabled.</li>
-     * </ul>
+     * <p>Specifies whether to enable OCR result normalization. Valid values: 0 (disabled) and 1 (enabled).</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>0</p>
      */
     @NameInMap("OcrValueStandard")
     public String ocrValueStandard;
@@ -139,12 +140,12 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     @NameInMap("ProductCode")
     public String productCode;
 
-    public static CredentialRecognitionIntlRequest build(java.util.Map<String, ?> map) throws Exception {
-        CredentialRecognitionIntlRequest self = new CredentialRecognitionIntlRequest();
+    public static CredentialRecognitionIntlV2Request build(java.util.Map<String, ?> map) throws Exception {
+        CredentialRecognitionIntlV2Request self = new CredentialRecognitionIntlV2Request();
         return TeaModel.build(map, self);
     }
 
-    public CredentialRecognitionIntlRequest setCheckRuleConfig(String checkRuleConfig) {
+    public CredentialRecognitionIntlV2Request setCheckRuleConfig(String checkRuleConfig) {
         this.checkRuleConfig = checkRuleConfig;
         return this;
     }
@@ -152,7 +153,7 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
         return this.checkRuleConfig;
     }
 
-    public CredentialRecognitionIntlRequest setCredentialOcrPictureBase64(String credentialOcrPictureBase64) {
+    public CredentialRecognitionIntlV2Request setCredentialOcrPictureBase64(String credentialOcrPictureBase64) {
         this.credentialOcrPictureBase64 = credentialOcrPictureBase64;
         return this;
     }
@@ -160,7 +161,15 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
         return this.credentialOcrPictureBase64;
     }
 
-    public CredentialRecognitionIntlRequest setCredentialOcrPictureUrl(String credentialOcrPictureUrl) {
+    public CredentialRecognitionIntlV2Request setCredentialOcrPictureFile(String credentialOcrPictureFile) {
+        this.credentialOcrPictureFile = credentialOcrPictureFile;
+        return this;
+    }
+    public String getCredentialOcrPictureFile() {
+        return this.credentialOcrPictureFile;
+    }
+
+    public CredentialRecognitionIntlV2Request setCredentialOcrPictureUrl(String credentialOcrPictureUrl) {
         this.credentialOcrPictureUrl = credentialOcrPictureUrl;
         return this;
     }
@@ -168,7 +177,7 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
         return this.credentialOcrPictureUrl;
     }
 
-    public CredentialRecognitionIntlRequest setDocType(String docType) {
+    public CredentialRecognitionIntlV2Request setDocType(String docType) {
         this.docType = docType;
         return this;
     }
@@ -176,7 +185,7 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
         return this.docType;
     }
 
-    public CredentialRecognitionIntlRequest setFileInputType(String fileInputType) {
+    public CredentialRecognitionIntlV2Request setFileInputType(String fileInputType) {
         this.fileInputType = fileInputType;
         return this;
     }
@@ -184,7 +193,7 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
         return this.fileInputType;
     }
 
-    public CredentialRecognitionIntlRequest setFraudCheck(String fraudCheck) {
+    public CredentialRecognitionIntlV2Request setFraudCheck(String fraudCheck) {
         this.fraudCheck = fraudCheck;
         return this;
     }
@@ -192,7 +201,7 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
         return this.fraudCheck;
     }
 
-    public CredentialRecognitionIntlRequest setIdQuality(String idQuality) {
+    public CredentialRecognitionIntlV2Request setIdQuality(String idQuality) {
         this.idQuality = idQuality;
         return this;
     }
@@ -200,7 +209,7 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
         return this.idQuality;
     }
 
-    public CredentialRecognitionIntlRequest setOcrArea(String ocrArea) {
+    public CredentialRecognitionIntlV2Request setOcrArea(String ocrArea) {
         this.ocrArea = ocrArea;
         return this;
     }
@@ -208,7 +217,7 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
         return this.ocrArea;
     }
 
-    public CredentialRecognitionIntlRequest setOcrTranslation(String ocrTranslation) {
+    public CredentialRecognitionIntlV2Request setOcrTranslation(String ocrTranslation) {
         this.ocrTranslation = ocrTranslation;
         return this;
     }
@@ -216,7 +225,7 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
         return this.ocrTranslation;
     }
 
-    public CredentialRecognitionIntlRequest setOcrValueStandard(String ocrValueStandard) {
+    public CredentialRecognitionIntlV2Request setOcrValueStandard(String ocrValueStandard) {
         this.ocrValueStandard = ocrValueStandard;
         return this;
     }
@@ -224,7 +233,7 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
         return this.ocrValueStandard;
     }
 
-    public CredentialRecognitionIntlRequest setProductCode(String productCode) {
+    public CredentialRecognitionIntlV2Request setProductCode(String productCode) {
         this.productCode = productCode;
         return this;
     }

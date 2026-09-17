@@ -3,7 +3,7 @@ package com.aliyun.cloudauth_intl20220809.models;
 
 import com.aliyun.tea.*;
 
-public class CredentialSubmitIntlResponseBody extends TeaModel {
+public class CredentialSubmitIntlV2ResponseBody extends TeaModel {
     /**
      * <p>The return code.</p>
      * 
@@ -14,7 +14,7 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The return message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -26,7 +26,7 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
      * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>5E63B760-0ECB-5C07-8503-A65C27876968</p>
+     * <p>7F971622-38C0-5F56-B2EC-315367979B4F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,14 +35,14 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
      * <p>The returned result.</p>
      */
     @NameInMap("Result")
-    public CredentialSubmitIntlResponseBodyResult result;
+    public CredentialSubmitIntlV2ResponseBodyResult result;
 
-    public static CredentialSubmitIntlResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CredentialSubmitIntlResponseBody self = new CredentialSubmitIntlResponseBody();
+    public static CredentialSubmitIntlV2ResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CredentialSubmitIntlV2ResponseBody self = new CredentialSubmitIntlV2ResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CredentialSubmitIntlResponseBody setCode(String code) {
+    public CredentialSubmitIntlV2ResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -50,7 +50,7 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CredentialSubmitIntlResponseBody setMessage(String message) {
+    public CredentialSubmitIntlV2ResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -58,7 +58,7 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
         return this.message;
     }
 
-    public CredentialSubmitIntlResponseBody setRequestId(String requestId) {
+    public CredentialSubmitIntlV2ResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -66,30 +66,30 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CredentialSubmitIntlResponseBody setResult(CredentialSubmitIntlResponseBodyResult result) {
+    public CredentialSubmitIntlV2ResponseBody setResult(CredentialSubmitIntlV2ResponseBodyResult result) {
         this.result = result;
         return this;
     }
-    public CredentialSubmitIntlResponseBodyResult getResult() {
+    public CredentialSubmitIntlV2ResponseBodyResult getResult() {
         return this.result;
     }
 
-    public static class CredentialSubmitIntlResponseBodyResult extends TeaModel {
+    public static class CredentialSubmitIntlV2ResponseBodyResult extends TeaModel {
         /**
-         * <p>The unique identifier of the authentication request.</p>
+         * <p>The unique identifier of the verification request.</p>
          * 
          * <strong>example:</strong>
-         * <p>4ab0b***cbde97</p>
+         * <p>hk573be80f944d95ac812e0*******a8</p>
          */
         @NameInMap("TransactionId")
         public String transactionId;
 
-        public static CredentialSubmitIntlResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
-            CredentialSubmitIntlResponseBodyResult self = new CredentialSubmitIntlResponseBodyResult();
+        public static CredentialSubmitIntlV2ResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
+            CredentialSubmitIntlV2ResponseBodyResult self = new CredentialSubmitIntlV2ResponseBodyResult();
             return TeaModel.build(map, self);
         }
 
-        public CredentialSubmitIntlResponseBodyResult setTransactionId(String transactionId) {
+        public CredentialSubmitIntlV2ResponseBodyResult setTransactionId(String transactionId) {
             this.transactionId = transactionId;
             return this;
         }
