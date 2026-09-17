@@ -1210,6 +1210,91 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a workspace queue.</p>
+     * 
+     * @param request CreateWorkspaceQueueRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateWorkspaceQueueResponse
+     */
+    public CreateWorkspaceQueueResponse createWorkspaceQueueWithOptions(CreateWorkspaceQueueRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuSpec)) {
+            body.put("gpuSpec", request.gpuSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("instanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paymentType)) {
+            body.put("paymentType", request.paymentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.preheat)) {
+            body.put("preheat", request.preheat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queueCategory)) {
+            body.put("queueCategory", request.queueCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceSpec)) {
+            body.put("resourceSpec", request.resourceSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("workspaceId", request.workspaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceQueueName)) {
+            body.put("workspaceQueueName", request.workspaceQueueName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateWorkspaceQueue"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/queues"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWorkspaceQueueResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a workspace queue.</p>
+     * 
+     * @param request CreateWorkspaceQueueRequest
+     * @return CreateWorkspaceQueueResponse
+     */
+    public CreateWorkspaceQueueResponse createWorkspaceQueue(CreateWorkspaceQueueRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createWorkspaceQueueWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes a Kyuubi gateway.</p>
      * 
      * @param headers map
