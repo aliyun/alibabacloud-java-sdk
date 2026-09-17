@@ -2230,8 +2230,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The per-user queries per second (QPS) limit for this operation is 100. If this limit is exceeded, the API calls are throttled, which may affect your business. Use this operation as appropriate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the details of a certificate without returning the certificate content or private key content.</p>
+     * <p>Queries the details of a certificate. The certificate content and private key content are not returned.</p>
      * 
      * @param request GetCertificateDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2262,8 +2265,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The per-user queries per second (QPS) limit for this operation is 100. If this limit is exceeded, the API calls are throttled, which may affect your business. Use this operation as appropriate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the details of a certificate without returning the certificate content or private key content.</p>
+     * <p>Queries the details of a certificate. The certificate content and private key content are not returned.</p>
      * 
      * @param request GetCertificateDetailRequest
      * @return GetCertificateDetailResponse
@@ -2980,8 +2986,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the operation logs of CA certificates, including root CA certificates and subordinate CA certificates. For example, you can query the creation logs and status change logs of CA certificates.
+     * The China site CertIdentifier is certificate ID + &quot;-cn-hangzhou&quot;, and the China site CertIdentifier is certificate ID + &quot;-cn-hangzhou&quot;. The China site CertIdentifier is certificate ID + &quot;-cn-hangzhou&quot;.
+     * The China site CertIdentifier is certificate ID + &quot;-cn-hangzhou&quot;.
+     * This operation has a rate limit of 10 queries per second (QPS) per user. If the rate limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the certificates managed by Certificate Management Service.</p>
+     * <p>Retrieves a list of certificates.</p>
      * 
      * @param request ListCertificatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3036,8 +3048,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the operation logs of CA certificates, including root CA certificates and subordinate CA certificates. For example, you can query the creation logs and status change logs of CA certificates.
+     * The China site CertIdentifier is certificate ID + &quot;-cn-hangzhou&quot;, and the China site CertIdentifier is certificate ID + &quot;-cn-hangzhou&quot;. The China site CertIdentifier is certificate ID + &quot;-cn-hangzhou&quot;.
+     * The China site CertIdentifier is certificate ID + &quot;-cn-hangzhou&quot;.
+     * This operation has a rate limit of 10 queries per second (QPS) per user. If the rate limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the certificates managed by Certificate Management Service.</p>
+     * <p>Retrieves a list of certificates.</p>
      * 
      * @param request ListCertificatesRequest
      * @return ListCertificatesResponse
@@ -5135,16 +5153,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The China SM certificate refers to a certificate that uses the ShangMi (SM) cryptographic algorithms. The China SM certificate includes an encryption certificate and a signing certificate. The China SM certificate is used in China to comply with the national cryptographic standards.
-     * The China SM certificate refers to a certificate that uses the ShangMi (SM) cryptographic algorithms.
-     * The China SM certificate includes an encryption certificate and a signing certificate.
-     * The China SM certificate is used in China to comply with the national cryptographic standards.
-     * The China SM certificate refers to a certificate that uses the ShangMi (SM) cryptographic algorithms.
-     * The China SM certificate includes an encryption certificate and a signing certificate.
-     * The throttling limit for this API is 100 queries per second (QPS) per user. If this limit is exceeded, API calls are throttled, which may affect your business. Call this API at a reasonable frequency.</p>
+     * <p>The maximum number of calls per user is 100 per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Uploads a certificate, including a standard Chinese national cryptographic (China SM) certificate or a non-China SM certificate.</p>
+     * <p>Uploads a certificate, including a standard SM certificate or a non-SM certificate.</p>
      * 
      * @param request UploadUserCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5212,16 +5224,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The China SM certificate refers to a certificate that uses the ShangMi (SM) cryptographic algorithms. The China SM certificate includes an encryption certificate and a signing certificate. The China SM certificate is used in China to comply with the national cryptographic standards.
-     * The China SM certificate refers to a certificate that uses the ShangMi (SM) cryptographic algorithms.
-     * The China SM certificate includes an encryption certificate and a signing certificate.
-     * The China SM certificate is used in China to comply with the national cryptographic standards.
-     * The China SM certificate refers to a certificate that uses the ShangMi (SM) cryptographic algorithms.
-     * The China SM certificate includes an encryption certificate and a signing certificate.
-     * The throttling limit for this API is 100 queries per second (QPS) per user. If this limit is exceeded, API calls are throttled, which may affect your business. Call this API at a reasonable frequency.</p>
+     * <p>The maximum number of calls per user is 100 per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Uploads a certificate, including a standard Chinese national cryptographic (China SM) certificate or a non-China SM certificate.</p>
+     * <p>Uploads a certificate, including a standard SM certificate or a non-SM certificate.</p>
      * 
      * @param request UploadUserCertificateRequest
      * @return UploadUserCertificateResponse

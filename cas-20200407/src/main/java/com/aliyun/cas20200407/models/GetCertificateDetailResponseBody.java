@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetCertificateDetailResponseBody extends TeaModel {
     /**
-     * <p>The certificate algorithm. Valid values:</p>
+     * <p>The certificate algorithm.</p>
      * <ul>
      * <li><strong>RSA</strong>: RSA algorithm.</li>
      * <li><strong>ECC</strong>: ECC algorithm.</li>
-     * <li><strong>SM2</strong>: SM2 encryption algorithm.</li>
+     * <li><strong>SM2</strong>: SM2 algorithm.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,10 +19,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public String algorithm;
 
     /**
-     * <p>The global certificate ID in the format of certificate ID + &quot;-&quot; + site region ID. This is commonly used across Alibaba Cloud services.
-     *   --For the China site, the format is certificate ID + &quot;-cn-hangzhou&quot;.
-     * For the China site, the format is certificate ID + &quot;-ap-southeast-1&quot;.
-     * For example, if the certificate ID is 123, the CertIdentifier on the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier on the China site is &quot;123-ap-southeast-1&quot;.</p>
+     * <p>The global certificate ID in the format of certificate ID + &quot;-&quot; + site region ID. This ID is commonly used across Alibaba Cloud services.
+     *   --For the China site, the value is certificate ID + &quot;-cn-hangzhou&quot;.
+     * For the International site, the value is certificate ID + &quot;-ap-southeast-1&quot;.
+     * For example, if the certificate ID is 123, the CertIdentifier on the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier on the International site is &quot;123-ap-southeast-1&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>21912069-cn-hangzhou</p>
@@ -55,11 +55,11 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public String certificateName;
 
     /**
-     * <p>The certificate source. Valid values:</p>
+     * <p>The certificate source.</p>
      * <ul>
-     * <li>BUY: purchased certificate.</li>
-     * <li>TEST: test certificate.</li>
-     * <li>UPLOAD: uploaded certificate.</li>
+     * <li>BUY: Purchased certificate.</li>
+     * <li>TEST: Test certificate.</li>
+     * <li>UPLOAD: Uploaded certificate.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,12 +69,12 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public String certificateSource;
 
     /**
-     * <p>The certificate status. Valid values:</p>
+     * <p>The certificate status.</p>
      * <ul>
-     * <li><strong>issued</strong>: issued.</li>
-     * <li><strong>revoked</strong>: revoked.</li>
-     * <li><strong>willExpire</strong>: about to expire.</li>
-     * <li><strong>expired</strong>: expired.</li>
+     * <li><strong>issued</strong>: Issued.</li>
+     * <li><strong>revoked</strong>: Revoked.</li>
+     * <li><strong>willExpire</strong>: About to expire.</li>
+     * <li><strong>expired</strong>: Expired.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,7 +93,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public String commonName;
 
     /**
-     * <p>The company information ID associated with the certificate application. This field is empty for DV certificates.</p>
+     * <p>The company information ID associated with the certificate application. This value is empty for DV certificates.</p>
      * 
      * <strong>example:</strong>
      * <p>44211</p>
@@ -120,7 +120,23 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public String csr;
 
     /**
-     * <p>All domain names contained in the certificate. Multiple domain names are separated by commas.</p>
+     * <p>The deployment information in JSON format:</p>
+     * <p>--Scope: Valid values are all/server. The value is all if the certificate has a private key, or server if it does not.</p>
+     * <p>--ServerName: The name of the server associated with the certificate instance.</p>
+     * <p>--ResourceInstanceId: The resource identifier of the server associated with the certificate instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;Scope&quot;: &quot;all&quot;,
+     *        &quot;ServerName&quot;: &quot;acmeServerName&quot;,
+     *        &quot;ResourceInstanceId&quot;: &quot;cas_dv-cn-XXX&quot;
+     * }</p>
+     */
+    @NameInMap("DeploymentDesc")
+    public String deploymentDesc;
+
+    /**
+     * <p>All domain names included in the certificate. Multiple domain names are separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>aliyundoc.com,example.aliyundoc.com</p>
@@ -160,7 +176,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The entity that issued the certificate.</p>
+     * <p>The certificate issue authority.</p>
      * 
      * <strong>example:</strong>
      * <p>Digicert</p>
@@ -200,7 +216,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public Long notBefore;
 
     /**
-     * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>5979d897-d69f-4fc9-87dd-f3bb73c40b80</p>
@@ -230,7 +246,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public java.util.List<GetCertificateDetailResponseBodyTags> tags;
 
     /**
-     * <p>The list of cloud services to which the current certificate is deployed.</p>
+     * <p>The list of Alibaba Cloud services to which the certificate is currently deployed.</p>
      */
     @NameInMap("UsingProductList")
     public java.util.List<String> usingProductList;
@@ -326,6 +342,14 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     }
     public String getCsr() {
         return this.csr;
+    }
+
+    public GetCertificateDetailResponseBody setDeploymentDesc(String deploymentDesc) {
+        this.deploymentDesc = deploymentDesc;
+        return this;
+    }
+    public String getDeploymentDesc() {
+        return this.deploymentDesc;
     }
 
     public GetCertificateDetailResponseBody setDomain(String domain) {
@@ -434,7 +458,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
 
     public static class GetCertificateDetailResponseBodyCertificateChainList extends TeaModel {
         /**
-         * <p>The issuer name in the certificate chain.</p>
+         * <p>The issuer name of the certificate chain.</p>
          * 
          * <strong>example:</strong>
          * <p>Digicert</p>
@@ -470,7 +494,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         public Integer remainDay;
 
         /**
-         * <p>The common name in the certificate chain.</p>
+         * <p>The common name of the certificate chain.</p>
          * 
          * <strong>example:</strong>
          * <p>Digicert</p>

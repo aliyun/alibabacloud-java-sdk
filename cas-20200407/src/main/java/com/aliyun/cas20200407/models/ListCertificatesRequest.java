@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListCertificatesRequest extends TeaModel {
     /**
-     * <p>The source of the certificate.</p>
+     * <p>The source of the certificate. Valid values:</p>
      * <ul>
-     * <li><p>BUY: A purchased certificate.</p>
-     * </li>
-     * <li><p>TEST: A test certificate.</p>
-     * </li>
-     * <li><p>UPLOAD: An uploaded certificate.</p>
-     * </li>
+     * <li>BUY: a formal certificate.</li>
+     * <li>TEST: a test certificate.</li>
+     * <li>UPLOAD: an uploaded certificate.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,16 +19,12 @@ public class ListCertificatesRequest extends TeaModel {
     public String certificateSource;
 
     /**
-     * <p>The status of the certificate.</p>
+     * <p>The status of the certificate. Valid values:</p>
      * <ul>
-     * <li><p><strong>issued</strong>: The certificate is issued.</p>
-     * </li>
-     * <li><p><strong>revoked</strong>: The certificate is revoked.</p>
-     * </li>
-     * <li><p><strong>willExpire</strong>: The certificate is about to expire.</p>
-     * </li>
-     * <li><p><strong>expired</strong>: The certificate has expired.</p>
-     * </li>
+     * <li><strong>issued</strong>: Issued.</li>
+     * <li><strong>revoked</strong>: Revoked.</li>
+     * <li><strong>willExpire</strong>: About to expire.</li>
+     * <li><strong>expired</strong>: Expired.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +34,7 @@ public class ListCertificatesRequest extends TeaModel {
     public String certificateStatus;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number of the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +52,7 @@ public class ListCertificatesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>A keyword for a fuzzy query. The keyword can be a domain name, a certificate name, or a resource ID.</p>
+     * <p>The keyword for fuzzy match. The keyword is matched against domain names, names, and corresponding resource IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -77,7 +70,7 @@ public class ListCertificatesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
