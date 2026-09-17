@@ -14,10 +14,10 @@ public class CreateTemplateRuntimeConfig extends TeaModel {
     public Float cpu;
 
     /**
-     * <p>The disk size. Unit: GB.</p>
+     * <p>The disk size. Unit: MB.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>10240</p>
      */
     @NameInMap("diskSize")
     public Integer diskSize;
