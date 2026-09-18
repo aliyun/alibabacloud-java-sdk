@@ -27,7 +27,7 @@ public class ListJobsRequest extends TeaModel {
      * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>job01 standalone job</p>
+     * <p>job01 standalone task</p>
      */
     @NameInMap("Description")
     public String description;
@@ -42,7 +42,7 @@ public class ListJobsRequest extends TeaModel {
     public String jobHandler;
 
     /**
-     * <p>The job ID.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -51,7 +51,7 @@ public class ListJobsRequest extends TeaModel {
     public Long jobId;
 
     /**
-     * <p>The job name.</p>
+     * <p>The task name.</p>
      * 
      * <strong>example:</strong>
      * <p>job01</p>
@@ -60,7 +60,7 @@ public class ListJobsRequest extends TeaModel {
     public String jobName;
 
     /**
-     * <p>The job label filter condition.</p>
+     * <p>The task label filter condition.</p>
      * 
      * <strong>example:</strong>
      * <p>{key:value}</p>

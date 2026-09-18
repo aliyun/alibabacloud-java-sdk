@@ -100,6 +100,9 @@ public class ListJobsResponseBody extends TeaModel {
     public static class ListJobsResponseBodyDataRecords extends TeaModel {
         /**
          * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1625</p>
          */
         @NameInMap("AppGroupId")
         public Long appGroupId;
@@ -114,7 +117,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The retry interval on error. Unit: seconds.</p>
+         * <p>The error retry interval, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -132,7 +135,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String calendar;
 
         /**
-         * <p>The child job ID.</p>
+         * <p>The child task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1246</p>
@@ -148,6 +151,15 @@ public class ListJobsResponseBody extends TeaModel {
          */
         @NameInMap("CleanMode")
         public String cleanMode;
+
+        /**
+         * <p>The timestamp when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1786354281000</p>
+         */
+        @NameInMap("CreateTime")
+        public Long createTime;
 
         /**
          * <p>The creator.</p>
@@ -183,7 +195,7 @@ public class ListJobsResponseBody extends TeaModel {
         public Integer dataOffset;
 
         /**
-         * <p>The dependency check strategy.</p>
+         * <p>The dependency check policy.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -192,10 +204,10 @@ public class ListJobsResponseBody extends TeaModel {
         public Integer dependentStrategy;
 
         /**
-         * <p>The job description.</p>
+         * <p>The task description.</p>
          * 
          * <strong>example:</strong>
-         * <p>job01 standalone job</p>
+         * <p>job01 standalone task</p>
          */
         @NameInMap("Description")
         public String description;
@@ -204,8 +216,8 @@ public class ListJobsResponseBody extends TeaModel {
          * <p>The client blocking strategy. Valid values:</p>
          * <ul>
          * <li>1: Serial execution on a single machine.</li>
-         * <li>2: Ignore subsequent schedules.</li>
-         * <li>3: Override previous schedules.</li>
+         * <li>2: Ignore subsequent scheduling.</li>
+         * <li>3: Override previous scheduling.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -224,7 +236,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String jobHandler;
 
         /**
-         * <p>The job ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>74</p>
@@ -233,7 +245,7 @@ public class ListJobsResponseBody extends TeaModel {
         public Long jobId;
 
         /**
-         * <p>The job type.</p>
+         * <p>The task type.</p>
          * 
          * <strong>example:</strong>
          * <p>xxljob</p>
@@ -242,7 +254,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String jobType;
 
         /**
-         * <p>The job label information.</p>
+         * <p>The task label information.</p>
          * 
          * <strong>example:</strong>
          * <p>{key:value}</p>
@@ -273,7 +285,7 @@ public class ListJobsResponseBody extends TeaModel {
         public Integer lastExecuteStatus;
 
         /**
-         * <p>The maximum number of retry attempts on error. Set this based on your business requirements.</p>
+         * <p>The maximum number of error retries. Set this parameter based on your business requirements.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -282,7 +294,7 @@ public class ListJobsResponseBody extends TeaModel {
         public Integer maxAttempt;
 
         /**
-         * <p>The maximum concurrency threshold.</p>
+         * <p>The overall concurrency threshold.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -291,7 +303,7 @@ public class ListJobsResponseBody extends TeaModel {
         public Integer maxConcurrency;
 
         /**
-         * <p>The job name.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>job01</p>
@@ -321,13 +333,13 @@ public class ListJobsResponseBody extends TeaModel {
          * <p>The notification contacts.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;contactType&quot;:1,&quot;name&quot;:&quot;恰橙&quot;}]</p>
+         * <p>[{&quot;contactType&quot;:1,&quot;name&quot;:&quot;John&quot;}]</p>
          */
         @NameInMap("NoticeContacts")
         public String noticeContacts;
 
         /**
-         * <p>The job parameters.</p>
+         * <p>The task parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>name=10</p>
@@ -336,7 +348,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String parameters;
 
         /**
-         * <p>The job execution priority.</p>
+         * <p>The execution job priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -347,14 +359,14 @@ public class ListJobsResponseBody extends TeaModel {
         /**
          * <p>The routing strategy. Valid values:</p>
          * <ul>
-         * <li>1: polling.</li>
-         * <li>2: random.</li>
-         * <li>3: first.</li>
-         * <li>4: last.</li>
-         * <li>5: least frequently used.</li>
-         * <li>6: least recently used.</li>
-         * <li>7: consistent hashing.</li>
-         * <li>8: shard broadcast.</li>
+         * <li>1: Round-robin.</li>
+         * <li>2: Random.</li>
+         * <li>3: First.</li>
+         * <li>4: Last.</li>
+         * <li>5: Least frequently used.</li>
+         * <li>6: Least recently used.</li>
+         * <li>7: Consistent hashing.</li>
+         * <li>8: Shard broadcast.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -385,10 +397,10 @@ public class ListJobsResponseBody extends TeaModel {
         public Integer startTimeType;
 
         /**
-         * <p>The job status. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li>0: DISABLE (disabled).</li>
-         * <li>1: ENABLE (enabled).</li>
+         * <li>0: DISABLE (Disabled).</li>
+         * <li>1: ENABLE (Enabled).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -407,7 +419,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String timeExpression;
 
         /**
-         * <p>The time type. Valid values:</p>
+         * <p>The time type. The following types are supported:</p>
          * <ul>
          * <li>-1: none.</li>
          * <li>1: cron.</li>
@@ -441,6 +453,15 @@ public class ListJobsResponseBody extends TeaModel {
         public String timezone;
 
         /**
+         * <p>The timestamp when the task was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1786354281000</p>
+         */
+        @NameInMap("UpdateTime")
+        public Long updateTime;
+
+        /**
          * <p>The updater.</p>
          * 
          * <strong>example:</strong>
@@ -450,7 +471,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String updater;
 
         /**
-         * <p>The job weight.</p>
+         * <p>The task weight.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -470,11 +491,11 @@ public class ListJobsResponseBody extends TeaModel {
         /**
          * <p>The extended attributes.</p>
          * <blockquote>
-         * <p>Not supported currently.</p>
+         * <p>Not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>暂无</p>
+         * <p>N/A</p>
          */
         @NameInMap("Xattrs")
         public String xattrs;
@@ -530,6 +551,14 @@ public class ListJobsResponseBody extends TeaModel {
         }
         public String getCleanMode() {
             return this.cleanMode;
+        }
+
+        public ListJobsResponseBodyDataRecords setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public ListJobsResponseBodyDataRecords setCreator(String creator) {
@@ -754,6 +783,14 @@ public class ListJobsResponseBody extends TeaModel {
         }
         public String getTimezone() {
             return this.timezone;
+        }
+
+        public ListJobsResponseBodyDataRecords setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
         }
 
         public ListJobsResponseBodyDataRecords setUpdater(String updater) {

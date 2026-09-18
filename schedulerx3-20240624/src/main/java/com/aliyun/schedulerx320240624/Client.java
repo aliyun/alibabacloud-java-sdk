@@ -9,20 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-shenzhen", "schedulerx3.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-beijing", "schedulerx3.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "schedulerx3.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "schedulerx3.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "schedulerx3.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "schedulerx3.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "schedulerx3.cn-hongkong.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "schedulerx3.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "schedulerx3.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "schedulerx3.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("eu-central-1", "schedulerx3.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "schedulerx3.cn-shanghai-finance-1.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("schedulerx3", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -3074,7 +3060,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of jobs.</p>
+     * <p>Retrieves a list of tasks.</p>
      * 
      * @param request ListJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3146,7 +3132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of jobs.</p>
+     * <p>Retrieves a list of tasks.</p>
      * 
      * @param request ListJobsRequest
      * @return ListJobsResponse
