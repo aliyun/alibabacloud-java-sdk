@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataCheckReportRequest extends TeaModel {
     /**
+     * <p>The validation job (batch) ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,13 @@ public class ListDataCheckReportRequest extends TeaModel {
     public Long batchId;
 
     /**
+     * <p>Filters by validation result. Valid values:</p>
+     * <ul>
+     * <li>0: No records.</li>
+     * <li>1: Passed.</li>
+     * <li>2: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -21,6 +29,17 @@ public class ListDataCheckReportRequest extends TeaModel {
     public Integer checkResult;
 
     /**
+     * <p>Filters by job status. Valid values:</p>
+     * <ul>
+     * <li>0: INIT (pending).</li>
+     * <li>1: RUNNING (running).</li>
+     * <li>2: FINISHED (completed).</li>
+     * <li>3: STOPPED (stopped).</li>
+     * <li>4: FAIL (failed).</li>
+     * <li>6: READY (ready).</li>
+     * <li>7: SKIPPED (skipped).</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -28,6 +47,8 @@ public class ListDataCheckReportRequest extends TeaModel {
     public Integer jobStatus;
 
     /**
+     * <p>The page number. Minimum value: 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -35,6 +56,8 @@ public class ListDataCheckReportRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -42,6 +65,8 @@ public class ListDataCheckReportRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The table name to filter by.</p>
+     * 
      * <strong>example:</strong>
      * <p>dim_func_with_diff_area_data_d</p>
      */

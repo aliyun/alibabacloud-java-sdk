@@ -4,10 +4,15 @@ package com.aliyun.lhm20250116.models;
 import com.aliyun.tea.*;
 
 public class PostInnerReaderRequest extends TeaModel {
+    /**
+     * <p>The fallback description used when the data source is missing. Use this parameter to pass the complete data source description information in the request parameters (Plan B).</p>
+     */
     @NameInMap("dataSourceDescriptor")
     public PostInnerReaderRequestDataSourceDescriptor dataSourceDescriptor;
 
     /**
+     * <p>The data source name. The discovery task uses this field as the dimension identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>ds_dolphin_prod</p>
      */
@@ -37,6 +42,8 @@ public class PostInnerReaderRequest extends TeaModel {
 
     public static class PostInnerReaderRequestDataSourceDescriptor extends TeaModel {
         /**
+         * <p>The data source name. Exact match and fuzzy match are supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_ds318_hangzhou_0428</p>
          */

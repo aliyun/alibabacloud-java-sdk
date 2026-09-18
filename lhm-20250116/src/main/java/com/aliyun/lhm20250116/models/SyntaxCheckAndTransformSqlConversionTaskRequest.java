@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SyntaxCheckAndTransformSqlConversionTaskRequest extends TeaModel {
     /**
+     * <p>The task ID that uniquely identifies a task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

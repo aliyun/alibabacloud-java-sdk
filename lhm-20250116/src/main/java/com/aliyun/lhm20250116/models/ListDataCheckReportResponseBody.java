@@ -4,10 +4,15 @@ package com.aliyun.lhm20250116.models;
 import com.aliyun.tea.*;
 
 public class ListDataCheckReportResponseBody extends TeaModel {
+    /**
+     * <p>The data list returned by the operation. For the structure of each element, see the child field descriptions.</p>
+     */
     @NameInMap("data")
     public java.util.List<ListDataCheckReportResponseBodyData> data;
 
     /**
+     * <p>The error code. An empty string is returned if the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -15,6 +20,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message. An empty string is returned if the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The page number, starting from 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +38,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The page size, which is the number of records returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -36,16 +47,23 @@ public class ListDataCheckReportResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID, which is used to locate and troubleshoot issues with this call.</p>
+     * 
      * <strong>example:</strong>
      * <p>4C467B38-3910-4477-9B0B-6963D83B4E72</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure. If the call fails, check errCode and errMessage for details.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
+     * <p>The total number of records that match the query conditions. This value is used for pagination.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -123,6 +141,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
 
     public static class ListDataCheckReportResponseBodyData extends TeaModel {
         /**
+         * <p>The validation job (batch) ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>20001</p>
          */
@@ -130,6 +150,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public Long batchId;
 
         /**
+         * <p>The number of columns checked.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -137,6 +159,13 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public Long checkColumCount;
 
         /**
+         * <p>The check result. Valid values:</p>
+         * <ul>
+         * <li>0: No records.</li>
+         * <li>1: Passed.</li>
+         * <li>2: Failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -144,6 +173,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public Integer checkResult;
 
         /**
+         * <p>The number of rows compared.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -151,6 +182,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public Long compareRowCount;
 
         /**
+         * <p>The job completion rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>95.00%</p>
          */
@@ -158,6 +191,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String completionRate;
 
         /**
+         * <p>The difference rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.00%</p>
          */
@@ -165,6 +200,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String diffRate;
 
         /**
+         * <p>The primary key or composite primary key of the destination. This is the comparison column on the destination used during row-by-row, column-by-column comparison.</p>
+         * 
          * <strong>example:</strong>
          * <p>id</p>
          */
@@ -175,16 +212,23 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String dstHint;
 
         /**
+         * <p>The metric field of the destination.</p>
+         * 
          * <strong>example:</strong>
          * <p>amount</p>
          */
         @NameInMap("dstMetricName")
         public String dstMetricName;
 
+        /**
+         * <p>The SQL list of the destination.</p>
+         */
         @NameInMap("dstSqlList")
         public java.util.List<String> dstSqlList;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>connection timeout</p>
          */
@@ -192,6 +236,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
+         * <p>The execution time of this check report detail.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-16 10:00:00</p>
          */
@@ -199,6 +245,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String execTime;
 
         /**
+         * <p>The expected number of different rows.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -206,6 +254,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String expDiffCount;
 
         /**
+         * <p>The completion time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-16T10:00:00Z</p>
          */
@@ -213,6 +263,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String finishTime;
 
         /**
+         * <p>Indicates whether the check is skipped.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -220,6 +272,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public Integer isSkipped;
 
         /**
+         * <p>The ID of the check sub-job.</p>
+         * 
          * <strong>example:</strong>
          * <p>10001</p>
          */
@@ -227,6 +281,17 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The job status. Valid values:</p>
+         * <ul>
+         * <li>0: INIT (pending).</li>
+         * <li>1: RUNNING (running).</li>
+         * <li>2: FINISHED (completed).</li>
+         * <li>3: STOPPED (stopped).</li>
+         * <li>4: FAIL (failed).</li>
+         * <li>6: READY (ready).</li>
+         * <li>7: SKIPPED (skipped).</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -234,6 +299,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public Integer jobStatus;
 
         /**
+         * <p>The number of metrics checked.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -241,6 +308,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public Long metricColumCount;
 
         /**
+         * <p>The number of metrics that passed the check.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -248,6 +317,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public Long metricPassColumCount;
 
         /**
+         * <p>The number of rows that exist only on the destination.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -255,6 +326,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public Long onlyDstCount;
 
         /**
+         * <p>The number of rows that exist only on the source.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -262,6 +335,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public Long onlySrcCount;
 
         /**
+         * <p>The number of columns that passed the check.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -269,6 +344,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public Long passColumCount;
 
         /**
+         * <p>The actual number of different rows.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -276,6 +353,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public Long realDiffCount;
 
         /**
+         * <p>The actual number of identical rows.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -283,6 +362,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public Long realSameCount;
 
         /**
+         * <p>The ID of the check result.</p>
+         * 
          * <strong>example:</strong>
          * <p>30001</p>
          */
@@ -290,6 +371,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String resultId;
 
         /**
+         * <p>The name of the source column.</p>
+         * 
          * <strong>example:</strong>
          * <p>amount</p>
          */
@@ -297,6 +380,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String sourceColumn;
 
         /**
+         * <p>The number of rows in the source data.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -304,6 +389,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String sourceCount;
 
         /**
+         * <p>The source data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds_demo</p>
          */
@@ -311,6 +398,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String sourceDataSource;
 
         /**
+         * <p>The error message of the source.</p>
+         * 
          * <strong>example:</strong>
          * <p>Table \&quot;src_db.src_table\&quot; doesn\&quot;t exist</p>
          */
@@ -318,6 +407,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String sourceError;
 
         /**
+         * <p>The GROUP BY clause of the source.</p>
+         * 
          * <strong>example:</strong>
          * <p>col_a,col_b</p>
          */
@@ -325,6 +416,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String sourceGroupClause;
 
         /**
+         * <p>The source partition.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds=20260116</p>
          */
@@ -332,6 +425,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String sourcePartition;
 
         /**
+         * <p>The name of the source table.</p>
+         * 
          * <strong>example:</strong>
          * <p>table_demo</p>
          */
@@ -339,6 +434,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String sourceTable;
 
         /**
+         * <p>The data type of the source.</p>
+         * 
          * <strong>example:</strong>
          * <p>Hive</p>
          */
@@ -346,6 +443,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String sourceType;
 
         /**
+         * <p>The WHERE clause of the source.</p>
+         * 
          * <strong>example:</strong>
          * <p>col_a &gt; 0 and col_b = \&quot;x\&quot;</p>
          */
@@ -353,6 +452,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String sourceWhereClause;
 
         /**
+         * <p>The primary key or composite primary key of the source. This is the comparison column on the source used during row-by-row, column-by-column comparison.</p>
+         * 
          * <strong>example:</strong>
          * <p>id</p>
          */
@@ -363,16 +464,23 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String srcHint;
 
         /**
+         * <p>The metric field of the source.</p>
+         * 
          * <strong>example:</strong>
          * <p>amount</p>
          */
         @NameInMap("srcMetricName")
         public String srcMetricName;
 
+        /**
+         * <p>The SQL list of the source.</p>
+         */
         @NameInMap("srcSqlList")
         public java.util.List<String> srcSqlList;
 
         /**
+         * <p>The column of the destination.</p>
+         * 
          * <strong>example:</strong>
          * <p>amount</p>
          */
@@ -380,6 +488,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String targetColumn;
 
         /**
+         * <p>The number of rows in the destination data.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -387,6 +497,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String targetCount;
 
         /**
+         * <p>The data source of the destination.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds_demo</p>
          */
@@ -394,6 +506,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String targetDataSource;
 
         /**
+         * <p>The error message of the destination.</p>
+         * 
          * <strong>example:</strong>
          * <p>Table \&quot;dst_db.dst_table\&quot; doesn\&quot;t exist</p>
          */
@@ -401,6 +515,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String targetError;
 
         /**
+         * <p>The GROUP BY clause of the destination.</p>
+         * 
          * <strong>example:</strong>
          * <p>col_a,col_b</p>
          */
@@ -408,6 +524,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String targetGroupClause;
 
         /**
+         * <p>The destination partition.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds=20260116</p>
          */
@@ -415,6 +533,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String targetPartition;
 
         /**
+         * <p>The destination table.</p>
+         * 
          * <strong>example:</strong>
          * <p>table_demo</p>
          */
@@ -422,6 +542,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String targetTable;
 
         /**
+         * <p>The destination data source type.</p>
+         * 
          * <strong>example:</strong>
          * <p>hive</p>
          */
@@ -429,6 +551,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String targetType;
 
         /**
+         * <p>The destination WHERE clause.</p>
+         * 
          * <strong>example:</strong>
          * <p>col_a &gt; 0 and col_b = \&quot;x\&quot;</p>
          */
@@ -436,6 +560,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public String targetWhereClause;
 
         /**
+         * <p>The ID of the validation task configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001</p>
          */
@@ -443,13 +569,17 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public Long taskConfigId;
 
         /**
+         * <p>The validation template name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>数据量校验模板</p>
+         * <p>Data Volume Validation Template</p>
          */
         @NameInMap("templateName")
         public String templateName;
 
         /**
+         * <p>The threshold.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0</p>
          */
@@ -457,6 +587,8 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         public Float threshold;
 
         /**
+         * <p>The threshold for comparing grouped data volumes.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */

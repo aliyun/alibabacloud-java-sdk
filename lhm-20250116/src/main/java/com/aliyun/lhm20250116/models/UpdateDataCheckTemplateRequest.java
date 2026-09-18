@@ -4,32 +4,62 @@ package com.aliyun.lhm20250116.models;
 import com.aliyun.tea.*;
 
 public class UpdateDataCheckTemplateRequest extends TeaModel {
+    /**
+     * <p>The list of metric check rules for basic data types. This field is required when checkType is set to 1 (metric comparison).</p>
+     */
     @NameInMap("basicMetricRules")
     public java.util.List<UpdateDataCheckTemplateRequestBasicMetricRules> basicMetricRules;
 
     /**
+     * <p>The check rule type. Valid values:</p>
+     * <ul>
+     * <li>0: data volume comparison.</li>
+     * <li>1: metric comparison.</li>
+     * <li>2: weak content comparison.</li>
+     * <li>3: custom comparison.</li>
+     * <li>4: full-text comparison.</li>
+     * <li>5: null rate comparison.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("checkType")
     public Integer checkType;
 
+    /**
+     * <p>The list of complex data type metric check rules. Used when checkType is set to 1 (metric comparison).</p>
+     */
     @NameInMap("complexMetricRules")
     public java.util.List<UpdateDataCheckTemplateRequestComplexMetricRules> complexMetricRules;
 
+    /**
+     * <p>The list of datasource engine relationships (datasource engines associated with the template).</p>
+     */
     @NameInMap("dsEngineRels")
     public java.util.List<UpdateDataCheckTemplateRequestDsEngineRels> dsEngineRels;
 
+    /**
+     * <p>The full-text comparison rule. This parameter has a value when checkType is set to 4 (full-text comparison). Refer to the child fields for the field structure.</p>
+     */
     @NameInMap("fulltextRule")
     public UpdateDataCheckTemplateRequestFulltextRule fulltextRule;
 
+    /**
+     * <p>The list of metric check rules. This parameter has a value when checkType is set to 1 (metric comparison).</p>
+     */
     @NameInMap("metricRules")
     public java.util.List<UpdateDataCheckTemplateRequestMetricRules> metricRules;
 
+    /**
+     * <p>The list of null value rate check rules. This parameter has a value when checkType is set to 5 (null value rate comparison).</p>
+     */
     @NameInMap("nullRules")
     public java.util.List<UpdateDataCheckTemplateRequestNullRules> nullRules;
 
     /**
+     * <p>The request ID, which is used to locate and troubleshoot issues of this call.</p>
+     * 
      * <strong>example:</strong>
      * <p>4C467B38-3910-4477-9B0B-6963D83B4E72</p>
      */
@@ -37,13 +67,17 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The template description.</p>
+     * 
      * <strong>example:</strong>
-     * <p>数据量校验模板描述</p>
+     * <p>Description of the data volume check template</p>
      */
     @NameInMap("templateDesc")
     public String templateDesc;
 
     /**
+     * <p>The check template ID (logical foreign key) that uniquely identifies a check template.</p>
+     * 
      * <strong>example:</strong>
      * <p>1001</p>
      */
@@ -51,12 +85,17 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
     public String templateId;
 
     /**
+     * <p>The check template name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>数据量校验模板</p>
+     * <p>Data volume check template</p>
      */
     @NameInMap("templateName")
     public String templateName;
 
+    /**
+     * <p>The weak content check rule. This parameter has a value and is required when checkType is set to 2 (weak content comparison). For the field structure, see the child field descriptions.</p>
+     */
     @NameInMap("weakContentRule")
     public UpdateDataCheckTemplateRequestWeakContentRule weakContentRule;
 
@@ -163,6 +202,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
 
     public static class UpdateDataCheckTemplateRequestBasicMetricRules extends TeaModel {
         /**
+         * <p>The check methods (metric calculation methods). Separate multiple values with commas, such as SUM,AVG,MIN,MAX. The values must be within the range allowed by the templatetype.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUM,AVG</p>
          */
@@ -170,6 +211,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public String checkMethods;
 
         /**
+         * <p>Specifies whether to control floating-point precision. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -177,6 +220,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer controlFloatPrecision;
 
         /**
+         * <p>The data type category. Valid values: 0 (native data type) and 1 (complex data type).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -184,16 +229,23 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer dataTypeClassify;
 
         /**
+         * <p>The data type group that identifies the data type category to which the check rule applies. Valid values: integers from 0 to 7. For the description of each value, see the enumeration values.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("dataTypeGroup")
         public Integer dataTypeGroup;
 
+        /**
+         * <p>The list of data types to which the check rule applies. Configure this field as needed.</p>
+         */
         @NameInMap("dataTypeList")
         public java.util.List<String> dataTypeList;
 
         /**
+         * <p>The data types. Configure this field as needed.</p>
+         * 
          * <strong>example:</strong>
          * <p>BIGINT</p>
          */
@@ -201,16 +253,23 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public String dataTypes;
 
         /**
+         * <p>The difference tolerance type. Valid values: 0 (unified) and 1 (custom). Default value: 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("diffTolerateType")
         public Integer diffTolerateType;
 
+        /**
+         * <p>The difference tolerance values. For the unified type, this is a single value, such as {&quot;SAME&quot;: 0}. For the custom type, values are set separately for each configured tolerance type, such as {&quot;SUM&quot;: 0.01, &quot;AVG&quot;: 0.001}.</p>
+         */
         @NameInMap("diffTolerateValues")
         public java.util.Map<String, ?> diffTolerateValues;
 
         /**
+         * <p>Specifies whether to enable decimal scale control for DECIMAL type comparison. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -218,6 +277,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer enableDecimalScale;
 
         /**
+         * <p>The filter column names, separated by commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>col_a,col_b</p>
          */
@@ -225,6 +286,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public String filterColumnName;
 
         /**
+         * <p><strong>[Deprecated]</strong> Use the filterColumnName field instead. This field was retained because the previous platform could not be modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>col_a,col_b</p>
          */
@@ -232,6 +295,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public String filterColumns;
 
         /**
+         * <p>The number of decimal places for floating-point values.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -239,6 +304,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer floatPrecision;
 
         /**
+         * <p>Specifies whether to ignore trailing zero differences in the decimal part. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -246,6 +313,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer ignoreDecimalDiff;
 
         /**
+         * <p>Specifies whether to ignore trailing zeros in the decimal scale for DECIMAL type comparison. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -253,6 +322,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer ignoreDecimalScaleSuffixZero;
 
         /**
+         * <p>Specifies whether to ignore the difference between null values and empty strings. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -260,6 +331,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer ignoreEmptyDiff;
 
         /**
+         * <p>Specifies whether to ignore zero values for numeric types. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -267,6 +340,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer ignoreNumericZero;
 
         /**
+         * <p>Specifies whether to ignore empty strings and null values for string types. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -274,6 +349,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer ignoreStringEmpty;
 
         /**
+         * <p>Specifies whether to ignore the difference between null values and zero values. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -281,6 +358,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer ignoreZeroDiff;
 
         /**
+         * <p>Specifies whether to enable count (data volume) check. Valid values: 0 (no) and 1 (yes). Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -288,6 +367,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer isCountCheck;
 
         /**
+         * <p>The rule ID that uniquely identifies a check rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001</p>
          */
@@ -295,6 +376,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public String ruleId;
 
         /**
+         * <p>The specific decimal scale value for DECIMAL type comparison.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -478,6 +561,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
 
     public static class UpdateDataCheckTemplateRequestComplexMetricRules extends TeaModel {
         /**
+         * <p>The check methods (metric calculation methods). Separate multiple values with commas, such as SUM,AVG,MIN,MAX. The values must be within the range allowed by the templatetype.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUM,AVG</p>
          */
@@ -485,6 +570,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public String checkMethods;
 
         /**
+         * <p>Specifies whether to control floating-point precision. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -492,6 +579,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer controlFloatPrecision;
 
         /**
+         * <p>The data type category. Valid values: 0 (native data type) and 1 (complex data type).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -499,16 +588,23 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer dataTypeClassify;
 
         /**
+         * <p>The data type group that identifies the data type category to which the check rule applies. Valid values: integers from 0 to 7. For the description of each value, see the enumeration values.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("dataTypeGroup")
         public Integer dataTypeGroup;
 
+        /**
+         * <p>The list of data types to which the check rule applies. Configure this field as needed.</p>
+         */
         @NameInMap("dataTypeList")
         public java.util.List<String> dataTypeList;
 
         /**
+         * <p>The data types. Configure this field as needed.</p>
+         * 
          * <strong>example:</strong>
          * <p>BIGINT</p>
          */
@@ -516,16 +612,23 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public String dataTypes;
 
         /**
+         * <p>The difference tolerance type. Valid values: 0 (unified) and 1 (custom). Default value: 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("diffTolerateType")
         public Integer diffTolerateType;
 
+        /**
+         * <p>The difference tolerance values. For the unified type, this is a single value, such as {&quot;SAME&quot;: 0}. For the custom type, values are set separately for each configured tolerance type, such as {&quot;SUM&quot;: 0.01, &quot;AVG&quot;: 0.001}.</p>
+         */
         @NameInMap("diffTolerateValues")
         public java.util.Map<String, ?> diffTolerateValues;
 
         /**
+         * <p>Specifies whether to enable decimal scale control for DECIMAL type comparison. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -533,6 +636,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer enableDecimalScale;
 
         /**
+         * <p>The filter column names, separated by commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>col_a,col_b</p>
          */
@@ -540,6 +645,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public String filterColumnName;
 
         /**
+         * <p><strong>[Deprecated]</strong> Use the filterColumnName field instead. This field was retained because the previous platform could not be modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>col_a,col_b</p>
          */
@@ -547,6 +654,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public String filterColumns;
 
         /**
+         * <p>The number of decimal places for floating-point values.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -554,6 +663,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer floatPrecision;
 
         /**
+         * <p>Specifies whether to ignore trailing zero differences in the decimal part. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -561,6 +672,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer ignoreDecimalDiff;
 
         /**
+         * <p>Specifies whether to ignore trailing zeros in the decimal scale for DECIMAL type comparison. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -568,6 +681,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer ignoreDecimalScaleSuffixZero;
 
         /**
+         * <p>Specifies whether to ignore the difference between null values and empty strings. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -575,6 +690,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer ignoreEmptyDiff;
 
         /**
+         * <p>Specifies whether to ignore zero values for numeric types. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -582,6 +699,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer ignoreNumericZero;
 
         /**
+         * <p>Specifies whether to ignore empty strings and null values for string types. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -589,6 +708,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer ignoreStringEmpty;
 
         /**
+         * <p>Specifies whether to ignore the difference between null values and zero values. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -596,6 +717,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer ignoreZeroDiff;
 
         /**
+         * <p>Specifies whether to enable count (data volume) check. Valid values: 0 (no) and 1 (yes). Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -603,6 +726,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer isCountCheck;
 
         /**
+         * <p>The rule ID that uniquely identifies a check rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001</p>
          */
@@ -610,6 +735,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public String ruleId;
 
         /**
+         * <p>The specific decimal scale value for DECIMAL type comparison.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -793,6 +920,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
 
     public static class UpdateDataCheckTemplateRequestDsEngineRels extends TeaModel {
         /**
+         * <p>The datasource engine configuration ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001</p>
          */
@@ -800,12 +929,17 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public String dsEngineId;
 
         /**
+         * <p>The datasource type, such as Hive or MaxCompute.</p>
+         * 
          * <strong>example:</strong>
          * <p>Hive</p>
          */
         @NameInMap("dsType")
         public String dsType;
 
+        /**
+         * <p>The list of covered check engine types, such as Tez or MapReduce. When specified as a string, separate multiple values with commas.</p>
+         */
         @NameInMap("engineTypes")
         public java.util.List<String> engineTypes;
 
@@ -842,6 +976,13 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
 
     public static class UpdateDataCheckTemplateRequestFulltextRule extends TeaModel {
         /**
+         * <p>The check mode. Valid values:</p>
+         * <ul>
+         * <li>0: row-by-row overall comparison.</li>
+         * <li>1: row-by-row column-by-column comparison.</li>
+         * <li>2: both row-by-row overall comparison and row-by-row column-by-column comparison.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -849,6 +990,14 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer checkMode;
 
         /**
+         * <p>The equality comparison type for row-by-row column-by-column comparison. Valid values:</p>
+         * <ul>
+         * <li>0: all field types.</li>
+         * <li>1: native primitive data types.</li>
+         * <li>2: complex data types.</li>
+         * <li>3: custom.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -856,6 +1005,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer columnEqualCmpType;
 
         /**
+         * <p>The custom type list for equality comparison during row-by-row column-by-column comparison. Separate multiple values with commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>ARRAY,MAP</p>
          */
@@ -863,6 +1014,12 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public String columnEqualCmpValues;
 
         /**
+         * <p>Specifies whether to enable cosine similarity during row-by-row column-by-column comparison. Valid values:</p>
+         * <ul>
+         * <li>0: Disabled.</li>
+         * <li>1: Enabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -870,6 +1027,12 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer columnIsCosine;
 
         /**
+         * <p>Specifies whether to ignore differences between null values and empty strings during row-by-row column-by-column comparison. Valid values:</p>
+         * <ul>
+         * <li>0: Not ignored.</li>
+         * <li>1: Ignored.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -877,6 +1040,12 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer columnIsIgnoreNull;
 
         /**
+         * <p>Specifies whether to ignore differences between null values and 0 values during row-by-row column-by-column comparison. Valid values:</p>
+         * <ul>
+         * <li>0: Not ignored.</li>
+         * <li>1: Ignored.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -884,6 +1053,12 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer columnIsIgnoreZero;
 
         /**
+         * <p>Specifies whether to enable sampling during row-by-row column-by-column comparison. Valid values:</p>
+         * <ul>
+         * <li>0: Disabled.</li>
+         * <li>1: Enabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -891,6 +1066,12 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer columnIsSamples;
 
         /**
+         * <p>The sampling method for row-by-row column-by-column comparison. Valid values:</p>
+         * <ul>
+         * <li>0: by row.</li>
+         * <li>1: by percentage.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -898,6 +1079,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer columnSamplesType;
 
         /**
+         * <p>The sampling value for row-by-row column-by-column comparison. The meaning depends on the sampling method: the number of rows when sampling by row, or the percentage value when sampling by percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -905,6 +1088,12 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer columnSamplesValue;
 
         /**
+         * <p>The size comparison type for row-by-row column-by-column comparison. Valid values:</p>
+         * <ul>
+         * <li>0: all complex data types.</li>
+         * <li>1: custom.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -912,6 +1101,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer columnSizeCmpType;
 
         /**
+         * <p>The custom type list for size comparison during row-by-row column-by-column comparison. Separate multiple values with commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>ARRAY,MAP</p>
          */
@@ -919,6 +1110,12 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public String columnSizeCmpValues;
 
         /**
+         * <p>Specifies whether to enable primary key or composite primary key existence check. Valid values:</p>
+         * <ul>
+         * <li>0: Disabled.</li>
+         * <li>1: Enabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -926,6 +1123,12 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer isPrimaryKeyCheck;
 
         /**
+         * <p>The row-by-row comparison method. Valid values:</p>
+         * <ul>
+         * <li>0: md5.</li>
+         * <li>1: crc32.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -933,6 +1136,12 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer lineCheckType;
 
         /**
+         * <p>Specifies whether to print all columns in the difference details during row-by-row comparison. Valid values:</p>
+         * <ul>
+         * <li>0: Not printed.</li>
+         * <li>1: Printed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -940,6 +1149,12 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer lineIsPrintAll;
 
         /**
+         * <p>Specifies whether to enable sampling during row-by-row comparison. Valid values:</p>
+         * <ul>
+         * <li>0: Disabled.</li>
+         * <li>1: Enabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -947,6 +1162,12 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer lineIsSamples;
 
         /**
+         * <p>The sampling method for row-by-row comparison. Valid values:</p>
+         * <ul>
+         * <li>0: by row.</li>
+         * <li>1: by percentage.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -954,6 +1175,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer lineSamplesType;
 
         /**
+         * <p>The sampling value for row-by-row comparison. The meaning depends on the sampling method: the number of rows when sampling by row, or the percentage value when sampling by percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -961,6 +1184,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer lineSamplesValue;
 
         /**
+         * <p>The rule ID that uniquely identifies a check rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001</p>
          */
@@ -1120,6 +1345,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
 
     public static class UpdateDataCheckTemplateRequestMetricRules extends TeaModel {
         /**
+         * <p>The check methods (metric calculation methods). Separate multiple values with commas (,), such as SUM,AVG,MIN,MAX. The values must be within the range allowed by the templatetype.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUM,AVG</p>
          */
@@ -1127,6 +1354,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public String checkMethods;
 
         /**
+         * <p>Specifies whether to control floating-point precision. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1134,6 +1363,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer controlFloatPrecision;
 
         /**
+         * <p>The data type category. Valid values: 0 (native data type) and 1 (complex data type).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1141,16 +1372,23 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer dataTypeClassify;
 
         /**
+         * <p>The data type group that identifies the data type category to which the check rule applies. Valid values: integers from 0 to 7. For the description of each value, see the enumeration values.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("dataTypeGroup")
         public Integer dataTypeGroup;
 
+        /**
+         * <p>The list of data types to which the check rule applies. Configure this field as needed.</p>
+         */
         @NameInMap("dataTypeList")
         public java.util.List<String> dataTypeList;
 
         /**
+         * <p>The data types. Configure this field as needed.</p>
+         * 
          * <strong>example:</strong>
          * <p>BIGINT</p>
          */
@@ -1158,16 +1396,23 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public String dataTypes;
 
         /**
+         * <p>The difference tolerance type. Valid values: 0 (unified) and 1 (custom). Default value: 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("diffTolerateType")
         public Integer diffTolerateType;
 
+        /**
+         * <p>The difference tolerance values. For the unified type, this is a single value, such as {&quot;SAME&quot;: 0}. For the custom type, values are set separately for each configured tolerance type, such as {&quot;SUM&quot;: 0.01, &quot;AVG&quot;: 0.001}.</p>
+         */
         @NameInMap("diffTolerateValues")
         public java.util.Map<String, ?> diffTolerateValues;
 
         /**
+         * <p>Specifies whether to enable decimal scale control for DECIMAL type comparison. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1175,6 +1420,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer enableDecimalScale;
 
         /**
+         * <p>The filter column names, separated by commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>col_a,col_b</p>
          */
@@ -1182,6 +1429,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public String filterColumnName;
 
         /**
+         * <p><strong>[Deprecated]</strong> Use the filterColumnName field instead. This field was retained because the previous platform could not be modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>col_a,col_b</p>
          */
@@ -1189,6 +1438,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public String filterColumns;
 
         /**
+         * <p>The number of decimal places for floating-point values.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -1196,6 +1447,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer floatPrecision;
 
         /**
+         * <p>Specifies whether to ignore trailing zero differences in the decimal part. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1203,6 +1456,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer ignoreDecimalDiff;
 
         /**
+         * <p>Specifies whether to ignore trailing zeros in the decimal scale for DECIMAL type comparison. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1210,6 +1465,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer ignoreDecimalScaleSuffixZero;
 
         /**
+         * <p>Specifies whether to ignore the difference between null values and empty strings. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1217,6 +1474,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer ignoreEmptyDiff;
 
         /**
+         * <p>Specifies whether to ignore zero values for numeric types. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1224,6 +1483,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer ignoreNumericZero;
 
         /**
+         * <p>Specifies whether to ignore empty strings and null values for string types. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1231,6 +1492,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer ignoreStringEmpty;
 
         /**
+         * <p>Specifies whether to ignore the difference between null values and zero values. Valid values: 0 (no) and 1 (yes).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1238,6 +1501,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer ignoreZeroDiff;
 
         /**
+         * <p>Specifies whether to enable count (data volume) check. Valid values: 0 (no) and 1 (yes). Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1245,6 +1510,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer isCountCheck;
 
         /**
+         * <p>The rule ID that uniquely identifies a check rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001</p>
          */
@@ -1252,6 +1519,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public String ruleId;
 
         /**
+         * <p>The specific decimal scale value for DECIMAL type comparison.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -1435,6 +1704,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
 
     public static class UpdateDataCheckTemplateRequestNullRules extends TeaModel {
         /**
+         * <p>The data type group that identifies the data type category to which the check rule applies. Valid values: integers from 0 to 7. For the description of each value, see the enumeration values.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1442,6 +1713,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public Integer dataTypeGroup;
 
         /**
+         * <p>The null values, stored in JSON format.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -1449,6 +1722,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public String nullValues;
 
         /**
+         * <p>The rule ID that uniquely identifies a check rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001</p>
          */
@@ -1488,16 +1763,23 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
 
     public static class UpdateDataCheckTemplateRequestWeakContentRule extends TeaModel {
         /**
+         * <p>The filter column name expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>^col_.*$</p>
          */
         @NameInMap("filterColumnExpression")
         public String filterColumnExpression;
 
+        /**
+         * <p>The filter column types, separated by vertical bars (|).</p>
+         */
         @NameInMap("filterColumnTypes")
         public java.util.List<String> filterColumnTypes;
 
         /**
+         * <p>The rule ID that uniquely identifies a check rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001</p>
          */
@@ -1505,6 +1787,8 @@ public class UpdateDataCheckTemplateRequest extends TeaModel {
         public String ruleId;
 
         /**
+         * <p>The weak content algorithm name: md5 or crc32.</p>
+         * 
          * <strong>example:</strong>
          * <p>md5</p>
          */

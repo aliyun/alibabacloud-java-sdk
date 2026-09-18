@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDataCheckConfigRequest extends TeaModel {
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListDataCheckConfigRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class ListDataCheckConfigRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The source table name for fuzzy search.</p>
+     * 
      * <strong>example:</strong>
      * <p>table_demo</p>
      */
@@ -26,6 +32,7 @@ public class ListDataCheckConfigRequest extends TeaModel {
     public String srcTable;
 
     /**
+     * <p>The ID of the data validation task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

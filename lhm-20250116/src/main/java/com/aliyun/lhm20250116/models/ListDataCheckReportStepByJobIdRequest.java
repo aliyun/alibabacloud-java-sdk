@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataCheckReportStepByJobIdRequest extends TeaModel {
     /**
+     * <p>The verification sub-job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListDataCheckReportStepByJobIdRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class ListDataCheckReportStepByJobIdRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

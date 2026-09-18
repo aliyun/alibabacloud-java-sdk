@@ -4,10 +4,15 @@ package com.aliyun.lhm20250116.models;
 import com.aliyun.tea.*;
 
 public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
+    /**
+     * <p>The data list returned by the operation. For the element structure, see the child field descriptions.</p>
+     */
     @NameInMap("data")
     public java.util.List<ListDataCheckReportStepByJobIdResponseBodyData> data;
 
     /**
+     * <p>The error code. An empty string is returned if the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -15,6 +20,8 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message. An empty string is returned if the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The page number, starting from 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +38,8 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The page size, which is the number of records returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -36,16 +47,23 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID, which is used to locate and troubleshoot issues with this call.</p>
+     * 
      * <strong>example:</strong>
      * <p>4C467B38-3910-4477-9B0B-6963D83B4E72</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure. If the call fails, check errCode and errMessage for troubleshooting.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
+     * <p>The total number of records that meet the query conditions. This value is used for pagination.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -123,6 +141,8 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
 
     public static class ListDataCheckReportStepByJobIdResponseBodyData extends TeaModel {
         /**
+         * <p>The shard boundary information.</p>
+         * 
          * <strong>example:</strong>
          * <p>R[1-&gt;1000)</p>
          */
@@ -130,6 +150,8 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         public String boundary;
 
         /**
+         * <p>The number of verified fields.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -137,6 +159,8 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         public Long checkColumCount;
 
         /**
+         * <p>The destination data volume. For single SQL verification, this indicates the data volume of the destination result set. For data volume verification and full verification, this indicates the total data volume on the destination.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -144,6 +168,8 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         public String dstCount;
 
         /**
+         * <p>The SQL statement executed on the destination.</p>
+         * 
          * <strong>example:</strong>
          * <p>SELECT * FROM dst_table;</p>
          */
@@ -151,6 +177,8 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         public String dstSql;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -158,6 +186,8 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         public String errMessage;
 
         /**
+         * <p>The reserved field.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -165,6 +195,8 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         public String extra;
 
         /**
+         * <p>The job end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-16T10:00:00Z</p>
          */
@@ -172,6 +204,8 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         public String gmtEnd;
 
         /**
+         * <p>The job start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-16T10:00:00Z</p>
          */
@@ -179,6 +213,12 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         public String gmtStart;
 
         /**
+         * <p>Indicates whether the data is consistent. Valid values:</p>
+         * <ul>
+         * <li>0: Inconsistent.</li>
+         * <li>1: Consistent.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -186,6 +226,8 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         public Integer isConsistent;
 
         /**
+         * <p>The number of verified metrics.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -193,6 +235,8 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         public Long metricColumCount;
 
         /**
+         * <p>The number of metrics that passed verification.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -200,6 +244,8 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         public Long metricPassColumCount;
 
         /**
+         * <p>The number of fields that passed verification.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -207,6 +253,8 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         public Long passColumCount;
 
         /**
+         * <p>The unique ID of the verification result.</p>
+         * 
          * <strong>example:</strong>
          * <p>30001</p>
          */
@@ -214,6 +262,8 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         public String resultId;
 
         /**
+         * <p>The source partition name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds=20260116</p>
          */
@@ -221,6 +271,8 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         public String sourcePtName;
 
         /**
+         * <p>The source data volume. For single SQL verification, this indicates the data volume of the source result set. For data volume verification and full verification, this indicates the total data volume on the source.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -228,6 +280,8 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         public String srcCount;
 
         /**
+         * <p>The SQL statement executed on the source.</p>
+         * 
          * <strong>example:</strong>
          * <p>SELECT * FROM src_table;</p>
          */
@@ -235,6 +289,15 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         public String srcSql;
 
         /**
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>0: Created.</li>
+         * <li>1: Running.</li>
+         * <li>2: Completed.</li>
+         * <li>3: Stopped.</li>
+         * <li>4: Canceled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -242,6 +305,8 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>The step ID, which uniquely identifies an execution step within the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -249,6 +314,8 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         public String stepId;
 
         /**
+         * <p>The destination partition name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds=20260116</p>
          */

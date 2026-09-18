@@ -4,10 +4,15 @@ package com.aliyun.lhm20250116.models;
 import com.aliyun.tea.*;
 
 public class SyntaxCheckAndTransformSqlConversionTaskResponseBody extends TeaModel {
+    /**
+     * <p>The data body returned by the operation. For the field structure, see the child field descriptions.</p>
+     */
     @NameInMap("data")
     public SyntaxCheckAndTransformSqlConversionTaskResponseBodyData data;
 
     /**
+     * <p>The error code. An empty string is returned if the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -15,6 +20,8 @@ public class SyntaxCheckAndTransformSqlConversionTaskResponseBody extends TeaMod
     public String errCode;
 
     /**
+     * <p>The error message. An empty string is returned if the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,12 +29,17 @@ public class SyntaxCheckAndTransformSqlConversionTaskResponseBody extends TeaMod
     public String errMessage;
 
     /**
+     * <p>The request ID, which is used to locate and troubleshoot issues with this call.</p>
+     * 
      * <strong>example:</strong>
      * <p>4C467B38-3910-4477-9B0B-6963D83B4E72</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful. Valid values: true and false. If the call fails, use errCode and errMessage to troubleshoot the issue.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -78,6 +90,8 @@ public class SyntaxCheckAndTransformSqlConversionTaskResponseBody extends TeaMod
 
     public static class SyntaxCheckAndTransformSqlConversionTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The task ID that uniquely identifies a task.</p>
+         * 
          * <strong>example:</strong>
          * <p>10001</p>
          */

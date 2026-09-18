@@ -4,10 +4,15 @@ package com.aliyun.lhm20250116.models;
 import com.aliyun.tea.*;
 
 public class ListDataCheckConfigResponseBody extends TeaModel {
+    /**
+     * <p>The data list returned by the operation. For the element structure, see the child field descriptions.</p>
+     */
     @NameInMap("data")
     public java.util.List<ListDataCheckConfigResponseBodyData> data;
 
     /**
+     * <p>The error code. An empty string is returned if the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -15,6 +20,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message. An empty string is returned if the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The page number, starting from 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +38,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The page size, which is the number of records returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -36,16 +47,23 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>4C467B38-3910-4477-9B0B-6963D83B4E72</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure. If the call fails, check errCode and errMessage for details.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
+     * <p>The total number of records that match the query conditions. This value is used for pagination.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -123,6 +141,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
 
     public static class ListDataCheckConfigResponseBodyData extends TeaModel {
         /**
+         * <p>The check algorithm.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -130,6 +150,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public Integer algorithm;
 
         /**
+         * <p>The batch size.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -137,6 +159,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public Integer batchSize;
 
         /**
+         * <p>The check type.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -144,6 +168,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public Integer checkType;
 
         /**
+         * <p>The compare type. Valid values: =, !=, &gt;, &lt;, &gt;=, &lt;=, contains, not contains, and ==.</p>
+         * 
          * <strong>example:</strong>
          * <p>=</p>
          */
@@ -151,6 +177,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public String comparator;
 
         /**
+         * <p>The reserved field.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -158,6 +186,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public String extra;
 
         /**
+         * <p>The group data volume compare threshold.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */
@@ -165,6 +195,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public Float groupCountThreshold;
 
         /**
+         * <p>The primary key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>10001</p>
          */
@@ -172,6 +204,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Indicates whether a full table count is performed.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -179,6 +213,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public Integer isFullTableCount;
 
         /**
+         * <p>Indicates whether the check is skipped.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -186,6 +222,13 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public Integer isSkipped;
 
         /**
+         * <p>The metric type. Valid values:</p>
+         * <ul>
+         * <li>CUSTOM_METRIC_NUM: built-in NUM mode.</li>
+         * <li>CUSTOM_METRIC_LEN: built-in LEN mode.</li>
+         * <li>CUSTOM_METRIC_MIX: built-in MIX mode.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOM_METRIC_MIX</p>
          */
@@ -193,6 +236,12 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public String metricType;
 
         /**
+         * <p>Indicates whether all columns of the source are checked. Valid values:</p>
+         * <ul>
+         * <li>0: No.</li>
+         * <li>1: Yes.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -200,6 +249,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public Integer sourceCheckAllColumn;
 
         /**
+         * <p>The source table fields. You can specify multiple fields separated by commas (,).</p>
+         * 
          * <strong>example:</strong>
          * <p>col_a,col_b</p>
          */
@@ -207,6 +258,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public String sourceColumns;
 
         /**
+         * <p>The source compare key.</p>
+         * 
          * <strong>example:</strong>
          * <p>id</p>
          */
@@ -214,6 +267,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public String sourceCompareKey;
 
         /**
+         * <p>The name of the source data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds_demo</p>
          */
@@ -221,16 +276,23 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public String sourceDataSource;
 
         /**
+         * <p>The GROUP BY clause for the source table.</p>
+         * 
          * <strong>example:</strong>
          * <p>col_a,col_b</p>
          */
         @NameInMap("sourceGroupClause")
         public String sourceGroupClause;
 
+        /**
+         * <p>The hint for the source.</p>
+         */
         @NameInMap("sourceHint")
         public String sourceHint;
 
         /**
+         * <p>The ID of the source data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001</p>
          */
@@ -238,6 +300,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public String sourceId;
 
         /**
+         * <p>The source partition.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds=20260116</p>
          */
@@ -245,6 +309,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public String sourcePartition;
 
         /**
+         * <p>The SQL statement for the source.</p>
+         * 
          * <strong>example:</strong>
          * <p>SELECT * FROM t;</p>
          */
@@ -252,6 +318,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public String sourceSql;
 
         /**
+         * <p>The source table.</p>
+         * 
          * <strong>example:</strong>
          * <p>table_demo</p>
          */
@@ -259,6 +327,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public String sourceTable;
 
         /**
+         * <p>The type of the source data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>Hive</p>
          */
@@ -266,6 +336,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public String sourceType;
 
         /**
+         * <p>The WHERE clause for the source table.</p>
+         * 
          * <strong>example:</strong>
          * <p>col_a &gt; 0 and col_b = \&quot;x\&quot;</p>
          */
@@ -273,6 +345,12 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public String sourceWhereClause;
 
         /**
+         * <p>Indicates whether all columns of the target are checked. Valid values:</p>
+         * <ul>
+         * <li>0: No.</li>
+         * <li>1: Yes.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -280,6 +358,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public Integer targetCheckAllColumn;
 
         /**
+         * <p>The target table fields. You can specify multiple fields separated by commas (,).</p>
+         * 
          * <strong>example:</strong>
          * <p>col_a,col_b</p>
          */
@@ -287,6 +367,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public String targetColumns;
 
         /**
+         * <p>The target compare key.</p>
+         * 
          * <strong>example:</strong>
          * <p>id</p>
          */
@@ -294,6 +376,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public String targetCompareKey;
 
         /**
+         * <p>The target data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds_demo</p>
          */
@@ -301,16 +385,23 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public String targetDataSource;
 
         /**
+         * <p>The GROUP BY clause for the target table.</p>
+         * 
          * <strong>example:</strong>
          * <p>col_a,col_b</p>
          */
         @NameInMap("targetGroupClause")
         public String targetGroupClause;
 
+        /**
+         * <p>The hint for the target.</p>
+         */
         @NameInMap("targetHint")
         public String targetHint;
 
         /**
+         * <p>The ID of the target data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>2001</p>
          */
@@ -318,6 +409,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public String targetId;
 
         /**
+         * <p>The target partition.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds=20260116</p>
          */
@@ -325,6 +418,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public String targetPartition;
 
         /**
+         * <p>The SQL statement for the target.</p>
+         * 
          * <strong>example:</strong>
          * <p>SELECT * FROM t;</p>
          */
@@ -332,6 +427,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public String targetSql;
 
         /**
+         * <p>The target table.</p>
+         * 
          * <strong>example:</strong>
          * <p>table_demo</p>
          */
@@ -339,6 +436,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public String targetTable;
 
         /**
+         * <p>The type of the target data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>hive</p>
          */
@@ -346,6 +445,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public String targetType;
 
         /**
+         * <p>The WHERE clause for the target table.</p>
+         * 
          * <strong>example:</strong>
          * <p>col_a &gt; 0 and col_b = \&quot;x\&quot;</p>
          */
@@ -353,6 +454,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public String targetWhereClause;
 
         /**
+         * <p>The configuration details.</p>
+         * 
          * <strong>example:</strong>
          * <p>lhm|lhm_dw|*</p>
          */
@@ -360,6 +463,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public String taskConfigInfo;
 
         /**
+         * <p>The batch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>10001</p>
          */
@@ -367,6 +472,8 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         public Long taskId;
 
         /**
+         * <p>The total data volume compare threshold.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */

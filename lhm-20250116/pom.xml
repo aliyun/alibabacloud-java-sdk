@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>lhm20250116</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <packaging>jar</packaging>
   <name>lhm20250116</name>
   <description>Alibaba Cloud LHM (20250116) SDK for Java

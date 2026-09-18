@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PostInnerReaderResponseBody extends TeaModel {
     /**
+     * <p>The business data returned by the operation (in string format). The specific content varies by operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>demo</p>
      */
@@ -12,6 +14,8 @@ public class PostInnerReaderResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The error code. This value is an empty string if the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -19,6 +23,8 @@ public class PostInnerReaderResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message. This value is an empty string if the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,6 +32,8 @@ public class PostInnerReaderResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The request ID, which uniquely identifies this call. Provide this value when troubleshooting issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>4C467B38-3910-4477-9B0B-6963D83B4E72</p>
      */
@@ -33,6 +41,12 @@ public class PostInnerReaderResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed. Troubleshoot by using errCode and errMessage.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
