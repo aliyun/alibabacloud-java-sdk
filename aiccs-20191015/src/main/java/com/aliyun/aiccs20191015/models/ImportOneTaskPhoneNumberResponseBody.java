@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImportOneTaskPhoneNumberResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why the access is denied.</p>
+     * <p>The detailed reason why access was denied.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -23,7 +23,7 @@ public class ImportOneTaskPhoneNumberResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public ImportOneTaskPhoneNumberResponseBodyData data;
@@ -32,7 +32,7 @@ public class ImportOneTaskPhoneNumberResponseBody extends TeaModel {
      * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
-     * <p>成功</p>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -49,10 +49,8 @@ public class ImportOneTaskPhoneNumberResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the API call was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The API call was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The API call failed.</p>
-     * </li>
+     * <li><strong>true</strong>: Successful.</li>
+     * <li><strong>false</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

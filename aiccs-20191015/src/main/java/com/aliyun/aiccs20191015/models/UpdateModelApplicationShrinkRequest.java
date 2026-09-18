@@ -33,7 +33,7 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
     public String applicationName;
 
     /**
-     * <p>Specifies whether to hang up the call when a call assistant is detected.</p>
+     * <p>Specifies whether to hang up when an intelligent answering service is detected.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -51,7 +51,7 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
     public Boolean callAssistantRecognize;
 
     /**
-     * <p>Specifies whether to trigger the model immediately after the call is connected.</p>
+     * <p>Specifies whether to enable call-connected event push. Disabled by default.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -60,7 +60,7 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
     public Boolean callConnectedTriggerModel;
 
     /**
-     * <p>The allowed DTMF digits, specified as a comma-separated string such as <code>1,2,3</code>. You can specify a maximum of 20 digits.</p>
+     * <p>The enumeration of allowed key digits, separated by commas, such as 1,2,3. Maximum of 20 values.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -69,7 +69,7 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
     public String dtmfAllowedDigits;
 
     /**
-     * <p>Specifies whether to automatically validate the DTMF digits.</p>
+     * <p>Specifies whether to enable automatic validation of key values.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -78,7 +78,7 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
     public Boolean dtmfAutoValidateEnable;
 
     /**
-     * <p>The number of DTMF digits to collect. The value must be between 1 and 12.</p>
+     * <p>The number of DTMF key digits. Valid values: 1 to 12.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -87,7 +87,7 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
     public Long dtmfDigitCount;
 
     /**
-     * <p>The timeout for DTMF input, in seconds. The value must be between 1 and 10.</p>
+     * <p>The DTMF input timeout period in seconds. Valid values: 1 to 10.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -96,7 +96,11 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
     public Long dtmfInputTimeout;
 
     /**
-     * <p>The action to take when the input is outside the allowed range. Valid values: <code>RETURN_MODEL</code> and <code>AUTO_RETRY</code>.</p>
+     * <p>The action to take when the input is out of range. Valid values:</p>
+     * <ul>
+     * <li>RETURN_MODEL: return to the model</li>
+     * <li>AUTO_RETRY: automatically retry</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>RETURN_MODEL</p>
@@ -105,7 +109,7 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
     public String dtmfOutOfRangeAction;
 
     /**
-     * <p>The number of retry attempts. The value must be between 1 and 3. This parameter is effective only when <code>DtmfOutOfRangeAction</code> is set to <code>AUTO_RETRY</code>.</p>
+     * <p>The number of retry attempts (PlayTimes). Valid values: 1 to 3. Takes effect only when DtmfOutOfRangeAction is set to AUTO_RETRY.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -114,7 +118,7 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
     public Long dtmfRetryPlayTimes;
 
     /**
-     * <p>The custom text for the retry prompt. The text can contain a maximum of 50 characters. If this parameter is empty, the system uses the default prompt: &quot;Invalid input. Please try again.&quot;</p>
+     * <p>The custom retry prompt text. Maximum length: 50 characters. If left empty, the default message is used.</p>
      * 
      * <strong>example:</strong>
      * <p>测试文本</p>
@@ -137,7 +141,7 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
     public Long dtmfSendWaitTimeout;
 
     /**
-     * <p>The scene name.</p>
+     * <p>The scenario name.</p>
      * 
      * <strong>example:</strong>
      * <p>测试场景</p>
@@ -146,7 +150,7 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
     public String dyvmsSceneName;
 
     /**
-     * <p>Specifies whether to enable the collection of DTMF signals. The default value is <code>false</code>.</p>
+     * <p>Specifies whether to enable DTMF key collection. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -162,7 +166,7 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
     public Boolean enableDtmfSend;
 
     /**
-     * <p>Specifies whether to enable the Morse code configuration. The default value is <code>false</code>.</p>
+     * <p>Specifies whether to enable Morse code configuration. Disabled by default.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -213,7 +217,7 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
     public Long muteDuration;
 
     /**
-     * <p>The number of consecutive mute events that trigger an automatic hang-up.</p>
+     * <p>The number of consecutive mute events after which the system proactively hangs up.</p>
      * 
      * <strong>example:</strong>
      * <p>70</p>
@@ -222,7 +226,7 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
     public Long muteHangupNum;
 
     /**
-     * <p>静音事件推送模式</p>
+     * <p>The push mode for mute events.</p>
      * 
      * <strong>example:</strong>
      * <p>FIRST_ONLY</p>
@@ -232,6 +236,15 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    /**
+     * <p>The ASR recognition pause duration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>350</p>
+     */
+    @NameInMap("PauseTime")
+    public Long pauseTime;
 
     /**
      * <p>The prompt.</p>
@@ -252,7 +265,7 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
     public Long qualificationId;
 
     /**
-     * <p>The name of the qualification.</p>
+     * <p>The qualification name.</p>
      * 
      * <strong>example:</strong>
      * <p>测试质检</p>
@@ -261,7 +274,7 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
     public String qualificationName;
 
     /**
-     * <p>The URL of the recording file.</p>
+     * <p>The URL of the recording audio file.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://xxxxxxxxxxxxxxx.wav">https://xxxxxxxxxxxxxxx.wav</a></p>
@@ -276,7 +289,7 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The session timeout, which is the maximum duration of a call.</p>
+     * <p>The maximum call duration.</p>
      * 
      * <strong>example:</strong>
      * <p>49</p>
@@ -285,7 +298,7 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
     public Long sessionTimeout;
 
     /**
-     * <p>The value must be <code>USER</code>.</p>
+     * <p>The source. Fixed value: USER.</p>
      * 
      * <strong>example:</strong>
      * <p>USER</p>
@@ -294,7 +307,7 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The content of the speech.</p>
+     * <p>The speech script content.</p>
      * 
      * <strong>example:</strong>
      * <p>测试话术</p>
@@ -303,7 +316,7 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
     public String speechContent;
 
     /**
-     * <p>The speech ID.</p>
+     * <p>The speech script ID.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -321,7 +334,7 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
     public String startWord;
 
     /**
-     * <p>The type of the opening statement. Valid values:</p>
+     * <p>The type of the opening statement.</p>
      * 
      * <strong>example:</strong>
      * <p>0：文本
@@ -331,13 +344,13 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
     public Long startWordType;
 
     /**
-     * <p>The TTS configuration, such as voice, volume, and speech rate.</p>
+     * <p>The text-to-speech (TTS) configuration, including voice, volume, and speed.</p>
      */
     @NameInMap("TtsConfig")
     public String ttsConfigShrink;
 
     /**
-     * <p>The purpose of the application.</p>
+     * <p>The usage description.</p>
      * 
      * <strong>example:</strong>
      * <p>测试用途</p>
@@ -564,6 +577,14 @@ public class UpdateModelApplicationShrinkRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public UpdateModelApplicationShrinkRequest setPauseTime(Long pauseTime) {
+        this.pauseTime = pauseTime;
+        return this;
+    }
+    public Long getPauseTime() {
+        return this.pauseTime;
     }
 
     public UpdateModelApplicationShrinkRequest setPrompt(String prompt) {

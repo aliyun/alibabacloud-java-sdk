@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateModelApplicationResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason for the access denial.</p>
+     * <p>The detailed reason why access was denied.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,7 +14,7 @@ public class UpdateModelApplicationResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The status code. A value of OK indicates that the request was successful.</p>
+     * <p>The request status code. OK indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -23,7 +23,7 @@ public class UpdateModelApplicationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned by the request.</p>
+     * <p>The data list.</p>
      * 
      * <strong>example:</strong>
      * <p>DKSDLSA</p>
@@ -32,7 +32,7 @@ public class UpdateModelApplicationResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -50,12 +50,10 @@ public class UpdateModelApplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: Successful.</li>
+     * <li><strong>false</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

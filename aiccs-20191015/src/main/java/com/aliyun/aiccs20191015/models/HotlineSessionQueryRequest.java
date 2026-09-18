@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HotlineSessionQueryRequest extends TeaModel {
     /**
-     * <p>Session ID. The acid received via WebSocket after an inbound call.</p>
+     * <p>The session ID. The acid in the websocket after an inbound call.</p>
      * 
      * <strong>example:</strong>
      * <p>7719786****</p>
@@ -14,23 +14,23 @@ public class HotlineSessionQueryRequest extends TeaModel {
     public String acid;
 
     /**
-     * <p>Session ID List.</p>
+     * <p>The list of session IDs.</p>
      */
     @NameInMap("AcidList")
     public java.util.List<String> acidList;
 
     /**
-     * <p>Call result. Valid values:  </p>
+     * <p>The call result. Valid values:</p>
      * <ul>
-     * <li><strong>normal</strong>: Normal hang-up.  </li>
-     * <li><strong>touchRouteError</strong>: Queue hang-up.  </li>
-     * <li><strong>touchInQueue</strong>: Queue hang-up.  </li>
-     * <li><strong>touchInLoss</strong>: Queue hang-up.  </li>
-     * <li><strong>userHangup</strong>: User hang-up or IVR hang-up.  </li>
-     * <li><strong>sysHangup</strong>: System hang-up or IVR hang-up.  </li>
-     * <li><strong>transferAgent</strong>: User hang-up or IVR hang-up.  </li>
-     * <li><strong>dailing</strong>: Agent hang-up during ringing.  </li>
-     * <li><strong>TouchRingCallLoss</strong>: Queue hang-up during ringing.</li>
+     * <li><strong>normal</strong>: The call ended normally.</li>
+     * <li><strong>touchRouteError</strong>: The call was terminated in the queue.</li>
+     * <li><strong>touchInQueue</strong>: The call was terminated in the queue.</li>
+     * <li><strong>touchInLoss</strong>: The call was terminated in the queue.</li>
+     * <li><strong>userHangup</strong>: The user hung up or the call was terminated in the IVR.</li>
+     * <li><strong>sysHangup</strong>: The system hung up or the call was terminated in the IVR.</li>
+     * <li><strong>transferAgent</strong>: The user hung up or the call was terminated in the IVR.</li>
+     * <li><strong>dailing</strong>: The agent hung up or the call was terminated during ringing.</li>
+     * <li><strong>TouchRingCallLoss</strong>: The call was terminated in the queue or during ringing.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,17 +40,17 @@ public class HotlineSessionQueryRequest extends TeaModel {
     public String callResult;
 
     /**
-     * <p>List of call results.</p>
+     * <p>The list of call results.</p>
      */
     @NameInMap("CallResultList")
     public java.util.List<String> callResultList;
 
     /**
-     * <p>Call Type. Valid values:</p>
+     * <p>The call type. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Outbound call.</li>
-     * <li><strong>2</strong>: Inbound call.</li>
-     * <li><strong>3</strong>: Change owner.</li>
+     * <li><strong>1</strong>: outbound call.</li>
+     * <li><strong>2</strong>: inbound call.</li>
+     * <li><strong>3</strong>: transferred call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,13 +60,13 @@ public class HotlineSessionQueryRequest extends TeaModel {
     public Integer callType;
 
     /**
-     * <p>Call Type List.</p>
+     * <p>The list of call types.</p>
      */
     @NameInMap("CallTypeList")
     public java.util.List<Integer> callTypeList;
 
     /**
-     * <p>Calling party number, such as a user\&quot;s phone number, agent number, or machine number.</p>
+     * <p>The number of the caller. For example, a mobile phone number, an agent number, or a robot number.</p>
      * 
      * <strong>example:</strong>
      * <p>135615****</p>
@@ -75,13 +75,13 @@ public class HotlineSessionQueryRequest extends TeaModel {
     public String calledNumber;
 
     /**
-     * <p>List of called numbers.</p>
+     * <p>The list of called numbers.</p>
      */
     @NameInMap("CalledNumberList")
     public java.util.List<String> calledNumberList;
 
     /**
-     * <p>Calling party number, such as a user\&quot;s phone number, customer service agent number, or machine number.</p>
+     * <p>The number of the callee. For example, a mobile phone number, an agent number, or a robot number.</p>
      * 
      * <strong>example:</strong>
      * <p>057177****</p>
@@ -90,13 +90,13 @@ public class HotlineSessionQueryRequest extends TeaModel {
     public String callingNumber;
 
     /**
-     * <p>List of calling numbers.</p>
+     * <p>The list of calling numbers.</p>
      */
     @NameInMap("CallingNumberList")
     public java.util.List<String> callingNumberList;
 
     /**
-     * <p>Skill group ID.</p>
+     * <p>The ID of the skill group.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -105,22 +105,22 @@ public class HotlineSessionQueryRequest extends TeaModel {
     public Long groupId;
 
     /**
-     * <p>List of skill group IDs.</p>
+     * <p>The list of skill group IDs.</p>
      */
     @NameInMap("GroupIdList")
     public java.util.List<Long> groupIdList;
 
     /**
-     * <p>Skill group name.</p>
+     * <p>The name of the skill group.</p>
      * 
      * <strong>example:</strong>
-     * <p>自动化技能组</p>
+     * <p>AutomationSkillGroup</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>Global unique ID (GUID) of the call detail.</p>
+     * <p>The globally unique ID of the call details.</p>
      * 
      * <strong>example:</strong>
      * <p>acc1c58dab4a4****0e3813c66</p>
@@ -129,7 +129,8 @@ public class HotlineSessionQueryRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>AICCS instance ID.<br>You can obtain it in the <strong>Instance Management</strong> section of the left-side navigation pane in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
+     * <p>The ID of the Artificial Intelligence Cloud Call Service (AICCS) instance.
+     * You can obtain the instance ID from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -139,7 +140,7 @@ public class HotlineSessionQueryRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Membership ID.</p>
+     * <p>The member ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7856****</p>
@@ -148,22 +149,22 @@ public class HotlineSessionQueryRequest extends TeaModel {
     public String memberId;
 
     /**
-     * <p>Membership List.</p>
+     * <p>The list of member IDs.</p>
      */
     @NameInMap("MemberIdList")
     public java.util.List<String> memberIdList;
 
     /**
-     * <p>Membership name.</p>
+     * <p>The member name.</p>
      * 
      * <strong>example:</strong>
-     * <p>匿名会员</p>
+     * <p>AnonymousMember</p>
      */
     @NameInMap("MemberName")
     public String memberName;
 
     /**
-     * <p>Current page number. The value must be greater than <strong>0</strong>. Default Value: <strong>1</strong>.</p>
+     * <p>The current page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -172,7 +173,7 @@ public class HotlineSessionQueryRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>Page size. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -181,7 +182,7 @@ public class HotlineSessionQueryRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Extension parameters.</p>
+     * <p>The extended parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx</p>
@@ -190,7 +191,7 @@ public class HotlineSessionQueryRequest extends TeaModel {
     public String params;
 
     /**
-     * <p>End UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The end timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1614829721</p>
@@ -199,7 +200,7 @@ public class HotlineSessionQueryRequest extends TeaModel {
     public Long queryEndTime;
 
     /**
-     * <p>Start UNIX timestamp. Unit: ms.</p>
+     * <p>The start timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1614828721</p>
@@ -208,7 +209,7 @@ public class HotlineSessionQueryRequest extends TeaModel {
     public Long queryStartTime;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
@@ -217,7 +218,7 @@ public class HotlineSessionQueryRequest extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Agent ID.</p>
+     * <p>The agent ID.</p>
      * 
      * <strong>example:</strong>
      * <p>555555</p>
@@ -226,16 +227,16 @@ public class HotlineSessionQueryRequest extends TeaModel {
     public String servicerId;
 
     /**
-     * <p>List of agent IDs.</p>
+     * <p>The list of agent IDs.</p>
      */
     @NameInMap("ServicerIdList")
     public java.util.List<String> servicerIdList;
 
     /**
-     * <p>Agent Name.</p>
+     * <p>The agent name.</p>
      * 
      * <strong>example:</strong>
-     * <p>刘测试</p>
+     * <p>TestAgent</p>
      */
     @NameInMap("ServicerName")
     public String servicerName;

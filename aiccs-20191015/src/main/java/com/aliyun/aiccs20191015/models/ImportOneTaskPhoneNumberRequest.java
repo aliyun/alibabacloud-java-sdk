@@ -12,7 +12,16 @@ public class ImportOneTaskPhoneNumberRequest extends TeaModel {
     public Long encryptionType;
 
     /**
-     * <p>The external ID. We recommend that you use a unique ID to ensure idempotency. The value cannot exceed 128 characters.</p>
+     * <p>The extension number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值示例值示例值</p>
+     */
+    @NameInMap("Extension")
+    public String extension;
+
+    /**
+     * <p>The external serial number. We recommend that you use a unique ID. The value cannot exceed 128 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>94ba739b-xxxx-ef91-335d-4be006c34899</p>
@@ -24,7 +33,7 @@ public class ImportOneTaskPhoneNumberRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The phone number of the callee.</p>
+     * <p>The called phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,17 +59,17 @@ public class ImportOneTaskPhoneNumberRequest extends TeaModel {
     public Long taskId;
 
     /**
-     * <p>A list of variables in a map.</p>
+     * <p>The variable list in Map format.</p>
      * <blockquote>
-     * <p>The format of variables for an engine-based call task is as follows:</p>
+     * <p>Variable format for engine-based voice call tasks:</p>
      * <ul>
-     * <li>{&quot;startWordParam.variable_key1&quot;:&quot;variable_value1&quot;,&quot;promptParam.variable_key2&quot;:&quot;variable_value2&quot;,&quot;bizParam.variable_key3&quot;:&quot;variable_value3&quot;}</li>
+     * <li>{&quot;startWordParam.VariableKey1&quot;:&quot;VariableValue1&quot;,&quot;promptParam.VariableKey2&quot;:&quot;VariableValue2&quot;,&quot;bizParam.VariableKey3&quot;:&quot;VariableValue3&quot;}</li>
      * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;变量key1&quot;:&quot;变量值1&quot;,&quot;变量key2&quot;:&quot;变量值2&quot;}
-     * 引擎呼叫任务示例值请看左侧描述</p>
+     * <p>{&quot;VariableKey1&quot;:&quot;VariableValue1&quot;,&quot;VariableKey2&quot;:&quot;VariableValue2&quot;}
+     * For example values of engine-based voice call tasks, refer to the description on the left</p>
      */
     @NameInMap("Variables")
     public java.util.Map<String, ?> variables;
@@ -76,6 +85,14 @@ public class ImportOneTaskPhoneNumberRequest extends TeaModel {
     }
     public Long getEncryptionType() {
         return this.encryptionType;
+    }
+
+    public ImportOneTaskPhoneNumberRequest setExtension(String extension) {
+        this.extension = extension;
+        return this;
+    }
+    public String getExtension() {
+        return this.extension;
     }
 
     public ImportOneTaskPhoneNumberRequest setOutId(String outId) {

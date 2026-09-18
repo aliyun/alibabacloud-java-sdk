@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access was denied.</p>
+     * <p>The detailed reason for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -23,7 +23,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The returned result data.</p>
      */
     @NameInMap("Data")
     public QueryConversationDetailInfoNewResponseBodyData data;
@@ -47,10 +47,10 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: successful.</li>
-     * <li><strong>false</strong>: failed.</li>
+     * <li><strong>true</strong>: Successful.</li>
+     * <li><strong>false</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
          * <p>The tag description.</p>
          * 
          * <strong>example:</strong>
-         * <p>评估客户对车型的兴趣和购买可能性</p>
+         * <p>Evaluate the customer\&quot;s interest in the model and purchase likelihood.</p>
          */
         @NameInMap("OutputTagDescription")
         public String outputTagDescription;
@@ -135,7 +135,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
          * <p>The tag name.</p>
          * 
          * <strong>example:</strong>
-         * <p>客户意向度</p>
+         * <p>Customer intent level.</p>
          */
         @NameInMap("OutputTagName")
         public String outputTagName;
@@ -144,7 +144,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
          * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;高（非常积极，大概率转化）&quot;]</p>
+         * <p>[&quot;High (very positive, high probability of conversion)&quot;]</p>
          */
         @NameInMap("OutputTagValue")
         public String outputTagValue;
@@ -309,6 +309,13 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
         public String batchId;
 
         /**
+         * <strong>example:</strong>
+         * <p>68</p>
+         */
+        @NameInMap("BranchId")
+        public Long branchId;
+
+        /**
          * <p>The unique ID of the call.</p>
          * 
          * <strong>example:</strong>
@@ -320,21 +327,21 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
         /**
          * <p>The call result. Valid values:</p>
          * <ul>
-         * <li>CALL_FORWARDING: call forwarding.</li>
-         * <li>INCOMING_CALL_BARRED: incoming call barred.</li>
-         * <li>CALL_REJECTED: call rejected.</li>
-         * <li>ANSWERED: the user answered.</li>
-         * <li>USER_BUSY: the callee is busy.</li>
-         * <li>POWERED_OFF: the phone is powered off.</li>
-         * <li>NO_USER_RESPONSE: out of service area.</li>
-         * <li>OPERATOR_BLOCK: blocked by the carrier.</li>
-         * <li>OTHERS: other status.</li>
-         * <li>SUSPEND: the phone is suspended.</li>
-         * <li>CANCEL: the caller canceled.</li>
-         * <li>INVALID_NUMBER: invalid number.</li>
-         * <li>UNAVAILABLE: temporarily unavailable.</li>
-         * <li>NETWORK_BUSY: network busy.</li>
-         * <li>NO_ANSWER: no answer.</li>
+         * <li>CALL_FORWARDING: Call forwarding.</li>
+         * <li>INCOMING_CALL_BARRED: Incoming call barred.</li>
+         * <li>CALL_REJECTED: Call rejected.</li>
+         * <li>ANSWERED: User answered.</li>
+         * <li>USER_BUSY: Callee busy.</li>
+         * <li>POWERED_OFF: Powered off.</li>
+         * <li>NO_USER_RESPONSE: Out of service area.</li>
+         * <li>OPERATOR_BLOCK: Operator blocked.</li>
+         * <li>OTHERS: Other status.</li>
+         * <li>SUSPEND: Service suspended.</li>
+         * <li>CANCEL: Caller canceled.</li>
+         * <li>INVALID_NUMBER: Invalid number.</li>
+         * <li>UNAVAILABLE: Temporarily unavailable.</li>
+         * <li>NETWORK_BUSY: Network busy.</li>
+         * <li>NO_ANSWER: No answer.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -362,28 +369,27 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
         public String callerPhone;
 
         /**
-         * <p>The chat record information. The structure is a JSON array, and the chat records are sorted in chronological order. The structure is as follows:</p>
+         * <p>The chat record information. The structure is a JSON array, sorted in chronological order. The format is as follows:</p>
          * <pre><code class="language-json">[
          *     {
-         *         &quot;content&quot;:&quot;聊天内容&quot;,
-         *         &quot;role&quot;:&quot;角色&quot;,//Valid values: user and assistant (robot).
+         *         &quot;content&quot;:&quot;Chat content&quot;,
+         *         &quot;role&quot;:&quot;Role&quot;,//Valid values: user, assistant (robot)
          *     }
          * ]
-         * ```.
          * </code></pre>
          * 
          * <strong>example:</strong>
          * <p>[
          *   {
-         *     &quot;content&quot;: &quot;111您好，年龄222，性别男，我这边是<strong>汽车的官方顾问，我们新出了一款车型为</strong>；<strong>已经上市了，售价</strong>万元起，*<em>分钟破</em>台，您看要不了解一下？&quot;,
+         *     &quot;content&quot;: &quot;111Hello, age 222, gender male, I am the official consultant of ** Auto, we have a new model **; ** is now available, starting at ** yuan, ** minutes to break * units, would you like to learn more?&quot;,
          *     &quot;role&quot;: &quot;assistant&quot;
          *   },
          *   {
-         *     &quot;content&quot;: &quot;&lt;客户打断&gt;哎，你是谁？&quot;,
+         *     &quot;content&quot;: &quot;<Customer interruption> Hey, who are you?&quot;,
          *     &quot;role&quot;: &quot;user&quot;
          *   },
          *   {
-         *     &quot;content&quot;: &quot;&lt;客户打断&gt;你再说一遍。&quot;,
+         *     &quot;content&quot;: &quot;<Customer interruption> Say that again.&quot;,
          *     &quot;role&quot;: &quot;user&quot;
          *   }]</p>
          */
@@ -409,7 +415,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
         public String detailId;
 
         /**
-         * <p>The call duration. The value is 0 if the call is not connected. Unit: seconds.</p>
+         * <p>The call duration in seconds. The value is 0 if the call is not connected.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -428,7 +434,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
          * <p>The failure reason.</p>
          * 
          * <strong>example:</strong>
-         * <p>主动取消</p>
+         * <p>Actively canceled.</p>
          */
         @NameInMap("FailedReason")
         public String failedReason;
@@ -436,8 +442,8 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
         /**
          * <p>The hangup direction. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: the user.</li>
-         * <li><strong>1</strong>: the robot.</li>
+         * <li><strong>0</strong>: User.</li>
+         * <li><strong>1</strong>: Robot.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -447,7 +453,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
         public String hangupDirection;
 
         /**
-         * <p>The import time. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The import time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>43</p>
@@ -465,7 +471,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
         public String majorIntent;
 
         /**
-         * <p>The variable information used at runtime. The information is stored in this field as key-value pairs.</p>
+         * <p>The variable information used at runtime, stored in this field as key-value pairs.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -473,7 +479,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
          *   &quot;phoneNumber&quot;: &quot;777&quot;,
          *   &quot;distance&quot;: &quot;555&quot;,
          *   &quot;mendian&quot;: &quot;444&quot;,
-         *   &quot;sex&quot;: &quot;男&quot;,
+         *   &quot;sex&quot;: &quot;male&quot;,
          *   &quot;name&quot;: &quot;111&quot;,
          *   &quot;age&quot;: &quot;222&quot;
          * }</p>
@@ -497,7 +503,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
         public java.util.List<QueryConversationDetailInfoNewResponseBodyDataOutputTags> outputTags;
 
         /**
-         * <p>The time when the call was answered. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the call was answered. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>12349732441</p>
@@ -515,7 +521,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
         public String recordingFileDownloadUrl;
 
         /**
-         * <p>The time when the call ended. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the call ended. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -524,7 +530,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
         public Long releaseTime;
 
         /**
-         * <p>The time when the call started. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the call started. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1286987391</p>
@@ -542,7 +548,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
         public Long status;
 
         /**
-         * <p>The call status code. For more information, see <a href="https://help.aliyun.com/document_detail/112804.html">Call status codes</a> in voice messaging.</p>
+         * <p>The call status code. For more information, see <a href="https://help.aliyun.com/document_detail/112804.html">Call status codes</a> in Voice Messaging.</p>
          * 
          * <strong>example:</strong>
          * <p>200005</p>
@@ -554,7 +560,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
          * <p>The call status information returned by the carrier.</p>
          * 
          * <strong>example:</strong>
-         * <p>呼叫结束（双呼）</p>
+         * <p>Call ended (dual call)</p>
          */
         @NameInMap("StatusMsg")
         public String statusMsg;
@@ -585,6 +591,14 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
         }
         public String getBatchId() {
             return this.batchId;
+        }
+
+        public QueryConversationDetailInfoNewResponseBodyData setBranchId(Long branchId) {
+            this.branchId = branchId;
+            return this;
+        }
+        public Long getBranchId() {
+            return this.branchId;
         }
 
         public QueryConversationDetailInfoNewResponseBodyData setCallId(String callId) {

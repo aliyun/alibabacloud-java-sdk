@@ -14,7 +14,7 @@ public class QueryConversationDetailInfoNewRequest extends TeaModel {
     public String callId;
 
     /**
-     * <p>The task detail ID. View the task detail ID in the upper-left corner of the <strong>Call Task Management</strong> &gt; <strong>Details</strong> &gt; <strong>Execution Records</strong> &gt; <strong>Completed</strong> &gt; <strong>Call Details</strong> console, or call the <a href="https://help.aliyun.com/document_detail/2926853.html">QueryAiCallDetailPage</a> operation to obtain the task detail ID.</p>
+     * <p>The task detail ID. View the task detail ID in the upper-left corner of the <strong>Call Task Management</strong> &gt; <strong>Details</strong> &gt; <strong>Execution Records</strong> &gt; <strong>Completed</strong> &gt; <strong>Call Details</strong> console, or retrieve it by calling the <a href="https://help.aliyun.com/document_detail/2926853.html">QueryAiCallDetailPage</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>9662*************</p>
@@ -41,7 +41,7 @@ public class QueryConversationDetailInfoNewRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The task ID. View the task ID in the <strong>Call Task Management</strong> console or call the <a href="https://help.aliyun.com/document_detail/2926799.html">QueryAiCallTaskPage</a> operation to obtain the task ID.</p>
+     * <p>The task ID. View the task ID in the <strong>Call Task Management</strong> console or retrieve it by calling the <a href="https://help.aliyun.com/document_detail/2926799.html">QueryAiCallTaskPage</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

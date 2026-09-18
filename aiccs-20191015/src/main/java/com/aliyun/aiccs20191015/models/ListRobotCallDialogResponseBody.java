@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRobotCallDialogResponseBody extends TeaModel {
     /**
-     * <p>Request status code. A return value of OK indicates that the request succeeded.</p>
+     * <p>The request status code. OK indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Conversation records.</p>
+     * <p>The conversation records.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListRobotCallDialogResponseBodyData> data;
 
     /**
-     * <p>Description of the status code.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
@@ -38,9 +38,9 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API invocation succeeded. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>true</strong>: Successful.</li>
      * <li><strong>false</strong>: Failed.</li>
      * </ul>
      * 
@@ -97,25 +97,25 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
 
     public static class ListRobotCallDialogResponseBodyData extends TeaModel {
         /**
-         * <p>Script content.</p>
+         * <p>The script content.</p>
          * 
          * <strong>example:</strong>
-         * <p>我是某某的客服，看您之前在我们家找过工作，做个回访，现在工作怎么样？</p>
+         * <p>I am a customer service representative from XX. I noticed that you previously looked for a job with us. I am doing a follow-up. How is your work going?</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>File Type.</p>
+         * <p>The node type.</p>
          * 
          * <strong>example:</strong>
-         * <p>开场白</p>
+         * <p>Opening</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
 
         /**
-         * <p>Role in the conversation content.</p>
+         * <p>The role in the conversation.</p>
          * 
          * <strong>example:</strong>
          * <p>robot</p>
@@ -124,16 +124,16 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
         public String role;
 
         /**
-         * <p>Intent label.</p>
+         * <p>The intent label.</p>
          * 
          * <strong>example:</strong>
-         * <p>拒绝</p>
+         * <p>Rejection</p>
          */
         @NameInMap("Tag")
         public String tag;
 
         /**
-         * <p>Start Time. UNIX timestamp in milliseconds.</p>
+         * <p>The start time. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1621483557000</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RobotCallResponseBody extends TeaModel {
     /**
-     * <p>Request status code. A return value of &quot;OK&quot; indicates that the request succeeded.</p>
+     * <p>The request status code. OK indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class RobotCallResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The unique receipt ID of this call, which is also the unique call ID.</p>
+     * <p>The unique receipt ID of this call, which is the unique call ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1160128<em><strong><strong>^10281427</strong></strong></em></p>
@@ -23,7 +23,7 @@ public class RobotCallResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>Description of the status code.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -32,7 +32,7 @@ public class RobotCallResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A90E4451-FED7-49D2-87C8-00700A8C4D0D</p>

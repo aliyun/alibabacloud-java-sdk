@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAiCallDetailPageResponseBody extends TeaModel {
     /**
-     * <p>The reason why the access request was denied.</p>
+     * <p>The detailed reason for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -29,10 +29,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
     public QueryAiCallDetailPageResponseBodyData data;
 
     /**
-     * <p>A description of the status code.</p>
+     * <p>The status code description.</p>
      * 
      * <strong>example:</strong>
-     * <p>成功</p>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
@@ -47,12 +47,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values are:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: successful.</li>
+     * <li><strong>false</strong>: failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -125,6 +123,8 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public String batchId;
 
         /**
+         * <p>The branch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>49</p>
          */
@@ -132,13 +132,17 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public Long branchId;
 
         /**
+         * <p>The branch name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>Default branch</p>
          */
         @NameInMap("BranchName")
         public String branchName;
 
         /**
+         * <p>The version ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>9</p>
          */
@@ -146,10 +150,28 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public Long branchVersionId;
 
         /**
+         * <p>The expiration time of the outbound call detail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-30 20:00:20</p>
+         */
+        @NameInMap("CallExpireTime")
+        public Long callExpireTime;
+
+        /**
+         * <p>The call ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123<em><strong><strong>456^123</strong></strong></em>456</p>
+         */
+        @NameInMap("CallId")
+        public String callId;
+
+        /**
          * <p>The call result.</p>
          * 
          * <strong>example:</strong>
-         * <p>用户接通</p>
+         * <p>Answered</p>
          */
         @NameInMap("CallResult")
         public String callResult;
@@ -164,7 +186,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public String calledNumber;
 
         /**
-         * <p>The call time, formatted as a timestamp in milliseconds.</p>
+         * <p>The calling time. This value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1748948749000</p>
@@ -173,7 +195,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public Long callingTime;
 
         /**
-         * <p>The conversation duration, in seconds.</p>
+         * <p>The conversation duration. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -182,11 +204,11 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public Long conversationDuration;
 
         /**
-         * <p>The conversation record, formatted as a chronologically sorted JSON array. Each object has the following structure:</p>
+         * <p>The chat record information. The structure is a JSON array, and the chat records are sorted in chronological order. The format is as follows:</p>
          * <pre><code class="language-json">[
          *     {
-         *         &quot;content&quot;:&quot;The content of the message.&quot;,
-         *         &quot;role&quot;:&quot;The role of the speaker.&quot;, // Valid values: user, assistant
+         *         &quot;content&quot;:&quot;Chat content&quot;,
+         *         &quot;role&quot;:&quot;Role&quot;,//Valid values: user, assistant (bot)
          *     }
          * ]
          * </code></pre>
@@ -247,7 +269,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public String conversationRecord;
 
         /**
-         * <p>The conversation turn count.</p>
+         * <p>The number of conversation turns.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -265,7 +287,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public String detailId;
 
         /**
-         * <p>The encryption type. Valid values are: 0 (no encryption), 1 (MD5), 2 (SHA256), and 3 (SM3).</p>
+         * <p>The encryption type. Valid values: 0: no encryption. 1: MD5. 2: SHA256. 3: SM3.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -274,16 +296,16 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public Long encryptionType;
 
         /**
-         * <p>The failure reason. Provided only if the call fails.</p>
+         * <p>The reason for call failure. This field is available only when the call fails.</p>
          * 
          * <strong>example:</strong>
-         * <p>账户停机</p>
+         * <p>Account suspended</p>
          */
         @NameInMap("FailedReason")
         public String failedReason;
 
         /**
-         * <p>The import time, formatted as a timestamp in milliseconds.</p>
+         * <p>The import time. This value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1748948749000</p>
@@ -301,7 +323,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public String majorIntent;
 
         /**
-         * <p>A JSON object of key-value pairs for runtime variables.</p>
+         * <p>The variable information used at runtime, stored in this field as key-value pairs.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -309,7 +331,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
          *   &quot;phoneNumber&quot;: &quot;777&quot;,
          *   &quot;distance&quot;: &quot;555&quot;,
          *   &quot;mendian&quot;: &quot;444&quot;,
-         *   &quot;sex&quot;: &quot;男&quot;,
+         *   &quot;sex&quot;: &quot;male&quot;,
          *   &quot;name&quot;: &quot;111&quot;,
          *   &quot;age&quot;: &quot;222&quot;
          * }</p>
@@ -318,6 +340,8 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public String options;
 
         /**
+         * <p>The external business serial number reserved for external input. A unique ID can be used for business association.</p>
+         * 
          * <strong>example:</strong>
          * <p>outId</p>
          */
@@ -325,7 +349,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public String outId;
 
         /**
-         * <p>The recording file path. Provided only after the recording file is generated.</p>
+         * <p>The download path of the recording file. This field is available only after the recording file is generated.</p>
          * 
          * <strong>example:</strong>
          * <p>https://*******</p>
@@ -334,22 +358,16 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public String recordingFilePath;
 
         /**
-         * <p>The task detail status.</p>
+         * <p>The task detail status. Valid values:</p>
          * <ul>
-         * <li><p>0: Initializing</p>
-         * </li>
-         * <li><p>1: Waiting to call</p>
-         * </li>
-         * <li><p>2: Waiting to retry</p>
-         * </li>
-         * <li><p>3: Calling</p>
-         * </li>
-         * <li><p>4: Call ended</p>
-         * </li>
-         * <li><p>5: Call failed</p>
-         * </li>
+         * <li>0: initialized.</li>
+         * <li>1: waiting to call.</li>
+         * <li>2: waiting to retry.</li>
+         * <li>3: calling.</li>
+         * <li>4: call ended.</li>
+         * <li>5: call failed.</li>
          * </ul>
-         * <p>Only statuses 4 and 5 are terminal states.</p>
+         * <p>Only 4 and 5 are desired states.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -367,15 +385,19 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The version name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>Default version</p>
          */
         @NameInMap("VersionName")
         public String versionName;
 
         /**
+         * <p>The version number.</p>
+         * 
          * <strong>example:</strong>
-         * <p>55</p>
+         * <p>1</p>
          */
         @NameInMap("VersionNo")
         public Long versionNo;
@@ -415,6 +437,22 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         }
         public Long getBranchVersionId() {
             return this.branchVersionId;
+        }
+
+        public QueryAiCallDetailPageResponseBodyDataList setCallExpireTime(Long callExpireTime) {
+            this.callExpireTime = callExpireTime;
+            return this;
+        }
+        public Long getCallExpireTime() {
+            return this.callExpireTime;
+        }
+
+        public QueryAiCallDetailPageResponseBodyDataList setCallId(String callId) {
+            this.callId = callId;
+            return this;
+        }
+        public String getCallId() {
+            return this.callId;
         }
 
         public QueryAiCallDetailPageResponseBodyDataList setCallResult(String callResult) {
@@ -565,13 +603,13 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
 
     public static class QueryAiCallDetailPageResponseBodyData extends TeaModel {
         /**
-         * <p>A list of task details.</p>
+         * <p>The list of task detail data.</p>
          */
         @NameInMap("List")
         public java.util.List<QueryAiCallDetailPageResponseBodyDataList> list;
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>

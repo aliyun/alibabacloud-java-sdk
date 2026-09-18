@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAiCallTaskRequest extends TeaModel {
     /**
-     * <p>The ID of a published agent.</p>
+     * <p>The code of the agent that is already online.</p>
      * 
      * <strong>example:</strong>
      * <p>1180**************</p>
@@ -14,6 +14,8 @@ public class CreateAiCallTaskRequest extends TeaModel {
     public String agentId;
 
     /**
+     * <p>The application code. This parameter is used when the creation source is engine.</p>
+     * 
      * <strong>example:</strong>
      * <p>025****C98</p>
      */
@@ -28,7 +30,37 @@ public class CreateAiCallTaskRequest extends TeaModel {
     public java.util.List<String> callDay;
 
     /**
-     * <p>The retry interval, in minutes. The maximum value is 720.</p>
+     * <p>The expiration date of outbound call details (specific deadline).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-07-30 20:00:20</p>
+     */
+    @NameInMap("CallExpireDate")
+    public String callExpireDate;
+
+    /**
+     * <p>The expiration duration of outbound call details. Unit: minutes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
+    @NameInMap("CallExpireMinutes")
+    public Long callExpireMinutes;
+
+    /**
+     * <p>The outbound call validity type. Valid values:</p>
+     * <p>0: permanently valid.
+     * 1: valid for a specified duration after import.
+     * 2: valid until a specified date.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("CallExpireType")
+    public Long callExpireType;
+
+    /**
+     * <p>The retry interval. Unit: minutes. The maximum value is 720 minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>
@@ -37,7 +69,7 @@ public class CreateAiCallTaskRequest extends TeaModel {
     public Long callRetryInterval;
 
     /**
-     * <p>The failure reasons that trigger a retry.</p>
+     * <p>The list of failure retry reasons.</p>
      */
     @NameInMap("CallRetryReason")
     public java.util.List<String> callRetryReason;
@@ -58,7 +90,12 @@ public class CreateAiCallTaskRequest extends TeaModel {
     @NameInMap("CallTime")
     public java.util.List<String> callTime;
 
+    @NameInMap("CallableTime")
+    public java.util.List<String> callableTime;
+
     /**
+     * <p>The line encoding.</p>
+     * 
      * <strong>example:</strong>
      * <p>JILIANG_***_***_NET</p>
      */
@@ -66,6 +103,8 @@ public class CreateAiCallTaskRequest extends TeaModel {
     public String lineEncoding;
 
     /**
+     * <p>The customer-provided line number.</p>
+     * 
      * <strong>example:</strong>
      * <p>152****3120</p>
      */
@@ -75,9 +114,9 @@ public class CreateAiCallTaskRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable retry. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: Enables retry.</p>
+     * <li><p>true: enabled.</p>
      * </li>
-     * <li><p><code>false</code> (default): Disables retry.</p>
+     * <li><p>false (default): disabled.</p>
      * </li>
      * </ul>
      * 
@@ -91,6 +130,14 @@ public class CreateAiCallTaskRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The number type. This parameter is used when the creation source is engine. Valid values:</p>
+     * <ul>
+     * <li><p>0: Alibaba Cloud number.</p>
+     * </li>
+     * <li><p>1: customer-provided line.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -104,6 +151,14 @@ public class CreateAiCallTaskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The creation source. Valid values:</p>
+     * <ul>
+     * <li><p>0: created by agent.</p>
+     * </li>
+     * <li><p>1: created by engine.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -111,11 +166,11 @@ public class CreateAiCallTaskRequest extends TeaModel {
     public Long source;
 
     /**
-     * <p>The startup mode. Valid values:</p>
+     * <p>The start mode. Valid values:</p>
      * <ul>
-     * <li><p><code>IMMEDIATE</code>: Starts the task immediately.</p>
+     * <li><p>IMMEDIATE: starts immediately.</p>
      * </li>
-     * <li><p><code>SCHEDULE</code>: Starts the task at a scheduled time.</p>
+     * <li><p>SCHEDULE: starts at a scheduled time.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -136,17 +191,17 @@ public class CreateAiCallTaskRequest extends TeaModel {
     public Long taskCps;
 
     /**
-     * <p>The name of the task. It must be unique within an account.</p>
+     * <p>The task name. The name must be unique within the same account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试任务</p>
+     * <p>TestTask</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
-     * <p>The scheduled start time for the task, specified as a timestamp in milliseconds. This parameter is required and applies only when <code>StartType</code> is set to <code>SCHEDULE</code>.</p>
+     * <p>The preset start time of the task. The value is a UNIX timestamp in milliseconds. This parameter is valid and required when the StartType parameter is set to SCHEDULE. The task automatically starts at the time specified by this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>12313123133</p>
@@ -192,6 +247,30 @@ public class CreateAiCallTaskRequest extends TeaModel {
         return this.callDay;
     }
 
+    public CreateAiCallTaskRequest setCallExpireDate(String callExpireDate) {
+        this.callExpireDate = callExpireDate;
+        return this;
+    }
+    public String getCallExpireDate() {
+        return this.callExpireDate;
+    }
+
+    public CreateAiCallTaskRequest setCallExpireMinutes(Long callExpireMinutes) {
+        this.callExpireMinutes = callExpireMinutes;
+        return this;
+    }
+    public Long getCallExpireMinutes() {
+        return this.callExpireMinutes;
+    }
+
+    public CreateAiCallTaskRequest setCallExpireType(Long callExpireType) {
+        this.callExpireType = callExpireType;
+        return this;
+    }
+    public Long getCallExpireType() {
+        return this.callExpireType;
+    }
+
     public CreateAiCallTaskRequest setCallRetryInterval(Long callRetryInterval) {
         this.callRetryInterval = callRetryInterval;
         return this;
@@ -222,6 +301,14 @@ public class CreateAiCallTaskRequest extends TeaModel {
     }
     public java.util.List<String> getCallTime() {
         return this.callTime;
+    }
+
+    public CreateAiCallTaskRequest setCallableTime(java.util.List<String> callableTime) {
+        this.callableTime = callableTime;
+        return this;
+    }
+    public java.util.List<String> getCallableTime() {
+        return this.callableTime;
     }
 
     public CreateAiCallTaskRequest setLineEncoding(String lineEncoding) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAiccsRobotResponseBody extends TeaModel {
     /**
-     * <p>Request status code. A return value of OK indicates that the request Succeeded.</p>
+     * <p>The request status code. OK indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class ListAiccsRobotResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Robot scripts.</p>
+     * <p>The robot scripts.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListAiccsRobotResponseBodyData> data;
 
     /**
-     * <p>Description of the status code.</p>
+     * <p>The status code description.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -29,7 +29,7 @@ public class ListAiccsRobotResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
@@ -38,10 +38,10 @@ public class ListAiccsRobotResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API invocation Succeeded. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Succeeded.</li>
-     * <li><strong>false</strong>: failed.</li>
+     * <li><strong>true</strong>: Successful.</li>
+     * <li><strong>false</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,25 +97,25 @@ public class ListAiccsRobotResponseBody extends TeaModel {
 
     public static class ListAiccsRobotResponseBodyData extends TeaModel {
         /**
-         * <p>Associated industry.</p>
+         * <p>The industry.</p>
          * 
          * <strong>example:</strong>
-         * <p>房地产</p>
+         * <p>RealEstate</p>
          */
         @NameInMap("AtProfession")
         public String atProfession;
 
         /**
-         * <p>Associated business.</p>
+         * <p>The associated business.</p>
          * 
          * <strong>example:</strong>
-         * <p>新房销售</p>
+         * <p>NewHomeSales</p>
          */
         @NameInMap("AtSence")
         public String atSence;
 
         /**
-         * <p>Robot ID.</p>
+         * <p>The robot ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12****</p>
@@ -124,16 +124,16 @@ public class ListAiccsRobotResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Robot name.</p>
+         * <p>The robot name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试机器人</p>
+         * <p>TestRobot</p>
          */
         @NameInMap("RobotName")
         public String robotName;
 
         /**
-         * <p>Robot type.</p>
+         * <p>The robot type.</p>
          * 
          * <strong>example:</strong>
          * <p>CUSTOM</p>

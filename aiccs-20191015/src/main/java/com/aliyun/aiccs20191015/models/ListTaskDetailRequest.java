@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTaskDetailRequest extends TeaModel {
     /**
-     * <p>The callee number. You can view the callee number on the <strong>Detail</strong> interface of <a href="https://aiccs.console.aliyun.com/job/list"><strong>Task Management</strong></a>.</p>
+     * <p>The called number. You can view the called number on the <a href="https://aiccs.console.aliyun.com/job/list"><strong>Task Management</strong></a> &gt; <strong>Details</strong> page.</p>
      * 
      * <strong>example:</strong>
      * <p>186****0000</p>
@@ -14,7 +14,7 @@ public class ListTaskDetailRequest extends TeaModel {
     public String called;
 
     /**
-     * <p>The detail ID. You can view the detail ID on the <strong>Detail</strong> interface of <a href="https://aiccs.console.aliyun.com/job/list"><strong>Task Management</strong></a>.</p>
+     * <p>The detail ID. You can view the detail ID on the <a href="https://aiccs.console.aliyun.com/job/list"><strong>Task Management</strong></a> &gt; <strong>Details</strong> page.</p>
      * 
      * <strong>example:</strong>
      * <p>12****</p>
@@ -50,7 +50,7 @@ public class ListTaskDetailRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Detail status. Valid values:</p>
+     * <p>The detail status. Valid values:</p>
      * <ul>
      * <li><strong>SUCCESS</strong>: The outbound call succeeded.</li>
      * <li><strong>FAIL</strong>: The outbound call failed.</li>
@@ -64,7 +64,7 @@ public class ListTaskDetailRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The call status code. For more information, see <a href="https://help.aliyun.com/document_detail/112804.html">Call Status Codes</a> in Voice Service.</p>
+     * <p>The call status code. For more information, see <a href="https://help.aliyun.com/document_detail/112804.html">Call status codes</a> in Voice Messaging.</p>
      * 
      * <strong>example:</strong>
      * <p>200100</p>
@@ -73,7 +73,7 @@ public class ListTaskDetailRequest extends TeaModel {
     public String statusCode;
 
     /**
-     * <p>The job ID. You can view the job ID on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or obtain it by using the <a href="https://help.aliyun.com/document_detail/2718008.html">ListTask</a> API.</p>
+     * <p>The task ID. You can view the task ID on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or obtain it by calling the <a href="https://help.aliyun.com/document_detail/2718008.html">ListTask</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

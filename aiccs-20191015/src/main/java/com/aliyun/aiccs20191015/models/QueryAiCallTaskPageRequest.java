@@ -5,17 +5,19 @@ import com.aliyun.tea.*;
 
 public class QueryAiCallTaskPageRequest extends TeaModel {
     /**
-     * <p>The agent name. The system performs a fuzzy search based on this name.</p>
+     * <p>The agent name. The system performs a fuzzy match based on the agent name.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试智能体</p>
+     * <p>TestAgent.</p>
      */
     @NameInMap("AgentName")
     public String agentName;
 
     /**
+     * <p>The application code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>025****C98</p>
      */
     @NameInMap("ApplicationCode")
     public String applicationCode;
@@ -24,7 +26,7 @@ public class QueryAiCallTaskPageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be greater than <strong>0</strong>. The default value is <strong>1</strong>.</p>
+     * <p>The current page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +35,7 @@ public class QueryAiCallTaskPageRequest extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in paging. Settings for the number of rows per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -48,8 +50,12 @@ public class QueryAiCallTaskPageRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The creation source. Valid values:</p>
+     * <p>0: created by agent.</p>
+     * <p>1: created by engine.</p>
+     * 
      * <strong>example:</strong>
-     * <p>68</p>
+     * <p>0</p>
      */
     @NameInMap("Source")
     public Long source;
@@ -57,14 +63,10 @@ public class QueryAiCallTaskPageRequest extends TeaModel {
     /**
      * <p>The task status. Valid values:</p>
      * <ul>
-     * <li><p><strong>INIT</strong>: The task is initialized but has not started.</p>
-     * </li>
-     * <li><p><strong>FAILED</strong>: The task failed to start.</p>
-     * </li>
-     * <li><p><strong>RUNNING</strong>: The task is running.</p>
-     * </li>
-     * <li><p><strong>STOPPED</strong>: The task is stopped.</p>
-     * </li>
+     * <li>INIT: init (not started).</li>
+     * <li>FAILED: startup failed.</li>
+     * <li>RUNNING: running.</li>
+     * <li>STOPPED: stopped.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,7 +76,7 @@ public class QueryAiCallTaskPageRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The unique ID of the task.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1187**************</p>
@@ -83,10 +85,10 @@ public class QueryAiCallTaskPageRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The task name. The system performs a fuzzy search based on this name.</p>
+     * <p>The task name. The system performs a fuzzy match based on the task name.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试任务</p>
+     * <p>TestTask.</p>
      */
     @NameInMap("TaskName")
     public String taskName;

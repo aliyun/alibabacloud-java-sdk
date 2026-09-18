@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAiCallTaskResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason for the access denial.</p>
+     * <p>The detailed reason why access is denied.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -32,10 +32,10 @@ public class CreateAiCallTaskResponseBody extends TeaModel {
     public Long data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
-     * <p>成功</p>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -50,12 +50,10 @@ public class CreateAiCallTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call succeeded.</p>
+     * <p>Indicates whether the API call is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The call succeeded.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The call failed.</p>
-     * </li>
+     * <li><strong>true</strong>: successful.</li>
+     * <li><strong>false</strong>: failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTaskDetailResponseBody extends TeaModel {
     /**
-     * <p>The request status code. A return value of OK indicates that the request succeeded.</p>
+     * <p>The request status code. OK indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class ListTaskDetailResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Detailed job information.</p>
+     * <p>The task details.</p>
      */
     @NameInMap("Data")
     public ListTaskDetailResponseBodyData data;
 
     /**
-     * <p>Description of the status code.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class ListTaskDetailResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
@@ -38,10 +38,10 @@ public class ListTaskDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API invocation succeeded. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Succeeded.</li>
-     * <li><strong>false</strong>: Failed.</li>
+     * <li><strong>true</strong>: The operation was successful.</li>
+     * <li><strong>false</strong>: The operation failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class ListTaskDetailResponseBody extends TeaModel {
 
     public static class ListTaskDetailResponseBodyDataRecord extends TeaModel {
         /**
-         * <p>Called number.</p>
+         * <p>The called number.</p>
          * 
          * <strong>example:</strong>
          * <p>186****0000</p>
@@ -106,7 +106,7 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public String called;
 
         /**
-         * <p>Calling number.</p>
+         * <p>The caller number.</p>
          * 
          * <strong>example:</strong>
          * <p>136****0000</p>
@@ -115,20 +115,20 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public String caller;
 
         /**
-         * <p>Hang-up direction. Valid values:</p>
+         * <p>The hangup direction. Valid values:</p>
          * <ul>
          * <li><strong>User</strong>.</li>
-         * <li><strong>Machine</strong>.</li>
+         * <li><strong>Robot</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>用户</p>
+         * <p>User</p>
          */
         @NameInMap("Direction")
         public String direction;
 
         /**
-         * <p>Call duration. Unit: seconds.</p>
+         * <p>The call duration. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -137,7 +137,7 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public Integer duration;
 
         /**
-         * <p>End time.</p>
+         * <p>The end time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-05-20 00:03:00</p>
@@ -146,7 +146,7 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>Record ID.</p>
+         * <p>The detail ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12****</p>
@@ -155,7 +155,7 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Current retry count.</p>
+         * <p>The current retry count.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -164,7 +164,7 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public Integer retryCurTimes;
 
         /**
-         * <p>Retry Count.</p>
+         * <p>The retry count.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,7 +173,7 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public Integer retryTimes;
 
         /**
-         * <p>Start Time.</p>
+         * <p>The start time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-05-20 00:00:00</p>
@@ -182,7 +182,7 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>Detail status.</p>
+         * <p>The detail status.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -191,7 +191,7 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Call status code.</p>
+         * <p>The call status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200100</p>
@@ -200,19 +200,19 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public String statusCode;
 
         /**
-         * <p>Call status code description.</p>
+         * <p>The description of the call status code.</p>
          * 
          * <strong>example:</strong>
-         * <p>呼叫成功</p>
+         * <p>Call succeeded</p>
          */
         @NameInMap("StatusCodeDesc")
         public String statusCodeDesc;
 
         /**
-         * <p>Intent tags.</p>
+         * <p>The intent label.</p>
          * 
          * <strong>example:</strong>
-         * <p>肯定</p>
+         * <p>Affirmative</p>
          */
         @NameInMap("Tags")
         public String tags;
@@ -330,7 +330,7 @@ public class ListTaskDetailResponseBody extends TeaModel {
 
     public static class ListTaskDetailResponseBodyData extends TeaModel {
         /**
-         * <p>Number of items per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -339,7 +339,7 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public Long pageNo;
 
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -348,13 +348,13 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>List of job information.</p>
+         * <p>The list of task details.</p>
          */
         @NameInMap("Record")
         public java.util.List<ListTaskDetailResponseBodyDataRecord> record;
 
         /**
-         * <p>Total number of jobs.</p>
+         * <p>The total number of tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

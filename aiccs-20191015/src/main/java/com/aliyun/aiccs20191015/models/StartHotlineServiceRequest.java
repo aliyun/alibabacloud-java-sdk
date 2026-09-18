@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartHotlineServiceRequest extends TeaModel {
     /**
-     * <p>Agent account name, which is the phone number or mailbox entered during account registration. It is unique within the instance.</p>
+     * <p>The name of the agent account, which is the mobile number or email address specified during account registration. The name must be unique within the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class StartHotlineServiceRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>Unique ID for the customer request. Used for idempotency validation and can be generated using UUID.</p>
+     * <p>The unique ID of the client request. Used for idempotency checks. You can use a UUID to generate this ID.</p>
      * 
      * <strong>example:</strong>
      * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
@@ -24,7 +24,8 @@ public class StartHotlineServiceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
+     * <p>The ID of the Artificial Intelligence Cloud Call Service (AICCS) instance.
+     * You can obtain the instance ID from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">AICCS console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

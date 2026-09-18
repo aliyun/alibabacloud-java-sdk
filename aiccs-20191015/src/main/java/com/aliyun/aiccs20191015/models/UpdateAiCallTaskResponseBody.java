@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAiCallTaskResponseBody extends TeaModel {
     /**
-     * <p>The reason why access was denied.</p>
+     * <p>The detailed reason for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -23,11 +23,11 @@ public class UpdateAiCallTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the task was updated successfully. Valid values:</p>
+     * <p>The update result. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The update is successful.</p>
+     * <li><p><strong>true</strong>: Updated.</p>
      * </li>
-     * <li><p><strong>false</strong>: The update failed.</p>
+     * <li><p><strong>false</strong>: Failed to update.</p>
      * </li>
      * </ul>
      * 
@@ -38,10 +38,10 @@ public class UpdateAiCallTaskResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The error message that is returned when an error occurs.</p>
+     * <p>The error message. This parameter is returned only when an exception occurs.</p>
      * 
      * <strong>example:</strong>
-     * <p>参数不合法</p>
+     * <p>Invalid parameter</p>
      */
     @NameInMap("Message")
     public String message;
@@ -56,12 +56,10 @@ public class UpdateAiCallTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call was successful. Valid values:</p>
+     * <p>Indicates whether the API call is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Failed.</p>
-     * </li>
+     * <li><strong>true</strong>: Successful.</li>
+     * <li><strong>false</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

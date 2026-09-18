@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RobotCallRequest extends TeaModel {
     /**
-     * <p>Called number.</p>
+     * <p>The called number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class RobotCallRequest extends TeaModel {
     public String calledNumber;
 
     /**
-     * <p>Outbound caller number. View it in the Voice Service <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Real Number Management</a> interface.</p>
+     * <p>The caller number for the outbound call. You can view this number on the <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Real Number Management</a> page of the voice messaging service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,11 +25,11 @@ public class RobotCallRequest extends TeaModel {
     public String calledShowNumber;
 
     /**
-     * <p>Whether to enable the number status detection identity. Valid values:  </p>
+     * <p>Specifies whether to enable the number status identification feature. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (Default Value): Disable.  </li>
-     * <li><strong>true</strong>: Enable.  <blockquote>
-     * <p>When enabled, the reason for unanswered calls will be recorded.</p>
+     * <li><strong>false</strong> (default): Disabled.</li>
+     * <li><strong>true</strong>: Enabled.<blockquote>
+     * <p>After this feature is enabled, the reason why a call is not answered is recorded.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -41,7 +41,7 @@ public class RobotCallRequest extends TeaModel {
     public Boolean earlyMediaAsr;
 
     /**
-     * <p>An ID reserved for the caller. This ID will be returned to the caller through the receipt message. It must be 1 to 15 bytes in length.</p>
+     * <p>The ID reserved for the caller. This ID is returned to the caller through a receipt message. The value is 1 to 15 bytes in length.</p>
      * 
      * <strong>example:</strong>
      * <p>222356****</p>
@@ -53,11 +53,11 @@ public class RobotCallRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Parameter list for the robot, in JSON format. The total length must not exceed 512 bytes. You can view the parameters in <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> &gt; <strong>Details</strong> &gt; <strong>Input Parameters</strong>, or by using the <a href="https://help.aliyun.com/document_detail/2717999.html">ListRobotParams</a> API.</p>
+     * <p>The parameter list of the robot in JSON format. The total length cannot exceed 512 bytes. You can view the parameters on the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> &gt; <strong>Details</strong> &gt; <strong>Input/Output Parameters</strong> page or by calling the <a href="https://help.aliyun.com/document_detail/2717999.html">ListRobotParams</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>{
-     *   &quot;name&quot;: &quot;张三&quot;,
+     *   &quot;name&quot;: &quot;Zhang San&quot;,
      *   &quot;age&quot;: &quot;25&quot;
      * }</p>
      */
@@ -65,7 +65,7 @@ public class RobotCallRequest extends TeaModel {
     public String params;
 
     /**
-     * <p>Whether to record the call. Valid values:</p>
+     * <p>Specifies whether to record the call. Valid values:</p>
      * <ul>
      * <li><strong>false</strong> (default): Do not record.</li>
      * <li><strong>true</strong>: Record.</li>
@@ -84,7 +84,7 @@ public class RobotCallRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Robot ID, which is the script ID. View the reviewed and approved script ID in the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface.</p>
+     * <p>The robot ID, which is the script ID. You can view approved script IDs on the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
