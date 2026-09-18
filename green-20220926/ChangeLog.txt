@@ -1,3 +1,8 @@
+2026-09-18 Version: 1.14.3
+- Update API ListAppConfigs: add response parameters Body.Data.$.CustomOrderNum.
+- Update API ModifyAppInfo: add request parameters CustomOrderNum.
+
+
 2026-09-15 Version: 1.14.2
 - Update API GetGuardLogStats: add request parameters CommodityCode.
 - Update API UpdateServiceConfig: add request parameters ClientToken.

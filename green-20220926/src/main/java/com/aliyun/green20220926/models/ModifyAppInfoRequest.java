@@ -14,6 +14,15 @@ public class ModifyAppInfoRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The sort number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("CustomOrderNum")
+    public Integer customOrderNum;
+
+    /**
      * <p>The app name.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +60,14 @@ public class ModifyAppInfoRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public ModifyAppInfoRequest setCustomOrderNum(Integer customOrderNum) {
+        this.customOrderNum = customOrderNum;
+        return this;
+    }
+    public Integer getCustomOrderNum() {
+        return this.customOrderNum;
     }
 
     public ModifyAppInfoRequest setName(String name) {

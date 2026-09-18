@@ -69,6 +69,15 @@ public class ListAppConfigsResponseBody extends TeaModel {
         public java.util.Map<String, ?> customConfig;
 
         /**
+         * <p>The sort number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("CustomOrderNum")
+        public Integer customOrderNum;
+
+        /**
          * <p>The publish status.</p>
          * 
          * <strong>example:</strong>
@@ -78,7 +87,7 @@ public class ListAppConfigsResponseBody extends TeaModel {
         public String deployStatus;
 
         /**
-         * <p>The last modification time.</p>
+         * <p>The last modified time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-15 10:17:49</p>
@@ -155,6 +164,14 @@ public class ListAppConfigsResponseBody extends TeaModel {
         }
         public java.util.Map<String, ?> getCustomConfig() {
             return this.customConfig;
+        }
+
+        public ListAppConfigsResponseBodyData setCustomOrderNum(Integer customOrderNum) {
+            this.customOrderNum = customOrderNum;
+            return this;
+        }
+        public Integer getCustomOrderNum() {
+            return this.customOrderNum;
         }
 
         public ListAppConfigsResponseBodyData setDeployStatus(String deployStatus) {
