@@ -48,6 +48,13 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <strong>example:</strong>
+     * <p>Immediate</p>
+     */
+    @NameInMap("EffectiveTime")
+    public String effectiveTime;
+
+    /**
      * <p>The specifications of segment nodes. For information about supported node specifications, see <a href="https://help.aliyun.com/document_detail/35406.html">Instance specifications</a>.</p>
      * <blockquote>
      * <p>This parameter is supported only for elastic storage mode instances.</p>
@@ -235,6 +242,14 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public UpgradeDBInstanceRequest setEffectiveTime(String effectiveTime) {
+        this.effectiveTime = effectiveTime;
+        return this;
+    }
+    public String getEffectiveTime() {
+        return this.effectiveTime;
     }
 
     public UpgradeDBInstanceRequest setInstanceSpec(String instanceSpec) {

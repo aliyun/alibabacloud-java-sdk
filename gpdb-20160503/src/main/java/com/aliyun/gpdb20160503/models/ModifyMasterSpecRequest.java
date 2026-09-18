@@ -16,7 +16,7 @@ public class ModifyMasterSpecRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,13 +27,26 @@ public class ModifyMasterSpecRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>This parameter must be specified if you want to change coordinator nodes to AI coordinator nodes.</p>
+     * <p>The effective period of the specification change. Valid values: </p>
+     * <ul>
+     * <li><strong>Immediately</strong> (default): The change takes effect immediately.</li>
+     * <li><strong>MaintainTime</strong>: The change takes effect during the maintenance window of the instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Immediate</p>
+     */
+    @NameInMap("EffectiveTime")
+    public String effectiveTime;
+
+    /**
+     * <p>If you want to change the master node to a MasterAI node, specify this parameter.</p>
      * <blockquote>
      * <ul>
-     * <li>You cannot specify the MasterAISpec and MasterCU parameters at the same time.</li>
-     * <li>You can change coordinator nodes to AI coordinator nodes only in specific regions and zones.</li>
-     * <li>Only AnalyticDB for PostgreSQL V7.0 instances of Basic Edition support AI coordinator nodes.</li>
-     * <li>You can view the valid values of this parameter on the configuration change page of coordinator nodes.</li>
+     * <li>This parameter and MasterCU cannot be specified at the same time.</li>
+     * <li>Only specific regions and zones support changing the master node to a MasterAI node.</li>
+     * <li>Only AnalyticDB for PostgreSQL V7.0 Basic Edition instances support MasterAI nodes.</li>
+     * <li>You can view all valid values of this parameter on the specification change page for the master node.</li>
      * </ul>
      * </blockquote>
      * 
@@ -44,17 +57,17 @@ public class ModifyMasterSpecRequest extends TeaModel {
     public String masterAISpec;
 
     /**
-     * <p>The specifications of coordinator node resources. Valid values:</p>
+     * <p>The master resources. Valid values: </p>
      * <ul>
-     * <li>2 CU</li>
-     * <li>4 CU</li>
-     * <li>8 CU</li>
-     * <li>16 CU</li>
-     * <li>32 CU</li>
-     * </ul>
-     * <blockquote>
-     * <p> You are charged for coordinator node resources of more than 8 compute units (CUs).</p>
+     * <li>2 CU </li>
+     * <li>4 CU </li>
+     * <li>8 CU </li>
+     * <li>16 CU </li>
+     * <li>32 CU <blockquote>
+     * <p>Master resources greater than 8 CU incur additional fees.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>8 CU</p>
@@ -63,7 +76,7 @@ public class ModifyMasterSpecRequest extends TeaModel {
     public Integer masterCU;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+     * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the resource group ID, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -90,6 +103,14 @@ public class ModifyMasterSpecRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public ModifyMasterSpecRequest setEffectiveTime(String effectiveTime) {
+        this.effectiveTime = effectiveTime;
+        return this;
+    }
+    public String getEffectiveTime() {
+        return this.effectiveTime;
     }
 
     public ModifyMasterSpecRequest setMasterAISpec(String masterAISpec) {

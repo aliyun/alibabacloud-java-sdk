@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBVersionRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in the specified region, including instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +18,20 @@ public class UpgradeDBVersionRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>This parameter is no longer used and does not need to be specified.</p>
+     * <p>The effective period. Valid values:</p>
+     * <ul>
+     * <li><strong>Immediate</strong> (default): The upgrade takes effect immediately.</li>
+     * <li><strong>MaintainTime</strong>: The upgrade takes effect during the O&amp;M window. For more information, see ModifyDBInstanceMaintainTime.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Immediate</p>
+     */
+    @NameInMap("EffectiveTime")
+    public String effectiveTime;
+
+    /**
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -24,7 +40,7 @@ public class UpgradeDBVersionRequest extends TeaModel {
     public String majorVersion;
 
     /**
-     * <p>The minor version of the instance.</p>
+     * <p>The minor version.</p>
      * 
      * <strong>example:</strong>
      * <p>6.3.6.1-202112012048</p>
@@ -36,7 +52,10 @@ public class UpgradeDBVersionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -45,7 +64,7 @@ public class UpgradeDBVersionRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>This parameter is no longer used and does not need to be specified.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -54,7 +73,7 @@ public class UpgradeDBVersionRequest extends TeaModel {
     public String switchTime;
 
     /**
-     * <p>This parameter is no longer used and does not need to be specified.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -73,6 +92,14 @@ public class UpgradeDBVersionRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public UpgradeDBVersionRequest setEffectiveTime(String effectiveTime) {
+        this.effectiveTime = effectiveTime;
+        return this;
+    }
+    public String getEffectiveTime() {
+        return this.effectiveTime;
     }
 
     public UpgradeDBVersionRequest setMajorVersion(String majorVersion) {

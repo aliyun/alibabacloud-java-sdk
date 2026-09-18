@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSupabaseProjectRequest extends TeaModel {
     /**
-     * <p>The Supabase instance ID. You can obtain the ID from the Supabase page in the console.</p>
+     * <p>The Supabase instance ID. You can obtain this value from the Supabase page in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

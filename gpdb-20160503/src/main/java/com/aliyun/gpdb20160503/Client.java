@@ -15693,11 +15693,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is not available for instances in reserved storage mode.
-     * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see <a href="https://help.aliyun.com/document_detail/35406.html">Billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">AnalyticDB for PostgreSQL pricing</a>.</p>
+     * <p>This operation does not support instances in storage reservation mode.
+     * Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the specifications of coordinator node resources for an AnalyticDB for PostgreSQL instance.</p>
+     * <p>Modifies the master node specifications.</p>
      * 
      * @param request ModifyMasterSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15712,6 +15712,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
             query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveTime)) {
+            query.put("EffectiveTime", request.effectiveTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.masterAISpec)) {
@@ -15745,11 +15749,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is not available for instances in reserved storage mode.
-     * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see <a href="https://help.aliyun.com/document_detail/35406.html">Billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">AnalyticDB for PostgreSQL pricing</a>.</p>
+     * <p>This operation does not support instances in storage reservation mode.
+     * Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the specifications of coordinator node resources for an AnalyticDB for PostgreSQL instance.</p>
+     * <p>Modifies the master node specifications.</p>
      * 
      * @param request ModifyMasterSpecRequest
      * @return ModifyMasterSpecResponse
@@ -16338,11 +16342,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Only ADBPG Supabase instances are supported.</li>
+     * <li>Only AnalyticDB for PostgreSQL Supabase instances are supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the automatic start and stop policy for a Supabase instance.</p>
+     * <p>Modifies the auto start/stop policy for a Supabase instance.</p>
      * 
      * @param request ModifySupabaseAutoScalePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16387,11 +16391,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Only ADBPG Supabase instances are supported.</li>
+     * <li>Only AnalyticDB for PostgreSQL Supabase instances are supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the automatic start and stop policy for a Supabase instance.</p>
+     * <p>Modifies the auto start/stop policy for a Supabase instance.</p>
      * 
      * @param request ModifySupabaseAutoScalePolicyRequest
      * @return ModifySupabaseAutoScalePolicyResponse
@@ -19374,6 +19378,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBInstanceId", request.DBInstanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveTime)) {
+            query.put("EffectiveTime", request.effectiveTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceSpec)) {
             query.put("InstanceSpec", request.instanceSpec);
         }
@@ -19457,7 +19465,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrades the minor version of an AnalyticDB for PostgreSQL instance.</p>
+     * <p>Upgrades the minor engine version of a specified AnalyticDB for PostgreSQL instance.</p>
      * 
      * @param request UpgradeDBVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19468,6 +19476,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
             query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveTime)) {
+            query.put("EffectiveTime", request.effectiveTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.majorVersion)) {
@@ -19513,7 +19525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrades the minor version of an AnalyticDB for PostgreSQL instance.</p>
+     * <p>Upgrades the minor engine version of a specified AnalyticDB for PostgreSQL instance.</p>
      * 
      * @param request UpgradeDBVersionRequest
      * @return UpgradeDBVersionResponse
