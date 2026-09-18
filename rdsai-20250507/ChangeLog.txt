@@ -1,3 +1,7 @@
+2026-09-18 Version: 3.9.4
+- Update API ModifyMessagesFeedbacks: add request parameters WorkspaceId.
+
+
 2026-09-16 Version: 3.9.3
 - Update API ChatMessages: add request parameters Inputs.ResumeCallId.
 - Update API ChatMessages: add request parameters Inputs.ToolApprovalMode.

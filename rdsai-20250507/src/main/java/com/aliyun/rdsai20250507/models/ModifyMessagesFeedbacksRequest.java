@@ -31,6 +31,15 @@ public class ModifyMessagesFeedbacksRequest extends TeaModel {
     @NameInMap("Rating")
     public String rating;
 
+    /**
+     * <p>The ContextDB workspace ID. Required only for ContextDB Manager App requests.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00000000-0000-4000-8000-000000000001</p>
+     */
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
     public static ModifyMessagesFeedbacksRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyMessagesFeedbacksRequest self = new ModifyMessagesFeedbacksRequest();
         return TeaModel.build(map, self);
@@ -58,6 +67,14 @@ public class ModifyMessagesFeedbacksRequest extends TeaModel {
     }
     public String getRating() {
         return this.rating;
+    }
+
+    public ModifyMessagesFeedbacksRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }
