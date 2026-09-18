@@ -4,10 +4,15 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class ListKnowledgeFilesResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListKnowledgeFilesResponseBodyData data;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
@@ -37,6 +42,8 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
 
     public static class ListKnowledgeFilesResponseBodyDataFiles extends TeaModel {
         /**
+         * <p>The time when the file was added to the knowledge base.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-06-09 10:27:35</p>
          */
@@ -44,6 +51,8 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>The ID of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>137</p>
          */
@@ -51,6 +60,8 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
         public Long fileId;
 
         /**
+         * <p>The size of the file, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1024</p>
          */
@@ -58,6 +69,8 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
         public Long fileSizeBytes;
 
         /**
+         * <p>The Object Storage Service (OSS) URL of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://bucketName/path/to/file</p>
          */
@@ -65,6 +78,8 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>The format of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>mp4</p>
          */
@@ -72,6 +87,8 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
         public String format;
 
         /**
+         * <p>Indicates whether the file is a directory.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -79,6 +96,8 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
         public Boolean isDirectory;
 
         /**
+         * <p>The file_id of the content host.</p>
+         * 
          * <strong>example:</strong>
          * <p>122</p>
          */
@@ -86,6 +105,8 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
         public Long ownerFileId;
 
         /**
+         * <p>The total number of pages in the file, such as the number of pages in a PDF file.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -93,6 +114,8 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
         public Integer pageCount;
 
         /**
+         * <p>The processing message of the knowledge base file.</p>
+         * 
          * <strong>example:</strong>
          * <p>successful</p>
          */
@@ -100,6 +123,14 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
         public String processMessage;
 
         /**
+         * <p>The status of the file in the knowledge base. Valid values:</p>
+         * <ul>
+         * <li><p>Processing: The file is being processed.</p>
+         * </li>
+         * <li><p>Finished: The file has been processed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Finished</p>
          */
@@ -107,6 +138,8 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
         public String processStatus;
 
         /**
+         * <p>The time when the file was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-06-10 10:23:46</p>
          */
@@ -209,10 +242,15 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
     }
 
     public static class ListKnowledgeFilesResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of file information.</p>
+         */
         @NameInMap("Files")
         public java.util.List<ListKnowledgeFilesResponseBodyDataFiles> files;
 
         /**
+         * <p>The message returned by the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>Successful</p>
          */
@@ -220,6 +258,8 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -227,6 +267,8 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
         public Integer page;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -234,6 +276,12 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -241,6 +289,8 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
         public Boolean success;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

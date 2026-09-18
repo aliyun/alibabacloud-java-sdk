@@ -11,7 +11,7 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public String atmConfigShrink;
 
     /**
-     * <p>The auto-stop interval, in minutes (m).</p>
+     * <p>The automatic stop interval, in minutes (m).</p>
      * 
      * <strong>example:</strong>
      * <p>5m</p>
@@ -102,7 +102,7 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public String engineParamsShrink;
 
     /**
-     * <p>The GPU time-based elastic plan.</p>
+     * <p>The GPU time-sharing elastic plan.</p>
      */
     @NameInMap("GpuElasticPlan")
     public String gpuElasticPlanShrink;
@@ -127,7 +127,7 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
      * <ul>
      * <li><strong>Interactive</strong></li>
      * <li><strong>Job</strong><blockquote>
-     * <p>For more information about Data Lakehouse Edition resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Introduction to resource groups (Data Lakehouse Edition)</a>.</p>
+     * <p>For more information about Data Lakehouse Edition resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview (Data Lakehouse Edition)</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -153,8 +153,8 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     /**
      * <p>The maximum reserved computing resources, in ACUs.</p>
      * <ul>
-     * <li>If the resource group type is Interactive, the maximum reserved computing resources are the unallocated resources of the cluster, in increments of 16 ACUs.</li>
-     * <li>If the resource group type is Job, the maximum reserved computing resources are the unallocated resources of the cluster, in increments of 8 ACUs.</li>
+     * <li>If the resource group type is Interactive, the maximum reserved computing resources are the current unallocated resources of the cluster, in increments of 16 ACUs.</li>
+     * <li>If the resource group type is Job, the maximum reserved computing resources are the current unallocated resources of the cluster, in increments of 8 ACUs.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -235,9 +235,9 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     /**
      * <p>The scaling policy of the resource group. Valid values:</p>
      * <ul>
-     * <li>AutoScaling: enables the AutoScaling auto-scaling policy.</li>
-     * <li>Disable: disables auto-scaling.</li>
-     * <li>MultiCluster: enables the MultiCluster auto-scaling policy.</li>
+     * <li>AutoScaling: enables the AutoScaling automatic scaling policy.</li>
+     * <li>Disable: disables automatic scaling.</li>
+     * <li>MultiCluster: enables the MultiCluster automatic scaling policy.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -256,7 +256,7 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public String specName;
 
     /**
-     * <p>The name of the destination resource group.</p>
+     * <p>The name of the target resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
