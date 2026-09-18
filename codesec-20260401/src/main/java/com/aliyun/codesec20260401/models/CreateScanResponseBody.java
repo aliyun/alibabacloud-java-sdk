@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateScanResponseBody extends TeaModel {
     /**
+     * <p>The code package ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>111</p>
      */
@@ -12,6 +14,8 @@ public class CreateScanResponseBody extends TeaModel {
     public Long codeBundleId;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-27T00:53:46.774Z</p>
      */
@@ -19,16 +23,23 @@ public class CreateScanResponseBody extends TeaModel {
     public String createdAt;
 
     /**
+     * <p>The user ID of the task creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>3221</p>
      */
     @NameInMap("createdBy")
     public String createdBy;
 
+    /**
+     * <p>The supported types.</p>
+     */
     @NameInMap("engineSnapshot")
     public CreateScanResponseBodyEngineSnapshot engineSnapshot;
 
     /**
+     * <p>The scan end time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-27T00:53:46.774Z</p>
      */
@@ -36,6 +47,8 @@ public class CreateScanResponseBody extends TeaModel {
     public String finishedAt;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>111</p>
      */
@@ -43,6 +56,12 @@ public class CreateScanResponseBody extends TeaModel {
     public Long id;
 
     /**
+     * <p>The type. Valid values:</p>
+     * <ul>
+     * <li>full: full data</li>
+     * <li>incremental: incremental</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>full</p>
      */
@@ -50,6 +69,8 @@ public class CreateScanResponseBody extends TeaModel {
     public String kind;
 
     /**
+     * <p>The project ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>11</p>
      */
@@ -57,16 +78,23 @@ public class CreateScanResponseBody extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9A1F403F-0A85-5578-8B7C-55E3E9408659</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The scan information.</p>
+     */
     @NameInMap("scanMetrics")
     public CreateScanResponseBodyScanMetrics scanMetrics;
 
     /**
+     * <p>The task progress.</p>
+     * 
      * <strong>example:</strong>
      * <p>40</p>
      */
@@ -74,6 +102,8 @@ public class CreateScanResponseBody extends TeaModel {
     public Long scanProgress;
 
     /**
+     * <p>The start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-27T00:53:46.774Z</p>
      */
@@ -81,6 +111,15 @@ public class CreateScanResponseBody extends TeaModel {
     public String startedAt;
 
     /**
+     * <p>The status. Valid values:</p>
+     * <ul>
+     * <li>running: Running.</li>
+     * <li>completed: Completed.</li>
+     * <li>failed: Failed.</li>
+     * <li>canceling: Being canceled.</li>
+     * <li>canceled: Canceled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>running</p>
      */
@@ -88,6 +127,8 @@ public class CreateScanResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The task name.</p>
+     * 
      * <strong>example:</strong>
      * <p>name</p>
      */
@@ -95,6 +136,8 @@ public class CreateScanResponseBody extends TeaModel {
     public String taskName;
 
     /**
+     * <p>The update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-27T00:53:46.774Z</p>
      */
@@ -102,6 +145,8 @@ public class CreateScanResponseBody extends TeaModel {
     public String updatedAt;
 
     /**
+     * <p>Deprecated.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -243,6 +288,8 @@ public class CreateScanResponseBody extends TeaModel {
 
     public static class CreateScanResponseBodyEngineSnapshot extends TeaModel {
         /**
+         * <p>Indicates whether SAST is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -250,6 +297,8 @@ public class CreateScanResponseBody extends TeaModel {
         public Boolean sast;
 
         /**
+         * <p>Indicates whether SCA is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -281,6 +330,8 @@ public class CreateScanResponseBody extends TeaModel {
 
     public static class CreateScanResponseBodyScanMetrics extends TeaModel {
         /**
+         * <p>The number of files.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -288,6 +339,8 @@ public class CreateScanResponseBody extends TeaModel {
         public Long fileCount;
 
         /**
+         * <p>The number of lines of code.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -295,6 +348,8 @@ public class CreateScanResponseBody extends TeaModel {
         public Long linesOfCode;
 
         /**
+         * <p>Deprecated.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */

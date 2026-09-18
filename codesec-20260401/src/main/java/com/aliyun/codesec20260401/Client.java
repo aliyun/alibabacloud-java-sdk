@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Finalize code bundle after client PUT to OSS</p>
+     * <p>Finalizes a code bundle after the client completes an OSS PUT operation. This operation validates the uploaded object and sets the code bundle status to ready. If CI metadata that triggers an automatic scan was provided during creation, a scanId is returned.</p>
      * 
      * @param request CompleteCodeBundleRequest
      * @param headers map
@@ -66,7 +66,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Finalize code bundle after client PUT to OSS</p>
+     * <p>Finalizes a code bundle after the client completes an OSS PUT operation. This operation validates the uploaded object and sets the code bundle status to ready. If CI metadata that triggers an automatic scan was provided during creation, a scanId is returned.</p>
      * 
      * @param request CompleteCodeBundleRequest
      * @return CompleteCodeBundleResponse
@@ -79,7 +79,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create pending code bundle with CI metadata and issue direct-to-OSS PUT credentials</p>
+     * <p>Creates a function code package in pending status and returns a pre-signed OSS PUT upload credential.</p>
      * 
      * @param request CreateCodeBundleRequest
      * @param headers map
@@ -117,7 +117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create pending code bundle with CI metadata and issue direct-to-OSS PUT credentials</p>
+     * <p>Creates a function code package in pending status and returns a pre-signed OSS PUT upload credential.</p>
      * 
      * @param request CreateCodeBundleRequest
      * @return CreateCodeBundleResponse
@@ -130,7 +130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create project</p>
+     * <p>Creates a project.</p>
      * 
      * @param tmpReq CreateProjectRequest
      * @param headers map
@@ -190,7 +190,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create project</p>
+     * <p>Creates a project.</p>
      * 
      * @param request CreateProjectRequest
      * @return CreateProjectResponse
@@ -203,7 +203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create scan</p>
+     * <p>Creates a scan task based on a code package that is ready.</p>
      * 
      * @param request CreateScanRequest
      * @param headers map
@@ -245,7 +245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create scan</p>
+     * <p>Creates a scan task based on a code package that is ready.</p>
      * 
      * @param request CreateScanRequest
      * @return CreateScanResponse
@@ -258,7 +258,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists projects under the current tenant with pagination. Supports fuzzy match by name or prompt.</p>
+     * <p>生成 SBOM / 许可证清单的短时下载链接</p>
+     * 
+     * @param request CreateScanSbomExportRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateScanSbomExportResponse
+     */
+    public CreateScanSbomExportResponse createScanSbomExportWithOptions(String projectId, String scanId, CreateScanSbomExportRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            query.put("fileName", request.fileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.format)) {
+            query.put("format", request.format);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateScanSbomExport"),
+            new TeaPair("version", "2026-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/projects/" + com.aliyun.openapiutil.Client.getEncodeParam(projectId) + "/scans/" + com.aliyun.openapiutil.Client.getEncodeParam(scanId) + "/reports/sbomExports"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateScanSbomExportResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>生成 SBOM / 许可证清单的短时下载链接</p>
+     * 
+     * @param request CreateScanSbomExportRequest
+     * @return CreateScanSbomExportResponse
+     */
+    public CreateScanSbomExportResponse createScanSbomExport(String projectId, String scanId, CreateScanSbomExportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createScanSbomExportWithOptions(projectId, scanId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists projects under a tenant by page, with support for fuzzy search by name or prompt.</p>
      * 
      * @param request DescribeProjectsRequest
      * @param headers map
@@ -308,7 +359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists projects under the current tenant with pagination. Supports fuzzy match by name or prompt.</p>
+     * <p>Lists projects under a tenant by page, with support for fuzzy search by name or prompt.</p>
      * 
      * @param request DescribeProjectsRequest
      * @return DescribeProjectsResponse
@@ -321,7 +372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get scan</p>
+     * <p>Queries the details of a scan task.</p>
      * 
      * @param request DescribeScanRequest
      * @param headers map
@@ -349,7 +400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get scan</p>
+     * <p>Queries the details of a scan task.</p>
      * 
      * @param request DescribeScanRequest
      * @return DescribeScanResponse
@@ -362,7 +413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the task result list to retrieve detailed SAST or SCA results for a specific scan.</p>
+     * <p>Queries the task result list to retrieve detailed SAST or SCA results of a specific scan.</p>
      * 
      * @param request DescribeScanResultsByEngineRequest
      * @param headers map
@@ -412,7 +463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the task result list to retrieve detailed SAST or SCA results for a specific scan.</p>
+     * <p>Queries the task result list to retrieve detailed SAST or SCA results of a specific scan.</p>
      * 
      * @param request DescribeScanResultsByEngineRequest
      * @return DescribeScanResultsByEngineResponse

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateProjectResponseBody extends TeaModel {
     /**
+     * <p>The project configuration version number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class CreateProjectResponseBody extends TeaModel {
     public Long configRevision;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-27T00:53:46.774Z</p>
      */
@@ -19,6 +23,8 @@ public class CreateProjectResponseBody extends TeaModel {
     public String createdAt;
 
     /**
+     * <p>The user ID of the project creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>3221</p>
      */
@@ -26,16 +32,23 @@ public class CreateProjectResponseBody extends TeaModel {
     public String createdBy;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>This is default function description by fc-deploy component</p>
      */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The engine switches for the project or scan snapshot. Only SAST and SCA are supported.</p>
+     */
     @NameInMap("engines")
     public CreateProjectResponseBodyEngines engines;
 
     /**
+     * <p>The project ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>111</p>
      */
@@ -43,6 +56,8 @@ public class CreateProjectResponseBody extends TeaModel {
     public Long id;
 
     /**
+     * <p>The natural language prompt that describes scanning or result processing preferences, such as ignoring low-risk vulnerabilities.</p>
+     * 
      * <strong>example:</strong>
      * <p>such as ignoring low-severity vulnerabilities, etc.</p>
      */
@@ -50,6 +65,8 @@ public class CreateProjectResponseBody extends TeaModel {
     public String instructionPrompt;
 
     /**
+     * <p>The project name.</p>
+     * 
      * <strong>example:</strong>
      * <p>name</p>
      */
@@ -57,16 +74,23 @@ public class CreateProjectResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9A1F403F-0A85-5578-8B7C-55E3E9408659</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The project source.</p>
+     */
     @NameInMap("source")
     public CreateProjectResponseBodySource source;
 
     /**
+     * <p>The update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-27T00:53:46.774Z</p>
      */
@@ -168,6 +192,8 @@ public class CreateProjectResponseBody extends TeaModel {
 
     public static class CreateProjectResponseBodyEngines extends TeaModel {
         /**
+         * <p>Specifies whether SAST is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -175,6 +201,8 @@ public class CreateProjectResponseBody extends TeaModel {
         public Boolean sast;
 
         /**
+         * <p>Specifies whether SCA is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -206,6 +234,8 @@ public class CreateProjectResponseBody extends TeaModel {
 
     public static class CreateProjectResponseBodySource extends TeaModel {
         /**
+         * <p>The project type.</p>
+         * 
          * <strong>example:</strong>
          * <p>api</p>
          */

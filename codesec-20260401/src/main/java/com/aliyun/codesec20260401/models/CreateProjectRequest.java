@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateProjectRequest extends TeaModel {
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>This is default function description by fc-deploy component</p>
      */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The engine switches for the project or scan snapshot. Only SAST and SCA are supported.</p>
+     */
     @NameInMap("engines")
     public CreateProjectRequestEngines engines;
 
     /**
+     * <p>The natural language prompt that describes scanning or result processing preferences, such as ignoring low-risk vulnerabilities.</p>
+     * 
      * <strong>example:</strong>
      * <p>such as ignoring low-severity vulnerabilities, etc.</p>
      */
@@ -22,6 +29,7 @@ public class CreateProjectRequest extends TeaModel {
     public String instructionPrompt;
 
     /**
+     * <p>The project name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +38,9 @@ public class CreateProjectRequest extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The project source.</p>
+     */
     @NameInMap("source")
     public CreateProjectRequestSource source;
 
@@ -78,8 +89,54 @@ public class CreateProjectRequest extends TeaModel {
         return this.source;
     }
 
+    public static class CreateProjectRequestEnginesSastConfig extends TeaModel {
+        /**
+         * <p>Specifies whether to generate remediation suggestions.</p>
+         */
+        @NameInMap("remediation")
+        public Boolean remediation;
+
+        public static CreateProjectRequestEnginesSastConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateProjectRequestEnginesSastConfig self = new CreateProjectRequestEnginesSastConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateProjectRequestEnginesSastConfig setRemediation(Boolean remediation) {
+            this.remediation = remediation;
+            return this;
+        }
+        public Boolean getRemediation() {
+            return this.remediation;
+        }
+
+    }
+
+    public static class CreateProjectRequestEnginesScaConfig extends TeaModel {
+        /**
+         * <p>Specifies whether to generate remediation suggestions.</p>
+         */
+        @NameInMap("remediation")
+        public Boolean remediation;
+
+        public static CreateProjectRequestEnginesScaConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateProjectRequestEnginesScaConfig self = new CreateProjectRequestEnginesScaConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateProjectRequestEnginesScaConfig setRemediation(Boolean remediation) {
+            this.remediation = remediation;
+            return this;
+        }
+        public Boolean getRemediation() {
+            return this.remediation;
+        }
+
+    }
+
     public static class CreateProjectRequestEngines extends TeaModel {
         /**
+         * <p>Specifies whether SAST is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -87,11 +144,25 @@ public class CreateProjectRequest extends TeaModel {
         public Boolean sast;
 
         /**
+         * <p>The engine-level configuration.</p>
+         */
+        @NameInMap("sastConfig")
+        public CreateProjectRequestEnginesSastConfig sastConfig;
+
+        /**
+         * <p>Specifies whether SCA is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("sca")
         public Boolean sca;
+
+        /**
+         * <p>The engine-level configuration.</p>
+         */
+        @NameInMap("scaConfig")
+        public CreateProjectRequestEnginesScaConfig scaConfig;
 
         public static CreateProjectRequestEngines build(java.util.Map<String, ?> map) throws Exception {
             CreateProjectRequestEngines self = new CreateProjectRequestEngines();
@@ -106,6 +177,14 @@ public class CreateProjectRequest extends TeaModel {
             return this.sast;
         }
 
+        public CreateProjectRequestEngines setSastConfig(CreateProjectRequestEnginesSastConfig sastConfig) {
+            this.sastConfig = sastConfig;
+            return this;
+        }
+        public CreateProjectRequestEnginesSastConfig getSastConfig() {
+            return this.sastConfig;
+        }
+
         public CreateProjectRequestEngines setSca(Boolean sca) {
             this.sca = sca;
             return this;
@@ -114,10 +193,20 @@ public class CreateProjectRequest extends TeaModel {
             return this.sca;
         }
 
+        public CreateProjectRequestEngines setScaConfig(CreateProjectRequestEnginesScaConfig scaConfig) {
+            this.scaConfig = scaConfig;
+            return this;
+        }
+        public CreateProjectRequestEnginesScaConfig getScaConfig() {
+            return this.scaConfig;
+        }
+
     }
 
     public static class CreateProjectRequestSource extends TeaModel {
         /**
+         * <p>The project type.</p>
+         * 
          * <strong>example:</strong>
          * <p>api</p>
          */

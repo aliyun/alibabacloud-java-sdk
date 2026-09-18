@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateScanRequest extends TeaModel {
     /**
+     * <p>The code package ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class CreateScanRequest extends TeaModel {
     public Long codeBundleId;
 
     /**
+     * <p>The type. Valid values:</p>
+     * <ul>
+     * <li>full: full data</li>
+     * <li>incremental: incremental</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +29,7 @@ public class CreateScanRequest extends TeaModel {
     public String kind;
 
     /**
+     * <p>The task name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateProjectShrinkRequest extends TeaModel {
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>This is default function description by fc-deploy component</p>
      */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The engine switches for the project or scan snapshot. Only SAST and SCA are supported.</p>
+     */
     @NameInMap("engines")
     public String enginesShrink;
 
     /**
+     * <p>The natural language prompt that describes scanning or result processing preferences, such as ignoring low-risk vulnerabilities.</p>
+     * 
      * <strong>example:</strong>
      * <p>such as ignoring low-severity vulnerabilities, etc.</p>
      */
@@ -22,6 +29,7 @@ public class CreateProjectShrinkRequest extends TeaModel {
     public String instructionPrompt;
 
     /**
+     * <p>The project name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +38,9 @@ public class CreateProjectShrinkRequest extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The project source.</p>
+     */
     @NameInMap("source")
     public String sourceShrink;
 

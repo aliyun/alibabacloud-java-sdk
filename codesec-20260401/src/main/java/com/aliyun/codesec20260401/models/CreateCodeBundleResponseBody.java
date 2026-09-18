@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCodeBundleResponseBody extends TeaModel {
     /**
+     * <p>The version identifier of the function code package.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class CreateCodeBundleResponseBody extends TeaModel {
     public String bundleVersion;
 
     /**
+     * <p>The function code package ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>111</p>
      */
@@ -19,7 +23,7 @@ public class CreateCodeBundleResponseBody extends TeaModel {
     public Long codeBundleId;
 
     /**
-     * <p>代码包创建时间（RFC3339）</p>
+     * <p>The time when the function code package was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-08-27T00:53:46.774Z</p>
@@ -28,6 +32,8 @@ public class CreateCodeBundleResponseBody extends TeaModel {
     public String createdAt;
 
     /**
+     * <p>The file name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-cases.zip</p>
      */
@@ -35,6 +41,8 @@ public class CreateCodeBundleResponseBody extends TeaModel {
     public String filename;
 
     /**
+     * <p>The project ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -42,6 +50,8 @@ public class CreateCodeBundleResponseBody extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9A1F403F-0A85-5578-8B7C-55E3E9408659</p>
      */
@@ -49,6 +59,8 @@ public class CreateCodeBundleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the function code package.</p>
+     * 
      * <strong>example:</strong>
      * <p>pending</p>
      */
@@ -56,7 +68,7 @@ public class CreateCodeBundleResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>代码包更新时间（RFC3339）</p>
+     * <p>The time when the function code package was last updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-08-27T00:53:46.774Z</p>
@@ -64,6 +76,9 @@ public class CreateCodeBundleResponseBody extends TeaModel {
     @NameInMap("updatedAt")
     public String updatedAt;
 
+    /**
+     * <p>The upload credential. See the following fields for details.</p>
+     */
     @NameInMap("upload")
     public CreateCodeBundleResponseBodyUpload upload;
 
@@ -146,7 +161,7 @@ public class CreateCodeBundleResponseBody extends TeaModel {
 
     public static class CreateCodeBundleResponseBodyUpload extends TeaModel {
         /**
-         * <p>凭证过期时间（RFC3339）</p>
+         * <p>The expiration time of the credential in RFC 3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-03T05:58:47.88987539Z</p>
@@ -155,7 +170,7 @@ public class CreateCodeBundleResponseBody extends TeaModel {
         public String expiresAt;
 
         /**
-         * <p>HTTP method for the presigned URL.</p>
+         * <p>The HTTP method of the pre-signed URL. Valid values: PUT.</p>
          * 
          * <strong>example:</strong>
          * <p>PUT</p>
@@ -164,7 +179,7 @@ public class CreateCodeBundleResponseBody extends TeaModel {
         public String method;
 
         /**
-         * <p>Presigned OSS PUT URL.</p>
+         * <p>The pre-signed OSS PUT upload URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://codesec-beijing.oss-cn-beijing.aliyuncs.com/87766767%2F1001667%2F1004171.zip">https://codesec-beijing.oss-cn-beijing.aliyuncs.com/87766767%2F1001667%2F1004171.zip</a></p>
@@ -173,7 +188,7 @@ public class CreateCodeBundleResponseBody extends TeaModel {
         public String putUrl;
 
         /**
-         * <p>Clients MUST send this <strong><code>Content-Type</code></strong> on PUT when <strong><code>put_url</code></strong> is set.</p>
+         * <p>The Content-Type header that the client must include when performing the PUT request. This field is returned when putUrl is present.</p>
          * 
          * <strong>example:</strong>
          * <p>application/octet-stream</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeScanResponseBody extends TeaModel {
     /**
+     * <p>The function code package ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>111</p>
      */
@@ -12,6 +14,8 @@ public class DescribeScanResponseBody extends TeaModel {
     public Long codeBundleId;
 
     /**
+     * <p>The time when the task was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-27T00:53:46.774Z</p>
      */
@@ -19,6 +23,8 @@ public class DescribeScanResponseBody extends TeaModel {
     public String createdAt;
 
     /**
+     * <p>The user ID of the task creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>3221</p>
      */
@@ -26,16 +32,30 @@ public class DescribeScanResponseBody extends TeaModel {
     public String createdBy;
 
     /**
+     * <p>The scan phase. Valid values:</p>
+     * <ul>
+     * <li>threat_model: threat modeling.</li>
+     * <li>discovery: vulnerability discovery.</li>
+     * <li>panel: vulnerability review.</li>
+     * <li>adversarial: adversarial verification.</li>
+     * <li>finalize: report compilation.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>discovery</p>
      */
     @NameInMap("currentPhase")
     public String currentPhase;
 
+    /**
+     * <p>The supported engine types.</p>
+     */
     @NameInMap("engineSnapshot")
     public DescribeScanResponseBodyEngineSnapshot engineSnapshot;
 
     /**
+     * <p>The time when the scan finished.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-27T00:53:46.774Z</p>
      */
@@ -43,6 +63,8 @@ public class DescribeScanResponseBody extends TeaModel {
     public String finishedAt;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>111</p>
      */
@@ -50,6 +72,12 @@ public class DescribeScanResponseBody extends TeaModel {
     public Long id;
 
     /**
+     * <p>The scan type. Valid values:</p>
+     * <ul>
+     * <li>full: full</li>
+     * <li>incremental: incremental</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>full</p>
      */
@@ -57,6 +85,8 @@ public class DescribeScanResponseBody extends TeaModel {
     public String kind;
 
     /**
+     * <p>The project ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1111</p>
      */
@@ -64,16 +94,23 @@ public class DescribeScanResponseBody extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9A1F403F-0A85-5578-8B7C-55E3E9408659</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The scan results.</p>
+     */
     @NameInMap("scanMetrics")
     public DescribeScanResponseBodyScanMetrics scanMetrics;
 
     /**
+     * <p>The task progress.</p>
+     * 
      * <strong>example:</strong>
      * <p>40</p>
      */
@@ -81,6 +118,8 @@ public class DescribeScanResponseBody extends TeaModel {
     public Long scanProgress;
 
     /**
+     * <p><strong>[Deprecated]</strong> This parameter is no longer used.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -88,6 +127,8 @@ public class DescribeScanResponseBody extends TeaModel {
     public Float securityCredits;
 
     /**
+     * <p>The time when the task started.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-27T00:53:46.774Z</p>
      */
@@ -95,6 +136,15 @@ public class DescribeScanResponseBody extends TeaModel {
     public String startedAt;
 
     /**
+     * <p>The task status. Valid values:</p>
+     * <ul>
+     * <li>running: Running.</li>
+     * <li>completed: Completed.</li>
+     * <li>failed: Failed.</li>
+     * <li>canceling: Being canceled.</li>
+     * <li>canceled: Canceled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>completed</p>
      */
@@ -102,6 +152,8 @@ public class DescribeScanResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The task name.</p>
+     * 
      * <strong>example:</strong>
      * <p>name</p>
      */
@@ -109,6 +161,8 @@ public class DescribeScanResponseBody extends TeaModel {
     public String taskName;
 
     /**
+     * <p>The time when the task was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-27T00:53:46.774Z</p>
      */
@@ -116,6 +170,8 @@ public class DescribeScanResponseBody extends TeaModel {
     public String updatedAt;
 
     /**
+     * <p><strong>[Deprecated]</strong> This parameter is no longer used.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -273,6 +329,8 @@ public class DescribeScanResponseBody extends TeaModel {
 
     public static class DescribeScanResponseBodyEngineSnapshot extends TeaModel {
         /**
+         * <p>Indicates whether Static Application Security Testing (SAST) is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -280,6 +338,8 @@ public class DescribeScanResponseBody extends TeaModel {
         public Boolean sast;
 
         /**
+         * <p>Indicates whether Software Composition Analysis (SCA) is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -311,6 +371,8 @@ public class DescribeScanResponseBody extends TeaModel {
 
     public static class DescribeScanResponseBodyScanMetrics extends TeaModel {
         /**
+         * <p>The number of credits consumed by the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -318,6 +380,8 @@ public class DescribeScanResponseBody extends TeaModel {
         public Float credit;
 
         /**
+         * <p>The number of files.</p>
+         * 
          * <strong>example:</strong>
          * <p>73894</p>
          */
@@ -325,6 +389,8 @@ public class DescribeScanResponseBody extends TeaModel {
         public Long fileCount;
 
         /**
+         * <p>The number of lines of code.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -332,6 +398,8 @@ public class DescribeScanResponseBody extends TeaModel {
         public Long linesOfCode;
 
         /**
+         * <p><strong>[Deprecated]</strong> This parameter is no longer used.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

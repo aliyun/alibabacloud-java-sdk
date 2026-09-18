@@ -32,7 +32,7 @@ public class DescribeProjectsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The unique request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9A1F403F-0A85-5578-8B7C-55E3E9408659</p>
@@ -94,9 +94,53 @@ public class DescribeProjectsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeProjectsResponseBodyItemsEnginesSastConfig extends TeaModel {
+        /**
+         * <p>Specifies whether to generate remediation suggestions.</p>
+         */
+        @NameInMap("remediation")
+        public Boolean remediation;
+
+        public static DescribeProjectsResponseBodyItemsEnginesSastConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeProjectsResponseBodyItemsEnginesSastConfig self = new DescribeProjectsResponseBodyItemsEnginesSastConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeProjectsResponseBodyItemsEnginesSastConfig setRemediation(Boolean remediation) {
+            this.remediation = remediation;
+            return this;
+        }
+        public Boolean getRemediation() {
+            return this.remediation;
+        }
+
+    }
+
+    public static class DescribeProjectsResponseBodyItemsEnginesScaConfig extends TeaModel {
+        /**
+         * <p>Specifies whether to generate remediation suggestions.</p>
+         */
+        @NameInMap("remediation")
+        public Boolean remediation;
+
+        public static DescribeProjectsResponseBodyItemsEnginesScaConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeProjectsResponseBodyItemsEnginesScaConfig self = new DescribeProjectsResponseBodyItemsEnginesScaConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeProjectsResponseBodyItemsEnginesScaConfig setRemediation(Boolean remediation) {
+            this.remediation = remediation;
+            return this;
+        }
+        public Boolean getRemediation() {
+            return this.remediation;
+        }
+
+    }
+
     public static class DescribeProjectsResponseBodyItemsEngines extends TeaModel {
         /**
-         * <p>Indicates whether SAST is enabled.</p>
+         * <p>Indicates whether SAST is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -105,13 +149,25 @@ public class DescribeProjectsResponseBody extends TeaModel {
         public Boolean sast;
 
         /**
-         * <p>Indicates whether SCA is enabled.</p>
+         * <p>The engine-level configuration.</p>
+         */
+        @NameInMap("sastConfig")
+        public DescribeProjectsResponseBodyItemsEnginesSastConfig sastConfig;
+
+        /**
+         * <p>Indicates whether SCA is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("sca")
         public Boolean sca;
+
+        /**
+         * <p>The engine-level configuration.</p>
+         */
+        @NameInMap("scaConfig")
+        public DescribeProjectsResponseBodyItemsEnginesScaConfig scaConfig;
 
         public static DescribeProjectsResponseBodyItemsEngines build(java.util.Map<String, ?> map) throws Exception {
             DescribeProjectsResponseBodyItemsEngines self = new DescribeProjectsResponseBodyItemsEngines();
@@ -126,12 +182,28 @@ public class DescribeProjectsResponseBody extends TeaModel {
             return this.sast;
         }
 
+        public DescribeProjectsResponseBodyItemsEngines setSastConfig(DescribeProjectsResponseBodyItemsEnginesSastConfig sastConfig) {
+            this.sastConfig = sastConfig;
+            return this;
+        }
+        public DescribeProjectsResponseBodyItemsEnginesSastConfig getSastConfig() {
+            return this.sastConfig;
+        }
+
         public DescribeProjectsResponseBodyItemsEngines setSca(Boolean sca) {
             this.sca = sca;
             return this;
         }
         public Boolean getSca() {
             return this.sca;
+        }
+
+        public DescribeProjectsResponseBodyItemsEngines setScaConfig(DescribeProjectsResponseBodyItemsEnginesScaConfig scaConfig) {
+            this.scaConfig = scaConfig;
+            return this;
+        }
+        public DescribeProjectsResponseBodyItemsEnginesScaConfig getScaConfig() {
+            return this.scaConfig;
         }
 
     }
@@ -172,7 +244,7 @@ public class DescribeProjectsResponseBody extends TeaModel {
         public Long configRevision;
 
         /**
-         * <p>The time when the project was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-07-28T03:36:31.573Z</p>
@@ -199,7 +271,7 @@ public class DescribeProjectsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The engine switches for the project or scan snapshot. Only SAST and SCA are supported.</p>
+         * <p>The engine switches in the project or scan snapshot. Only SAST and SCA are supported.</p>
          */
         @NameInMap("engines")
         public DescribeProjectsResponseBodyItemsEngines engines;
@@ -214,7 +286,7 @@ public class DescribeProjectsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The natural language prompt provided by the user that describes scanning or result processing preferences, such as ignoring low-risk vulnerabilities.</p>
+         * <p>The natural language prompt provided by the user that describes scanning or result processing preferences, such as ignoring low-severity vulnerabilities.</p>
          * 
          * <strong>example:</strong>
          * <p>1111</p>
@@ -247,7 +319,7 @@ public class DescribeProjectsResponseBody extends TeaModel {
         public DescribeProjectsResponseBodyItemsSource source;
 
         /**
-         * <p>The time when the project was last updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-07-28T03:36:31.573Z</p>

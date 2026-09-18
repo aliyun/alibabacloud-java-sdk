@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CompleteCodeBundleResponseBody extends TeaModel {
     /**
+     * <p>The code bundle version identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class CompleteCodeBundleResponseBody extends TeaModel {
     public String bundleVersion;
 
     /**
+     * <p>The object size.</p>
+     * 
      * <strong>example:</strong>
      * <p>111</p>
      */
@@ -19,6 +23,8 @@ public class CompleteCodeBundleResponseBody extends TeaModel {
     public Long byteSize;
 
     /**
+     * <p>The code bundle ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>111</p>
      */
@@ -26,6 +32,8 @@ public class CompleteCodeBundleResponseBody extends TeaModel {
     public Long codeBundleId;
 
     /**
+     * <p>The MIME type of the stored code bundle. This is typically application/octet-stream for pre-signed PUT operations.</p>
+     * 
      * <strong>example:</strong>
      * <p>application/octet-stream</p>
      */
@@ -33,7 +41,7 @@ public class CompleteCodeBundleResponseBody extends TeaModel {
     public String contentType;
 
     /**
-     * <p>代码包创建时间（RFC3339）</p>
+     * <p>The time when the record was created, in RFC 3339 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-08-27T00:53:46.774Z</p>
@@ -42,6 +50,8 @@ public class CompleteCodeBundleResponseBody extends TeaModel {
     public String createdAt;
 
     /**
+     * <p>The file name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-cases.zip</p>
      */
@@ -49,6 +59,8 @@ public class CompleteCodeBundleResponseBody extends TeaModel {
     public String filename;
 
     /**
+     * <p>The project ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>76851f2b5bf0187fbc29e8bca4</p>
      */
@@ -56,6 +68,8 @@ public class CompleteCodeBundleResponseBody extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9A1F403F-0A85-5578-8B7C-55E3E9408659</p>
      */
@@ -63,6 +77,8 @@ public class CompleteCodeBundleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The code bundle status.</p>
+     * 
      * <strong>example:</strong>
      * <p>ready</p>
      */
@@ -70,7 +86,7 @@ public class CompleteCodeBundleResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>代码包更新时间（RFC3339）</p>
+     * <p>The time when the record was last updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-08-27T00:53:46.774Z</p>

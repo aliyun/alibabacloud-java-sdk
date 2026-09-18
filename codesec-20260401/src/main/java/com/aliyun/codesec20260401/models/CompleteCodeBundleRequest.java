@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CompleteCodeBundleRequest extends TeaModel {
     /**
-     * <p>Declared uploaded object size; should match OSS <strong><code>Content-Length</code></strong>.</p>
+     * <p>The declared size of the uploaded object. This value must match the OSS Content-Length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CompleteCodeBundleRequest extends TeaModel {
     public Long byteSize;
 
     /**
-     * <p>MIME type stored on the bundle (often <strong><code>application/octet-stream</code></strong> for presigned PUT).</p>
+     * <p>The MIME type of the stored code bundle. This is typically application/octet-stream for pre-signed PUT operations.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

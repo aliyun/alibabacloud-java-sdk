@@ -1,3 +1,19 @@
+2026-09-18 Version: 1.2.0
+- Support API CreateScanSbomExport.
+- Update API CreateProject: add request parameters engines.sastConfig.
+- Update API CreateProject: add request parameters engines.scaConfig.
+- Update API DescribeProjects: add response parameters Body.items.$.engines.sastConfig.
+- Update API DescribeProjects: add response parameters Body.items.$.engines.scaConfig.
+- Update API DescribeScanResultsByEngine: add response parameters Body.items.$.scaComponent.componentType.
+- Update API DescribeScanResultsByEngine: add response parameters Body.items.$.scaComponent.declaredIn.
+- Update API DescribeScanResultsByEngine: add response parameters Body.items.$.scaComponent.ecosystem.
+- Update API DescribeScanResultsByEngine: add response parameters Body.items.$.scaComponent.license.
+- Update API DescribeScanResultsByEngine: add response parameters Body.items.$.scaComponent.purl.
+- Update API DescribeScanResultsByEngine: add response parameters Body.items.$.scaComponent.scope.
+- Update API DescribeScanResultsByEngine: add response parameters Body.items.$.scaComponent.cveDetails.$.cweId.
+- Update API DescribeScanResultsByEngine: add response parameters Body.items.$.scaComponent.cveDetails.$.fixedVersion.
+
+
 2026-09-04 Version: 1.1.0
 - Support API CompleteCodeBundle.
 - Support API CreateCodeBundle.
