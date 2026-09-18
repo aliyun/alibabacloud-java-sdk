@@ -36,6 +36,9 @@ public class ManageAlertRulesResult extends TeaModel {
 
     /**
      * <p>The list of UUIDs of rules that were successfully enabled or disabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;,&quot;b2c3d4e5-f6a7-8901-bcde-f12345678901&quot;]</p>
      */
     @NameInMap("updatedUuidList")
     public java.util.List<String> updatedUuidList;

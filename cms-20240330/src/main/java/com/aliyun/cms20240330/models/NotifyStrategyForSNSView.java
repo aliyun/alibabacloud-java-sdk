@@ -23,7 +23,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
      * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>Sample description</p>
+     * <p>SampleDescription</p>
      */
     @NameInMap("description")
     public String description;
@@ -53,7 +53,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
     public NotifyStrategyForSNSViewGroupingSetting groupingSetting;
 
     /**
-     * <p>Indicates whether recovery notifications are sent.</p>
+     * <p>Indicates whether to send a notification upon recovery.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -62,7 +62,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
     public Boolean ignoreRestoredNotification;
 
     /**
-     * <p>The UUID of the associated response plan, which equals notifyStrategyId.</p>
+     * <p>The associated response plan UUID, which equals notifyStrategyId.</p>
      * 
      * <strong>example:</strong>
      * <p>example-id-001</p>
@@ -74,7 +74,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
      * <p>The lifecycle mode. Within SNS, this value is always BundleStrategy.</p>
      * 
      * <strong>example:</strong>
-     * <p>Sample value</p>
+     * <p>SampleValue</p>
      */
     @NameInMap("mode")
     public String mode;
@@ -92,7 +92,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
      * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Sample name</p>
+     * <p>SampleName</p>
      */
     @NameInMap("notifyStrategyName")
     public String notifyStrategyName;
@@ -104,7 +104,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
     public java.util.List<NotifyStrategyForSNSViewRoutes> routes;
 
     /**
-     * <p>The synchronization source. For SNS creation, this value is always OBS.</p>
+     * <p>The sync source. For SNS creation, this value is always OBS.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -134,7 +134,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
      * <p>The workspace identifier.</p>
      * 
      * <strong>example:</strong>
-     * <p>Sample value</p>
+     * <p>SampleValue</p>
      */
     @NameInMap("workspace")
     public String workspace;
@@ -442,13 +442,13 @@ public class NotifyStrategyForSNSView extends TeaModel {
 
     public static class NotifyStrategyForSNSViewRoutesEffectTimeRange extends TeaModel {
         /**
-         * <p>The effective days, from Monday to Sunday.</p>
+         * <p>The effective days (Monday to Sunday).</p>
          */
         @NameInMap("dayInWeek")
         public java.util.List<Integer> dayInWeek;
 
         /**
-         * <p>The start time in minutes.</p>
+         * <p>The start time (in minutes).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -457,7 +457,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
         public Integer endTimeInMinute;
 
         /**
-         * <p>The start time in minutes.</p>
+         * <p>The start time (in minutes).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -524,7 +524,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
          * <p>The digital employee name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sample name</p>
+         * <p>SampleName</p>
          */
         @NameInMap("digitalEmployeeName")
         public String digitalEmployeeName;

@@ -50,7 +50,7 @@ public class IncidentResponsePlanForSNSView extends TeaModel {
      * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Sample response plan</p>
+     * <p>SampleResponsePlan</p>
      */
     @NameInMap("name")
     public String name;
@@ -62,13 +62,13 @@ public class IncidentResponsePlanForSNSView extends TeaModel {
     public IncidentResponsePlanForSNSViewPushingSetting pushingSetting;
 
     /**
-     * <p>The repeat notification configuration.</p>
+     * <p>The repeat notification settings.</p>
      */
     @NameInMap("repeatNotifySetting")
     public IncidentResponsePlanForSNSViewRepeatNotifySetting repeatNotifySetting;
 
     /**
-     * <p>The source. The value must be CUSTOM within SNS.</p>
+     * <p>The source. This value must be CUSTOM within SNS.</p>
      * 
      * <strong>example:</strong>
      * <p>CUSTOM</p>
@@ -86,7 +86,7 @@ public class IncidentResponsePlanForSNSView extends TeaModel {
     public String syncFromType;
 
     /**
-     * <p>The response plan type. The value must be NOTIFY_STRATEGY_DEFINED within SNS.</p>
+     * <p>The response plan type. This value must be NOTIFY_STRATEGY_DEFINED within SNS.</p>
      * 
      * <strong>example:</strong>
      * <p>NOTIFY_STRATEGY_DEFINED</p>

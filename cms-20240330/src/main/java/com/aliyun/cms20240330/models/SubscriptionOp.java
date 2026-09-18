@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SubscriptionOp extends TeaModel {
     /**
      * <p>The operation type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>create</p>
      */
     @NameInMap("op")
     public String op;
@@ -18,6 +21,9 @@ public class SubscriptionOp extends TeaModel {
 
     /**
      * <p>Required for update and remove operations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7076c75c-c804-461e-975f-c6f9ed5af745</p>
      */
     @NameInMap("uuid")
     public String uuid;

@@ -74,7 +74,7 @@ public class ListContactsRequest extends TeaModel {
     public Boolean queryUngroupedContacts;
 
     /**
-     * <p>The workspace name.</p>
+     * <p>The workspace name. Format: <code>default-cms-{accountId}-{region}</code>. Example: <code>default-cms-1744108686100472-cn-hangzhou</code>. You can call the ListWorkspaces API to obtain valid workspace names.</p>
      * 
      * <strong>example:</strong>
      * <p>default-cms-1744108686100472-cn-hangzhou</p>

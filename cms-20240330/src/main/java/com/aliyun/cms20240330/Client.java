@@ -466,6 +466,81 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an alert robot.</p>
+     * 
+     * @param request CreateAlertRobotRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAlertRobotResponse
+     */
+    public CreateAlertRobotResponse createAlertRobotWithOptions(CreateAlertRobotRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.digitalEmployeeName)) {
+            body.put("digitalEmployeeName", request.digitalEmployeeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            body.put("lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.robotId)) {
+            body.put("robotId", request.robotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.robotSignKey)) {
+            body.put("robotSignKey", request.robotSignKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            body.put("url", request.url);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            body.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAlertRobot"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/robot"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAlertRobotResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an alert robot.</p>
+     * 
+     * @param request CreateAlertRobotRequest
+     * @return CreateAlertRobotResponse
+     */
+    public CreateAlertRobotResponse createAlertRobot(CreateAlertRobotRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAlertRobotWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Creates a webhook notification recipient.</p>
      * 
@@ -2016,6 +2091,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteAggTaskGroupWithOptions(instanceId, groupId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an alert chatbot.</p>
+     * 
+     * @param tmpReq DeleteAlertRobotsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAlertRobotsResponse
+     */
+    public DeleteAlertRobotsResponse deleteAlertRobotsWithOptions(DeleteAlertRobotsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteAlertRobotsShrinkRequest request = new DeleteAlertRobotsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.robotIds)) {
+            request.robotIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.robotIds, "robotIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.robotIdsShrink)) {
+            query.put("robotIds", request.robotIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAlertRobots"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/robots"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAlertRobotsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an alert chatbot.</p>
+     * 
+     * @param request DeleteAlertRobotsRequest
+     * @return DeleteAlertRobotsResponse
+     */
+    public DeleteAlertRobotsResponse deleteAlertRobots(DeleteAlertRobotsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteAlertRobotsWithOptions(request, headers, runtime);
     }
 
     /**
@@ -5788,8 +5920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation can only query alert history from the last year.
-     * This topic provides an example of querying the alert history of Elastic Computing Service from the <code>product</code> dimension of a cloud service.</p>
+     * <p>Queries the list of alert robots under the current account. Alert robots are webhook receivers for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter results by robot ID, name, type, and workspace.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries alert robots.</p>
@@ -5856,8 +5987,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation can only query alert history from the last year.
-     * This topic provides an example of querying the alert history of Elastic Computing Service from the <code>product</code> dimension of a cloud service.</p>
+     * <p>Queries the list of alert robots under the current account. Alert robots are webhook receivers for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter results by robot ID, name, type, and workspace.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries alert robots.</p>
@@ -8739,6 +8869,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateAggTaskGroupStatusWithOptions(instanceId, groupId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates an alert robot.</p>
+     * 
+     * @param request UpdateAlertRobotRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAlertRobotResponse
+     */
+    public UpdateAlertRobotResponse updateAlertRobotWithOptions(String robotId, UpdateAlertRobotRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.digitalEmployeeName)) {
+            body.put("digitalEmployeeName", request.digitalEmployeeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            body.put("lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.robotSignKey)) {
+            body.put("robotSignKey", request.robotSignKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            body.put("url", request.url);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAlertRobot"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/robot/" + com.aliyun.openapiutil.Client.getEncodeParam(robotId) + ""),
+            new TeaPair("method", "PATCH"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAlertRobotResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates an alert robot.</p>
+     * 
+     * @param request UpdateAlertRobotRequest
+     * @return UpdateAlertRobotResponse
+     */
+    public UpdateAlertRobotResponse updateAlertRobot(String robotId, UpdateAlertRobotRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAlertRobotWithOptions(robotId, request, headers, runtime);
     }
 
     /**

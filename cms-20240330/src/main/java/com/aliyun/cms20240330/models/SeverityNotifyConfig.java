@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SeverityNotifyConfig extends TeaModel {
     /**
-     * <p>The list of Notification Recipients. Each recipient specifies the type, identifier, and enabled channels.</p>
+     * <p>The list of Notification Recipients. Each recipient specifies a type, an identifier, and the enabled channels.</p>
      */
     @NameInMap("receivers")
     public java.util.List<DirectNotifyReceiver> receivers;

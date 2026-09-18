@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ObserveResourceListFilter extends TeaModel {
     /**
-     * <p>Returns resources if a specified property contains any string in this array.</p>
+     * <p>The match condition that requires the observeResourceList of a rule to contain at least one instance ID from the array (OR semantics).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;i-bp1a2b3c4d5e6f7g8h9i&quot;]</p>
      */
     @NameInMap("contains")
     public java.util.List<String> contains;

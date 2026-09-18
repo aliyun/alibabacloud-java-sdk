@@ -5,13 +5,18 @@ import com.aliyun.tea.*;
 
 public class DirectNotifyChannel extends TeaModel {
     /**
+     * <p>The list of Notification Recipient identifiers.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("identifiers")
     public java.util.List<String> identifiers;
 
     /**
+     * <p>The notification channel type.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CONTACT</p>
      */
     @NameInMap("type")
     public String type;

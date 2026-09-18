@@ -48,7 +48,7 @@ public class NotifyRouteForSubscription extends TeaModel {
         public String channelType;
 
         /**
-         * <p>The list of enabled sub-channels.</p>
+         * <p>The list of enabled subchannels.</p>
          */
         @NameInMap("enabledSubChannels")
         public java.util.List<String> enabledSubChannels;

@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class LabelsFilter extends TeaModel {
     /**
-     * <p>An array of <code>LabelMatcher</code> requirements. An object is selected only if it satisfies all of the requirements in this list (a logical AND). If provided, the list cannot be empty.</p>
+     * <p>Match all labels (AND).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;production&quot;},{&quot;key&quot;:&quot;team&quot;,&quot;value&quot;:&quot;ops&quot;}]</p>
      */
     @NameInMap("allOf")
     public java.util.List<LabelMatcher> allOf;
 
     /**
-     * <p>An array of <code>LabelMatcher</code> requirements. An object is selected if it satisfies at least one of the requirements in this list (a logical OR). If provided, the list cannot be empty.</p>
+     * <p>Match any label (OR).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;production&quot;},{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;staging&quot;}]</p>
      */
     @NameInMap("anyOf")
     public java.util.List<LabelMatcher> anyOf;

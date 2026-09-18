@@ -32,7 +32,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The robot ID.</p>
+     * <p>The robot IDs.</p>
      */
     @NameInMap("robots")
     public java.util.List<ListAlertRobotsResponseBodyRobots> robots;
@@ -129,7 +129,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         public String robotId;
 
         /**
-         * <p>The signature key of the robot.</p>
+         * <p>The signing key of the robot.</p>
          * 
          * <strong>example:</strong>
          * <p>abc123</p>
@@ -138,7 +138,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         public String robotSignKey;
 
         /**
-         * <p>The robot type.</p>
+         * <p>The robot types.</p>
          * 
          * <strong>example:</strong>
          * <p>DING</p>

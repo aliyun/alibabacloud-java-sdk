@@ -4,9 +4,21 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class QueryAlertRulesEntityTypeFilter extends TeaModel {
+    /**
+     * <p>Matches any value in the set (OR semantics).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;UMODEL_ENTITY&quot;,&quot;CLOUD_INSTANCE&quot;]</p>
+     */
     @NameInMap("in")
     public java.util.List<String> in;
 
+    /**
+     * <p>Excludes any value in the set (NOT IN semantics).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;TAG&quot;]</p>
+     */
     @NameInMap("notIn")
     public java.util.List<String> notIn;
 

@@ -5,21 +5,30 @@ import com.aliyun.tea.*;
 
 public class ApmMeasureConfig extends TeaModel {
     /**
-     * <p>The grouping dimension.</p>
+     * <p>The list of grouping dimensions for the APM metric. This parameter specifies the dimension keys by which to perform grouping and aggregation on metric data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;host.name&quot;, &quot;service.name&quot;]</p>
      */
     @NameInMap("groupBy")
     public java.util.List<String> groupBy;
 
     /**
-     * <p>The metric code.</p>
+     * <p>The code identifier of the APM metric. This parameter specifies the metric type to collect and query.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CPU</p>
      */
     @NameInMap("measureCode")
     public String measureCode;
 
     /**
-     * <p>The query time window in seconds.</p>
+     * <p>The query time window, in seconds.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("windowSecs")
     public Integer windowSecs;

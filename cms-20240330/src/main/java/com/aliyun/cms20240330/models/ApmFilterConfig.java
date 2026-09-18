@@ -5,21 +5,36 @@ import com.aliyun.tea.*;
 
 public class ApmFilterConfig extends TeaModel {
     /**
-     * <p>The dimension key.</p>
+     * <p>The dimension key name of the APM query filter condition. Specifies which dimension to filter by, such as hostname or service name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>host.name</p>
      */
     @NameInMap("key")
     public String key;
 
     /**
-     * <p>The filter type.</p>
+     * <p>The matching type of the APM query filter condition. Valid values:</p>
+     * <ul>
+     * <li>ALL: Matches all values.</li>
+     * <li>EQ: Exact match.</li>
+     * <li>NE: Not equal to.</li>
+     * <li>DISABLED: Disables the filter condition.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EQ</p>
      */
     @NameInMap("type")
     public String type;
 
     /**
-     * <p>The filter value. This can be empty when type is ALL or DISABLED.</p>
+     * <p>The filter value. Can be empty when type is set to ALL or DISABLED.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("value")
     public String value;

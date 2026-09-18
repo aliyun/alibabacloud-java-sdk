@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class IncidentResponsePlanForModify extends TeaModel {
     /**
-     * <p>The auto-recovery time in seconds when no events occur.</p>
+     * <p>The auto-recovery time when no events occur, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -41,7 +41,7 @@ public class IncidentResponsePlanForModify extends TeaModel {
      * <p>The lifecycle mode.</p>
      * 
      * <strong>example:</strong>
-     * <p>SampleValue</p>
+     * <p>Sample value</p>
      */
     @NameInMap("mode")
     public String mode;
@@ -50,7 +50,7 @@ public class IncidentResponsePlanForModify extends TeaModel {
      * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>SampleName</p>
+     * <p>Sample name</p>
      */
     @NameInMap("name")
     public String name;
@@ -71,7 +71,7 @@ public class IncidentResponsePlanForModify extends TeaModel {
      * <p>The source.</p>
      * 
      * <strong>example:</strong>
-     * <p>SampleValue</p>
+     * <p>Sample value</p>
      */
     @NameInMap("source")
     public String source;
@@ -95,7 +95,7 @@ public class IncidentResponsePlanForModify extends TeaModel {
     public String type;
 
     /**
-     * <p>Required for Update. Can be omitted for Create, in which case the backend generates it. The UUID is shared with NotifyStrategy.</p>
+     * <p>Required for Update. Can be omitted for Create, in which case the backend generates it. Shared with NotifyStrategy.</p>
      * 
      * <strong>example:</strong>
      * <p>example-id-001</p>

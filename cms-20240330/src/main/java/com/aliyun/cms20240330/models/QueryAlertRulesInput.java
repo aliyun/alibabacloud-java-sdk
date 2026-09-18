@@ -5,19 +5,28 @@ import com.aliyun.tea.*;
 
 public class QueryAlertRulesInput extends TeaModel {
     /**
-     * <p>The filter criteria. Only alert rules that match these criteria are returned.</p>
+     * <p>The comprehensive filter conditions for querying alert rules. Supports combined filtering by multiple dimensions such as name, status, severity level, tags, and notification channels.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;status&quot;:{&quot;eq&quot;:&quot;Alarm&quot;},&quot;severityLevels&quot;:{&quot;contains&quot;:[&quot;CRITICAL&quot;,&quot;ERROR&quot;]}}</p>
      */
     @NameInMap("filter")
     public QueryAlertRulesFilter filter;
 
     /**
-     * <p>The pagination settings for the query. If omitted, the system returns the first page of results with the default page size.</p>
+     * <p>The pagination mode parameter. keyset indicates keyset-based pagination.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;pageNumber&quot;:1,&quot;pageSize&quot;:20}</p>
      */
     @NameInMap("pagination")
     public Pagination pagination;
 
     /**
-     * <p>The ID of the workspace that contains the alert rules.</p>
+     * <p>The observable workspace name. If this parameter is not specified, all alert rules are returned based on the caller identity (callerUserId + callerRegionId). If this parameter is specified, only the rules under the specified workspace are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workspace-test</p>
      */
     @NameInMap("workspace")
     public String workspace;

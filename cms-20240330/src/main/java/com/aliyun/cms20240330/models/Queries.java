@@ -24,6 +24,9 @@ public class Queries extends TeaModel {
 
     /**
      * <p>The label filter conditions for UMODEL_METRICSET_MULTI_QUERY. This parameter is optional and independent for each query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;key&quot;:&quot;host.name&quot;,&quot;value&quot;:&quot;web-server-01&quot;,&quot;type&quot;:&quot;eq&quot;}]</p>
      */
     @NameInMap("labelFilters")
     public java.util.List<LabelFilters> labelFilters;

@@ -11,7 +11,7 @@ public class TagSelector extends TeaModel {
     public java.util.List<TagCondition> conditions;
 
     /**
-     * <p>The custom expression in advanced mode, which overwrites conditions and relation.</p>
+     * <p>The custom expression in advanced mode. This overrides the conditions and relation settings.</p>
      * 
      * <strong>example:</strong>
      * <p>env=prod AND region=cn-hangzhou</p>
@@ -20,7 +20,7 @@ public class TagSelector extends TeaModel {
     public String expression;
 
     /**
-     * <p>The condition relationship.</p>
+     * <p>The relationship between conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>AND</p>
