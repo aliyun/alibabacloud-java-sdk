@@ -4,15 +4,36 @@ package com.aliyun.alikafkakopilot20260414.models;
 import com.aliyun.tea.*;
 
 public class KopilotQueryStatusResponseBody extends TeaModel {
+    /**
+     * <p>The status code. A value of 200 indicates success.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The status information returned when the call is successful.</p>
+     */
     @NameInMap("Data")
     public KopilotQueryStatusResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2DF166F2-F581-5254-AAB6-B482083FA7B4</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,18 +75,48 @@ public class KopilotQueryStatusResponseBody extends TeaModel {
     }
 
     public static class KopilotQueryStatusResponseBodyData extends TeaModel {
+        /**
+         * <p>The UNIX timestamp when the instance was activated, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17346565678778</p>
+         */
         @NameInMap("ActivateTime")
         public Long activateTime;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The instance status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NotActivated</p>
+         */
         @NameInMap("LifeStatus")
         public String lifeStatus;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The UID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>206022063004684756</p>
+         */
         @NameInMap("Uid")
         public String uid;
 

@@ -1,3 +1,19 @@
+2026-09-18 Version: 1.0.1
+- Update API KopilotChatStream: add request parameters AcceptLanguage.
+- Update API KopilotListConversationChatMessages: add request parameters TaskCursor.
+- Update API KopilotListConversationChatMessages: add request parameters TaskPageSize.
+- Update API KopilotListConversationChatMessages: add response parameters Body.Data.ScheduledTaskInfo.
+- Update API KopilotListConversationChatMessages: add response parameters Body.Data.ScheduledTaskQuota.
+- Update API KopilotListConversations: add request parameters DestinationCursor.
+- Update API KopilotListConversations: add request parameters DestinationPageSize.
+- Update API KopilotListConversations: add request parameters IncludeAutomationOverview.
+- Update API KopilotListConversations: add request parameters TaskCursor.
+- Update API KopilotListConversations: add request parameters TaskPageSize.
+- Update API KopilotListConversations: add response parameters Body.Data.AutomationOverview.
+- Update API KopilotListConversations: add response parameters Body.Data.ScheduledTaskInfoBySessionId.
+- Update API KopilotListConversations: add response parameters Body.Data.ScheduledTaskQuota.
+
+
 2026-06-22 Version: 1.0.0
 - Generated java 2026-04-14 for AlikafkaKopilot.
 

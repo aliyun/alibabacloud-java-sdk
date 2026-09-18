@@ -8,7 +8,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("alikafkakopilot", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>智能体 stream chat</p>
+     * <p>Initiates a streaming chat session with an agent.</p>
      * 
      * @param request KopilotChatStreamRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -37,6 +37,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public KopilotChatStreamResponse kopilotChatStreamWithOptions(KopilotChatStreamRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.message)) {
             query.put("Message", request.message);
         }
@@ -68,7 +72,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>智能体 stream chat</p>
+     * <p>Initiates a streaming chat session with an agent.</p>
      * 
      * @param request KopilotChatStreamRequest
      * @return KopilotChatStreamResponse
@@ -80,7 +84,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>评价</p>
+     * <p>Evaluates a user session.</p>
      * 
      * @param request KopilotFeedbackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -128,7 +132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>评价</p>
+     * <p>Evaluates a user session.</p>
      * 
      * @param request KopilotFeedbackRequest
      * @return KopilotFeedbackResponse
@@ -140,7 +144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>历史会话</p>
+     * <p>Queries historical conversations.</p>
      * 
      * @param request KopilotListConversationChatMessagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -165,6 +169,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SessionId", request.sessionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.taskCursor)) {
+            query.put("TaskCursor", request.taskCursor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskPageSize)) {
+            query.put("TaskPageSize", request.taskPageSize);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -184,7 +196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>历史会话</p>
+     * <p>Queries historical conversations.</p>
      * 
      * @param request KopilotListConversationChatMessagesRequest
      * @return KopilotListConversationChatMessagesResponse
@@ -196,7 +208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>智能体</p>
+     * <p>Queries the session IDs of the current user in the Console channel, sorted by creation time in descending order. Pagination is supported.</p>
      * 
      * @param request KopilotListConversationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -205,6 +217,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public KopilotListConversationsResponse kopilotListConversationsWithOptions(KopilotListConversationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationCursor)) {
+            query.put("DestinationCursor", request.destinationCursor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationPageSize)) {
+            query.put("DestinationPageSize", request.destinationPageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeAutomationOverview)) {
+            query.put("IncludeAutomationOverview", request.includeAutomationOverview);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.page)) {
             query.put("Page", request.page);
         }
@@ -215,6 +239,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.size)) {
             query.put("Size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskCursor)) {
+            query.put("TaskCursor", request.taskCursor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskPageSize)) {
+            query.put("TaskPageSize", request.taskPageSize);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -236,7 +268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>智能体</p>
+     * <p>Queries the session IDs of the current user in the Console channel, sorted by creation time in descending order. Pagination is supported.</p>
      * 
      * @param request KopilotListConversationsRequest
      * @return KopilotListConversationsResponse
@@ -248,7 +280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>状态</p>
+     * <p>Queries the enabling status of an instance.</p>
      * 
      * @param request KopilotQueryStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -284,7 +316,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>状态</p>
+     * <p>Queries the enabling status of an instance.</p>
      * 
      * @param request KopilotQueryStatusRequest
      * @return KopilotQueryStatusResponse

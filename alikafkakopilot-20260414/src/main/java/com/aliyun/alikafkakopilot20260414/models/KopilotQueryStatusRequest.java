@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class KopilotQueryStatusRequest extends TeaModel {
     /**
+     * <p>The account ID of the owner.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1590639435720201</p>
      */
     @NameInMap("Owner")
     public String owner;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
