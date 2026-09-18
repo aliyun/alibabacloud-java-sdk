@@ -29,7 +29,7 @@ public class ListCredentialsResponseBody extends TeaModel {
     public java.util.List<ListCredentialsResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of records per page that took effect for this query.</p>
+     * <p>The maximum number of records per page that takes effect for this query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -295,7 +295,7 @@ public class ListCredentialsResponseBody extends TeaModel {
         public java.util.List<ListCredentialsResponseBodyItemsResourceRefs> resourceRefs;
 
         /**
-         * <p>The scope of resources to which the credential can be applied.</p>
+         * <p>The resource scope of the credential.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>

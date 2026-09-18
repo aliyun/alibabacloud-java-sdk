@@ -148,7 +148,7 @@ public class CreateManagedAgentRequest extends TeaModel {
 
     public static class CreateManagedAgentRequestBodyHarnessConfiguration extends TeaModel {
         /**
-         * <p>The Key ID used to bind a Service Account Key of the QoderCLI Connector. This parameter can be omitted when only one key exists, but is required when multiple keys exist.</p>
+         * <p>The connector service account key.</p>
          * 
          * <strong>example:</strong>
          * <p>key-xxxx</p>
@@ -157,7 +157,7 @@ public class CreateManagedAgentRequest extends TeaModel {
         public String connectorServiceAccountKey;
 
         /**
-         * <p>The Connector Key name that is populated during queries. This parameter is not used as a binding criterion during writes.</p>
+         * <p>The connector service account name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-connector-key</p>
@@ -190,13 +190,13 @@ public class CreateManagedAgentRequest extends TeaModel {
 
     public static class CreateManagedAgentRequestBodyHarness extends TeaModel {
         /**
-         * <p>The Connector binding configuration for the qodercli harness.</p>
+         * <p>The harness configuration.</p>
          */
         @NameInMap("configuration")
         public CreateManagedAgentRequestBodyHarnessConfiguration configuration;
 
         /**
-         * <p>The harness type. Valid values: qwenpaw and qodercli. When the type is qodercli, binding is performed based on configuration.connectorServiceAccountKey, and the name is also populated during queries.</p>
+         * <p>The harness type.</p>
          * 
          * <strong>example:</strong>
          * <p>qodercli</p>
@@ -328,7 +328,7 @@ public class CreateManagedAgentRequest extends TeaModel {
         public String modelName;
 
         /**
-         * <p>The model token quota configuration. If this parameter is not specified, no quota is configured.</p>
+         * <p>The model token quota configuration. If not specified, no quota is configured.</p>
          */
         @NameInMap("quota")
         public CreateManagedAgentRequestBodyModelQuota quota;
@@ -453,18 +453,27 @@ public class CreateManagedAgentRequest extends TeaModel {
     public static class CreateManagedAgentRequestBodyOssMounts extends TeaModel {
         /**
          * <p>The OSS bucket name. This parameter is required by backend validation for each mount entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bucket-001</p>
          */
         @NameInMap("bucketName")
         public String bucketName;
 
         /**
-         * <p>The absolute mount path inside the container. This parameter is required by backend validation for each mount entry.</p>
+         * <p>The absolute mount path in the container. This parameter is required by backend validation for each mount entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/mnt/oss/datasets</p>
          */
         @NameInMap("mountPath")
         public String mountPath;
 
         /**
-         * <p>The relative object prefix within the bucket. If this parameter is not specified, the entire bucket is mounted.</p>
+         * <p>The relative object prefix in the bucket. If not specified, the entire bucket is mounted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>datasets</p>
          */
         @NameInMap("path")
         public String path;
@@ -516,7 +525,7 @@ public class CreateManagedAgentRequest extends TeaModel {
 
     public static class CreateManagedAgentRequestBodyRuntimeCompute extends TeaModel {
         /**
-         * <p>The compute class.</p>
+         * <p>The compute specification.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -549,24 +558,36 @@ public class CreateManagedAgentRequest extends TeaModel {
 
         /**
          * <p>The maximum number of active sessions per sandbox. This parameter is required by backend validation when hpa is present.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("maxConcurrentSessionsPerSandbox")
         public Integer maxConcurrentSessionsPerSandbox;
 
         /**
          * <p>The maximum number of sandboxes. This parameter is required when HPA is enabled and the value must be no less than the minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("maxSandboxCount")
         public Integer maxSandboxCount;
 
         /**
          * <p>The minimum number of sandboxes. This parameter is required when HPA is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("minSandboxCount")
         public Integer minSandboxCount;
 
         /**
-         * <p>The session reclamation time after inactivity, in seconds. This parameter is required by backend validation when hpa is present.</p>
+         * <p>The time in seconds before an inactive session is reclaimed. This parameter is required by backend validation when hpa is present.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         @NameInMap("sessionTtlSeconds")
         public Integer sessionTtlSeconds;
@@ -927,7 +948,7 @@ public class CreateManagedAgentRequest extends TeaModel {
         public CreateManagedAgentRequestBodyEnvironment environment;
 
         /**
-         * <p>The harness for the managed agent. Valid values: qwenpaw and qodercli.</p>
+         * <p>The agent harness.</p>
          */
         @NameInMap("harness")
         public CreateManagedAgentRequestBodyHarness harness;
@@ -965,7 +986,7 @@ public class CreateManagedAgentRequest extends TeaModel {
         public CreateManagedAgentRequestBodyNetwork network;
 
         /**
-         * <p>The list of OSS mounts. A maximum of 10 entries are supported.</p>
+         * <p>The OSS mount list. A maximum of 10 entries are supported.</p>
          */
         @NameInMap("ossMounts")
         public java.util.List<CreateManagedAgentRequestBodyOssMounts> ossMounts;
@@ -996,7 +1017,7 @@ public class CreateManagedAgentRequest extends TeaModel {
         public CreateManagedAgentRequestBodyTemplate template;
 
         /**
-         * <p>The tool configuration list.</p>
+         * <p>The list of tool configurations.</p>
          */
         @NameInMap("tools")
         public java.util.List<CreateManagedAgentRequestBodyTools> tools;

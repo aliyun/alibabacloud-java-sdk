@@ -136,6 +136,16 @@ public class CreateWorkspaceRequest extends TeaModel {
         @NameInMap("networkConfiguration")
         public CreateWorkspaceRequestBodyNetworkConfiguration networkConfiguration;
 
+        /**
+         * <p>The storage type of the workspace. Valid values:</p>
+         * <ul>
+         * <li>PLATFORM: Platform-managed storage.</li>
+         * <li>PRIVATE: User-owned private OSS storage.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
+         */
         @NameInMap("storageType")
         public String storageType;
 

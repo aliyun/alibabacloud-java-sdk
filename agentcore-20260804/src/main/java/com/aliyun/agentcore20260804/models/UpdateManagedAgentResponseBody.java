@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateManagedAgentResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value SUCCESS is returned if the request is successful.</p>
+     * <p>The business status code. The value is SUCCESS when the operation succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -29,7 +29,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned for the request.</p>
+     * <p>The result message of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -216,7 +216,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
 
     public static class UpdateManagedAgentResponseBodyDataHarnessConfiguration extends TeaModel {
         /**
-         * <p>The Key ID used to bind a Service Account Key of the QoderCLI Connector. This parameter can be omitted when only one key exists, but is required when multiple keys exist.</p>
+         * <p>The connector service account key.</p>
          * 
          * <strong>example:</strong>
          * <p>key-xxxx</p>
@@ -225,7 +225,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public String connectorServiceAccountKey;
 
         /**
-         * <p>The Connector Key name that is populated during queries. This value is not used as a binding reference during writes.</p>
+         * <p>The connector service account name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-connector-key</p>
@@ -258,13 +258,13 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
 
     public static class UpdateManagedAgentResponseBodyDataHarness extends TeaModel {
         /**
-         * <p>The Connector binding configuration for the qodercli harness.</p>
+         * <p>The harness configuration.</p>
          */
         @NameInMap("configuration")
         public UpdateManagedAgentResponseBodyDataHarnessConfiguration configuration;
 
         /**
-         * <p>The type of the runtime harness. Valid values: qwenpaw and qodercli. When the type is qodercli, binding is performed based on configuration.connectorServiceAccountKey, and the name is also populated during queries.</p>
+         * <p>The harness type.</p>
          * 
          * <strong>example:</strong>
          * <p>qodercli</p>
@@ -297,6 +297,8 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
 
     public static class UpdateManagedAgentResponseBodyDataModelQuota extends TeaModel {
         /**
+         * <p>Indicates whether the quota is enabled. This field is not returned if no quota is configured.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -304,6 +306,8 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p>The quota limit type. Currently, only token is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>token</p>
          */
@@ -311,6 +315,8 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public String limitType;
 
         /**
+         * <p>Indicates whether the quota has been exceeded in the current period. This is a read-only field returned by the backend.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -318,6 +324,8 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public Boolean overLimit;
 
         /**
+         * <p>The quota statistical period. The value day indicates a daily period, and the value month indicates a monthly period.</p>
+         * 
          * <strong>example:</strong>
          * <p>day</p>
          */
@@ -325,6 +333,8 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public String periodType;
 
         /**
+         * <p>The gateway quota rule status. This is a read-only field returned by the backend.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
          */
@@ -332,6 +342,8 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public String ruleStatus;
 
         /**
+         * <p>The maximum number of tokens that can be consumed within a single period.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000000</p>
          */
@@ -339,6 +351,8 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public Long usageLimit;
 
         /**
+         * <p>The number of tokens consumed in the current period. This is a read-only field returned by the backend.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */
@@ -427,6 +441,9 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         @NameInMap("modelName")
         public String modelName;
 
+        /**
+         * <p>The model token quota configuration and the quota usage status for the current period. This field is empty if no quota is configured.</p>
+         */
         @NameInMap("quota")
         public UpdateManagedAgentResponseBodyDataModelQuota quota;
 
@@ -463,7 +480,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
 
     public static class UpdateManagedAgentResponseBodyDataNetworkAccessInternet extends TeaModel {
         /**
-         * <p>Specifies whether public network access is allowed.</p>
+         * <p>Specifies whether to allow public network access.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -488,7 +505,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
 
     public static class UpdateManagedAgentResponseBodyDataNetworkAccessVpc extends TeaModel {
         /**
-         * <p>Specifies whether VPC access is allowed.</p>
+         * <p>Specifies whether to allow VPC access.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -549,25 +566,34 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
 
     public static class UpdateManagedAgentResponseBodyDataOssMounts extends TeaModel {
         /**
-         * <p>The OSS bucket name. Each mount item is validated as required by the backend.</p>
+         * <p>The OSS bucket name. This parameter is required by backend validation for each mount entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bucket-001</p>
          */
         @NameInMap("bucketName")
         public String bucketName;
 
         /**
-         * <p>The absolute mount path in the container. Each mount item is validated as required by the backend.</p>
+         * <p>The absolute mount path in the container. This parameter is required by backend validation for each mount entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/mnt/oss/datasets</p>
          */
         @NameInMap("mountPath")
         public String mountPath;
 
         /**
-         * <p>The relative object prefix in the bucket. If not specified, the entire bucket is mounted.</p>
+         * <p>The relative object prefix within the bucket. If this parameter is not specified, the entire bucket is mounted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>datasets</p>
          */
         @NameInMap("path")
         public String path;
 
         /**
-         * <p>Specifies whether to mount as read-only. Default value: false.</p>
+         * <p>Specifies whether to mount in read-only mode. Default value: false.</p>
          */
         @NameInMap("readOnly")
         public Boolean readOnly;
@@ -639,31 +665,43 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
 
     public static class UpdateManagedAgentResponseBodyDataRuntimeHpa extends TeaModel {
         /**
-         * <p>Specifies whether to enable auto scaling. Required when hpa is present as validated by the backend.</p>
+         * <p>Specifies whether to enable auto scaling. This parameter is required by backend validation when hpa is specified.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>The maximum number of active sessions per Sandbox. Required when hpa is present as validated by the backend.</p>
+         * <p>The maximum number of active sessions per sandbox. This parameter is required by backend validation when hpa is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("maxConcurrentSessionsPerSandbox")
         public Integer maxConcurrentSessionsPerSandbox;
 
         /**
-         * <p>The maximum number of Sandboxes. Required when HPA is enabled and must be no less than the minimum value.</p>
+         * <p>The maximum number of sandboxes. This parameter is required when HPA is enabled and the value must be no less than the minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("maxSandboxCount")
         public Integer maxSandboxCount;
 
         /**
-         * <p>The minimum number of Sandboxes. Required when HPA is enabled.</p>
+         * <p>The minimum number of sandboxes. This parameter is required when HPA is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("minSandboxCount")
         public Integer minSandboxCount;
 
         /**
-         * <p>The session reclamation time after inactivity, in seconds. Required when hpa is present as validated by the backend.</p>
+         * <p>The session reclamation time after inactivity, in seconds. This parameter is required by backend validation when hpa is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         @NameInMap("sessionTtlSeconds")
         public Integer sessionTtlSeconds;
@@ -717,7 +755,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
 
     public static class UpdateManagedAgentResponseBodyDataRuntimeSessionPolicy extends TeaModel {
         /**
-         * <p>The HTTP header name used for session affinity. Takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
+         * <p>The name of the HTTP header used for session affinity. This parameter takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
          * 
          * <strong>example:</strong>
          * <p>X-Session-Id</p>
@@ -767,7 +805,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public UpdateManagedAgentResponseBodyDataRuntimeCompute compute;
 
         /**
-         * <p>The Sandbox auto scaling and session configuration.</p>
+         * <p>The sandbox auto scaling and session configuration.</p>
          */
         @NameInMap("hpa")
         public UpdateManagedAgentResponseBodyDataRuntimeHpa hpa;
@@ -1054,13 +1092,13 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The environment configuration.</p>
+         * <p>The environment configuration information.</p>
          */
         @NameInMap("environment")
         public UpdateManagedAgentResponseBodyDataEnvironment environment;
 
         /**
-         * <p>The runtime harness of the managed agent. Valid values: qwenpaw and qodercli.</p>
+         * <p>The agent harness configuration.</p>
          */
         @NameInMap("harness")
         public UpdateManagedAgentResponseBodyDataHarness harness;
@@ -1084,7 +1122,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public Long latestSpecVersion;
 
         /**
-         * <p>The status of the latest version.</p>
+         * <p>The latest version status.</p>
          * 
          * <strong>example:</strong>
          * <p>succeeded</p>
@@ -1093,7 +1131,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public String latestVersionStatus;
 
         /**
-         * <p>The model configuration.</p>
+         * <p>The model configuration information.</p>
          */
         @NameInMap("model")
         public UpdateManagedAgentResponseBodyDataModel model;
@@ -1108,7 +1146,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The network configuration.</p>
+         * <p>The network configuration information.</p>
          */
         @NameInMap("network")
         public UpdateManagedAgentResponseBodyDataNetwork network;
@@ -1129,13 +1167,13 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The runtime configuration.</p>
+         * <p>The runtime configuration information.</p>
          */
         @NameInMap("runtime")
         public UpdateManagedAgentResponseBodyDataRuntime runtime;
 
         /**
-         * <p>The instance count of the managed agent grouped by sandbox phase. Current keys: PENDING (being created or initialized), RUNNING (running), HIBERNATING (entering hibernation), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (being terminated), and FAILED (runtime failure). Only phases that actually exist are returned. A missing key indicates a count of 0. This field is a dynamic map and new keys may be added in the future. You can use FAILED &gt; 0 to determine whether abnormal instances exist.</p>
+         * <p>The number of managed agent instances grouped by sandbox phase. Current keys: PENDING (being created or initialized), RUNNING (running), HIBERNATING (entering hibernation), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (being terminated), FAILED (runtime failure). Only phases that actually occur are returned. Missing keys should be treated as 0. This field is a dynamic mapping, and new keys may be added in the future. You can use FAILED &gt; 0 to determine whether any abnormal instances exist.</p>
          */
         @NameInMap("sandboxPhaseCounts")
         public java.util.Map<String, Long> sandboxPhaseCounts;
@@ -1174,7 +1212,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public java.util.List<UpdateManagedAgentResponseBodyDataTools> tools;
 
         /**
-         * <p>The update time in RFC 3339 format.</p>
+         * <p>The time when the managed agent was last updated, in RFC 3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01T00:00:00Z</p>

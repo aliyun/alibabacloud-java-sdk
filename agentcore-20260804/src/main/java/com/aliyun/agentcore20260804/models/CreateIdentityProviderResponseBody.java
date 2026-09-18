@@ -29,7 +29,7 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message. An error description is returned if the request fails.</p>
+     * <p>The response message. An error description is returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -107,7 +107,11 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
 
     public static class CreateIdentityProviderResponseBodyData extends TeaModel {
         /**
-         * <p>The type of the external identity provider. Valid values: DingTalk, Feishu.</p>
+         * <p>The type of the external identity provider. Valid values:</p>
+         * <ul>
+         * <li>DingTalk</li>
+         * <li>Feishu</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>DingTalk</p>

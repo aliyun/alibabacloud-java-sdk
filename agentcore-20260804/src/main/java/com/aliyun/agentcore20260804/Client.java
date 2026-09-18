@@ -328,10 +328,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</p>
+     * <p>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must be no draft currently being edited.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</p>
+     * <p>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must be no draft currently being edited.</p>
      * 
      * @param tmpReq CreateAgentSpecVersionRequest
      * @param headers map
@@ -372,10 +372,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</p>
+     * <p>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must be no draft currently being edited.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</p>
+     * <p>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must be no draft currently being edited.</p>
      * 
      * @param request CreateAgentSpecVersionRequest
      * @return CreateAgentSpecVersionResponse
@@ -518,10 +518,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</p>
+     * <p>Creates a bootstrap token and CMS configuration required for connecting a specified external agent.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</p>
+     * <p>Creates a bootstrap token and CMS configuration required for connecting a specified external agent.</p>
      * 
      * @param request CreateExternalAgentBootstrapTokenRequest
      * @param headers map
@@ -555,10 +555,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</p>
+     * <p>Creates a bootstrap token and CMS configuration required for connecting a specified external agent.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</p>
+     * <p>Creates a bootstrap token and CMS configuration required for connecting a specified external agent.</p>
      * 
      * @param request CreateExternalAgentBootstrapTokenRequest
      * @return CreateExternalAgentBootstrapTokenResponse
@@ -571,7 +571,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Binds an external identity provider to a specified workspace for single sign-on and organization member synchronization. Each workspace can be bound to at most one external identity provider. The binding is an asynchronous operation. After the API returns, you can track the progress by querying the status through GetIdentityProvider.</p>
+     * <p>Binds an external identity provider to a specified workspace for single sign-on and organization member synchronization. Each workspace can be bound to at most one external identity provider. The binding is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</p>
      * 
      * @param tmpReq CreateIdentityProviderRequest
      * @param headers map
@@ -611,7 +611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Binds an external identity provider to a specified workspace for single sign-on and organization member synchronization. Each workspace can be bound to at most one external identity provider. The binding is an asynchronous operation. After the API returns, you can track the progress by querying the status through GetIdentityProvider.</p>
+     * <p>Binds an external identity provider to a specified workspace for single sign-on and organization member synchronization. Each workspace can be bound to at most one external identity provider. The binding is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</p>
      * 
      * @param request CreateIdentityProviderRequest
      * @return CreateIdentityProviderResponse
@@ -1047,7 +1047,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description\nCreates an AgentCore workspace control plane record. The server completes the state transition from <code>Initializing</code> to <code>Initialized</code> within the same transaction. The network configuration uses <code>Enabled</code> to specify whether to enable VPC networking. When enabled, you must provide <code>VpcId</code> and at least one <code>VSwitchIds</code>.\n.</h2>
+     * <h2>Operation description\nCreates an AgentCore workspace control plane record. The server completes the state transition from <code>Initializing</code> to <code>Initialized</code> within the same transaction. Use <code>Enabled</code> in the network configuration to specify whether to enable VPC networking. If VPC networking is enabled, you must provide a <code>VpcId</code> and at least one entry in <code>VSwitchIds</code>.\n.</h2>
      * 
      * <b>summary</b> : 
      * <p>Creates an AgentCore workspace control plane record. The server completes the state transition from Initializing to Initialized within the same transaction.</p>
@@ -1096,7 +1096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description\nCreates an AgentCore workspace control plane record. The server completes the state transition from <code>Initializing</code> to <code>Initialized</code> within the same transaction. The network configuration uses <code>Enabled</code> to specify whether to enable VPC networking. When enabled, you must provide <code>VpcId</code> and at least one <code>VSwitchIds</code>.\n.</h2>
+     * <h2>Operation description\nCreates an AgentCore workspace control plane record. The server completes the state transition from <code>Initializing</code> to <code>Initialized</code> within the same transaction. Use <code>Enabled</code> in the network configuration to specify whether to enable VPC networking. If VPC networking is enabled, you must provide a <code>VpcId</code> and at least one entry in <code>VSwitchIds</code>.\n.</h2>
      * 
      * <b>summary</b> : 
      * <p>Creates an AgentCore workspace control plane record. The server completes the state transition from Initializing to Initialized within the same transaction.</p>
@@ -1886,10 +1886,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Disables a specified Connector in a workspace.</p>
+     * <p>Disables a Connector in a specified workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Disables a Connector.</p>
+     * <p>Disables a QoderCLI Connector in a specified workspace. The Connector can be disabled only when no Agent is using it. After the Connector is disabled, the Connector and its Service Account Key configuration are removed.</p>
      * 
      * @param request DisableConnectorRequest
      * @param headers map
@@ -1917,10 +1917,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Disables a specified Connector in a workspace.</p>
+     * <p>Disables a Connector in a specified workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Disables a Connector.</p>
+     * <p>Disables a QoderCLI Connector in a specified workspace. The Connector can be disabled only when no Agent is using it. After the Connector is disabled, the Connector and its Service Account Key configuration are removed.</p>
      * 
      * @param request DisableConnectorRequest
      * @return DisableConnectorResponse
@@ -1937,7 +1937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Retrieves a pre-signed OSS download URL for a specified AgentSpec, which is used to download the AgentSpec ZIP package.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a pre-signed OSS download URL for a specified AgentSpec ZIP package.</p>
+     * <p>Retrieves a pre-signed OSS download URL for a specified AgentSpec, which is used to download the AgentSpec ZIP package.</p>
      * 
      * @param request DownloadAgentSpecViaOssRequest
      * @param headers map
@@ -1975,7 +1975,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Retrieves a pre-signed OSS download URL for a specified AgentSpec, which is used to download the AgentSpec ZIP package.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a pre-signed OSS download URL for a specified AgentSpec ZIP package.</p>
+     * <p>Retrieves a pre-signed OSS download URL for a specified AgentSpec, which is used to download the AgentSpec ZIP package.</p>
      * 
      * @param request DownloadAgentSpecViaOssRequest
      * @return DownloadAgentSpecViaOssResponse
@@ -2037,10 +2037,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Enables a Connector in a specified workspace. Credential verification is required before enabling.</p>
+     * <p>Enables a Connector in a specified workspace. Credential verification is required before the Connector can be enabled.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables a Connector.</p>
+     * <p>Enables a QoderCLI Connector in a specified workspace. The request must include the site, API key, and at least one service account key. The service validates all account keys before saving the configuration.</p>
      * 
      * @param tmpReq EnableConnectorRequest
      * @param headers map
@@ -2080,10 +2080,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Enables a Connector in a specified workspace. Credential verification is required before enabling.</p>
+     * <p>Enables a Connector in a specified workspace. Credential verification is required before the Connector can be enabled.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables a Connector.</p>
+     * <p>Enables a QoderCLI Connector in a specified workspace. The request must include the site, API key, and at least one service account key. The service validates all account keys before saving the configuration.</p>
      * 
      * @param request EnableConnectorRequest
      * @return EnableConnectorResponse
@@ -3095,7 +3095,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specified user in a workspace. Returns an error if the user does not exist.</p>
+     * <p>Queries the details of a specified user in a specified workspace. Returns an error if the user does not exist.</p>
      * 
      * @param request GetUserRequest
      * @param headers map
@@ -3123,7 +3123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specified user in a workspace. Returns an error if the user does not exist.</p>
+     * <p>Queries the details of a specified user in a specified workspace. Returns an error if the user does not exist.</p>
      * 
      * @param request GetUserRequest
      * @return GetUserResponse
@@ -3179,6 +3179,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getWorkspaceWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>ACR and user OSS mounts share the same workspace role. If no existing role is found, the system uses AliyunAgentCoreWorkspace-{workspaceId}. If a valid legacy OSS mount role exists, the system reuses it and only appends permissions without overwriting existing OSS policies. Previously pinned shared roles continue to be reused and are not rebuilt or renamed because of new naming templates. The acrInstanceId, namespace, and repository parameters are required. The region and account are derived from the workspace context. The response contains the backend-resolved role and the authorization URL for the target repository. This operation does not create ACR or Agent execution versions or deliver runtime configurations. After authorization is complete, you can call Verify, and then create or update an Agent without calling a separate Ensure operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the ACR RAM authorization URL for a workspace.</p>
+     * 
+     * @param request GetWorkspaceAcrRamAuthorizeUrlRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWorkspaceAcrRamAuthorizeUrlResponse
+     */
+    public GetWorkspaceAcrRamAuthorizeUrlResponse getWorkspaceAcrRamAuthorizeUrlWithOptions(String workspaceId, GetWorkspaceAcrRamAuthorizeUrlRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acrInstanceId)) {
+            query.put("acrInstanceId", request.acrInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repository)) {
+            query.put("repository", request.repository);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetWorkspaceAcrRamAuthorizeUrl"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/acr/authorize"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetWorkspaceAcrRamAuthorizeUrlResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>ACR and user OSS mounts share the same workspace role. If no existing role is found, the system uses AliyunAgentCoreWorkspace-{workspaceId}. If a valid legacy OSS mount role exists, the system reuses it and only appends permissions without overwriting existing OSS policies. Previously pinned shared roles continue to be reused and are not rebuilt or renamed because of new naming templates. The acrInstanceId, namespace, and repository parameters are required. The region and account are derived from the workspace context. The response contains the backend-resolved role and the authorization URL for the target repository. This operation does not create ACR or Agent execution versions or deliver runtime configurations. After authorization is complete, you can call Verify, and then create or update an Agent without calling a separate Ensure operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the ACR RAM authorization URL for a workspace.</p>
+     * 
+     * @param request GetWorkspaceAcrRamAuthorizeUrlRequest
+     * @return GetWorkspaceAcrRamAuthorizeUrlResponse
+     */
+    public GetWorkspaceAcrRamAuthorizeUrlResponse getWorkspaceAcrRamAuthorizeUrl(String workspaceId, GetWorkspaceAcrRamAuthorizeUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getWorkspaceAcrRamAuthorizeUrlWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
@@ -3364,10 +3425,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the IM channel list of a specified agent.</p>
+     * <p>Queries the list of IM channels for a specified agent.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the IM channel list of a specified agent.</p>
+     * <p>Queries the list of IM channels for a specified agent.</p>
      * 
      * @param request ListAgentIMChannelsRequest
      * @param headers map
@@ -3413,10 +3474,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the IM channel list of a specified agent.</p>
+     * <p>Queries the list of IM channels for a specified agent.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the IM channel list of a specified agent.</p>
+     * <p>Queries the list of IM channels for a specified agent.</p>
      * 
      * @param request ListAgentIMChannelsRequest
      * @return ListAgentIMChannelsResponse
@@ -3516,7 +3577,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of teams to which specified agents belong. Specify the agent IDs through agentIds to retrieve the membership information between each agent and its teams, including the team ID, team name, and the role that the agent assumes in the team.</p>
+     * <p>Queries the list of teams to which specified agents belong. Specify the agent IDs by using agentIds. The response includes the membership information between each agent and its teams, such as the team ID, team name, and the role that the agent assumes in the team.</p>
      * 
      * @param tmpReq ListAgentTeamsRequest
      * @param headers map
@@ -3556,7 +3617,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of teams to which specified agents belong. Specify the agent IDs through agentIds to retrieve the membership information between each agent and its teams, including the team ID, team name, and the role that the agent assumes in the team.</p>
+     * <p>Queries the list of teams to which specified agents belong. Specify the agent IDs by using agentIds. The response includes the membership information between each agent and its teams, such as the team ID, team name, and the role that the agent assumes in the team.</p>
      * 
      * @param request ListAgentTeamsRequest
      * @return ListAgentTeamsResponse
@@ -3569,10 +3630,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of available models for a specified connector. Pagination is supported.</p>
+     * <p>Queries the list of available models for a specified Connector. Pagination is supported.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of models for a connector.</p>
+     * <p>Queries the available official models and enterprise models for an enabled QoderCLI Connector. The service retrieves models in real time by using the saved API key and organization ID, and deduplicates the results by model ID.</p>
      * 
      * @param request ListConnectorModelsRequest
      * @param headers map
@@ -3614,10 +3675,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of available models for a specified connector. Pagination is supported.</p>
+     * <p>Queries the list of available models for a specified Connector. Pagination is supported.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of models for a connector.</p>
+     * <p>Queries the available official models and enterprise models for an enabled QoderCLI Connector. The service retrieves models in real time by using the saved API key and organization ID, and deduplicates the results by model ID.</p>
      * 
      * @param request ListConnectorModelsRequest
      * @return ListConnectorModelsResponse
@@ -3633,7 +3694,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Queries the list of connectors in a specified workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of connectors.</p>
+     * <p>Queries the list of connectors supported by a specified workspace, including their status, number of bound agents, and configurations. The current version returns the QoderCLI connector.</p>
      * 
      * @param request ListConnectorsRequest
      * @param headers map
@@ -3674,7 +3735,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Queries the list of connectors in a specified workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of connectors.</p>
+     * <p>Queries the list of connectors supported by a specified workspace, including their status, number of bound agents, and configurations. The current version returns the QoderCLI connector.</p>
      * 
      * @param request ListConnectorsRequest
      * @return ListConnectorsResponse
@@ -3687,10 +3748,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of credentials in a workspace with paging. Supports filtering by type and name.</p>
+     * <p>Queries credentials in a workspace with paging. Supports filtering by type and name.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries credentials in a specified workspace with paging. Filter by type using credentialType, perform a fuzzy match on credential names using nameLike, specify the maximum number of records per page using maxResults, and retrieve the next page using nextToken. If maxResults is not specified, the server returns 10 records by default.</p>
+     * <p>Queries credentials in a specified workspace with paging. Use credentialType to filter by type, nameLike to perform a fuzzy match on credential names, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default.</p>
      * 
      * @param request ListCredentialsRequest
      * @param headers map
@@ -3740,10 +3801,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of credentials in a workspace with paging. Supports filtering by type and name.</p>
+     * <p>Queries credentials in a workspace with paging. Supports filtering by type and name.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries credentials in a specified workspace with paging. Filter by type using credentialType, perform a fuzzy match on credential names using nameLike, specify the maximum number of records per page using maxResults, and retrieve the next page using nextToken. If maxResults is not specified, the server returns 10 records by default.</p>
+     * <p>Queries credentials in a specified workspace with paging. Use credentialType to filter by type, nameLike to perform a fuzzy match on credential names, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default.</p>
      * 
      * @param request ListCredentialsRequest
      * @return ListCredentialsResponse
@@ -3864,7 +3925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query for the list of managed agents in a specified workspace. Returns summary information for each agent, including the identity, name, status, template, and specifications. Use paging parameters to navigate through results.</p>
+     * <p>Queries the list of managed agents in a specified workspace by using paging. Returns summary information for each agent, including the identity, name, status, template, and specifications.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of managed agents in a specified workspace.</p>
@@ -3905,7 +3966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query for the list of managed agents in a specified workspace. Returns summary information for each agent, including the identity, name, status, template, and specifications. Use paging parameters to navigate through results.</p>
+     * <p>Queries the list of managed agents in a specified workspace by using paging. Returns summary information for each agent, including the identity, name, status, template, and specifications.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of managed agents in a specified workspace.</p>
@@ -4342,10 +4403,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of active sessions in the Sandbox of a specified managed agent.</p>
+     * <p>Queries the list of active sessions in the sandbox of a specified managed agent.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of Sandbox sessions.</p>
+     * <p>Queries the list of active sessions in the sandbox of a specified managed agent by paging, and returns the session source and external channel type.</p>
      * 
      * @param request ListSandboxSessionsRequest
      * @param headers map
@@ -4383,10 +4444,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of active sessions in the Sandbox of a specified managed agent.</p>
+     * <p>Queries the list of active sessions in the sandbox of a specified managed agent.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of Sandbox sessions.</p>
+     * <p>Queries the list of active sessions in the sandbox of a specified managed agent by paging, and returns the session source and external channel type.</p>
      * 
      * @param request ListSandboxSessionsRequest
      * @return ListSandboxSessionsResponse
@@ -4399,10 +4460,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the sandbox list of a specified managed agent. The searchText parameter performs a fuzzy match on Sandbox ID fragments, and the sessionId parameter performs a fuzzy match on currently active Session ID fragments. Both parameters can be specified simultaneously and are combined with AND logic.</p>
+     * <p>Queries the list of sandboxes for a specified managed agent. The searchText parameter performs a fuzzy match on sandbox ID fragments, and the sessionId parameter performs a fuzzy match on active session ID fragments. Both parameters are case-insensitive and can be used together with AND logic.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of sandboxes.</p>
+     * <p>Queries the list of sandboxes for a managed agent in a specified workspace. You can filter results by sandbox ID and active session ID fragments.</p>
      * 
      * @param request ListSandboxesRequest
      * @param headers map
@@ -4448,10 +4509,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the sandbox list of a specified managed agent. The searchText parameter performs a fuzzy match on Sandbox ID fragments, and the sessionId parameter performs a fuzzy match on currently active Session ID fragments. Both parameters can be specified simultaneously and are combined with AND logic.</p>
+     * <p>Queries the list of sandboxes for a specified managed agent. The searchText parameter performs a fuzzy match on sandbox ID fragments, and the sessionId parameter performs a fuzzy match on active session ID fragments. Both parameters are case-insensitive and can be used together with AND logic.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of sandboxes.</p>
+     * <p>Queries the list of sandboxes for a managed agent in a specified workspace. You can filter results by sandbox ID and active session ID fragments.</p>
      * 
      * @param request ListSandboxesRequest
      * @return ListSandboxesResponse
@@ -4464,7 +4525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description\nQueries service endpoints in a specified workspace by using paging. Filter results by targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status. Use maxResults to specify the maximum number of records per page, and use nextToken to retrieve the next page. If maxResults is not specified, the server returns 20 records by default.\n</h2>
+     * <h2>Operation description\nQueries service endpoints in a specified workspace by using paging. Filter results by targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status. Use maxResults to specify the maximum number of records per page and nextToken to retrieve the next page. If maxResults is not specified, the server returns 20 records by default.\n</h2>
      * 
      * <b>summary</b> : 
      * <p>Queries service endpoints in a specified workspace by using paging. Supports filtering by target type, agent, collaboration component, and status.</p>
@@ -4529,7 +4590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description\nQueries service endpoints in a specified workspace by using paging. Filter results by targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status. Use maxResults to specify the maximum number of records per page, and use nextToken to retrieve the next page. If maxResults is not specified, the server returns 20 records by default.\n</h2>
+     * <h2>Operation description\nQueries service endpoints in a specified workspace by using paging. Filter results by targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status. Use maxResults to specify the maximum number of records per page and nextToken to retrieve the next page. If maxResults is not specified, the server returns 20 records by default.\n</h2>
      * 
      * <b>summary</b> : 
      * <p>Queries service endpoints in a specified workspace by using paging. Supports filtering by target type, agent, collaboration component, and status.</p>
@@ -4632,7 +4693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries teams in a specified workspace by paging. Use nameLike to filter by team name with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default. Member information in the list includes only the member identity, name, and team role.</p>
+     * <p>Performs a paged query of teams in a specified workspace. Use nameLike to filter by team name with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default. Member information in the list includes only the member identity, name, and team role.</p>
      * 
      * @param request ListTeamsRequest
      * @param headers map
@@ -4674,7 +4735,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries teams in a specified workspace by paging. Use nameLike to filter by team name with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default. Member information in the list includes only the member identity, name, and team role.</p>
+     * <p>Performs a paged query of teams in a specified workspace. Use nameLike to filter by team name with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default. Member information in the list includes only the member identity, name, and team role.</p>
      * 
      * @param request ListTeamsRequest
      * @return ListTeamsResponse
@@ -4687,7 +4748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户列表</p>
+     * <p>Queries users in a specified workspace with paging. Use nameLike to filter by username with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default.</p>
      * 
      * @param request ListUsersRequest
      * @param headers map
@@ -4733,7 +4794,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户列表</p>
+     * <p>Queries users in a specified workspace with paging. Use nameLike to filter by username with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default.</p>
      * 
      * @param request ListUsersRequest
      * @return ListUsersResponse
@@ -5478,10 +5539,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the sensitive configuration of a specified Connector and aligns the Service Account Key by ID.</p>
+     * <p>Updates the sensitive configuration of a specified Connector and aligns Service Account Keys by ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the credentials of a Connector.</p>
+     * <p>Updates the API Key or Service Account Key collection for an enabled QoderCLI Connector. When serviceAccountKeys is submitted, the service treats it as the complete updated key collection and performs additions, renames, rotations, and deletions accordingly.</p>
      * 
      * @param tmpReq UpdateConnectorRequest
      * @param headers map
@@ -5521,10 +5582,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the sensitive configuration of a specified Connector and aligns the Service Account Key by ID.</p>
+     * <p>Updates the sensitive configuration of a specified Connector and aligns Service Account Keys by ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the credentials of a Connector.</p>
+     * <p>Updates the API Key or Service Account Key collection for an enabled QoderCLI Connector. When serviceAccountKeys is submitted, the service treats it as the complete updated key collection and performs additions, renames, rotations, and deletions accordingly.</p>
      * 
      * @param request UpdateConnectorRequest
      * @return UpdateConnectorResponse
@@ -6344,10 +6405,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <code>Initialized</code> state can be updated. <code>Status</code>, <code>TenantId</code>, and <code>RegionId</code> are maintained by the server and cannot be modified through this operation. The network configuration uses <code>Enabled</code> to specify whether to enable VPC networking. When enabled, you must also provide <code>VpcId</code> and at least one <code>VSwitchIds</code>.\n.</h2>
+     * <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <code>Initialized</code> status can be updated. The <code>Status</code>, <code>TenantId</code>, and <code>RegionId</code> fields are maintained by the server and cannot be modified through this operation. The network configuration uses <code>Enabled</code> to specify whether to enable VPC networking. When enabled, you must also provide a <code>VpcId</code> and at least one entry in <code>VSwitchIds</code>.\n.</h2>
      * 
      * <b>summary</b> : 
-     * <p>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</p>
+     * <p>Updates the name or network configuration of a workspace. Only workspaces in the Initialized status can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</p>
      * 
      * @param tmpReq UpdateWorkspaceRequest
      * @param headers map
@@ -6393,10 +6454,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <code>Initialized</code> state can be updated. <code>Status</code>, <code>TenantId</code>, and <code>RegionId</code> are maintained by the server and cannot be modified through this operation. The network configuration uses <code>Enabled</code> to specify whether to enable VPC networking. When enabled, you must also provide <code>VpcId</code> and at least one <code>VSwitchIds</code>.\n.</h2>
+     * <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <code>Initialized</code> status can be updated. The <code>Status</code>, <code>TenantId</code>, and <code>RegionId</code> fields are maintained by the server and cannot be modified through this operation. The network configuration uses <code>Enabled</code> to specify whether to enable VPC networking. When enabled, you must also provide a <code>VpcId</code> and at least one entry in <code>VSwitchIds</code>.\n.</h2>
      * 
      * <b>summary</b> : 
-     * <p>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</p>
+     * <p>Updates the name or network configuration of a workspace. Only workspaces in the Initialized status can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</p>
      * 
      * @param request UpdateWorkspaceRequest
      * @return UpdateWorkspaceResponse
@@ -6534,7 +6595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Validates whether the credentials of a specified Connector are valid and returns a list of invalid Service Account Keys.</p>
      * 
      * <b>summary</b> : 
-     * <p>Validates the credentials of a Connector.</p>
+     * <p>Validates whether one or more Qoder Service Account Keys are available at a specified site. This operation does not save keys or modify the Connector status.</p>
      * 
      * @param tmpReq VerifyConnectorRequest
      * @param headers map
@@ -6577,7 +6638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Validates whether the credentials of a specified Connector are valid and returns a list of invalid Service Account Keys.</p>
      * 
      * <b>summary</b> : 
-     * <p>Validates the credentials of a Connector.</p>
+     * <p>Validates whether one or more Qoder Service Account Keys are available at a specified site. This operation does not save keys or modify the Connector status.</p>
      * 
      * @param request VerifyConnectorRequest
      * @return VerifyConnectorResponse
@@ -6590,10 +6651,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries whether the OSS mount role of a workspace is bound to the custom RAM policy for the target bucket. Returns AUTHORIZED or UNAUTHORIZED. If bucketName is not specified, the existing user-managed OSS binding of the workspace is used and the authorization status is saved. If bucketName is specified, only the authorization status of the specified bucket is queried without modifying the workspace OSS binding. This operation does not verify OSS data plane access permissions or resume workspace initialization tasks.</p>
+     * <p>ACR and user OSS mounts share the same workspace role. When no existing role is found, the system uses AliyunAgentCoreWorkspace-{workspaceId}. When a valid legacy OSS mount role exists, the system reuses it and only appends permissions without overwriting existing OSS policies. Previously pinned shared roles continue to be reused and are not rebuilt or renamed because of new naming templates. This operation performs a read-only check to verify whether the custom policies corresponding to the target instance, namespace, and repository are attached to the shared role, and checks the workspace prerequisite status. It does not create execution versions or trigger configuration delivery. AUTHORIZED only indicates that the custom policy for the target name is attached. It does not parse policy content or simulate final permissions. ELIGIBLE does not indicate that RuntimeManager capacity or template admission is complete, nor does it require that ACR configurations have been delivered. Creating or updating an Agent re-verifies permissions and processes ACR dependencies on the backend. Configuration waiting, failures, and retries are reported through Agent details.</p>
      * 
      * <b>summary</b> : 
-     * <p>Verifies the RAM authorization for an OSS mount in a workspace.</p>
+     * <p>Verifies the ACR RAM authorization of a workspace.</p>
+     * 
+     * @param request VerifyWorkspaceAcrRamAuthorizationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VerifyWorkspaceAcrRamAuthorizationResponse
+     */
+    public VerifyWorkspaceAcrRamAuthorizationResponse verifyWorkspaceAcrRamAuthorizationWithOptions(String workspaceId, VerifyWorkspaceAcrRamAuthorizationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acrInstanceId)) {
+            query.put("acrInstanceId", request.acrInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repository)) {
+            query.put("repository", request.repository);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VerifyWorkspaceAcrRamAuthorization"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/acr/authorize/verify"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VerifyWorkspaceAcrRamAuthorizationResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>ACR and user OSS mounts share the same workspace role. When no existing role is found, the system uses AliyunAgentCoreWorkspace-{workspaceId}. When a valid legacy OSS mount role exists, the system reuses it and only appends permissions without overwriting existing OSS policies. Previously pinned shared roles continue to be reused and are not rebuilt or renamed because of new naming templates. This operation performs a read-only check to verify whether the custom policies corresponding to the target instance, namespace, and repository are attached to the shared role, and checks the workspace prerequisite status. It does not create execution versions or trigger configuration delivery. AUTHORIZED only indicates that the custom policy for the target name is attached. It does not parse policy content or simulate final permissions. ELIGIBLE does not indicate that RuntimeManager capacity or template admission is complete, nor does it require that ACR configurations have been delivered. Creating or updating an Agent re-verifies permissions and processes ACR dependencies on the backend. Configuration waiting, failures, and retries are reported through Agent details.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Verifies the ACR RAM authorization of a workspace.</p>
+     * 
+     * @param request VerifyWorkspaceAcrRamAuthorizationRequest
+     * @return VerifyWorkspaceAcrRamAuthorizationResponse
+     */
+    public VerifyWorkspaceAcrRamAuthorizationResponse verifyWorkspaceAcrRamAuthorization(String workspaceId, VerifyWorkspaceAcrRamAuthorizationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.verifyWorkspaceAcrRamAuthorizationWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries whether the workspace OSS mount role is bound to the custom RAM policy corresponding to the target bucket, and returns AUTHORIZED or UNAUTHORIZED. When bucketName is not specified, the existing user-managed OSS binding of the workspace is used and the authorization status is saved. When bucketName is specified, only the authorization status of the specified bucket is queried without modifying the workspace OSS binding. This operation does not verify OSS data plane access permissions or resume workspace initialization tasks. Alibaba Cloud Container Registry (ACR) and user OSS mounts share the workspace role. If no existing role is available, AliyunAgentCoreWorkspace-{workspaceId} is used. If a valid legacy OSS mount role exists, it is reused and permissions are only appended without overwriting existing OSS policies. Previously pinned shared roles continue to be reused and are not recreated or renamed due to new naming templates.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Verifies the RAM authorization for a workspace to access an OSS bucket and returns the current authorization status. When bucketName is specified, verifies the authorization for an agent-mounted bucket. When bucketName is not specified, verifies and updates the authorization status of the workspace\&quot;s private OSS storage.</p>
      * 
      * @param request VerifyWorkspaceOssMountRamAuthorizationRequest
      * @param headers map
@@ -6627,10 +6749,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries whether the OSS mount role of a workspace is bound to the custom RAM policy for the target bucket. Returns AUTHORIZED or UNAUTHORIZED. If bucketName is not specified, the existing user-managed OSS binding of the workspace is used and the authorization status is saved. If bucketName is specified, only the authorization status of the specified bucket is queried without modifying the workspace OSS binding. This operation does not verify OSS data plane access permissions or resume workspace initialization tasks.</p>
+     * <p>Queries whether the workspace OSS mount role is bound to the custom RAM policy corresponding to the target bucket, and returns AUTHORIZED or UNAUTHORIZED. When bucketName is not specified, the existing user-managed OSS binding of the workspace is used and the authorization status is saved. When bucketName is specified, only the authorization status of the specified bucket is queried without modifying the workspace OSS binding. This operation does not verify OSS data plane access permissions or resume workspace initialization tasks. Alibaba Cloud Container Registry (ACR) and user OSS mounts share the workspace role. If no existing role is available, AliyunAgentCoreWorkspace-{workspaceId} is used. If a valid legacy OSS mount role exists, it is reused and permissions are only appended without overwriting existing OSS policies. Previously pinned shared roles continue to be reused and are not recreated or renamed due to new naming templates.</p>
      * 
      * <b>summary</b> : 
-     * <p>Verifies the RAM authorization for an OSS mount in a workspace.</p>
+     * <p>Verifies the RAM authorization for a workspace to access an OSS bucket and returns the current authorization status. When bucketName is specified, verifies the authorization for an agent-mounted bucket. When bucketName is not specified, verifies and updates the authorization status of the workspace\&quot;s private OSS storage.</p>
      * 
      * @param request VerifyWorkspaceOssMountRamAuthorizationRequest
      * @return VerifyWorkspaceOssMountRamAuthorizationResponse

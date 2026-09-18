@@ -4,30 +4,82 @@ package com.aliyun.agentcore20260804.models;
 import com.aliyun.tea.*;
 
 public class ListSandboxesResponseBody extends TeaModel {
+    /**
+     * <p>The business status code. The value SUCCESS is returned if the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The HTTP status code. The value 200 is returned if the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The list of sandboxes that match the filter conditions.</p>
+     */
     @NameInMap("items")
     public java.util.List<ListSandboxesResponseBodyItems> items;
 
+    /**
+     * <p>The maximum number of records per page for this query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The response message. The value success is returned if the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The pagination token for the next page. An empty value indicates that no more results are available.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>next-token-1</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1a2b3c4d-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>The total number of records that match the query conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -109,24 +161,66 @@ public class ListSandboxesResponseBody extends TeaModel {
     }
 
     public static class ListSandboxesResponseBodyItems extends TeaModel {
+        /**
+         * <p>The number of active sessions for this sandbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("activeSessionCount")
         public Integer activeSessionCount;
 
+        /**
+         * <p>The time when the sandbox was created, in RFC 3339 UTC format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-29T00:00:00Z</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <p>The time of the last activity on the sandbox, in RFC 3339 UTC format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-29T00:02:00Z</p>
+         */
         @NameInMap("lastActiveAt")
         public String lastActiveAt;
 
+        /**
+         * <p>The time of the last heartbeat from the sandbox, in RFC 3339 UTC format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-29T00:01:00Z</p>
+         */
         @NameInMap("lastHeartbeatAt")
         public String lastHeartbeatAt;
 
+        /**
+         * <p>The maximum number of concurrent sessions allowed for this sandbox, derived from the auto scaling configuration in effect at runtime. This value is empty if auto scaling is not enabled or the configuration is unavailable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("maxConcurrentSessions")
         public Integer maxConcurrentSessions;
 
+        /**
+         * <p>The current running phase of the sandbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("phase")
         public String phase;
 
+        /**
+         * <p>The sandbox ID. You can call the ListSandboxes operation to query sandbox IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sbx-2</p>
+         */
         @NameInMap("sandboxId")
         public String sandboxId;
 

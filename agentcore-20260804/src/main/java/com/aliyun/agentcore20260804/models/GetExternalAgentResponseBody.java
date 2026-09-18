@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetExternalAgentResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value SUCCESS is returned when the request succeeds.</p>
+     * <p>The business status code. The value is SUCCESS when the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -20,7 +20,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
     public GetExternalAgentResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. The value 200 is returned when the request succeeds.</p>
+     * <p>The HTTP status code. The value is 200 when the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message that indicates the result of the request.</p>
+     * <p>The request processing result message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -121,7 +121,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public String heartbeatStatus;
 
         /**
-         * <p>The last active time of the external agent in RFC 3339 format.</p>
+         * <p>The most recent active time of the external agent in RFC 3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01T00:00:00Z</p>
@@ -130,7 +130,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public String lastActiveAt;
 
         /**
-         * <p>The last heartbeat time of the external agent in RFC 3339 format.</p>
+         * <p>The most recent heartbeat time of the external agent in RFC 3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01T00:00:00Z</p>
@@ -205,6 +205,8 @@ public class GetExternalAgentResponseBody extends TeaModel {
 
     public static class GetExternalAgentResponseBodyDataModelQuota extends TeaModel {
         /**
+         * <p>Indicates whether the quota is enabled. This parameter is not returned if no quota is configured.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -212,6 +214,8 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p>The quota limit type. Currently, only token is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>token</p>
          */
@@ -219,6 +223,8 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public String limitType;
 
         /**
+         * <p>Indicates whether the quota has been exceeded in the current cycle. This is a read-only field returned by the backend.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -226,6 +232,8 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public Boolean overLimit;
 
         /**
+         * <p>The quota statistical period. day indicates daily and month indicates monthly.</p>
+         * 
          * <strong>example:</strong>
          * <p>day</p>
          */
@@ -233,6 +241,8 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public String periodType;
 
         /**
+         * <p>The gateway quota rule status. This is a read-only field returned by the backend.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
          */
@@ -240,6 +250,8 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public String ruleStatus;
 
         /**
+         * <p>The maximum number of tokens that can be consumed within a single cycle.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000000</p>
          */
@@ -247,6 +259,8 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public Long usageLimit;
 
         /**
+         * <p>The number of tokens consumed in the current cycle. This is a read-only field returned by the backend.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */
@@ -335,6 +349,9 @@ public class GetExternalAgentResponseBody extends TeaModel {
         @NameInMap("modelName")
         public String modelName;
 
+        /**
+         * <p>The model token quota configuration and the quota usage status in the current cycle. This parameter is empty if no quota is configured.</p>
+         */
         @NameInMap("quota")
         public GetExternalAgentResponseBodyDataModelQuota quota;
 
@@ -619,7 +636,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public GetExternalAgentResponseBodyDataModel model;
 
         /**
-         * <p>The source of the model configuration. PLATFORM indicates that the model configuration is parsed and delivered by the platform. RUNTIME indicates that the model is managed by the external runtime, and the model parameter cannot be specified at the same time. Valid values:</p>
+         * <p>The model configuration source. PLATFORM indicates that the model configuration is parsed and distributed by the platform. RUNTIME indicates that the model is managed by the external runtime, and the model parameter cannot be specified at the same time. Valid values:</p>
          * <ul>
          * <li>PLATFORM: Platform model.</li>
          * <li>RUNTIME: Runtime model.</li>

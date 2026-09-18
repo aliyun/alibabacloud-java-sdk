@@ -39,12 +39,12 @@ public class ListAgentIMChannelsRequest extends TeaModel {
     /**
      * <p>The IM channel status. Valid values:</p>
      * <ul>
-     * <li>CREATING: being created.</li>
-     * <li>READY: ready.</li>
-     * <li>UPDATING: being updated.</li>
-     * <li>FAILED: failed.</li>
-     * <li>DELETING: being deleted.</li>
-     * <li>DELETE_FAILED: deletion failed.</li>
+     * <li>CREATING: The channel is being created.</li>
+     * <li>READY: The channel is ready.</li>
+     * <li>UPDATING: The channel is being updated.</li>
+     * <li>FAILED: The channel creation or update failed.</li>
+     * <li>DELETING: The channel is being deleted.</li>
+     * <li>DELETE_FAILED: The channel deletion failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

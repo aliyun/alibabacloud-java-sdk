@@ -4,30 +4,82 @@ package com.aliyun.agentcore20260804.models;
 import com.aliyun.tea.*;
 
 public class ListSandboxSessionsResponseBody extends TeaModel {
+    /**
+     * <p>The business status code. The value SUCCESS is returned if the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The HTTP status code. The value 200 is returned if the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The list of active sessions in the sandbox.</p>
+     */
     @NameInMap("items")
     public java.util.List<ListSandboxSessionsResponseBodyItems> items;
 
+    /**
+     * <p>The maximum number of records per page for this query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The response message. The value success is returned if the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The pagination token for the next page. An empty value indicates that no more results are available.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>next-token-1</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1a2b3c4d-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>The total number of records that match the query conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -111,13 +163,34 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
     public static class ListSandboxSessionsResponseBodyItems extends TeaModel {
         /**
          * <p>The external channel type, such as DINGTALK, FEISHU, or WECOM. This parameter is empty for non-external channels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DINGTALK</p>
          */
         @NameInMap("channelType")
         public String channelType;
 
+        /**
+         * <p>The unique identifier of the active session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sess-2</p>
+         */
         @NameInMap("sessionId")
         public String sessionId;
 
+        /**
+         * <p>The session source type. Valid values:</p>
+         * <ul>
+         * <li>API: API call.</li>
+         * <li>CONSOLE_DEBUG: Console debugging.</li>
+         * <li>EXTERNAL_CHANNEL: External channel.</li>
+         * <li>UNKNOWN: Unknown source.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EXTERNAL_CHANNEL</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConnectorModelsRequest extends TeaModel {
     /**
-     * <p>The ID of a service account key. This parameter is required when multiple keys exist. You can leave this parameter empty if only one key exists.</p>
+     * <p>The Connector Key ID. This parameter is not supported in the current version.</p>
      * 
      * <strong>example:</strong>
      * <p>ckey-xxxx</p>
@@ -14,7 +14,7 @@ public class ListConnectorModelsRequest extends TeaModel {
     public String connectorKeyId;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size. This parameter is not supported in the current version.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListConnectorModelsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page.</p>
+     * <p>The next page token. This parameter is not supported in the current version.</p>
      * 
      * <strong>example:</strong>
      * <p>dGVzdA==</p>

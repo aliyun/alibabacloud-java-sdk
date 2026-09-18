@@ -14,7 +14,10 @@ public class ListSandboxSessionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The cursor used to query the next page.</p>
+     * <p>The pagination token for querying the next page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>next-token-1</p>
      */
     @NameInMap("nextToken")
     public String nextToken;

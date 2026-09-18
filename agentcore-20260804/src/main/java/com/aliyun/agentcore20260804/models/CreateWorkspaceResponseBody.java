@@ -232,7 +232,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
 
     public static class CreateWorkspaceResponseBodyData extends TeaModel {
         /**
-         * <p>The AI Registry namespace ID. This value is returned after the related resource binding is complete and may be empty during initialization.</p>
+         * <p>The AI Registry namespace ID. This value is returned after the related resources are bound. It may be empty during initialization.</p>
          * 
          * <strong>example:</strong>
          * <p>namespace-0123456789abcdef</p>
@@ -245,18 +245,24 @@ public class CreateWorkspaceResponseBody extends TeaModel {
 
         /**
          * <p>The OSS storage authorization status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AUTHORIZED</p>
          */
         @NameInMap("authorizationStatus")
         public String authorizationStatus;
 
         /**
          * <p>The name of the private OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bucket-001</p>
          */
         @NameInMap("bucketName")
         public String bucketName;
 
         /**
-         * <p>The CloudMonitor workspace ID. This value is returned after the related resource binding is complete and may be empty during initialization.</p>
+         * <p>The CloudMonitor workspace ID. This value is returned after the related resources are bound. It may be empty during initialization.</p>
          * 
          * <strong>example:</strong>
          * <p>cms-ws-0123456789abcdef</p>
@@ -268,7 +274,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public String cmsWorkspaceId;
 
         /**
-         * <p>The time when the workspace was created, in ISO-8601 format.</p>
+         * <p>The time when the workspace was created, in ISO 8601 format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -323,7 +329,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The supplementary reason for the current workspace status. This value is used to display the specific reason when initialization fails or authorization is pending, and may be empty under normal conditions.</p>
+         * <p>The supplementary reason for the current workspace status. This value is used to display the specific reason when initialization fails or authorization is pending. It may be empty under normal conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>Waiting for OSS RAM authorization</p>
@@ -336,6 +342,9 @@ public class CreateWorkspaceResponseBody extends TeaModel {
 
         /**
          * <p>The storage type of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         @NameInMap("storageType")
         public String storageType;

@@ -26,7 +26,7 @@ public class VerifyConnectorRequest extends TeaModel {
 
     public static class VerifyConnectorRequestBody extends TeaModel {
         /**
-         * <p>A JSON string. qodercli uses apiKey. This parameter is used only for validation and is not persisted.</p>
+         * <p>The Connector configuration JSON string to validate. Set site to global or cn. The serviceAccountKeys field must contain at least one item with a serviceAccountKey.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

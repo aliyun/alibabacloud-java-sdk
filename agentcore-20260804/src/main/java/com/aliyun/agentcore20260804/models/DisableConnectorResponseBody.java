@@ -128,7 +128,7 @@ public class DisableConnectorResponseBody extends TeaModel {
         public String enabledAt;
 
         /**
-         * <p>A JSON string. For qodercli: {&quot;site&quot;:&quot;global|cn&quot;,&quot;organizationId&quot;:&quot;...&quot;,&quot;apiKey&quot;:&quot;...&quot;,&quot;serviceAccountKeys&quot;:[{&quot;id&quot;:&quot;ckey-xxx&quot;,&quot;name&quot;:&quot;default&quot;,&quot;serviceAccountKey&quot;:&quot;...&quot;}]}. This field is empty when the Connector is not enabled.</p>
+         * <p>The Connector configuration JSON string before the Connector was disabled. This is sensitive data.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;site&quot;:&quot;global&quot;,&quot;organizationId&quot;:&quot;org-xxxx&quot;}</p>
@@ -137,7 +137,7 @@ public class DisableConnectorResponseBody extends TeaModel {
         public String metadata;
 
         /**
-         * <p>The Connector name.</p>
+         * <p>The Connector name. Currently, the value is qodercli.</p>
          * 
          * <strong>example:</strong>
          * <p>qodercli</p>

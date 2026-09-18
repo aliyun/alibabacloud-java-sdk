@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentIMChannelsResponseBody extends TeaModel {
     /**
-     * <p>The business status code. A value of SUCCESS indicates success.</p>
+     * <p>The business status code. The value SUCCESS indicates a successful request.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,7 +14,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code. A value of 200 indicates success.</p>
+     * <p>The HTTP status code. The value 200 indicates a successful request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The IM channel list.</p>
+     * <p>The list of IM channels.</p>
      */
     @NameInMap("items")
     public java.util.List<ListAgentIMChannelsResponseBodyItems> items;
@@ -38,7 +38,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The message returned for the request.</p>
+     * <p>The request processing result message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -71,7 +71,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of records that match the query conditions.</p>
+     * <p>The total number of records that match the specified conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -268,7 +268,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The channel credential summary. Only non-sensitive fields and configured secret field names are returned. Secret values are not returned.</p>
+         * <p>The channel credential summary. Only non-sensitive fields and the names of configured secret fields are returned. Secret values are not returned.</p>
          */
         @NameInMap("credentialSummary")
         public ListAgentIMChannelsResponseBodyItemsCredentialSummary credentialSummary;
@@ -298,7 +298,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
         public String imChannelId;
 
         /**
-         * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public network address.</p>
+         * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public access URL.</p>
          * 
          * <strong>example:</strong>
          * <p>se-1</p>
@@ -309,12 +309,12 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
         /**
          * <p>The IM channel status. Valid values:</p>
          * <ul>
-         * <li>CREATING: being created.</li>
-         * <li>READY: ready.</li>
-         * <li>UPDATING: being updated.</li>
-         * <li>FAILED: failed.</li>
-         * <li>DELETING: being deleted.</li>
-         * <li>DELETE_FAILED: deletion failed.</li>
+         * <li>CREATING: The channel is being created.</li>
+         * <li>READY: The channel is ready.</li>
+         * <li>UPDATING: The channel is being updated.</li>
+         * <li>FAILED: The channel creation or update failed.</li>
+         * <li>DELETING: The channel is being deleted.</li>
+         * <li>DELETE_FAILED: The channel deletion failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

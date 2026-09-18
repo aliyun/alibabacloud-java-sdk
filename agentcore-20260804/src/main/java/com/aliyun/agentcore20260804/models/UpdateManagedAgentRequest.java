@@ -11,7 +11,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
     public UpdateManagedAgentRequestBody body;
 
     /**
-     * <p>The reserved idempotency token. The backend does not guarantee idempotence in the current phase.</p>
+     * <p>The reserved idempotency token. The backend does not provide idempotency guarantees in the current version.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-1</p>
@@ -148,7 +148,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBodyHarnessConfiguration extends TeaModel {
         /**
-         * <p>The Key ID used to bind a Service Account Key of the QoderCLI Connector. This parameter can be omitted when only one key exists, but is required when multiple keys exist.</p>
+         * <p>The connector service account key.</p>
          * 
          * <strong>example:</strong>
          * <p>key-xxxx</p>
@@ -157,7 +157,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public String connectorServiceAccountKey;
 
         /**
-         * <p>The Connector Key name that is populated during queries. This value is not used as a binding reference during writes.</p>
+         * <p>The connector service account name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-connector-key</p>
@@ -190,13 +190,13 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBodyHarness extends TeaModel {
         /**
-         * <p>The Connector binding configuration for the qodercli harness.</p>
+         * <p>The harness configuration.</p>
          */
         @NameInMap("configuration")
         public UpdateManagedAgentRequestBodyHarnessConfiguration configuration;
 
         /**
-         * <p>The type of the runtime harness. Valid values: qwenpaw and qodercli. When the type is qodercli, binding is performed based on configuration.connectorServiceAccountKey, and the name is also populated during queries.</p>
+         * <p>The harness type.</p>
          * 
          * <strong>example:</strong>
          * <p>qodercli</p>
@@ -229,6 +229,8 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBodyModelQuota extends TeaModel {
         /**
+         * <p>Specifies whether to enable the token quota. Default value: true. If you set this parameter to false, the token quota is disabled and existing quota rules are deleted.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -236,6 +238,8 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p>The quota limit type. This parameter is required by backend validation when the quota is enabled. Fixed value: token.</p>
+         * 
          * <strong>example:</strong>
          * <p>token</p>
          */
@@ -243,6 +247,12 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public String limitType;
 
         /**
+         * <p>The quota statistical period. This parameter is required by backend validation when the quota is enabled. Valid values:</p>
+         * <ul>
+         * <li>day: daily.</li>
+         * <li>month: monthly.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>day</p>
          */
@@ -250,6 +260,8 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public String periodType;
 
         /**
+         * <p>The maximum number of tokens that can be consumed within a single period. This parameter is required by backend validation when the quota is enabled. The value must be greater than 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000000</p>
          */
@@ -315,6 +327,9 @@ public class UpdateManagedAgentRequest extends TeaModel {
         @NameInMap("modelName")
         public String modelName;
 
+        /**
+         * <p>The model token quota configuration. If this parameter is not specified, no quota is configured.</p>
+         */
         @NameInMap("quota")
         public UpdateManagedAgentRequestBodyModelQuota quota;
 
@@ -351,7 +366,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBodyNetworkAccessInternet extends TeaModel {
         /**
-         * <p>Specifies whether public network access is allowed.</p>
+         * <p>Specifies whether to allow public network access.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -376,7 +391,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBodyNetworkAccessVpc extends TeaModel {
         /**
-         * <p>Specifies whether VPC access is allowed.</p>
+         * <p>Specifies whether to allow VPC access.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -437,25 +452,34 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBodyOssMounts extends TeaModel {
         /**
-         * <p>The OSS bucket name. Each mount item is validated as required by the backend.</p>
+         * <p>The OSS bucket name. This parameter is required by backend validation for each mount entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bucket-001</p>
          */
         @NameInMap("bucketName")
         public String bucketName;
 
         /**
-         * <p>The absolute mount path in the container. Each mount item is validated as required by the backend.</p>
+         * <p>The absolute mount path in the container. This parameter is required by backend validation for each mount entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/mnt/oss/datasets</p>
          */
         @NameInMap("mountPath")
         public String mountPath;
 
         /**
-         * <p>The relative object prefix in the bucket. If not specified, the entire bucket is mounted.</p>
+         * <p>The relative object prefix within the bucket. If this parameter is not specified, the entire bucket is mounted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>datasets</p>
          */
         @NameInMap("path")
         public String path;
 
         /**
-         * <p>Specifies whether to mount as read-only. Default value: false.</p>
+         * <p>Specifies whether to mount in read-only mode. Default value: false.</p>
          */
         @NameInMap("readOnly")
         public Boolean readOnly;
@@ -527,31 +551,43 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBodyRuntimeHpa extends TeaModel {
         /**
-         * <p>Specifies whether to enable auto scaling. Required when hpa is present as validated by the backend.</p>
+         * <p>Specifies whether to enable auto scaling. This parameter is required by backend validation when hpa is specified.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>The maximum number of active sessions per Sandbox. Required when hpa is present as validated by the backend.</p>
+         * <p>The maximum number of active sessions per sandbox. This parameter is required by backend validation when hpa is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("maxConcurrentSessionsPerSandbox")
         public Integer maxConcurrentSessionsPerSandbox;
 
         /**
-         * <p>The maximum number of Sandboxes. Required when HPA is enabled and must be no less than the minimum value.</p>
+         * <p>The maximum number of sandboxes. This parameter is required when HPA is enabled and the value must be no less than the minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("maxSandboxCount")
         public Integer maxSandboxCount;
 
         /**
-         * <p>The minimum number of Sandboxes. Required when HPA is enabled.</p>
+         * <p>The minimum number of sandboxes. This parameter is required when HPA is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("minSandboxCount")
         public Integer minSandboxCount;
 
         /**
-         * <p>The session reclamation time after inactivity, in seconds. Required when hpa is present as validated by the backend.</p>
+         * <p>The session reclamation time after inactivity, in seconds. This parameter is required by backend validation when hpa is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         @NameInMap("sessionTtlSeconds")
         public Integer sessionTtlSeconds;
@@ -605,7 +641,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBodyRuntimeSessionPolicy extends TeaModel {
         /**
-         * <p>The HTTP header name used for session affinity. Takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
+         * <p>The name of the HTTP header used for session affinity. This parameter takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
          * 
          * <strong>example:</strong>
          * <p>X-Session-Id</p>
@@ -655,7 +691,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public UpdateManagedAgentRequestBodyRuntimeCompute compute;
 
         /**
-         * <p>The Sandbox auto scaling and session configuration.</p>
+         * <p>The sandbox auto scaling and session configuration.</p>
          */
         @NameInMap("hpa")
         public UpdateManagedAgentRequestBodyRuntimeHpa hpa;
@@ -912,7 +948,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public UpdateManagedAgentRequestBodyEnvironment environment;
 
         /**
-         * <p>The runtime harness of the managed agent. Valid values: qwenpaw and qodercli.</p>
+         * <p>The agent harness configuration.</p>
          */
         @NameInMap("harness")
         public UpdateManagedAgentRequestBodyHarness harness;
@@ -948,7 +984,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public UpdateManagedAgentRequestBodyNetwork network;
 
         /**
-         * <p>The OSS mount list. A maximum of 10 items are supported. Pass an empty array to clear existing mounts.</p>
+         * <p>The list of OSS mounts. A maximum of 10 entries are supported. Pass an empty array to clear existing mounts.</p>
          */
         @NameInMap("ossMounts")
         public java.util.List<UpdateManagedAgentRequestBodyOssMounts> ossMounts;

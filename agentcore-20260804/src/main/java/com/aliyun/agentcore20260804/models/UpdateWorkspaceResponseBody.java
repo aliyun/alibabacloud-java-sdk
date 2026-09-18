@@ -125,7 +125,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The VPC ID of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1234567890</p>
@@ -166,7 +166,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
 
     public static class UpdateWorkspaceResponseBodyDataNetworkConfiguration extends TeaModel {
         /**
-         * <p>The VPC network configuration.</p>
+         * <p>The VPC network configuration of the user.</p>
          */
         @NameInMap("vpc")
         public UpdateWorkspaceResponseBodyDataNetworkConfigurationVpc vpc;
@@ -189,12 +189,18 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
     public static class UpdateWorkspaceResponseBodyData extends TeaModel {
         /**
          * <p>The OSS storage authorization status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AUTHORIZED</p>
          */
         @NameInMap("authorizationStatus")
         public String authorizationStatus;
 
         /**
          * <p>The name of the private OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bucket-001</p>
          */
         @NameInMap("bucketName")
         public String bucketName;
@@ -224,7 +230,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The workspace status. Valid values: Initializing, Initialized, Deleting, Deleted.</p>
+         * <p>The workspace status. Valid values: Initializing, Initialized, Deleting, and Deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>Initialized</p>
@@ -234,12 +240,15 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
 
         /**
          * <p>The storage type of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         @NameInMap("storageType")
         public String storageType;
 
         /**
-         * <p>The ID of the tenant to which the workspace belongs.</p>
+         * <p>The tenant ID to which the workspace belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>tenant-123456</p>

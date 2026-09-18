@@ -38,7 +38,7 @@ public class ListTeamsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The response message. An error description is returned if the request fails.</p>
+     * <p>The response message. An error description is returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class ListTeamsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination token for the next page. This parameter is empty if no more pages are available.</p>
+     * <p>The pagination token for the next page. This value is empty if no more pages are available.</p>
      * 
      * <strong>example:</strong>
      * <p>dGVhbS1vZmZzZXQ6MTA</p>
@@ -291,7 +291,7 @@ public class ListTeamsResponseBody extends TeaModel {
         public java.util.List<ListTeamsResponseBodyItemsAgents> agents;
 
         /**
-         * <p>The time when the team was created, in UTC and RFC 3339 format.</p>
+         * <p>The creation time in UTC, formatted according to RFC 3339.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
@@ -303,7 +303,7 @@ public class ListTeamsResponseBody extends TeaModel {
          * <p>The team description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Team responsible for the intelligent customer service business</p>
+         * <p>A team responsible for intelligent customer service</p>
          */
         @NameInMap("description")
         public String description;
@@ -344,7 +344,7 @@ public class ListTeamsResponseBody extends TeaModel {
         public String teamId;
 
         /**
-         * <p>The time when the team was last modified, in UTC and RFC 3339 format.</p>
+         * <p>The time of the last modification in UTC, formatted according to RFC 3339.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>

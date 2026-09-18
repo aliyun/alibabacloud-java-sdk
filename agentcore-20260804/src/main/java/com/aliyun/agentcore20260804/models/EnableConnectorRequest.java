@@ -26,7 +26,7 @@ public class EnableConnectorRequest extends TeaModel {
 
     public static class EnableConnectorRequestBody extends TeaModel {
         /**
-         * <p>A JSON string. qodercli uses apiKey. This field is write-only and is not returned in responses.</p>
+         * <p>The Connector configuration JSON string. Set site to global or cn. apiKey is required. serviceAccountKeys must contain at least one named service account key. organizationId is optional.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

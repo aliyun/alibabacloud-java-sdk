@@ -152,7 +152,7 @@ public class UpdateUserResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>The username. The name must be unique within the workspace and can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit. The name must be 1 to 32 characters in length.</p>
+         * <p>The username. The name must be unique within the workspace and can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit and be 1 to 32 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>user-01</p>

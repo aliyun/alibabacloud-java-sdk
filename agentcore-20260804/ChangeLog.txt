@@ -1,3 +1,8 @@
+2026-09-18 Version: 2.1.0
+- Support API GetWorkspaceAcrRamAuthorizeUrl.
+- Support API VerifyWorkspaceAcrRamAuthorization.
+
+
 2026-09-15 Version: 2.0.1
 - Update API CreateExternalAgent: add request parameters body.model.quota.
 - Update API CreateExternalAgent: add response parameters Body.data.model.quota.

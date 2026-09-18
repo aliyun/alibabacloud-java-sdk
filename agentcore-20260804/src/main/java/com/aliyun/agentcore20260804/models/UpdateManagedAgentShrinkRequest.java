@@ -11,7 +11,7 @@ public class UpdateManagedAgentShrinkRequest extends TeaModel {
     public String bodyShrink;
 
     /**
-     * <p>The reserved idempotency token. The backend does not guarantee idempotence in the current phase.</p>
+     * <p>The reserved idempotency token. The backend does not provide idempotency guarantees in the current version.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-1</p>

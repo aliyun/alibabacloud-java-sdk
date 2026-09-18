@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class VerifyWorkspaceOssMountRamAuthorizationResponseBody extends TeaModel {
     /**
      * <p>The business status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
      */
     @NameInMap("code")
     public String code;
@@ -18,18 +21,27 @@ public class VerifyWorkspaceOssMountRamAuthorizationResponseBody extends TeaMode
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1a2b3c4d-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -96,6 +108,9 @@ public class VerifyWorkspaceOssMountRamAuthorizationResponseBody extends TeaMode
     public static class VerifyWorkspaceOssMountRamAuthorizationResponseBodyData extends TeaModel {
         /**
          * <p>The OSS storage authorization status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AUTHORIZED</p>
          */
         @NameInMap("authorizationStatus")
         public String authorizationStatus;

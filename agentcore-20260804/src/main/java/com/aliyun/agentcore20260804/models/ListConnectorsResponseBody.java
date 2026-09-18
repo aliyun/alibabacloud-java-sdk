@@ -29,7 +29,7 @@ public class ListConnectorsResponseBody extends TeaModel {
     public java.util.List<ListConnectorsResponseBodyItems> items;
 
     /**
-     * <p>The number of entries returned in this request.</p>
+     * <p>The number of connectors returned in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +47,7 @@ public class ListConnectorsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination token for the next page.</p>
+     * <p>The next page token. The current version does not return this field.</p>
      * 
      * <strong>example:</strong>
      * <p>dGVzdA==</p>
@@ -74,7 +74,7 @@ public class ListConnectorsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of connectors.</p>
+     * <p>The total number of connectors returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -161,7 +161,7 @@ public class ListConnectorsResponseBody extends TeaModel {
 
     public static class ListConnectorsResponseBodyItems extends TeaModel {
         /**
-         * <p>The number of agents bound to the connector.</p>
+         * <p>The number of bound agents.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -179,7 +179,7 @@ public class ListConnectorsResponseBody extends TeaModel {
         public String enabledAt;
 
         /**
-         * <p>A JSON string. qodercli: {&quot;site&quot;:&quot;global|cn&quot;,&quot;organizationId&quot;:&quot;...&quot;,&quot;apiKey&quot;:&quot;...&quot;,&quot;serviceAccountKeys&quot;:[{&quot;id&quot;:&quot;ckey-xxx&quot;,&quot;name&quot;:&quot;default&quot;,&quot;serviceAccountKey&quot;:&quot;...&quot;}]}. This field is absent when the connector is not enabled.</p>
+         * <p>The connector configuration JSON string. After the connector is enabled, this string may contain sensitive credentials.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;site&quot;:&quot;global&quot;,&quot;organizationId&quot;:&quot;org-xxxx&quot;}</p>
@@ -188,7 +188,7 @@ public class ListConnectorsResponseBody extends TeaModel {
         public String metadata;
 
         /**
-         * <p>The connector name.</p>
+         * <p>The connector name. The current value is qodercli.</p>
          * 
          * <strong>example:</strong>
          * <p>qodercli</p>

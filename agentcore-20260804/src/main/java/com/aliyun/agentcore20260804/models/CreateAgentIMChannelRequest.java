@@ -11,7 +11,7 @@ public class CreateAgentIMChannelRequest extends TeaModel {
     public CreateAgentIMChannelRequestBody body;
 
     /**
-     * <p>A reserved idempotency token. The backend does not provide persistent idempotency guarantees in the current phase.</p>
+     * <p>The reserved idempotency token. The backend does not provide persistent idempotency guarantees in the current phase.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-1</p>
@@ -99,20 +99,20 @@ public class CreateAgentIMChannelRequest extends TeaModel {
         public String channelType;
 
         /**
-         * <p>The channel credentials. All fields must be provided and field values must be non-empty strings. DingTalk uses clientID and clientSecret. Lark uses appId and appSecret. WeCom uses botId and secret.</p>
+         * <p>The channel credential. All fields must be provided and field values must be non-empty strings. DingTalk uses clientID and clientSecret. Lark uses appId and appSecret. WeCom uses botId and secret.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("credential")
         public java.util.Map<String, String> credential;
 
         /**
-         * <p>Specifies whether to enable the IM channel. Default value: true.</p>
+         * <p>Specifies whether to enable the IM channel. Default value during creation: true.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>The ID of the ServiceEndpoint to bind. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public network address.</p>
+         * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public network address.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

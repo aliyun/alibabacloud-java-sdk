@@ -57,7 +57,7 @@ public class UpdateWorkspaceRequest extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The VPC ID of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1234567890</p>
@@ -98,7 +98,7 @@ public class UpdateWorkspaceRequest extends TeaModel {
 
     public static class UpdateWorkspaceRequestBodyNetworkConfiguration extends TeaModel {
         /**
-         * <p>The VPC network configuration.</p>
+         * <p>The VPC network configuration of the user.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("vpc")
