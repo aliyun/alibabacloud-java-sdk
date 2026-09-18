@@ -23,7 +23,7 @@ public class ListSignalsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -128,7 +128,7 @@ public class ListSignalsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The message returned with the result.</p>
+         * <p>The message of the returned result.</p>
          * 
          * <strong>example:</strong>
          * <p>signal delivered to 1 pods</p>
@@ -158,7 +158,7 @@ public class ListSignalsResponseBody extends TeaModel {
         public java.util.List<String> roles;
 
         /**
-         * <p>The delivery scope.</p>
+         * <p>The sending scope.</p>
          * 
          * <strong>example:</strong>
          * <p>pods</p>

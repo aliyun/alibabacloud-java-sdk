@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetWebTerminalRequest extends TeaModel {
     /**
-     * <p>Specifies whether to create a shareable link to access the container. Valid values:</p>
+     * <p>Specifies whether to create a shared link for accessing the container. Valid values:</p>
      * <ul>
-     * <li>true: returns a shareable link to access the container. The link will expire after 30 seconds and can only be used once. After you access the container by using the link, other requests that use this link to access the container become invalid.</li>
-     * <li>false: returns a common shareable link to access the container. If you use a common shareable link to access a container, Alibaba Cloud identity authentication is required. The link will expire after 30 seconds.</li>
+     * <li>true: Returns a shared link for accessing the container. The link expires after 30 seconds and can be used only once. After someone accesses the container through this link, subsequent requests using the same link are invalid.</li>
+     * <li>false: Returns a regular link for accessing the container. Alibaba Cloud identity authentication is required when using this link. The link expires after 30 seconds.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class GetWebTerminalRequest extends TeaModel {
     public Boolean isShared;
 
     /**
-     * <p>The pod UID.</p>
+     * <p>Pod UID。</p>
      * 
      * <strong>example:</strong>
-     * <p>94a7cc7c-0033-48b5-85bd-71c63592c268</p>
+     * <p>94a7cc7c-0033-48b5-85bd-71c63592****</p>
      */
     @NameInMap("PodUid")
     public String podUid;

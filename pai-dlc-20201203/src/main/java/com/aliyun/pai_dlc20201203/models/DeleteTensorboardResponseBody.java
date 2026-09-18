@@ -14,7 +14,7 @@ public class DeleteTensorboardResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The TensorBoard ID.</p>
+     * <p>Tensorboard ID。</p>
      * 
      * <strong>example:</strong>
      * <p>tensorboard-20210114104214-vf9lowjt3pso</p>

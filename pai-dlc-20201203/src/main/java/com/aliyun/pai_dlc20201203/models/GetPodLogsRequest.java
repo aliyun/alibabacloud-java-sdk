@@ -45,7 +45,7 @@ public class GetPodLogsRequest extends TeaModel {
     public Integer maxLines;
 
     /**
-     * <p>The node UID. For information about how to obtain the node UID, see <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a>.</p>
+     * <p>The node UID. To obtain the node UID, see <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>fe846462-af2c-4521-bd6f-96787a57****</p>

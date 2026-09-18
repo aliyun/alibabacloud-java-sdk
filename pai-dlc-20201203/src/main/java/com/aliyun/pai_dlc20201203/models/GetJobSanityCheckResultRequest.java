@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetJobSanityCheckResultRequest extends TeaModel {
     /**
-     * <p>The nth time for which the job sanity check is performed.</p>
+     * <p>The sequence number of the computing power health check for the job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,13 @@ public class GetJobSanityCheckResultRequest extends TeaModel {
     public Integer sanityCheckNumber;
 
     /**
-     * <p>The phase in which the job sanity check is performed.</p>
+     * <p>The phase of the computing power health check. Valid values:</p>
      * <ul>
-     * <li>CheckInit</li>
-     * <li>DeviceCheck</li>
-     * <li>SingleNodeCommCheck</li>
-     * <li>TwoNodeCommCheck</li>
-     * <li>AllNodeCommCheck</li>
+     * <li>CheckInit: environment preparation check.</li>
+     * <li>DeviceCheck: single-card computing power check.</li>
+     * <li>SingleNodeCommCheck: intra-node communication check.</li>
+     * <li>TwoNodeCommCheck: two-node communication check.</li>
+     * <li>AllNodeCommCheck: all-node communication check.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class GetJobSanityCheckResultRequest extends TeaModel {
     public String sanityCheckPhase;
 
     /**
-     * <p>The token information for job sharing. For more information about how to obtain the token information, see <a href="https://help.aliyun.com/document_detail/2557812.html">GetToken</a>.</p>
+     * <p>The token information in the job sharing token. To obtain the token, see <a href="https://help.aliyun.com/document_detail/2557812.html">GetToken</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJhbG<strong><strong><strong>zI1NiIsInR5cCI6IkpXVCJ9.eyJle</strong></strong>jE3MDk1Mzk0NDIsImlhdCI6MTcwODkzNDY0MiwidXNlcl9pZCI6IjE3NTgwNTQxNjI0Mzg2NTUiLCJ0YXJnZXRfaWQiOiJkbGM1OGh1a2xyYzZwdGMyIiwidGFyZ2V0X3R5cGUiOiJqb2IifQ.GNL7jo6</strong><strong>mgKKv0QeGIYgvBufSU-PH_EQttX</strong>**</p>

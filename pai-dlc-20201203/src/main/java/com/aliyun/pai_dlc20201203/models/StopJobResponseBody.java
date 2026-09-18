@@ -14,7 +14,7 @@ public class StopJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The request ID. You can troubleshoot issues based on the request ID.</p>
+     * <p>The request ID, used for diagnostics and troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-xxxxxx</p>

@@ -20,7 +20,7 @@ public class GetJobEventsResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The request ID, which can be used for troubleshooting.</p>
+     * <p>The request ID, which is used for diagnostics and troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>78F6FCE2-278F-4C4A-A6B7-DD8ECEA9C456</p>

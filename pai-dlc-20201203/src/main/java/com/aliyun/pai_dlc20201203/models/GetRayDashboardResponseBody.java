@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRayDashboardResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether Cloud Monitor is enabled for this dashboard to display Ray metrics</p>
+     * <p>Indicates whether the dashboard has integrated CloudMonitor to display Ray metrics.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class GetRayDashboardResponseBody extends TeaModel {
     public String metricsEnabled;
 
     /**
-     * <p>The Ray Dashboard URL</p>
+     * <p>The URL of the Ray Dashboard.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://pre-pai-dlc-proxy-cn-hangzhou.aliyun.com/ray/dashboard/dlc1k7426goc7bvy">https://pre-pai-dlc-proxy-cn-hangzhou.aliyun.com/ray/dashboard/dlc1k7426goc7bvy</a></p>

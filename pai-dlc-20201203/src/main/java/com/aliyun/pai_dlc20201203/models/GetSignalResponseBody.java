@@ -32,7 +32,7 @@ public class GetSignalResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The status description, which contains a summary for each pod (number of successful deliveries, names of failed or pending pods, etc.).</p>
+     * <p>The status description, which contains a summary for each pod, such as the number of successful deliveries and the names of failed or pending pods.</p>
      * 
      * <strong>example:</strong>
      * <p>signal delivered to 1 pods</p>

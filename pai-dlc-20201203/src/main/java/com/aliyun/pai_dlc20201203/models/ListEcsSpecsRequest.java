@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEcsSpecsRequest extends TeaModel {
     /**
-     * <p>Filter by accelerator type. Valid values:</p>
+     * <p>Filters by accelerator type. Valid values:</p>
      * <ul>
      * <li>CPU</li>
      * <li>GPU</li>
@@ -18,7 +18,7 @@ public class ListEcsSpecsRequest extends TeaModel {
     public String acceleratorType;
 
     /**
-     * <p>The instance types to query. Separate the types with commas (,).</p>
+     * <p>The list of instance types to query. Separate multiple instance types with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g6.large,ecs.g6.xlarge</p>
@@ -27,7 +27,7 @@ public class ListEcsSpecsRequest extends TeaModel {
     public String instanceTypes;
 
     /**
-     * <p>The sorting order. Valid values:</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
      * <li>desc: descending order.</li>
      * <li>asc: ascending order.</li>
@@ -40,7 +40,7 @@ public class ListEcsSpecsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The number of the page to query. The start value is 1.</p>
+     * <p>The page number. The minimum value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -49,7 +49,7 @@ public class ListEcsSpecsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries to return on each page in a paged query. This parameter is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -58,7 +58,7 @@ public class ListEcsSpecsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
      * <li>ECS</li>
      * <li>Lingjun</li>
@@ -71,7 +71,7 @@ public class ListEcsSpecsRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The field based on which the results are sorted. Valid values:</p>
+     * <p>Sorts by return field. Valid values:</p>
      * <ul>
      * <li>CPU</li>
      * <li>GPU</li>

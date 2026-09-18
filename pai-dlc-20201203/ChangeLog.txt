@@ -1,3 +1,9 @@
+2026-09-18 Version: 1.11.5
+- Update API GetJob: add response parameters Body.RequestCPU.
+- Update API GetJob: add response parameters Body.RequestGPU.
+- Update API GetJob: add response parameters Body.RequestMemory.
+
+
 2026-09-09 Version: 1.11.4
 - Update API CreateJobTemplate: add response parameters Body.LastUsedTime.
 - Update API GetJobTemplate: add response parameters Body.LastUsedTime.

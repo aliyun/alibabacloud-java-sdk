@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateJobTemplateResponseBody extends TeaModel {
     /**
-     * <p>The default version number.</p>
+     * <p>The default version number currently in use.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,7 +14,7 @@ public class UpdateJobTemplateResponseBody extends TeaModel {
     public Integer defaultVersion;
 
     /**
-     * <p>The time the template was last modified.</p>
+     * <p>The last modification time of the template.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class UpdateJobTemplateResponseBody extends TeaModel {
     public String gmtModifyTime;
 
     /**
-     * <p>The request ID, used for diagnostics and troubleshooting.</p>
+     * <p>The ID of the request, used for diagnostics and troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-xxxxxxx</p>

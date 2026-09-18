@@ -16,6 +16,10 @@ public class UpdateJobRequest extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <strong>example:</strong>
+     * <p>This is a training job</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -40,6 +44,9 @@ public class UpdateJobRequest extends TeaModel {
 
     /**
      * <p>The user command.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sleep 1d</p>
      */
     @NameInMap("UserCommand")
     public String userCommand;

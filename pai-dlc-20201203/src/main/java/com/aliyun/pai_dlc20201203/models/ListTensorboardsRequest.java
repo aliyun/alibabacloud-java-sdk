@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListTensorboardsRequest extends TeaModel {
     /**
-     * <p>The visibility of the Tensorboard instance. Valid values:</p>
+     * <p>The visibility of the job. Valid values:</p>
      * <ul>
-     * <li>PUBLIC: visible to all members in the workspace.</li>
-     * <li>PRIVATE: visible only to you and administrators in the workspace.</li>
+     * <li>PUBLIC: Visible to all users in this workspace.</li>
+     * <li>PRIVATE: Visible only to you and administrators in this workspace.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ListTensorboardsRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The end time of the query range. Tensorboard instances are filtered by their creation time in UTC. If this parameter is left empty, the default value is the current time.</p>
+     * <p>The end time of the query range. The creation time of the Tensorboard instance in UTC is used for filtering. If this parameter is left empty, the default value is the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-09T14:45:00Z</p>
@@ -36,7 +36,7 @@ public class ListTensorboardsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The DLC job ID used to filter Tensorboard instances. Call <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to obtain the job ID.</p>
+     * <p>Filters Tensorboard instances by DLC job ID. See <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to obtain the job ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dlc-xxx</p>
@@ -47,8 +47,8 @@ public class ListTensorboardsRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li>desc: descending order.</li>
-     * <li>asc: ascending order.</li>
+     * <li>desc: Descending order.</li>
+     * <li>asc: Ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class ListTensorboardsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number for paging. The value starts from 1.</p>
+     * <p>The page number of the page to return in a paged query. The value starts from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -67,7 +67,7 @@ public class ListTensorboardsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of Tensorboard instances to return on each page for paging.</p>
+     * <p>The number of Tensorboard instances to return per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -76,10 +76,10 @@ public class ListTensorboardsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The billing method of the Tensorboard instance. Valid values:</p>
+     * <p>The billing type of the Tensorboard instance. Valid values:</p>
      * <ul>
-     * <li>Free: a Tensorboard instance that uses free resources.</li>
-     * <li>Postpaid: a Tensorboard instance that uses pay-as-you-go resources.</li>
+     * <li>Free: The Tensorboard instance uses free resources.</li>
+     * <li>Postpaid: The Tensorboard instance uses pay-as-you-go resources.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,7 +93,7 @@ public class ListTensorboardsRequest extends TeaModel {
      * <blockquote>
      * <ul>
      * <li>Currently, only whitelisted users can use resource quota resources to create Tensorboard instances. To use this feature, contact us.</li>
-     * <li>This parameter takes effect only when the Tensorboard instance uses resource quota resources.</li>
+     * <li>This value is valid only when the Tensorboard instance uses resource quota resources.</li>
      * </ul>
      * </blockquote>
      * 
@@ -113,10 +113,10 @@ public class ListTensorboardsRequest extends TeaModel {
     public Boolean showOwn;
 
     /**
-     * <p>The field by which the results are sorted. Valid values:</p>
+     * <p>Sorts the results by the following fields. Valid values:</p>
      * <ul>
-     * <li>DisplayName: the job name.</li>
-     * <li>GmtCreateTime: the job creation time.</li>
+     * <li>DisplayName: The job name.</li>
+     * <li>GmtCreateTime: The job creation time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class ListTensorboardsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The data source ID. Call <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to obtain the job ID.</p>
+     * <p>The data source ID. See <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to obtain the job ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dlc-xxxxxx</p>
@@ -144,7 +144,7 @@ public class ListTensorboardsRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The start time of the query range. Tensorboard instances are filtered by their creation time in UTC. If this parameter is left empty, the default value is 7 days before the current time.</p>
+     * <p>The start time of the query range. The creation time of the Tensorboard instance in UTC is used for filtering. If this parameter is left empty, the default value is 7 days before the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-08T16:00:00Z</p>
@@ -155,11 +155,11 @@ public class ListTensorboardsRequest extends TeaModel {
     /**
      * <p>The Tensorboard status. Valid values:</p>
      * <ul>
-     * <li>Creating: being created.</li>
-     * <li>Running: running.</li>
-     * <li>Stopped: stopped.</li>
-     * <li>Succeeded: succeeded.</li>
-     * <li>Failed: failed.</li>
+     * <li>Creating: Being created.</li>
+     * <li>Running: Running.</li>
+     * <li>Stopped: Stopped.</li>
+     * <li>Succeeded: Succeeded.</li>
+     * <li>Failed: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -169,7 +169,7 @@ public class ListTensorboardsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The Tensorboard ID used to filter the Tensorboard list.</p>
+     * <p>Filters the Tensorboard list by Tensorboard ID.</p>
      * 
      * <strong>example:</strong>
      * <p>tensorboard-xxx</p>
@@ -196,10 +196,10 @@ public class ListTensorboardsRequest extends TeaModel {
     public String username;
 
     /**
-     * <p>Specifies whether to display details.</p>
+     * <p>Specifies whether to show details. Valid values:</p>
      * <ul>
-     * <li>true: Display details.</li>
-     * <li>false: Do not display details.</li>
+     * <li>true: Show details.</li>
+     * <li>false: Do not show details.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class ListTensorboardsRequest extends TeaModel {
     public Boolean verbose;
 
     /**
-     * <p>The workspace ID. Tensorboard instances are filtered by workspace ID. &lt;props=&quot;china&quot;&gt;Call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID..</p>
+     * <p>The workspace ID. The Tensorboard list is retrieved based on the workspace ID. &lt;props=&quot;china&quot;&gt;See <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>380</p>

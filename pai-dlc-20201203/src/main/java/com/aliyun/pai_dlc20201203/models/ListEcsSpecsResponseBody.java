@@ -20,7 +20,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of types that meet the filter conditions.</p>
+     * <p>The total number of entries that match the filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

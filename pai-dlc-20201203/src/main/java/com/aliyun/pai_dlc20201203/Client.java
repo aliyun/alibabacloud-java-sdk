@@ -299,9 +299,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you use this operation, make sure that you are familiar with the billing of PAI-DLC and the <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
+     * <p>Make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before using this operation.</p>
      * <blockquote>
-     * <p>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</p>
+     * <p>Notice: The total length of the CreateJob operation parameters (including system-generated parameters) cannot exceed 65536 bytes.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -363,9 +363,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you use this operation, make sure that you are familiar with the billing of PAI-DLC and the <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
+     * <p>Make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before using this operation.</p>
      * <blockquote>
-     * <p>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</p>
+     * <p>Notice: The total length of the CreateJob operation parameters (including system-generated parameters) cannot exceed 65536 bytes.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -384,13 +384,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>This API operation sends a specific signal to one or more Pods of a specified job.</li>
+     * <li>This API operation sends a specific signal to one or more pods of a specified job.</li>
      * <li>After the signal is sent, the API immediately returns a <code>SignalId</code>. The actual signal delivery is processed by a background worker.</li>
-     * <li>Query the signal status by calling the <code>GetSignal</code> or <code>ListSignals</code> operation.</li>
+     * <li>You can query the signal status by calling the <code>GetSignal</code> or <code>ListSignals</code> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Sends a signal to the Pods of a specified job and retrieves the signal ID.</p>
+     * <p>Sends a signal to the pods of a specified job and retrieves the signal ID.</p>
      * 
      * @param request CreateSignalRequest
      * @param headers map
@@ -430,13 +430,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>This API operation sends a specific signal to one or more Pods of a specified job.</li>
+     * <li>This API operation sends a specific signal to one or more pods of a specified job.</li>
      * <li>After the signal is sent, the API immediately returns a <code>SignalId</code>. The actual signal delivery is processed by a background worker.</li>
-     * <li>Query the signal status by calling the <code>GetSignal</code> or <code>ListSignals</code> operation.</li>
+     * <li>You can query the signal status by calling the <code>GetSignal</code> or <code>ListSignals</code> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Sends a signal to the Pods of a specified job and retrieves the signal ID.</p>
+     * <p>Sends a signal to the pods of a specified job and retrieves the signal ID.</p>
      * 
      * @param request CreateSignalRequest
      * @return CreateSignalResponse
@@ -449,7 +449,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a TensorBoard by using a job or specifying a data source configuration.</p>
+     * <p>Creates a TensorBoard instance. You can create a TensorBoard instance from a job or by specifying a datasource config.</p>
      * 
      * @param request CreateTensorboardRequest
      * @param headers map
@@ -559,7 +559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a TensorBoard by using a job or specifying a data source configuration.</p>
+     * <p>Creates a TensorBoard instance. You can create a TensorBoard instance from a job or by specifying a datasource config.</p>
      * 
      * @param request CreateTensorboardRequest
      * @return CreateTensorboardResponse
@@ -572,7 +572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a completed or stopped job.</p>
+     * <p>Deletes a job that has completed or been stopped.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -598,7 +598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a completed or stopped job.</p>
+     * <p>Deletes a job that has completed or been stopped.</p>
      * @return DeleteJobResponse
      */
     public DeleteJobResponse deleteJob(String JobId) throws Exception {
@@ -609,7 +609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a job template. You cannot delete a job template that is in use by a job.</p>
+     * <p>Deletes an unused task template. If the template is already in use by a node, it cannot be deleted.</p>
      * 
      * @param request DeleteJobTemplateRequest
      * @param headers map
@@ -637,7 +637,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a job template. You cannot delete a job template that is in use by a job.</p>
+     * <p>Deletes an unused task template. If the template is already in use by a node, it cannot be deleted.</p>
      * 
      * @param request DeleteJobTemplateRequest
      * @return DeleteJobTemplateResponse
@@ -697,7 +697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a stopped TensorBoard.</p>
+     * <p>Deletes a stopped Tensorboard.</p>
      * 
      * @param request DeleteTensorboardRequest
      * @param headers map
@@ -731,7 +731,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a stopped TensorBoard.</p>
+     * <p>Deletes a stopped Tensorboard.</p>
      * 
      * @param request DeleteTensorboardRequest
      * @return DeleteTensorboardResponse
@@ -744,10 +744,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before using this API, review the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> for PAI-DLC.</p>
+     * <p>Before using this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the Dashboard URL for a DLC job, if available.</p>
+     * <p>Retrieves the dashboard URL of a DLC job, if available.</p>
      * 
      * @param request GetDashboardRequest
      * @param headers map
@@ -785,10 +785,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before using this API, review the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> for PAI-DLC.</p>
+     * <p>Before using this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the Dashboard URL for a DLC job, if available.</p>
+     * <p>Retrieves the dashboard URL of a DLC job, if available.</p>
      * 
      * @param request GetDashboardRequest
      * @return GetDashboardResponse
@@ -801,7 +801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the detailed configuration and runtime information of a task.</p>
+     * <p>Retrieves the detailed configuration and runtime information of a node.</p>
      * 
      * @param request GetJobRequest
      * @param headers map
@@ -835,7 +835,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the detailed configuration and runtime information of a task.</p>
+     * <p>Retrieves the detailed configuration and runtime information of a node.</p>
      * 
      * @param request GetJobRequest
      * @return GetJobResponse
@@ -848,7 +848,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the system events of a job.</p>
+     * <p>Retrieves system events for a job.</p>
      * 
      * @param request GetJobEventsRequest
      * @param headers map
@@ -890,7 +890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the system events of a job.</p>
+     * <p>Retrieves system events for a job.</p>
      * 
      * @param request GetJobEventsRequest
      * @return GetJobEventsResponse
@@ -903,7 +903,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the monitoring data of a job, including the CPU, GPU, and memory utilization, network, and disk read/write rate. ⚠️ Note: Except for pay-as-you-go tasks based on general-purpose computing resources, all task types are connected to CloudMonitor. Use the CloudMonitor API to call related monitoring. The overwritten features in the original API are no longer maintained. For more information, see \[Training monitoring and alerting]\\(<a href="https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting">https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting</a>).</p>
+     * <p>Retrieves monitoring data for a node, including CPU, GPU, and memory usage, as well as network and disk read/write rates.
+     * ⚠️ Note: All node types except pay-as-you-go (postpaid) nodes based on general computing resources are integrated with CloudMonitor. Use CloudMonitor API operations for monitoring calls. Features already covered by the new API operations will no longer undergo maintenance in the original API operations. For more information, see <a href="https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting">Training Monitoring and Alerts</a>.</p>
      * 
      * @param request GetJobMetricsRequest
      * @param headers map
@@ -953,7 +954,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the monitoring data of a job, including the CPU, GPU, and memory utilization, network, and disk read/write rate. ⚠️ Note: Except for pay-as-you-go tasks based on general-purpose computing resources, all task types are connected to CloudMonitor. Use the CloudMonitor API to call related monitoring. The overwritten features in the original API are no longer maintained. For more information, see \[Training monitoring and alerting]\\(<a href="https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting">https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting</a>).</p>
+     * <p>Retrieves monitoring data for a node, including CPU, GPU, and memory usage, as well as network and disk read/write rates.
+     * ⚠️ Note: All node types except pay-as-you-go (postpaid) nodes based on general computing resources are integrated with CloudMonitor. Use CloudMonitor API operations for monitoring calls. Features already covered by the new API operations will no longer undergo maintenance in the original API operations. For more information, see <a href="https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting">Training Monitoring and Alerts</a>.</p>
      * 
      * @param request GetJobMetricsRequest
      * @return GetJobMetricsResponse
@@ -966,7 +968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains specified job sanity check result in a Deep Learning Containers (DLC) job.</p>
+     * <p>Retrieves the computing power health check result for a specific run of a DLC job.</p>
      * 
      * @param request GetJobSanityCheckResultRequest
      * @param headers map
@@ -1008,7 +1010,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains specified job sanity check result in a Deep Learning Containers (DLC) job.</p>
+     * <p>Retrieves the computing power health check result for a specific run of a DLC job.</p>
      * 
      * @param request GetJobSanityCheckResultRequest
      * @return GetJobSanityCheckResultResponse
@@ -1068,18 +1070,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>This API retrieves monitoring metrics for a specific job (JobId) or dimensions under a given namespace.</li>
-     * <li>It supports custom time ranges. By default, it returns data from the last hour.</li>
-     * <li>Select different time intervals (Period) to obtain data points with finer or coarser granularity.</li>
-     * <li>To paginate through large datasets, use the <code>NextToken</code> parameter.</li>
-     * <li>The <code>MetricName</code> parameter is required and specifies the monitoring metric to query.</li>
-     * <li>For advanced features or specific metric types, see the related documentation.</li>
+     * <li>This operation queries monitoring metrics for a specific job (JobId) or dimension (Dimensions) under a specified namespace (Namespace).</li>
+     * <li>Custom query time ranges are supported. By default, data from the last hour is returned.</li>
+     * <li>You can select different time intervals (Period) to retrieve data points at a finer or coarser granularity.</li>
+     * <li>To retrieve large amounts of data with paging, use the <code>NextToken</code> parameter for paging operations.</li>
+     * <li><code>MetricName</code> is required and specifies the name of the monitoring metric to query.</li>
+     * <li>For advanced features or specific types of monitoring metrics, refer to the relevant documentation for more information.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve metrics data.</p>
+     * <p>Retrieves metrics data.</p>
      * 
      * @param request GetMetricsRequest
      * @param headers map
@@ -1149,18 +1151,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>This API retrieves monitoring metrics for a specific job (JobId) or dimensions under a given namespace.</li>
-     * <li>It supports custom time ranges. By default, it returns data from the last hour.</li>
-     * <li>Select different time intervals (Period) to obtain data points with finer or coarser granularity.</li>
-     * <li>To paginate through large datasets, use the <code>NextToken</code> parameter.</li>
-     * <li>The <code>MetricName</code> parameter is required and specifies the monitoring metric to query.</li>
-     * <li>For advanced features or specific metric types, see the related documentation.</li>
+     * <li>This operation queries monitoring metrics for a specific job (JobId) or dimension (Dimensions) under a specified namespace (Namespace).</li>
+     * <li>Custom query time ranges are supported. By default, data from the last hour is returned.</li>
+     * <li>You can select different time intervals (Period) to retrieve data points at a finer or coarser granularity.</li>
+     * <li>To retrieve large amounts of data with paging, use the <code>NextToken</code> parameter for paging operations.</li>
+     * <li><code>MetricName</code> is required and specifies the name of the monitoring metric to query.</li>
+     * <li>For advanced features or specific types of monitoring metrics, refer to the relevant documentation for more information.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve metrics data.</p>
+     * <p>Retrieves metrics data.</p>
      * 
      * @param request GetMetricsRequest
      * @return GetMetricsResponse
@@ -1173,7 +1175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the system events of a specific node in a job to locate and troubleshoot issues.</p>
+     * <p>Retrieves system events for a specific node in a job to locate and troubleshoot issues.</p>
      * 
      * @param request GetPodEventsRequest
      * @param headers map
@@ -1219,7 +1221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the system events of a specific node in a job to locate and troubleshoot issues.</p>
+     * <p>Retrieves system events for a specific node in a job to locate and troubleshoot issues.</p>
      * 
      * @param request GetPodEventsRequest
      * @return GetPodEventsResponse
@@ -1299,10 +1301,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you use this operation, review the PAI-DLC billing model and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
+     * <p>Before you use this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve the Ray Dashboard URL.</p>
+     * <p>Retrieves the Ray Dashboard URL.</p>
      * 
      * @param request GetRayDashboardRequest
      * @param headers map
@@ -1340,10 +1342,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you use this operation, review the PAI-DLC billing model and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
+     * <p>Before you use this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve the Ray Dashboard URL.</p>
+     * <p>Retrieves the Ray Dashboard URL.</p>
      * 
      * @param request GetRayDashboardRequest
      * @return GetRayDashboardResponse
@@ -1356,10 +1358,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this API operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the parameters for the CreateJob API, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * <p>Before you use this operation, make sure that you are familiar with the billing of PAI-DLC and have read the <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
+     * <blockquote>
+     * <p>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specific RayHistoryServer.</p>
+     * <p>Queries a RayHistoryServer.</p>
      * 
      * @param request GetRayHistoryServerRequest
      * @param headers map
@@ -1387,10 +1392,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this API operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the parameters for the CreateJob API, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * <p>Before you use this operation, make sure that you are familiar with the billing of PAI-DLC and have read the <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
+     * <blockquote>
+     * <p>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specific RayHistoryServer.</p>
+     * <p>Queries a RayHistoryServer.</p>
      * 
      * @param request GetRayHistoryServerRequest
      * @return GetRayHistoryServerResponse
@@ -1404,7 +1412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>This API allows you to retrieve the signal details for the specified <code>JobId</code> and <code>SignalId</code>, including the signal status and delivery scope. Note that the response no longer contains the raw result structure for each pod. Instead, the <code>Status</code>, <code>Reason</code>, and <code>Message</code> fields describe the overall signal processing status.</p>
+     * <p>You can call this operation to retrieve the details of a signal that corresponds to a specified <code>JobId</code> and <code>SignalId</code>, including the signal status and delivery scope. Note that the response no longer contains the raw result structure for each pod. Instead, the <code>Status</code>, <code>Reason</code>, and <code>Message</code> fields describe the overall signal processing result.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of a specific signal in a specified job.</p>
@@ -1442,7 +1450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>This API allows you to retrieve the signal details for the specified <code>JobId</code> and <code>SignalId</code>, including the signal status and delivery scope. Note that the response no longer contains the raw result structure for each pod. Instead, the <code>Status</code>, <code>Reason</code>, and <code>Message</code> fields describe the overall signal processing status.</p>
+     * <p>You can call this operation to retrieve the details of a signal that corresponds to a specified <code>JobId</code> and <code>SignalId</code>, including the signal status and delivery scope. Note that the response no longer contains the raw result structure for each pod. Instead, the <code>Status</code>, <code>Reason</code>, and <code>Message</code> fields describe the overall signal processing result.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of a specific signal in a specified job.</p>
@@ -1458,7 +1466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a Tensorboard instance.</p>
+     * <p>Retrieves the details of a Tensorboard.</p>
      * 
      * @param request GetTensorboardRequest
      * @param headers map
@@ -1500,7 +1508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a Tensorboard instance.</p>
+     * <p>Retrieves the details of a Tensorboard.</p>
      * 
      * @param request GetTensorboardRequest
      * @return GetTensorboardResponse
@@ -1513,7 +1521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the shareable link of a TensorBoard task. The link contains digital tokens. You can use a shareable link to access a TensorBoard task.</p>
+     * <p>Retrieves the sharing link for a TensorBoard task. The link contains a digital token. You can use the sharing link to access the shared TensorBoard task.</p>
      * 
      * @param request GetTensorboardSharedUrlRequest
      * @param headers map
@@ -1547,7 +1555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the shareable link of a TensorBoard task. The link contains digital tokens. You can use a shareable link to access a TensorBoard task.</p>
+     * <p>Retrieves the sharing link for a TensorBoard task. The link contains a digital token. You can use the sharing link to access the shared TensorBoard task.</p>
      * 
      * @param request GetTensorboardSharedUrlRequest
      * @return GetTensorboardSharedUrlResponse
@@ -1619,7 +1627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Provides methods and steps to obtain a HTTP link for accessing a container.</p>
+     * <p>Provides the method and steps to obtain an HTTP link for accessing a container.</p>
      * 
      * @param request GetWebTerminalRequest
      * @param headers map
@@ -1657,7 +1665,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Provides methods and steps to obtain a HTTP link for accessing a container.</p>
+     * <p>Provides the method and steps to obtain an HTTP link for accessing a container.</p>
      * 
      * @param request GetWebTerminalRequest
      * @return GetWebTerminalResponse
@@ -1670,7 +1678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of supported instance types.</p>
+     * <p>Queries the list of currently supported machine resource configurations.</p>
      * 
      * @param request ListEcsSpecsRequest
      * @param headers map
@@ -1728,7 +1736,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of supported instance types.</p>
+     * <p>Queries the list of currently supported machine resource configurations.</p>
      * 
      * @param request ListEcsSpecsRequest
      * @return ListEcsSpecsResponse
@@ -1741,7 +1749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the results of all sanity checks for a DLC job.</p>
+     * <p>Retrieves all computing power health check results for a specific DLC job.</p>
      * 
      * @param request ListJobSanityCheckResultsRequest
      * @param headers map
@@ -1775,7 +1783,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the results of all sanity checks for a DLC job.</p>
+     * <p>Retrieves all computing power health check results for a specific DLC job.</p>
      * 
      * @param request ListJobSanityCheckResultsRequest
      * @return ListJobSanityCheckResultsResponse
@@ -2064,9 +2072,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you use this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Platform for AI - Deep Learning Containers (PAI-DLC).</p>
+     * <p>Before using this operation, make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
      * <blockquote>
-     * <p>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes..</p>
+     * <p>Notice: The total length of parameters for the CreateJob operation (including system-generated parameters) cannot exceed 65536 bytes.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -2168,9 +2176,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you use this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Platform for AI - Deep Learning Containers (PAI-DLC).</p>
+     * <p>Before using this operation, make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
      * <blockquote>
-     * <p>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes..</p>
+     * <p>Notice: The total length of parameters for the CreateJob operation (including system-generated parameters) cannot exceed 65536 bytes.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -2188,7 +2196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>You can call this API operation to retrieve the details of all signal records for a specific job, including signal IDs, statuses, and creation times. You can use query parameters to further filter or sort the results.</p>
+     * <p>You can call this operation to retrieve the details of all signal records for a specific job, including the signal ID, status, and creation time. You can use query parameters to further filter or sort the results.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries all signal records of a specified job.</p>
@@ -2246,7 +2254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>You can call this API operation to retrieve the details of all signal records for a specific job, including signal IDs, statuses, and creation times. You can use query parameters to further filter or sort the results.</p>
+     * <p>You can call this operation to retrieve the details of all signal records for a specific job, including the signal ID, status, and creation time. You can use query parameters to further filter or sort the results.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries all signal records of a specified job.</p>
@@ -2432,7 +2440,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, familiarize yourself with the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the API parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * <p>Before using this operation, make sure that you fully understand the billing method and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
+     * <blockquote>
+     * <p>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
      * <p>Starts a Ray History Server.</p>
@@ -2463,7 +2474,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, familiarize yourself with the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the API parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * <p>Before using this operation, make sure that you fully understand the billing method and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
+     * <blockquote>
+     * <p>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
      * <p>Starts a Ray History Server.</p>
@@ -2479,7 +2493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a TensorBoard instance.</p>
+     * <p>Starts a Tensorboard.</p>
      * 
      * @param request StartTensorboardRequest
      * @param headers map
@@ -2513,7 +2527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a TensorBoard instance.</p>
+     * <p>Starts a Tensorboard.</p>
      * 
      * @param request StartTensorboardRequest
      * @return StartTensorboardResponse
@@ -2610,7 +2624,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops a TensorBoard instance.</p>
+     * <p>Stops a TensorBoard.</p>
      * 
      * @param request StopTensorboardRequest
      * @param headers map
@@ -2644,7 +2658,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops a TensorBoard instance.</p>
+     * <p>Stops a TensorBoard.</p>
      * 
      * @param request StopTensorboardRequest
      * @return StopTensorboardResponse
@@ -2854,7 +2868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a job template.</p>
+     * <p>Updates a task template.</p>
      * 
      * @param request UpdateJobTemplateRequest
      * @param headers map
@@ -2912,7 +2926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a job template.</p>
+     * <p>Updates a task template.</p>
      * 
      * @param request UpdateJobTemplateRequest
      * @return UpdateJobTemplateResponse
