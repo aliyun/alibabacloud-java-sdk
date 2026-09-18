@@ -8,6 +8,8 @@ public class ListMmsJobsRequest extends TeaModel {
     public ListMmsJobsRequestSorter sorter;
 
     /**
+     * <p>The destination MaxCompute project.</p>
+     * 
      * <strong>example:</strong>
      * <p>mms_test</p>
      */
@@ -15,6 +17,8 @@ public class ListMmsJobsRequest extends TeaModel {
     public String dstDbName;
 
     /**
+     * <p>The destination MaxCompute table.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_table_1</p>
      */
@@ -22,6 +26,8 @@ public class ListMmsJobsRequest extends TeaModel {
     public String dstTableName;
 
     /**
+     * <p>The name of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>demo</p>
      */
@@ -29,6 +35,8 @@ public class ListMmsJobsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The number of the page to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +44,8 @@ public class ListMmsJobsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of items to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,6 +53,8 @@ public class ListMmsJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The name of the source database.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_db_1</p>
      */
@@ -50,6 +62,8 @@ public class ListMmsJobsRequest extends TeaModel {
     public String srcDbName;
 
     /**
+     * <p>The name of the source table.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_table_1</p>
      */
@@ -57,6 +71,8 @@ public class ListMmsJobsRequest extends TeaModel {
     public String srcTableName;
 
     /**
+     * <p>The status of the migration job.</p>
+     * 
      * <strong>example:</strong>
      * <p>DOING</p>
      */
@@ -64,6 +80,8 @@ public class ListMmsJobsRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>Indicates whether the job is stopped.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -71,6 +89,8 @@ public class ListMmsJobsRequest extends TeaModel {
     public Long stopped;
 
     /**
+     * <p>The timer ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -172,6 +192,8 @@ public class ListMmsJobsRequest extends TeaModel {
 
     public static class ListMmsJobsRequestSorter extends TeaModel {
         /**
+         * <p>Sorting by status</p>
+         * 
          * <strong>example:</strong>
          * <p>desc</p>
          */

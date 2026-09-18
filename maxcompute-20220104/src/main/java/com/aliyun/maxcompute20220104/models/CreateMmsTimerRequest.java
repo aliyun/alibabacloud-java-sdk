@@ -4,10 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class CreateMmsTimerRequest extends TeaModel {
+    /**
+     * <p>A map of source column names to target column names.</p>
+     */
     @NameInMap("columnMapping")
     public java.util.Map<String, String> columnMapping;
 
     /**
+     * <p>Specifies whether to migrate table data.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -15,6 +20,8 @@ public class CreateMmsTimerRequest extends TeaModel {
     public Boolean enableDataMigration;
 
     /**
+     * <p>Specifies whether to migrate the table schema.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -22,6 +29,8 @@ public class CreateMmsTimerRequest extends TeaModel {
     public Boolean enableSchemaMigration;
 
     /**
+     * <p>Specifies whether to enable data verification. If set to <code>true</code>, the system runs a <code>SELECT COUNT(*)</code> query on both the source and target tables and compares the row counts.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -29,22 +38,35 @@ public class CreateMmsTimerRequest extends TeaModel {
     public Boolean enableVerification;
 
     /**
+     * <p>The name of the scheduled task.</p>
+     * 
      * <strong>example:</strong>
      * <p>planA</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>Other configuration settings.</p>
+     */
     @NameInMap("others")
     public java.util.Map<String, ?> others;
 
+    /**
+     * <p>A map of table names to their corresponding partition filter expressions.</p>
+     */
     @NameInMap("partitionFilters")
     public java.util.Map<String, String> partitionFilters;
 
+    /**
+     * <p>A list of IDs for the table partitions to migrate. This parameter takes effect only when the <code>type</code> parameter is set to <code>Partitions</code>.</p>
+     */
     @NameInMap("partitions")
     public java.util.List<Long> partitions;
 
     /**
+     * <p>The schedule type for the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>Daily</p>
      */
@@ -52,6 +74,8 @@ public class CreateMmsTimerRequest extends TeaModel {
     public String scheduleType;
 
     /**
+     * <p>The ID of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>2000014</p>
      */
@@ -59,25 +83,41 @@ public class CreateMmsTimerRequest extends TeaModel {
     public Long sourceId;
 
     /**
+     * <p>The name of the source database.</p>
+     * 
      * <strong>example:</strong>
      * <p>src_db</p>
      */
     @NameInMap("srcDbName")
     public String srcDbName;
 
+    /**
+     * <p>A blacklist of tables to exclude from the migration. This parameter takes effect only when the <code>type</code> parameter is set to <code>Database</code>.</p>
+     */
     @NameInMap("tableBlackList")
     public java.util.List<String> tableBlackList;
 
+    /**
+     * <p>A map of source table names to target table names.</p>
+     */
     @NameInMap("tableMapping")
     public java.util.Map<String, String> tableMapping;
 
+    /**
+     * <p>A whitelist of tables to migrate. This parameter takes effect only when the <code>type</code> parameter is set to <code>Database</code>. If omitted, all tables in the source database are migrated.</p>
+     */
     @NameInMap("tableWhiteList")
     public java.util.List<String> tableWhiteList;
 
+    /**
+     * <p>A list of table names to migrate. This parameter takes effect only when the <code>type</code> parameter is set to <code>Tables</code>.</p>
+     */
     @NameInMap("tables")
     public java.util.List<String> tables;
 
     /**
+     * <p>The time to run the scheduled task. If <code>scheduleType</code> is set to <code>Daily</code>, the value is the time in <code>HH:MM</code> format. If <code>scheduleType</code> is set to <code>Hourly</code>, the value is the minute of the hour (<code>MM</code>).</p>
+     * 
      * <strong>example:</strong>
      * <p>12:00</p>
      */

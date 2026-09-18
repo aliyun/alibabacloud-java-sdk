@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListComputeMetricsByInstanceRequest extends TeaModel {
     /**
-     * <p>The end time for the period.</p>
+     * <p>The end date. This value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1718590596556</p>
@@ -14,7 +14,7 @@ public class ListComputeMetricsByInstanceRequest extends TeaModel {
     public Long endDate;
 
     /**
-     * <p>The job(instance) ID.</p>
+     * <p>The job ID.</p>
      * 
      * <strong>example:</strong>
      * <p>20240730****ddlr</p>
@@ -23,7 +23,7 @@ public class ListComputeMetricsByInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The Alibaba Cloud account that is used to run the MaxCompute job.</p>
+     * <p>The job owner.</p>
      * 
      * <strong>example:</strong>
      * <p>ALIYUN$7632***@aliyun.com</p>
@@ -41,7 +41,7 @@ public class ListComputeMetricsByInstanceRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,13 +50,13 @@ public class ListComputeMetricsByInstanceRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The name of MaxCompute project.</p>
+     * <p>The project name.</p>
      */
     @NameInMap("projectNames")
     public java.util.List<String> projectNames;
 
     /**
-     * <p>The signature of the SQL job.</p>
+     * <p>The SQL job signature.</p>
      * 
      * <strong>example:</strong>
      * <p>ghijkl789012</p>
@@ -65,13 +65,13 @@ public class ListComputeMetricsByInstanceRequest extends TeaModel {
     public String signature;
 
     /**
-     * <p>Specification types.</p>
+     * <p>The specification types.</p>
      */
     @NameInMap("specCodes")
     public java.util.List<String> specCodes;
 
     /**
-     * <p>The start time for the period.</p>
+     * <p>The start date. This value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1715393576201</p>
@@ -80,7 +80,7 @@ public class ListComputeMetricsByInstanceRequest extends TeaModel {
     public Long startDate;
 
     /**
-     * <p>Metering types.</p>
+     * <p>The metering types.</p>
      */
     @NameInMap("types")
     public java.util.List<String> types;

@@ -4,10 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class ListMmsTimerLogsResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public ListMmsTimerLogsResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0b87b7e716665825896565060e87a4</p>
      */
@@ -37,6 +42,8 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
 
     public static class ListMmsTimerLogsResponseBodyDataObjectList extends TeaModel {
         /**
+         * <p>The logged action for the migration job created by the scheduled task.</p>
+         * 
          * <strong>example:</strong>
          * <p>start job</p>
          */
@@ -44,6 +51,8 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
         public String action;
 
         /**
+         * <p>The creation time of the log entry.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-17 15:44:17</p>
          */
@@ -51,6 +60,8 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The ID of the asynchronous task for the migration job created by the scheduled task.</p>
+         * 
          * <strong>example:</strong>
          * <p>1003476</p>
          */
@@ -58,6 +69,8 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>A detailed message about the action.</p>
+         * 
          * <strong>example:</strong>
          * <p>start job success</p>
          */
@@ -65,6 +78,8 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
         public String msg;
 
         /**
+         * <p>The ID of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>200018</p>
          */
@@ -72,6 +87,8 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
         public Long sourceId;
 
         /**
+         * <p>The status of the migration job created by the scheduled task.</p>
+         * 
          * <strong>example:</strong>
          * <p>DOING</p>
          */
@@ -134,10 +151,15 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
     }
 
     public static class ListMmsTimerLogsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of logs.</p>
+         */
         @NameInMap("objectList")
         public java.util.List<ListMmsTimerLogsResponseBodyDataObjectList> objectList;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -145,6 +167,8 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -152,6 +176,8 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

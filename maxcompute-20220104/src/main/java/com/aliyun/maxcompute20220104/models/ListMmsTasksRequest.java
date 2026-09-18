@@ -8,6 +8,8 @@ public class ListMmsTasksRequest extends TeaModel {
     public ListMmsTasksRequestSorter sorter;
 
     /**
+     * <p>The destination MaxCompute project.</p>
+     * 
      * <strong>example:</strong>
      * <p>mms_test</p>
      */
@@ -15,6 +17,8 @@ public class ListMmsTasksRequest extends TeaModel {
     public String dstDbName;
 
     /**
+     * <p>The destination MaxCompute table.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_table_1</p>
      */
@@ -22,6 +26,8 @@ public class ListMmsTasksRequest extends TeaModel {
     public String dstTableName;
 
     /**
+     * <p>The migration job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +35,8 @@ public class ListMmsTasksRequest extends TeaModel {
     public Long jobId;
 
     /**
+     * <p>The job name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test1</p>
      */
@@ -36,6 +44,8 @@ public class ListMmsTasksRequest extends TeaModel {
     public String jobName;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -43,6 +53,8 @@ public class ListMmsTasksRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -50,6 +62,8 @@ public class ListMmsTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The partition value. Use this parameter to filter migration tasks that migrated a specific partition value.</p>
+     * 
      * <strong>example:</strong>
      * <p>p1=1/p2=abc</p>
      */
@@ -57,6 +71,8 @@ public class ListMmsTasksRequest extends TeaModel {
     public String partition;
 
     /**
+     * <p>The source database name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_db_1</p>
      */
@@ -64,6 +80,8 @@ public class ListMmsTasksRequest extends TeaModel {
     public String srcDbName;
 
     /**
+     * <p>The source table name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_table_1</p>
      */
@@ -71,6 +89,8 @@ public class ListMmsTasksRequest extends TeaModel {
     public String srcTableName;
 
     /**
+     * <p>The migration task status.</p>
+     * 
      * <strong>example:</strong>
      * <p>DATA_DOING</p>
      */
@@ -172,6 +192,8 @@ public class ListMmsTasksRequest extends TeaModel {
 
     public static class ListMmsTasksRequestSorter extends TeaModel {
         /**
+         * <p>Sorts results by the start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>desc</p>
          */
@@ -179,6 +201,8 @@ public class ListMmsTasksRequest extends TeaModel {
         public String startTime;
 
         /**
+         * <p>Sorts results by status.</p>
+         * 
          * <strong>example:</strong>
          * <p>asc</p>
          */

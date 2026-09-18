@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProjectsResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public ListProjectsResponseBodyData data;
@@ -42,9 +42,9 @@ public class ListProjectsResponseBody extends TeaModel {
 
     public static class ListProjectsResponseBodyDataProjectsIpWhiteList extends TeaModel {
         /**
-         * <p>The IP address whitelist for access over the Internet or the network for interconnecting with other Alibaba Cloud services.</p>
+         * <p>The IP whitelist for access over the public network and from other Alibaba Cloud services.</p>
          * <blockquote>
-         * <p> If you configure only the IP address whitelist for access over the Internet or the network for interconnecting with other Alibaba Cloud services, the access over the Internet or the network for interconnecting with other Alibaba Cloud services is subject to configurations, and access over a virtual private cloud (VPC) is not allowed.</p>
+         * <p>If you configure only this IP whitelist, access over the public network and from other Alibaba Cloud services is restricted based on the whitelist, and all access from VPCs is denied.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -54,9 +54,9 @@ public class ListProjectsResponseBody extends TeaModel {
         public String ipList;
 
         /**
-         * <p>The IP address whitelist for access over a VPC.</p>
+         * <p>The IP whitelist for access from VPCs.</p>
          * <blockquote>
-         * <p> If you configure only the IP address whitelist for access over a VPC, the access over a VPC is subject to configurations, and the access over the Internet or the network for interconnecting with other Alibaba Cloud services is not allowed.</p>
+         * <p>If you configure only the VPC IP whitelist, access from VPCs is restricted based on the whitelist, and all access over the public network and from other Alibaba Cloud services is denied.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -90,17 +90,17 @@ public class ListProjectsResponseBody extends TeaModel {
 
     public static class ListProjectsResponseBodyDataProjectsPropertiesEncryption extends TeaModel {
         /**
-         * <p>The data encryption algorithm that is supported by the key. Valid values: AES256, AESCTR, and RC4.</p>
+         * <p>The data encryption algorithm. Supported algorithms include AES256, AESCTR, and RC4.</p>
          * 
          * <strong>example:</strong>
-         * <p>SHA1</p>
+         * <p>AES256</p>
          */
         @NameInMap("algorithm")
         public String algorithm;
 
         /**
-         * <p>Indicates whether the data encryption feature needs to be enabled for the project. For more information about data encryption, see</p>
-         * <p><a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/storage-encryption">Storage encryption</a>.</p>
+         * <p>Specifies whether to enable storage encryption for the project. For more information, see
+         * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/storage-encryption">Storage encryption</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -109,7 +109,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The type of key that is used for data encryption. You can select MaxCompute Default Key or Bring Your Own Key (BYOK) as the key type. If you select MaxCompute Default Key, the default key that is created by MaxCompute is used.</p>
+         * <p>The key for data encryption. You can use the default MaxCompute-managed key or a custom key with the Bring Your Own Key (BYOK) feature.</p>
          * 
          * <strong>example:</strong>
          * <p>dafault</p>
@@ -150,7 +150,7 @@ public class ListProjectsResponseBody extends TeaModel {
 
     public static class ListProjectsResponseBodyDataProjectsPropertiesExternalProjectProperties extends TeaModel {
         /**
-         * <p>Indicates whether the external project is an external project for <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/lake-warehouse-integrated-2-0-use-guide">data lakehouse solution 2.0</a>.</p>
+         * <p>Specifies whether the project is an external project for &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/lake-warehouse-integrated-2-0-use-guide">Integrated Lakehouse</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -175,11 +175,14 @@ public class ListProjectsResponseBody extends TeaModel {
 
     public static class ListProjectsResponseBodyDataProjectsPropertiesTableLifecycle extends TeaModel {
         /**
-         * <p>The lifecycle type. Valid values:</p>
+         * <p>The type of the lifecycle. Valid values:</p>
          * <ul>
-         * <li><strong>mandatory</strong>: The lifecycle clause is required in a table creation statement.</li>
-         * <li><strong>optional</strong>: The lifecycle clause is optional in a table creation statement. If you do not configure a lifecycle for a table, the table does not expire.</li>
-         * <li><strong>inherit</strong>: If you do not configure a lifecycle for a table when you create the table, the value of the odps.table.lifecycle.value parameter is used as the table lifecycle by default.</li>
+         * <li><p><strong>mandatory</strong>: A lifecycle must be configured for each table.</p>
+         * </li>
+         * <li><p><strong>optional</strong>: The lifecycle is optional. If unspecified for a table, the table does not expire.</p>
+         * </li>
+         * <li><p><strong>inherit</strong>: If no lifecycle is specified for a table, the table inherits its lifecycle from the <code>odps.table.lifecycle.value</code> property.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,7 +192,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The table lifecycle. Unit: days. Valid values: 1 to 37231. Default value: 37231.</p>
+         * <p>The lifecycle of the table, in days. Valid values: <code>1</code> to <code>37231</code>. Default value: <code>37231</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>37231</p>
@@ -222,7 +225,7 @@ public class ListProjectsResponseBody extends TeaModel {
 
     public static class ListProjectsResponseBodyDataProjectsProperties extends TeaModel {
         /**
-         * <p>Indicates whether a full table scan is allowed in the project. A full table scan occupies a large number of resources, which reduces data processing efficiency. By default, the full table scan feature is disabled.</p>
+         * <p>Specifies whether to allow a full table scan in the project. This feature is disabled by default because a full table scan can consume a large amount of computing resources.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -231,7 +234,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public Boolean allowFullScan;
 
         /**
-         * <p>Indicates whether the DECIMAL type of the MaxCompute V2.0 data type edition is enabled.</p>
+         * <p>Specifies whether to enable the MaxCompute 2.0 Decimal data type in the project.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -240,10 +243,12 @@ public class ListProjectsResponseBody extends TeaModel {
         public Boolean enableDecimal2;
 
         /**
-         * <p>Indicates whether the routing of the Tunnel resource group is enabled.</p>
+         * <p>Specifies whether to enable routing for the Data Transmission Service resource group.</p>
          * <ul>
-         * <li>true: The data transfer tasks that are submitted by the project by default use the Tunnel resource group that is bound to the project.</li>
-         * <li>false: The data transfer tasks that are submitted by the project by default use the Tunnel shared resource group.</li>
+         * <li><p>true: Data transmission jobs submitted by default from the project use the bound Data Transmission Service resource group.</p>
+         * </li>
+         * <li><p>false: Data transmission jobs submitted by default from the project use the shared Data Transmission Service resource group.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -265,7 +270,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public ListProjectsResponseBodyDataProjectsPropertiesExternalProjectProperties externalProjectProperties;
 
         /**
-         * <p>The retention period for backup data. Unit: days. During the retention period, you can restore data of the version in use to the backup data of any version. Valid values: [0,30]. Default value: 1. The value 0 indicates that the backup feature is disabled.</p>
+         * <p>The number of retention days for backup data. You can restore data to any backup version that is created within the retention period. Valid values: <code>0</code> to <code>30</code>. Default value: <code>1</code>. A value of <code>0</code> indicates that the backup feature is disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -274,7 +279,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public Long retentionDays;
 
         /**
-         * <p>The maximum consumption threshold of a single SQL statement. Formula: Amount of scanned data (GB) × Complexity.</p>
+         * <p>The maximum metered cost for a single SQL statement. The cost is calculated by using the formula: (scanned data in GB) × (complexity).</p>
          * 
          * <strong>example:</strong>
          * <p>1500</p>
@@ -289,7 +294,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public ListProjectsResponseBodyDataProjectsPropertiesTableLifecycle tableLifecycle;
 
         /**
-         * <p>The time zone that is used by your project. The time zone is the same as the time zone specified by <code>odps.sql.timezone</code>.</p>
+         * <p>The time zone of the project. This parameter corresponds to the <code>odps.sql.timezone</code> property.</p>
          * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>
@@ -298,26 +303,31 @@ public class ListProjectsResponseBody extends TeaModel {
         public String timezone;
 
         /**
-         * <p>The <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/overview-of-dts">Tunnel</a> resource group that is bound to the project.</p>
+         * <p>The &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/overview-of-dts">Data Transmission Service</a> resource group that is bound to the project.</p>
          * <ul>
-         * <li>Default resource group: The Tunnel shared resource group is used. You cannot use the subscription-based Tunnel resource group for the project. The default resource group is automatically used by the Tunnel service of your project, regardless of the parameter setting.</li>
-         * <li>Subscription-based Tunnel resource group: You can use the subscription-based Tunnel resource group for the project.</li>
+         * <li><p>Default (shared Data Transmission Service resource group): The project cannot use subscription Data Transmission Service resource groups. Data Transmission Service jobs submitted from this project automatically use the Default resource group, regardless of the default setting for the Data Transmission Service resource group.</p>
+         * </li>
+         * <li><p>Subscription Data Transmission Service resource group: The project can use a subscription Data Transmission Service resource group.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>quota_tunnel</p>
+         * <p>Default</p>
          */
         @NameInMap("tunnelQuota")
         public String tunnelQuota;
 
         /**
-         * <p>The data type edition. Valid values:</p>
+         * <p>The data type version. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: MaxCompute V1.0 data type edition</li>
-         * <li><strong>2</strong>: MaxCompute V2.0 data type edition</li>
-         * <li><strong>hive</strong>: Hive-compatible data type edition</li>
+         * <li><p><strong>1</strong>: Version 1.0.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Version 2.0.</p>
+         * </li>
+         * <li><p><strong>hive</strong>: A Hive-compatible type.</p>
+         * </li>
          * </ul>
-         * <p>For more information about the differences among the three data type editions, see <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/data-type-editions">Data type editions</a>.</p>
+         * <p>For more information about the differences between the data type versions, see &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/data-type-editions">Data type versions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -422,19 +432,19 @@ public class ListProjectsResponseBody extends TeaModel {
 
     public static class ListProjectsResponseBodyDataProjectsSaleTag extends TeaModel {
         /**
-         * <p>The instance ID of the default computing quota.</p>
+         * <p>The instance ID of the default compute quota.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;aaaa-bbbb&quot;</p>
+         * <p>b7afb7d1-<strong><strong>-</strong></strong>-****-c393669c307b</p>
          */
         @NameInMap("resourceId")
         public String resourceId;
 
         /**
-         * <p>The billing method of the default computing quota.</p>
+         * <p>The billing method of the default compute quota.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;project&quot;</p>
+         * <p>PayAsYouGo</p>
          */
         @NameInMap("resourceType")
         public String resourceType;
@@ -464,7 +474,7 @@ public class ListProjectsResponseBody extends TeaModel {
 
     public static class ListProjectsResponseBodyDataProjectsSecurityPropertiesProjectProtection extends TeaModel {
         /**
-         * <p>If you enable the project data protection mechanism, you can configure exception or trusted projects. This allows specified users to transfer data of a specified object to a specified project. The project data protection mechanism does not take effect in all the situations that are specified in the exception policy.</p>
+         * <p>If project data protection is enabled, you can configure an exception policy. This policy allows specified users to export data from specified objects to trusted projects, bypassing the data protection mechanism.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -492,7 +502,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public String exceptionPolicy;
 
         /**
-         * <p>Indicates whether the <a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/project-data-protection">data protection mechanism</a> is enabled for the project. This allows or denies data transfer across projects. By default, the data protection mechanism is disabled.</p>
+         * <p>Specifies whether to enable &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/project-data-protection">project data protection</a> to prevent data from being exported from the project. Default value: <code>false</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -525,7 +535,7 @@ public class ListProjectsResponseBody extends TeaModel {
 
     public static class ListProjectsResponseBodyDataProjectsSecurityProperties extends TeaModel {
         /**
-         * <p>Indicates whether the <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/label-based-access-control">download control</a> feature is enabled. By default, this feature is disabled.</p>
+         * <p>Specifies whether to enable &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/label-based-access-control">download control</a>. Default value: <code>false</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -534,7 +544,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public Boolean enableDownloadPrivilege;
 
         /**
-         * <p>Indicates whether the <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/label-based-access-control">label-based access control</a> feature is enabled. By default, this feature is disabled.</p>
+         * <p>Specifies whether to enable &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/label-based-access-control">label-based access control</a>. Default value: <code>false</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -543,7 +553,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public Boolean labelSecurity;
 
         /**
-         * <p>Indicates whether to allow the object creator to have the access permissions on the object. The default value is true, which indicates that the object creator has the access permissions on the object.</p>
+         * <p>Specifies whether the creator of an object can access it. Default value: <code>true</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -552,7 +562,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public Boolean objectCreatorHasAccessPermission;
 
         /**
-         * <p>Indicates whether the object creator has the authorization permissions on the object. The default value is true, which indicates that the object creator has the authorization permissions on the object.</p>
+         * <p>Specifies whether the creator of an object can grant other users permissions on it. Default value: <code>true</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -561,13 +571,13 @@ public class ListProjectsResponseBody extends TeaModel {
         public Boolean objectCreatorHasGrantPermission;
 
         /**
-         * <p>The properties of the <a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/project-data-protection">data protection mechanism</a>.</p>
+         * <p>The &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/project-data-protection">project data protection</a> properties.</p>
          */
         @NameInMap("projectProtection")
         public ListProjectsResponseBodyDataProjectsSecurityPropertiesProjectProtection projectProtection;
 
         /**
-         * <p>Indicates whether the <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/acl-based-access-control">ACL-based access control</a> feature is enabled. By default, this feature is enabled.</p>
+         * <p>Specifies whether to enable &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/acl-based-access-control">ACL-based access control</a>. Default value: <code>true</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -576,7 +586,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public Boolean usingAcl;
 
         /**
-         * <p>Indicates whether the <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/policy-based-access-control-1">policy-based access control</a> feature is enabled. By default, this feature is enabled.</p>
+         * <p>Specifies whether to enable &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/policy-based-access-control-1">policy-based access control</a>. Default value: <code>true</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -649,16 +659,16 @@ public class ListProjectsResponseBody extends TeaModel {
 
     public static class ListProjectsResponseBodyDataProjects extends TeaModel {
         /**
-         * <p>The project description.</p>
+         * <p>The description of the project.</p>
          * 
          * <strong>example:</strong>
-         * <p>maxcompute projects</p>
+         * <p>BI_Analysis</p>
          */
         @NameInMap("comment")
         public String comment;
 
         /**
-         * <p>The total storage usage. The storage space that is occupied by your project, which is the logical storage space after your project data is collected and compressed.</p>
+         * <p>The total storage usage of the project, which represents the compressed, logical data size used for metering.</p>
          * 
          * <strong>example:</strong>
          * <p>16489027</p>
@@ -667,7 +677,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public String costStorage;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the project was created, as a Unix timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1704380838000</p>
@@ -676,16 +686,16 @@ public class ListProjectsResponseBody extends TeaModel {
         public Long createdTime;
 
         /**
-         * <p>The default computing quota that is used to allocate computing resources. If you do not specify a computing quota for your project, the jobs that are initiated by your project consume the computing resources in the default quota. For more information about how to use computing resources, see <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/use-of-computing-resources">Use quota groups for computing resources</a></p>
+         * <p>The default compute quota. If you do not specify a quota for a job, the job consumes computing resources from this default quota. For more information about how to use computing resources, see &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/use-of-computing-resources">Use of computing resources</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>quotaA</p>
+         * <p>os_PayAsYouGoQuota</p>
          */
         @NameInMap("defaultQuota")
         public String defaultQuota;
 
         /**
-         * <p>The information about the IP address whitelist.</p>
+         * <p>The IP whitelist.</p>
          */
         @NameInMap("ipWhiteList")
         public ListProjectsResponseBodyDataProjectsIpWhiteList ipWhiteList;
@@ -700,10 +710,10 @@ public class ListProjectsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The account information of the project owner.</p>
+         * <p>The owner of the project.</p>
          * 
          * <strong>example:</strong>
-         * <p>1139815775606813</p>
+         * <p>ALIYUN$odps****@aliyunid.com</p>
          */
         @NameInMap("owner")
         public String owner;
@@ -724,24 +734,28 @@ public class ListProjectsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The instance ID and billing method of the default computing quota.</p>
+         * <p>The instance ID and billing method of the default compute quota.</p>
          */
         @NameInMap("saleTag")
         public ListProjectsResponseBodyDataProjectsSaleTag saleTag;
 
         /**
-         * <p>The permission properties.</p>
+         * <p>The security-related properties.</p>
          */
         @NameInMap("securityProperties")
         public ListProjectsResponseBodyDataProjectsSecurityProperties securityProperties;
 
         /**
-         * <p>The project status. Valid values:</p>
+         * <p>The status of the project. Valid values:</p>
          * <ul>
-         * <li><strong>AVAILABLE</strong></li>
-         * <li><strong>READONLY</strong></li>
-         * <li><strong>FROZEN</strong></li>
-         * <li><strong>DELETING</strong></li>
+         * <li><p><strong>AVAILABLE</strong>: The project is running as expected.</p>
+         * </li>
+         * <li><p><strong>READONLY</strong>: The project is read-only.</p>
+         * </li>
+         * <li><p><strong>FROZEN</strong>: The project is frozen.</p>
+         * </li>
+         * <li><p><strong>DELETING</strong>: The project is being deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -751,12 +765,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Indicates whether data storage by schema is supported. MaxCompute supports the schema feature. This feature allows you to classify objects such as tables, resources, and user-defined functions (UDFs) in a project by schema. You can create multiple schemas in a project. For more information, see <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/schema-related-operations">Schema-related operations</a>.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true: supported</li>
-         * <li>false: not supported</li>
-         * </ul>
+         * <p>Specifies whether the project uses a three-tier model (project &gt; schema &gt; object). In this model, schemas are used within a project to organize objects such as tables, resources, and user-defined functions (UDFs). For more information, see &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/schema-related-operations">Schema operations</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -765,10 +774,12 @@ public class ListProjectsResponseBody extends TeaModel {
         public Boolean threeTierModel;
 
         /**
-         * <p>The project type. Valid values:</p>
+         * <p>The type of the project. Valid values:</p>
          * <ul>
-         * <li><strong>managed</strong>: internal project</li>
-         * <li><strong>external</strong>: external project</li>
+         * <li><p><strong>managed</strong>: An internal project.</p>
+         * </li>
+         * <li><p><strong>external</strong>: An external project.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -898,7 +909,7 @@ public class ListProjectsResponseBody extends TeaModel {
 
     public static class ListProjectsResponseBodyData extends TeaModel {
         /**
-         * <p>A pagination token. Only continuous page turning is supported. If NextToken is not empty, the next page exists. The value of NextToken can be used in the next request to retrieve a new page of results.</p>
+         * <p>The token for retrieving the next page of results. If this parameter is empty, all results have been returned.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kvikyUl3ChyRxN+qLPvtOb</p>
@@ -907,7 +918,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>Indicates the marker after which the returned list begins.</p>
+         * <p>A pagination marker used to retrieve the next page of results. This parameter is returned when the response is truncated.</p>
          * 
          * <strong>example:</strong>
          * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>

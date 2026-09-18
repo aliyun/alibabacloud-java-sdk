@@ -4,10 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public java.util.List<ListInstancesResponseBodyData> data;
 
     /**
+     * <p>Indicates whether the request was successful. If the value of this parameter is not 200, the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +20,8 @@ public class ListInstancesResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0FC8BA40-C712-5FFD-9AA5-24C8F47F86E9</p>
      */
@@ -52,6 +59,8 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyData extends TeaModel {
         /**
+         * <p>The project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>projectAbc</p>
          */

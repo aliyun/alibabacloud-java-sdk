@@ -4,10 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class ListMmsJobsResponseBody extends TeaModel {
+    /**
+     * <p>The details of the returned data.</p>
+     */
     @NameInMap("data")
     public ListMmsJobsResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1112E7C7-C65F-57A2-A7C7-3B178AA257B6</p>
      */
@@ -36,42 +41,99 @@ public class ListMmsJobsResponseBody extends TeaModel {
     }
 
     public static class ListMmsJobsResponseBodyDataObjectListConfig extends TeaModel {
+        /**
+         * <p>The mapping from source column names to destination column names.</p>
+         */
         @NameInMap("columnMapping")
         public java.util.Map<String, String> columnMapping;
 
+        /**
+         * <p>Enable verification. The current method runs SELECT COUNT on both the source and destination and compares the row counts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enableVerification")
         public Boolean enableVerification;
 
+        /**
+         * <p>Enable incremental migration. Only new or modified partitions are migrated. Modified partitions are re-migrated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("increment")
         public Boolean increment;
 
+        /**
+         * <p>Other configuration settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;spark.executor.mem&quot;: &quot;2g&quot;}</p>
+         */
         @NameInMap("others")
         public java.util.Map<String, ?> others;
 
+        /**
+         * <p>The partition filter expression. Specify the partition filter expression for each table.</p>
+         */
         @NameInMap("partitionFilters")
         public java.util.Map<String, String> partitionFilters;
 
+        /**
+         * <p>When type is set to Partitions, specify the partition IDs of the tables to migrate.</p>
+         */
         @NameInMap("partitions")
         public java.util.List<Long> partitions;
 
+        /**
+         * <p>Deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("schemaOnly")
         public Boolean schemaOnly;
 
+        /**
+         * <p>When type is set to Database, specify the tables to exclude from migration.</p>
+         */
         @NameInMap("tableBlackList")
         public java.util.List<String> tableBlackList;
 
+        /**
+         * <p>The mapping from source table names to destination table names.</p>
+         */
         @NameInMap("tableMapping")
         public java.util.Map<String, String> tableMapping;
 
+        /**
+         * <p>When type is set to Database, specify the tables to migrate. If you do not specify tableWhiteList, all tables in the specified database are migrated.</p>
+         */
         @NameInMap("tableWhiteList")
         public java.util.List<String> tableWhiteList;
 
+        /**
+         * <p>When type is set to Tables, specify the names of the tables to migrate.</p>
+         */
         @NameInMap("tables")
         public java.util.List<String> tables;
 
+        /**
+         * <p>Deprecated. Valid values: MOCK, HIVE (hive udtf task), HIVE_DATAX (hive datax task), COPY_TASK (ODPS Copy Task), ODPS_INSERT_OVERWRITE (ODPS simple insert overwrite task), MC2MC_VERIFY, OSS, HIVE_OSS, HIVE_SPARK, and BIGQUERY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BIGQUERY</p>
+         */
         @NameInMap("taskType")
         public String taskType;
 
+        /**
+         * <p>Deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Depcreated</p>
+         */
         @NameInMap("tunnelQuota")
         public String tunnelQuota;
 
@@ -187,10 +249,15 @@ public class ListMmsJobsResponseBody extends TeaModel {
     }
 
     public static class ListMmsJobsResponseBodyDataObjectList extends TeaModel {
+        /**
+         * <p>The configuration of the migration job.</p>
+         */
         @NameInMap("config")
         public ListMmsJobsResponseBodyDataObjectListConfig config;
 
         /**
+         * <p>Indicates whether the migration job is stopped.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-17 15:44:17</p>
          */
@@ -198,6 +265,8 @@ public class ListMmsJobsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The source database ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>196</p>
          */
@@ -205,6 +274,8 @@ public class ListMmsJobsResponseBody extends TeaModel {
         public Long dbId;
 
         /**
+         * <p>The destination MaxCompute project.</p>
+         * 
          * <strong>example:</strong>
          * <p>mms_test</p>
          */
@@ -212,16 +283,26 @@ public class ListMmsJobsResponseBody extends TeaModel {
         public String dstDbName;
 
         /**
+         * <p>The destination MaxCompute schema.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_table_1</p>
          */
         @NameInMap("dstSchemaName")
         public String dstSchemaName;
 
+        /**
+         * <p>The estimated completion time of the migration. A smaller eta value increases the priority of the migration job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-05-06</p>
+         */
         @NameInMap("eta")
         public String eta;
 
         /**
+         * <p>The migration job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>18</p>
          */
@@ -229,6 +310,8 @@ public class ListMmsJobsResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The name of the migration job.</p>
+         * 
          * <strong>example:</strong>
          * <p>migrate_db_1</p>
          */
@@ -236,6 +319,8 @@ public class ListMmsJobsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The data source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000015</p>
          */
@@ -243,6 +328,8 @@ public class ListMmsJobsResponseBody extends TeaModel {
         public Long sourceId;
 
         /**
+         * <p>The name of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>demo</p>
          */
@@ -250,6 +337,8 @@ public class ListMmsJobsResponseBody extends TeaModel {
         public String sourceName;
 
         /**
+         * <p>The name of the source database.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_db_1</p>
          */
@@ -257,6 +346,8 @@ public class ListMmsJobsResponseBody extends TeaModel {
         public String srcDbName;
 
         /**
+         * <p>The source schema name. This is the schema in a Layer 3 namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_table_1</p>
          */
@@ -264,6 +355,8 @@ public class ListMmsJobsResponseBody extends TeaModel {
         public String srcSchemaName;
 
         /**
+         * <p>The status of the migration job.</p>
+         * 
          * <strong>example:</strong>
          * <p>DONE</p>
          */
@@ -271,6 +364,8 @@ public class ListMmsJobsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Indicates whether the migration job is stopped.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -278,6 +373,8 @@ public class ListMmsJobsResponseBody extends TeaModel {
         public Boolean stopped;
 
         /**
+         * <p>The number of completed migration tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -285,6 +382,8 @@ public class ListMmsJobsResponseBody extends TeaModel {
         public Integer taskDone;
 
         /**
+         * <p>The number of migration tasks in the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -292,6 +391,8 @@ public class ListMmsJobsResponseBody extends TeaModel {
         public Integer taskNum;
 
         /**
+         * <p>The migration scope. Valid values: Database, Tables, and Partitions.</p>
+         * 
          * <strong>example:</strong>
          * <p>Tables</p>
          */
@@ -442,10 +543,15 @@ public class ListMmsJobsResponseBody extends TeaModel {
     }
 
     public static class ListMmsJobsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of migration jobs.</p>
+         */
         @NameInMap("objectList")
         public java.util.List<ListMmsJobsResponseBodyDataObjectList> objectList;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -453,6 +559,8 @@ public class ListMmsJobsResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>The number of entries returned on each page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -460,6 +568,8 @@ public class ListMmsJobsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

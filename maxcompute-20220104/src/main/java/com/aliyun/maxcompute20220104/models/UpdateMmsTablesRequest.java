@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateMmsTablesRequest extends TeaModel {
     /**
+     * <p>The name of the database that contains the source tables to be updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -12,6 +14,8 @@ public class UpdateMmsTablesRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The destination MaxCompute project.</p>
+     * 
      * <strong>example:</strong>
      * <p>pj</p>
      */
@@ -19,6 +23,8 @@ public class UpdateMmsTablesRequest extends TeaModel {
     public String dstProjectName;
 
     /**
+     * <p>The destination MaxCompute schema.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -26,17 +32,22 @@ public class UpdateMmsTablesRequest extends TeaModel {
     public String dstSchemaName;
 
     /**
+     * <p>The migration status.</p>
+     * 
      * <strong>example:</strong>
      * <p>INIT</p>
      */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The list of source tables to be updated.</p>
+     */
     @NameInMap("tableNames")
     public java.util.List<String> tableNames;
 
     /**
-     * <p>Deprecated</p>
+     * <p>This parameter is deprecated.</p>
      */
     @NameInMap("tables")
     public java.util.List<Long> tables;

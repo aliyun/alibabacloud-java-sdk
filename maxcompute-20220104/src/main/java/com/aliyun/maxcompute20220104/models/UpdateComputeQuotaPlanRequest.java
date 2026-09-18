@@ -101,8 +101,10 @@ public class UpdateComputeQuotaPlanRequest extends TeaModel {
          * <p>The value of minCU in Reserved CUs.</p>
          * <blockquote>
          * <ul>
-         * <li>The total value of minCU in all the level-2 quotas is equal to the value of minCU in the level-1 quota.</li>
-         * <li>The value of minCU must be less than or equal to the value of maxCU in the level-2 quota and less than or equal to the value of minCU in the level-1 quota that you purchased.</li>
+         * <li><p>The total value of minCU in all the level-2 quotas is equal to the value of minCU in the level-1 quota.</p>
+         * </li>
+         * <li><p>The value of minCU must be less than or equal to the value of maxCU in the level-2 quota and less than or equal to the value of minCU in the level-1 quota that you purchased.</p>
+         * </li>
          * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetStorageAmountSummaryRequest extends TeaModel {
     /**
+     * <p>The date for statistics collection. The value is at the day level and must be in the YYYYMMdd format.</p>
+     * 
      * <strong>example:</strong>
      * <p>20241205</p>
      */
@@ -12,6 +14,8 @@ public class GetStorageAmountSummaryRequest extends TeaModel {
     public String date;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -19,6 +23,8 @@ public class GetStorageAmountSummaryRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The tenant ID. You can view the tenant ID by logging on to the MaxCompute console and choosing <strong>Tenant Management</strong> &gt; <strong>Tenant Properties</strong> in the left-side navigation pane.</p>
+     * 
      * <strong>example:</strong>
      * <p>478403690625249</p>
      */

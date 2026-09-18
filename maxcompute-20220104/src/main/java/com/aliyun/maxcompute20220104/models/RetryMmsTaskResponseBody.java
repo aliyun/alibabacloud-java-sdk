@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RetryMmsTaskResponseBody extends TeaModel {
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,8 @@ public class RetryMmsTaskResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0a06dd4516687375802853481ec9fd</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SumComputeMetricsByRecordRequest extends TeaModel {
     /**
+     * <p>The end of the time range to query, specified as a required Unix timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1718590596556</p>
      */
     @NameInMap("endDate")
     public Long endDate;
 
+    /**
+     * <p>The list of project names.</p>
+     */
     @NameInMap("projectNames")
     public java.util.List<String> projectNames;
 
     /**
+     * <p>The start of the time range to query, specified as a required Unix timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1715393576201</p>
      */

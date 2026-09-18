@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SumComputeMetricsByUsageRequest extends TeaModel {
     /**
+     * <p>The end timestamp for the query, in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1718590596556</p>
      */
     @NameInMap("endDate")
     public Long endDate;
 
+    /**
+     * <p>The project names.</p>
+     */
     @NameInMap("projectNames")
     public java.util.List<String> projectNames;
 
     /**
+     * <p>The start timestamp for the query, in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1715393576201</p>
      */
@@ -22,6 +29,8 @@ public class SumComputeMetricsByUsageRequest extends TeaModel {
     public Long startDate;
 
     /**
+     * <p>The usage type. Valid values: <code>CU</code> (CU usage) and <code>SCAN</code> (scanned data volume).</p>
+     * 
      * <strong>example:</strong>
      * <p>SCAN</p>
      */

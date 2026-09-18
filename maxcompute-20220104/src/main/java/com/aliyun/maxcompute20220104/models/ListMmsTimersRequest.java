@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListMmsTimersRequest extends TeaModel {
     /**
+     * <p>The timer name.</p>
+     * 
      * <strong>example:</strong>
      * <p>demo</p>
      */
@@ -12,6 +14,8 @@ public class ListMmsTimersRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListMmsTimersRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class ListMmsTimersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The source database name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_db_1</p>
      */
@@ -33,6 +41,8 @@ public class ListMmsTimersRequest extends TeaModel {
     public String srcDbName;
 
     /**
+     * <p>The source table name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_table_1</p>
      */
@@ -40,6 +50,8 @@ public class ListMmsTimersRequest extends TeaModel {
     public String srcTableName;
 
     /**
+     * <p>Filters timers by their stopped state.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

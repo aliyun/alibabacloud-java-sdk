@@ -4,19 +4,20 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class SumDailyBillsByItemResponseBody extends TeaModel {
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public SumDailyBillsByItemResponseBodyData data;
 
     /**
-     * <strong>example:</strong>
-     * <p>200</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("httpCode")
     public Integer httpCode;
 
     /**
-     * <strong>example:</strong>
-     * <p>0bc3b4ab17217876841756121e1349</p>
+     * <p>The unique identifier for the request.</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -52,29 +53,25 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
 
     public static class SumDailyBillsByItemResponseBodyDataItemSummaryBillsDailySumBillsItemBills extends TeaModel {
         /**
-         * <strong>example:</strong>
-         * <p>433</p>
+         * <p>The cost of the item.</p>
          */
         @NameInMap("cost")
         public String cost;
 
         /**
-         * <strong>example:</strong>
-         * <p>RMB</p>
+         * <p>The currency of the cost.</p>
          */
         @NameInMap("currency")
         public String currency;
 
         /**
-         * <strong>example:</strong>
-         * <p>empty</p>
+         * <p>The name of the billable item.</p>
          */
         @NameInMap("itemName")
         public String itemName;
 
         /**
-         * <strong>example:</strong>
-         * <p>60</p>
+         * <p>The item\&quot;s percentage of the daily total cost.</p>
          */
         @NameInMap("percentage")
         public Double percentage;
@@ -120,26 +117,26 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
 
     public static class SumDailyBillsByItemResponseBodyDataItemSummaryBillsDailySumBills extends TeaModel {
         /**
-         * <strong>example:</strong>
-         * <p>31</p>
+         * <p>The cost for the day.</p>
          */
         @NameInMap("cost")
         public String cost;
 
         /**
-         * <strong>example:</strong>
-         * <p>RMB</p>
+         * <p>The currency of the cost.</p>
          */
         @NameInMap("currency")
         public String currency;
 
         /**
-         * <strong>example:</strong>
-         * <p>20260409</p>
+         * <p>The date. Format: YYYYMMDD.</p>
          */
         @NameInMap("dateTime")
         public String dateTime;
 
+        /**
+         * <p>An array of detailed bills for the item on the specified day.</p>
+         */
         @NameInMap("itemBills")
         public java.util.List<SumDailyBillsByItemResponseBodyDataItemSummaryBillsDailySumBillsItemBills> itemBills;
 
@@ -184,39 +181,37 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
 
     public static class SumDailyBillsByItemResponseBodyDataItemSummaryBills extends TeaModel {
         /**
-         * <strong>example:</strong>
-         * <p>RMB</p>
+         * <p>The currency of the cost.</p>
          */
         @NameInMap("currency")
         public String currency;
 
+        /**
+         * <p>An array of daily cost summaries for the item.</p>
+         */
         @NameInMap("dailySumBills")
         public java.util.List<SumDailyBillsByItemResponseBodyDataItemSummaryBillsDailySumBills> dailySumBills;
 
         /**
-         * <strong>example:</strong>
-         * <p>DRStorage</p>
+         * <p>The name of the billable item.</p>
          */
         @NameInMap("itemName")
         public String itemName;
 
         /**
-         * <strong>example:</strong>
-         * <p>50</p>
+         * <p>The item\&quot;s percentage of the total cost.</p>
          */
         @NameInMap("percentage")
         public Double percentage;
 
         /**
-         * <strong>example:</strong>
-         * <p>OdpsStandard</p>
+         * <p>The specification code of the item.</p>
          */
         @NameInMap("specCode")
         public String specCode;
 
         /**
-         * <strong>example:</strong>
-         * <p>10000</p>
+         * <p>The total cost of the item.</p>
          */
         @NameInMap("totalCost")
         public String totalCost;
@@ -277,26 +272,26 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
     }
 
     public static class SumDailyBillsByItemResponseBodyData extends TeaModel {
+        /**
+         * <p>An array of item-level cost summaries.</p>
+         */
         @NameInMap("itemSummaryBills")
         public java.util.List<SumDailyBillsByItemResponseBodyDataItemSummaryBills> itemSummaryBills;
 
         /**
-         * <strong>example:</strong>
-         * <p>2</p>
+         * <p>The current page number.</p>
          */
         @NameInMap("pageNumber")
         public Long pageNumber;
 
         /**
-         * <strong>example:</strong>
-         * <p>10</p>
+         * <p>The number of entries per page.</p>
          */
         @NameInMap("pageSize")
         public Long pageSize;
 
         /**
-         * <strong>example:</strong>
-         * <p>60</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("totalCount")
         public Long totalCount;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobInfosRequest extends TeaModel {
     /**
-     * <p>Specifies whether to sort query results in ascending or descending order.</p>
+     * <p>Specifies whether to sort in ascending or descending order.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,11 +14,14 @@ public class ListJobInfosRequest extends TeaModel {
     public Boolean ascOrder;
 
     /**
-     * <p>The ancestor node IDs.</p>
+     * <p>The upstream node IDs.</p>
      */
     @NameInMap("extNodeIdList")
     public java.util.List<String> extNodeIdList;
 
+    /**
+     * <p>The upstream node names.</p>
+     */
     @NameInMap("extNodeNameList")
     public java.util.List<String> extNodeNameList;
 
@@ -66,7 +69,7 @@ public class ListJobInfosRequest extends TeaModel {
     public String quotaNickname;
 
     /**
-     * <p>The intelligent diagnostics tags.</p>
+     * <p>The intelligent diagnosis labels.</p>
      */
     @NameInMap("sceneTagList")
     public java.util.List<String> sceneTagList;
@@ -78,23 +81,26 @@ public class ListJobInfosRequest extends TeaModel {
     public java.util.List<String> signatureList;
 
     /**
-     * <p>The sorting columns.</p>
+     * <p>The fields used for multi-column sorting.</p>
      */
     @NameInMap("sortByList")
     public java.util.List<String> sortByList;
 
     /**
-     * <p>The orders for the sorting columns.</p>
+     * <p>The sort orders for multi-column sorting.</p>
      */
     @NameInMap("sortOrderList")
     public java.util.List<String> sortOrderList;
 
     /**
-     * <p>The job states.</p>
+     * <p>The job statuses.</p>
      */
     @NameInMap("statusList")
     public java.util.List<String> statusList;
 
+    /**
+     * <p>The job names.</p>
+     */
     @NameInMap("taskNameList")
     public java.util.List<String> taskNameList;
 
@@ -115,7 +121,7 @@ public class ListJobInfosRequest extends TeaModel {
     public java.util.List<String> typeList;
 
     /**
-     * <p>The column based on which you want to sort query results.</p>
+     * <p>The column used for sorting.</p>
      * 
      * <strong>example:</strong>
      * <p>cuUsage</p>

@@ -8,6 +8,8 @@ public class ListMmsPartitionsRequest extends TeaModel {
     public ListMmsPartitionsRequestSorter sorter;
 
     /**
+     * <p>The database ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -15,6 +17,8 @@ public class ListMmsPartitionsRequest extends TeaModel {
     public Long dbId;
 
     /**
+     * <p>The database name.</p>
+     * 
      * <strong>example:</strong>
      * <p>d1</p>
      */
@@ -22,6 +26,8 @@ public class ListMmsPartitionsRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The maximum lastDdlTime value.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-12-17 19:44:42</p>
      */
@@ -29,6 +35,8 @@ public class ListMmsPartitionsRequest extends TeaModel {
     public String lastDdlTimeEnd;
 
     /**
+     * <p>The minimum lastDdlTime value.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-12-17 15:44:42</p>
      */
@@ -36,6 +44,8 @@ public class ListMmsPartitionsRequest extends TeaModel {
     public String lastDdlTimeStart;
 
     /**
+     * <p>The page number to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -43,16 +53,23 @@ public class ListMmsPartitionsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The migration status.</p>
+     */
     @NameInMap("status")
     public java.util.List<String> status;
 
     /**
+     * <p>The ID of the table that contains the partition.</p>
+     * 
      * <strong>example:</strong>
      * <p>20323</p>
      */
@@ -60,6 +77,8 @@ public class ListMmsPartitionsRequest extends TeaModel {
     public Long tableId;
 
     /**
+     * <p>The table name.</p>
+     * 
      * <strong>example:</strong>
      * <p>t1</p>
      */
@@ -67,6 +86,8 @@ public class ListMmsPartitionsRequest extends TeaModel {
     public String tableName;
 
     /**
+     * <p>Filters partitions whose metadata has been updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -74,6 +95,8 @@ public class ListMmsPartitionsRequest extends TeaModel {
     public Boolean updated;
 
     /**
+     * <p>The partition value.</p>
+     * 
      * <strong>example:</strong>
      * <p>p1=1/p2=abc</p>
      */
@@ -183,6 +206,8 @@ public class ListMmsPartitionsRequest extends TeaModel {
 
     public static class ListMmsPartitionsRequestSorter extends TeaModel {
         /**
+         * <p>Sorts by lastDdlTime.</p>
+         * 
          * <strong>example:</strong>
          * <p>desc</p>
          */
@@ -190,6 +215,8 @@ public class ListMmsPartitionsRequest extends TeaModel {
         public String lastDdlTime;
 
         /**
+         * <p>Sorts by number of rows.</p>
+         * 
          * <strong>example:</strong>
          * <p>desc</p>
          */
@@ -197,6 +224,8 @@ public class ListMmsPartitionsRequest extends TeaModel {
         public String numRows;
 
         /**
+         * <p>Sorts by data size.</p>
+         * 
          * <strong>example:</strong>
          * <p>asc</p>
          */

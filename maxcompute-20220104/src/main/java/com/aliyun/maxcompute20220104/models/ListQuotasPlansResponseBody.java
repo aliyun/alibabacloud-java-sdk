@@ -44,8 +44,10 @@ public class ListQuotasPlansResponseBody extends TeaModel {
         /**
          * <p>The billing method of the quota. Valid values:</p>
          * <ul>
-         * <li>subscription: a subscription quota.</li>
-         * <li>payasyougo: a pay-as-you-go quota.</li>
+         * <li><p>subscription: a subscription quota.</p>
+         * </li>
+         * <li><p>payasyougo: a pay-as-you-go quota.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -234,8 +236,10 @@ public class ListQuotasPlansResponseBody extends TeaModel {
         /**
          * <p>The billing method of the quota. Valid values:</p>
          * <ul>
-         * <li>subscription: a subscription quota.</li>
-         * <li>payasyougo: a pay-as-you-go quota.</li>
+         * <li><p>subscription: a subscription quota.</p>
+         * </li>
+         * <li><p>payasyougo: a pay-as-you-go quota.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetStorageSizeSummaryRequest extends TeaModel {
     /**
+     * <p>The date of statistics. The value is at the day level. The format is YYYYMMdd.</p>
+     * 
      * <strong>example:</strong>
      * <p>20241205</p>
      */
@@ -12,6 +14,8 @@ public class GetStorageSizeSummaryRequest extends TeaModel {
     public String date;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-chengdu</p>
      */
@@ -19,6 +23,8 @@ public class GetStorageSizeSummaryRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The tenant ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>483212237127906</p>
      */

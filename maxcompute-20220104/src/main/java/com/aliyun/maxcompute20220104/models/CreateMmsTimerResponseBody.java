@@ -4,10 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class CreateMmsTimerResponseBody extends TeaModel {
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public CreateMmsTimerResponseBodyData data;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0be3e0b716671885050924814e3623</p>
      */
@@ -37,7 +42,7 @@ public class CreateMmsTimerResponseBody extends TeaModel {
 
     public static class CreateMmsTimerResponseBodyData extends TeaModel {
         /**
-         * <p>timer id</p>
+         * <p>The ID of the timer.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

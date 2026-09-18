@@ -4,10 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class ListMmsTimersResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public ListMmsTimersResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0b87b7e716665825896565060e87a4</p>
      */
@@ -37,6 +42,8 @@ public class ListMmsTimersResponseBody extends TeaModel {
 
     public static class ListMmsTimersResponseBodyDataObjectList extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-17 09:29:58</p>
          */
@@ -44,6 +51,8 @@ public class ListMmsTimersResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The source database ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>196</p>
          */
@@ -51,6 +60,8 @@ public class ListMmsTimersResponseBody extends TeaModel {
         public Long dbId;
 
         /**
+         * <p>The timer ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>18</p>
          */
@@ -58,6 +69,8 @@ public class ListMmsTimersResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The timer name.</p>
+         * 
          * <strong>example:</strong>
          * <p>migrate_db_1</p>
          */
@@ -65,6 +78,8 @@ public class ListMmsTimersResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The schedule type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Daily</p>
          */
@@ -72,6 +87,8 @@ public class ListMmsTimersResponseBody extends TeaModel {
         public String scheduleType;
 
         /**
+         * <p>The data source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000015</p>
          */
@@ -79,6 +96,8 @@ public class ListMmsTimersResponseBody extends TeaModel {
         public Long sourceId;
 
         /**
+         * <p>The source database name.</p>
+         * 
          * <strong>example:</strong>
          * <p>db_1</p>
          */
@@ -86,6 +105,8 @@ public class ListMmsTimersResponseBody extends TeaModel {
         public String srcDbName;
 
         /**
+         * <p>Indicates whether the timer is stopped.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -93,6 +114,8 @@ public class ListMmsTimersResponseBody extends TeaModel {
         public Boolean stopped;
 
         /**
+         * <p>The job type.</p>
+         * 
          * <strong>example:</strong>
          * <p>TABLES</p>
          */
@@ -100,6 +123,8 @@ public class ListMmsTimersResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The schedule time.</p>
+         * 
          * <strong>example:</strong>
          * <p>00:00</p>
          */
@@ -194,10 +219,15 @@ public class ListMmsTimersResponseBody extends TeaModel {
     }
 
     public static class ListMmsTimersResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of timers.</p>
+         */
         @NameInMap("objectList")
         public java.util.List<ListMmsTimersResponseBodyDataObjectList> objectList;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -205,6 +235,8 @@ public class ListMmsTimersResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>The number of entries on the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -212,6 +244,8 @@ public class ListMmsTimersResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>13</p>
          */

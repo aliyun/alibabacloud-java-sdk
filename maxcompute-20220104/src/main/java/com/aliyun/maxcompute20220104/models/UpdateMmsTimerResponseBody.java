@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateMmsTimerResponseBody extends TeaModel {
     /**
+     * <p>The response data.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,8 @@ public class UpdateMmsTimerResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EA1320AB-7766-5EC7-B0F6-8B20E2298567</p>
      */

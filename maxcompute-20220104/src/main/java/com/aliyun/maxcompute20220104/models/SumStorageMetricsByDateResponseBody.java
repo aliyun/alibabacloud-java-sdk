@@ -4,10 +4,27 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class SumStorageMetricsByDateResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public java.util.List<SumStorageMetricsByDateResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * <ul>
+     * <li><p>1xx: Informational. The request is received and the process is continuing.</p>
+     * </li>
+     * <li><p>2xx: Success. The request is successfully received, understood, and accepted.</p>
+     * </li>
+     * <li><p>3xx: Redirection. Further action needs to be taken to complete the request.</p>
+     * </li>
+     * <li><p>4xx: Client Error. The request contains bad syntax or cannot be fulfilled.</p>
+     * </li>
+     * <li><p>5xx: Server Error. The server fails to fulfill an apparently valid request.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +32,8 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0abb781a17411408145995819e0dae</p>
      */
@@ -52,6 +71,8 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
 
     public static class SumStorageMetricsByDateResponseBodyDataItemStorageMetrics extends TeaModel {
         /**
+         * <p>If the type is PROJECT, this parameter indicates the project name. If the type is STORAGE_TYPE, this parameter indicates the storage type.</p>
+         * 
          * <strong>example:</strong>
          * <p>prj</p>
          */
@@ -59,6 +80,8 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
         public String itemName;
 
         /**
+         * <p>The percentage of the storage usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>91.22</p>
          */
@@ -66,6 +89,8 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
         public Double percentage;
 
         /**
+         * <p>The storage usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>300.560392</p>
          */
@@ -105,16 +130,31 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
 
     public static class SumStorageMetricsByDateResponseBodyData extends TeaModel {
         /**
+         * <p>The date of the statistics. The format is yyyyMMdd.</p>
+         * 
          * <strong>example:</strong>
          * <p>20250719</p>
          */
         @NameInMap("dateTime")
         public String dateTime;
 
+        /**
+         * <p>The list of storage usage of a specified type.</p>
+         */
         @NameInMap("itemStorageMetrics")
         public java.util.List<SumStorageMetricsByDateResponseBodyDataItemStorageMetrics> itemStorageMetrics;
 
         /**
+         * <p>The storage type. Valid values:</p>
+         * <ul>
+         * <li><p>Storage: Standard.</p>
+         * </li>
+         * <li><p>LowFreqStorage: Infrequent Access (IA).</p>
+         * </li>
+         * <li><p>ColdStorage: Archive.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Storage</p>
          */
@@ -122,6 +162,8 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
         public String storageType;
 
         /**
+         * <p>The unit of the total storage.</p>
+         * 
          * <strong>example:</strong>
          * <p>GB</p>
          */
@@ -129,6 +171,8 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The total storage.</p>
+         * 
          * <strong>example:</strong>
          * <p>329.503338</p>
          */

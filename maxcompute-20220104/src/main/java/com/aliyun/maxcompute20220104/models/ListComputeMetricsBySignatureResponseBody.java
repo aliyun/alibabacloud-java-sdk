@@ -4,10 +4,27 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class ListComputeMetricsBySignatureResponseBody extends TeaModel {
+    /**
+     * <p>The data payload of the response.</p>
+     */
     @NameInMap("data")
     public ListComputeMetricsBySignatureResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * <ul>
+     * <li><p><code>1xx</code>: Informational - The server has received the request and is processing it.</p>
+     * </li>
+     * <li><p><code>2xx</code>: Success - The server successfully received, understood, and accepted the request.</p>
+     * </li>
+     * <li><p><code>3xx</code>: Redirection - Further action is required to complete the request.</p>
+     * </li>
+     * <li><p><code>4xx</code>: Client Error - The request contains invalid syntax or cannot be fulfilled.</p>
+     * </li>
+     * <li><p><code>5xx</code>: Server Error - The server failed to fulfill a valid request.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,8 +32,10 @@ public class ListComputeMetricsBySignatureResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>0adbef0f17600626304764284d0001</p>
+     * <p>0a06dc0a17495216593736061e45a3</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -52,22 +71,28 @@ public class ListComputeMetricsBySignatureResponseBody extends TeaModel {
 
     public static class ListComputeMetricsBySignatureResponseBodyDataSignatureComputeMetricsInstances extends TeaModel {
         /**
+         * <p>The end time of the instance.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1770886999000</p>
+         * <p>1766780295000</p>
          */
         @NameInMap("endTime")
         public Long endTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>20250910185415772gu7vl8vwk22</p>
+         * <p>20260124052241299gdxd3wveqsj</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
+         * <p>The start time of the instance.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1762946698000</p>
+         * <p>1765765291000</p>
          */
         @NameInMap("startTime")
         public Long startTime;
@@ -104,20 +129,30 @@ public class ListComputeMetricsBySignatureResponseBody extends TeaModel {
     }
 
     public static class ListComputeMetricsBySignatureResponseBodyDataSignatureComputeMetrics extends TeaModel {
+        /**
+         * <p>A list of instances.</p>
+         */
         @NameInMap("instances")
         public java.util.List<ListComputeMetricsBySignatureResponseBodyDataSignatureComputeMetricsInstances> instances;
 
+        /**
+         * <p>A list of project names.</p>
+         */
         @NameInMap("projectNames")
         public java.util.List<String> projectNames;
 
         /**
+         * <p>The signature of the SQL job.</p>
+         * 
          * <strong>example:</strong>
-         * <p>oC0HkG5aTRscH3BDrttrLwHf8XA=</p>
+         * <p>YF3JMiEXEvZVmGzUXz6G4MtWVJk=</p>
          */
         @NameInMap("signature")
         public String signature;
 
         /**
+         * <p>The unit of compute usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>GBCplx</p>
          */
@@ -125,8 +160,10 @@ public class ListComputeMetricsBySignatureResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The compute usage.</p>
+         * 
          * <strong>example:</strong>
-         * <p>100</p>
+         * <p>32.67767215706408</p>
          */
         @NameInMap("usage")
         public Double usage;
@@ -180,6 +217,8 @@ public class ListComputeMetricsBySignatureResponseBody extends TeaModel {
 
     public static class ListComputeMetricsBySignatureResponseBodyData extends TeaModel {
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -187,18 +226,25 @@ public class ListComputeMetricsBySignatureResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
+         * <p>The number of entries on the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("pageSize")
         public Long pageSize;
 
+        /**
+         * <p>An array containing the compute metrics for each signature.</p>
+         */
         @NameInMap("signatureComputeMetrics")
         public java.util.List<ListComputeMetricsBySignatureResponseBodyDataSignatureComputeMetrics> signatureComputeMetrics;
 
         /**
+         * <p>The total number of entries that match the query.</p>
+         * 
          * <strong>example:</strong>
-         * <p>57</p>
+         * <p>60</p>
          */
         @NameInMap("totalCount")
         public Long totalCount;

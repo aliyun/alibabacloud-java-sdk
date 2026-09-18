@@ -4,10 +4,21 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetStorageSizeSummaryResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public GetStorageSizeSummaryResponseBodyData data;
 
     /**
+     * <p>The business error code or an empty value.</p>
+     * <ul>
+     * <li><p>If success is false, a business error code is returned.</p>
+     * </li>
+     * <li><p>If success is true, an empty value is returned.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +26,8 @@ public class GetStorageSizeSummaryResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The description of the error.</p>
+     * 
      * <strong>example:</strong>
      * <p>this quota is not exist.</p>
      */
@@ -22,6 +35,8 @@ public class GetStorageSizeSummaryResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>Indicates whether the business is successful. If this parameter is not empty and the value is not 200, the business fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +44,8 @@ public class GetStorageSizeSummaryResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0be3e0aa16667684362147582e038f</p>
      */
@@ -82,6 +99,8 @@ public class GetStorageSizeSummaryResponseBody extends TeaModel {
 
     public static class GetStorageSizeSummaryResponseBodyData extends TeaModel {
         /**
+         * <p>The date of statistics.</p>
+         * 
          * <strong>example:</strong>
          * <p>20241205</p>
          */
@@ -89,15 +108,43 @@ public class GetStorageSizeSummaryResponseBody extends TeaModel {
         public String date;
 
         /**
+         * <p>The timestamp of the last data update.</p>
+         * 
          * <strong>example:</strong>
          * <p>1749090705919</p>
          */
         @NameInMap("timestamp")
         public Long timestamp;
 
+        /**
+         * <p>The unit of the storage metric usage. It includes:</p>
+         * <ul>
+         * <li><p>lowFreqStorage</p>
+         * </li>
+         * <li><p>standardStorage</p>
+         * </li>
+         * <li><p>longTermStorage</p>
+         * </li>
+         * <li><p>totalStorage</p>
+         * </li>
+         * </ul>
+         */
         @NameInMap("unit")
         public java.util.Map<String, String> unit;
 
+        /**
+         * <p>The storage metrics. It includes:</p>
+         * <ul>
+         * <li><p>lowFreqStorage</p>
+         * </li>
+         * <li><p>standardStorage</p>
+         * </li>
+         * <li><p>longTermStorage</p>
+         * </li>
+         * <li><p>totalStorage</p>
+         * </li>
+         * </ul>
+         */
         @NameInMap("value")
         public java.util.Map<String, Double> value;
 

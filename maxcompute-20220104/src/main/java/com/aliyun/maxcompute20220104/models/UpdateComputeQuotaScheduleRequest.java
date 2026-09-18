@@ -10,6 +10,15 @@ public class UpdateComputeQuotaScheduleRequest extends TeaModel {
     @NameInMap("body")
     public java.util.List<UpdateComputeQuotaScheduleRequestBody> body;
 
+    /**
+     * <p>The time zone.</p>
+     * <blockquote>
+     * <p>The default value is UTC+8.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>UTC+8</p>
+     */
     @NameInMap("scheduleTimezone")
     public String scheduleTimezone;
 
@@ -36,7 +45,7 @@ public class UpdateComputeQuotaScheduleRequest extends TeaModel {
 
     public static class UpdateComputeQuotaScheduleRequestBodyCondition extends TeaModel {
         /**
-         * <p>The start time when the quota plan takes effect.</p>
+         * <p>The time when the plan takes effect.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -62,7 +71,7 @@ public class UpdateComputeQuotaScheduleRequest extends TeaModel {
 
     public static class UpdateComputeQuotaScheduleRequestBody extends TeaModel {
         /**
-         * <p>The value of effective condition.</p>
+         * <p>The condition for the plan to take effect.</p>
          */
         @NameInMap("condition")
         public UpdateComputeQuotaScheduleRequestBodyCondition condition;
@@ -78,10 +87,11 @@ public class UpdateComputeQuotaScheduleRequest extends TeaModel {
         public String plan;
 
         /**
-         * <p>The type of the quota plan.</p>
+         * <p>The type.</p>
          * <blockquote>
-         * <p>Notice: Currently, only daily is supported.</notice></p>
+         * <p>Notice: </p>
          * </blockquote>
+         * <p>Only daily is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

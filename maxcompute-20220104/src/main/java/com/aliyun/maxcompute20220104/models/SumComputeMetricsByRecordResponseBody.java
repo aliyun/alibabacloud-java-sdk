@@ -4,10 +4,27 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class SumComputeMetricsByRecordResponseBody extends TeaModel {
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public java.util.List<SumComputeMetricsByRecordResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * <ul>
+     * <li><p>1xx: Informational. The server has received the request and is processing it.</p>
+     * </li>
+     * <li><p>2xx: Success. The server successfully received, understood, and accepted the request.</p>
+     * </li>
+     * <li><p>3xx: Redirection. The client must take further action to complete the request.</p>
+     * </li>
+     * <li><p>4xx: Client-side error. The request contains invalid syntax or parameters and cannot be fulfilled.</p>
+     * </li>
+     * <li><p>5xx: Server-side error. The server failed to fulfill a valid request.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +32,8 @@ public class SumComputeMetricsByRecordResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0a06dfe517540143853845404e83af</p>
      */
@@ -52,6 +71,8 @@ public class SumComputeMetricsByRecordResponseBody extends TeaModel {
 
     public static class SumComputeMetricsByRecordResponseBodyDataDailyComputeRecords extends TeaModel {
         /**
+         * <p>The statistics date. The format is yyyyMMdd.</p>
+         * 
          * <strong>example:</strong>
          * <p>20260411</p>
          */
@@ -59,6 +80,8 @@ public class SumComputeMetricsByRecordResponseBody extends TeaModel {
         public String dateTime;
 
         /**
+         * <p>This day\&quot;s usage as a percentage of the total usage for the specified period. The value does not include a percent sign (%).</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -66,6 +89,8 @@ public class SumComputeMetricsByRecordResponseBody extends TeaModel {
         public Double percentage;
 
         /**
+         * <p>The record count.</p>
+         * 
          * <strong>example:</strong>
          * <p>1200</p>
          */
@@ -104,10 +129,15 @@ public class SumComputeMetricsByRecordResponseBody extends TeaModel {
     }
 
     public static class SumComputeMetricsByRecordResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of daily usage records.</p>
+         */
         @NameInMap("dailyComputeRecords")
         public java.util.List<SumComputeMetricsByRecordResponseBodyDataDailyComputeRecords> dailyComputeRecords;
 
         /**
+         * <p>The usage type. For example: ComputationSql</p>
+         * 
          * <strong>example:</strong>
          * <p>ComputationSql</p>
          */

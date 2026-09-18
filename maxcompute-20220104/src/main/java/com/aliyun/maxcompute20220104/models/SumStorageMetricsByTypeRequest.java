@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SumStorageMetricsByTypeRequest extends TeaModel {
     /**
+     * <p>Required. The query end time, specified as a Unix timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1718590596556</p>
      */
     @NameInMap("endDate")
     public Long endDate;
 
+    /**
+     * <p>An array of project names.</p>
+     */
     @NameInMap("projectNames")
     public java.util.List<String> projectNames;
 
     /**
+     * <p>Required. The query start time, specified as a Unix timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1715393576201</p>
      */
@@ -22,6 +29,8 @@ public class SumStorageMetricsByTypeRequest extends TeaModel {
     public Long startDate;
 
     /**
+     * <p>The dimension for aggregating statistics. Valid values: <code>PROJECT</code> (by project) and <code>STORAGE_TYPE</code> (by storage type).</p>
+     * 
      * <strong>example:</strong>
      * <p>PROJECT</p>
      */

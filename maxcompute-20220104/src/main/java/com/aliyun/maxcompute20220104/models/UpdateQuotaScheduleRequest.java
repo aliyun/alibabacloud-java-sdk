@@ -8,7 +8,33 @@ public class UpdateQuotaScheduleRequest extends TeaModel {
      * <p>The request body parameters.</p>
      * 
      * <strong>example:</strong>
-     * <p>\# The quota plan immediately takes effect. [ { &quot;type&quot;: &quot;once&quot;, &quot;plan&quot;: &quot;planA&quot;, &quot;operator&quot;:&quot;userA&quot; } ] # The quota plan is scheduled on a regular basis. [ { &quot;id&quot;: &quot;etl_time&quot;, &quot;type&quot;: &quot;daily&quot;, &quot;condition&quot;: { &quot;at&quot;: &quot;0800&quot;, &quot;after&quot;: &quot;2022-04-25T04:23:04Z&quot; // optional }, &quot;plan&quot;: &quot;planA&quot; }, { &quot;id&quot;: &quot;bi&quot;, &quot;type&quot;: &quot;daily&quot;, &quot;condition&quot;: { &quot;at&quot;: &quot;0900&quot;, &quot;after&quot;: &quot;2022-04-25T04:23:04Z&quot; // optional }, &quot;plan&quot;: &quot;planB&quot; }, ]</p>
+     * <h1>The quota plan immediately takes effect.</h1>
+     * <p>[
+     *   {
+     *     &quot;type&quot;: &quot;once&quot;,
+     *     &quot;plan&quot;: &quot;planA&quot;,
+     *     &quot;operator&quot;: &quot;userA&quot;
+     *   }
+     * ]</p>
+     * <h1>The quota plan is scheduled on a regular basis.</h1>
+     * <p>[
+     *   {
+     *     &quot;id&quot;: &quot;etl_time&quot;,
+     *     &quot;type&quot;: &quot;daily&quot;,
+     *     &quot;condition&quot;: {
+     *       &quot;at&quot;: &quot;0800&quot;
+     *     },
+     *     &quot;plan&quot;: &quot;planA&quot;
+     *   },
+     *   {
+     *     &quot;id&quot;: &quot;bi&quot;,
+     *     &quot;type&quot;: &quot;daily&quot;,
+     *     &quot;condition&quot;: {
+     *       &quot;at&quot;: &quot;0900&quot;
+     *     },
+     *     &quot;plan&quot;: &quot;planB&quot;
+     *   }
+     * ]</p>
      */
     @NameInMap("body")
     public String body;

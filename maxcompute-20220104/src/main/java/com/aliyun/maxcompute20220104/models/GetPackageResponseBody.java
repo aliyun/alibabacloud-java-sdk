@@ -23,7 +23,7 @@ public class GetPackageResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>error message.</p>
+     * <p>Exception information</p>
      */
     @NameInMap("errorMsg")
     public String errorMsg;

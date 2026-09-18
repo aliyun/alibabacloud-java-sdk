@@ -31,11 +31,16 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
      * <ul>
-     * <li>1xx: informational response. The request is received and is being processed.</li>
-     * <li>2xx: success. The request is successfully received, understood, and accepted by the server.</li>
-     * <li>3xx: redirection. The request is redirected, and further actions are required to complete the request.</li>
-     * <li>4xx: client error. The request contains invalid request parameters and syntaxes, or specific request conditions cannot be met.</li>
-     * <li>5xx: server error. The server cannot meet requirements due to other reasons.</li>
+     * <li><p>1xx: informational response. The request is received and is being processed.</p>
+     * </li>
+     * <li><p>2xx: success. The request is successfully received, understood, and accepted by the server.</p>
+     * </li>
+     * <li><p>3xx: redirection. The request is redirected, and further actions are required to complete the request.</p>
+     * </li>
+     * <li><p>4xx: client error. The request contains invalid request parameters and syntaxes, or specific request conditions cannot be met.</p>
+     * </li>
+     * <li><p>5xx: server error. The server cannot meet requirements due to other reasons.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -120,7 +125,7 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
         /**
          * <p>The time when the table was last accessed. This value is returned when the table is a non-partitioned table.</p>
          * <blockquote>
-         * <p> The data collection method is upgraded from July 2023. If the data is not accessed after the upgrade or is accessed by using ALGO jobs or the direct read method of Hologres, the last access time cannot be collected.</p>
+         * <p>The data collection method is upgraded from July 2023. If the data is not accessed after the upgrade or is accessed by using ALGO jobs or the direct read method of Hologres, the last access time cannot be collected.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -240,10 +245,14 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
         /**
          * <p>The table storage type.</p>
          * <ul>
-         * <li>standard</li>
-         * <li>lowfrequency</li>
-         * <li>longterm</li>
-         * <li>unknown: This value is returned when the table is a partitioned table. You can call the ListStoragePartitionsInfo operation to query the storage type of each partition.</li>
+         * <li><p>standard</p>
+         * </li>
+         * <li><p>lowfrequency</p>
+         * </li>
+         * <li><p>longterm</p>
+         * </li>
+         * <li><p>unknown: This value is returned when the table is a partitioned table. You can call the ListStoragePartitionsInfo operation to query the storage type of each partition.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -287,7 +296,7 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
         /**
          * <p>The total amount of accessed data.</p>
          * <blockquote>
-         * <p> The amount of data that is read by all access behaviors.</p>
+         * <p>The amount of data that is read by all access behaviors.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

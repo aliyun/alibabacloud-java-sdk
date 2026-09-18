@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteRoleResponseBody extends TeaModel {
     /**
+     * <p>The returned data. A value of <code>success</code> indicates that the operation succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,8 @@ public class DeleteRoleResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0adb901117579891946416405d0409</p>
      */

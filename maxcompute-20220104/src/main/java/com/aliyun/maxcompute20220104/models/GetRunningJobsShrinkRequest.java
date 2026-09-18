@@ -7,8 +7,10 @@ public class GetRunningJobsShrinkRequest extends TeaModel {
     /**
      * <p>The time when the query starts. This parameter specifies the time when a job is submitted.</p>
      * <ul>
-     * <li>The time range that is specified by the <strong>from</strong> and <strong>to</strong> request parameters is a closed interval. The start time and end time are included in the range. If the value of <strong>from</strong> is the same as the value of <strong>to</strong>, the time range is invalid, and a null value is returned.</li>
-     * <li>The value is a UNIX timestamp that represents the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</li>
+     * <li><p>The time range that is specified by the <strong>from</strong> and <strong>to</strong> request parameters is a closed interval. The start time and end time are included in the range. If the value of <strong>from</strong> is the same as the value of <strong>to</strong>, the time range is invalid, and a null value is returned.</p>
+     * </li>
+     * <li><p>The value is a UNIX timestamp that represents the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -51,8 +53,10 @@ public class GetRunningJobsShrinkRequest extends TeaModel {
     /**
      * <p>The time when the query ends. This parameter specifies the time when a job is submitted.</p>
      * <ul>
-     * <li>The time interval that is specified by the <strong>from</strong> and <strong>to</strong> request parameters is a closed interval. The start time and end time are included in the interval. If the value of <strong>from</strong> is the same as the value of <strong>to</strong>, the interval is invalid, and a null value is returned.</li>
-     * <li>The value is a UNIX timestamp that represents the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</li>
+     * <li><p>The time interval that is specified by the <strong>from</strong> and <strong>to</strong> request parameters is a closed interval. The start time and end time are included in the interval. If the value of <strong>from</strong> is the same as the value of <strong>to</strong>, the interval is invalid, and a null value is returned.</p>
+     * </li>
+     * <li><p>The value is a UNIX timestamp that represents the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

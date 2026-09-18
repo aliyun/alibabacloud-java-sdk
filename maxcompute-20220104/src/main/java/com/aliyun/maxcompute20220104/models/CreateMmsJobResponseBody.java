@@ -4,9 +4,18 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class CreateMmsJobResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public CreateMmsJobResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>73207140-0FD5-588A-B11A-3CE093924196</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,6 +41,12 @@ public class CreateMmsJobResponseBody extends TeaModel {
     }
 
     public static class CreateMmsJobResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the asynchronous task that is created for the migration job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("asyncTaskId")
         public Long asyncTaskId;
 

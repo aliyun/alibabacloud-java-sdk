@@ -4,10 +4,27 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class SumComputeMetricsByUsageResponseBody extends TeaModel {
+    /**
+     * <p>The usage data for each metering type.</p>
+     */
     @NameInMap("data")
     public java.util.List<SumComputeMetricsByUsageResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * <ul>
+     * <li><p><code>1xx</code>: Informational response. The request is received and is being processed.</p>
+     * </li>
+     * <li><p><code>2xx</code>: Success. The request was successfully received, understood, and accepted.</p>
+     * </li>
+     * <li><p><code>3xx</code>: Redirection. Further action is required to complete the request.</p>
+     * </li>
+     * <li><p><code>4xx</code>: Client error. The request has invalid syntax or cannot be fulfilled.</p>
+     * </li>
+     * <li><p><code>5xx</code>: Server error. The server failed to fulfill an otherwise valid request.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +32,8 @@ public class SumComputeMetricsByUsageResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0bc0598d17544456742466519e6611</p>
      */
@@ -52,6 +71,8 @@ public class SumComputeMetricsByUsageResponseBody extends TeaModel {
 
     public static class SumComputeMetricsByUsageResponseBodyDataDailyComputeMetrics extends TeaModel {
         /**
+         * <p>The date of the usage, in <code>yyyyMMdd</code> format.</p>
+         * 
          * <strong>example:</strong>
          * <p>20260413</p>
          */
@@ -59,6 +80,8 @@ public class SumComputeMetricsByUsageResponseBody extends TeaModel {
         public String dateTime;
 
         /**
+         * <p>The unit of compute usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>GBCplx</p>
          */
@@ -66,6 +89,8 @@ public class SumComputeMetricsByUsageResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The total usage for the day.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.149683987</p>
          */
@@ -104,10 +129,21 @@ public class SumComputeMetricsByUsageResponseBody extends TeaModel {
     }
 
     public static class SumComputeMetricsByUsageResponseBodyData extends TeaModel {
+        /**
+         * <p>The daily usage statistics.</p>
+         */
         @NameInMap("dailyComputeMetrics")
         public java.util.List<SumComputeMetricsByUsageResponseBodyDataDailyComputeMetrics> dailyComputeMetrics;
 
         /**
+         * <p>The metering type.</p>
+         * <p><code>ComputationSql</code>: Metering data for SQL jobs on internal tables.</p>
+         * <p><code>ComputationSqlOTS</code>: Metering data for SQL jobs on OTS external tables.</p>
+         * <p><code>ComputationSqlOSS</code>: Metering data for SQL jobs on OSS external tables.</p>
+         * <p><code>MapReduce</code>: Metering data for MapReduce jobs.</p>
+         * <p><code>spark</code>: Metering data for Spark jobs.</p>
+         * <p><code>mars</code>: Metering data for Mars jobs.</p>
+         * 
          * <strong>example:</strong>
          * <p>ComputationSql</p>
          */

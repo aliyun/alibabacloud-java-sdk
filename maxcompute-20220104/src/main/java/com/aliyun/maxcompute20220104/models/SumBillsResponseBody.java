@@ -4,10 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class SumBillsResponseBody extends TeaModel {
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("data")
     public SumBillsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +20,8 @@ public class SumBillsResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BB66A390-4EF7-557E-9489-7F98D6F44002</p>
      */
@@ -52,6 +59,8 @@ public class SumBillsResponseBody extends TeaModel {
 
     public static class SumBillsResponseBodyDataItemBills extends TeaModel {
         /**
+         * <p>The cost.</p>
+         * 
          * <strong>example:</strong>
          * <p>123.56</p>
          */
@@ -59,6 +68,8 @@ public class SumBillsResponseBody extends TeaModel {
         public String cost;
 
         /**
+         * <p>The currency.</p>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -66,6 +77,8 @@ public class SumBillsResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The item name. When the request\&quot;s <code>statsType</code> is <code>PROJECT</code>, this is the instance name. When <code>statsType</code> is <code>FEE_ITEM</code>, this is the billable item type (for example, <code>DRStorage</code>, <code>ComputationSql</code>, or <code>Storage</code>).</p>
+         * 
          * <strong>example:</strong>
          * <p>projectName</p>
          */
@@ -73,6 +86,8 @@ public class SumBillsResponseBody extends TeaModel {
         public String itemName;
 
         /**
+         * <p>The percentage of the total cost that this item represents. The value does not include a percent sign (%).</p>
+         * 
          * <strong>example:</strong>
          * <p>56.12</p>
          */
@@ -120,16 +135,23 @@ public class SumBillsResponseBody extends TeaModel {
 
     public static class SumBillsResponseBodyData extends TeaModel {
         /**
+         * <p>The currency used for all cost values.</p>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
         @NameInMap("currency")
         public String currency;
 
+        /**
+         * <p>A list of billable items.</p>
+         */
         @NameInMap("itemBills")
         public java.util.List<SumBillsResponseBodyDataItemBills> itemBills;
 
         /**
+         * <p>The total cost of all returned billable items.</p>
+         * 
          * <strong>example:</strong>
          * <p>123.56</p>
          */

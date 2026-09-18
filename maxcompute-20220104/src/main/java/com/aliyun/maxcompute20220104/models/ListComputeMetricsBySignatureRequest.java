@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListComputeMetricsBySignatureRequest extends TeaModel {
     /**
+     * <p>The end time for the query. This value is a UNIX timestamp representing milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1718590596556</p>
      */
@@ -12,6 +14,8 @@ public class ListComputeMetricsBySignatureRequest extends TeaModel {
     public Long endDate;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>20240730****ddlr</p>
      */
@@ -19,6 +23,8 @@ public class ListComputeMetricsBySignatureRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The job owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>ALIYUN$7632***@aliyun.com</p>
      */
@@ -26,6 +32,8 @@ public class ListComputeMetricsBySignatureRequest extends TeaModel {
     public String jobOwner;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,29 +41,44 @@ public class ListComputeMetricsBySignatureRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("pageSize")
     public Long pageSize;
 
+    /**
+     * <p>The project names.</p>
+     */
     @NameInMap("projectNames")
     public java.util.List<String> projectNames;
 
     /**
+     * <p>The SQL job signature.</p>
+     * 
      * <strong>example:</strong>
-     * <p>ghijkl789012</p>
+     * <p>m4S/2HipBVngCX94MNIAqmM7Ov4=</p>
      */
     @NameInMap("signature")
     public String signature;
 
     /**
+     * <p>The start time for the query. This value is a UNIX timestamp representing milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1715393576201</p>
      */
     @NameInMap("startDate")
     public Long startDate;
 
+    /**
+     * <p>The metering type.</p>
+     * <ul>
+     * <li><code>ComputationSql</code>: the metering data of SQL jobs that are performed on internal tables.</li>
+     * </ul>
+     */
     @NameInMap("types")
     public java.util.List<String> types;
 

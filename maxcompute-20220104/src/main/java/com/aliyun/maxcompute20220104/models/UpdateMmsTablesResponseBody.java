@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateMmsTablesResponseBody extends TeaModel {
     /**
+     * <p>The returned result.</p>
+     * 
      * <strong>example:</strong>
      * <p>88</p>
      */
@@ -12,6 +14,8 @@ public class UpdateMmsTablesResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5CA6292A-E301-5CD8-B4E2-AF060F99147B</p>
      */

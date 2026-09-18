@@ -45,7 +45,7 @@ public class ListUsersResponseBody extends TeaModel {
          * <p>The ID of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
-         * <p>167835629082</p>
+         * <p>16783562****</p>
          */
         @NameInMap("accountId")
         public String accountId;

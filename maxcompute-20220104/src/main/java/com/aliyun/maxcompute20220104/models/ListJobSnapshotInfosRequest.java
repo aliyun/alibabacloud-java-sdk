@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobSnapshotInfosRequest extends TeaModel {
     /**
-     * <p>Specifies whether to sort data in ascending order.</p>
+     * <p>Specifies whether to sort the results in ascending order.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,15 +14,15 @@ public class ListJobSnapshotInfosRequest extends TeaModel {
     public Boolean ascOrder;
 
     /**
-     * <p>The ID of the upstream node.</p>
+     * <p>The upstream node ID.</p>
      */
     @NameInMap("extNodeIdList")
     public java.util.List<String> extNodeIdList;
 
     /**
-     * <p>Start timestamp.</p>
+     * <p>The start UNIX timestamp.</p>
      * <blockquote>
-     * <p>This parameter is invalid. The end timestamp should be the time point for the snapshot you want to view.</p>
+     * <p>This parameter is invalid. The end timestamp is the point in time for the snapshot that you want to view.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,31 +32,31 @@ public class ListJobSnapshotInfosRequest extends TeaModel {
     public Long from;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The job instance ID.</p>
      */
     @NameInMap("instanceIdList")
     public java.util.List<String> instanceIdList;
 
     /**
-     * <p>The account that commits the job.</p>
+     * <p>The job owner.</p>
      */
     @NameInMap("jobOwnerList")
     public java.util.List<String> jobOwnerList;
 
     /**
-     * <p>The priority of the job.</p>
+     * <p>The job priority.</p>
      */
     @NameInMap("priorityList")
     public java.util.List<Long> priorityList;
 
     /**
-     * <p>The name of project.</p>
+     * <p>The project name.</p>
      */
     @NameInMap("projectList")
     public java.util.List<String> projectList;
 
     /**
-     * <p>The nickname of the compute Quota used by the job.</p>
+     * <p>The nickname of the computing quota that the job uses.</p>
      * 
      * <strong>example:</strong>
      * <p>quota_A</p>
@@ -71,25 +71,25 @@ public class ListJobSnapshotInfosRequest extends TeaModel {
     public java.util.List<String> signatureList;
 
     /**
-     * <p>The sorting columns.</p>
+     * <p>The fields for multi-column sorting.</p>
      */
     @NameInMap("sortByList")
     public java.util.List<String> sortByList;
 
     /**
-     * <p>The orders for the sorting columns.</p>
+     * <p>The sort orders for multi-column sorting.</p>
      */
     @NameInMap("sortOrderList")
     public java.util.List<String> sortOrderList;
 
     /**
-     * <p>The status of jobs.</p>
+     * <p>The job status.</p>
      */
     @NameInMap("statusList")
     public java.util.List<String> statusList;
 
     /**
-     * <p>End timestamp.</p>
+     * <p>The end UNIX timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -99,13 +99,45 @@ public class ListJobSnapshotInfosRequest extends TeaModel {
     public Long to;
 
     /**
-     * <p>The type of the job.</p>
+     * <p>The job type.</p>
      */
     @NameInMap("typeList")
     public java.util.List<String> typeList;
 
     /**
-     * <p>The sorting column.</p>
+     * <p>The column to sort by. Valid values:</p>
+     * <ul>
+     * <li><p>submittedAtTime</p>
+     * </li>
+     * <li><p>waitingTime</p>
+     * </li>
+     * <li><p>runningAtTime</p>
+     * </li>
+     * <li><p>runningTime</p>
+     * </li>
+     * <li><p>snapshotTime</p>
+     * </li>
+     * <li><p>totalTime</p>
+     * </li>
+     * <li><p>cpuUsage</p>
+     * </li>
+     * <li><p>memoryUsage</p>
+     * </li>
+     * <li><p>minCpuPct</p>
+     * </li>
+     * <li><p>minMemoryPct</p>
+     * </li>
+     * <li><p>priority</p>
+     * </li>
+     * <li><p>cpuRequest</p>
+     * </li>
+     * <li><p>memoryRequest</p>
+     * </li>
+     * <li><p>cpuUsageToRequestRatio</p>
+     * </li>
+     * <li><p>memoryUsageToRequestRatio</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>cpuUsage</p>
@@ -141,7 +173,7 @@ public class ListJobSnapshotInfosRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The ID of the tenant. You can log on to the MaxCompute console, and choose Tenants &gt; Tenant Property from the left-side navigation pane to view the tenant ID.</p>
+     * <p>The tenant ID. To view the tenant ID, log on to the MaxCompute console. In the navigation pane on the left, choose Tenant Management &gt; Tenant Properties.</p>
      * 
      * <strong>example:</strong>
      * <p>478403690625249</p>

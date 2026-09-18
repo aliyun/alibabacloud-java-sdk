@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateMmsDbRequest extends TeaModel {
     /**
+     * <p>The name of the destination schema in MaxCompute.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -12,6 +14,8 @@ public class UpdateMmsDbRequest extends TeaModel {
     public String dstName;
 
     /**
+     * <p>The name of the destination MaxCompute project.</p>
+     * 
      * <strong>example:</strong>
      * <p>dst_project_name</p>
      */
@@ -19,6 +23,8 @@ public class UpdateMmsDbRequest extends TeaModel {
     public String dstProjectName;
 
     /**
+     * <p>The migration status.</p>
+     * 
      * <strong>example:</strong>
      * <p>INIT</p>
      */

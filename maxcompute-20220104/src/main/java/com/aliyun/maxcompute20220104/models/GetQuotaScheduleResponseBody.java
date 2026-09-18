@@ -12,8 +12,10 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li>If the value of success was false, an error code was returned.</li>
-     * <li>If the value of success was true, a null value was returned.</li>
+     * <li><p>If the value of success was false, an error code was returned.</p>
+     * </li>
+     * <li><p>If the value of success was true, a null value was returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,7 +28,7 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>errorMsg</p>
+     * <p>Exception information</p>
      */
     @NameInMap("errorMsg")
     public String errorMsg;

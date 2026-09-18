@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SumBillsRequest extends TeaModel {
     /**
+     * <p>The end time of the billing cycle.</p>
+     * 
      * <strong>example:</strong>
      * <p>1776232895313</p>
      */
     @NameInMap("endDate")
     public Long endDate;
 
+    /**
+     * <p>A list of instance names. This parameter is not required if <code>statsType</code> is set to <code>FEE_ITEM</code>.</p>
+     */
     @NameInMap("projectNames")
     public java.util.List<String> projectNames;
 
     /**
+     * <p>The start time of the billing cycle.</p>
+     * 
      * <strong>example:</strong>
      * <p>1715393576201</p>
      */
@@ -22,6 +29,8 @@ public class SumBillsRequest extends TeaModel {
     public Long startDate;
 
     /**
+     * <p>The dimension by which to summarize costs. Valid values: <code>PROJECT</code> (by instance) and <code>FEE_ITEM</code> (by billable item).</p>
+     * 
      * <strong>example:</strong>
      * <p>PROJECT</p>
      */
@@ -29,6 +38,8 @@ public class SumBillsRequest extends TeaModel {
     public String statsType;
 
     /**
+     * <p>The number of top results to return after sorting by cost.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */

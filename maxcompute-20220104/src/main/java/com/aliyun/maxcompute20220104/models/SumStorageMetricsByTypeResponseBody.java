@@ -4,10 +4,27 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class SumStorageMetricsByTypeResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public java.util.List<SumStorageMetricsByTypeResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * <ul>
+     * <li><p><code>1xx</code>: Informational response - The request has been received and is being processed.</p>
+     * </li>
+     * <li><p><code>2xx</code>: Success - The request was successfully received, understood, and accepted.</p>
+     * </li>
+     * <li><p><code>3xx</code>: Redirection - Further action is needed to complete the request.</p>
+     * </li>
+     * <li><p><code>4xx</code>: Client error - The request contains invalid syntax or cannot be fulfilled.</p>
+     * </li>
+     * <li><p><code>5xx</code>: Server error - The server failed to fulfill a valid request.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +32,8 @@ public class SumStorageMetricsByTypeResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0a06dc0917476202205161986edbbc</p>
      */
@@ -52,6 +71,8 @@ public class SumStorageMetricsByTypeResponseBody extends TeaModel {
 
     public static class SumStorageMetricsByTypeResponseBodyDataDailyStorageMetrics extends TeaModel {
         /**
+         * <p>The date of the metric, in <code>yyyyMMdd</code> format.</p>
+         * 
          * <strong>example:</strong>
          * <p>20260410</p>
          */
@@ -59,6 +80,8 @@ public class SumStorageMetricsByTypeResponseBody extends TeaModel {
         public String dateTime;
 
         /**
+         * <p>The percentage of total daily storage that this storage type accounts for.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -66,6 +89,22 @@ public class SumStorageMetricsByTypeResponseBody extends TeaModel {
         public Double percentage;
 
         /**
+         * <p>The storage type. Valid values:</p>
+         * <ul>
+         * <li><p><code>Storage</code>: standard storage.</p>
+         * </li>
+         * <li><p><code>LowFreqStorage</code>: infrequent access storage.</p>
+         * </li>
+         * <li><p><code>ColdStorage</code>: archive storage.</p>
+         * </li>
+         * <li><p><code>$sum</code>: total storage.</p>
+         * </li>
+         * <li><p><code>RecycleBinStorage</code>: recycle bin storage.</p>
+         * </li>
+         * <li><p><code>DRStorage</code>: multi-AZ storage.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Storage</p>
          */
@@ -73,6 +112,8 @@ public class SumStorageMetricsByTypeResponseBody extends TeaModel {
         public String storageType;
 
         /**
+         * <p>The unit of the storage metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>GB</p>
          */
@@ -80,6 +121,8 @@ public class SumStorageMetricsByTypeResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The storage usage for this day.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -134,10 +177,29 @@ public class SumStorageMetricsByTypeResponseBody extends TeaModel {
     }
 
     public static class SumStorageMetricsByTypeResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of daily storage usage metrics.</p>
+         */
         @NameInMap("dailyStorageMetrics")
         public java.util.List<SumStorageMetricsByTypeResponseBodyDataDailyStorageMetrics> dailyStorageMetrics;
 
         /**
+         * <p>The storage type. Valid values:</p>
+         * <ul>
+         * <li><p><code>Storage</code>: standard storage.</p>
+         * </li>
+         * <li><p><code>LowFreqStorage</code>: infrequent access storage.</p>
+         * </li>
+         * <li><p><code>ColdStorage</code>: archive storage.</p>
+         * </li>
+         * <li><p><code>$sum</code>: total storage.</p>
+         * </li>
+         * <li><p><code>RecycleBinStorage</code>: recycle bin storage.</p>
+         * </li>
+         * <li><p><code>DRStorage</code>: multi-AZ storage.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Storage</p>
          */
@@ -145,6 +207,8 @@ public class SumStorageMetricsByTypeResponseBody extends TeaModel {
         public String storageType;
 
         /**
+         * <p>The unit of the storage metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>GB</p>
          */
@@ -152,6 +216,8 @@ public class SumStorageMetricsByTypeResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The total storage usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>329.503338</p>
          */

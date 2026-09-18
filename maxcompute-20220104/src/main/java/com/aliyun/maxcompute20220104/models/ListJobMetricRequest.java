@@ -9,10 +9,14 @@ public class ListJobMetricRequest extends TeaModel {
      * <blockquote>
      * <p>Available values: project, quota, type, status. Meanings:</p>
      * <ul>
-     * <li>project: Group and aggregate by project;</li>
-     * <li>quota: Group and aggregate by quota;</li>
-     * <li>type: Group and aggregate by job type;</li>
-     * <li>status: Group and aggregate by job status.</li>
+     * <li><p>project: Group and aggregate by project;</p>
+     * </li>
+     * <li><p>quota: Group and aggregate by quota;</p>
+     * </li>
+     * <li><p>type: Group and aggregate by job type;</p>
+     * </li>
+     * <li><p>status: Group and aggregate by job status.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 

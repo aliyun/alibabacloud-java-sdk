@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SumBillsByDateRequest extends TeaModel {
     /**
+     * <p>The end time of the cost statistics period.</p>
+     * 
      * <strong>example:</strong>
      * <p>1718590596556</p>
      */
     @NameInMap("endDate")
     public Long endDate;
 
+    /**
+     * <p>A list of instance names. In this context, an instance is a MaxCompute project.</p>
+     */
     @NameInMap("projectNames")
     public java.util.List<String> projectNames;
 
     /**
+     * <p>The start time of the cost statistics period.</p>
+     * 
      * <strong>example:</strong>
      * <p>1715393576201</p>
      */
@@ -22,6 +29,8 @@ public class SumBillsByDateRequest extends TeaModel {
     public Long startDate;
 
     /**
+     * <p>The statistics type. Valid values: <code>PROJECT</code> (by instance) and <code>FEE_ITEM</code> (by billable item).</p>
+     * 
      * <strong>example:</strong>
      * <p>PROJECT</p>
      */
@@ -29,6 +38,8 @@ public class SumBillsByDateRequest extends TeaModel {
     public String statsType;
 
     /**
+     * <p>The number of top results to return, sorted by cost.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */

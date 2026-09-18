@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateMmsTableRequest extends TeaModel {
     /**
+     * <p>The name of the destination MaxCompute table. If you do not specify this parameter, the source table name is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>dst_table_name</p>
      */
@@ -12,6 +14,8 @@ public class UpdateMmsTableRequest extends TeaModel {
     public String dstName;
 
     /**
+     * <p>The name of the destination MaxCompute project.</p>
+     * 
      * <strong>example:</strong>
      * <p>dst_project_name</p>
      */
@@ -19,6 +23,8 @@ public class UpdateMmsTableRequest extends TeaModel {
     public String dstProjectName;
 
     /**
+     * <p>The schema of the destination MaxCompute project.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -26,6 +32,8 @@ public class UpdateMmsTableRequest extends TeaModel {
     public String dstSchemaName;
 
     /**
+     * <p>The migration status.</p>
+     * 
      * <strong>example:</strong>
      * <p>INIT</p>
      */

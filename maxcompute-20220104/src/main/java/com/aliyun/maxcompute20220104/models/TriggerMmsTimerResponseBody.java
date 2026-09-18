@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TriggerMmsTimerResponseBody extends TeaModel {
     /**
-     * <p>timer id</p>
+     * <p>The ID of the timer.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,6 +14,8 @@ public class TriggerMmsTimerResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0be3e0b716671885050924814e3623</p>
      */

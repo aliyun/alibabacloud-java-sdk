@@ -95,8 +95,10 @@ public class QueryQuotaResponseBody extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>subscription: the subscription quota.</li>
-         * <li>payasyougo: the pay-as-you-go quota.</li>
+         * <li><p>subscription: the subscription quota.</p>
+         * </li>
+         * <li><p>payasyougo: the pay-as-you-go quota.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -358,8 +360,10 @@ public class QueryQuotaResponseBody extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>subscription: the subscription quota.</li>
-         * <li>payasyougo: the pay-as-you-go quota.</li>
+         * <li><p>subscription: the subscription quota.</p>
+         * </li>
+         * <li><p>payasyougo: the pay-as-you-go quota.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

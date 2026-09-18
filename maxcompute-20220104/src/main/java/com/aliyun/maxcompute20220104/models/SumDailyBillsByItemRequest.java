@@ -4,41 +4,21 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class SumDailyBillsByItemRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>1718590596556</p>
-     */
     @NameInMap("endDate")
     public Long endDate;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("pageSize")
     public Long pageSize;
 
     @NameInMap("projectNames")
     public java.util.List<String> projectNames;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1715393576201</p>
-     */
     @NameInMap("startDate")
     public Long startDate;
 
-    /**
-     * <strong>example:</strong>
-     * <p>PROJECT</p>
-     */
     @NameInMap("statsType")
     public String statsType;
 

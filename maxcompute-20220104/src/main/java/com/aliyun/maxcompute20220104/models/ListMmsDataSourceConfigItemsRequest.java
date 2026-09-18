@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListMmsDataSourceConfigItemsRequest extends TeaModel {
     /**
+     * <p>The language for the descriptions of the configuration items. Defaults to Chinese (<code>zh_CN</code>).</p>
+     * 
      * <strong>example:</strong>
      * <p>zh_CN</p>
      */
@@ -12,6 +14,7 @@ public class ListMmsDataSourceConfigItemsRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The data source type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -16,8 +16,10 @@ public class GetQuotaUsageShrinkRequest extends TeaModel {
     /**
      * <p>The time when the query starts. The value is the log time that is specified when log data is written.</p>
      * <ul>
-     * <li>The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the <strong>from</strong> parameter, but does not include the end time specified by the <strong>to</strong> parameter. If you set the <strong>from</strong> and <strong>to</strong> parameters to the same value, the time range is invalid and an error message is returned.</li>
-     * <li>This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</li>
+     * <li><p>The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the <strong>from</strong> parameter, but does not include the end time specified by the <strong>to</strong> parameter. If you set the <strong>from</strong> and <strong>to</strong> parameters to the same value, the time range is invalid and an error message is returned.</p>
+     * </li>
+     * <li><p>This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -36,8 +38,10 @@ public class GetQuotaUsageShrinkRequest extends TeaModel {
     /**
      * <p>The quota type. Default value: ODPS.</p>
      * <ul>
-     * <li>ODPS: computing quota</li>
-     * <li>TUNNEL: Tunnel quota</li>
+     * <li><p>ODPS: computing quota</p>
+     * </li>
+     * <li><p>TUNNEL: Tunnel quota</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,8 +80,10 @@ public class GetQuotaUsageShrinkRequest extends TeaModel {
     /**
      * <p>The time when the query ends. The value is the log time that is specified when log data is written.</p>
      * <ul>
-     * <li>The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the <strong>from</strong> parameter, but does not include the end time specified by the <strong>to</strong> parameter. If you set the <strong>from</strong> and <strong>to</strong> parameters to the same value, the time range is invalid and an error message is returned.</li>
-     * <li>This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</li>
+     * <li><p>The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the <strong>from</strong> parameter, but does not include the end time specified by the <strong>to</strong> parameter. If you set the <strong>from</strong> and <strong>to</strong> parameters to the same value, the time range is invalid and an error message is returned.</p>
+     * </li>
+     * <li><p>This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProjectsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to list the built-in <strong>SYSTEM_CATALOG</strong> projects that are used to provide data such as project metadata and historical usage data. For more information, see <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tenant-level-information-schema">Tenant-level Information Schema</a>.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true: The built-in SYSTEM_CATALOG projects are listed.</li>
-     * <li>false: The built-in SYSTEM_CATALOG projects are not listed.</li>
-     * </ul>
+     * <p>Specifies whether to list the built-in <strong>SYSTEM_CATALOG</strong> project. This project provides information such as project metadata and usage history. For more information, see &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tenant-level-information-schema">Information Schema</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -19,7 +14,7 @@ public class ListProjectsRequest extends TeaModel {
     public Boolean listSystemCatalog;
 
     /**
-     * <p>The maximum number of entries to return on each page.</p>
+     * <p>The token that specifies the starting point of the query. The results are returned in alphabetical order, starting from the entry that immediately follows the marker.</p>
      * 
      * <strong>example:</strong>
      * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>
@@ -28,7 +23,7 @@ public class ListProjectsRequest extends TeaModel {
     public String marker;
 
     /**
-     * <p>The maximum number of entries per page. Default value: 10.</p>
+     * <p>The maximum number of entries to return on each page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -37,7 +32,7 @@ public class ListProjectsRequest extends TeaModel {
     public Integer maxItem;
 
     /**
-     * <p>Specifies the marker after which the returned list begins.</p>
+     * <p>The prefix of the resource names to query. For example, if you specify <code>a</code> for this parameter, only resources whose names start with &quot;a&quot; are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>a</p>
@@ -46,19 +41,19 @@ public class ListProjectsRequest extends TeaModel {
     public String prefix;
 
     /**
-     * <p>The quota name that is automatically generated. You can log on to the <a href="https://maxcompute.console.aliyun.com">MaxCompute console</a>, choose <strong>Workspace</strong> &gt; <strong>Quotas</strong> from the left-side navigation pane, and then view the quota name on the <strong>Quotas</strong> page.</p>
+     * <p>The quota name. The system automatically generates this name. To obtain the quota name, log in to the <a href="https://maxcompute.console.aliyun.com">MaxCompute console</a> and select <strong>Workspace</strong> &gt; <strong>Quota</strong> <strong>Management</strong> from the navigation pane on the left.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;hsajkdgbkaubh&quot;</p>
+     * <p>aliyun_5495***3697</p>
      */
     @NameInMap("quotaName")
     public String quotaName;
 
     /**
-     * <p>The quota nickname. You can log on to the <a href="https://maxcompute.console.aliyun.com">MaxCompute console</a>, choose <strong>Workspace</strong> &gt; <strong>Quotas</strong> from the left-side navigation pane, and then view the quota nickname on the <strong>Quotas</strong> page.</p>
+     * <p>The quota nickname. To obtain the quota nickname, log in to the <a href="https://maxcompute.console.aliyun.com">MaxCompute console</a> and select <strong>Workspace</strong> &gt; <strong>Quota</strong> <strong>Management</strong> from the navigation pane on the left.</p>
      * 
      * <strong>example:</strong>
-     * <p>quotaA</p>
+     * <p>os_PayAsYouGoQuota</p>
      */
     @NameInMap("quotaNickName")
     public String quotaNickName;
@@ -73,19 +68,40 @@ public class ListProjectsRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The instance ID and billing method of the default computing quota.</p>
+     * <p>The instance ID and billing method of the default compute quota.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;aaaa-bbbb&quot;</p>
+     * <p>{
+     *       &quot;resourceId&quot;: &quot;b7afb7d1-<strong><strong>-</strong></strong>-****-c393669c307b&quot;,
+     *       &quot;resourceType&quot;: &quot;PayAsYouGo&quot;
+     *     }</p>
      */
     @NameInMap("saleTags")
     public String saleTags;
 
     /**
-     * <p>The tenant ID. You can log on to the <a href="https://maxcompute.console.aliyun.com">MaxCompute console</a>, and choose <strong>Tenants</strong> &gt; <strong>Tenant Property</strong> from the left-side navigation pane to view the tenant ID.</p>
+     * <p>The sort field. The only supported value is <code>createdTime</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>549532154333697</p>
+     * <p>createdTime</p>
+     */
+    @NameInMap("sortBy")
+    public String sortBy;
+
+    /**
+     * <p>The sort order. This parameter takes effect only when <code>sortBy</code> is specified. Valid values are <code>ASC</code> and <code>DESC</code>. The values are case-insensitive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DESC</p>
+     */
+    @NameInMap("sortOrder")
+    public String sortOrder;
+
+    /**
+     * <p>The tenant ID. To obtain the ID, log in to the <a href="https://maxcompute.console.aliyun.com">MaxCompute console</a> and select <strong>Tenant Management</strong> &gt; <strong>Tenant Properties</strong> from the navigation pane on the left.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5495****3697</p>
      */
     @NameInMap("tenantId")
     public String tenantId;
@@ -93,12 +109,14 @@ public class ListProjectsRequest extends TeaModel {
     /**
      * <p>The project type. Valid values:</p>
      * <ul>
-     * <li><strong>managed</strong>: internal project</li>
-     * <li><strong>external</strong>: external project</li>
+     * <li><p><strong>managed</strong>: a managed project.</p>
+     * </li>
+     * <li><p><strong>external</strong>: an external project.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>&quot;managed&quot;</p>
+     * <p>managed</p>
      */
     @NameInMap("type")
     public String type;
@@ -170,6 +188,22 @@ public class ListProjectsRequest extends TeaModel {
     }
     public String getSaleTags() {
         return this.saleTags;
+    }
+
+    public ListProjectsRequest setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    public String getSortBy() {
+        return this.sortBy;
+    }
+
+    public ListProjectsRequest setSortOrder(String sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    public String getSortOrder() {
+        return this.sortOrder;
     }
 
     public ListProjectsRequest setTenantId(String tenantId) {

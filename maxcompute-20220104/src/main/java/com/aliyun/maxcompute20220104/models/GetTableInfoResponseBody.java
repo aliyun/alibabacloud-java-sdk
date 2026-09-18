@@ -158,7 +158,7 @@ public class GetTableInfoResponseBody extends TeaModel {
          * <p>The column comments.</p>
          * 
          * <strong>example:</strong>
-         * <p>The name of shop.</p>
+         * <p>Store name</p>
          */
         @NameInMap("comment")
         public String comment;
@@ -234,7 +234,7 @@ public class GetTableInfoResponseBody extends TeaModel {
          * <p>The comments of the partition key column.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sale date.</p>
+         * <p>Sales date</p>
          */
         @NameInMap("comment")
         public String comment;
@@ -252,7 +252,7 @@ public class GetTableInfoResponseBody extends TeaModel {
          * <p>The partition name.</p>
          * 
          * <strong>example:</strong>
-         * <p>sale_date</p>
+         * <p>ds=\&quot;20190130\&quot;</p>
          */
         @NameInMap("name")
         public String name;
@@ -352,7 +352,7 @@ public class GetTableInfoResponseBody extends TeaModel {
          * <p>The display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>project_name.schema_name.table_name</p>
+         * <p>odps_project.default.sale_detail</p>
          */
         @NameInMap("displayName")
         public String displayName;
@@ -484,7 +484,7 @@ public class GetTableInfoResponseBody extends TeaModel {
          * <p>The account information of the table or view owner.</p>
          * 
          * <strong>example:</strong>
-         * <p>188785396123****</p>
+         * <p>ALIYUN$odps****@aliyunid.com</p>
          */
         @NameInMap("owner")
         public String owner;
@@ -508,7 +508,7 @@ public class GetTableInfoResponseBody extends TeaModel {
          * <p>The name of the project to which the table or view belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>projectA</p>
+         * <p>odps_project</p>
          */
         @NameInMap("projectName")
         public String projectName;
@@ -571,7 +571,7 @@ public class GetTableInfoResponseBody extends TeaModel {
          * <p>The columns of the Tablestore table to be accessed, including the primary key column and attribute column. This response parameter is returned when type is set to external.</p>
          * 
          * <strong>example:</strong>
-         * <p>:o_orderkey,:o_orderdate,o_custkey,o_orderstatus,o_totalprice</p>
+         * <p>o_orderkey,o_orderdate,o_custkey,o_orderstatus,o_totalprice</p>
          */
         @NameInMap("tablestoreColumnsMapping")
         public String tablestoreColumnsMapping;
@@ -579,10 +579,14 @@ public class GetTableInfoResponseBody extends TeaModel {
         /**
          * <p>The type of the table or view. Valid values:</p>
          * <ul>
-         * <li><strong>internal</strong>: internal table</li>
-         * <li><strong>external</strong>: external table</li>
-         * <li><strong>view</strong>: view</li>
-         * <li><strong>materializedView</strong>: <a href="https://www.alibabacloud.com/help/maxcompute/user-guide/materialized-view-operations">materialize view</a></li>
+         * <li><p><strong>internal</strong>: internal table</p>
+         * </li>
+         * <li><p><strong>external</strong>: external table</p>
+         * </li>
+         * <li><p><strong>view</strong>: view</p>
+         * </li>
+         * <li><p><strong>materializedView</strong>: <a href="https://www.alibabacloud.com/help/maxcompute/user-guide/materialized-view-operations">materialize view</a></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

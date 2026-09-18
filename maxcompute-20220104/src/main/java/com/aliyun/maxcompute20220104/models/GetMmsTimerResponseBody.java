@@ -4,10 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetMmsTimerResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("data")
     public GetMmsTimerResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0a06dfe716674588654372173ec0da</p>
      */
@@ -36,40 +41,72 @@ public class GetMmsTimerResponseBody extends TeaModel {
     }
 
     public static class GetMmsTimerResponseBodyDataConfig extends TeaModel {
+        /**
+         * <p>A map of source column names to destination column names.</p>
+         */
         @NameInMap("columnMapping")
         public java.util.Map<String, String> columnMapping;
 
+        /**
+         * <p>Whether to migrate table data.</p>
+         */
         @NameInMap("enableDataMigration")
         public Boolean enableDataMigration;
 
+        /**
+         * <p>Whether to migrate the table schema.</p>
+         */
         @NameInMap("enableSchemaMigration")
         public Boolean enableSchemaMigration;
 
         /**
+         * <p>Whether to enable verification. The system performs verification by running a <code>SELECT COUNT(*)</code> query on both the source and destination to compare the row count.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("enableVerification")
         public Boolean enableVerification;
 
+        /**
+         * <p>Other configurations.</p>
+         */
         @NameInMap("others")
         public java.util.Map<String, ?> others;
 
+        /**
+         * <p>A map of table names to their corresponding partition filter expressions.</p>
+         */
         @NameInMap("partitionFilters")
         public java.util.Map<String, String> partitionFilters;
 
+        /**
+         * <p>If <code>type</code> is set to <code>Partitions</code>, this parameter specifies a list of partition IDs to migrate.</p>
+         */
         @NameInMap("partitions")
         public java.util.List<Long> partitions;
 
+        /**
+         * <p>If <code>type</code> is set to <code>Database</code>, this parameter specifies a table deny list. Tables on this list are excluded from the migration.</p>
+         */
         @NameInMap("tableBlackList")
         public java.util.List<String> tableBlackList;
 
+        /**
+         * <p>A map of source table names to destination table names.</p>
+         */
         @NameInMap("tableMapping")
         public java.util.Map<String, String> tableMapping;
 
+        /**
+         * <p>If <code>type</code> is set to <code>Database</code>, this parameter specifies a table allowlist. If this parameter is not specified, all tables in the database are migrated.</p>
+         */
         @NameInMap("tableWhiteList")
         public java.util.List<String> tableWhiteList;
 
+        /**
+         * <p>If <code>type</code> is set to <code>Tables</code>, this parameter specifies a list of table names to migrate.</p>
+         */
         @NameInMap("tables")
         public java.util.List<String> tables;
 
@@ -169,10 +206,15 @@ public class GetMmsTimerResponseBody extends TeaModel {
     }
 
     public static class GetMmsTimerResponseBodyData extends TeaModel {
+        /**
+         * <p>The configuration of the migration job.</p>
+         */
         @NameInMap("config")
         public GetMmsTimerResponseBodyDataConfig config;
 
         /**
+         * <p>The creation time of the scheduled task. This is a Unix timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1730946421757</p>
          */
@@ -180,6 +222,8 @@ public class GetMmsTimerResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The ID of the source database.</p>
+         * 
          * <strong>example:</strong>
          * <p>23</p>
          */
@@ -187,6 +231,8 @@ public class GetMmsTimerResponseBody extends TeaModel {
         public Long dbId;
 
         /**
+         * <p>The ID of the scheduled task.</p>
+         * 
          * <strong>example:</strong>
          * <p>2523</p>
          */
@@ -194,6 +240,8 @@ public class GetMmsTimerResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The name of the scheduled task.</p>
+         * 
          * <strong>example:</strong>
          * <p>sale_detail</p>
          */
@@ -201,6 +249,8 @@ public class GetMmsTimerResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The scheduling type of the scheduled task. Valid values: <code>Daily</code> and <code>Hourly</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>Daily</p>
          */
@@ -208,6 +258,8 @@ public class GetMmsTimerResponseBody extends TeaModel {
         public String scheduleType;
 
         /**
+         * <p>The ID of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000017</p>
          */
@@ -215,6 +267,8 @@ public class GetMmsTimerResponseBody extends TeaModel {
         public Long sourceId;
 
         /**
+         * <p>The name of the source database.</p>
+         * 
          * <strong>example:</strong>
          * <p>mms_test</p>
          */
@@ -222,6 +276,8 @@ public class GetMmsTimerResponseBody extends TeaModel {
         public String srcDbName;
 
         /**
+         * <p>Indicates whether the scheduled task is stopped.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -229,6 +285,8 @@ public class GetMmsTimerResponseBody extends TeaModel {
         public Boolean stopped;
 
         /**
+         * <p>The type of the scheduled task.</p>
+         * 
          * <strong>example:</strong>
          * <p>Daily, Hourly</p>
          */
@@ -236,6 +294,8 @@ public class GetMmsTimerResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The last update time of the scheduled task, in ISO 8601 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-01T02:18:01Z</p>
          */
@@ -243,6 +303,8 @@ public class GetMmsTimerResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The scheduling time. If <code>scheduleType</code> is <code>Daily</code>, the value is in the <code>HH:MM</code> format. If <code>scheduleType</code> is <code>Hourly</code>, the value is in the <code>MM</code> format.</p>
+         * 
          * <strong>example:</strong>
          * <p>p1=1/p2=abc</p>
          */

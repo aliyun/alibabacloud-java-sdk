@@ -31,11 +31,16 @@ public class ListJobMetricResponseBody extends TeaModel {
     /**
      * <p>HTTP status code.</p>
      * <ul>
-     * <li>1xx: Informational response - Request received, processing continues.</li>
-     * <li>2xx: Success - The request has been successfully received, understood, and accepted by the server.</li>
-     * <li>3xx: Redirection - Further action must be taken to complete the request.</li>
-     * <li>4xx: Client error - The request contains bad syntax or cannot be fulfilled.</li>
-     * <li>5xx: Server error - The server failed to fulfill an apparently valid request.</li>
+     * <li><p>1xx: Informational response - Request received, processing continues.</p>
+     * </li>
+     * <li><p>2xx: Success - The request has been successfully received, understood, and accepted by the server.</p>
+     * </li>
+     * <li><p>3xx: Redirection - Further action must be taken to complete the request.</p>
+     * </li>
+     * <li><p>4xx: Client error - The request contains bad syntax or cannot be fulfilled.</p>
+     * </li>
+     * <li><p>5xx: Server error - The server failed to fulfill an apparently valid request.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

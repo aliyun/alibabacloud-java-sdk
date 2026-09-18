@@ -4,10 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class ListMmsDataSourceConfigItemsResponseBody extends TeaModel {
+    /**
+     * <p>A list of configuration items.</p>
+     */
     @NameInMap("data")
     public java.util.List<ListMmsDataSourceConfigItemsResponseBodyData> data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>688003E1-D1B4-5468-957E-2FFB3AC8D79B</p>
      */
@@ -37,16 +42,23 @@ public class ListMmsDataSourceConfigItemsResponseBody extends TeaModel {
 
     public static class ListMmsDataSourceConfigItemsResponseBodyData extends TeaModel {
         /**
+         * <p>The description of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>MaxCompute Default Project</p>
          */
         @NameInMap("desc")
         public String desc;
 
+        /**
+         * <p>The enumerated values for the configuration item.</p>
+         */
         @NameInMap("enums")
         public java.util.List<String> enums;
 
         /**
+         * <p>The group to which the configuration item belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>group.basic</p>
          */
@@ -54,6 +66,8 @@ public class ListMmsDataSourceConfigItemsResponseBody extends TeaModel {
         public String group;
 
         /**
+         * <p>The key of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>mc.default.project</p>
          */
@@ -61,6 +75,8 @@ public class ListMmsDataSourceConfigItemsResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The name of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>MaxCompute Default Project</p>
          */
@@ -68,6 +84,8 @@ public class ListMmsDataSourceConfigItemsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The placeholder for the configuration value.</p>
+         * 
          * <strong>example:</strong>
          * <p>project</p>
          */
@@ -75,16 +93,23 @@ public class ListMmsDataSourceConfigItemsResponseBody extends TeaModel {
         public String placeHolder;
 
         /**
+         * <p>Indicates whether the configuration item is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("required")
         public Boolean required;
 
+        /**
+         * <p>The sub-items of the configuration item.</p>
+         */
         @NameInMap("subItems")
         public java.util.Map<String, ?> subItems;
 
         /**
+         * <p>The file type. This parameter is valid only when <code>type</code> is <code>file</code>. For example, .keytab.</p>
+         * 
          * <strong>example:</strong>
          * <p>.keytab</p>
          */
@@ -92,6 +117,8 @@ public class ListMmsDataSourceConfigItemsResponseBody extends TeaModel {
         public String subType;
 
         /**
+         * <p>The data type of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>STRING</p>
          */
@@ -99,6 +126,8 @@ public class ListMmsDataSourceConfigItemsResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The value of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>p1=1/p2=abc</p>
          */
