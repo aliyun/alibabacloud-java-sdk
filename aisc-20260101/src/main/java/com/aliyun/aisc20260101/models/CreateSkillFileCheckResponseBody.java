@@ -42,7 +42,7 @@ public class CreateSkillFileCheckResponseBody extends TeaModel {
 
     public static class CreateSkillFileCheckResponseBodyDataUploadResults extends TeaModel {
         /**
-         * <p>The error message returned when the file upload fails.</p>
+         * <p>The error message returned when the file fails to be uploaded.</p>
          * 
          * <strong>example:</strong>
          * <p>Network error.</p>
@@ -51,7 +51,7 @@ public class CreateSkillFileCheckResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
-         * <p>The SHA256 value of the uploaded file.</p>
+         * <p>The SHA256 hash of the uploaded file.</p>
          * 
          * <strong>example:</strong>
          * <p>514f44ebed1d0c1df5e16a116080b64b</p>

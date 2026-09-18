@@ -102,7 +102,7 @@ public class ListAIAgentEventResponseBody extends TeaModel {
         public String assetType;
 
         /**
-         * <p>The check time.</p>
+         * <p>The check time, in UNIX timestamp format. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1763949968</p>
@@ -111,7 +111,7 @@ public class ListAIAgentEventResponseBody extends TeaModel {
         public String checkTime;
 
         /**
-         * <p>The event handling time.</p>
+         * <p>The event handling time, in UNIX timestamp format. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1763949968</p>
@@ -214,6 +214,12 @@ public class ListAIAgentEventResponseBody extends TeaModel {
         @NameInMap("RiskName")
         public String riskName;
 
+        /**
+         * <p>The associated skill ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SkillId")
         public Long skillId;
 
@@ -252,12 +258,12 @@ public class ListAIAgentEventResponseBody extends TeaModel {
         /**
          * <p>The cloud asset vendor. Valid values:</p>
          * <ul>
-         * <li><strong>DIFY</strong>: DIFY.</li>
-         * <li><strong>BAILIAN</strong>: BAILIAN.</li>
-         * <li><strong>VOLCAI</strong>: VOLCAI.</li>
-         * <li><strong>AGENTRUN</strong>: AGENTRUN.</li>
-         * <li><strong>PAI</strong>: PAI.</li>
-         * <li><strong>OpenClaw</strong>: OpenClaw.</li>
+         * <li>** DIFY**: DIFY</li>
+         * <li>** BAILIAN**: BAILIAN</li>
+         * <li>** VOLCAI**: VOLCAI</li>
+         * <li>** AGENTRUN**: AGENTRUN</li>
+         * <li>** PAI**: PAI</li>
+         * <li>** OpenClaw**: OpenClaw</li>
          * </ul>
          * 
          * <strong>example:</strong>

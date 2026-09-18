@@ -1,3 +1,19 @@
+2026-09-18 Version: 1.3.0
+- Support API CreateAttackTarget.
+- Support API CreateTargetScanTask.
+- Support API DeleteAttackTarget.
+- Support API DeleteScannerTask.
+- Support API GenerateRelayPollerScript.
+- Support API GetAttackTarget.
+- Support API GetScannerTaskHitDataUrl.
+- Support API GetScannerTaskResultHtmlUrl.
+- Support API ListAttackTargets.
+- Support API ListScanTasksByTarget.
+- Support API StopScannerTask.
+- Support API TestConnectivity.
+- Update API ListAIAgentEvent: add request parameters ResourceDirectoryAccountId.
+
+
 2026-08-20 Version: 1.2.1
 - Update API CreateSkillFileCheck: add request parameters Source.
 - Update API CreateSkillFileCheck: add request parameters Files.$.UploadKey.

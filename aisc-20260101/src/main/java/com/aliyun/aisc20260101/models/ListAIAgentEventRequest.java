@@ -100,13 +100,19 @@ public class ListAIAgentEventRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Sort direction</p>
+     * <p>The sort order. Valid values: asc indicates ascending order. desc indicates descending order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asc</p>
      */
     @NameInMap("Order")
     public String order;
 
     /**
-     * <p>Sort field, currently supports CheckTime</p>
+     * <p>The field by which to sort results. Currently, only sorting by check time is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CheckTime</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;
@@ -119,6 +125,9 @@ public class ListAIAgentEventRequest extends TeaModel {
      */
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
 
     /**
      * <p>The risk level of the check item to query. Valid values:</p>
@@ -184,12 +193,12 @@ public class ListAIAgentEventRequest extends TeaModel {
     /**
      * <p>The cloud asset vendor. Valid values:</p>
      * <ul>
-     * <li><strong>DIFY</strong>: DIFY.</li>
-     * <li><strong>BAILIAN</strong>: BAILIAN.</li>
-     * <li><strong>VOLCAI</strong>: VOLCAI.</li>
-     * <li><strong>AGENTRUN</strong>: AGENTRUN.</li>
-     * <li><strong>PAI</strong>: PAI.</li>
-     * <li><strong>OpenClaw</strong>: OpenClaw.</li>
+     * <li>** DIFY**: DIFY</li>
+     * <li>** BAILIAN**: BAILIAN</li>
+     * <li>** VOLCAI**: VOLCAI</li>
+     * <li>** AGENTRUN**: AGENTRUN</li>
+     * <li>** PAI**: PAI</li>
+     * <li>** OpenClaw**: OpenClaw</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -297,6 +306,14 @@ public class ListAIAgentEventRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAIAgentEventRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public ListAIAgentEventRequest setRiskLevel(String riskLevel) {

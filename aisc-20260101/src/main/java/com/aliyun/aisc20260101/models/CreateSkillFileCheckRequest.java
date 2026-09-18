@@ -11,7 +11,7 @@ public class CreateSkillFileCheckRequest extends TeaModel {
     public java.util.List<CreateSkillFileCheckRequestFiles> files;
 
     /**
-     * <p>The upload source. If left empty, the default value is user_upload. Use sec_ops_agent for the security operations agent.</p>
+     * <p>The upload source. If left empty, user_upload is used by default. Security operations agents use sec_ops_agent.</p>
      * 
      * <strong>example:</strong>
      * <p>sec_ops_agent</p>
