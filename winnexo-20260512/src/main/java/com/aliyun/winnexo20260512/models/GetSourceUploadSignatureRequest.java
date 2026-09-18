@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetSourceUploadSignatureRequest extends TeaModel {
     /**
-     * <p>The content type. Valid values: Text and Markdown.</p>
+     * <p>The content type. Valid values:</p>
+     * <ul>
+     * <li>Text</li>
+     * <li>Markdown</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -33,7 +37,16 @@ public class GetSourceUploadSignatureRequest extends TeaModel {
     public String filename;
 
     /**
-     * <p>The name of the digital employee (operating object name). This parameter is optional.</p>
+     * <p>The collaboration space ID passed from the frontend. This parameter is required when scope is set to group. The value must be a space accessible to the current user and is used in the OSS path for locating. The value must be 1 to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-). This parameter is not used for other scope values.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>group_example</p>
+     */
+    @NameInMap("groupId")
+    public String groupId;
+
+    /**
+     * <p>The name of the digital employee (operating object name, optional).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -86,6 +99,14 @@ public class GetSourceUploadSignatureRequest extends TeaModel {
     }
     public String getFilename() {
         return this.filename;
+    }
+
+    public GetSourceUploadSignatureRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public GetSourceUploadSignatureRequest setOperatingObjectName(String operatingObjectName) {

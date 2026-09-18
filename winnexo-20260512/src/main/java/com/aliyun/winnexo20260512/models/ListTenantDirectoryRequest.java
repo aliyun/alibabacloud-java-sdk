@@ -46,7 +46,7 @@ public class ListTenantDirectoryRequest extends TeaModel {
     public String sortField;
 
     /**
-     * <p>The sort order. This parameter takes effect only when sortBy is specified. Valid values: ASC, DESC (case-insensitive).</p>
+     * <p>The sort order. This parameter takes effect only when sortBy is specified. Valid values: ASC and DESC (case-insensitive).</p>
      * 
      * <strong>example:</strong>
      * <p>asc</p>

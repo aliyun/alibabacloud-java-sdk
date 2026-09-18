@@ -14,7 +14,7 @@ public class CreatePersonalFileRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The directory ID.</p>
+     * <p>The folder ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -23,7 +23,7 @@ public class CreatePersonalFileRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The file extension (optional, such as pdf or docx).</p>
+     * <p>The file name extension (optional, such as pdf or docx).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -51,7 +51,7 @@ public class CreatePersonalFileRequest extends TeaModel {
     public String filePath;
 
     /**
-     * <p>The publicly accessible URL of the Alibaba DingTalk online document.</p>
+     * <p>The publicly accessible URL of the DingTalk online document.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></p>
@@ -88,10 +88,10 @@ public class CreatePersonalFileRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>资源标签 JSON 字符串列表</p>
+     * <p>The list of resource tag JSON strings.</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;重点&quot;,&quot;文件&quot;]</p>
+     * <p>[&quot;Important&quot;,&quot;File&quot;]</p>
      */
     @NameInMap("sourceTags")
     public String sourceTags;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSkillResponseBody extends TeaModel {
     /**
-     * <p>The simplified parameter schema that describes what needs to be passed in runSkill.arguments. This is automatically extracted from inputConfigFormatted.</p>
+     * <p>The simplified parameter schema that describes what to pass in runSkill.arguments. Automatically extracted from inputConfigFormatted.</p>
      */
     @NameInMap("arguments")
     public java.util.List<GetSkillResponseBodyArguments> arguments;
@@ -29,7 +29,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String createdTime;
 
     /**
-     * <p>The skill description, which has been resolved through internationalization (i18n).</p>
+     * <p>The skill description. The value is resolved through i18n.</p>
      * 
      * <strong>example:</strong>
      * <p>Sample description</p>
@@ -107,7 +107,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The skill name, which has been resolved through internationalization (i18n).</p>
+     * <p>The skill name. The value is resolved through i18n.</p>
      * 
      * <strong>example:</strong>
      * <p>SampleName.pdf</p>
@@ -134,7 +134,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String skillCode;
 
     /**
-     * <p>The nested tree of skill files. This is returned only when includeSkillFiles is set to True.</p>
+     * <p>The nested skill file tree. This parameter is returned only when includeSkillFiles is set to True.</p>
      */
     @NameInMap("skillFiles")
     public java.util.List<java.util.Map<String, ?>> skillFiles;
@@ -176,7 +176,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The tag list, which has been resolved through internationalization (i18n).</p>
+     * <p>The label list. The values are resolved through i18n.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -185,7 +185,7 @@ public class GetSkillResponseBody extends TeaModel {
     public java.util.List<String> tags;
 
     /**
-     * <p>The modification time in ISO 8601 format.</p>
+     * <p>The update time in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-10-01T12:00:00Z</p>
@@ -428,7 +428,7 @@ public class GetSkillResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The list of valid values, which is available when the options are limited.</p>
+         * <p>The list of valid values when options are limited.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -437,7 +437,7 @@ public class GetSkillResponseBody extends TeaModel {
         public java.util.List<String> _enum;
 
         /**
-         * <p>The parameter name, which corresponds to the key in runSkill.arguments.</p>
+         * <p>The parameter name, corresponding to the key in runSkill.arguments.</p>
          * 
          * <strong>example:</strong>
          * <p>SampleName.pdf</p>

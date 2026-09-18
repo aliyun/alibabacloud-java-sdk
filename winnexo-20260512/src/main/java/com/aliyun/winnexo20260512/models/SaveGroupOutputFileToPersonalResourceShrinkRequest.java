@@ -36,8 +36,8 @@ public class SaveGroupOutputFileToPersonalResourceShrinkRequest extends TeaModel
     /**
      * <p>The save mode. Valid values:</p>
      * <ul>
-     * <li>link: creates a link (1:1 idempotent, editing the output synchronizes the resource).</li>
-     * <li>copy: creates a copy (unlimited times, snapshot).</li>
+     * <li>link: Links the output. This mode is idempotent on a 1:1 basis. Editing the output synchronizes the resource.</li>
+     * <li>copy: Copies the output. This mode allows unlimited copies and creates a snapshot.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

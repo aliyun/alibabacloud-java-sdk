@@ -56,7 +56,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of outputs that match the specified conditions.</p>
+     * <p>The total number of outputs that meet the specified conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -136,7 +136,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         public String body;
 
         /**
-         * <p>The content type, such as MARKDOWN/JSONML/HTML.</p>
+         * <p>The content type, such as MARKDOWN, JSONML, or HTML.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -364,13 +364,13 @@ public class ListOutputFilesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The email information. This field is present when the output type is email.</p>
+         * <p>The email information. This field is present only when the output type is email.</p>
          */
         @NameInMap("emailInfo")
         public ListOutputFilesResponseBodyItemsOutputItemsEmailInfo emailInfo;
 
         /**
-         * <p>The file information. This field is present when the output type is file.</p>
+         * <p>The file information. This field is present only when the output type is file.</p>
          */
         @NameInMap("fileInfo")
         public ListOutputFilesResponseBodyItemsOutputItemsFileInfo fileInfo;
@@ -448,7 +448,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         public Boolean shareEnabled;
 
         /**
-         * <p>The share token that is present when sharing is enabled. You can use this token to access the public share preview API.</p>
+         * <p>The share token. This field is present only when sharing is enabled. You can use this token to access the public share preview endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>example_share_token</p>
@@ -466,7 +466,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         public String skillOutputId;
 
         /**
-         * <p>The slides information. This field is present when the output type is slides.</p>
+         * <p>The slides information. This field is present only when the output type is slides.</p>
          */
         @NameInMap("slidesInfo")
         public ListOutputFilesResponseBodyItemsOutputItemsSlidesInfo slidesInfo;
@@ -609,7 +609,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
 
     public static class ListOutputFilesResponseBodyItems extends TeaModel {
         /**
-         * <p>The conversation ID.</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleConversationId</p>
@@ -669,7 +669,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         public java.util.List<ListOutputFilesResponseBodyItemsOutputItems> outputItems;
 
         /**
-         * <p>The output type: <code>conversation/skill/task</code>.</p>
+         * <p>The output type. Valid values: <code>conversation/skill/task</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>conversation</p>
@@ -696,7 +696,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         public String skillOutputId;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>string_example_value</p>

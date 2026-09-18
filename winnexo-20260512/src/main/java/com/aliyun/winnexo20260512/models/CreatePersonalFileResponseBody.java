@@ -14,7 +14,7 @@ public class CreatePersonalFileResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The directory ID.</p>
+     * <p>The folder ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>

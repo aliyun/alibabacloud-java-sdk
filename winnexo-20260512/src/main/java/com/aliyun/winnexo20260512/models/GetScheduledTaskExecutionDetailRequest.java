@@ -15,7 +15,7 @@ public class GetScheduledTaskExecutionDetailRequest extends TeaModel {
     public String executionId;
 
     /**
-     * <p>The tenant ID that takes effect.</p>
+     * <p>The ID of the effective tenant.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

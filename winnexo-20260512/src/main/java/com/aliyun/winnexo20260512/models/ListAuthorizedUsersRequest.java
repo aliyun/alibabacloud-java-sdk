@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListAuthorizedUsersRequest extends TeaModel {
     /**
-     * <p>The filter type. Valid values: USER, USER_GROUP. If not specified, all types are returned.</p>
+     * <p>The filter type. Valid values:</p>
+     * <ul>
+     * <li>USER</li>
+     * <li>USER_GROUP</li>
+     * </ul>
+     * <p>If this parameter is not specified, all types are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>USER</p>
@@ -42,7 +47,7 @@ public class ListAuthorizedUsersRequest extends TeaModel {
     public String permission;
 
     /**
-     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
+     * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveGraphDraftResourceRequest extends TeaModel {
     /**
-     * <p>资源小类：resourceType=object 时固定 object_type；resourceType=element 时为 indicator / logic / process / rule / analysis 之一</p>
+     * <p>The element type. Currently, only text is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class SaveGraphDraftResourceRequest extends TeaModel {
     public String elementType;
 
     /**
-     * <p>图谱名称，须已存在（active 记录）</p>
+     * <p>The graph name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class SaveGraphDraftResourceRequest extends TeaModel {
     public String graphName;
 
     /**
-     * <p>资源名（创建后不可改名，底层校验）</p>
+     * <p>The resource name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,8 @@ public class SaveGraphDraftResourceRequest extends TeaModel {
     public String resourceName;
 
     /**
-     * <p>资源大类：object（对象）/ element（业务元素）</p>
+     * <p>The resource type.</p>
+     * <p>This parameter is set to <strong>instance</strong>, which indicates that the resource type is instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +46,7 @@ public class SaveGraphDraftResourceRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -54,11 +55,11 @@ public class SaveGraphDraftResourceRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>单资源 YAML 文本</p>
+     * <p>The original YAML text of the graph schema trimmed by READ permissions, with $ref references within the authorized subgraph retained.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>name: customer\ndisplay_name: 客户</p>
+     * <p>name: customer\ndisplay_name: Customer</p>
      */
     @NameInMap("yamlEdit")
     public String yamlEdit;

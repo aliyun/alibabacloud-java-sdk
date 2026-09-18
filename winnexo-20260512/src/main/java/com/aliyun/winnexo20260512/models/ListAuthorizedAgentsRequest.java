@@ -23,7 +23,7 @@ public class ListAuthorizedAgentsRequest extends TeaModel {
     public Long targetUserId;
 
     /**
-     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
+     * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

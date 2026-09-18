@@ -59,7 +59,7 @@ public class GetSourceResponseBody extends TeaModel {
     public Boolean hasNotes;
 
     /**
-     * <p>Indicates whether settings configuration exists.</p>
+     * <p>Indicates whether settings configurations exist.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -119,7 +119,7 @@ public class GetSourceResponseBody extends TeaModel {
     public java.util.List<GetSourceResponseBodyObjectBindings> objectBindings;
 
     /**
-     * <p>The associated variable ID.</p>
+     * <p>The ID of the associated variable.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleObjectId</p>
@@ -137,7 +137,7 @@ public class GetSourceResponseBody extends TeaModel {
     public String objectType;
 
     /**
-     * <p>The digital employee name (operating object name, optional).</p>
+     * <p>The name of the digital employee (operating object name, optional).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -164,13 +164,13 @@ public class GetSourceResponseBody extends TeaModel {
     public String scope;
 
     /**
-     * <p>The user profile settings.</p>
+     * <p>The user card information settings.</p>
      */
     @NameInMap("settings")
     public java.util.Map<String, ?> settings;
 
     /**
-     * <p>The skill output ID (carried when the output is saved as a resource).</p>
+     * <p>The skill output ID. This ID is included when the output is saved as a resource.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleSkillOutputId</p>
@@ -191,7 +191,7 @@ public class GetSourceResponseBody extends TeaModel {
      * <p>The knowledge base (KB) ownership type. Valid values:</p>
      * <ul>
      * <li>aliding_kb_doc: DingTalk knowledge base document.</li>
-     * <li>normal: common knowledge.</li>
+     * <li>normal: standard knowledge.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -201,7 +201,7 @@ public class GetSourceResponseBody extends TeaModel {
     public String sourceKind;
 
     /**
-     * <p>The resource tags (optional, a JSON string list such as [&quot;tagA&quot;,&quot;tagB&quot;]).</p>
+     * <p>The resource tags (optional). The value is a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;].</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -219,7 +219,7 @@ public class GetSourceResponseBody extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The final status of the message.</p>
+     * <p>The final message status.</p>
      * 
      * <strong>example:</strong>
      * <p>READY</p>
@@ -465,7 +465,7 @@ public class GetSourceResponseBody extends TeaModel {
 
     public static class GetSourceResponseBodyObjectBindings extends TeaModel {
         /**
-         * <p>The semantic graph name to which the object belongs.</p>
+         * <p>The name of the semantic graph to which the object belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -474,7 +474,7 @@ public class GetSourceResponseBody extends TeaModel {
         public String graphName;
 
         /**
-         * <p>The ID of the recommended item, which can be a <strong>feedId</strong> or a micro-application ID.</p>
+         * <p>The ID of the recommended item. The value can be a <strong>feedId</strong> or a mini-app ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleObjectId</p>
@@ -542,7 +542,7 @@ public class GetSourceResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The file record ID (optional, corresponding to settings.file_record_id).</p>
+         * <p>The file record ID (optional). This value corresponds to settings.file_record_id.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleFileRecordId</p>
@@ -564,7 +564,7 @@ public class GetSourceResponseBody extends TeaModel {
         public String fileType;
 
         /**
-         * <p>The session analysis result in OSS URL format. The URL expires in one hour.</p>
+         * <p>The session analysis result in OSS URL format. The URL expires after one hour.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></p>

@@ -24,7 +24,7 @@ public class GetSourceRequest extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>The tenant ID to which the task belongs.</p>
+     * <p>The ID of the tenant to which the task belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

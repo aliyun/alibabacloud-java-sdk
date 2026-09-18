@@ -61,6 +61,21 @@ public class SendChatMessageResponseBody extends TeaModel {
     @NameInMap("type")
     public String type;
 
+    /**
+     * <p>The session work mode that takes effect for the current turn. Valid values:</p>
+     * <ul>
+     * <li>ask: Quick Q&amp;A.</li>
+     * <li>work: Deep work.</li>
+     * <li>direct: Direct connection (request-level).</li>
+     * </ul>
+     * <p>In multi-digital-employee or task execution scenarios, if ask is provided, work takes effect instead.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>work</p>
+     */
+    @NameInMap("workMode")
+    public String workMode;
+
     public static SendChatMessageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SendChatMessageResponseBody self = new SendChatMessageResponseBody();
         return TeaModel.build(map, self);
@@ -115,6 +130,14 @@ public class SendChatMessageResponseBody extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public SendChatMessageResponseBody setWorkMode(String workMode) {
+        this.workMode = workMode;
+        return this;
+    }
+    public String getWorkMode() {
+        return this.workMode;
     }
 
 }

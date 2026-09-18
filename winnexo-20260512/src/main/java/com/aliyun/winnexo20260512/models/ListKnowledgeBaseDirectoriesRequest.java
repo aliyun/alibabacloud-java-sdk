@@ -16,9 +16,9 @@ public class ListKnowledgeBaseDirectoriesRequest extends TeaModel {
     /**
      * <p>The field by which the results are sorted. Valid values:</p>
      * <ul>
-     * <li>event_time: event creation time</li>
-     * <li>event_execute_start_time: event execution time</li>
-     * <li>event_execute_finish_time: event completion time</li>
+     * <li>event_time: the event creation time.</li>
+     * <li>event_execute_start_time: the event execution time.</li>
+     * <li>event_execute_finish_time: the event completion time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class ListKnowledgeBaseDirectoriesRequest extends TeaModel {
     public String sortField;
 
     /**
-     * <p>The sort order. This parameter takes effect only when sortBy is specified. Valid values: ASC, DESC (case-insensitive).</p>
+     * <p>The sort order. This parameter takes effect only when sortBy is specified. Valid values: ASC and DESC (case-insensitive).</p>
      * 
      * <strong>example:</strong>
      * <p>asc</p>
@@ -37,7 +37,7 @@ public class ListKnowledgeBaseDirectoriesRequest extends TeaModel {
     public String sortOrder;
 
     /**
-     * <p>The tenant ID. This is a common parameter. You can pass it explicitly by using --tenant-id in winnexo-cli.</p>
+     * <p>The tenant ID. This is a common parameter. You can pass this parameter explicitly by using --tenant-id in winnexo-cli.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

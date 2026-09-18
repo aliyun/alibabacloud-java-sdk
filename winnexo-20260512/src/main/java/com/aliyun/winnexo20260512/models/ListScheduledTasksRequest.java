@@ -14,7 +14,7 @@ public class ListScheduledTasksRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>Specifies whether to return only tasks created by the caller. This parameter takes effect only in the group dimension (in the personal dimension, only the caller\&quot;s own tasks are returned). If not specified, no filtering is applied.</p>
+     * <p>Specifies whether to return only tasks created by the caller. This parameter takes effect only in the group dimension. In the personal dimension, only the caller\&quot;s own tasks are always returned. If not specified, no filtering is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class ListScheduledTasksRequest extends TeaModel {
     public Boolean creatorOnly;
 
     /**
-     * <p>The keyword of the rule name for fuzzy match.</p>
+     * <p>The keyword of the rule name, used for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>SampleKeyword</p>
@@ -71,7 +71,7 @@ public class ListScheduledTasksRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The tenant ID that takes effect.</p>
+     * <p>The ID of the effective tenant.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

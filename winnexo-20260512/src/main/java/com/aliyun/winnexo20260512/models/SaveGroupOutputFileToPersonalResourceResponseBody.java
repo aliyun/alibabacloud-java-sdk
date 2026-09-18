@@ -14,7 +14,7 @@ public class SaveGroupOutputFileToPersonalResourceResponseBody extends TeaModel 
     public String code;
 
     /**
-     * <p>The status code description.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -32,7 +32,7 @@ public class SaveGroupOutputFileToPersonalResourceResponseBody extends TeaModel 
     public String requestId;
 
     /**
-     * <p>The result list.</p>
+     * <p>The list of results.</p>
      */
     @NameInMap("results")
     public java.util.List<SaveGroupOutputFileToPersonalResourceResponseBodyResults> results;
@@ -76,7 +76,7 @@ public class SaveGroupOutputFileToPersonalResourceResponseBody extends TeaModel 
 
     public static class SaveGroupOutputFileToPersonalResourceResponseBodyResults extends TeaModel {
         /**
-         * <p>The business error code (i18n key), returned on failure.</p>
+         * <p>The business error code (i18n key) returned upon failure.</p>
          * 
          * <strong>example:</strong>
          * <p>ERR.Robject.UserOutput.ItemNotFound</p>
@@ -85,7 +85,7 @@ public class SaveGroupOutputFileToPersonalResourceResponseBody extends TeaModel 
         public String errorCode;
 
         /**
-         * <p>The error description (internationalized based on the request locale), returned on failure.</p>
+         * <p>The error description returned upon failure. The description is internationalized based on the request locale.</p>
          * 
          * <strong>example:</strong>
          * <p>Group output does not exist</p>
@@ -103,7 +103,7 @@ public class SaveGroupOutputFileToPersonalResourceResponseBody extends TeaModel 
         public String itemId;
 
         /**
-         * <p>The sourceId of the newly created resource, returned on success.</p>
+         * <p>The sourceId of the newly created resource, returned upon success.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleSourceId</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetScheduledTaskPushOptionsRequest extends TeaModel {
     /**
-     * <p>The ID of the collaboration group (such as cg_101). If specified, a group workspace task is created (the caller must be a valid group member). If left empty, a personal task is created.</p>
+     * <p>The ID of the collaboration group, such as cg_101. If specified, a group workspace task is created and the caller must be a valid group member. If left empty, a personal task is created.</p>
      * 
      * <strong>example:</strong>
      * <p>cg_401</p>
@@ -23,7 +23,7 @@ public class GetScheduledTaskPushOptionsRequest extends TeaModel {
     public String digitalEmployeeName;
 
     /**
-     * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly with --tenant-id.</p>
+     * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass this value explicitly by using --tenant-id.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

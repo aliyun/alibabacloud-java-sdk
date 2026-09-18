@@ -14,7 +14,11 @@ public class GetSourceUploadSignatureResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The content type. Valid values: Text and Markdown.</p>
+     * <p>The content type. Valid values:</p>
+     * <ul>
+     * <li>Text</li>
+     * <li>Markdown</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -41,7 +45,7 @@ public class GetSourceUploadSignatureResponseBody extends TeaModel {
     public String filePublicUrl;
 
     /**
-     * <p>The file record ID. This parameter is optional and corresponds to settings.file_record_id.</p>
+     * <p>The file record ID (optional, corresponding to settings.file_record_id).</p>
      * 
      * <strong>example:</strong>
      * <p>exampleFileRecordId</p>

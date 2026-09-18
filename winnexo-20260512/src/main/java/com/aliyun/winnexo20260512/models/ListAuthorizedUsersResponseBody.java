@@ -110,7 +110,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
 
     public static class ListAuthorizedUsersResponseBodyItems extends TeaModel {
         /**
-         * <p>The authorization expiration timestamp in milliseconds. If not specified, the authorization never expires.</p>
+         * <p>The authorization expiration timestamp in milliseconds. If this parameter is not specified, the authorization never expires.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -128,7 +128,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The last update time.</p>
+         * <p>The last modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -137,7 +137,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The user ID of the person who granted the authorization.</p>
+         * <p>The user ID of the grantor.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -146,7 +146,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public Long grantedBy;
 
         /**
-         * <p>The ID of the authorized object.</p>
+         * <p>The ID of the grantee.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleGranteeId</p>
@@ -155,7 +155,11 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public String granteeId;
 
         /**
-         * <p>The authorization object type. Valid values: USER, USER_GROUP.</p>
+         * <p>The object type of the authorization target. Valid values:</p>
+         * <ul>
+         * <li>USER</li>
+         * <li>USER_GROUP</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -184,15 +188,15 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         /**
          * <p>The permission member type. Valid values:</p>
          * <ul>
-         * <li><p><strong>ORG</strong>: Enterprise.</p>
+         * <li><p><strong>ORG</strong>: enterprise.</p>
          * </li>
-         * <li><p><strong>DEPT</strong>: Department.</p>
+         * <li><p><strong>DEPT</strong>: department.</p>
          * </li>
-         * <li><p><strong>TAG</strong>: Custom tag.</p>
+         * <li><p><strong>TAG</strong>: custom tag.</p>
          * </li>
-         * <li><p><strong>CONVERSATION</strong>: Conversation.</p>
+         * <li><p><strong>CONVERSATION</strong>: conversation.</p>
          * </li>
-         * <li><p><strong>USER</strong>: User.</p>
+         * <li><p><strong>USER</strong>: user.</p>
          * </li>
          * </ul>
          * 
@@ -212,7 +216,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public String userGroupId;
 
         /**
-         * <p>The user group name.</p>
+         * <p>The name of the user group.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

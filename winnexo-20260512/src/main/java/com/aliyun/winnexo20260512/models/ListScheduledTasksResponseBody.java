@@ -182,7 +182,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
 
     public static class ListScheduledTasksResponseBodyItems extends TeaModel {
         /**
-         * <p>The reason for the exception. This field has a value only when status is abnormal.</p>
+         * <p>The reason for the exception. This parameter has a value only when status is abnormal.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -191,7 +191,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public String abnormalReason;
 
         /**
-         * <p>Indicates whether the current caller can delete the task (only the task creator and group owner can do so). Always returns true for personal tasks.</p>
+         * <p>Indicates whether the current caller can delete the task. Only the task creator and group owner can delete the task. For personal tasks, this value is always true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -200,7 +200,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public Boolean canDelete;
 
         /**
-         * <p>Indicates whether the task can be edited or deleted.</p>
+         * <p>Indicates whether the course can be edited or deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -209,7 +209,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public Boolean canEdit;
 
         /**
-         * <p>Indicates whether the current caller can immediately execute the task (anyone with visibility can operate. Returns false for abnormal tasks). Always returns true for personal tasks.</p>
+         * <p>Indicates whether the current caller can immediately execute the task. A task is executable if it is visible to the caller, except for abnormal tasks which return false. For personal tasks, this value is always true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -218,7 +218,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public Boolean canExecute;
 
         /**
-         * <p>Indicates whether the current caller can start or stop the task (only the task creator and group owner can do so. Returns false for abnormal tasks). Always returns true for personal tasks.</p>
+         * <p>Indicates whether the current caller can start or stop the task. Only the task creator and group owner can toggle the task. Abnormal tasks return false. For personal tasks, this value is always true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -266,7 +266,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
          * <p>The description of the to-do card type.</p>
          * 
          * <strong>example:</strong>
-         * <p>SampleDescription</p>
+         * <p>Sample description</p>
          */
         @NameInMap("description")
         public String description;
@@ -281,7 +281,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public java.util.List<String> digitalEmployeeName;
 
         /**
-         * <p>The total number of executions.</p>
+         * <p>The cumulative number of executions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -353,7 +353,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The trigger type.</p>
+         * <p>The type of the trigger.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -368,7 +368,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
          * <li>COLLABORATIVE: visible to specified collaborators.</li>
          * <li>PUBLIC: visible to all group members.</li>
          * </ul>
-         * <p>For group tasks, the default value is PRIVATE if not specified. This field is ignored for personal tasks.</p>
+         * <p>If not specified for a group task, the default value is PRIVATE. This parameter is ignored for personal tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIVATE</p>
@@ -377,7 +377,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public String visibility;
 
         /**
-         * <p>The list of collaborators (excluding the task creator and group creator, who are covered by the authentication layer). This field is returned only for group tasks. An empty list is returned for PRIVATE or PUBLIC visibility.</p>
+         * <p>The list of collaborator members, excluding the task creator and group creator whose access is governed by the authentication layer. This parameter is returned only for group tasks. An empty list is returned for PRIVATE and PUBLIC visibility.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

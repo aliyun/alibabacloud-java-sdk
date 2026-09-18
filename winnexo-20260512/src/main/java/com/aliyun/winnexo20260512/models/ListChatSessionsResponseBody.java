@@ -14,7 +14,7 @@ public class ListChatSessionsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether there is a next page.</p>
+     * <p>Indicates whether more pages are available.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class ListChatSessionsResponseBody extends TeaModel {
     public Boolean hasMore;
 
     /**
-     * <p>The status code description.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>

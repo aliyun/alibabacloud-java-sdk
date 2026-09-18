@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGraphSchemasResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class ListGraphSchemasResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>租户下 active 图谱摘要列表</p>
+     * <p>The location clustering.</p>
      */
     @NameInMap("items")
     public java.util.List<ListGraphSchemasResponseBodyItems> items;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The prompt message.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -29,7 +29,7 @@ public class ListGraphSchemasResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -76,7 +76,7 @@ public class ListGraphSchemasResponseBody extends TeaModel {
 
     public static class ListGraphSchemasResponseBodyItems extends TeaModel {
         /**
-         * <p>active Schema 版本</p>
+         * <p>The currently active schema version number. The value is 0.0.0 for a quick-created placeholder graph.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.0</p>
@@ -85,25 +85,25 @@ public class ListGraphSchemasResponseBody extends TeaModel {
         public String activeVersion;
 
         /**
-         * <p>业务说明，未设置时为空字符串</p>
+         * <p>The business description of the graph. An empty string is returned if this parameter is not configured.</p>
          * 
          * <strong>example:</strong>
-         * <p>客户域语义图谱</p>
+         * <p>Customer domain semantic graph</p>
          */
         @NameInMap("businessProfile")
         public String businessProfile;
 
         /**
-         * <p>图谱展示名，空值时兜底 graphName</p>
+         * <p>The display name of the tool.</p>
          * 
          * <strong>example:</strong>
-         * <p>CRM 图谱</p>
+         * <p>CRM Graph</p>
          */
         @NameInMap("displayName")
         public String displayName;
 
         /**
-         * <p>图谱名称</p>
+         * <p>The graph name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class ListGraphSchemasResponseBody extends TeaModel {
         public String graphName;
 
         /**
-         * <p>图谱状态：PUBLISHED / DEVELOPING（当前用户有活动草稿）/ PUBLISHING（当前用户发布中）</p>
+         * <p>The status of the semantic graph.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +123,7 @@ public class ListGraphSchemasResponseBody extends TeaModel {
         public String graphStatus;
 
         /**
-         * <p>当前调用者视角是否存在个人活动草稿；部署/系统级 Token 恒 false</p>
+         * <p>Indicates whether the graph contains a draft.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +133,7 @@ public class ListGraphSchemasResponseBody extends TeaModel {
         public Boolean hasDraft;
 
         /**
-         * <p>是否为租户默认图谱</p>
+         * <p>Indicates whether this is the default group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class ListGraphSchemasResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>object_type 数量，解析失败兜底 0</p>
+         * <p>The number of object types. The value falls back to 0 if parsing fails.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class ListGraphSchemasResponseBody extends TeaModel {
         public Long objectTypeCount;
 
         /**
-         * <p>relation 数量，解析失败兜底 0</p>
+         * <p>The number of relations. The value falls back to 0 if parsing fails.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +163,7 @@ public class ListGraphSchemasResponseBody extends TeaModel {
         public Long relationCount;
 
         /**
-         * <p>语义标签列表，未配置时为空数组</p>
+         * <p>The list of semantic tags. An empty array [] is returned if this parameter is not configured.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("semanticTags")

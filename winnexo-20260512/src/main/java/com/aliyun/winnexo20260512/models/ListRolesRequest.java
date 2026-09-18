@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRolesRequest extends TeaModel {
     /**
-     * <p>The tenant ID. This is a common parameter. You can pass it explicitly by using --tenant-id in winnexo-cli.</p>
+     * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly with --tenant-id.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

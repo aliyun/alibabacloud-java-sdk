@@ -63,7 +63,7 @@ public class GetUserResponseBody extends TeaModel {
     public String lastLoginTime;
 
     /**
-     * <p>The status code description.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -81,7 +81,7 @@ public class GetUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of system role codes (full replacement, must contain at least one role). Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</p>
+     * <p>The list of system role codes. The list performs a full replacement and must contain at least one role. Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
