@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentsResponseBody extends TeaModel {
     /**
-     * <p>The API status code or POP error code. Valid values: Success: The operation was successful.</p>
+     * <p>The API status or POP error code. Valid values: Success: The operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -99,7 +99,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public java.util.List<Agent> agents;
 
         /**
-         * <p>The ID of the first record.</p>
+         * <p>The ID of the first entry.</p>
          * 
          * <strong>example:</strong>
          * <p>uat-agent</p>
@@ -108,11 +108,11 @@ public class ListAgentsResponseBody extends TeaModel {
         public String firstId;
 
         /**
-         * <p>Indicates whether more pages are available. Valid values:</p>
+         * <p>Indicates whether there is a next page. Valid values:</p>
          * <ul>
-         * <li><p>true: More pages are available.</p>
+         * <li><p>true: There is a next page.</p>
          * </li>
-         * <li><p>false: No more pages are available.</p>
+         * <li><p>false: There is no next page.</p>
          * </li>
          * </ul>
          * 
@@ -123,7 +123,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String hasMore;
 
         /**
-         * <p>The ID of the last record.</p>
+         * <p>The ID of the last conversation record.</p>
          * 
          * <strong>example:</strong>
          * <p>last-agent</p>

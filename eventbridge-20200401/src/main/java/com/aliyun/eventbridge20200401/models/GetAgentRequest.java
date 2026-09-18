@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgentRequest extends TeaModel {
     /**
-     * <p>The agent name.</p>
+     * <p>The Agent name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

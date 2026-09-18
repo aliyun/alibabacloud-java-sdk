@@ -11,6 +11,8 @@ public class Agent extends TeaModel {
     public String description;
 
     /**
+     * <p>The ID of the MCP server associated with the agent.</p>
+     * 
      * <strong>example:</strong>
      * <p>8vHW4mDRxxxxx</p>
      */
@@ -18,6 +20,8 @@ public class Agent extends TeaModel {
     public String mcpServerId;
 
     /**
+     * <p>The name of the MCP server.</p>
+     * 
      * <strong>example:</strong>
      * <p>data-analyze-agent</p>
      */

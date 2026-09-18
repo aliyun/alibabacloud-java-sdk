@@ -670,6 +670,96 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a knowledge base.</p>
+     * 
+     * @param tmpReq CreateKnowledgeBaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateKnowledgeBaseResponse
+     */
+    public CreateKnowledgeBaseResponse createKnowledgeBaseWithOptions(CreateKnowledgeBaseRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateKnowledgeBaseShrinkRequest request = new CreateKnowledgeBaseShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.chunkConfiguration)) {
+            request.chunkConfigurationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.chunkConfiguration, "ChunkConfiguration", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.metadataSchema)) {
+            request.metadataSchemaShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.metadataSchema, "MetadataSchema", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.searchConfiguration)) {
+            request.searchConfigurationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.searchConfiguration, "SearchConfiguration", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            query.put("Catalog", request.catalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chunkConfigurationShrink)) {
+            query.put("ChunkConfiguration", request.chunkConfigurationShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.embeddingDimension)) {
+            query.put("EmbeddingDimension", request.embeddingDimension);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.embeddingModel)) {
+            query.put("EmbeddingModel", request.embeddingModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseName)) {
+            query.put("KnowledgeBaseName", request.knowledgeBaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metadataSchemaShrink)) {
+            query.put("MetadataSchema", request.metadataSchemaShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchConfigurationShrink)) {
+            query.put("SearchConfiguration", request.searchConfigurationShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateKnowledgeBase"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateKnowledgeBaseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a knowledge base.</p>
+     * 
+     * @param request CreateKnowledgeBaseRequest
+     * @return CreateKnowledgeBaseResponse
+     */
+    public CreateKnowledgeBaseResponse createKnowledgeBase(CreateKnowledgeBaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createKnowledgeBaseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Create Namespace</p>
      * 
      * @param request CreateNamespaceRequest
@@ -1334,6 +1424,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Deletes a knowledge base.</p>
+     * 
+     * @param request DeleteKnowledgeBaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteKnowledgeBaseResponse
+     */
+    public DeleteKnowledgeBaseResponse deleteKnowledgeBaseWithOptions(DeleteKnowledgeBaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            query.put("Catalog", request.catalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseName)) {
+            query.put("KnowledgeBaseName", request.knowledgeBaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteKnowledgeBase"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteKnowledgeBaseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a knowledge base.</p>
+     * 
+     * @param request DeleteKnowledgeBaseRequest
+     * @return DeleteKnowledgeBaseResponse
+     */
+    public DeleteKnowledgeBaseResponse deleteKnowledgeBase(DeleteKnowledgeBaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteKnowledgeBaseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes a namespace.</p>
      * 
      * @param request DeleteNamespaceRequest
@@ -1836,7 +1978,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves agent metadata.</p>
+     * <p>Retrieves Agent metadata.</p>
      * 
      * @param request GetAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1868,7 +2010,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves agent metadata.</p>
+     * <p>Retrieves Agent metadata.</p>
      * 
      * @param request GetAgentRequest
      * @return GetAgentResponse
@@ -2023,6 +2165,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a chunk.</p>
+     * 
+     * @param request GetChunkRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetChunkResponse
+     */
+    public GetChunkResponse getChunkWithOptions(GetChunkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            query.put("Catalog", request.catalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chunkSeq)) {
+            query.put("ChunkSeq", request.chunkSeq);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentId)) {
+            query.put("DocumentId", request.documentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseName)) {
+            query.put("KnowledgeBaseName", request.knowledgeBaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetChunk"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetChunkResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a chunk.</p>
+     * 
+     * @param request GetChunkRequest
+     * @return GetChunkResponse
+     */
+    public GetChunkResponse getChunk(GetChunkRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getChunkWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Queries the configuration of a single connection.</p>
      * 
@@ -2070,6 +2272,122 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetConnectionResponse getConnection(GetConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getConnectionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a document.</p>
+     * 
+     * @param request GetDocumentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDocumentResponse
+     */
+    public GetDocumentResponse getDocumentWithOptions(GetDocumentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            query.put("Catalog", request.catalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentId)) {
+            query.put("DocumentId", request.documentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseName)) {
+            query.put("KnowledgeBaseName", request.knowledgeBaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDocument"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDocumentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a document.</p>
+     * 
+     * @param request GetDocumentRequest
+     * @return GetDocumentResponse
+     */
+    public GetDocumentResponse getDocument(GetDocumentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDocumentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the download URL of a document.</p>
+     * 
+     * @param request GetDocumentDownloadUrlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDocumentDownloadUrlResponse
+     */
+    public GetDocumentDownloadUrlResponse getDocumentDownloadUrlWithOptions(GetDocumentDownloadUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            query.put("Catalog", request.catalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentId)) {
+            query.put("DocumentId", request.documentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseName)) {
+            query.put("KnowledgeBaseName", request.knowledgeBaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkType)) {
+            query.put("NetworkType", request.networkType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDocumentDownloadUrl"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDocumentDownloadUrlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the download URL of a document.</p>
+     * 
+     * @param request GetDocumentDownloadUrlRequest
+     * @return GetDocumentDownloadUrlResponse
+     */
+    public GetDocumentDownloadUrlResponse getDocumentDownloadUrl(GetDocumentDownloadUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDocumentDownloadUrlWithOptions(request, runtime);
     }
 
     /**
@@ -2258,6 +2576,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetGenerateAgentDataSemanticsProgressResponse getGenerateAgentDataSemanticsProgress(GetGenerateAgentDataSemanticsProgressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getGenerateAgentDataSemanticsProgressWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a knowledge base.</p>
+     * 
+     * @param request GetKnowledgeBaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetKnowledgeBaseResponse
+     */
+    public GetKnowledgeBaseResponse getKnowledgeBaseWithOptions(GetKnowledgeBaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            query.put("Catalog", request.catalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseName)) {
+            query.put("KnowledgeBaseName", request.knowledgeBaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetKnowledgeBase"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetKnowledgeBaseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a knowledge base.</p>
+     * 
+     * @param request GetKnowledgeBaseRequest
+     * @return GetKnowledgeBaseResponse
+     */
+    public GetKnowledgeBaseResponse getKnowledgeBase(GetKnowledgeBaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getKnowledgeBaseWithOptions(request, runtime);
     }
 
     /**
@@ -3070,6 +3440,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the list of document chunks.</p>
+     * 
+     * @param request ListChunksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListChunksResponse
+     */
+    public ListChunksResponse listChunksWithOptions(ListChunksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            query.put("Catalog", request.catalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentId)) {
+            query.put("DocumentId", request.documentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            query.put("Enabled", request.enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseName)) {
+            query.put("KnowledgeBaseName", request.knowledgeBaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListChunks"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListChunksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of document chunks.</p>
+     * 
+     * @param request ListChunksRequest
+     * @return ListChunksResponse
+     */
+    public ListChunksResponse listChunks(ListChunksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listChunksWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Retrieves a list of connection configurations.</p>
      * 
@@ -3133,6 +3575,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListConnectionsResponse listConnections(ListConnectionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listConnectionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of documents.</p>
+     * 
+     * @param request ListDocumentsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDocumentsResponse
+     */
+    public ListDocumentsResponse listDocumentsWithOptions(ListDocumentsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            query.put("Catalog", request.catalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileNamePrefix)) {
+            query.put("FileNamePrefix", request.fileNamePrefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseName)) {
+            query.put("KnowledgeBaseName", request.knowledgeBaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDocuments"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDocumentsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of documents.</p>
+     * 
+     * @param request ListDocumentsRequest
+     * @return ListDocumentsResponse
+     */
+    public ListDocumentsResponse listDocuments(ListDocumentsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDocumentsWithOptions(request, runtime);
     }
 
     /**
@@ -3312,8 +3822,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of knowledge bases.</p>
+     * 
+     * @param request ListKnowledgeBasesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListKnowledgeBasesResponse
+     */
+    public ListKnowledgeBasesResponse listKnowledgeBasesWithOptions(ListKnowledgeBasesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            query.put("Catalog", request.catalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListKnowledgeBases"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListKnowledgeBasesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of knowledge bases.</p>
+     * 
+     * @param request ListKnowledgeBasesRequest
+     * @return ListKnowledgeBasesResponse
+     */
+    public ListKnowledgeBasesResponse listKnowledgeBases(ListKnowledgeBasesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listKnowledgeBasesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <p>Lists all data catalogs bound to a Luma Agent. Returns the complete set of bindings without pagination.</p>
+     * <p>Lists the data catalogs bound to a Luma Agent. Results are returned in pages. Pass the NextToken from the previous response to retrieve the next page. An empty NextToken indicates that no more data is available. Expired bindings are skipped, so the number of entries on a single page may be less than the Limit value. Do not use an insufficient page count to determine whether the last page has been reached.</p>
      * 
      * <b>summary</b> : 
      * <p>Lists all data catalogs bound to a Luma Agent. Returns the complete set of bindings without pagination.</p>
@@ -3356,7 +3922,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists all data catalogs bound to a Luma Agent. Returns the complete set of bindings without pagination.</p>
+     * <p>Lists the data catalogs bound to a Luma Agent. Results are returned in pages. Pass the NextToken from the previous response to retrieve the next page. An empty NextToken indicates that no more data is available. Expired bindings are skipped, so the number of entries on a single page may be less than the Limit value. Do not use an insufficient page count to determine whether the last page has been reached.</p>
      * 
      * <b>summary</b> : 
      * <p>Lists all data catalogs bound to a Luma Agent. Returns the complete set of bindings without pagination.</p>
@@ -3597,7 +4163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists all namespaces bound to a Luma Agent under a specified data catalog. Returns the complete set of bindings without pagination.</p>
+     * <p>Lists the namespaces bound to a Luma Agent under a specified data catalog. Results are returned in pages. Pass the NextToken from the previous response to retrieve the next page. An empty NextToken indicates that no more data is available. Expired bindings are skipped, so the number of entries on a single page may be less than the Limit value. Do not use an insufficient number of entries on the current page to determine whether the last page has been reached.</p>
      * 
      * <b>summary</b> : 
      * <p>Lists all namespaces bound to a Luma Agent under a specified data catalog. Returns the complete set of bindings without pagination.</p>
@@ -3644,7 +4210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists all namespaces bound to a Luma Agent under a specified data catalog. Returns the complete set of bindings without pagination.</p>
+     * <p>Lists the namespaces bound to a Luma Agent under a specified data catalog. Results are returned in pages. Pass the NextToken from the previous response to retrieve the next page. An empty NextToken indicates that no more data is available. Expired bindings are skipped, so the number of entries on a single page may be less than the Limit value. Do not use an insufficient number of entries on the current page to determine whether the last page has been reached.</p>
      * 
      * <b>summary</b> : 
      * <p>Lists all namespaces bound to a Luma Agent under a specified data catalog. Returns the complete set of bindings without pagination.</p>
@@ -4710,6 +5276,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries event content.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Executes a SQL statement to query event warehouse data. This operation is suitable for scenarios where the exact SQL is known, without natural language conversion or conversation context. Returns a structured result set.</p>
+     * 
+     * @param request QueryWithSQLRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryWithSQLResponse
+     */
+    public QueryWithSQLResponse queryWithSQLWithOptions(QueryWithSQLRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("Query", request.query);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryWithSQL"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryWithSQLResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries event content.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Executes a SQL statement to query event warehouse data. This operation is suitable for scenarios where the exact SQL is known, without natural language conversion or conversation context. Returns a structured result set.</p>
+     * 
+     * @param request QueryWithSQLRequest
+     * @return QueryWithSQLResponse
+     */
+    public QueryWithSQLResponse queryWithSQL(QueryWithSQLRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryWithSQLWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Saves data semantics for an agent.</p>
      * 
@@ -4785,6 +5405,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SaveAgentDataSemanticsResponse saveAgentDataSemantics(SaveAgentDataSemanticsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.saveAgentDataSemanticsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves knowledge base search results.</p>
+     * 
+     * @param request SearchKnowledgeBaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchKnowledgeBaseResponse
+     */
+    public SearchKnowledgeBaseResponse searchKnowledgeBaseWithOptions(SearchKnowledgeBaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            query.put("Catalog", request.catalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseName)) {
+            query.put("KnowledgeBaseName", request.knowledgeBaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metadataFilter)) {
+            query.put("MetadataFilter", request.metadataFilter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            query.put("Mode", request.mode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rankAlgorithm)) {
+            query.put("RankAlgorithm", request.rankAlgorithm);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rerank)) {
+            query.put("Rerank", request.rerank);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rerankModel)) {
+            query.put("RerankModel", request.rerankModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rrfK)) {
+            query.put("RrfK", request.rrfK);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topK)) {
+            query.put("TopK", request.topK);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vectorWeight)) {
+            query.put("VectorWeight", request.vectorWeight);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchKnowledgeBase"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchKnowledgeBaseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves knowledge base search results.</p>
+     * 
+     * @param request SearchKnowledgeBaseRequest
+     * @return SearchKnowledgeBaseResponse
+     */
+    public SearchKnowledgeBaseResponse searchKnowledgeBase(SearchKnowledgeBaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchKnowledgeBaseWithOptions(request, runtime);
     }
 
     /**
@@ -5653,6 +6361,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateEventStreamingBusinessOptionResponse updateEventStreamingBusinessOption(UpdateEventStreamingBusinessOptionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateEventStreamingBusinessOptionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a knowledge base.</p>
+     * 
+     * @param tmpReq UpdateKnowledgeBaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateKnowledgeBaseResponse
+     */
+    public UpdateKnowledgeBaseResponse updateKnowledgeBaseWithOptions(UpdateKnowledgeBaseRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateKnowledgeBaseShrinkRequest request = new UpdateKnowledgeBaseShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.chunkConfiguration)) {
+            request.chunkConfigurationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.chunkConfiguration, "ChunkConfiguration", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.searchConfiguration)) {
+            request.searchConfigurationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.searchConfiguration, "SearchConfiguration", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            query.put("Catalog", request.catalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chunkConfigurationShrink)) {
+            query.put("ChunkConfiguration", request.chunkConfigurationShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseName)) {
+            query.put("KnowledgeBaseName", request.knowledgeBaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchConfigurationShrink)) {
+            query.put("SearchConfiguration", request.searchConfigurationShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateKnowledgeBase"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateKnowledgeBaseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a knowledge base.</p>
+     * 
+     * @param request UpdateKnowledgeBaseRequest
+     * @return UpdateKnowledgeBaseResponse
+     */
+    public UpdateKnowledgeBaseResponse updateKnowledgeBase(UpdateKnowledgeBaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateKnowledgeBaseWithOptions(request, runtime);
     }
 
     /**

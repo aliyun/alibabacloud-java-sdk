@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLumaCatalogsResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of Success indicates a successful call. A specific error code is returned when the call fails.</p>
+     * <p>The response code. A value of Success indicates a successful call. If the call fails, a specific error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class ListLumaCatalogsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The list of data catalogs bound to the Agent. All results are returned at once without pagination.</p>
+     * <p>The list of data catalogs bound to the agent, including entries and pagination information.</p>
      */
     @NameInMap("Data")
     public ListLumaCatalogsResponseBodyData data;
 
     /**
-     * <p>The message returned by the operation. The value is Operation success when the call succeeds, or a specific error description when the call fails.</p>
+     * <p>The response message. A value of Operation success is returned if the call succeeds. A specific error description is returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>Operation success</p>
@@ -29,7 +29,7 @@ public class ListLumaCatalogsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique identifier of the request, used for troubleshooting and ticket submission.</p>
+     * <p>The unique ID of the request. Use this ID for troubleshooting and when submitting a ticket.</p>
      * 
      * <strong>example:</strong>
      * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
@@ -38,7 +38,7 @@ public class ListLumaCatalogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. A value of true indicates success.</p>
+     * <p>Indicates whether the call is successful. A value of true indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class ListLumaCatalogsResponseBody extends TeaModel {
 
     public static class ListLumaCatalogsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of data catalogs bound to the Agent.</p>
+         * <p>The list of data catalogs bound to the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;Name&quot;:&quot;my_catalog&quot;}]</p>
@@ -102,7 +102,7 @@ public class ListLumaCatalogsResponseBody extends TeaModel {
         public java.util.List<Catalog> catalogs;
 
         /**
-         * <p>本次请求实际生效的每页数量。未传 Limit 时为服务端默认值，超出上限时为收敛后的值</p>
+         * <p>The effective page size for this request. If the Limit parameter is not specified, the server default value is used. If the specified value exceeds the upper limit, the value is adjusted to the maximum allowed value.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -111,7 +111,7 @@ public class ListLumaCatalogsResponseBody extends TeaModel {
         public Integer limit;
 
         /**
-         * <p>下一页起始Token，传入下次请求的 NextToken 可获取下一页；为空表示已无更多数据</p>
+         * <p>The token for the next page. Pass this value as the NextToken in the next request to retrieve the next page. An empty value indicates that no more data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -120,7 +120,7 @@ public class ListLumaCatalogsResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>Agent 绑定的数据目录总数，与本页返回条数无关</p>
+         * <p>The total number of data catalogs bound to the agent, regardless of the number of entries returned on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

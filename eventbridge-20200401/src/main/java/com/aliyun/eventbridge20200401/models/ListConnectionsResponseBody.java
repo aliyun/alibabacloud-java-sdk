@@ -29,7 +29,7 @@ public class ListConnectionsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The common parameter. The ID of the request. Each request has a unique ID, which is active for troubleshooting.</p>
+     * <p>The common parameter. The request ID. Each request has a unique ID, which is active for troubleshooting and locating issues.</p>
      * 
      * <strong>example:</strong>
      * <p>E3619976-8714-5D88-BBA2-6983D798A8BB</p>
@@ -379,7 +379,7 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParameters extends TeaModel {
         /**
-         * <p>The list of body request parameter data structures.</p>
+         * <p>The list of request parameter data structures for the body.</p>
          */
         @NameInMap("BodyParameters")
         public java.util.List<ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersBodyParameters> bodyParameters;
@@ -429,7 +429,7 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParameters extends TeaModel {
         /**
-         * <p>The endpoint URL for obtaining the OAuth token.</p>
+         * <p>The endpoint for obtaining the OAuth token.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://localhost:8080/oauth/token">http://localhost:8080/oauth/token</a></p>
@@ -444,7 +444,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersClientParameters clientParameters;
 
         /**
-         * <p>The HTTP method for the probe request. Valid values:</p>
+         * <p>The HTTP method. Valid values:</p>
          * <ul>
          * <li>GET</li>
          * <li>POST</li>
@@ -458,7 +458,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public String httpMethod;
 
         /**
-         * <p>The HTTP request parameters for OAuth authentication.</p>
+         * <p>The request parameters for OAuth authentication.</p>
          */
         @NameInMap("OAuthHttpParameters")
         public ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParameters OAuthHttpParameters;
@@ -510,7 +510,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public ListConnectionsResponseBodyDataConnectionsAuthParametersApiKeyAuthParameters apiKeyAuthParameters;
 
         /**
-         * <p>The authorization type:</p>
+         * <p>The authentication type. Valid values:</p>
          * <ul>
          * <li><p>BASIC: BASIC_AUTH</p>
          * </li>
@@ -579,11 +579,10 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     public static class ListConnectionsResponseBodyDataConnectionsNetworkParameters extends TeaModel {
         /**
+         * <p>The network type. Valid values:</p>
          * <ul>
-         * <li><p>Public network: PublicNetwork</p>
-         * </li>
-         * <li><p>Virtual private cloud: PrivateNetwork</p>
-         * </li>
+         * <li>PublicNetwork: public network.</li>
+         * <li>PrivateNetwork: virtual private cloud (VPC).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -602,7 +601,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eb-test/vpc-bp1symadadwnwgmqud</p>
@@ -684,7 +683,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The timestamp when the datasource was created.</p>
+         * <p>The timestamp when the data source was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1592838994234</p>
@@ -702,13 +701,13 @@ public class ListConnectionsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The data structure of the network configuration.</p>
+         * <p>The data structure of network configurations.</p>
          */
         @NameInMap("NetworkParameters")
         public ListConnectionsResponseBodyDataConnectionsNetworkParameters networkParameters;
 
         /**
-         * <p>The datasource connection parameters (JSON object). This field is returned only for datasource-type connections and is empty for Http type. For field definitions, refer to the ParamsSchema returned by GetConnectionType.</p>
+         * <p>The data source connection parameters (JSON object). Returned only for data source type connections. This field is empty for Http type connections. For field definitions, refer to the ParamsSchema returned by GetConnectionType.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;HostName&quot;:&quot;xxx.mysql.rds.aliyuncs.com&quot;,&quot;Port&quot;:&quot;3306&quot;,&quot;User&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;xxx&quot;,&quot;DatabaseName&quot;:&quot;demo_db&quot;}</p>
@@ -717,7 +716,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public Object parameters;
 
         /**
-         * <p>The connection type. Valid values: Http, MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, Iceberg, and lakehouse.</p>
+         * <p>The connection type. Valid values: Http, MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, Iceberg, lakehouse.</p>
          * 
          * <strong>example:</strong>
          * <p>Http</p>
@@ -813,7 +812,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public Float maxResults;
 
         /**
-         * <p>The pagination token returned when additional results are available.</p>
+         * <p>If there are additional entries to return, NextToken is included in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

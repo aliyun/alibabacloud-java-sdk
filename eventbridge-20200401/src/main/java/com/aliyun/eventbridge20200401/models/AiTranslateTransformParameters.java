@@ -4,10 +4,15 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class AiTranslateTransformParameters extends TeaModel {
+    /**
+     * <p>The input text field.</p>
+     */
     @NameInMap("InputField")
     public AiTransformField inputField;
 
     /**
+     * <p>The source language. If left empty, the language is automatically detected.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -15,6 +20,8 @@ public class AiTranslateTransformParameters extends TeaModel {
     public String sourceLanguage;
 
     /**
+     * <p>The field name attached to the CloudEvent output. Default value: transform0.</p>
+     * 
      * <strong>example:</strong>
      * <p>translation</p>
      */
@@ -22,6 +29,8 @@ public class AiTranslateTransformParameters extends TeaModel {
     public String stepName;
 
     /**
+     * <p>The target language.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */

@@ -3,9 +3,9 @@ package com.aliyun.eventbridge20200401.models;
 
 import com.aliyun.tea.*;
 
-public class GetAgentResponseBody extends TeaModel {
+public class GetKnowledgeBaseResponseBody extends TeaModel {
     /**
-     * <p>The API status or POP error code. Valid values: Success: The operation was successful.</p>
+     * <p>The response code. Success indicates a successful call. If the call fails, a specific error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,19 +14,16 @@ public class GetAgentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned result.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
+     * <p>The knowledge base details, including basic information, metadata schema, and chunking and retrieval configurations.</p>
      */
     @NameInMap("Data")
-    public Agent data;
+    public KnowledgeBase data;
 
     /**
-     * <p>The error message.</p>
+     * <p>The response message. Operation success is returned for a successful call. A specific error description is returned for a failed call.</p>
      * 
      * <strong>example:</strong>
-     * <p>Agent with name \&quot;xxx\&quot; not found for account 1186xxx</p>
+     * <p>Operation success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -35,13 +32,13 @@ public class GetAgentResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>E0FFAB67-XXXXXX-CAD4D37448C4</p>
+     * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Returns true if the operation is successful.</p>
+     * <p>Indicates whether the call was successful. A value of true indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -49,12 +46,12 @@ public class GetAgentResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static GetAgentResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetAgentResponseBody self = new GetAgentResponseBody();
+    public static GetKnowledgeBaseResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetKnowledgeBaseResponseBody self = new GetKnowledgeBaseResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetAgentResponseBody setCode(String code) {
+    public GetKnowledgeBaseResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -62,15 +59,15 @@ public class GetAgentResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetAgentResponseBody setData(Agent data) {
+    public GetKnowledgeBaseResponseBody setData(KnowledgeBase data) {
         this.data = data;
         return this;
     }
-    public Agent getData() {
+    public KnowledgeBase getData() {
         return this.data;
     }
 
-    public GetAgentResponseBody setMessage(String message) {
+    public GetKnowledgeBaseResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -78,7 +75,7 @@ public class GetAgentResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GetAgentResponseBody setRequestId(String requestId) {
+    public GetKnowledgeBaseResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -86,7 +83,7 @@ public class GetAgentResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetAgentResponseBody setSuccess(Boolean success) {
+    public GetKnowledgeBaseResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

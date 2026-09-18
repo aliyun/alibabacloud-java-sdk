@@ -1,3 +1,18 @@
+2026-09-18 Version: 7.7.0
+- Support API CreateKnowledgeBase.
+- Support API DeleteKnowledgeBase.
+- Support API GetChunk.
+- Support API GetDocument.
+- Support API GetDocumentDownloadUrl.
+- Support API GetKnowledgeBase.
+- Support API ListChunks.
+- Support API ListDocuments.
+- Support API ListKnowledgeBases.
+- Support API QueryWithSQL.
+- Support API SearchKnowledgeBase.
+- Support API UpdateKnowledgeBase.
+
+
 2026-09-16 Version: 7.6.1
 - Update API CreateEventStreaming: add request parameters Transforms.$.AiChunkTransformParameters.
 - Update API CreateEventStreaming: add request parameters Transforms.$.AiClassifyTransformParameters.

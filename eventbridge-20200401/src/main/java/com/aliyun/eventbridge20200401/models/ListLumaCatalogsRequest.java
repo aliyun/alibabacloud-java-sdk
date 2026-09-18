@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLumaCatalogsRequest extends TeaModel {
     /**
-     * <p>The name of the Agent.</p>
+     * <p>The name of the agent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListLumaCatalogsRequest extends TeaModel {
     public String agentName;
 
     /**
-     * <p>每页返回的最大数据条数。取值范围 1~100，不传时默认 100。每条记录都需回源查询一次元数据，因此该值同时限制单次调用的回源次数</p>
+     * <p>The maximum number of entries to return per page. Valid values: 1 to 100. Default value: 100. Each entry requires a back-to-origin metadata query, so this value also limits the number of back-to-origin requests per call.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -24,7 +24,7 @@ public class ListLumaCatalogsRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>分页查询的起始Token。首次查询不传或传 &quot;0&quot;；后续翻页使用上一次响应中返回的 NextToken 值</p>
+     * <p>The token for the paging query. Leave this parameter empty or set it to &quot;0&quot; for the first query. For subsequent pages, use the NextToken value returned in the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
