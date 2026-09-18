@@ -23,7 +23,7 @@ public class UpdateKBSyncLinkRequest extends TeaModel {
     public String clientSecret;
 
     /**
-     * <p>The unique identifier of the knowledge base.</p>
+     * <p>The unique ID of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class UpdateKBSyncLinkRequest extends TeaModel {
     public String linkId;
 
     /**
-     * <p>The MCP Server address for DingTalk documents.</p>
+     * <p>The DingTalk document MCP Server endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876</a></p>
@@ -62,7 +62,7 @@ public class UpdateKBSyncLinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The MCP Server address for DingTalk spreadsheets.</p>
+     * <p>The DingTalk spreadsheet MCP Server endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543</a></p>
@@ -89,7 +89,16 @@ public class UpdateKBSyncLinkRequest extends TeaModel {
     public Integer syncIntervalMinutes;
 
     /**
-     * <p>The DingTalk user ID for the operation.</p>
+     * <p>The new Lark user access token.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
+    @NameInMap("UserAccessToken")
+    public String userAccessToken;
+
+    /**
+     * <p>The DingTalk user ID of the operator.</p>
      * 
      * <strong>example:</strong>
      * <p>123***56</p>
@@ -172,6 +181,14 @@ public class UpdateKBSyncLinkRequest extends TeaModel {
     }
     public Integer getSyncIntervalMinutes() {
         return this.syncIntervalMinutes;
+    }
+
+    public UpdateKBSyncLinkRequest setUserAccessToken(String userAccessToken) {
+        this.userAccessToken = userAccessToken;
+        return this;
+    }
+    public String getUserAccessToken() {
+        return this.userAccessToken;
     }
 
     public UpdateKBSyncLinkRequest setUserId(String userId) {

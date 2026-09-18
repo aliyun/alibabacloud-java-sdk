@@ -14,7 +14,7 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
     public String clientId;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The time when the synchronization link was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-08-14T05:58:42Z</p>
@@ -45,7 +45,7 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
     public String imPlatform;
 
     /**
-     * <p>The synchronization link ID.</p>
+     * <p>The ID of the synchronization link.</p>
      * 
      * <strong>example:</strong>
      * <p>pkbl-xxxxxx</p>

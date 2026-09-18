@@ -108,12 +108,123 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
         return this.totalRecordCount;
     }
 
+    public static class DescribeKnowledgeBaseFileShardsResponseBodyShardsImageResources extends TeaModel {
+        /**
+         * <p>The index of the source document to which the image belongs, starting from 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("DocumentIndex")
+        public Integer documentIndex;
+
+        /**
+         * <p>The unique ID of the image resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>document-0/pictures/1</p>
+         */
+        @NameInMap("Id")
+        public String id;
+
+        /**
+         * <p>The element reference of the image in the Docling source document structure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>#/pictures/1</p>
+         */
+        @NameInMap("ItemRef")
+        public String itemRef;
+
+        /**
+         * <p>The media type of the image resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image/png</p>
+         */
+        @NameInMap("MimeType")
+        public String mimeType;
+
+        /**
+         * <p>The OSS URI of the image resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://my-bucket/results/my-space/doc-001/artifacts/image-1.png</p>
+         */
+        @NameInMap("Uri")
+        public String uri;
+
+        public static DescribeKnowledgeBaseFileShardsResponseBodyShardsImageResources build(java.util.Map<String, ?> map) throws Exception {
+            DescribeKnowledgeBaseFileShardsResponseBodyShardsImageResources self = new DescribeKnowledgeBaseFileShardsResponseBodyShardsImageResources();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeKnowledgeBaseFileShardsResponseBodyShardsImageResources setDocumentIndex(Integer documentIndex) {
+            this.documentIndex = documentIndex;
+            return this;
+        }
+        public Integer getDocumentIndex() {
+            return this.documentIndex;
+        }
+
+        public DescribeKnowledgeBaseFileShardsResponseBodyShardsImageResources setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public DescribeKnowledgeBaseFileShardsResponseBodyShardsImageResources setItemRef(String itemRef) {
+            this.itemRef = itemRef;
+            return this;
+        }
+        public String getItemRef() {
+            return this.itemRef;
+        }
+
+        public DescribeKnowledgeBaseFileShardsResponseBodyShardsImageResources setMimeType(String mimeType) {
+            this.mimeType = mimeType;
+            return this;
+        }
+        public String getMimeType() {
+            return this.mimeType;
+        }
+
+        public DescribeKnowledgeBaseFileShardsResponseBodyShardsImageResources setUri(String uri) {
+            this.uri = uri;
+            return this;
+        }
+        public String getUri() {
+            return this.uri;
+        }
+
+    }
+
     public static class DescribeKnowledgeBaseFileShardsResponseBodyShards extends TeaModel {
+        /**
+         * <p>The list of figure or table captions associated with the shard.</p>
+         */
+        @NameInMap("Captions")
+        public java.util.List<String> captions;
+
+        /**
+         * <p>The list of Docling source document structured element references associated with the shard. You can use these references to precisely locate original document elements.</p>
+         */
+        @NameInMap("DocItems")
+        public java.util.List<String> docItems;
+
         /**
          * <p>The chain of section headings to which the shard belongs.</p>
          */
         @NameInMap("Headings")
         public java.util.List<String> headings;
+
+        /**
+         * <p>The list of image resources referenced by the shard.</p>
+         */
+        @NameInMap("ImageResources")
+        public java.util.List<DescribeKnowledgeBaseFileShardsResponseBodyShardsImageResources> imageResources;
 
         /**
          * <p>The list of page numbers to which the shard belongs.</p>
@@ -131,7 +242,7 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
         public String shardContent;
 
         /**
-         * <p>The shard index.</p>
+         * <p>The index of the shard.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -144,12 +255,36 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeKnowledgeBaseFileShardsResponseBodyShards setCaptions(java.util.List<String> captions) {
+            this.captions = captions;
+            return this;
+        }
+        public java.util.List<String> getCaptions() {
+            return this.captions;
+        }
+
+        public DescribeKnowledgeBaseFileShardsResponseBodyShards setDocItems(java.util.List<String> docItems) {
+            this.docItems = docItems;
+            return this;
+        }
+        public java.util.List<String> getDocItems() {
+            return this.docItems;
+        }
+
         public DescribeKnowledgeBaseFileShardsResponseBodyShards setHeadings(java.util.List<String> headings) {
             this.headings = headings;
             return this;
         }
         public java.util.List<String> getHeadings() {
             return this.headings;
+        }
+
+        public DescribeKnowledgeBaseFileShardsResponseBodyShards setImageResources(java.util.List<DescribeKnowledgeBaseFileShardsResponseBodyShardsImageResources> imageResources) {
+            this.imageResources = imageResources;
+            return this;
+        }
+        public java.util.List<DescribeKnowledgeBaseFileShardsResponseBodyShardsImageResources> getImageResources() {
+            return this.imageResources;
         }
 
         public DescribeKnowledgeBaseFileShardsResponseBodyShards setPageNumbers(java.util.List<String> pageNumbers) {

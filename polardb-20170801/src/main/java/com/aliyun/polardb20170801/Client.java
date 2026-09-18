@@ -621,7 +621,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a single-round knowledge base question answering.</p>
+     * <p>Performs a single-turn knowledge base question answering.</p>
      * 
      * @param request AnswerKnowledgeBaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -693,7 +693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a single-round knowledge base question answering.</p>
+     * <p>Performs a single-turn knowledge base question answering.</p>
      * 
      * @param request AnswerKnowledgeBaseRequest
      * @return AnswerKnowledgeBaseResponse
@@ -5776,6 +5776,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
             query.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userAccessToken)) {
+            query.put("UserAccessToken", request.userAccessToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
@@ -18525,7 +18529,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the result of a single-turn Q&amp;A task in a knowledge base.</p>
+     * <p>Queries the result of a single-round knowledge base question answering task.</p>
      * 
      * @param request DescribeKnowledgeBaseAnswerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18565,7 +18569,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the result of a single-turn Q&amp;A task in a knowledge base.</p>
+     * <p>Queries the result of a single-round knowledge base question answering task.</p>
      * 
      * @param request DescribeKnowledgeBaseAnswerRequest
      * @return DescribeKnowledgeBaseAnswerResponse
@@ -24704,7 +24708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the model or the customer-facing invocation name of an AI cluster.</p>
+     * <p>Changes the model or the client-facing invocation name of an AI cluster.</p>
      * 
      * @param request ModifyAIDBClusterModelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24733,6 +24737,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.restartMode)) {
+            query.put("RestartMode", request.restartMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workerBatchSize)) {
+            query.put("WorkerBatchSize", request.workerBatchSize);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -24752,7 +24764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the model or the customer-facing invocation name of an AI cluster.</p>
+     * <p>Changes the model or the client-facing invocation name of an AI cluster.</p>
      * 
      * @param request ModifyAIDBClusterModelRequest
      * @return ModifyAIDBClusterModelResponse
@@ -33209,6 +33221,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.syncIntervalMinutes)) {
             query.put("SyncIntervalMinutes", request.syncIntervalMinutes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userAccessToken)) {
+            query.put("UserAccessToken", request.userAccessToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {

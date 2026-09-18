@@ -15,7 +15,7 @@ public class ModifyAIDBClusterModelRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The new customer-facing invocation name. If this parameter is not specified, the existing invocation name is retained.</p>
+     * <p>The new client-facing invocation name. If this parameter is not specified, the existing invocation name is retained.</p>
      * 
      * <strong>example:</strong>
      * <p>my-flagship-chat</p>
@@ -24,7 +24,7 @@ public class ModifyAIDBClusterModelRequest extends TeaModel {
     public String displayModelName;
 
     /**
-     * <p>Specifies whether to only preview the change.</p>
+     * <p>Specifies whether to only preview the change without actually performing it.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -51,6 +51,28 @@ public class ModifyAIDBClusterModelRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    /**
+     * <p>The restart mode for workers. Valid values:</p>
+     * <ul>
+     * <li>inPlace</li>
+     * <li>recreate</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>inPlace</p>
+     */
+    @NameInMap("RestartMode")
+    public String restartMode;
+
+    /**
+     * <p>The maximum number of workers to restart per batch within a single MSD. Valid values: 1 to 30. This parameter takes effect only when RestartMode is set to inPlace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
+    @NameInMap("WorkerBatchSize")
+    public Long workerBatchSize;
 
     public static ModifyAIDBClusterModelRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAIDBClusterModelRequest self = new ModifyAIDBClusterModelRequest();
@@ -95,6 +117,22 @@ public class ModifyAIDBClusterModelRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyAIDBClusterModelRequest setRestartMode(String restartMode) {
+        this.restartMode = restartMode;
+        return this;
+    }
+    public String getRestartMode() {
+        return this.restartMode;
+    }
+
+    public ModifyAIDBClusterModelRequest setWorkerBatchSize(Long workerBatchSize) {
+        this.workerBatchSize = workerBatchSize;
+        return this;
+    }
+    public Long getWorkerBatchSize() {
+        return this.workerBatchSize;
     }
 
 }

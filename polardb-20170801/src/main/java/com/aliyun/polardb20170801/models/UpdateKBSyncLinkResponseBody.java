@@ -23,7 +23,7 @@ public class UpdateKBSyncLinkResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The scheduling time of the synchronization task.</p>
+     * <p>The scheduled time of the synchronization task.</p>
      */
     @NameInMap("SyncSchedule")
     public String syncSchedule;

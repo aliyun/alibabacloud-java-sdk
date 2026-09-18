@@ -24,7 +24,7 @@ public class AnswerKnowledgeBaseRequest extends TeaModel {
     public Integer maxContextChars;
 
     /**
-     * <p>The user query text.</p>
+     * <p>The user question.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class AnswerKnowledgeBaseRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to enable reranking. Default value: false.</p>
+     * <p>Specifies whether to enable reranking. Disabled by default.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -53,7 +53,7 @@ public class AnswerKnowledgeBaseRequest extends TeaModel {
     public Boolean rerankEnabled;
 
     /**
-     * <p>Specifies whether to return citation sources. Default value: true.</p>
+     * <p>Specifies whether to return citation sources. Enabled by default.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -89,7 +89,7 @@ public class AnswerKnowledgeBaseRequest extends TeaModel {
     public String systemPrompt;
 
     /**
-     * <p>The number of results to recall during retrieval.</p>
+     * <p>The number of recall results to retrieve.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -98,7 +98,7 @@ public class AnswerKnowledgeBaseRequest extends TeaModel {
     public Integer topK;
 
     /**
-     * <p>The supplementary user instructions.</p>
+     * <p>The user supplementary instructions.</p>
      * 
      * <strong>example:</strong>
      * <p>Return a short summary and test result.</p>

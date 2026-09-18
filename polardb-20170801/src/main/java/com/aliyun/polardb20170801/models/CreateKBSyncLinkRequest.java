@@ -34,7 +34,7 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The unique identifier of the knowledge base.</p>
+     * <p>The unique ID of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     public String linkName;
 
     /**
-     * <p>The DingTalk document MCP Server endpoint.</p>
+     * <p>The MCP Server address for DingTalk documents.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876</a></p>
@@ -73,7 +73,7 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The DingTalk spreadsheet MCP Server endpoint.</p>
+     * <p>The MCP Server address for DingTalk sheets.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543</a></p>
@@ -120,7 +120,16 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The DingTalk operator user ID.</p>
+     * <p>The Lark user access token. This token is used only when the application identity cannot expand group members because the bot is not in the group chat.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
+    @NameInMap("UserAccessToken")
+    public String userAccessToken;
+
+    /**
+     * <p>The DingTalk user ID of the operator.</p>
      * 
      * <strong>example:</strong>
      * <p>123***56</p>
@@ -227,6 +236,14 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     }
     public String getTenantId() {
         return this.tenantId;
+    }
+
+    public CreateKBSyncLinkRequest setUserAccessToken(String userAccessToken) {
+        this.userAccessToken = userAccessToken;
+        return this;
+    }
+    public String getUserAccessToken() {
+        return this.userAccessToken;
     }
 
     public CreateKBSyncLinkRequest setUserId(String userId) {

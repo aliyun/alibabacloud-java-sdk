@@ -1,3 +1,14 @@
+2026-09-18 Version: 8.4.1
+- Update API CreateKBSyncLink: add request parameters UserAccessToken.
+- Update API DescribeKnowledgeBaseAnswer: add response parameters Body.Sources.$.ImageResources.
+- Update API DescribeKnowledgeBaseFileShards: add response parameters Body.Shards.$.Captions.
+- Update API DescribeKnowledgeBaseFileShards: add response parameters Body.Shards.$.DocItems.
+- Update API DescribeKnowledgeBaseFileShards: add response parameters Body.Shards.$.ImageResources.
+- Update API ModifyAIDBClusterModel: add request parameters RestartMode.
+- Update API ModifyAIDBClusterModel: add request parameters WorkerBatchSize.
+- Update API UpdateKBSyncLink: add request parameters UserAccessToken.
+
+
 2026-09-16 Version: 8.4.0
 - Support API DeleteAIDBClusterCustomModel.
 - Support API ModifyAIDBClusterModel.
