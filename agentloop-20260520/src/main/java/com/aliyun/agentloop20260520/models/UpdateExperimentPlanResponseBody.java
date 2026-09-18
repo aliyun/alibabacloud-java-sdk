@@ -14,7 +14,7 @@ public class UpdateExperimentPlanResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the experiment plan.</p>
+     * <p>The experiment plan ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exp-plan-e95bff54685a4ae29ff3a834c1008a71</p>

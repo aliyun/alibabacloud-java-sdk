@@ -8,13 +8,13 @@ public class CreateExperimentRunResponseBody extends TeaModel {
      * <p>The message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Experiment created, execution started.</p>
+     * <p>Experiment created, execution started</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>The experiment record ID. For online experiments, the format is typically exp-run-{uuid32}. For offline experiments, the format may also be a standard UUID.</p>
+     * <p>The experiment record ID. For online experiments, the ID is typically in the format exp-run-{uuid32}. For offline experiments, the ID may also be a standard UUID.</p>
      * 
      * <strong>example:</strong>
      * <p>exp-run-f6d419b0ed3d43a7b585948a55efc07b</p>
@@ -32,7 +32,7 @@ public class CreateExperimentRunResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The experiment record status. After creation, the status is typically pending.</p>
+     * <p>The experiment record status. The value is typically pending after creation.</p>
      * 
      * <strong>example:</strong>
      * <p>pending</p>

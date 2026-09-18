@@ -14,7 +14,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     public String agentSpace;
 
     /**
-     * <p>The task source.</p>
+     * <p>The source of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -23,7 +23,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     public String channel;
 
     /**
-     * <p>The data source and execution configuration. Tasks with <code>dataType=trace</code> typically contain <code>project</code>, <code>storeName</code>, and <code>dataScope</code> fields that are populated by the backend.</p>
+     * <p>The data source and execution configuration. Tasks with <code>dataType=trace</code> typically contain backend-populated <code>project</code>, <code>storeName</code>, and <code>dataScope</code> fields.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;project&quot;:&quot;agentspace-project&quot;,&quot;storeName&quot;:&quot;logstore-tracing&quot;,&quot;dataScope&quot;:&quot;trace&quot;}</p>
@@ -32,7 +32,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     public java.util.Map<String, String> config;
 
     /**
-     * <p>The creation time, in seconds-level UNIX timestamp.</p>
+     * <p>The creation time, in seconds as a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1782816000</p>
@@ -41,7 +41,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     public Long createdAt;
 
     /**
-     * <p>The evaluation data filter condition, returned by the backend as a JSON string.</p>
+     * <p>The evaluation data filter conditions, returned by the backend as a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;query&quot;:&quot;serviceName=\&quot;checkout-service\&quot;&quot;,&quot;maxRecords&quot;:10,&quot;samplingRate&quot;:100}</p>
@@ -59,10 +59,10 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     public String dataType;
 
     /**
-     * <p>The evaluation task description.</p>
+     * <p>The description of the evaluation task.</p>
      * 
      * <strong>example:</strong>
-     * <p>Evaluate the task completion rate of the online Agent pipeline</p>
+     * <p>Evaluate the task completion of the online Agent pipeline</p>
      */
     @NameInMap("description")
     public String description;
@@ -95,7 +95,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The structured configuration of the run strategy, including the parsed backfill strategy and continuous evaluation strategy.</p>
+     * <p>The structured run strategy configuration, including the parsed backfill strategy and continuous evaluation strategy.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;backfill&quot;:{&quot;enabled&quot;:true,&quot;startTime&quot;:1782816000000,&quot;endTime&quot;:1782902400000},&quot;continuous&quot;:{&quot;enabled&quot;:true,&quot;intervalUnit&quot;:&quot;HOUR&quot;,&quot;intervalValue&quot;:1,&quot;dataDelayMinutes&quot;:5}}</p>
@@ -149,7 +149,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     public String taskName;
 
     /**
-     * <p>The last update time, in seconds-level UNIX timestamp.</p>
+     * <p>The last update time, in seconds as a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1782816600</p>

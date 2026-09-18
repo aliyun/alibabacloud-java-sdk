@@ -4,30 +4,66 @@ package com.aliyun.agentloop20260520.models;
 import com.aliyun.tea.*;
 
 public class ExperimentConfig extends TeaModel {
+    /**
+     * <p>The endpoint connector ID. This parameter is required in user/agent mode.</p>
+     */
     @NameInMap("endpointConnectorId")
     public String endpointConnectorId;
 
+    /**
+     * <p>The experiment label (A/B/C/D/E).</p>
+     */
     @NameInMap("label")
     public String label;
 
+    /**
+     * <p>The model name. You can set this parameter to agent in agent scenarios.</p>
+     */
     @NameInMap("modelName")
     public String modelName;
 
+    /**
+     * <p>The model parameters.</p>
+     */
     @NameInMap("modelParameters")
     public ModelParameters modelParameters;
 
+    /**
+     * <p>The model provider. Valid values: dashscope (default), user, and agent.</p>
+     */
     @NameInMap("modelProvider")
     public String modelProvider;
 
+    /**
+     * <p>The experiment name.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The prompt message template. Supports {{variable name}} placeholders.</p>
+     */
     @NameInMap("promptTemplate")
     public java.util.List<PromptTemplateItem> promptTemplate;
 
+    /**
+     * <p>The agent request body template. This parameter is required in agent mode. Supports {{variable name}} placeholders.</p>
+     */
     @NameInMap("requestBodyTemplate")
     public String requestBodyTemplate;
 
+    /**
+     * <p>The agent request header template. This parameter is optional in agent mode. Supports {{variable name}} placeholders.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Content-Type: application/json&quot; }</p>
+     */
+    @NameInMap("requestHeaderTemplate")
+    public String requestHeaderTemplate;
+
+    /**
+     * <p>The agent request method. Valid values: POST (default) and GET.</p>
+     */
     @NameInMap("requestMethod")
     public String requestMethod;
 
@@ -98,6 +134,14 @@ public class ExperimentConfig extends TeaModel {
     }
     public String getRequestBodyTemplate() {
         return this.requestBodyTemplate;
+    }
+
+    public ExperimentConfig setRequestHeaderTemplate(String requestHeaderTemplate) {
+        this.requestHeaderTemplate = requestHeaderTemplate;
+        return this;
+    }
+    public String getRequestHeaderTemplate() {
+        return this.requestHeaderTemplate;
     }
 
     public ExperimentConfig setRequestMethod(String requestMethod) {

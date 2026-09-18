@@ -63,10 +63,10 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The file remarks.</p>
+         * <p>The file remark.</p>
          * 
          * <strong>example:</strong>
-         * <p>主技能说明</p>
+         * <p>Main skill description</p>
          */
         @NameInMap("remark")
         public String remark;
@@ -104,7 +104,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
 
     public static class GetEvaluatorSkillResponseBodySkillVersions extends TeaModel {
         /**
-         * <p>The time when the version was created. This value is a UNIX timestamp in seconds.</p>
+         * <p>The version creation time, in seconds-level UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1782816000</p>
@@ -125,7 +125,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
          * <p>The version description.</p>
          * 
          * <strong>example:</strong>
-         * <p>首次发布版本</p>
+         * <p>Initial release version</p>
          */
         @NameInMap("versionDescription")
         public String versionDescription;
@@ -163,7 +163,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
 
     public static class GetEvaluatorSkillResponseBodySkill extends TeaModel {
         /**
-         * <p>The time when the skill was created. This value is a UNIX timestamp in seconds.</p>
+         * <p>The creation time, in seconds-level UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1782816000</p>
@@ -184,7 +184,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
          * <p>The skill description.</p>
          * 
          * <strong>example:</strong>
-         * <p>读取链路上下文辅助评估</p>
+         * <p>Read trace context to assist evaluation</p>
          */
         @NameInMap("description")
         public String description;
@@ -193,7 +193,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
          * <p>The display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Trace 上下文读取</p>
+         * <p>Trace Context Loader</p>
          */
         @NameInMap("displayName")
         public String displayName;
@@ -211,7 +211,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
          * <p>The list of skill files.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;# Trace Context Loader&quot;,&quot;remark&quot;:&quot;主技能说明&quot;}]</p>
+         * <p>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;# Trace Context Loader&quot;,&quot;remark&quot;:&quot;Main skill description&quot;}]</p>
          */
         @NameInMap("files")
         public java.util.List<GetEvaluatorSkillResponseBodySkillFiles> files;
@@ -235,7 +235,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
         public String skillName;
 
         /**
-         * <p>The time when the skill was last updated. This value is a UNIX timestamp in seconds.</p>
+         * <p>The update time, in seconds-level UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1782816600</p>
@@ -247,7 +247,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
          * <p>The list of skill versions.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;version&quot;:&quot;1782816000000&quot;,&quot;versionDescription&quot;:&quot;首次发布版本&quot;}]</p>
+         * <p>[{&quot;version&quot;:&quot;1782816000000&quot;,&quot;versionDescription&quot;:&quot;Initial release version&quot;}]</p>
          */
         @NameInMap("versions")
         public java.util.List<GetEvaluatorSkillResponseBodySkillVersions> versions;

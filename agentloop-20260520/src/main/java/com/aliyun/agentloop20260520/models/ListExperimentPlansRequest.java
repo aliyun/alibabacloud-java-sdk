@@ -41,7 +41,7 @@ public class ListExperimentPlansRequest extends TeaModel {
     public Integer offset;
 
     /**
-     * <p>Fuzzy match by plan name.</p>
+     * <p>Fuzzy matches experiment plans by plan name.</p>
      * 
      * <strong>example:</strong>
      * <p>arms_agent</p>
@@ -50,7 +50,7 @@ public class ListExperimentPlansRequest extends TeaModel {
     public String planName;
 
     /**
-     * <p>Filters by exact status.</p>
+     * <p>Filters experiment plans by exact status.</p>
      * 
      * <strong>example:</strong>
      * <p>pending</p>

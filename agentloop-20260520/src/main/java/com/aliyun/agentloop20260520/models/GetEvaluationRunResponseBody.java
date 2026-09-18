@@ -14,7 +14,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
     public Long createdAt;
 
     /**
-     * <p>The end time of the data window for the run, in seconds-level UNIX timestamp.</p>
+     * <p>The end time of the run data window, in seconds-level UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1782902400</p>
@@ -23,7 +23,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
     public Long dataEndTime;
 
     /**
-     * <p>The start time of the data window for the run, in seconds-level UNIX timestamp.</p>
+     * <p>The start time of the run data window, in seconds-level UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1782816000</p>
@@ -32,7 +32,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
     public Long dataStartTime;
 
     /**
-     * <p>The list of progress details by evaluator.</p>
+     * <p>The list of progress entries by evaluator.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;evaluatorName&quot;:&quot;Builtin.agent_task_completion&quot;,&quot;totalCount&quot;:100,&quot;successCount&quot;:96,&quot;failedCount&quot;:4}]</p>
@@ -41,7 +41,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
     public java.util.List<GetEvaluationRunResponseBodyEvaluatorProgress> evaluatorProgress;
 
     /**
-     * <p>The evaluator configuration snapshot at the time the run was created, in JSON string format.</p>
+     * <p>The snapshot of the evaluator configuration at the time the run was created, in JSON string format.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;evaluatorRef&quot;:&quot;Builtin.agent_task_completion&quot;}]</p>
@@ -50,7 +50,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
     public String evaluators;
 
     /**
-     * <p>The number of failed entries.</p>
+     * <p>The number of failed items.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -104,7 +104,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The number of successful entries.</p>
+     * <p>The number of successful items.</p>
      * 
      * <strong>example:</strong>
      * <p>96</p>
@@ -122,7 +122,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The total number of evaluation entries.</p>
+     * <p>The total number of evaluation items.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -275,7 +275,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
         public String evaluatorName;
 
         /**
-         * <p>The number of failed entries for this evaluator.</p>
+         * <p>The number of failed items for this evaluator.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -284,7 +284,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
         public Integer failedCount;
 
         /**
-         * <p>The number of successful entries for this evaluator.</p>
+         * <p>The number of successful items for this evaluator.</p>
          * 
          * <strong>example:</strong>
          * <p>96</p>
@@ -293,7 +293,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
         public Integer successCount;
 
         /**
-         * <p>The total number of entries for this evaluator.</p>
+         * <p>The total number of items for this evaluator.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

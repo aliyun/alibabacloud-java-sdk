@@ -41,7 +41,7 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records. The total count is returned only on the first page. This value may be empty on subsequent pages.</p>
+     * <p>The total number of records. The total count is calculated only on the first page. This value may be empty on subsequent pages.</p>
      * 
      * <strong>example:</strong>
      * <p>126</p>
@@ -123,10 +123,10 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
         public String dataType;
 
         /**
-         * <p>The evaluation task description.</p>
+         * <p>The description of the evaluation task.</p>
          * 
          * <strong>example:</strong>
-         * <p>评估线上 Agent 链路任务完成度</p>
+         * <p>Evaluate the task completion of the online Agent trace</p>
          */
         @NameInMap("description")
         public String description;

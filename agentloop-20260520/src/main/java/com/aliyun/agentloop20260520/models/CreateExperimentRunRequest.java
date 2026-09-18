@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateExperimentRunRequest extends TeaModel {
     /**
-     * <p>The completion time, in millisecond-level UNIX timestamp.</p>
+     * <p>The completion time. The value is a millisecond-level UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1784721811392</p>
@@ -14,7 +14,7 @@ public class CreateExperimentRunRequest extends TeaModel {
     public Long completedAt;
 
     /**
-     * <p>The number of completed tasks. If not specified, the default value is 0.</p>
+     * <p>The number of completed tasks. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -23,7 +23,7 @@ public class CreateExperimentRunRequest extends TeaModel {
     public Integer completedTasks;
 
     /**
-     * <p>The execution time, in millisecond-level UNIX timestamp.</p>
+     * <p>The execution time. The value is a millisecond-level UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1784721775379</p>
@@ -42,7 +42,7 @@ public class CreateExperimentRunRequest extends TeaModel {
     public String experimentPlanId;
 
     /**
-     * <p>The number of failed tasks. If not specified, the default value is 0.</p>
+     * <p>The number of failed tasks. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -51,7 +51,7 @@ public class CreateExperimentRunRequest extends TeaModel {
     public Integer failedTasks;
 
     /**
-     * <p>The list of offline experiment configurations. Required when the plan type is offline. The number of items ranges from 1 to 5.</p>
+     * <p>The list of offline experiment configurations. This parameter is required when the plan type is offline. You can specify 1 to 5 configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;label&quot;: &quot;experimentA&quot;, &quot;name&quot;: &quot;experimentA&quot;}]</p>
@@ -60,7 +60,7 @@ public class CreateExperimentRunRequest extends TeaModel {
     public java.util.List<OfflineExperimentConfig> offlineExperiments;
 
     /**
-     * <p>The experiment record name. If not specified, the default value is the plan name plus a timestamp.</p>
+     * <p>The experiment record name. If not specified, the default value is the plan name followed by a timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>arms_agent_experiment 2026/07/22 20:02:55</p>
@@ -69,7 +69,7 @@ public class CreateExperimentRunRequest extends TeaModel {
     public String recordName;
 
     /**
-     * <p>The initial status. If not specified, the default value is <code>pending</code>.</p>
+     * <p>The initial status. Default value: <code>pending</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>pending</p>

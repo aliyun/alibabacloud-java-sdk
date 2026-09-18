@@ -23,7 +23,7 @@ public class ListEvaluationRunsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page. An empty value indicates that no more pages exist.</p>
+     * <p>The pagination token for the next page. An empty value indicates that no more pages are available.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJsYXN0SWQiOjEyMH0=</p>

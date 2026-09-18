@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateEvaluatorRequest extends TeaModel {
     /**
-     * <p>The list of annotation marks.</p>
+     * <p>The list of annotation tags.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;__en&quot;]</p>
@@ -14,10 +14,10 @@ public class UpdateEvaluatorRequest extends TeaModel {
     public java.util.List<String> annotations;
 
     /**
-     * <p>The new version configuration. This parameter is typically required when <code>version</code> is specified.</p>
+     * <p>The configuration of the new version. This parameter is typically required when <code>version</code> is specified.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;prompt&quot;:&quot;请更严格地评估任务完成度&quot;}</p>
+     * <p>{&quot;prompt&quot;:&quot;Evaluate task completion more strictly&quot;}</p>
      */
     @NameInMap("config")
     public java.util.Map<String, ?> config;
@@ -26,7 +26,7 @@ public class UpdateEvaluatorRequest extends TeaModel {
      * <p>The evaluator description.</p>
      * 
      * <strong>example:</strong>
-     * <p>判断 Agent 是否完成用户任务</p>
+     * <p>Determines whether the agent completes the user task</p>
      */
     @NameInMap("description")
     public String description;
@@ -35,7 +35,7 @@ public class UpdateEvaluatorRequest extends TeaModel {
      * <p>The display name.</p>
      * 
      * <strong>example:</strong>
-     * <p>链路任务完成度</p>
+     * <p>Task completion of the chain</p>
      */
     @NameInMap("displayName")
     public String displayName;
@@ -50,7 +50,7 @@ public class UpdateEvaluatorRequest extends TeaModel {
     public java.util.Map<String, ?> properties;
 
     /**
-     * <p>The new version number. If specified, a new version is created.</p>
+     * <p>The new version number. A new version is created when this parameter is specified.</p>
      * 
      * <strong>example:</strong>
      * <p>1.1.0</p>
@@ -62,7 +62,7 @@ public class UpdateEvaluatorRequest extends TeaModel {
      * <p>The version description.</p>
      * 
      * <strong>example:</strong>
-     * <p>优化评分说明</p>
+     * <p>Optimized scoring instructions</p>
      */
     @NameInMap("versionDescription")
     public String versionDescription;

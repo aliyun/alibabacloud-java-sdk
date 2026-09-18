@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateExperimentPlanRequest extends TeaModel {
     /**
-     * <p>The ID of the associated dataset. If this parameter is not specified, the execution phase processes in simple mode.</p>
+     * <p>The ID of the associated dataset. If not specified, the execution phase processes in simple mode.</p>
      * 
      * <strong>example:</strong>
      * <p>rca_benckmark_eval</p>
@@ -42,7 +42,7 @@ public class CreateExperimentPlanRequest extends TeaModel {
     public String experimentType;
 
     /**
-     * <p>The list of experiment configurations. A maximum of five configurations are supported. For offline experiments, this parameter can be omitted or set to an empty array. For online experiments, at least one configuration is required.</p>
+     * <p>The list of experiment configurations. A maximum of 5 entries are supported. For offline experiments, this parameter can be omitted or set to an empty array. For online experiments, at least one entry is required.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,13 +61,13 @@ public class CreateExperimentPlanRequest extends TeaModel {
     public java.util.Map<String, ?> input;
 
     /**
-     * <p>The name of the associated data processing pipeline (optional). After association, when the experiment execution under this plan writes results to the experiment result Logstore, the system filters by the traceId of the experiment trace, calls PreviewPipeline, and writes the pipeline-processed results together.</p>
+     * <p>The name of the associated data processing pipeline (optional). After association, when experiment runs under this plan finish writing results to the experiment result Logstore, the system filters by the traceId of the experiment trace, calls PreviewPipeline, and writes the pipeline-processed results together.</p>
      */
     @NameInMap("pipelineName")
     public String pipelineName;
 
     /**
-     * <p>The experiment plan name. The name must be unique within the same AgentSpace under the same account.</p>
+     * <p>The name of the experiment plan. The name must be unique within the same AgentSpace and account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,7 +77,7 @@ public class CreateExperimentPlanRequest extends TeaModel {
     public String planName;
 
     /**
-     * <p>The custom query SQL clause in partial dataset mode. This parameter can be used when <code>selectedItemIds</code> is empty.</p>
+     * <p>The custom query SQL clause for partial dataset mode. This parameter can be used when <code>selectedItemIds</code> is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>status=\&quot;OK\&quot;</p>
@@ -86,7 +86,7 @@ public class CreateExperimentPlanRequest extends TeaModel {
     public String querySql;
 
     /**
-     * <p>The list of selected data item IDs in partial dataset mode. Use this parameter together with <code>datasetId</code>.</p>
+     * <p>The list of selected data item IDs for partial dataset mode. This parameter must be used together with <code>datasetId</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;019ef4d5-a0f0-7114-832d-5542d771cd8c&quot;, &quot;019f1729-be9b-7769-a006-8e98023ad7ad&quot;]</p>

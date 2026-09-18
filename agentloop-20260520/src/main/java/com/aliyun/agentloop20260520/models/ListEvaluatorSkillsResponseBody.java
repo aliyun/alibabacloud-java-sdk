@@ -35,7 +35,7 @@ public class ListEvaluatorSkillsResponseBody extends TeaModel {
      * <p>The list of skill summaries.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;skillName&quot;:&quot;trace_context_loader&quot;,&quot;displayName&quot;:&quot;Trace 上下文读取&quot;,&quot;enable&quot;:true}]</p>
+     * <p>[{&quot;skillName&quot;:&quot;trace_context_loader&quot;,&quot;displayName&quot;:&quot;Trace Context Loader&quot;,&quot;enable&quot;:true}]</p>
      */
     @NameInMap("skills")
     public java.util.List<ListEvaluatorSkillsResponseBodySkills> skills;
@@ -96,7 +96,7 @@ public class ListEvaluatorSkillsResponseBody extends TeaModel {
 
     public static class ListEvaluatorSkillsResponseBodySkills extends TeaModel {
         /**
-         * <p>The creation time. This field is declared as int64 in CloudSpec, but the backend currently returns the StarOps <code>createTime</code> string field.</p>
+         * <p>The creation time. Declared as int64 in CloudSpec. The backend currently returns the StarOps <code>createTime</code> string field.</p>
          * 
          * <strong>example:</strong>
          * <p>1782816000</p>
@@ -108,7 +108,7 @@ public class ListEvaluatorSkillsResponseBody extends TeaModel {
          * <p>The skill description.</p>
          * 
          * <strong>example:</strong>
-         * <p>读取链路上下文辅助评估</p>
+         * <p>Reads trace context to assist evaluation</p>
          */
         @NameInMap("description")
         public String description;
@@ -117,7 +117,7 @@ public class ListEvaluatorSkillsResponseBody extends TeaModel {
          * <p>The display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Trace 上下文读取</p>
+         * <p>Trace Context Loader</p>
          */
         @NameInMap("displayName")
         public String displayName;
@@ -150,7 +150,7 @@ public class ListEvaluatorSkillsResponseBody extends TeaModel {
         public String skillName;
 
         /**
-         * <p>The update time. This field is declared as int64 in CloudSpec, but the backend currently returns the StarOps <code>updateTime</code> string field.</p>
+         * <p>The update time. Declared as int64 in CloudSpec. The backend currently returns the StarOps <code>updateTime</code> string field.</p>
          * 
          * <strong>example:</strong>
          * <p>1782816600</p>

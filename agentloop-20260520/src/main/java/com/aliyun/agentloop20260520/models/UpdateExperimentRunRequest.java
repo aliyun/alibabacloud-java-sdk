@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateExperimentRunRequest extends TeaModel {
     /**
-     * <p>The experiment completion time. A millisecond-level UNIX timestamp.</p>
+     * <p>The experiment completion time. This value is a millisecond-level UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1784719989371</p>
@@ -23,7 +23,7 @@ public class UpdateExperimentRunRequest extends TeaModel {
     public Integer completedTasks;
 
     /**
-     * <p>The experiment execution time. A millisecond-level UNIX timestamp.</p>
+     * <p>The experiment execution time. This value is a millisecond-level UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1784719439255</p>
@@ -50,7 +50,7 @@ public class UpdateExperimentRunRequest extends TeaModel {
     public String recordName;
 
     /**
-     * <p>The experiment record status. Set to cancelled to cancel execution.</p>
+     * <p>The experiment record status. Set this parameter to cancelled to cancel the execution.</p>
      * 
      * <strong>example:</strong>
      * <p>running</p>

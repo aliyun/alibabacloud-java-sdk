@@ -370,7 +370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls the CreateEvaluationTask operation to create an evaluation task under a specified AgentSpace. The server verifies AgentSpace permissions, initializes evaluation result storage, checks the uniqueness of the task name, and asynchronously creates and executes an EvaluationRun based on <code>taskMode</code> and <code>runStrategies</code>.
+     * <p>Calls the CreateEvaluationTask operation to create an evaluation task under a specified AgentSpace. The server validates AgentSpace permissions, initializes evaluation result storage, checks task name uniqueness, and asynchronously creates and executes an EvaluationRun based on <code>taskMode</code> and <code>runStrategies</code>.
      * This operation is applicable to running built-in or custom evaluators on Trace, Dataset, or SLS Log data. It supports two execution strategies: historical backfill and continuous evaluation.</p>
      * 
      * <b>summary</b> : 
@@ -450,7 +450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls the CreateEvaluationTask operation to create an evaluation task under a specified AgentSpace. The server verifies AgentSpace permissions, initializes evaluation result storage, checks the uniqueness of the task name, and asynchronously creates and executes an EvaluationRun based on <code>taskMode</code> and <code>runStrategies</code>.
+     * <p>Calls the CreateEvaluationTask operation to create an evaluation task under a specified AgentSpace. The server validates AgentSpace permissions, initializes evaluation result storage, checks task name uniqueness, and asynchronously creates and executes an EvaluationRun based on <code>taskMode</code> and <code>runStrategies</code>.
      * This operation is applicable to running built-in or custom evaluators on Trace, Dataset, or SLS Log data. It supports two execution strategies: historical backfill and continuous evaluation.</p>
      * 
      * <b>summary</b> : 
@@ -629,7 +629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</p>
+     * <p>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. This operation defines the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an experiment plan.</p>
@@ -702,7 +702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</p>
+     * <p>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. This operation defines the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an experiment plan.</p>
@@ -718,7 +718,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls CreateExperimentRun to initiate an experiment execution based on an existing experiment plan. For online experiments, you typically only need to pass <code>experimentPlanId</code>. For offline experiments, you need to pass <code>offlineExperiments</code> (1 to 5 items).</p>
+     * <p>Calls CreateExperimentRun to initiate an experiment run based on an existing experiment plan. For online experiments, you typically only need to pass <code>experimentPlanId</code>. For offline experiments, you must pass <code>offlineExperiments</code> (1 to 5).</p>
      * 
      * <b>summary</b> : 
      * <p>Executes an experiment.</p>
@@ -793,7 +793,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls CreateExperimentRun to initiate an experiment execution based on an existing experiment plan. For online experiments, you typically only need to pass <code>experimentPlanId</code>. For offline experiments, you need to pass <code>offlineExperiments</code> (1 to 5 items).</p>
+     * <p>Calls CreateExperimentRun to initiate an experiment run based on an existing experiment plan. For online experiments, you typically only need to pass <code>experimentPlanId</code>. For offline experiments, you must pass <code>offlineExperiments</code> (1 to 5).</p>
      * 
      * <b>summary</b> : 
      * <p>Executes an experiment.</p>
@@ -1101,7 +1101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an evaluation task.</p>
+     * <p>Deletes a model evaluation task.</p>
      * 
      * @param request DeleteEvaluationTaskRequest
      * @param headers map
@@ -1129,7 +1129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an evaluation task.</p>
+     * <p>Deletes a model evaluation task.</p>
      * 
      * @param request DeleteEvaluationTaskRequest
      * @return DeleteEvaluationTaskResponse
@@ -1283,7 +1283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls DeleteExperimentRun to delete a specified experiment run record. Deleting the record does not delete the experiment plan to which it belongs.</p>
+     * <p>Calls DeleteExperimentRun to delete a specified experiment run record. Deleting a record does not delete the experiment plan to which it belongs.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an experiment record.</p>
@@ -1314,7 +1314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls DeleteExperimentRun to delete a specified experiment run record. Deleting the record does not delete the experiment plan to which it belongs.</p>
+     * <p>Calls DeleteExperimentRun to delete a specified experiment run record. Deleting a record does not delete the experiment plan to which it belongs.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an experiment record.</p>
@@ -2462,7 +2462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the skill list of an evaluator.</p>
+     * <p>Queries the list of skills for an evaluator.</p>
      * 
      * @param request ListEvaluatorSkillsRequest
      * @param headers map
@@ -2504,7 +2504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the skill list of an evaluator.</p>
+     * <p>Queries the list of skills for an evaluator.</p>
      * 
      * @param request ListEvaluatorSkillsRequest
      * @return ListEvaluatorSkillsResponse
@@ -2584,7 +2584,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination using <code>offset</code>/<code>limit</code>.</p>
+     * <p>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination by using <code>offset</code>/<code>limit</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of experiment plans.</p>
@@ -2641,7 +2641,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination using <code>offset</code>/<code>limit</code>.</p>
+     * <p>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination by using <code>offset</code>/<code>limit</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of experiment plans.</p>
@@ -2805,7 +2805,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists CI/CD pipelines.</p>
+     * <p>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status with cursor-based pagination.</p>
      * 
      * @param request ListPipelinesRequest
      * @param headers map
@@ -2859,7 +2859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists CI/CD pipelines.</p>
+     * <p>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status with cursor-based pagination.</p>
      * 
      * @param request ListPipelinesRequest
      * @return ListPipelinesResponse
@@ -3750,7 +3750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls UpdateExperimentRun to update the name, status, and task counts of an experiment record. Fields that are not specified remain unchanged. Typical sequence for offline experiments: running → progress writeback → completed.</p>
+     * <p>Calls UpdateExperimentRun to update the name, status, and task counts of an experiment record. Fields that are not specified remain unchanged. Typical sequence for an offline experiment: running → progress writeback → completed.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an experiment run.</p>
@@ -3817,7 +3817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls UpdateExperimentRun to update the name, status, and task counts of an experiment record. Fields that are not specified remain unchanged. Typical sequence for offline experiments: running → progress writeback → completed.</p>
+     * <p>Calls UpdateExperimentRun to update the name, status, and task counts of an experiment record. Fields that are not specified remain unchanged. Typical sequence for an offline experiment: running → progress writeback → completed.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an experiment run.</p>
