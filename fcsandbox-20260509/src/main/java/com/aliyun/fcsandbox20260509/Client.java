@@ -154,6 +154,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建模板缓存</p>
+     * 
+     * @param request CreateTemplateCacheRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateTemplateCacheResponse
+     */
+    public CreateTemplateCacheResponse createTemplateCacheWithOptions(CreateTemplateCacheRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateTemplateCache"),
+            new TeaPair("version", "2026-05-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/2026-05-09/template-caches"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTemplateCacheResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建模板缓存</p>
+     * 
+     * @param request CreateTemplateCacheRequest
+     * @return CreateTemplateCacheResponse
+     */
+    public CreateTemplateCacheResponse createTemplateCache(CreateTemplateCacheRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createTemplateCacheWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a volume.</p>
      * 
      * @param request CreateVolumeRequest
@@ -372,6 +414,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除模板缓存</p>
+     * 
+     * @param request DeleteTemplateCacheRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteTemplateCacheResponse
+     */
+    public DeleteTemplateCacheResponse deleteTemplateCacheWithOptions(String templateID, DeleteTemplateCacheRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.teamID)) {
+            query.put("teamID", request.teamID);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteTemplateCache"),
+            new TeaPair("version", "2026-05-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/2026-05-09/template-caches/" + com.aliyun.openapiutil.Client.getEncodeParam(templateID) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTemplateCacheResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除模板缓存</p>
+     * 
+     * @param request DeleteTemplateCacheRequest
+     * @return DeleteTemplateCacheResponse
+     */
+    public DeleteTemplateCacheResponse deleteTemplateCache(String templateID, DeleteTemplateCacheRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteTemplateCacheWithOptions(templateID, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes a Volume.</p>
      * 
      * @param request DeleteVolumeRequest
@@ -503,6 +592,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeQuotaWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the template cache.</p>
+     * 
+     * @param request DescribeTemplateCacheRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeTemplateCacheResponse
+     */
+    public DescribeTemplateCacheResponse describeTemplateCacheWithOptions(String templateID, DescribeTemplateCacheRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.teamID)) {
+            query.put("teamID", request.teamID);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeTemplateCache"),
+            new TeaPair("version", "2026-05-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/2026-05-09/template-caches/" + com.aliyun.openapiutil.Client.getEncodeParam(templateID) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTemplateCacheResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the template cache.</p>
+     * 
+     * @param request DescribeTemplateCacheRequest
+     * @return DescribeTemplateCacheResponse
+     */
+    public DescribeTemplateCacheResponse describeTemplateCache(String templateID, DescribeTemplateCacheRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeTemplateCacheWithOptions(templateID, request, headers, runtime);
     }
 
     /**
@@ -823,6 +959,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listTeamsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries template caches by using paging.</p>
+     * 
+     * @param request ListTemplateCacheRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTemplateCacheResponse
+     */
+    public ListTemplateCacheResponse listTemplateCacheWithOptions(ListTemplateCacheRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.teamID)) {
+            query.put("teamID", request.teamID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateID)) {
+            query.put("templateID", request.templateID);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTemplateCache"),
+            new TeaPair("version", "2026-05-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/2026-05-09/template-caches"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTemplateCacheResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries template caches by using paging.</p>
+     * 
+     * @param request ListTemplateCacheRequest
+     * @return ListTemplateCacheResponse
+     */
+    public ListTemplateCacheResponse listTemplateCache(ListTemplateCacheRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listTemplateCacheWithOptions(request, headers, runtime);
     }
 
     /**
