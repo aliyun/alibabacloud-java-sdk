@@ -15,7 +15,7 @@ public class ForcePublishSkillVersionRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The Skill name.</p>
+     * <p>The skill name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

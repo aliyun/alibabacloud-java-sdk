@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSkillLabelsRequest extends TeaModel {
     /**
-     * <p>The version label mapping JSON string.</p>
+     * <p>The JSON string of the version label mapping.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

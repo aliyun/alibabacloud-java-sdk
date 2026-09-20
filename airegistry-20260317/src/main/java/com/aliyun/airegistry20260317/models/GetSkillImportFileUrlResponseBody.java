@@ -51,7 +51,7 @@ public class GetSkillImportFileUrlResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The maximum size of the file that can be uploaded, in MB.</p>
+         * <p>The maximum allowed file size for upload, in MB.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -62,7 +62,7 @@ public class GetSkillImportFileUrlResponseBody extends TeaModel {
         /**
          * <p>The file name in the authorized OSS bucket.</p>
          * <blockquote>
-         * <p>You can use one of the following methods to pass in images: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one of these methods.</p>
+         * <p>Among the four image input methods (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select one to use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -15,7 +15,7 @@ public class ListSkillsRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The field by which to sort the results. Set the value to download_count to sort by download count. Default value: gmt_modified.</p>
+     * <p>The field by which to sort the results. Set the value to download_count. Default value: gmt_modified.</p>
      * 
      * <strong>example:</strong>
      * <p>download_count</p>
@@ -24,7 +24,7 @@ public class ListSkillsRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>Filters results by owner.</p>
+     * <p>The owner by which to filter the results.</p>
      * 
      * <strong>example:</strong>
      * <p>user123</p>
@@ -51,10 +51,10 @@ public class ListSkillsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Filters results by visibility. Valid values:</p>
+     * <p>The visibility by which to filter the results. Valid values:</p>
      * <ul>
-     * <li>PUBLIC: public</li>
-     * <li>PRIVATE: private.</li>
+     * <li>PUBLIC</li>
+     * <li>PRIVATE</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class ListSkillsRequest extends TeaModel {
     /**
      * <p>The search mode. Valid values:</p>
      * <ul>
-     * <li>accurate: exact match</li>
+     * <li>accurate: exact match.</li>
      * <li>blur: fuzzy match.</li>
      * </ul>
      * 

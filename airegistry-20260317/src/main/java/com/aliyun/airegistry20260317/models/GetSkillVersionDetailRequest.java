@@ -15,7 +15,7 @@ public class GetSkillVersionDetailRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The skill name.</p>
+     * <p>The Skill name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class DataResourceValue extends TeaModel {
     public String name;
 
     /**
-     * <p>The resource type: template, data, script, etc.</p>
+     * <p>The resource type, such as template, data, or script.</p>
      * 
      * <strong>example:</strong>
      * <p>script</p>
@@ -26,7 +26,7 @@ public class DataResourceValue extends TeaModel {
      * <p>The resource content.</p>
      * 
      * <strong>example:</strong>
-     * <p>This is a sample file.</p>
+     * <p>This is a sample file</p>
      */
     @NameInMap("Content")
     public String content;

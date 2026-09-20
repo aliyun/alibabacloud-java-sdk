@@ -17,7 +17,7 @@ public class CreateSkillDraftRequest extends TeaModel {
      * <p>The commit message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Initial version.</p>
+     * <p>Initial version</p>
      */
     @NameInMap("CommitMsg")
     public String commitMsg;
@@ -52,7 +52,7 @@ public class CreateSkillDraftRequest extends TeaModel {
     public String skillName;
 
     /**
-     * <p>The specified draft version number. If not specified, the version number is automatically incremented.</p>
+     * <p>The specified draft version number. If not specified, the version number auto-increments.</p>
      * 
      * <strong>example:</strong>
      * <p>0.0.2</p>

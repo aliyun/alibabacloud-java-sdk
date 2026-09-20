@@ -4,6 +4,9 @@ package com.aliyun.airegistry20260317.models;
 import com.aliyun.tea.*;
 
 public class UploadSkillViaOssRequest extends TeaModel {
+    /**
+     * <p>The commit message. This parameter is optional.</p>
+     */
     @NameInMap("CommitMsg")
     public String commitMsg;
 
@@ -34,6 +37,8 @@ public class UploadSkillViaOssRequest extends TeaModel {
     public Boolean overwrite;
 
     /**
+     * <p>The target upload version number. This parameter is optional and used as a fallback when the ZIP file contains no version information.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0.0</p>
      */

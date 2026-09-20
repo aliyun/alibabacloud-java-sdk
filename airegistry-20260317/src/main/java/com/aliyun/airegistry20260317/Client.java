@@ -728,7 +728,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a URL for uploading a Skill to OSS. The client uses the returned URL to upload the Skill by performing a PUT request.</p>
+     * <p>Retrieves a pre-signed URL for uploading a Skill to OSS. The client uses the returned URL to perform a PUT request to upload the Skill.</p>
      * 
      * @param request GetSkillImportFileUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -764,7 +764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a URL for uploading a Skill to OSS. The client uses the returned URL to upload the Skill by performing a PUT request.</p>
+     * <p>Retrieves a pre-signed URL for uploading a Skill to OSS. The client uses the returned URL to perform a PUT request to upload the Skill.</p>
      * 
      * @param request GetSkillImportFileUrlRequest
      * @return GetSkillImportFileUrlResponse
@@ -1132,7 +1132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Brings online a Skill or a specific version of a Skill.</p>
+     * <p>Publishes a skill or a specific version of a skill.</p>
      * 
      * @param request OnlineSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1176,7 +1176,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Brings online a Skill or a specific version of a Skill.</p>
+     * <p>Publishes a skill or a specific version of a skill.</p>
      * 
      * @param request OnlineSkillRequest
      * @return OnlineSkillResponse
@@ -1538,7 +1538,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates business labels.</p>
+     * <p>Updates business tags for a skill.</p>
      * 
      * @param request UpdateSkillBizTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1578,7 +1578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates business labels.</p>
+     * <p>Updates business tags for a skill.</p>
      * 
      * @param request UpdateSkillBizTagsRequest
      * @return UpdateSkillBizTagsResponse
@@ -1750,7 +1750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Uploads a skill (ZIP) from OSS. Retrieves file content from OSS and uploads it to Nacos.</p>
+     * <p>Uploads a skill (ZIP) from OSS by pulling the file content from OSS and uploading it to Nacos.</p>
      * 
      * @param request UploadSkillViaOssRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1798,7 +1798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Uploads a skill (ZIP) from OSS. Retrieves file content from OSS and uploads it to Nacos.</p>
+     * <p>Uploads a skill (ZIP) from OSS by pulling the file content from OSS and uploading it to Nacos.</p>
      * 
      * @param request UploadSkillViaOssRequest
      * @return UploadSkillViaOssResponse

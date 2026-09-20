@@ -15,7 +15,7 @@ public class DownloadSkillVersionViaOssRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The name of the skill.</p>
+     * <p>The skill name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DownloadSkillVersionViaOssRequest extends TeaModel {
     public String skillName;
 
     /**
-     * <p>The version number of the skill.</p>
+     * <p>The version number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

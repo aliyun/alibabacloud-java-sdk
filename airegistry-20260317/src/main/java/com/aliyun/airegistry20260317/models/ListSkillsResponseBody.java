@@ -45,7 +45,7 @@ public class ListSkillsResponseBody extends TeaModel {
 
     public static class ListSkillsResponseBodyDataPageItems extends TeaModel {
         /**
-         * <p>The business tags as a JSON array string.</p>
+         * <p>The business label JSON array string.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -72,7 +72,20 @@ public class ListSkillsResponseBody extends TeaModel {
         public Long downloadCount;
 
         /**
-         * <p>The version being edited.</p>
+         * <p>The draft mode. Valid values:</p>
+         * <ul>
+         * <li>VERSIONED: numbered mode. Each draft corresponds to a specific version number.</li>
+         * <li>HEAD: workspace mode. A permanent draft workspace that overwrites in place and publishes version snapshots.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HEAD</p>
+         */
+        @NameInMap("DraftMode")
+        public String draftMode;
+
+        /**
+         * <p>The version that is being edited.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.3</p>
@@ -108,7 +121,7 @@ public class ListSkillsResponseBody extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>OCR品牌</p>
+         * <p>OCR Brand</p>
          */
         @NameInMap("Name")
         public String name;
@@ -141,7 +154,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The version under review.</p>
+         * <p>The version that is under review.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.2</p>
@@ -200,6 +213,14 @@ public class ListSkillsResponseBody extends TeaModel {
         }
         public Long getDownloadCount() {
             return this.downloadCount;
+        }
+
+        public ListSkillsResponseBodyDataPageItems setDraftMode(String draftMode) {
+            this.draftMode = draftMode;
+            return this;
+        }
+        public String getDraftMode() {
+            return this.draftMode;
         }
 
         public ListSkillsResponseBodyDataPageItems setEditingVersion(String editingVersion) {

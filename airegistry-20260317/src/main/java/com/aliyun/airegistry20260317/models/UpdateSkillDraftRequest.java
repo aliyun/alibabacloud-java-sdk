@@ -8,7 +8,7 @@ public class UpdateSkillDraftRequest extends TeaModel {
      * <p>The commit message.</p>
      * 
      * <strong>example:</strong>
-     * <p>更新说明</p>
+     * <p>Update description</p>
      */
     @NameInMap("CommitMsg")
     public String commitMsg;

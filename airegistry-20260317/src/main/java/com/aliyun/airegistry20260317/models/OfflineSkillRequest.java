@@ -18,7 +18,7 @@ public class OfflineSkillRequest extends TeaModel {
      * <p>The operation scope. Valid values:</p>
      * <ul>
      * <li>skill: the entire Skill.</li>
-     * <li>version: a specific version.</li>
+     * <li>version: a specified version.</li>
      * </ul>
      * 
      * <strong>example:</strong>

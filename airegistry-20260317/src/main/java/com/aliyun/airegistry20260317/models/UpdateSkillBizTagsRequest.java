@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSkillBizTagsRequest extends TeaModel {
     /**
-     * <p>The business label JSON array string.</p>
+     * <p>The business tags as a JSON array string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateSkillBizTagsRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The Skill name.</p>
+     * <p>The skill name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

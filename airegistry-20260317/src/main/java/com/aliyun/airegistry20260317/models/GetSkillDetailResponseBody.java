@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSkillDetailResponseBody extends TeaModel {
     /**
-     * <p>The detailed information about the skill.</p>
+     * <p>The detailed information of the skill.</p>
      */
     @NameInMap("Data")
     public GetSkillDetailResponseBodyData data;
@@ -54,7 +54,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
          * <p>The version commit message.</p>
          * 
          * <strong>example:</strong>
-         * <p>版本1说明。</p>
+         * <p>Description of version 1</p>
          */
         @NameInMap("CommitMsg")
         public String commitMsg;
@@ -69,7 +69,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The description.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>dataphin_300067022_pre</p>
@@ -242,7 +242,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
 
     public static class GetSkillDetailResponseBodyData extends TeaModel {
         /**
-         * <p>The business tags as a JSON array string.</p>
+         * <p>The business tag JSON array string.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -267,6 +267,19 @@ public class GetSkillDetailResponseBody extends TeaModel {
          */
         @NameInMap("DownloadCount")
         public Long downloadCount;
+
+        /**
+         * <p>The draft mode. Valid values:</p>
+         * <ul>
+         * <li>VERSIONED: Numbered mode. Each draft corresponds to a specific version number.</li>
+         * <li>HEAD: Workspace mode. A permanent draft workspace overwrites in place and publishes version snapshots.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HEAD</p>
+         */
+        @NameInMap("DraftMode")
+        public String draftMode;
 
         /**
          * <p>The version that is being edited.</p>
@@ -406,6 +419,14 @@ public class GetSkillDetailResponseBody extends TeaModel {
         }
         public Long getDownloadCount() {
             return this.downloadCount;
+        }
+
+        public GetSkillDetailResponseBodyData setDraftMode(String draftMode) {
+            this.draftMode = draftMode;
+            return this;
+        }
+        public String getDraftMode() {
+            return this.draftMode;
         }
 
         public GetSkillDetailResponseBodyData setEditingVersion(String editingVersion) {
