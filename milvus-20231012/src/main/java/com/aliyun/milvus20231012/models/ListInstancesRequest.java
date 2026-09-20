@@ -59,7 +59,7 @@ public class ListInstancesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags used to filter instances.</p>
+     * <p>The tag information.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListInstancesRequestTag> tag;
@@ -127,7 +127,7 @@ public class ListInstancesRequest extends TeaModel {
 
     public static class ListInstancesRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -136,7 +136,7 @@ public class ListInstancesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>

@@ -22,6 +22,9 @@ public class UpdateInstanceResponseBody extends TeaModel {
     @NameInMap("data")
     public Boolean data;
 
+    /**
+     * <p>The order ID.</p>
+     */
     @NameInMap("orderId")
     public String orderId;
 

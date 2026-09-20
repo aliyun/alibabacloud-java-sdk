@@ -59,7 +59,7 @@ public class ListInstancesShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags used to filter instances.</p>
+     * <p>The tag information.</p>
      */
     @NameInMap("Tag")
     public String tagShrink;

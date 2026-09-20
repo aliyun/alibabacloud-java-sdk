@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
-     * <p>Details for an access denial error.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;milvus:xxxx&quot; }</p>
@@ -14,7 +14,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>An array of instance objects.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListInstancesResponseBodyData> data;
@@ -65,7 +65,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of instances found.</p>
+     * <p>The total count.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -146,18 +146,12 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * <p>The component type. Valid values:</p>
          * <ul>
-         * <li><p><code>standalone</code></p>
-         * </li>
-         * <li><p><code>proxy</code></p>
-         * </li>
-         * <li><p><code>mix_coordinator</code></p>
-         * </li>
-         * <li><p><code>query</code></p>
-         * </li>
-         * <li><p><code>index</code></p>
-         * </li>
-         * <li><p><code>data</code></p>
-         * </li>
+         * <li>standalone</li>
+         * <li>proxy</li>
+         * <li>mix_coordinator</li>
+         * <li>query</li>
+         * <li>index</li>
+         * <li>data</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -176,7 +170,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer cuNum;
 
         /**
-         * <p>The disk size in GB.</p>
+         * <p>The disk size.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -251,7 +245,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyDataClusterInfo extends TeaModel {
         /**
-         * <p>The Attu port.</p>
+         * <p>The port of the Attu component.</p>
          * 
          * <strong>example:</strong>
          * <p>3000</p>
@@ -278,7 +272,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String intranetUrl;
 
         /**
-         * <p>A list of resource details for the instance\&quot;s components.</p>
+         * <p>The resource details.</p>
          */
         @NameInMap("MilvusResourceInfoList")
         public java.util.List<ListInstancesResponseBodyDataClusterInfoMilvusResourceInfoList> milvusResourceInfoList;
@@ -293,7 +287,16 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer proxyPort;
 
         /**
-         * <p>The total number of CUs.</p>
+         * <p>The ID of the resource owner account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123456</p>
+         */
+        @NameInMap("ResourceOwnerId")
+        public String resourceOwnerId;
+
+        /**
+         * <p>The number of CUs.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>
@@ -302,7 +305,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer totalCuNum;
 
         /**
-         * <p>The total disk size in GB.</p>
+         * <p>The total disk size.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -355,6 +358,14 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.proxyPort;
         }
 
+        public ListInstancesResponseBodyDataClusterInfo setResourceOwnerId(String resourceOwnerId) {
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+        public String getResourceOwnerId() {
+            return this.resourceOwnerId;
+        }
+
         public ListInstancesResponseBodyDataClusterInfo setTotalCuNum(Integer totalCuNum) {
             this.totalCuNum = totalCuNum;
             return this;
@@ -375,7 +386,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyDataTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -384,7 +395,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>
@@ -426,7 +437,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Boolean autoBackup;
 
         /**
-         * <p>The creation time of the instance.</p>
+         * <p>The start time.</p>
          * 
          * <strong>example:</strong>
          * <p>1718608505000</p>
@@ -450,7 +461,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String clusterName;
 
         /**
-         * <p>The expiration time of the instance.</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>1721232000000</p>
@@ -470,18 +481,12 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li><p><code>creating</code>: The instance is being created.</p>
-         * </li>
-         * <li><p><code>running</code>: The instance is running.</p>
-         * </li>
-         * <li><p><code>updating</code>: The instance is being updated. This includes scaling the instance, changing configurations, or modifying public network access.</p>
-         * </li>
-         * <li><p><code>disable</code>: The instance is unavailable because it has expired and requires renewal.</p>
-         * </li>
-         * <li><p><code>deleting</code>: The instance is being deleted.</p>
-         * </li>
-         * <li><p><code>deleted</code>: The instance has been deleted.</p>
-         * </li>
+         * <li>creating: Being created.</li>
+         * <li>running: Running.</li>
+         * <li>updating: Being upgraded. This includes specification changes, configuration changes, and enabling or disabling public network access.</li>
+         * <li>disable: Unavailable. The cluster has expired and requires renewal to reactivate.</li>
+         * <li>deleting: Being deleted.</li>
+         * <li>deleted: Deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -509,12 +514,10 @@ public class ListInstancesResponseBody extends TeaModel {
         public Boolean openPublicNet;
 
         /**
-         * <p>The instance edition. Valid values:</p>
+         * <p>The edition. Valid values:</p>
          * <ul>
-         * <li><p><code>trial</code>: Trial Edition.</p>
-         * </li>
-         * <li><p><code>standard</code>: Standard Edition.</p>
-         * </li>
+         * <li>trial: Trial Edition.</li>
+         * <li>standard: Standard Edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -524,12 +527,10 @@ public class ListInstancesResponseBody extends TeaModel {
         public String packageType;
 
         /**
-         * <p>The billing method. Valid values:</p>
+         * <p>The billing type. Valid values:</p>
          * <ul>
-         * <li><p><code>0</code>: pay-as-you-go.</p>
-         * </li>
-         * <li><p><code>1</code>: subscription.</p>
-         * </li>
+         * <li>0: Pay-as-you-go.</li>
+         * <li>1: Subscription.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -539,7 +540,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer payType;
 
         /**
-         * <p>The product code.</p>
+         * <p>The commodity code.</p>
          * 
          * <strong>example:</strong>
          * <p>milvus_milvuspre_public_cn</p>
@@ -566,7 +567,16 @@ public class ListInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The duration the instance has been running.</p>
+         * <p>The ID of the resource owner account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123456</p>
+         */
+        @NameInMap("ResourceOwnerId")
+        public String resourceOwnerId;
+
+        /**
+         * <p>The running time.</p>
          * 
          * <strong>example:</strong>
          * <p>536611</p>
@@ -584,20 +594,14 @@ public class ListInstancesResponseBody extends TeaModel {
         public String sgId;
 
         /**
-         * <p>The tags attached to the instance.</p>
+         * <p>The tag information.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListInstancesResponseBodyDataTags> tags;
 
-        /**
-         * <p>The template version.</p>
-         */
         @NameInMap("TemplateVersion")
         public String templateVersion;
 
-        /**
-         * <p>The instance version.</p>
-         */
         @NameInMap("Version")
         public String version;
 
@@ -620,7 +624,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String vswId;
 
         /**
-         * <p>The zone ID.</p>
+         * <p>The zone.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-g</p>
@@ -743,6 +747,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public ListInstancesResponseBodyData setResourceOwnerId(String resourceOwnerId) {
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+        public String getResourceOwnerId() {
+            return this.resourceOwnerId;
         }
 
         public ListInstancesResponseBodyData setRunningTime(Integer runningTime) {

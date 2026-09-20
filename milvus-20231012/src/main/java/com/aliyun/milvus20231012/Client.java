@@ -638,7 +638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of Milvus instances in the current account.</p>
+     * <p>Retrieves the list of Milvus instances under the current account.</p>
      * 
      * @param tmpReq ListInstancesRequest
      * @param headers map
@@ -702,7 +702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of Milvus instances in the current account.</p>
+     * <p>Retrieves the list of Milvus instances under the current account.</p>
      * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
@@ -800,7 +800,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration parameters for Milvus components.</p>
+     * <p>Updates the configuration parameters of various Milvus components.</p>
      * 
      * @param request ModifyInstanceConfigRequest
      * @param headers map
@@ -842,7 +842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration parameters for Milvus components.</p>
+     * <p>Updates the configuration parameters of various Milvus components.</p>
      * 
      * @param request ModifyInstanceConfigRequest
      * @return ModifyInstanceConfigResponse
