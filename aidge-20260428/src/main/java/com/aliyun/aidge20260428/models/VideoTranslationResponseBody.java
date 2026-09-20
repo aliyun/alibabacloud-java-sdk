@@ -14,7 +14,7 @@ public class VideoTranslationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The asynchronous task submit result.</p>
+     * <p>The submit status of the asynchronous task.</p>
      */
     @NameInMap("Data")
     public VideoTranslationResponseBodyData data;

@@ -12,7 +12,7 @@ public class VideoTranslationShrinkRequest extends TeaModel {
     public String capabilitiesShrink;
 
     /**
-     * <p>The source language. This parameter is optional. Default value: auto (automatic detection).</p>
+     * <p>The source language. This parameter is optional. Default value: auto, which indicates automatic detection.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>

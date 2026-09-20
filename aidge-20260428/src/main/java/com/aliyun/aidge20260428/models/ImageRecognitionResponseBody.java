@@ -183,7 +183,7 @@ public class ImageRecognitionResponseBody extends TeaModel {
         public Integer pdNum;
 
         /**
-         * <p>The proportion of the product area in the image.</p>
+         * <p>The proportion of the product in the image.</p>
          * 
          * <strong>example:</strong>
          * <p>74.15%</p>
@@ -198,7 +198,7 @@ public class ImageRecognitionResponseBody extends TeaModel {
         public java.util.List<String> recText;
 
         /**
-         * <p>The proportion of the text area in the image.</p>
+         * <p>The proportion of text in the image.</p>
          * 
          * <strong>example:</strong>
          * <p>7.52%</p>

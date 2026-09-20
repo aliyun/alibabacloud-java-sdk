@@ -20,7 +20,7 @@ public class TextCorrectResponseBody extends TeaModel {
     public TextCorrectResponseBodyData data;
 
     /**
-     * <p>The error message. The value &quot;Success&quot; is returned if the call is successful. A specific error message is returned if an exception occurs, such as &quot;The parameters contain sensitive information. Try other input.&quot;</p>
+     * <p>The error message. The value &quot;Success&quot; is returned if the call is successful. If an error occurs, a specific error message is returned, such as &quot;The parameters contain sensitive information. Try other input.&quot;</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>

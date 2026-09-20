@@ -27,6 +27,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>虚拟试穿（同步）</p>
+     * 
+     * @param request AiTryOnRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AiTryOnResponse
+     */
+    public AiTryOnResponse aiTryOnWithOptions(AiTryOnRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clothImageUrl)) {
+            query.put("ClothImageUrl", request.clothImageUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clothType)) {
+            query.put("ClothType", request.clothType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelImageUrl)) {
+            query.put("ModelImageUrl", request.modelImageUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resolution)) {
+            query.put("Resolution", request.resolution);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AiTryOn"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AiTryOnResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>虚拟试穿（同步）</p>
+     * 
+     * @param request AiTryOnRequest
+     * @return AiTryOnResponse
+     */
+    public AiTryOnResponse aiTryOn(AiTryOnRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.aiTryOnWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
      * <p>A one-click cross-platform product listing optimization service for cross-border e-commerce sellers (minimum cost edition). Accepts a product link from a source platform and outputs all listing assets adapted to the target platform requirements, including titles, attributes, main images, SKU images, detail images, and copywriting. Uses an officially preset minimum-cost workflow that focuses on filtering and lightweight processing without calling expensive image translation capabilities, maximizing cost control while ensuring listing compliance. (Asynchronous)</p>
@@ -1105,7 +1161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>Designed specifically for document translation. Supports translation between more than 100 language pairs (including bridged pairs) to handle multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
+     * <p>Designed specifically for document translation. Supports translation between more than 400 language pairs (including bridged pairs) to handle multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
      * Excels in the following areas:</p>
      * <ul>
      * <li>Content accuracy: translation accuracy, parameter and unit accuracy</li>
@@ -1113,17 +1169,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h2>Common scenarios</h2>
      * <p>Cross-border e-commerce product manuals, contracts, agreements, business proposals, qualification documents, textbooks and courseware, and many other scenarios.</p>
-     * <h2>Features</h2>
+     * <h2>Functions and features</h2>
      * <ul>
      * <li>Supports PDF and Word formats. Supports source documents that contain multiple languages. For a detailed language list, see section 4.5.</li>
      * <li>Supports translation of text within images in documents, as well as complex translation scenarios such as charts and special symbols.</li>
      * <li>Supports high-fidelity layout restoration after translation.</li>
      * <li>A single PDF supports up to 100 pages. A single Word document supports up to 100 pages.</li>
-     * <li>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for scenarios such as brand name protection. Simply pass the corresponding glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 glossary entries. If you need more, contact the platform for assistance.</li>
+     * <li>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand name protection and similar scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Designed specifically for document translation. Supports translation between more than 100 language pairs (including bridged pairs) to handle multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
+     * <p>Designed specifically for document translation. Supports translation between more than 400 language pairs (including bridged pairs) to handle multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
      * Excels in the following areas:</p>
      * <ul>
      * <li>Content accuracy: translation accuracy, parameter and unit accuracy.</li>
@@ -1173,7 +1229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>Designed specifically for document translation. Supports translation between more than 100 language pairs (including bridged pairs) to handle multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
+     * <p>Designed specifically for document translation. Supports translation between more than 400 language pairs (including bridged pairs) to handle multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
      * Excels in the following areas:</p>
      * <ul>
      * <li>Content accuracy: translation accuracy, parameter and unit accuracy</li>
@@ -1181,17 +1237,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h2>Common scenarios</h2>
      * <p>Cross-border e-commerce product manuals, contracts, agreements, business proposals, qualification documents, textbooks and courseware, and many other scenarios.</p>
-     * <h2>Features</h2>
+     * <h2>Functions and features</h2>
      * <ul>
      * <li>Supports PDF and Word formats. Supports source documents that contain multiple languages. For a detailed language list, see section 4.5.</li>
      * <li>Supports translation of text within images in documents, as well as complex translation scenarios such as charts and special symbols.</li>
      * <li>Supports high-fidelity layout restoration after translation.</li>
      * <li>A single PDF supports up to 100 pages. A single Word document supports up to 100 pages.</li>
-     * <li>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for scenarios such as brand name protection. Simply pass the corresponding glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 glossary entries. If you need more, contact the platform for assistance.</li>
+     * <li>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand name protection and similar scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Designed specifically for document translation. Supports translation between more than 100 language pairs (including bridged pairs) to handle multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
+     * <p>Designed specifically for document translation. Supports translation between more than 400 language pairs (including bridged pairs) to handle multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
      * Excels in the following areas:</p>
      * <ul>
      * <li>Content accuracy: translation accuracy, parameter and unit accuracy.</li>
@@ -1621,12 +1677,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>The Intelligent Element Recognition API is designed specifically for identifying specific elements in e-commerce images. It can deeply analyze image details and help users quickly identify elements such as text, logos, watermarks, and text-containing color blocks in both the subject and background of images. This greatly improves the efficiency and accuracy of image screening. (Synchronous)</p>
+     * <p>The Intelligent Element Recognition API is designed specifically for identifying specific elements in e-commerce images. It analyzes image details in depth, helping users quickly identify elements such as text, logos, watermarks, and text-containing color blocks in both the subject and background of images. This greatly improves the efficiency and accuracy of image screening. (Synchronous)</p>
      * <h2>Scenarios</h2>
      * <p><strong>1. Intelligent image screening and optimization:</strong>
      * Merchants and platforms can use the Intelligent Element Recognition API for image screening to automatically identify images that contain specific elements such as watermarks and logos. After screening, you can call the Intelligent Removal API to optimize these images, improve image quality, and shorten the product release cycle.
      * <strong>2. Automated image processing and efficiency improvement:</strong>
-     * By using the Intelligent Element Recognition API, merchants and platforms can automate the image processing workflow to automatically identify and mark image elements that need optimization. This process reduces manual intervention and improves image processing efficiency.</p>
+     * With the Intelligent Element Recognition API, merchants and platforms can automate the image processing workflow by automatically identifying and marking image elements that require optimization. This process reduces manual intervention and improves image processing efficiency.</p>
      * <h2>Features</h2>
      * <p><strong>1. Definitions of image subject, image background, text, logo, watermark, and text-containing color block: For details, see the related examples in the removal documentation (reserved text link)</strong></p>
      * <ul>
@@ -1647,17 +1703,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li><p>Element recognition: Identifies whether elements such as text, logos, watermarks, and text-containing color blocks exist in the image subject and background.</p>
      * </li>
-     * <li><p>Workflow coordination: Used in combination with the Intelligent Removal API. First, use the Intelligent Element Recognition API to identify elements that need to be removed, and then use the Intelligent Removal API to effectively remove them, ensuring the accuracy and efficiency of image processing.</p>
+     * <li><p>Workflow coordination: Used in combination with the Intelligent Removal API. First, the Intelligent Element Recognition API identifies elements that need to be removed, and then the Intelligent Removal API removes them effectively, ensuring the accuracy and efficiency of image processing.</p>
      * </li>
      * </ul>
      * <h2>Technical advantages</h2>
      * <ul>
-     * <li><p>Synchronous batch processing: As a synchronous API, the Intelligent Element Recognition API can process a large number of images while maintaining fast response times, adapting to business requirements of different scales.</p>
+     * <li><p>Synchronous batch processing: As a synchronous API, the Intelligent Element Recognition API can process a large number of images while maintaining fast response times, adapting to business needs of different scales.</p>
      * </li>
-     * <li><p>Flexibility: Users can select the types of elements to identify as needed, including elements in the subject and non-subject areas such as watermarks, logos, and text, to meet personalized recognition requirements.</p>
+     * <li><p>Flexibility: Users can select the types of elements to identify, including elements in both the subject and non-subject areas, such as watermarks, logos, and text, to meet personalized recognition needs.</p>
      * </li>
      * </ul>
-     * <h2>Effect comparison</h2>
+     * <h2>Comparison</h2>
      * <table>
      * <thead>
      * <tr>
@@ -1713,7 +1769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Identifies intelligent elements in images.</p>
+     * <p>Intelligent element recognition.</p>
      * 
      * @param tmpReq ImageRecognitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1784,12 +1840,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>The Intelligent Element Recognition API is designed specifically for identifying specific elements in e-commerce images. It can deeply analyze image details and help users quickly identify elements such as text, logos, watermarks, and text-containing color blocks in both the subject and background of images. This greatly improves the efficiency and accuracy of image screening. (Synchronous)</p>
+     * <p>The Intelligent Element Recognition API is designed specifically for identifying specific elements in e-commerce images. It analyzes image details in depth, helping users quickly identify elements such as text, logos, watermarks, and text-containing color blocks in both the subject and background of images. This greatly improves the efficiency and accuracy of image screening. (Synchronous)</p>
      * <h2>Scenarios</h2>
      * <p><strong>1. Intelligent image screening and optimization:</strong>
      * Merchants and platforms can use the Intelligent Element Recognition API for image screening to automatically identify images that contain specific elements such as watermarks and logos. After screening, you can call the Intelligent Removal API to optimize these images, improve image quality, and shorten the product release cycle.
      * <strong>2. Automated image processing and efficiency improvement:</strong>
-     * By using the Intelligent Element Recognition API, merchants and platforms can automate the image processing workflow to automatically identify and mark image elements that need optimization. This process reduces manual intervention and improves image processing efficiency.</p>
+     * With the Intelligent Element Recognition API, merchants and platforms can automate the image processing workflow by automatically identifying and marking image elements that require optimization. This process reduces manual intervention and improves image processing efficiency.</p>
      * <h2>Features</h2>
      * <p><strong>1. Definitions of image subject, image background, text, logo, watermark, and text-containing color block: For details, see the related examples in the removal documentation (reserved text link)</strong></p>
      * <ul>
@@ -1810,17 +1866,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li><p>Element recognition: Identifies whether elements such as text, logos, watermarks, and text-containing color blocks exist in the image subject and background.</p>
      * </li>
-     * <li><p>Workflow coordination: Used in combination with the Intelligent Removal API. First, use the Intelligent Element Recognition API to identify elements that need to be removed, and then use the Intelligent Removal API to effectively remove them, ensuring the accuracy and efficiency of image processing.</p>
+     * <li><p>Workflow coordination: Used in combination with the Intelligent Removal API. First, the Intelligent Element Recognition API identifies elements that need to be removed, and then the Intelligent Removal API removes them effectively, ensuring the accuracy and efficiency of image processing.</p>
      * </li>
      * </ul>
      * <h2>Technical advantages</h2>
      * <ul>
-     * <li><p>Synchronous batch processing: As a synchronous API, the Intelligent Element Recognition API can process a large number of images while maintaining fast response times, adapting to business requirements of different scales.</p>
+     * <li><p>Synchronous batch processing: As a synchronous API, the Intelligent Element Recognition API can process a large number of images while maintaining fast response times, adapting to business needs of different scales.</p>
      * </li>
-     * <li><p>Flexibility: Users can select the types of elements to identify as needed, including elements in the subject and non-subject areas such as watermarks, logos, and text, to meet personalized recognition requirements.</p>
+     * <li><p>Flexibility: Users can select the types of elements to identify, including elements in both the subject and non-subject areas, such as watermarks, logos, and text, to meet personalized recognition needs.</p>
      * </li>
      * </ul>
-     * <h2>Effect comparison</h2>
+     * <h2>Comparison</h2>
      * <table>
      * <thead>
      * <tr>
@@ -1876,7 +1932,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Identifies intelligent elements in images.</p>
+     * <p>Intelligent element recognition.</p>
      * 
      * @param request ImageRecognitionRequest
      * @return ImageRecognitionResponse
@@ -2625,20 +2681,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>Image Translation Pro is designed for e-commerce images. It integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. It supports more than 100 language directions (including bridged directions).</p>
+     * <p>Image Translation Pro is designed for e-commerce images. It integrates multimodal large model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. It supports more than 400 language directions (including bridged directions).</p>
      * <h2>Scenarios</h2>
      * <p>E-commerce product images, marketing images, and images for various other scenarios.</p>
      * <h2>Features</h2>
      * <ul>
-     * <li><strong>Product subject protection</strong>: Specify whether to translate text on the product subject. This helps protect subject information such as embedded product names from being translated.</li>
-     * <li><strong>Post-translation editing</strong>: Specify whether to return layout information such as text position, font, and color. This information can be used for secondary editing when integrated with an image editor. The editor SDK is not yet available. Follow platform notifications for updates.</li>
-     * <li><strong>Brand name protection</strong>: Specify whether to translate brand names on images. This helps protect brand name information from being translated.</li>
-     * <li><strong>Translation intervention</strong>: Customize translation results, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and remove text (ABC→empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API to meet translation requirements across different scenarios. You can upload up to 100,000 intervention terms. Contact the platform if you need a higher limit.  </li>
-     * <li><strong>Image editor integration</strong>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image Translation Editor Protocol</a>.</li>
+     * <li><strong>Product subject protection</strong>: Specify whether to translate text on the product subject. This helps you protect subject information from being translated, such as embedded information like product names.</li>
+     * <li><strong>Post-translation editing</strong>: Specify whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrated with an image editor. The editor SDK is not yet available. Follow platform notifications for updates.</li>
+     * <li><strong>Brand name protection</strong>: Specify whether to translate brand names on images. This helps you protect brand name information from being translated.</li>
+     * <li><strong>Translation intervention</strong>: Customize translation results, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and remove text (ABC→empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.  </li>
+     * <li>&lt;props=&quot;china&quot;&gt; <strong>Image editor integration</strong>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image Translation Editor Protocol</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Image Translation Pro is designed for e-commerce images. It integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. It supports more than 100 language directions (including bridged directions).</p>
+     * <p>Image Translation Pro is designed for e-commerce images. It integrates multimodal large model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. It supports more than 100 language directions (including bridged directions).</p>
      * 
      * @param request ImageTranslationProRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2699,20 +2755,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>Image Translation Pro is designed for e-commerce images. It integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. It supports more than 100 language directions (including bridged directions).</p>
+     * <p>Image Translation Pro is designed for e-commerce images. It integrates multimodal large model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. It supports more than 400 language directions (including bridged directions).</p>
      * <h2>Scenarios</h2>
      * <p>E-commerce product images, marketing images, and images for various other scenarios.</p>
      * <h2>Features</h2>
      * <ul>
-     * <li><strong>Product subject protection</strong>: Specify whether to translate text on the product subject. This helps protect subject information such as embedded product names from being translated.</li>
-     * <li><strong>Post-translation editing</strong>: Specify whether to return layout information such as text position, font, and color. This information can be used for secondary editing when integrated with an image editor. The editor SDK is not yet available. Follow platform notifications for updates.</li>
-     * <li><strong>Brand name protection</strong>: Specify whether to translate brand names on images. This helps protect brand name information from being translated.</li>
-     * <li><strong>Translation intervention</strong>: Customize translation results, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and remove text (ABC→empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API to meet translation requirements across different scenarios. You can upload up to 100,000 intervention terms. Contact the platform if you need a higher limit.  </li>
-     * <li><strong>Image editor integration</strong>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image Translation Editor Protocol</a>.</li>
+     * <li><strong>Product subject protection</strong>: Specify whether to translate text on the product subject. This helps you protect subject information from being translated, such as embedded information like product names.</li>
+     * <li><strong>Post-translation editing</strong>: Specify whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrated with an image editor. The editor SDK is not yet available. Follow platform notifications for updates.</li>
+     * <li><strong>Brand name protection</strong>: Specify whether to translate brand names on images. This helps you protect brand name information from being translated.</li>
+     * <li><strong>Translation intervention</strong>: Customize translation results, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and remove text (ABC→empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.  </li>
+     * <li>&lt;props=&quot;china&quot;&gt; <strong>Image editor integration</strong>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image Translation Editor Protocol</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Image Translation Pro is designed for e-commerce images. It integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. It supports more than 100 language directions (including bridged directions).</p>
+     * <p>Image Translation Pro is designed for e-commerce images. It integrates multimodal large model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. It supports more than 100 language directions (including bridged directions).</p>
      * 
      * @param request ImageTranslationProRequest
      * @return ImageTranslationProResponse
@@ -3199,21 +3255,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>Marco MT is an e-commerce translation model trained on over 1 billion\+ high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</p>
+     * <p>Marco MT is an e-commerce translation model trained on over 1 billion\+ high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 100 language directions (including bridged translations), especially Chinese-English, Chinese-to-multilingual, and English-to-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</p>
      * <h2>Common scenarios</h2>
      * <ul>
      * <li>Product titles: Marco MT large model translation accurately translates phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</li>
-     * <li>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco large model translation supports long text translation and HTML format, delivering excellent translation quality and format preservation.</li>
-     * <li>Product attributes: Product attribute terms are short and may contain e-commerce-specific terms such as model numbers and parameters.</li>
+     * <li>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco MT large model translation supports long text translation and HTML formatting, delivering excellent translation quality and format preservation.</li>
+     * <li>Product attributes: Product attribute terms are typically short and may contain e-commerce-specific terms such as model numbers and specifications.</li>
      * <li>Customer service conversations: In customer service scenarios, the model optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
      * Marco MT large model translation can also be used for general-purpose translation scenarios, such as office work, meetings, and daily conversations.</li>
      * </ul>
      * <h2>Features</h2>
      * <ul>
-     * <li><strong>Supported language directions</strong> Marco MT large model translation supports translation between more than 100 languages and language detection for 23 languages. For specific language directions, refer to the language mapping table in Section 5.6.</li>
-     * <li><strong>Ultra-low hallucination rate and high-speed inference</strong> Marco MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it provides faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</li>
+     * <li><strong>Supported language directions</strong> Marco MT large model translation supports mutual translation among more than 100 languages and language detection for 23 languages. For specific language directions, refer to the language mapping table in Section 5.6.</li>
+     * <li><strong>Ultra-low hallucination rate and high-speed inference</strong> Marco MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it delivers faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</li>
      * <li><strong>Supported text format types</strong> Currently supports text and html text types.</li>
-     * <li><strong>Translation intervention support</strong> Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand term protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</li>
+     * <li><strong>Translation intervention support</strong> Supports custom translation results, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and skip translation (ABC→empty value). This is commonly used for scenarios such as brand name protection. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</li>
      * </ul>
      * <h2>Translation quality comparison</h2>
      * <table>
@@ -3245,12 +3301,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
      * <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
      * <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-     * <td>Clearer and more precise product subject expression. The translation correctly identifies &quot;key bag&quot; rather than &quot;keychain&quot;, avoiding ambiguity about the product type</td>
+     * <td>Clearer and more accurate product subject description — correctly identifies &quot;key bag&quot; rather than &quot;keychain.&quot; Other translations may cause ambiguity about the product subject</td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</p>
+     * <p>Maas-MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 400 language directions (including bridged translations), especially Chinese-English, Chinese-to-multilingual, and English-to-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</p>
      * 
      * @param tmpReq PrepaidTextTranslateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3313,21 +3369,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>Marco MT is an e-commerce translation model trained on over 1 billion\+ high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</p>
+     * <p>Marco MT is an e-commerce translation model trained on over 1 billion\+ high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 100 language directions (including bridged translations), especially Chinese-English, Chinese-to-multilingual, and English-to-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</p>
      * <h2>Common scenarios</h2>
      * <ul>
      * <li>Product titles: Marco MT large model translation accurately translates phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</li>
-     * <li>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco large model translation supports long text translation and HTML format, delivering excellent translation quality and format preservation.</li>
-     * <li>Product attributes: Product attribute terms are short and may contain e-commerce-specific terms such as model numbers and parameters.</li>
+     * <li>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco MT large model translation supports long text translation and HTML formatting, delivering excellent translation quality and format preservation.</li>
+     * <li>Product attributes: Product attribute terms are typically short and may contain e-commerce-specific terms such as model numbers and specifications.</li>
      * <li>Customer service conversations: In customer service scenarios, the model optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
      * Marco MT large model translation can also be used for general-purpose translation scenarios, such as office work, meetings, and daily conversations.</li>
      * </ul>
      * <h2>Features</h2>
      * <ul>
-     * <li><strong>Supported language directions</strong> Marco MT large model translation supports translation between more than 100 languages and language detection for 23 languages. For specific language directions, refer to the language mapping table in Section 5.6.</li>
-     * <li><strong>Ultra-low hallucination rate and high-speed inference</strong> Marco MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it provides faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</li>
+     * <li><strong>Supported language directions</strong> Marco MT large model translation supports mutual translation among more than 100 languages and language detection for 23 languages. For specific language directions, refer to the language mapping table in Section 5.6.</li>
+     * <li><strong>Ultra-low hallucination rate and high-speed inference</strong> Marco MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it delivers faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</li>
      * <li><strong>Supported text format types</strong> Currently supports text and html text types.</li>
-     * <li><strong>Translation intervention support</strong> Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand term protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</li>
+     * <li><strong>Translation intervention support</strong> Supports custom translation results, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and skip translation (ABC→empty value). This is commonly used for scenarios such as brand name protection. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</li>
      * </ul>
      * <h2>Translation quality comparison</h2>
      * <table>
@@ -3359,12 +3415,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
      * <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
      * <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-     * <td>Clearer and more precise product subject expression. The translation correctly identifies &quot;key bag&quot; rather than &quot;keychain&quot;, avoiding ambiguity about the product type</td>
+     * <td>Clearer and more accurate product subject description — correctly identifies &quot;key bag&quot; rather than &quot;keychain.&quot; Other translations may cause ambiguity about the product subject</td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</p>
+     * <p>Maas-MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 400 language directions (including bridged translations), especially Chinese-English, Chinese-to-multilingual, and English-to-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</p>
      * 
      * @param request PrepaidTextTranslateRequest
      * @return PrepaidTextTranslateResponse
@@ -3617,7 +3673,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>Intelligently extracts structured information such as size charts and package weight/dimensions from images using a multimodal foundation model. (Asynchronous)</p>
+     * <p>Intelligently extracts structured information such as size charts and package weight/dimension data from images by using a multimodal large language model. (Asynchronous)</p>
      * <h2>Common scenarios</h2>
      * <ul>
      * <li><p>Size chart: Extracts size charts from apparel category images into text.</p>
@@ -3626,9 +3682,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </li>
      * </ul>
      * <h2>Functions and features</h2>
-     * <p>The size chart extraction service is based on a multimodal foundation model that automatically identifies size tables or package weight/dimension information in images and converts them into structured text output. You provide an image URL, and the system processes it as an asynchronous task, returning the extracted structured data. You can specify column names to recognize (such as Size, Bust, Length) through ColumnNameList for precise targeted extraction. You can also control the output language through the LanguageModel parameter, with options for Chinese (cn) or English (en). If not specified, the original language is preserved. This service is suitable for scenarios such as converting apparel size tables to text and batch structuring of product package weight/dimension information.
-     * Core capabilities: Input an image URL and optional column name configuration, and output structured data of size charts or package weight/dimensions from the image. The API uses an asynchronous task mode (background: true). After submission, a task ID is returned, and you need to poll for the final result. This is suitable for processing complex images or high-volume call scenarios.</p>
-     * <h2>Effect comparison</h2>
+     * <p>The size chart extraction service is based on a multimodal large language model. It automatically recognizes size chart or package weight/dimension information in images and converts it into structured text output. You provide an image URL, and the system processes the request as an asynchronous task and returns the extracted structured data. You can use the ColumnNameList parameter to specify the column names to recognize (such as Size, Bust, and Length) for precise targeted extraction. You can also use the LanguageModel parameter to control the output language. Valid values: cn (Chinese) and en (English). If you leave this parameter empty, the original language is retained. This service is applicable to scenarios such as converting apparel size charts to text and batch structuring of product weight/dimension information.
+     * Core capability: Provide an image URL and optional column name configurations as input, and receive structured data of size charts or package weight/dimensions from the image as output. The API uses an asynchronous task mode (background: true). After submission, a task ID is returned. Poll for the final result. This mode is suitable for processing complex images or high-volume call scenarios.</p>
+     * <h2>Comparison</h2>
      * <table>
      * <thead>
      * <tr>
@@ -3749,7 +3805,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>} |</p>
      * 
      * <b>summary</b> : 
-     * <p>Intelligently extracts structured information such as size charts and package weight/dimensions from images using a multimodal foundation model. (Asynchronous)</p>
+     * <p>Intelligently extracts structured information such as size charts and package weight/dimension data from images by using a multimodal large language model. (Asynchronous)</p>
      * 
      * @param tmpReq SizeChartExtractRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3796,7 +3852,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>Intelligently extracts structured information such as size charts and package weight/dimensions from images using a multimodal foundation model. (Asynchronous)</p>
+     * <p>Intelligently extracts structured information such as size charts and package weight/dimension data from images by using a multimodal large language model. (Asynchronous)</p>
      * <h2>Common scenarios</h2>
      * <ul>
      * <li><p>Size chart: Extracts size charts from apparel category images into text.</p>
@@ -3805,9 +3861,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </li>
      * </ul>
      * <h2>Functions and features</h2>
-     * <p>The size chart extraction service is based on a multimodal foundation model that automatically identifies size tables or package weight/dimension information in images and converts them into structured text output. You provide an image URL, and the system processes it as an asynchronous task, returning the extracted structured data. You can specify column names to recognize (such as Size, Bust, Length) through ColumnNameList for precise targeted extraction. You can also control the output language through the LanguageModel parameter, with options for Chinese (cn) or English (en). If not specified, the original language is preserved. This service is suitable for scenarios such as converting apparel size tables to text and batch structuring of product package weight/dimension information.
-     * Core capabilities: Input an image URL and optional column name configuration, and output structured data of size charts or package weight/dimensions from the image. The API uses an asynchronous task mode (background: true). After submission, a task ID is returned, and you need to poll for the final result. This is suitable for processing complex images or high-volume call scenarios.</p>
-     * <h2>Effect comparison</h2>
+     * <p>The size chart extraction service is based on a multimodal large language model. It automatically recognizes size chart or package weight/dimension information in images and converts it into structured text output. You provide an image URL, and the system processes the request as an asynchronous task and returns the extracted structured data. You can use the ColumnNameList parameter to specify the column names to recognize (such as Size, Bust, and Length) for precise targeted extraction. You can also use the LanguageModel parameter to control the output language. Valid values: cn (Chinese) and en (English). If you leave this parameter empty, the original language is retained. This service is applicable to scenarios such as converting apparel size charts to text and batch structuring of product weight/dimension information.
+     * Core capability: Provide an image URL and optional column name configurations as input, and receive structured data of size charts or package weight/dimensions from the image as output. The API uses an asynchronous task mode (background: true). After submission, a task ID is returned. Poll for the final result. This mode is suitable for processing complex images or high-volume call scenarios.</p>
+     * <h2>Comparison</h2>
      * <table>
      * <thead>
      * <tr>
@@ -3928,7 +3984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>} |</p>
      * 
      * <b>summary</b> : 
-     * <p>Intelligently extracts structured information such as size charts and package weight/dimensions from images using a multimodal foundation model. (Asynchronous)</p>
+     * <p>Intelligently extracts structured information such as size charts and package weight/dimension data from images by using a multimodal large language model. (Asynchronous)</p>
      * 
      * @param request SizeChartExtractRequest
      * @return SizeChartExtractResponse
@@ -4253,21 +4309,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>Marco MT is an e-commerce translation model trained on over 1 billion\+ high-quality bilingual sentence pairs, with continuous optimization for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 100 language directions (including bridged directions), especially Chinese-English, Chinese-to-multilingual, and English-to-multilingual translation. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</p>
+     * <p>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 100 language directions (including bridged directions), especially Chinese-English, Chinese-multilingual, and English-multilingual translation. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</p>
      * <h2>Common scenarios</h2>
      * <ul>
-     * <li>Product titles: Marco MT large model translation accurately translates phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</li>
-     * <li>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco large model translation supports long text translation and HTML formatting, delivering excellent translation quality and format preservation.</li>
-     * <li>Product attributes: Product attribute terms are typically short and may contain e-commerce-specific terms such as model numbers and parameters.</li>
-     * <li>Customer service conversations: In customer service scenarios, Marco MT optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
-     * Marco MT large model translation can also be used for general-purpose translation scenarios, such as office work, meetings, and daily conversations.</li>
+     * <li><strong>Product titles</strong>: Marco MT can accurately translate phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</li>
+     * <li><strong>Product descriptions</strong>: Product descriptions are typically long with diverse and complex formatting. Marco MT supports long text translation and HTML format, delivering excellent translation quality and format preservation.</li>
+     * <li><strong>Product attributes</strong>: Product attribute terms are typically short and may contain e-commerce-specific terms such as model numbers and specifications.</li>
+     * <li><strong>Customer service conversations</strong>: In customer service scenarios, Marco MT can handle issues such as missing context and typos, and supports polite expressions for certain language directions.
+     * Marco MT can also be used for general translation scenarios such as office work, meetings, and daily conversations.</li>
      * </ul>
-     * <h2>Features</h2>
+     * <h2>Functions and features</h2>
      * <ul>
-     * <li><strong>Supported language directions</strong><br>Marco MT large model translation supports mutual translation among more than 100 languages and language detection for 24 languages. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping table</a>.</li>
-     * <li><strong>Ultra-low hallucination rate and high-speed inference</strong><br>Marco MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it provides faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</li>
-     * <li><strong>Supported text format types</strong><br>Currently, text and html text types are supported.</li>
-     * <li><strong>Translation intervention support</strong><br>Custom translation results are supported, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and skip translation (ABC→empty value). This is commonly used for brand term protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</li>
+     * <li><strong>Supported language directions</strong><br>Marco MT supports mutual translation among more than 100 languages and language detection for 24 languages. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping table</a>.</li>
+     * <li><strong>Ultra-low hallucination rate and high-speed inference</strong><br>Marco MT is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it delivers faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</li>
+     * <li><strong>Supported text format types</strong><br>Currently supports text and html text types.</li>
+     * <li><strong>Translation intervention</strong><br>Supports custom translation results, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and skip translation (ABC→empty value). This is commonly used for scenarios such as brand name protection. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</li>
      * </ul>
      * <h2>Translation quality comparison</h2>
      * <table>
@@ -4299,12 +4355,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
      * <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
      * <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-     * <td>Clearer and more accurate product subject expression, correctly identifying &quot;key bag&quot; rather than &quot;keychain&quot;, avoiding ambiguity about the product subject in other translations</td>
+     * <td>Clearer and more accurate product subject expression — correctly identifies &quot;key bag&quot; rather than &quot;keychain,&quot; avoiding ambiguity about the product</td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, with continuous optimization for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 100 language directions (including bridged directions), especially Chinese-English, Chinese-to-multilingual, and English-to-multilingual translation. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</p>
+     * <p>Maas-MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 100 language directions (including bridged directions), especially Chinese-English, Chinese-multilingual, and English-multilingual translation. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</p>
      * 
      * @param tmpReq TextTranslateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4367,21 +4423,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>Marco MT is an e-commerce translation model trained on over 1 billion\+ high-quality bilingual sentence pairs, with continuous optimization for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 100 language directions (including bridged directions), especially Chinese-English, Chinese-to-multilingual, and English-to-multilingual translation. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</p>
+     * <p>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 100 language directions (including bridged directions), especially Chinese-English, Chinese-multilingual, and English-multilingual translation. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</p>
      * <h2>Common scenarios</h2>
      * <ul>
-     * <li>Product titles: Marco MT large model translation accurately translates phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</li>
-     * <li>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco large model translation supports long text translation and HTML formatting, delivering excellent translation quality and format preservation.</li>
-     * <li>Product attributes: Product attribute terms are typically short and may contain e-commerce-specific terms such as model numbers and parameters.</li>
-     * <li>Customer service conversations: In customer service scenarios, Marco MT optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
-     * Marco MT large model translation can also be used for general-purpose translation scenarios, such as office work, meetings, and daily conversations.</li>
+     * <li><strong>Product titles</strong>: Marco MT can accurately translate phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</li>
+     * <li><strong>Product descriptions</strong>: Product descriptions are typically long with diverse and complex formatting. Marco MT supports long text translation and HTML format, delivering excellent translation quality and format preservation.</li>
+     * <li><strong>Product attributes</strong>: Product attribute terms are typically short and may contain e-commerce-specific terms such as model numbers and specifications.</li>
+     * <li><strong>Customer service conversations</strong>: In customer service scenarios, Marco MT can handle issues such as missing context and typos, and supports polite expressions for certain language directions.
+     * Marco MT can also be used for general translation scenarios such as office work, meetings, and daily conversations.</li>
      * </ul>
-     * <h2>Features</h2>
+     * <h2>Functions and features</h2>
      * <ul>
-     * <li><strong>Supported language directions</strong><br>Marco MT large model translation supports mutual translation among more than 100 languages and language detection for 24 languages. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping table</a>.</li>
-     * <li><strong>Ultra-low hallucination rate and high-speed inference</strong><br>Marco MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it provides faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</li>
-     * <li><strong>Supported text format types</strong><br>Currently, text and html text types are supported.</li>
-     * <li><strong>Translation intervention support</strong><br>Custom translation results are supported, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and skip translation (ABC→empty value). This is commonly used for brand term protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</li>
+     * <li><strong>Supported language directions</strong><br>Marco MT supports mutual translation among more than 100 languages and language detection for 24 languages. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping table</a>.</li>
+     * <li><strong>Ultra-low hallucination rate and high-speed inference</strong><br>Marco MT is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it delivers faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</li>
+     * <li><strong>Supported text format types</strong><br>Currently supports text and html text types.</li>
+     * <li><strong>Translation intervention</strong><br>Supports custom translation results, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and skip translation (ABC→empty value). This is commonly used for scenarios such as brand name protection. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</li>
      * </ul>
      * <h2>Translation quality comparison</h2>
      * <table>
@@ -4413,12 +4469,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
      * <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
      * <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-     * <td>Clearer and more accurate product subject expression, correctly identifying &quot;key bag&quot; rather than &quot;keychain&quot;, avoiding ambiguity about the product subject in other translations</td>
+     * <td>Clearer and more accurate product subject expression — correctly identifies &quot;key bag&quot; rather than &quot;keychain,&quot; avoiding ambiguity about the product</td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, with continuous optimization for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 100 language directions (including bridged directions), especially Chinese-English, Chinese-to-multilingual, and English-to-multilingual translation. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</p>
+     * <p>Maas-MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 100 language directions (including bridged directions), especially Chinese-English, Chinese-multilingual, and English-multilingual translation. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</p>
      * 
      * @param request TextTranslateRequest
      * @return TextTranslateResponse
@@ -4551,14 +4607,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </li>
      * <li><p><strong>Global brand advertising</strong>: Automatically generates video versions in the language of the target region to reduce manual production costs.</p>
      * </li>
-     * <li><p><strong>Training and product documentation</strong>: Translates on-screen text in training courses or product demonstration videos into multiple languages for use by global teams.</p>
+     * <li><p><strong>Training and product instructions</strong>: Translates on-screen text in training courses or product demonstration videos into multiple languages for use by global teams.</p>
      * </li>
      * </ul>
      * <h2>3. Features</h2>
      * <table>
      * <thead>
      * <tr>
-     * <th>Capability</th>
+     * <th>Feature</th>
      * <th>Identifier</th>
      * <th>Description</th>
      * </tr>
@@ -4636,14 +4692,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </li>
      * <li><p><strong>Global brand advertising</strong>: Automatically generates video versions in the language of the target region to reduce manual production costs.</p>
      * </li>
-     * <li><p><strong>Training and product documentation</strong>: Translates on-screen text in training courses or product demonstration videos into multiple languages for use by global teams.</p>
+     * <li><p><strong>Training and product instructions</strong>: Translates on-screen text in training courses or product demonstration videos into multiple languages for use by global teams.</p>
      * </li>
      * </ul>
      * <h2>3. Features</h2>
      * <table>
      * <thead>
      * <tr>
-     * <th>Capability</th>
+     * <th>Feature</th>
      * <th>Identifier</th>
      * <th>Description</th>
      * </tr>
@@ -4675,30 +4731,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Scenarios</h2>
      * <ul>
      * <li><strong>Virtual try-on for clothing products:</strong>
-     * Supports multiple clothing categories such as tops, bottoms, jumpsuits, and skirts. After uploading a model image and a product image, the system generates a natural and realistic try-on effect that intuitively showcases how the clothing looks when worn.</li>
+     * Supports multiple clothing categories such as tops, bottoms, jumpsuits, and dresses. After uploading a model image and a product image, the system generates a natural and realistic try-on effect that visually demonstrates how the garment looks when worn.</li>
      * <li><strong>Virtual try-on for shoes and hats:</strong>
-     * Supports virtual try-on for shoes, hats, and similar products. The system intelligently matches the product position and proportion based on the model\&quot;s pose and body parts, producing a coordinated and realistic wearing effect.</li>
+     * Supports virtual try-on for shoes, hats, and similar products. The system intelligently matches the product position and proportion based on the model\&quot;s pose and body parts to produce a coordinated and realistic wearing effect.</li>
      * <li><strong>E-commerce product display and marketing:</strong>
-     * Helps merchants quickly generate model try-on images for different products, reducing the costs of traditional photography, outfit changes, and post-production, and improving the production efficiency of product images.  </li>
+     * Helps merchants quickly generate model try-on images for different products, reducing the costs of traditional photography, outfit changes, and post-production while improving the production efficiency of product images.  </li>
      * <li><strong>Online shopping experience optimization:</strong>
-     * Consumers can preview how products look when worn through virtual try-on, gaining a more intuitive understanding of the style, coordination, and overall effect of products, which assists purchase decisions and enhances the shopping experience.</li>
+     * Consumers can preview how products look when worn through virtual try-on, gaining a more intuitive understanding of the style, coordination, and overall effect of products to support purchasing decisions and enhance the shopping experience.</li>
      * </ul>
      * <h2>Features</h2>
      * <ul>
-     * <li><strong>First, the user needs to provide a model image and a product image. The system uses the model image as the try-on subject and applies the garment from the product image onto the model:</strong><ul>
-     * <li>a. Model image: the image of the person for the virtual try-on.</li>
+     * <li><strong>First, provide a model image and a product image. The system uses the model image as the try-on subject and applies the garment from the product image onto the model:</strong><ul>
+     * <li>a. Model image: the image of the person for virtual try-on.</li>
      * <li>b. Product image: the image of the clothing, shoes, or hat to be applied onto the model.</li>
      * </ul>
      * </li>
-     * <li><strong>Second, the user can select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, skirts, shoes, and hats:</strong><ul>
-     * <li>a. Specified product type: the user can directly specify the product type, and the system processes accordingly.</li>
-     * <li>b. Automatic type recognition: if the user does not specify a product type, the system automatically identifies the product category from the product image and performs the virtual try-on based on the recognition result.</li>
+     * <li><strong>Second, select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</strong><ul>
+     * <li>a. Specify product type: directly specify the product type, and the system processes accordingly.</li>
+     * <li>b. Automatic type recognition: if no product type is specified, the system automatically identifies the product category from the product image and performs the virtual try-on based on the recognition result.</li>
      * </ul>
      * </li>
      * <li><strong>Finally, the system combines the model image, product image, and product type to generate a virtual try-on image that shows how the product looks on the model:</strong><ul>
-     * <li>a. Preserves model details: the generation process does not alter the model\&quot;s appearance, hairstyle, pose, body shape, or other details from the original model image.</li>
-     * <li>b. Maintains scene consistency: the background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</li>
-     * <li>c. Generates try-on effect: the product is naturally applied onto the model, fitting the model\&quot;s pose and body structure to produce a coordinated and realistic virtual try-on image.</li>
+     * <li>a. Preserve model details: the generation process does not alter the model\&quot;s appearance, hairstyle, pose, body shape, or other details from the original model image.</li>
+     * <li>b. Maintain scene consistency: the background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</li>
+     * <li>c. Generate try-on effect: the product is naturally applied onto the model, conforming to the model\&quot;s pose and body structure, to produce a coordinated and realistic virtual try-on image.</li>
      * </ul>
      * </li>
      * </ul>
@@ -4737,7 +4793,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/635096eb-f2b2-4fd8-91d8-4c7e2e7d7ad1.png" alt="20c8b46a-213e-985c-aab2-d56f8752f3a4_qwen_image3_serving_output_0.png"></td>
      * </tr>
      * <tr>
-     * <td>Skirts</td>
+     * <td>Dresses</td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/eddffa7c-a494-4f5b-9d66-da758fb0265f.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/3d4a6de0-95d2-40cf-9105-48b5e899e0d3.png" alt="image.png"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/a3cbb609-db71-47d6-8ac6-884f18c6596f.png" alt="45b630e6-4e9d-9bf0-bb4e-224b30a91f77_qwen_image3_serving_output_0.png"></td>
@@ -4751,7 +4807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Generates virtual try-on images based on AI algorithms. This API service replaces the clothing on a model with the specified garment based on the input garment image and model image, while preserving the model\&quot;s appearance details, pose, facial features, and scene details to achieve a realistic and well-fitted try-on result. You only need to provide the URL of the original product image to obtain a processed clean image.</p>
+     * <p>Generates virtual try-on images based on AI algorithms. This API service replaces the clothing on a model with the specified garment based on the input garment image and model image, while preserving the model\&quot;s appearance details, pose, facial features, and scene details to produce realistic and well-fitted try-on results. You only need to provide the URL of the original product image to obtain a processed clean image.</p>
      * 
      * @param request VirtualTryOnRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4798,30 +4854,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Scenarios</h2>
      * <ul>
      * <li><strong>Virtual try-on for clothing products:</strong>
-     * Supports multiple clothing categories such as tops, bottoms, jumpsuits, and skirts. After uploading a model image and a product image, the system generates a natural and realistic try-on effect that intuitively showcases how the clothing looks when worn.</li>
+     * Supports multiple clothing categories such as tops, bottoms, jumpsuits, and dresses. After uploading a model image and a product image, the system generates a natural and realistic try-on effect that visually demonstrates how the garment looks when worn.</li>
      * <li><strong>Virtual try-on for shoes and hats:</strong>
-     * Supports virtual try-on for shoes, hats, and similar products. The system intelligently matches the product position and proportion based on the model\&quot;s pose and body parts, producing a coordinated and realistic wearing effect.</li>
+     * Supports virtual try-on for shoes, hats, and similar products. The system intelligently matches the product position and proportion based on the model\&quot;s pose and body parts to produce a coordinated and realistic wearing effect.</li>
      * <li><strong>E-commerce product display and marketing:</strong>
-     * Helps merchants quickly generate model try-on images for different products, reducing the costs of traditional photography, outfit changes, and post-production, and improving the production efficiency of product images.  </li>
+     * Helps merchants quickly generate model try-on images for different products, reducing the costs of traditional photography, outfit changes, and post-production while improving the production efficiency of product images.  </li>
      * <li><strong>Online shopping experience optimization:</strong>
-     * Consumers can preview how products look when worn through virtual try-on, gaining a more intuitive understanding of the style, coordination, and overall effect of products, which assists purchase decisions and enhances the shopping experience.</li>
+     * Consumers can preview how products look when worn through virtual try-on, gaining a more intuitive understanding of the style, coordination, and overall effect of products to support purchasing decisions and enhance the shopping experience.</li>
      * </ul>
      * <h2>Features</h2>
      * <ul>
-     * <li><strong>First, the user needs to provide a model image and a product image. The system uses the model image as the try-on subject and applies the garment from the product image onto the model:</strong><ul>
-     * <li>a. Model image: the image of the person for the virtual try-on.</li>
+     * <li><strong>First, provide a model image and a product image. The system uses the model image as the try-on subject and applies the garment from the product image onto the model:</strong><ul>
+     * <li>a. Model image: the image of the person for virtual try-on.</li>
      * <li>b. Product image: the image of the clothing, shoes, or hat to be applied onto the model.</li>
      * </ul>
      * </li>
-     * <li><strong>Second, the user can select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, skirts, shoes, and hats:</strong><ul>
-     * <li>a. Specified product type: the user can directly specify the product type, and the system processes accordingly.</li>
-     * <li>b. Automatic type recognition: if the user does not specify a product type, the system automatically identifies the product category from the product image and performs the virtual try-on based on the recognition result.</li>
+     * <li><strong>Second, select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</strong><ul>
+     * <li>a. Specify product type: directly specify the product type, and the system processes accordingly.</li>
+     * <li>b. Automatic type recognition: if no product type is specified, the system automatically identifies the product category from the product image and performs the virtual try-on based on the recognition result.</li>
      * </ul>
      * </li>
      * <li><strong>Finally, the system combines the model image, product image, and product type to generate a virtual try-on image that shows how the product looks on the model:</strong><ul>
-     * <li>a. Preserves model details: the generation process does not alter the model\&quot;s appearance, hairstyle, pose, body shape, or other details from the original model image.</li>
-     * <li>b. Maintains scene consistency: the background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</li>
-     * <li>c. Generates try-on effect: the product is naturally applied onto the model, fitting the model\&quot;s pose and body structure to produce a coordinated and realistic virtual try-on image.</li>
+     * <li>a. Preserve model details: the generation process does not alter the model\&quot;s appearance, hairstyle, pose, body shape, or other details from the original model image.</li>
+     * <li>b. Maintain scene consistency: the background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</li>
+     * <li>c. Generate try-on effect: the product is naturally applied onto the model, conforming to the model\&quot;s pose and body structure, to produce a coordinated and realistic virtual try-on image.</li>
      * </ul>
      * </li>
      * </ul>
@@ -4860,7 +4916,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/635096eb-f2b2-4fd8-91d8-4c7e2e7d7ad1.png" alt="20c8b46a-213e-985c-aab2-d56f8752f3a4_qwen_image3_serving_output_0.png"></td>
      * </tr>
      * <tr>
-     * <td>Skirts</td>
+     * <td>Dresses</td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/eddffa7c-a494-4f5b-9d66-da758fb0265f.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/3d4a6de0-95d2-40cf-9105-48b5e899e0d3.png" alt="image.png"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/a3cbb609-db71-47d6-8ac6-884f18c6596f.png" alt="45b630e6-4e9d-9bf0-bb4e-224b30a91f77_qwen_image3_serving_output_0.png"></td>
@@ -4874,7 +4930,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Generates virtual try-on images based on AI algorithms. This API service replaces the clothing on a model with the specified garment based on the input garment image and model image, while preserving the model\&quot;s appearance details, pose, facial features, and scene details to achieve a realistic and well-fitted try-on result. You only need to provide the URL of the original product image to obtain a processed clean image.</p>
+     * <p>Generates virtual try-on images based on AI algorithms. This API service replaces the clothing on a model with the specified garment based on the input garment image and model image, while preserving the model\&quot;s appearance details, pose, facial features, and scene details to produce realistic and well-fitted try-on results. You only need to provide the URL of the original product image to obtain a processed clean image.</p>
      * 
      * @param request VirtualTryOnRequest
      * @return VirtualTryOnResponse
