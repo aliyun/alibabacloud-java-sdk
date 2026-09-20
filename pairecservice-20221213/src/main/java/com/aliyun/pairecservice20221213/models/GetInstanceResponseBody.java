@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceResponseBody extends TeaModel {
     /**
-     * <p>The billing method of the instance. The value is fixed as Subscription.</p>
+     * <p>The billing type of the instance. Currently, only Subscription (prepayment) is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Subscription</p>
@@ -23,7 +23,7 @@ public class GetInstanceResponseBody extends TeaModel {
     public String commodityCode;
 
     /**
-     * <p>The instance configurations.</p>
+     * <p>The instance configuration.</p>
      */
     @NameInMap("Config")
     public GetInstanceResponseBodyConfig config;
@@ -36,6 +36,9 @@ public class GetInstanceResponseBody extends TeaModel {
      */
     @NameInMap("ExpiredTime")
     public String expiredTime;
+
+    @NameInMap("FeatureStoreInfo")
+    public GetInstanceResponseBodyFeatureStoreInfo featureStoreInfo;
 
     /**
      * <p>The time when the instance was created.</p>
@@ -65,13 +68,22 @@ public class GetInstanceResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The operating tool configurations.</p>
+     * <p>The configuration of the operations tool.</p>
      */
     @NameInMap("OperatingTool")
     public GetInstanceResponseBodyOperatingTool operatingTool;
 
+    @NameInMap("RecommendCustomization")
+    public GetInstanceResponseBodyRecommendCustomization recommendCustomization;
+
     /**
-     * <p>The region ID. Valid values:<br>● cn-shenzhen: Shenzhen<br>● cn-hangzhou: Hangzhou<br>● cn-beijing: Beijing<br>● cn-shanghai: Shanghai<br><br><br><br></p>
+     * <p>The region ID. Valid values:</p>
+     * <ul>
+     * <li>cn-shenzhen: China (Shenzhen).</li>
+     * <li>cn-hangzhou: China (Hangzhou).</li>
+     * <li>cn-beijing: China (Beijing).</li>
+     * <li>cn-shanghai: China (Shanghai).</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
@@ -89,7 +101,12 @@ public class GetInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The instance status. Valid values:<br>● Initializing<br>● Stopped<br>● Running<br><br><br></p>
+     * <p>The instance status. Valid values:</p>
+     * <ul>
+     * <li>Initializing: The instance is being initialized.</li>
+     * <li>Stopped: The instance is stopped.</li>
+     * <li>Running: The instance is running.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Initializing</p>
@@ -98,7 +115,13 @@ public class GetInstanceResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The instance type. Valid values:<br>● basic: Basic<br>● highlevel: High-level<br>● advanced: Advanced<br>● standard: Standard<br><br><br><br></p>
+     * <p>The instance type. Valid values:</p>
+     * <ul>
+     * <li>basic: Basic Edition.</li>
+     * <li>highleve: Upgraded Edition.</li>
+     * <li>advance: Advanced Edition.</li>
+     * <li>standard: Standard Edition.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>basic</p>
@@ -143,6 +166,14 @@ public class GetInstanceResponseBody extends TeaModel {
         return this.expiredTime;
     }
 
+    public GetInstanceResponseBody setFeatureStoreInfo(GetInstanceResponseBodyFeatureStoreInfo featureStoreInfo) {
+        this.featureStoreInfo = featureStoreInfo;
+        return this;
+    }
+    public GetInstanceResponseBodyFeatureStoreInfo getFeatureStoreInfo() {
+        return this.featureStoreInfo;
+    }
+
     public GetInstanceResponseBody setGmtCreateTime(String gmtCreateTime) {
         this.gmtCreateTime = gmtCreateTime;
         return this;
@@ -173,6 +204,14 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public GetInstanceResponseBodyOperatingTool getOperatingTool() {
         return this.operatingTool;
+    }
+
+    public GetInstanceResponseBody setRecommendCustomization(GetInstanceResponseBodyRecommendCustomization recommendCustomization) {
+        this.recommendCustomization = recommendCustomization;
+        return this;
+    }
+    public GetInstanceResponseBodyRecommendCustomization getRecommendCustomization() {
+        return this.recommendCustomization;
     }
 
     public GetInstanceResponseBody setRegionId(String regionId) {
@@ -389,7 +428,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public java.util.List<GetInstanceResponseBodyConfigEngines> engines;
 
         /**
-         * <p>The list of monitoring components.</p>
+         * <p>The list of supporting features.</p>
          */
         @NameInMap("Monitors")
         public java.util.List<GetInstanceResponseBodyConfigMonitors> monitors;
@@ -425,14 +464,42 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
 
+    public static class GetInstanceResponseBodyFeatureStoreInfo extends TeaModel {
+        @NameInMap("FeatureDBStatus")
+        public String featureDBStatus;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        public static GetInstanceResponseBodyFeatureStoreInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyFeatureStoreInfo self = new GetInstanceResponseBodyFeatureStoreInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyFeatureStoreInfo setFeatureDBStatus(String featureDBStatus) {
+            this.featureDBStatus = featureDBStatus;
+            return this;
+        }
+        public String getFeatureDBStatus() {
+            return this.featureDBStatus;
+        }
+
+        public GetInstanceResponseBodyFeatureStoreInfo setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+    }
+
     public static class GetInstanceResponseBodyOperatingTool extends TeaModel {
         /**
-         * <p>Indicates whether the operating tool is enabled for the instance. Valid values:</p>
+         * <p>Indicates whether the operations tool is enabled for the instance. Valid values:</p>
          * <ul>
-         * <li><p>True: Enabled</p>
-         * </li>
-         * <li><p>False: Disabled</p>
-         * </li>
+         * <li>True: Enabled.</li>
+         * <li>False: Not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -447,6 +514,25 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         public GetInstanceResponseBodyOperatingTool setIsEnable(Boolean isEnable) {
+            this.isEnable = isEnable;
+            return this;
+        }
+        public Boolean getIsEnable() {
+            return this.isEnable;
+        }
+
+    }
+
+    public static class GetInstanceResponseBodyRecommendCustomization extends TeaModel {
+        @NameInMap("IsEnable")
+        public Boolean isEnable;
+
+        public static GetInstanceResponseBodyRecommendCustomization build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyRecommendCustomization self = new GetInstanceResponseBodyRecommendCustomization();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyRecommendCustomization setIsEnable(Boolean isEnable) {
             this.isEnable = isEnable;
             return this;
         }

@@ -9,18 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-shenzhen", "pairecservice.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "pairecservice.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "pairecservice.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "pairecservice.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-beijing", "pairecservice.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "pairecservice.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "pairecservice.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "pairecservice.eu-central-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "pairecservice.us-east-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "pairecservice.us-west-1.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("pairecservice", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -5257,7 +5245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the details of a specified PAI-REC instance.</p>
+     * <p>Retrieves the details of a specified PAIRec instance.</p>
      * 
      * @param request GetInstanceRequest
      * @param headers map
@@ -5285,7 +5273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the details of a specified PAI-REC instance.</p>
+     * <p>Retrieves the details of a specified PAIRec instance.</p>
      * 
      * @param request GetInstanceRequest
      * @return GetInstanceResponse
