@@ -1717,7 +1717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the basic information of a MaxCompute project.</p>
+     * <p>Queries the basic information about a MaxCompute project.</p>
      * 
      * @param request GetProjectRequest
      * @param headers map
@@ -1759,7 +1759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the basic information of a MaxCompute project.</p>
+     * <p>Queries the basic information about a MaxCompute project.</p>
      * 
      * @param request GetProjectRequest
      * @return GetProjectResponse

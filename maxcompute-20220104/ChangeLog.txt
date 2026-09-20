@@ -1,3 +1,7 @@
+2026-09-20 Version: 6.1.2
+- Update API GetProject: add response parameters Body.data.securityProperties.enableNamespacePrivilege.
+
+
 2026-09-18 Version: 6.1.1
 - Update API GetProject: add response parameters Body.data.properties.enableDataMasking.
 - Update API ListJobInfos: add response parameters Body.data.jobInfoList.$.roleSessionName.
