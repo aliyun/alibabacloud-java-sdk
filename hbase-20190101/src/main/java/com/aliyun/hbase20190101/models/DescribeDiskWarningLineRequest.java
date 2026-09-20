@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDiskWarningLineRequest extends TeaModel {
     /**
+     * <p>The ID of the cluster to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

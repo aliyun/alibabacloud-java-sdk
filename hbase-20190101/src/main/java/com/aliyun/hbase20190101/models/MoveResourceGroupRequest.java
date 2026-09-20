@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveResourceGroupRequest extends TeaModel {
     /**
+     * <p>The ID of the target instance. You can call the <a href="https://help.aliyun.com/document_detail/144595.html">DescribeInstances</a> operation to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class MoveResourceGroupRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The ID of the target resource group. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the list of resource groups.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

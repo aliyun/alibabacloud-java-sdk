@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateHBaseSlbServerResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>61FC5B21-87B0-41BC-9686-9DA395EB40B6</p>
      */

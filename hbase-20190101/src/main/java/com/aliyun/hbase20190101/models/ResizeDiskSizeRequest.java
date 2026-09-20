@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResizeDiskSizeRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ResizeDiskSizeRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The disk size of a single node. Unit: GB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

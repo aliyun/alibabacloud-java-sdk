@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConvertInstanceRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,12 @@ public class ConvertInstanceRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The subscription duration. Valid values:</p>
+     * <ul>
+     * <li>If PricingCycle is set to year, the value ranges from 1 to 3.</li>
+     * <li>If PricingCycle is set to month, the value ranges from 1 to 9.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -21,6 +28,12 @@ public class ConvertInstanceRequest extends TeaModel {
     public Integer duration;
 
     /**
+     * <p>The billing method of the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>Prepaid</strong>: subscription.</li>
+     * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Prepaid</p>
      */
@@ -28,6 +41,12 @@ public class ConvertInstanceRequest extends TeaModel {
     public String payType;
 
     /**
+     * <p>The unit of the subscription period. Valid values:</p>
+     * <ul>
+     * <li>year: year.</li>
+     * <li>month: month.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>month</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyResponseBody extends TeaModel {
     /**
+     * <p>The number of days for which backups are retained.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String backupRetentionPeriod;
 
     /**
+     * <p>The UTC time when the backup ends.</p>
+     * 
      * <strong>example:</strong>
      * <p>18:00Z</p>
      */
@@ -19,6 +23,8 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String preferredBackupEndTimeUTC;
 
     /**
+     * <p>The backup cycle. For example, Friday indicates that the backup is performed every Friday.</p>
+     * 
      * <strong>example:</strong>
      * <p>Friday</p>
      */
@@ -26,6 +32,8 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String preferredBackupPeriod;
 
     /**
+     * <p>The UTC time when the backup starts.</p>
+     * 
      * <strong>example:</strong>
      * <p>17:00Z</p>
      */
@@ -33,6 +41,8 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String preferredBackupStartTimeUTC;
 
     /**
+     * <p>The backup time range in the current time zone.</p>
+     * 
      * <strong>example:</strong>
      * <p>01:00-02:00</p>
      */
@@ -40,6 +50,8 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String preferredBackupTime;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>94AC38B6-7C6D-45B2-BC03-B8750071A482</p>
      */

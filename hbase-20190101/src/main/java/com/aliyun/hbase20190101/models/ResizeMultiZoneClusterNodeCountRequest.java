@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ResizeMultiZoneClusterNodeCountRequest extends TeaModel {
     /**
+     * <p>The vSwitch ID of the arbitration node.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-hangxzhouxb*****</p>
      */
@@ -12,6 +14,7 @@ public class ResizeMultiZoneClusterNodeCountRequest extends TeaModel {
     public String arbiterVSwitchId;
 
     /**
+     * <p>The ID of the multi-zone cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ResizeMultiZoneClusterNodeCountRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The number of core nodes. The minimum value is 4, and the increment must be a multiple of 2.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -28,6 +33,8 @@ public class ResizeMultiZoneClusterNodeCountRequest extends TeaModel {
     public Integer coreNodeCount;
 
     /**
+     * <p>The number of log nodes. The minimum value is 4, and the value must be a multiple of 4.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -35,6 +42,8 @@ public class ResizeMultiZoneClusterNodeCountRequest extends TeaModel {
     public Integer logNodeCount;
 
     /**
+     * <p>The number of core nodes in the primary zone instance. The minimum value is 4, and the increment must be a multiple of 2.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -42,6 +51,8 @@ public class ResizeMultiZoneClusterNodeCountRequest extends TeaModel {
     public Integer primaryCoreNodeCount;
 
     /**
+     * <p>The vSwitch ID of the instance in the primary zone.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-hangxzhouxe*****</p>
      */
@@ -49,6 +60,8 @@ public class ResizeMultiZoneClusterNodeCountRequest extends TeaModel {
     public String primaryVSwitchId;
 
     /**
+     * <p>The number of core nodes in the secondary zone instance. The minimum value is 4, and the increment must be a multiple of 2.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -56,6 +69,8 @@ public class ResizeMultiZoneClusterNodeCountRequest extends TeaModel {
     public Integer standbyCoreNodeCount;
 
     /**
+     * <p>The vSwitch ID of the instance in the secondary zone.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-hangxzhouxf****</p>
      */

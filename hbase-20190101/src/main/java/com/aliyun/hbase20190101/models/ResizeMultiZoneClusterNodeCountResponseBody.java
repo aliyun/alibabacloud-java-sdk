@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ResizeMultiZoneClusterNodeCountResponseBody extends TeaModel {
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234123412****</p>
      */
@@ -12,6 +14,8 @@ public class ResizeMultiZoneClusterNodeCountResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E2B7E9DA-1575-4B9D-A0E4-9468BAC</p>
      */

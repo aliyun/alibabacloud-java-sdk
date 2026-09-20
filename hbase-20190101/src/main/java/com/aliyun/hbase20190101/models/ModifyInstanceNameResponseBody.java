@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceNameResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>959DA199-54E5-569D-AD46-92BED8515E62</p>
      */

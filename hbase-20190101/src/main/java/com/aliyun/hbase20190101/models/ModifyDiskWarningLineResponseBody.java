@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskWarningLineResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FC4A930D-3AEE-4C9D-BC70-C0F2EEEAA174</p>
      */

@@ -8,6 +8,8 @@ public class QueryXpackRelateDBResponseBody extends TeaModel {
     public QueryXpackRelateDBResponseBodyClusterList clusterList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>288E9010-36DD-499C-B4DA-61E4362DA4CC</p>
      */
@@ -36,52 +38,24 @@ public class QueryXpackRelateDBResponseBody extends TeaModel {
     }
 
     public static class QueryXpackRelateDBResponseBodyClusterListCluster extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>hb-bp16o0pd52e3y582s</p>
-         */
         @NameInMap("ClusterId")
         public String clusterId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>hbase_test</p>
-         */
         @NameInMap("ClusterName")
         public String clusterName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>hbase</p>
-         */
         @NameInMap("DBType")
         public String DBType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2.0</p>
-         */
         @NameInMap("DBVersion")
         public String DBVersion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("IsRelated")
         public Boolean isRelated;
 
-        /**
-         * <strong>example:</strong>
-         * <p>..</p>
-         */
         @NameInMap("LockMode")
         public String lockMode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ACTIVATION</p>
-         */
         @NameInMap("Status")
         public String status;
 

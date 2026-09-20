@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityGroupsRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifySecurityGroupsRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The IDs of the security groups, separated by commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

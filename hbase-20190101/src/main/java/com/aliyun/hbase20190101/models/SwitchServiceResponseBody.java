@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SwitchServiceResponseBody extends TeaModel {
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>F1005DE4-D981-559F-9E37-5172DXXXXXX</p>
      */

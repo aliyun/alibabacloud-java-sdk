@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteHbaseHaSlbResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C9D568D9-A59C-4AF2-8FBB-F086A841D58E</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupSummaryRequest extends TeaModel {
     /**
+     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/144595.html">DescribeInstances</a> operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeBackupSummaryRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class DescribeBackupSummaryRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The maximum number of entries per page. Maximum value: 100. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

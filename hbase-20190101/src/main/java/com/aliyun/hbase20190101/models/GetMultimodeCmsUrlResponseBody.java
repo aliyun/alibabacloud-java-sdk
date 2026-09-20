@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetMultimodeCmsUrlResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>hb-t4naqsay5gn******</p>
      */
@@ -12,6 +14,8 @@ public class GetMultimodeCmsUrlResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The CloudMonitor URL.</p>
+     * 
      * <strong>example:</strong>
      * <p>htpp://***********</p>
      */
@@ -19,6 +23,8 @@ public class GetMultimodeCmsUrlResponseBody extends TeaModel {
     public String multimodCmsUrl;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>44183B05-852E-4716-B902-52977140190F</p>
      */

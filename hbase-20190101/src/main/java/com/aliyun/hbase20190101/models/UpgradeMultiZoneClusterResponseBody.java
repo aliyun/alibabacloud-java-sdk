@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpgradeMultiZoneClusterResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C532A4D4-9451-4460-BB3E-300FEC852D3F</p>
      */
@@ -12,6 +14,8 @@ public class UpgradeMultiZoneClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The components that triggered the upgrade among the multiple components to be upgraded.</p>
+     * 
      * <strong>example:</strong>
      * <p>LINDORM</p>
      */

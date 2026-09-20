@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeServerlessClusterResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether auto-renewal is enabled. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Auto-renewal is enabled.</li>
+     * <li><strong>false</strong>: Auto-renewal is not enabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +18,12 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
     public String autoRenew;
 
     /**
+     * <p>The cluster type. Valid values:</p>
+     * <ul>
+     * <li><strong>Cluster</strong>: Cluster Edition.</li>
+     * <li><strong>Single</strong>: single-node.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>single</p>
      */
@@ -19,6 +31,8 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
     public String clusterType;
 
     /**
+     * <p>The time when the cluster was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2019-10-12T14:40:46</p>
      */
@@ -26,6 +40,8 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The compute unit (CU) size.</p>
+     * 
      * <strong>example:</strong>
      * <p>150</p>
      */
@@ -33,6 +49,8 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
     public String cuSize;
 
     /**
+     * <p>The disk size of the node. Unit: GB.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -40,6 +58,8 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
     public String diskSize;
 
     /**
+     * <p>The expiration time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2019-10-12T14:40:46</p>
      */
@@ -47,6 +67,12 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
     public String expireTime;
 
     /**
+     * <p>Indicates whether high availability (HA) is enabled. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: HA is enabled.</li>
+     * <li><strong>false</strong>: HA is not enabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -54,6 +80,12 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
     public String haType;
 
     /**
+     * <p>Indicates whether the cluster has users. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The cluster has users.</li>
+     * <li><strong>false</strong>: The cluster does not have users.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -61,6 +93,8 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
     public String hasUser;
 
     /**
+     * <p>The internal endpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://sh-wz91452kg946i****-lindorm-serverless-in.lindorm.rds.aliyuncs.com:443">https://sh-wz91452kg946i****-lindorm-serverless-in.lindorm.rds.aliyuncs.com:443</a></p>
      */
@@ -68,6 +102,8 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
     public String innerEndpoint;
 
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>hb-bp16f1441y6p2****</p>
      */
@@ -75,6 +111,8 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The cluster name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -82,16 +120,29 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>Indicates whether deletion protection is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("IsDeletionProtection")
     public String isDeletionProtection;
 
+    /**
+     * <p>The lock type of the cluster.</p>
+     * <blockquote>
+     * <p>This parameter does not return a value.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>过期</p>
+     */
     @NameInMap("LockMode")
     public String lockMode;
 
     /**
+     * <p>The major version.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.0.8</p>
      */
@@ -99,6 +150,8 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
     public String mainVersion;
 
     /**
+     * <p>The public endpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://sh-wz91452kg946i****-lindorm-serverless.lindorm.rds.aliyuncs.com:443">https://sh-wz91452kg946i****-lindorm-serverless.lindorm.rds.aliyuncs.com:443</a></p>
      */
@@ -106,6 +159,12 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
     public String outerEndpoint;
 
     /**
+     * <p>The billing method. Valid values:</p>
+     * <ul>
+     * <li><strong>Prepaid</strong>: subscription.</li>
+     * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Postpaid</p>
      */
@@ -113,6 +172,8 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
     public String payType;
 
     /**
+     * <p>The region ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -120,6 +181,8 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>89F81C30-320B-4550-91DB-C37C81D2358F</p>
      */
@@ -127,6 +190,8 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The maximum reserved QPS.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -134,6 +199,8 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
     public String reserverMaxQpsNum;
 
     /**
+     * <p>The minimum reserved QPS.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -141,6 +208,8 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
     public String reserverMinQpsNum;
 
     /**
+     * <p>The ID of the resource group to which the resource belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-fjm2d4v7sf****</p>
      */
@@ -148,6 +217,14 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The current status. Valid values:</p>
+     * <ul>
+     * <li><strong>CREATING</strong>: being created.</li>
+     * <li><strong>ACTIVATION</strong>: running.</li>
+     * <li><strong>DELETING</strong>: being deleted.</li>
+     * <li><strong>RESTARTING</strong>: being restarted.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ACTIVATION</p>
      */
@@ -155,6 +232,13 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The minor version upgrade status. Valid values:</p>
+     * <ul>
+     * <li><strong>YES</strong>: An upgrade is available.</li>
+     * <li><strong>NO</strong>: No upgrade is available.</li>
+     * <li><strong>PENDING</strong>: An upgrade is in progress.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>NO</p>
      */
@@ -162,6 +246,8 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
     public String updateStatus;
 
     /**
+     * <p>The vSwitch ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-bp191ipotqf****</p>
      */
@@ -169,6 +255,8 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
     public String vSwitchId;
 
     /**
+     * <p>The ID of the virtual private cloud (VPC) to which the instance belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-bp120k6ixs4eoghz****</p>
      */
@@ -176,6 +264,8 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
     public String vpcId;
 
     /**
+     * <p>The zone ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-f</p>
      */

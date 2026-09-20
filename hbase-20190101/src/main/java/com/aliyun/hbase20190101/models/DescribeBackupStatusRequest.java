@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupStatusRequest extends TeaModel {
     /**
+     * <p>The ID of the HBaseue cluster for which data backup is performed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

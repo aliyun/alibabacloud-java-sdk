@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GrantResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9CBF8DF0-4931-4A54-9B60-4C6E1AB5****</p>
      */

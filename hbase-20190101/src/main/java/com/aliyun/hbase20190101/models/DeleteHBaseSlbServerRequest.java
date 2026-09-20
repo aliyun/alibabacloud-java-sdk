@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteHBaseSlbServerRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,9 @@ public class DeleteHBaseSlbServerRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The load balancing service. Valid values:
+     * thrift
+     * rest.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyActiveOperationTasksResponseBody extends TeaModel {
     /**
+     * <p>The O&amp;M task IDs. Multiple IDs are separated with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>1111,2222</p>
      */
@@ -12,6 +14,8 @@ public class ModifyActiveOperationTasksResponseBody extends TeaModel {
     public String ids;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8C9CC46A-9532-4752-B59F-580112C5A45B</p>
      */

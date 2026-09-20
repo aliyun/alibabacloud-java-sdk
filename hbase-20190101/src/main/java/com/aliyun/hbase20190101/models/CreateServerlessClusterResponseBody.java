@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateServerlessClusterResponseBody extends TeaModel {
     /**
+     * <p>The instance ID of the HBase Serverless instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>sh-bp1a969y7681****</p>
      */
@@ -12,6 +14,8 @@ public class CreateServerlessClusterResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>23232453233*****</p>
      */
@@ -19,6 +23,8 @@ public class CreateServerlessClusterResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The password used to access the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -26,6 +32,8 @@ public class CreateServerlessClusterResponseBody extends TeaModel {
     public String passWord;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3E19E345-101D-4014-946C-************</p>
      */

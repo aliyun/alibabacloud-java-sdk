@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRestoreSummaryResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether there is a next page. This parameter is currently not used.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,8 @@ public class DescribeRestoreSummaryResponseBody extends TeaModel {
     public Integer hasMoreRestoreRecord;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class DescribeRestoreSummaryResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class DescribeRestoreSummaryResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AE639ED7-F0F3-4A71-911E-CF8EC088816E</p>
      */
@@ -36,6 +44,8 @@ public class DescribeRestoreSummaryResponseBody extends TeaModel {
     public DescribeRestoreSummaryResponseBodyRescords rescords;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -96,59 +106,27 @@ public class DescribeRestoreSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreSummaryResponseBodyRescordsRescord extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1/1</p>
-         */
         @NameInMap("BulkLoadProcess")
         public String bulkLoadProcess;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-11-05T06:45:14Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-11-05T06:45:51Z</p>
-         */
         @NameInMap("FinishTime")
         public String finishTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1/1</p>
-         */
         @NameInMap("HfileRestoreProcess")
         public String hfileRestoreProcess;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0/0</p>
-         */
         @NameInMap("LogProcess")
         public String logProcess;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20201105144514</p>
-         */
         @NameInMap("RecordId")
         public String recordId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1/1</p>
-         */
         @NameInMap("SchemaProcess")
         public String schemaProcess;
 
-        /**
-         * <strong>example:</strong>
-         * <p>SUCCEEDED</p>
-         */
         @NameInMap("Status")
         public String status;
 

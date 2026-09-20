@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSubDomainRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class DescribeSubDomainRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The zone ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-f</p>
      */

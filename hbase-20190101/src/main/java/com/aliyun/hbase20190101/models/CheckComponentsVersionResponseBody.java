@@ -8,6 +8,8 @@ public class CheckComponentsVersionResponseBody extends TeaModel {
     public CheckComponentsVersionResponseBodyComponents components;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E3537EB4-1100-41CA-A147-C74CCC8BB12C</p>
      */
@@ -36,17 +38,9 @@ public class CheckComponentsVersionResponseBody extends TeaModel {
     }
 
     public static class CheckComponentsVersionResponseBodyComponentsComponent extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>HBASE</p>
-         */
         @NameInMap("Component")
         public String component;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("IsLatestVersion")
         public String isLatestVersion;
 

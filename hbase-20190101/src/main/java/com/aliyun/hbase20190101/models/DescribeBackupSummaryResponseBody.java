@@ -4,13 +4,21 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupSummaryResponseBody extends TeaModel {
+    /**
+     * <p>The details of the full backup.</p>
+     */
     @NameInMap("Full")
     public DescribeBackupSummaryResponseBodyFull full;
 
+    /**
+     * <p>The details of the incremental backup.</p>
+     */
     @NameInMap("Incr")
     public DescribeBackupSummaryResponseBodyIncr incr;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>168793CB-7B31-43E7-ADAB-FE3E8D584D6E</p>
      */
@@ -47,52 +55,24 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupSummaryResponseBodyFullRecordsRecord extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2020-11-02T18:00:00Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1.2 kB</p>
-         */
         @NameInMap("DataSize")
         public String dataSize;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-11-02T18:02:04Z</p>
-         */
         @NameInMap("FinishTime")
         public String finishTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1/1</p>
-         */
         @NameInMap("Process")
         public String process;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20201103020000</p>
-         */
         @NameInMap("RecordId")
         public String recordId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.00 MB/s</p>
-         */
         @NameInMap("Speed")
         public String speed;
 
-        /**
-         * <strong>example:</strong>
-         * <p>SUCCESS</p>
-         */
         @NameInMap("Status")
         public String status;
 
@@ -180,6 +160,12 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
 
     public static class DescribeBackupSummaryResponseBodyFull extends TeaModel {
         /**
+         * <p>Indicates whether there is a next page. Valid values:</p>
+         * <ul>
+         * <li>true: There is a next page.</li>
+         * <li>false: There is no next page.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -187,6 +173,8 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
         public String hasMore;
 
         /**
+         * <p>The time of the next full backup.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-11-09T18:00:00Z</p>
          */
@@ -194,6 +182,8 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
         public String nextFullBackupDate;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -201,6 +191,8 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -211,6 +203,8 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
         public DescribeBackupSummaryResponseBodyFullRecords records;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -274,6 +268,8 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
 
     public static class DescribeBackupSummaryResponseBodyIncr extends TeaModel {
         /**
+         * <p>The data size.</p>
+         * 
          * <strong>example:</strong>
          * <p>266 B</p>
          */
@@ -281,6 +277,8 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
         public String backupLogSize;
 
         /**
+         * <p>The synchronization point.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-11-05T01:20:31Z</p>
          */
@@ -288,6 +286,8 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
         public String pos;
 
         /**
+         * <p>The number of logs in the queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -295,6 +295,8 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
         public String queueLogNum;
 
         /**
+         * <p>The number of logs being backed up.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -302,6 +304,8 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
         public String runningLogNum;
 
         /**
+         * <p>The current write speed of the incremental backup.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.00 MB/s</p>
          */
@@ -309,6 +313,8 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
         public String speed;
 
         /**
+         * <p>The status of the incremental backup.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */

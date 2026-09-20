@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ResizeNodeCountResponseBody extends TeaModel {
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>20470860005****</p>
      */
@@ -12,6 +14,8 @@ public class ResizeNodeCountResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B288B41F-6681-42A6-8905-47C3C42B19B0</p>
      */

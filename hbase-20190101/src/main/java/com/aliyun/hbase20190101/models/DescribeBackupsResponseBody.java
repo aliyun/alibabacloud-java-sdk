@@ -8,6 +8,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public DescribeBackupsResponseBodyBackups backups;
 
     /**
+     * <p>The backup enabling status. Valid values:</p>
+     * <ul>
+     * <li>enable: Enabled.</li>
+     * <li>disable: Not enabled.</li>
+     * <li>opening: Being enabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>enable</p>
      */
@@ -15,6 +22,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String enableStatus;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +31,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +40,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A93CE373-0FDE-4CCB-9DBA-6700906825ED</p>
      */
@@ -36,6 +49,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -96,87 +111,39 @@ public class DescribeBackupsResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupsResponseBodyBackupsBackup extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("BackupDBNames")
         public String backupDBNames;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("BackupDownloadURL")
         public String backupDownloadURL;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-12-23 17:25:24</p>
-         */
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-12-23T09:25:24Z</p>
-         */
         @NameInMap("BackupEndTimeUTC")
         public String backupEndTimeUTC;
 
-        /**
-         * <strong>example:</strong>
-         * <p>511876087</p>
-         */
         @NameInMap("BackupId")
         public Integer backupId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>P</p>
-         */
         @NameInMap("BackupMethod")
         public String backupMethod;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("BackupMode")
         public String backupMode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.00</p>
-         */
         @NameInMap("BackupSize")
         public String backupSize;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-12-23 17:25:08</p>
-         */
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-12-23T09:25:08Z</p>
-         */
         @NameInMap("BackupStartTimeUTC")
         public String backupStartTimeUTC;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>F</p>
-         */
         @NameInMap("BackupType")
         public String backupType;
 

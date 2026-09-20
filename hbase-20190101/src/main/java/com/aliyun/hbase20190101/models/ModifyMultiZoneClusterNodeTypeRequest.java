@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyMultiZoneClusterNodeTypeRequest extends TeaModel {
     /**
+     * <p>The ID of the multi-zone instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ModifyMultiZoneClusterNodeTypeRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The node specifications of the core node. For valid values, refer to DescribeInstanceType.</p>
+     * 
      * <strong>example:</strong>
      * <p>hbase.sn1.large</p>
      */
@@ -21,6 +24,8 @@ public class ModifyMultiZoneClusterNodeTypeRequest extends TeaModel {
     public String coreInstanceType;
 
     /**
+     * <p>The node specifications of the log node. For valid values, refer to DescribeInstanceType.</p>
+     * 
      * <strong>example:</strong>
      * <p>hbase.sn1.2xlarge</p>
      */
@@ -28,6 +33,8 @@ public class ModifyMultiZoneClusterNodeTypeRequest extends TeaModel {
     public String logInstanceType;
 
     /**
+     * <p>The node specifications of the master node. For valid values, refer to DescribeInstanceType.</p>
+     * 
      * <strong>example:</strong>
      * <p>hbase.sn1.8xlarge</p>
      */

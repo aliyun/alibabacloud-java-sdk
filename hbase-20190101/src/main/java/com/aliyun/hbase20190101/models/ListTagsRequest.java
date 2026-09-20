@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagsRequest extends TeaModel {
     /**
+     * <p>The region ID. You can call DescribeRegions to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

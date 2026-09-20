@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupsRequest extends TeaModel {
     /**
+     * <p>The ID of the backup to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>job-xxxx</p>
      */
@@ -12,6 +14,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public String backupId;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class DescribeBackupsRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The end time of the backup query. Format: yyyy-MM-dd HH:mm.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-12-23 23:59:59</p>
      */
@@ -28,6 +33,8 @@ public class DescribeBackupsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The end time of the backup query in UTC. The end time must be later than the start time. Format: yyyy-MM-ddTHH:mmZ.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-12-23T15:59:59Z</p>
      */
@@ -35,6 +42,8 @@ public class DescribeBackupsRequest extends TeaModel {
     public String endTimeUTC;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -42,6 +51,8 @@ public class DescribeBackupsRequest extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -49,6 +60,8 @@ public class DescribeBackupsRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The start time of the backup query. Format: yyyy-MM-dd HH:mm.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-12-13 00:00:00</p>
      */
@@ -56,6 +69,8 @@ public class DescribeBackupsRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The start time of the backup query in UTC. Format: yyyy-MM-ddTHH:mmZ.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-12-12T16:00:00Z</p>
      */

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D0FE2717-E194-465A-B27B-7373F96E580B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The incremental restoration details.</p>
+     */
     @NameInMap("RestoreIncrDetail")
     public DescribeRestoreIncrDetailResponseBodyRestoreIncrDetail restoreIncrDetail;
 
@@ -37,6 +42,8 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
 
     public static class DescribeRestoreIncrDetailResponseBodyRestoreIncrDetail extends TeaModel {
         /**
+         * <p>The end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-11-05T06:45:44Z</p>
          */
@@ -44,6 +51,8 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The progress.</p>
+         * 
          * <strong>example:</strong>
          * <p>0/0</p>
          */
@@ -51,6 +60,8 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
         public String process;
 
         /**
+         * <p>The synchronization latency.</p>
+         * 
          * <strong>example:</strong>
          * <p>0 ms</p>
          */
@@ -58,6 +69,8 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
         public String restoreDelay;
 
         /**
+         * <p>The synchronization start point.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-11-02T18:00:00Z</p>
          */
@@ -65,6 +78,8 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
         public String restoreStartTs;
 
         /**
+         * <p>The synchronization point.</p>
+         * 
          * <strong>example:</strong>
          * <p>\&quot;\&quot;</p>
          */
@@ -72,6 +87,8 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
         public String restoredTs;
 
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-11-05T06:45:44Z</p>
          */
@@ -79,6 +96,8 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The status.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCEEDED</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateMultiZoneClusterResponseBody extends TeaModel {
     /**
+     * <p>The instance ID of the ApsaraDB for HBase multi-zone database instance that is active.</p>
+     * 
      * <strong>example:</strong>
      * <p>ld-t4nn71xa0yn56****</p>
      */
@@ -12,6 +14,8 @@ public class CreateMultiZoneClusterResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>23232453****</p>
      */
@@ -19,6 +23,8 @@ public class CreateMultiZoneClusterResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7F68E8F5-0377-4CF8-8B1D-FFFD6F5804D5</p>
      */

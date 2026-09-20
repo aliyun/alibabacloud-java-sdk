@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryHBaseHaDBRequest extends TeaModel {
     /**
+     * <p>The ID of the BDS cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

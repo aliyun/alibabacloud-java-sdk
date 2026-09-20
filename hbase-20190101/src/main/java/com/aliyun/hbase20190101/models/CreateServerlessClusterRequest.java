@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateServerlessClusterRequest extends TeaModel {
     /**
+     * <p>The auto-renewal period of the instance. Unit: months.</p>
+     * <blockquote>
+     * <ul><li>The default value of the auto-renewal period is 0, which indicates that the instance is not automatically renewed after the instance expires.</li>
+     * </blockquote>
+     * <li>For example, if the auto-renewal period is set to 2, the instance is automatically renewed for two months after the instance expires.</li></ul>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,6 +18,8 @@ public class CreateServerlessClusterRequest extends TeaModel {
     public Integer autoRenewPeriod;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can be up to 64 ASCII characters in length and cannot contain non-ASCII characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
      */
@@ -19,6 +27,8 @@ public class CreateServerlessClusterRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The parameter that identifies the source of the creation request. For public cloud, leave this parameter empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>xx</p>
      */
@@ -26,6 +36,8 @@ public class CreateServerlessClusterRequest extends TeaModel {
     public String clientType;
 
     /**
+     * <p>The name of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>serverless-name</p>
      */
@@ -33,6 +45,15 @@ public class CreateServerlessClusterRequest extends TeaModel {
     public String clusterName;
 
     /**
+     * <p>The disk type of the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>cloud_efficiency</strong>: ultra cloud disk.</li>
+     * <li><strong>cloud_ssd</strong>: standard SSD.</li>
+     * <li><strong>local_hdd_pro</strong>: local HDD.</li>
+     * <li><strong>local_ssd_pro</strong>: local SSD.</li>
+     * <li><strong>cloud_essd_pl1</strong>: ESSD.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cloud_ssd</p>
      */
@@ -40,6 +61,8 @@ public class CreateServerlessClusterRequest extends TeaModel {
     public String diskType;
 
     /**
+     * <p>The engine type of the HBase Serverless instance. Set the value to <strong>serverlesshbase</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>serverlesshbase</p>
      */
@@ -47,6 +70,8 @@ public class CreateServerlessClusterRequest extends TeaModel {
     public String engine;
 
     /**
+     * <p>The DPI engine version.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.0</p>
      */
@@ -54,6 +79,11 @@ public class CreateServerlessClusterRequest extends TeaModel {
     public String engineVersion;
 
     /**
+     * <p>The billing method of the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>Prepaid</strong>: subscription.</li>
+     * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,6 +93,15 @@ public class CreateServerlessClusterRequest extends TeaModel {
     public String payType;
 
     /**
+     * <p>The subscription duration of the subscription instance. Valid values:</p>
+     * <ul>
+     * <li>If PeriodUnit is set to year, valid values are <strong>1</strong> to <strong>3</strong>.</li>
+     * <li>If PeriodUnit is set to month, valid values are <strong>1</strong> to <strong>9</strong>.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is required only when the billing method of the instance is <strong>Prepaid</strong>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -70,6 +109,15 @@ public class CreateServerlessClusterRequest extends TeaModel {
     public Integer period;
 
     /**
+     * <p>The unit of the subscription duration for the subscription instance. Valid values:</p>
+     * <ul>
+     * <li><strong>year</strong>: year.</li>
+     * <li><strong>month</strong>: month.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is required only when the billing method of the instance is <strong>Prepaid</strong>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>month</p>
      */
@@ -77,6 +125,7 @@ public class CreateServerlessClusterRequest extends TeaModel {
     public String periodUnit;
 
     /**
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/144489.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,6 +135,8 @@ public class CreateServerlessClusterRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-j4d53glb3****</p>
      */
@@ -93,6 +144,8 @@ public class CreateServerlessClusterRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The processing capability per unit. Unit: CU.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -100,6 +153,8 @@ public class CreateServerlessClusterRequest extends TeaModel {
     public Integer serverlessCapability;
 
     /**
+     * <p>The specification type. Valid values: leave empty or <strong>serverless.small</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>serverless.small</p>
      */
@@ -107,6 +162,8 @@ public class CreateServerlessClusterRequest extends TeaModel {
     public String serverlessSpec;
 
     /**
+     * <p>The storage size. Unit: GB.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -114,6 +171,8 @@ public class CreateServerlessClusterRequest extends TeaModel {
     public Integer serverlessStorage;
 
     /**
+     * <p>The vSwitch ID within the VPC.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-bp191ipotqj1ssyl*****</p>
      */
@@ -121,6 +180,11 @@ public class CreateServerlessClusterRequest extends TeaModel {
     public String vSwitchId;
 
     /**
+     * <p>The ID of the virtual private cloud (VPC).</p>
+     * <blockquote>
+     * <p>If both this parameter and the VswitchId parameter are left empty, the network type of the instance is classic network.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>vpc-bp120k6ixs4eog****</p>
      */
@@ -128,6 +192,7 @@ public class CreateServerlessClusterRequest extends TeaModel {
     public String vpcId;
 
     /**
+     * <p>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/144489.html">DescribeRegions</a> operation to query the zone ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

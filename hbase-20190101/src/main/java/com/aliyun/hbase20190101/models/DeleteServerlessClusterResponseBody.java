@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteServerlessClusterResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>46950E74-59C4-4E3E-9B38-A33B*********</p>
      */

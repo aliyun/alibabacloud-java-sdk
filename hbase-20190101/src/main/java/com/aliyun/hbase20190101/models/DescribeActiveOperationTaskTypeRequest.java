@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskTypeRequest extends TeaModel {
     /**
+     * <p>Specifies whether to return historical O&amp;M tasks. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: Returns only the current pending O&amp;M tasks.</li>
+     * <li><strong>1</strong>: Returns historical O&amp;M tasks.</li>
+     * </ul>
+     * <p>Default value: <strong>0</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

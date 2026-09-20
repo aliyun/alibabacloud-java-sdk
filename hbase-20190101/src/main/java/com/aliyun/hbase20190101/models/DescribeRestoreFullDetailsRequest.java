@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRestoreFullDetailsRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeRestoreFullDetailsRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class DescribeRestoreFullDetailsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -28,6 +33,7 @@ public class DescribeRestoreFullDetailsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The restoration record ID. You can call DescribeRestoreSummary to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

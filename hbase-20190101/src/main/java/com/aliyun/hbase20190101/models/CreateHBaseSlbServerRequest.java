@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateHBaseSlbServerRequest extends TeaModel {
     /**
+     * <p>The client token.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxx-xxxxx-xxxxx</p>
      */
@@ -12,6 +14,7 @@ public class CreateHBaseSlbServerRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,11 @@ public class CreateHBaseSlbServerRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The load balancing service to create. Valid values:</p>
+     * <ul>
+     * <li><strong>thrift</strong>: the Thrift cross-language and cross-platform remote procedure call (RPC) protocol service.</li>
+     * <li><strong>rest</strong>: the HTTP protocol service.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

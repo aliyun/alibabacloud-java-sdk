@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BC682A80-7677-4294-975C-CFEA425381DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The schema restoration details.</p>
+     */
     @NameInMap("RestoreSchema")
     public DescribeRestoreSchemaDetailsResponseBodyRestoreSchema restoreSchema;
 
@@ -36,38 +41,18 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreSchemaDetailsResponseBodyRestoreSchemaRestoreSchemaDetailsRestoreSchemaDetail extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2020-11-05T06:45:18Z</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-11-05T06:45:14Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>SUCCEEDED</p>
-         */
         @NameInMap("State")
         public String state;
 
-        /**
-         * <strong>example:</strong>
-         * <p>default:test1</p>
-         */
         @NameInMap("Table")
         public String table;
 
@@ -139,6 +124,8 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
 
     public static class DescribeRestoreSchemaDetailsResponseBodyRestoreSchema extends TeaModel {
         /**
+         * <p>The number of failed restorations.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -146,6 +133,8 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
         public Integer fail;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -153,6 +142,8 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -163,6 +154,8 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
         public DescribeRestoreSchemaDetailsResponseBodyRestoreSchemaRestoreSchemaDetails restoreSchemaDetails;
 
         /**
+         * <p>The number of successful restorations.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -170,6 +163,8 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
         public Integer succeed;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

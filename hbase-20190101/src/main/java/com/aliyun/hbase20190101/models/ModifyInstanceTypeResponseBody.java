@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceTypeResponseBody extends TeaModel {
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123412341234123</p>
      */
@@ -12,6 +14,8 @@ public class ModifyInstanceTypeResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3E19E345-101D-4014-946C-****</p>
      */

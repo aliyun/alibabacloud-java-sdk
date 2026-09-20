@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeMultiZoneAvailableResourceRequest extends TeaModel {
     /**
+     * <p>The billing method. Valid values:</p>
+     * <ul>
+     * <li>Prepaid: subscription.</li>
+     * <li>Postpaid: pay-as-you-go.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +19,7 @@ public class DescribeMultiZoneAvailableResourceRequest extends TeaModel {
     public String chargeType;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +29,8 @@ public class DescribeMultiZoneAvailableResourceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The zone combination. If this parameter is not specified, all zone combinations in the region are queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-bef-aliyun</p>
      */

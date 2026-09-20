@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RelateDbForHBaseHaResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DC654531-0799-4502-AFA5-80EE1C16829A</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnableHBaseueModuleResponseBody extends TeaModel {
     /**
+     * <p>The ID of the extension cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>ld-bp150tns0sjxs****-m1-ps</p>
      */
@@ -12,6 +14,8 @@ public class EnableHBaseueModuleResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>21474915573****</p>
      */
@@ -19,6 +23,8 @@ public class EnableHBaseueModuleResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>407075EA-47F5-5A2D-888F-C1F90B8F3FCA</p>
      */

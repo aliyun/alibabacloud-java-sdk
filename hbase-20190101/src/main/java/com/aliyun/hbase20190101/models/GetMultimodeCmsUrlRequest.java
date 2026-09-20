@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMultimodeCmsUrlRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetMultimodeCmsUrlRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -8,6 +8,8 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
     public DescribeBackupTablesResponseBodyBackupRecords backupRecords;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +17,8 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +26,8 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>01262E9C-B0CC-4663-82FA-D50173649F92</p>
      */
@@ -32,6 +38,8 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
     public DescribeBackupTablesResponseBodyTables tables;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -92,59 +100,27 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupTablesResponseBodyBackupRecordsBackupRecord extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1.2 kB</p>
-         */
         @NameInMap("DataSize")
         public String dataSize;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-11-02T18:00:05Z</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <strong>example:</strong>
-         * <p>14/14</p>
-         */
         @NameInMap("Process")
         public String process;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.00 MB/s</p>
-         */
         @NameInMap("Speed")
         public String speed;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-11-02T18:00:00Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>SUCCEEDED</p>
-         */
         @NameInMap("State")
         public String state;
 
-        /**
-         * <strong>example:</strong>
-         * <p>default:test1</p>
-         */
         @NameInMap("Table")
         public String table;
 

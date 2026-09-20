@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceRequest extends TeaModel {
     /**
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/144595.html">DescribeInstances</a> operation to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

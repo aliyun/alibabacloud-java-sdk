@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupStatusResponseBody extends TeaModel {
     /**
+     * <p>The enabling status of backup. Valid values:</p>
+     * <ul>
+     * <li>closed: not enabled.</li>
+     * <li>opened: enabled.</li>
+     * <li>opening: being enabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>opened</p>
      */
@@ -12,6 +19,8 @@ public class DescribeBackupStatusResponseBody extends TeaModel {
     public String backupStatus;
 
     /**
+     * <p>The instance ID of the BDS instance used for backup.</p>
+     * 
      * <strong>example:</strong>
      * <p>bds-m5e54q06ceyhxxxx</p>
      */
@@ -19,6 +28,8 @@ public class DescribeBackupStatusResponseBody extends TeaModel {
     public String bdsClusterId;
 
     /**
+     * <p>The ID of the backup cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>ld-m5eznlga4k5bcxxxx</p>
      */
@@ -26,6 +37,8 @@ public class DescribeBackupStatusResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F7E71430-A825-470A-B40B-DF3F3AAC9BEE</p>
      */

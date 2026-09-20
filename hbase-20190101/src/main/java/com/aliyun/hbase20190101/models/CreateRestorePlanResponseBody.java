@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateRestorePlanResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A0598673-EB6E-4F6D-9961-E0F2012090C0</p>
      */

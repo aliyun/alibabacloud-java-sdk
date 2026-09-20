@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpgradeMinorVersionResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7B8EC240-BB13-4DBC-B955-F90170E82609</p>
      */
@@ -12,6 +14,8 @@ public class UpgradeMinorVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The components that were successfully upgraded.</p>
+     * 
      * <strong>example:</strong>
      * <p>HADOOP</p>
      */

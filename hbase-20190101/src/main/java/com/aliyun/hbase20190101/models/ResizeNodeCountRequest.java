@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResizeNodeCountRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ResizeNodeCountRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The number of core nodes in the cluster.</p>
+     * <p>You can add up to 50 nodes at a time, and the total number of nodes can be scaled up to 250. If you have additional requirements, submit a ticket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +26,8 @@ public class ResizeNodeCountRequest extends TeaModel {
     public Integer nodeCount;
 
     /**
+     * <p>The vSwitch ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-bp191otqj1ssyl****</p>
      */
@@ -30,6 +35,8 @@ public class ResizeNodeCountRequest extends TeaModel {
     public String vSwitchId;
 
     /**
+     * <p>The zone ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-f</p>
      */

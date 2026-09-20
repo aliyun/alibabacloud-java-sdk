@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
     /**
+     * <p>The ID of target instance. You can call the <a href="https://help.aliyun.com/document_detail/144595.html">DescribeInstances</a> operation to query target instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>hb-bp1u0639js2h7****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeInstancesRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The name of the ApsaraDB for HBase instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -19,6 +23,13 @@ public class DescribeInstancesRequest extends TeaModel {
     public String clusterName;
 
     /**
+     * <p>The service type. Valid values:</p>
+     * <ul>
+     * <li><strong>hbase</strong>: ApsaraDB for HBase Standard Edition or ApsaraDB for HBase single-node.</li>
+     * <li><strong>hbaseue</strong>: ApsaraDB for HBase Performance-enhanced Edition.</li>
+     * <li><strong>bds</strong>: BDS data synchronization service.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>hbase</p>
      */
@@ -26,6 +37,8 @@ public class DescribeInstancesRequest extends TeaModel {
     public String dbType;
 
     /**
+     * <p>The page number of the instance list. Minimum value: <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +46,8 @@ public class DescribeInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The maximum number of rows to display per page. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,6 +55,11 @@ public class DescribeInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the region to which the instance belongs. You can call the <a href="https://help.aliyun.com/document_detail/144489.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <blockquote>
+     * <p>If you specify the <strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong> parameters, this parameter is required.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -47,12 +67,17 @@ public class DescribeInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group. You can query the resource group ID in the Resource Group console.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-4f51d54g5****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeInstancesRequestTag> tag;
 
@@ -127,6 +152,8 @@ public class DescribeInstancesRequest extends TeaModel {
 
     public static class DescribeInstancesRequestTag extends TeaModel {
         /**
+         * <p>The key of the tag. The tag key and tag value form a key-value pair in the format of {&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;}.</p>
+         * 
          * <strong>example:</strong>
          * <p>key</p>
          */
@@ -134,6 +161,8 @@ public class DescribeInstancesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the tag key. The tag value and tag key form a key-value pair.</p>
+         * 
          * <strong>example:</strong>
          * <p>value</p>
          */

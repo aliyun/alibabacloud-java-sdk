@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class RevokeResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>C9085433-A56A-4089-B49A-DF5A4E2B7B06</p>
+     * <p>C9085433-A56A-4089-B49A-DF5A4E2*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

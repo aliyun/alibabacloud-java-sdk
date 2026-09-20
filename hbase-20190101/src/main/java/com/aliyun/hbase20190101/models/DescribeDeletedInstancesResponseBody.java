@@ -8,6 +8,8 @@ public class DescribeDeletedInstancesResponseBody extends TeaModel {
     public DescribeDeletedInstancesResponseBodyInstances instances;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +17,8 @@ public class DescribeDeletedInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +26,8 @@ public class DescribeDeletedInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0CAC5702-C862-44C0-AD54-C9CE70F4B246</p>
      */
@@ -29,6 +35,8 @@ public class DescribeDeletedInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -81,87 +89,39 @@ public class DescribeDeletedInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDeletedInstancesResponseBodyInstancesInstance extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>cluster</p>
-         */
         @NameInMap("ClusterType")
         public String clusterType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-11-02T07:16:07Z</p>
-         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-11-02T07:27:24Z</p>
-         */
         @NameInMap("DeleteTime")
         public String deleteTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>hbase</p>
-         */
         @NameInMap("Engine")
         public String engine;
 
-        /**
-         * <strong>example:</strong>
-         * <p>hb-bp10q7n2zdw12xxxx</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>e2e-test</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2.0</p>
-         */
         @NameInMap("MajorVersion")
         public String majorVersion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("ModuleStackVersion")
         public String moduleStackVersion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("ParentId")
         public String parentId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>DELETED</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-f</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

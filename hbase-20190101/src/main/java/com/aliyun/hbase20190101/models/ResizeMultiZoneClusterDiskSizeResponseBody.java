@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ResizeMultiZoneClusterDiskSizeResponseBody extends TeaModel {
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123412341****</p>
      */
@@ -12,6 +14,8 @@ public class ResizeMultiZoneClusterDiskSizeResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>568339C4-9F71-43D0-994E-E039CD826E56</p>
      */

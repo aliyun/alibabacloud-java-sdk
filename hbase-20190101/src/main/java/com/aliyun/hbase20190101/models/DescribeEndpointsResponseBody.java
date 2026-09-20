@@ -8,6 +8,14 @@ public class DescribeEndpointsResponseBody extends TeaModel {
     public DescribeEndpointsResponseBodyConnAddrs connAddrs;
 
     /**
+     * <p>The engine type of the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>hbaseue</strong></li>
+     * <li><strong>hbase</strong></li>
+     * <li><strong>spark</strong></li>
+     * <li><strong>geomesa</strong>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>hbaseue</p>
      */
@@ -15,6 +23,12 @@ public class DescribeEndpointsResponseBody extends TeaModel {
     public String engine;
 
     /**
+     * <p>The network type of the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>VPC</strong>: virtual private cloud.</li>
+     * <li><strong>CLASSIC</strong>: classic network.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>VPC</p>
      */
@@ -22,6 +36,8 @@ public class DescribeEndpointsResponseBody extends TeaModel {
     public String netType;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F072593C-5234-5B56-9F63-3C7A3AD85D66</p>
      */
@@ -29,6 +45,8 @@ public class DescribeEndpointsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The vSwitch ID. This parameter is returned only when NetType is set to <strong>VPC</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-bp1foll427ze3d4ps****</p>
      */
@@ -36,6 +54,8 @@ public class DescribeEndpointsResponseBody extends TeaModel {
     public String vSwitchId;
 
     /**
+     * <p>The VPC ID. This parameter is returned only when NetType is set to <strong>VPC</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-bp15s22y1a7sff5gj****</p>
      */
@@ -96,31 +116,15 @@ public class DescribeEndpointsResponseBody extends TeaModel {
     }
 
     public static class DescribeEndpointsResponseBodyConnAddrsConnAddrInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <hr>
-         */
         @NameInMap("ConnAddr")
         public String connAddr;
 
-        /**
-         * <strong>example:</strong>
-         * <hr>
-         */
         @NameInMap("ConnAddrPort")
         public String connAddrPort;
 
-        /**
-         * <strong>example:</strong>
-         * <p>zkConn</p>
-         */
         @NameInMap("ConnType")
         public String connType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("NetType")
         public String netType;
 

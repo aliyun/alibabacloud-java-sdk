@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteHBaseHaDBRequest extends TeaModel {
     /**
+     * <p>The ID of the BDS cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteHBaseHaDBRequest extends TeaModel {
     public String bdsId;
 
     /**
+     * <p>The ID of the HA instance. You can call the QueryHBaseHaDB operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SwitchHbaseHaSlbRequest extends TeaModel {
     /**
+     * <p>The ID of the BDS cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class SwitchHbaseHaSlbRequest extends TeaModel {
     public String bdsId;
 
     /**
+     * <p>The high-availability ID in BDS high-availability management.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,11 @@ public class SwitchHbaseHaSlbRequest extends TeaModel {
     public String haId;
 
     /**
+     * <p>The high-availability type. Valid values:</p>
+     * <ol>
+     * <li>thrift</li>
+     * <li>phoenix.</li>
+     * </ol>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +39,11 @@ public class SwitchHbaseHaSlbRequest extends TeaModel {
     public String haTypes;
 
     /**
+     * <p>Specifies whether to switch to the primary or secondary instance. Valid values:</p>
+     * <ol>
+     * <li>Active: Switch to the primary instance.</li>
+     * <li>Standby: Switch to the secondary instance.</li>
+     * </ol>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

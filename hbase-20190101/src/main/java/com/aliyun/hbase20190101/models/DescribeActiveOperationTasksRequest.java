@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTasksRequest extends TeaModel {
     /**
+     * <p>Specifies whether the task can be canceled. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: The task cannot be canceled.</li>
+     * <li><strong>1</strong>: The task can be canceled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +18,12 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer allowCancel;
 
     /**
+     * <p>Specifies whether the time can be modified. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: The time cannot be modified.</li>
+     * <li><strong>1</strong>: The time can be modified.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +31,12 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer allowChange;
 
     /**
+     * <p>The change level. Valid values:</p>
+     * <ul>
+     * <li><strong>S0</strong>: Exception fix.</li>
+     * <li><strong>S1</strong>: System O&amp;M.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>S1</p>
      */
@@ -26,6 +44,13 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String changeLevel;
 
     /**
+     * <p>The database type. Valid values:</p>
+     * <ul>
+     * <li><strong>hbaseue</strong>: ApsaraDB for HBase Enhanced Edition.</li>
+     * <li><strong>hbase</strong>: ApsaraDB for HBase Standard Edition.</li>
+     * <li><strong>bds</strong>: BDS data synchronization service.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>hbaseue</p>
      */
@@ -33,6 +58,8 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String dbType;
 
     /**
+     * <p>The HBase instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ld-bp150tns0sjxs****</p>
      */
@@ -46,6 +73,8 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. The value must be greater than <strong>0</strong> and cannot exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -53,6 +82,8 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The maximum number of records that can be displayed per page. The value must be greater than <strong>10</strong>. Default value: <strong>30</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -60,6 +91,8 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The product name. Default value: <strong>hbase</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>hbase</p>
      */
@@ -67,6 +100,8 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String productId;
 
     /**
+     * <p>The region ID of the event to be processed. You can call <a href="https://help.aliyun.com/document_detail/144489.html">DescribeRegions</a> to obtain the region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -83,6 +118,16 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The task running status. Valid values:</p>
+     * <ul>
+     * <li><strong>2</strong>: Waiting for the user to specify a time.</li>
+     * <li><strong>3</strong>: Waiting for processing.</li>
+     * <li><strong>4</strong>: Processing.</li>
+     * <li><strong>5</strong>: Succeeded.</li>
+     * <li><strong>6</strong>: Failed.</li>
+     * <li><strong>7</strong>: Canceled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -90,6 +135,8 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer status;
 
     /**
+     * <p>The task type. Set the value to <strong>rds_apsaradb_upgrade</strong>, which indicates a minor version upgrade.</p>
+     * 
      * <strong>example:</strong>
      * <p>rds_apsaradb_upgrade</p>
      */

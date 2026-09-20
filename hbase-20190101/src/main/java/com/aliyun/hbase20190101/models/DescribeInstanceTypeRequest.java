@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceTypeRequest extends TeaModel {
     /**
+     * <p>The instance specification name. For more information, see <a href="https://help.aliyun.com/document_detail/194870.html">Instance node specifications</a>.</p>
+     * <blockquote>
+     * <p>If InstanceType is left empty, all instance specifications are returned.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>hbase.n2.4xlarge</p>
      */

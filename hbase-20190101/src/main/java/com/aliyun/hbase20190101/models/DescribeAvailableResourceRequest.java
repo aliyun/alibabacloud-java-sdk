@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceRequest extends TeaModel {
     /**
+     * <p>The billing method. Valid values:</p>
+     * <ul>
+     * <li><strong>Prepaid</strong>: subscription.</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +19,8 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String chargeType;
 
     /**
+     * <p>The specifications of the core node. For more information about valid values, see <a href="https://help.aliyun.com/document_detail/194870.html">Instance node specifications</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>hbase.sn1.large</p>
      */
@@ -21,6 +28,15 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String coreInstanceType;
 
     /**
+     * <p>The disk type of the core node. Valid values:</p>
+     * <ul>
+     * <li><strong>cloud_efficiency</strong>: ultra cloud disk</li>
+     * <li><strong>cloud_ssd</strong>: standard SSD</li>
+     * <li><strong>cloud_essd_pl1</strong>: ESSD</li>
+     * <li><strong>local_hdd_pro</strong>: local HDD</li>
+     * <li><strong>local_ssd_pro</strong>: local SSD.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cloud_ssd</p>
      */
@@ -28,6 +44,14 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String diskType;
 
     /**
+     * <p>The service type of the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>hbase</strong>: ApsaraDB for HBase Standard Edition standard instance.</li>
+     * <li><strong>hbaseue</strong>: ApsaraDB for HBase Performance-enhanced Edition standard instance.</li>
+     * <li><strong>singlehbase</strong>: ApsaraDB for HBase single-node standard instance.</li>
+     * <li><strong>bds</strong>: Data Synchronization (BDS) service.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>hbaseue</p>
      */
@@ -35,6 +59,16 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String engine;
 
     /**
+     * <p>The version number of the service type. Valid values:</p>
+     * <ul>
+     * <li><strong>1.0</strong>: The Data Synchronization (BDS) service supports version 1.0.</li>
+     * <li><strong>1.1</strong>: ApsaraDB for HBase Standard Edition standard instances and ApsaraDB for HBase single-node standard instances support version 1.1.</li>
+     * <li><strong>2.0</strong>: ApsaraDB for HBase Standard Edition standard instances, ApsaraDB for HBase Performance-enhanced Edition standard instances, and ApsaraDB for HBase single-node standard instances support version 2.0.</li>
+     * </ul>
+     * <blockquote>
+     * <p>Specify the version number based on the service type of the ApsaraDB for HBase instance.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2.0</p>
      */
@@ -42,6 +76,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String engineVersion;
 
     /**
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/144489.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +86,8 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The zone. You can call the <a href="https://help.aliyun.com/document_detail/144489.html">DescribeRegions</a> operation to query available zones.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-h</p>
      */

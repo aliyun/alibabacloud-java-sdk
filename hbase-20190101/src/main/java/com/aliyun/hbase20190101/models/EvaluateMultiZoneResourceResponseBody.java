@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EvaluateMultiZoneResourceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FB703B69-D4D4-4879-B9FE-6A37F67C46FD</p>
      */
@@ -12,6 +14,12 @@ public class EvaluateMultiZoneResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether available resources exist. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Available resources exist.</li>
+     * <li><strong>false</strong>: No available resources exist.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

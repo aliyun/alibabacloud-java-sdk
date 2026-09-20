@@ -5,21 +5,35 @@ import com.aliyun.tea.*;
 
 public class DescribeRestoreTablesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>18D9CC47-D913-48BF-AB6B-4FA9B28FBDB1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The full restore details.</p>
+     */
     @NameInMap("RestoreFull")
     public DescribeRestoreTablesResponseBodyRestoreFull restoreFull;
 
+    /**
+     * <p>The incremental restore details.</p>
+     */
     @NameInMap("RestoreIncrDetail")
     public DescribeRestoreTablesResponseBodyRestoreIncrDetail restoreIncrDetail;
 
+    /**
+     * <p>The schema restore details.</p>
+     */
     @NameInMap("RestoreSchema")
     public DescribeRestoreTablesResponseBodyRestoreSchema restoreSchema;
 
+    /**
+     * <p>The restore summary.</p>
+     */
     @NameInMap("RestoreSummary")
     public DescribeRestoreTablesResponseBodyRestoreSummary restoreSummary;
 
@@ -80,59 +94,27 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreTablesResponseBodyRestoreFullRestoreFullDetailsRestoreFullDetail extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1.2 kB</p>
-         */
         @NameInMap("DataSize")
         public String dataSize;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-11-05T06:45:51Z</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>“”</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <strong>example:</strong>
-         * <p>14/14</p>
-         */
         @NameInMap("Process")
         public String process;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.00 MB/s</p>
-         */
         @NameInMap("Speed")
         public String speed;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-11-05T06:45:45Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>SUCCEEDED</p>
-         */
         @NameInMap("State")
         public String state;
 
-        /**
-         * <strong>example:</strong>
-         * <p>default:test1</p>
-         */
         @NameInMap("Table")
         public String table;
 
@@ -228,6 +210,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
 
     public static class DescribeRestoreTablesResponseBodyRestoreFull extends TeaModel {
         /**
+         * <p>The total data size.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.2 kB</p>
          */
@@ -235,6 +219,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         public String dataSize;
 
         /**
+         * <p>The number of failed full restores.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -242,6 +228,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         public Integer fail;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -249,6 +237,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -259,6 +249,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         public DescribeRestoreTablesResponseBodyRestoreFullRestoreFullDetails restoreFullDetails;
 
         /**
+         * <p>The total speed.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.00 MB/s</p>
          */
@@ -266,6 +258,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         public String speed;
 
         /**
+         * <p>The number of successful restores.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -273,6 +267,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         public Integer succeed;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -352,6 +348,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
 
     public static class DescribeRestoreTablesResponseBodyRestoreIncrDetail extends TeaModel {
         /**
+         * <p>The end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-11-05T06:45:44Z</p>
          */
@@ -359,6 +357,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The completion progress.</p>
+         * 
          * <strong>example:</strong>
          * <p>0/0</p>
          */
@@ -366,6 +366,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         public String process;
 
         /**
+         * <p>The synchronization latency.</p>
+         * 
          * <strong>example:</strong>
          * <p>0 ms</p>
          */
@@ -373,6 +375,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         public String restoreDelay;
 
         /**
+         * <p>The synchronization start position.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-11-02T18:00:00Z</p>
          */
@@ -380,6 +384,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         public String restoreStartTs;
 
         /**
+         * <p>The synchronization position.</p>
+         * 
          * <strong>example:</strong>
          * <p>“”</p>
          */
@@ -387,6 +393,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         public String restoredTs;
 
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-11-05T06:45:44Z</p>
          */
@@ -394,6 +402,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The status.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCEEDED</p>
          */
@@ -464,38 +474,18 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreTablesResponseBodyRestoreSchemaRestoreSchemaDetailsRestoreSchemaDetail extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2020-11-05T06:45:18Z</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-11-05T06:45:14Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>SUCCEEDED</p>
-         */
         @NameInMap("State")
         public String state;
 
-        /**
-         * <strong>example:</strong>
-         * <p>default:test1</p>
-         */
         @NameInMap("Table")
         public String table;
 
@@ -567,6 +557,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
 
     public static class DescribeRestoreTablesResponseBodyRestoreSchema extends TeaModel {
         /**
+         * <p>The number of failed restores.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -574,6 +566,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         public Integer fail;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -581,6 +575,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -591,6 +587,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         public DescribeRestoreTablesResponseBodyRestoreSchemaRestoreSchemaDetails restoreSchemaDetails;
 
         /**
+         * <p>The number of successful restores.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -598,6 +596,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         public Integer succeed;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -661,6 +661,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
 
     public static class DescribeRestoreTablesResponseBodyRestoreSummary extends TeaModel {
         /**
+         * <p>The completion time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-11-05T06:45:51Z</p>
          */
@@ -668,6 +670,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The record ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>20201105144514</p>
          */
@@ -675,6 +679,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         public String recordId;
 
         /**
+         * <p>The point in time to which data is restored.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-11-04T05:15:00Z</p>
          */
@@ -682,6 +688,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         public String restoreToDate;
 
         /**
+         * <p>The restore start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-11-05T06:45:14Z</p>
          */
@@ -689,6 +697,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The status.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCEEDED</p>
          */
@@ -696,6 +706,8 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>The target cluster for the restore.</p>
+         * 
          * <strong>example:</strong>
          * <p>ld-m5e2t34kr54wgxxxx</p>
          */

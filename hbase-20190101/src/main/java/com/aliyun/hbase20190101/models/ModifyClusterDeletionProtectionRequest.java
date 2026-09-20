@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyClusterDeletionProtectionRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class ModifyClusterDeletionProtectionRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Specifies whether to enable deletion protection. Valid values:</p>
+     * <ul>
+     * <li>true: Enables deletion protection. The cluster cannot be deleted when deletion protection is enabled.</li>
+     * <li>false: Disables deletion protection. The cluster can be deleted.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

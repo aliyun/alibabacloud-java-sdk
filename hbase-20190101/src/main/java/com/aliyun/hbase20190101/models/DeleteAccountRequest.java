@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class DeleteAccountRequest extends TeaModel {
     /**
+     * <p>The name of the existing account to be deleted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test01</p>
+     * <p>test01****</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

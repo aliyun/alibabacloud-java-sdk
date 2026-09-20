@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPlanConfigResponseBody extends TeaModel {
     /**
+     * <p>The full backup cycle.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -12,6 +14,8 @@ public class DescribeBackupPlanConfigResponseBody extends TeaModel {
     public Integer fullBackupCycle;
 
     /**
+     * <p>The number of full backups to retain.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -19,6 +23,8 @@ public class DescribeBackupPlanConfigResponseBody extends TeaModel {
     public Integer minHFileBackupCount;
 
     /**
+     * <p>The date of the next full backup.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-11-09T18:00:00Z</p>
      */
@@ -26,6 +32,8 @@ public class DescribeBackupPlanConfigResponseBody extends TeaModel {
     public String nextFullBackupDate;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>33A23201-6038-4A6A-B76A-61047EA04E6A</p>
      */

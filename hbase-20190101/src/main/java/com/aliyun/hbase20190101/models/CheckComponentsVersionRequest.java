@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckComponentsVersionRequest extends TeaModel {
     /**
+     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/144595.html">DescribeInstances</a> operation to obtain the cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,14 @@ public class CheckComponentsVersionRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The component to check. Valid values:</p>
+     * <ul>
+     * <li><strong>HBASE</strong></li>
+     * <li><strong>HADOOP</strong></li>
+     * <li><strong>PHOENIX</strong></li>
+     * <li><strong>SOLR</strong></li>
+     * <li><strong>THRIFT</strong>.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

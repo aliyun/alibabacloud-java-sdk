@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnableHBaseueBackupRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -12,6 +14,8 @@ public class EnableHBaseueBackupRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The cold storage size for the backup service. The minimum value is 800 GB.</p>
+     * 
      * <strong>example:</strong>
      * <p>800</p>
      */
@@ -19,6 +23,7 @@ public class EnableHBaseueBackupRequest extends TeaModel {
     public Integer coldStorageSize;
 
     /**
+     * <p>The ID of the HBaseue cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class EnableHBaseueBackupRequest extends TeaModel {
     public String hbaseueClusterId;
 
     /**
+     * <p>The number of backup nodes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

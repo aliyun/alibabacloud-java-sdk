@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstanceServiceConfigHistoriesRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListInstanceServiceConfigHistoriesRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -21,6 +24,8 @@ public class ListInstanceServiceConfigHistoriesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

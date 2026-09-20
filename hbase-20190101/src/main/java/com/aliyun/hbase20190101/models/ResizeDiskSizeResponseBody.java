@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ResizeDiskSizeResponseBody extends TeaModel {
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3C22622B-8555-42BF-AD8A-1B960743****</p>
      */
@@ -12,6 +14,8 @@ public class ResizeDiskSizeResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>493A762B-E4A6-44E9-B877-CA6D0CAF8B29</p>
      */

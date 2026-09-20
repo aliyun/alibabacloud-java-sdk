@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHBaseInstancesRequest extends TeaModel {
     /**
+     * <p>The VPC ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

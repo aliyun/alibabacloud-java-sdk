@@ -8,6 +8,8 @@ public class ListInstanceServiceConfigHistoriesResponseBody extends TeaModel {
     public ListInstanceServiceConfigHistoriesResponseBodyConfigureHistoryList configureHistoryList;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +17,8 @@ public class ListInstanceServiceConfigHistoriesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +26,8 @@ public class ListInstanceServiceConfigHistoriesResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>658C1549-2C02-4FD9-9490-EB3B285F9DCA</p>
      */
@@ -29,6 +35,8 @@ public class ListInstanceServiceConfigHistoriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -81,38 +89,18 @@ public class ListInstanceServiceConfigHistoriesResponseBody extends TeaModel {
     }
 
     public static class ListInstanceServiceConfigHistoriesResponseBodyConfigureHistoryListConfig extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>hbase#hbase-site.xml#hbase.client.keyvalue.maxsize</p>
-         */
         @NameInMap("ConfigureName")
         public String configureName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1608708923000</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("Effective")
         public String effective;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10485770</p>
-         */
         @NameInMap("NewValue")
         public String newValue;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10485760</p>
-         */
         @NameInMap("OldValue")
         public String oldValue;
 

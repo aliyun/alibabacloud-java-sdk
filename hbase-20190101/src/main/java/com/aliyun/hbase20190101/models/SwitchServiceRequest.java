@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SwitchServiceRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,10 @@ public class SwitchServiceRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <ul>
+     * <li>open: Enable  </li>
+     * <li>close: Shutdown</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +28,7 @@ public class SwitchServiceRequest extends TeaModel {
     public String operate;
 
     /**
+     * <p>Service name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

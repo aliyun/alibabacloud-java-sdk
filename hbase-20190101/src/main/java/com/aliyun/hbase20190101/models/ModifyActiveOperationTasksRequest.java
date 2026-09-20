@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyActiveOperationTasksRequest extends TeaModel {
     /**
+     * <p>The O&amp;M task IDs. Separate multiple IDs with commas (,).</p>
+     * <blockquote>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/414458.html">DescribeActiveOperationTasks</a> to obtain O&amp;M task IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,12 @@ public class ModifyActiveOperationTasksRequest extends TeaModel {
     public String ids;
 
     /**
+     * <p>Specifies whether to immediately execute the O&amp;M task. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: immediately executes the task.</li>
+     * <li><strong>0</strong>: executes the task at the specified time.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +46,10 @@ public class ModifyActiveOperationTasksRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The scheduled switchover time to set. Specify the time in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format (UTC).</p>
+     * <blockquote>
+     * <p>The time cannot be later than the deadline. You can call <a href="https://help.aliyun.com/document_detail/414458.html">DescribeActiveOperationTasks</a> and check the value of the <strong>Deadline</strong> response parameter to obtain the deadline.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

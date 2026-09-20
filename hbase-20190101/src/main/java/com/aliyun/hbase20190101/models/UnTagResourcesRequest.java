@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UnTagResourcesRequest extends TeaModel {
     /**
+     * <p>Specifies whether to delete all tags. If TagKey is specified, tags are deleted only by TagKey. Valid values: true and false. If this parameter is set to true and TagKey is not specified, all tags are deleted.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,7 @@ public class UnTagResourcesRequest extends TeaModel {
     public Boolean all;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class UnTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of resource N to untag. The resource ID is the cluster ID. You can specify multiple resource IDs, such as ResourceId.2 and ResourceId.3. N is a positive integer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class UnTagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
+     * <p>The key of tag N to delete. You can specify multiple tag keys, such as TagKey.2 and TagKey.3. N is a positive integer.</p>
+     * 
      * <strong>example:</strong>
      * <p>key1</p>
      */

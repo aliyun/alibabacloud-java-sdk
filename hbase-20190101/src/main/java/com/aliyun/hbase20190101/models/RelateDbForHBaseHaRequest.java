@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RelateDbForHBaseHaRequest extends TeaModel {
     /**
+     * <p>The ID of the BDS cluster. You can call the <a href="https://help.aliyun.com/document_detail/144595.html">DescribeInstances</a> operation to obtain the cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The instance ID of the primary instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     public String haActive;
 
     /**
+     * <p>The ZooKeeper address of the primary instance. This parameter is required when the primary instance is a non-standard instance (IsActiveStandard is set to false).</p>
+     * 
      * <strong>example:</strong>
      * <p>hb-t4naqsay5gn******-master1-001.hbase.singapore.rds.aliyuncs.com,hb-t4naqsay5gn******-master3-001.hbase.singapore.rds.aliyuncs.com,hb-t4naqsay5gn******-master2-001.hbase.singapore.rds.aliyuncs.com:2181:/hbase</p>
      */
@@ -30,6 +34,7 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     public String haActiveClusterKey;
 
     /**
+     * <p>The cluster type of the primary instance. Valid values: <strong>HBase</strong> and <strong>HBaseue</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,8 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     public String haActiveDBType;
 
     /**
+     * <p>The HDFS directory of the primary instance. This parameter is required when the primary instance is a non-standard instance (IsActiveStandard is set to false).</p>
+     * 
      * <strong>example:</strong>
      * <p>/hbase</p>
      */
@@ -46,6 +53,8 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     public String haActiveHbaseFsDir;
 
     /**
+     * <p>The HDFS URI of the primary instance. This parameter is required when the primary instance is a non-standard instance (IsActiveStandard is set to false).</p>
+     * 
      * <strong>example:</strong>
      * <p>hdfs://hb-t4naqsay5gn******-master1-001.hbase.rds.aliyuncs.com:8020,hb-t4naqsay5gn******-master2-001.hbase.rds.aliyuncs.com:8020</p>
      */
@@ -53,6 +62,8 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     public String haActiveHdfsUri;
 
     /**
+     * <p>The password that corresponds to the username of the primary instance. This parameter is required when the primary instance is <strong>HBaseue</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>root</p>
      */
@@ -60,6 +71,8 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     public String haActivePassword;
 
     /**
+     * <p>The username of the primary instance. This parameter is required when the primary instance is <strong>HBaseue</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>root</p>
      */
@@ -67,6 +80,13 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     public String haActiveUser;
 
     /**
+     * <p>The database engine version of the primary instance. This parameter is required when the primary instance is a non-standard instance (IsActiveStandard is set to false). Valid values:</p>
+     * <ul>
+     * <li><strong>HBase1x</strong>: HBase 1.x.</li>
+     * <li><strong>HBase2x</strong>: HBase 2.x.</li>
+     * <li><strong>HBaseUE</strong>: HBaseue.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>HBase2x</p>
      */
@@ -74,6 +94,12 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     public String haActiveVersion;
 
     /**
+     * <p>The synchronization type. Valid values:</p>
+     * <ul>
+     * <li><strong>CLUSTER</strong>: instance-level synchronization.</li>
+     * <li><strong>TABLE</strong>: table-level synchronization.</li>
+     * <li><strong>SKIP</strong>: no synchronization required.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,6 +109,7 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     public String haMigrateType;
 
     /**
+     * <p>The ID of the secondary instance cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,6 +119,8 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     public String haStandby;
 
     /**
+     * <p>The ZooKeeper address of the secondary instance. This parameter is required when the secondary instance is a non-standard instance (IsStandbyStandard is set to false).</p>
+     * 
      * <strong>example:</strong>
      * <p>hb-bp1w6krp539******-master1-001.hbase.singapore.rds.aliyuncs.com,hb-bp1w6krp539******-master3-001.hbase.singapore.rds.aliyuncs.com,hb-t4naqsay5gn******-master2-001.hbase.singapore.rds.aliyuncs.com:2181:/hbase</p>
      */
@@ -99,6 +128,7 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     public String haStandbyClusterKey;
 
     /**
+     * <p>The cluster type of the secondary instance. Valid values: <strong>HBase</strong> and <strong>HBaseue</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -108,6 +138,8 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     public String haStandbyDBType;
 
     /**
+     * <p>The HDFS directory of the secondary instance. This parameter is required when the secondary instance is a non-standard instance (IsStandbyStandard is set to false).</p>
+     * 
      * <strong>example:</strong>
      * <p>/hbase</p>
      */
@@ -115,6 +147,8 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     public String haStandbyHbaseFsDir;
 
     /**
+     * <p>The HDFS URI of the secondary instance. This parameter is required when the secondary instance is a non-standard instance (IsStandbyStandard is set to false).</p>
+     * 
      * <strong>example:</strong>
      * <p>hdfs://hb-bp1w6krp539******-master1-001.hbase.rds.aliyuncs.com:8020,hb-bp1w6krp539******-master2-001.hbase.rds.aliyuncs.com:8020</p>
      */
@@ -122,6 +156,8 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     public String haStandbyHdfsUri;
 
     /**
+     * <p>The password that corresponds to the username of the secondary instance. This parameter is required when the secondary instance is <strong>hbaseue</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>root</p>
      */
@@ -129,6 +165,8 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     public String haStandbyPassword;
 
     /**
+     * <p>The username of the secondary instance. This parameter is required when the secondary instance is <strong>hbaseue</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>root</p>
      */
@@ -136,6 +174,13 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     public String haStandbyUser;
 
     /**
+     * <p>The database engine version of the secondary instance. This parameter is required when the secondary instance is a non-standard instance (IsStandbyStandard is set to false). Valid values:</p>
+     * <ul>
+     * <li><strong>HBase1x</strong>: HBase 1.x.</li>
+     * <li><strong>HBase2x</strong>: HBase 2.x.</li>
+     * <li><strong>HBaseUE</strong>: HBaseue.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>HBase2x</p>
      */
@@ -143,6 +188,8 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     public String haStandbyVersion;
 
     /**
+     * <p>The tables to synchronize. This parameter is required when HaMigrateType is set to TABLE. Separate multiple tables with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>test,test1</p>
      */
@@ -150,6 +197,7 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     public String haTables;
 
     /**
+     * <p>Specifies whether the primary instance is a standard instance. Set this parameter to <strong>true</strong> for a standard instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -159,6 +207,7 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     public Boolean isActiveStandard;
 
     /**
+     * <p>Specifies whether the secondary instance is a standard instance. Set this parameter to <strong>true</strong> for a standard instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

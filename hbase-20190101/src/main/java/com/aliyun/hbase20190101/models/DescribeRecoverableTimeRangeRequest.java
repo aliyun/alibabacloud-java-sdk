@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRecoverableTimeRangeRequest extends TeaModel {
     /**
+     * <p>The ID of the HBaseue cluster for which you want to query the recoverable time range.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

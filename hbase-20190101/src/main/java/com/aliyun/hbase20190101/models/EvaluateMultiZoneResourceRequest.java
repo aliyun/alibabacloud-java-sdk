@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class EvaluateMultiZoneResourceRequest extends TeaModel {
     /**
+     * <p>The vSwitch ID of the arbitration zone. The vSwitch must be in the zone specified by <strong>ArbiterZoneId</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public String arbiterVSwitchId;
 
     /**
+     * <p>The zone ID of the arbitration zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public String arbiterZoneId;
 
     /**
+     * <p>The version of the deployment architecture. Currently, only the hbaseue engine type is supported. Set the value to <strong>2.0</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,12 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public String archVersion;
 
     /**
+     * <p>The auto-renewal period of the instance. Unit: months.</p>
+     * <blockquote>
+     * <ul><li>The default value is 0, which indicates that the instance is not automatically renewed after the instance expires.</li>
+     * </blockquote>
+     * <li>For example, if the auto-renewal period is set to 2, the instance is automatically renewed for two months after the instance expires.</li></ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -39,6 +48,8 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public Integer autoRenewPeriod;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The value cannot exceed 64 ASCII characters in length and cannot contain non-ASCII characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>f4g8t5rd2gr94****</p>
      */
@@ -46,6 +57,13 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The cluster name. The following rules apply:</p>
+     * <ul>
+     * <li>The name must be 2 to 128 characters in length.</li>
+     * <li>The name must start with an uppercase letter, a lowercase letter, or a Chinese character.</li>
+     * <li>The name can contain digits or special characters, including periods (.), hyphens (-), and underscores (_).</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>hbaseue_test</p>
      */
@@ -53,6 +71,7 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public String clusterName;
 
     /**
+     * <p>The disk size of the node. Valid values: 400 to 64000. Unit: GB. The value must be a multiple of 40.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +81,13 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public Integer coreDiskSize;
 
     /**
+     * <p>The disk type of the core node. Valid values:</p>
+     * <ul>
+     * <li><strong>cloud_efficiency</strong>: ultra cloud disk.</li>
+     * <li><strong>cloud_ssd</strong>: standard SSD.</li>
+     * <li><strong>local_hdd_pro</strong>: throughput-intensive local disk.</li>
+     * <li><strong>local_ssd_pro</strong>: I/O-intensive local disk.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,6 +97,7 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public String coreDiskType;
 
     /**
+     * <p>The node specifications of the core node. You can invoke the <a href="https://help.aliyun.com/document_detail/145796.html">DescribeInstanceType</a> operation to query the node specifications.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,6 +107,7 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public String coreInstanceType;
 
     /**
+     * <p>The number of core nodes. Valid values: 2 to 20. The value must be an even number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,6 +117,7 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public Integer coreNodeCount;
 
     /**
+     * <p>The service type. Currently, only ApsaraDB for HBase Performance-enhanced Edition is supported. Set the value to <strong>hbaseue</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,6 +127,7 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public String engine;
 
     /**
+     * <p>The version of the engine type. Set the value to <strong>2.0</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -107,6 +137,8 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public String engineVersion;
 
     /**
+     * <p>The disk size of the log node. Valid values: 400 to 64000. Unit: GB. The value must be a multiple of 40.</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -114,6 +146,14 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public Integer logDiskSize;
 
     /**
+     * <p>The disk type of the log node. Valid values:</p>
+     * <ul>
+     * <li><strong>cloud_efficiency</strong>: ultra cloud disk.</li>
+     * <li><strong>cloud_ssd</strong>: standard SSD.</li>
+     * <li><strong>local_hdd_pro</strong>: throughput-intensive local disk.</li>
+     * <li><strong>local_ssd_pro</strong>: I/O-intensive local disk.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cloud_ssd</p>
      */
@@ -121,6 +161,8 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public String logDiskType;
 
     /**
+     * <p>The node specifications of the log node. You can invoke the <a href="https://help.aliyun.com/document_detail/145796.html">DescribeInstanceType</a> operation to query the node specifications.</p>
+     * 
      * <strong>example:</strong>
      * <p>hbase.sn1.medium</p>
      */
@@ -128,6 +170,8 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public String logInstanceType;
 
     /**
+     * <p>The number of log nodes. Valid values: 4 to 400. The value must be a multiple of 4.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -135,6 +179,7 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public Integer logNodeCount;
 
     /**
+     * <p>The node specifications of the master node. You can invoke the <a href="https://help.aliyun.com/document_detail/145796.html">DescribeInstanceType</a> operation to query the node specifications.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -144,6 +189,8 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public String masterInstanceType;
 
     /**
+     * <p>&lt;props=&quot;china&quot;&gt;The zone combination. The following combinations are supported. You can go to the buy page or call the <a href="https://help.aliyun.com/document_detail/203039.html">DescribeMultiZoneAvailableRegions</a> operation to view the supported zone combinations.
+     * &lt;props=&quot;intl&quot;&gt;The zone combination. The following combinations are supported. You can go to the buy page to view the supported zone combinations..</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -153,6 +200,11 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public String multiZoneCombination;
 
     /**
+     * <p>The billing method of the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>Prepaid</strong>: subscription.</li>
+     * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -162,6 +214,15 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public String payType;
 
     /**
+     * <p>The subscription duration of the subscription instance. Valid values:</p>
+     * <ul>
+     * <li>If PeriodUnit is set to year, valid values are 1 to 3.</li>
+     * <li>If PeriodUnit is set to month, valid values are 1 to 9.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is required only when PayType is set to Prepaid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -169,6 +230,15 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public Integer period;
 
     /**
+     * <p>The unit of the subscription duration for the subscription instance. Valid values:</p>
+     * <ul>
+     * <li><strong>year</strong></li>
+     * <li><strong>month</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is required only when PayType is set to Prepaid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>month</p>
      */
@@ -176,6 +246,7 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public String periodUnit;
 
     /**
+     * <p>The vSwitch ID of the primary zone instance. The vSwitch must be in the zone specified by <strong>PrimaryZoneId</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -185,6 +256,7 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public String primaryVSwitchId;
 
     /**
+     * <p>The zone ID of the primary zone instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -194,6 +266,7 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public String primaryZoneId;
 
     /**
+     * <p>The ID of the region in which the instance resides. You can call the <a href="https://help.aliyun.com/document_detail/144489.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -203,6 +276,11 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The IP addresses in the whitelist of the instance. Separate multiple IP addresses with commas (,).</p>
+     * <blockquote>
+     * <p>If the IP address is set to 127.0.0.1, all addresses are denied access to the instance. For example, 192.168.0.0/24 indicates that all IP addresses in the 192.168.0.XX range are allowed to access the instance.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */
@@ -210,6 +288,7 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public String securityIPList;
 
     /**
+     * <p>The vSwitch ID of the secondary zone instance. The vSwitch must be in the zone specified by <strong>StandbyZoneId</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -219,6 +298,7 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public String standbyVSwitchId;
 
     /**
+     * <p>The zone ID of the secondary zone instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -228,6 +308,7 @@ public class EvaluateMultiZoneResourceRequest extends TeaModel {
     public String standbyZoneId;
 
     /**
+     * <p>The ID of the virtual private cloud (VPC). The VPC must be in the region specified by <strong>RegionId</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

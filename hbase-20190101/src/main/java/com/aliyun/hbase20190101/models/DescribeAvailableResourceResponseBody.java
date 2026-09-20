@@ -8,6 +8,8 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public DescribeAvailableResourceResponseBodyAvailableZones availableZones;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EA76F208-E334-592A-A0C6-41E15EC87ED0</p>
      */
@@ -36,17 +38,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResourcesMasterResourceInstanceTypeDetail extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("Cpu")
         public Integer cpu;
 
-        /**
-         * <strong>example:</strong>
-         * <p>8</p>
-         */
         @NameInMap("Mem")
         public Integer mem;
 
@@ -74,10 +68,6 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResourcesMasterResource extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>hbase.sn1.medium</p>
-         */
         @NameInMap("InstanceType")
         public String instanceType;
 
@@ -127,24 +117,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DBInstanceStorageRange extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>8000</p>
-         */
         @NameInMap("MaxSize")
         public Integer maxSize;
 
-        /**
-         * <strong>example:</strong>
-         * <p>400</p>
-         */
         @NameInMap("MinSize")
         public Integer minSize;
 
-        /**
-         * <strong>example:</strong>
-         * <p>40</p>
-         */
         @NameInMap("StepSize")
         public Integer stepSize;
 
@@ -180,17 +158,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class InstanceTypeDetail extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("Cpu")
         public Integer cpu;
 
-        /**
-         * <strong>example:</strong>
-         * <p>8</p>
-         */
         @NameInMap("Mem")
         public Integer mem;
 
@@ -221,20 +191,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         @NameInMap("DBInstanceStorageRange")
         public DBInstanceStorageRange DBInstanceStorageRange;
 
-        /**
-         * <strong>example:</strong>
-         * <p>hbase.sn1.large</p>
-         */
         @NameInMap("InstanceType")
         public String instanceType;
 
         @NameInMap("InstanceTypeDetail")
         public InstanceTypeDetail instanceTypeDetail;
 
-        /**
-         * <strong>example:</strong>
-         * <p>16</p>
-         */
         @NameInMap("MaxCoreCount")
         public Integer maxCoreCount;
 
@@ -300,10 +262,6 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         @NameInMap("CoreResources")
         public CoreResources coreResources;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cloud_ssd</p>
-         */
         @NameInMap("StorageType")
         public String storageType;
 
@@ -350,10 +308,6 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategories extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>cluster</p>
-         */
         @NameInMap("Category")
         public String category;
 
@@ -406,10 +360,6 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         @NameInMap("SupportedCategories")
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategories supportedCategories;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2.0</p>
-         */
         @NameInMap("Version")
         public String version;
 
@@ -456,10 +406,6 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>hbase</p>
-         */
         @NameInMap("Engine")
         public String engine;
 
@@ -512,20 +458,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         @NameInMap("MasterResources")
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResources masterResources;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-shenzhen</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
         @NameInMap("SupportedEngines")
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines supportedEngines;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-shenzhen-e</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

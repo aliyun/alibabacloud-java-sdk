@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
+     * <p>The token used to start the next query. If the amount of data exceeds the limit, this parameter is returned for you to query the next page.</p>
+     * 
      * <strong>example:</strong>
      * <p>NextToken</p>
      */
@@ -12,6 +14,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,12 +24,17 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of resource N. In this context, the resource ID is the cluster ID. You can query multiple resources at a time by specifying ResourceId.2, ResourceId.3, and so on. N is a positive integer.</p>
+     * 
      * <strong>example:</strong>
      * <p>bds-bp15e022622f****</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -69,6 +77,8 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
+         * <p>The key of the tag to query. You can specify multiple keys. N is a positive integer.</p>
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -76,6 +86,8 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the tag to query. You can specify multiple values. N is a positive integer.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */

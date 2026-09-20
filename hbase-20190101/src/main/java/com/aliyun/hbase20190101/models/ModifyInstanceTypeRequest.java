@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceTypeRequest extends TeaModel {
     /**
+     * <p>The ID of target instance. You can call <a href="https://help.aliyun.com/document_detail/144595.html">DescribeInstances</a> to obtain target instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class ModifyInstanceTypeRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The new node specifications of the core node. You can invoke <a href="https://help.aliyun.com/document_detail/145796.html">DescribeInstanceType</a> to obtain the available node specifications.</p>
+     * <blockquote>
+     * <p>You must specify either the MasterInstanceType parameter or the CoreInstanceType parameter.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>hbase.sn1.8xlarge</p>
      */
@@ -21,6 +27,11 @@ public class ModifyInstanceTypeRequest extends TeaModel {
     public String coreInstanceType;
 
     /**
+     * <p>The new node specifications of the master node. You can invoke <a href="https://help.aliyun.com/document_detail/145796.html">DescribeInstanceType</a> to obtain the available node specifications.</p>
+     * <blockquote>
+     * <p>You must specify either the MasterInstanceType parameter or the CoreInstanceType parameter.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>hbase.sn1.large</p>
      */

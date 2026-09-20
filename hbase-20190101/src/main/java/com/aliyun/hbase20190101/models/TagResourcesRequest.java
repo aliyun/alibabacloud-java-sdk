@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/144489.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The list of instance IDs. You can call the <a href="https://help.aliyun.com/document_detail/144595.html">DescribeInstances</a> operation to query instance IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class TagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
+     * <p>The list of tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -59,6 +62,13 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
+         * <p>The key of the tag.</p>
+         * <blockquote>
+         * <p>N specifies the sequence number of the tag key. For example:<ul></p>
+         * </blockquote>
+         * <li>Tag.1.Key specifies the key of the first tag.</li>
+         * <li>Tag.2.Key specifies the key of the second tag.</li></ul>.
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -66,6 +76,13 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the tag.</p>
+         * <blockquote>
+         * <p>N specifies the sequence number of the tag value. For example:<ul></p>
+         * </blockquote>
+         * <li>Tag.1.Value specifies the value of the first tag.</li>
+         * <li>Tag.2.Value specifies the value of the second tag.</li></ul>.
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */

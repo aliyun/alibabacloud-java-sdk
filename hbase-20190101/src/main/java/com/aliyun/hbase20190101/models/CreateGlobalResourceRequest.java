@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateGlobalResourceRequest extends TeaModel {
     /**
+     * <p>This parameter is automatically populated when the request is sent. You do not need to specify this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxx-xxxxx-xxxxx</p>
      */
@@ -12,6 +14,7 @@ public class CreateGlobalResourceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The ID of the target instance. You can call the DescribeInstances operation to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,10 +23,29 @@ public class CreateGlobalResourceRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The resource name. Valid values:</p>
+     * <ul>
+     * <li><p>HbaseSLBThriftVip: Thrift SLB EPS resource.</p>
+     * </li>
+     * <li><p>SolrSlbVip: Solr SLB EPS resource.</p>
+     * </li>
+     * <li><p>PhoenixSLBQueryServerVip: Phoenix SLB EPS resource.</p>
+     * </li>
+     * <li><p>PubHbaseSLBThriftVip: Thrift SLB public network resource.</p>
+     * </li>
+     * <li><p>PubPhoenixSLBQueryServerVip: Phoenix SLB public network resource.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +55,7 @@ public class CreateGlobalResourceRequest extends TeaModel {
     public String resourceName;
 
     /**
+     * <p>The resource type. Set the value to <strong>GLOBAL_VIP</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

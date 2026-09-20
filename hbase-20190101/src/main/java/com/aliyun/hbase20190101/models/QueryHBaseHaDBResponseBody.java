@@ -8,6 +8,8 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
     public QueryHBaseHaDBResponseBodyClusterList clusterList;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +17,8 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +26,8 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>963355AD-A3B1-4654-AFFC-B5186EB8F889</p>
      */
@@ -29,6 +35,8 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries in the list.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -81,24 +89,12 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
     }
 
     public static class QueryHBaseHaDBResponseBodyClusterListClusterHaSlbConnListHaSlbConn extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>Standby</p>
-         */
         @NameInMap("HbaseType")
         public String hbaseType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ha-v21tmnxjwh2yuy1il-phoenix.bds.9b78df04-b.rds.aliyuncs.com:8765</p>
-         */
         @NameInMap("SlbConnAddr")
         public String slbConnAddr;
 
-        /**
-         * <strong>example:</strong>
-         * <p>phoenix</p>
-         */
         @NameInMap("SlbType")
         public String slbType;
 
@@ -153,36 +149,18 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
     }
 
     public static class QueryHBaseHaDBResponseBodyClusterListCluster extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>hb-t4nn7dy1u1etbzmzm</p>
-         */
         @NameInMap("ActiveName")
         public String activeName;
 
-        /**
-         * <p>bdsId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>bds-t4n3496whj23ia4k</p>
-         */
         @NameInMap("BdsName")
         public String bdsName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ha-v21tmnxjwh2yuy1il</p>
-         */
         @NameInMap("HaName")
         public String haName;
 
         @NameInMap("HaSlbConnList")
         public QueryHBaseHaDBResponseBodyClusterListClusterHaSlbConnList haSlbConnList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>hb-t4n0ye37832tx22vz</p>
-         */
         @NameInMap("StandbyName")
         public String standbyName;
 

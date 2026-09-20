@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteGlobalResourceRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class DeleteGlobalResourceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource name. PubPhoenixSLBQueryServerVip releases the public endpoint of the HBase SQL service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +28,7 @@ public class DeleteGlobalResourceRequest extends TeaModel {
     public String resourceName;
 
     /**
+     * <p>The resource type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

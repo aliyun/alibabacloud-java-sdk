@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokeRequest extends TeaModel {
     /**
+     * <p>The database account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,13 @@ public class RevokeRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>The list of permissions. Separate multiple permissions with commas (,). Valid values:</p>
+     * <ul>
+     * <li>READ: read permission.</li>
+     * <li>WRITE: write permission.</li>
+     * <li>ADMIN: administrative permission.</li>
+     * <li>TRASH: purge permission.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +31,7 @@ public class RevokeRequest extends TeaModel {
     public String aclActions;
 
     /**
+     * <p>The target instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +41,7 @@ public class RevokeRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The namespace. An asterisk (*) indicates global, which means all namespaces.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +51,7 @@ public class RevokeRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The table name. An asterisk (*) indicates global, which means all tables.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

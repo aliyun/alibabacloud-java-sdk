@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewInstanceRequest extends TeaModel {
     /**
+     * <p>The instance ID of the target instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class RenewInstanceRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The renewal epoch for the target instance.</p>
+     * <ul>
+     * <li>If PricingCycle is set to <strong>year</strong>, valid values are 1 to 3.</li>
+     * <li>If PricingCycle is set to <strong>month</strong>, valid values are 1 to 9.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +29,11 @@ public class RenewInstanceRequest extends TeaModel {
     public Integer duration;
 
     /**
+     * <p>The unit of the renewal epoch for the target instance.</p>
+     * <ul>
+     * <li><strong>year</strong>: year.</li>
+     * <li><strong>month</strong>: month.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

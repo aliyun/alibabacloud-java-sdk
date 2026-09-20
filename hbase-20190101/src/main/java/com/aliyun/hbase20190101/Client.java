@@ -63,6 +63,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Adds a self-managed HDFS address to Xpack.</p>
+     * 
      * @param request AddUserHdfsInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddUserHdfsInfoResponse
@@ -100,6 +103,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Adds a self-managed HDFS address to Xpack.</p>
+     * 
      * @param request AddUserHdfsInfoRequest
      * @return AddUserHdfsInfoResponse
      */
@@ -109,6 +115,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Applies for a public endpoint.</p>
+     * 
      * @param request AllocatePublicNetworkAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AllocatePublicNetworkAddressResponse
@@ -142,6 +151,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Applies for a public endpoint.</p>
+     * 
      * @param request AllocatePublicNetworkAddressRequest
      * @return AllocatePublicNetworkAddressResponse
      */
@@ -151,6 +163,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Cancels O&amp;M event tasks by calling the CancelActiveOperationTasks operation.</p>
+     * 
      * @param request CancelActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CancelActiveOperationTasksResponse
@@ -200,6 +215,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Cancels O&amp;M event tasks by calling the CancelActiveOperationTasks operation.</p>
+     * 
      * @param request CancelActiveOperationTasksRequest
      * @return CancelActiveOperationTasksResponse
      */
@@ -209,6 +227,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Checks whether the versions of components are the latest versions by calling CheckComponentsVersion.</p>
+     * 
      * @param request CheckComponentsVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckComponentsVersionResponse
@@ -242,6 +263,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Checks whether the versions of components are the latest versions by calling CheckComponentsVersion.</p>
+     * 
      * @param request CheckComponentsVersionRequest
      * @return CheckComponentsVersionResponse
      */
@@ -251,6 +275,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disables the backup and recovery feature for an HBase cluster by calling CloseBackup.</p>
+     * 
      * @param request CloseBackupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CloseBackupResponse
@@ -280,6 +307,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disables the backup and recovery feature for an HBase cluster by calling CloseBackup.</p>
+     * 
      * @param request CloseBackupRequest
      * @return CloseBackupResponse
      */
@@ -289,6 +319,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Note: This operation can be called only when payType is set to Postpaid.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Converts an instance from pay-as-you-go to subscription billing.</p>
+     * 
      * @param request ConvertInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ConvertInstanceResponse
@@ -330,6 +366,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Note: This operation can be called only when payType is set to Postpaid.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Converts an instance from pay-as-you-go to subscription billing.</p>
+     * 
      * @param request ConvertInstanceRequest
      * @return ConvertInstanceResponse
      */
@@ -339,8 +381,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only ApsaraDB for HBase Performance-enhanced Edition is supported.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新建账户</p>
+     * <p>Creates a wide table account.</p>
      * 
      * @param request CreateAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -379,8 +424,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only ApsaraDB for HBase Performance-enhanced Edition is supported.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新建账户</p>
+     * <p>Creates a wide table account.</p>
      * 
      * @param request CreateAccountRequest
      * @return CreateAccountResponse
@@ -391,6 +439,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Currently, this operation supports only HBaseue clusters. The EnableHBaseueBackup operation is compatible with this operation and performs automatic creation of a backup plan after a BDS cluster is created.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a backup plan. Currently, only HBaseue is supported.</p>
+     * 
      * @param request CreateBackupPlanRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateBackupPlanResponse
@@ -420,6 +474,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Currently, this operation supports only HBaseue clusters. The EnableHBaseueBackup operation is compatible with this operation and performs automatic creation of a backup plan after a BDS cluster is created.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a backup plan. Currently, only HBaseue is supported.</p>
+     * 
      * @param request CreateBackupPlanRequest
      * @return CreateBackupPlanResponse
      */
@@ -429,6 +489,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an ApsaraDB for HBase cluster by calling CreateCluster.</p>
+     * 
      * @param request CreateClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateClusterResponse
@@ -538,6 +601,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an ApsaraDB for HBase cluster by calling CreateCluster.</p>
+     * 
      * @param request CreateClusterRequest
      * @return CreateClusterResponse
      */
@@ -547,6 +613,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a global resource in a cluster by calling CreateGlobalResource.</p>
+     * 
      * @param request CreateGlobalResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateGlobalResourceResponse
@@ -592,6 +661,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a global resource in a cluster by calling CreateGlobalResource.</p>
+     * 
      * @param request CreateGlobalResourceRequest
      * @return CreateGlobalResourceResponse
      */
@@ -601,6 +673,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a load balancing service by calling CreateHBaseSlbServer.</p>
+     * 
      * @param request CreateHBaseSlbServerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateHBaseSlbServerResponse
@@ -638,6 +713,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a load balancing service by calling CreateHBaseSlbServer.</p>
+     * 
      * @param request CreateHBaseSlbServerRequest
      * @return CreateHBaseSlbServerResponse
      */
@@ -647,6 +725,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a high-availability Thrift or Phoenix service for a BDS cluster that already has a high-availability HBase setup.</p>
+     * 
      * @param request CreateHbaseHaSlbRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateHbaseHaSlbResponse
@@ -692,6 +773,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a high-availability Thrift or Phoenix service for a BDS cluster that already has a high-availability HBase setup.</p>
+     * 
      * @param request CreateHbaseHaSlbRequest
      * @return CreateHbaseHaSlbResponse
      */
@@ -701,6 +785,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Currently, only version 2.0 of the HBaseue engine is supported.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a multi-zone cluster by calling CreateMultiZoneCluster.</p>
+     * 
      * @param request CreateMultiZoneClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateMultiZoneClusterResponse
@@ -842,6 +932,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Currently, only version 2.0 of the HBaseue engine is supported.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a multi-zone cluster by calling CreateMultiZoneCluster.</p>
+     * 
      * @param request CreateMultiZoneClusterRequest
      * @return CreateMultiZoneClusterResponse
      */
@@ -851,6 +947,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the backup and restore feature is enabled for the ApsaraDB for HBase Performance-enhanced Edition cluster and that the target ApsaraDB for HBase Performance-enhanced Edition cluster is associated with the corresponding BDS.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Restores backed-up data from a cluster with the backup and restore feature enabled to another ApsaraDB for HBase Performance-enhanced Edition cluster in the same region.</p>
+     * 
      * @param request CreateRestorePlanRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateRestorePlanResponse
@@ -900,6 +1002,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the backup and restore feature is enabled for the ApsaraDB for HBase Performance-enhanced Edition cluster and that the target ApsaraDB for HBase Performance-enhanced Edition cluster is associated with the corresponding BDS.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Restores backed-up data from a cluster with the backup and restore feature enabled to another ApsaraDB for HBase Performance-enhanced Edition cluster in the same region.</p>
+     * 
      * @param request CreateRestorePlanRequest
      * @return CreateRestorePlanResponse
      */
@@ -909,6 +1017,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an HBase Serverless cluster.</p>
+     * 
      * @param request CreateServerlessClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateServerlessClusterResponse
@@ -1006,6 +1117,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an HBase Serverless cluster.</p>
+     * 
      * @param request CreateServerlessClusterRequest
      * @return CreateServerlessClusterResponse
      */
@@ -1015,8 +1129,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only supported for HBase Enhanced Edition (HBaseue).</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除账户</p>
+     * <p>Delete Wide Table Database Account</p>
      * 
      * @param request DeleteAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1051,8 +1168,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only supported for HBase Enhanced Edition (HBaseue).</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除账户</p>
+     * <p>Delete Wide Table Database Account</p>
      * 
      * @param request DeleteAccountRequest
      * @return DeleteAccountResponse
@@ -1063,6 +1183,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a global resource from a cluster by calling DeleteGlobalResource.</p>
+     * 
      * @param request DeleteGlobalResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteGlobalResourceResponse
@@ -1104,6 +1227,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a global resource from a cluster by calling DeleteGlobalResource.</p>
+     * 
      * @param request DeleteGlobalResourceRequest
      * @return DeleteGlobalResourceResponse
      */
@@ -1113,6 +1239,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a created HA instance.</p>
+     * 
      * @param request DeleteHBaseHaDBRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteHBaseHaDBResponse
@@ -1146,6 +1275,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a created HA instance.</p>
+     * 
      * @param request DeleteHBaseHaDBRequest
      * @return DeleteHBaseHaDBResponse
      */
@@ -1155,6 +1287,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls DeleteHBaseSlbServer to delete an activated load balancing service.</p>
+     * 
      * @param request DeleteHBaseSlbServerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteHBaseSlbServerResponse
@@ -1188,6 +1323,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls DeleteHBaseSlbServer to delete an activated load balancing service.</p>
+     * 
      * @param request DeleteHBaseSlbServerRequest
      * @return DeleteHBaseSlbServerResponse
      */
@@ -1197,6 +1335,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes the corresponding high-availability Thrift or high-availability Phoenix configuration. This operation is the counterpart of the CreateHbaseHaSlb operation.</p>
+     * 
      * @param request DeleteHbaseHaSlbRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteHbaseHaSlbResponse
@@ -1234,6 +1375,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes the corresponding high-availability Thrift or high-availability Phoenix configuration. This operation is the counterpart of the CreateHbaseHaSlb operation.</p>
+     * 
      * @param request DeleteHbaseHaSlbRequest
      * @return DeleteHbaseHaSlbResponse
      */
@@ -1243,6 +1387,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you call this operation, the instance must meet the following conditions:</p>
+     * <ul>
+     * <li>The instance status is <strong>Running</strong>.</li>
+     * <li>The billing method of the instance is <strong>pay-as-you-go</strong>.<blockquote>
+     * <p>Subscription instances cannot be deleted by calling this operation. They are automatically released upon expiration. To release a subscription instance in advance, submit a ticket.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Calls DeleteInstance to release an HBase instance.</p>
+     * 
      * @param request DeleteInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteInstanceResponse
@@ -1276,6 +1433,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you call this operation, the instance must meet the following conditions:</p>
+     * <ul>
+     * <li>The instance status is <strong>Running</strong>.</li>
+     * <li>The billing method of the instance is <strong>pay-as-you-go</strong>.<blockquote>
+     * <p>Subscription instances cannot be deleted by calling this operation. They are automatically released upon expiration. To release a subscription instance in advance, submit a ticket.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Calls DeleteInstance to release an HBase instance.</p>
+     * 
      * @param request DeleteInstanceRequest
      * @return DeleteInstanceResponse
      */
@@ -1285,6 +1455,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a multi-zone instance by calling the DeleteMultiZoneCluster operation.</p>
+     * 
      * @param request DeleteMultiZoneClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteMultiZoneClusterResponse
@@ -1318,6 +1491,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a multi-zone instance by calling the DeleteMultiZoneCluster operation.</p>
+     * 
      * @param request DeleteMultiZoneClusterRequest
      * @return DeleteMultiZoneClusterResponse
      */
@@ -1327,6 +1503,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes an HBase Serverless cluster.</p>
+     * 
      * @param request DeleteServerlessClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteServerlessClusterResponse
@@ -1364,6 +1543,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes an HBase Serverless cluster.</p>
+     * 
      * @param request DeleteServerlessClusterRequest
      * @return DeleteServerlessClusterResponse
      */
@@ -1373,6 +1555,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls DeleteUserHdfsInfo to delete user-created HDFS information in Xpack.</p>
+     * 
      * @param request DeleteUserHdfsInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteUserHdfsInfoResponse
@@ -1406,6 +1591,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls DeleteUserHdfsInfo to delete user-created HDFS information in Xpack.</p>
+     * 
      * @param request DeleteUserHdfsInfoRequest
      * @return DeleteUserHdfsInfoResponse
      */
@@ -1416,7 +1604,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询账户列表</p>
+     * <p>Queries the list of database accounts.</p>
      * 
      * @param request DescribeAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1448,7 +1636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询账户列表</p>
+     * <p>Queries the list of database accounts.</p>
      * 
      * @param request DescribeAccountsRequest
      * @return DescribeAccountsResponse
@@ -1459,6 +1647,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the DescribeActiveOperationTaskType operation to query the O&amp;M task types, the number of tasks of each type, and the details of an HBase instance.</p>
+     * 
      * @param request DescribeActiveOperationTaskTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeActiveOperationTaskTypeResponse
@@ -1508,6 +1699,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the DescribeActiveOperationTaskType operation to query the O&amp;M task types, the number of tasks of each type, and the details of an HBase instance.</p>
+     * 
      * @param request DescribeActiveOperationTaskTypeRequest
      * @return DescribeActiveOperationTaskTypeResponse
      */
@@ -1517,6 +1711,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the DescribeActiveOperationTasks operation to query details of O&amp;M tasks for HBase instances.</p>
+     * 
      * @param request DescribeActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeActiveOperationTasksResponse
@@ -1606,6 +1803,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the DescribeActiveOperationTasks operation to query details of O&amp;M tasks for HBase instances.</p>
+     * 
      * @param request DescribeActiveOperationTasksRequest
      * @return DescribeActiveOperationTasksResponse
      */
@@ -1615,6 +1815,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries available resources by calling DescribeAvailableResource.</p>
+     * 
      * @param request DescribeAvailableResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAvailableResourceResponse
@@ -1668,6 +1871,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries available resources by calling DescribeAvailableResource.</p>
+     * 
      * @param request DescribeAvailableResourceRequest
      * @return DescribeAvailableResourceResponse
      */
@@ -1677,6 +1883,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation currently supports only HBaseue. Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the configuration of a backup plan by calling the DescribeBackupPlanConfig operation.</p>
+     * 
      * @param request DescribeBackupPlanConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBackupPlanConfigResponse
@@ -1706,6 +1918,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation currently supports only HBaseue. Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the configuration of a backup plan by calling the DescribeBackupPlanConfig operation.</p>
+     * 
      * @param request DescribeBackupPlanConfigRequest
      * @return DescribeBackupPlanConfigResponse
      */
@@ -1715,6 +1933,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the backup policy of an HBase cluster by calling DescribeBackupPolicy.</p>
+     * 
      * @param request DescribeBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBackupPolicyResponse
@@ -1744,6 +1965,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the backup policy of an HBase cluster by calling DescribeBackupPolicy.</p>
+     * 
      * @param request DescribeBackupPolicyRequest
      * @return DescribeBackupPolicyResponse
      */
@@ -1753,6 +1977,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Describes the status of a backup task by calling the DescribeBackupStatus operation.</p>
+     * 
      * @param request DescribeBackupStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBackupStatusResponse
@@ -1782,6 +2009,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Describes the status of a backup task by calling the DescribeBackupStatus operation.</p>
+     * 
      * @param request DescribeBackupStatusRequest
      * @return DescribeBackupStatusResponse
      */
@@ -1791,6 +2021,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The backup and restore feature of the HBase Enhanced Edition instance is enabled. For more information, see <a href="https://help.aliyun.com/document_detail/145767.html">Enable backup and restore</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>After HBase Enhanced Edition backup is enabled, you can call the DescribeBackupSummary operation to query backup details.</p>
+     * 
      * @param request DescribeBackupSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBackupSummaryResponse
@@ -1828,6 +2064,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The backup and restore feature of the HBase Enhanced Edition instance is enabled. For more information, see <a href="https://help.aliyun.com/document_detail/145767.html">Enable backup and restore</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>After HBase Enhanced Edition backup is enabled, you can call the DescribeBackupSummary operation to query backup details.</p>
+     * 
      * @param request DescribeBackupSummaryRequest
      * @return DescribeBackupSummaryResponse
      */
@@ -1837,6 +2079,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that backup records exist. You can call the DescribeBackupSummary operation to obtain backup records.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the backup table information of a specific backup record by calling the DescribeBackupTables operation.</p>
+     * 
      * @param request DescribeBackupTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBackupTablesResponse
@@ -1878,6 +2126,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that backup records exist. You can call the DescribeBackupSummary operation to obtain backup records.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the backup table information of a specific backup record by calling the DescribeBackupTables operation.</p>
+     * 
      * @param request DescribeBackupTablesRequest
      * @return DescribeBackupTablesResponse
      */
@@ -1887,6 +2141,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves backup records of an ApsaraDB for HBase cluster by calling DescribeBackups.</p>
+     * 
      * @param request DescribeBackupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBackupsResponse
@@ -1944,6 +2201,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves backup records of an ApsaraDB for HBase cluster by calling DescribeBackups.</p>
+     * 
      * @param request DescribeBackupsRequest
      * @return DescribeBackupsResponse
      */
@@ -1953,6 +2213,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the connection list of a cluster by calling DescribeClusterConnection.</p>
+     * 
      * @param request DescribeClusterConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeClusterConnectionResponse
@@ -1986,6 +2249,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the connection list of a cluster by calling DescribeClusterConnection.</p>
+     * 
      * @param request DescribeClusterConnectionRequest
      * @return DescribeClusterConnectionResponse
      */
@@ -1995,6 +2261,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls DescribeColdStorage to retrieve the cold storage information of an instance.</p>
+     * 
      * @param request DescribeColdStorageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeColdStorageResponse
@@ -2024,6 +2293,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls DescribeColdStorage to retrieve the cold storage information of an instance.</p>
+     * 
      * @param request DescribeColdStorageRequest
      * @return DescribeColdStorageResponse
      */
@@ -2033,6 +2305,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls DescribeDBInstanceUsage to retrieve the running watermark status of an HBase cluster by cluster ID.</p>
+     * 
      * @param request DescribeDBInstanceUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstanceUsageResponse
@@ -2062,6 +2337,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls DescribeDBInstanceUsage to retrieve the running watermark status of an HBase cluster by cluster ID.</p>
+     * 
      * @param request DescribeDBInstanceUsageRequest
      * @return DescribeDBInstanceUsageResponse
      */
@@ -2071,6 +2349,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>By default, cluster resources are fully cleaned up 7 days after deletion. If you have called the PurgeInstance operation or set ImmediateDeleteFlag to true when calling the delete operation, the resources have already been fully cleaned up.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a list of clusters that have been deleted but not fully released.</p>
+     * 
      * @param request DescribeDeletedInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDeletedInstancesResponse
@@ -2108,6 +2392,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>By default, cluster resources are fully cleaned up 7 days after deletion. If you have called the PurgeInstance operation or set ImmediateDeleteFlag to true when calling the delete operation, the resources have already been fully cleaned up.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a list of clusters that have been deleted but not fully released.</p>
+     * 
      * @param request DescribeDeletedInstancesRequest
      * @return DescribeDeletedInstancesResponse
      */
@@ -2117,6 +2407,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Currently, only HBase and HBaseue are supported.</p>
+     * 
      * @param request DescribeDiskWarningLineRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDiskWarningLineResponse
@@ -2146,6 +2439,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Currently, only HBase and HBaseue are supported.</p>
+     * 
      * @param request DescribeDiskWarningLineRequest
      * @return DescribeDiskWarningLineResponse
      */
@@ -2155,6 +2451,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the database connection information of an ApsaraDB for HBase instance by calling DescribeEndpoints.</p>
+     * 
      * @param request DescribeEndpointsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeEndpointsResponse
@@ -2184,6 +2483,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the database connection information of an ApsaraDB for HBase instance by calling DescribeEndpoints.</p>
+     * 
      * @param request DescribeEndpointsRequest
      * @return DescribeEndpointsResponse
      */
@@ -2193,6 +2495,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of an ApsaraDB for HBase instance.</p>
+     * 
      * @param request DescribeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceResponse
@@ -2222,6 +2527,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of an ApsaraDB for HBase instance.</p>
+     * 
      * @param request DescribeInstanceRequest
      * @return DescribeInstanceResponse
      */
@@ -2231,6 +2539,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The complete specification mapping table is based on the list returned by this operation.
+     * If the response returns an &quot;instanceType is not found&quot; error, the specification has been deprecated. If you have a strong dependency on this specification, contact the Alibaba Cloud HBase management team.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries instance specifications (CPU and memory) by calling DescribeInstanceType.</p>
+     * 
      * @param request DescribeInstanceTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceTypeResponse
@@ -2260,6 +2575,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The complete specification mapping table is based on the list returned by this operation.
+     * If the response returns an &quot;instanceType is not found&quot; error, the specification has been deprecated. If you have a strong dependency on this specification, contact the Alibaba Cloud HBase management team.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries instance specifications (CPU and memory) by calling DescribeInstanceType.</p>
+     * 
      * @param request DescribeInstanceTypeRequest
      * @return DescribeInstanceTypeResponse
      */
@@ -2269,6 +2591,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the list of ApsaraDB for HBase instances in a specified region by calling DescribeInstances.</p>
+     * 
      * @param request DescribeInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstancesResponse
@@ -2326,6 +2651,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the list of ApsaraDB for HBase instances in a specified region by calling DescribeInstances.</p>
+     * 
      * @param request DescribeInstancesRequest
      * @return DescribeInstancesResponse
      */
@@ -2335,6 +2663,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the IP whitelist information of a cluster by cluster ID.</p>
+     * 
      * @param request DescribeIpWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeIpWhitelistResponse
@@ -2364,6 +2695,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the IP whitelist information of a cluster by cluster ID.</p>
+     * 
      * @param request DescribeIpWhitelistRequest
      * @return DescribeIpWhitelistResponse
      */
@@ -2373,6 +2707,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the available region and zone combinations for multi-zone deployment by calling DescribeMultiZoneAvailableRegions.</p>
+     * 
      * @param request DescribeMultiZoneAvailableRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeMultiZoneAvailableRegionsResponse
@@ -2402,6 +2739,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the available region and zone combinations for multi-zone deployment by calling DescribeMultiZoneAvailableRegions.</p>
+     * 
      * @param request DescribeMultiZoneAvailableRegionsRequest
      * @return DescribeMultiZoneAvailableRegionsResponse
      */
@@ -2411,6 +2751,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries purchasable resources in multiple zones by calling DescribeMultiZoneAvailableResource.</p>
+     * 
      * @param request DescribeMultiZoneAvailableResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeMultiZoneAvailableResourceResponse
@@ -2448,6 +2791,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries purchasable resources in multiple zones by calling DescribeMultiZoneAvailableResource.</p>
+     * 
      * @param request DescribeMultiZoneAvailableResourceRequest
      * @return DescribeMultiZoneAvailableResourceResponse
      */
@@ -2457,6 +2803,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a multi-zone instance.</p>
+     * 
      * @param request DescribeMultiZoneClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeMultiZoneClusterResponse
@@ -2486,6 +2835,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a multi-zone instance.</p>
+     * 
      * @param request DescribeMultiZoneClusterRequest
      * @return DescribeMultiZoneClusterResponse
      */
@@ -2495,6 +2847,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the recoverable time range after backup is enabled for an HBaseue cluster.</p>
+     * 
      * @param request DescribeRecoverableTimeRangeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRecoverableTimeRangeResponse
@@ -2524,6 +2882,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the recoverable time range after backup is enabled for an HBaseue cluster.</p>
+     * 
      * @param request DescribeRecoverableTimeRangeRequest
      * @return DescribeRecoverableTimeRangeResponse
      */
@@ -2533,6 +2897,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries available regions by calling DescribeRegions.</p>
+     * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRegionsResponse
@@ -2566,6 +2933,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries available regions by calling DescribeRegions.</p>
+     * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */
@@ -2575,6 +2945,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restoration records exist. You can call DescribeRestoreSummary to obtain restoration records.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specific full restoration for an HBaseue cluster that has backup and recovery enabled.</p>
+     * 
      * @param request DescribeRestoreFullDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRestoreFullDetailsResponse
@@ -2616,6 +2992,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restoration records exist. You can call DescribeRestoreSummary to obtain restoration records.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specific full restoration for an HBaseue cluster that has backup and recovery enabled.</p>
+     * 
      * @param request DescribeRestoreFullDetailsRequest
      * @return DescribeRestoreFullDetailsResponse
      */
@@ -2625,6 +3007,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restoration records exist. You can call the DescribeRestoreSummary operation to obtain restoration records.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of an incremental restoration by calling the DescribeRestoreIncrDetail operation.</p>
+     * 
      * @param request DescribeRestoreIncrDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRestoreIncrDetailResponse
@@ -2658,6 +3046,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restoration records exist. You can call the DescribeRestoreSummary operation to obtain restoration records.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of an incremental restoration by calling the DescribeRestoreIncrDetail operation.</p>
+     * 
      * @param request DescribeRestoreIncrDetailRequest
      * @return DescribeRestoreIncrDetailResponse
      */
@@ -2667,6 +3061,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restoration records exist.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of schema restoration for an HBaseue cluster that has backup and recovery enabled.</p>
+     * 
      * @param request DescribeRestoreSchemaDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRestoreSchemaDetailsResponse
@@ -2708,6 +3108,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restoration records exist.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of schema restoration for an HBaseue cluster that has backup and recovery enabled.</p>
+     * 
      * @param request DescribeRestoreSchemaDetailsRequest
      * @return DescribeRestoreSchemaDetailsResponse
      */
@@ -2717,6 +3123,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that backup and recovery is enabled for the HBaseue cluster.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the data recovery summary for an HBaseue cluster that has backup and recovery enabled by calling the DescribeRestoreSummary operation.</p>
+     * 
      * @param request DescribeRestoreSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRestoreSummaryResponse
@@ -2754,6 +3166,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that backup and recovery is enabled for the HBaseue cluster.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the data recovery summary for an HBaseue cluster that has backup and recovery enabled by calling the DescribeRestoreSummary operation.</p>
+     * 
      * @param request DescribeRestoreSummaryRequest
      * @return DescribeRestoreSummaryResponse
      */
@@ -2763,6 +3181,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restore records exist. You can call DescribeRestoreSummary to obtain restore records.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a restore record for a cluster that has been restored from a backup.</p>
+     * 
      * @param request DescribeRestoreTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRestoreTablesResponse
@@ -2796,6 +3220,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restore records exist. You can call DescribeRestoreSummary to obtain restore records.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a restore record for a cluster that has been restored from a backup.</p>
+     * 
      * @param request DescribeRestoreTablesRequest
      * @return DescribeRestoreTablesResponse
      */
@@ -2805,6 +3235,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls DescribeSecurityGroups to retrieve the security group information of a cluster by cluster ID.</p>
+     * 
      * @param request DescribeSecurityGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSecurityGroupsResponse
@@ -2834,6 +3267,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls DescribeSecurityGroups to retrieve the security group information of a cluster by cluster ID.</p>
+     * 
      * @param request DescribeSecurityGroupsRequest
      * @return DescribeSecurityGroupsResponse
      */
@@ -2843,6 +3279,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a serverless cluster by calling DescribeServerlessCluster.</p>
+     * 
      * @param request DescribeServerlessClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeServerlessClusterResponse
@@ -2876,6 +3315,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a serverless cluster by calling DescribeServerlessCluster.</p>
+     * 
      * @param request DescribeServerlessClusterRequest
      * @return DescribeServerlessClusterResponse
      */
@@ -2885,6 +3327,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls DescribeSubDomain to retrieve an available subdomain.</p>
+     * 
      * @param request DescribeSubDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSubDomainResponse
@@ -2918,6 +3363,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls DescribeSubDomain to retrieve an available subdomain.</p>
+     * 
      * @param request DescribeSubDomainRequest
      * @return DescribeSubDomainResponse
      */
@@ -2927,6 +3375,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Enables backup and recovery for an HBaseue cluster.</p>
+     * 
      * @param request EnableHBaseueBackupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableHBaseueBackupResponse
@@ -2968,6 +3419,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Enables backup and recovery for an HBaseue cluster.</p>
+     * 
      * @param request EnableHBaseueBackupRequest
      * @return EnableHBaseueBackupResponse
      */
@@ -2977,6 +3431,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the EnableHBaseueModule operation to enable an extension service.</p>
+     * 
      * @param request EnableHBaseueModuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableHBaseueModuleResponse
@@ -3074,6 +3531,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the EnableHBaseueModule operation to enable an extension service.</p>
+     * 
      * @param request EnableHBaseueModuleRequest
      * @return EnableHBaseueModuleResponse
      */
@@ -3083,6 +3543,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the EvaluateMultiZoneResource operation to evaluate whether available resources exist.</p>
+     * 
      * @param request EvaluateMultiZoneResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EvaluateMultiZoneResourceResponse
@@ -3220,6 +3683,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the EvaluateMultiZoneResource operation to evaluate whether available resources exist.</p>
+     * 
      * @param request EvaluateMultiZoneResourceRequest
      * @return EvaluateMultiZoneResourceResponse
      */
@@ -3229,6 +3695,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>CloudMonitor has been migrated. This operation is no longer in use. Access monitoring from the Monitoring and Alerts page in cluster management.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the monitoring URL based on the cluster ID.</p>
+     * 
      * @param request GetMultimodeCmsUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMultimodeCmsUrlResponse
@@ -3262,6 +3734,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>CloudMonitor has been migrated. This operation is no longer in use. Access monitoring from the Monitoring and Alerts page in cluster management.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the monitoring URL based on the cluster ID.</p>
+     * 
      * @param request GetMultimodeCmsUrlRequest
      * @return GetMultimodeCmsUrlResponse
      */
@@ -3272,7 +3750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>授权账户权限</p>
+     * <p>Grants permissions to an account.</p>
      * 
      * @param request GrantRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3320,7 +3798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>授权账户权限</p>
+     * <p>Grants permissions to an account.</p>
      * 
      * @param request GrantRequest
      * @return GrantResponse
@@ -3331,6 +3809,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls ListHBaseInstances to retrieve ApsaraDB for HBase instances within the same VPC.</p>
+     * 
      * @param request ListHBaseInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListHBaseInstancesResponse
@@ -3360,6 +3841,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls ListHBaseInstances to retrieve ApsaraDB for HBase instances within the same VPC.</p>
+     * 
      * @param request ListHBaseInstancesRequest
      * @return ListHBaseInstancesResponse
      */
@@ -3369,6 +3853,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the modification history of cluster parameters by calling ListInstanceServiceConfigHistories.</p>
+     * 
      * @param request ListInstanceServiceConfigHistoriesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListInstanceServiceConfigHistoriesResponse
@@ -3406,6 +3893,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the modification history of cluster parameters by calling ListInstanceServiceConfigHistories.</p>
+     * 
      * @param request ListInstanceServiceConfigHistoriesRequest
      * @return ListInstanceServiceConfigHistoriesResponse
      */
@@ -3415,6 +3905,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the configuration items of a cluster by calling ListInstanceServiceConfigurations.</p>
+     * 
      * @param request ListInstanceServiceConfigurationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListInstanceServiceConfigurationsResponse
@@ -3452,6 +3945,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the configuration items of a cluster by calling ListInstanceServiceConfigurations.</p>
+     * 
      * @param request ListInstanceServiceConfigurationsRequest
      * @return ListInstanceServiceConfigurationsResponse
      */
@@ -3461,6 +3957,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must specify at least one of the ResourceId and Tag parameters. Otherwise, an error is returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a list of tags by ResourceId or Tag (query by Key only, or by both Key and Value).</p>
+     * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTagResourcesResponse
@@ -3502,6 +4004,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must specify at least one of the ResourceId and Tag parameters. Otherwise, an error is returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a list of tags by ResourceId or Tag (query by Key only, or by both Key and Value).</p>
+     * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -3511,6 +4019,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves all labels in a specified region.</p>
+     * 
      * @param request ListTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTagsResponse
@@ -3540,6 +4051,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves all labels in a specified region.</p>
+     * 
      * @param request ListTagsRequest
      * @return ListTagsResponse
      */
@@ -3550,7 +4064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更改账户密码</p>
+     * <p>Changes the password of a database access account.</p>
      * 
      * @param request ModifyAccountPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3590,7 +4104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更改账户密码</p>
+     * <p>Changes the password of a database access account.</p>
      * 
      * @param request ModifyAccountPasswordRequest
      * @return ModifyAccountPasswordResponse
@@ -3601,6 +4115,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>In addition to notifications sent by text message, phone call, email, or internal message, O&amp;M events of ApsaraDB for HBase (such as minor engine version updates) are also displayed in the console. In addition to calling this operation to modify the scheduled switchover time, you can also modify it in the console. For more information, see <a href="https://help.aliyun.com/document_detail/405057.html">Query or manage pending events</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Calls the ModifyActiveOperationTasks operation to modify the scheduled switchover time of O&amp;M tasks.</p>
+     * 
      * @param request ModifyActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyActiveOperationTasksResponse
@@ -3658,6 +4178,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>In addition to notifications sent by text message, phone call, email, or internal message, O&amp;M events of ApsaraDB for HBase (such as minor engine version updates) are also displayed in the console. In addition to calling this operation to modify the scheduled switchover time, you can also modify it in the console. For more information, see <a href="https://help.aliyun.com/document_detail/405057.html">Query or manage pending events</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Calls the ModifyActiveOperationTasks operation to modify the scheduled switchover time of O&amp;M tasks.</p>
+     * 
      * @param request ModifyActiveOperationTasksRequest
      * @return ModifyActiveOperationTasksResponse
      */
@@ -3667,6 +4193,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the backup configuration for an HBaseue cluster that has backup and recovery enabled.</p>
+     * 
      * @param request ModifyBackupPlanConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyBackupPlanConfigResponse
@@ -3712,6 +4244,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the backup configuration for an HBaseue cluster that has backup and recovery enabled.</p>
+     * 
      * @param request ModifyBackupPlanConfigRequest
      * @return ModifyBackupPlanConfigResponse
      */
@@ -3721,6 +4259,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls ModifyBackupPolicy to modify the backup plan of an HBase cluster.</p>
+     * 
      * @param request ModifyBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyBackupPolicyResponse
@@ -3766,6 +4307,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls ModifyBackupPolicy to modify the backup plan of an HBase cluster.</p>
+     * 
      * @param request ModifyBackupPolicyRequest
      * @return ModifyBackupPolicyResponse
      */
@@ -3775,6 +4319,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Sets the deletion protection attribute of an instance by calling ModifyClusterDeletionProtection.</p>
+     * 
      * @param request ModifyClusterDeletionProtectionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyClusterDeletionProtectionResponse
@@ -3808,6 +4355,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Sets the deletion protection attribute of an instance by calling ModifyClusterDeletionProtection.</p>
+     * 
      * @param request ModifyClusterDeletionProtectionRequest
      * @return ModifyClusterDeletionProtectionResponse
      */
@@ -3817,6 +4367,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the disk capacity alert threshold for HBase Cluster Edition and HBaseue clusters. The default alert threshold is 80%.</p>
+     * 
      * @param request ModifyDiskWarningLineRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDiskWarningLineResponse
@@ -3850,6 +4403,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the disk capacity alert threshold for HBase Cluster Edition and HBaseue clusters. The default alert threshold is 80%.</p>
+     * 
      * @param request ModifyDiskWarningLineRequest
      * @return ModifyDiskWarningLineResponse
      */
@@ -3859,6 +4415,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the ModifyInstanceMaintainTime operation to modify the O&amp;M window start time of an instance.</p>
+     * 
      * @param request ModifyInstanceMaintainTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyInstanceMaintainTimeResponse
@@ -3896,6 +4455,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the ModifyInstanceMaintainTime operation to modify the O&amp;M window start time of an instance.</p>
+     * 
      * @param request ModifyInstanceMaintainTimeRequest
      * @return ModifyInstanceMaintainTimeResponse
      */
@@ -3905,6 +4467,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the name of an instance by calling ModifyInstanceName.</p>
+     * 
      * @param request ModifyInstanceNameRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyInstanceNameResponse
@@ -3950,6 +4515,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the name of an instance by calling ModifyInstanceName.</p>
+     * 
      * @param request ModifyInstanceNameRequest
      * @return ModifyInstanceNameResponse
      */
@@ -3959,6 +4527,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls ModifyInstanceServiceConfig to modify cluster configurations. You can call the ListInstanceServiceConfigurations operation to query the configuration items that can be modified.</p>
+     * 
      * @param request ModifyInstanceServiceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyInstanceServiceConfigResponse
@@ -4004,6 +4575,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls ModifyInstanceServiceConfig to modify cluster configurations. You can call the ListInstanceServiceConfigurations operation to query the configuration items that can be modified.</p>
+     * 
      * @param request ModifyInstanceServiceConfigRequest
      * @return ModifyInstanceServiceConfigResponse
      */
@@ -4013,6 +4587,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls ModifyInstanceType to change the specifications of an instance.</p>
+     * 
      * @param request ModifyInstanceTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyInstanceTypeResponse
@@ -4050,6 +4627,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls ModifyInstanceType to change the specifications of an instance.</p>
+     * 
      * @param request ModifyInstanceTypeRequest
      * @return ModifyInstanceTypeResponse
      */
@@ -4059,6 +4639,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the IP whitelist group of an instance by calling ModifyIpWhitelist.</p>
+     * 
      * @param request ModifyIpWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyIpWhitelistResponse
@@ -4100,6 +4683,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the IP whitelist group of an instance by calling ModifyIpWhitelist.</p>
+     * 
      * @param request ModifyIpWhitelistRequest
      * @return ModifyIpWhitelistResponse
      */
@@ -4109,6 +4695,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the node specifications of a multi-zone instance by calling ModifyMultiZoneClusterNodeType.</p>
+     * 
      * @param request ModifyMultiZoneClusterNodeTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyMultiZoneClusterNodeTypeResponse
@@ -4150,6 +4739,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the node specifications of a multi-zone instance by calling ModifyMultiZoneClusterNodeType.</p>
+     * 
      * @param request ModifyMultiZoneClusterNodeTypeRequest
      * @return ModifyMultiZoneClusterNodeTypeResponse
      */
@@ -4159,6 +4751,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls ModifySecurityGroups to modify the security groups associated with a cluster.</p>
+     * 
      * @param request ModifySecurityGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifySecurityGroupsResponse
@@ -4192,6 +4787,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls ModifySecurityGroups to modify the security groups associated with a cluster.</p>
+     * 
      * @param request ModifySecurityGroupsRequest
      * @return ModifySecurityGroupsResponse
      */
@@ -4201,6 +4799,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Resets the password for accessing the cluster management UI by calling ModifyUIProxyAccountPassword.</p>
+     * 
      * @param request ModifyUIAccountPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyUIAccountPasswordResponse
@@ -4238,6 +4839,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Resets the password for accessing the cluster management UI by calling ModifyUIProxyAccountPassword.</p>
+     * 
      * @param request ModifyUIAccountPasswordRequest
      * @return ModifyUIAccountPasswordResponse
      */
@@ -4247,6 +4851,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Moves a target instance to a target resource group.</p>
+     * 
      * @param request MoveResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return MoveResourceGroupResponse
@@ -4280,6 +4887,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Moves a target instance to a target resource group.</p>
+     * 
      * @param request MoveResourceGroupRequest
      * @return MoveResourceGroupResponse
      */
@@ -4289,6 +4899,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Enables the backup and recovery feature for an ApsaraDB for HBase cluster by calling OpenBackup.</p>
+     * 
      * @param request OpenBackupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return OpenBackupResponse
@@ -4318,6 +4931,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Enables the backup and recovery feature for an ApsaraDB for HBase cluster by calling OpenBackup.</p>
+     * 
      * @param request OpenBackupRequest
      * @return OpenBackupResponse
      */
@@ -4327,6 +4943,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Completely cleans up an instance that has been deleted (within the last 7 days) but not fully cleaned up.</p>
+     * 
      * @param request PurgeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PurgeInstanceResponse
@@ -4356,6 +4975,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Completely cleans up an instance that has been deleted (within the last 7 days) but not fully cleaned up.</p>
+     * 
      * @param request PurgeInstanceRequest
      * @return PurgeInstanceResponse
      */
@@ -4365,6 +4987,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the high-availability HBase list for a BDS cluster. This operation corresponds to CreateHaCluster and CreateHbaseHaSlb. It returns the corresponding high-availability list.</p>
+     * 
      * @param request QueryHBaseHaDBRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryHBaseHaDBResponse
@@ -4394,6 +5019,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the high-availability HBase list for a BDS cluster. This operation corresponds to CreateHaCluster and CreateHbaseHaSlb. It returns the corresponding high-availability list.</p>
+     * 
      * @param request QueryHBaseHaDBRequest
      * @return QueryHBaseHaDBResponse
      */
@@ -4403,6 +5031,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the list of databases that can be associated with the current instance by calling QueryXpackRelateDB.</p>
+     * 
      * @param request QueryXpackRelateDBRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryXpackRelateDBResponse
@@ -4440,6 +5071,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the list of databases that can be associated with the current instance by calling QueryXpackRelateDB.</p>
+     * 
      * @param request QueryXpackRelateDBRequest
      * @return QueryXpackRelateDBResponse
      */
@@ -4449,6 +5083,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Adds an active-active instance pair to a BDS cluster.</p>
+     * 
      * @param request RelateDbForHBaseHaRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RelateDbForHBaseHaResponse
@@ -4558,6 +5195,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Adds an active-active instance pair to a BDS cluster.</p>
+     * 
      * @param request RelateDbForHBaseHaRequest
      * @return RelateDbForHBaseHaResponse
      */
@@ -4567,6 +5207,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Releases the public endpoint of an instance.</p>
+     * 
      * @param request ReleasePublicNetworkAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReleasePublicNetworkAddressResponse
@@ -4596,6 +5239,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Releases the public endpoint of an instance.</p>
+     * 
      * @param request ReleasePublicNetworkAddressRequest
      * @return ReleasePublicNetworkAddressResponse
      */
@@ -4605,6 +5251,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation applies only to subscription HBase instances.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Renews a subscription for an HBase instance.</p>
+     * 
      * @param request RenewInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RenewInstanceResponse
@@ -4642,6 +5294,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation applies only to subscription HBase instances.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Renews a subscription for an HBase instance.</p>
+     * 
      * @param request RenewInstanceRequest
      * @return RenewInstanceResponse
      */
@@ -4651,6 +5309,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Changes the cold storage size.</p>
+     * 
      * @param request ResizeColdStorageSizeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResizeColdStorageSizeResponse
@@ -4684,6 +5345,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Changes the cold storage size.</p>
+     * 
      * @param request ResizeColdStorageSizeRequest
      * @return ResizeColdStorageSizeResponse
      */
@@ -4693,6 +5357,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls ResizeDiskSize to resize a disk.</p>
+     * 
      * @param request ResizeDiskSizeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResizeDiskSizeResponse
@@ -4726,6 +5393,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls ResizeDiskSize to resize a disk.</p>
+     * 
      * @param request ResizeDiskSizeRequest
      * @return ResizeDiskSizeResponse
      */
@@ -4735,6 +5405,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the ResizeMultiZoneClusterDiskSize operation to modify the disk size of a multi-zone instance.</p>
+     * 
      * @param request ResizeMultiZoneClusterDiskSizeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResizeMultiZoneClusterDiskSizeResponse
@@ -4772,6 +5445,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the ResizeMultiZoneClusterDiskSize operation to modify the disk size of a multi-zone instance.</p>
+     * 
      * @param request ResizeMultiZoneClusterDiskSizeRequest
      * @return ResizeMultiZoneClusterDiskSizeResponse
      */
@@ -4781,6 +5457,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Scales out nodes for a multi-zone instance by calling the ResizeMultiZoneClusterNodeCount operation.</p>
+     * 
      * @param request ResizeMultiZoneClusterNodeCountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResizeMultiZoneClusterNodeCountResponse
@@ -4838,6 +5517,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Scales out nodes for a multi-zone instance by calling the ResizeMultiZoneClusterNodeCount operation.</p>
+     * 
      * @param request ResizeMultiZoneClusterNodeCountRequest
      * @return ResizeMultiZoneClusterNodeCountResponse
      */
@@ -4847,6 +5529,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Scales up the number of core nodes in a cluster. You can add up to 50 nodes at a time, and the total number of nodes can be scaled up to 250. If you have additional requirements, submit a ticket.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Calls ResizeNodeCount to adjust the number of nodes for an instance.</p>
+     * 
      * @param request ResizeNodeCountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResizeNodeCountResponse
@@ -4888,6 +5576,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Scales up the number of core nodes in a cluster. You can add up to 50 nodes at a time, and the total number of nodes can be scaled up to 250. If you have additional requirements, submit a ticket.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Calls ResizeNodeCount to adjust the number of nodes for an instance.</p>
+     * 
      * @param request ResizeNodeCountRequest
      * @return ResizeNodeCountResponse
      */
@@ -4897,6 +5591,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Restarts an HBase cluster by calling RestartInstance.</p>
+     * 
      * @param request RestartInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RestartInstanceResponse
@@ -4930,6 +5627,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Restarts an HBase cluster by calling RestartInstance.</p>
+     * 
      * @param request RestartInstanceRequest
      * @return RestartInstanceResponse
      */
@@ -4940,7 +5640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>回收账户权限</p>
+     * <p>Revokes permissions from a wide table account.</p>
      * 
      * @param request RevokeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4988,7 +5688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>回收账户权限</p>
+     * <p>Revokes permissions from a wide table account.</p>
      * 
      * @param request RevokeRequest
      * @return RevokeResponse
@@ -4999,6 +5699,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Performs a primary/secondary switchover for high-availability Thrift or high-availability Phoenix. This operation corresponds to the CreateHbaseHaSlb operation.</p>
+     * 
      * @param request SwitchHbaseHaSlbRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SwitchHbaseHaSlbResponse
@@ -5040,6 +5743,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Performs a primary/secondary switchover for high-availability Thrift or high-availability Phoenix. This operation corresponds to the CreateHbaseHaSlb operation.</p>
+     * 
      * @param request SwitchHbaseHaSlbRequest
      * @return SwitchHbaseHaSlbResponse
      */
@@ -5049,8 +5755,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Extension service<br>For example: the Lindorm service compatible with the HBaseProxy protocol.</p>
+     * 
      * <b>summary</b> : 
-     * <p>开通/关闭 扩展服务</p>
+     * <p>Enable or disable an extension service</p>
      * 
      * @param request SwitchServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5089,8 +5798,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Extension service<br>For example: the Lindorm service compatible with the HBaseProxy protocol.</p>
+     * 
      * <b>summary</b> : 
-     * <p>开通/关闭 扩展服务</p>
+     * <p>Enable or disable an extension service</p>
      * 
      * @param request SwitchServiceRequest
      * @return SwitchServiceResponse
@@ -5101,6 +5813,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Adds tags to instances.</p>
+     * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TagResourcesResponse
@@ -5138,6 +5853,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Adds tags to instances.</p>
+     * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
      */
@@ -5147,6 +5865,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Untags resources. This operation is the counterpart of TagResources.</p>
+     * 
      * @param request UnTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UnTagResourcesResponse
@@ -5188,6 +5909,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Untags resources. This operation is the counterpart of TagResources.</p>
+     * 
      * @param request UnTagResourcesRequest
      * @return UnTagResourcesResponse
      */
@@ -5197,6 +5921,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Upgrades the minor version of a cluster by calling UpgradeMinorVersion.</p>
+     * 
      * @param request UpgradeMinorVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpgradeMinorVersionResponse
@@ -5230,6 +5957,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Upgrades the minor version of a cluster by calling UpgradeMinorVersion.</p>
+     * 
      * @param request UpgradeMinorVersionRequest
      * @return UpgradeMinorVersionResponse
      */
@@ -5239,6 +5969,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Upgrades the minor version of components for a multi-zone instance by calling the UpgradeMultiZoneCluster operation.</p>
+     * 
      * @param request UpgradeMultiZoneClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpgradeMultiZoneClusterResponse
@@ -5288,6 +6021,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Upgrades the minor version of components for a multi-zone instance by calling the UpgradeMultiZoneCluster operation.</p>
+     * 
      * @param request UpgradeMultiZoneClusterRequest
      * @return UpgradeMultiZoneClusterResponse
      */
@@ -5297,6 +6033,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Associates a database by calling XpackRelateDB.</p>
+     * 
      * @param request XpackRelateDBRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return XpackRelateDBResponse
@@ -5334,6 +6073,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Associates a database by calling XpackRelateDB.</p>
+     * 
      * @param request XpackRelateDBRequest
      * @return XpackRelateDBResponse
      */

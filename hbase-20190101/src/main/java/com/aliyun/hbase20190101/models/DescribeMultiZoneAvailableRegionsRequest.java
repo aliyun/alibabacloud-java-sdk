@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeMultiZoneAvailableRegionsRequest extends TeaModel {
     /**
+     * <p>The supported language. Valid values:</p>
+     * <ul>
+     * <li>zh-CN: Chinese (default)</li>
+     * <li>en-US: English</li>
+     * <li>ja: Japanese.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */

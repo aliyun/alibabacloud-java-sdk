@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskWarningLineRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyDiskWarningLineRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The alert threshold. Valid values: 50 to 90.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

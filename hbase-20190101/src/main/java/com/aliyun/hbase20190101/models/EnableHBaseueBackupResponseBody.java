@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnableHBaseueBackupResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID of the activated BDS backup service.</p>
+     * 
      * <strong>example:</strong>
      * <p>bds-m5e54q06ceyhxxxx</p>
      */
@@ -12,6 +14,8 @@ public class EnableHBaseueBackupResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1449xxx</p>
      */
@@ -19,6 +23,8 @@ public class EnableHBaseueBackupResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>15272D5D-46E8-4400-9CC8-A7E7B589F575</p>
      */

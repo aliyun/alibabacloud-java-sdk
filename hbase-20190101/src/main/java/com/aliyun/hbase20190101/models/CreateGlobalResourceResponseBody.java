@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateGlobalResourceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AB9ABDF-7E1E-44AD-8610-70A005115DD1</p>
      */
