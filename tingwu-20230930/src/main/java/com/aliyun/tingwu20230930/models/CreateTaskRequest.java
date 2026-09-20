@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTaskRequest extends TeaModel {
     /**
-     * <p>The AppKey of the project that you created in the console.</p>
+     * <p>The AppKey of the project created in the console.</p>
      * 
      * <strong>example:</strong>
      * <p>JV1sRTisRMi****</p>
@@ -14,11 +14,11 @@ public class CreateTaskRequest extends TeaModel {
     public String appKey;
 
     /**
-     * <p>The basic input parameters for creating a task. The required parameters vary based on the task type.</p>
+     * <p>The basic parameters set when creating a task. The required parameters vary depending on the task type.</p>
      * <ul>
-     * <li><p>For an offline task (<code>type=&quot;offline&quot;</code>), you must specify the <code>SourceLanguage</code> and <code>FileUrl</code> parameters.</p>
+     * <li><p>When type=offline (offline task), you must set the SourceLanguage and FileUrl parameters.</p>
      * </li>
-     * <li><p>For a real-time task (<code>type=&quot;realtime&quot;</code>), you must also specify the <code>SourceLanguage</code>, <code>Format</code>, and <code>SampleRate</code> parameters.</p>
+     * <li><p>When type=realtime (real-time meeting task), you must additionally set the SourceLanguage, Format, and SampleRate parameters.</p>
      * </li>
      * </ul>
      */
@@ -26,19 +26,20 @@ public class CreateTaskRequest extends TeaModel {
     public CreateTaskRequestInput input;
 
     /**
-     * <p>Algorithm-related parameters for customizing task processing.</p>
+     * <p>The algorithm-related parameters set when creating a task. You can set these as needed.</p>
      */
     @NameInMap("Parameters")
     public CreateTaskRequestParameters parameters;
 
     /**
-     * <p>The operation to perform. Valid values:</p>
+     * <p>The operation. Valid values:</p>
      * <ul>
-     * <li><p><strong>start</strong>: Creates a task. This is the default value and does not typically need to be set.</p>
-     * </li>
-     * <li><p><strong>stop</strong>: Stops a real-time recording task. This value is used only for real-time tasks. To end the recording, set this parameter to <code>stop</code>.</p>
-     * </li>
+     * <li>start: creates a task. This is the default value. In most cases, you do not need to explicitly set this parameter.</li>
+     * <li>stop: stops a real-time meeting task. This value is used in real-time meeting scenarios. After a meeting ends, set this parameter to stop and trigger the call.</li>
      * </ul>
+     * <blockquote>
+     * <p>Note: When ending a real-time recording, you must set this parameter to stop.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>stop</p>
@@ -47,12 +48,10 @@ public class CreateTaskRequest extends TeaModel {
     public String operation;
 
     /**
-     * <p>The type of the task. Valid values:</p>
+     * <p>The task type. Valid values:</p>
      * <ul>
-     * <li><p><strong>offline</strong>: An offline task, such as an offline transcription.</p>
-     * </li>
-     * <li><p><strong>realtime</strong>: A real-time task, such as a real-time recording.</p>
-     * </li>
+     * <li><strong>offline</strong>: offline task, such as offline transcription.</li>
+     * <li><strong>realtime</strong>: real-time task, such as creating a real-time recording.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -109,13 +108,13 @@ public class CreateTaskRequest extends TeaModel {
 
     public static class CreateTaskRequestInput extends TeaModel {
         /**
-         * <p>Multi-channel audio or video processing mode.</p>
+         * <p>The multi-channel audio and video processing mode.</p>
          */
         @NameInMap("AudioChannelMode")
         public String audioChannelMode;
 
         /**
-         * <p>The HTTP or HTTPS URL of the source audio or video file. This parameter is required when you create an offline transcription task.</p>
+         * <p>The HTTP or HTTPS URL of the original audio or video file. This parameter is required when you create an offline transcription task.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxx.com/zzz/1.wav">http://xxx.com/zzz/1.wav</a></p>
@@ -124,18 +123,13 @@ public class CreateTaskRequest extends TeaModel {
         public String fileUrl;
 
         /**
-         * <p>The encoding format of the audio stream data. This parameter is required when you create a real-time recording task. The following values are supported:</p>
+         * <p>The encoding format of the audio stream data when you create a real-time meeting, such as pcm. Valid values:</p>
          * <ul>
-         * <li><p><strong>pcm</strong></p>
-         * </li>
-         * <li><p><strong>opus</strong></p>
-         * </li>
-         * <li><p><strong>aac</strong></p>
-         * </li>
-         * <li><p><strong>speex</strong></p>
-         * </li>
-         * <li><p><strong>mp3</strong></p>
-         * </li>
+         * <li><strong>pcm</strong></li>
+         * <li><strong>opus</strong></li>
+         * <li><strong>aac</strong></li>
+         * <li><strong>speex</strong></li>
+         * <li><strong>mp3</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,13 +139,13 @@ public class CreateTaskRequest extends TeaModel {
         public String format;
 
         /**
-         * <p>Preferred languages. This applies only when SourceLanguage is multilingual. It restricts the output language of the model.</p>
+         * <p>The preferred languages. This parameter takes effect only when SourceLanguage is set to &quot;multilingual&quot;. It restricts the output languages of the model.</p>
          */
         @NameInMap("LanguageHints")
         public java.util.List<String> languageHints;
 
         /**
-         * <p>Specifies whether to enable multi-channel audio stream recognition. This parameter applies only to real-time recording scenarios. The default value is <code>false</code>.</p>
+         * <p>Specifies whether to enable multi-channel audio stream recognition. This parameter needs to be set only in real-time recording scenarios. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -160,13 +154,14 @@ public class CreateTaskRequest extends TeaModel {
         public Boolean multipleStreamsEnabled;
 
         /**
-         * <p>After you configure OSS settings in the console, specify an OSS path to save results directly to your OSS bucket.</p>
+         * <p>After configuring OSS information in the console, you can specify an OSS write path to save results directly to your custom OSS bucket.</p>
          */
         @NameInMap("OutputPath")
         public String outputPath;
 
         /**
-         * <p>Specifies whether to enable callbacks. To receive callbacks, you must configure the callback type and URL in the console and set this parameter to <code>true</code>.</p>
+         * <p>Specifies whether to enable the callback feature.
+         * To enable the callback feature, configure the callback type and address in the console, and set this parameter to true when creating a task.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -175,12 +170,10 @@ public class CreateTaskRequest extends TeaModel {
         public Boolean progressiveCallbacksEnabled;
 
         /**
-         * <p>The sample rate of the audio stream data. This parameter is required when you create a real-time recording task. The supported values are 8000 and 16000.</p>
+         * <p>The sample rate of the audio stream data when you create a real-time meeting. Valid values: 8000 and 16000.</p>
          * <ul>
-         * <li><p><strong>8000</strong>: Suitable for telephony and customer service scenarios.</p>
-         * </li>
-         * <li><p><strong>16000</strong>: Suitable for real-time meeting audio capture scenarios.</p>
-         * </li>
+         * <li><strong>8000</strong>: telephone customer service scenarios.</li>
+         * <li><strong>16000</strong>: real-time meeting audio capture scenarios.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -190,18 +183,13 @@ public class CreateTaskRequest extends TeaModel {
         public Integer sampleRate;
 
         /**
-         * <p>The language model for speech transcription. The following values are supported:</p>
+         * <p>The language model used for audio transcription. Valid values:</p>
          * <ul>
-         * <li><p><strong>cn</strong>: Chinese</p>
-         * </li>
-         * <li><p><strong>en</strong>: English</p>
-         * </li>
-         * <li><p><strong>fspk</strong>: Chinese-English code-switching</p>
-         * </li>
-         * <li><p><strong>ja</strong>: Japanese</p>
-         * </li>
-         * <li><p><strong>yue</strong>: Cantonese</p>
-         * </li>
+         * <li><strong>cn</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * <li><strong>fspk</strong>: Chinese-English free speaking</li>
+         * <li><strong>ja</strong>: Japanese</li>
+         * <li><strong>yue</strong>: Cantonese</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -212,7 +200,7 @@ public class CreateTaskRequest extends TeaModel {
         public String sourceLanguage;
 
         /**
-         * <p>The task ID that is returned when you create a real-time recording. This ID is required to stop the recording. Specify this parameter only when stopping a real-time recording.</p>
+         * <p>The TaskId returned when you create a real-time recording. You can use this ID to end the real-time recording. Set this parameter only when ending a real-time recording. Do not set it at other times.</p>
          * 
          * <strong>example:</strong>
          * <p>9922c84c087044eda18659c128b56c84</p>
@@ -221,7 +209,7 @@ public class CreateTaskRequest extends TeaModel {
         public String taskId;
 
         /**
-         * <p>A custom identifier that you can set for the task.</p>
+         * <p>The custom identifier set by the user to associate with this task.</p>
          * 
          * <strong>example:</strong>
          * <p>task_tingwu_123</p>
@@ -345,7 +333,7 @@ public class CreateTaskRequest extends TeaModel {
 
     public static class CreateTaskRequestParametersContentExtractionExtractionContents extends TeaModel {
         /**
-         * <p>Definition of the content extraction dimension.</p>
+         * <p>The extraction dimension definition for conversation content extraction.</p>
          */
         @NameInMap("Content")
         public String content;
@@ -354,7 +342,7 @@ public class CreateTaskRequest extends TeaModel {
         public String identity;
 
         /**
-         * <p>Name of the content extraction dimension.</p>
+         * <p>The extraction dimension name for conversation content extraction.</p>
          */
         @NameInMap("Title")
         public String title;
@@ -392,13 +380,13 @@ public class CreateTaskRequest extends TeaModel {
 
     public static class CreateTaskRequestParametersContentExtraction extends TeaModel {
         /**
-         * <p>List of content extraction dimensions. Each dimension includes a name and definition.</p>
+         * <p>The list of extraction dimensions for conversation content extraction, including the name and definition of each extraction item.</p>
          */
         @NameInMap("ExtractionContents")
         public java.util.List<CreateTaskRequestParametersContentExtractionExtractionContents> extractionContents;
 
         /**
-         * <p>Description of the conversation scenario for content extraction.</p>
+         * <p>The scene description for conversation content extraction.</p>
          */
         @NameInMap("SceneIntroduction")
         public String sceneIntroduction;
@@ -439,7 +427,7 @@ public class CreateTaskRequest extends TeaModel {
 
     public static class CreateTaskRequestParametersCustomPromptContents extends TeaModel {
         /**
-         * <p>The model to use for the prompt.</p>
+         * <p>The model specified for the prompt.</p>
          * 
          * <strong>example:</strong>
          * <p>tingwu-turbo</p>
@@ -448,7 +436,7 @@ public class CreateTaskRequest extends TeaModel {
         public String model;
 
         /**
-         * <p>A custom name for the prompt, used to identify the corresponding output.</p>
+         * <p>The custom name of the prompt, used to match output results.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -458,17 +446,17 @@ public class CreateTaskRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The content of the custom prompt.</p>
+         * <p>The custom content of the prompt.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>总结一下下面的对话内容:{Transcription}</p>
+         * <p>Summarize the following conversation:{Transcription}</p>
          */
         @NameInMap("Prompt")
         public String prompt;
 
         /**
-         * <p>Specifies the format for the <code>{Transcription}</code> tag.</p>
+         * <p>The format of the {Transcription} tag.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -517,7 +505,7 @@ public class CreateTaskRequest extends TeaModel {
 
     public static class CreateTaskRequestParametersCustomPrompt extends TeaModel {
         /**
-         * <p>A list of custom prompt parameters.</p>
+         * <p>The list of custom prompt parameters.</p>
          */
         @NameInMap("Contents")
         public java.util.List<CreateTaskRequestParametersCustomPromptContents> contents;
@@ -538,6 +526,9 @@ public class CreateTaskRequest extends TeaModel {
     }
 
     public static class CreateTaskRequestParametersExtraParamsTranslationHotwordMap extends TeaModel {
+        /**
+         * <p>The business scenario type.</p>
+         */
         @NameInMap("bizType")
         public String bizType;
 
@@ -572,19 +563,19 @@ public class CreateTaskRequest extends TeaModel {
         public Boolean domainEducationEnabled;
 
         /**
-         * <p>Full-text summary format.</p>
+         * <p>The return format of the full-text summary.</p>
          */
         @NameInMap("FullTextSummaryFormat")
         public String fullTextSummaryFormat;
 
         /**
-         * <p>Maximum number of keywords.</p>
+         * <p>The number of keywords to extract.</p>
          */
         @NameInMap("MaxKeywords")
         public Integer maxKeywords;
 
         /**
-         * <p>Specifies whether to enable nfix. You do not typically need to configure this parameter.</p>
+         * <p>Specifies whether to enable Nfix. In most cases, you do not need to set this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -598,6 +589,9 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("TranslateLlmSceneEnabled")
         public Boolean translateLlmSceneEnabled;
 
+        /**
+         * <p>The translation hotword configuration.</p>
+         */
         @NameInMap("TranslationHotwordMap")
         public CreateTaskRequestParametersExtraParamsTranslationHotwordMap translationHotwordMap;
 
@@ -666,13 +660,13 @@ public class CreateTaskRequest extends TeaModel {
 
     public static class CreateTaskRequestParametersIdentityRecognitionIdentityContents extends TeaModel {
         /**
-         * <p>Identity description.</p>
+         * <p>The identity description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Identity name.</p>
+         * <p>The identity name.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -702,13 +696,13 @@ public class CreateTaskRequest extends TeaModel {
 
     public static class CreateTaskRequestParametersIdentityRecognition extends TeaModel {
         /**
-         * <p>List of identities, including identity name and description.</p>
+         * <p>The list of identity contents for identity recognition, including the identity name and description.</p>
          */
         @NameInMap("IdentityContents")
         public java.util.List<CreateTaskRequestParametersIdentityRecognitionIdentityContents> identityContents;
 
         /**
-         * <p>Description of the scenario for identity recognition.</p>
+         * <p>The scene description for identity recognition.</p>
          */
         @NameInMap("SceneIntroduction")
         public String sceneIntroduction;
@@ -738,7 +732,7 @@ public class CreateTaskRequest extends TeaModel {
 
     public static class CreateTaskRequestParametersMeetingAssistance extends TeaModel {
         /**
-         * <p>The types of analysis to perform when the intelligent minutes feature is enabled. Supported values: <code>Actions</code> (action items) and <code>KeyInformation</code> (key information, including keywords and key points).</p>
+         * <p>When the intelligent meeting notes feature is enabled, pass in the expected feature parameter types. Supported types: action items (Actions) and key information (KeyInformation). Key information includes keywords and key content (key sentences).</p>
          */
         @NameInMap("Types")
         public java.util.List<String> types;
@@ -760,13 +754,13 @@ public class CreateTaskRequest extends TeaModel {
 
     public static class CreateTaskRequestParametersServiceInspectionInspectionContents extends TeaModel {
         /**
-         * <p>Definition of the inspection dimension.</p>
+         * <p>The inspection dimension definition for service inspection.</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>Name of the inspection dimension.</p>
+         * <p>The inspection dimension name for service inspection.</p>
          */
         @NameInMap("Title")
         public String title;
@@ -796,19 +790,19 @@ public class CreateTaskRequest extends TeaModel {
 
     public static class CreateTaskRequestParametersServiceInspection extends TeaModel {
         /**
-         * <p>List of inspection dimensions for service quality inspection. Each dimension includes a name and definition, which tells the Large Language Model how to evaluate whether the dimension is met.</p>
+         * <p>The list of inspection dimensions for service inspection, including the dimension name and definition. The definition specifies the criteria that the large language model uses to determine whether a dimension is matched.</p>
          */
         @NameInMap("InspectionContents")
         public java.util.List<CreateTaskRequestParametersServiceInspectionInspectionContents> inspectionContents;
 
         /**
-         * <p>Description of the inspection goals and focus areas for service quality inspection.</p>
+         * <p>The description of the inspection target and focus for service inspection.</p>
          */
         @NameInMap("InspectionIntroduction")
         public String inspectionIntroduction;
 
         /**
-         * <p>Description of the conversation scenario for service quality inspection.</p>
+         * <p>The conversation scene description for service inspection.</p>
          */
         @NameInMap("SceneIntroduction")
         public String sceneIntroduction;
@@ -857,7 +851,7 @@ public class CreateTaskRequest extends TeaModel {
 
     public static class CreateTaskRequestParametersSummarization extends TeaModel {
         /**
-         * <p>The types of summaries to generate. This parameter is required when summarization is enabled. Supported types include <code>Paragraph</code> (full-text summary), <code>Conversational</code> (speaker summary), and <code>QuestionsAnswering</code> (Q\&amp;A summary).</p>
+         * <p>When the summarization feature is enabled, pass in the expected summarization types. Supported types: full-text summary (Paragraph), speaker summary (Conversational), and Q&amp;A review summary (QuestionsAnswering).</p>
          * 
          * <strong>example:</strong>
          * <p>Paragraph</p>
@@ -882,7 +876,7 @@ public class CreateTaskRequest extends TeaModel {
 
     public static class CreateTaskRequestParametersTranscoding extends TeaModel {
         /**
-         * <p>Specifies whether to generate and save an audio waveform from the source audio/video file or audio stream. This parameter is optional for offline transcription and real-time recording tasks.</p>
+         * <p>Specifies whether to generate an audio waveform from the original audio/video file or audio stream and save it. Currently, only MP3 format is supported. This parameter is optional when creating offline file transcription or real-time meetings.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -891,7 +885,7 @@ public class CreateTaskRequest extends TeaModel {
         public Boolean spectrumEnabled;
 
         /**
-         * <p>Specifies the target format for the transcoded audio. Set to <code>mp3</code> to transcode the source audio into MP3 format for storage. This parameter is optional for offline transcription and real-time recording tasks.</p>
+         * <p>Specifies whether to convert the original audio/video file or audio stream to MP3 format for storage. Currently, only MP3 format is supported. This parameter is optional when creating offline file transcription or real-time meetings.</p>
          * 
          * <strong>example:</strong>
          * <p>mp3</p>
@@ -900,7 +894,7 @@ public class CreateTaskRequest extends TeaModel {
         public String targetAudioFormat;
 
         /**
-         * <p>Specifies the target format for the transcoded video. Set to <code>mp4</code> to transcode the source video into MP4 format for storage. This parameter applies only to offline transcription tasks with a video source file.</p>
+         * <p>Specifies whether to convert the original video file to MP4 format for storage. Currently, only MP4 format is supported. This parameter is meaningful only when creating offline file transcription and the original file is in video format. Typically, you do not need to set this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>mp4</p>
@@ -909,7 +903,7 @@ public class CreateTaskRequest extends TeaModel {
         public String targetVideoFormat;
 
         /**
-         * <p>Specifies whether to extract and save video thumbnails from the source video file. This parameter applies only to offline transcription tasks with a video source file.</p>
+         * <p>Specifies whether to extract video thumbnails from the original video file and save them. This parameter is meaningful only when creating offline file transcription and the original file is in video format. Typically, you do not need to set this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -958,10 +952,10 @@ public class CreateTaskRequest extends TeaModel {
 
     public static class CreateTaskRequestParametersTranscriptionDiarization extends TeaModel {
         /**
-         * <p>Specifies the number of speakers to identify.</p>
-         * <p>If this parameter is not set, speakers are not differentiated in the transcript.</p>
-         * <p>Set the value to <code>0</code> to identify an unknown number of speakers.</p>
-         * <p>Set the value to <code>2</code> to identify two speakers.</p>
+         * <p>Sets the speaker diarization parameter.</p>
+         * <p>If not set: speaker role differentiation is not used. </p>
+         * <p>0: the number of speakers is undetermined.</p>
+         * <p>2: the number of speakers is 2.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -986,14 +980,14 @@ public class CreateTaskRequest extends TeaModel {
 
     public static class CreateTaskRequestParametersTranscription extends TeaModel {
         /**
-         * <p>Specifies the level of detail for speech transcription results for the active speaker in a real-time recording scenario.</p>
+         * <p>Sets the output level for speech recognition results of the active speaker in real-time recording scenarios.</p>
          * <ul>
-         * <li><p><strong>1</strong>: Returns results only when a complete sentence is recognized.</p>
+         * <li><p><strong>1</strong>: Returns results when a complete sentence is recognized.</p>
          * </li>
-         * <li><p><strong>2</strong>: Returns both intermediate and final results as they are recognized.</p>
+         * <li><p><strong>2</strong>: Returns results for both intermediate results and complete sentences.</p>
          * </li>
          * </ul>
-         * <p>This parameter applies only to real-time recordings when <code>MultipleStreamsEnabled</code> is set to <code>true</code>.</p>
+         * <p>Set this parameter as needed only in real-time recording scenarios when MultipleStreamsEnabled is set to true. This parameter does not need to be set for offline transcription scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1002,7 +996,7 @@ public class CreateTaskRequest extends TeaModel {
         public Integer additionalStreamOutputLevel;
 
         /**
-         * <p>Specifies whether to enable sound event detection, which identifies non-speech events in the audio, such as music.</p>
+         * <p>Specifies whether to enable audio event detection during speech transcription to determine whether events such as music exist in the audio.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1011,7 +1005,7 @@ public class CreateTaskRequest extends TeaModel {
         public Boolean audioEventDetectionEnabled;
 
         /**
-         * <p>Parameters for the speaker diarization feature.</p>
+         * <p>The speaker diarization parameters.</p>
          */
         @NameInMap("Diarization")
         public CreateTaskRequestParametersTranscriptionDiarization diarization;
@@ -1025,21 +1019,24 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("DiarizationEnabled")
         public Boolean diarizationEnabled;
 
+        /**
+         * <p>Specifies whether to enable disfluency removal during speech transcription. Enabled by default.</p>
+         */
         @NameInMap("DisfluencyEnabled")
         public Boolean disfluencyEnabled;
 
         /**
-         * <p>Set the speech transcription model to improve accuracy for specific domains.</p>
+         * <p>Sets the speech transcription model to improve transcription accuracy in specific domains.</p>
          */
         @NameInMap("Model")
         public String model;
 
         /**
-         * <p>Specifies the level of detail for the speech transcription results. Default value: <code>1</code>.</p>
+         * <p>Sets the output level for speech recognition results. Default value: 1.</p>
          * <ul>
-         * <li><p><strong>1</strong>: Returns results only when a complete sentence is recognized.</p>
+         * <li><p><strong>1</strong>: Returns results when a complete sentence is recognized.</p>
          * </li>
-         * <li><p><strong>2</strong>: Returns both intermediate and final results as they are recognized.</p>
+         * <li><p><strong>2</strong>: Returns results for both intermediate results and complete sentences.</p>
          * </li>
          * </ul>
          * 
@@ -1049,8 +1046,11 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("OutputLevel")
         public Integer outputLevel;
 
+        @NameInMap("Phrase")
+        public java.util.Map<String, ?> phrase;
+
         /**
-         * <p>The ID of the hotword list.</p>
+         * <p>The vocabulary ID of the hot words.</p>
          * 
          * <strong>example:</strong>
          * <p>ce9c2a34b6d847bf92a77d0a196f****</p>
@@ -1059,7 +1059,7 @@ public class CreateTaskRequest extends TeaModel {
         public String phraseId;
 
         /**
-         * <p>Enable sensitive word filtering during speech transcription. Enabled by default.</p>
+         * <p>Specifies whether to enable profanity filtering during speech transcription. Enabled by default.</p>
          */
         @NameInMap("ProfanityFilterEnabled")
         public Boolean profanityFilterEnabled;
@@ -1128,6 +1128,14 @@ public class CreateTaskRequest extends TeaModel {
             return this.outputLevel;
         }
 
+        public CreateTaskRequestParametersTranscription setPhrase(java.util.Map<String, ?> phrase) {
+            this.phrase = phrase;
+            return this;
+        }
+        public java.util.Map<String, ?> getPhrase() {
+            return this.phrase;
+        }
+
         public CreateTaskRequestParametersTranscription setPhraseId(String phraseId) {
             this.phraseId = phraseId;
             return this;
@@ -1156,14 +1164,12 @@ public class CreateTaskRequest extends TeaModel {
 
     public static class CreateTaskRequestParametersTranslation extends TeaModel {
         /**
-         * <p>Specifies the level of detail for real-time translation results for the active speaker.</p>
+         * <p>Sets the output level for translation results of the active speaker in real-time recording scenarios.</p>
          * <ul>
-         * <li><p><strong>1</strong>: Returns results only for complete sentences.</p>
-         * </li>
-         * <li><p><strong>2</strong>: Returns both intermediate and final results.</p>
-         * </li>
+         * <li><strong>1</strong>: Returns results when a complete sentence is recognized.</li>
+         * <li><strong>2</strong>: Returns results for both intermediate results and complete sentences.</li>
          * </ul>
-         * <p>This parameter applies only to real-time recordings when <code>MultipleStreamsEnabled</code> is set to <code>true</code>.</p>
+         * <p>Set this parameter as needed only in real-time recording scenarios when MultipleStreamsEnabled is set to true. This parameter does not need to be set for offline transcription scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1172,14 +1178,12 @@ public class CreateTaskRequest extends TeaModel {
         public Integer additionalStreamOutputLevel;
 
         /**
-         * <p>Specifies the level of detail for real-time translation results. Default value: <code>1</code>.</p>
+         * <p>Sets the output level for real-time translation results. Default value: 1.</p>
          * <ul>
-         * <li><p><strong>1</strong>: Returns results only for complete sentences.</p>
-         * </li>
-         * <li><p><strong>2</strong>: Returns both intermediate and final results.</p>
-         * </li>
+         * <li><strong>1</strong>: Returns results when a complete sentence is recognized.</li>
+         * <li><strong>2</strong>: Returns results for both intermediate results and complete sentences.</li>
          * </ul>
-         * <p>This parameter applies only to real-time recordings.</p>
+         * <p>Set this parameter as needed only in real-time recording scenarios. This parameter does not need to be set for offline transcription scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1188,11 +1192,14 @@ public class CreateTaskRequest extends TeaModel {
         public Integer outputLevel;
 
         /**
-         * <p>The target languages for translation. This parameter is required if translation is enabled. Supported languages include Chinese, English, and Japanese.</p>
+         * <p>The target languages to set when the translation feature is enabled. Chinese, English, and Japanese are supported.</p>
          */
         @NameInMap("TargetLanguages")
         public java.util.List<String> targetLanguages;
 
+        /**
+         * <p>Specifies whether to use large language model-based translation. Default value: false.</p>
+         */
         @NameInMap("TranslateLlmSceneEnabled")
         public Boolean translateLlmSceneEnabled;
 
@@ -1240,7 +1247,7 @@ public class CreateTaskRequest extends TeaModel {
         public CreateTaskRequestParametersAutoChapters autoChapters;
 
         /**
-         * <p>Specifies whether to generate a chapter summary, which includes chapter titles and summaries for each chapter.</p>
+         * <p>Specifies whether to enable the chapter overview feature. When enabled, chapter titles and chapter summaries are generated.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1249,22 +1256,25 @@ public class CreateTaskRequest extends TeaModel {
         public Boolean autoChaptersEnabled;
 
         /**
-         * <p>Conversation content extraction parameters.</p>
+         * <p>The conversation content extraction parameter object.</p>
          */
         @NameInMap("ContentExtraction")
         public CreateTaskRequestParametersContentExtraction contentExtraction;
 
+        /**
+         * <p>The business user ID.</p>
+         */
         @NameInMap("ContentExtractionEnabled")
         public Boolean contentExtractionEnabled;
 
         /**
-         * <p>Parameters to control the custom prompt feature.</p>
+         * <p>The custom prompt control parameter object.</p>
          */
         @NameInMap("CustomPrompt")
         public CreateTaskRequestParametersCustomPrompt customPrompt;
 
         /**
-         * <p>Specifies whether to enable the custom prompt feature.</p>
+         * <p>Specifies whether to enable the custom prompt feature. When enabled, you can enter a personalized custom prompt.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1273,19 +1283,19 @@ public class CreateTaskRequest extends TeaModel {
         public Boolean customPromptEnabled;
 
         /**
-         * <p>Extended parameters for advanced use cases. You do not typically need to configure these parameters.</p>
+         * <p>The extra parameters. In most cases, you do not need to set this parameter.</p>
          */
         @NameInMap("ExtraParams")
         public CreateTaskRequestParametersExtraParams extraParams;
 
         /**
-         * <p>Identity recognition parameters.</p>
+         * <p>The identity recognition parameter object.</p>
          */
         @NameInMap("IdentityRecognition")
         public CreateTaskRequestParametersIdentityRecognition identityRecognition;
 
         /**
-         * <p>Enable identity recognition.</p>
+         * <p>Specifies whether to enable the identity recognition feature.</p>
          */
         @NameInMap("IdentityRecognitionEnabled")
         public Boolean identityRecognitionEnabled;
@@ -1294,13 +1304,13 @@ public class CreateTaskRequest extends TeaModel {
         public String llmOutputLanguage;
 
         /**
-         * <p>Parameters for the intelligent minutes feature, which supports processing for action items, keywords, and key points. If <code>MeetingAssistanceEnabled</code> is set to <code>true</code> but you do not specify this object, all analysis types are enabled by default.</p>
+         * <p>The control parameters for the intelligent meeting notes feature, which supports algorithm processing for action items, keywords, and key content. If you enable MeetingAssistanceEnabled but do not specify algorithm types through MeetingAssistance, all types are called and returned by default.</p>
          */
         @NameInMap("MeetingAssistance")
         public CreateTaskRequestParametersMeetingAssistance meetingAssistance;
 
         /**
-         * <p>Specifies whether to generate intelligent minutes, which include keywords, key points, and action items.</p>
+         * <p>Specifies whether to enable the intelligent meeting notes feature. When enabled, results such as keywords, key content, and action items are generated.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1312,7 +1322,7 @@ public class CreateTaskRequest extends TeaModel {
         public String model;
 
         /**
-         * <p>Specifies whether to enable PPT extraction. If enabled, the service extracts slides from the video file and generates corresponding summaries. This feature applies only to offline transcription tasks with a video source file and has no effect on other task types.</p>
+         * <p>Specifies whether to enable PPT extraction and PPT summarization. When enabled, PPT frames are extracted from the video file and corresponding summaries are generated. Enable this parameter only for offline transcription when the source file is a video file. Results cannot be generated in real-time recording scenarios or offline transcription scenarios where the source file is audio only.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1321,25 +1331,25 @@ public class CreateTaskRequest extends TeaModel {
         public Boolean pptExtractionEnabled;
 
         /**
-         * <p>Service quality inspection parameters.</p>
+         * <p>The service inspection parameter object.</p>
          */
         @NameInMap("ServiceInspection")
         public CreateTaskRequestParametersServiceInspection serviceInspection;
 
         /**
-         * <p>Enable service quality inspection. Default is false.</p>
+         * <p>Specifies whether to enable the service inspection feature. Default value: false.</p>
          */
         @NameInMap("ServiceInspectionEnabled")
         public Boolean serviceInspectionEnabled;
 
         /**
-         * <p>Parameters for the summarization feature.</p>
+         * <p>The summarization control parameters.</p>
          */
         @NameInMap("Summarization")
         public CreateTaskRequestParametersSummarization summarization;
 
         /**
-         * <p>Specifies whether to enable the summarization feature, which can generate results such as a full-text summary and a speaker summary.</p>
+         * <p>Specifies whether to enable the summarization feature. When enabled, results such as full-text summaries and speaker summaries can be generated.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1348,7 +1358,7 @@ public class CreateTaskRequest extends TeaModel {
         public Boolean summarizationEnabled;
 
         /**
-         * <p>Specifies whether to enable the spoken-to-written conversion feature.</p>
+         * <p>Specifies whether to enable the spoken-to-written text conversion feature.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1357,19 +1367,19 @@ public class CreateTaskRequest extends TeaModel {
         public Boolean textPolishEnabled;
 
         /**
-         * <p>Parameters for transcoding source audio/video files or audio streams.</p>
+         * <p>The audio/video or audio stream transcoding module.</p>
          */
         @NameInMap("Transcoding")
         public CreateTaskRequestParametersTranscoding transcoding;
 
         /**
-         * <p>Parameters to control the speech transcription process.</p>
+         * <p>The speech transcription control parameters.</p>
          */
         @NameInMap("Transcription")
         public CreateTaskRequestParametersTranscription transcription;
 
         /**
-         * <p>Parameters to control the translation feature.</p>
+         * <p>The translation control parameters.</p>
          */
         @NameInMap("Translation")
         public CreateTaskRequestParametersTranslation translation;

@@ -9,9 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-beijing", "tingwu.cn-beijing.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("tingwu", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -31,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create offline transcription and real-time meeting tasks in Tingwu.</p>
+     * <p>Creates a Tingwu task, including offline transcription tasks and real-time meeting tasks.</p>
      * 
      * @param request CreateTaskRequest
      * @param headers map
@@ -83,7 +80,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create offline transcription and real-time meeting tasks in Tingwu.</p>
+     * <p>Creates a Tingwu task, including offline transcription tasks and real-time meeting tasks.</p>
      * 
      * @param request CreateTaskRequest
      * @return CreateTaskResponse

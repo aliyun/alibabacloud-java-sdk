@@ -14,13 +14,13 @@ public class CreateTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The response object.</p>
      */
     @NameInMap("Data")
     public CreateTaskResponseBodyData data;
 
     /**
-     * <p>The status message.</p>
+     * <p>The status description.</p>
      * 
      * <strong>example:</strong>
      * <p>Success.</p>
@@ -29,7 +29,7 @@ public class CreateTaskResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, used for troubleshooting only.</p>
+     * <p>The request ID, used only for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>35124E1C-AE99-5D6C-A52E-BD689D8D****</p>
@@ -76,7 +76,7 @@ public class CreateTaskResponseBody extends TeaModel {
 
     public static class CreateTaskResponseBodyData extends TeaModel {
         /**
-         * <p>The stream ingestion URL. Push audio streams to this URL for real-time transcription.</p>
+         * <p>The audio stream push URL generated in the real-time recording scenario. You can use this URL for subsequent real-time audio stream recognition.</p>
          * 
          * <strong>example:</strong>
          * <p>wss://tingwu-realtime-cn-beijing.aliyuncs.com/api/ws/v1?mc=****</p>
@@ -94,7 +94,7 @@ public class CreateTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The custom identifier specified during task creation.</p>
+         * <p>The custom identifier set by the user when creating the task.</p>
          * 
          * <strong>example:</strong>
          * <p>task_tingwu_123</p>
