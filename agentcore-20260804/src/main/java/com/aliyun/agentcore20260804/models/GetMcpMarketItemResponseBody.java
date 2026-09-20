@@ -107,7 +107,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
 
     public static class GetMcpMarketItemResponseBodyData extends TeaModel {
         /**
-         * <p>The category of the MCP marketplace template.</p>
+         * <p>The MCP marketplace template category.</p>
          * 
          * <strong>example:</strong>
          * <p>knowledge</p>
@@ -116,7 +116,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The description of the MCP service.</p>
+         * <p>The MCP service description.</p>
          * 
          * <strong>example:</strong>
          * <p>An MCP service for querying knowledge bases</p>
@@ -125,10 +125,16 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The display metadata of the template.</p>
+         * <p>The template display metadata.</p>
          */
         @NameInMap("displayMetadata")
         public java.util.Map<String, ?> displayMetadata;
+
+        /**
+         * <p>The multilingual display content, organized by BCP-47 language tags. Falls back to default fields when the specified language is not matched.</p>
+         */
+        @NameInMap("i18n")
+        public java.util.Map<String, DataI18nValue> i18n;
 
         /**
          * <p>The icon URL of the MCP marketplace template.</p>
@@ -167,7 +173,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
         public String mcpType;
 
         /**
-         * <p>The name of the MCP marketplace template.</p>
+         * <p>The MCP marketplace template name.</p>
          * 
          * <strong>example:</strong>
          * <p>Knowledge</p>
@@ -221,7 +227,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
         public String templateInputSchema;
 
         /**
-         * <p>The version of the MCP marketplace template.</p>
+         * <p>The MCP marketplace template version.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -256,6 +262,14 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
         }
         public java.util.Map<String, ?> getDisplayMetadata() {
             return this.displayMetadata;
+        }
+
+        public GetMcpMarketItemResponseBodyData setI18n(java.util.Map<String, DataI18nValue> i18n) {
+            this.i18n = i18n;
+            return this;
+        }
+        public java.util.Map<String, DataI18nValue> getI18n() {
+            return this.i18n;
         }
 
         public GetMcpMarketItemResponseBodyData setIconUrl(String iconUrl) {

@@ -2630,10 +2630,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</p>
+     * <p>Queries the details of a specified MCP server, including the address, type, status, authentication configuration, and protocol.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</p>
+     * <p>Queries the details of a specified MCP server, including the address, type, status, authentication configuration, and protocol.</p>
      * 
      * @param request GetMcpRequest
      * @param headers map
@@ -2662,10 +2662,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</p>
+     * <p>Queries the details of a specified MCP server, including the address, type, status, authentication configuration, and protocol.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</p>
+     * <p>Queries the details of a specified MCP server, including the address, type, status, authentication configuration, and protocol.</p>
      * 
      * @param request GetMcpRequest
      * @return GetMcpResponse
@@ -3291,7 +3291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Validates input based on the specified template version and creates an MCP in the workspace.</p>
+     * <p>Validates the input based on the specified template version and creates an MCP in the workspace.</p>
      * 
      * <b>summary</b> : 
      * <p>Installs an MCP marketplace template.</p>
@@ -3344,7 +3344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Validates input based on the specified template version and creates an MCP in the workspace.</p>
+     * <p>Validates the input based on the specified template version and creates an MCP in the workspace.</p>
      * 
      * <b>summary</b> : 
      * <p>Installs an MCP marketplace template.</p>
@@ -4124,6 +4124,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListMcpsResponse listMcpsWithOptions(String workspaceId, ListMcpsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customTag)) {
+            query.put("customTag", request.customTag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("maxResults", request.maxResults);
         }
@@ -5907,7 +5911,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the schema-exposed parameters by using the same template version that was bound when the MCP was created. This operation does not upgrade the template version.</p>
+     * <p>Updates the schema-exposed parameters by using the same template version that was bound when the MCP was created, without upgrading the template version.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates MCP parameters by template.</p>
@@ -5960,7 +5964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the schema-exposed parameters by using the same template version that was bound when the MCP was created. This operation does not upgrade the template version.</p>
+     * <p>Updates the schema-exposed parameters by using the same template version that was bound when the MCP was created, without upgrading the template version.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates MCP parameters by template.</p>

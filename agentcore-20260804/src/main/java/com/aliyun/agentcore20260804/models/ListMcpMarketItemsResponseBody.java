@@ -71,7 +71,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of records that match the filter conditions.</p>
+     * <p>The total number of records that match the specified conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -158,7 +158,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
 
     public static class ListMcpMarketItemsResponseBodyItems extends TeaModel {
         /**
-         * <p>The MCP marketplace template category.</p>
+         * <p>The category of the MCP marketplace template.</p>
          * 
          * <strong>example:</strong>
          * <p>knowledge</p>
@@ -167,7 +167,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The MCP service description.</p>
+         * <p>The description of the MCP service.</p>
          * 
          * <strong>example:</strong>
          * <p>An MCP service for querying knowledge bases</p>
@@ -180,6 +180,12 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
          */
         @NameInMap("displayMetadata")
         public java.util.Map<String, ?> displayMetadata;
+
+        /**
+         * <p>The multilingual display content organized by BCP-47 language tags. Falls back to default fields if the specified language is not matched.</p>
+         */
+        @NameInMap("i18n")
+        public java.util.Map<String, ItemsI18nValue> i18n;
 
         /**
          * <p>The icon URL of the MCP marketplace template.</p>
@@ -200,7 +206,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
         public Long installCount;
 
         /**
-         * <p>The MCP marketplace template ID.</p>
+         * <p>The ID of the MCP marketplace template.</p>
          * 
          * <strong>example:</strong>
          * <p>market-1</p>
@@ -218,7 +224,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
         public String mcpType;
 
         /**
-         * <p>The MCP marketplace template name.</p>
+         * <p>The name of the MCP marketplace template.</p>
          * 
          * <strong>example:</strong>
          * <p>Knowledge</p>
@@ -245,7 +251,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The usage instructions for the MCP marketplace template.</p>
+         * <p>The usage instructions of the MCP marketplace template.</p>
          * 
          * <strong>example:</strong>
          * <h1>Knowledge\nKnowledge base query service</h1>
@@ -254,7 +260,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
         public String readme;
 
         /**
-         * <p>The template schema version.</p>
+         * <p>The schema version of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -272,7 +278,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
         public String templateInputSchema;
 
         /**
-         * <p>The MCP marketplace template version.</p>
+         * <p>The version of the MCP marketplace template.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -307,6 +313,14 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
         }
         public java.util.Map<String, ?> getDisplayMetadata() {
             return this.displayMetadata;
+        }
+
+        public ListMcpMarketItemsResponseBodyItems setI18n(java.util.Map<String, ItemsI18nValue> i18n) {
+            this.i18n = i18n;
+            return this;
+        }
+        public java.util.Map<String, ItemsI18nValue> getI18n() {
+            return this.i18n;
         }
 
         public ListMcpMarketItemsResponseBodyItems setIconUrl(String iconUrl) {

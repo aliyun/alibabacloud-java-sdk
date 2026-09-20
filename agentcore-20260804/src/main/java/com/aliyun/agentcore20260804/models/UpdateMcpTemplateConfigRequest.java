@@ -11,7 +11,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
     public UpdateMcpTemplateConfigRequestBody body;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>The client token that is used to ensure the idempotency of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -111,7 +111,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
         public String credential;
 
         /**
-         * <p>The ID of the backend authentication configuration.</p>
+         * <p>The backend authentication configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>api-key-auth</p>
@@ -120,7 +120,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the API key parameter.</p>
+         * <p>The API key parameter name.</p>
          * 
          * <strong>example:</strong>
          * <p>X-API-Key</p>
@@ -129,7 +129,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The position where the API key is delivered.</p>
+         * <p>The position where the API key is passed.</p>
          * 
          * <strong>example:</strong>
          * <p>header</p>
@@ -201,7 +201,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
         public UpdateMcpTemplateConfigRequestBodyAuthDirectProxy directProxy;
 
         /**
-         * <p>Specifies whether this configuration is enabled.</p>
+         * <p>Specifies whether to enable this configuration.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
@@ -263,7 +263,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
          * <p>The access control mode. Valid values:</p>
          * <ul>
          * <li>ANONYMOUS: anonymous access.</li>
-         * <li>CREDENTIAL: uses AgentCore access credentials.</li>
+         * <li>CREDENTIAL: AgentCore credential-based access.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -311,7 +311,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
         public Boolean authorizationEnabled;
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the credential provider.</p>
+         * <p>The ARN of the credential provider.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:agentidentity:cn-hangzhou:1234567890123456:provider/example</p>
@@ -320,7 +320,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
         public String credentialProviderArn;
 
         /**
-         * <p>The credential provider type.</p>
+         * <p>The type of the credential provider.</p>
          * 
          * <strong>example:</strong>
          * <p>oauth2</p>
@@ -384,7 +384,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
         public String codePackageToken;
 
         /**
-         * <p>The full startup command, with each argument passed in order by parameter boundary. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the full subcommand, and remaining arguments.</p>
+         * <p>The full startup command, with each argument passed in order by parameter boundary. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the full subcommand, and the remaining arguments.</p>
          */
         @NameInMap("command")
         public java.util.List<String> command;
@@ -470,7 +470,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
         public String imageRegistryType;
 
         /**
-         * <p>Custom containers must expose a standard MCP endpoint on their own. Set this parameter to SELF_HOSTED.</p>
+         * <p>The MCP runtime mode for the custom container. The custom container must expose a standard MCP endpoint on its own. Set this parameter to SELF_HOSTED.</p>
          * 
          * <strong>example:</strong>
          * <p>SELF_HOSTED</p>
@@ -479,7 +479,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
         public String mcpRuntimeMode;
 
         /**
-         * <p>Currently fixed to CONTAINER_IMAGE.</p>
+         * <p>The container source type. Currently fixed to CONTAINER_IMAGE.</p>
          * 
          * <strong>example:</strong>
          * <p>CONTAINER_IMAGE</p>
@@ -564,7 +564,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
          * <p>The hook description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Log MCP tool invocations</p>
+         * <p>Log MCP tool calls</p>
          */
         @NameInMap("description")
         public String description;
@@ -591,7 +591,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
         public java.util.Map<String, String> headers;
 
         /**
-         * <p>The timeout period, in milliseconds.</p>
+         * <p>The timeout period. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3000</p>
@@ -673,7 +673,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
 
     public static class UpdateMcpTemplateConfigRequestBodyDeploymentConfigHookConfiguration extends TeaModel {
         /**
-         * <p>The PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks are executed in array order.</p>
+         * <p>The hooks executed in array order: PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL.</p>
          */
         @NameInMap("hooks")
         public java.util.List<UpdateMcpTemplateConfigRequestBodyDeploymentConfigHookConfigurationHooks> hooks;
@@ -707,7 +707,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
         public Boolean enableRequestMetrics;
 
         /**
-         * <p>The log splitting begin rule for Function Compute (FC).</p>
+         * <p>The log segmentation start rule for Function Compute.</p>
          * 
          * <strong>example:</strong>
          * <p>DefaultRegex</p>
@@ -725,7 +725,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
         public String logstore;
 
         /**
-         * <p>The Simple Log Service project name.</p>
+         * <p>The Log Service project name.</p>
          * 
          * <strong>example:</strong>
          * <p>agentcore-mcp-logs</p>
@@ -782,7 +782,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
 
     public static class UpdateMcpTemplateConfigRequestBodyDeploymentConfigMcpConfiguration extends TeaModel {
         /**
-         * <p>The MCP endpoint path, such as /mcp or /sse.</p>
+         * <p>For example, /mcp or /sse.</p>
          * 
          * <strong>example:</strong>
          * <p>/mcp</p>
@@ -791,7 +791,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
         public String endpointPath;
 
         /**
-         * <p>The number of concurrent sessions per instance. Currently fixed to 1.</p>
+         * <p>Currently fixed to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -800,7 +800,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
         public Integer sessionConcurrencyPerInstance;
 
         /**
-         * <p>The session idle timeout period. Unit: seconds. Default value: 1800.</p>
+         * <p>The session idle timeout. Unit: seconds. Default value: 1800.</p>
          * 
          * <strong>example:</strong>
          * <p>1800</p>
@@ -1233,7 +1233,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
 
     public static class UpdateMcpTemplateConfigRequestBodyDeploymentConfigRuntimeConfiguration extends TeaModel {
         /**
-         * <p>The number of vCPUs. Default value: 0.25.</p>
+         * <p>The CPU specification. Unit: cores. Default value: 0.25.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -1266,7 +1266,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
         public String executionRoleArn;
 
         /**
-         * <p>The maximum number of concurrent requests per instance. Default value: 200.</p>
+         * <p>Default value: 200.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -1275,7 +1275,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
         public Integer instanceConcurrency;
 
         /**
-         * <p>The memory size. Unit: MB. Default value: 512.</p>
+         * <p>Unit: MB. Default value: 512.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -1284,7 +1284,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
         public Integer memory;
 
         /**
-         * <p>The service port. Default value: 9000.</p>
+         * <p>Default value: 9000.</p>
          * 
          * <strong>example:</strong>
          * <p>9000</p>
@@ -1293,7 +1293,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The function timeout period. Unit: seconds. Default value: 300.</p>
+         * <p>Unit: seconds. Default value: 300.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -1374,7 +1374,7 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
 
     public static class UpdateMcpTemplateConfigRequestBodyDeploymentConfig extends TeaModel {
         /**
-         * <p>The MCP ingress access control configuration.</p>
+         * <p>The MCP ingress access control settings.</p>
          */
         @NameInMap("accessControl")
         public UpdateMcpTemplateConfigRequestBodyDeploymentConfigAccessControl accessControl;
@@ -1386,7 +1386,11 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
         public UpdateMcpTemplateConfigRequestBodyDeploymentConfigAgentIdentityConfiguration agentIdentityConfiguration;
 
         /**
-         * <p>Valid values: Code (ZIP code package) and Container (custom container).</p>
+         * <p>The artifact type. Valid values:</p>
+         * <ul>
+         * <li>Code: ZIP code package.</li>
+         * <li>Container: custom container.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Code</p>
@@ -1599,16 +1603,16 @@ public class UpdateMcpTemplateConfigRequest extends TeaModel {
         public UpdateMcpTemplateConfigRequestBodyDeploymentConfig deploymentConfig;
 
         /**
-         * <p>The description of the MCP service.</p>
+         * <p>The MCP service description.</p>
          * 
          * <strong>example:</strong>
-         * <p>An MCP service for querying the knowledge base</p>
+         * <p>An MCP service for querying knowledge bases</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The OpenAPI configuration used for HTTP-to-MCP conversion, represented as a JSON string.</p>
+         * <p>The OpenAPI configuration for HTTP-to-MCP conversion, represented as a JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;openapi&quot;:&quot;3.0.3&quot;,&quot;info&quot;:{&quot;title&quot;:&quot;Knowledge API&quot;,&quot;version&quot;:&quot;1.0.0&quot;},&quot;paths&quot;:{}}</p>

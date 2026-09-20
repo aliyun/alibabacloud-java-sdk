@@ -284,7 +284,7 @@ public class CreateMcpResponseBody extends TeaModel {
 
     public static class CreateMcpResponseBodyDataAuth extends TeaModel {
         /**
-         * <p>The API key authentication configuration for callers of code-deployed MCP.</p>
+         * <p>The API key authentication configuration for code-deployed MCP callers.</p>
          */
         @NameInMap("codePackage")
         public CreateMcpResponseBodyDataAuthCodePackage codePackage;
@@ -667,7 +667,7 @@ public class CreateMcpResponseBody extends TeaModel {
          * <p>The hook description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Record MCP tool calling</p>
+         * <p>Record MCP tool invocations</p>
          */
         @NameInMap("description")
         public String description;
@@ -694,7 +694,7 @@ public class CreateMcpResponseBody extends TeaModel {
         public java.util.Map<String, String> headers;
 
         /**
-         * <p>The hook timeout period. Unit: milliseconds.</p>
+         * <p>The timeout period. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3000</p>
@@ -1097,7 +1097,7 @@ public class CreateMcpResponseBody extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-example</p>
@@ -1360,7 +1360,7 @@ public class CreateMcpResponseBody extends TeaModel {
         public java.util.Map<String, String> environmentVariables;
 
         /**
-         * <p>The ARN of the RAM role used when user code accesses downstream Alibaba Cloud resources.</p>
+         * <p>The ARN of the RAM role used by user code to access downstream Alibaba Cloud resources.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::1234567890123456:role/agentcore-mcp-execution</p>
@@ -1809,13 +1809,13 @@ public class CreateMcpResponseBody extends TeaModel {
         public java.util.List<String> addresses;
 
         /**
-         * <p>The backend authentication configuration. enabled indicates whether authentication is enabled. directProxy specifies custom authentication headers for direct proxy connections. httpToMcp specifies the list of OpenAPI credentials for HTTP_TO_MCP.</p>
+         * <p>The backend authentication configuration. enabled indicates whether authentication is enabled. directProxy specifies custom authentication headers for direct-connect proxies. httpToMcp specifies the OpenAPI credential list for HTTP_TO_MCP.</p>
          */
         @NameInMap("auth")
         public CreateMcpResponseBodyDataAuth auth;
 
         /**
-         * <p>Custom tags. Multiple tags are supported.</p>
+         * <p>The custom tags. Multiple tags are supported.</p>
          */
         @NameInMap("customTags")
         public java.util.List<String> customTags;

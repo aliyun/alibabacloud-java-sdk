@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListMcpsRequest extends TeaModel {
     /**
+     * <p>Filters results by custom tag. The tag must be an exact match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>KnowledgeBase</p>
+     */
+    @NameInMap("customTag")
+    public String customTag;
+
+    /**
      * <p>The maximum number of entries per page.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +64,7 @@ public class ListMcpsRequest extends TeaModel {
     public String searchType;
 
     /**
-     * <p>Specifies whether the service is still bound by the official template usage constraint.</p>
+     * <p>Specifies whether the service is still bound by the official template usage.</p>
      */
     @NameInMap("usageActive")
     public Boolean usageActive;
@@ -63,6 +72,14 @@ public class ListMcpsRequest extends TeaModel {
     public static ListMcpsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMcpsRequest self = new ListMcpsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListMcpsRequest setCustomTag(String customTag) {
+        this.customTag = customTag;
+        return this;
+    }
+    public String getCustomTag() {
+        return this.customTag;
     }
 
     public ListMcpsRequest setMaxResults(Integer maxResults) {

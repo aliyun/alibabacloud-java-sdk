@@ -38,7 +38,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which is used to locate and troubleshoot requests.</p>
+     * <p>The request ID, used for locating and troubleshooting issues.</p>
      * 
      * <strong>example:</strong>
      * <p>request-123456</p>
@@ -122,7 +122,11 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>ANONYMOUS indicates anonymous access. CREDENTIAL indicates access using an AgentCore credential.</p>
+         * <p>The access control mode. Valid values:</p>
+         * <ul>
+         * <li>ANONYMOUS: anonymous access.</li>
+         * <li>CREDENTIAL: AgentCore credential-based access.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CREDENTIAL</p>
@@ -163,13 +167,13 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
 
     public static class InstallMcpMarketItemResponseBodyDataDeploymentConfigAgentIdentityConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether authorization is enabled.</p>
+         * <p>Specifies whether to enable authorization.</p>
          */
         @NameInMap("authorizationEnabled")
         public Boolean authorizationEnabled;
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the credential provider.</p>
+         * <p>The ARN of the credential provider.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:agentidentity:cn-hangzhou:1234567890123456:provider/example</p>
@@ -178,7 +182,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         public String credentialProviderArn;
 
         /**
-         * <p>The credential provider type.</p>
+         * <p>The type of the credential provider.</p>
          * 
          * <strong>example:</strong>
          * <p>oauth2</p>
@@ -187,7 +191,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         public String credentialProviderType;
 
         /**
-         * <p>Specifies whether Agent Identity is enabled.</p>
+         * <p>Specifies whether to enable Agent Identity.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
@@ -233,7 +237,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
 
     public static class InstallMcpMarketItemResponseBodyDataDeploymentConfigCodeConfiguration extends TeaModel {
         /**
-         * <p>The temporary code package token returned by GetMcpCodePackageUploadUrl. After the presigned upload is complete, this token is used to create or update a code deployment.</p>
+         * <p>The temporary code package token returned by GetMcpCodePackageUploadUrl. This token is used to create or update a code deployment after the presigned upload is complete.</p>
          * 
          * <strong>example:</strong>
          * <p>upload-token</p>
@@ -242,13 +246,13 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         public String codePackageToken;
 
         /**
-         * <p>The full startup command, with arguments passed in sequence by parameter boundary. For example, when using supergateway to start a stdio MCP, pass in supergateway, --stdio, the full subcommand, and remaining arguments.</p>
+         * <p>The full startup command, with arguments passed in order by parameter boundary. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the full subcommand, and remaining arguments.</p>
          */
         @NameInMap("command")
         public java.util.List<String> command;
 
         /**
-         * <p>The code package runtime: python3.13, nodejs22, or java17.</p>
+         * <p>The code package runtime. Valid values: python3.13, nodejs22, and java17.</p>
          * 
          * <strong>example:</strong>
          * <p>python3.13</p>
@@ -328,7 +332,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         public String imageRegistryType;
 
         /**
-         * <p>Custom containers must expose a standard MCP endpoint. Set this parameter to SELF_HOSTED.</p>
+         * <p>The MCP Runtime mode. Custom containers must expose a standard MCP endpoint. Set this parameter to SELF_HOSTED.</p>
          * 
          * <strong>example:</strong>
          * <p>SELF_HOSTED</p>
@@ -337,7 +341,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         public String mcpRuntimeMode;
 
         /**
-         * <p>Currently fixed to CONTAINER_IMAGE.</p>
+         * <p>The container source type. Currently fixed to CONTAINER_IMAGE.</p>
          * 
          * <strong>example:</strong>
          * <p>CONTAINER_IMAGE</p>
@@ -449,7 +453,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         public java.util.Map<String, String> headers;
 
         /**
-         * <p>The timeout period, in milliseconds.</p>
+         * <p>The timeout period. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3000</p>
@@ -531,7 +535,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
 
     public static class InstallMcpMarketItemResponseBodyDataDeploymentConfigHookConfiguration extends TeaModel {
         /**
-         * <p>Executes PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in array order.</p>
+         * <p>The hooks executed in array order: PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL.</p>
          */
         @NameInMap("hooks")
         public java.util.List<InstallMcpMarketItemResponseBodyDataDeploymentConfigHookConfigurationHooks> hooks;
@@ -640,7 +644,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
 
     public static class InstallMcpMarketItemResponseBodyDataDeploymentConfigMcpConfiguration extends TeaModel {
         /**
-         * <p>The MCP endpoint path. For example, /mcp or /sse.</p>
+         * <p>For example, /mcp or /sse.</p>
          * 
          * <strong>example:</strong>
          * <p>/mcp</p>
@@ -649,7 +653,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         public String endpointPath;
 
         /**
-         * <p>The number of concurrent sessions per instance. Currently fixed to 1.</p>
+         * <p>Currently fixed to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -658,7 +662,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         public Integer sessionConcurrencyPerInstance;
 
         /**
-         * <p>The session idle timeout period. Unit: seconds. Default value: 1800.</p>
+         * <p>Unit: seconds. Default value: 1800.</p>
          * 
          * <strong>example:</strong>
          * <p>1800</p>
@@ -667,7 +671,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         public Integer sessionIdleTimeoutSeconds;
 
         /**
-         * <p>The maximum session lifetime. Unit: seconds. Default value: 21600.</p>
+         * <p>Unit: seconds. Default value: 21600.</p>
          * 
          * <strong>example:</strong>
          * <p>21600</p>
@@ -1019,7 +1023,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The reserved reference to a parameter transformation and result enhancement rule set.</p>
+         * <p>The reserved reference to the parameter transformation and result enhancement rule set.</p>
          * 
          * <strong>example:</strong>
          * <p>rules-1</p>
@@ -1091,7 +1095,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
 
     public static class InstallMcpMarketItemResponseBodyDataDeploymentConfigRuntimeConfiguration extends TeaModel {
         /**
-         * <p>The number of vCPUs. Default value: 0.25.</p>
+         * <p>Unit: cores. Default value: 0.25.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -1100,7 +1104,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         public Double cpu;
 
         /**
-         * <p>The ephemeral disk size. Unit: MB. Valid values: 512 and 10240.</p>
+         * <p>Unit: MB. Valid values: 512 and 10240.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -1115,7 +1119,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         public java.util.Map<String, String> environmentVariables;
 
         /**
-         * <p>The ARN of the RAM role used by user code to access downstream Alibaba Cloud resources.</p>
+         * <p>The ARN of the RAM role used when user code accesses downstream Alibaba Cloud resources.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::1234567890123456:role/agentcore-mcp-execution</p>
@@ -1124,7 +1128,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         public String executionRoleArn;
 
         /**
-         * <p>The maximum number of concurrent requests per instance. Default value: 200.</p>
+         * <p>Default value: 200.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -1133,7 +1137,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         public Integer instanceConcurrency;
 
         /**
-         * <p>The memory size. Unit: MB. Default value: 512.</p>
+         * <p>Unit: MB. Default value: 512.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -1142,7 +1146,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         public Integer memory;
 
         /**
-         * <p>The service port. Default value: 9000.</p>
+         * <p>Default value: 9000.</p>
          * 
          * <strong>example:</strong>
          * <p>9000</p>
@@ -1151,7 +1155,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The function timeout period. Unit: seconds. Default value: 300.</p>
+         * <p>Unit: seconds. Default value: 300.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -1232,7 +1236,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
 
     public static class InstallMcpMarketItemResponseBodyDataDeploymentConfig extends TeaModel {
         /**
-         * <p>The MCP ingress access control configuration.</p>
+         * <p>The MCP ingress access control settings.</p>
          */
         @NameInMap("accessControl")
         public InstallMcpMarketItemResponseBodyDataDeploymentConfigAccessControl accessControl;
@@ -1244,7 +1248,11 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         public InstallMcpMarketItemResponseBodyDataDeploymentConfigAgentIdentityConfiguration agentIdentityConfiguration;
 
         /**
-         * <p>Code indicates a ZIP code package. Container indicates a custom container.</p>
+         * <p>The artifact type. Valid values:</p>
+         * <ul>
+         * <li>Code: ZIP code package.</li>
+         * <li>Container: custom container.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Code</p>
@@ -1464,7 +1472,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
 
     public static class InstallMcpMarketItemResponseBodyDataTemplate extends TeaModel {
         /**
-         * <p>The template version that is currently applied to the MCP service.</p>
+         * <p>The template version currently applied to the MCP.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -1575,13 +1583,13 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
          * <p>The MCP service description.</p>
          * 
          * <strong>example:</strong>
-         * <p>An MCP service for querying the knowledge base</p>
+         * <p>MCP service for querying knowledge bases</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The MCP server endpoint.</p>
+         * <p>The MCP service access endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/mcp">https://example.com/mcp</a></p>
@@ -1590,7 +1598,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The Function Compute function name that corresponds to the code-deployed MCP server.</p>
+         * <p>The Function Compute function name corresponding to the code-deployed MCP.</p>
          * 
          * <strong>example:</strong>
          * <p>agentcore-mcp-example</p>
@@ -1599,13 +1607,13 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         public String functionName;
 
         /**
-         * <p>The marketplace template from which the MCP service originates.</p>
+         * <p>The marketplace template from which the MCP originates.</p>
          */
         @NameInMap("marketSource")
         public InstallMcpMarketItemResponseBodyDataMarketSource marketSource;
 
         /**
-         * <p>The MCP server ID.</p>
+         * <p>The MCP service ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mcp-server-id</p>
@@ -1623,7 +1631,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The official usage tag, managed by the server.</p>
+         * <p>The official purpose tag, managed by the server.</p>
          * 
          * <strong>example:</strong>
          * <p>KNOWLEDGE_BASE</p>
@@ -1659,7 +1667,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         public String statusReason;
 
         /**
-         * <p>The template version and input schema bound to the MCP service.</p>
+         * <p>The template version and input schema bound to the MCP.</p>
          */
         @NameInMap("template")
         public InstallMcpMarketItemResponseBodyDataTemplate template;
@@ -1667,9 +1675,9 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         /**
          * <p>The MCP type. Valid values:</p>
          * <ul>
-         * <li>DIRECT_PROXY: direct proxy.</li>
+         * <li>DIRECT_PROXY: Direct proxy.</li>
          * <li>HTTP_TO_MCP: HTTP-to-MCP conversion.</li>
-         * <li>CODE_PACKAGE: code deployment.</li>
+         * <li>CODE_PACKAGE: Code deployment.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1679,7 +1687,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Indicates whether the MCP service is still bound by the usage constraints of the official template.</p>
+         * <p>Indicates whether the MCP is still subject to the usage constraints of the official template.</p>
          */
         @NameInMap("usageActive")
         public Boolean usageActive;
