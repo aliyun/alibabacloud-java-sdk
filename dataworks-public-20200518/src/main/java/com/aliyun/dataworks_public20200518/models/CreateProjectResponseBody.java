@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateProjectResponseBody extends TeaModel {
     /**
-     * <p>The workspace ID.</p>
+     * <p>The ID of the DataWorks workspace that was created.</p>
      * 
      * <strong>example:</strong>
      * <p>466230</p>
@@ -34,8 +34,8 @@ public class CreateProjectResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

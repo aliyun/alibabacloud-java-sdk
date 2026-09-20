@@ -5,9 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveEntityTagsResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
-     * <p>true\
-     * false</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <p>true: Successful.<br>false: Failed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -43,7 +42,7 @@ public class RemoveEntityTagsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-E****</p>
@@ -53,8 +52,7 @@ public class RemoveEntityTagsResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <p>true\
-     * false</p>
+     * <p>true: Successful.<br>false: Failed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

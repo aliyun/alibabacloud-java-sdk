@@ -15,7 +15,7 @@ public class SetEntityTagsShrinkRequest extends TeaModel {
     public String qualifiedName;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of labels.</p>
      */
     @NameInMap("Tags")
     public String tagsShrink;

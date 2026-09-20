@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopInstanceRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/173982.html">ListInstances</a> operation to obtain the ID.</p>
+     * <p>The ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/173982.html">ListInstances</a> to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

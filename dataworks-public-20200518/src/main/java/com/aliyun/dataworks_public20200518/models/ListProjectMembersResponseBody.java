@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProjectMembersResponseBody extends TeaModel {
     /**
-     * <p>The returned results.</p>
+     * <p>The query result.</p>
      */
     @NameInMap("Data")
     public ListProjectMembersResponseBodyData data;
@@ -42,7 +42,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
 
     public static class ListProjectMembersResponseBodyDataProjectMemberListProjectRoleList extends TeaModel {
         /**
-         * <p>The code of the role. DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see <a href="https://help.aliyun.com/document_detail/295463.html">Overview of users, roles, and permissions</a>.</p>
+         * <p>The role code. DataWorks provides preset roles. You can also create custom roles based on your business requirements. For more information about roles, see <a href="https://help.aliyun.com/document_detail/295463.html">Overview of users, roles, and permissions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>role_project_guest</p>
@@ -60,7 +60,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         public Integer projectRoleId;
 
         /**
-         * <p>The name of the role. DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see <a href="https://help.aliyun.com/document_detail/295463.html">Overview of users, roles, and permissions</a>.</p>
+         * <p>The name of the role. DataWorks provides preset roles. You can also create custom roles based on your business requirements. For more information about roles, see <a href="https://help.aliyun.com/document_detail/295463.html">Overview of users, roles, and permissions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Visitor</p>
@@ -71,9 +71,9 @@ public class ListProjectMembersResponseBody extends TeaModel {
         /**
          * <p>The type of the role. Valid values:</p>
          * <ul>
-         * <li><p>0: SYSTEM, which indicates that the role is a built-in role.</p>
+         * <li><p>SYSTEM (0): system role.</p>
          * </li>
-         * <li><p>2: USER_CUSTOM, which indicates that the role is a custom role.</p>
+         * <li><p>USER_CUSTOM (2): custom role.</p>
          * </li>
          * </ul>
          * 
@@ -124,7 +124,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
 
     public static class ListProjectMembersResponseBodyDataProjectMemberList extends TeaModel {
         /**
-         * <p>The nickname of the member.</p>
+         * <p>The nickname of the workspace member.</p>
          * 
          * <strong>example:</strong>
          * <p>zhangsan</p>
@@ -133,7 +133,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         public String nick;
 
         /**
-         * <p>The member ID.</p>
+         * <p>The user ID of the member.</p>
          * 
          * <strong>example:</strong>
          * <p>121</p>
@@ -153,12 +153,9 @@ public class ListProjectMembersResponseBody extends TeaModel {
         /**
          * <p>The type of the member. Valid values:</p>
          * <ul>
-         * <li><p>1: USER_ALIYUN, which indicates that the member is an Alibaba Cloud account.</p>
-         * </li>
-         * <li><p>5: USER_UBACCOUNT, which indicates that the member is a RAM user.</p>
-         * </li>
-         * <li><p>6: USER_STS_ROLE, which indicates that the member is a RAM role.</p>
-         * </li>
+         * <li>1: Alibaba Cloud account (USER_ALIYUN).</li>
+         * <li>5: RAM user (USER_UBACCOUNT).</li>
+         * <li>6: RAM role (USER_STS_ROLE).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -168,20 +165,17 @@ public class ListProjectMembersResponseBody extends TeaModel {
         public String projectMemberType;
 
         /**
-         * <p>The roles that are assigned to the member.</p>
+         * <p>The list of roles assigned to the member.</p>
          */
         @NameInMap("ProjectRoleList")
         public java.util.List<ListProjectMembersResponseBodyDataProjectMemberListProjectRoleList> projectRoleList;
 
         /**
-         * <p>The status of the member. Valid values:</p>
+         * <p>The query status. Valid values:</p>
          * <ul>
-         * <li><p>0: NORMAL, which indicates that the member is in a normal state.</p>
-         * </li>
-         * <li><p>1: FORBIDDEN, which indicates that the member is disabled.</p>
-         * </li>
-         * <li><p>2: DELETED, which indicates that the member is deleted.</p>
-         * </li>
+         * <li>0: Normal (NORMAL).</li>
+         * <li>1: Disabled (FORBIDDEN).</li>
+         * <li>2: Deleted (DELETED).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,7 +241,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
 
     public static class ListProjectMembersResponseBodyData extends TeaModel {
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -265,7 +259,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The information about members in the DataWorks workspace.</p>
+         * <p>The list of workspace members.</p>
          */
         @NameInMap("ProjectMemberList")
         public java.util.List<ListProjectMembersResponseBodyDataProjectMemberList> projectMemberList;

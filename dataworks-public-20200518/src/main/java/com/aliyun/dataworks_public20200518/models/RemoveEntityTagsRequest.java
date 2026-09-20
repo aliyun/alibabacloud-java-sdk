@@ -15,7 +15,7 @@ public class RemoveEntityTagsRequest extends TeaModel {
     public String qualifiedName;
 
     /**
-     * <p>The tag keys.</p>
+     * <p>The list of tag keys.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TagKeys")

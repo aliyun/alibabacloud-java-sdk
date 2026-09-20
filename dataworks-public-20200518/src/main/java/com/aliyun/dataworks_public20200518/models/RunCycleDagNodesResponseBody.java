@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunCycleDagNodesResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the nodes in the workflow. You can query instances based on the IDs.</p>
+     * <p>The DagId returned by the data backfill instance. You can use this DagId to query the corresponding instances.</p>
      */
     @NameInMap("Data")
     public java.util.List<Long> data;
@@ -38,7 +38,7 @@ public class RunCycleDagNodesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
+     * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <blockquote>
@@ -49,7 +49,7 @@ public class RunCycleDagNodesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

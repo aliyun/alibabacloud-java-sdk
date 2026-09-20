@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataServiceApiResponseBody extends TeaModel {
     /**
-     * <p>The ID of the API.</p>
+     * <p>The ID of the created API.</p>
      * 
      * <strong>example:</strong>
      * <p>100003</p>
@@ -41,7 +41,7 @@ public class CreateDataServiceApiResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. A unique identifier for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>

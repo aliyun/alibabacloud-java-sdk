@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryDefaultTemplateResponseBody extends TeaModel {
     /**
-     * <p>The returned data about the default data category and data sensitivity level template. The data is in the JSON array format.</p>
+     * <p>The default data classification template returned. The value is in JSON format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class QueryDefaultTemplateResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,8 +57,8 @@ public class QueryDefaultTemplateResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEntitiesByTagsResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ListEntitiesByTagsResponseBodyData data;
@@ -38,7 +38,7 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-E****</p>
@@ -48,8 +48,10 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <p>true\
-     * false</p>
+     * <ul>
+     * <li>true: The request was successful.  </li>
+     * <li>false: The request failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -112,13 +114,13 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
 
     public static class ListEntitiesByTagsResponseBodyData extends TeaModel {
         /**
-         * <p>The entities.</p>
+         * <p>The list of entities.</p>
          */
         @NameInMap("EntityList")
         public java.util.List<Entity> entityList;
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token that specifies the start point of the next read operation.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>

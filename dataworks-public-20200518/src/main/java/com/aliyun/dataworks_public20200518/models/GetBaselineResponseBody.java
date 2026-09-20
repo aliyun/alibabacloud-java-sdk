@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBaselineResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public GetBaselineResponseBodyData data;
@@ -114,7 +114,7 @@ public class GetBaselineResponseBody extends TeaModel {
 
     public static class GetBaselineResponseBodyDataAlertSettingsDingRobots extends TeaModel {
         /**
-         * <p>Whether @ everyone.</p>
+         * <p>Indicates whether to @ all members.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -123,7 +123,7 @@ public class GetBaselineResponseBody extends TeaModel {
         public Boolean atAll;
 
         /**
-         * <p>DingTalk robot address</p>
+         * <p>The webhook URL of the DingTalk chatbot.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=xxx">https://oapi.dingtalk.com/robot/send?access_token=xxx</a></p>
@@ -154,9 +154,47 @@ public class GetBaselineResponseBody extends TeaModel {
 
     }
 
+    public static class GetBaselineResponseBodyDataAlertSettingsTopicSlowConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3600</p>
+         */
+        @NameInMap("MinOver")
+        public Integer minOver;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
+        @NameInMap("OverFactor")
+        public Double overFactor;
+
+        public static GetBaselineResponseBodyDataAlertSettingsTopicSlowConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetBaselineResponseBodyDataAlertSettingsTopicSlowConfig self = new GetBaselineResponseBodyDataAlertSettingsTopicSlowConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetBaselineResponseBodyDataAlertSettingsTopicSlowConfig setMinOver(Integer minOver) {
+            this.minOver = minOver;
+            return this;
+        }
+        public Integer getMinOver() {
+            return this.minOver;
+        }
+
+        public GetBaselineResponseBodyDataAlertSettingsTopicSlowConfig setOverFactor(Double overFactor) {
+            this.overFactor = overFactor;
+            return this;
+        }
+        public Double getOverFactor() {
+            return this.overFactor;
+        }
+
+    }
+
     public static class GetBaselineResponseBodyDataAlertSettings extends TeaModel {
         /**
-         * <p>The event alert interval, in seconds.</p>
+         * <p>The event alerting interval, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>900</p>
@@ -165,7 +203,7 @@ public class GetBaselineResponseBody extends TeaModel {
         public Integer alertInterval;
 
         /**
-         * <p>The maximum number of event alerts.</p>
+         * <p>The maximum number of event alerting notifications.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -174,16 +212,18 @@ public class GetBaselineResponseBody extends TeaModel {
         public Integer alertMaximum;
 
         /**
-         * <p>Alert method list</p>
+         * <p>The list of alert methods.</p>
          */
         @NameInMap("AlertMethods")
         public java.util.List<String> alertMethods;
 
         /**
-         * <p>Alert recipient details.</p>
-         * <p>AlertRecipientType is OWNER: empty
-         * AlertRecipientType is SHIFT_SCHEDULE: duty table uid
-         * AlertRecipientType is OTHER: uid list, multiple UIDs are in English, split</p>
+         * <p>The alert recipient details.</p>
+         * <ul>
+         * <li>If AlertRecipientType is set to OWNER: empty.</li>
+         * <li>If AlertRecipientType is set to SHIFT_SCHEDULE: the UID of the shift schedule.</li>
+         * <li>If AlertRecipientType is set to OTHER: a list of UIDs. Separate multiple UIDs with commas (,).</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>123123</p>
@@ -192,11 +232,11 @@ public class GetBaselineResponseBody extends TeaModel {
         public String alertRecipient;
 
         /**
-         * <p>The type of alert recipient.</p>
+         * <p>The type of alert recipient. Valid values:</p>
          * <ul>
-         * <li>OWNER: task owner</li>
-         * <li>OTHER: designated person</li>
-         * <li>SHIFT: SCHEDULE-duty table</li>
+         * <li>OWNER: node owner.</li>
+         * <li>OTHER: specified users.</li>
+         * <li>SHIFT_SCHEDULE: shift schedule.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -206,10 +246,10 @@ public class GetBaselineResponseBody extends TeaModel {
         public String alertRecipientType;
 
         /**
-         * <p>Alert type</p>
+         * <p>The alerting type. Valid values:</p>
          * <ul>
-         * <li>BASELINE: baseline</li>
-         * <li>TOPIC: event</li>
+         * <li>BASELINE: baseline.</li>
+         * <li>TOPIC: event.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -219,10 +259,10 @@ public class GetBaselineResponseBody extends TeaModel {
         public String alertType;
 
         /**
-         * <p>The baseline alarm switch.</p>
+         * <p>The baseline alert switch. This is a baseline-specific configuration. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: started.</li>
+         * <li>false: stopped.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,13 +272,13 @@ public class GetBaselineResponseBody extends TeaModel {
         public Boolean baselineAlertEnabled;
 
         /**
-         * <p>DingTalk robot list.</p>
+         * <p>The list of DingTalk chatbots.</p>
          */
         @NameInMap("DingRobots")
         public java.util.List<GetBaselineResponseBodyDataAlertSettingsDingRobots> dingRobots;
 
         /**
-         * <p>The end time of the silence. The format is HH:mm:ss.</p>
+         * <p>The silence end time, in the HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00:00</p>
@@ -247,7 +287,7 @@ public class GetBaselineResponseBody extends TeaModel {
         public String silenceEndTime;
 
         /**
-         * <p>The start time of the silence. Format: HH:mm:ss</p>
+         * <p>The silence start time, in the HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00:00</p>
@@ -255,14 +295,17 @@ public class GetBaselineResponseBody extends TeaModel {
         @NameInMap("SilenceStartTime")
         public String silenceStartTime;
 
+        @NameInMap("TopicSlowConfig")
+        public GetBaselineResponseBodyDataAlertSettingsTopicSlowConfig topicSlowConfig;
+
         /**
-         * <p>The list of Event Alert types.</p>
+         * <p>The list of event alerting types. This is an event-specific configuration.</p>
          */
         @NameInMap("TopicTypes")
         public java.util.List<String> topicTypes;
 
         /**
-         * <p>webhook list.</p>
+         * <p>The list of webhooks.</p>
          */
         @NameInMap("Webhooks")
         public java.util.List<String> webhooks;
@@ -352,6 +395,14 @@ public class GetBaselineResponseBody extends TeaModel {
             return this.silenceStartTime;
         }
 
+        public GetBaselineResponseBodyDataAlertSettings setTopicSlowConfig(GetBaselineResponseBodyDataAlertSettingsTopicSlowConfig topicSlowConfig) {
+            this.topicSlowConfig = topicSlowConfig;
+            return this;
+        }
+        public GetBaselineResponseBodyDataAlertSettingsTopicSlowConfig getTopicSlowConfig() {
+            return this.topicSlowConfig;
+        }
+
         public GetBaselineResponseBodyDataAlertSettings setTopicTypes(java.util.List<String> topicTypes) {
             this.topicTypes = topicTypes;
             return this;
@@ -372,7 +423,7 @@ public class GetBaselineResponseBody extends TeaModel {
 
     public static class GetBaselineResponseBodyDataOverTimeSettings extends TeaModel {
         /**
-         * <p>The period corresponding to the commitment time. The space-based line is 1, and the hourly baseline can be configured for up to 24 cycles.</p>
+         * <p>The cycle corresponding to the committed time. The value is 1 for daily baselines. You can configure up to 24 cycles for hourly baselines.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -381,7 +432,7 @@ public class GetBaselineResponseBody extends TeaModel {
         public Integer cycle;
 
         /**
-         * <p>Commitment time, hh:mm format, hh value range is [0,47],mm value range is [0,59].</p>
+         * <p>The committed time in hh:mm format, where hh ranges from 0 to 47 and mm ranges from 0 to 59.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00</p>
@@ -414,7 +465,7 @@ public class GetBaselineResponseBody extends TeaModel {
 
     public static class GetBaselineResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the alerting feature is enabled. Valid values:</p>
+         * <p>Indicates whether alerting is started. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -427,7 +478,7 @@ public class GetBaselineResponseBody extends TeaModel {
         public Boolean alertEnabled;
 
         /**
-         * <p>The alert margin threshold. Unit: minutes.</p>
+         * <p>The alert margin threshold, in minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -442,7 +493,7 @@ public class GetBaselineResponseBody extends TeaModel {
         public java.util.List<GetBaselineResponseBodyDataAlertSettings> alertSettings;
 
         /**
-         * <p>The baseline ID.</p>
+         * <p>The ID of the baseline.</p>
          * 
          * <strong>example:</strong>
          * <p>1001</p>
@@ -462,8 +513,8 @@ public class GetBaselineResponseBody extends TeaModel {
         /**
          * <p>The type of the baseline. Valid values:</p>
          * <ul>
-         * <li>DAILY</li>
-         * <li>HOURLY</li>
+         * <li>DAILY: daily baseline.</li>
+         * <li>HOURLY: hourly baseline.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -473,7 +524,7 @@ public class GetBaselineResponseBody extends TeaModel {
         public String baselineType;
 
         /**
-         * <p>Indicates whether the baseline is enabled.</p>
+         * <p>Indicates whether the baseline is started.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -482,13 +533,13 @@ public class GetBaselineResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The node IDs.</p>
+         * <p>The list of upstream nodes of the baseline.</p>
          */
         @NameInMap("NodeIds")
         public java.util.List<Long> nodeIds;
 
         /**
-         * <p>The settings of the committed completion time of the baseline.</p>
+         * <p>The baseline committed time settings.</p>
          */
         @NameInMap("OverTimeSettings")
         public java.util.List<GetBaselineResponseBodyDataOverTimeSettings> overTimeSettings;
@@ -512,7 +563,7 @@ public class GetBaselineResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The project ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

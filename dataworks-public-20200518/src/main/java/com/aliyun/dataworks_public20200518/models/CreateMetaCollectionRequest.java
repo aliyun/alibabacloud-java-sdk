@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMetaCollectionRequest extends TeaModel {
     /**
-     * <p>The type of the collection.</p>
+     * <p>The collection type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,8 @@ public class CreateMetaCollectionRequest extends TeaModel {
     public String collectionType;
 
     /**
-     * <p>The comment of the collection. The comment must be 1 to 64 characters in length.</p>
+     * <p>The comment for the collection.</p>
+     * <p>Length limit: 1 to 64 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a comment</p>
@@ -24,7 +25,8 @@ public class CreateMetaCollectionRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The name of the collection. The name must be 1 to 32 characters in length.</p>
+     * <p>The collection name.</p>
+     * <p>Length limit: 1 to 32 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

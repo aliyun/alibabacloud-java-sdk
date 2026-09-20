@@ -7,6 +7,9 @@ public class DsgWhiteListAddOrUpdateRequest extends TeaModel {
     /**
      * <p>A collection of whitelists.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DsgWhiteListAddOrUpdate</p>
      */
     @NameInMap("WhiteLists")
     public java.util.List<DsgWhiteListAddOrUpdateRequestWhiteLists> whiteLists;

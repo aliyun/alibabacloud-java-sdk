@@ -38,7 +38,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID. You can troubleshoot issues based on the ID.</p>
+     * <p>The request ID. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>1324afdsfde</p>
@@ -119,7 +119,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the level.</p>
+         * <p>The level ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -128,7 +128,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         public Long levelId;
 
         /**
-         * <p>The name of the level.</p>
+         * <p>The level name.</p>
          * 
          * <strong>example:</strong>
          * <p>level1</p>
@@ -137,12 +137,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The type of the level. Valid values:</p>
+         * <p>The level type. Valid values:</p>
          * <ul>
-         * <li><p>1: indicates the logical level.</p>
-         * </li>
-         * <li><p>2: indicates the physical level.</p>
-         * </li>
+         * <li>1: logical level.</li>
+         * <li>2: physical level.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,12 +190,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
 
     public static class GetMetaTableThemeLevelResponseBodyEntityTheme extends TeaModel {
         /**
-         * <p>The level of the theme. Valid values:</p>
+         * <p>The theme type. Valid values:</p>
          * <ul>
-         * <li><p>1</p>
-         * </li>
-         * <li><p>2</p>
-         * </li>
+         * <li>1: primary theme.</li>
+         * <li>2: secondary theme.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,7 +203,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         public Integer level;
 
         /**
-         * <p>The name of the theme.</p>
+         * <p>The theme name.</p>
          * 
          * <strong>example:</strong>
          * <p>theme1</p>
@@ -225,7 +221,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         public Long parentId;
 
         /**
-         * <p>The ID of the theme.</p>
+         * <p>The theme ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -274,13 +270,13 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
 
     public static class GetMetaTableThemeLevelResponseBodyEntity extends TeaModel {
         /**
-         * <p>The information about the levels of the metatable.</p>
+         * <p>The level information.</p>
          */
         @NameInMap("Level")
         public java.util.List<GetMetaTableThemeLevelResponseBodyEntityLevel> level;
 
         /**
-         * <p>The information about the themes of the metatable.</p>
+         * <p>The theme information.</p>
          */
         @NameInMap("Theme")
         public java.util.List<GetMetaTableThemeLevelResponseBodyEntityTheme> theme;

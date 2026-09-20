@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchNodesByOutputResponseBody extends TeaModel {
     /**
-     * <p>The map returned. The key in the map indicates an output name, and the value in the map indicates the information about the node that generates the output.</p>
+     * <p>The returned data, which is a map. The key is each output that you specify, and the value is the node information that corresponds to the output.</p>
      */
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
@@ -38,7 +38,7 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>SDFSDFSDF-asdfDFSDF-SDFSDf-SDfSFD</p>
@@ -47,7 +47,7 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBaselineKeyPathRequest extends TeaModel {
     /**
-     * <p>The name of the event.</p>
+     * <p>The ID of the baseline.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetBaselineKeyPathRequest extends TeaModel {
     public Long baselineId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The business date in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ UTC format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetBaselineKeyPathRequest extends TeaModel {
     public String bizdate;
 
     /**
-     * <p>The ID of the event.</p>
+     * <p>The cycle number of the baseline instance. The value is 1 for a daily baseline. Valid values for an hourly baseline: [1,24\].</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

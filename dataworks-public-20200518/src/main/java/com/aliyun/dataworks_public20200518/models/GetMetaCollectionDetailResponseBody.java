@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMetaCollectionDetailResponseBody extends TeaModel {
     /**
-     * <p>The information about the collection.</p>
+     * <p>The collection object.</p>
      */
     @NameInMap("Collection")
     public Collection collection;
@@ -38,7 +38,7 @@ public class GetMetaCollectionDetailResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-E****</p>
@@ -47,9 +47,11 @@ public class GetMetaCollectionDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <p>true</p>
-     * <p>false</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProjectsResponseBody extends TeaModel {
     /**
-     * <p>The results that are returned.</p>
+     * <p>The query result.</p>
      */
     @NameInMap("PageResult")
     public ListProjectsResponseBodyPageResult pageResult;
@@ -42,7 +42,7 @@ public class ListProjectsResponseBody extends TeaModel {
 
     public static class ListProjectsResponseBodyPageResultProjectListTags extends TeaModel {
         /**
-         * <p>The key of tag N added to the workspace.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key</p>
@@ -51,7 +51,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N added to the workspace.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value</p>
@@ -84,10 +84,10 @@ public class ListProjectsResponseBody extends TeaModel {
 
     public static class ListProjectsResponseBodyPageResultProjectList extends TeaModel {
         /**
-         * <p>Indicates whether the Development role is disabled. Valid values:</p>
+         * <p>Indicates whether the development role is disabled. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong>: enabled</li>
-         * <li><strong>true</strong>: disabled</li>
+         * <li><strong>false</strong>: The development role is enabled.</li>
+         * <li><strong>true</strong>: The development role is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -97,10 +97,10 @@ public class ListProjectsResponseBody extends TeaModel {
         public Boolean disableDevelopment;
 
         /**
-         * <p>Indicates whether the workspace is a default workspace. Valid values:</p>
+         * <p>Indicates whether the workspace is the default workspace. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: The workspace is a default workspace.</li>
-         * <li><strong>0</strong>: The workspace is not a default workspace.</li>
+         * <li><strong>1</strong>: yes.</li>
+         * <li><strong>0</strong>: no.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>The ID of the user used by the workspace owner.</p>
+         * <p>The user ID of the workspace owner.</p>
          * 
          * <strong>example:</strong>
          * <p>13969939245****</p>
@@ -157,16 +157,16 @@ public class ListProjectsResponseBody extends TeaModel {
         /**
          * <p>The status of the workspace. Valid values:</p>
          * <ul>
-         * <li>0: AVAILABLE, which indicates that the workspace is running as expected.</li>
-         * <li>1: DELETED, which indicates that the workspace is deleted.</li>
-         * <li>2: INITIALIZING, which indicates that the workspace is being initialized.</li>
-         * <li>3: INIT_FAILED, which indicates that the workspace fails to be initialized.</li>
-         * <li>4: FORBIDDEN, which indicates that the workspace is manually disabled.</li>
-         * <li>5: DELETING, which indicates that the workspace is being deleted.</li>
-         * <li>6: DEL_FAILED, which indicates that the workspace fails to be deleted.</li>
-         * <li>7: FROZEN, which indicates that the workspace is frozen due to overdue payments.</li>
-         * <li>8: UPDATING, which indicates that the workspace is being updated. After you associate a compute engine with the workspace, the system initializes the compute engine and updates the workspace.</li>
-         * <li>9: UPDATE_FAILED, which indicates that the workspace fails to be updated.</li>
+         * <li>AVAILABLE: The status value is 0, which indicates that the workspace is Normal.</li>
+         * <li>DELETED: The status value is 1, which indicates that the workspace is deleted.</li>
+         * <li>INITIALIZING: The status value is 2, which indicates that the workspace is being initialized.</li>
+         * <li>INIT_FAILED: The status value is 3, which indicates that the workspace failed to be initialized.</li>
+         * <li>FORBIDDEN: The status value is 4, which indicates that the workspace is manually disabled.</li>
+         * <li>DELETING: The status value is 5, which indicates that the workspace is being deleted.</li>
+         * <li>DEL_FAILED: The status value is 6, which indicates that the workspace failed to be deleted.</li>
+         * <li>FROZEN: The status value is 7, which indicates that the workspace is frozen due to overdue payment.</li>
+         * <li>UPDATING: The status value is 8, which indicates that the workspace is being updated (a compute engine is being added and initialized for the project).</li>
+         * <li>UPDATE_FAILED: The status value is 9, which indicates that the workspace failed to be updated (a compute engine failed to be added and initialized for the project).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,16 +178,16 @@ public class ListProjectsResponseBody extends TeaModel {
         /**
          * <p>The status code of the workspace. Valid values:</p>
          * <ul>
-         * <li>AVAILABLE: 0, which indicates that the workspace is running as expected.</li>
-         * <li>DELETED: 1, which indicates that the workspace is deleted.</li>
-         * <li>INITIALIZING: 2, which indicates that the workspace is being initialized.</li>
-         * <li>INIT_FAILED: 3, which indicates that the workspace fails to be initialized.</li>
-         * <li>FORBIDDEN: 4, which indicates that the workspace is manually disabled.</li>
-         * <li>DELETING: 5, which indicates that the workspace is being deleted.</li>
-         * <li>DEL_FAILED: 6, which indicates that the workspace fails to be deleted.</li>
-         * <li>FROZEN: 7, which indicates that the workspace is frozen due to overdue payments.</li>
-         * <li>UPDATING: 8, which indicates that the workspace is being updated. After you associate a compute engine with the workspace, the system initializes the compute engine and updates the workspace.</li>
-         * <li>UPDATE_FAILED: 9, which indicates that the workspace fails to be updated.</li>
+         * <li>AVAILABLE: The status value is 0, which indicates that the workspace is Normal.</li>
+         * <li>DELETED: The status value is 1, which indicates that the workspace is deleted.</li>
+         * <li>INITIALIZING: The status value is 2, which indicates that the workspace is being initialized.</li>
+         * <li>INIT_FAILED: The status value is 3, which indicates that the workspace failed to be initialized.</li>
+         * <li>FORBIDDEN: The status value is 4, which indicates that the workspace is manually disabled.</li>
+         * <li>DELETING: The status value is 5, which indicates that the workspace is being deleted.</li>
+         * <li>DEL_FAILED: The status value is 6, which indicates that the workspace failed to be deleted.</li>
+         * <li>FROZEN: The status value is 7, which indicates that the workspace is frozen due to overdue payment.</li>
+         * <li>UPDATING: The status value is 8, which indicates that the workspace is being updated (a compute engine is being added and initialized for the project).</li>
+         * <li>UPDATE_FAILED: The status value is 9, which indicates that the workspace failed to be updated (a compute engine failed to be added and initialized for the project).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -206,10 +206,10 @@ public class ListProjectsResponseBody extends TeaModel {
         public String resourceManagerResourceGroupId;
 
         /**
-         * <p>Indicates whether the MaxCompute tables in the workspace are visible to the users within a tenant. Valid values:</p>
+         * <p>The visibility permission of MaxCompute tables. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: invisible</li>
-         * <li><strong>1</strong>: visible</li>
+         * <li><strong>0</strong>: MaxCompute tables are not visible to users within the tenant.</li>
+         * <li><strong>1</strong>: MaxCompute tables are visible to users within the tenant.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -219,16 +219,16 @@ public class ListProjectsResponseBody extends TeaModel {
         public Integer tablePrivacyMode;
 
         /**
-         * <p>The tags added to the workspace.</p>
+         * <p>The list of tags bound to the workspace.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListProjectsResponseBodyPageResultProjectListTags> tags;
 
         /**
-         * <p>Indicates whether a proxy account is used to access the MaxCompute compute engine associated with the workspace. Valid values:</p>
+         * <p>Indicates whether a proxy account is used to access the MaxCompute engine. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong></li>
-         * <li><strong>true</strong></li>
+         * <li><strong>false</strong>: A proxy account is not used.</li>
+         * <li><strong>true</strong>: A proxy account is used.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -350,7 +350,7 @@ public class ListProjectsResponseBody extends TeaModel {
 
     public static class ListProjectsResponseBodyPageResult extends TeaModel {
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -368,7 +368,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The DataWorks workspaces.</p>
+         * <p>The list of DataWorks workspaces.</p>
          */
         @NameInMap("ProjectList")
         public java.util.List<ListProjectsResponseBodyPageResultProjectList> projectList;

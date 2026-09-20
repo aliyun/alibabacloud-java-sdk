@@ -15,7 +15,11 @@ public class GetNodeCodeRequest extends TeaModel {
     public Long nodeId;
 
     /**
-     * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
+     * <p>The environment of the workspace. Valid values:</p>
+     * <ul>
+     * <li>PROD: production environment</li>
+     * <li>DEV: development environment</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

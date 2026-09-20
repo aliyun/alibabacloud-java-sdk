@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListResourceGroupsResponseBody extends TeaModel {
     /**
-     * <p>The resource groups.</p>
+     * <p>The list of resource groups.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListResourceGroupsResponseBodyData> data;
@@ -120,8 +120,8 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         /**
          * <p>The category of the resource group. Valid values:</p>
          * <ul>
-         * <li>default: shared resource group</li>
-         * <li>single: exclusive resource group</li>
+         * <li>default: public resource group.</li>
+         * <li>single: dedicated resource group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         public String bizExtKey;
 
         /**
-         * <p>The name of the cluster. This parameter is returned only if the type of the resource group is MaxCompute or PAI.</p>
+         * <p>The name of the cluster. This parameter is valid only for MaxCompute and PAI resource group types.</p>
          * 
          * <strong>example:</strong>
          * <p>AY18G</p>
@@ -140,7 +140,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         public String cluster;
 
         /**
-         * <p>The time when the cluster was created. Example: Jul 9, 2018 2:43:37 PM.</p>
+         * <p>The time when the cluster was created. The format is Jul 9, 2018 2:43:37 PM.</p>
          * 
          * <strong>example:</strong>
          * <p>Jul 9, 2018 2:43:37 PM</p>
@@ -149,10 +149,11 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Indicates whether the UID of an Alibaba Cloud account is used for access. Valid values:</p>
+         * <p>Indicates whether Kp (key person) access is used. Valid values:</p>
          * <ul>
-         * <li>true: The MaxCompute compute engine uses the UID of the Alibaba Cloud account as the display name of the account for access.</li>
-         * <li>false: The MaxCompute compute engine uses the name of the Alibaba Cloud account as the display name of the account for access. The remaining values are useless. This parameter is returned only if the type of the resource group is MaxCompute.</li>
+         * <li>true: The MaxCompute engine uses the Alibaba Cloud account UID as the display name of the access account.</li>
+         * <li>false: The MaxCompute engine uses the Alibaba Cloud account name as the display name of the access account.
+         * This parameter is meaningless for other types and is valid only for the MaxCompute engine.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -162,7 +163,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         public Boolean enableKp;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567</p>
@@ -193,11 +194,11 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The mode of the resource group. Valid values:</p>
+         * <p>The type of the resource group. Valid values:</p>
          * <ul>
-         * <li>ISOLATE: exclusive resource group that adopts the subscription billing method</li>
-         * <li>SHARE: shared resource group that adopts the pay-as-you-go billing method</li>
-         * <li>DEVELOP: resource group for developers</li>
+         * <li>ISOLATE: an upfront dedicated resource group.</li>
+         * <li>SHARE: a pay-as-you-go public resource group.</li>
+         * <li>DEVELOP: a developer edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -221,9 +222,9 @@ public class ListResourceGroupsResponseBody extends TeaModel {
          * <li>0: DataWorks</li>
          * <li>2: MaxCompute</li>
          * <li>3: PAI</li>
-         * <li>4: Data Integration</li>
+         * <li>4: data integration</li>
          * <li>7: scheduling</li>
-         * <li>9: DataService Studio</li>
+         * <li>9: dataService</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -233,7 +234,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         public String resourceGroupType;
 
         /**
-         * <p>The ID of your Alibaba Cloud resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzbn7pti3zfa</p>
@@ -242,7 +243,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         public String resourceManagerResourceGroupId;
 
         /**
-         * <p>The sequence number of the resource group. Created resource groups are sorted in ascending order by sequence number.</p>
+         * <p>The sequence field. Used to sort created resource groups in ascending order by creation sequence number.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -251,7 +252,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         public Integer sequence;
 
         /**
-         * <p>The details of the resource group. The content enclosed in braces {} is the details of the resource group.</p>
+         * <p>The detailed information of the resource group. The content displayed in {} is the detailed information of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -262,16 +263,16 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         /**
          * <p>The status of the resource group. Valid values:</p>
          * <ul>
-         * <li>0: NORMAL, which indicates that the resource group is running or in service.</li>
-         * <li>1: STOP, which indicates that the resource group has expired and is frozen.</li>
-         * <li>2: DELETED, which indicates that the resource group is released or destroyed.</li>
-         * <li>3: CREATING, which indicates that the resource group is being created or started.</li>
-         * <li>4: CREATE_FAILED, which indicates that the resource group fails to be created or started.</li>
-         * <li>5: UPDATING, which indicates that the resource group is being scaled out or upgraded.</li>
-         * <li>6: UPDATE_FAILED, which indicates that the resource group fails to be scaled out or upgraded.</li>
-         * <li>7: DELETING, which indicates that the resource group is being released or destroyed.</li>
-         * <li>8: DELETE_FAILED, which indicates that the resource group fails to be released or destroyed.</li>
-         * <li>9: TIMEOUT, which indicates that the operation performed on the resource group times out. All operations may time out. This value is temporarily available only for DataService Studio.</li>
+         * <li>NORMAL(0): The resource group is running or in service.</li>
+         * <li>STOP(1): The resource group has expired and is frozen.</li>
+         * <li>DELETED(2): The resource group has been released or destroyed.</li>
+         * <li>CREATING(3): The resource group is being created or started.</li>
+         * <li>CREATE_FAILED(4): The resource group failed to be created or started.</li>
+         * <li>UPDATING(5): The resource group is being scaled out or upgraded.</li>
+         * <li>UPDATE_FAILED(6): The resource group failed to be scaled out or upgraded.</li>
+         * <li>DELETING(7): The resource group is being released or destroyed.</li>
+         * <li>DELETE_FAILED(8): The resource group failed to be released or destroyed.</li>
+         * <li>TIMEOUT(9): The operation performed on the resource group timed out. All change operations may time out. This value is temporarily available only for DataService.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -281,7 +282,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListResourceGroupsResponseBodyDataTags> tags;
@@ -297,6 +298,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
 
         /**
          * <p>The time when the resource group was last updated.</p>
+         * <p>The format is <code>MMM d, yyyy h:mm:ss a</code>, for example, <code>Jul 9, 2018 2:43:37 PM</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Jul 9, 2018 2:43:37 PM</p>

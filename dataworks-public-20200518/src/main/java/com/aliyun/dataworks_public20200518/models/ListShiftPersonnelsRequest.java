@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListShiftPersonnelsRequest extends TeaModel {
     /**
-     * <p>The time when the on-duty engineer starts a shift. Set the value to a UNIX timestamp.</p>
+     * <p>The start time of the on-duty period. This value is a timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListShiftPersonnelsRequest extends TeaModel {
     public Long beginTime;
 
     /**
-     * <p>The time when the on-duty engineer ends a shift. Set the value to a UNIX timestamp.</p>
+     * <p>The end time of the on-duty period. This value is a timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListShiftPersonnelsRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The ID of the Alibaba Cloud account. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to view the ID.</p>
+     * <p>The Alibaba Cloud account ID. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to view the account ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1933790****551</p>
@@ -44,7 +44,13 @@ public class ListShiftPersonnelsRequest extends TeaModel {
     public String shiftScheduleIdentifier;
 
     /**
-     * <p>The type of the on-duty engineer that you want to query. Valid values: ALL, PRIMARY, BACKUP, and DESIGNATED_USER.</p>
+     * <p>The query condition for on-duty personnel. Valid values:</p>
+     * <ul>
+     * <li>ALL: all on-duty personnel.</li>
+     * <li>PRIMARY: primary on-duty personnel.</li>
+     * <li>BACKUP: backup on-duty personnel.</li>
+     * <li>DESIGNATED_USER: designated personnel.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ALL</p>

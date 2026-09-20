@@ -5,13 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateQualityRuleRequest extends TeaModel {
     /**
-     * <p>The strength of the quality rule. You can specify a rule as a strong or weak rule based on the importance of the rule. Valid values:</p>
+     * <p>The strength of the quality check rule. The strength indicates the importance of the rule. Valid values:</p>
      * <ul>
-     * <li><p>1: strong rule</p>
-     * </li>
-     * <li><p>0: weak rule
-     * If you specify a rule as a strong rule and a critical alert is triggered for the rule, the scheduling of the associated task is blocked.</p>
-     * </li>
+     * <li>1: strong rule.</li>
+     * <li>0: weak rule.
+     * You can set important rules as strong rules based on your business requirements. If a strong rule is used and a red alert is triggered, the scheduling task is blocked.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +19,18 @@ public class UpdateQualityRuleRequest extends TeaModel {
     public Integer blockType;
 
     /**
-     * <p>The checker ID. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to query the checker ID.</p>
+     * <p>The checker ID.
+     * 2: 7-day average fluctuation.
+     * 3: 30-day average fluctuation.
+     * 4: 1-day cycle comparison.
+     * 5: 7-day cycle comparison.
+     * 6: 30-day cycle comparison.
+     * 7: 7-day variance fluctuation.
+     * 8: 30-day variance fluctuation.
+     * 9: comparison with a fixed value.
+     * 10: 1-, 7-, and 30-day fluctuation detection.
+     * 11: previous cycle comparison.
+     * You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to obtain the checker ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9</p>
@@ -30,7 +39,7 @@ public class UpdateQualityRuleRequest extends TeaModel {
     public Integer checker;
 
     /**
-     * <p>The description of the quality rule.</p>
+     * <p>The description of the quality check rule.</p>
      * 
      * <strong>example:</strong>
      * <p>Verify the number of table rows</p>
@@ -39,7 +48,7 @@ public class UpdateQualityRuleRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The threshold for a critical alert. The threshold specifies the deviation of a check result from the expected value. You can customize the threshold based on your business requirements. If you use a strong rule and a critical alert is triggered, the scheduling of the associated task is blocked.</p>
+     * <p>The red alert threshold. This value indicates the degree of deviation from the expected sample value. You can customize this threshold based on your business requirements. If a strong rule is used and the red threshold is triggered, the scheduling task is blocked.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -48,7 +57,7 @@ public class UpdateQualityRuleRequest extends TeaModel {
     public String criticalThreshold;
 
     /**
-     * <p>The ID of the partition filter expression. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to query the ID of the partition filter expression.</p>
+     * <p>The ID of the partition expression. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to obtain the partition expression ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -57,7 +66,7 @@ public class UpdateQualityRuleRequest extends TeaModel {
     public Long entityId;
 
     /**
-     * <p>The expected value.</p>
+     * <p>The expected value of the check result.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -66,7 +75,7 @@ public class UpdateQualityRuleRequest extends TeaModel {
     public String expectValue;
 
     /**
-     * <p>The rule ID. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to query the rule ID.</p>
+     * <p>The ID of the quality check rule. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to obtain the rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,11 +95,11 @@ public class UpdateQualityRuleRequest extends TeaModel {
     public String methodName;
 
     /**
-     * <p>Specifies whether to enable or disable the quality rule. This parameter specifies whether to run the quality rule in the production environment.</p>
+     * <p>The enabled or disabled status of the rule, which controls whether the quality rule runs in the production environment.</p>
      * <ul>
-     * <li><p>true: The quality rule is triggered when the scheduling task that is associated with the output table of the rule runs.</p>
+     * <li><p>true: When the scheduling task associated with the output table data of the data quality rule is executed, the quality rule check is triggered.</p>
      * </li>
-     * <li><p>false: The quality rule is not triggered when the scheduling task that is associated with the output table of the rule runs.</p>
+     * <li><p>false: When the scheduling task associated with the output table data of the data quality rule is executed, the quality rule check is not triggered.</p>
      * </li>
      * </ul>
      * 
@@ -104,9 +113,9 @@ public class UpdateQualityRuleRequest extends TeaModel {
     public Boolean openSwitch;
 
     /**
-     * <p>The comparison operator. Valid values: &gt;, &gt;=, =, !=, &lt;, and &lt;=.</p>
+     * <p>The comparison operator. Valid values: &gt;, &gt;=, =, ≠, &lt;, and &lt;=.</p>
      * <blockquote>
-     * <p>This parameter is required if you set the Checker parameter to 9.</p>
+     * <p>When Checker is set to 9, Operator is a required parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -117,12 +126,10 @@ public class UpdateQualityRuleRequest extends TeaModel {
     public String operator;
 
     /**
-     * <p>Specifies whether to use a dynamic threshold. Valid values:</p>
+     * <p>Specifies whether the threshold is dynamic. Valid values:</p>
      * <ul>
-     * <li><p>0: no</p>
-     * </li>
-     * <li><p>2: yes</p>
-     * </li>
+     * <li>0: non-dynamic threshold.</li>
+     * <li>2: dynamic threshold.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -132,7 +139,7 @@ public class UpdateQualityRuleRequest extends TeaModel {
     public Integer predictType;
 
     /**
-     * <p>The DataWorks workspace ID.</p>
+     * <p>The ID of the DataWorks workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>26</p>
@@ -141,7 +148,7 @@ public class UpdateQualityRuleRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The name of the engine or data source. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the name.</p>
+     * <p>The name of the engine or data source. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -161,7 +168,7 @@ public class UpdateQualityRuleRequest extends TeaModel {
     public String property;
 
     /**
-     * <p>The data type of the field.</p>
+     * <p>The type of the field.</p>
      * 
      * <strong>example:</strong>
      * <p>bigint</p>
@@ -170,7 +177,7 @@ public class UpdateQualityRuleRequest extends TeaModel {
     public String propertyType;
 
     /**
-     * <p>The name of the quality rule.</p>
+     * <p>The name of the quality check rule.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -181,12 +188,9 @@ public class UpdateQualityRuleRequest extends TeaModel {
     /**
      * <p>The type of the rule. Valid values:</p>
      * <ul>
-     * <li><p>0: system template</p>
-     * </li>
-     * <li><p>1: custom SQL</p>
-     * </li>
-     * <li><p>2: custom template</p>
-     * </li>
+     * <li>0: system template rule.</li>
+     * <li>1: custom SQL rule.</li>
+     * <li>4: custom template rule.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -196,7 +200,7 @@ public class UpdateQualityRuleRequest extends TeaModel {
     public Integer ruleType;
 
     /**
-     * <p>The variable settings that are inserted before a custom rule. The settings are in the format of x=a,y=b.</p>
+     * <p>The variable settings inserted before the custom rule, in the format of x=a,y=b.</p>
      * 
      * <strong>example:</strong>
      * <p>x=a,y=b</p>
@@ -205,7 +209,7 @@ public class UpdateQualityRuleRequest extends TeaModel {
     public String taskSetting;
 
     /**
-     * <p>The ID of the template that is used for the check. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to query the template ID.</p>
+     * <p>The ID of the check template. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to obtain the check template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -216,12 +220,9 @@ public class UpdateQualityRuleRequest extends TeaModel {
     /**
      * <p>The trend of the check result. Valid values:</p>
      * <ul>
-     * <li><p>up: upward trend</p>
-     * </li>
-     * <li><p>down: downward trend</p>
-     * </li>
-     * <li><p>abs: absolute value</p>
-     * </li>
+     * <li>up: upward trend.</li>
+     * <li>down: downward trend.</li>
+     * <li>abs: absolute value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -231,7 +232,7 @@ public class UpdateQualityRuleRequest extends TeaModel {
     public String trend;
 
     /**
-     * <p>The threshold for a warning alert. The threshold specifies the deviation of a check result from the expected value. You can customize the threshold based on your business requirements.</p>
+     * <p>The orange alert threshold. This value indicates the degree of deviation from the expected sample value. You can customize this threshold based on your business requirements.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -240,7 +241,7 @@ public class UpdateQualityRuleRequest extends TeaModel {
     public String warningThreshold;
 
     /**
-     * <p>The filter condition or custom SQL statement that is used for the check.</p>
+     * <p>The filter condition or custom SQL statement used by the check task.</p>
      * 
      * <strong>example:</strong>
      * <p>dt=$[yyyymmdd]</p>

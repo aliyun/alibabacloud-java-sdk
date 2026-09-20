@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetProjectResponseBody extends TeaModel {
     /**
-     * <p>The information about the workspace.</p>
+     * <p>The details of the workspace.</p>
      */
     @NameInMap("Data")
     public GetProjectResponseBodyData data;
@@ -31,8 +31,8 @@ public class GetProjectResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -140,7 +140,7 @@ public class GetProjectResponseBody extends TeaModel {
         public Boolean baseProject;
 
         /**
-         * <p>The ID of the resource group that was allocated by default when you purchased an exclusive resource group for MaxCompute.</p>
+         * <p>The identifier of the default resource group that is automatically assigned when you purchase a MaxCompute exclusive resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>group_280749521****</p>
@@ -176,10 +176,10 @@ public class GetProjectResponseBody extends TeaModel {
         public Integer developmentType;
 
         /**
-         * <p>Indicates whether the Develop role is disabled. Valid values:</p>
+         * <p>Indicates whether the development role is disabled. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default)</li>
-         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default): The development role is enabled.</li>
+         * <li><strong>true</strong>: The development role is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,7 +189,7 @@ public class GetProjectResponseBody extends TeaModel {
         public Boolean disableDevelopment;
 
         /**
-         * <p>The environment information of the workspace.</p>
+         * <p>The environment context of the workspace.</p>
          */
         @NameInMap("EnvTypes")
         public java.util.List<String> envTypes;
@@ -213,10 +213,10 @@ public class GetProjectResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>Indicates whether you are allowed to download the query result from DataStudio. Valid values:</p>
+         * <p>Indicates whether downloading query results from the IDE is allowed. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: You are allowed to download the query result from DataStudio.</li>
-         * <li><strong>0</strong>: You are not allowed to download the query result from DataStudio.</li>
+         * <li><strong>1</strong>: Downloading is allowed.</li>
+         * <li><strong>0</strong>: Downloading is not allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -226,10 +226,10 @@ public class GetProjectResponseBody extends TeaModel {
         public Integer isAllowDownload;
 
         /**
-         * <p>Indicates whether the workspace is a default workspace. Valid values:</p>
+         * <p>Indicates whether the workspace is the default workspace. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: The workspace is a default workspace.</li>
-         * <li><strong>0</strong>: The workspace is not a default workspace.</li>
+         * <li><strong>1</strong>: Yes.</li>
+         * <li><strong>0</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -266,7 +266,7 @@ public class GetProjectResponseBody extends TeaModel {
         public String projectDescription;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>466230</p>
@@ -286,8 +286,8 @@ public class GetProjectResponseBody extends TeaModel {
         /**
          * <p>The mode of the workspace. Valid values:</p>
          * <ul>
-         * <li><strong>2</strong>: The workspace is in basic mode.</li>
-         * <li><strong>3</strong>: The workspace is in standard mode.</li>
+         * <li><strong>2</strong>: basic mode.</li>
+         * <li><strong>3</strong>: standard mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -306,7 +306,7 @@ public class GetProjectResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the workspace owner.</p>
+         * <p>The Alibaba Cloud ID of the workspace owner.</p>
          * 
          * <strong>example:</strong>
          * <p>18229311****</p>
@@ -315,10 +315,10 @@ public class GetProjectResponseBody extends TeaModel {
         public String projectOwnerBaseId;
 
         /**
-         * <p>Indicates whether the workspace protection feature is enabled. Valid values:</p>
+         * <p>Indicates whether protected mode is enabled for the workspace. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: enabled</li>
-         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: Protected mode is enabled.</li>
+         * <li><strong>0</strong>: Protected mode is not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -330,8 +330,8 @@ public class GetProjectResponseBody extends TeaModel {
         /**
          * <p>The type of the workspace. Valid values:</p>
          * <ul>
-         * <li><strong>private</strong></li>
-         * <li><strong>swap</strong></li>
+         * <li><strong>private</strong>: private zone.</li>
+         * <li><strong>swap</strong>: swap zone.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -350,7 +350,7 @@ public class GetProjectResponseBody extends TeaModel {
         public String resourceManagerResourceGroupId;
 
         /**
-         * <p>The default maximum number of automatic reruns that are allowed after an error occurs.</p>
+         * <p>The default maximum number of automatic reruns upon an error.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -359,7 +359,7 @@ public class GetProjectResponseBody extends TeaModel {
         public Integer schedulerMaxRetryTimes;
 
         /**
-         * <p>The default interval between automatic reruns after an error occurs. Unit: milliseconds. The maximum interval is 30 minutes. You must pay attention to the conversion between units.</p>
+         * <p>The default interval between automatic reruns upon an error. Unit: ms. The maximum value is 30 minutes. Note the unit conversion.</p>
          * 
          * <strong>example:</strong>
          * <p>120000</p>
@@ -370,16 +370,16 @@ public class GetProjectResponseBody extends TeaModel {
         /**
          * <p>The status of the workspace. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: AVAILABLE, which indicates that the workspace runs as expected.</li>
-         * <li><strong>1</strong>: DELETED, which indicates that the workspace is deleted.</li>
-         * <li><strong>2</strong>: INITIALIZING, which indicates that the workspace is being initialized.</li>
-         * <li><strong>3</strong>: INIT_FAILED, which indicates that the workspace fails to be initialized.</li>
-         * <li><strong>4</strong>: FORBIDDEN, which indicates that the workspace is manually disabled.</li>
-         * <li><strong>5</strong>: DELETING, which indicates that the workspace is being deleted.</li>
-         * <li><strong>6</strong>: DEL_FAILED, which indicates that the workspace fails to be deleted.</li>
-         * <li><strong>7</strong>: FROZEN, which indicates that the workspace is frozen due to overdue payments.</li>
-         * <li><strong>8</strong>: UPDATING, which indicates that the workspace is being updated. The workspace enters this state after you associate a new compute engine with the workspace and the compute engine is initialized.</li>
-         * <li><strong>9</strong>: UPDATE_FAILED, which indicates that the workspace fails to be updated.</li>
+         * <li><strong>0</strong>: AVAILABLE. The workspace is running normally.</li>
+         * <li><strong>1</strong>: DELETED. The workspace has been deleted.</li>
+         * <li><strong>2</strong>: INITIALIZING. The workspace is being initialized.</li>
+         * <li><strong>3</strong>: INIT_FAILED. The workspace failed to be initialized.</li>
+         * <li><strong>4</strong>: FORBIDDEN. The workspace is manually disabled.</li>
+         * <li><strong>5</strong>: DELETING. The workspace is being deleted.</li>
+         * <li><strong>6</strong>: DEL_FAILED. The workspace failed to be deleted.</li>
+         * <li><strong>7</strong>: FROZEN. The workspace is frozen due to overdue payment.</li>
+         * <li><strong>8</strong>: UPDATING. The workspace is being updated (a compute engine is being added and initialized).</li>
+         * <li><strong>9</strong>: UPDATE_FAILED. The workspace failed to be updated (a compute engine failed to be added and initialized).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -389,10 +389,10 @@ public class GetProjectResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>Indicates whether the MaxCompute tables in the workspace are visible to the users within a tenant. Valid values:</p>
+         * <p>The visibility of MaxCompute tables. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: invisible</li>
-         * <li><strong>1</strong>: visible</li>
+         * <li><strong>0</strong>: MaxCompute tables are not visible to users within the tenant.</li>
+         * <li><strong>1</strong>: MaxCompute tables are visible to users within the tenant.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -402,7 +402,7 @@ public class GetProjectResponseBody extends TeaModel {
         public Integer tablePrivacyMode;
 
         /**
-         * <p>The tags added to the workspace.</p>
+         * <p>The list of tags bound to the workspace.</p>
          */
         @NameInMap("Tags")
         public java.util.List<GetProjectResponseBodyDataTags> tags;
@@ -417,7 +417,7 @@ public class GetProjectResponseBody extends TeaModel {
         public Long tenantId;
 
         /**
-         * <p>Indicates whether a proxy account is used to access the MaxCompute compute engine associated with the workspace.</p>
+         * <p>Indicates whether a proxy account is used to access the MaxCompute engine.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

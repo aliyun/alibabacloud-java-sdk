@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetProjectRequest extends TeaModel {
     /**
-     * <p>The ID of the DataWorks workspace. You can call the <a href="https://help.aliyun.com/document_detail/2780068.html">ListProjects</a> operation to query the ID.</p>
+     * <p>The DataWorks workspace ID.
+     * You can call the <a href="https://help.aliyun.com/document_detail/2780068.html">ListProjects</a> operation to obtain the workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>466230</p>
@@ -14,7 +15,7 @@ public class GetProjectRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The name of the DataWorks workspace. You can call the <a href="https://help.aliyun.com/document_detail/2780068.html">ListProjects</a> operation to query the name.</p>
+     * <p>The name of the DataWorks workspace. You can call the <a href="https://help.aliyun.com/document_detail/2780068.html">ListProjects</a> operation to obtain the workspace name.</p>
      * 
      * <strong>example:</strong>
      * <p>test_project</p>

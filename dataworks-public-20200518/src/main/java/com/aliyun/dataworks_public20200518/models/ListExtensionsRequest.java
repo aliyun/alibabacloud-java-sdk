@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListExtensionsRequest extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the request, used for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

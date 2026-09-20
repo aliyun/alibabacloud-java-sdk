@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateTableAddColumnRequest extends TeaModel {
     /**
-     * <p>The fields.</p>
+     * <p>The list of columns.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Column")
     public java.util.List<UpdateTableAddColumnRequestColumn> column;
 
     /**
-     * <p>The globally unique identifier (GUID) of the MaxCompute table. Specify the GUID in the odps.projectName.tableName format.</p>
+     * <p>The unique identifier of the MaxCompute table. Format: odps.projectName.tableName.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class UpdateTableAddColumnRequest extends TeaModel {
 
     public static class UpdateTableAddColumnRequestColumn extends TeaModel {
         /**
-         * <p>The name of the field.</p>
+         * <p>The name of the column.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class UpdateTableAddColumnRequest extends TeaModel {
         public String columnName;
 
         /**
-         * <p>The display name of the field.</p>
+         * <p>The Chinese name of the column.</p>
          * 
          * <strong>example:</strong>
          * <p>中文</p>
@@ -63,7 +63,7 @@ public class UpdateTableAddColumnRequest extends TeaModel {
         public String columnNameCn;
 
         /**
-         * <p>The type of the field. For more information, see MaxCompute field types.</p>
+         * <p>The type of the column. For more information, see the column types supported by MaxCompute.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class UpdateTableAddColumnRequest extends TeaModel {
         public String columnType;
 
         /**
-         * <p>The comment of the field.</p>
+         * <p>The comment of the column.</p>
          * 
          * <strong>example:</strong>
          * <p>Remarks</p>

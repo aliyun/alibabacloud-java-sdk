@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTopicRequest extends TeaModel {
     /**
-     * <p>The event ID. You can call the <a href="https://help.aliyun.com/document_detail/173973.html">ListTopics</a> operation to query the ID.</p>
+     * <p>The ID of the event. You can call <a href="https://help.aliyun.com/document_detail/173973.html">listTopics</a> to obtain the ID.</p>
+     * <p>The documentation example is for format demonstration only. Valid TopicId values can be obtained from Data.Topics[].TopicId in the ListTopics response.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

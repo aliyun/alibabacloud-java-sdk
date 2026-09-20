@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateProjectShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. This parameter can be left empty.</p>
+     * <p>The idempotency parameter. This parameter can be left empty.</p>
      * 
      * <strong>example:</strong>
      * <p>ABFUOEUOTRTRJKE</p>
@@ -14,10 +14,10 @@ public class CreateProjectShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to disable the Develop role. Valid values:</p>
+     * <p>Specifies whether to disable the development role. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default)</li>
-     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default): enables the development role.</li>
+     * <li><strong>true</strong>: disables the development role.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +27,10 @@ public class CreateProjectShrinkRequest extends TeaModel {
     public Boolean disableDevelopment;
 
     /**
-     * <p>Specifies whether to allow you to download the query result from DataStudio. Valid values:</p>
+     * <p>Specifies whether to allow downloading query results from the IDE. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong> (default): allows you to download the query result from DataStudio.</li>
-     * <li><strong>0</strong>: does not allow you to download the query result from DataStudio.</li>
+     * <li><strong>1</strong> (default): allows downloading.</li>
+     * <li><strong>0</strong>: does not allow downloading.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class CreateProjectShrinkRequest extends TeaModel {
     public Integer isAllowDownload;
 
     /**
-     * <p>The description of the workspace.</p>
+     * <p>The detailed description of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>test_describe</p>
@@ -49,7 +49,7 @@ public class CreateProjectShrinkRequest extends TeaModel {
     public String projectDescription;
 
     /**
-     * <p>The name of the workspace. The name can contain only letters, digits, and underscores (_) and must start with a letter or digit.</p>
+     * <p>The name of the workspace. The name can contain only letters, digits, and underscores (_), and must start with a letter or digit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,11 +59,11 @@ public class CreateProjectShrinkRequest extends TeaModel {
     public String projectIdentifier;
 
     /**
-     * <p>The mode of the workspace. For more information about the differences between the modes of workspaces, see <a href="https://help.aliyun.com/document_detail/85772.html">Differences between workspaces in basic mode and workspaces in standard mode</a>.</p>
+     * <p>The mode of the workspace. For more information about the differences between modes, see <a href="https://help.aliyun.com/document_detail/85772.html">Must-read: Differences between simple mode and standard mode</a>.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>2</strong> (default): basic mode</li>
-     * <li><strong>3</strong>: standard mode</li>
+     * <li><strong>2</strong> (default): simple workspace mode.</li>
+     * <li><strong>3</strong>: standard workspace mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,7 +92,7 @@ public class CreateProjectShrinkRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The tags added to the workspace.</p>
+     * <p>The list of tags bound to the workspace.</p>
      */
     @NameInMap("Tags")
     public String tagsShrink;

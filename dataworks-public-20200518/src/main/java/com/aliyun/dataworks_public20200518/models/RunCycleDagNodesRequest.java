@@ -7,9 +7,9 @@ public class RunCycleDagNodesRequest extends TeaModel {
     /**
      * <p>The alert notification method. Valid values:</p>
      * <ul>
-     * <li>SMS</li>
-     * <li>MAIL</li>
-     * <li>SMS_MAIL</li>
+     * <li>SMS: text message.</li>
+     * <li>MAIL: email.</li>
+     * <li>SMS_MAIL: text message and email.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,11 +19,11 @@ public class RunCycleDagNodesRequest extends TeaModel {
     public String alertNoticeType;
 
     /**
-     * <p>The alert type. Valid values:</p>
+     * <p>The Alarm Metric. Valid values:</p>
      * <ul>
-     * <li>SUCCESS: An alert is generated when data backfill succeeds.</li>
-     * <li>FAILURE: An alert is generated when data backfill fails.</li>
-     * <li>SUCCESS_FAILURE: An alert is generated regardless of whether data backfill succeeds or fails.</li>
+     * <li>SUCCESS: Alerting on success.</li>
+     * <li>FAILURE: Alerting on failed.</li>
+     * <li>SUCCESS_FAILURE: Alerting on success or failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class RunCycleDagNodesRequest extends TeaModel {
     public String alertType;
 
     /**
-     * <p>The time when the node starts to run. This parameter is required only for auto triggered nodes that are scheduled by hour. Specify the value in the HH:mm:ss format. Valid values: 00:00:00 to 23:59:59.</p>
+     * <p>The start time of the node. This parameter is required only for hourly scheduled nodes. Format: HH:mm:ss. Valid values: 00:00:00 to 23:59:59.</p>
      * 
      * <strong>example:</strong>
      * <p>00:00:00</p>
@@ -42,7 +42,7 @@ public class RunCycleDagNodesRequest extends TeaModel {
     public String bizBeginTime;
 
     /**
-     * <p>The time when the node stops running. This parameter is required only for auto triggered nodes that are scheduled by hour. Specify the value in the HH:mm:ss format. Valid values: 00:00:00 to 23:59:59.</p>
+     * <p>The end time of the node. This parameter is required only for hourly scheduled nodes. Format: HH:mm:ss. Valid values: 00:00:00 to 23:59:59.</p>
      * 
      * <strong>example:</strong>
      * <p>01:00:00</p>
@@ -51,7 +51,7 @@ public class RunCycleDagNodesRequest extends TeaModel {
     public String bizEndTime;
 
     /**
-     * <p>The number of nodes that can run in parallel. Valid values: 2 to 10.</p>
+     * <p>The number of concurrent nodes. Valid values: 2 to 10.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -60,7 +60,7 @@ public class RunCycleDagNodesRequest extends TeaModel {
     public Integer concurrentRuns;
 
     /**
-     * <p>The data timestamp at which data is no longer backfilled. Specify the value in the yyyy-MM-dd 00:00:00 format.</p>
+     * <p>The end business date for data backfill. Format: yyyy-MM-dd 00:00:00.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class RunCycleDagNodesRequest extends TeaModel {
     public String endBizDate;
 
     /**
-     * <p>The IDs of the nodes for which no data needs to be backfilled. The system generates dry-run instances for all these nodes. After these dry-run instances are scheduled, the statuses of these instances are directly set to successful, but the script is not run.</p>
+     * <p>The list of node IDs that do not require data backfill. Nodes in this list generate dry-run instances. After a dry-run instance is scheduled, it directly succeeds without executing the script content.</p>
      * 
      * <strong>example:</strong>
      * <p>1234,123465</p>
@@ -79,7 +79,7 @@ public class RunCycleDagNodesRequest extends TeaModel {
     public String excludeNodeIds;
 
     /**
-     * <p>The ID of the node for which you want to backfill data. If you want to backfill data for multiple nodes, separate the IDs of the nodes with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to obtain the node ID.</p>
+     * <p>The node IDs for data backfill. Separate multiple node IDs with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to obtain node IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -99,16 +99,16 @@ public class RunCycleDagNodesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The parameters that need to be configured for the node. Set this parameter to a JSON string. The key indicates the ID of the node, and the value indicates the actual values of the parameters.</p>
+     * <p>A JSON string in which the key is the node ID and the value is the actual parameter value.</p>
      * 
      * <strong>example:</strong>
-     * <p>{74324:&quot;a=123 b=456&quot;}</p>
+     * <p>{&quot;74324&quot;:&quot;a=123 b=456&quot;}</p>
      */
     @NameInMap("NodeParams")
     public String nodeParams;
 
     /**
-     * <p>Specifies whether data can be backfilled for multiple nodes at the same time.</p>
+     * <p>Specifies whether nodes across multiple business dates can run in parallel.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class RunCycleDagNodesRequest extends TeaModel {
     public Boolean parallelism;
 
     /**
-     * <p>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.</p>
+     * <p>The environment of the workspace. PROD indicates the production environment. DEV indicates the development environment.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -128,7 +128,7 @@ public class RunCycleDagNodesRequest extends TeaModel {
     public String projectEnv;
 
     /**
-     * <p>The ID of the node for which data is first backfilled. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to obtain the node ID.</p>
+     * <p>The ID of the start node for data backfill. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to obtain the node ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class RunCycleDagNodesRequest extends TeaModel {
     public Long rootNodeId;
 
     /**
-     * <p>The data timestamp at which data starts to be backfilled. Specify the value in the yyyy-MM-dd 00:00:00 format.</p>
+     * <p>The start business date for data backfill. Format: yyyy-MM-dd 00:00:00.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -148,7 +148,7 @@ public class RunCycleDagNodesRequest extends TeaModel {
     public String startBizDate;
 
     /**
-     * <p>Specifies whether to immediately run an instance that is scheduled to run in the future. If you set this parameter to true, the instance that is scheduled to run in the future is run immediately. Otherwise, the instance is run as scheduled.</p>
+     * <p>Specifies whether to immediately run instances whose scheduling time is in the future. If this parameter is set to true, instances with a scheduling time later than the current time run immediately. Otherwise, the instances wait until the scheduling time.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

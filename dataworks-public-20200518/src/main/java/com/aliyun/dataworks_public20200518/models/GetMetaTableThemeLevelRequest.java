@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMetaTableThemeLevelRequest extends TeaModel {
     /**
-     * <p>The type of the data source. Set the value to odps.</p>
+     * <p>The data type. Currently, only odps is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetMetaTableThemeLevelRequest extends TeaModel {
     public String dataSourceType;
 
     /**
-     * <p>The GUID of the metatable. Specify the GUID in the format of odps.${projectName}.${tableName}.</p>
+     * <p>The unique ID of the table. Format: odps.${projectName}.${tableName}.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

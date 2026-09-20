@@ -15,7 +15,7 @@ public class AddMetaCollectionEntityRequest extends TeaModel {
     public String collectionQualifiedName;
 
     /**
-     * <p>The unique identifier of the entity. Example: maxcompute-table.projectA.tableA.</p>
+     * <p>The unique identifier of the entity.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class AddMetaCollectionEntityRequest extends TeaModel {
     public String entityQualifiedName;
 
     /**
-     * <p>The remarks of the entity. Example: latest product table.</p>
+     * <p>The remarks on the entity.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a remark</p>

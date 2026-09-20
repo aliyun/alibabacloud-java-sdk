@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetQualityEntityResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned information.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetQualityEntityResponseBodyData> data;
@@ -47,7 +47,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,8 @@ public class GetQualityEntityResponseBody extends TeaModel {
 
     public static class GetQualityEntityResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the partition filter expression was created.</p>
+         * <p>The time when the partition expression was created.</p>
+         * <p>The value is a 13-digit number, for example, <code>1593964800000</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1593964800000</p>
@@ -119,12 +120,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The level of the partition filter expression. Valid values:</p>
+         * <p>The level of the partition expression. Valid values:</p>
          * <ul>
-         * <li><p>0 (SQL-level): A data quality check is triggered after each SQL statement is run.</p>
-         * </li>
-         * <li><p>1 (Task-level): A data quality check is triggered after all SQL statements are run.</p>
-         * </li>
+         * <li>0 (SQL level): DQC verification is triggered after each SQL statement is executed.</li>
+         * <li>1 (Task level): Verification is performed after all SQL statements are executed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +142,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
         public String envType;
 
         /**
-         * <p>The subscribers who receive alert notifications. The value is the ID of an Alibaba Cloud account.</p>
+         * <p>The subscribers. The Alibaba Cloud account IDs that receive alert notifications.</p>
          * 
          * <strong>example:</strong>
          * <p>1822931****</p>
@@ -152,12 +151,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
         public String followers;
 
         /**
-         * <p>Indicates whether the partition filter expression is associated with a scheduling node. Valid values:</p>
+         * <p>Indicates whether the partition expression is associated with scheduling. Valid values:</p>
          * <ul>
-         * <li><p>true: The partition filter expression is associated with a scheduling node.</p>
-         * </li>
-         * <li><p>false: The partition filter expression is not associated with a scheduling node.</p>
-         * </li>
+         * <li>true: Associated with scheduling.</li>
+         * <li>false: Not associated with scheduling.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,7 +164,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
         public Boolean hasRelativeNode;
 
         /**
-         * <p>The ID of the partition filter expression.</p>
+         * <p>The ID of the partition expression.</p>
          * 
          * <strong>example:</strong>
          * <p>4003918</p>
@@ -176,7 +173,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The partition filter expression.</p>
+         * <p>The partition expression.</p>
          * 
          * <strong>example:</strong>
          * <p>dt=$[yyyymmdd-1]</p>
@@ -185,7 +182,8 @@ public class GetQualityEntityResponseBody extends TeaModel {
         public String matchExpression;
 
         /**
-         * <p>The time when the partition filter expression was last updated.</p>
+         * <p>The time when the partition expression was updated.</p>
+         * <p>The value is a 13-digit number, for example, <code>1593964800000</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1593964800000</p>
@@ -194,7 +192,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The user who updates the partition filter expression. The value is the ID of an Alibaba Cloud account.</p>
+         * <p>The account ID of the user who updated the partition expression.</p>
          * 
          * <strong>example:</strong>
          * <p>1822931****</p>
@@ -203,7 +201,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
         public String modifyUser;
 
         /**
-         * <p>The owner who configures the partition filter expression. The value is the ID of an Alibaba Cloud account.</p>
+         * <p>The owner. The account ID of the user who configured the partition expression.</p>
          * 
          * <strong>example:</strong>
          * <p>1822931****</p>
@@ -212,7 +210,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
         public String onDuty;
 
         /**
-         * <p>The name of the Alibaba Cloud account of the owner.</p>
+         * <p>The Alibaba Cloud account name of the owner.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -230,12 +228,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>The scheduling node that is associated with the partition filter expression. This parameter includes the following sub-parameters:</p>
+         * <p>The information about the scheduling node associated with the partition expression, including:</p>
          * <ul>
-         * <li><p>ProjectName: The name of the workspace to which the scheduling node belongs.</p>
-         * </li>
-         * <li><p>NodeID: The ID of the scheduling node.</p>
-         * </li>
+         * <li>ProjectName: the name of the project to which the scheduling node belongs.</li>
+         * <li>NodeID: the node ID of the scheduling node.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -245,7 +241,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
         public String relativeNode;
 
         /**
-         * <p>The SQL-level partition filter expression.</p>
+         * <p>The SQL-level partition expression.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

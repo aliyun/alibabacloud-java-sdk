@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProjectRolesResponseBody extends TeaModel {
     /**
-     * <p>The roles in the DataWorks workspace.</p>
+     * <p>The list of roles in the workspace.</p>
      */
     @NameInMap("ProjectRoleList")
     public java.util.List<ListProjectRolesResponseBodyProjectRoleList> projectRoleList;
@@ -42,7 +42,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
 
     public static class ListProjectRolesResponseBodyProjectRoleList extends TeaModel {
         /**
-         * <p>The code of the role in the DataWorks workspace.</p>
+         * <p>The code of the workspace role.</p>
          * 
          * <strong>example:</strong>
          * <p>role_project_guest</p>
@@ -51,7 +51,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
         public String projectRoleCode;
 
         /**
-         * <p>The ID of the role in the DataWorks workspace.</p>
+         * <p>The ID of the workspace role.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -60,7 +60,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
         public Integer projectRoleId;
 
         /**
-         * <p>The name of the role in the DataWorks workspace.</p>
+         * <p>The name of the workspace role.</p>
          * 
          * <strong>example:</strong>
          * <p>Visitor</p>
@@ -69,7 +69,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
         public String projectRoleName;
 
         /**
-         * <p>The type of the role in the DataWorks workspace.</p>
+         * <p>The type of the workspace role.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDataServiceGroupsResponseBody extends TeaModel {
     /**
-     * <p>The paging result for the business processes.</p>
+     * <p>The pagination result of business processes.</p>
      */
     @NameInMap("GroupPagingResult")
     public ListDataServiceGroupsResponseBodyGroupPagingResult groupPagingResult;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. A unique identifier for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EF****</p>
@@ -42,7 +42,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
 
     public static class ListDataServiceGroupsResponseBodyGroupPagingResultGroups extends TeaModel {
         /**
-         * <p>The ID of the API Gateway group to which the workflow is bound.</p>
+         * <p>The ID of the API Gateway group associated with the business process.</p>
          * 
          * <strong>example:</strong>
          * <p>100abc</p>
@@ -52,6 +52,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
 
         /**
          * <p>The time when the business process was created.</p>
+         * <p>The format is <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ssZ</code>, for example, <code>2020-09-24T18:37:51+0800</code>. The time zone offset in this example is <code>+0800</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-09-24T18:37:51+0800</p>
@@ -60,7 +61,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The user identifier (UID) of the creator of the business process. The value of this parameter may be empty for creators of some existing business processes.</p>
+         * <p>The UID of the creator. The creator UID may be empty for some legacy business processes.</p>
          * 
          * <strong>example:</strong>
          * <p>10001</p>
@@ -72,13 +73,13 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
          * <p>The description of the business process.</p>
          * 
          * <strong>example:</strong>
-         * <p>Workflow description</p>
+         * <p>Business process description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The business process ID.</p>
+         * <p>The ID of the business process.</p>
          * 
          * <strong>example:</strong>
          * <p>ds_123abc</p>
@@ -90,13 +91,14 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
          * <p>The name of the business process.</p>
          * 
          * <strong>example:</strong>
-         * <p>Workflow name</p>
+         * <p>Business process name</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
-         * <p>The time when the business process was modified.</p>
+         * <p>The time when the business process was last modified.</p>
+         * <p>The format is <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ssZ</code>, for example, <code>2020-09-24T18:37:51+0800</code>. The time zone offset in this example is <code>+0800</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-09-24T18:37:51+0800</p>
@@ -203,13 +205,13 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
 
     public static class ListDataServiceGroupsResponseBodyGroupPagingResult extends TeaModel {
         /**
-         * <p>The business processes.</p>
+         * <p>The list of business processes.</p>
          */
         @NameInMap("Groups")
         public java.util.List<ListDataServiceGroupsResponseBodyGroupPagingResultGroups> groups;
 
         /**
-         * <p>The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.</p>
+         * <p>The page number, which is the same as the PageNumber value in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -218,7 +220,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -227,7 +229,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

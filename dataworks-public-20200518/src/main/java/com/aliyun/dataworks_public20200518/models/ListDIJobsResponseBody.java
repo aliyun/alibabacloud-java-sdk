@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDIJobsResponseBody extends TeaModel {
     /**
-     * <p>The pagination information.</p>
+     * <p>The paginated task results.</p>
      */
     @NameInMap("DIJobPaging")
     public ListDIJobsResponseBodyDIJobPaging DIJobPaging;
@@ -51,7 +51,7 @@ public class ListDIJobsResponseBody extends TeaModel {
         public Long DIJobId;
 
         /**
-         * <p>The type of the destination. The value Hologres is returned.</p>
+         * <p>The destination data source type. Valid values: Hologres.</p>
          * 
          * <strong>example:</strong>
          * <p>Hologres</p>
@@ -69,20 +69,14 @@ public class ListDIJobsResponseBody extends TeaModel {
         public String jobName;
 
         /**
-         * <p>The task status. Valid values:</p>
+         * <p>The synchronization status. Valid values:</p>
          * <ul>
-         * <li><p>Finished</p>
-         * </li>
-         * <li><p>Initialized</p>
-         * </li>
-         * <li><p>Stopped</p>
-         * </li>
-         * <li><p>Failed</p>
-         * </li>
-         * <li><p>Running</p>
-         * </li>
-         * <li><p>Stopping</p>
-         * </li>
+         * <li>Finished: Completed successfully.</li>
+         * <li>Initialized: Initialization completed.</li>
+         * <li>Stopped: Stopped.</li>
+         * <li>Failed: Failed.</li>
+         * <li>Running: Running.</li>
+         * <li>Stopping: Stopping.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -94,12 +88,9 @@ public class ListDIJobsResponseBody extends TeaModel {
         /**
          * <p>The synchronization type. Valid values:</p>
          * <ul>
-         * <li><p>FullAndRealtimeIncremental: one-time full synchronization and real-time incremental synchronization</p>
-         * </li>
-         * <li><p>RealtimeIncremental: real-time incremental synchronization</p>
-         * </li>
-         * <li><p>Full: one-time full synchronization</p>
-         * </li>
+         * <li>FullAndRealtimeIncremental: Full and real-time incremental.</li>
+         * <li>RealtimeIncremental: Real-time incremental.</li>
+         * <li>Full: Full.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,7 +109,7 @@ public class ListDIJobsResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The type of the source. The value MySQL is returned.</p>
+         * <p>The source data source type. Valid values: MySQL.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -191,7 +182,7 @@ public class ListDIJobsResponseBody extends TeaModel {
 
     public static class ListDIJobsResponseBodyDIJobPaging extends TeaModel {
         /**
-         * <p>The list of tasks.</p>
+         * <p>The task list.</p>
          */
         @NameInMap("DIJobs")
         public java.util.List<ListDIJobsResponseBodyDIJobPagingDIJobs> DIJobs;
@@ -206,7 +197,7 @@ public class ListDIJobsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -215,7 +206,7 @@ public class ListDIJobsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>

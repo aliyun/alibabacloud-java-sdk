@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMetaTableChangeLogRequest extends TeaModel {
     /**
-     * <p>The type of the change. Valid values: CREATE_TABLE, ALTER_TABLE, DROP_TABLE, ADD_PARTITION, and DROP_PARTITION.</p>
+     * <p>The type of change. Valid values: CREATE_TABLE, ALTER_TABLE, DROP_TABLE, ADD_PARTITION, and DROP_PARTITION.</p>
      * 
      * <strong>example:</strong>
      * <p>ALTER_TABLE</p>
@@ -14,12 +14,10 @@ public class GetMetaTableChangeLogRequest extends TeaModel {
     public String changeType;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
+     * <p>The end date of the table change. Format: yyyy-MM-dd HH:mm:ss.</p>
      * <ul>
-     * <li><p>By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.</p>
-     * </li>
-     * <li><p>If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.</p>
-     * </li>
+     * <li>If the date validation fails, the system uses the current time as the end date by default.</li>
+     * <li>If both the start date and end date fail validation, the system automatically retrieves the table change records from the last 30 days.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +27,7 @@ public class GetMetaTableChangeLogRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The entity on which the change is made. Valid values: TABLE and PARTITION.</p>
+     * <p>The type of the changed object. Valid values: TABLE and PARTITION.</p>
      * 
      * <strong>example:</strong>
      * <p>TABLE</p>
@@ -38,7 +36,7 @@ public class GetMetaTableChangeLogRequest extends TeaModel {
     public String objectType;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number. Used for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -56,12 +54,10 @@ public class GetMetaTableChangeLogRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
+     * <p>The start date of the table change. Format: yyyy-MM-dd HH:mm:ss.</p>
      * <ul>
-     * <li><p>By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.</p>
-     * </li>
-     * <li><p>If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.</p>
-     * </li>
+     * <li>If the date validation fails, the system uses the current time as the start date by default.</li>
+     * <li>If both the start date and end date fail validation, the system automatically retrieves the table change records from the last 30 days.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,9 +67,9 @@ public class GetMetaTableChangeLogRequest extends TeaModel {
     public String startDate;
 
     /**
-     * <p>The GUID of the table. Specify the GUID in the odps.projectName.tableName format. You can call the <a href="https://help.aliyun.com/document_detail/2780086.html">GetMetaDBTableList</a> operation to query the GUID.</p>
+     * <p>The globally unique identifier (GUID) of the table. Format: odps.projectName.tableName. You can call <a href="https://help.aliyun.com/document_detail/2780086.html">GetMetaDBTableList</a> to obtain the GUID of the table.</p>
      * <blockquote>
-     * <p>To query the change logs of a MaxCompute table, you must call the <a href="https://help.aliyun.com/document_detail/2780094.html">GetMetaTableChangeLog</a> operation.</p>
+     * <p>Currently, you can call <a href="https://help.aliyun.com/document_detail/2780094.html">GetMetaTableChangeLog</a> to retrieve the change log of only MaxCompute tables.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

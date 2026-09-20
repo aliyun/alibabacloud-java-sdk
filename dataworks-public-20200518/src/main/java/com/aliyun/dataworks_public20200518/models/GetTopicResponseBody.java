@@ -38,7 +38,7 @@ public class GetTopicResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFGH-IJKLMNOPQ</p>
@@ -47,7 +47,7 @@ public class GetTopicResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class GetTopicResponseBody extends TeaModel {
 
     public static class GetTopicResponseBodyData extends TeaModel {
         /**
-         * <p>The timestamp when the event was found.</p>
+         * <p>The timestamp when the event was discovered.</p>
          * 
          * <strong>example:</strong>
          * <p>1553524393000</p>
@@ -119,7 +119,7 @@ public class GetTopicResponseBody extends TeaModel {
         public Long addTime;
 
         /**
-         * <p>The timestamp when the first alert was reported.</p>
+         * <p>The timestamp of the first alert.</p>
          * 
          * <strong>example:</strong>
          * <p>1553524393000</p>
@@ -128,7 +128,7 @@ public class GetTopicResponseBody extends TeaModel {
         public Long alertTime;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the alert recipient.</p>
+         * <p>The Alibaba Cloud UID of the assigner.</p>
          * 
          * <strong>example:</strong>
          * <p>952795****</p>
@@ -137,7 +137,7 @@ public class GetTopicResponseBody extends TeaModel {
         public String assigner;
 
         /**
-         * <p>The margin of the worst baseline instance. Unit: seconds.</p>
+         * <p>The buffer of the worst baseline instance, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -146,7 +146,7 @@ public class GetTopicResponseBody extends TeaModel {
         public Long baselineBuffer;
 
         /**
-         * <p>The ID of the baseline to which the worst baseline instance belongs.</p>
+         * <p>The baseline ID of the worst baseline instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -155,7 +155,7 @@ public class GetTopicResponseBody extends TeaModel {
         public Long baselineId;
 
         /**
-         * <p>The ID of the cycle of the worst baseline instance.</p>
+         * <p>The cycle number of the worst baseline instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -164,7 +164,7 @@ public class GetTopicResponseBody extends TeaModel {
         public Integer baselineInGroupId;
 
         /**
-         * <p>The name of the baseline to which the worst baseline instance belongs.</p>
+         * <p>The baseline name of the worst baseline instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Baseline name</p>
@@ -173,7 +173,7 @@ public class GetTopicResponseBody extends TeaModel {
         public String baselineName;
 
         /**
-         * <p>The status of the baseline. Valid values: ERROR, SAFE, DANGROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes are run before the alert duration begins. The value DANGROUS indicates that nodes are still running after the alert duration ends but the committed completion time does not arrive. The value OVER indicates that nodes are still running after the committed completion time.</p>
+         * <p>The status of the baseline. Valid values: ERROR, SAFE, DANGROUS (warning), and OVER (exceeded).</p>
          * 
          * <strong>example:</strong>
          * <p>SAFE</p>
@@ -182,7 +182,7 @@ public class GetTopicResponseBody extends TeaModel {
         public String baselineStatus;
 
         /**
-         * <p>The margin of the event. Unit: seconds.</p>
+         * <p>The buffer of the event, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1200</p>
@@ -191,7 +191,7 @@ public class GetTopicResponseBody extends TeaModel {
         public Long buffer;
 
         /**
-         * <p>The timestamp when the event was last processed.</p>
+         * <p>The timestamp of the last handling.</p>
          * 
          * <strong>example:</strong>
          * <p>1553524393000</p>
@@ -200,7 +200,7 @@ public class GetTopicResponseBody extends TeaModel {
         public Long dealTime;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the user who last processed the event.</p>
+         * <p>The Alibaba Cloud UID of the last handler.</p>
          * 
          * <strong>example:</strong>
          * <p>952795****</p>
@@ -209,7 +209,7 @@ public class GetTopicResponseBody extends TeaModel {
         public String dealUser;
 
         /**
-         * <p>The timestamp when the event was processed.</p>
+         * <p>The timestamp when the event was resolved.</p>
          * 
          * <strong>example:</strong>
          * <p>1553524393000</p>
@@ -218,7 +218,7 @@ public class GetTopicResponseBody extends TeaModel {
         public Long fixTime;
 
         /**
-         * <p>The timestamp when the event occurred. A time difference may exist between the time when the event occurred and the time when the event was found.</p>
+         * <p>The timestamp when the event occurred. There may be a time difference between when the event occurred and when it was discovered.</p>
          * 
          * <strong>example:</strong>
          * <p>1553524393000</p>
@@ -227,7 +227,7 @@ public class GetTopicResponseBody extends TeaModel {
         public Long happenTime;
 
         /**
-         * <p>The ID of the instance that triggered the event.</p>
+         * <p>The instance ID associated with the event.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -236,7 +236,7 @@ public class GetTopicResponseBody extends TeaModel {
         public Long instanceId;
 
         /**
-         * <p>The timestamp when the system reports the next alert.</p>
+         * <p>The timestamp of the next alert.</p>
          * 
          * <strong>example:</strong>
          * <p>1553524393000</p>
@@ -245,7 +245,7 @@ public class GetTopicResponseBody extends TeaModel {
         public Long nextAlertTime;
 
         /**
-         * <p>The ID of the node that triggered the event.</p>
+         * <p>The ID of the node associated with the event.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -254,7 +254,7 @@ public class GetTopicResponseBody extends TeaModel {
         public Long nodeId;
 
         /**
-         * <p>The name of the node that triggered the event.</p>
+         * <p>The name of the node associated with the event.</p>
          * 
          * <strong>example:</strong>
          * <p>Node name</p>
@@ -263,7 +263,7 @@ public class GetTopicResponseBody extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the event owner.</p>
+         * <p>The Alibaba Cloud UID of the event owner.</p>
          * 
          * <strong>example:</strong>
          * <p>952795****</p>
@@ -272,7 +272,7 @@ public class GetTopicResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The ID of the workspace to which the node that triggered the event belongs.</p>
+         * <p>The ID of the workspace to which the node associated with the event belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -281,7 +281,7 @@ public class GetTopicResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The event ID.</p>
+         * <p>The ID of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -299,7 +299,7 @@ public class GetTopicResponseBody extends TeaModel {
         public String topicName;
 
         /**
-         * <p>The status of the event. Valid values: IGNORE, NEW, FIXING, and RECOVER.</p>
+         * <p>The status of the event. Valid values: IGNORE (ignored), NEW (newly discovered), FIXING (being handled), and RECOVER (recovered).</p>
          * 
          * <strong>example:</strong>
          * <p>FIXING</p>
@@ -308,7 +308,7 @@ public class GetTopicResponseBody extends TeaModel {
         public String topicStatus;
 
         /**
-         * <p>The type of the event. Valid values: SLOW and ERROR. The value SLOW indicates that the duration of the task is significantly longer than the average duration of the task in previous cycles. The value ERROR indicates that the task fails to run.</p>
+         * <p>The type of the event. Valid values: SLOW and ERROR.</p>
          * 
          * <strong>example:</strong>
          * <p>ERROR</p>

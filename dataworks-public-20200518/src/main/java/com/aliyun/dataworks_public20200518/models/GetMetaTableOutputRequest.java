@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class GetMetaTableOutputRequest extends TeaModel {
     /**
      * <p>The end date.</p>
+     * <p>The format is <code>yyyy-MM-dd</code>, for example, <code>2020-05-27</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +16,7 @@ public class GetMetaTableOutputRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The page number. Valid values: 1 to 30. Default value: 1.</p>
+     * <p>The page number. Default value: 1. Minimum value: 1. Maximum value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -34,6 +35,7 @@ public class GetMetaTableOutputRequest extends TeaModel {
 
     /**
      * <p>The start date.</p>
+     * <p>The format is <code>yyyy-MM-dd</code>, for example, <code>2020-06-27</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +45,7 @@ public class GetMetaTableOutputRequest extends TeaModel {
     public String startDate;
 
     /**
-     * <p>The GUID of the metatable.</p>
+     * <p>The unique identifier of the table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

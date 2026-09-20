@@ -11,7 +11,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
     public GetBaselineStatusResponseBodyData data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>1031203110005</p>
@@ -20,7 +20,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The specified parameters are invalid.</p>
@@ -29,7 +29,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -38,7 +38,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     * <p>The unique ID of the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
@@ -47,7 +47,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
 
     public static class GetBaselineStatusResponseBodyDataBlockInstance extends TeaModel {
         /**
-         * <p>The timestamp of the predicted time when the instance finished running.</p>
+         * <p>The estimated completion timestamp of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1553443200000</p>
@@ -119,7 +119,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
         public Long endCast;
 
         /**
-         * <p>The timestamp of the actual time when the instance finished running.</p>
+         * <p>The actual completion timestamp of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1553443200000</p>
@@ -149,13 +149,13 @@ public class GetBaselineStatusResponseBody extends TeaModel {
          * <p>The name of the node.</p>
          * 
          * <strong>example:</strong>
-         * <p>节点名称</p>
+         * <p>NodeName</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+         * <p>The Alibaba Cloud UID of the node owner.</p>
          * 
          * <strong>example:</strong>
          * <p>9527952795****</p>
@@ -173,7 +173,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS. The value NOT_RUN indicates that the instance is not run. The value WAIT_TIME indicates that the instance is waiting to be run. The value WAIT_RESOURCE indicates that the instance is waiting for resources. The value RUNNING indicates that the instance is running. The value CHECKING indicates that data quality is being checked for the instance. The value CHECKING_CONDITION indicates that branch conditions are being checked for the instance. The value FAILURE indicates that the instance fails to run. The value SUCCESS indicates that the instance is run.</p>
+         * <p>The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -254,7 +254,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
 
     public static class GetBaselineStatusResponseBodyDataLastInstance extends TeaModel {
         /**
-         * <p>The timestamp of the predicted time when the instance finished running.</p>
+         * <p>The estimated completion timestamp of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1553443200000</p>
@@ -263,7 +263,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
         public Long endCast;
 
         /**
-         * <p>The timestamp of the actual time when the instance finished running.</p>
+         * <p>The actual completion timestamp of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1553443200000</p>
@@ -299,7 +299,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+         * <p>The Alibaba Cloud UID of the node owner.</p>
          * 
          * <strong>example:</strong>
          * <p>9527952795****</p>
@@ -317,7 +317,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS. The value NOT_RUN indicates that the instance is not run. The value WAIT_TIME indicates that the instance is waiting to be run. The value WAIT_RESOURCE indicates that the instance is waiting for resources. The value RUNNING indicates that the instance is running. The value CHECKING indicates that data quality is being checked for the instance. The value CHECKING_CONDITION indicates that branch conditions are being checked for the instance. The value FAILURE indicates that the instance fails to run. The value SUCCESS indicates that the instance is run.</p>
+         * <p>The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -416,7 +416,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
         public String baselineName;
 
         /**
-         * <p>The data timestamp of the baseline instance.</p>
+         * <p>The business date timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1553443200000</p>
@@ -425,13 +425,13 @@ public class GetBaselineStatusResponseBody extends TeaModel {
         public Long bizdate;
 
         /**
-         * <p>The information about the key instance.</p>
+         * <p>The information about the critical instance.</p>
          */
         @NameInMap("BlockInstance")
         public GetBaselineStatusResponseBodyDataBlockInstance blockInstance;
 
         /**
-         * <p>The margin of the baseline instance. Unit: seconds.</p>
+         * <p>The buffer time of the baseline instance, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1200</p>
@@ -440,7 +440,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
         public Float buffer;
 
         /**
-         * <p>The timestamp of the predicted time when the baseline instance finished running.</p>
+         * <p>The estimated completion timestamp of the baseline instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1553443200000</p>
@@ -449,7 +449,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
         public Long endCast;
 
         /**
-         * <p>The timestamp of the alerting time of the baseline instance.</p>
+         * <p>The warning timestamp of the baseline instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1553443200000</p>
@@ -458,7 +458,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
         public Long expTime;
 
         /**
-         * <p>The status of the baseline instance. Valid values: UNFINISH and FINISH. The value UNFINISH indicates that the baseline instance is still running. The value FINISH indicates that the baseline instance finishes running.</p>
+         * <p>Indicates whether the baseline instance is completed. Valid values: UNFINISH and FINISH.</p>
          * 
          * <strong>example:</strong>
          * <p>UNFINISH</p>
@@ -467,7 +467,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
         public String finishStatus;
 
         /**
-         * <p>The timestamp of the actual time when the baseline instance finished running. This parameter is returned if the value of the FinishStatus parameter is FINISH.</p>
+         * <p>The completion timestamp of the baseline instance. This parameter is returned only when FinishStatus is FINISH.</p>
          * 
          * <strong>example:</strong>
          * <p>1553443200000</p>
@@ -476,7 +476,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
         public Long finishTime;
 
         /**
-         * <p>The ID of the scheduling cycle of the baseline instance. For a baseline instance that is scheduled by day, the value of this parameter is 1. For a baseline instance that is scheduled by hour, the value of this parameter ranges from 1 to 24.</p>
+         * <p>The cycle number of the baseline instance. The value is 1 for daily baselines. The value ranges from [1,24\] for hourly baselines.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -485,13 +485,13 @@ public class GetBaselineStatusResponseBody extends TeaModel {
         public Integer inGroupId;
 
         /**
-         * <p>The information about the last generated instance.</p>
+         * <p>The information about the latest instance.</p>
          */
         @NameInMap("LastInstance")
         public GetBaselineStatusResponseBodyDataLastInstance lastInstance;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the baseline owner. Multiple IDs are separated by commas (,).</p>
+         * <p>The Alibaba Cloud UID of the baseline owner. Multiple owners are separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>9527952795****</p>
@@ -518,7 +518,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The timestamp of the committed completion time of the baseline instance.</p>
+         * <p>The committed completion timestamp of the baseline instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1553443200000</p>
@@ -527,7 +527,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
         public Long slaTime;
 
         /**
-         * <p>The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes finish running before the alerting time. The value DANGEROUS indicates that nodes are still running after the alerting time but before the committed completion time. The value OVER indicates that nodes are still running after the committed completion time.</p>
+         * <p>The status of the baseline. Valid values: ERROR, SAFE, DANGROUS (warning), and OVER (exceeded).</p>
          * 
          * <strong>example:</strong>
          * <p>SAFE</p>

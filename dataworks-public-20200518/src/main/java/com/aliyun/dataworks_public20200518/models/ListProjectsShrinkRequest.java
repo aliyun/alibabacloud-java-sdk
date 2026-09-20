@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProjectsShrinkRequest extends TeaModel {
     /**
-     * <p>The page number. Valid values: 1 to 100.</p>
+     * <p>The page number. Minimum value: 1. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListProjectsShrinkRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The tags to add to the workspace.</p>
+     * <p>The list of tags bound to the workspace.</p>
      */
     @NameInMap("Tags")
     public String tagsShrink;

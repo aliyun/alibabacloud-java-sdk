@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckMetaTableRequest extends TeaModel {
     /**
-     * <p>The E-MapReduce (EMR) cluster ID.</p>
+     * <p>The ID of the EMR cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -14,7 +14,7 @@ public class CheckMetaTableRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The type of the data source. Valid values: odps and emr.</p>
+     * <p>The data source type. Valid values: odps and emr.</p>
      * 
      * <strong>example:</strong>
      * <p>emr</p>
@@ -23,7 +23,7 @@ public class CheckMetaTableRequest extends TeaModel {
     public String dataSourceType;
 
     /**
-     * <p>The name of the metadatabase of the EMR cluster.</p>
+     * <p>The name of the EMR database.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -32,7 +32,7 @@ public class CheckMetaTableRequest extends TeaModel {
     public String databaseName;
 
     /**
-     * <p>The GUID of the metatable.</p>
+     * <p>The globally unique identifier of the table.</p>
      * 
      * <strong>example:</strong>
      * <p>odps.engine_name.table_name</p>
@@ -41,7 +41,7 @@ public class CheckMetaTableRequest extends TeaModel {
     public String tableGuid;
 
     /**
-     * <p>The name of the EMR metatable.</p>
+     * <p>The name of the EMR table.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>

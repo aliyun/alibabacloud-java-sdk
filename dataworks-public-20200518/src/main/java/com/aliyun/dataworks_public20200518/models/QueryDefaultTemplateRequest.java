@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class QueryDefaultTemplateRequest extends TeaModel {
     /**
-     * <p>The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.</p>
+     * <p>The tenant ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, go to the DataStudio page, click your username in the upper-right corner, and choose Menu &gt; User Info to obtain the tenant ID.</p>
+     * <p>You can also obtain the tenant ID from Data.TenantId in the response of the GetProject operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>10241024</p>
+     * <p>1024102</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

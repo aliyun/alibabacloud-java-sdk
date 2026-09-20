@@ -19,6 +19,9 @@ public class DsgUpdateDesensStatusListRequest extends TeaModel {
     /**
      * <p>The list of switch IDs.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DsgUpdateDesensStatusList</p>
      */
     @NameInMap("Ids")
     public java.util.List<Integer> ids;

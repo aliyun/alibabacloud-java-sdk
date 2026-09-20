@@ -41,7 +41,7 @@ public class CreateDagTestResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+     * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>E6F0DBDD-5AD****</p>

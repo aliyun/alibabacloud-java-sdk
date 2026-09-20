@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMetaDBRequest extends TeaModel {
     /**
-     * <p>The ID of the E-MapReduce (EMR) cluster. You can log on to the <a href="https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou">EMR console</a> to query the ID.</p>
+     * <p>The ID of the EMR cluster. You can log on to the <a href="https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou">EMR console</a> to obtain the cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -14,7 +14,7 @@ public class ListMetaDBRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The type of the data source. Set the value to emr.</p>
+     * <p>The data type. Currently, only emr is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class ListMetaDBRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The DataWorks workspace ID. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to query the ID.</p>
+     * <p>The ID of the DataWorks workspace. You can call <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> to obtain the workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNodeInputOrOutputResponseBody extends TeaModel {
     /**
-     * <p>The ancestor or descendant nodes.</p>
+     * <p>The list of input and output nodes.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListNodeInputOrOutputResponseBodyData> data;
@@ -38,7 +38,7 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>E6F0DBDD-5AD****</p>
@@ -110,7 +110,7 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
 
     public static class ListNodeInputOrOutputResponseBodyData extends TeaModel {
         /**
-         * <p>The name of the ancestor or descendant node.</p>
+         * <p>The name of the input or output node.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx.123141254_out</p>
@@ -128,7 +128,7 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
         public Long nodeId;
 
         /**
-         * <p>This parameter does not take effect. You cannot obtain the parameter settings.</p>
+         * <p>This parameter is not in use and cannot be queried.</p>
          * 
          * <strong>example:</strong>
          * <p>dwd_xxx_table</p>

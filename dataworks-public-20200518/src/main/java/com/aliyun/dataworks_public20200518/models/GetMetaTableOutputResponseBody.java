@@ -111,6 +111,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
     public static class GetMetaTableOutputResponseBodyDataDataEntityList extends TeaModel {
         /**
          * <p>The end time.</p>
+         * <p>The format is <code>yyyy-MM-dd HH:mm:ss</code>, for example, <code>2020-01-01 00:01:00</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-01-01 00:01:00</p>
@@ -129,6 +130,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
 
         /**
          * <p>The start time.</p>
+         * <p>The format is <code>yyyy-MM-dd HH:mm:ss</code>, for example, <code>2020-01-01 00:00:00</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-01-01 00:00:00</p>
@@ -137,7 +139,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The GUID of the MaxCompute table.</p>
+         * <p>The unique identifier of the ODPS table.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.engine_name.table_name</p>
@@ -164,7 +166,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
         public Long taskInstanceId;
 
         /**
-         * <p>The waiting time.</p>
+         * <p>The task wait duration, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>323</p>
@@ -237,13 +239,13 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
 
     public static class GetMetaTableOutputResponseBodyData extends TeaModel {
         /**
-         * <p>The partitions.</p>
+         * <p>The list of instances.</p>
          */
         @NameInMap("DataEntityList")
         public java.util.List<GetMetaTableOutputResponseBodyDataDataEntityList> dataEntityList;
 
         /**
-         * <p>The page number. Valid values: 1 to 30. Default value: 1.</p>
+         * <p>The page number. Default value: 1. Minimum value: 1. Maximum value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -261,7 +263,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of tables.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

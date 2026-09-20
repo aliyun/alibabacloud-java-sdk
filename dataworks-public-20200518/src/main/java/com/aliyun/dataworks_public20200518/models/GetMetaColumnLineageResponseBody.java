@@ -110,7 +110,7 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
 
     public static class GetMetaColumnLineageResponseBodyDataDataEntityList extends TeaModel {
         /**
-         * <p>The EMR cluster ID.</p>
+         * <p>The ID of the EMR cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -203,13 +203,13 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
 
     public static class GetMetaColumnLineageResponseBodyData extends TeaModel {
         /**
-         * <p>The returned result.</p>
+         * <p>The list of instance data.</p>
          */
         @NameInMap("DataEntityList")
         public java.util.List<GetMetaColumnLineageResponseBodyDataDataEntityList> dataEntityList;
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number. Used for pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLineageResponseBody extends TeaModel {
     /**
-     * <p>The structure returned.</p>
+     * <p>The response structure.</p>
      */
     @NameInMap("Data")
     public ListLineageResponseBodyData data;
@@ -38,7 +38,7 @@ public class ListLineageResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>64B-587A-8CED-969E1973887FXXX-TT</p>
@@ -49,8 +49,8 @@ public class ListLineageResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,8 +116,8 @@ public class ListLineageResponseBody extends TeaModel {
         /**
          * <p>The data channel. Valid values:</p>
          * <ul>
-         * <li><strong>FIRST_PARTY: DataWorks platform</strong></li>
-         * <li><strong>THIRD_PARTY: user registration</strong></li>
+         * <li><strong>FIRST_PARTY</strong>: DataWorks platform data.</li>
+         * <li><strong>THIRD_PARTY</strong>: User-registered data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,13 +130,13 @@ public class ListLineageResponseBody extends TeaModel {
          * <p>The data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>mysql</p>
+         * <p>maxcompute,mysql</p>
          */
         @NameInMap("Datasource")
         public String datasource;
 
         /**
-         * <p>The unique relationship ID.</p>
+         * <p>The unique ID of the relation.</p>
          * 
          * <strong>example:</strong>
          * <p>aaabbccddguid</p>
@@ -145,7 +145,7 @@ public class ListLineageResponseBody extends TeaModel {
         public String guid;
 
         /**
-         * <p>The task type, which is used to describe the relationship between entities, such as SQL-based calculation, mapping based on report fields, or API operation definition.</p>
+         * <p>The task type, which describes the relationship type between entities. For example, computed by SQL, mapped by report fields, or defined by API.</p>
          * 
          * <strong>example:</strong>
          * <p>sql</p>
@@ -194,7 +194,7 @@ public class ListLineageResponseBody extends TeaModel {
 
     public static class ListLineageResponseBodyDataDataEntityList extends TeaModel {
         /**
-         * <p>The time when the lineage was generated.</p>
+         * <p>The time when the lineage was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1686215809269</p>
@@ -203,13 +203,13 @@ public class ListLineageResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The information about the entity.</p>
+         * <p>The entity information.</p>
          */
         @NameInMap("Entity")
         public Entity entity;
 
         /**
-         * <p>The array of the relationship structure.</p>
+         * <p>The array of relation structures.</p>
          */
         @NameInMap("RelationList")
         public java.util.List<ListLineageResponseBodyDataDataEntityListRelationList> relationList;
@@ -247,13 +247,13 @@ public class ListLineageResponseBody extends TeaModel {
 
     public static class ListLineageResponseBodyData extends TeaModel {
         /**
-         * <p>The array of the entity structure.</p>
+         * <p>The array of entity structures.</p>
          */
         @NameInMap("DataEntityList")
         public java.util.List<ListLineageResponseBodyDataDataEntityList> dataEntityList;
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token that specifies the starting point of the next read operation.</p>
          * 
          * <strong>example:</strong>
          * <p>nextTokenFromRequest-xxxsd-ff</p>

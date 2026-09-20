@@ -15,11 +15,7 @@ public class UpdateNodeRunModeRequest extends TeaModel {
     public Long nodeId;
 
     /**
-     * <p>The environment in which the node runs. Valid values: DEV and PROD. The value DEV indicates the development environment, and the value PROD indicates the production environment.</p>
-     * <ul>
-     * <li>PROD</li>
-     * <li>DEV</li>
-     * </ul>
+     * <p>The environment in which the node runs. Valid values: DEV (development environment) and PROD (production environment).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,10 +25,10 @@ public class UpdateNodeRunModeRequest extends TeaModel {
     public String projectEnv;
 
     /**
-     * <p>The operation that you want to perform on the node. Valid values:</p>
+     * <p>The operation to perform on the specified node. Valid values:</p>
      * <ul>
-     * <li>0: indicates that you want to unfreeze the node.</li>
-     * <li>2: indicates that you want to freeze the node.</li>
+     * <li>0: unfreezes the specified node.</li>
+     * <li>2: freezes the specified node.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

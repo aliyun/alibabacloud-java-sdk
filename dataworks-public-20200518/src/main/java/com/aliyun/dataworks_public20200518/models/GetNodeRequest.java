@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetNodeRequest extends TeaModel {
     /**
-     * <p>The interval at which the node is rerun after the node fails to run.</p>
+     * <p>The ID of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the node ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNodesByBaselineResponseBody extends TeaModel {
     /**
-     * <p>The nodes in the baseline.</p>
+     * <p>The list of nodes in the baseline.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListNodesByBaselineResponseBodyData> data;
@@ -38,7 +38,7 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID. You can use the ID to troubleshoot issues.</p>
+     * <p>The request ID. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-E****</p>
@@ -47,7 +47,7 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
 
     public static class ListNodesByBaselineResponseBodyData extends TeaModel {
         /**
-         * <p>The node ID.</p>
+         * <p>The ID of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -128,7 +128,7 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+         * <p>The Alibaba Cloud UID of the node owner.</p>
          * 
          * <strong>example:</strong>
          * <p>9527952****</p>

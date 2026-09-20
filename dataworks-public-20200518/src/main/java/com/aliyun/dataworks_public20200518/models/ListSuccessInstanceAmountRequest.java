@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSuccessInstanceAmountRequest extends TeaModel {
     /**
-     * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to obtain the workspace ID.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the workspace configuration page to obtain the workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

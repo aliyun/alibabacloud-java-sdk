@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetManualDagInstancesResponseBody extends TeaModel {
     /**
-     * <p>The instances in the manually triggered workflow.</p>
+     * <p>The list of internal instances of the manual workflow.</p>
      */
     @NameInMap("Instances")
     public java.util.List<GetManualDagInstancesResponseBodyInstances> instances;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>SDFSDFSDF-SDFSDF-SDFDSF-SDFSDF</p>
@@ -42,7 +42,8 @@ public class GetManualDagInstancesResponseBody extends TeaModel {
 
     public static class GetManualDagInstancesResponseBodyInstances extends TeaModel {
         /**
-         * <p>The time when the instance started to run.</p>
+         * <p>The time when the instance node started to run.</p>
+         * <p>The value is a 13-digit number, for example, <code>1605178414676</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1605178414676</p>
@@ -51,7 +52,8 @@ public class GetManualDagInstancesResponseBody extends TeaModel {
         public Long beginRunningTime;
 
         /**
-         * <p>The time when the instance started to wait for resources.</p>
+         * <p>The time when the instance node started to wait for resources.</p>
+         * <p>The value is a 13-digit number, for example, <code>1605178414676</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1605178414676</p>
@@ -60,7 +62,8 @@ public class GetManualDagInstancesResponseBody extends TeaModel {
         public Long beginWaitResTime;
 
         /**
-         * <p>The time when the instance started to wait to be scheduled.</p>
+         * <p>The time when the instance node started to wait for scheduling.</p>
+         * <p>The value is a 13-digit number, for example, <code>1605178414676</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1605178414676</p>
@@ -69,7 +72,8 @@ public class GetManualDagInstancesResponseBody extends TeaModel {
         public Long beginWaitTimeTime;
 
         /**
-         * <p>The data timestamp of the instance. In most cases, the value is one day before the time when the instance was run.</p>
+         * <p>The business date. This is typically the day before the node runs.</p>
+         * <p>The value is a 13-digit number, for example, <code>1605178414676</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1605178414676</p>
@@ -78,7 +82,8 @@ public class GetManualDagInstancesResponseBody extends TeaModel {
         public Long bizDate;
 
         /**
-         * <p>The time when the instance was generated.</p>
+         * <p>The time when the instance node was created.</p>
+         * <p>The value is a 13-digit number, for example, <code>1605178414676</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1605178414676</p>
@@ -87,7 +92,7 @@ public class GetManualDagInstancesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The user who performed the operation.</p>
+         * <p>The operator.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -96,7 +101,8 @@ public class GetManualDagInstancesResponseBody extends TeaModel {
         public String createUser;
 
         /**
-         * <p>The time when the instance was scheduled to run.</p>
+         * <p>The scheduled time of the instance node.</p>
+         * <p>The value is a 13-digit number, for example, <code>1605178414676</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1605178414676</p>
@@ -105,7 +111,7 @@ public class GetManualDagInstancesResponseBody extends TeaModel {
         public Long cycTime;
 
         /**
-         * <p>The ID of the DAG for the manually triggered workflow.</p>
+         * <p>The DAG ID of the manual workflow instance.</p>
          * 
          * <strong>example:</strong>
          * <p>350850491</p>
@@ -114,7 +120,7 @@ public class GetManualDagInstancesResponseBody extends TeaModel {
         public Long dagId;
 
         /**
-         * <p>The type of the manually triggered workflow.</p>
+         * <p>The type of the manual workflow.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -123,7 +129,8 @@ public class GetManualDagInstancesResponseBody extends TeaModel {
         public String dagType;
 
         /**
-         * <p>The time when the instance finished running.</p>
+         * <p>The time when the instance node finished running.</p>
+         * <p>The value is a 13-digit number, for example, <code>1605178414676</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1605178414676</p>
@@ -132,7 +139,7 @@ public class GetManualDagInstancesResponseBody extends TeaModel {
         public Long finishTime;
 
         /**
-         * <p>The ID of the instance in the manually triggered workflow.</p>
+         * <p>The internal instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>11726873619</p>
@@ -141,7 +148,8 @@ public class GetManualDagInstancesResponseBody extends TeaModel {
         public Long instanceId;
 
         /**
-         * <p>The time when the instance was last modified.</p>
+         * <p>The most recent modification time of the instance node.</p>
+         * <p>The value is a 13-digit number, for example, <code>1605178414676</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1605178414676</p>
@@ -150,7 +158,7 @@ public class GetManualDagInstancesResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The ID of the node in the manually triggered workflow.</p>
+         * <p>The internal node ID of the workflow.</p>
          * 
          * <strong>example:</strong>
          * <p>37851</p>
@@ -159,7 +167,7 @@ public class GetManualDagInstancesResponseBody extends TeaModel {
         public Long nodeId;
 
         /**
-         * <p>The name of the node.</p>
+         * <p>The node name.</p>
          * 
          * <strong>example:</strong>
          * <p>test2</p>
@@ -168,7 +176,7 @@ public class GetManualDagInstancesResponseBody extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>The parameters related to the instance.</p>
+         * <p>The parameter information of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -177,16 +185,16 @@ public class GetManualDagInstancesResponseBody extends TeaModel {
         public String paramValues;
 
         /**
-         * <p>The status of the instance. Valid values:</p>
+         * <p>The status of the instance node. Valid values:</p>
          * <ul>
          * <li>NOT_RUN: The instance is not run.</li>
-         * <li>WAIT_TIME: The instance is waiting for its scheduling time to arrive.</li>
+         * <li>WAIT_TIME: The instance is waiting for the scheduled dueTime or cycleTime.</li>
          * <li>WAIT_RESOURCE: The instance is waiting for resources.</li>
          * <li>RUNNING: The instance is running.</li>
-         * <li>CHECKING: Data quality is being checked for the instance.</li>
-         * <li>CHECKING_CONDITION: Branch conditions are being checked for the instance.</li>
-         * <li>FAILURE: The instance fails to be run.</li>
-         * <li>SUCCESS: The instance is successfully run.</li>
+         * <li>CHECKING: The instance is submitted to Data Quality for data verification.</li>
+         * <li>CHECKING_CONDITION: The instance is performing branch condition verification.</li>
+         * <li>FAILURE: The instance failed to run.</li>
+         * <li>SUCCESS: The instance is run successfully.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -196,16 +204,16 @@ public class GetManualDagInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The scheduling type of the node that generates the instance. Valid values:</p>
+         * <p>The scheduling type of the instance node. Valid values:</p>
          * <ul>
-         * <li>NORMAL(0): The node is an auto triggered node. The scheduling system regularly runs the node.</li>
-         * <li>MANUAL(1): The node is a manually triggered node. The scheduling system does not regularly run the node.</li>
-         * <li>PAUSE(2): The node is a paused node. The scheduling system regularly runs the node but sets the status of the node to failed when the scheduling system starts to run the node.</li>
-         * <li>SKIP(3): The node is a dry-run node. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.</li>
-         * <li>SKIP_UNCHOOSE(4): The node is an unselected node in a temporary workflow. This type of node exists only in temporary workflows. The scheduling system sets the status of the node to successful when the scheduling system starts to run the node.</li>
-         * <li>SKIP_CYCLE(5): The node is a node that is scheduled by week or month and is waiting for the scheduling time to arrive. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.</li>
-         * <li>CONDITION_UNCHOOSE(6): The node is not selected by its ancestor branch node and is run as a dry-run node.</li>
-         * <li>REALTIME_DEPRECATED(7): The node has instances that are generated in real time but deprecated. The scheduling system sets the status of the node to successful.</li>
+         * <li>NORMAL(0): a normal scheduling node. The node is scheduled on a daily basis.</li>
+         * <li>MANUAL(1): a manual node. The node is not scheduled on a daily basis.</li>
+         * <li>PAUSE(2): a paused node. The node is scheduled on a daily basis, but is set to failed when scheduling starts.</li>
+         * <li>SKIP(3): a dry-run node. The node is scheduled on a daily basis, but is set to successful when scheduling starts.</li>
+         * <li>SKIP_UNCHOOSE(4): a node that is not selected in a temporary workflow. This type of node exists only in temporary workflows and is set to successful when scheduling starts.</li>
+         * <li>SKIP_CYCLE(5): a weekly or monthly node that has not reached its run cycle. The node is scheduled on a daily basis, but is set to successful when scheduling starts.</li>
+         * <li>CONDITION_UNCHOOSE(6): a downstream node that is not selected by an upstream branch (IF) node. The node is directly set to dry-run.</li>
+         * <li>REALTIME_DEPRECATED(7): an expired periodic instance generated in real time. This type of node is directly set to successful.</li>
          * </ul>
          * 
          * <strong>example:</strong>

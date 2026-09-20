@@ -7,6 +7,9 @@ public class DsgWhiteListAddOrUpdateShrinkRequest extends TeaModel {
     /**
      * <p>A collection of whitelists.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DsgWhiteListAddOrUpdate</p>
      */
     @NameInMap("WhiteLists")
     public String whiteListsShrink;

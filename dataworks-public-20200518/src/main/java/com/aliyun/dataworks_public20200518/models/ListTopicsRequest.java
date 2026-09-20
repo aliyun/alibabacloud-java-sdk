@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTopicsRequest extends TeaModel {
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The start time for discovery. Specify the time in UTC format (yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListTopicsRequest extends TeaModel {
     public String beginTime;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end time for discovery. Specify the time in UTC format (yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListTopicsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the node instance that triggers the events. You can configure either this parameter or the NodeId parameter.</p>
+     * <p>The instance ID associated with the event. This parameter is mutually exclusive with NodeId.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>
@@ -34,7 +34,7 @@ public class ListTopicsRequest extends TeaModel {
     public Long instanceId;
 
     /**
-     * <p>The ID of the node that triggers the events. You can configure either this parameter or the InstanceId parameter.</p>
+     * <p>The ID of the node associated with the event. This parameter is mutually exclusive with InstanceId.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>
@@ -43,7 +43,7 @@ public class ListTopicsRequest extends TeaModel {
     public Long nodeId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account used by the owner of the events.</p>
+     * <p>The Alibaba Cloud UID of the event owner.</p>
      * 
      * <strong>example:</strong>
      * <p>952795****</p>
@@ -52,7 +52,7 @@ public class ListTopicsRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The number of the page to return. Valid values: 1 to 30. Default value: 1.</p>
+     * <p>The page number. Default value: 1. Minimum value: 1. Maximum value: 30.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class ListTopicsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class ListTopicsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The status of the events. Valid values: IGNORE, NEW, FIXING, and RECOVER. The value IGNORE indicates that the events are ignored. The value NEW indicates that the events are new events. The value FIXING indicates that the events are being processed. The value RECOVER indicates that the events are processed. You can specify multiple states. Separate them with commas (,).</p>
+     * <p>The status of the event. Valid values: IGNORE (ignored), NEW (newly discovered), FIXING (being processed), and RECOVER (recovered). Separate multiple event statuses with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>IGNORE,NEW,FIXING,RECOVER</p>
@@ -81,7 +81,7 @@ public class ListTopicsRequest extends TeaModel {
     public String topicStatuses;
 
     /**
-     * <p>The types of the events. Valid values: SLOW and ERROR. The value SLOW indicates that the running duration of the node in the current scheduling cycle is significantly longer than the average running duration of the node in previous scheduling cycles. The value ERROR indicates that the node fails to run. You can specify multiple types. Separate them with commas (,).</p>
+     * <p>The type of the event. Valid values: SLOW (slow) and ERROR (error). Separate multiple event types with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR,SLOW</p>

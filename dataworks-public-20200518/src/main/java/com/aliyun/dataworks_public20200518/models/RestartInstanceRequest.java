@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class RestartInstanceRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the instance.</p>
+     * <p>You can obtain the ID from Data.Instances[].InstanceId in the ListInstances response.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +16,11 @@ public class RestartInstanceRequest extends TeaModel {
     public Long instanceId;
 
     /**
-     * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
+     * <p>The environment of the workspace. Valid values:</p>
+     * <ul>
+     * <li>PROD: production environment</li>
+     * <li>DEV: development environment</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

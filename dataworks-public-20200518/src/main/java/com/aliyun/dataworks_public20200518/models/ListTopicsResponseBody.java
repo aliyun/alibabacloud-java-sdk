@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListTopicsResponseBody extends TeaModel {
     /**
-     * <p>The information about the events returned.</p>
+     * <p>The returned event list.</p>
      */
     @NameInMap("Data")
     public ListTopicsResponseBodyData data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>1031203110005</p>
@@ -20,7 +20,7 @@ public class ListTopicsResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The specified parameters are invalid.</p>
@@ -29,7 +29,7 @@ public class ListTopicsResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -38,7 +38,7 @@ public class ListTopicsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     * <p>The unique ID of the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
@@ -47,7 +47,7 @@ public class ListTopicsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class ListTopicsResponseBody extends TeaModel {
 
     public static class ListTopicsResponseBodyDataTopics extends TeaModel {
         /**
-         * <p>The timestamp when the event was found.</p>
+         * <p>The timestamp when the event was discovered.</p>
          * 
          * <strong>example:</strong>
          * <p>1553524393000</p>
@@ -119,7 +119,7 @@ public class ListTopicsResponseBody extends TeaModel {
         public Long addTime;
 
         /**
-         * <p>The timestamp when the event was processed.</p>
+         * <p>The timestamp when the event was recovered.</p>
          * 
          * <strong>example:</strong>
          * <p>1553508465000</p>
@@ -128,7 +128,7 @@ public class ListTopicsResponseBody extends TeaModel {
         public Long fixTime;
 
         /**
-         * <p>The timestamp when the event occurred. A time difference may exist between the time when the event occurred and the time when the event was found.</p>
+         * <p>The timestamp when the event occurred. There is a time difference between when the event occurs and when it is discovered.</p>
          * 
          * <strong>example:</strong>
          * <p>1553508465000</p>
@@ -137,7 +137,7 @@ public class ListTopicsResponseBody extends TeaModel {
         public Long happenTime;
 
         /**
-         * <p>The ID of the node instance that triggers the event.</p>
+         * <p>The instance ID associated with the event.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -146,7 +146,7 @@ public class ListTopicsResponseBody extends TeaModel {
         public Long instanceId;
 
         /**
-         * <p>The ID of the node that triggers the event.</p>
+         * <p>The ID of the node associated with the event.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -164,7 +164,7 @@ public class ListTopicsResponseBody extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is used by the node owner.</p>
+         * <p>The Alibaba Cloud UID of the node owner.</p>
          * 
          * <strong>example:</strong>
          * <p>952795****</p>
@@ -194,13 +194,13 @@ public class ListTopicsResponseBody extends TeaModel {
          * <p>The name of the event.</p>
          * 
          * <strong>example:</strong>
-         * <p>Error 1234</p>
+         * <p>1234 error</p>
          */
         @NameInMap("TopicName")
         public String topicName;
 
         /**
-         * <p>The status of the event. Valid values: IGNORE, NEW, FIXING, and RECOVER. The value IGNORE indicates that the event is ignored. The value NEW indicates that the event is a new event. The value FIXING indicates that the event is being processed. The value RECOVER indicates that the event is processed.</p>
+         * <p>The status of the event. Valid values: IGNORE (ignored), NEW (newly discovered), FIXING (being processed), and RECOVER (recovered).</p>
          * 
          * <strong>example:</strong>
          * <p>NEW</p>
@@ -209,7 +209,7 @@ public class ListTopicsResponseBody extends TeaModel {
         public String topicStatus;
 
         /**
-         * <p>The type of the event. Valid values: SLOW and ERROR. The value SLOW indicates that the running duration of the node in the current scheduling cycle is significantly longer than the average running duration of the node in previous scheduling cycles. The value ERROR indicates that the node fails to run.</p>
+         * <p>The type of the event. Valid values: SLOW (slow) and ERROR (error).</p>
          * 
          * <strong>example:</strong>
          * <p>ERROR</p>
@@ -322,7 +322,7 @@ public class ListTopicsResponseBody extends TeaModel {
 
     public static class ListTopicsResponseBodyData extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -331,7 +331,7 @@ public class ListTopicsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -340,13 +340,13 @@ public class ListTopicsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The events returned.</p>
+         * <p>The list of events.</p>
          */
         @NameInMap("Topics")
         public java.util.List<ListTopicsResponseBodyDataTopics> topics;
 
         /**
-         * <p>The total number of the events returned.</p>
+         * <p>The total number of events.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

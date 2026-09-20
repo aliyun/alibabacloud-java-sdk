@@ -15,7 +15,7 @@ public class ListEntitiesByTagsShrinkRequest extends TeaModel {
     public String entityType;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The pagination token that specifies the start point of the current read operation.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>
@@ -24,7 +24,7 @@ public class ListEntitiesByTagsShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Valid values: 1 to 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -33,7 +33,7 @@ public class ListEntitiesByTagsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tags")

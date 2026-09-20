@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunTriggerNodeResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9BA675F1-F848-4752-A6E3-92ABA0616005</p>
@@ -14,10 +14,12 @@ public class RunTriggerNodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful.</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The call was successful.</p>
+     * </li>
+     * <li><p>false: The call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

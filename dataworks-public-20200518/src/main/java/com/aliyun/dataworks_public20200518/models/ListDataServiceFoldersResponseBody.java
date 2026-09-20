@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDataServiceFoldersResponseBody extends TeaModel {
     /**
-     * <p>The paging result for the folders.</p>
+     * <p>The pagination result of the folder list.</p>
      */
     @NameInMap("FolderPagingResult")
     public ListDataServiceFoldersResponseBodyFolderPagingResult folderPagingResult;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. A unique identifier for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EF****</p>
@@ -43,6 +43,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
     public static class ListDataServiceFoldersResponseBodyFolderPagingResultFolders extends TeaModel {
         /**
          * <p>The time when the folder was created.</p>
+         * <p>The format is <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ssZ</code>, for example, <code>2020-09-24T18:37:51+0800</code>. The time zone offset in this example is <code>+0800</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-09-24T18:37:51+0800</p>
@@ -60,7 +61,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
         public Long folderId;
 
         /**
-         * <p>The name of the folder.</p>
+         * <p>The folder name.</p>
          * 
          * <strong>example:</strong>
          * <p>test1</p>
@@ -79,6 +80,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
 
         /**
          * <p>The time when the folder was last modified.</p>
+         * <p>The format is <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ssZ</code>, for example, <code>2020-09-24T18:37:51+0800</code>. The time zone offset in this example is <code>+0800</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-09-24T18:37:51+0800</p>
@@ -87,7 +89,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The ID of the parent folder. The ID of the root folder in a business process is 0, and the ID of a folder created by a user in a business process is greater than 0.</p>
+         * <p>The ID of the parent folder. The root folder ID under a business process is 0. User-created folder IDs are greater than 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -186,13 +188,13 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
 
     public static class ListDataServiceFoldersResponseBodyFolderPagingResult extends TeaModel {
         /**
-         * <p>The folders.</p>
+         * <p>The folder list.</p>
          */
         @NameInMap("Folders")
         public java.util.List<ListDataServiceFoldersResponseBodyFolderPagingResultFolders> folders;
 
         /**
-         * <p>The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.</p>
+         * <p>The page number, which is the same as the PageNumber parameter in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -210,7 +212,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

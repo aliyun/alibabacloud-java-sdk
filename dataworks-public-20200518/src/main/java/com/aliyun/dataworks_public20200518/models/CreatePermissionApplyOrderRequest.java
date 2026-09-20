@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePermissionApplyOrderRequest extends TeaModel {
     /**
-     * <p>The list of objects for which permissions are requested.</p>
+     * <p>The list of objects to request permissions for.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ApplyObject")
@@ -24,13 +24,13 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
     /**
      * <p>The type of the request order. Valid values:</p>
      * <ul>
-     * <li>MaxComputeTable: MaxCompute table permission request order.</li>
-     * <li>MaxComputeFunction: MaxCompute function permission request order.</li>
-     * <li>MaxComputeResource: MaxCompute resource permission request order.</li>
-     * <li>DLFSchema: Data Lake Formation (DLF) 1.0 schema permission request order.</li>
-     * <li>DLFTable: DLF 1.0 table permission request order.</li>
-     * <li>DLFColumn: DLF 1.0 column permission request order.</li>
-     * <li>DsApiDeploy: Data service publication permission request order.</li>
+     * <li>[MaxComputeTable] MaxCompute table permission request order.</li>
+     * <li>[MaxComputeFunction] MaxCompute function permission request order.</li>
+     * <li>[MaxComputeResource] MaxCompute resource permission request order.</li>
+     * <li>[DLFSchema] DLF 1.0 schema permission request order.</li>
+     * <li>[DLFTable] DLF 1.0 table permission request order.</li>
+     * <li>[DLFColumn] DLF 1.0 column permission request order.</li>
+     * <li>[DsApiDeploy] Data service publication permission request order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
     public String applyUserIds;
 
     /**
-     * <p>The name of the data catalog to query. Go to the <a href="https://dlf.console.aliyun.com/ap-southeast-1/metadata/catalog?spm=a2c4g.11186623.0.0.5a225658pT4Dkr">Data Lake Formation console</a> to view the data catalog name.</p>
+     * <p>The name of the data catalog. Go to the <a href="https://dlf.console.aliyun.com/cn-hangzhou/metadata/catalog?spm=a2c4g.11186623.0.0.5a225658pT4Dkr">Data Lake Formation console</a> to view the data catalog name.</p>
      * 
      * <strong>example:</strong>
      * <p>hive</p>
@@ -60,9 +60,9 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
 
     /**
      * <p>The expiration time of the requested permissions. Specify a UNIX timestamp. If you do not specify this parameter, the default expiration time is January 1, 2065.
-     * If LabelSecurity is not enabled for the MaxCompute project, or the security level of the requested table field is 0 or less than or equal to the security level of the requesting account, you can request only permanent permissions.
-     * Go to the management page of the DataWorks workspace and check the advanced configuration page of the MaxCompute engine to verify whether column-level access control is enabled.
-     * Go to the DataWorks workspace to view the security level of fields in Data Map and the security level of accounts on the Member Management page.</p>
+     * If LabelSecurity is not enabled for the MaxCompute project, or the security level of the requested table field is 0 or less than or equal to the security level of the requesting account, you can only request permanent permissions.
+     * Go to the management page of the DataWorks workspace and check whether column-level access control is enabled on the advanced configuration page of the MaxCompute engine.
+     * Go to the DataWorks workspace to view the security level of fields in Data Map and the security level of accounts on the member management page.</p>
      * 
      * <strong>example:</strong>
      * <p>1617115071885</p>
@@ -71,7 +71,7 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
     public Long deadline;
 
     /**
-     * <p>This field is deprecated. Set it to empty.</p>
+     * <p>This parameter is deprecated. Leave it empty.</p>
      * 
      * <strong>example:</strong>
      * <p>odps</p>
@@ -93,7 +93,7 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
     public String maxComputeProjectName;
 
     /**
-     * <p>This field is deprecated. Set it to empty.</p>
+     * <p>This parameter is deprecated. Leave it empty.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -212,8 +212,8 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
         public String actions;
 
         /**
-         * <p>The name of the column for which permissions are requested. To request permissions on the entire table, enter all column names of the table.
-         * You can request permissions on specific columns only if LabelSecurity is enabled for the MaxCompute project. If LabelSecurity is not enabled, you can request permissions only on the entire table.</p>
+         * <p>The name of the column for which permissions are requested. If you request permissions on the entire table, enter all column names of the table.
+         * You can request permissions on specific columns only if LabelSecurity is enabled for the MaxCompute project. If LabelSecurity is not enabled, you can only request permissions on the entire table.</p>
          * 
          * <strong>example:</strong>
          * <p>aColumnName</p>
@@ -261,7 +261,7 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
         public java.util.List<CreatePermissionApplyOrderRequestApplyObjectColumnMetaList> columnMetaList;
 
         /**
-         * <p>The object for which permissions are requested. Only MaxCompute table permissions are supported. Enter the name of the target table.</p>
+         * <p>The object for which permissions are requested. Only MaxCompute tables are supported. Enter the name of the target table.</p>
          * 
          * <strong>example:</strong>
          * <p>aTableName</p>

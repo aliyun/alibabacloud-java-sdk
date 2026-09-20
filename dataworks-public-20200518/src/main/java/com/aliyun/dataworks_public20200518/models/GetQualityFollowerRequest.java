@@ -24,7 +24,7 @@ public class GetQualityFollowerRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The name of the engine or data source.</p>
+     * <p>The name of the compute engine or data source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -32,13 +32,13 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The lineage.</p>
+     * <p>The lineage relationship object.</p>
      */
     @NameInMap("LineageRelation")
     public RegisterLineageRelationResponseBodyLineageRelation lineageRelation;
 
     /**
-     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>EE50E05E-028C-182B-****</p>
@@ -49,9 +49,9 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
+     * <li><p>true: The request was successful.</p>
      * </li>
-     * <li><p>false</p>
+     * <li><p>false: The request failed.</p>
      * </li>
      * </ul>
      * 
@@ -125,7 +125,7 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
         public String destEntityQualifiedName;
 
         /**
-         * <p>The ID of the lineage between entities.</p>
+         * <p>The lineage relationship ID between entities.</p>
          * 
          * <strong>example:</strong>
          * <p>dfsldfdlsfdsaaaabbbb</p>

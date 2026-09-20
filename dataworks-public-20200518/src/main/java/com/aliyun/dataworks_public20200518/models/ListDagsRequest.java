@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDagsRequest extends TeaModel {
     /**
-     * <p>The sequence number that uniquely identifies the data backfill operation. You can call the <a href="https://help.aliyun.com/document_detail/189753.html">GetDag</a> operation to query the sequence number.</p>
+     * <p>The unique identifier of the data backfill instance. You can call the <a href="https://help.aliyun.com/document_detail/189753.html">GetDag</a> operation to obtain this value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListDagsRequest extends TeaModel {
     public Long opSeq;
 
     /**
-     * <p>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.</p>
+     * <p>The identifier of the scheduling O&amp;M environment. PROD indicates the production environment, and DEV indicates the development environment.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

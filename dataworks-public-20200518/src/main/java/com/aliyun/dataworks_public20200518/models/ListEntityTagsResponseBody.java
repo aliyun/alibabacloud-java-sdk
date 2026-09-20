@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEntityTagsResponseBody extends TeaModel {
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Data")
     public java.util.List<UserEntityTag> data;
@@ -38,7 +38,7 @@ public class ListEntityTagsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-E****</p>
@@ -48,8 +48,10 @@ public class ListEntityTagsResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <p>true\
-     * false</p>
+     * <ul>
+     * <li>true: The request was successful.  </li>
+     * <li>false: The request failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMetaCollectionRequest extends TeaModel {
     /**
-     * <p>The comment of the collection. The comment must be 1 to 64 characters in length.</p>
+     * <p>The comment of the collection. Length limit: 1 to 64 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a comment</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRemindRequest extends TeaModel {
     /**
-     * <p>The minimum interval at which alerts are reported. Unit: seconds. Minimum value: 1200. Default value: 1800.</p>
+     * <p>The minimum alert interval, in seconds. Minimum value: 1200. Default value: 1800.</p>
      * 
      * <strong>example:</strong>
      * <p>1800</p>
@@ -14,14 +14,16 @@ public class CreateRemindRequest extends TeaModel {
     public Integer alertInterval;
 
     /**
-     * <p>The notification method. Valid values:</p>
+     * <p>The alert method. Valid values:</p>
      * <ul>
-     * <li>MAIL: Alert notifications are sent by email.</li>
-     * <li>SMS: Alert notifications are sent by text message. Alert notifications can be sent by text message only in the Singapore, Malaysia (Kuala Lumpur), and Germany (Frankfurt) regions.</li>
-     * <li>WEBHOOKS (WeCom or Lark chatbot): Alert notifications are sent by WeCom or Lark message. If you want to use this notification method, you must configure the Webhooks parameter.</li>
-     * <li>DINGROBOTS: Alert notifications are sent by DingTalk chatbot.</li>
+     * <li>MAIL: email.</li>
+     * <li>SMS: text message.
+     * &lt;props=&quot;intl&quot;&gt;The regions that support SMS alerts are Singapore, Malaysia (Kuala Lumpur), and Germany (Frankfurt).
+     * &lt;props=&quot;china&quot;&gt;- PHONE: phone call. Only DataWorks Professional Edition and higher editions are supported.</li>
+     * <li>Webhooks (WeCom or Lark chatbot). This alert method takes effect only after the Webhooks parameter is configured.</li>
+     * <li>DINGROBOTS: DingTalk chatbot.</li>
      * </ul>
-     * <p>You can specify multiple notification methods. Separate them with commas (,).</p>
+     * <p>Separate multiple alert methods with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,8 +34,10 @@ public class CreateRemindRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li>If the AlertUnit parameter is set to OWNER, leave this parameter empty.</li>
-     * <li>If the AlertUnit parameter is set to OTHER, set this parameter to the ID of the Alibaba Cloud account used by the specified user. You can specify multiple IDs. Separate multiple IDs with commas (,). You can specify a maximum of 10 IDs.</li>
+     * <li><p>When AlertUnit (alert recipient) is set to OWNER (node owner), pass an empty value.</p>
+     * </li>
+     * <li><p>When AlertUnit (alert recipient) is set to OTHER (specified user), pass the Alibaba Cloud UIDs of the specified users. Separate multiple Alibaba Cloud UIDs with commas (,). A maximum of 10 UIDs are supported.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +47,7 @@ public class CreateRemindRequest extends TeaModel {
     public String alertTargets;
 
     /**
-     * <p>The recipient of the alert. Valid values: OWNER and OTHER. The value OWNER indicates the node owner. The value OTHER indicates a specified user.</p>
+     * <p>The granularity of the alert recipient. Valid values: OWNER (node owner) and OTHER (specified user).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +57,7 @@ public class CreateRemindRequest extends TeaModel {
     public String alertUnit;
 
     /**
-     * <p>The ID of the baseline to which the custom alert rule is applied. This parameter takes effect when the RemindUnit parameter is set to BASELINE. You can specify multiple IDs. Separate multiple IDs with commas (,). A maximum of five baselines can be specified for a custom alert rule.</p>
+     * <p>The IDs of the baselines to monitor when RemindUnit (object type) is set to BASELINE (baseline). Separate multiple IDs with commas (,). A maximum of 5 baselines can be monitored by a single rule.</p>
      * 
      * <strong>example:</strong>
      * <p>1,2,3</p>
@@ -62,7 +66,7 @@ public class CreateRemindRequest extends TeaModel {
     public String baselineIds;
 
     /**
-     * <p>The ID of the workflow to which the custom alert rule is applied. This parameter takes effect when the RemindUnit parameter is set to BIZPROCESS. You can specify multiple IDs. Separate multiple IDs with commas (,). A maximum of five workflows can be specified for a custom alert rule.</p>
+     * <p>The IDs of the business processes to monitor when RemindUnit (object type) is set to BIZPROCESS (business process). Separate multiple business process IDs with commas (,). A maximum of 5 business processes can be monitored by a single rule.</p>
      * 
      * <strong>example:</strong>
      * <p>1,2,3</p>
@@ -71,13 +75,18 @@ public class CreateRemindRequest extends TeaModel {
     public String bizProcessIds;
 
     /**
-     * <p>The details of the conditions that trigger an alert.</p>
+     * <p>The descriptions for different trigger conditions are as follows:</p>
      * <ul>
-     * <li>If the RemindType parameter is set to FINISHED, leave this parameter empty.</li>
-     * <li>If the RemindType parameter is set to UNFINISHED, configure this parameter as key-value pairs. Example: {&quot;hour&quot;:23,&quot;minu&quot;:59}. Valid values of hour: [0,47]. Valid values of minu: [0,59].</li>
-     * <li>If the RemindType parameter is set to ERROR, leave this parameter empty.</li>
-     * <li>If the RemindType parameter is set to CYCLE_UNFINISHED, configure this parameter as key-value pairs. Example: {&quot;1&quot;:&quot;05:50&quot;,&quot;2&quot;:&quot;06:50&quot;,&quot;3&quot;:&quot;07:50&quot;,&quot;4&quot;:&quot;08:50&quot;,&quot;5&quot;:&quot;09:50&quot;,&quot;6&quot;:&quot;10:50&quot;,&quot;7&quot;:&quot;11:50&quot;,&quot;8&quot;:&quot;12:50&quot;,&quot;9&quot;:&quot;13:50&quot;,&quot;10&quot;:&quot;14:50&quot;,&quot;11&quot;:&quot;15:50&quot;,&quot;12&quot;:&quot;16:50&quot;,&quot;13&quot;:&quot;17:50&quot;,&quot;14&quot;:&quot;18:50&quot;,&quot;15&quot;:&quot;19:50&quot;,&quot;16&quot;:&quot;20:50&quot;,&quot;17&quot;:&quot;21:50&quot;,&quot;18&quot;:&quot;22:50&quot;,&quot;19&quot;:&quot;23:50&quot;,&quot;20&quot;:&quot;24:50&quot;,&quot;21&quot;:&quot;25:50&quot;}. The key indicates the ID of the cycle. Valid values: [1,288]. The value indicates the timeout period of the node that is running in the cycle. Specify the value in the hh:mm format. Valid values of hh: [0,47]. Valid values of mm: [0,59].</li>
-     * <li>If the RemindType parameter is set to TIMEOUT, set this parameter to the timeout period. Unit: seconds. Example: 1800. This value indicates that an alert is reported if the node has run for more than 30 minutes.</li>
+     * <li><p>When RemindType (trigger condition) is set to FINISHED (completed), pass an empty value.</p>
+     * </li>
+     * <li><p>When RemindType (trigger condition) is set to UNFINISHED (not completed), pass parameter in the format of {&quot;hour&quot;:23,&quot;minu&quot;:59}. Valid values of hour: [0,47\]. Valid values of minu: [0,59\].</p>
+     * </li>
+     * <li><p>When RemindType (trigger condition) is set to ERROR (error), pass an empty value.</p>
+     * </li>
+     * <li><p>When RemindType (trigger condition) is set to CYCLE_UNFINISHED (cycle not completed), pass parameter in the format of {&quot;1&quot;:&quot;05:50&quot;,&quot;2&quot;:&quot;06:50&quot;,&quot;3&quot;:&quot;07:50&quot;,&quot;4&quot;:&quot;08:50&quot;,&quot;5&quot;:&quot;09:50&quot;,&quot;6&quot;:&quot;10:50&quot;,&quot;7&quot;:&quot;11:50&quot;,&quot;8&quot;:&quot;12:50&quot;,&quot;9&quot;:&quot;13:50&quot;,&quot;10&quot;:&quot;14:50&quot;,&quot;11&quot;:&quot;15:50&quot;,&quot;12&quot;:&quot;16:50&quot;,&quot;13&quot;:&quot;17:50&quot;,&quot;14&quot;:&quot;18:50&quot;,&quot;15&quot;:&quot;19:50&quot;,&quot;16&quot;:&quot;20:50&quot;,&quot;17&quot;:&quot;21:50&quot;,&quot;18&quot;:&quot;22:50&quot;,&quot;19&quot;:&quot;23:50&quot;,&quot;20&quot;:&quot;24:50&quot;,&quot;21&quot;:&quot;25:50&quot;}. The key in the JSON character string is the cycle number. Valid values: [1,288\]. The value is the not-completed time for the corresponding cycle, in the hh:mm format. Valid values of hh: [0,47\]. Valid values of mm: [0,59\].</p>
+     * </li>
+     * <li><p>When RemindType (trigger condition) is set to TIMEOUT (running timeout), pass parameter as a value such as 1800, in seconds. This means that an alert is triggered if the running time exceeds 30 minutes from the start of execution.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -87,7 +96,7 @@ public class CreateRemindRequest extends TeaModel {
     public String detail;
 
     /**
-     * <p>The end time of the quiet hours. Specify the time in the hh:mm format. Valid values of hh: [0,23]. Valid values of mm: [0,59].</p>
+     * <p>The end time of the do-not-disturb period, in the hh:mm format. Valid values of hh: [0,23\]. Valid values of mm: [0,59\].</p>
      * 
      * <strong>example:</strong>
      * <p>08:00</p>
@@ -96,7 +105,7 @@ public class CreateRemindRequest extends TeaModel {
     public String dndEnd;
 
     /**
-     * <p>The maximum number of alerts. Valid values: 1 to 10. Default value: 3.</p>
+     * <p>The maximum number of alerts. Minimum value: 1. Maximum value: 10. Default value: 3.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -105,7 +114,7 @@ public class CreateRemindRequest extends TeaModel {
     public Integer maxAlertTimes;
 
     /**
-     * <p>The ID of the node to which the custom alert rule is applied. This parameter takes effect when the RemindUnit parameter is set to NODE. You can specify multiple IDs. Separate multiple IDs with commas (,). A maximum of 50 nodes can be specified for a custom alert rule.</p>
+     * <p>The IDs of the nodes to monitor when RemindUnit (object type) is set to NODE (node). Separate multiple IDs with commas (,). A maximum of 50 nodes can be monitored by a single rule.</p>
      * 
      * <strong>example:</strong>
      * <p>1,2,3</p>
@@ -114,7 +123,7 @@ public class CreateRemindRequest extends TeaModel {
     public String nodeIds;
 
     /**
-     * <p>The ID of the workspace to which the custom alert rule is applied. This parameter takes effect when the RemindUnit parameter is set to PROJECT. You can specify only one workspace for a custom alert rule.</p>
+     * <p>The ID of the workspace to monitor when RemindUnit (object type) is set to PROJECT (workspace). A single rule can monitor only one workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>9527</p>
@@ -123,7 +132,7 @@ public class CreateRemindRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The name of the custom alert rule. The name cannot exceed 128 characters in length.</p>
+     * <p>The name of the custom rule. The name can be up to 128 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -133,7 +142,7 @@ public class CreateRemindRequest extends TeaModel {
     public String remindName;
 
     /**
-     * <p>The conditions that trigger an alert. Valid values: FINISHED, UNFINISHED, ERROR, CYCLE_UNFINISHED, and TIMEOUT.</p>
+     * <p>The trigger condition. Valid values: FINISHED (completed), UNFINISHED (not completed), ERROR (error), CYCLE_UNFINISHED (cycle not completed), and TIMEOUT (running timeout).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -143,7 +152,7 @@ public class CreateRemindRequest extends TeaModel {
     public String remindType;
 
     /**
-     * <p>The type of the object to which the custom alert rule is applied. Valid values: NODE, BASELINE, PROJECT, and BIZPROCESS. The value NODE indicates a node. The value BASELINE indicates a baseline. The value PROJECT indicates a workspace. The value BIZPROCESS indicates a workflow.</p>
+     * <p>The type of the object. Valid values: NODE (node), BASELINE (baseline), PROJECT (workspace), and BIZPROCESS (business process).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -153,7 +162,7 @@ public class CreateRemindRequest extends TeaModel {
     public String remindUnit;
 
     /**
-     * <p>The webhook URL of the DingTalk chatbot. You can specify multiple webhook URLs. Separate multiple webhook URLs with commas (,).</p>
+     * <p>The webhook URLs of DingTalk chatbots. Separate multiple webhook URLs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>******************************</p>
@@ -162,8 +171,9 @@ public class CreateRemindRequest extends TeaModel {
     public String robotUrls;
 
     /**
-     * <p>The webhook URL of the WeCom or Lark chatbot. You can specify multiple webhook URLs. Separate multiple webhook URLs with commas (,). You must specify WEBHOOKS for AlertMethods.</p>
-     * <p>Only DataWorks Enterprise Edition supports this parameter. The webhook URL-based alerting feature is supported in the following regions: China (Shanghai), China (Chengdu), China (Zhangjiakou), China (Beijing), China (Hangzhou), China (Shenzhen), China (Hong Kong), Germany (Frankfurt), and Singapore.</p>
+     * <p>The webhook URLs of WeCom or Lark chatbots. Separate multiple webhook URLs with commas (,). The alertMethods parameter must include the WEBHOOKS alert method.</p>
+     * <p>Only DataWorks Enterprise Edition is supported.
+     * Available regions: China (Shanghai), China (Chengdu), China (Zhangjiakou), China (Beijing), China (Hangzhou), China (Shenzhen), Hong Kong (China), Germany (Frankfurt), and Singapore.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://open.feishu.cn/open-apis/bot/v2/hook/">https://open.feishu.cn/open-apis/bot/v2/hook/</a>*******</p>

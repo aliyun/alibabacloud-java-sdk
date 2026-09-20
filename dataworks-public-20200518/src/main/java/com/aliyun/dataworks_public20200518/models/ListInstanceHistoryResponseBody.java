@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListInstanceHistoryResponseBody extends TeaModel {
     /**
-     * <p>The instances.</p>
+     * <p>The list of instances.</p>
      */
     @NameInMap("Instances")
     public java.util.List<ListInstanceHistoryResponseBodyInstances> instances;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>E6F0DBDD-5AD****</p>
@@ -20,12 +20,10 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +63,7 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
 
     public static class ListInstanceHistoryResponseBodyInstances extends TeaModel {
         /**
-         * <p>The time when the instance started to be run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the instance started running, in timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>1590416703313</p>
@@ -74,7 +72,8 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
         public Long beginRunningTime;
 
         /**
-         * <p>The time when the instance started to wait for resources.</p>
+         * <p>The time when the instance started waiting for resources.</p>
+         * <p>The value is a 13-digit number, such as <code>1590416703313</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1590416703313</p>
@@ -83,7 +82,8 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
         public Long beginWaitResTime;
 
         /**
-         * <p>The time when the instance started to wait to be scheduled.</p>
+         * <p>The time when the instance started waiting for scheduling.</p>
+         * <p>The value is a 13-digit number, such as <code>1590416703313</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1590416703313</p>
@@ -92,7 +92,8 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
         public Long beginWaitTimeTime;
 
         /**
-         * <p>The data timestamp of the instance. In most cases, the value is one day before the time when the instance was run.</p>
+         * <p>The business date on which the scheduled node was run. This value is typically one day before the run time of the node.</p>
+         * <p>The value is a 13-digit number, such as <code>1590336000000</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1590336000000</p>
@@ -101,7 +102,8 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
         public Long bizdate;
 
         /**
-         * <p>The time when the instance was generated.</p>
+         * <p>The time when the instance was created.</p>
+         * <p>The value is a 13-digit number, such as <code>1590416703313</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1590416703313</p>
@@ -110,7 +112,7 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The time when the node started to be run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The scheduled run time of the node, in timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>1590422400000</p>
@@ -119,7 +121,7 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
         public Long cycTime;
 
         /**
-         * <p>The workflow ID.</p>
+         * <p>The ID of the workflow.</p>
          * 
          * <strong>example:</strong>
          * <p>33845</p>
@@ -128,12 +130,10 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
         public Long dagId;
 
         /**
-         * <p>Indicates whether the instance is associated with a monitoring rule in Data Quality. Valid values:</p>
+         * <p>The Data Quality Check (DQC) type. Valid values:</p>
          * <ul>
-         * <li><p>0: The instance is associated with a monitoring rule in Data Quality.</p>
-         * </li>
-         * <li><p>1: The instance is not associated with a monitoring rule in Data Quality.</p>
-         * </li>
+         * <li>0: associated with DQC.</li>
+         * <li>1: not associated with DQC.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
         public String dagType;
 
         /**
-         * <p>The error message. This parameter is deprecated. You can call the GetInstanceLog operation to query the error information related to the node.</p>
+         * <p><strong>[Deprecated]</strong> The error message returned when the instance failed to run. This field is deprecated. You can call the GetInstanceLog operation to obtain the error information of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>error message</p>
@@ -152,7 +152,7 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The time when the running of the node was complete. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the scheduled node finished running, in timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>1590416703313</p>
@@ -161,7 +161,7 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
         public Long finishTime;
 
         /**
-         * <p>The historical record number of the instance.</p>
+         * <p>The history archive ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -170,7 +170,7 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
         public Long instanceHistoryId;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -179,7 +179,8 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
         public Long instanceId;
 
         /**
-         * <p>The time when the node was last modified.</p>
+         * <p>The time when the scheduled node was last modified.</p>
+         * <p>The value is a 13-digit number, such as <code>1590416703313</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1590416703313</p>
@@ -188,7 +189,7 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The node ID.</p>
+         * <p>The ID of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>33115</p>
@@ -206,24 +207,16 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>The status of the node that generates the instance. Valid values:</p>
+         * <p>The status of the node. Valid values:</p>
          * <ul>
-         * <li><p>NOT_RUN: The node is not run.</p>
-         * </li>
-         * <li><p>WAIT_TIME: The node is waiting for the scheduling time to arrive.</p>
-         * </li>
-         * <li><p>WAIT_RESOURCE: The node is waiting for resources.</p>
-         * </li>
-         * <li><p>RUNNING: The node is running.</p>
-         * </li>
-         * <li><p>CHECKING: Data quality is being checked for the node.</p>
-         * </li>
-         * <li><p>CHECKING_CONDITION: Branch conditions are being checked for the node.</p>
-         * </li>
-         * <li><p>FAILURE: The node fails to be run.</p>
-         * </li>
-         * <li><p>SUCCESS: The node is successfully run.</p>
-         * </li>
+         * <li>NOT_RUN: The node is not run.</li>
+         * <li>WAIT_TIME: The node is waiting for the scheduled time (DueTime or CycTime) to arrive.</li>
+         * <li>WAIT_RESOURCE: The node is waiting for resources.</li>
+         * <li>RUNNING: The node is running.</li>
+         * <li>CHECKING: The node is sent to Data Quality for data verification.</li>
+         * <li>CHECKING_CONDITION: The node is undergoing branch condition verification.</li>
+         * <li>FAILURE: The node failed to run.</li>
+         * <li>SUCCESS: The node ran successfully.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -233,24 +226,16 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The scheduling type of the node. Valid values:</p>
+         * <p>The scheduling type of the node instance. Valid values:</p>
          * <ul>
-         * <li><p>NORMAL(0): The node is an auto triggered node. The scheduling system regularly runs the node.</p>
-         * </li>
-         * <li><p>MANUAL(1): The node is a manually triggered node. The scheduling system does not regularly run the node.</p>
-         * </li>
-         * <li><p>PAUSE(2): The node is a frozen node. The scheduling system regularly runs the node but sets the status of the node to failed when the scheduling system starts to run the node.</p>
-         * </li>
-         * <li><p>SKIP(3): The node is a dry-run node. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.</p>
-         * </li>
-         * <li><p>SKIP_UNCHOOSE(4): The node is an unselected node in a temporary workflow. This type of node exists only in temporary workflows. The scheduling system sets the status of the node to successful when the scheduling system starts to run the node.</p>
-         * </li>
-         * <li><p>SKIP_CYCLE(5): The node is a node that is scheduled by the week or month and is waiting for the scheduling time to arrive. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.</p>
-         * </li>
-         * <li><p>CONDITION_UNCHOOSE(6): The node is not selected by its ancestor branch node and is run as a dry-run node.</p>
-         * </li>
-         * <li><p>REALTIME_DEPRECATED(7): The node has instances that are generated in real time but deprecated. The scheduling system sets the status of the node to successful.</p>
-         * </li>
+         * <li>NORMAL(0): A normal scheduling node. The node is scheduled on a daily basis.</li>
+         * <li>MANUAL(1): A manual node. The node is not scheduled on a daily basis.</li>
+         * <li>PAUSE(2): A frozen node. The node is scheduled on a daily basis, but is set to failed when scheduling starts.</li>
+         * <li>SKIP(3): A dry-run node. The node is scheduled on a daily basis, but is set to successful when scheduling starts.</li>
+         * <li>SKIP_UNCHOOSE(4): A node that is not selected in a temporary workflow. This type of node exists only in temporary workflows and is set to successful when scheduling starts.</li>
+         * <li>SKIP_CYCLE(5): A weekly or monthly node that has not reached its run cycle. The node is scheduled on a daily basis, but is set to successful when scheduling starts.</li>
+         * <li>CONDITION_UNCHOOSE(6): A downstream node that is not selected by an upstream branch (IF) node. The node is directly set to dry-run.</li>
+         * <li>REALTIME_DEPRECATED(7): An expired periodic instance generated in real time. This type of node is directly set to successful.</li>
          * </ul>
          * 
          * <strong>example:</strong>

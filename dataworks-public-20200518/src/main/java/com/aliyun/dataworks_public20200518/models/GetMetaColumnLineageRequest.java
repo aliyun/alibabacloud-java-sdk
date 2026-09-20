@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMetaColumnLineageRequest extends TeaModel {
     /**
-     * <p>The ID of the E-MapReduce (EMR) cluster. Configure this parameter only when you query data in an EMR compute engine instance.</p>
+     * <p>The ID of the EMR cluster. This parameter is required for EMR scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -32,7 +32,11 @@ public class GetMetaColumnLineageRequest extends TeaModel {
     public String columnName;
 
     /**
-     * <p>The type of the data source. Valid values: odps and emr.</p>
+     * <p>The data source type. Valid values:</p>
+     * <ul>
+     * <li>odps</li>
+     * <li>emr</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>emr</p>
@@ -50,7 +54,11 @@ public class GetMetaColumnLineageRequest extends TeaModel {
     public String databaseName;
 
     /**
-     * <p>Specifies whether to query the ancestor or descendant lineage of the field. The value up indicates the ancestor lineage. The value down indicates the descendant lineage.</p>
+     * <p>The direction of the field lineage. Valid values:</p>
+     * <ul>
+     * <li>up: upstream.</li>
+     * <li>down: downstream.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +68,7 @@ public class GetMetaColumnLineageRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number. Used for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -69,7 +77,7 @@ public class GetMetaColumnLineageRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -78,7 +86,7 @@ public class GetMetaColumnLineageRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the metatable.</p>
+     * <p>The name of the table.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>

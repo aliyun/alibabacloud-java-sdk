@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProjectsRequest extends TeaModel {
     /**
-     * <p>The page number. Valid values: 1 to 100.</p>
+     * <p>The page number. Minimum value: 1. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListProjectsRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The tags to add to the workspace.</p>
+     * <p>The list of tags bound to the workspace.</p>
      */
     @NameInMap("Tags")
     public java.util.List<ListProjectsRequestTags> tags;
@@ -76,7 +76,7 @@ public class ListProjectsRequest extends TeaModel {
 
     public static class ListProjectsRequestTags extends TeaModel {
         /**
-         * <p>The key of tag N to add to the workspace.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key</p>
@@ -85,7 +85,7 @@ public class ListProjectsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the workspace.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value</p>

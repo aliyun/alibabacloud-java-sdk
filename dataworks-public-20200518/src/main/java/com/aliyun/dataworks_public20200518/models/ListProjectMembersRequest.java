@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProjectMembersRequest extends TeaModel {
     /**
-     * <p>The page number. Valid values: 1 to 30. Default value: 1.</p>
+     * <p>The page number. Default value: 1. Minimum value: 1. Maximum value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

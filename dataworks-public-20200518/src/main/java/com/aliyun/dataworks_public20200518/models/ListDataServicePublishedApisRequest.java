@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataServicePublishedApisRequest extends TeaModel {
     /**
-     * <p>The keyword in API names. The keyword is used to search for the APIs whose names contain the keyword.</p>
+     * <p>The keyword used to filter APIs by name. APIs whose names contain this keyword are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>My API name</p>
@@ -14,7 +14,7 @@ public class ListDataServicePublishedApisRequest extends TeaModel {
     public String apiNameKeyword;
 
     /**
-     * <p>The keyword in API paths. The keyword is used to search for the APIs whose paths contain the keyword.</p>
+     * <p>The keyword used to filter APIs by path. APIs whose paths contain this keyword are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>/test/</p>
@@ -23,7 +23,7 @@ public class ListDataServicePublishedApisRequest extends TeaModel {
     public String apiPathKeyword;
 
     /**
-     * <p>The ID of the Alibaba Cloud account used by the creator of the APIs. The ID is used to search for the APIs created by the creator.</p>
+     * <p>The Alibaba Cloud ID of the API creator. Only APIs created by this user are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>
@@ -32,7 +32,7 @@ public class ListDataServicePublishedApisRequest extends TeaModel {
     public String creatorId;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class ListDataServicePublishedApisRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default is 10, and the maximum is 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,7 +50,7 @@ public class ListDataServicePublishedApisRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The workspace ID.</p>
+     * <p>The ID of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class ListDataServicePublishedApisRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.</p>
+     * <p>The tenant ID. To obtain the tenant ID, log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, go to the DataStudio page, click your username in the upper-right corner, and select Menu &gt; User Info.</p>
      * 
      * <strong>example:</strong>
      * <p>10001</p>

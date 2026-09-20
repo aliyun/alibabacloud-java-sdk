@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRemindResponseBody extends TeaModel {
     /**
-     * <p>The ID of the custom alert rule.</p>
+     * <p>The ID of the custom rule returned after the custom monitoring rule is created.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>
@@ -41,7 +41,7 @@ public class CreateRemindResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMetaTableLineageRequest extends TeaModel {
     /**
-     * <p>The ID of the E-MapReduce (EMR) cluster. Configure this parameter only if you want to query the lineage of an EMR table.</p>
+     * <p>The ID of the EMR cluster. This parameter is required for EMR scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -14,7 +14,7 @@ public class GetMetaTableLineageRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The type of the data source. Valid values: odps and emr.</p>
+     * <p>The data source type. Valid values: odps and emr.</p>
      * 
      * <strong>example:</strong>
      * <p>emr</p>
@@ -32,7 +32,11 @@ public class GetMetaTableLineageRequest extends TeaModel {
     public String databaseName;
 
     /**
-     * <p>Specifies the ancestor or descendant lineage that you want to query for a field. Valid values: up and down. The value up indicates the ancestor lineage. The value down indicates the descendant lineage.</p>
+     * <p>The direction of the lineage. Valid values:</p>
+     * <ul>
+     * <li>up: upstream.</li>
+     * <li>down: downstream.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +46,8 @@ public class GetMetaTableLineageRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The logic of paging. Configure this parameter based on the value of the response parameter NextPrimaryKey when the value of the response parameter HasNext is true in the previous request.</p>
+     * <p>The pagination logic.</p>
+     * <p>If HasNext is set to true and NextPrimaryKey is not empty in the last response, set this parameter to the value of NextPrimaryKey in the next request.</p>
      * 
      * <strong>example:</strong>
      * <p>next_primary_key</p>

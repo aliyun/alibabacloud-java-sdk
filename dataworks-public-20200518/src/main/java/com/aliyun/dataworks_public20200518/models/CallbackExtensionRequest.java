@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CallbackExtensionRequest extends TeaModel {
     /**
-     * <p>The check message of the extension point event. If CheckResult is set to FAIL, you must provide the failure cause.</p>
+     * <p>The reason for the failure when CheckResult is set to FAIL.</p>
      * 
      * <strong>example:</strong>
      * <p>The xxx rule is hit. Modify it and try again.</p>
@@ -14,11 +14,11 @@ public class CallbackExtensionRequest extends TeaModel {
     public String checkMessage;
 
     /**
-     * <p>The check status of the extension point event. Valid values:</p>
+     * <p>The check status of the extension program for the extension point event. Valid values:</p>
      * <ul>
-     * <li>OK: The event passes the check.</li>
-     * <li>FAIL: The event fails to pass the check. You must check and handle the reported error at the earliest opportunity to ensure that your program is run as expected.</li>
-     * <li>WARN: The event passes the check, but an alert is reported.</li>
+     * <li>OK: The extension program check for the extension point event passed.</li>
+     * <li>FAIL: The extension program check for the extension point event failed. View and resolve the error promptly to avoid affecting the normal execution of subsequent programs.</li>
+     * <li>WARN: The extension program check for the extension point event passed, but warnings exist.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -29,21 +29,22 @@ public class CallbackExtensionRequest extends TeaModel {
     public String checkResult;
 
     /**
-     * <p>The unique code of the extension.</p>
+     * <p>The unique code of the extension program.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>8abcb91f-d266-4073-b907-2ed670378ed1</p>
+     * <p>8abcb91f-d266-4073-b907-2****</p>
      */
     @NameInMap("ExtensionCode")
     public String extensionCode;
 
     /**
-     * <p>The message ID in DataWorks OpenEvent. You can obtain the ID from a received message when an extension point event is triggered.</p>
+     * <p>The message ID of the DataWorks open message. After an extension point event is triggered, you can obtain the message ID from the received event message.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about the message format, see <a href="https://help.aliyun.com/document_detail/215367.html">Message format</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>03400b03-b721-4c34-8727-2d6884077091</p>
+     * <p>034********091</p>
      */
     @NameInMap("MessageId")
     public String messageId;

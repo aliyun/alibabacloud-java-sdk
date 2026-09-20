@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBaselineStatusesRequest extends TeaModel {
     /**
-     * <p>The type of the baseline. Valid values: DAILY and HOURLY. The value DAILY indicates that the baseline is scheduled by day. The value HOURLY indicates that the baseline is scheduled by hour. Multiple types are separated by commas (,).</p>
+     * <p>The type of the baseline. Valid values: DAILY and HOURLY. Separate multiple values with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>DAILY,HOURLY</p>
@@ -14,7 +14,7 @@ public class ListBaselineStatusesRequest extends TeaModel {
     public String baselineTypes;
 
     /**
-     * <p>The data timestamp of the baseline instance. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The business date in UTC format (yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListBaselineStatusesRequest extends TeaModel {
     public String bizdate;
 
     /**
-     * <p>The status of the baseline instance. Valid values: UNFINISH and FINISH. The value UNFINISH indicates that the baseline instance is still running. The value FINISH indicates that the baseline instance finishes running. Multiple states are separated by commas (,).</p>
+     * <p>The completion status of the baseline instance. Valid values: UNFINISH and FINISH. Separate multiple values with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>FINISH,UNFINISH</p>
@@ -33,7 +33,7 @@ public class ListBaselineStatusesRequest extends TeaModel {
     public String finishStatus;
 
     /**
-     * <p>The ID of the Alibaba Cloud account used by the baseline owner.</p>
+     * <p>The Alibaba Cloud UID of the baseline owner.</p>
      * 
      * <strong>example:</strong>
      * <p>9527952795****</p>
@@ -42,7 +42,7 @@ public class ListBaselineStatusesRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The number of the page to return. Valid values: 1 to 30. Default value: 1.</p>
+     * <p>The page number. Default value: 1. Minimum value: 1. Maximum value: 30.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class ListBaselineStatusesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class ListBaselineStatusesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The priority of the baseline. Valid values: 1, 3, 5, 7, and 8. Multiple priorities are separated by commas (,).</p>
+     * <p>The priority of the baseline. Valid values: 1, 3, 5, 7, and 8. Separate multiple priorities with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>1,3,5,7,8</p>
@@ -71,16 +71,16 @@ public class ListBaselineStatusesRequest extends TeaModel {
     public String priority;
 
     /**
-     * <p>The keyword of the baseline name used to search for the baseline.</p>
+     * <p>The search keyword. You can search by baseline name or baseline ID. If you enter an hourly baseline ID, all instances of that hourly baseline are returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>Keyword</p>
+     * <p>keyword</p>
      */
     @NameInMap("SearchText")
     public String searchText;
 
     /**
-     * <p>The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes finish running before the alerting time. The value DANGEROUS indicates that nodes are still running after the alerting time but before the committed completion time. The value OVER indicates that nodes are still running after the committed completion time. Multiple states are separated by commas (,).</p>
+     * <p>The status of the baseline. Valid values: ERROR, SAFE, DANGROUS, and OVER. Separate multiple values with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>SAFE,DANGROUS,OVER</p>
@@ -89,7 +89,7 @@ public class ListBaselineStatusesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the event.</p>
+     * <p>The ID of the related event.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>

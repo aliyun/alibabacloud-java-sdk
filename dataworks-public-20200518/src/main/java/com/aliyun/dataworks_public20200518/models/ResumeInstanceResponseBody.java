@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResumeInstanceResponseBody extends TeaModel {
     /**
-     * <p>The result returned.</p>
+     * <p>The result returned after the ResumeInstance operation is called.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class ResumeInstanceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>E6F0DBDD-5AD****</p>
@@ -50,7 +50,7 @@ public class ResumeInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

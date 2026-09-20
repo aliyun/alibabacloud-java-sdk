@@ -5,7 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateQualityFollowerRequest extends TeaModel {
     /**
-     * <p>The alert method. Valid values: 1 (email), 2 (email and SMS), 4 (DingTalk Group Bot), 5 (DingTalk Group Bot with an @all message), 6 (Lark), 7 (WeCom), 8 (webhook), and 9 (Phone Alert).</p>
+     * <p>The notification method. Valid values:</p>
+     * <ul>
+     * <li>1: email.</li>
+     * <li>2: email and text message.</li>
+     * <li>4: DingTalk chatbot.</li>
+     * <li>5: DingTalk chatbot @ALL.</li>
+     * <li>6: Lark.</li>
+     * <li>7: WeCom.</li>
+     * <li>8: WEBHOOK.</li>
+     * <li>9: phone call alert.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +35,7 @@ public class CreateQualityFollowerRequest extends TeaModel {
     public Long entityId;
 
     /**
-     * <p>The Alibaba Cloud account ID of the follower.</p>
+     * <p>The account ID of the subscriber.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +45,7 @@ public class CreateQualityFollowerRequest extends TeaModel {
     public String follower;
 
     /**
-     * <p>The ID of the DataWorks workspace. To find the workspace ID, log in to the DataWorks console.</p>
+     * <p>The ID of the DataWorks workspace. You can obtain the ID from the DataWorks console.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -44,7 +54,7 @@ public class CreateQualityFollowerRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The name of the compute engine or data source.</p>
+     * <p>The name of the engine or data source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

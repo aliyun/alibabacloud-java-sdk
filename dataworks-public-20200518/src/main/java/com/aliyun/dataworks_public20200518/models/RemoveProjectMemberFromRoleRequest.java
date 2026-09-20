@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveProjectMemberFromRoleRequest extends TeaModel {
     /**
-     * <p>The DataWorks workspace ID.</p>
+     * <p>The ID of the DataWorks workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,17 +15,18 @@ public class RemoveProjectMemberFromRoleRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The code of the role in the DataWorks workspace. You can call the ListProjectRoles operation to query the codes of all roles in a DataWorks workspace. Valid values:</p>
+     * <p>The role code of the DataWorks workspace. You can invoke the ListProjectRoles operation to obtain the list of role codes for a project.
+     * The default preset roles are as follows:</p>
      * <ul>
-     * <li>role_project_owner: workspace owner</li>
-     * <li>role_project_admin: workspace administrator</li>
-     * <li>role_project_dev: developer</li>
-     * <li>role_project_pe: O\&amp;M engineer</li>
-     * <li>role_project_deploy: deployment expert</li>
-     * <li>role_project_guest: visitor</li>
-     * <li>role_project_security: security administrator</li>
-     * <li>role_project_tester: experiencer</li>
-     * <li>role_project_erd: model designer</li>
+     * <li>role_project_owner: Project owner.</li>
+     * <li>role_project_admin: Storage management administrator.</li>
+     * <li>role_project_dev: Developer.</li>
+     * <li>role_project_pe: O&amp;M engineer.</li>
+     * <li>role_project_deploy: Deployment.</li>
+     * <li>role_project_guest: Visitor.</li>
+     * <li>role_project_security: Security administrator.</li>
+     * <li>role_project_tester: Experience user.</li>
+     * <li>role_project_erd: Model designer.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -36,7 +37,7 @@ public class RemoveProjectMemberFromRoleRequest extends TeaModel {
     public String roleCode;
 
     /**
-     * <p>The user ID.</p>
+     * <p>The ID of the user.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

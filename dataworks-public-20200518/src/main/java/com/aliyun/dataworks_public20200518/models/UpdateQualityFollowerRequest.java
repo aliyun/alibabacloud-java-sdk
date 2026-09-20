@@ -5,7 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateQualityFollowerRequest extends TeaModel {
     /**
-     * <p>The notification method. Valid values: 1 (email), 2 (email and SMS), 4 (DingTalk group chatbot), 5 (DingTalk group chatbot with an @all reminder), 6 (Lark), 7 (WeCom), 8 (webhook), and 9 (phone call).</p>
+     * <p>The notification method. Valid values:</p>
+     * <ul>
+     * <li>1: email</li>
+     * <li>2: email and SMS</li>
+     * <li>4: DingTalk chatbot</li>
+     * <li>5: DingTalk chatbot @ALL</li>
+     * <li>6: Lark</li>
+     * <li>7: WeCom</li>
+     * <li>8: WEBHOOK</li>
+     * <li>9: phone call alert</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +35,7 @@ public class UpdateQualityFollowerRequest extends TeaModel {
     public String follower;
 
     /**
-     * <p>The ID of the subscription.</p>
+     * <p>The ID of the subscription relationship.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +45,7 @@ public class UpdateQualityFollowerRequest extends TeaModel {
     public Long followerId;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console to obtain the ID.</p>
+     * <p>The ID of the DataWorks workspace. You can obtain the ID from the DataWorks console.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>

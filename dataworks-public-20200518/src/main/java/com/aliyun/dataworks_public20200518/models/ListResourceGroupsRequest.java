@@ -7,8 +7,8 @@ public class ListResourceGroupsRequest extends TeaModel {
     /**
      * <p>The category of the resource group. Valid values:</p>
      * <ul>
-     * <li>default (default): shared resource group</li>
-     * <li>single: exclusive resource group</li>
+     * <li>default: public resource group.</li>
+     * <li>single: dedicated resource group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ListResourceGroupsRequest extends TeaModel {
     public String bizExtKey;
 
     /**
-     * <p>The keyword that is used for fuzzy match by resource group name and identifier.</p>
+     * <p>The keyword. Used for fuzzy matching of resource group names and resource group identifiers.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -27,18 +27,18 @@ public class ListResourceGroupsRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The type of the resource group that you want to query. Valid values:</p>
+     * <p>The type ID of the resource group to query. Valid values:</p>
      * <ul>
      * <li>0: DataWorks</li>
      * <li>1: scheduling</li>
      * <li>2: MaxCompute</li>
-     * <li>3: Platform for AI (PAI)</li>
-     * <li>4: Data Integration</li>
-     * <li>7: exclusive resource group for scheduling (An ID is generated for the purchased resource when you purchase an exclusive resource group for scheduling.)</li>
-     * <li>9: DataService Studio</li>
-     * <li>Default value: 1</li>
+     * <li>3: PAI</li>
+     * <li>4: data integration</li>
+     * <li>7: the purchase resource ID generated when you purchase a dedicated schedule resource group</li>
+     * <li>9: dataService</li>
+     * <li>Default value: 1 (scheduling).</li>
      * </ul>
-     * <p>If the value indicates a compute engine, the resource groups to query are the ones that were created when you purchased the compute engine.</p>
+     * <p>When the value represents an engine, the returned resource group list contains the resource groups created when you purchased that type of engine.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -56,7 +56,7 @@ public class ListResourceGroupsRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<ListResourceGroupsRequestTags> tags;

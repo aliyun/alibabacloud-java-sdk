@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUdfFileRequest extends TeaModel {
     /**
-     * <p>The name of the class in which the function is defined. This parameter corresponds to the Class Name parameter in the Register Function section of the configuration tab of the function in the DataWorks console.</p>
+     * <p>The name of the class where the function is defined, which corresponds to the Class Name field in the Create Function form.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String className;
 
     /**
-     * <p>The syntax used for calling the function. This parameter corresponds to the Expression Syntax parameter in the Register Function section of the configuration tab of the function in the DataWorks console.</p>
+     * <p>The command format for calling the function, which corresponds to the Command Format field in the Create Function form.</p>
      * 
      * <strong>example:</strong>
      * <p>StringConcat(String... substrs)</p>
@@ -24,7 +24,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String cmdDescription;
 
     /**
-     * <p>The example for calling the function. This parameter corresponds to the Example parameter in the Register Function section of the configuration tab of the function in the DataWorks console.</p>
+     * <p>The example of calling the function, which corresponds to the Example field in the Create Function form.</p>
      * 
      * <strong>example:</strong>
      * <p>StringConcat(\&quot;a\&quot;, \&quot;b\&quot;, \&quot;c\&quot;)</p>
@@ -33,7 +33,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String example;
 
     /**
-     * <p>The path of the folder in which the function file is stored.</p>
+     * <p>The path of the folder where the function file is stored.</p>
      * 
      * <strong>example:</strong>
      * <p>Business_process/First_Business_Process/function/string_processing_function</p>
@@ -42,7 +42,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String fileFolderPath;
 
     /**
-     * <p>The file ID.</p>
+     * <p>The ID of the file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,15 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The type of the function. Valid values: MATH, AGGREGATE, STRING, DATE, ANALYTIC, and OTHER. This parameter corresponds to the Function Type parameter in the Register Function section of the configuration tab of the function on the DataStudio page.</p>
+     * <p>The categorization of the function, which corresponds to the udf type field in the Create Function form. Valid values:</p>
+     * <ul>
+     * <li>MATH: mathematical operation function.</li>
+     * <li>AGGREGATE: aggregate functions.</li>
+     * <li>STRING: character string processing function.</li>
+     * <li>DATE: date processing function.</li>
+     * <li>ANALYTIC: window function.</li>
+     * <li>OTHER: other function.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,13 +70,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String functionType;
 
     /**
-     * <p>The description of the input parameters of the function. This parameter corresponds to the Parameter Description parameter in the Register Function section of the configuration tab of the function on the DataStudio page.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>ALL_ALLOWD</li>
-     * <li>FAILURE_ALLOWED</li>
-     * <li>ALL_DENIED</li>
-     * </ul>
+     * <p>The description of the function input parameters, which corresponds to the metric description field in the Create Function form.</p>
      * 
      * <strong>example:</strong>
      * <p>List of strings to be connected</p>
@@ -77,7 +79,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String parameterDescription;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can click the Workspace Manage icon in the upper-right corner of the DataStudio page to go to the Workspace Management page and view the workspace ID.</p>
+     * <p>The ID of the DataWorks workspace. You can click the small wrench icon in the upper-right corner of the page to go to the storage management page and view the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -86,8 +88,8 @@ public class UpdateUdfFileRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The unique identifier of the DataWorks workspace. You can click the identifier in the upper-left corner of the DataStudio page to switch to another workspace.</p>
-     * <p>You must specify either this parameter or ProjectId to determine the DataWorks workspace to which the operation is applied.</p>
+     * <p>The unique identifier of the DataWorks workspace, which is the English identifier displayed in the workspace switcher at the top of the DataStudio page.</p>
+     * <p>You must specify either this parameter or the ProjectId parameter to determine the DataWorks workspace for this API call.</p>
      * 
      * <strong>example:</strong>
      * <p>dw_project</p>
@@ -96,7 +98,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String projectIdentifier;
 
     /**
-     * <p>The names of the resources that are referenced by the function. This parameter corresponds to the Resources parameter in the Register Function section of the configuration tab of the function in the DataWorks console. Separate multiple resource names with commas (,).</p>
+     * <p>The list of resource names referenced by the function, separated by commas (,). This corresponds to the resources field in the Create Function form.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -106,7 +108,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String resources;
 
     /**
-     * <p>The description of the return value of the function. This parameter corresponds to the Return Value parameter in the Register Function section of the configuration tab of the function on the DataStudio page.</p>
+     * <p>The description of the function return value, which corresponds to the Return Value field in the Create Function form.</p>
      * 
      * <strong>example:</strong>
      * <p>New strings generated by concatenating all strings before and after the input order</p>
@@ -115,7 +117,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String returnValue;
 
     /**
-     * <p>The description of the function. This parameter corresponds to the Description parameter in the Register Function section of the configuration tab of the function on the DataStudio page.</p>
+     * <p>The description of the function purpose, which corresponds to the Description field in the Create Function form.</p>
      * 
      * <strong>example:</strong>
      * <p>Concatenate several strings to generate a new string</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
     /**
-     * <p>The APIs on which other users are granted the access permissions.</p>
+     * <p>The list of APIs authorized to other users.</p>
      */
     @NameInMap("Data")
     public ListDataServiceApiAuthoritiesResponseBodyData data;
@@ -38,7 +38,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. A unique identifier for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
@@ -47,10 +47,10 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
-     * <p>Boolean</p>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -110,7 +110,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
 
     public static class ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationListAuthorizationRecords extends TeaModel {
         /**
-         * <p>The time when the access permissions on the API were granted to other users.</p>
+         * <p>The authorization time, in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format (the example time zone is +0800).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-06-23T00:21:01+0800</p>
@@ -119,7 +119,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the API owner.</p>
+         * <p>The Alibaba Cloud ID of the API owner.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -128,7 +128,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         public String creatorId;
 
         /**
-         * <p>The end time of the validity period of the authorization.</p>
+         * <p>The end time of the authorization validity period, in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format (the example time zone is +0800).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-06-24T00:21:01+0800</p>
@@ -137,7 +137,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The ID of the workspace to which the access permissions on the API are granted.</p>
+         * <p>The workspace ID that has been granted the authorization.</p>
          * 
          * <strong>example:</strong>
          * <p>10004</p>
@@ -198,7 +198,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
          * <p>The name of the API.</p>
          * 
          * <strong>example:</strong>
-         * <p>My API name</p>
+         * <p>MyAPIName</p>
          */
         @NameInMap("ApiName")
         public String apiName;
@@ -213,7 +213,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         public String apiPath;
 
         /**
-         * <p>The status of the API. Valid values: 0 and 1. The value 0 indicates that the API is not published. The value 1 indicates that the API is published.</p>
+         * <p>The status of the API. Valid values: 0: unpublished. 1: published.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -222,13 +222,13 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         public Integer apiStatus;
 
         /**
-         * <p>The authorization records.</p>
+         * <p>The list of authorization details for APIs authorized to other users.</p>
          */
         @NameInMap("AuthorizationRecords")
         public java.util.List<ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationListAuthorizationRecords> authorizationRecords;
 
         /**
-         * <p>The time when the API was created.</p>
+         * <p>The time when the API was created, in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format (the example time zone is +0800).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-06-23T00:21:01+0800</p>
@@ -237,7 +237,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the API owner.</p>
+         * <p>The Alibaba Cloud ID of the API owner.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -255,7 +255,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The time when the API was last modified.</p>
+         * <p>The time when the API was last modified, in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format (the example time zone is +0800).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-06-23T00:21:01+0800</p>
@@ -378,13 +378,13 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
 
     public static class ListDataServiceApiAuthoritiesResponseBodyData extends TeaModel {
         /**
-         * <p>The APIs on which other users are granted the access permissions.</p>
+         * <p>The response structure.</p>
          */
         @NameInMap("ApiAuthorizationList")
         public java.util.List<ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList> apiAuthorizationList;
 
         /**
-         * <p>The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.</p>
+         * <p>The page number, which is the same as the PageNumber value in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -393,7 +393,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -402,7 +402,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListNodeInputOrOutputRequest extends TeaModel {
     /**
-     * <p>The type of node that you want to query. Valid values:</p>
+     * <p>Specifies whether to query upstream or downstream nodes. Valid values:</p>
      * <ul>
-     * <li>input: ancestor node</li>
-     * <li>output: descendant node</li>
+     * <li>input: upstream nodes.</li>
+     * <li>output: downstream nodes.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +19,7 @@ public class ListNodeInputOrOutputRequest extends TeaModel {
     public String ioType;
 
     /**
-     * <p>The node ID. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID.</p>
+     * <p>The node ID. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the node ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class ListNodeInputOrOutputRequest extends TeaModel {
     public Long nodeId;
 
     /**
-     * <p>The environment of the workspace. Valid values: DEV and PROD.</p>
+     * <p>The environment in which the node runs. Valid values: DEV (development environment) and PROD (production environment).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

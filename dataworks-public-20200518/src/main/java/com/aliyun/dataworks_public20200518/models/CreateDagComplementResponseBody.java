@@ -38,7 +38,7 @@ public class CreateDagComplementResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID. The ID is used to locate logs and troubleshoot issues.</p>
+     * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>E6F0DBDD-5AD****</p>
@@ -47,7 +47,7 @@ public class CreateDagComplementResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

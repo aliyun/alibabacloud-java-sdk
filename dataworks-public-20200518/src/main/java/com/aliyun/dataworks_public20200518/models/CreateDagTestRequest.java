@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class CreateDagTestRequest extends TeaModel {
     /**
      * <p>The business date.</p>
+     * <p>The format is <code>yyyy-MM-dd HH:mm:ss</code>. Example: <code>2020-05-26 00:00:00</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

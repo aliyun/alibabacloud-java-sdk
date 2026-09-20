@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetProjectDetailRequest extends TeaModel {
     /**
-     * <p>The DataWorks workspace ID.</p>
+     * <p>The ID of the DataWorks workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

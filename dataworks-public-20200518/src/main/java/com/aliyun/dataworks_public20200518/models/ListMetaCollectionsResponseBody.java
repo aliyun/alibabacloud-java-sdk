@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMetaCollectionsResponseBody extends TeaModel {
     /**
-     * <p>The returned result.</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("Data")
     public ListMetaCollectionsResponseBodyData data;
@@ -38,7 +38,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
      * 
      * <strong>example:</strong>
      * <p>E25887B7-579C-54A5-9C4F-83A0DE367DDE</p>
@@ -47,12 +47,10 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,13 +114,13 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
 
     public static class ListMetaCollectionsResponseBodyData extends TeaModel {
         /**
-         * <p>The collections.</p>
+         * <p>The array object.</p>
          */
         @NameInMap("CollectionList")
         public java.util.List<Collection> collectionList;
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>37ae2053d87d380f28ce0dc0853ca51e</p>

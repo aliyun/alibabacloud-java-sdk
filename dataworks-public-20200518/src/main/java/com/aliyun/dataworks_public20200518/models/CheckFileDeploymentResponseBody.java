@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckFileDeploymentResponseBody extends TeaModel {
     /**
-     * <p>The request ID. You can use the ID to troubleshoot issues.</p>
+     * <p>The request ID, which is used for subsequent troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>86d5a5ac-0cc0-4c5f-a374-a15713b252ab</p>

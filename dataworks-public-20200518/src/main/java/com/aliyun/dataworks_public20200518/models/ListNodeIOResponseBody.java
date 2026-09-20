@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNodeIOResponseBody extends TeaModel {
     /**
-     * <p>The node information.</p>
+     * <p>The upstream and downstream information.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListNodeIOResponseBodyData> data;
@@ -38,7 +38,7 @@ public class ListNodeIOResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request, which is used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>E6F0DBDD-5AD****</p>
@@ -47,7 +47,7 @@ public class ListNodeIOResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class ListNodeIOResponseBody extends TeaModel {
 
     public static class ListNodeIOResponseBodyData extends TeaModel {
         /**
-         * <p>The name of the ancestor or descendant node.</p>
+         * <p>The name of the input or output.</p>
          * 
          * <strong>example:</strong>
          * <p>dataworks_a.1234_out</p>

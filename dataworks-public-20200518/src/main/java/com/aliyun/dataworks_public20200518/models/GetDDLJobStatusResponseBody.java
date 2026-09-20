@@ -51,7 +51,7 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The ID of the ongoing task. If no value is returned for this parameter, all subtasks are complete.</p>
+         * <p>The ID of the task that is in progress. If this parameter is empty, all tasks are completed.</p>
          * 
          * <strong>example:</strong>
          * <p>abc1</p>
@@ -69,7 +69,7 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>

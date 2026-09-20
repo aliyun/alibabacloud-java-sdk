@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstanceHistoryRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the ListInstances operation to query the instance ID.</p>
+     * <p>The ID of the instance. You can call ListInstances to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListInstanceHistoryRequest extends TeaModel {
     public Long instanceId;
 
     /**
-     * <p>The environment of the workspace. Valid values: PROD and DEV. By default, data of instances in the production environment is queried.</p>
+     * <p>The environment of the workspace. Valid values: PROD (production environment) and DEV (development environment). Default value: PROD.</p>
      * 
      * <strong>example:</strong>
      * <p>PROD</p>

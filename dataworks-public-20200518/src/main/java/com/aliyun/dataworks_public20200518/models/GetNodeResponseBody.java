@@ -11,7 +11,7 @@ public class GetNodeResponseBody extends TeaModel {
     public GetNodeResponseBodyData data;
 
     /**
-     * <p>The ID of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the node ID.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Invalid.Tenant.ConnectionNotExists</p>
@@ -20,7 +20,7 @@ public class GetNodeResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The connection string.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The connection does not exist.</p>
@@ -29,7 +29,7 @@ public class GetNodeResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>GetNode</strong>.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -38,7 +38,7 @@ public class GetNodeResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Other parameters.</p>
+     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>E6F0DBDD-5AD****</p>
@@ -47,7 +47,7 @@ public class GetNodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the workflow.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class GetNodeResponseBody extends TeaModel {
 
     public static class GetNodeResponseBodyData extends TeaModel {
         /**
-         * <p>The description of the node.</p>
+         * <p>The baseline ID. The baseline ID configured for the node as a leaf node is returned. If no baseline is configured, a workspace default value is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -119,7 +119,7 @@ public class GetNodeResponseBody extends TeaModel {
         public Long baselineId;
 
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>GetNode</strong>.</p>
+         * <p>The ID of the workflow.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -128,7 +128,7 @@ public class GetNodeResponseBody extends TeaModel {
         public Long businessId;
 
         /**
-         * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
+         * <p>The connection string.</p>
          * 
          * <strong>example:</strong>
          * <p>odps_source_dev</p>
@@ -138,6 +138,7 @@ public class GetNodeResponseBody extends TeaModel {
 
         /**
          * <p>The creation time.</p>
+         * <p>The value is a 13-digit number, such as <code>1727280000000</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1727280000000</p>
@@ -146,7 +147,7 @@ public class GetNodeResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
+         * <p>The CRON expression.</p>
          * 
          * <strong>example:</strong>
          * <p>00 00 00 * * ?</p>
@@ -156,6 +157,7 @@ public class GetNodeResponseBody extends TeaModel {
 
         /**
          * <p>The deployment date.</p>
+         * <p>The value is a 13-digit number, such as <code>1727280000000</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1727280000000</p>
@@ -164,7 +166,7 @@ public class GetNodeResponseBody extends TeaModel {
         public Long deployDate;
 
         /**
-         * <p>The name of the resource group.</p>
+         * <p>The description of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -173,7 +175,7 @@ public class GetNodeResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the node ID.</p>
+         * <p>The DQC partitioning rule string.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;projectName&quot;:&quot;test_0923001&quot;,&quot;tableName&quot;:&quot;test_table_001&quot;,&quot;partition&quot;:&quot;ds\u003d$[yyyymmdd]&quot;},{&quot;projectName&quot;:&quot;test_0923001&quot;,&quot;tableName&quot;:&quot;test_table_002&quot;,&quot;partition&quot;:&quot;NOTAPARTITIONTABLE&quot;}]</p>
@@ -182,7 +184,7 @@ public class GetNodeResponseBody extends TeaModel {
         public String dqcDescription;
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The DQC type. A value of 0 indicates that no DQC rule is associated. A value of 1 indicates that a DQC rule is associated.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -191,9 +193,7 @@ public class GetNodeResponseBody extends TeaModel {
         public Integer dqcType;
 
         /**
-         * <p>The file ID.</p>
-         * <p>\<em>\</em></p>
-         * <p><strong>Warning</strong> The field is deprecated.</p>
+         * <p>The file ID. <warning>This field is deprecated.</warning></p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -202,7 +202,7 @@ public class GetNodeResponseBody extends TeaModel {
         public Long fileId;
 
         /**
-         * <p>The file type. Different file types have different codes. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks node collection</a>.</p>
+         * <p>The file type. Different file types have different codes. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -211,7 +211,7 @@ public class GetNodeResponseBody extends TeaModel {
         public Integer fileType;
 
         /**
-         * <p>The version of the file.</p>
+         * <p>The file version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -221,6 +221,7 @@ public class GetNodeResponseBody extends TeaModel {
 
         /**
          * <p>The modification time.</p>
+         * <p>The value is a 13-digit number, such as <code>1727280000000</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1727280000000</p>
@@ -229,7 +230,7 @@ public class GetNodeResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The ID of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -238,26 +239,16 @@ public class GetNodeResponseBody extends TeaModel {
         public Long nodeId;
 
         /**
-         * <p>The scheduling type of the node. Valid values:</p>
-         * <ul>
-         * <li><p>NORMAL: The node is an auto triggered node.</p>
-         * </li>
-         * <li><p>MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered.</p>
-         * </li>
-         * <li><p>PAUSE: The node is a paused node.</p>
-         * </li>
-         * <li><p>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</p>
-         * </li>
-         * </ul>
+         * <p>The name of the node.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sql node</p>
+         * <p>sql_node</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The ID of the node owner.</p>
          * 
          * <strong>example:</strong>
          * <p>17366294****</p>
@@ -266,7 +257,7 @@ public class GetNodeResponseBody extends TeaModel {
         public String ownerId;
 
         /**
-         * <p>The CRON expression returned.</p>
+         * <p>The additional parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>a=b</p>
@@ -275,7 +266,7 @@ public class GetNodeResponseBody extends TeaModel {
         public String paramValues;
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The priority of the node. Valid values: 1, 3, 5, 7, and 8.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -284,7 +275,7 @@ public class GetNodeResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The ID of the owner of the node.</p>
+         * <p>The type of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>ODPS_SQL</p>
@@ -293,7 +284,7 @@ public class GetNodeResponseBody extends TeaModel {
         public String programType;
 
         /**
-         * <p>Indicates whether the node can be rerun.</p>
+         * <p>The ID of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -302,7 +293,7 @@ public class GetNodeResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>Indicates whether the node is associated with Data Quality. Valid values: 0 and 1. A value of 0 indicates that the node is associated with Data Quality. A value of 1 indicates that the node is not associated with Data Quality.</p>
+         * <p>The ID of the associated workflow.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -311,7 +302,7 @@ public class GetNodeResponseBody extends TeaModel {
         public Long relatedFlowId;
 
         /**
-         * <p>The ID of the workflow to which the node belongs.</p>
+         * <p>The interval at which the node is rescheduled after a failure.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -320,7 +311,7 @@ public class GetNodeResponseBody extends TeaModel {
         public Long repeatInterval;
 
         /**
-         * <p>Rerun mode. 0 indicates that you can rerun only if you fail, 1 indicates that you can rerun in all cases, and 2 indicates that you cannot rerun in all cases.</p>
+         * <p>The rerun mode. A value of 0 indicates that the node can be rerun only upon failure. A value of 1 indicates that the node can be rerun in all cases. A value of 2 indicates that the node cannot be rerun in any case.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -329,7 +320,7 @@ public class GetNodeResponseBody extends TeaModel {
         public Integer repeatMode;
 
         /**
-         * <p>The type of the node.</p>
+         * <p>Indicates whether the node can be rerun.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -347,16 +338,22 @@ public class GetNodeResponseBody extends TeaModel {
         public String resGroupIdentifier;
 
         /**
-         * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+         * <p>The name of the resource group.</p>
          * 
          * <strong>example:</strong>
-         * <p>Default resource group</p>
+         * <p>Default Resource Group</p>
          */
         @NameInMap("ResGroupName")
         public String resGroupName;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The scheduling type. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: normal scheduling node.</li>
+         * <li>MANUAL: manual node that is not scheduled on a regular basis.</li>
+         * <li>PAUSE: paused node.</li>
+         * <li>SKIP: dry-run node that is scheduled on a regular basis but is directly set to successful when scheduling starts.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>

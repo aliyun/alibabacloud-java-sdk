@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListBaselineStatusesResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The list of baseline instances returned.</p>
      */
     @NameInMap("Data")
     public ListBaselineStatusesResponseBodyData data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Invalid.Tenant.ConnectionNotExists</p>
@@ -20,7 +20,7 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The specified parameters are invalid.</p>
@@ -29,7 +29,7 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -38,7 +38,7 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     * <p>The unique ID of the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
@@ -47,7 +47,7 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
 
     public static class ListBaselineStatusesResponseBodyDataBaselineStatuses extends TeaModel {
         /**
-         * <p>The baseline ID.</p>
+         * <p>The ID of the baseline.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -122,22 +122,22 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
          * <p>The name of the baseline.</p>
          * 
          * <strong>example:</strong>
-         * <p>Baseline name</p>
+         * <p>BaselineName</p>
          */
         @NameInMap("BaselineName")
         public String baselineName;
 
         /**
-         * <p>The type of the baseline, including DAILY and HOURLY. Separate multiple types with commas (,).</p>
+         * <p>The type of the baseline. Valid values: DAILY and HOURLY.</p>
          * 
          * <strong>example:</strong>
-         * <p>Baseline type</p>
+         * <p>BaselineType</p>
          */
         @NameInMap("BaselineType")
         public String baselineType;
 
         /**
-         * <p>The data timestamp.</p>
+         * <p>The business date timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1553443200000</p>
@@ -146,7 +146,7 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         public Long bizdate;
 
         /**
-         * <p>The margin of the baseline instance. Unit: seconds.</p>
+         * <p>The buffer time of the baseline instance, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1800</p>
@@ -155,7 +155,7 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         public Long buffer;
 
         /**
-         * <p>The timestamp of the predicted time when the baseline instance finished running.</p>
+         * <p>The estimated completion time of the baseline instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1553531400000</p>
@@ -164,7 +164,8 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         public Long endCast;
 
         /**
-         * <p>The timestamp of the alerting time of the baseline instance.</p>
+         * <p>The warning time of the baseline instance.</p>
+         * <p>The format is a 13-digit number, such as <code>1553531400000</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1553531400000</p>
@@ -173,7 +174,7 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         public Long expTime;
 
         /**
-         * <p>The status of the baseline instance. Valid values: UNFINISH and FINISH.</p>
+         * <p>The completion status of the baseline instance. Valid values: UNFINISH and FINISH.</p>
          * 
          * <strong>example:</strong>
          * <p>UNFINISH</p>
@@ -182,7 +183,7 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         public String finishStatus;
 
         /**
-         * <p>The timestamp of the actual time when the baseline instance finished running. This parameter is returned if the value of the FinishStatus parameter is FINISH.</p>
+         * <p>The completion timestamp of the baseline instance. This parameter is returned only when FinishStatus is FINISH.</p>
          * 
          * <strong>example:</strong>
          * <p>1553531400000</p>
@@ -191,7 +192,7 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         public Long finishTime;
 
         /**
-         * <p>The ID of the cycle of the baseline instance. Valid values of the ID of an hour-level cycle: [1,24]. The ID of a day-level cycle is 1.</p>
+         * <p>The cycle number of the baseline instance. The value is 1 for daily baselines. The value ranges from 1 to 24 for hourly baselines.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -200,7 +201,7 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         public Integer inGroupId;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the baseline owner. Multiple IDs are separated by commas (,).</p>
+         * <p>The Alibaba Cloud UID of the baseline owner. Separate multiple owners with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>9527952795****</p>
@@ -209,7 +210,7 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The priority of the baseline. Valid values: {1,3,5,7,8}.</p>
+         * <p>The priority of the baseline. Valid values: 1, 3, 5, 7, and 8.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -218,7 +219,7 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The ID of the workspace to which the baseline belongs.</p>
+         * <p>The ID of the workspace where the baseline resides.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -227,7 +228,8 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The timestamp of the actual time when the baseline instance finished running.</p>
+         * <p>The actual completion time of the baseline instance.</p>
+         * <p>The format is a 13-digit number, such as <code>1553531400000</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1553531400000</p>
@@ -236,7 +238,7 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         public Long slaTime;
 
         /**
-         * <p>The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes are run before the alert duration begins. The value DANGEROUS indicates that nodes are still running after the alert duration ends but the committed completion time does not arrive. The value OVER indicates that nodes are still running after the committed completion time.</p>
+         * <p>The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER.</p>
          * 
          * <strong>example:</strong>
          * <p>SAFE</p>
@@ -379,7 +381,7 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         public java.util.List<ListBaselineStatusesResponseBodyDataBaselineStatuses> baselineStatuses;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -388,7 +390,7 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateManualDagResponseBody extends TeaModel {
     /**
-     * <p>The instance ID of the DAG generated when the manual workflow runs. You can use this DagId together with the relevant API to query the details and status of the internal node instances of this manual workflow run.</p>
+     * <p>The instance ID of the dagrun for the manual business process. You can use this DagId with the corresponding operation to query the detailed information and status of the internal node instances of this manual business process execution.</p>
      * 
      * <strong>example:</strong>
      * <p>700000123123141</p>
@@ -14,7 +14,7 @@ public class CreateManualDagResponseBody extends TeaModel {
     public Long dagId;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AASFDFSDFG-DFSDF-DFSDFD-SDFSDF</p>

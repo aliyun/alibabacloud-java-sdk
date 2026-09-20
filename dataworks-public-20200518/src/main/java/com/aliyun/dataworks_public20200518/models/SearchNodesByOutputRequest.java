@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchNodesByOutputRequest extends TeaModel {
     /**
-     * <p>The output names of the node. If you specify multiple output names, separate them with commas (,).</p>
+     * <p>The output strings of the node. You can specify multiple values. Separate multiple values with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,11 @@ public class SearchNodesByOutputRequest extends TeaModel {
     public String outputs;
 
     /**
-     * <p>The environment of Operation Center. Valid values: PROD and DEV.</p>
+     * <p>The environment identifier in Operation Center. Valid values:</p>
+     * <ul>
+     * <li>PROD: production environment.</li>
+     * <li>DEV: development environment.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

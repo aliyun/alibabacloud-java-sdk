@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID of the node.</p>
+     * <p>The list of instances.</p>
      */
     @NameInMap("Data")
     public ListInstancesResponseBodyData data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Invalid.Tenant.ProjectNotExists</p>
@@ -20,7 +20,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The project does not exist.</p>
@@ -29,8 +29,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The error message that is returned for the instance.</p>
-     * <p>This parameter is deprecated. You can call the <a href="https://help.aliyun.com/document_detail/173983.html">GetInstanceLog</a> operation to query the error information related to the node.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -39,7 +38,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The name of the node.</p>
+     * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>E6F0DBDD-5AD****</p>
@@ -48,7 +47,11 @@ public class ListInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -111,13 +114,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyDataInstances extends TeaModel {
         /**
-         * <p>The type of the workflow. Valid values:</p>
-         * <ul>
-         * <li>DAILY: The workflow is used to run auto triggered nodes.</li>
-         * <li>MANUAL: The workflow is used to run manually triggered nodes.</li>
-         * <li>SMOKE_TEST: The workflow is used to perform smoke testing.</li>
-         * <li>SUPPLY_DATA: The workflow is used to backfill data.</li>
-         * </ul>
+         * <p>The baseline ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123123</p>
@@ -126,7 +123,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long baselineId;
 
         /**
-         * <p>The time when the instance started to run.</p>
+         * <p>The time when the instance started running.</p>
+         * <p>The value is a 13-digit number, such as <code>1590416703313</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1590416703313</p>
@@ -135,7 +133,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long beginRunningTime;
 
         /**
-         * <p>The time when the node stopped running.</p>
+         * <p>The time when the instance started waiting for resources.</p>
+         * <p>The value is a 13-digit number, such as <code>1590416703313</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1590416703313</p>
@@ -144,7 +143,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long beginWaitResTime;
 
         /**
-         * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+         * <p>The time when the instance started waiting for scheduling.</p>
+         * <p>The value is a 13-digit number, such as <code>1590416703313</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1590416703313</p>
@@ -153,8 +153,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long beginWaitTimeTime;
 
         /**
-         * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
-         * <p>You cannot specify the sorting method for the instances to be returned by this operation. By default, the instances are sorted in descending order of the time when the instances were created.</p>
+         * <p>The data timestamp of the scheduled node. This is typically the day before the node runs.</p>
+         * <p>The value is a 13-digit number, such as <code>1590336000000</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1590336000000</p>
@@ -163,7 +163,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long bizdate;
 
         /**
-         * <p>The ID of the workflow to which the node belongs.</p>
+         * <p>The business process ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -172,21 +172,17 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long businessId;
 
         /**
-         * <p>The number of times the node can be rerun. The value of this parameter can be empty or an integer that is greater than or equal to 0.</p>
-         * <ul>
-         * <li>If the value of this parameter is empty, the number of times that the node can be rerun is not specified.</li>
-         * <li>If the value of this parameter is 0, the node cannot be rerun.</li>
-         * <li>If the value of this parameter is a positive integer such as n, the node can be rerun n times. For example, if the value of this parameter is 1, the node can be rerun once. If the value of this parameter is 2, the node can be rerun twice.</li>
-         * </ul>
+         * <p>The connection string.</p>
          * 
          * <strong>example:</strong>
-         * <p>odps_first</p>
+         * <p>odps_source</p>
          */
         @NameInMap("Connection")
         public String connection;
 
         /**
-         * <p>The interval at which the node is rerun after the node fails to run. Unit: milliseconds.</p>
+         * <p>The time when the instance was created.</p>
+         * <p>The value is a 13-digit number, such as <code>1590416703313</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1590416703313</p>
@@ -195,7 +191,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID of the node.</p>
+         * <p>The user who triggered the instance to run. For example, if user Test triggered a data backfill instance, the CreateUser is Test.</p>
          * 
          * <strong>example:</strong>
          * <p>Test</p>
@@ -204,7 +200,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String createUser;
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The scheduled runtime of the node.</p>
+         * <p>The value is a 13-digit number, such as <code>1590422400000</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1590422400000</p>
@@ -213,7 +210,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long cycTime;
 
         /**
-         * <p>The time when the instance started to wait for resources.</p>
+         * <p>The workflow ID.</p>
          * 
          * <strong>example:</strong>
          * <p>33845</p>
@@ -222,7 +219,15 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long dagId;
 
         /**
-         * <p>The data timestamp of the instance. In most cases, the value is one day before the time when the instance was run.</p>
+         * <p>The type of the workflow. Valid values:</p>
+         * <ul>
+         * <li>DAILY(0): daily scheduling workflow.</li>
+         * <li>MANUAL(1): manual task workflow.</li>
+         * <li>SMOKE_TEST(2): smoke testing workflow.</li>
+         * <li>SUPPLY_DATA(3): data backfill workflow.</li>
+         * <li>MANUAL_FLOW(4): manually triggered dataflow PAI workflow (such as running a workflow in the IDE).</li>
+         * <li>BUSINESS_PROCESS_DAG(5): manual business process workflow.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>DAILY</p>
@@ -231,7 +236,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String dagType;
 
         /**
-         * <p>The operation that you want to perform.</p>
+         * <p>The DQC partitioning rule string.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;projectName&quot;:&quot;ztjy_dim&quot;,&quot;tableName&quot;:&quot;dim_user_agent_manage_area_a&quot;,&quot;partition&quot;:&quot;ds\u003d$[yyyy-mm-dd-1]&quot;}]</p>
@@ -240,16 +245,10 @@ public class ListInstancesResponseBody extends TeaModel {
         public String dqcDescription;
 
         /**
-         * <p>The status of the node. Valid values:</p>
+         * <p>The DQC type. Valid values:</p>
          * <ul>
-         * <li>NOT_RUN: The node is not run.</li>
-         * <li>WAIT_TIME: The node is waiting for the scheduling time to arrive.</li>
-         * <li>WAIT_RESOURCE: The node is waiting for resources.</li>
-         * <li>RUNNING: The node is running.</li>
-         * <li>CHECKING: Data quality is being checked for the node.</li>
-         * <li>CHECKING_CONDITION: Branch conditions are being checked for the node.</li>
-         * <li>FAILURE: The node fails to run.</li>
-         * <li>SUCCESS: The node is successfully run.</li>
+         * <li>0: associated with DQC.</li>
+         * <li>1: not associated with DQC.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -259,7 +258,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer dqcType;
 
         /**
-         * <p>The name of the account that is used to run the instance. For example, if an account named Test was used to run the instance to backfill data, the value of this parameter is Test.</p>
+         * <p><strong>[Deprecated]</strong> The error message of the instance run. You can call <a href="https://help.aliyun.com/document_detail/173983.html">GetInstanceLog</a> to obtain the error information of the executed task.</p>
          * 
          * <strong>example:</strong>
          * <p>error message</p>
@@ -268,7 +267,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the workspace administrator. You can log on to the Alibaba Cloud Management Console and view the ID on the Security Settings page of the Account Center console.</p>
+         * <p>The time when the scheduled node finished running.</p>
+         * <p>The value is a 13-digit number, such as <code>1590416703313</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1590416703313</p>
@@ -277,7 +277,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long finishTime;
 
         /**
-         * <p>The number of the page to return. Minimum value:1. Maximum value: 100.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -286,7 +286,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long instanceId;
 
         /**
-         * <p>The name of the workflow. You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the name of the workflow.</p>
+         * <p>The time when the scheduled node was last modified.</p>
+         * <p>The value is a 13-digit number, such as <code>1590416703313</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1590416703313</p>
@@ -295,7 +296,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.</p>
+         * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>33115</p>
@@ -304,7 +305,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long nodeId;
 
         /**
-         * <p>The ID of the workflow.</p>
+         * <p>The node name.</p>
          * 
          * <strong>example:</strong>
          * <p>kzh</p>
@@ -313,7 +314,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>The table and partition filter expression in Data Quality that are associated with the node.</p>
+         * <p>The parameter information.</p>
          * 
          * <strong>example:</strong>
          * <p>bizdate=$bizdate tbods=$tbods</p>
@@ -322,7 +323,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String paramValues;
 
         /**
-         * <p>The total number of instances.</p>
+         * <p>The priority of the instance. Valid values: 1, 3, 5, 7, and 8.</p>
+         * <p>A larger value indicates a higher priority. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -331,7 +333,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The type of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the type of the node.</p>
+         * <p>The ID of the associated business process.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -340,24 +342,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long relatedFlowId;
 
         /**
-         * <p>The scheduling type of the node. Valid values:</p>
-         * <ul>
-         * <li><p>NORMAL(0): The node is an auto triggered node. The scheduling system regularly runs the node.</p>
-         * </li>
-         * <li><p>MANUAL(1): The node is a manually triggered node. The scheduling system does not regularly run the node.</p>
-         * </li>
-         * <li><p>PAUSE(2): The node is a frozen node. The scheduling system regularly runs the node but sets the status of the node to failed when the scheduling system starts to run the node.</p>
-         * </li>
-         * <li><p>SKIP(3): The node is a dry-run node. The scheduling system regularly runs the node but sets the status of the node to succeeded when the scheduling system starts to run the node.</p>
-         * </li>
-         * <li><p>SKIP_UNCHOOSE(4): The node is an unselected node in a temporary workflow. This type of node exists only in temporary workflows. The scheduling system sets the status of the node to succeeded when the scheduling system starts to run the node.</p>
-         * </li>
-         * <li><p>SKIP_CYCLE(5): The node is a node that is scheduled by week or month and is waiting for the scheduling time to arrive. The scheduling system regularly runs the node but sets the status of the node to succeeded when the scheduling system starts to run the node.</p>
-         * </li>
-         * <li><p>CONDITION_UNCHOOSE(6): The node is not selected by its ancestor branch node and is run as a dry-run node.</p>
-         * <p>REALTIME_DEPRECATED(7): The node has instances that are generated in real time but deprecated. The scheduling system sets the status of the node to succeeded.</p>
-         * </li>
-         * </ul>
+         * <p>The interval at which the node is rescheduled after a failure. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>60000</p>
@@ -366,17 +351,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long repeatInterval;
 
         /**
-         * <p>The status of the node. Valid values:</p>
-         * <ul>
-         * <li>NOT_RUN: The node is not run.</li>
-         * <li>WAIT_TIME: The node is waiting for the scheduling time to arrive.</li>
-         * <li>WAIT_RESOURCE: The node is waiting for resources.</li>
-         * <li>RUNNING: The node is running.</li>
-         * <li>CHECKING: Data quality is being checked for the node.</li>
-         * <li>CHECKING_CONDITION: Branch conditions are being checked for the node.</li>
-         * <li>FAILURE: The node fails to run.</li>
-         * <li>SUCCESS: The node is successfully run.</li>
-         * </ul>
+         * <p>Indicates whether the instance task can be rerun.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -385,7 +360,18 @@ public class ListInstancesResponseBody extends TeaModel {
         public Boolean repeatability;
 
         /**
-         * <p>The data timestamp of the instances that you want to query. Specify the timestamp in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <p>The status of the node. Valid values:</p>
+         * <ul>
+         * <li>NOT_RUN(1): The node is not run.</li>
+         * <li>WAIT_TIME(2): The node is waiting for the scheduled time to arrive.</li>
+         * <li>WAIT_RESOURCE(3): The node has been sent to the execution engine and is waiting for resources to be scheduled.</li>
+         * <li>RUNNING(4): The node is running.</li>
+         * <li>CHECKING(7): The node has finished running and has been sent to Data Quality for data verification.</li>
+         * <li>CHECKING_CONDITION(8): The node has finished running and is undergoing branch condition verification.</li>
+         * <li>WAIT_TRIGGER(9): The node is waiting to be triggered. A trigger-based node enters this state after the waiting time elapses.</li>
+         * <li>FAILURE(5): The node failed to run.</li>
+         * <li>SUCCESS(6): The node ran successfully.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>NOT_RUN</p>
@@ -394,7 +380,12 @@ public class ListInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the workspace. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to query the ID of the workspace.</p>
+         * <p>The number of remaining reruns for the instance. The value can be empty or an integer greater than or equal to 0.</p>
+         * <ul>
+         * <li>Empty: The node corresponding to this instance does not have automatic rerun configured.</li>
+         * <li>0: The instance cannot be rerun.</li>
+         * <li>An integer greater than 0 (n): The instance can be rerun n times. For example, if the value is 1, the remaining rerun count is 1. If the value is 2, the remaining rerun count is 2, and so on. The initial value is the automatic rerun count defined for the corresponding node plus 1.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -403,7 +394,17 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer taskRerunTime;
 
         /**
-         * <p>The information about the instances.</p>
+         * <p>The scheduling type of the task instance. Valid values:</p>
+         * <ul>
+         * <li>NORMAL(0): The node is a normal scheduled node that is triggered by daily scheduling.</li>
+         * <li>MANUAL(1): The node is a manual node that is not triggered by daily scheduling.</li>
+         * <li>PAUSE(2): The node is a frozen node that is triggered by daily scheduling but is set to failed when scheduling starts.</li>
+         * <li>SKIP(3): The node is a dry-run node that is triggered by daily scheduling but is set to successful when scheduling starts.</li>
+         * <li>SKIP_UNCHOOSE(4): The node is an unselected node in a temporary workflow. It exists only in temporary workflows and is set to successful when scheduling starts.</li>
+         * <li>SKIP_CYCLE(5): The node is a weekly or monthly node whose scheduling cycle has not arrived. It is triggered by daily scheduling but is set to successful when scheduling starts.</li>
+         * <li>CONDITION_UNCHOOSE(6): The upstream instance contains a branch (IF) node, but this downstream node is not selected by the branch node and is set to a dry-run node.</li>
+         * <li>REALTIME_DEPRECATED(7): The node is an expired periodic instance generated in real time. This type of node is set to successful.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>NORMAL(0)</p>
@@ -644,13 +645,13 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyData extends TeaModel {
         /**
-         * <p>The name of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the name of the node.</p>
+         * <p>The instance information.</p>
          */
         @NameInMap("Instances")
         public java.util.List<ListInstancesResponseBodyDataInstances> instances;
 
         /**
-         * <p>The time when the node was scheduled to run.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -659,7 +660,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -668,8 +669,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The priority of the instance. Valid values: 1, 3, 5, 7, and 8.</p>
-         * <p>A greater value indicates a higher priority. Default value: 1.</p>
+         * <p>The total number of instances.</p>
          * 
          * <strong>example:</strong>
          * <p>66</p>

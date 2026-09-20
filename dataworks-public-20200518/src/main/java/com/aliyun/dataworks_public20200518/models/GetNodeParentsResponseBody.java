@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetNodeParentsResponseBody extends TeaModel {
     /**
-     * <p>The ancestor nodes.</p>
+     * <p>The list of node information returned.</p>
      */
     @NameInMap("Data")
     public GetNodeParentsResponseBodyData data;
@@ -38,7 +38,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID. You can troubleshoot issues based on the ID.</p>
+     * <p>The unique ID of the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>asfsdfas-adfasdf-asfas-dfasdf-asdf</p>
@@ -47,7 +47,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -119,7 +119,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
         public Long baselineId;
 
         /**
-         * <p>The CRON expression. CRON expressions are used to run auto triggered nodes.</p>
+         * <p>The CRON expression. This expression is used for timed scheduling to execute the node task.</p>
          * 
          * <strong>example:</strong>
          * <p>00 00 * * * *</p>
@@ -137,7 +137,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
         public Long nodeId;
 
         /**
-         * <p>The name of the node.</p>
+         * <p>The node name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_Node</p>
@@ -146,7 +146,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+         * <p>The DataWorks UID of the node owner.</p>
          * 
          * <strong>example:</strong>
          * <p>123124561341251321</p>
@@ -155,7 +155,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
         public String ownerId;
 
         /**
-         * <p>The priority. Valid values: 1 to 8. A large value indicates a high priority.</p>
+         * <p>The priority. Valid values: 1 to 8. A larger value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -164,7 +164,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The type of the node.</p>
+         * <p>The node type.</p>
          * 
          * <strong>example:</strong>
          * <p>ODPS_SQL</p>
@@ -182,10 +182,10 @@ public class GetNodeParentsResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>Indicates whether the node can be rerun if the node fails to run. Valid values:</p>
+         * <p>Indicates whether the node can be rerun upon failure. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The node can be rerun.</li>
+         * <li>false: The node cannot be rerun.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -195,12 +195,12 @@ public class GetNodeParentsResponseBody extends TeaModel {
         public Boolean repeatability;
 
         /**
-         * <p>The scheduling type of the node. Valid values:</p>
+         * <p>The scheduling type. Valid values:</p>
          * <ul>
-         * <li>NORMAL: The node is an auto triggered node.</li>
-         * <li>MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered.</li>
-         * <li>PAUSE: The node is a paused node. Paused nodes are started as scheduled but the system sets the status of the nodes to failed when it starts to run them.</li>
-         * <li>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</li>
+         * <li>NORMAL: normal scheduling node.</li>
+         * <li>MANUAL: manual node that is not triggered by daily scheduling.</li>
+         * <li>PAUSE: paused node that is triggered by daily scheduling but is set to failed when scheduling starts.</li>
+         * <li>SKIP: dry-run node that is triggered by daily scheduling but is set to successful when scheduling starts.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,10 +210,10 @@ public class GetNodeParentsResponseBody extends TeaModel {
         public String schedulerType;
 
         /**
-         * <p>The scheduling dependency type.</p>
+         * <p>The scheduling dependency type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: same-cycle scheduling dependency</li>
-         * <li><strong>3</strong>: cross-cycle scheduling dependency</li>
+         * <li><strong>0</strong>: same-cycle dependency.</li>
+         * <li><strong>3</strong>: cross-cycle dependency.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -319,7 +319,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
 
     public static class GetNodeParentsResponseBodyData extends TeaModel {
         /**
-         * <p>The ancestor nodes.</p>
+         * <p>The list of nodes.</p>
          */
         @NameInMap("Nodes")
         public java.util.List<GetNodeParentsResponseBodyDataNodes> nodes;

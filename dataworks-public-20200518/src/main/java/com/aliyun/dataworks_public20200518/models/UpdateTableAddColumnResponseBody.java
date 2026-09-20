@@ -14,10 +14,11 @@ public class UpdateTableAddColumnResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the request task. After a request task is submitted, it is divided into multiple subtasks that are run in sequence. After the current subtask is complete, the next subtask starts to run. After all subtasks are complete, the request task is complete. If a request task is aborted due to one of the following issues, address the issue based on the error code and initiate the request task again:</p>
+     * <p>The information about the request task.</p>
+     * <p>After the request task is submitted, it is divided into multiple subtasks that are executed in sequence. The next subtask is executed only after the current subtask succeeds. The request task ends when all subtasks are completed. The request task terminates in the following situations. You must resolve the issue based on the error code and resubmit the request task:</p>
      * <ul>
      * <li>The request task fails to be submitted.</li>
-     * <li>After the request task is submitted, a subtask fails to run.</li>
+     * <li>After the request task is submitted, any subtask fails.</li>
      * </ul>
      */
     @NameInMap("TaskInfo")
@@ -46,10 +47,10 @@ public class UpdateTableAddColumnResponseBody extends TeaModel {
 
     public static class UpdateTableAddColumnResponseBodyTaskInfo extends TeaModel {
         /**
-         * <p>The details about the status of the current subtask.</p>
+         * <p>The detailed execution status of the current subtask:</p>
          * <ul>
-         * <li>If the current subtask is successful, success is returned.</li>
-         * <li>If the current subtask fails, the error details are displayed.</li>
+         * <li>If the execution succeeds, &quot;success&quot; is returned.</li>
+         * <li>If the execution fails, the corresponding error details are returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -59,7 +60,7 @@ public class UpdateTableAddColumnResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The ID of the subtask that you want to run. If this parameter is left empty, all subtasks are complete.</p>
+         * <p>The ID of the subtask to be executed next. If this field is empty, all subtasks have been completed.</p>
          * 
          * <strong>example:</strong>
          * <p>abc1</p>
@@ -70,9 +71,9 @@ public class UpdateTableAddColumnResponseBody extends TeaModel {
         /**
          * <p>The status of the current subtask. Valid values:</p>
          * <ul>
-         * <li>operating: The subtask is running.</li>
-         * <li>success: The subtask succeeds.</li>
-         * <li>failure: The subtask fails to run. For more information about the error details, see the Content parameter.</li>
+         * <li>operating: The subtask is being executed.</li>
+         * <li>success: The subtask is executed.</li>
+         * <li>failure: The subtask failed to be executed. For detailed error information, see the Content parameter.</li>
          * </ul>
          * 
          * <strong>example:</strong>

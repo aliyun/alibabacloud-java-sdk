@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunTriggerNodeRequest extends TeaModel {
     /**
-     * <p>The ID of the DataWorks workspace to which the manually triggered node belongs. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to query the ID.</p>
+     * <p>The ID of the DataWorks workspace to which the trigger node belongs. You can call <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> to query the workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class RunTriggerNodeRequest extends TeaModel {
     public Long appId;
 
     /**
-     * <p>The data timestamp of the instance that is generated for the manually triggered node.</p>
+     * <p>The timestamp of the business date for the trigger node instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class RunTriggerNodeRequest extends TeaModel {
     public Long bizDate;
 
     /**
-     * <p>The scheduling time to run the manually triggered node. Set the value to a 13-digit timestamp in milliseconds.</p>
+     * <p>The 13-digit millisecond-level timestamp that specifies the scheduled time of the node task corresponding to the trigger node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class RunTriggerNodeRequest extends TeaModel {
     public Long cycleTime;
 
     /**
-     * <p>The ID of the manually triggered node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID.</p>
+     * <p>The ID of the trigger node. You can call <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> to obtain the node ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

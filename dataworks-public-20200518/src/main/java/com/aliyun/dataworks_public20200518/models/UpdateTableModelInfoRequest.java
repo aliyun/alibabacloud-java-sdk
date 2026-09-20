@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTableModelInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the first-level table folder.</p>
+     * <p>The first-level topic ID.</p>
      * 
      * <strong>example:</strong>
      * <p>101</p>
@@ -14,7 +14,7 @@ public class UpdateTableModelInfoRequest extends TeaModel {
     public Long firstLevelThemeId;
 
     /**
-     * <p>The table level ID.</p>
+     * <p>The level ID.</p>
      * 
      * <strong>example:</strong>
      * <p>101</p>
@@ -23,7 +23,11 @@ public class UpdateTableModelInfoRequest extends TeaModel {
     public Long levelId;
 
     /**
-     * <p>The type of the table level. Valid values: 1 and 2. The value 1 indicates the logical level. The value 2 indicates the physical level.</p>
+     * <p>The level type. Valid values:</p>
+     * <ul>
+     * <li>1: logical level.</li>
+     * <li>2: physical level.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +36,7 @@ public class UpdateTableModelInfoRequest extends TeaModel {
     public Integer levelType;
 
     /**
-     * <p>The ID of the second-level table folder.</p>
+     * <p>The second-level topic ID.</p>
      * 
      * <strong>example:</strong>
      * <p>101</p>
@@ -41,7 +45,7 @@ public class UpdateTableModelInfoRequest extends TeaModel {
     public Long secondLevelThemeId;
 
     /**
-     * <p>The GUID of the table. Specify the GUID in the odps.{projectName}.{tableName} format.</p>
+     * <p>The unique identifier of the table, in the format of odps.{projectName}.{tableName}.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

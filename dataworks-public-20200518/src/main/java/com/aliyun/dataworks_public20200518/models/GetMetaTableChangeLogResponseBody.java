@@ -128,7 +128,8 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
         public String changeType;
 
         /**
-         * <p>The time when the metatable was created.</p>
+         * <p>The time when the table was created.</p>
+         * <p>The format is a 13-digit number, for example, <code>1590722845000</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1590722845000</p>
@@ -137,7 +138,8 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The time when the metatable was modified.</p>
+         * <p>The time when the table was modified.</p>
+         * <p>The format is a 13-digit number, for example, <code>1590722845000</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1590722845000</p>
@@ -146,7 +148,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
         public Long modifiedTime;
 
         /**
-         * <p>The entity on which the change was made. Valid values: TABLE and PARTITION.</p>
+         * <p>The type of the changed object. Valid values: TABLE and PARTITION.</p>
          * 
          * <strong>example:</strong>
          * <p>TABLE</p>
@@ -226,7 +228,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
         public java.util.List<GetMetaTableChangeLogResponseBodyDataDataEntityList> dataEntityList;
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number. Used for pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -244,7 +246,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of metatables.</p>
+         * <p>The total number of tables.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

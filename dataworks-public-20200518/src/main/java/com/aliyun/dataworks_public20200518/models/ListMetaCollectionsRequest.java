@@ -14,11 +14,10 @@ public class ListMetaCollectionsRequest extends TeaModel {
     public String administrator;
 
     /**
+     * <p>The type of collection to query. Valid values:</p>
      * <ul>
-     * <li><p>ALBUM: data album</p>
-     * </li>
-     * <li><p>ALBUM_CATEGORY: category in a data album</p>
-     * </li>
+     * <li><strong>ALBUM</strong>: album collection.</li>
+     * <li><strong>ALBUM_CATEGORY</strong>: subcategory within an album.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -29,7 +28,7 @@ public class ListMetaCollectionsRequest extends TeaModel {
     public String collectionType;
 
     /**
-     * <p>The ID of the collection creator.</p>
+     * <p>The user ID of the creator.</p>
      * 
      * <strong>example:</strong>
      * <p>1200759642363000</p>
@@ -56,7 +55,7 @@ public class ListMetaCollectionsRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The pagination token that specifies the start point of the current read operation.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>
@@ -65,7 +64,7 @@ public class ListMetaCollectionsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The name of the sorting field.</p>
+     * <p>The name of the field used for sorting.</p>
      * 
      * <strong>example:</strong>
      * <p>Sort field</p>

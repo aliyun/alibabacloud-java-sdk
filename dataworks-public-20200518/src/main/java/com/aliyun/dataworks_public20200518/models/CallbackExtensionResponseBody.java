@@ -14,9 +14,9 @@ public class CallbackExtensionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <p>true</p>
-     * <p>false</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>true: The call was successful.</p>
+     * <p>false: The call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
