@@ -14,22 +14,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-beijing", "ddosbgp.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "ddosbgp.aliyuncs.com"),
             new TeaPair("cn-huhehaote", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "ddosbgp.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "ddosbgp.aliyuncs.com"),
             new TeaPair("cn-shanghai", "ddosbgp.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "ddosbgp.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "ddosbgp.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "ddosbgp.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "ddosbgp.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "ddosbgp.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "ddosbgp.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "ddosbgp.aliyuncs.com"),
             new TeaPair("cn-chengdu", "ddosbgp.aliyuncs.com"),
-            new TeaPair("eu-central-1", "ddosbgp.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "ddosbgp.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "ddosbgp.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "ddosbgp.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "ddosbgp.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "ddosbgp.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "ddosbgp.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "ddosbgp.aliyuncs.com"),
+            new TeaPair("eu-west-1", "ddosbgp.aliyuncs.com"),
+            new TeaPair("eu-central-1", "ddosbgp.aliyuncs.com"),
+            new TeaPair("ap-south-1", "ddosbgp.aliyuncs.com"),
+            new TeaPair("me-east-1", "ddosbgp.aliyuncs.com"),
             new TeaPair("cn-shenzhen-finance-1", "ddosbgp.aliyuncs.com"),
+            new TeaPair("ap-northeast-2-pop", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-pop", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-beijing-gov-1", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-beijing-nu16-b01", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-edge-1", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-fujian", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-haidian-cm12-c01", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-bj-b01", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-prod-1", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-1", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-2", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-3", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-test-306", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-hongkong-finance-pop", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-huhehaote-nebula-1", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-qingdao-nebula", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et15-b01", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et2-b01", "ddosbgp.aliyuncs.com"),
             new TeaPair("cn-shanghai-finance-1", "ddosbgp.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "ddosbgp.aliyuncs.com")
+            new TeaPair("cn-shanghai-inner", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-shanghai-internal-test-1", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-inner", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-st4-d01", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-su18-b01", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-wuhan", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-yushanfang", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-zhangbei-na61-b01", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou-na62-a01", "ddosbgp.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-nebula-1", "ddosbgp.aliyuncs.com"),
+            new TeaPair("eu-west-1-oxs", "ddosbgp.aliyuncs.com"),
+            new TeaPair("rus-west-1-pop", "ddosbgp.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("ddosbgp", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -220,10 +255,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Mitigation policies that are associated with protection objects cannot be deleted.</p>
+     * <p>A mitigation policy that is associated with protection objects cannot be deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>Associates protection objects with mitigation policies.</p>
+     * <p>Associates protection objects with a mitigation policy.</p>
      * 
      * @param tmpReq AttachToPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -269,10 +304,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Mitigation policies that are associated with protection objects cannot be deleted.</p>
+     * <p>A mitigation policy that is associated with protection objects cannot be deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>Associates protection objects with mitigation policies.</p>
+     * <p>Associates protection objects with a mitigation policy.</p>
      * 
      * @param request AttachToPolicyRequest
      * @return AttachToPolicyResponse
@@ -1144,9 +1179,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to perform a paged query of the details of Layer 3 and Layer 4 packet interception records for all Anti-DDoS Origin instances owned by the current Alibaba Cloud account. Paging is supported.</p>
+     * <p>This operation is used to query the details of Layer 3 and Layer 4 packet interception records for all Anti-DDoS Origin instances owned by the current Alibaba Cloud account by using paging.</p>
      * <h3>QPS limit</h3>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API invokes are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API invoke is throttled, which may affect your business. Invoke this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the network-layer interception records of Anti-DDoS Origin instances.</p>
@@ -1172,6 +1207,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interceptModule)) {
+            query.put("InterceptModule", request.interceptModule);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.networkProtocol)) {
@@ -1221,9 +1260,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to perform a paged query of the details of Layer 3 and Layer 4 packet interception records for all Anti-DDoS Origin instances owned by the current Alibaba Cloud account. Paging is supported.</p>
+     * <p>This operation is used to query the details of Layer 3 and Layer 4 packet interception records for all Anti-DDoS Origin instances owned by the current Alibaba Cloud account by using paging.</p>
      * <h3>QPS limit</h3>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API invokes are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API invoke is throttled, which may affect your business. Invoke this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the network-layer interception records of Anti-DDoS Origin instances.</p>

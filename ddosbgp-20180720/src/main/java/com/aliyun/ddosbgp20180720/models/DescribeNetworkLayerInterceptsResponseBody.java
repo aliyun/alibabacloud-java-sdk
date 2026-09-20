@@ -29,7 +29,7 @@ public class DescribeNetworkLayerInterceptsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of interception logs that match the current filter conditions.</p>
+     * <p>The total number of interception log entries that match the current filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>17</p>
@@ -112,7 +112,7 @@ public class DescribeNetworkLayerInterceptsResponseBody extends TeaModel {
         public Long interceptCount;
 
         /**
-         * <p>The end time of the interception.</p>
+         * <p>The interception end time.</p>
          * <blockquote>
          * <p>The value is a Unix/POSIX timestamp. Unit: seconds.</p>
          * </blockquote>
@@ -133,7 +133,7 @@ public class DescribeNetworkLayerInterceptsResponseBody extends TeaModel {
         public String interceptModule;
 
         /**
-         * <p>The start time of the interception.</p>
+         * <p>The interception start time.</p>
          * <blockquote>
          * <p>The value is a Unix/POSIX timestamp. Unit: seconds.</p>
          * </blockquote>

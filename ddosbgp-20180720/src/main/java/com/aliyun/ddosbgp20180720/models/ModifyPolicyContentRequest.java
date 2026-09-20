@@ -32,8 +32,8 @@ public class ModifyPolicyContentRequest extends TeaModel {
     /**
      * <p>The version of the port-specific mitigation policy. Valid values:</p>
      * <ul>
-     * <li><strong>Not specified</strong>: Modifies the default surf mitigation engine policy.</li>
-     * <li><strong>2</strong>: Modifies the new stream mitigation engine policy.<blockquote>
+     * <li><strong>Not specified</strong>: modifies the default surf mitigation engine policy.</li>
+     * <li><strong>2</strong>: modifies the new stream mitigation engine policy.<blockquote>
      * <p>Only port-specific mitigation policies are supported.</p>
      * </blockquote>
      * </li>
@@ -120,12 +120,12 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The action to take after a fingerprint match. Valid values:</p>
+         * <p>The action to take when the fingerprint is matched. Valid values:</p>
          * <ul>
-         * <li><strong>permit</strong>: Permits traffic that matches the fingerprint.</li>
-         * <li><strong>drop</strong>: Drops traffic that matches the fingerprint.</li>
-         * <li><strong>ip_rate</strong>: Rate-limits the source IP address of traffic that matches the fingerprint. Set the rate limit by using the <strong>RateValue</strong> parameter.</li>
-         * <li><strong>session_rate</strong>: Rate-limits the source session of traffic that matches the fingerprint. Set the rate limit by using the <strong>RateValue</strong> parameter.</li>
+         * <li><strong>permit</strong>: allows traffic that matches the fingerprint.</li>
+         * <li><strong>drop</strong>: drops traffic that matches the fingerprint.</li>
+         * <li><strong>ip_rate</strong>: rate-limits the source IP address of traffic that matches the fingerprint. The rate limit is specified by the <strong>RateValue</strong> parameter.</li>
+         * <li><strong>session_rate</strong>: rate-limits the source session of traffic that matches the fingerprint. The rate limit is specified by the <strong>RateValue</strong> parameter.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -172,7 +172,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public Integer offset;
 
         /**
-         * <p>The detection payload, represented in hexadecimal string format.</p>
+         * <p>The detection payload. The value is in hexadecimal string format.</p>
          * 
          * <strong>example:</strong>
          * <p>abcd</p>
@@ -194,9 +194,9 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The rate limit value. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
+         * <p>The rate limit. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
          * <blockquote>
-         * <p>This parameter is required when the match action is source IP rate limiting or source session rate limiting (<strong>MatchAction</strong> is <strong>ip_rate</strong> or <strong>session_rate</strong>).</p>
+         * <p>This parameter is required when the match action is source IP rate limiting or source session rate limiting (<strong>MatchAction</strong> is set to <strong>ip_rate</strong> or <strong>session_rate</strong>).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -215,9 +215,9 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public String rule;
 
         /**
-         * <p>The priority number, expressed as an integer.</p>
+         * <p>The priority of the rule, represented as an integer.</p>
          * <blockquote>
-         * <p>A smaller number indicates a higher priority.</p>
+         * <p>A smaller value indicates a higher priority.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -456,14 +456,14 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public String arg;
 
         /**
-         * <p>The match content.</p>
+         * <p>The matching content.</p>
          * <ol>
          * <li>When <strong>Encode</strong> is set to <strong>str</strong>, the following requirements must be met:</li>
          * </ol>
          * <ul>
          * <li><p>The length of <strong>Content</strong> must not exceed 1500.</p>
          * </li>
-         * <li><p><strong>End</strong> - <strong>Start</strong> &gt;= the length of <strong>Content</strong>.</p>
+         * <li><p><strong>End</strong> - <strong>Start</strong> &gt;= length of <strong>Content</strong>.</p>
          * </li>
          * </ul>
          * <ol start="2">
@@ -476,7 +476,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
          * </li>
          * <li><p>The length of <strong>Content</strong> must not exceed 3000.</p>
          * </li>
-         * <li><p><strong>End</strong> - <strong>Start</strong> + 1 &gt;= the length of <strong>Content</strong> / 2.</p>
+         * <li><p><strong>End</strong> - <strong>Start</strong> + 1 &gt;= length of <strong>Content</strong> / 2.</p>
          * </li>
          * </ul>
          * 
@@ -511,13 +511,13 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public String encode;
 
         /**
-         * <p>The match range.</p>
+         * <p>The matching range.</p>
          */
         @NameInMap("Offset")
         public ModifyPolicyContentRequestContentL4RuleListConditionListOffset offset;
 
         /**
-         * <p>The match mode. Valid values:</p>
+         * <p>The matching pattern. Valid values:</p>
          * <ul>
          * <li><p><strong>contain</strong>: contains.</p>
          * </li>
@@ -620,7 +620,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public java.util.List<ModifyPolicyContentRequestContentL4RuleListConditionList> conditionList;
 
         /**
-         * <p>The minimum number of bytes in a session flow that triggers rule matching. Valid values: <strong>0</strong> to <strong>2048</strong>.</p>
+         * <p>The minimum number of bytes in a session flow to trigger rule matching. Valid values: <strong>0</strong> to <strong>2048</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -631,9 +631,9 @@ public class ModifyPolicyContentRequest extends TeaModel {
         /**
          * <p>The logical operator. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: The action is executed on a match.</p>
+         * <li><p><strong>0</strong>: executes the action when the rule is matched.</p>
          * </li>
-         * <li><p><strong>1</strong>: The action is executed on a non-match.</p>
+         * <li><p><strong>1</strong>: executes the action when the rule is not matched.</p>
          * </li>
          * </ul>
          * 
@@ -646,9 +646,9 @@ public class ModifyPolicyContentRequest extends TeaModel {
         /**
          * <p>The rule type. Valid values:</p>
          * <ul>
-         * <li><p><strong>char</strong>: string match.</p>
+         * <li><p><strong>char</strong>: string matching.</p>
          * </li>
-         * <li><p><strong>hex</strong>: hexadecimal match.</p>
+         * <li><p><strong>hex</strong>: hexadecimal matching.</p>
          * </li>
          * </ul>
          * 
@@ -801,9 +801,9 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The priority number, expressed as an integer.</p>
+         * <p>The priority of the rule, represented as an integer.</p>
          * <blockquote>
-         * <p>A smaller number indicates a higher priority.</p>
+         * <p>A smaller value indicates a higher priority.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -906,7 +906,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
 
     public static class ModifyPolicyContentRequestContentSipDefense extends TeaModel {
         /**
-         * <p>Specifies whether SIP protection is enabled. Valid values:</p>
+         * <p>Specifies whether to enable SIP protection. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Enabled.</li>
          * <li><strong>false</strong>: Disabled.</li>
@@ -955,7 +955,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public String sipPort;
 
         /**
-         * <p>The SIP source rate limit value in PPS.</p>
+         * <p>The SIP source rate limit (PPS).</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -964,7 +964,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public Long sipRate;
 
         /**
-         * <p>The SIP activation threshold in Mbit/s.</p>
+         * <p>The SIP activation threshold (Mbps).</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -973,7 +973,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public Long sipStartMbps;
 
         /**
-         * <p>The SIP activation threshold in PPS.</p>
+         * <p>The SIP activation threshold (PPS).</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -1094,10 +1094,10 @@ public class ModifyPolicyContentRequest extends TeaModel {
         /**
          * <p>The source rate limiting type. Valid values:</p>
          * <ul>
-         * <li><strong>3</strong>: source PPS rate limiting.</li>
-         * <li><strong>4</strong>: source bandwidth throttling.</li>
-         * <li><strong>5</strong>: source SYN PPS rate limiting.</li>
-         * <li><strong>6</strong>: source SYN bandwidth throttling.</li>
+         * <li><strong>3</strong>: Source PPS rate limiting.</li>
+         * <li><strong>4</strong>: Source bandwidth throttling.</li>
+         * <li><strong>5</strong>: Source SYN PPS rate limiting.</li>
+         * <li><strong>6</strong>: Source SYN bandwidth throttling.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -1148,7 +1148,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
 
     public static class ModifyPolicyContentRequestContentSourceLimit extends TeaModel {
         /**
-         * <p>The source bandwidth throttling value, in bytes per second (Byte/s).</p>
+         * <p>The source bandwidth throttling value, in bytes per second (byte/s).</p>
          * 
          * <strong>example:</strong>
          * <p>2048</p>
@@ -1157,7 +1157,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public Integer bps;
 
         /**
-         * <p>The source PPS rate limit, in packets per second (Packet/s).</p>
+         * <p>The source PPS rate limit, in packets per second (packet/s).</p>
          * 
          * <strong>example:</strong>
          * <p>64</p>
@@ -1166,7 +1166,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public Integer pps;
 
         /**
-         * <p>The source SYN bandwidth throttling value, in bytes per second (Byte/s).</p>
+         * <p>The source SYN bandwidth throttling value, in bytes per second (byte/s).</p>
          * 
          * <strong>example:</strong>
          * <p>2048</p>
@@ -1175,7 +1175,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public Integer synBps;
 
         /**
-         * <p>The source SYN PPS rate limit, in packets per second (Packet/s).</p>
+         * <p>The source SYN PPS rate limit, in packets per second (packet/s).</p>
          * 
          * <strong>example:</strong>
          * <p>64</p>
@@ -1224,7 +1224,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
 
     public static class ModifyPolicyContentRequestContent extends TeaModel {
         /**
-         * <p>The expiration time of the IP blacklist, in UNIX timestamp format.</p>
+         * <p>The expiration time of the IP blacklist (UNIX timestamp).</p>
          * 
          * <strong>example:</strong>
          * <p>1716878000</p>
@@ -1242,7 +1242,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public Boolean enableDropIcmp;
 
         /**
-         * <p>Specifies whether to enable AI-based intelligent protection.</p>
+         * <p>Specifies whether to enable AI-based intelligent analysis.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1251,7 +1251,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public Boolean enableIntelligence;
 
         /**
-         * <p>Specifies whether to enable port protection.</p>
+         * <p>Specifies whether to enable port-specific mitigation.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1266,7 +1266,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public java.util.List<ModifyPolicyContentRequestContentFingerPrintRuleList> fingerPrintRuleList;
 
         /**
-         * <p>The protection level of AI-based intelligent protection. Valid values:</p>
+         * <p>The protection level of AI-based intelligent analysis. Valid values:</p>
          * <ul>
          * <li><strong>default</strong>: Normal.</li>
          * <li><strong>hard</strong>: Strict.</li>
@@ -1292,7 +1292,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public java.util.List<ModifyPolicyContentRequestContentPortRuleList> portRuleList;
 
         /**
-         * <p>The list of ports filtered by reflection attack prevention.</p>
+         * <p>The list of ports filtered by the reflection attack prevention feature.</p>
          */
         @NameInMap("ReflectBlockUdpPortList")
         public java.util.List<Integer> reflectBlockUdpPortList;
@@ -1328,7 +1328,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public ModifyPolicyContentRequestContentSourceLimit sourceLimit;
 
         /**
-         * <p>Specifies whether to whitelist the back-to-origin IP addresses of Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland &amp; outside the Chinese mainland).</p>
+         * <p>Specifies whether to whitelist the back-to-origin IP addresses of Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland and outside the Chinese mainland).</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

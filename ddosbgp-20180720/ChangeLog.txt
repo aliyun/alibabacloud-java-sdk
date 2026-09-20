@@ -1,3 +1,8 @@
+2026-09-20 Version: 3.1.3
+- Update API DescribeNetworkLayerIntercepts: add request parameters InterceptModule.
+- Update API ListPolicyAttachment: add response parameters Body.AttachmentList.$.Status.
+
+
 2026-09-02 Version: 3.1.2
 - Update API ListPolicy: add response parameters Body.PolicyList.$.Content.FingerPrintRuleList.$.Comment.
 - Update API ListPolicy: add response parameters Body.PolicyList.$.Content.FingerPrintRuleList.$.Mode.

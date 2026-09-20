@@ -43,6 +43,15 @@ public class DescribeNetworkLayerInterceptsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The interception module.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>src</p>
+     */
+    @NameInMap("InterceptModule")
+    public String interceptModule;
+
+    /**
      * <p>The network protocol.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +70,7 @@ public class DescribeNetworkLayerInterceptsRequest extends TeaModel {
     public Long page;
 
     /**
-     * <p>Settings for the number of interception logs to return on each page when you perform a paged query. Paging is used to return results.</p>
+     * <p>The number of interception log entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -141,6 +150,14 @@ public class DescribeNetworkLayerInterceptsRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeNetworkLayerInterceptsRequest setInterceptModule(String interceptModule) {
+        this.interceptModule = interceptModule;
+        return this;
+    }
+    public String getInterceptModule() {
+        return this.interceptModule;
     }
 
     public DescribeNetworkLayerInterceptsRequest setNetworkProtocol(String networkProtocol) {

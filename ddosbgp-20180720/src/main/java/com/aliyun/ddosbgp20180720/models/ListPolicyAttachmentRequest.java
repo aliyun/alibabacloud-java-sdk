@@ -20,7 +20,7 @@ public class ListPolicyAttachmentRequest extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>The number of rows per page in a paging query. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paging query. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -54,8 +54,8 @@ public class ListPolicyAttachmentRequest extends TeaModel {
     /**
      * <p>The version of the port-specific mitigation policy. Valid values:</p>
      * <ul>
-     * <li><strong>Not specified</strong>: queries the policy associations that attach to the default surf DPI engine.</li>
-     * <li><strong>2</strong>: queries the policy associations that attach to the new stream DPI engine.</li>
+     * <li><strong>Not specified</strong>: queries the policy associations of the default surf DPI engine.</li>
+     * <li><strong>2</strong>: queries the policy associations of the new stream DPI engine.</li>
      * </ul>
      * 
      * <strong>example:</strong>

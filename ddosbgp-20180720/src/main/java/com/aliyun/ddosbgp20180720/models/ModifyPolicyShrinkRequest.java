@@ -7,28 +7,28 @@ public class ModifyPolicyShrinkRequest extends TeaModel {
     /**
      * <p>The action type. Valid values:</p>
      * <ul>
-     * <li><strong>10</strong>: Modifies the name (Name is required).</li>
-     * <li><strong>11</strong>: Modifies the blacklist timeout period (BlackIpListExpireAt is required). Only IP-specific mitigation policies are supported.</li>
-     * <li><strong>12</strong>: Modifies the switch for whitelisting back-to-origin IP addresses of Anti-DDoS Pro and Anti-DDoS Premium (WhitenGfbrNets is required). Only IP-specific mitigation policies are supported.</li>
-     * <li><strong>13</strong>: Modifies the switch for ICMP Blocking (EnableDropIcmp is required). Only IP-specific mitigation policies are supported.</li>
-     * <li><strong>20</strong>: Adds blacklist and whitelist entries (WhiteIpList and BlackIpList are optional). Only IP-specific mitigation policies are supported.</li>
-     * <li><strong>21</strong>: Deletes blacklist and whitelist entries (WhiteIpList and BlackIpList are optional). Only IP-specific mitigation policies are supported.</li>
-     * <li><strong>22</strong>: Clears the whitelist. Only IP-specific mitigation policies are supported.</li>
-     * <li><strong>23</strong>: Clears the blacklist. Only IP-specific mitigation policies are supported.</li>
-     * <li><strong>30</strong>: Modifies the AI-based intelligent protection switch and level (EnableIntelligence and IntelligenceLevel are required). Only IP-specific mitigation policies are supported.</li>
-     * <li><strong>31</strong>: Modifies the Location Blacklist configuration (RegionBlockCountryList and RegionBlockProvinceList are optional). Only IP-specific mitigation policies are supported.</li>
-     * <li><strong>32</strong>: Modifies the Source Rate Limiting configuration (SourceLimit and SourceBlockList are required). Only IP-specific mitigation policies are supported.</li>
-     * <li><strong>33</strong>: Modifies the Reflection Attack Filtering (ReflectBlockUdpPortList is required). Only IP-specific mitigation policies are supported.</li>
-     * <li><strong>40</strong>: Creates a Port Blocking rule (PortRuleList is required). Only IP-specific mitigation policies are supported.</li>
-     * <li><strong>41</strong>: Modifies a Port Blocking rule (PortRuleList is required). Only IP-specific mitigation policies are supported.</li>
-     * <li><strong>42</strong>: Deletes a Port Blocking rule (PortRuleList is required). Only IP-specific mitigation policies are supported.</li>
-     * <li><strong>50</strong>: Creates a Byte-Match Filter rule (FingerPrintRuleList is required). Only IP-specific mitigation policies are supported.</li>
-     * <li><strong>51</strong>: Modifies a Byte-Match Filter rule (FingerPrintRuleList is required). Only IP-specific mitigation policies are supported.</li>
-     * <li><strong>52</strong>: Deletes a Byte-Match Filter rule (FingerPrintRuleList is required). Only IP-specific mitigation policies are supported.</li>
-     * <li><strong>60</strong>: Modifies the port-specific mitigation switch (EnableL4Defense is required). Only port-specific mitigation policies are supported.</li>
-     * <li><strong>61</strong>: Creates a port-specific mitigation rule (L4RuleList is required). Only port-specific mitigation policies are supported.</li>
-     * <li><strong>62</strong>: Modifies a port-specific mitigation rule (L4RuleList is required). Only port-specific mitigation policies are supported.</li>
-     * <li><strong>63</strong>: Deletes a port-specific mitigation rule (L4RuleList is required). Only port-specific mitigation policies are supported.</li>
+     * <li><strong>10</strong>: modifies the name (Name is required).</li>
+     * <li><strong>11</strong>: modifies the blacklist timeout period (BlackIpListExpireAt is required). Only IP-specific mitigation policy is supported.</li>
+     * <li><strong>12</strong>: modifies the switch for whitelisting back-to-origin IP addresses of Anti-DDoS Pro and Anti-DDoS Premium (WhitenGfbrNets is required). Only IP-specific mitigation policy is supported.</li>
+     * <li><strong>13</strong>: modifies the switch for ICMP Blocking (EnableDropIcmp is required). Only IP-specific mitigation policy is supported.</li>
+     * <li><strong>20</strong>: adds entries to blacklists and whitelists (WhiteIpList and BlackIpList are optional). Only IP-specific mitigation policy is supported.</li>
+     * <li><strong>21</strong>: deletes entries from blacklists and whitelists (WhiteIpList and BlackIpList are optional). Only IP-specific mitigation policy is supported.</li>
+     * <li><strong>22</strong>: clears the whitelist. Only IP-specific mitigation policy is supported.</li>
+     * <li><strong>23</strong>: clears the blacklist. Only IP-specific mitigation policy is supported.</li>
+     * <li><strong>30</strong>: modifies the AI-based intelligent protection switch and level (EnableIntelligence and IntelligenceLevel are required). Only IP-specific mitigation policy is supported.</li>
+     * <li><strong>31</strong>: modifies the Location Blacklist configuration (RegionBlockCountryList and RegionBlockProvinceList are optional). Only IP-specific mitigation policy is supported.</li>
+     * <li><strong>32</strong>: modifies the source rate limiting configuration (SourceLimit and SourceBlockList are required). Only IP-specific mitigation policy is supported.</li>
+     * <li><strong>33</strong>: modifies the reflection attack port filtering (ReflectBlockUdpPortList is required). Only IP-specific mitigation policy is supported.</li>
+     * <li><strong>40</strong>: creates a port blocking rule (PortRuleList is required). Only IP-specific mitigation policy is supported.</li>
+     * <li><strong>41</strong>: modifies a port blocking rule (PortRuleList is required). Only IP-specific mitigation policy is supported.</li>
+     * <li><strong>42</strong>: deletes a port blocking rule (PortRuleList is required). Only IP-specific mitigation policy is supported.</li>
+     * <li><strong>50</strong>: creates a byte-match filter rule (FingerPrintRuleList is required). Only IP-specific mitigation policy is supported.</li>
+     * <li><strong>51</strong>: modifies a byte-match filter rule (FingerPrintRuleList is required). Only IP-specific mitigation policy is supported.</li>
+     * <li><strong>52</strong>: deletes a byte-match filter rule (FingerPrintRuleList is required). Only IP-specific mitigation policy is supported.</li>
+     * <li><strong>60</strong>: modifies the port-specific mitigation switch (EnableL4Defense is required). Only port-specific mitigation policy is supported.</li>
+     * <li><strong>61</strong>: creates a port-specific mitigation rule (L4RuleList is required). Only port-specific mitigation policy is supported.</li>
+     * <li><strong>62</strong>: modifies a port-specific mitigation rule (L4RuleList is required). Only port-specific mitigation policy is supported.</li>
+     * <li><strong>63</strong>: deletes a port-specific mitigation rule (L4RuleList is required). Only port-specific mitigation policy is supported.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -64,10 +64,10 @@ public class ModifyPolicyShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The port-specific mitigation policy version. Valid values:</p>
+     * <p>The version of the port-specific mitigation policy. Valid values:</p>
      * <ul>
-     * <li><strong>Empty</strong>: Modifies the default surf DPI engine policy.</li>
-     * <li><strong>2</strong>: Modifies the new stream DPI engine policy.<blockquote>
+     * <li><strong>Not specified</strong>: Modifies the default surf mitigation engine policy.</li>
+     * <li><strong>2</strong>: Modifies the new stream mitigation engine policy.<blockquote>
      * <p>Only port-specific mitigation policies are supported.</p>
      * </blockquote>
      * </li>
