@@ -80,6 +80,241 @@ public class InvokeAssistantResponseBody extends TeaModel {
         return this.streamEnd;
     }
 
+    public static class InvokeAssistantResponseBodyMessagesContentA2uiMessagesAppendDataModel extends TeaModel {
+        @NameInMap("path")
+        public String path;
+
+        @NameInMap("surfaceId")
+        public String surfaceId;
+
+        @NameInMap("value")
+        public Object value;
+
+        public static InvokeAssistantResponseBodyMessagesContentA2uiMessagesAppendDataModel build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantResponseBodyMessagesContentA2uiMessagesAppendDataModel self = new InvokeAssistantResponseBodyMessagesContentA2uiMessagesAppendDataModel();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessagesAppendDataModel setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessagesAppendDataModel setSurfaceId(String surfaceId) {
+            this.surfaceId = surfaceId;
+            return this;
+        }
+        public String getSurfaceId() {
+            return this.surfaceId;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessagesAppendDataModel setValue(Object value) {
+            this.value = value;
+            return this;
+        }
+        public Object getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class InvokeAssistantResponseBodyMessagesContentA2uiMessagesCreateSurface extends TeaModel {
+        @NameInMap("surfaceId")
+        public String surfaceId;
+
+        public static InvokeAssistantResponseBodyMessagesContentA2uiMessagesCreateSurface build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantResponseBodyMessagesContentA2uiMessagesCreateSurface self = new InvokeAssistantResponseBodyMessagesContentA2uiMessagesCreateSurface();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessagesCreateSurface setSurfaceId(String surfaceId) {
+            this.surfaceId = surfaceId;
+            return this;
+        }
+        public String getSurfaceId() {
+            return this.surfaceId;
+        }
+
+    }
+
+    public static class InvokeAssistantResponseBodyMessagesContentA2uiMessagesDeleteSurface extends TeaModel {
+        @NameInMap("surfaceId")
+        public String surfaceId;
+
+        public static InvokeAssistantResponseBodyMessagesContentA2uiMessagesDeleteSurface build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantResponseBodyMessagesContentA2uiMessagesDeleteSurface self = new InvokeAssistantResponseBodyMessagesContentA2uiMessagesDeleteSurface();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessagesDeleteSurface setSurfaceId(String surfaceId) {
+            this.surfaceId = surfaceId;
+            return this;
+        }
+        public String getSurfaceId() {
+            return this.surfaceId;
+        }
+
+    }
+
+    public static class InvokeAssistantResponseBodyMessagesContentA2uiMessagesUpdateComponents extends TeaModel {
+        @NameInMap("components")
+        public java.util.List<?> components;
+
+        @NameInMap("surfaceId")
+        public String surfaceId;
+
+        public static InvokeAssistantResponseBodyMessagesContentA2uiMessagesUpdateComponents build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantResponseBodyMessagesContentA2uiMessagesUpdateComponents self = new InvokeAssistantResponseBodyMessagesContentA2uiMessagesUpdateComponents();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessagesUpdateComponents setComponents(java.util.List<?> components) {
+            this.components = components;
+            return this;
+        }
+        public java.util.List<?> getComponents() {
+            return this.components;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessagesUpdateComponents setSurfaceId(String surfaceId) {
+            this.surfaceId = surfaceId;
+            return this;
+        }
+        public String getSurfaceId() {
+            return this.surfaceId;
+        }
+
+    }
+
+    public static class InvokeAssistantResponseBodyMessagesContentA2uiMessagesUpdateDataModel extends TeaModel {
+        @NameInMap("path")
+        public String path;
+
+        @NameInMap("surfaceId")
+        public String surfaceId;
+
+        @NameInMap("value")
+        public Object value;
+
+        public static InvokeAssistantResponseBodyMessagesContentA2uiMessagesUpdateDataModel build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantResponseBodyMessagesContentA2uiMessagesUpdateDataModel self = new InvokeAssistantResponseBodyMessagesContentA2uiMessagesUpdateDataModel();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessagesUpdateDataModel setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessagesUpdateDataModel setSurfaceId(String surfaceId) {
+            this.surfaceId = surfaceId;
+            return this;
+        }
+        public String getSurfaceId() {
+            return this.surfaceId;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessagesUpdateDataModel setValue(Object value) {
+            this.value = value;
+            return this;
+        }
+        public Object getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class InvokeAssistantResponseBodyMessagesContentA2uiMessages extends TeaModel {
+        @NameInMap("appendDataModel")
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessagesAppendDataModel appendDataModel;
+
+        @NameInMap("createSurface")
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessagesCreateSurface createSurface;
+
+        @NameInMap("deleteSurface")
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessagesDeleteSurface deleteSurface;
+
+        @NameInMap("profile")
+        public String profile;
+
+        @NameInMap("updateComponents")
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessagesUpdateComponents updateComponents;
+
+        @NameInMap("updateDataModel")
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessagesUpdateDataModel updateDataModel;
+
+        @NameInMap("version")
+        public String version;
+
+        public static InvokeAssistantResponseBodyMessagesContentA2uiMessages build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantResponseBodyMessagesContentA2uiMessages self = new InvokeAssistantResponseBodyMessagesContentA2uiMessages();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessages setAppendDataModel(InvokeAssistantResponseBodyMessagesContentA2uiMessagesAppendDataModel appendDataModel) {
+            this.appendDataModel = appendDataModel;
+            return this;
+        }
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessagesAppendDataModel getAppendDataModel() {
+            return this.appendDataModel;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessages setCreateSurface(InvokeAssistantResponseBodyMessagesContentA2uiMessagesCreateSurface createSurface) {
+            this.createSurface = createSurface;
+            return this;
+        }
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessagesCreateSurface getCreateSurface() {
+            return this.createSurface;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessages setDeleteSurface(InvokeAssistantResponseBodyMessagesContentA2uiMessagesDeleteSurface deleteSurface) {
+            this.deleteSurface = deleteSurface;
+            return this;
+        }
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessagesDeleteSurface getDeleteSurface() {
+            return this.deleteSurface;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessages setProfile(String profile) {
+            this.profile = profile;
+            return this;
+        }
+        public String getProfile() {
+            return this.profile;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessages setUpdateComponents(InvokeAssistantResponseBodyMessagesContentA2uiMessagesUpdateComponents updateComponents) {
+            this.updateComponents = updateComponents;
+            return this;
+        }
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessagesUpdateComponents getUpdateComponents() {
+            return this.updateComponents;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessages setUpdateDataModel(InvokeAssistantResponseBodyMessagesContentA2uiMessagesUpdateDataModel updateDataModel) {
+            this.updateDataModel = updateDataModel;
+            return this;
+        }
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessagesUpdateDataModel getUpdateDataModel() {
+            return this.updateDataModel;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentA2uiMessages setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+    }
+
     public static class InvokeAssistantResponseBodyMessagesContentAguiContentAguiEventList extends TeaModel {
         @NameInMap("activityType")
         public String activityType;
@@ -1001,6 +1236,9 @@ public class InvokeAssistantResponseBody extends TeaModel {
     }
 
     public static class InvokeAssistantResponseBodyMessagesContent extends TeaModel {
+        @NameInMap("a2uiMessages")
+        public java.util.List<InvokeAssistantResponseBodyMessagesContentA2uiMessages> a2uiMessages;
+
         @NameInMap("aguiContent")
         public InvokeAssistantResponseBodyMessagesContentAguiContent aguiContent;
 
@@ -1038,6 +1276,14 @@ public class InvokeAssistantResponseBody extends TeaModel {
         public static InvokeAssistantResponseBodyMessagesContent build(java.util.Map<String, ?> map) throws Exception {
             InvokeAssistantResponseBodyMessagesContent self = new InvokeAssistantResponseBodyMessagesContent();
             return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantResponseBodyMessagesContent setA2uiMessages(java.util.List<InvokeAssistantResponseBodyMessagesContentA2uiMessages> a2uiMessages) {
+            this.a2uiMessages = a2uiMessages;
+            return this;
+        }
+        public java.util.List<InvokeAssistantResponseBodyMessagesContentA2uiMessages> getA2uiMessages() {
+            return this.a2uiMessages;
         }
 
         public InvokeAssistantResponseBodyMessagesContent setAguiContent(InvokeAssistantResponseBodyMessagesContentAguiContent aguiContent) {
