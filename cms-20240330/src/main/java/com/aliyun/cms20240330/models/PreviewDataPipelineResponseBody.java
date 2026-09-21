@@ -11,7 +11,13 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
     public java.util.List<PreviewDataPipelineResponseBodyDatasets> datasets;
 
     /**
-     * <p>The effective SPL.</p>
+     * <p>The aggregated diagnostics.</p>
+     */
+    @NameInMap("diagnostics")
+    public java.util.Map<String, ?> diagnostics;
+
+    /**
+     * <p>The effective SPL script.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -41,6 +47,14 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
     }
     public java.util.List<PreviewDataPipelineResponseBodyDatasets> getDatasets() {
         return this.datasets;
+    }
+
+    public PreviewDataPipelineResponseBody setDiagnostics(java.util.Map<String, ?> diagnostics) {
+        this.diagnostics = diagnostics;
+        return this;
+    }
+    public java.util.Map<String, ?> getDiagnostics() {
+        return this.diagnostics;
     }
 
     public PreviewDataPipelineResponseBody setEffectiveScript(String effectiveScript) {

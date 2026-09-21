@@ -6403,10 +6403,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Uses a paged query to retrieve data stream pipelines in a specified workspace. Paging is supported.</p>
+     * <p>Queries data pipelines in a specified workspace by using paging.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of DataPipelines.</p>
+     * <p>Queries a list of DataPipelines.</p>
      * 
      * @param request ListDataPipelinesRequest
      * @param headers map
@@ -6444,10 +6444,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Uses a paged query to retrieve data stream pipelines in a specified workspace. Paging is supported.</p>
+     * <p>Queries data pipelines in a specified workspace by using paging.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of DataPipelines.</p>
+     * <p>Queries a list of DataPipelines.</p>
      * 
      * @param request ListDataPipelinesRequest
      * @return ListDataPipelinesResponse
@@ -9933,10 +9933,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the information about a Prometheus view instance.</p>
+     * <p>Updates the information of a Prometheus view instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the information about a Prometheus view instance.</p>
+     * <p>Updates the information of a Prometheus view instance.</p>
      * 
      * @param request UpdatePrometheusViewRequest
      * @param headers map
@@ -9994,10 +9994,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the information about a Prometheus view instance.</p>
+     * <p>Updates the information of a Prometheus view instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the information about a Prometheus view instance.</p>
+     * <p>Updates the information of a Prometheus view instance.</p>
      * 
      * @param request UpdatePrometheusViewRequest
      * @return UpdatePrometheusViewResponse

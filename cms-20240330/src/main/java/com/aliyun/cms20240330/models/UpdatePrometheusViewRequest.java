@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePrometheusViewRequest extends TeaModel {
     /**
-     * <p>The policy for password-free read access. IP address segments and VPC IDs are supported.</p>
+     * <p>The authentication-free read policy. IP CIDR blocks and VPC IDs are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -20,19 +20,21 @@ public class UpdatePrometheusViewRequest extends TeaModel {
      * }</p>
      */
     @NameInMap("authFreeReadPolicy")
+    @Deprecated
     public String authFreeReadPolicy;
 
     /**
-     * <p>Specifies whether to enable password-free read access.</p>
+     * <p>Specifies whether authentication-free read is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("enableAuthFreeRead")
+    @Deprecated
     public Boolean enableAuthFreeRead;
 
     /**
-     * <p>Specifies whether to enable authentication tokens.</p>
+     * <p>Specifies whether authToken is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -41,7 +43,7 @@ public class UpdatePrometheusViewRequest extends TeaModel {
     public Boolean enableAuthToken;
 
     /**
-     * <p>A list of Prometheus instances.</p>
+     * <p>The list of Prometheus instances.</p>
      */
     @NameInMap("prometheusInstances")
     public java.util.List<UpdatePrometheusViewRequestPrometheusInstances> prometheusInstances;
@@ -56,7 +58,7 @@ public class UpdatePrometheusViewRequest extends TeaModel {
     public String prometheusViewName;
 
     /**
-     * <p>The status of the Prometheus view.</p>
+     * <p>The running status.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -65,7 +67,7 @@ public class UpdatePrometheusViewRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The workspace to which the view belongs.</p>
+     * <p>The workspace to which the instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>default-cms-108490012345-cn-heyuan</p>
@@ -78,6 +80,7 @@ public class UpdatePrometheusViewRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public UpdatePrometheusViewRequest setAuthFreeReadPolicy(String authFreeReadPolicy) {
         this.authFreeReadPolicy = authFreeReadPolicy;
         return this;
@@ -86,6 +89,7 @@ public class UpdatePrometheusViewRequest extends TeaModel {
         return this.authFreeReadPolicy;
     }
 
+    @Deprecated
     public UpdatePrometheusViewRequest setEnableAuthFreeRead(Boolean enableAuthFreeRead) {
         this.enableAuthFreeRead = enableAuthFreeRead;
         return this;
@@ -145,7 +149,7 @@ public class UpdatePrometheusViewRequest extends TeaModel {
         public String prometheusInstanceId;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-north-2-gov-1</p>

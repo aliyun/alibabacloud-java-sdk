@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePrometheusViewRequest extends TeaModel {
     /**
-     * <p>Not in use.</p>
+     * <p>Not yet enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -20,15 +20,17 @@ public class CreatePrometheusViewRequest extends TeaModel {
      * }</p>
      */
     @NameInMap("authFreeReadPolicy")
+    @Deprecated
     public String authFreeReadPolicy;
 
     /**
-     * <p>Specifies whether anonymous read is supported.</p>
+     * <p>Specifies whether authentication-free read is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("enableAuthFreeRead")
+    @Deprecated
     public Boolean enableAuthFreeRead;
 
     /**
@@ -67,7 +69,7 @@ public class CreatePrometheusViewRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Not in use.</p>
+     * <p>Not yet enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -76,7 +78,7 @@ public class CreatePrometheusViewRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags.</p>
+     * <p>The operation to perform.</p>
      */
     @NameInMap("tags")
     public java.util.List<CreatePrometheusViewRequestTags> tags;
@@ -84,8 +86,8 @@ public class CreatePrometheusViewRequest extends TeaModel {
     /**
      * <p>Valid values:</p>
      * <ul>
-     * <li>V1: legacy version</li>
-     * <li>V2: new version.</li>
+     * <li>V1: Legacy version.</li>
+     * <li>V2: New version.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -109,6 +111,7 @@ public class CreatePrometheusViewRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public CreatePrometheusViewRequest setAuthFreeReadPolicy(String authFreeReadPolicy) {
         this.authFreeReadPolicy = authFreeReadPolicy;
         return this;
@@ -117,6 +120,7 @@ public class CreatePrometheusViewRequest extends TeaModel {
         return this.authFreeReadPolicy;
     }
 
+    @Deprecated
     public CreatePrometheusViewRequest setEnableAuthFreeRead(Boolean enableAuthFreeRead) {
         this.enableAuthFreeRead = enableAuthFreeRead;
         return this;

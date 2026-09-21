@@ -40,9 +40,93 @@ public class GetDataPipelineResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigAssignments extends TeaModel {
+        /**
+         * <p>The assignment expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>duration / 1000000.0</p>
+         */
+        @NameInMap("expression")
+        public String expression;
+
+        /**
+         * <p>The output field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>latency_ms</p>
+         */
+        @NameInMap("field")
+        public String field;
+
+        public static GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigAssignments build(java.util.Map<String, ?> map) throws Exception {
+            GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigAssignments self = new GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigAssignments();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigAssignments setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
+        }
+
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigAssignments setField(String field) {
+            this.field = field;
+            return this;
+        }
+        public String getField() {
+            return this.field;
+        }
+
+    }
+
+    public static class GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigProjections extends TeaModel {
+        /**
+         * <p>The source field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>serviceName</p>
+         */
+        @NameInMap("source")
+        public String source;
+
+        /**
+         * <p>The target field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service</p>
+         */
+        @NameInMap("target")
+        public String target;
+
+        public static GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigProjections build(java.util.Map<String, ?> map) throws Exception {
+            GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigProjections self = new GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigProjections();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigProjections setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigProjections setTarget(String target) {
+            this.target = target;
+            return this;
+        }
+        public String getTarget() {
+            return this.target;
+        }
+
+    }
+
     public static class GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigRules extends TeaModel {
         /**
-         * <p>The prefix length to retain.</p>
+         * <p>The retained prefix length.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -51,7 +135,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
         public Integer keepPrefix;
 
         /**
-         * <p>The suffix length to retain.</p>
+         * <p>The retained suffix length.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -146,6 +230,263 @@ public class GetDataPipelineResponseBody extends TeaModel {
 
     }
 
+    public static class GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditionsField extends TeaModel {
+        /**
+         * <p>The JSON object container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("container")
+        public String container;
+
+        /**
+         * <p>The reference data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>label</p>
+         */
+        @NameInMap("kind")
+        public String kind;
+
+        /**
+         * <p>The field or dimension name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>azone</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <p>The JSON literal key path.</p>
+         */
+        @NameInMap("path")
+        public java.util.List<String> path;
+
+        public static GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditionsField build(java.util.Map<String, ?> map) throws Exception {
+            GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditionsField self = new GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditionsField();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditionsField setContainer(String container) {
+            this.container = container;
+            return this;
+        }
+        public String getContainer() {
+            return this.container;
+        }
+
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditionsField setKind(String kind) {
+            this.kind = kind;
+            return this;
+        }
+        public String getKind() {
+            return this.kind;
+        }
+
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditionsField setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditionsField setPath(java.util.List<String> path) {
+            this.path = path;
+            return this;
+        }
+        public java.util.List<String> getPath() {
+            return this.path;
+        }
+
+    }
+
+    public static class GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditions extends TeaModel {
+        /**
+         * <p>The field reference.</p>
+         */
+        @NameInMap("field")
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditionsField field;
+
+        /**
+         * <p>The match type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXACT</p>
+         */
+        @NameInMap("matchType")
+        public String matchType;
+
+        /**
+         * <p>The match values.</p>
+         */
+        @NameInMap("values")
+        public java.util.List<String> values;
+
+        public static GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditions build(java.util.Map<String, ?> map) throws Exception {
+            GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditions self = new GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditions();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditions setField(GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditionsField field) {
+            this.field = field;
+            return this;
+        }
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditionsField getField() {
+            return this.field;
+        }
+
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditions setMatchType(String matchType) {
+            this.matchType = matchType;
+            return this;
+        }
+        public String getMatchType() {
+            return this.matchType;
+        }
+
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditions setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+    }
+
+    public static class GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeMetricName extends TeaModel {
+        /**
+         * <p>The match type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXACT</p>
+         */
+        @NameInMap("matchType")
+        public String matchType;
+
+        /**
+         * <p>The metric name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;http_requests_total&quot;]</p>
+         */
+        @NameInMap("values")
+        public java.util.List<String> values;
+
+        public static GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeMetricName build(java.util.Map<String, ?> map) throws Exception {
+            GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeMetricName self = new GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeMetricName();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeMetricName setMatchType(String matchType) {
+            this.matchType = matchType;
+            return this;
+        }
+        public String getMatchType() {
+            return this.matchType;
+        }
+
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeMetricName setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+    }
+
+    public static class GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeServiceName extends TeaModel {
+        /**
+         * <p>The match type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXACT</p>
+         */
+        @NameInMap("matchType")
+        public String matchType;
+
+        /**
+         * <p>The match values.</p>
+         */
+        @NameInMap("values")
+        public java.util.List<String> values;
+
+        public static GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeServiceName build(java.util.Map<String, ?> map) throws Exception {
+            GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeServiceName self = new GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeServiceName();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeServiceName setMatchType(String matchType) {
+            this.matchType = matchType;
+            return this;
+        }
+        public String getMatchType() {
+            return this.matchType;
+        }
+
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeServiceName setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+    }
+
+    public static class GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScope extends TeaModel {
+        /**
+         * <p>The additional field conditions.</p>
+         */
+        @NameInMap("conditions")
+        public java.util.List<GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditions> conditions;
+
+        /**
+         * <p>The metric name scope.</p>
+         */
+        @NameInMap("metricName")
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeMetricName metricName;
+
+        /**
+         * <p>The service name scope.</p>
+         */
+        @NameInMap("serviceName")
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeServiceName serviceName;
+
+        public static GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScope build(java.util.Map<String, ?> map) throws Exception {
+            GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScope self = new GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScope();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScope setConditions(java.util.List<GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditions> conditions) {
+            this.conditions = conditions;
+            return this;
+        }
+        public java.util.List<GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeConditions> getConditions() {
+            return this.conditions;
+        }
+
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScope setMetricName(GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeMetricName metricName) {
+            this.metricName = metricName;
+            return this;
+        }
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeMetricName getMetricName() {
+            return this.metricName;
+        }
+
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScope setServiceName(GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeServiceName serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScopeServiceName getServiceName() {
+            return this.serviceName;
+        }
+
+    }
+
     public static class GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigSelector extends TeaModel {
         /**
          * <p>The list of service names.</p>
@@ -204,6 +545,12 @@ public class GetDataPipelineResponseBody extends TeaModel {
         public java.util.List<String> applications;
 
         /**
+         * <p>The field assignment list.</p>
+         */
+        @NameInMap("assignments")
+        public java.util.List<GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigAssignments> assignments;
+
+        /**
          * <p>The filter expression.</p>
          * 
          * <strong>example:</strong>
@@ -219,10 +566,28 @@ public class GetDataPipelineResponseBody extends TeaModel {
         public java.util.List<String> fields;
 
         /**
+         * <p>The extended parameters.</p>
+         */
+        @NameInMap("parameters")
+        public java.util.Map<String, ?> parameters;
+
+        /**
+         * <p>The field projection list.</p>
+         */
+        @NameInMap("projections")
+        public java.util.List<GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigProjections> projections;
+
+        /**
          * <p>The masking rule list.</p>
          */
         @NameInMap("rules")
         public java.util.List<GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigRules> rules;
+
+        /**
+         * <p>The scope in which the pipeline processing processor takes effect.</p>
+         */
+        @NameInMap("scope")
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScope scope;
 
         /**
          * <p>The SPL script.</p>
@@ -260,6 +625,14 @@ public class GetDataPipelineResponseBody extends TeaModel {
             return this.applications;
         }
 
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfig setAssignments(java.util.List<GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigAssignments> assignments) {
+            this.assignments = assignments;
+            return this;
+        }
+        public java.util.List<GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigAssignments> getAssignments() {
+            return this.assignments;
+        }
+
         public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfig setExpression(String expression) {
             this.expression = expression;
             return this;
@@ -276,12 +649,36 @@ public class GetDataPipelineResponseBody extends TeaModel {
             return this.fields;
         }
 
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfig setParameters(java.util.Map<String, ?> parameters) {
+            this.parameters = parameters;
+            return this;
+        }
+        public java.util.Map<String, ?> getParameters() {
+            return this.parameters;
+        }
+
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfig setProjections(java.util.List<GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigProjections> projections) {
+            this.projections = projections;
+            return this;
+        }
+        public java.util.List<GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigProjections> getProjections() {
+            return this.projections;
+        }
+
         public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfig setRules(java.util.List<GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigRules> rules) {
             this.rules = rules;
             return this;
         }
         public java.util.List<GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigRules> getRules() {
             return this.rules;
+        }
+
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfig setScope(GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScope scope) {
+            this.scope = scope;
+            return this;
+        }
+        public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScope getScope() {
+            return this.scope;
         }
 
         public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfig setScript(String script) {
@@ -405,9 +802,93 @@ public class GetDataPipelineResponseBody extends TeaModel {
 
     }
 
+    public static class GetDataPipelineResponseBodyPipelineProcessorsConfigAssignments extends TeaModel {
+        /**
+         * <p>The assignment expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>duration / 1000000.0</p>
+         */
+        @NameInMap("expression")
+        public String expression;
+
+        /**
+         * <p>The output field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>latency_ms</p>
+         */
+        @NameInMap("field")
+        public String field;
+
+        public static GetDataPipelineResponseBodyPipelineProcessorsConfigAssignments build(java.util.Map<String, ?> map) throws Exception {
+            GetDataPipelineResponseBodyPipelineProcessorsConfigAssignments self = new GetDataPipelineResponseBodyPipelineProcessorsConfigAssignments();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigAssignments setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
+        }
+
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigAssignments setField(String field) {
+            this.field = field;
+            return this;
+        }
+        public String getField() {
+            return this.field;
+        }
+
+    }
+
+    public static class GetDataPipelineResponseBodyPipelineProcessorsConfigProjections extends TeaModel {
+        /**
+         * <p>The source field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>serviceName</p>
+         */
+        @NameInMap("source")
+        public String source;
+
+        /**
+         * <p>The target field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service</p>
+         */
+        @NameInMap("target")
+        public String target;
+
+        public static GetDataPipelineResponseBodyPipelineProcessorsConfigProjections build(java.util.Map<String, ?> map) throws Exception {
+            GetDataPipelineResponseBodyPipelineProcessorsConfigProjections self = new GetDataPipelineResponseBodyPipelineProcessorsConfigProjections();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigProjections setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigProjections setTarget(String target) {
+            this.target = target;
+            return this;
+        }
+        public String getTarget() {
+            return this.target;
+        }
+
+    }
+
     public static class GetDataPipelineResponseBodyPipelineProcessorsConfigRules extends TeaModel {
         /**
-         * <p>The prefix length to retain.</p>
+         * <p>The retained prefix length.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -416,7 +897,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
         public Integer keepPrefix;
 
         /**
-         * <p>The suffix length to retain.</p>
+         * <p>The retained suffix length.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -511,6 +992,263 @@ public class GetDataPipelineResponseBody extends TeaModel {
 
     }
 
+    public static class GetDataPipelineResponseBodyPipelineProcessorsConfigScopeConditionsField extends TeaModel {
+        /**
+         * <p>The JSON object container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("container")
+        public String container;
+
+        /**
+         * <p>The reference data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>explorer_link</p>
+         */
+        @NameInMap("kind")
+        public String kind;
+
+        /**
+         * <p>The field or dimension name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>site_check_monitor</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <p>The JSON literal key path.</p>
+         */
+        @NameInMap("path")
+        public java.util.List<String> path;
+
+        public static GetDataPipelineResponseBodyPipelineProcessorsConfigScopeConditionsField build(java.util.Map<String, ?> map) throws Exception {
+            GetDataPipelineResponseBodyPipelineProcessorsConfigScopeConditionsField self = new GetDataPipelineResponseBodyPipelineProcessorsConfigScopeConditionsField();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigScopeConditionsField setContainer(String container) {
+            this.container = container;
+            return this;
+        }
+        public String getContainer() {
+            return this.container;
+        }
+
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigScopeConditionsField setKind(String kind) {
+            this.kind = kind;
+            return this;
+        }
+        public String getKind() {
+            return this.kind;
+        }
+
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigScopeConditionsField setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigScopeConditionsField setPath(java.util.List<String> path) {
+            this.path = path;
+            return this;
+        }
+        public java.util.List<String> getPath() {
+            return this.path;
+        }
+
+    }
+
+    public static class GetDataPipelineResponseBodyPipelineProcessorsConfigScopeConditions extends TeaModel {
+        /**
+         * <p>The field reference.</p>
+         */
+        @NameInMap("field")
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigScopeConditionsField field;
+
+        /**
+         * <p>The match type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXACT</p>
+         */
+        @NameInMap("matchType")
+        public String matchType;
+
+        /**
+         * <p>The match values.</p>
+         */
+        @NameInMap("values")
+        public java.util.List<String> values;
+
+        public static GetDataPipelineResponseBodyPipelineProcessorsConfigScopeConditions build(java.util.Map<String, ?> map) throws Exception {
+            GetDataPipelineResponseBodyPipelineProcessorsConfigScopeConditions self = new GetDataPipelineResponseBodyPipelineProcessorsConfigScopeConditions();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigScopeConditions setField(GetDataPipelineResponseBodyPipelineProcessorsConfigScopeConditionsField field) {
+            this.field = field;
+            return this;
+        }
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigScopeConditionsField getField() {
+            return this.field;
+        }
+
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigScopeConditions setMatchType(String matchType) {
+            this.matchType = matchType;
+            return this;
+        }
+        public String getMatchType() {
+            return this.matchType;
+        }
+
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigScopeConditions setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+    }
+
+    public static class GetDataPipelineResponseBodyPipelineProcessorsConfigScopeMetricName extends TeaModel {
+        /**
+         * <p>The match type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXACT</p>
+         */
+        @NameInMap("matchType")
+        public String matchType;
+
+        /**
+         * <p>The metric name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;http_requests_total&quot;]</p>
+         */
+        @NameInMap("values")
+        public java.util.List<String> values;
+
+        public static GetDataPipelineResponseBodyPipelineProcessorsConfigScopeMetricName build(java.util.Map<String, ?> map) throws Exception {
+            GetDataPipelineResponseBodyPipelineProcessorsConfigScopeMetricName self = new GetDataPipelineResponseBodyPipelineProcessorsConfigScopeMetricName();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigScopeMetricName setMatchType(String matchType) {
+            this.matchType = matchType;
+            return this;
+        }
+        public String getMatchType() {
+            return this.matchType;
+        }
+
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigScopeMetricName setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+    }
+
+    public static class GetDataPipelineResponseBodyPipelineProcessorsConfigScopeServiceName extends TeaModel {
+        /**
+         * <p>The match type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXACT</p>
+         */
+        @NameInMap("matchType")
+        public String matchType;
+
+        /**
+         * <p>The match values.</p>
+         */
+        @NameInMap("values")
+        public java.util.List<String> values;
+
+        public static GetDataPipelineResponseBodyPipelineProcessorsConfigScopeServiceName build(java.util.Map<String, ?> map) throws Exception {
+            GetDataPipelineResponseBodyPipelineProcessorsConfigScopeServiceName self = new GetDataPipelineResponseBodyPipelineProcessorsConfigScopeServiceName();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigScopeServiceName setMatchType(String matchType) {
+            this.matchType = matchType;
+            return this;
+        }
+        public String getMatchType() {
+            return this.matchType;
+        }
+
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigScopeServiceName setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+    }
+
+    public static class GetDataPipelineResponseBodyPipelineProcessorsConfigScope extends TeaModel {
+        /**
+         * <p>The additional field conditions.</p>
+         */
+        @NameInMap("conditions")
+        public java.util.List<GetDataPipelineResponseBodyPipelineProcessorsConfigScopeConditions> conditions;
+
+        /**
+         * <p>The metric name scope.</p>
+         */
+        @NameInMap("metricName")
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigScopeMetricName metricName;
+
+        /**
+         * <p>The service name scope.</p>
+         */
+        @NameInMap("serviceName")
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigScopeServiceName serviceName;
+
+        public static GetDataPipelineResponseBodyPipelineProcessorsConfigScope build(java.util.Map<String, ?> map) throws Exception {
+            GetDataPipelineResponseBodyPipelineProcessorsConfigScope self = new GetDataPipelineResponseBodyPipelineProcessorsConfigScope();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigScope setConditions(java.util.List<GetDataPipelineResponseBodyPipelineProcessorsConfigScopeConditions> conditions) {
+            this.conditions = conditions;
+            return this;
+        }
+        public java.util.List<GetDataPipelineResponseBodyPipelineProcessorsConfigScopeConditions> getConditions() {
+            return this.conditions;
+        }
+
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigScope setMetricName(GetDataPipelineResponseBodyPipelineProcessorsConfigScopeMetricName metricName) {
+            this.metricName = metricName;
+            return this;
+        }
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigScopeMetricName getMetricName() {
+            return this.metricName;
+        }
+
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigScope setServiceName(GetDataPipelineResponseBodyPipelineProcessorsConfigScopeServiceName serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigScopeServiceName getServiceName() {
+            return this.serviceName;
+        }
+
+    }
+
     public static class GetDataPipelineResponseBodyPipelineProcessorsConfigSelector extends TeaModel {
         /**
          * <p>The list of service names.</p>
@@ -569,6 +1307,12 @@ public class GetDataPipelineResponseBody extends TeaModel {
         public java.util.List<String> applications;
 
         /**
+         * <p>The field assignment list.</p>
+         */
+        @NameInMap("assignments")
+        public java.util.List<GetDataPipelineResponseBodyPipelineProcessorsConfigAssignments> assignments;
+
+        /**
          * <p>The filter expression.</p>
          * 
          * <strong>example:</strong>
@@ -584,10 +1328,28 @@ public class GetDataPipelineResponseBody extends TeaModel {
         public java.util.List<String> fields;
 
         /**
+         * <p>The extended parameters.</p>
+         */
+        @NameInMap("parameters")
+        public java.util.Map<String, ?> parameters;
+
+        /**
+         * <p>The field projection list.</p>
+         */
+        @NameInMap("projections")
+        public java.util.List<GetDataPipelineResponseBodyPipelineProcessorsConfigProjections> projections;
+
+        /**
          * <p>The masking rule list.</p>
          */
         @NameInMap("rules")
         public java.util.List<GetDataPipelineResponseBodyPipelineProcessorsConfigRules> rules;
+
+        /**
+         * <p>The scope in which the pipeline processing processor takes effect.</p>
+         */
+        @NameInMap("scope")
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigScope scope;
 
         /**
          * <p>The SPL script.</p>
@@ -625,6 +1387,14 @@ public class GetDataPipelineResponseBody extends TeaModel {
             return this.applications;
         }
 
+        public GetDataPipelineResponseBodyPipelineProcessorsConfig setAssignments(java.util.List<GetDataPipelineResponseBodyPipelineProcessorsConfigAssignments> assignments) {
+            this.assignments = assignments;
+            return this;
+        }
+        public java.util.List<GetDataPipelineResponseBodyPipelineProcessorsConfigAssignments> getAssignments() {
+            return this.assignments;
+        }
+
         public GetDataPipelineResponseBodyPipelineProcessorsConfig setExpression(String expression) {
             this.expression = expression;
             return this;
@@ -641,12 +1411,36 @@ public class GetDataPipelineResponseBody extends TeaModel {
             return this.fields;
         }
 
+        public GetDataPipelineResponseBodyPipelineProcessorsConfig setParameters(java.util.Map<String, ?> parameters) {
+            this.parameters = parameters;
+            return this;
+        }
+        public java.util.Map<String, ?> getParameters() {
+            return this.parameters;
+        }
+
+        public GetDataPipelineResponseBodyPipelineProcessorsConfig setProjections(java.util.List<GetDataPipelineResponseBodyPipelineProcessorsConfigProjections> projections) {
+            this.projections = projections;
+            return this;
+        }
+        public java.util.List<GetDataPipelineResponseBodyPipelineProcessorsConfigProjections> getProjections() {
+            return this.projections;
+        }
+
         public GetDataPipelineResponseBodyPipelineProcessorsConfig setRules(java.util.List<GetDataPipelineResponseBodyPipelineProcessorsConfigRules> rules) {
             this.rules = rules;
             return this;
         }
         public java.util.List<GetDataPipelineResponseBodyPipelineProcessorsConfigRules> getRules() {
             return this.rules;
+        }
+
+        public GetDataPipelineResponseBodyPipelineProcessorsConfig setScope(GetDataPipelineResponseBodyPipelineProcessorsConfigScope scope) {
+            this.scope = scope;
+            return this;
+        }
+        public GetDataPipelineResponseBodyPipelineProcessorsConfigScope getScope() {
+            return this.scope;
         }
 
         public GetDataPipelineResponseBodyPipelineProcessorsConfig setScript(String script) {
@@ -927,7 +1721,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
         public GetDataPipelineResponseBodyPipelineSourceConfig config;
 
         /**
-         * <p>The data source type.</p>
+         * <p>The type of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>traces-default</p>
@@ -960,7 +1754,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
 
     public static class GetDataPipelineResponseBodyPipeline extends TeaModel {
         /**
-         * <p>The time when the pipeline was created.</p>
+         * <p>The creation time.</p>
          * <p>This parameter is required.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
