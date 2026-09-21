@@ -14,6 +14,12 @@ public class UpdateDatasetRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The field renames for the dataset.</p>
+     */
+    @NameInMap("renames")
+    public java.util.List<UpdateDatasetRequestRenames> renames;
+
+    /**
      * <p>The table schema of the dataset.</p>
      */
     @NameInMap("schema")
@@ -41,6 +47,14 @@ public class UpdateDatasetRequest extends TeaModel {
         return this.description;
     }
 
+    public UpdateDatasetRequest setRenames(java.util.List<UpdateDatasetRequestRenames> renames) {
+        this.renames = renames;
+        return this;
+    }
+    public java.util.List<UpdateDatasetRequestRenames> getRenames() {
+        return this.renames;
+    }
+
     public UpdateDatasetRequest setSchema(java.util.Map<String, IndexKey> schema) {
         this.schema = schema;
         return this;
@@ -55,6 +69,48 @@ public class UpdateDatasetRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public static class UpdateDatasetRequestRenames extends TeaModel {
+        /**
+         * <p>The new field name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t2</p>
+         */
+        @NameInMap("newName")
+        public String newName;
+
+        /**
+         * <p>The original field name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t1</p>
+         */
+        @NameInMap("oldName")
+        public String oldName;
+
+        public static UpdateDatasetRequestRenames build(java.util.Map<String, ?> map) throws Exception {
+            UpdateDatasetRequestRenames self = new UpdateDatasetRequestRenames();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateDatasetRequestRenames setNewName(String newName) {
+            this.newName = newName;
+            return this;
+        }
+        public String getNewName() {
+            return this.newName;
+        }
+
+        public UpdateDatasetRequestRenames setOldName(String oldName) {
+            this.oldName = oldName;
+            return this;
+        }
+        public String getOldName() {
+            return this.oldName;
+        }
+
     }
 
 }

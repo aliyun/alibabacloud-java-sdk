@@ -3349,6 +3349,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.renames)) {
+            body.put("renames", request.renames);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.schema)) {
             body.put("schema", request.schema);
         }
