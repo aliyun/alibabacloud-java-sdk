@@ -20,7 +20,7 @@ public class BatchPutKvWithHighCapacityResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of keys that were written.</p>
+     * <p>The list of keys that were written successfully.</p>
      */
     @NameInMap("SuccessKeys")
     public java.util.List<String> successKeys;

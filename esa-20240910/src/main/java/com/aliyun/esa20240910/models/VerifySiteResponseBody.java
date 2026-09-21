@@ -7,8 +7,8 @@ public class VerifySiteResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the verification passed. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The verification passed.</li>
+     * <li><strong>false</strong>: The verification failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -20,7 +20,7 @@ public class RecoverSiteResponseBody extends TeaModel {
     public String accessType;
 
     /**
-     * <p>The CNAME suffix of the site. For sites accessed through CNAME, this is the suffix that needs to be configured for the CNAME record.</p>
+     * <p>The CNAME suffix of the site. For sites that are accessed through CNAME, this field indicates the CNAME suffix that needs to be configured for records.</p>
      * 
      * <strong>example:</strong>
      * <p>gf-test.hkrt.cn</p>
@@ -61,7 +61,7 @@ public class RecoverSiteResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The list of name servers assigned to the site, separated by commas (,). When the site is accessed through NS, this field contains values. You need to change the DNS servers of the site to these name servers. Then you can verify site ownership and activate the site.</p>
+     * <p>The list of name servers assigned to the site, separated by commas (,). When the site uses NS access, this field contains values. You need to change the DNS servers of the site to these name servers. Then you can verify the site ownership and activate the site.</p>
      * 
      * <strong>example:</strong>
      * <p>ns1.example.com,ns2.example.com</p>
@@ -70,13 +70,13 @@ public class RecoverSiteResponseBody extends TeaModel {
     public String nameServerList;
 
     /**
-     * <p>The reason why the site was disabled. Valid values:</p>
+     * <p>The reason why the site was deactivated. Valid values:</p>
      * <ul>
-     * <li><strong>expiration_ arrears</strong>: the subscription plan expired or the account has an overdue payment.</li>
-     * <li><strong>internally_disabled</strong>: disabled by the system internally.</li>
-     * <li><strong>missing_icp</strong>: the domain name lacks an ICP filing.</li>
-     * <li><strong>content_violation</strong>: content violation.</li>
-     * <li><strong>proactively_disabled</strong>: you proactively disabled the site or the site was disabled due to the usage cap you configured.</li>
+     * <li><strong>expiration_arrears</strong>: The subscription plan expired or the account has an overdue payment.</li>
+     * <li><strong>internally_disabled</strong>: The site was disabled by the system.</li>
+     * <li><strong>missing_icp</strong>: The domain name does not have an ICP filing.</li>
+     * <li><strong>content_violation</strong>: Content violation.</li>
+     * <li><strong>proactively_disabled</strong>: You proactively disabled the site or the site was disabled because the usage cap you configured was reached.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -133,10 +133,10 @@ public class RecoverSiteResponseBody extends TeaModel {
     /**
      * <p>The site status. Valid values:</p>
      * <ul>
-     * <li><strong>pending</strong>: the site is pending configuration.</li>
-     * <li><strong>active</strong>: the site is activated.</li>
-     * <li><strong>offline</strong>: the site is offline.</li>
-     * <li><strong>moved</strong>: the site has been superseded.</li>
+     * <li><strong>pending</strong>: The site is pending configuration.</li>
+     * <li><strong>active</strong>: The site is activated.</li>
+     * <li><strong>offline</strong>: The site is offline.</li>
+     * <li><strong>moved</strong>: The site has been replaced.</li>
      * </ul>
      * 
      * <strong>example:</strong>

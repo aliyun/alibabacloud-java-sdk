@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWafFilterRequest extends TeaModel {
     /**
-     * <p>Specifies the WAF phase from which to retrieve the matching engine information.</p>
+     * <p>The WAF phase. Specifies the WAF phase for which to query the match engine information.</p>
      * 
      * <strong>example:</strong>
      * <p>http_bot</p>
@@ -14,7 +14,7 @@ public class GetWafFilterRequest extends TeaModel {
     public String phase;
 
     /**
-     * <p>Specifies the ID of the site. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class GetWafFilterRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Specifies the application target of the matching engine.</p>
+     * <p>The target. Defines the application target of the match engine.</p>
      * 
      * <strong>example:</strong>
      * <p>characteristics</p>
@@ -32,7 +32,7 @@ public class GetWafFilterRequest extends TeaModel {
     public String target;
 
     /**
-     * <p>Specifies the rule type.</p>
+     * <p>The rule type.</p>
      * 
      * <strong>example:</strong>
      * <p>http_custom_cc</p>

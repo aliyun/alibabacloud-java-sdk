@@ -5,6 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeDDoSBpsMaxRequest extends TeaModel {
     /**
+     * <p>The protection region. If this parameter is not specified, the default value global is used. Valid values:</p>
+     * <ul>
+     * <li><p>domestic: the Chinese mainland.</p>
+     * </li>
+     * <li><p>overseas: global (excluding the Chinese mainland).</p>
+     * </li>
+     * <li><p>global: global.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>global</p>
      */
@@ -12,6 +22,11 @@ public class DescribeDDoSBpsMaxRequest extends TeaModel {
     public String coverage;
 
     /**
+     * <p>The end of the time range to query. Specify the time in ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <blockquote>
+     * <p>The end time must be later than the start time.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2023-04-07T02:34:00Z</p>
      */
@@ -19,6 +34,7 @@ public class DescribeDDoSBpsMaxRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The site ID, which can be obtained by calling the <a href="url">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +44,7 @@ public class DescribeDDoSBpsMaxRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The beginning of the time range to query. Specify the time in ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAsyncTasksRequest extends TeaModel {
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListAsyncTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of tasks to display per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class ListAsyncTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The resource ID to which the task belongs, such as a site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>4080****3752512</p>
      */
@@ -26,6 +32,8 @@ public class ListAsyncTasksRequest extends TeaModel {
     public String resourceIds;
 
     /**
+     * <p>The resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>site</p>
      */
@@ -33,6 +41,13 @@ public class ListAsyncTasksRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The current status of the task. Valid values:</p>
+     * <ul>
+     * <li>in_progress: in progress.</li>
+     * <li>success: completed.</li>
+     * <li>fail: failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -40,6 +55,8 @@ public class ListAsyncTasksRequest extends TeaModel {
     public String taskStatus;
 
     /**
+     * <p>The task type. For example, the task type for applying for a free certificate is free_cert.</p>
+     * 
      * <strong>example:</strong>
      * <p>free_cert</p>
      */

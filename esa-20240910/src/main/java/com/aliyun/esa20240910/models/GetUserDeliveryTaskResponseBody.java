@@ -7,14 +7,10 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
     /**
      * <p>The business type. Valid values:</p>
      * <ul>
-     * <li><p><strong>dcdn_log_access_l1</strong> (default): access log.</p>
-     * </li>
-     * <li><p><strong>dcdn_log_er</strong>: edge function log.</p>
-     * </li>
-     * <li><p><strong>dcdn_log_waf</strong>: WAF log.</p>
-     * </li>
-     * <li><p><strong>dcdn_log_ipa</strong>: Layer 4 acceleration log.</p>
-     * </li>
+     * <li><strong>dcdn_log_access_l1</strong> (default): access logs.</li>
+     * <li><strong>dcdn_log_er</strong>: Edge Routine function logs.</li>
+     * <li><strong>dcdn_log_waf</strong>: security protection logs.</li>
+     * <li><strong>dcdn_log_ipa</strong>: Layer 4 acceleration logs.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,10 +22,8 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
     /**
      * <p>The data center. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn</strong>: Chinese mainland</p>
-     * </li>
-     * <li><p><strong>sg</strong>: Global (excluding the Chinese mainland)</p>
-     * </li>
+     * <li><strong>cn</strong>: the Chinese mainland.</li>
+     * <li><strong>sg</strong>: global (excluding the Chinese mainland).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,18 +35,12 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
     /**
      * <p>The delivery type. Valid values:</p>
      * <ul>
-     * <li><p><strong>sls</strong>: Log Service</p>
-     * </li>
-     * <li><p><strong>http</strong>: HTTP service</p>
-     * </li>
-     * <li><p><strong>aws3</strong>: Amazon S3</p>
-     * </li>
-     * <li><p><strong>oss</strong>: OSS</p>
-     * </li>
-     * <li><p><strong>kafka</strong>: Kafka service</p>
-     * </li>
-     * <li><p><strong>aws3cmpt</strong>: Amazon S3-compatible service</p>
-     * </li>
+     * <li><strong>sls</strong>: Alibaba Cloud Simple Log Service.</li>
+     * <li><strong>http</strong>: HTTP service.</li>
+     * <li><strong>aws3</strong>: Amazon S3 service.</li>
+     * <li><strong>oss</strong>: Alibaba Cloud Object Storage Service.</li>
+     * <li><strong>kafka</strong>: Kafka service.</li>
+     * <li><strong>aws3cmpt</strong>: Amazon S3-compatible service.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,6 +49,12 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
     @NameInMap("DeliveryType")
     public String deliveryType;
 
+    /**
+     * <p>The list of Edge Routine PODs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx,xxx</p>
+     */
     @NameInMap("Details")
     public String details;
 
@@ -74,7 +68,7 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
     public Float discardRate;
 
     /**
-     * <p>A comma-separated list of fields.</p>
+     * <p>The field array.</p>
      * 
      * <strong>example:</strong>
      * <p>ClientRequestID,ClientRequestHost</p>
@@ -91,9 +85,38 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
     @NameInMap("FilterRules")
     public String filterRules;
 
+    /**
+     * <p>The version of the filter rules.</p>
+     * <blockquote>
+     * <p>For backward compatibility with legacy filter rules, the default value is v1. Newly created rules use v2.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>v2</p>
+     */
     @NameInMap("FilterVer")
     public String filterVer;
 
+    /**
+     * <p>The filter rules for the delivery task.</p>
+     * <blockquote>
+     * <p>New version of delivery filter rules.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;where&quot;: {
+     *     &quot;or&quot;: [
+     *       {
+     *         &quot;and&quot;: [
+     *           { &quot;key&quot;: &quot;site&quot;, &quot;operator&quot;: &quot;eq&quot;, &quot;value&quot;: &quot;example.com&quot; },
+     *           { &quot;key&quot;: &quot;status_code&quot;, &quot;operator&quot;: &quot;in&quot;, &quot;value&quot;: [&quot;200&quot;, &quot;304&quot;] }
+     *         ]
+     *       }
+     *     ]
+     *   }
+     * }</p>
+     */
     @NameInMap("RawRule")
     public String rawRule;
 

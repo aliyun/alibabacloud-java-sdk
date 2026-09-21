@@ -14,7 +14,7 @@ public class SubmitUploadTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the file upload task.</p>
+     * <p>The file upload task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1593805857882113</p>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class PurchaseDDoSInstanceRequest extends TeaModel {
     /**
+     * <p>The billing method.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class PurchaseDDoSInstanceRequest extends TeaModel {
     public String DDoSBillingMode;
 
     /**
+     * <p>The instance specifications for the Chinese mainland.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class PurchaseDDoSInstanceRequest extends TeaModel {
     public String DDoSBurstableDomesticProtection;
 
     /**
+     * <p>The instance specifications for outside China.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class PurchaseDDoSInstanceRequest extends TeaModel {
     public String DDoSBurstableOverseasProtection;
 
     /**
+     * <p>The site instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

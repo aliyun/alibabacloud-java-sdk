@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKvNamespaceResponseBody extends TeaModel {
     /**
-     * <p>The available capacity of the namespace, in bytes.</p>
+     * <p>The available capacity of the KV namespace, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>1073741824</p>
@@ -14,7 +14,7 @@ public class GetKvNamespaceResponseBody extends TeaModel {
     public Long capacity;
 
     /**
-     * <p>The available capacity of the namespace, formatted as a human-readable string.</p>
+     * <p>The available capacity of the KV namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>1 GB</p>
@@ -23,7 +23,7 @@ public class GetKvNamespaceResponseBody extends TeaModel {
     public String capacityString;
 
     /**
-     * <p>The used capacity of the namespace, in bytes.</p>
+     * <p>The used capacity of the KV namespace, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>10048576</p>
@@ -32,7 +32,7 @@ public class GetKvNamespaceResponseBody extends TeaModel {
     public Long capacityUsed;
 
     /**
-     * <p>The used capacity of the namespace, formatted as a human-readable string.</p>
+     * <p>The used capacity of the KV namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>100 MB</p>
@@ -41,7 +41,7 @@ public class GetKvNamespaceResponseBody extends TeaModel {
     public String capacityUsedString;
 
     /**
-     * <p>The description of the namespace.</p>
+     * <p>The description of the KV namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a test namespace.</p>
@@ -50,7 +50,7 @@ public class GetKvNamespaceResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the namespace.</p>
+     * <p>The name of the KV namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>test_namespace</p>
@@ -59,7 +59,7 @@ public class GetKvNamespaceResponseBody extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>The ID of the KV namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>643355322374688768</p>
@@ -68,7 +68,7 @@ public class GetKvNamespaceResponseBody extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
@@ -77,15 +77,15 @@ public class GetKvNamespaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the namespace. Valid values:</p>
+     * <p>The status of the KV namespace. Valid values:</p>
      * <ul>
-     * <li><p><strong>online</strong>: The namespace is active.</p>
+     * <li><p><strong>online</strong>: Normal.</p>
      * </li>
-     * <li><p><strong>delete</strong>: The namespace is marked for deletion.</p>
+     * <li><p><strong>delete</strong>: Pending deletion.</p>
      * </li>
-     * <li><p><strong>deleting</strong>: The namespace is being deleted.</p>
+     * <li><p><strong>deleting</strong>: Being deleted.</p>
      * </li>
-     * <li><p><strong>deleted</strong>: The namespace has been deleted.</p>
+     * <li><p><strong>deleted</strong>: Deleted.</p>
      * </li>
      * </ul>
      * 

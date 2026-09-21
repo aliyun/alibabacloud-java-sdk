@@ -131,7 +131,7 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The interval between each batch execution of the scheduled prefetch plan. Unit: seconds.</p>
+         * <p>The interval between each batch execution of the scheduled prefetch plan, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -282,7 +282,7 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The interval between each batch execution of the scheduled prefetch plan. Unit: seconds.</p>
+         * <p>The interval between each batch execution of the scheduled prefetch plan, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>

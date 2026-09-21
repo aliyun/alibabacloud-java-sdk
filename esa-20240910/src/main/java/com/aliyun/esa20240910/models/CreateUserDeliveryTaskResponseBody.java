@@ -7,7 +7,7 @@ public class CreateUserDeliveryTaskResponseBody extends TeaModel {
     /**
      * <p>The data center. Valid values:</p>
      * <ul>
-     * <li><strong>cn</strong>: Chinese mainland.</li>
+     * <li><strong>cn</strong>: the Chinese mainland.</li>
      * <li><strong>sg</strong>: global (excluding the Chinese mainland).</li>
      * </ul>
      * 

@@ -14,7 +14,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
     public Long quota;
 
     /**
-     * <p>The number of used free certificates.</p>
+     * <p>The free certificate quota usage.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -32,7 +32,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The site count.</p>
+     * <p>The number of sites.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -41,7 +41,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
     public Long siteCount;
 
     /**
-     * <p>Details about the certificate usage for each site.</p>
+     * <p>The list of site usage details.</p>
      */
     @NameInMap("SiteUsage")
     public java.util.List<GetCertificateQuotaResponseBodySiteUsage> siteUsage;
@@ -128,7 +128,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
         public String siteName;
 
         /**
-         * <p>The number of certificates used by the site.</p>
+         * <p>The site usage.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

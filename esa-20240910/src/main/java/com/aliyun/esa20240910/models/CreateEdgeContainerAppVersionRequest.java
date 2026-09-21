@@ -296,10 +296,10 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public String httpHeaders;
 
         /**
-         * <p>The initial delay time for the container probe, in seconds. For example, 5 indicates that the initial delay is set to 5 seconds.</p>
+         * <p>The initial delay time for the container probe. Unit: seconds. For example, 5 indicates that the initial delay time is set to 5 seconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>5</p>
          */
         @NameInMap("InitialDelaySeconds")
         public Integer initialDelaySeconds;
@@ -314,7 +314,7 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public String path;
 
         /**
-         * <p>The interval between container health checks, in seconds. For example, 5 indicates that the health check interval is set to 5 seconds.</p>
+         * <p>The interval for the container health check. Unit: seconds. For example, 5 indicates that the health check interval is set to 5 seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -350,7 +350,7 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public Integer successThreshold;
 
         /**
-         * <p>The timeout period for the container health check, in seconds. For example, 5 indicates that the timeout is set to 5 seconds.</p>
+         * <p>The timeout period for the container health check. Unit: seconds. For example, 5 indicates that the timeout period is set to 5 seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -527,7 +527,7 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public String postStart;
 
         /**
-         * <p>The command to execute before the container stops. Separate multiple commands with spaces. This command is executed before the service exits and is typically used for cleanup operations.</p>
+         * <p>The command to execute before the container stops. Separate multiple commands with spaces. This command is executed before the service exits and is typically used for cleanup operations before exit.</p>
          * 
          * <strong>example:</strong>
          * <p>sh prestop.sh &quot;echo hello world&quot;</p>
@@ -540,7 +540,7 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>具体字段可参照k8s官方就绪探针的定义。</p>
+         * <p>For specific fields, refer to the official Kubernetes readiness probe definition</p>
          */
         @NameInMap("ProbeContent")
         public CreateEdgeContainerAppVersionRequestContainersProbeContent probeContent;
@@ -549,8 +549,8 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
          * <p>The probe type. Valid values:</p>
          * <ul>
          * <li><strong>exec</strong>: Command-based.</li>
-         * <li><strong>tcpSocket</strong>: TCP-based.</li>
-         * <li><strong>httpGet</strong>: HTTP-based.</li>
+         * <li><strong>tcpSocket</strong>: TCP detection-based.</li>
+         * <li><strong>httpGet</strong>: HTTP access-based.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -561,7 +561,7 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public String probeType;
 
         /**
-         * <p>The container specifications. Specifies the computing power specifications. Valid values: 1C2G, 2C4G, 2C8G, 4C8G, 4C16G, 8C16G, and 8C32G.</p>
+         * <p>The container specifications. Specifies the computing specifications. Valid values: 1C2G, 2C4G, 2C8G, 4C8G, 4C16G, 8C16G, and 8C32G.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

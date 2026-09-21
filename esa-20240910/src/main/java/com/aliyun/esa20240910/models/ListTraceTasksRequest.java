@@ -23,7 +23,7 @@ public class ListTraceTasksRequest extends TeaModel {
     public String diagnoseId;
 
     /**
-     * <p>The domain name to diagnose.</p>
+     * <p>The domain name to be diagnosed.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com">http://www.example.com</a></p>
@@ -50,7 +50,7 @@ public class ListTraceTasksRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The page size. Valid values: any integer from 1 to 1000.</p>
+     * <p>The number of entries per page. Valid values: any integer from 1 to 1000.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -77,7 +77,7 @@ public class ListTraceTasksRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The diagnostic trace ID.</p>
+     * <p>The trace ID of the diagnostic task.</p>
      * 
      * <strong>example:</strong>
      * <p>000000xxxxxxxxxxxxxxxxxxxxxx33427e</p>

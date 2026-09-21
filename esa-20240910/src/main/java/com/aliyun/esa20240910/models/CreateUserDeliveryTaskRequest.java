@@ -7,15 +7,13 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
     /**
      * <p>The real-time log type. Valid values:</p>
      * <ul>
-     * <li><strong>dcdn_log_access_l1 (default)</strong>: access logs.</li>
-     * <li><strong>dcdn_log_er</strong>: edge function logs.</li>
-     * <li><strong>dcdn_log_waf</strong>: security protection logs.</li>
-     * <li><strong>dcdn_log_ipa</strong>: Layer 4 acceleration logs.</li>
+     * <li><strong>dcdn_log_er_pod</strong>: edge container logs.</li>
+     * <li><strong>dcdn_log_dns</strong>: edge DNS logs.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dcdn_log_access_l1</p>
+     * <p>dcdn_log_er_pod</p>
      */
     @NameInMap("BusinessType")
     public String businessType;
@@ -23,7 +21,7 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
     /**
      * <p>The data center. Valid values:</p>
      * <ul>
-     * <li><strong>cn</strong>: Chinese mainland.</li>
+     * <li><strong>cn</strong>: the Chinese mainland.</li>
      * <li><strong>sg</strong>: global (excluding the Chinese mainland).</li>
      * </ul>
      * 
@@ -51,6 +49,12 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
     @NameInMap("DeliveryType")
     public String deliveryType;
 
+    /**
+     * <p>The list of Edge Routine (ER) pods to configure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx,xxx</p>
+     */
     @NameInMap("Details")
     public String details;
 
@@ -64,15 +68,24 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
     public Float discardRate;
 
     /**
-     * <p>The fields to be selected, separated by commas (,).</p>
+     * <p>The fields to deliver, separated by commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>user_agent,ip_address,ip_port</p>
+     * <p>ClientIP,ClientRequestURI,EdgeResponseStatusCode</p>
      */
     @NameInMap("FieldName")
     public String fieldName;
 
+    /**
+     * <p>The version of the filter rule.</p>
+     * <blockquote>
+     * <p>This parameter is used for backward compatibility with legacy filter rules. The default value is v1. New tasks use v2.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>v2</p>
+     */
     @NameInMap("FilterVer")
     public String filterVer;
 
@@ -227,7 +240,10 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
 
     public static class CreateUserDeliveryTaskRequestHttpDeliveryStandardAuthParam extends TeaModel {
         /**
-         * <p>The expiration time.</p>
+         * <p>The encryption timeout period.</p>
+         * <blockquote>
+         * <p>The value must be greater than 0. A value of 300 or greater is recommended. Unit: seconds.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -295,7 +311,7 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
         public String compress;
 
         /**
-         * <p>The HTTP server delivery URL.</p>
+         * <p>The HTTP server delivery address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxx.aliyun.com/v1/log/upload">http://xxx.aliyun.com/v1/log/upload</a></p>
@@ -304,13 +320,13 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
         public String destUrl;
 
         /**
-         * <p>The custom headers.</p>
+         * <p>The Custom Header.</p>
          */
         @NameInMap("HeaderParam")
         public java.util.Map<String, HttpDeliveryHeaderParamValue> headerParam;
 
         /**
-         * <p>The trailing delimiter.</p>
+         * <p>The trailing separator.</p>
          * 
          * <strong>example:</strong>
          * <p>\n</p>
@@ -337,7 +353,7 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
         public String logBodySuffix;
 
         /**
-         * <p>Specifies whether to enable log splitting. Default value: true.</p>
+         * <p>Specifies whether to enable log segmentation. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -346,7 +362,7 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
         public Boolean logSplit;
 
         /**
-         * <p>The log delimiter.</p>
+         * <p>The log separator.</p>
          * 
          * <strong>example:</strong>
          * <p>\n</p>
@@ -355,7 +371,7 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
         public String logSplitWords;
 
         /**
-         * <p>The maximum number of bytes per delivery. Unit: MB.</p>
+         * <p>The maximum size of a single delivery batch. Unit: MB.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -364,7 +380,7 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
         public Long maxBatchMB;
 
         /**
-         * <p>The maximum number of entries per delivery.</p>
+         * <p>The maximum number of log entries per delivery batch.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -555,7 +571,7 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
         public java.util.List<String> brokers;
 
         /**
-         * <p>The compression method. By default, no compression is used.</p>
+         * <p>The compression method. By default, no compression is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>lz4</p>
@@ -590,6 +606,15 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
         @NameInMap("Topic")
         public String topic;
 
+        /**
+         * <p>Specifies whether to enable SASL-encrypted transmission for Kafka delivery.</p>
+         * <blockquote>
+         * <p>The delivery address must be configured with a public certificate. Verification with a self-signed certificate will fail.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("UseTLS")
         public Boolean useTLS;
 
@@ -786,7 +811,7 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
         public String bucketPath;
 
         /**
-         * <p>The S3 endpoint URL.</p>
+         * <p>The S3 endpoint address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://s3.oss-cn-hangzhou.aliyuncs.com">https://s3.oss-cn-hangzhou.aliyuncs.com</a></p>
@@ -813,7 +838,7 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
         public String region;
 
         /**
-         * <p>Specifies whether the service is S3-compatible.</p>
+         * <p>Specifies whether the storage is S3-compatible.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -830,9 +855,25 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
         @NameInMap("SecretKey")
         public String secretKey;
 
+        /**
+         * <p>Specifies whether to enable S3 server-side encryption.</p>
+         * <p>To configure server-side encryption for the S3 bucket, refer to OSS <a href="https://help.aliyun.com/document_detail/31871.html">Server-side encryption</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("ServerSideEncryption")
         public Boolean serverSideEncryption;
 
+        /**
+         * <p>The key verification method for S3 delivery.</p>
+         * <blockquote>
+         * <p>The key configuration comes from the console or SDK. Keys from the console are encrypted during transmission. Keys from the SDK do not require encryption.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>console</p>
+         */
         @NameInMap("VertifyType")
         public String vertifyType;
 

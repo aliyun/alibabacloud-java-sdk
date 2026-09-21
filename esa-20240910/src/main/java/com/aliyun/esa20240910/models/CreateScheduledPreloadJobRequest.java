@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateScheduledPreloadJobRequest extends TeaModel {
     /**
-     * <p>The method of uploading prefetch files. Text box and OSS upload methods are supported.</p>
+     * <p>The method for uploading prefetch files. Text box and OSS upload methods are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateScheduledPreloadJobRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The OSS file for the scheduled prefetch task. Enter the address of the OSS file.
+     * <p>The OSS file address for the scheduled prefetch. Enter the address of the OSS file.
      * Note: The OSS file contains the URLs that you want to prefetch.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class CreateScheduledPreloadJobRequest extends TeaModel {
     public String ossUrl;
 
     /**
-     * <p>The site ID. You can obtain it by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class CreateScheduledPreloadJobRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The list of URLs to prefetch. This parameter is used when you upload prefetch files via the text box.</p>
+     * <p>The list of URLs to prefetch. This parameter is used when you upload prefetch files through the text box method.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://testurl.com/a.txt">http://testurl.com/a.txt</a>

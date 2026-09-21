@@ -41,6 +41,9 @@ public class ListCertificatesRequest extends TeaModel {
     @NameInMap("SiteId")
     public Long siteId;
 
+    @NameInMap("Type")
+    public String type;
+
     /**
      * <p>Specifies whether to return only valid certificates.</p>
      * 
@@ -85,6 +88,14 @@ public class ListCertificatesRequest extends TeaModel {
     }
     public Long getSiteId() {
         return this.siteId;
+    }
+
+    public ListCertificatesRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public ListCertificatesRequest setValidOnly(Boolean validOnly) {

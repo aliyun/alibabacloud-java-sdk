@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRatePlanInstanceStatusRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can obtain the ID by calling the <a href="~~ListUserRatePlanInstances~~">ListUserRatePlanInstances</a> operation.</p>
+     * <p>The instance ID. You can call the <a href="~~ListUserRatePlanInstances~~">ListUserRatePlanInstances</a> operation to obtain the instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>xcdn-91fknmb80f0g***</p>
@@ -13,6 +13,12 @@ public class DescribeRatePlanInstanceStatusRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The resource owner account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1700594193617909</p>
+     */
     @NameInMap("ResourceOwner")
     public Long resourceOwner;
 

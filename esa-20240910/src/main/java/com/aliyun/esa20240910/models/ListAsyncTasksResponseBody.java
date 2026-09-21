@@ -4,10 +4,15 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class ListAsyncTasksResponseBody extends TeaModel {
+    /**
+     * <p>The task list.</p>
+     */
     @NameInMap("AsyncTasks")
     public java.util.List<ListAsyncTasksResponseBodyAsyncTasks> asyncTasks;
 
     /**
+     * <p>The page number of the returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values: <strong>1 to 500</strong>. Default value: <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,7 +29,7 @@ public class ListAsyncTasksResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C370DAF1-C838-4288-A1A0-9A87633D2***</p>
@@ -31,6 +38,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -38,6 +47,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -99,6 +110,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
 
     public static class ListAsyncTasksResponseBodyAsyncTasks extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-09-19 09:36:46</p>
          */
@@ -106,6 +119,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The last modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-09-19 09:37:04</p>
          */
@@ -113,6 +128,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>4081****752512</p>
          */
@@ -120,6 +137,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>4081****752512</p>
          */
@@ -127,6 +146,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         public Long resourceId;
 
         /**
+         * <p>The resource name.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
          */
@@ -134,16 +155,23 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         public String resourceName;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>site</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The task description.</p>
+         */
         @NameInMap("TaskDescription")
         public java.util.Map<String, String> taskDescription;
 
         /**
+         * <p>The custom identifier that is set to associate with this task.</p>
+         * 
          * <strong>example:</strong>
          * <p>linke-quality-sign</p>
          */
@@ -151,6 +179,13 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         public String taskKey;
 
         /**
+         * <p>The current status of the task. Valid values:</p>
+         * <ul>
+         * <li>in_progress: in progress.</li>
+         * <li>success: completed.</li>
+         * <li>fail: failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -158,6 +193,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         public String taskStatus;
 
         /**
+         * <p>The task type.</p>
+         * 
          * <strong>example:</strong>
          * <p>free_cert</p>
          */
@@ -165,6 +202,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         public String taskType;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1077***12880</p>
          */

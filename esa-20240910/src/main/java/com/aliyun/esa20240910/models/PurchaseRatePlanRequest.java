@@ -26,7 +26,7 @@ public class PurchaseRatePlanRequest extends TeaModel {
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
      * <li>true: Auto-renewal is enabled.</li>
-     * <li>false: Auto-renewal is not enabled.</li>
+     * <li>false: Auto-renewal is disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,6 +72,12 @@ public class PurchaseRatePlanRequest extends TeaModel {
     @NameInMap("Coverage")
     public String coverage;
 
+    /**
+     * <p>The overage policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>limit_speed</p>
+     */
     @NameInMap("OveragePolicy")
     public String overagePolicy;
 
@@ -86,7 +92,7 @@ public class PurchaseRatePlanRequest extends TeaModel {
 
     /**
      * <p>The plan code.</p>
-     * <p>Chinese site</p>
+     * <p>China site</p>
      * <ul>
      * <li>Free Edition: entranceplan</li>
      * <li>Basic: basicplan</li>
@@ -108,7 +114,7 @@ public class PurchaseRatePlanRequest extends TeaModel {
 
     /**
      * <p>The plan name.</p>
-     * <p>Chinese site</p>
+     * <p>China site</p>
      * <ul>
      * <li>Free Edition: entranceplan</li>
      * <li>Basic: basic</li>

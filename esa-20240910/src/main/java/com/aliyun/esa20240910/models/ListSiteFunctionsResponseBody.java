@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSiteFunctionsResponseBody extends TeaModel {
     /**
-     * <p>The configuration information.</p>
+     * <p>The response body configurations.</p>
      */
     @NameInMap("Configs")
     public ListSiteFunctionsResponseBodyConfigs configs;
@@ -119,11 +119,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public Long configId;
 
         /**
-         * <p>Specifies whether to enable cache reserve. Disabled by default. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether to enable cache reserve. This feature is disabled by default. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -183,11 +179,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>The browser cache mode. Valid values:</p>
-         * <ul>
-         * <li>no_cache: no caching.</li>
-         * <li>follow_origin: follows the origin server cache policy.</li>
-         * <li>override_origin: overrides the origin server cache policy.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>follow_origin</p>
@@ -218,11 +209,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String bypassCache;
 
         /**
-         * <p>Specifies whether to enable cache deception armor. This feature protects against web cache deception attacks by caching only content that passes validation. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether cache deception armor is enabled. This feature protects against web cache deception attacks by caching only content that passes validation. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -231,10 +218,10 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String cacheDeceptionArmor;
 
         /**
-         * <p>The cache reserve eligibility. Controls whether requests bypass the cache reserve node during back-to-origin. Valid values:</p>
+         * <p>The cache reserve eligibility. Controls whether user requests bypass cache reserve nodes during back-to-origin. Valid values:</p>
          * <ul>
          * <li>bypass_cache_reserve: requests bypass cache reserve.</li>
-         * <li>eligible_for_cache_reserve: requests are eligible for cache reserve.</li>
+         * <li>eligible_for_cache_reserve: eligible for cache reserve.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,7 +231,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String cacheReserveEligibility;
 
         /**
-         * <p>Checks whether a cookie exists when generating cache keys. If the cookie exists, the cookie name (case-insensitive) is added to the cache key. Multiple cookie names are supported and separated by spaces.</p>
+         * <p>The cookie names to check for presence when generating cache keys. If a cookie exists, its name (case-insensitive) is added to the cache key. Multiple cookie names are separated by spaces.</p>
          * 
          * <strong>example:</strong>
          * <p>cookiename</p>
@@ -253,7 +240,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String checkPresenceCookie;
 
         /**
-         * <p>Checks whether a header exists when generating cache keys. If the header exists, the header name (case-insensitive) is added to the cache key. Multiple header names are supported and separated by spaces.</p>
+         * <p>The header names to check for presence when generating cache keys. If a header exists, its name (case-insensitive) is added to the cache key. Multiple header names are separated by spaces.</p>
          * 
          * <strong>example:</strong>
          * <p>headername</p>
@@ -273,10 +260,10 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         /**
          * <p>The edge cache mode. Valid values:</p>
          * <ul>
-         * <li>follow_origin: follows the origin server cache policy (if present). Otherwise, uses the default cache policy.</li>
-         * <li>no_cache: no caching.</li>
-         * <li>override_origin: overrides the origin server cache policy.</li>
-         * <li>follow_origin_bypass: follows the origin server cache policy (if present). Otherwise, does not cache.</li>
+         * <li>follow_origin: follows the origin cache policy if one exists. Otherwise, uses the default cache policy.</li>
+         * <li>no_cache: does not cache.</li>
+         * <li>override_origin: overrides the origin cache policy.</li>
+         * <li>follow_origin_bypass: follows the origin cache policy if one exists. Otherwise, does not cache.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -286,7 +273,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String edgeCacheMode;
 
         /**
-         * <p>The edge cache expiration time, in seconds.</p>
+         * <p>The edge node cache expiration time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -304,7 +291,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String edgeStatusCodeCacheTtl;
 
         /**
-         * <p>The cookie names and their values to include when generating cache keys. Multiple values are supported and separated by spaces.</p>
+         * <p>The specified cookie names and their values to include when generating cache keys. Multiple values are separated by spaces.</p>
          * 
          * <strong>example:</strong>
          * <p>cookie_exapmle</p>
@@ -313,7 +300,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String includeCookie;
 
         /**
-         * <p>The header names and their values to include when generating cache keys. Multiple values are supported and separated by spaces.</p>
+         * <p>The specified header names and their values to include when generating cache keys. Multiple values are separated by spaces.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -331,7 +318,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String postBodyCacheKey;
 
         /**
-         * <p>The body size limit, in KB. Supports body sizes from 1 to 8 KB. If left empty, the default value of 8 KB is used.</p>
+         * <p>The body size limit, in KB. Supports body sizes from 1 to 8 KB. If the value is empty, the default value of 8 KB takes effect.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -340,7 +327,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String postBodySizeLimit;
 
         /**
-         * <p>The POST cache switch.</p>
+         * <p>Specifies whether POST caching is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -349,7 +336,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String postCache;
 
         /**
-         * <p>The query strings to retain or remove. Multiple values are supported and separated by spaces.</p>
+         * <p>The query strings to retain or remove. Multiple values are separated by spaces.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -358,13 +345,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String queryString;
 
         /**
-         * <p>The query string processing mode when generating cache keys. Valid values:</p>
-         * <ul>
-         * <li>ignore_all: ignores all query strings.</li>
-         * <li>exclude_query_string: removes specified query strings.</li>
-         * <li>reserve_all: retains all query strings. This is the default value.</li>
-         * <li>include_query_string: retains specified query strings.</li>
-         * </ul>
+         * <p>The processing mode for query strings when generating cache keys. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>reserve_all</p>
@@ -382,11 +363,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>The rule switch. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether the rule is enabled. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -404,7 +381,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -413,11 +390,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String sequence;
 
         /**
-         * <p>Specifies whether to serve stale cache. When enabled, the edge node can respond to user requests with cached expired content when the origin server is unavailable. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether to serve stale cache. When enabled, edge nodes can respond to user requests with cached expired content when the origin server is unavailable. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -426,11 +399,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String serveStale;
 
         /**
-         * <p>Specifies whether to sort query strings. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether to sort query strings for caching. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -440,10 +409,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to include the type of the client when generating cache keys. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: shutdown.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -453,10 +418,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to include the client geographic location when generating cache keys. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -466,10 +427,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to include the client language type when generating cache keys. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -711,10 +668,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
     public static class ListSiteFunctionsResponseBodyConfigsCacheTags extends TeaModel {
         /**
          * <p>Specifies whether to ignore case. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -732,7 +685,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public Long configId;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -802,7 +755,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
          * <p>The flattening mode. Valid values:</p>
          * <ul>
          * <li>flatten_all: flattens all records.</li>
-         * <li>flatten_at_root: flattens only the root domain. This is the default value.</li>
+         * <li>flatten_at_root: flattens only the root domain. The root domain is flattened by default.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -812,7 +765,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String flattenMode;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -853,11 +806,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
     public static class ListSiteFunctionsResponseBodyConfigsCompressionRules extends TeaModel {
         /**
-         * <p>Specifies whether to enable Brotli compression. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>The Brotli compression setting. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -875,11 +824,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public Long configId;
 
         /**
-         * <p>Specifies whether to enable Gzip compression. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>The Gzip compression setting. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -897,11 +842,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>The rule switch. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether the rule is enabled. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -919,7 +860,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -928,11 +869,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String sequence;
 
         /**
-         * <p>Specifies whether to enable Zstd compression. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>The Zstd compression setting. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1023,10 +960,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to enable Chinese mainland network access optimization. Disabled by default. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1035,7 +968,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String enable;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1103,10 +1036,10 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String returnCode;
 
         /**
-         * <p>The rule content. Uses conditional expressions to match user requests. This parameter is not required when adding a global configuration. Two scenarios are supported:</p>
+         * <p>The rule content. A conditional expression is used to match user requests. You do not need to set this parameter when you add a global configuration. Two scenarios are supported:</p>
          * <ul>
-         * <li>Match all incoming requests: set the value to true.</li>
-         * <li>Match specified requests: set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
+         * <li>Match all incoming requests: Set the value to true.</li>
+         * <li>Match specified requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1116,11 +1049,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>The rule switch. This parameter is not required when adding a global configuration. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether to enable the rule. You do not need to set this parameter when adding a global configuration. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1129,7 +1058,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String ruleEnable;
 
         /**
-         * <p>The rule name. This parameter is not required when adding a global configuration.</p>
+         * <p>The rule name. You do not need to set this parameter when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -1138,7 +1067,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The rule execution order. A smaller value indicates a higher priority.</p>
+         * <p>The execution priority of the rule. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1221,10 +1150,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>The feature switch. Disabled by default. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1233,7 +1158,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String enable;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1274,20 +1199,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
     public static class ListSiteFunctionsResponseBodyConfigsErrorPagesRedirectsErrorPagesRedirect extends TeaModel {
         /**
-         * <p>The response status code used by the edge node when responding with the redirect address to the client. Valid values:</p>
-         * <ul>
-         * <li>400</li>
-         * <li>403</li>
-         * <li>404</li>
-         * <li>405</li>
-         * <li>414</li>
-         * <li>416</li>
-         * <li>500</li>
-         * <li>501</li>
-         * <li>502</li>
-         * <li>503</li>
-         * <li>504</li>
-         * </ul>
+         * <p>The response status code used by the node when returning the redirect address to the client. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>400</p>
@@ -1296,7 +1208,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String statusCode;
 
         /**
-         * <p>The target URL after redirection.</p>
+         * <p>The target URL to which the request is redirected.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example.com/test">http://example.com/test</a></p>
@@ -1338,16 +1250,16 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public Long configId;
 
         /**
-         * <p>The error page redirect configuration.</p>
+         * <p>The error code redirect configuration.</p>
          */
         @NameInMap("ErrorPagesRedirect")
         public java.util.List<ListSiteFunctionsResponseBodyConfigsErrorPagesRedirectsErrorPagesRedirect> errorPagesRedirect;
 
         /**
-         * <p>The rule content. Uses conditional expressions to match user requests. This parameter is not required when adding a global configuration. Two scenarios are supported:</p>
+         * <p>The rule content. A conditional expression is used to match user requests. You do not need to set this parameter when you add a global configuration. Two scenarios are supported:</p>
          * <ul>
-         * <li>Match all incoming requests: set the value to true.</li>
-         * <li>Match specified requests: set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
+         * <li>Match all incoming requests: Set the value to true.</li>
+         * <li>Match specified requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1357,11 +1269,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>The rule switch. This parameter is not required when adding a global configuration. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether to enable the rule. You do not need to set this parameter when adding a global configuration. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1370,7 +1278,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String ruleEnable;
 
         /**
-         * <p>The rule name. This parameter is not required when adding a global configuration.</p>
+         * <p>The rule name. You do not need to set this parameter when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -1379,7 +1287,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The rule execution order. A smaller value indicates a higher priority.</p>
+         * <p>The execution priority of the rule. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1454,11 +1362,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>The operation type. Valid values:</p>
-         * <ul>
-         * <li>add: adds a header.</li>
-         * <li>del: deletes a header.</li>
-         * <li>modify: modifies a header.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>add</p>
@@ -1532,11 +1435,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>The rule switch. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether the rule is enabled. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1554,7 +1453,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1629,11 +1528,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>The operation type. Valid values:</p>
-         * <ul>
-         * <li>add: adds a header.</li>
-         * <li>del: deletes a header.</li>
-         * <li>modify: modifies a header.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>add</p>
@@ -1707,11 +1601,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>The rule switch. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether the rule is enabled. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1729,7 +1619,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1804,11 +1694,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>The operation type. Valid values:</p>
-         * <ul>
-         * <li>add: adds a header.</li>
-         * <li>del: deletes a header.</li>
-         * <li>modify: modifies a header.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>add</p>
@@ -1885,11 +1770,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>The rule switch. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether the rule is enabled. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1907,7 +1788,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1982,11 +1863,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>The operation type. Valid values:</p>
-         * <ul>
-         * <li>add: adds a header.</li>
-         * <li>del: deletes a header.</li>
-         * <li>modify: modifies a header.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>add</p>
@@ -2063,11 +1939,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>The rule switch. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether the rule is enabled. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2085,7 +1957,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2151,10 +2023,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
     public static class ListSiteFunctionsResponseBodyConfigsHttpsApplicationConfiguration extends TeaModel {
         /**
          * <p>The Alt-Svc feature switch. Disabled by default. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2164,10 +2032,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether the Alt-Svc header includes the clear parameter. Disabled by default. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2186,10 +2050,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether the Alt-Svc header includes the persist parameter. Disabled by default. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2208,10 +2068,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to enable HSTS. Disabled by default. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2221,10 +2077,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to include subdomains in HSTS. Disabled by default. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2243,10 +2095,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to enable HSTS preload. Disabled by default. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2256,12 +2104,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to enable forced HTTPS. Disabled by default. Valid values:</p>
-         * <ul>
-         * <li><p>on: enabled.</p>
-         * </li>
-         * <li><p>off: disabled.</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2270,13 +2112,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String httpsForce;
 
         /**
-         * <p>The status code used for forced HTTPS redirect. Valid values:</p>
-         * <ul>
-         * <li>301</li>
-         * <li>302</li>
-         * <li>307</li>
-         * <li>308</li>
-         * </ul>
+         * <p>The HTTP status code for forced HTTPS redirect. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>301</p>
@@ -2295,10 +2131,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>The rule switch. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2316,7 +2148,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2453,7 +2285,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
     public static class ListSiteFunctionsResponseBodyConfigsHttpsBasicConfiguration extends TeaModel {
         /**
-         * <p>The custom cipher suites. Specifies the specific encryption algorithms selected when CiphersuiteGroup is set to custom.</p>
+         * <p>The custom cipher suite. Specifies the specific encryption algorithms selected when CiphersuiteGroup is set to custom.</p>
          * 
          * <strong>example:</strong>
          * <p>TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</p>
@@ -2462,7 +2294,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String ciphersuite;
 
         /**
-         * <p>The cipher suite group. All cipher suites are enabled by default. Valid values:</p>
+         * <p>The cipher suite group. By default, all cipher suites are enabled. Valid values:</p>
          * <ul>
          * <li>all: all cipher suites.</li>
          * <li>strict: strong cipher suites.</li>
@@ -2486,10 +2318,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to enable HTTP/2. Enabled by default. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2499,10 +2327,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to enable HTTP/3. Enabled by default. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2512,12 +2336,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to enable HTTPS. Enabled by default. Valid values:</p>
-         * <ul>
-         * <li><p>on: enabled.</p>
-         * </li>
-         * <li><p>off: disabled.</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2527,10 +2345,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to enable OCSP stapling. Disabled by default. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2548,11 +2362,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>The rule switch. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether the rule is enabled. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2570,7 +2380,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2580,10 +2390,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to enable TLS 1.0. Disabled by default. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2593,10 +2399,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to enable TLS 1.1. Enabled by default. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2606,10 +2408,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to enable TLS 1.2. Enabled by default. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2619,10 +2417,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to enable TLS 1.3. Enabled by default. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2786,11 +2580,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public Long configId;
 
         /**
-         * <p>Specifies whether to enable image transformation. Disabled by default. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether to enable image transformation. This feature is disabled by default. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2808,11 +2598,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>The rule switch. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether the rule is enabled. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2830,7 +2616,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2921,10 +2707,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to enable IPv6. Enabled by default. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2933,7 +2715,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String enable;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2975,10 +2757,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
     public static class ListSiteFunctionsResponseBodyConfigsManagedTransforms extends TeaModel {
         /**
          * <p>Specifies whether to add visitor geolocation headers. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2987,7 +2765,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String addClientGeolocationHeaders;
 
         /**
-         * <p>Specifies whether to add the &quot;ali-real-client-ip&quot; header that contains the real client IP address. Valid values:</p>
+         * <p>Adds the &quot;ali-real-client-ip&quot; header that contains the originating IP address of the client. Valid values:</p>
          * <ul>
          * <li>on: enabled.</li>
          * <li>off: disabled.</li>
@@ -3009,7 +2787,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public Long configId;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -3056,6 +2834,80 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
     }
 
+    public static class ListSiteFunctionsResponseBodyConfigsMarkdownForAgent extends TeaModel {
+        @NameInMap("ConfigId")
+        public Long configId;
+
+        @NameInMap("Enable")
+        public String enable;
+
+        @NameInMap("Rule")
+        public String rule;
+
+        @NameInMap("RuleEnable")
+        public String ruleEnable;
+
+        @NameInMap("RuleName")
+        public String ruleName;
+
+        @NameInMap("Sequence")
+        public String sequence;
+
+        public static ListSiteFunctionsResponseBodyConfigsMarkdownForAgent build(java.util.Map<String, ?> map) throws Exception {
+            ListSiteFunctionsResponseBodyConfigsMarkdownForAgent self = new ListSiteFunctionsResponseBodyConfigsMarkdownForAgent();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSiteFunctionsResponseBodyConfigsMarkdownForAgent setConfigId(Long configId) {
+            this.configId = configId;
+            return this;
+        }
+        public Long getConfigId() {
+            return this.configId;
+        }
+
+        public ListSiteFunctionsResponseBodyConfigsMarkdownForAgent setEnable(String enable) {
+            this.enable = enable;
+            return this;
+        }
+        public String getEnable() {
+            return this.enable;
+        }
+
+        public ListSiteFunctionsResponseBodyConfigsMarkdownForAgent setRule(String rule) {
+            this.rule = rule;
+            return this;
+        }
+        public String getRule() {
+            return this.rule;
+        }
+
+        public ListSiteFunctionsResponseBodyConfigsMarkdownForAgent setRuleEnable(String ruleEnable) {
+            this.ruleEnable = ruleEnable;
+            return this;
+        }
+        public String getRuleEnable() {
+            return this.ruleEnable;
+        }
+
+        public ListSiteFunctionsResponseBodyConfigsMarkdownForAgent setRuleName(String ruleName) {
+            this.ruleName = ruleName;
+            return this;
+        }
+        public String getRuleName() {
+            return this.ruleName;
+        }
+
+        public ListSiteFunctionsResponseBodyConfigsMarkdownForAgent setSequence(String sequence) {
+            this.sequence = sequence;
+            return this;
+        }
+        public String getSequence() {
+            return this.sequence;
+        }
+
+    }
+
     public static class ListSiteFunctionsResponseBodyConfigsNetworkOptimization extends TeaModel {
         /**
          * <p>The configuration ID.</p>
@@ -3067,11 +2919,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public Long configId;
 
         /**
-         * <p>Specifies whether to enable gRPC. Disabled by default. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether to enable gRPC. This feature is disabled by default. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -3080,11 +2928,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String grpc;
 
         /**
-         * <p>Specifies whether to enable HTTP/2 back-to-origin. Disabled by default. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether to enable HTTP/2 back-to-origin. This feature is disabled by default. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -3103,10 +2947,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>The rule switch. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -3124,7 +2964,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -3133,11 +2973,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String sequence;
 
         /**
-         * <p>Specifies whether to enable smart routing. Disabled by default. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether to enable the smart routing service. This feature is disabled by default. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -3146,7 +2982,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String smartRouting;
 
         /**
-         * <p>The maximum upload file size, in MB. Valid values: 100 to 500.</p>
+         * <p>The maximum upload file size. Unit: MB. Valid values: 100 to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -3155,11 +2991,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String uploadMaxFilesize;
 
         /**
-         * <p>Specifies whether to enable WebSocket. Enabled by default. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether to enable WebSocket. This feature is enabled by default. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -3265,7 +3097,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public Long configId;
 
         /**
-         * <p>The overridden DNS resolution record for back-to-origin requests.</p>
+         * <p>The rewritten DNS resolution record for back-to-origin requests.</p>
          * 
          * <strong>example:</strong>
          * <p>test.example.com</p>
@@ -3301,11 +3133,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String originHttpsPort;
 
         /**
-         * <p>Specifies whether to enable mTLS for back-to-origin. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether to enable mTLS for back-to-origin requests. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -3324,11 +3152,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>The protocol used for back-to-origin requests. Valid values:</p>
-         * <ul>
-         * <li>http: uses HTTP for back-to-origin.</li>
-         * <li>https: uses HTTPS for back-to-origin.</li>
-         * <li>follow: follows the client protocol for back-to-origin.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>http</p>
@@ -3347,10 +3170,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to enable origin server certificate verification. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -3359,7 +3178,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String originVerify;
 
         /**
-         * <p>Specifies whether to use range-based origin fetch for file downloads. Valid values:</p>
+         * <p>Uses range-based origin fetch to download files. Valid values:</p>
          * <ul>
          * <li>on: enabled.</li>
          * <li>off: disabled.</li>
@@ -3374,12 +3193,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>The range chunk size. Valid values:</p>
-         * <ul>
-         * <li>512KB</li>
-         * <li>1MB</li>
-         * <li>2MB</li>
-         * <li>4MB</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>512KB</p>
@@ -3397,11 +3210,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>The rule switch. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether the rule is enabled. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -3419,7 +3228,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -3573,11 +3382,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public Long configId;
 
         /**
-         * <p>Specifies whether to preserve the query string. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether to reserve the query string. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -3595,11 +3400,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>The rule switch. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether the rule is enabled. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -3617,7 +3418,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -3626,7 +3427,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String sequence;
 
         /**
-         * <p>The response status code used by the edge node when responding with the redirect address to the client. Valid values:</p>
+         * <p>The HTTP status code used when the node responds to the client with a redirect address. Valid values:</p>
          * <ul>
          * <li>301</li>
          * <li>302</li>
@@ -3652,9 +3453,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>The redirect type. Valid values:</p>
-         * <ul>
-         * <li>static: static mode.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>static</p>
@@ -3762,9 +3560,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>The query string rewrite type. Valid values:</p>
-         * <ul>
-         * <li>static: static mode.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>static</p>
@@ -3774,9 +3569,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>The path rewrite type. Valid values:</p>
-         * <ul>
-         * <li>static: static mode.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>static</p>
@@ -3794,11 +3586,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>The rule switch. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether the rule is enabled. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -3816,7 +3604,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -3924,10 +3712,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>The feature switch. Disabled by default. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -3936,7 +3720,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String enable;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -3987,10 +3771,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>The feature switch. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -3999,7 +3779,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String enable;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -4049,10 +3829,10 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public Long configId;
 
         /**
-         * <p>Temporarily pauses the proxy acceleration feature for the entire site. When enabled, all DNS records directly return record values to clients. Valid values:</p>
+         * <p>Specifies whether to temporarily pause the proxy acceleration feature for the entire site. When enabled, all DNS records directly return record values to the client. Valid values:</p>
          * <ul>
-         * <li>true: site acceleration is paused.</li>
-         * <li>false: site acceleration is active.</li>
+         * <li>true: Site acceleration is paused.</li>
+         * <li>false: Site acceleration is active.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4062,7 +3842,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String paused;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -4104,12 +3884,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
     public static class ListSiteFunctionsResponseBodyConfigsTieredCache extends TeaModel {
         /**
          * <p>The tiered cache architecture mode. Valid values:</p>
-         * <ul>
-         * <li>edge: edge cache layer.</li>
-         * <li>edge_smart: edge cache layer + smart cache layer.</li>
-         * <li>edge_regional: edge cache layer + regional cache layer.</li>
-         * <li>edge_regional_smart: edge cache layer + regional cache layer + smart cache layer.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>edge_smart</p>
@@ -4127,7 +3901,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public Long configId;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -4196,10 +3970,6 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>The FLV seeking mode. Valid values:</p>
-         * <ul>
-         * <li>by_byte: seeks by byte.</li>
-         * <li>by_time: seeks by time.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>by_time</p>
@@ -4235,11 +4005,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>The rule switch. Valid values:</p>
-         * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
-         * </ul>
+         * <p>Specifies whether the rule is enabled. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -4257,7 +4023,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The rule execution order.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -4266,13 +4032,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public String sequence;
 
         /**
-         * <p>The video seeking switch. Valid values:</p>
-         * <ul>
-         * <li><p>on: enabled.</p>
-         * </li>
-         * <li><p>off: disabled.</p>
-         * </li>
-         * </ul>
+         * <p>Specifies whether to enable the audio seeking feature. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -4389,7 +4149,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public java.util.List<ListSiteFunctionsResponseBodyConfigsCacheRules> cacheRules;
 
         /**
-         * <p>The cache tags. When using the purge-by-cache-tag feature, specifies the CacheTag name carried in the origin server response.</p>
+         * <p>The cache tag configuration. When using the purge-by-cache-tag feature, specifies the CacheTag name carried in the origin server response.</p>
          */
         @NameInMap("CacheTags")
         public java.util.List<ListSiteFunctionsResponseBodyConfigsCacheTags> cacheTags;
@@ -4413,7 +4173,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public java.util.List<ListSiteFunctionsResponseBodyConfigsCrossBorderOptimization> crossBorderOptimization;
 
         /**
-         * <p>The custom response code rules.</p>
+         * <p>The custom response code configurations.</p>
          */
         @NameInMap("CustomResponseCode")
         public java.util.List<ListSiteFunctionsResponseBodyConfigsCustomResponseCode> customResponseCode;
@@ -4425,7 +4185,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public java.util.List<ListSiteFunctionsResponseBodyConfigsDevelopmentMode> developmentMode;
 
         /**
-         * <p>The error page redirect rules.</p>
+         * <p>The error code redirect rules.</p>
          */
         @NameInMap("ErrorPagesRedirects")
         public java.util.List<ListSiteFunctionsResponseBodyConfigsErrorPagesRedirects> errorPagesRedirects;
@@ -4437,7 +4197,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public java.util.List<ListSiteFunctionsResponseBodyConfigsHttpIncomingRequestHeaderModificationRules> httpIncomingRequestHeaderModificationRules;
 
         /**
-         * <p>The inbound response header modification rules.</p>
+         * <p>The rules for modifying inbound response headers.</p>
          */
         @NameInMap("HttpIncomingResponseHeaderModificationRules")
         public java.util.List<ListSiteFunctionsResponseBodyConfigsHttpIncomingResponseHeaderModificationRules> httpIncomingResponseHeaderModificationRules;
@@ -4484,6 +4244,9 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         @NameInMap("ManagedTransforms")
         public java.util.List<ListSiteFunctionsResponseBodyConfigsManagedTransforms> managedTransforms;
 
+        @NameInMap("MarkdownForAgent")
+        public java.util.List<ListSiteFunctionsResponseBodyConfigsMarkdownForAgent> markdownForAgent;
+
         /**
          * <p>The network optimization configuration.</p>
          */
@@ -4515,13 +4278,13 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public java.util.List<ListSiteFunctionsResponseBodyConfigsSeoBypass> seoBypass;
 
         /**
-         * <p>The site name exclusive configuration. When enabled, other accounts cannot create sites or subsites with the same name as the current site.</p>
+         * <p>Site name exclusive. When enabled, other accounts cannot create sites or subsites with the same name as the current site.</p>
          */
         @NameInMap("SiteNameExclusive")
         public java.util.List<ListSiteFunctionsResponseBodyConfigsSiteNameExclusive> siteNameExclusive;
 
         /**
-         * <p>The site acceleration pause configuration. Temporarily pauses the proxy acceleration feature for the entire site. When enabled, all DNS records directly return record values to clients.</p>
+         * <p>Site acceleration pause. Temporarily pauses the proxy acceleration feature for the entire site. When enabled, all DNS records directly return record values to the client.</p>
          */
         @NameInMap("SitePause")
         public java.util.List<ListSiteFunctionsResponseBodyConfigsSitePause> sitePause;
@@ -4533,7 +4296,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         public java.util.List<ListSiteFunctionsResponseBodyConfigsTieredCache> tieredCache;
 
         /**
-         * <p>The video processing configuration.</p>
+         * <p>The video processing configurations.</p>
          */
         @NameInMap("VideoProcessing")
         public java.util.List<ListSiteFunctionsResponseBodyConfigsVideoProcessing> videoProcessing;
@@ -4685,6 +4448,14 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         }
         public java.util.List<ListSiteFunctionsResponseBodyConfigsManagedTransforms> getManagedTransforms() {
             return this.managedTransforms;
+        }
+
+        public ListSiteFunctionsResponseBodyConfigs setMarkdownForAgent(java.util.List<ListSiteFunctionsResponseBodyConfigsMarkdownForAgent> markdownForAgent) {
+            this.markdownForAgent = markdownForAgent;
+            return this;
+        }
+        public java.util.List<ListSiteFunctionsResponseBodyConfigsMarkdownForAgent> getMarkdownForAgent() {
+            return this.markdownForAgent;
         }
 
         public ListSiteFunctionsResponseBodyConfigs setNetworkOptimization(java.util.List<ListSiteFunctionsResponseBodyConfigsNetworkOptimization> networkOptimization) {

@@ -23,7 +23,7 @@ public class UploadOriginClientCertificateResponseBody extends TeaModel {
     public String fingerprintSha256;
 
     /**
-     * <p>The ID of the certificate.</p>
+     * <p>The certificate ID.</p>
      * 
      * <strong>example:</strong>
      * <p>babaabcd****</p>
@@ -32,7 +32,7 @@ public class UploadOriginClientCertificateResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The issuer of the certificate.</p>
+     * <p>The certification authority.</p>
      * 
      * <strong>example:</strong>
      * <p>GlobalSign nv-sa</p>
@@ -41,7 +41,7 @@ public class UploadOriginClientCertificateResponseBody extends TeaModel {
     public String issuer;
 
     /**
-     * <p>The end of the certificate\&quot;s validity period (<code>not after</code>). The timestamp is in UTC and formatted in ISO 8601.</p>
+     * <p>The end time of the certificate validity period.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-12-01T02:13:07Z</p>
@@ -50,7 +50,7 @@ public class UploadOriginClientCertificateResponseBody extends TeaModel {
     public String notAfter;
 
     /**
-     * <p>The start of the certificate\&quot;s validity period (<code>not before</code>). The timestamp is in UTC and formatted in ISO 8601.</p>
+     * <p>The start time of the certificate validity period.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-12-01T02:13:07Z</p>
@@ -68,7 +68,7 @@ public class UploadOriginClientCertificateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The serial number of the certificate.</p>
+     * <p>The certificate serial number.</p>
      * 
      * <strong>example:</strong>
      * <p>babaded901474b9693acf530e0fb1daa</p>
@@ -86,7 +86,7 @@ public class UploadOriginClientCertificateResponseBody extends TeaModel {
     public String signatureAlgorithm;
 
     /**
-     * <p>The status of the certificate.</p>
+     * <p>The certificate status.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -95,7 +95,7 @@ public class UploadOriginClientCertificateResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The validity period of the certificate in days.</p>
+     * <p>The number of days the certificate is valid.</p>
      * 
      * <strong>example:</strong>
      * <p>365</p>

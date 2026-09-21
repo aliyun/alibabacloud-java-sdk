@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DescribeSiteWafTopDataRequest extends TeaModel {
     /**
      * <p>The end of the time range to query.</p>
-     * <p>Specify the time in ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
      * <blockquote>
      * <p>The end time must be later than the start time.</p>
      * </blockquote>
@@ -54,7 +54,7 @@ public class DescribeSiteWafTopDataRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query.</p>
-     * <p>Specify the time in ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-04-08T16:00:00Z</p>
@@ -117,7 +117,7 @@ public class DescribeSiteWafTopDataRequest extends TeaModel {
 
     public static class DescribeSiteWafTopDataRequestFields extends TeaModel {
         /**
-         * <p>The query dimension.</p>
+         * <p>The query dimensions.</p>
          */
         @NameInMap("Dimension")
         public java.util.List<String> dimension;

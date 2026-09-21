@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCertificateQuotaRequest extends TeaModel {
     /**
-     * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain this ID.</p>
+     * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to query the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

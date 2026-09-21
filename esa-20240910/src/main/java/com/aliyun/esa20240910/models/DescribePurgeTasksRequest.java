@@ -67,9 +67,9 @@ public class DescribePurgeTasksRequest extends TeaModel {
     /**
      * <p>The task execution status. Valid values:</p>
      * <ul>
-     * <li><strong>Complete</strong>: Completed.</li>
-     * <li><strong>Refreshing</strong>: Refreshing.</li>
-     * <li><strong>Failed</strong>: Refresh failed.</li>
+     * <li><strong>Complete</strong>: completed.</li>
+     * <li><strong>Refreshing</strong>: refreshing.</li>
+     * <li><strong>Failed</strong>: refresh failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

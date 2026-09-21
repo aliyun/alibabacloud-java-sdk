@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetClientCertificateHostnamesResponseBody extends TeaModel {
     /**
-     * <p>The list of bound hostnames.</p>
+     * <p>The list of bound domain names.</p>
      */
     @NameInMap("Hostnames")
     public java.util.List<String> hostnames;

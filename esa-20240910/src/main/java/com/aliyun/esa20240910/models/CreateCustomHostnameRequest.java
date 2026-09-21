@@ -17,7 +17,7 @@ public class CreateCustomHostnameRequest extends TeaModel {
      * <p>The region of the SSL Certificates Service certificate. This parameter is required when CertType is set to cas.</p>
      * <ul>
      * <li>For Chinese site accounts, set this parameter to cn-hangzhou.</li>
-     * <li>For International site accounts, set this parameter to ap-southeast-1.</li>
+     * <li>For international site accounts, set this parameter to ap-southeast-1.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class CreateCustomHostnameRequest extends TeaModel {
     public String hostname;
 
     /**
-     * <p>The certificate private key. This parameter is required when CertType is set to upload.</p>
+     * <p>The private key of the certificate. This parameter is required when CertType is set to upload.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN PRIVATE KEY-----</p>
@@ -69,7 +69,7 @@ public class CreateCustomHostnameRequest extends TeaModel {
     public String privateKey;
 
     /**
-     * <p>The ID of the record to bind. You can call the <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a> operation to obtain the record ID.</p>
+     * <p>The ID of the record to bind. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class CreateCustomHostnameRequest extends TeaModel {
     public Long recordId;
 
     /**
-     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
+     * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

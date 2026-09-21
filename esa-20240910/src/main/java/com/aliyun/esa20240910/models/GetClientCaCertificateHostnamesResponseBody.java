@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetClientCaCertificateHostnamesResponseBody extends TeaModel {
     /**
-     * <p>A list of domain names.</p>
+     * <p>The domain names.</p>
      */
     @NameInMap("Hostnames")
     public java.util.List<String> hostnames;
@@ -29,7 +29,7 @@ public class GetClientCaCertificateHostnamesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The site ID.</p>
+     * <p>The site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890123</p>

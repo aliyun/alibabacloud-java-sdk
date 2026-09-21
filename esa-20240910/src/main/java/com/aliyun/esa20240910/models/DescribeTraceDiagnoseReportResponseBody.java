@@ -74,7 +74,7 @@ public class DescribeTraceDiagnoseReportResponseBody extends TeaModel {
     public String domain;
 
     /**
-     * <p>The expiration time. Unit: seconds. The value is a UNIX timestamp.</p>
+     * <p>The expiration time. The value is a UNIX timestamp. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1678701915</p>
@@ -107,7 +107,7 @@ public class DescribeTraceDiagnoseReportResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The report generation status. Valid values:</p>
+     * <p>The report generation status.</p>
      * <p>0: succeeded.
      * 1: failed.
      * 2: timed out.
@@ -121,7 +121,7 @@ public class DescribeTraceDiagnoseReportResponseBody extends TeaModel {
     public String state;
 
     /**
-     * <p>The status of the diagnostic link. Valid values:</p>
+     * <p>The status of the diagnostic link.</p>
      * <p>1: active.
      * 0: expired.</p>
      * 

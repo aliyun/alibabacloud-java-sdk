@@ -20,9 +20,9 @@ public class GetPurgeQuotaRequest extends TeaModel {
      * <li><strong>file</strong> (default): file refresh.</li>
      * <li><strong>cachetag</strong>: cache tag refresh.</li>
      * <li><strong>directory</strong>: directory refresh.</li>
-     * <li><strong>ignoreParams</strong>: ignore-parameters refresh.</li>
+     * <li><strong>ignoreParams</strong>: parameter-stripped refresh.</li>
      * <li><strong>hostname</strong>: hostname refresh.</li>
-     * <li><strong>purgeall</strong>: purge all cache under the site.</li>
+     * <li><strong>purgeall</strong>: refreshes all cached content under the site.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

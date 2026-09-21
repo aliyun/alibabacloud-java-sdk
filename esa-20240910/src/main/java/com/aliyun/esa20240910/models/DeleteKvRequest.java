@@ -15,7 +15,7 @@ public class DeleteKvRequest extends TeaModel {
     public String key;
 
     /**
-     * <p>The name you specified when you called <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a>.</p>
+     * <p>The name specified when calling <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

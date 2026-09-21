@@ -7,14 +7,10 @@ public class UpdateUserDeliveryTaskRequest extends TeaModel {
     /**
      * <p>The real-time log type. Valid values:</p>
      * <ul>
-     * <li><p><strong>dcdn_log_access_l1 (default)</strong>: access log.</p>
-     * </li>
-     * <li><p><strong>dcdn_log_er</strong>: edge function log.</p>
-     * </li>
-     * <li><p><strong>dcdn_log_waf</strong>: WAF log.</p>
-     * </li>
-     * <li><p><strong>dcdn_log_ipa</strong>: layer 4 acceleration log.</p>
-     * </li>
+     * <li><strong>dcdn_log_access_l1 (default)</strong>: access logs.</li>
+     * <li><strong>dcdn_log_er</strong>: Edge Routine function logs.</li>
+     * <li><strong>dcdn_log_waf</strong>: security protection logs.</li>
+     * <li><strong>dcdn_log_ipa</strong>: Layer 4 acceleration logs.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -23,11 +19,17 @@ public class UpdateUserDeliveryTaskRequest extends TeaModel {
     @NameInMap("BusinessType")
     public String businessType;
 
+    /**
+     * <p>The list of ER PODs to configure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx,xxx</p>
+     */
     @NameInMap("Details")
     public String details;
 
     /**
-     * <p>The default value is 0.</p>
+     * <p>The discard rate. If not specified, the default value is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -36,7 +38,7 @@ public class UpdateUserDeliveryTaskRequest extends TeaModel {
     public Float discardRate;
 
     /**
-     * <p>The selected fields. Separate multiple fields with a comma.</p>
+     * <p>The selected fields, separated by commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +47,15 @@ public class UpdateUserDeliveryTaskRequest extends TeaModel {
     @NameInMap("FieldName")
     public String fieldName;
 
+    /**
+     * <p>The version of the filter rule.</p>
+     * <blockquote>
+     * <p>Compatible with legacy filter rules. The default value is v1. Newly created tasks use v2.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>v2</p>
+     */
     @NameInMap("FilterVer")
     public String filterVer;
 

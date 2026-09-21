@@ -19,10 +19,10 @@ public class DescribeRatePlanInstanceStatusResponseBody extends TeaModel {
      * <li>running: Running.</li>
      * <li>renewing: Being renewed.</li>
      * <li>upgrading: Being upgraded.</li>
-     * <li>releasePrepaidService: Released due to prepaid expiration.</li>
+     * <li>releasePrepaidService: Released due to subscription expiration.</li>
      * <li>creating: Being created.</li>
      * <li>downgrading: Being downgraded.</li>
-     * <li>ceasePrepaidService: Suspended due to prepaid expiration.</li>
+     * <li>ceasePrepaidService: Suspended due to subscription expiration.</li>
      * </ul>
      * 
      * <strong>example:</strong>

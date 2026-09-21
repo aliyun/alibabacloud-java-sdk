@@ -11,7 +11,7 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
     public java.util.List<DescribeSiteWafTimeSeriesDataResponseBodyData> data;
 
     /**
-     * <p>The end time of the returned data.</p>
+     * <p>The end of the time range for the returned data.</p>
      * <p>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC+0.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
     public Float samplingRate;
 
     /**
-     * <p>The start time for the data query.</p>
+     * <p>The beginning of the time range to query.</p>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The summarized query data.</p>
+     * <p>The summarized data.</p>
      */
     @NameInMap("SummarizedData")
     public java.util.List<DescribeSiteWafTimeSeriesDataResponseBodySummarizedData> summarizedData;
@@ -175,7 +175,7 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
         public java.util.List<DescribeSiteWafTimeSeriesDataResponseBodyDataDetailData> detailData;
 
         /**
-         * <p>The query dimension.</p>
+         * <p>The query dimensions.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>
@@ -196,7 +196,7 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
          * <p>The metric name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Traffic</p>
+         * <p>Requests</p>
          */
         @NameInMap("FieldName")
         public String fieldName;
@@ -272,7 +272,7 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
          * <p>The summarized metric name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Traffic</p>
+         * <p>Requests</p>
          */
         @NameInMap("FieldName")
         public String fieldName;

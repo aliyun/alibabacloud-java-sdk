@@ -68,7 +68,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         public String aliUid;
 
         /**
-         * <p>The task creation time in ISO 8601 format (e.g., 2024-01-01T00:00:00+Z).</p>
+         * <p>The task creation time in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-01T08:53:13Z</p>
@@ -77,7 +77,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The list of prefetch domains.</p>
+         * <p>The list of domain names for prefetch.</p>
          * 
          * <strong>example:</strong>
          * <p>testurl.com</p>
@@ -86,7 +86,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         public String domains;
 
         /**
-         * <p>The error information.</p>
+         * <p>The fault error message.</p>
          * 
          * <strong>example:</strong>
          * <p>invalid domain:test.com</p>
@@ -95,7 +95,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         public String errorInfo;
 
         /**
-         * <p>The number of prefetch plans.</p>
+         * <p>The number of prefetch schedules.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -113,7 +113,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         public String failedFileOss;
 
         /**
-         * <p>The URL list file ID (used for downloading).</p>
+         * <p>The URL list file ID, which is used for download.</p>
          * 
          * <strong>example:</strong>
          * <p>665d3b48621bccf3fe29e1a7</p>
@@ -131,7 +131,11 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The URL insertion method.</p>
+         * <p>The URL insertion method. Valid values:</p>
+         * <ul>
+         * <li>oss: URLs are imported in bulk from an OSS file.</li>
+         * <li>testBox: URLs are entered one by one in a text box.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>oss</p>
@@ -149,7 +153,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Site ID.</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>190007158391808</p>
@@ -167,7 +171,12 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         public Integer taskSubmitted;
 
         /**
-         * <p>The task type (refresh/prefetch).</p>
+         * <p>The task type (refresh or prefetch). Valid values:</p>
+         * <ul>
+         * <li>path: Directory refresh.</li>
+         * <li>refresh: URL refresh.</li>
+         * <li>preload: URL prefetch.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>preload</p>

@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class BatchPutKvRequest extends TeaModel {
     /**
-     * <p>The list of key-value pairs to set. The total size cannot exceed 2 MB (2 × 1,000 × 1,000).</p>
+     * <p>The list of key-value pairs to batch set. The total size cannot exceed 2 MB (2\*1000\*1000).</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("KvList")
     public java.util.List<BatchPutKvRequestKvList> kvList;
 
     /**
-     * <p>The name specified when you call <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a>.</p>
+     * <p>The name specified when you called <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class BatchPutKvRequest extends TeaModel {
 
     public static class BatchPutKvRequestKvList extends TeaModel {
         /**
-         * <p>The expiration time. This is a UNIX timestamp in seconds and cannot be earlier than the current time. If you set both Expiration and ExpirationTtl, ExpirationTtl takes precedence.</p>
+         * <p>The expiration time as a UNIX timestamp in seconds. The value cannot be earlier than the current time. If both Expiration and ExpirationTtl are specified, ExpirationTtl takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>1690081381</p>
@@ -53,7 +53,7 @@ public class BatchPutKvRequest extends TeaModel {
         public Long expiration;
 
         /**
-         * <p>The time-to-live (TTL). This is a relative time in seconds. If you set both Expiration and ExpirationTtl, ExpirationTtl takes precedence.</p>
+         * <p>The expiration time as a relative time in seconds. If both Expiration and ExpirationTtl are specified, ExpirationTtl takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -62,7 +62,7 @@ public class BatchPutKvRequest extends TeaModel {
         public Long expirationTtl;
 
         /**
-         * <p>The name of the key. The key can be up to 512 characters long and cannot contain spaces or backslashes (/).</p>
+         * <p>The key name to set. The key name can be up to 512 characters in length and cannot contain spaces or backslashes (/).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

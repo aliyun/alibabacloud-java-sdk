@@ -14,7 +14,7 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the website log files.</p>
+     * <p>The site log information.</p>
      */
     @NameInMap("SiteLogDetails")
     public java.util.List<DescribeSiteLogsResponseBodySiteLogDetails> siteLogDetails;
@@ -43,6 +43,9 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
     public static class DescribeSiteLogsResponseBodySiteLogDetailsLogInfos extends TeaModel {
         /**
          * <p>The end time.</p>
+         * <blockquote>
+         * <p>Date format example: yyyy-MM-ddTHH:mm:ssZ</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>2022-11-06T17:00:00Z</p>
@@ -51,7 +54,7 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The name of the log file.</p>
+         * <p>The log name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com_2022_11_07_000000_020000.gz.xxxxxx</p>
@@ -62,7 +65,7 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
         /**
          * <p>The log path.</p>
          * <blockquote>
-         * <p>Take note of the Expires field (expiration timestamp) in this parameter. If the log download URL expires, you must reobtain the URL.</p>
+         * <p>Note the Expires field (expiration timestamp) in the LogPath response parameter. After the expiration time, the log download link becomes invalid and must be obtained again.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -72,7 +75,7 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
         public String logPath;
 
         /**
-         * <p>The size of the log file. Unit: bytes.</p>
+         * <p>The log size, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>438304768</p>
@@ -81,7 +84,10 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
         public Integer logSize;
 
         /**
-         * <p>The create time.</p>
+         * <p>The start time.</p>
+         * <blockquote>
+         * <p>Date format example: yyyy-MM-ddTHH:mm:ssZ</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>2022-11-06T16:00:00Z</p>
@@ -138,7 +144,7 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
 
     public static class DescribeSiteLogsResponseBodySiteLogDetailsPageInfos extends TeaModel {
         /**
-         * <p>The page number returned.</p>
+         * <p>The page number of the returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -197,7 +203,7 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
 
     public static class DescribeSiteLogsResponseBodySiteLogDetails extends TeaModel {
         /**
-         * <p>The total number of entries returned on the current page.</p>
+         * <p>The total number of entries returned on this page.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -206,19 +212,19 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
         public Integer logCount;
 
         /**
-         * <p>The details of the website log files.</p>
+         * <p>The site log package information.</p>
          */
         @NameInMap("LogInfos")
         public java.util.List<DescribeSiteLogsResponseBodySiteLogDetailsLogInfos> logInfos;
 
         /**
-         * <p>Pagination information.</p>
+         * <p>The pagination information.</p>
          */
         @NameInMap("PageInfos")
         public DescribeSiteLogsResponseBodySiteLogDetailsPageInfos pageInfos;
 
         /**
-         * <p>The website ID.</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456***</p>
@@ -227,7 +233,7 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
         public Long siteId;
 
         /**
-         * <p>The website name.</p>
+         * <p>The site name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>

@@ -12,7 +12,7 @@ public class DescribeSiteWafTopDataResponseBody extends TeaModel {
 
     /**
      * <p>The end of the time range for the returned data.</p>
-     * <p>The time is in ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC+0.</p>
+     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC+0.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-04-09T16:00:00Z</p>
@@ -40,7 +40,7 @@ public class DescribeSiteWafTopDataResponseBody extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query.</p>
-     * <p>Specify the time in ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-04-08T16:00:00Z</p>
@@ -143,7 +143,7 @@ public class DescribeSiteWafTopDataResponseBody extends TeaModel {
         public java.util.List<DescribeSiteWafTopDataResponseBodyDataDetailData> detailData;
 
         /**
-         * <p>The query dimension.</p>
+         * <p>The query dimensions.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>

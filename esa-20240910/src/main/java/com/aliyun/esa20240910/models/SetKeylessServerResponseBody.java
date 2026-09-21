@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetKeylessServerResponseBody extends TeaModel {
     /**
-     * <p>The keyless server ID.</p>
+     * <p>Keyless server ID。</p>
      * 
      * <strong>example:</strong>
      * <p>babaabcd****</p>

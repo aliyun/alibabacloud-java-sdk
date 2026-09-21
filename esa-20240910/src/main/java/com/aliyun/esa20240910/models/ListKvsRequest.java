@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListKvsRequest extends TeaModel {
     /**
-     * <p>The name specified when you called <a href="https://help.aliyun.com/document_detail/2850317.html">CreatevNamespace</a>.</p>
+     * <p>The name specified when calling <a href="https://help.aliyun.com/document_detail/2850317.html">CreatevNamespace</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListKvsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page size. Default value: <strong>50</strong>. Maximum value: <strong>100</strong>.</p>
+     * <p>The page size for the returned results. Default value: <strong>50</strong>. Maximum value: <strong>100</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class ApplyCertificateRequest extends TeaModel {
     /**
-     * <p>A comma-separated list of domain names.</p>
+     * <p>The algorithm type.</p>
+     */
+    @NameInMap("AlgType")
+    public String algType;
+
+    /**
+     * <p>The list of domain names, separated by commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +31,12 @@ public class ApplyCertificateRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The certificate type. Valid values: <code>lets_encrypt</code> for a Let\&quot;s Encrypt certificate, <code>digicert_single</code> for a Digicert single-domain certificate, and <code>digicert_wildcard</code> for a Digicert wildcard certificate.</p>
+     * <p>The certificate type. Valid values:</p>
+     * <ul>
+     * <li>lets_encrypt: Let\&quot;s Encrypt certificate.</li>
+     * <li>digicert_single: DigiCert single-domain certificate.</li>
+     * <li>digicert_wildcard: DigiCert wildcard domain certificate.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>lets_encrypt</p>
@@ -36,6 +47,14 @@ public class ApplyCertificateRequest extends TeaModel {
     public static ApplyCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         ApplyCertificateRequest self = new ApplyCertificateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ApplyCertificateRequest setAlgType(String algType) {
+        this.algType = algType;
+        return this;
+    }
+    public String getAlgType() {
+        return this.algType;
     }
 
     public ApplyCertificateRequest setDomains(String domains) {

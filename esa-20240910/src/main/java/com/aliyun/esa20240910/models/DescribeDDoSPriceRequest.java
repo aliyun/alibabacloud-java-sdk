@@ -15,7 +15,7 @@ public class DescribeDDoSPriceRequest extends TeaModel {
     public String DDoSBillingMode;
 
     /**
-     * <p>The instance specifications for the Chinese mainland.</p>
+     * <p>The specification of the instance in the Chinese mainland.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeDDoSPriceRequest extends TeaModel {
     public String DDoSBurstableDomesticProtection;
 
     /**
-     * <p>The instance specifications for regions outside the Chinese mainland.</p>
+     * <p>The specification of the instance outside the Chinese mainland.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

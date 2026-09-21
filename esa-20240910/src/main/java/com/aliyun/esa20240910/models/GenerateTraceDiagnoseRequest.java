@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateTraceDiagnoseRequest extends TeaModel {
     /**
-     * <p>The source of the request.</p>
+     * <p>The source.</p>
      * 
      * <strong>example:</strong>
      * <p>ai</p>

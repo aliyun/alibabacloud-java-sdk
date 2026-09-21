@@ -15,11 +15,6 @@ public class ListSiteFunctionsRequest extends TeaModel {
 
     /**
      * <p>The configuration type. You can use this parameter to query global configurations or rule configurations. Valid values:</p>
-     * <ul>
-     * <li>global: queries global configurations.</li>
-     * <li>rule: queries rule configurations.</li>
-     * </ul>
-     * <p>This parameter is optional. If not specified, both global and rule configurations are returned. This parameter takes effect only when the FunctionName parameter is specified.</p>
      * 
      * <strong>example:</strong>
      * <p>rule</p>
@@ -55,7 +50,7 @@ public class ListSiteFunctionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The rule name. Returns the rule that matches the specified name. This parameter takes effect only when the FunctionName parameter is specified.</p>
+     * <p>The rule name. Filters the rule that matches the specified name. This parameter takes effect only when FunctionName is specified.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

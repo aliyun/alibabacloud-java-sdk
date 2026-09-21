@@ -12,7 +12,7 @@ public class BlockObjectRequest extends TeaModel {
     public java.util.List<String> content;
 
     /**
-     * <p>The effective period of the block, in seconds. This parameter is required when the type is set to block.</p>
+     * <p>The effective period of the block, in seconds. Specify this parameter when the type is block.</p>
      * 
      * <strong>example:</strong>
      * <p>864000</p>
@@ -33,8 +33,8 @@ public class BlockObjectRequest extends TeaModel {
     /**
      * <p>The type. Valid values:</p>
      * <ul>
-     * <li><strong>block</strong>: blocks the URLs.</li>
-     * <li><strong>unblock</strong>: unblocks the URLs.</li>
+     * <li><strong>block</strong>: Block.</li>
+     * <li><strong>unblock</strong>: Unblock.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

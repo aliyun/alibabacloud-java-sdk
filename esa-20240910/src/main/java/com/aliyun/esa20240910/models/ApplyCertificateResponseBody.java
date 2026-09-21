@@ -14,7 +14,7 @@ public class ApplyCertificateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of application details for each free certificate.</p>
+     * <p>The list of free certificate application details.</p>
      */
     @NameInMap("Result")
     public java.util.List<ApplyCertificateResponseBodyResult> result;
@@ -29,7 +29,7 @@ public class ApplyCertificateResponseBody extends TeaModel {
     public String siteName;
 
     /**
-     * <p>The total number of certificates requested, which matches the number of domain names provided in the request.</p>
+     * <p>The number of certificates applied for, which is the same as the number of input domain names.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

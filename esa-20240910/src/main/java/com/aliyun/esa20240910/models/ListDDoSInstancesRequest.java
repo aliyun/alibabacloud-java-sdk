@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDDoSInstancesRequest extends TeaModel {
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>esa-ddos-b1e0l80ugfeo</p>
@@ -14,7 +14,7 @@ public class ListDDoSInstancesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Page number. Default: <strong>1</strong>.</p>
+     * <p>The page number for a paged query. The value must be greater than or equal to 1. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListDDoSInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Number of entries per page. Default: 20. Maximum: 500. Valid values: integers from 1 to 500.</p>
+     * <p>The number of entries per page for a paged query. Default value: 20. Maximum value: 500. Valid values: any integer from 1 to 500.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,7 +32,7 @@ public class ListDDoSInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Associated site package instance ID.</p>
+     * <p>The instance ID of the associated site plan.</p>
      * 
      * <strong>example:</strong>
      * <p>esa-site-a71k7bw1adf</p>
@@ -41,9 +41,9 @@ public class ListDDoSInstancesRequest extends TeaModel {
     public String siteInstanceId;
 
     /**
-     * <p>Sort field. Default: CreateTime.</p>
+     * <p>The sort field. By default, results are sorted by purchase time. Valid values:</p>
      * <ul>
-     * <li><strong>CreateTime</strong>: Time when the instance was purchased.</li>
+     * <li><strong>CreateTime</strong>: purchase time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,12 +53,10 @@ public class ListDDoSInstancesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>Sort order:</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><p>asc: ascending.</p>
-     * </li>
-     * <li><p>desc: descending.</p>
-     * </li>
+     * <li>asc: ascending order.</li>
+     * <li>desc: descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +66,7 @@ public class ListDDoSInstancesRequest extends TeaModel {
     public String sortOrder;
 
     /**
-     * <p>Instance status.</p>
+     * <p>The instance status.</p>
      * 
      * <strong>example:</strong>
      * <p>online</p>

@@ -29,7 +29,7 @@ public class ListTraceTasksResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The page size. Valid values: any integer from 1 to 1000.</p>
+     * <p>The number of entries per page. Valid values: any integer from 1 to 1000.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -138,7 +138,7 @@ public class ListTraceTasksResponseBody extends TeaModel {
         public String diagnoseId;
 
         /**
-         * <p>The diagnostic URL.</p>
+         * <p>The diagnose URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://cdn.dns-detect.alicdn.com/diagnose/xxxxxx">http://cdn.dns-detect.alicdn.com/diagnose/xxxxxx</a></p>
@@ -147,7 +147,7 @@ public class ListTraceTasksResponseBody extends TeaModel {
         public String diagnoseUrl;
 
         /**
-         * <p>The domain name to diagnose.</p>
+         * <p>The domain name to be diagnosed.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">http://www.example.com</a></p>
@@ -190,10 +190,10 @@ public class ListTraceTasksResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The status of the diagnostic URL. Valid values:</p>
+         * <p>The status of the diagnose URL. Valid values:</p>
          * <ul>
-         * <li>1: active</li>
-         * <li>0: expired.</li>
+         * <li>1: Active.</li>
+         * <li>0: Expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -221,7 +221,7 @@ public class ListTraceTasksResponseBody extends TeaModel {
         public Long timeConsuming;
 
         /**
-         * <p>The diagnostic trace ID.</p>
+         * <p>The trace ID of the diagnostic task.</p>
          * 
          * <strong>example:</strong>
          * <p>000000xxxxxxxxxxxxxxxxxxxxxx25941e</p>

@@ -154,7 +154,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The DCV type. Valid values: DNS and HTTP.</p>
+         * <p>The DCV type. Valid values: DNS, HTTP.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -256,7 +256,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>The creation time. Format: YYYY-MM-DD HH:MM:SS, in UTC/GMT time zone.</p>
+         * <p>The creation time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-06-24 07:48:51</p>
@@ -325,7 +325,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The end time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in UTC/GMT time zone.</p>
+         * <p>The end time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-31 02:08:00</p>
@@ -334,7 +334,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String notAfter;
 
         /**
-         * <p>The start time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in UTC/GMT time zone.</p>
+         * <p>The start time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-31 02:08:00</p>
@@ -393,10 +393,10 @@ public class ListCertificatesResponseBody extends TeaModel {
          * <li>OK: Normal.</li>
          * <li>Expired: The certificate has expired.</li>
          * <li>Expiring: The certificate is about to expire (within 30 days).</li>
-         * <li>Issued: Free certificate - issued.</li>
-         * <li>Applying: Free certificate - applying.</li>
-         * <li>ApplyFailed: Free certificate - application failed.</li>
-         * <li>Canceled: Free certificate - canceled.</li>
+         * <li>Issued: Free certificate - Issued.</li>
+         * <li>Applying: Free certificate - Applying.</li>
+         * <li>ApplyFailed: Free certificate - Application failed.</li>
+         * <li>Canceled: Free certificate - Canceled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -408,7 +408,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         /**
          * <p>The certificate type. Valid values:</p>
          * <ul>
-         * <li>cas: SSL Certificates Service certificate.</li>
+         * <li>cas: Alibaba Cloud SSL certificate.</li>
          * <li>upload: Custom uploaded certificate.</li>
          * <li>free: Free certificate.</li>
          * <li>keyless: Keyless certificate.</li>
@@ -421,7 +421,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The update time. Format: YYYY-MM-DD HH:MM:SS, in UTC/GMT time zone.</p>
+         * <p>The update time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-20 06:18:42</p>

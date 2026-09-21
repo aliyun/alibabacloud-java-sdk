@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetKeylessServerRequest extends TeaModel {
     /**
-     * <p>The CA certificate used to verify the server certificate of the keyless server. This parameter applies only when <code>Verify</code> is set to <code>true</code>.</p>
+     * <p>The CA certificate used to verify the server certificate of the Keyless server. This parameter takes effect only when Verify is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----****</p>
@@ -14,7 +14,7 @@ public class SetKeylessServerRequest extends TeaModel {
     public String caCertificate;
 
     /**
-     * <p>The client certificate. This parameter must be used with the <code>ClientPrivateKey</code> parameter.</p>
+     * <p>The client certificate. This parameter must be specified together with the client private key.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----****</p>
@@ -23,7 +23,7 @@ public class SetKeylessServerRequest extends TeaModel {
     public String clientCertificate;
 
     /**
-     * <p>The client private key. This parameter must be used with the <code>ClientCertificate</code> parameter.</p>
+     * <p>The client private key. This parameter must be specified together with the client certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN RSA PRIVATE KEY-----****</p>
@@ -32,7 +32,7 @@ public class SetKeylessServerRequest extends TeaModel {
     public String clientPrivateKey;
 
     /**
-     * <p>The hostname of the keyless server. The value can be a domain name or an IP address.</p>
+     * <p>The hostname of the Keyless server. The value can be a domain name or an IP address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class SetKeylessServerRequest extends TeaModel {
     public String host;
 
     /**
-     * <p>The keyless server ID.</p>
+     * <p>Keyless server ID。</p>
      * 
      * <strong>example:</strong>
      * <p>baba39055622c008b90285a8838e****</p>
@@ -51,7 +51,7 @@ public class SetKeylessServerRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The keyless server name.</p>
+     * <p>The name of the Keyless server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class SetKeylessServerRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The keyless server port.</p>
+     * <p>The port of the Keyless server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class SetKeylessServerRequest extends TeaModel {
     public Long port;
 
     /**
-     * <p>The site ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,7 +81,7 @@ public class SetKeylessServerRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Specifies whether to verify the server certificate of the keyless server. Default: false.</p>
+     * <p>Specifies whether to verify the server certificate of the Keyless server. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

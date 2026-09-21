@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadSiteOriginClientCertificateResponseBody extends TeaModel {
     /**
-     * <p>The Common Name of the certificate.</p>
+     * <p>The common name of the certificate.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -23,7 +23,7 @@ public class UploadSiteOriginClientCertificateResponseBody extends TeaModel {
     public String fingerprintSha256;
 
     /**
-     * <p>The certificate ID on ESA.</p>
+     * <p>The certificate ID.</p>
      * 
      * <strong>example:</strong>
      * <p>babaabcd****</p>
@@ -32,7 +32,7 @@ public class UploadSiteOriginClientCertificateResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The CA that issued the certificate.</p>
+     * <p>The certification authority.</p>
      * 
      * <strong>example:</strong>
      * <p>GlobalSign nv-sa</p>
@@ -41,7 +41,7 @@ public class UploadSiteOriginClientCertificateResponseBody extends TeaModel {
     public String issuer;
 
     /**
-     * <p>The time when the certificate expires.</p>
+     * <p>The end time of the certificate validity period.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-12-01T02:12:49Z</p>
@@ -50,7 +50,7 @@ public class UploadSiteOriginClientCertificateResponseBody extends TeaModel {
     public String notAfter;
 
     /**
-     * <p>The time when the certificate takes effect.</p>
+     * <p>The start time of the certificate validity period.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-12-01T02:13:07Z</p>
@@ -59,7 +59,7 @@ public class UploadSiteOriginClientCertificateResponseBody extends TeaModel {
     public String notBefore;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
@@ -68,7 +68,7 @@ public class UploadSiteOriginClientCertificateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The serial number of the certificate.</p>
+     * <p>The certificate serial number.</p>
      * 
      * <strong>example:</strong>
      * <p>babaded901474b9693acf530e0fb1d**</p>
@@ -86,7 +86,7 @@ public class UploadSiteOriginClientCertificateResponseBody extends TeaModel {
     public String signatureAlgorithm;
 
     /**
-     * <p>The status of the certificate.</p>
+     * <p>The certificate status.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -95,7 +95,7 @@ public class UploadSiteOriginClientCertificateResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The validity period of the certificate. Unit: day.</p>
+     * <p>The number of days the certificate is valid.</p>
      * 
      * <strong>example:</strong>
      * <p>365</p>

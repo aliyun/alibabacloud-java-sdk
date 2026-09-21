@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDDoSInstancesResponseBody extends TeaModel {
     /**
-     * <p>Instance details</p>
+     * <p>The instance details.</p>
      */
     @NameInMap("InstanceInfo")
     public java.util.List<ListDDoSInstancesResponseBodyInstanceInfo> instanceInfo;
 
     /**
-     * <p>Page number. Default: <strong>1</strong>.</p>
+     * <p>The current page number, which is the same as the PageNumber request parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Number of entries per page</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9F1DC265-BF10-5C9C-B607-760265C5F365</p>
@@ -38,7 +38,7 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of entries</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -47,7 +47,7 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>Total number of pages</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -110,7 +110,7 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
 
     public static class ListDDoSInstancesResponseBodyInstanceInfo extends TeaModel {
         /**
-         * <p>Time when the instance was purchased</p>
+         * <p>The purchase time of the instance. The time is in ISO 8601 format and displayed in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-01T07:59:07Z</p>
@@ -119,7 +119,7 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>DDoS protection specification for the Chinese mainland</p>
+         * <p>The specifications of the DDoS instance in the Chinese mainland.</p>
          * 
          * <strong>example:</strong>
          * <p>cn_300</p>
@@ -128,7 +128,7 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
         public String DDoSBurstableDomesticProtection;
 
         /**
-         * <p>DDoS protection specification for regions outside the Chinese mainland</p>
+         * <p>The specifications of the DDoS instance outside the Chinese mainland.</p>
          * 
          * <strong>example:</strong>
          * <p>overseas_300</p>
@@ -137,7 +137,7 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
         public String DDoSBurstableOverseasProtection;
 
         /**
-         * <p>Instance ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-ddddxxxxx</p>
@@ -146,7 +146,7 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Scheduled release time</p>
+         * <p>The scheduled release time. The time is in ISO 8601 format and displayed in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-03-25T16:00:00Z</p>
@@ -155,7 +155,7 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
         public String reserveReleaseTime;
 
         /**
-         * <p>Associated site package instance ID</p>
+         * <p>The ID of the associated site plan instance.</p>
          * 
          * <strong>example:</strong>
          * <p>esa-site-b0s6kmx0r0n4</p>
@@ -164,16 +164,12 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
         public String siteInstanceId;
 
         /**
-         * <p>Instance status. Valid values:</p>
+         * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li><p><strong>online</strong>: Normal service status.</p>
-         * </li>
-         * <li><p><strong>offline</strong>: Expired but not overdue. Instance is unavailable.</p>
-         * </li>
-         * <li><p><strong>disable</strong>: Released.</p>
-         * </li>
-         * <li><p><strong>overdue</strong>: Service suspended due to overdue payment.</p>
-         * </li>
+         * <li><strong>online</strong>: The instance is running normally.</li>
+         * <li><strong>offline</strong>: The instance has expired but is not overdue, and is unavailable.</li>
+         * <li><strong>disable</strong>: The instance has been released.</li>
+         * <li><strong>overdue</strong>: The instance is suspended due to overdue payment.</li>
          * </ul>
          * 
          * <strong>example:</strong>

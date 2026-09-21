@@ -43,13 +43,13 @@ public class CreateKvNamespaceResponseBody extends TeaModel {
     /**
      * <p>The status of the KV namespace. Valid values:</p>
      * <ul>
-     * <li><p><strong>online</strong>: The namespace is available.</p>
+     * <li><p><strong>online</strong>: Normal.</p>
      * </li>
-     * <li><p><strong>delete</strong>: The namespace is pending deletion.</p>
+     * <li><p><strong>delete</strong>: Pending deletion.</p>
      * </li>
-     * <li><p><strong>deleting</strong>: The namespace is being deleted.</p>
+     * <li><p><strong>deleting</strong>: Being deleted.</p>
      * </li>
-     * <li><p><strong>deleted</strong>: The namespace is deleted.</p>
+     * <li><p><strong>deleted</strong>: Deleted.</p>
      * </li>
      * </ul>
      * 

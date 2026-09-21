@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateSiteDeliveryTaskRequest extends TeaModel {
     /**
-     * <p>The real-time log type. Valid values:</p>
+     * <p>The log type of real-time logs. Valid values:</p>
      * <ul>
-     * <li><p><strong>dcdn_log_access_l1</strong> (default): access log.</p>
-     * </li>
-     * <li><p><strong>dcdn_log_er</strong>: Edge Routine log.</p>
-     * </li>
-     * <li><p><strong>dcdn_log_waf</strong>: WAF log.</p>
-     * </li>
-     * <li><p><strong>dcdn_log_ipa</strong>: Layer 4 acceleration log.</p>
-     * </li>
+     * <li><strong>dcdn_log_access_l1 (default)</strong>: access logs.</li>
+     * <li><strong>dcdn_log_er</strong>: Edge Routine logs.</li>
+     * <li><strong>dcdn_log_waf</strong>: security protection logs.</li>
+     * <li><strong>dcdn_log_ipa</strong>: Layer 4 acceleration logs.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +29,7 @@ public class UpdateSiteDeliveryTaskRequest extends TeaModel {
     public Float discardRate;
 
     /**
-     * <p>A comma-separated list of delivery fields.</p>
+     * <p>The list of delivery fields to modify, separated by commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,11 +38,20 @@ public class UpdateSiteDeliveryTaskRequest extends TeaModel {
     @NameInMap("FieldName")
     public String fieldName;
 
+    /**
+     * <p>The version of the filter rule.</p>
+     * <blockquote>
+     * <p>Compatible with legacy filter rules. The default value is v1. Newly created rules use v2.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>v2</p>
+     */
     @NameInMap("FilterVer")
     public String filterVer;
 
     /**
-     * <p>The site ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>123456****</p>

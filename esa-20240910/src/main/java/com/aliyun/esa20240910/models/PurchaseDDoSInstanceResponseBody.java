@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PurchaseDDoSInstanceResponseBody extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>esa-ddos-9tuv*********</p>
      */
@@ -12,6 +14,8 @@ public class PurchaseDDoSInstanceResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2223332122***</p>
      */
@@ -19,6 +23,8 @@ public class PurchaseDDoSInstanceResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</p>
      */

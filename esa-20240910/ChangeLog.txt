@@ -1,3 +1,7 @@
+2026-09-21 Version: 3.11.2
+- Update API GetWafFilter: add response parameters Body.Filter.Fields.$.Subs.
+
+
 2026-07-24 Version: 3.12.0
 - Support API CreateRoutineBuild.
 - Support API DescribeDDoSPrice.

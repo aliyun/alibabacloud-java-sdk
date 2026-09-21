@@ -7,15 +7,13 @@ public class CreateUserDeliveryTaskShrinkRequest extends TeaModel {
     /**
      * <p>The real-time log type. Valid values:</p>
      * <ul>
-     * <li><strong>dcdn_log_access_l1 (default)</strong>: access logs.</li>
-     * <li><strong>dcdn_log_er</strong>: edge function logs.</li>
-     * <li><strong>dcdn_log_waf</strong>: security protection logs.</li>
-     * <li><strong>dcdn_log_ipa</strong>: Layer 4 acceleration logs.</li>
+     * <li><strong>dcdn_log_er_pod</strong>: edge container logs.</li>
+     * <li><strong>dcdn_log_dns</strong>: edge DNS logs.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dcdn_log_access_l1</p>
+     * <p>dcdn_log_er_pod</p>
      */
     @NameInMap("BusinessType")
     public String businessType;
@@ -23,7 +21,7 @@ public class CreateUserDeliveryTaskShrinkRequest extends TeaModel {
     /**
      * <p>The data center. Valid values:</p>
      * <ul>
-     * <li><strong>cn</strong>: Chinese mainland.</li>
+     * <li><strong>cn</strong>: the Chinese mainland.</li>
      * <li><strong>sg</strong>: global (excluding the Chinese mainland).</li>
      * </ul>
      * 
@@ -51,6 +49,12 @@ public class CreateUserDeliveryTaskShrinkRequest extends TeaModel {
     @NameInMap("DeliveryType")
     public String deliveryType;
 
+    /**
+     * <p>The list of Edge Routine (ER) pods to configure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx,xxx</p>
+     */
     @NameInMap("Details")
     public String details;
 
@@ -64,15 +68,24 @@ public class CreateUserDeliveryTaskShrinkRequest extends TeaModel {
     public Float discardRate;
 
     /**
-     * <p>The fields to be selected, separated by commas (,).</p>
+     * <p>The fields to deliver, separated by commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>user_agent,ip_address,ip_port</p>
+     * <p>ClientIP,ClientRequestURI,EdgeResponseStatusCode</p>
      */
     @NameInMap("FieldName")
     public String fieldName;
 
+    /**
+     * <p>The version of the filter rule.</p>
+     * <blockquote>
+     * <p>This parameter is used for backward compatibility with legacy filter rules. The default value is v1. New tasks use v2.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>v2</p>
+     */
     @NameInMap("FilterVer")
     public String filterVer;
 

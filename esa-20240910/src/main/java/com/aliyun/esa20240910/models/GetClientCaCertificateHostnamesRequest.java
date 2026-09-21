@@ -14,7 +14,7 @@ public class GetClientCaCertificateHostnamesRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The site ID. To obtain this ID, call the <a href="~~ListSites~~">ListSites</a> API.</p>
+     * <p>The site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

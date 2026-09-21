@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeKvAccountStatusResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
@@ -14,12 +14,10 @@ public class DescribeKvAccountStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Account status.</p>
+     * <p>The account status.</p>
      * <ul>
-     * <li><p><strong>online</strong>: Enabled.</p>
-     * </li>
-     * <li><p><strong>offline</strong>: Disabled.</p>
-     * </li>
+     * <li><strong>online</strong>: Enabled.</li>
+     * <li><strong>offline</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

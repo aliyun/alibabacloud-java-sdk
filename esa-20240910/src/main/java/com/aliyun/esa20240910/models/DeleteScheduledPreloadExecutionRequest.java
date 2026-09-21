@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteScheduledPreloadExecutionRequest extends TeaModel {
     /**
-     * <p>The preload plan ID.</p>
+     * <p>The prefetch plan ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class BatchDeleteKvRequest extends TeaModel {
     /**
-     * <p>List of keys to delete in bulk. You can delete up to 10,000 keys.</p>
+     * <p>The list of key names to delete in batch. A maximum of 10,000 keys can be deleted.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Keys")
     public java.util.List<String> keys;
 
     /**
-     * <p>Name specified when you call <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a>.</p>
+     * <p>The name specified when calling <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

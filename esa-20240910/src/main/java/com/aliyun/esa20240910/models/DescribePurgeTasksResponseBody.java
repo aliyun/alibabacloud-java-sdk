@@ -131,11 +131,11 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
         /**
          * <p>The status. Valid values:</p>
          * <ul>
-         * <li><p><strong>Complete</strong>: Completed.</p>
+         * <li><p><strong>Complete</strong>: completed.</p>
          * </li>
-         * <li><p><strong>Refreshing</strong>: Refreshing.</p>
+         * <li><p><strong>Refreshing</strong>: refreshing.</p>
          * </li>
-         * <li><p><strong>Failed</strong>: Refresh failed.</p>
+         * <li><p><strong>Failed</strong>: refresh failed.</p>
          * </li>
          * </ul>
          * 

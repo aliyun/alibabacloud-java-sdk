@@ -110,6 +110,8 @@ public class ListPagesResponseBody extends TeaModel {
 
     public static class ListPagesResponseBodyPagesModeration extends TeaModel {
         /**
+         * <p>The list of rejection reasons.</p>
+         * 
          * <strong>example:</strong>
          * <p>[]</p>
          */
@@ -117,6 +119,8 @@ public class ListPagesResponseBody extends TeaModel {
         public java.util.List<String> reasons;
 
         /**
+         * <p>The moderation status.</p>
+         * 
          * <strong>example:</strong>
          * <p>pending</p>
          */
@@ -177,7 +181,7 @@ public class ListPagesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the custom response page. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</p>
+         * <p>The ID of the custom response page. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>50000001</p>
@@ -195,6 +199,8 @@ public class ListPagesResponseBody extends TeaModel {
         public String kind;
 
         /**
+         * <p>The content moderation result.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */

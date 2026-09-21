@@ -14,7 +14,7 @@ public class GenerateTraceDiagnoseResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A diagnostic message.</p>
+     * <p>The tip.</p>
      * 
      * <strong>example:</strong>
      * <p>Origin IP x.x.x.x: Test URL returned HTTP 404 (non-2xx status).
@@ -24,7 +24,7 @@ public class GenerateTraceDiagnoseResponseBody extends TeaModel {
     public String tip;
 
     /**
-     * <p>The generated diagnostic link.</p>
+     * <p>The diagnostic link URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://cdn.dns-detect.alicdn.com/diagnose_v2?id=5d97ac9b&token=WFji65gy2mGNM11bD929%2BCMoyI6mbk2deRR9hOC6INH%2FoYbccQZQcvEn4wc%2FDPHlTshxRSAa5HokX%2BabItBpJ0FdnteROssomXqgIdjHpM46L%2BbaIeweZfsWG6QnbXT5n7O5APMyc%2Fe8d1o9PwwB429Ccks1FU1AfjNZfvBcLeo%3D">http://cdn.dns-detect.alicdn.com/diagnose_v2?id=5d97ac9b&amp;token=WFji65gy2mGNM11bD929%2BCMoyI6mbk2deRR9hOC6INH%2FoYbccQZQcvEn4wc%2FDPHlTshxRSAa5HokX%2BabItBpJ0FdnteROssomXqgIdjHpM46L%2BbaIeweZfsWG6QnbXT5n7O5APMyc%2Fe8d1o9PwwB429Ccks1FU1AfjNZfvBcLeo%3D</a></p>

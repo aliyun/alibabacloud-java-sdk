@@ -23,7 +23,7 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>The list of prefetch domains.</p>
+     * <p>The list of domain names for prefetch.</p>
      * 
      * <strong>example:</strong>
      * <p>testurl.com</p>
@@ -32,12 +32,12 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
     public String domains;
 
     /**
-     * <p>The error information. Multiple errors are separated by commas:</p>
+     * <p>The error message. Multiple faults are separated by commas. Valid values:</p>
      * <ul>
      * <li><strong>InvalidUrl</strong>: The URL format is invalid.</li>
-     * <li><strong>InvalidDomain</strong>: The domain ownership verification failed.</li>
-     * <li><strong>QuotaExcess</strong>: The quota limit has been exceeded.</li>
-     * <li><strong>OtherErrors</strong>: Other errors.</li>
+     * <li><strong>InvalidDomain</strong>: The domain name ownership verification failed.</li>
+     * <li><strong>QuotaExcess</strong>: The quota limit is exceeded.</li>
+     * <li><strong>OtherErrors</strong>: Other faults.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
     public String failedFileOss;
 
     /**
-     * <p>The URL list file ID, used for downloading.</p>
+     * <p>The URL list file ID, which is used for download.</p>
      * 
      * <strong>example:</strong>
      * <p>665d3b48621bccf3fe29e1a7</p>
@@ -110,7 +110,7 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The number of URLs that have been submitted to the system for prefetch tasks.</p>
+     * <p>The number of URLs that have been submitted to the system for prefetch.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

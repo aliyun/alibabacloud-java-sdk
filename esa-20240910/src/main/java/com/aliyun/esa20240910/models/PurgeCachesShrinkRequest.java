@@ -11,7 +11,7 @@ public class PurgeCachesShrinkRequest extends TeaModel {
     public String contentShrink;
 
     /**
-     * <p>Specifies whether to refresh edge computing cached resources. For example, this allows refreshing content cached by the Edge Routine Cache API operation function.</p>
+     * <p>Specifies whether to refresh edge computing cached resources. For example, this allows refreshing content cached by the Edge Routine CacheAPI API operation using edge functions.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -20,13 +20,13 @@ public class PurgeCachesShrinkRequest extends TeaModel {
     public Boolean edgeComputePurge;
 
     /**
-     * <p>Specifies whether to refresh all resources under the corresponding directory when the back-to-origin content is inconsistent with the origin server resources. Default value: false.</p>
+     * <p>Specifies whether to refresh resources under the corresponding directory when the back-to-origin content is inconsistent with the origin server resources. Default value: false.</p>
      * <ul>
      * <li><strong>true</strong>: Refreshes all resources under the corresponding directory.</li>
      * <li><strong>false</strong>: Refreshes only the changed resources under the corresponding directory.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter takes effect for directory refresh, cache tag refresh, parameter-ignored refresh, hostname refresh, and full site cache refresh.</p>
+     * <p> This parameter applies to directory refresh, cache tag refresh, parameter-ignored refresh, hostname refresh, and entire site cache refresh.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class PurgeCachesShrinkRequest extends TeaModel {
      * <li><strong>cachekey</strong>: cache key refresh.</li>
      * <li><strong>cachetag</strong>: cache label refresh.</li>
      * <li><strong>directory</strong>: folder refresh.</li>
-     * <li><strong>ignoreParams</strong>: parameter-ignored refresh. This refers to removing the question mark (?) and all parameters after it from the request URL. When you commit a parameter-stripped URL through this API operation, the submitted URL is matched against cached resource URLs after their parameters are also stripped. If a cached resource URL matches the submitted URL after parameter stripping, the point of presence executes the refresh on the cached resource.</li>
+     * <li><strong>ignoreParams</strong>: parameter-ignored refresh. This refers to removing the question mark (?) and all parameters after it from the request URL. When you commit a parameter-stripped URL through this API operation, the committed URL is matched against cached resource URLs after their parameters are stripped. If a cached resource URL matches the committed URL after parameter stripping, the point of presence executes the refresh on the cached resource.</li>
      * <li><strong>hostname</strong>: hostname refresh.</li>
      * <li><strong>purgeall</strong>: refreshes all cached content under the site.</li>
      * </ul>

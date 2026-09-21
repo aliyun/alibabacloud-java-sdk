@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteLogsRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query.</p>
-     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The end time for log retrieval.</p>
+     * <p>The date is in ISO 8601 format and uses UTC+0 time in the format of yyyy-MM-ddTHH:mm:ssZ.</p>
      * <blockquote>
-     * <p>The end time must be later than the start time.</p>
+     * <p>Note: The end time must be later than the start time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeSiteLogsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number to return. Valid values: any integer greater than 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +27,7 @@ public class DescribeSiteLogsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 300. Valid values: 1 to 1000.</p>
+     * <p>The number of entries per page. Default value: 300. Maximum value: 1000. Valid values: any integer from 1 to 1000.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -36,7 +36,7 @@ public class DescribeSiteLogsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the website. You can call the ListSites operation to obtain.</p>
+     * <p>The site ID, which can be obtained by calling ListSites.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,8 +46,8 @@ public class DescribeSiteLogsRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The beginning of the time range to query.</p>
-     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The start time for log retrieval.</p>
+     * <p>The date is in ISO 8601 format and uses UTC+0 time in the format of yyyy-MM-ddTHH:mm:ssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-11-06T16:00:00Z</p>

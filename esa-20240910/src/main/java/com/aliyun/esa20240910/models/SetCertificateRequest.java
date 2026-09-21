@@ -23,7 +23,7 @@ public class SetCertificateRequest extends TeaModel {
     public String certificate;
 
     /**
-     * <p>The certificate ID. Certificates of the free type (created by calling the ApplyCertificate operation) are not supported. Certificates of the cas and upload types are supported.</p>
+     * <p>The certificate ID. Free certificates created by calling the ApplyCertificate operation are not supported. Certificate IDs of the cas and upload types are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>babae7c40fef412d887688b91c9e****</p>
@@ -61,9 +61,9 @@ public class SetCertificateRequest extends TeaModel {
     /**
      * <p>The region. This parameter is required when Type is set to cas. Valid values:</p>
      * <ul>
-     * <li><p>China site accounts: cn-hangzhou.</p>
+     * <li><p>Alibaba Cloud China Website accounts: cn-hangzhou.</p>
      * </li>
-     * <li><p>International site accounts: ap-southeast-1.</p>
+     * <li><p>Alibaba Cloud International Website accounts: ap-southeast-1.</p>
      * </li>
      * </ul>
      * 
@@ -89,11 +89,11 @@ public class SetCertificateRequest extends TeaModel {
     /**
      * <p>The certificate type. Valid values:</p>
      * <ul>
-     * <li><p><strong>cas</strong>: certificate from SSL Certificates Service.</p>
+     * <li><p><strong>cas</strong>: a certificate from SSL Certificates Service.</p>
      * </li>
-     * <li><p><strong>upload</strong>: custom uploaded certificate.</p>
+     * <li><p><strong>upload</strong>: a custom uploaded certificate.</p>
      * </li>
-     * <li><p><strong>keyless</strong>: keyless certificate.</p>
+     * <li><p><strong>keyless</strong>: a keyless certificate.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

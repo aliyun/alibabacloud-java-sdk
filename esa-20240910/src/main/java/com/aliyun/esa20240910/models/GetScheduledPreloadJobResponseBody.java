@@ -32,7 +32,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
     public String domains;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if a fault occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>invalid domain:test.com</p>
@@ -68,7 +68,11 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The URL insertion method.</p>
+     * <p>The URL insertion method. Valid values:</p>
+     * <ul>
+     * <li>oss: Import URLs in bulk from an OSS file.</li>
+     * <li>testBox: Enter URLs one by one in a text box.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>oss</p>
@@ -113,7 +117,12 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
     public Integer taskSubmitted;
 
     /**
-     * <p>The task type (refresh or prefetch).</p>
+     * <p>The task type (refresh or prefetch). Valid values:</p>
+     * <ul>
+     * <li>path: Directory refresh.</li>
+     * <li>refresh: URL refresh.</li>
+     * <li>preload: URL prefetch.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>preload</p>
