@@ -13,6 +13,12 @@ public class ChatResponseBody extends TeaModel {
     @NameInMap("ActivityType")
     public String activityType;
 
+    /**
+     * <p>The agent ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agent-7f9c2a81</p>
+     */
     @NameInMap("AgentId")
     public String agentId;
 
@@ -34,9 +40,21 @@ public class ChatResponseBody extends TeaModel {
     @NameInMap("Delta")
     public String delta;
 
+    /**
+     * <p>The step type of STEP_STARTED, such as task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>task</p>
+     */
     @NameInMap("Kind")
     public String kind;
 
+    /**
+     * <p>The display name of the sub-agent for STEP_STARTED.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SQL Performance Diagnostics</p>
+     */
     @NameInMap("Label")
     public String label;
 
@@ -58,9 +76,21 @@ public class ChatResponseBody extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The original ID of the tool call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ag-xxxx</p>
+     */
     @NameInMap("OriginatingToolCallId")
     public String originatingToolCallId;
 
+    /**
+     * <p>The parent agent ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agent-3a6f1c92</p>
+     */
     @NameInMap("ParentAgentId")
     public String parentAgentId;
 
@@ -100,11 +130,17 @@ public class ChatResponseBody extends TeaModel {
     @NameInMap("StepName")
     public String stepName;
 
+    /**
+     * <p>The step status of STEP_FINISHED, such as completed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>completed</p>
+     */
     @NameInMap("StepStatus")
     public String stepStatus;
 
     /**
-     * <p>The callback tool class.</p>
+     * <p>The callback utility class.</p>
      * 
      * <strong>example:</strong>
      * <p>das_api</p>
@@ -121,14 +157,26 @@ public class ChatResponseBody extends TeaModel {
     @NameInMap("ThreadId")
     public String threadId;
 
+    /**
+     * <p>The event timestamp.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1767225600000</p>
+     */
     @NameInMap("Timestamp")
     public Long timestamp;
 
+    /**
+     * <p>The error that occurred during tool invocation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("ToolCallError")
     public String toolCallError;
 
     /**
-     * <p>The tool calling invoke ID.</p>
+     * <p>The tool invocation ID.</p>
      * 
      * <strong>example:</strong>
      * <p>call_edf9cdb69e0e4c9796a6a5a6</p>

@@ -29,7 +29,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
     public java.util.List<DescribeAuditLogsResponseBodyItems> items;
 
     /**
-     * <p>The page size for the paged query. This parameter indicates the number of entries per page for paging.</p>
+     * <p>The page size for the paged query. This value indicates the number of records per page for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -173,7 +173,11 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public Long effectRow;
 
         /**
-         * <p>The execution status. Valid values: 0: failed. 1: succeeded.</p>
+         * <p>The execution status. Valid values:</p>
+         * <ul>
+         * <li>0: failed.</li>
+         * <li>1: succeeded.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -209,7 +213,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public Boolean inWhiteList;
 
         /**
-         * <p>The instance audit status.</p>
+         * <p>The audit status of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -337,7 +341,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String ruleCategory;
 
         /**
-         * <p>The ID of the audit policy.</p>
+         * <p>The audit policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9953411</p>
@@ -393,9 +397,9 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         /**
          * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: low-risk.</li>
-         * <li><strong>2</strong>: medium-risk.</li>
-         * <li><strong>3</strong>: high-risk.</li>
+         * <li><strong>1</strong>: low.</li>
+         * <li><strong>2</strong>: medium.</li>
+         * <li><strong>3</strong>: high.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -405,11 +409,11 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String warnLevel;
 
         /**
-         * <p>The name of the risk level. Valid values:</p>
+         * <p>The risk level name. Valid values:</p>
          * <ul>
-         * <li>Low-risk.</li>
-         * <li>Medium-risk.</li>
-         * <li>High-risk.</li>
+         * <li>Low.</li>
+         * <li>Medium.</li>
+         * <li>High.</li>
          * </ul>
          * 
          * <strong>example:</strong>

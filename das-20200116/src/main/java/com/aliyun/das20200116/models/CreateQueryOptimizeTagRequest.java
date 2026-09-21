@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateQueryOptimizeTagRequest extends TeaModel {
     /**
      * <p>The remarks.</p>
-     * <p>The remarks can be 1 to 300 characters in length.</p>
+     * <p>The value must be 1 to 300 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>Slow SQL from offline synchronization. No optimization needed.</p>
@@ -17,12 +17,9 @@ public class CreateQueryOptimizeTagRequest extends TeaModel {
     /**
      * <p>The database engine. Valid values:</p>
      * <ul>
-     * <li><p><strong>MySQL</strong>: ApsaraDB RDS for MySQL</p>
-     * </li>
-     * <li><p><strong>PolarDBMySQL</strong>: PolarDB for MySQL</p>
-     * </li>
-     * <li><p><strong>PostgreSQL</strong>: ApsaraDB RDS for PostgreSQL</p>
-     * </li>
+     * <li><strong>MySQL</strong>: RDS MySQL</li>
+     * <li><strong>PolarDBMySQL</strong>: PolarDB for MySQL</li>
+     * <li><strong>PostgreSQL</strong>: RDS PostgreSQL</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -43,7 +40,7 @@ public class CreateQueryOptimizeTagRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The SQL template IDs. You can call the <a href="https://help.aliyun.com/document_detail/405261.html">GetQueryOptimizeExecErrorStats</a> operation to obtain the SQL template ID. Separate multiple SQL template IDs with commas (,).</p>
+     * <p>The SQL template ID. You can call the <a href="https://help.aliyun.com/document_detail/405261.html">GetQueryOptimizeDataStats</a> operation to query SQL template IDs. You can specify multiple template IDs separated by commas (,) to add tags in batches.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,12 +50,10 @@ public class CreateQueryOptimizeTagRequest extends TeaModel {
     public String sqlIds;
 
     /**
-     * <p>The status of <strong>Tags</strong>. Valid values:</p>
+     * <p>The status of the <strong>Tags</strong> request parameter.</p>
      * <ul>
-     * <li><p><strong>0</strong>: removes all tags added to the SQL templates that are specified by <strong>SqlIds</strong> and leaves <strong>Tags</strong> empty.</p>
-     * </li>
-     * <li><p><strong>1</strong>: adds the tags specified by <strong>Tags</strong> to the SQL templates that are specified by <strong>SqlIds</strong>.</p>
-     * </li>
+     * <li><strong>0</strong>: Clears all tags for the SQL template IDs specified by <strong>SqlIds</strong> and ignores the <strong>Tags</strong> parameter.</li>
+     * <li><strong>1</strong>: Sets the tags for the SQL template IDs specified by <strong>SqlIds</strong> to the values specified by <strong>Tags</strong>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -69,16 +64,12 @@ public class CreateQueryOptimizeTagRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The SQL tags. Separate multiple SQL tags with commas (,). Valid values:</p>
+     * <p>The SQL tag. You can specify multiple values separated by commas (,).</p>
      * <ul>
-     * <li><p><strong>DAS_IMPORTANT</strong>: The SQL template is important.</p>
-     * </li>
-     * <li><p><strong>DAS_NOT_IMPORTANT</strong>: The SQL template is unimportant.</p>
-     * </li>
-     * <li><p><strong>USER_IGNORE</strong>: The scheduling of the SQL template does not need to be optimized.</p>
-     * </li>
-     * <li><p><strong>DAS_IN_PLAN</strong>: The scheduling of the SQL template needs to be optimized.</p>
-     * </li>
+     * <li><strong>DAS_IMPORTANT</strong>: important SQL.</li>
+     * <li><strong>DAS_NOT_IMPORTANT</strong>: unimportant SQL.</li>
+     * <li><strong>USER_IGNORE</strong>: optimization not required.</li>
+     * <li><strong>DAS_IN_PLAN</strong>: scheduled for optimization.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

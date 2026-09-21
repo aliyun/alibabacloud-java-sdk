@@ -7,24 +7,15 @@ public class AddHDMInstanceRequest extends TeaModel {
     /**
      * <p>The database engine. Valid values:</p>
      * <ul>
-     * <li><p><strong>MySQL</strong></p>
-     * </li>
-     * <li><p><strong>PostgreSQL</strong></p>
-     * </li>
-     * <li><p><strong>SQLServer</strong></p>
-     * </li>
-     * <li><p><strong>PolarDBMySQL</strong></p>
-     * </li>
-     * <li><p><strong>PolarDBPostgreSQL</strong></p>
-     * </li>
-     * <li><p><strong>Redis</strong></p>
-     * </li>
-     * <li><p><strong>MongoDB</strong></p>
-     * </li>
-     * <li><p><strong>PolarDBOracle</strong></p>
-     * </li>
-     * <li><p><strong>PolarDBX</strong></p>
-     * </li>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>SQLServer</strong></li>
+     * <li><strong>PolarDBMySQL</strong></li>
+     * <li><strong>PolarDBPostgreSQL</strong></li>
+     * <li><strong>Redis</strong></li>
+     * <li><strong>MongoDB</strong></li>
+     * <li><strong>PolarDBOracle</strong></li>
+     * <li><strong>PolarDBX</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +34,7 @@ public class AddHDMInstanceRequest extends TeaModel {
     public String flushAccount;
 
     /**
-     * <p>The name of the instance.</p>
+     * <p>The instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>yuecq--test****</p>
@@ -52,17 +43,14 @@ public class AddHDMInstanceRequest extends TeaModel {
     public String instanceAlias;
 
     /**
-     * <p>The type of the instance on which the database is deployed. Valid values:</p>
+     * <p>The database product to which the instance belongs. Valid values:</p>
      * <ul>
-     * <li><p><strong>RDS</strong>: an Alibaba Cloud database instance.</p>
-     * </li>
-     * <li><p><strong>ECS</strong>: an Elastic Compute Service (ECS) instance on which a self-managed database is deployed.</p>
-     * </li>
-     * <li><p><strong>IDC</strong>: a self-managed database instance that is not deployed on Alibaba Cloud.</p>
-     * </li>
+     * <li><strong>RDS</strong>: cloud instance.</li>
+     * <li><strong>ECS</strong>: self-managed instance on ECS.</li>
+     * <li><strong>IDC</strong>: self-managed instance not on a public cloud.</li>
      * </ul>
      * <blockquote>
-     * <p>IDC refers to your data center.</p>
+     * <p>IDC stands for Internet Data Center.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -82,7 +70,7 @@ public class AddHDMInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The endpoint that is used to access the instance over internal networks.</p>
+     * <p>The internal endpoint of the instance to be connected.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2ze1jdv45i7l6****.mysql.rds.aliyuncs.com</p>
@@ -100,7 +88,7 @@ public class AddHDMInstanceRequest extends TeaModel {
     public String networkType;
 
     /**
-     * <p>The password for the username.</p>
+     * <p>The password of the username.</p>
      * 
      * <strong>example:</strong>
      * <p>122****</p>
@@ -109,7 +97,7 @@ public class AddHDMInstanceRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The port that is used to access the instance over internal networks.</p>
+     * <p>The internal network connection port of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>3306</p>
@@ -118,7 +106,7 @@ public class AddHDMInstanceRequest extends TeaModel {
     public String port;
 
     /**
-     * <p>The ID of the region in which the instance resides.</p>
+     * <p>The region in which the instance resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -127,7 +115,7 @@ public class AddHDMInstanceRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The username that is used to log on to the database.</p>
+     * <p>The username.</p>
      * 
      * <strong>example:</strong>
      * <p>test****</p>
@@ -136,7 +124,7 @@ public class AddHDMInstanceRequest extends TeaModel {
     public String username;
 
     /**
-     * <p>The virtual private cloud (VPC) ID.</p>
+     * <p>VPC ID。</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-m5e666n89m2bx8jar****</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to sort results in ascending order. Default value: <strong>true</strong>.</p>
+     * <p>Specifies whether to sort the results in ascending order. Default value: <strong>true</strong>.</p>
      * <ul>
-     * <li><strong>true</strong>: ascending order.</li>
-     * <li><strong>false</strong>: descending order.</li>
+     * <li><strong>true</strong>: Sort in ascending order.</li>
+     * <li><strong>false</strong>: Sort in descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,28 +54,44 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li><strong>MySQL</strong> <ul>
-     * <li>QueryTimeSeconds: query duration in seconds.</li>
-     * <li>LockTimeSeconds: lock time in seconds.</li>
-     * <li>RowsSent: rows sent.</li>
+     * <li><p><strong>Common to all engines</strong> </p>
+     * <ul>
+     * <li>QueryTimeSeconds: query duration (seconds).</li>
+     * <li>Timestamp: timestamp.</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>SQL-based engines (MySQL / PolarDB for MySQL / PostgreSQL / PolarDB for PostgreSQL / PolarDB for Oracle / PolarDB-X DN)</strong></p>
+     * <ul>
+     * <li>LockTimeSeconds: lock time (seconds).</li>
      * <li>RowsExamined: rows examined.</li>
+     * <li>RowsSent: rows returned.</li>
      * </ul>
      * </li>
-     * <li><strong>Redis</strong><ul>
-     * <li>QueryTime: query duration.</li>
-     * <li>Timestamp: execution end time.</li>
-     * </ul>
-     * </li>
-     * <li><strong>MongoDB</strong><ul>
-     * <li>QueryTime: query duration.</li>
-     * <li>Timestamp: execution end time.</li>
-     * <li>KeysExamined: keys examined.</li>
-     * <li>DocExamined: documents examined.</li>
+     * <li><p><strong>MongoDB</strong></p>
+     * <ul>
+     * <li>KeysExamined: number of indexes scanned.</li>
+     * <li>DocExamined: number of documents scanned.</li>
      * <li>ReturnNum: rows returned.</li>
      * </ul>
      * </li>
+     * <li><p><strong>SQL Server</strong></p>
+     * <ul>
+     * <li>CPUTimeSeconds: CPU time.</li>
+     * <li>IOWrites: number of I/O writes.</li>
+     * <li>LastRowsCountAffected: last rows affected.</li>
+     * <li>LogicalIOReads: logical I/O reads.</li>
+     * <li>PhysicalIOReads: physical I/O reads.</li>
+     * <li>RowsCountAffected: rows affected.</li>
      * </ul>
-     * <p><notice>RDS PostgreSQL, PolarDB for PostgreSQL, and SQL Server do not support sorting.</notice></p>
+     * </li>
+     * <li><p><strong>PolarDB-X CN</strong></p>
+     * <ul>
+     * <li>RowsSent: rows returned or updated.</li>
+     * <li>Frows: rows fetched.</li>
+     * <li>Scnt: number of physical SQL statements.</li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>QueryTimeSeconds</p>

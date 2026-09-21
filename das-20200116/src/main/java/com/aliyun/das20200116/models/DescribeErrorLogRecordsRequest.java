@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeErrorLogRecordsRequest extends TeaModel {
     /**
-     * <p>The end time of the query. The value is in the format of a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The end time of the query. The value is in the format of a UNIX timestamp, in milliseconds.</p>
      * <blockquote>
-     * <p>Notice: The value is of the Long type. Precision loss may occur during serialization/deserialization. The value must not be greater than 9007199254740991.</p>
+     * <p>Notice: The data type of this parameter is Long. During the sequence of serialization/deserialization, precision loss may occur. Ensure that the value does not exceed 9007199254740991.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class DescribeErrorLogRecordsRequest extends TeaModel {
     /**
      * <p>The filter conditions.</p>
      * <blockquote>
-     * <p>Filtering is supported only for error logs of ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, and PolarDB for PostgreSQL (Compatible with Oracle).</p>
+     * <p>Only error log filtering for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, and PolarDB for PostgreSQL (Compatible with Oracle) is supported.</p>
      * </blockquote>
      */
     @NameInMap("Filters")
@@ -70,7 +70,7 @@ public class DescribeErrorLogRecordsRequest extends TeaModel {
      * <li>mongos</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is supported only for ApsaraDB for MongoDB instances.</p>
+     * <p>Only ApsaraDB for MongoDB instances are supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -80,9 +80,9 @@ public class DescribeErrorLogRecordsRequest extends TeaModel {
     public String role;
 
     /**
-     * <p>The start time of the query. The value is in the format of a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The start time of the query. The value is in the format of a UNIX timestamp, in milliseconds.</p>
      * <blockquote>
-     * <p>Notice: The value is of the Long type. Precision loss may occur during serialization/deserialization. The value must not be greater than 9007199254740991.</p>
+     * <p>Notice: The data type of this parameter is Long. During the sequence of serialization/deserialization, precision loss may occur. Ensure that the value does not exceed 9007199254740991.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

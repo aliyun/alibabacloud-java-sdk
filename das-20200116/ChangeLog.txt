@@ -1,3 +1,13 @@
+2026-09-21 Version: 4.0.0
+- Support API DescribeSqlInsightStatistic.
+- Update API Chat: add request parameters Resume.
+- Update API DescribeAuditLogs: delete request parameters RuleID.
+- Update API DescribeErrorLogRecords: add response parameters Body.Data.Logs.$.Db.
+- Update API DescribeErrorLogRecords: add response parameters Body.Data.Logs.$.User.
+- Update API DescribeErrorLogRecords: add response parameters Body.Data.Logs.$.UserIp.
+- Update API GetFullRequestSampleByInstanceId: delete request parameters UserId.
+
+
 2026-08-28 Version: 3.2.0
 - Support API DescribeDasOpsConfig.
 - Support API ModifyDasOpsConfig.

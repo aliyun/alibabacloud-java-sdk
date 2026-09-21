@@ -10,8 +10,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "central";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-shanghai", "das.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "das.aliyuncs.com")
+            new TeaPair("cn-shanghai", "das.cn-shanghai.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("das", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -32,14 +31,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
+     * <p>Before you begin:</p>
      * <ul>
-     * <li>If you use an Alibaba Cloud SDK or a DAS SDK to call this operation, we recommend that you use the latest version of the SDK.</li>
-     * <li>If you use an SDK to call DAS, you must set the region to cn-shanghai.</li>
+     * <li>Use the latest version of the Alibaba Cloud or DAS SDK.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds a database instance to Database Autonomy Service (DAS).</p>
+     * <p>Calls the AddHDMInstance operation to connect a database instance to Database Autonomy Service (DAS).</p>
      * 
      * @param request AddHDMInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -119,14 +118,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
+     * <p>Before you begin:</p>
      * <ul>
-     * <li>If you use an Alibaba Cloud SDK or a DAS SDK to call this operation, we recommend that you use the latest version of the SDK.</li>
-     * <li>If you use an SDK to call DAS, you must set the region to cn-shanghai.</li>
+     * <li>Use the latest version of the Alibaba Cloud or DAS SDK.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds a database instance to Database Autonomy Service (DAS).</p>
+     * <p>Calls the AddHDMInstance operation to connect a database instance to Database Autonomy Service (DAS).</p>
      * 
      * @param request AddHDMInstanceRequest
      * @return AddHDMInstanceResponse
@@ -143,11 +142,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>Use the latest version of the Alibaba Cloud or DAS SDK.</li>
      * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
      * <li>Only database instances with DAS Enterprise Edition activated support creating batch tasks. For databases and regions supported by each DAS Enterprise Edition version, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.
-     * For more methods and examples of interacting with DAS Agent by using the Chat API, see <a href="https://www.alibabacloud.com/help/en/das/developer-reference/chat-api-best-practice">Best practices for DAS Agent interaction (integrating Chat API)</a>.</li>
+     * For more methods and examples of interacting with DAS Agent by using the Chat API, see <a href="https://www.alibabacloud.com/help/en/das/developer-reference/chat-api-best-practice">Best practices for DAS Agent interaction (integrating the Chat API)</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Provides an asynchronous interface for interacting with DAS Agent powered by large language model capabilities.</p>
+     * <p>Provides the asynchronous logic interface for DAS large model capabilities.</p>
      * 
      * @param request ChatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -162,6 +161,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.message)) {
             query.put("Message", request.message);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resume)) {
+            query.put("Resume", request.resume);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
@@ -196,11 +199,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>Use the latest version of the Alibaba Cloud or DAS SDK.</li>
      * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
      * <li>Only database instances with DAS Enterprise Edition activated support creating batch tasks. For databases and regions supported by each DAS Enterprise Edition version, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.
-     * For more methods and examples of interacting with DAS Agent by using the Chat API, see <a href="https://www.alibabacloud.com/help/en/das/developer-reference/chat-api-best-practice">Best practices for DAS Agent interaction (integrating Chat API)</a>.</li>
+     * For more methods and examples of interacting with DAS Agent by using the Chat API, see <a href="https://www.alibabacloud.com/help/en/das/developer-reference/chat-api-best-practice">Best practices for DAS Agent interaction (integrating the Chat API)</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Provides an asynchronous interface for interacting with DAS Agent powered by large language model capabilities.</p>
+     * <p>Provides the asynchronous logic interface for DAS large model capabilities.</p>
      * 
      * @param request ChatRequest
      * @return ChatResponse
@@ -743,18 +746,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>If you use Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.</li>
-     * <li>If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.</li>
+     * <li>When using the Alibaba Cloud or DAS SDK, use the latest version.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
      * <li>This operation supports the following database engines:<ul>
-     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>RDS MySQL</li>
      * <li>PolarDB for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>RDS PostgreSQL</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds a tag to a SQL template.</p>
+     * <p>Calls the CreateQueryOptimizeTag operation to add tags to target SQL statements.</p>
      * 
      * @param request CreateQueryOptimizeTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -807,18 +810,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>If you use Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.</li>
-     * <li>If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.</li>
+     * <li>When using the Alibaba Cloud or DAS SDK, use the latest version.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
      * <li>This operation supports the following database engines:<ul>
-     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>RDS MySQL</li>
      * <li>PolarDB for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>RDS PostgreSQL</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds a tag to a SQL template.</p>
+     * <p>Calls the CreateQueryOptimizeTag operation to add tags to target SQL statements.</p>
      * 
      * @param request CreateQueryOptimizeTagRequest
      * @return CreateQueryOptimizeTagResponse
@@ -1337,11 +1340,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you begin:</p>
      * <ul>
      * <li>Use the latest version of the Alibaba Cloud or DAS SDK.</li>
-     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
+     * <li>When you call DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of audit alert logs for alert search and alert handling.</p>
+     * <p>Queries the audit alert log list for alert search and alert handling.</p>
      * 
      * @param request DescribeAuditLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1434,10 +1437,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RuleCategory", request.ruleCategory);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.ruleID)) {
-            query.put("RuleID", request.ruleID);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
             query.put("RuleId", request.ruleId);
         }
@@ -1480,11 +1479,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you begin:</p>
      * <ul>
      * <li>Use the latest version of the Alibaba Cloud or DAS SDK.</li>
-     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
+     * <li>When you call DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of audit alert logs for alert search and alert handling.</p>
+     * <p>Queries the audit alert log list for alert search and alert handling.</p>
      * 
      * @param request DescribeAuditLogsRequest
      * @return DescribeAuditLogsResponse
@@ -2068,12 +2067,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the error log details of an instance within a specified time range.
-     * Before you begin:</p>
+     * <p>Queries the error log details of an instance within a specified time range.
+     * Before you begin, make sure the following prerequisites are met:</p>
      * <ul>
-     * <li>The target database engine must be one of the following: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, PolarDB for PostgreSQL (Compatible with Oracle), or ApsaraDB for MongoDB.</li>
-     * <li>If you use the Alibaba Cloud or DAS SDK, use the latest version.</li>
-     * <li>When you call DAS operations by using the SDK, set the region to cn-shanghai.</li>
+     * <li>The target database engine is one of the following: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, PolarDB for PostgreSQL (Compatible with Oracle), or ApsaraDB for MongoDB.</li>
+     * <li>If you use the SDK of Alibaba Cloud or DAS, use the latest version.</li>
+     * <li>When you call DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2137,12 +2136,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the error log details of an instance within a specified time range.
-     * Before you begin:</p>
+     * <p>Queries the error log details of an instance within a specified time range.
+     * Before you begin, make sure the following prerequisites are met:</p>
      * <ul>
-     * <li>The target database engine must be one of the following: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, PolarDB for PostgreSQL (Compatible with Oracle), or ApsaraDB for MongoDB.</li>
-     * <li>If you use the Alibaba Cloud or DAS SDK, use the latest version.</li>
-     * <li>When you call DAS operations by using the SDK, set the region to cn-shanghai.</li>
+     * <li>The target database engine is one of the following: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, PolarDB for PostgreSQL (Compatible with Oracle), or ApsaraDB for MongoDB.</li>
+     * <li>If you use the SDK of Alibaba Cloud or DAS, use the latest version.</li>
+     * <li>When you call DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2659,16 +2658,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><code>InstanceId</code> specifies the instance ID. This parameter is required.</li>
-     * <li><code>StartTime</code> and <code>EndTime</code> specify the time range for the query. These parameters are required.</li>
-     * <li>Set <code>PageNumber</code> and <code>PageSize</code> to retrieve results by paging.</li>
-     * <li>Use the <code>OrderBy</code> parameter to sort results. For sortable fields, refer to the References.</li>
-     * <li>Use the <code>Filters</code> parameter to further refine query conditions, such as filtering by host address or SQL ID.
-     * <notice>Certain database types (such as PostgreSQL and PolarDB for PostgreSQL) do not support specific sorting methods. Settings appropriate parameters as needed.</notice></li>
+     * <li>InstanceId is the instance ID. This parameter is required.</li>
+     * <li>StartTime and EndTime specify the time range for the query. These parameters are required.</li>
+     * <li>Settings PageNumber and PageSize to retrieve results by paging.</li>
+     * <li>Use the OrderBy parameter to sort the results. For more information about the sortable fields, refer to the References.</li>
+     * <li>Use the Filters parameter to further refine query conditions, such as filtering by host address or SQL ID.
+     * <notice>Certain database types, such as PostgreSQL and PolarDB for PostgreSQL, do not support specific sorting methods. Select appropriate parameters based on your database type.</notice></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries slow query log records of a database instance with support for filtering and sorting by multiple conditions.</p>
+     * <p>Queries slow query log records of a database instance. You can filter and sort the results by multiple conditions.</p>
      * 
      * @param request DescribeSlowLogRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2735,16 +2734,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><code>InstanceId</code> specifies the instance ID. This parameter is required.</li>
-     * <li><code>StartTime</code> and <code>EndTime</code> specify the time range for the query. These parameters are required.</li>
-     * <li>Set <code>PageNumber</code> and <code>PageSize</code> to retrieve results by paging.</li>
-     * <li>Use the <code>OrderBy</code> parameter to sort results. For sortable fields, refer to the References.</li>
-     * <li>Use the <code>Filters</code> parameter to further refine query conditions, such as filtering by host address or SQL ID.
-     * <notice>Certain database types (such as PostgreSQL and PolarDB for PostgreSQL) do not support specific sorting methods. Settings appropriate parameters as needed.</notice></li>
+     * <li>InstanceId is the instance ID. This parameter is required.</li>
+     * <li>StartTime and EndTime specify the time range for the query. These parameters are required.</li>
+     * <li>Settings PageNumber and PageSize to retrieve results by paging.</li>
+     * <li>Use the OrderBy parameter to sort the results. For more information about the sortable fields, refer to the References.</li>
+     * <li>Use the Filters parameter to further refine query conditions, such as filtering by host address or SQL ID.
+     * <notice>Certain database types, such as PostgreSQL and PolarDB for PostgreSQL, do not support specific sorting methods. Select appropriate parameters based on your database type.</notice></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries slow query log records of a database instance with support for filtering and sorting by multiple conditions.</p>
+     * <p>Queries slow query log records of a database instance. You can filter and sort the results by multiple conditions.</p>
      * 
      * @param request DescribeSlowLogRecordsRequest
      * @return DescribeSlowLogRecordsResponse
@@ -2856,6 +2855,158 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeSlowLogStatisticResponse describeSlowLogStatistic(DescribeSlowLogStatisticRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSlowLogStatisticWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you begin:</p>
+     * <ul>
+     * <li>When using the Alibaba Cloud or DAS SDK, use the latest version.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
+     * <li>SQL Explorer must be enabled for the target instance. If SQL Explorer is not enabled, the operation returns an error.
+     * Usage notes:</li>
+     * <li><strong>This is an asynchronous operation. The first call returns a ResultId and State. Poll with the exact same request parameters until State is SUCCESS to obtain the statistical results in Data.</strong></li>
+     * <li>Both StartTime and EndTime are millisecond-level timestamps. StartTime must be within the last 30 days, and the span between StartTime and EndTime must not exceed 7 days.</li>
+     * <li>Because data aggregation involves latency, EndTime is automatically trimmed to a few minutes before the current time. Data from the most recent minutes may not be available.</li>
+     * <li>StartTime is automatically adjusted to be no earlier than the time when SQL Explorer was enabled for the instance.
+     * Response description:</li>
+     * <li>Data.Data.List contains statistical results grouped by the aggregation dimension. Each element corresponds to a SQL template or an aggregation key, not an individual execution record.</li>
+     * <li>Scnt, AvgScnt, Rows, AvgRows, Frows, and AvgFrows are metrics exclusive to PolarDB-X compute nodes and are returned only when Role is polarx_cn.</li>
+     * <li>Writes, AvgWrites, MaxWrites, MinWrites, PhysicalRead, AvgPhysicalRead, MaxPhysicalRead, MinPhysicalRead, CpuTime, AvgCpuTime, MaxCpuTime, and MinCpuTime are metrics exclusive to SQL Server instances.</li>
+     * <li>Trend is returned only when the DoFillTrend request parameter is set to true and the trend filling capability is enabled for the instance. The time slice interval is automatically determined by the query span.</li>
+     * <li>SQL sample dimension fields such as SqlNew, Params, FirstTime, and Extra are not returned by this operation. This operation provides template-level aggregated statistics.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Calls the DescribeSqlInsightStatistic operation to aggregate and collect statistics on SQL Explorer data for a specified instance within a given time window, by dimensions such as SQL template, access source, or database user.</p>
+     * 
+     * @param request DescribeSqlInsightStatisticRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSqlInsightStatisticResponse
+     */
+    public DescribeSqlInsightStatisticResponse describeSqlInsightStatisticWithOptions(DescribeSqlInsightStatisticRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.consoleContext)) {
+            query.put("ConsoleContext", request.consoleContext);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filters)) {
+            query.put("Filters", request.filters);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.asc)) {
+            body.put("Asc", request.asc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
+            body.put("DbName", request.dbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.doFillTrend)) {
+            body.put("DoFillTrend", request.doFillTrend);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            body.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            body.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            body.put("NodeId", request.nodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            body.put("OrderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            body.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.role)) {
+            body.put("Role", request.role);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sqlType)) {
+            body.put("SqlType", request.sqlType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            body.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSqlInsightStatistic"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSqlInsightStatisticResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you begin:</p>
+     * <ul>
+     * <li>When using the Alibaba Cloud or DAS SDK, use the latest version.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
+     * <li>SQL Explorer must be enabled for the target instance. If SQL Explorer is not enabled, the operation returns an error.
+     * Usage notes:</li>
+     * <li><strong>This is an asynchronous operation. The first call returns a ResultId and State. Poll with the exact same request parameters until State is SUCCESS to obtain the statistical results in Data.</strong></li>
+     * <li>Both StartTime and EndTime are millisecond-level timestamps. StartTime must be within the last 30 days, and the span between StartTime and EndTime must not exceed 7 days.</li>
+     * <li>Because data aggregation involves latency, EndTime is automatically trimmed to a few minutes before the current time. Data from the most recent minutes may not be available.</li>
+     * <li>StartTime is automatically adjusted to be no earlier than the time when SQL Explorer was enabled for the instance.
+     * Response description:</li>
+     * <li>Data.Data.List contains statistical results grouped by the aggregation dimension. Each element corresponds to a SQL template or an aggregation key, not an individual execution record.</li>
+     * <li>Scnt, AvgScnt, Rows, AvgRows, Frows, and AvgFrows are metrics exclusive to PolarDB-X compute nodes and are returned only when Role is polarx_cn.</li>
+     * <li>Writes, AvgWrites, MaxWrites, MinWrites, PhysicalRead, AvgPhysicalRead, MaxPhysicalRead, MinPhysicalRead, CpuTime, AvgCpuTime, MaxCpuTime, and MinCpuTime are metrics exclusive to SQL Server instances.</li>
+     * <li>Trend is returned only when the DoFillTrend request parameter is set to true and the trend filling capability is enabled for the instance. The time slice interval is automatically determined by the query span.</li>
+     * <li>SQL sample dimension fields such as SqlNew, Params, FirstTime, and Extra are not returned by this operation. This operation provides template-level aggregated statistics.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Calls the DescribeSqlInsightStatistic operation to aggregate and collect statistics on SQL Explorer data for a specified instance within a given time window, by dimensions such as SQL template, access source, or database user.</p>
+     * 
+     * @param request DescribeSqlInsightStatisticRequest
+     * @return DescribeSqlInsightStatisticResponse
+     */
+    public DescribeSqlInsightStatisticResponse describeSqlInsightStatistic(DescribeSqlInsightStatisticRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSqlInsightStatisticWithOptions(request, runtime);
     }
 
     /**
@@ -5548,14 +5699,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The SQL Explorer feature allows you to check the health status of SQL statements and troubleshoot performance issues. For more information, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</p>
+     * <p>The SQL Explorer feature allows you to diagnose SQL health and troubleshoot performance issues. For details, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</p>
      * <ul>
-     * <li>For more information about the database engines that support SQL Explorer, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</li>
-     * <li>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</li>
+     * <li>For information about supported database engines, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</li>
+     * <li>When you use an SDK to invoke DAS, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries sample SQL statements in the SQL Explorer data of a database instance by SQL ID. You can query up to 20 sample SQL statements.</p>
+     * <p>Queries SQL sample data from the SQL Explorer results of a database instance by SQL ID by calling the GetFullRequestSampleByInstanceId operation. A maximum of 20 sample records are returned.</p>
      * 
      * @param request GetFullRequestSampleByInstanceIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5585,10 +5736,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Start", request.start);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
-            body.put("UserId", request.userId);
-        }
-
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -5609,14 +5756,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The SQL Explorer feature allows you to check the health status of SQL statements and troubleshoot performance issues. For more information, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</p>
+     * <p>The SQL Explorer feature allows you to diagnose SQL health and troubleshoot performance issues. For details, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</p>
      * <ul>
-     * <li>For more information about the database engines that support SQL Explorer, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</li>
-     * <li>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</li>
+     * <li>For information about supported database engines, see <a href="https://help.aliyun.com/document_detail/204096.html">SQL Explorer</a>.</li>
+     * <li>When you use an SDK to invoke DAS, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries sample SQL statements in the SQL Explorer data of a database instance by SQL ID. You can query up to 20 sample SQL statements.</p>
+     * <p>Queries SQL sample data from the SQL Explorer results of a database instance by SQL ID by calling the GetFullRequestSampleByInstanceId operation. A maximum of 20 sample records are returned.</p>
      * 
      * @param request GetFullRequestSampleByInstanceIdRequest
      * @return GetFullRequestSampleByInstanceIdResponse

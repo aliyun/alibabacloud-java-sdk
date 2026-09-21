@@ -68,7 +68,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The range of execution time.</p>
+     * <p>The range of the execution time.</p>
      * 
      * <strong>example:</strong>
      * <p>in[1000 2000]</p>
@@ -101,7 +101,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String ipType;
 
     /**
-     * <p>The language type for sending and receiving messages. Default value: zh_cn. Valid values:</p>
+     * <p>The language of the request and response. Default value: zh_cn. Valid values:</p>
      * <ul>
      * <li>zh_cn: Chinese.</li>
      * <li>en_us: English.</li>
@@ -189,7 +189,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public Long productId;
 
     /**
-     * <p>Specifies whether to perform an aggregate query.</p>
+     * <p>Specifies whether to use aggregate query.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -205,15 +205,6 @@ public class DescribeAuditLogsRequest extends TeaModel {
      */
     @NameInMap("RuleCategory")
     public String ruleCategory;
-
-    /**
-     * <p>The ID of the audit policy.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>9953411</p>
-     */
-    @NameInMap("RuleID")
-    public String ruleID;
 
     /**
      * <p>The rule ID.</p>
@@ -431,14 +422,6 @@ public class DescribeAuditLogsRequest extends TeaModel {
     }
     public String getRuleCategory() {
         return this.ruleCategory;
-    }
-
-    public DescribeAuditLogsRequest setRuleID(String ruleID) {
-        this.ruleID = ruleID;
-        return this;
-    }
-    public String getRuleID() {
-        return this.ruleID;
     }
 
     public DescribeAuditLogsRequest setRuleId(String ruleId) {

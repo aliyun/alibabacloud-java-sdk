@@ -22,7 +22,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p> If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,8 +43,8 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,7 +104,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
          * <ul>
          * <li><strong>NETWORK</strong>: network connectivity log.</li>
          * <li><strong>ACCESS</strong>: access control log.</li>
-         * <li><strong>-</strong>: common log.</li>
+         * <li><strong>-</strong>: general log.</li>
          * <li><strong>COMMAND</strong>: slow log.</li>
          * <li><strong>SHARDING</strong>: cluster log.</li>
          * <li><strong>STORAGE</strong>: storage engine log.</li>
@@ -113,7 +113,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
          * <li><strong>WRITE</strong>: slow update log.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is supported only for ApsaraDB for MongoDB instances.</p>
+         * <p>Only ApsaraDB for MongoDB instances are supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         /**
          * <p>The log connection information.</p>
          * <blockquote>
-         * <p>This parameter is supported only for ApsaraDB for MongoDB instances.</p>
+         * <p>Only ApsaraDB for MongoDB instances are supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         /**
          * <p>The node ID.</p>
          * <blockquote>
-         * <p>This parameter is supported only for ApsaraDB for MongoDB instances.</p>
+         * <p>Only ApsaraDB for MongoDB instances are supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -166,6 +166,42 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
+
+        /**
+         * <p>The database name.</p>
+         * <blockquote>
+         * <p>Only certain special logs of ApsaraDB RDS for PostgreSQL and PolarDB for PostgreSQL instances are supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>db_name</p>
+         */
+        @NameInMap("Db")
+        public String db;
+
+        /**
+         * <p>The database account.</p>
+         * <blockquote>
+         * <p>Only certain special logs of ApsaraDB RDS for PostgreSQL and PolarDB for PostgreSQL instances are supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>db_user</p>
+         */
+        @NameInMap("User")
+        public String user;
+
+        /**
+         * <p>The client IP address.</p>
+         * <blockquote>
+         * <p>Only certain special logs of ApsaraDB RDS for PostgreSQL and PolarDB for PostgreSQL instances are supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>x.x.x.x</p>
+         */
+        @NameInMap("UserIp")
+        public String userIp;
 
         public static DescribeErrorLogRecordsResponseBodyDataLogs build(java.util.Map<String, ?> map) throws Exception {
             DescribeErrorLogRecordsResponseBodyDataLogs self = new DescribeErrorLogRecordsResponseBodyDataLogs();
@@ -212,6 +248,30 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             return this.DBInstanceName;
         }
 
+        public DescribeErrorLogRecordsResponseBodyDataLogs setDb(String db) {
+            this.db = db;
+            return this;
+        }
+        public String getDb() {
+            return this.db;
+        }
+
+        public DescribeErrorLogRecordsResponseBodyDataLogs setUser(String user) {
+            this.user = user;
+            return this;
+        }
+        public String getUser() {
+            return this.user;
+        }
+
+        public DescribeErrorLogRecordsResponseBodyDataLogs setUserIp(String userIp) {
+            this.userIp = userIp;
+            return this;
+        }
+        public String getUserIp() {
+            return this.userIp;
+        }
+
     }
 
     public static class DescribeErrorLogRecordsResponseBodyData extends TeaModel {
@@ -225,7 +285,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The total number of log entries returned on the current page.</p>
+         * <p>The total number of log entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -240,7 +300,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         public java.util.List<DescribeErrorLogRecordsResponseBodyDataLogs> logs;
 
         /**
-         * <p>The maximum number of entries per page.</p>
+         * <p>The maximum number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -249,7 +309,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         public Integer maxRecordsPerPage;
 
         /**
-         * <p>The current page number.</p>
+         * <p>The page number of the current query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -267,7 +327,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The total number of log entries within the specified time range.</p>
+         * <p>The total number of log entries within the query time range.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

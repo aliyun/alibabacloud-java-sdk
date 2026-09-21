@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddHDMInstanceResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The detailed information, including the error codes and the number of entries that are returned.</p>
+     * <p>The details, including the total number of entries and error codes.</p>
      */
     @NameInMap("Data")
     public AddHDMInstanceResponseBodyData data;
@@ -22,7 +22,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message is returned, such as an error code.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,12 +41,10 @@ public class AddHDMInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -128,7 +126,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
         public String callerUid;
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -137,7 +135,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
         public Integer code;
 
         /**
-         * <p>The error message returned if the request failed.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidRequestURL</p>
@@ -155,7 +153,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The endpoint of the instance.</p>
+         * <p>The IP endpoint of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-de21209****.mysql.rds.aliyuncs.com</p>
@@ -164,7 +162,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The ID of the instance owner.</p>
+         * <p>The owner ID.</p>
          * 
          * <strong>example:</strong>
          * <p>325352345</p>
@@ -173,7 +171,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
         public String ownerId;
 
         /**
-         * <p>The port number of the instance that you want to access.</p>
+         * <p>The port of the target instance.</p>
          * 
          * <strong>example:</strong>
          * <p>3306</p>
@@ -182,7 +180,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The role of the current API caller.</p>
+         * <p>The role information.</p>
          * 
          * <strong>example:</strong>
          * <p>master</p>
@@ -200,7 +198,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
         public String tenantId;
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>The client token, which is a custom unique random string.</p>
          * 
          * <strong>example:</strong>
          * <p>tokenID</p>
@@ -218,7 +216,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
         public String uuid;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>VPC ID。</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-m5e666n89m2bx8jar****</p>
