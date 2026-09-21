@@ -23,7 +23,7 @@ public class DescribeCloudPhoneNodesRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The billing type. Only subscription is supported.</p>
+     * <p>The billing method. Only subscription is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -41,7 +41,7 @@ public class DescribeCloudPhoneNodesRequest extends TeaModel {
     public String maxResults;
 
     /**
-     * <p>The pagination token for the next query. If the results of a query are not completely returned, the returned NextToken is not empty. You can pass the returned NextToken in the next query to continue retrieving results.</p>
+     * <p>The pagination token for the next query. If the results of a query are not completely returned, the returned NextToken is not empty. You can include the returned NextToken in the next request to continue the query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>

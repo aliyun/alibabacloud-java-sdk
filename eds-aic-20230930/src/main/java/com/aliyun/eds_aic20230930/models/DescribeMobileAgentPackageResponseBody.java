@@ -91,6 +91,48 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeMobileAgentPackageResponseBodyPackageListTags extends TeaModel {
+        /**
+         * <p>The label key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The label value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeMobileAgentPackageResponseBodyPackageListTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMobileAgentPackageResponseBodyPackageListTags self = new DescribeMobileAgentPackageResponseBodyPackageListTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMobileAgentPackageResponseBodyPackageListTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeMobileAgentPackageResponseBodyPackageListTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeMobileAgentPackageResponseBodyPackageList extends TeaModel {
         /**
          * <p>The expiration time.</p>
@@ -151,6 +193,12 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
 
         @NameInMap("PeriodStartTime")
         public String periodStartTime;
+
+        /**
+         * <p>The labels.</p>
+         */
+        @NameInMap("Tags")
+        public java.util.List<DescribeMobileAgentPackageResponseBodyPackageListTags> tags;
 
         /**
          * <p>The number of credits that have been used.</p>
@@ -236,6 +284,14 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         }
         public String getPeriodStartTime() {
             return this.periodStartTime;
+        }
+
+        public DescribeMobileAgentPackageResponseBodyPackageList setTags(java.util.List<DescribeMobileAgentPackageResponseBodyPackageListTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeMobileAgentPackageResponseBodyPackageListTags> getTags() {
+            return this.tags;
         }
 
         public DescribeMobileAgentPackageResponseBodyPackageList setUsedCredit(String usedCredit) {

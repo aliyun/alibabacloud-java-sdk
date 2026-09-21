@@ -14,10 +14,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. Valid values:</p>
+     * <p>Indicates whether a next query token exists. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no more results exist.</li>
-     * <li>If <strong>NextToken</strong> has a value, the value indicates the token from which the next query starts.</li>
+     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+     * <li>If <strong>NextToken</strong> has a return value, the value is the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -304,7 +304,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
 
     public static class DescribeCloudPhoneNodesResponseBodyNodeModel extends TeaModel {
         /**
-         * <p>The bandwidth plan ID.</p>
+         * <p>The ID of the bandwidth plan.</p>
          * 
          * <strong>example:</strong>
          * <p>cbwp-7xvrl7axet2qg6yia******</p>
@@ -313,12 +313,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public String bandwidthPackageId;
 
         /**
-         * <p>The status of the bandwidth plan. Valid values:</p>
-         * <ul>
-         * <li>0: initializing</li>
-         * <li>1: normal</li>
-         * <li>2: deleted</li>
-         * </ul>
+         * <p>The status of the bandwidth plan. Valid values: 0: initializing. 1: normal. 2: deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -345,7 +340,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public String channel;
 
         /**
-         * <p>The billing type.</p>
+         * <p>The billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -381,7 +376,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public String gmtExpired;
 
         /**
-         * <p>The time when the matrix was last modified.</p>
+         * <p>The most recent modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-02-13 02:03:14</p>
@@ -453,7 +448,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public String packageId;
 
         /**
-         * <p>The number of instances provisioned under the cloud phone matrix.</p>
+         * <p>The number of instances under the cloud phone matrix.</p>
          * 
          * <strong>example:</strong>
          * <p>25</p>

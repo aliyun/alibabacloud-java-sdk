@@ -11,7 +11,7 @@ public class DescribeMobileAgentPackageRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The list of package IDs.</p>
+     * <p>The list of packages.</p>
      */
     @NameInMap("PackageIds")
     public java.util.List<String> packageIds;

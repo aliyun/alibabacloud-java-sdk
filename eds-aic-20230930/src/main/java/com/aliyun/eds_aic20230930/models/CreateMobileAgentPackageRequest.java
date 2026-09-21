@@ -16,11 +16,11 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables automatic payment. Make sure that your account balance is sufficient.</li>
-     * <li><strong>false</strong> (default): generates an order without charging the account.</li>
+     * <li><strong>true</strong>: Automatic payment is enabled. Make sure that your account balance is sufficient.</li>
+     * <li><strong>false</strong> (default): Only an order is generated. No payment is made.</li>
      * </ul>
      * <blockquote>
-     * <p>If your payment method has an insufficient balance, set this parameter to false. An unpaid order is generated. You can log on to the CloudPhone console to complete the payment.</p>
+     * <p>If your payment method has an insufficient balance, set this parameter to false. An unpaid order is generated. You can log on to the Elastic Cloud Phone console to complete the payment.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,8 +32,8 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables auto-renewal.</li>
-     * <li><strong>false</strong> (default): disables auto-renewal.</li>
+     * <li><strong>true</strong>: Auto-renewal is enabled.</li>
+     * <li><strong>false</strong> (default): Auto-renewal is disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The region in which the instance resides. Currently, only cn-hangzhou is supported.</p>
+     * <p>The region where the instance resides. Currently, only cn-hangzhou is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -136,6 +136,12 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
      */
     @NameInMap("PromotionId")
     public String promotionId;
+
+    /**
+     * <p>The tags.</p>
+     */
+    @NameInMap("Tag")
+    public java.util.List<CreateMobileAgentPackageRequestTag> tag;
 
     public static CreateMobileAgentPackageRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMobileAgentPackageRequest self = new CreateMobileAgentPackageRequest();
@@ -260,6 +266,56 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     }
     public String getPromotionId() {
         return this.promotionId;
+    }
+
+    public CreateMobileAgentPackageRequest setTag(java.util.List<CreateMobileAgentPackageRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateMobileAgentPackageRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateMobileAgentPackageRequestTag extends TeaModel {
+        /**
+         * <p>The tag key. This parameter cannot be empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateMobileAgentPackageRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateMobileAgentPackageRequestTag self = new CreateMobileAgentPackageRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateMobileAgentPackageRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateMobileAgentPackageRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

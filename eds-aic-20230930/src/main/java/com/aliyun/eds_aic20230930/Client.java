@@ -1628,10 +1628,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Alibaba Cloud CloudPhone.</p>
+     * <p>This operation involves billing. Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Elastic Cloud Phone.</p>
      * 
      * <b>summary</b> : 
-     * <p>Purchases a resource plan.</p>
+     * <p>Purchases a resource plan by placing an order.</p>
      * 
      * @param request CreateMobileAgentPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1700,6 +1700,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PromotionId", request.promotionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1719,10 +1723,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Alibaba Cloud CloudPhone.</p>
+     * <p>This operation involves billing. Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Elastic Cloud Phone.</p>
      * 
      * <b>summary</b> : 
-     * <p>Purchases a resource plan.</p>
+     * <p>Purchases a resource plan by placing an order.</p>
      * 
      * @param request CreateMobileAgentPackageRequest
      * @return CreateMobileAgentPackageResponse
@@ -2162,7 +2166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a batch of backup files.</p>
+     * <p>Deletes backup files in batches.</p>
      * 
      * @param request DeleteBackupFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2194,7 +2198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a batch of backup files.</p>
+     * <p>Deletes backup files in batches.</p>
      * 
      * @param request DeleteBackupFileRequest
      * @return DeleteBackupFileResponse
@@ -3057,7 +3061,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Queries the details of a cloud phone matrix.
-     * In the Wuying Cloud Phone system, a matrix (Cloud Phone Server) is a logical resource snap-in that represents a physical server instance. The physical server can be divided into multiple independently running cloud phone instances that share the underlying compute, storage, and network resources of the matrix. Creating a matrix is equivalent to obtaining a physical server on which you can create cloud phone instances. The number of cloud phone instances that can be created varies depending on the configuration.</p>
+     * In the Wuying Cloud Phone system, a matrix (Cloud Phone Server) is a logical resource management snap-in that represents a physical server instance. The physical server can be divided into multiple independently running cloud phone instances that share the underlying compute, storage, and network resources of the matrix. Creating a matrix is equivalent to obtaining a physical server on which you can create cloud phone instances. The number of cloud phone instances that can be created varies depending on the configuration.</p>
      * 
      * @param request DescribeCloudPhoneNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3138,7 +3142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Queries the details of a cloud phone matrix.
-     * In the Wuying Cloud Phone system, a matrix (Cloud Phone Server) is a logical resource snap-in that represents a physical server instance. The physical server can be divided into multiple independently running cloud phone instances that share the underlying compute, storage, and network resources of the matrix. Creating a matrix is equivalent to obtaining a physical server on which you can create cloud phone instances. The number of cloud phone instances that can be created varies depending on the configuration.</p>
+     * In the Wuying Cloud Phone system, a matrix (Cloud Phone Server) is a logical resource management snap-in that represents a physical server instance. The physical server can be divided into multiple independently running cloud phone instances that share the underlying compute, storage, and network resources of the matrix. Creating a matrix is equivalent to obtaining a physical server on which you can create cloud phone instances. The number of cloud phone instances that can be created varies depending on the configuration.</p>
      * 
      * @param request DescribeCloudPhoneNodesRequest
      * @return DescribeCloudPhoneNodesResponse
@@ -5055,10 +5059,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You can import a custom image to develop custom features or services.</li>
-     * <li>First, obtain the required Android Open Source Project (AOSP) image baseline from the platform. Then, create a custom build. After the build is complete, import the image to the platform. For detailed instructions, contact Wuying technical support.</li>
-     * <li>Ensure the image tar package is smaller than 2 GB. Otherwise, image parsing may fail.</li>
-     * <li>Ensure the Object Storage Service (OSS) address is in mainland China. If the address is outside mainland China or in the Hong Kong region, the image file download may time out.</li>
+     * <li>Importing a custom image is applicable to scenarios where you need to develop customized features or services.</li>
+     * <li>Obtain the required AOSP base image from the platform, perform a custom build, and then import the built image to the platform for use. For detailed steps, contact Wuying technical support.</li>
+     * <li>Ensure that the image TAR package is smaller than 2 GB. Otherwise, image parsing may fail.</li>
+     * <li>Ensure that your OSS address is in the Chinese mainland. Addresses outside the Chinese mainland or in Hong Kong (China) may cause image file download timeouts.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -5071,6 +5075,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ImportImageResponse importImageWithOptions(ImportImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseImageId)) {
+            query.put("BaseImageId", request.baseImageId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageDescription)) {
             query.put("ImageDescription", request.imageDescription);
         }
@@ -5103,10 +5111,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You can import a custom image to develop custom features or services.</li>
-     * <li>First, obtain the required Android Open Source Project (AOSP) image baseline from the platform. Then, create a custom build. After the build is complete, import the image to the platform. For detailed instructions, contact Wuying technical support.</li>
-     * <li>Ensure the image tar package is smaller than 2 GB. Otherwise, image parsing may fail.</li>
-     * <li>Ensure the Object Storage Service (OSS) address is in mainland China. If the address is outside mainland China or in the Hong Kong region, the image file download may time out.</li>
+     * <li>Importing a custom image is applicable to scenarios where you need to develop customized features or services.</li>
+     * <li>Obtain the required AOSP base image from the platform, perform a custom build, and then import the built image to the platform for use. For detailed steps, contact Wuying technical support.</li>
+     * <li>Ensure that the image TAR package is smaller than 2 GB. Otherwise, image parsing may fail.</li>
+     * <li>Ensure that your OSS address is in the Chinese mainland. Addresses outside the Chinese mainland or in Hong Kong (China) may cause image file download timeouts.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -8040,6 +8048,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.untagResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After changing the system cloud disk image, the instance may have compatibility issues. Verify compatibility before making the change.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the system cloud disk image of a normal matrix node.</p>
+     * 
+     * @param request UpdateCloudPhoneNodeSystemImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCloudPhoneNodeSystemImageResponse
+     */
+    public UpdateCloudPhoneNodeSystemImageResponse updateCloudPhoneNodeSystemImageWithOptions(UpdateCloudPhoneNodeSystemImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            query.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeIds)) {
+            query.put("NodeIds", request.nodeIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCloudPhoneNodeSystemImage"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCloudPhoneNodeSystemImageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After changing the system cloud disk image, the instance may have compatibility issues. Verify compatibility before making the change.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the system cloud disk image of a normal matrix node.</p>
+     * 
+     * @param request UpdateCloudPhoneNodeSystemImageRequest
+     * @return UpdateCloudPhoneNodeSystemImageResponse
+     */
+    public UpdateCloudPhoneNodeSystemImageResponse updateCloudPhoneNodeSystemImage(UpdateCloudPhoneNodeSystemImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCloudPhoneNodeSystemImageWithOptions(request, runtime);
     }
 
     /**
