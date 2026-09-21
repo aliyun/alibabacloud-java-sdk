@@ -3061,7 +3061,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application associated with a PolarDB instance.</p>
+     * <p>Creates an application that is associated with a PolarDB instance.</p>
      * 
      * @param tmpReq CreateApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3110,6 +3110,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.agenticDBBranchSpecShrink)) {
             query.put("AgenticDBBranchSpec", request.agenticDBBranchSpecShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agenticDBClusterId)) {
+            query.put("AgenticDBClusterId", request.agenticDBClusterId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.applicationType)) {
@@ -3299,7 +3303,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application associated with a PolarDB instance.</p>
+     * <p>Creates an application that is associated with a PolarDB instance.</p>
      * 
      * @param request CreateApplicationRequest
      * @return CreateApplicationResponse

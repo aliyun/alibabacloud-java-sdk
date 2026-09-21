@@ -23,6 +23,15 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String agenticDBBranchSpecShrink;
 
     /**
+     * <p>The AgenticDB cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pagc-xxx</p>
+     */
+    @NameInMap("AgenticDBClusterId")
+    public String agenticDBClusterId;
+
+    /**
      * <p>The application type. Valid values:</p>
      * <ul>
      * <li>supabase: Set this value to create a managed Supabase application.</li>
@@ -69,7 +78,7 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String authProviderConfig;
 
     /**
-     * <p>Specifies whether to enable automatic creation of an elastic IP address (EIP) and attach it to the instance. This is equivalent to associate with an EIP.</p>
+     * <p>Specifies whether to automatically create an elastic IP address (EIP) and associate it with the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen3-max</p>
@@ -78,7 +87,7 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public Boolean autoAllocatePublicEip;
 
     /**
-     * <p>Specifies whether to enable automatic creation of a cold storage Polarlakebase instance. Valid values:</p>
+     * <p>Specifies whether to enable automatic creation of a cold storage Polarlakebase. Valid values:</p>
      * <ul>
      * <li>false (default): Automatic creation is disabled.</li>
      * <li>true: Automatic creation is enabled.</li>
@@ -143,7 +152,7 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String dnatEntriesShrink;
 
     /**
-     * <p>The DNAT-dedicated NAT IP address that has been allocated (separate from the SNAT IP address) for NAT mapping. The IP address must belong to the specified gateway and be in an available state. The vSwitch of the gateway must belong to a primary CIDR block that is reachable from the office network. Specify this parameter together with VpcNatGatewayId. Prerequisite: An SNAT entry has been bound to the vSwitch where the application resides.</p>
+     * <p>The DNAT-dedicated NAT IP address allocated by the customer, which must be separate from the SNAT IP address. The IP address must belong to the specified gateway and be in an available state. The vSwitch where the gateway resides must be in a primary CIDR block reachable from the office network. Specify this parameter together with VpcNatGatewayId. Prerequisite: The customer has bound an SNAT entry to the vSwitch where the application resides.</p>
      * 
      * <strong>example:</strong>
      * <p>10.64.0.10</p>
@@ -208,7 +217,7 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     /**
      * <p>The model source. Valid values:</p>
      * <ul>
-     * <li>bailian: Alibaba Cloud Model Studio model.</li>
+     * <li>bailian: Bailian model.</li>
      * <li>custom: Custom model.</li>
      * <li>maas: PolarDB model operator.</li>
      * </ul>
@@ -312,7 +321,7 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String securityIPArrayName;
 
     /**
-     * <p>The IP whitelist. If you do not specify this parameter, the default value is <code>127.0.0.1</code>.</p>
+     * <p>The IP whitelist. If you do not specify this parameter, the default value <code>127.0.0.1</code> is used.</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.0.1,172.17.0.0/24</p>
@@ -390,7 +399,7 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The VPC NAT gateway ID for NAT mapping. If specified, NAT mapping is enabled when the instance is created. The NAT gateway must be in the same VPC as the application, use the private network type (intranet), and be in an active state.</p>
+     * <p>The VPC NAT gateway ID for NAT mapping. If specified, NAT mapping is enabled when the instance is created. The NAT gateway must be in the same VPC as the application, use the private network type (intranet), and be in active status.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-xxx</p>
@@ -426,6 +435,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getAgenticDBBranchSpecShrink() {
         return this.agenticDBBranchSpecShrink;
+    }
+
+    public CreateApplicationShrinkRequest setAgenticDBClusterId(String agenticDBClusterId) {
+        this.agenticDBClusterId = agenticDBClusterId;
+        return this;
+    }
+    public String getAgenticDBClusterId() {
+        return this.agenticDBClusterId;
     }
 
     public CreateApplicationShrinkRequest setApplicationType(String applicationType) {

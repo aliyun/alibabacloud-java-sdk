@@ -1,3 +1,7 @@
+2026-09-21 Version: 8.4.2
+- Update API CreateApplication: add request parameters AgenticDBClusterId.
+
+
 2026-09-18 Version: 8.4.1
 - Update API CreateKBSyncLink: add request parameters UserAccessToken.
 - Update API DescribeKnowledgeBaseAnswer: add response parameters Body.Sources.$.ImageResources.

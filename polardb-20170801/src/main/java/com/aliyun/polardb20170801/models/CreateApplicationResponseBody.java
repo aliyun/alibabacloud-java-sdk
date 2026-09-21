@@ -20,7 +20,7 @@ public class CreateApplicationResponseBody extends TeaModel {
     public java.util.List<CreateApplicationResponseBodyComponents> components;
 
     /**
-     * <p>The application description.</p>
+     * <p>The description of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>myapp</p>
