@@ -428,7 +428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Clones an engine configuration.</p>
+     * <p>Clones a DPI engine configuration.</p>
      * 
      * @param request CloneEngineConfigRequest
      * @param headers map
@@ -454,6 +454,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            body.put("SceneId", request.sceneId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -474,7 +478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Clones an engine configuration.</p>
+     * <p>Clones a DPI engine configuration.</p>
      * 
      * @param request CloneEngineConfigRequest
      * @return CloneEngineConfigResponse
@@ -1307,6 +1311,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            body.put("SceneId", request.sceneId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
@@ -6839,7 +6847,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of engine configurations.</p>
+     * <p>Retrieves a list of engine configurations.</p>
      * 
      * @param request ListEngineConfigsRequest
      * @param headers map
@@ -6867,6 +6875,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
@@ -6897,7 +6909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of engine configurations.</p>
+     * <p>Retrieves a list of engine configurations.</p>
      * 
      * @param request ListEngineConfigsRequest
      * @return ListEngineConfigsResponse
@@ -7032,7 +7044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of feature consistency check task configurations.</p>
+     * <p>Retrieves the list of feature consistency check task configurations.</p>
      * 
      * @param request ListFeatureConsistencyCheckJobConfigsRequest
      * @param headers map
@@ -7056,6 +7068,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
@@ -7082,7 +7098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of feature consistency check task configurations.</p>
+     * <p>Retrieves the list of feature consistency check task configurations.</p>
      * 
      * @param request ListFeatureConsistencyCheckJobConfigsRequest
      * @return ListFeatureConsistencyCheckJobConfigsResponse
@@ -8243,6 +8259,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
@@ -9835,15 +9855,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>This API is used to send conversation messages to the AI shopping guide and supports Server-Sent Events (SSE).</li>
-     * <li><code>InstanceId</code>, <code>SessionId</code>, <code>SceneId</code>, <code>ServiceId</code>, <code>Environment</code>, <code>Uid</code>, and <code>Language</code> are required parameters. Ensure the accuracy of these values to obtain optimal responses.</li>
-     * <li>The <code>InputMessage</code> must contain at least one text-type message that describes the user\&quot;s request or question.</li>
+     * <li>This API operation sends conversation messages to the AI shopping assistant and supports Server-Sent Events (SSE).</li>
+     * <li><code>InstanceId</code>, <code>SessionId</code>, <code>SceneId</code>, <code>ServiceId</code>, <code>Environment</code>, <code>Uid</code>, and <code>Language</code> are required parameters. Ensure the accuracy of these parameters to get the best response.</li>
+     * <li><code>InputMessage</code> must contain at least one text-type message that describes the user\&quot;s request or question.</li>
      * <li>Based on the provided input, the system returns corresponding recommendation results or other relevant information.</li>
      * <li>Check the returned <code>StopReason</code> field to understand whether the session has ended and the reason.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Conducts conversations with users through an AI shopping guide to provide product recommendation services.</p>
+     * <p>Conducts a conversation with a user through an AI shopping assistant to provide product recommendation services.</p>
      * 
      * @param request ShoppingAssistantRequest
      * @param headers map
@@ -9919,15 +9939,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>This API is used to send conversation messages to the AI shopping guide and supports Server-Sent Events (SSE).</li>
-     * <li><code>InstanceId</code>, <code>SessionId</code>, <code>SceneId</code>, <code>ServiceId</code>, <code>Environment</code>, <code>Uid</code>, and <code>Language</code> are required parameters. Ensure the accuracy of these values to obtain optimal responses.</li>
-     * <li>The <code>InputMessage</code> must contain at least one text-type message that describes the user\&quot;s request or question.</li>
+     * <li>This API operation sends conversation messages to the AI shopping assistant and supports Server-Sent Events (SSE).</li>
+     * <li><code>InstanceId</code>, <code>SessionId</code>, <code>SceneId</code>, <code>ServiceId</code>, <code>Environment</code>, <code>Uid</code>, and <code>Language</code> are required parameters. Ensure the accuracy of these parameters to get the best response.</li>
+     * <li><code>InputMessage</code> must contain at least one text-type message that describes the user\&quot;s request or question.</li>
      * <li>Based on the provided input, the system returns corresponding recommendation results or other relevant information.</li>
      * <li>Check the returned <code>StopReason</code> field to understand whether the session has ended and the reason.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Conducts conversations with users through an AI shopping guide to provide product recommendation services.</p>
+     * <p>Conducts a conversation with a user through an AI shopping assistant to provide product recommendation services.</p>
      * 
      * @param request ShoppingAssistantRequest
      * @return ShoppingAssistantResponse
@@ -10899,6 +10919,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            body.put("SceneId", request.sceneId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {

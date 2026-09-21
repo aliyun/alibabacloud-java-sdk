@@ -58,6 +58,13 @@ public class CreateEngineConfigRequest extends TeaModel {
     public String name;
 
     /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("SceneId")
+    public String sceneId;
+
+    /**
      * <p>The type of the engine configuration.</p>
      * 
      * <strong>example:</strong>
@@ -109,6 +116,14 @@ public class CreateEngineConfigRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateEngineConfigRequest setSceneId(String sceneId) {
+        this.sceneId = sceneId;
+        return this;
+    }
+    public String getSceneId() {
+        return this.sceneId;
     }
 
     public CreateEngineConfigRequest setType(String type) {

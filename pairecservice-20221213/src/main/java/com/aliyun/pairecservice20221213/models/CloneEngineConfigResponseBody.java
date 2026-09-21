@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CloneEngineConfigResponseBody extends TeaModel {
     /**
-     * <p>The engine configuration ID.</p>
+     * <p>The DPI engine configuration ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

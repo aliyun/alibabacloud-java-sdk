@@ -20,7 +20,7 @@ public class ListEngineConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of elements in the list.</p>
+     * <p>The total number of entries in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -86,13 +86,13 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         public String engineConfigId;
 
         /**
-         * <p>The runtime environment.</p>
+         * <p>The runtime environment. Valid values:</p>
          * <ul>
-         * <li><p>Daily: daily environment.</p>
+         * <li><p>Daily: Daily environment.</p>
          * </li>
-         * <li><p>Pre: staging environment.</p>
+         * <li><p>Pre: Pre-release environment.</p>
          * </li>
-         * <li><p>Prod: production environment.</p>
+         * <li><p>Prod: Production environment.</p>
          * </li>
          * </ul>
          * 
@@ -139,11 +139,20 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status.</p>
+         * <p>The scene ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("SceneId")
+        public String sceneId;
+
+        /**
+         * <p>The status. Valid values:</p>
          * <ul>
-         * <li><p>Released: released.</p>
+         * <li><p>Released: Released.</p>
          * </li>
-         * <li><p>UnReleased: not released.</p>
+         * <li><p>UnReleased: Not released.</p>
          * </li>
          * </ul>
          * 
@@ -238,6 +247,14 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListEngineConfigsResponseBodyEngineConfigs setSceneId(String sceneId) {
+            this.sceneId = sceneId;
+            return this;
+        }
+        public String getSceneId() {
+            return this.sceneId;
         }
 
         public ListEngineConfigsResponseBodyEngineConfigs setStatus(String status) {

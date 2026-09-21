@@ -28,8 +28,7 @@ public class UpdateEngineConfigRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The runtime environment.</p>
-     * <p>Valid values:</p>
+     * <p>The runtime environment. Valid values:</p>
      * <ul>
      * <li><p>Daily: daily environment.</p>
      * </li>
@@ -62,6 +61,15 @@ public class UpdateEngineConfigRequest extends TeaModel {
      */
     @NameInMap("Name")
     public String name;
+
+    /**
+     * <p>The scene.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("SceneId")
+    public String sceneId;
 
     /**
      * <p>The engine configuration type.</p>
@@ -115,6 +123,14 @@ public class UpdateEngineConfigRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public UpdateEngineConfigRequest setSceneId(String sceneId) {
+        this.sceneId = sceneId;
+        return this;
+    }
+    public String getSceneId() {
+        return this.sceneId;
     }
 
     public UpdateEngineConfigRequest setType(String type) {

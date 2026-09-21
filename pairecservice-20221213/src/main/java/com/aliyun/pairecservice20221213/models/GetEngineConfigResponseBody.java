@@ -85,6 +85,13 @@ public class GetEngineConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("SceneId")
+    public String sceneId;
+
+    /**
      * <p>The status. Valid values:</p>
      * <ul>
      * <li><p>Released: published.</p>
@@ -175,6 +182,14 @@ public class GetEngineConfigResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetEngineConfigResponseBody setSceneId(String sceneId) {
+        this.sceneId = sceneId;
+        return this;
+    }
+    public String getSceneId() {
+        return this.sceneId;
     }
 
     public GetEngineConfigResponseBody setStatus(String status) {

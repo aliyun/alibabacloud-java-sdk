@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListEngineConfigsRequest extends TeaModel {
     /**
-     * <p>The runtime environment.</p>
+     * <p>The runtime environment. Valid values:</p>
      * <ul>
-     * <li><p>Daily: daily environment.</p>
+     * <li><p>Daily: Daily environment.</p>
      * </li>
-     * <li><p>Pre: staging environment.</p>
+     * <li><p>Pre: Pre-release environment.</p>
      * </li>
-     * <li><p>Prod: production environment.</p>
+     * <li><p>Prod: Production environment.</p>
      * </li>
      * </ul>
      * 
@@ -50,7 +50,7 @@ public class ListEngineConfigsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,11 +59,20 @@ public class ListEngineConfigsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The status filter.</p>
+     * <p>The scene ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("SceneId")
+    public String sceneId;
+
+    /**
+     * <p>The status filter. Valid values:</p>
      * <ul>
-     * <li><p>Released: released.</p>
+     * <li><p>Released: Released.</p>
      * </li>
-     * <li><p>Unreleased: not released.</p>
+     * <li><p>Unreleased: Not released.</p>
      * </li>
      * </ul>
      * 
@@ -74,7 +83,7 @@ public class ListEngineConfigsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The version filter.</p>
+     * <p>The version filter. Valid values:</p>
      * <p>latest: the most recently updated version.</p>
      * 
      * <strong>example:</strong>
@@ -126,6 +135,14 @@ public class ListEngineConfigsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListEngineConfigsRequest setSceneId(String sceneId) {
+        this.sceneId = sceneId;
+        return this;
+    }
+    public String getSceneId() {
+        return this.sceneId;
     }
 
     public ListEngineConfigsRequest setStatus(String status) {

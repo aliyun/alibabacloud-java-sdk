@@ -11,10 +11,10 @@ public class ShoppingAssistantResponseBody extends TeaModel {
     public ShoppingAssistantResponseBodyCitation citation;
 
     /**
-     * <p>The returned content.</p>
+     * <p>The response content.</p>
      * 
      * <strong>example:</strong>
-     * <p>Here are some light-colored long-sleeve shirts I picked for you:\n.</p>
+     * <p>Here are some light-colored long-sleeve shirts for you:\n</p>
      */
     @NameInMap("Content")
     public String content;
@@ -27,6 +27,12 @@ public class ShoppingAssistantResponseBody extends TeaModel {
      */
     @NameInMap("ConversationId")
     public String conversationId;
+
+    /**
+     * <p>Indicates whether suggestions are provided.</p>
+     */
+    @NameInMap("EnableSuggestion")
+    public Boolean enableSuggestion;
 
     /**
      * <p>The error message.</p>
@@ -108,6 +114,14 @@ public class ShoppingAssistantResponseBody extends TeaModel {
         return this.conversationId;
     }
 
+    public ShoppingAssistantResponseBody setEnableSuggestion(Boolean enableSuggestion) {
+        this.enableSuggestion = enableSuggestion;
+        return this;
+    }
+    public Boolean getEnableSuggestion() {
+        return this.enableSuggestion;
+    }
+
     public ShoppingAssistantResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -158,7 +172,7 @@ public class ShoppingAssistantResponseBody extends TeaModel {
 
     public static class ShoppingAssistantResponseBodyCitation extends TeaModel {
         /**
-         * <p>The ID of the <code>item</code>.</p>
+         * <p>The ID of the item.</p>
          * 
          * <strong>example:</strong>
          * <p>0005</p>
@@ -273,10 +287,10 @@ public class ShoppingAssistantResponseBody extends TeaModel {
         public ShoppingAssistantResponseBodyResultCitation citation;
 
         /**
-         * <p>The returned content.</p>
+         * <p>The response content.</p>
          * 
          * <strong>example:</strong>
-         * <p>Here are some light-colored long-sleeve shirts I picked for you:\\n.</p>
+         * <p>Here are some light-colored long-sleeve shirts for you:\\n</p>
          */
         @NameInMap("Content")
         public String content;

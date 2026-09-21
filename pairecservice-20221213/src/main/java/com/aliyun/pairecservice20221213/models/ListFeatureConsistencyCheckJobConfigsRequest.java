@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFeatureConsistencyCheckJobConfigsRequest extends TeaModel {
     /**
-     * <p>The instance ID. To obtain an instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+     * <p>The instance ID. For information about how to obtain an instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,12 +15,10 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The sort order.</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><p><code>ASC</code>: Ascending order.</p>
-     * </li>
-     * <li><p><code>DESC</code>: Descending order.</p>
-     * </li>
+     * <li>ASC: ascending order.</li>
+     * <li>DESC: descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,7 +28,7 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number. The value starts at 1. The default value is 1.</p>
+     * <p>The page number. Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -48,12 +46,19 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The field to sort by.</p>
+     * <p>The scene ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("SceneId")
+    public String sceneId;
+
+    /**
+     * <p>The field used to sort the results. Valid values:</p>
      * <ul>
-     * <li><p><code>GmtCreateTime</code>: Creation time.</p>
-     * </li>
-     * <li><p><code>GmtModifiedTime</code>: Modified time.</p>
-     * </li>
+     * <li>GmtCreateTime: sorts by creation time.</li>
+     * <li>GmtModifiedTime: sorts by update time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,6 +102,14 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public ListFeatureConsistencyCheckJobConfigsRequest setSceneId(String sceneId) {
+        this.sceneId = sceneId;
+        return this;
+    }
+    public String getSceneId() {
+        return this.sceneId;
     }
 
     public ListFeatureConsistencyCheckJobConfigsRequest setSortBy(String sortBy) {

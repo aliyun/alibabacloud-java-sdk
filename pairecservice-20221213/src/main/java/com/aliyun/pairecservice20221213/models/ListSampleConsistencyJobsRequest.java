@@ -19,6 +19,9 @@ public class ListSampleConsistencyJobsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("SceneId")
+    public String sceneId;
+
     @NameInMap("SortBy")
     public String sortBy;
 
@@ -57,6 +60,14 @@ public class ListSampleConsistencyJobsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListSampleConsistencyJobsRequest setSceneId(String sceneId) {
+        this.sceneId = sceneId;
+        return this;
+    }
+    public String getSceneId() {
+        return this.sceneId;
     }
 
     public ListSampleConsistencyJobsRequest setSortBy(String sortBy) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CloneEngineConfigRequest extends TeaModel {
     /**
-     * <p>The content of the engine configuration.</p>
+     * <p>The content of the DPI engine configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -13,17 +13,23 @@ public class CloneEngineConfigRequest extends TeaModel {
     @NameInMap("ConfigValue")
     public String configValue;
 
+    /**
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>this is a clone config.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The environment. Valid values:</p>
+     * <p>The runtime environment. Valid values:</p>
      * <ul>
-     * <li><p>Daily: The daily environment.</p>
+     * <li><p>Daily: daily environment.</p>
      * </li>
-     * <li><p>Pre: The pre-release environment.</p>
+     * <li><p>Pre: staging environment.</p>
      * </li>
-     * <li><p>Prod: The production environment.</p>
+     * <li><p>Prod: production environment.</p>
      * </li>
      * </ul>
      * 
@@ -34,13 +40,22 @@ public class CloneEngineConfigRequest extends TeaModel {
     public String environment;
 
     /**
-     * <p>The instance ID. To obtain an instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+     * <p>The instance ID. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>pairec-cn-********</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
+
+    /**
+     * <p>The scene.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("SceneId")
+    public String sceneId;
 
     public static CloneEngineConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         CloneEngineConfigRequest self = new CloneEngineConfigRequest();
@@ -77,6 +92,14 @@ public class CloneEngineConfigRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public CloneEngineConfigRequest setSceneId(String sceneId) {
+        this.sceneId = sceneId;
+        return this;
+    }
+    public String getSceneId() {
+        return this.sceneId;
     }
 
 }

@@ -20,7 +20,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
     public String requestId;
 
     /**
-     * <p>The total number of configurations.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +59,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
 
     public static class ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs extends TeaModel {
         /**
-         * <p>Indicates whether to enable feature comparison.</p>
+         * <p>Indicates whether feature comparison is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -86,7 +86,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String defaultRoute;
 
         /**
-         * <p>The name of the EAS service.</p>
+         * <p>The service name of EAS.</p>
          * 
          * <strong>example:</strong>
          * <p>eas_service_1</p>
@@ -122,7 +122,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String featureConsistencyCheckJobConfigId;
 
         /**
-         * <p>The features to exclude from the results. Separate multiple features with a comma (,).</p>
+         * <p>The features to exclude from display. Separate multiple features with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>feature1,feature2</p>
@@ -131,7 +131,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String featureDisplayExclude;
 
         /**
-         * <p>The ID of the data source for feature landing.</p>
+         * <p>The ID of the data landing resource.</p>
          * 
          * <strong>example:</strong>
          * <p>reso-********</p>
@@ -140,7 +140,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String featureLandingResourceId;
 
         /**
-         * <p>The URI of the data source for feature landing.</p>
+         * <p>The URI of the data landing resource.</p>
          * 
          * <strong>example:</strong>
          * <p>mc_project_1</p>
@@ -149,7 +149,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String featureLandingResourceUri;
 
         /**
-         * <p>The high-priority features to read from the user table. If a feature is not found, the system retrieves it from the behavior table. Separate multiple features with a comma (,).</p>
+         * <p>The feature priority. Separate multiple features with commas (,). This parameter specifies which features are preferentially read from the user table. If the user table is empty, the features are queried from the behavior table.</p>
          * 
          * <strong>example:</strong>
          * <p>feature1,feature2,feature3</p>
@@ -158,7 +158,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String featurePriority;
 
         /**
-         * <p>The primary key for the item side in the feature store.</p>
+         * <p>The primary key on the item side in Feature Store.</p>
          * 
          * <strong>example:</strong>
          * <p>item</p>
@@ -167,7 +167,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String featureStoreItemId;
 
         /**
-         * <p>The ID of the model in the feature store.</p>
+         * <p>feature store model ID。</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -176,7 +176,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String featureStoreModelId;
 
         /**
-         * <p>The ID of the feature store project.</p>
+         * <p>The Feature Store project ID.</p>
          * 
          * <strong>example:</strong>
          * <p>prj-01</p>
@@ -185,7 +185,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String featureStoreProjectId;
 
         /**
-         * <p>The name of the feature store project.</p>
+         * <p>The Feature Store project name.</p>
          * 
          * <strong>example:</strong>
          * <p>project-1</p>
@@ -194,7 +194,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String featureStoreProjectName;
 
         /**
-         * <p>The name of the feature view that contains item features within the sequence features.</p>
+         * <p>The name of the feature view that contains the item features in the sequence feature.</p>
          * 
          * <strong>example:</strong>
          * <p>item-1</p>
@@ -203,7 +203,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String featureStoreSeqFeatureView;
 
         /**
-         * <p>The primary key for the user side in the feature store.</p>
+         * <p>The primary key on the user side in Feature Store.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>
@@ -212,7 +212,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String featureStoreUserId;
 
         /**
-         * <p>The version of the <code>fg_jar</code> file.</p>
+         * <p>The version of fg_jar.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -221,7 +221,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String fgJarVersion;
 
         /**
-         * <p>The name of the <code>fg_json</code> file.</p>
+         * <p>The name of the fg_json file.</p>
          * 
          * <strong>example:</strong>
          * <p>file.json</p>
@@ -230,7 +230,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String fgJsonFileName;
 
         /**
-         * <p>Indicates whether to generate a ZIP package.</p>
+         * <p>Indicates whether a zip package needs to be generated.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -257,7 +257,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String gmtModifiedTime;
 
         /**
-         * <p>The name of the <code>item_id</code> field.</p>
+         * <p>The name of the item_id field.</p>
          * 
          * <strong>example:</strong>
          * <p>item_id</p>
@@ -284,12 +284,10 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String itemTablePartitionField;
 
         /**
-         * <p>The format of the partition field of the item table. Valid values:</p>
+         * <p>The format of the item table partition field. Valid values:</p>
          * <ul>
-         * <li><p><code>yyyymmdd</code></p>
-         * </li>
-         * <li><p><code>yyyy-mm-dd</code></p>
-         * </li>
+         * <li>yyyymmdd</li>
+         * <li>yyyy-mm-dd</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -299,7 +297,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String itemTablePartitionFieldFormat;
 
         /**
-         * <p>The end time of the latest job based on this configuration.</p>
+         * <p>The end time of the most recently created job.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -308,7 +306,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String latestJobGmtSamplingEndTime;
 
         /**
-         * <p>The start time of the latest job based on this configuration.</p>
+         * <p>The start time of the most recently created job.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -317,7 +315,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String latestJobGmtSamplingStartTime;
 
         /**
-         * <p>The ID of the most recent job created from this configuration.</p>
+         * <p>The ID of the most recently created job based on this configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -365,7 +363,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String resourceConfig;
 
         /**
-         * <p>The sample rate, a value from 0 to 1.</p>
+         * <p>The sampling rate. Valid values: 0 to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0.89</p>
@@ -374,7 +372,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String sampleRate;
 
         /**
-         * <p>The ID of the scene.</p>
+         * <p>The scene ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -404,7 +402,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String serviceId;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>service1</p>
@@ -413,12 +411,10 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String serviceName;
 
         /**
-         * <p>The status of the configuration. Valid values:</p>
+         * <p>The status. Valid values:</p>
          * <ul>
-         * <li><p><code>Editable</code>: The configuration is editable.</p>
-         * </li>
-         * <li><p><code>Uneditable</code>: The configuration is not editable.</p>
-         * </li>
+         * <li>Editable: Editable.</li>
+         * <li>Uneditable: Not editable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -431,12 +427,10 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String switchId;
 
         /**
-         * <p>Indicates whether to use a feature store. Valid values:</p>
+         * <p>Indicates whether Feature Store is used. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: A feature store is used. In this case, the response includes parameters such as <code>FeatureStoreProjectId</code>, <code>FeatureStoreProjectName</code>, <code>FeatureStoreModelId</code>, <code>FeatureStoreUserId</code>, and <code>FeatureStoreItemId</code>.</p>
-         * </li>
-         * <li><p><code>false</code>: A feature store is not used. In this case, the response includes parameters such as <code>UserTable</code>, <code>UserIdField</code>, <code>UserTablePartitionField</code>, <code>UserTablePartitionFieldFormat</code>, <code>ItemTable</code>, <code>ItemIdField</code>, <code>ItemTablePartitionField</code>, and <code>ItemTablePartitionFieldFormat</code>.</p>
-         * </li>
+         * <li>true: Feature Store is used. In this case, FeatureStoreProjectId, FeatureStoreProjectName, FeatureStoreModelId, FeatureStoreUserId, and FeatureStoreItemId are returned.</li>
+         * <li>false: Feature Store is not used. In this case, UserTable, UserIdField, UserTablePartitionField, UserTablePartitionFieldFormat, ItemTable, ItemIdField, ItemTablePartitionField, and ItemTablePartitionFieldFormat are returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -446,7 +440,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String useFeatureStore;
 
         /**
-         * <p>The name of the <code>user_id</code> field.</p>
+         * <p>The name of the user_id field.</p>
          * 
          * <strong>example:</strong>
          * <p>user_id</p>
@@ -473,12 +467,10 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         public String userTablePartitionField;
 
         /**
-         * <p>The format of the partition field of the user table. Valid values:</p>
+         * <p>The format of the user table partition field. Valid values:</p>
          * <ul>
-         * <li><p><code>yyyymmdd</code></p>
-         * </li>
-         * <li><p><code>yyyy-mm-dd</code></p>
-         * </li>
+         * <li>yyyymmdd</li>
+         * <li>yyyy-mm-dd</li>
          * </ul>
          * 
          * <strong>example:</strong>

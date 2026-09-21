@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetServiceResponseBody extends TeaModel {
     /**
-     * <p>The Container Registry Enterprise instance ID selected by the user when a non-official image is used.</p>
+     * <p>The instance ID of the Container Registry Enterprise instance selected when a non-official image is used.</p>
      * 
      * <strong>example:</strong>
      * <p>cri-xxx</p>
@@ -32,7 +32,7 @@ public class GetServiceResponseBody extends TeaModel {
     public String engineConfigId;
 
     /**
-     * <p>The time of the most recent production release.</p>
+     * <p>The time of the most recent production publish.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -56,7 +56,7 @@ public class GetServiceResponseBody extends TeaModel {
     public String imageName;
 
     /**
-     * <p>The most recent production release record.</p>
+     * <p>The most recent production publish record.</p>
      */
     @NameInMap("LatestProdReleaseOrder")
     public GetServiceResponseBodyLatestProdReleaseOrder latestProdReleaseOrder;
@@ -80,7 +80,7 @@ public class GetServiceResponseBody extends TeaModel {
     public String region;
 
     /**
-     * <p>The Container Registry Enterprise Edition repository ID selected by the user when a non-official image is used.</p>
+     * <p>The ID of the Container Registry Enterprise Edition repository selected when a non-official image is used.</p>
      * 
      * <strong>example:</strong>
      * <p>crr-xxx</p>
@@ -98,7 +98,16 @@ public class GetServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The configuration used to publish the service, such as the service configuration in EAS.</p>
+     * <p>The scenario.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("SceneId")
+    public String sceneId;
+
+    /**
+     * <p>The configuration used to publish the service, such as the Elastic Algorithm Service (EAS) service configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Port&quot;:8080}</p>
@@ -107,7 +116,7 @@ public class GetServiceResponseBody extends TeaModel {
     public String serviceConfig;
 
     /**
-     * <p>The resource address used to publish the service, such as the resource group name in Elastic Algorithm Service (EAS).</p>
+     * <p>The resource address used to publish the service, such as the EAS resource group name.</p>
      * 
      * <strong>example:</strong>
      * <p>eas-resource-xxx</p>
@@ -208,6 +217,14 @@ public class GetServiceResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetServiceResponseBody setSceneId(String sceneId) {
+        this.sceneId = sceneId;
+        return this;
+    }
+    public String getSceneId() {
+        return this.sceneId;
+    }
+
     public GetServiceResponseBody setServiceConfig(String serviceConfig) {
         this.serviceConfig = serviceConfig;
         return this;
@@ -226,7 +243,7 @@ public class GetServiceResponseBody extends TeaModel {
 
     public static class GetServiceResponseBodyLatestProdReleaseOrder extends TeaModel {
         /**
-         * <p>The release content.</p>
+         * <p>The publish content.</p>
          * 
          * <strong>example:</strong>
          * <p>update golang version to 1.22</p>
@@ -244,7 +261,7 @@ public class GetServiceResponseBody extends TeaModel {
         public String imageVersion;
 
         /**
-         * <p>The release information.</p>
+         * <p>The publish information.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -262,7 +279,7 @@ public class GetServiceResponseBody extends TeaModel {
         public String releaseInfo;
 
         /**
-         * <p>The release order ID.</p>
+         * <p>The publish order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -280,7 +297,7 @@ public class GetServiceResponseBody extends TeaModel {
         public String releaser;
 
         /**
-         * <p>The release title.</p>
+         * <p>The publish title.</p>
          * 
          * <strong>example:</strong>
          * <p>update version</p>
