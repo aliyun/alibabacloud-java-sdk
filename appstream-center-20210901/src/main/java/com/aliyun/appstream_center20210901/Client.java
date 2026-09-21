@@ -9,10 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-shanghai", "appstream-center.cn-shanghai.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "appstream-center.ap-southeast-1.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("appstream-center", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -32,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the execution time for an over-the-air update.</p>
+     * <p>Sets the execution time for an OTA upgrade.</p>
      * 
      * @param request ApproveOtaTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -80,7 +76,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the execution time for an over-the-air update.</p>
+     * <p>Sets the execution time for an OTA upgrade.</p>
      * 
      * @param request ApproveOtaTaskRequest
      * @return ApproveOtaTaskResponse
@@ -141,11 +137,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>變更指派使用者後，選取的使用者將收到相應的通知電子郵件。一般需要等待約 2 分鐘，變更才會在終端機生效。</p>
+     * <p>After you change assigned users, the selected users receive notification emails. Changes typically take about 2 minutes to take effect on the client.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>為交付群組新增或移除指派使用者。只有新增至指派使用者的使用者才可存取雲端應用程式。</p>
+     * <p>Adds or removes assigned users for a delivery group. Only users added as assigned users can access cloud applications.</p>
      * 
      * @param tmpReq AuthorizeInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -162,6 +158,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupId)) {
             body.put("AppInstanceGroupId", request.appInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupSetId)) {
+            body.put("AppInstanceGroupSetId", request.appInstanceGroupSetId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.appInstancePersistentId)) {
@@ -221,11 +221,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>變更指派使用者後，選取的使用者將收到相應的通知電子郵件。一般需要等待約 2 分鐘，變更才會在終端機生效。</p>
+     * <p>After you change assigned users, the selected users receive notification emails. Changes typically take about 2 minutes to take effect on the client.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>為交付群組新增或移除指派使用者。只有新增至指派使用者的使用者才可存取雲端應用程式。</p>
+     * <p>Adds or removes assigned users for a delivery group. Only users added as assigned users can access cloud applications.</p>
      * 
      * @param request AuthorizeInstanceGroupRequest
      * @return AuthorizeInstanceGroupResponse
@@ -233,6 +233,128 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AuthorizeInstanceGroupResponse authorizeInstanceGroup(AuthorizeInstanceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.authorizeInstanceGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This operation manages user authorization for a delivery group at the application level. The authorization result applies only to the application specified by AppId and does not affect the authorization of other applications in the delivery group. To authorize users for an entire delivery group, call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation.</p>
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>The delivery group is created, and <strong>the application specified by AppId is deployed in the image used by the delivery group</strong>. Otherwise, the error code <code>InvalidAppId.NotFound</code> is returned.</li>
+     * <li>The delivery group <strong>has not been added to a delivery group set that is in effect</strong>. A delivery group that has been added to a set cannot be authorized individually. You must authorize it through the set. Otherwise, the error code <code>InvalidAppInstanceGroup.AuthorizeBlockedBySet</code> is returned.</li>
+     * <li>If the workspace to which the delivery group belongs is an Active Directory (AD) workspace, <strong>you must specify UserMeta</strong>, with <code>UserMeta.Type</code> set to <code>ad</code> and <code>UserMeta.AdDomain</code> matching the AD domain bound to the workspace.</li>
+     * <li>If the delivery group has been authorized through user groups and mixed authorization of users and user groups is not supported, you cannot authorize by user. Otherwise, the error code <code>AuthAppInstanceGroup.MixNotSupported</code> is returned.</li>
+     * </ul>
+     * <h2>Parameter description</h2>
+     * <ul>
+     * <li><strong>At least one of AuthorizeUserIds and UnAuthorizeUserIds must be specified.</strong> You can also specify both. If both are empty, this invocation does not change any authorization.</li>
+     * <li>When adding authorizations, the sum of the currently authorized users for the application and the users to be added cannot exceed the authorized user quota for the application. If the quota is exceeded, the error code <code>ExceedAppAuthUserQuota</code> is returned. Removing authorizations is not subject to quota limits.</li>
+     * </ul>
+     * <h2>Call sequence</h2>
+     * <ol>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> or <a href="https://help.aliyun.com/document_detail/600836.html">GetAppInstanceGroup</a> operation to obtain the delivery group ID (AppInstanceGroupId) and the application IDs of deployed applications in the delivery group (AppId in the Apps list).</li>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/436936.html">DescribeUsers</a> operation to obtain the usernames of the users to be authorized or unauthorized.</li>
+     * <li>Call this operation to complete the authorization change.<blockquote>
+     * <p>After the authorization is changed, the selected users receive a notification email. It typically takes about 2 minutes for the change to take effect on the client.</p>
+     * </blockquote>
+     * </li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds or removes authorized users for a specified application deployed in a delivery group. Only authorized users can access the application.</p>
+     * 
+     * @param tmpReq AuthorizeUsersForAppRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AuthorizeUsersForAppResponse
+     */
+    public AuthorizeUsersForAppResponse authorizeUsersForAppWithOptions(AuthorizeUsersForAppRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AuthorizeUsersForAppShrinkRequest request = new AuthorizeUsersForAppShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userMeta)) {
+            request.userMetaShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userMeta, "UserMeta", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupId)) {
+            body.put("AppInstanceGroupId", request.appInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizeUserIds)) {
+            body.put("AuthorizeUserIds", request.authorizeUserIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.unAuthorizeUserIds)) {
+            body.put("UnAuthorizeUserIds", request.unAuthorizeUserIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userMetaShrink)) {
+            body.put("UserMeta", request.userMetaShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AuthorizeUsersForApp"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AuthorizeUsersForAppResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This operation manages user authorization for a delivery group at the application level. The authorization result applies only to the application specified by AppId and does not affect the authorization of other applications in the delivery group. To authorize users for an entire delivery group, call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation.</p>
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>The delivery group is created, and <strong>the application specified by AppId is deployed in the image used by the delivery group</strong>. Otherwise, the error code <code>InvalidAppId.NotFound</code> is returned.</li>
+     * <li>The delivery group <strong>has not been added to a delivery group set that is in effect</strong>. A delivery group that has been added to a set cannot be authorized individually. You must authorize it through the set. Otherwise, the error code <code>InvalidAppInstanceGroup.AuthorizeBlockedBySet</code> is returned.</li>
+     * <li>If the workspace to which the delivery group belongs is an Active Directory (AD) workspace, <strong>you must specify UserMeta</strong>, with <code>UserMeta.Type</code> set to <code>ad</code> and <code>UserMeta.AdDomain</code> matching the AD domain bound to the workspace.</li>
+     * <li>If the delivery group has been authorized through user groups and mixed authorization of users and user groups is not supported, you cannot authorize by user. Otherwise, the error code <code>AuthAppInstanceGroup.MixNotSupported</code> is returned.</li>
+     * </ul>
+     * <h2>Parameter description</h2>
+     * <ul>
+     * <li><strong>At least one of AuthorizeUserIds and UnAuthorizeUserIds must be specified.</strong> You can also specify both. If both are empty, this invocation does not change any authorization.</li>
+     * <li>When adding authorizations, the sum of the currently authorized users for the application and the users to be added cannot exceed the authorized user quota for the application. If the quota is exceeded, the error code <code>ExceedAppAuthUserQuota</code> is returned. Removing authorizations is not subject to quota limits.</li>
+     * </ul>
+     * <h2>Call sequence</h2>
+     * <ol>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> or <a href="https://help.aliyun.com/document_detail/600836.html">GetAppInstanceGroup</a> operation to obtain the delivery group ID (AppInstanceGroupId) and the application IDs of deployed applications in the delivery group (AppId in the Apps list).</li>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/436936.html">DescribeUsers</a> operation to obtain the usernames of the users to be authorized or unauthorized.</li>
+     * <li>Call this operation to complete the authorization change.<blockquote>
+     * <p>After the authorization is changed, the selected users receive a notification email. It typically takes about 2 minutes for the change to take effect on the client.</p>
+     * </blockquote>
+     * </li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds or removes authorized users for a specified application deployed in a delivery group. Only authorized users can access the application.</p>
+     * 
+     * @param request AuthorizeUsersForAppRequest
+     * @return AuthorizeUsersForAppResponse
+     */
+    public AuthorizeUsersForAppResponse authorizeUsersForApp(AuthorizeUsersForAppRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.authorizeUsersForAppWithOptions(request, runtime);
     }
 
     /**
@@ -495,8 +617,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and pricing</a> of WUYING CloudApp before you call this operation.
-     * A delivery group is a logical grouping for delivering cloud applications to end users. It includes underlying cloud application resources, images that contain cloud applications, resource management policies, and user allocation settings. For details, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish a delivery group</a>.</p>
+     * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing and pricing</a> of WUYING CloudApp.
+     * A delivery group is a logical grouping for delivering cloud applications to end users. It includes the underlying cloud application resources, images that contain cloud applications, resource management policies, and user allocation settings. For details, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish a delivery group</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a delivery group.</p>
@@ -675,8 +797,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and pricing</a> of WUYING CloudApp before you call this operation.
-     * A delivery group is a logical grouping for delivering cloud applications to end users. It includes underlying cloud application resources, images that contain cloud applications, resource management policies, and user allocation settings. For details, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish a delivery group</a>.</p>
+     * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing and pricing</a> of WUYING CloudApp.
+     * A delivery group is a logical grouping for delivering cloud applications to end users. It includes the underlying cloud application resources, images that contain cloud applications, resource management policies, and user allocation settings. For details, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish a delivery group</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a delivery group.</p>
@@ -690,8 +812,242 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>Prepare an available office network, image, and instance type in the target business region. Make sure that the account has the required browser configurations and resource quotas.</li>
+     * <li>Specify <code>CloudBrowserName</code> and <code>BizRegionId</code>. Set <code>OsType</code> to <code>Windows</code>.</li>
+     * <li>Authorized users must be created in advance and must match the account type. Authorized user groups must belong to the current account and match the account type of the office network.</li>
+     * <li><strong><code>Users</code> and <code>UserGroupIds</code> cannot both be non-empty.</strong></li>
+     * </ul>
+     * <h2>MAU billing parameters</h2>
+     * <ul>
+     * <li>Set <code>ChargeType</code> to <code>PostPaid</code>.</li>
+     * <li><strong>Set <code>SubPayType</code> to <code>mau</code> explicitly. Omitting this field does not enable MAU billing.</strong></li>
+     * <li>Set <code>ChargeResourceMode</code> to <code>AppInstance</code>.</li>
+     * <li>Do not specify <code>Period</code>, <code>PeriodUnit</code>, <code>AppPackageType</code>, <code>AutoPay</code>, <code>AutoRenew</code>, or <code>NodePool</code>.</li>
+     * </ul>
+     * <h2>Post-call processing</h2>
+     * <p><strong>A successful response does not indicate that the browser resources are ready.</strong> After creation, query the browser group status and confirm that the group is connectable before use.
+     * This operation creates a new cloud browser group. You do not need to create a delivery group in advance.</p>
+     * <h2>Example description</h2>
+     * <p>The example values of fields are provided to demonstrate how to specify the fields. Replace resource identifiers with actual values under your account. Capacity examples do not represent default values or upper limits.
+     * An example value of <code>-</code> indicates that the field does not need to be specified. Omit the corresponding parameter when you call the operation. Do not pass the character <code>-</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a custom image from a deployed WUYING instance to quickly create more instances with the same configuration, avoiding repetitive environment setup each time.</p>
+     * <p>Creates a cloud browser group that is billed by monthly active users (MAU).</p>
+     * 
+     * @param tmpReq CreateBrowserInstanceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateBrowserInstanceGroupResponse
+     */
+    public CreateBrowserInstanceGroupResponse createBrowserInstanceGroupWithOptions(CreateBrowserInstanceGroupRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateBrowserInstanceGroupShrinkRequest request = new CreateBrowserInstanceGroupShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.browserConfig)) {
+            request.browserConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.browserConfig, "BrowserConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.network)) {
+            request.networkShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.network, "Network", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.nodePool)) {
+            request.nodePoolShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.nodePool, "NodePool", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.policy)) {
+            request.policyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.policy, "Policy", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.securityPolicy)) {
+            request.securityPolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.securityPolicy, "SecurityPolicy", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.storagePolicy)) {
+            request.storagePolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.storagePolicy, "StoragePolicy", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.timers)) {
+            request.timersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.timers, "Timers", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userInfo)) {
+            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userInfo, "UserInfo", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.users)) {
+            request.usersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.users, "Users", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appPackageType)) {
+            body.put("AppPackageType", request.appPackageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authNotificationEnabled)) {
+            body.put("AuthNotificationEnabled", request.authNotificationEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            body.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            body.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            body.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.browserConfigShrink)) {
+            body.put("BrowserConfig", request.browserConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeResourceMode)) {
+            body.put("ChargeResourceMode", request.chargeResourceMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
+            body.put("ChargeType", request.chargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudBrowserName)) {
+            body.put("CloudBrowserName", request.cloudBrowserName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            body.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
+            body.put("InstanceType", request.instanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxAmount)) {
+            body.put("MaxAmount", request.maxAmount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkShrink)) {
+            body.put("Network", request.networkShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodePoolShrink)) {
+            body.put("NodePool", request.nodePoolShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.osType)) {
+            body.put("OsType", request.osType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            body.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            body.put("PeriodUnit", request.periodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyShrink)) {
+            body.put("Policy", request.policyShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionId)) {
+            body.put("PromotionId", request.promotionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityPolicyShrink)) {
+            body.put("SecurityPolicy", request.securityPolicyShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storagePolicyShrink)) {
+            body.put("StoragePolicy", request.storagePolicyShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subPayType)) {
+            body.put("SubPayType", request.subPayType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            body.put("Tag", request.tagShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timersShrink)) {
+            body.put("Timers", request.timersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupIds)) {
+            body.put("UserGroupIds", request.userGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userInfoShrink)) {
+            body.put("UserInfo", request.userInfoShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usersShrink)) {
+            body.put("Users", request.usersShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateBrowserInstanceGroup"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBrowserInstanceGroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>Prepare an available office network, image, and instance type in the target business region. Make sure that the account has the required browser configurations and resource quotas.</li>
+     * <li>Specify <code>CloudBrowserName</code> and <code>BizRegionId</code>. Set <code>OsType</code> to <code>Windows</code>.</li>
+     * <li>Authorized users must be created in advance and must match the account type. Authorized user groups must belong to the current account and match the account type of the office network.</li>
+     * <li><strong><code>Users</code> and <code>UserGroupIds</code> cannot both be non-empty.</strong></li>
+     * </ul>
+     * <h2>MAU billing parameters</h2>
+     * <ul>
+     * <li>Set <code>ChargeType</code> to <code>PostPaid</code>.</li>
+     * <li><strong>Set <code>SubPayType</code> to <code>mau</code> explicitly. Omitting this field does not enable MAU billing.</strong></li>
+     * <li>Set <code>ChargeResourceMode</code> to <code>AppInstance</code>.</li>
+     * <li>Do not specify <code>Period</code>, <code>PeriodUnit</code>, <code>AppPackageType</code>, <code>AutoPay</code>, <code>AutoRenew</code>, or <code>NodePool</code>.</li>
+     * </ul>
+     * <h2>Post-call processing</h2>
+     * <p><strong>A successful response does not indicate that the browser resources are ready.</strong> After creation, query the browser group status and confirm that the group is connectable before use.
+     * This operation creates a new cloud browser group. You do not need to create a delivery group in advance.</p>
+     * <h2>Example description</h2>
+     * <p>The example values of fields are provided to demonstrate how to specify the fields. Replace resource identifiers with actual values under your account. Capacity examples do not represent default values or upper limits.
+     * An example value of <code>-</code> indicates that the field does not need to be specified. Omit the corresponding parameter when you call the operation. Do not pass the character <code>-</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a cloud browser group that is billed by monthly active users (MAU).</p>
+     * 
+     * @param request CreateBrowserInstanceGroupRequest
+     * @return CreateBrowserInstanceGroupResponse
+     */
+    public CreateBrowserInstanceGroupResponse createBrowserInstanceGroup(CreateBrowserInstanceGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createBrowserInstanceGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a custom image from a deployed WUYING instance. You can use the custom image to quickly create more WUYING instances with the same configurations, without having to repeatedly configure the instance environment each time.</p>
      * 
      * @param request CreateImageByInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -765,7 +1121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom image from a deployed WUYING instance to quickly create more instances with the same configuration, avoiding repetitive environment setup each time.</p>
+     * <p>Creates a custom image from a deployed WUYING instance. You can use the custom image to quickly create more WUYING instances with the same configurations, without having to repeatedly configure the instance environment each time.</p>
      * 
      * @param request CreateImageByInstanceRequest
      * @return CreateImageByInstanceResponse
@@ -917,11 +1273,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can create a model group in the WUYING Agent Management Center to manage the model providers and model scope that an Agent can invoke. After creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
-     * Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before invoking this operation.</p>
+     * <p>You can create a model group in the Wuying Agent Management Center to manage the model providers and model scope that an Agent can invoke. After model creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
+     * Make sure that you are familiar with the operations and usage of the Wuying Agent Management Center before invoking this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a model creation template.</p>
+     * <p>Creates a model template.</p>
      * 
      * @param request CreateModelTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -973,11 +1329,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can create a model group in the WUYING Agent Management Center to manage the model providers and model scope that an Agent can invoke. After creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
-     * Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before invoking this operation.</p>
+     * <p>You can create a model group in the Wuying Agent Management Center to manage the model providers and model scope that an Agent can invoke. After model creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
+     * Make sure that you are familiar with the operations and usage of the Wuying Agent Management Center before invoking this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a model creation template.</p>
+     * <p>Creates a model template.</p>
      * 
      * @param request CreateModelTemplateRequest
      * @return CreateModelTemplateResponse
@@ -991,7 +1347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ol>
      * <li>A project corresponds to the resource configuration module in the CloudFlow console.</li>
-     * <li>When the ContentId input parameter has multiple versions, this API <notice>uses the default version</notice> for binding.</li>
+     * <li>When the ContentId input parameter has multiple versions, this API <notice>uses the default version</notice> and bindss it at the same time.</li>
      * <li>This operation succeeds only when the default version of the Content is in an available state.</li>
      * </ol>
      * 
@@ -1032,6 +1388,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.dataDisk)) {
             bodyFlat.put("DataDisk", request.dataDisk);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.erdmaEnabled)) {
+            body.put("ErdmaEnabled", request.erdmaEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuDriverVersion)) {
+            body.put("GpuDriverVersion", request.gpuDriverVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.hostName)) {
@@ -1139,7 +1503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ol>
      * <li>A project corresponds to the resource configuration module in the CloudFlow console.</li>
-     * <li>When the ContentId input parameter has multiple versions, this API <notice>uses the default version</notice> for binding.</li>
+     * <li>When the ContentId input parameter has multiple versions, this API <notice>uses the default version</notice> and bindss it at the same time.</li>
      * <li>This operation succeeds only when the default version of the Content is in an available state.</li>
      * </ol>
      * 
@@ -1275,8 +1639,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>You can delete only custom images that belong to your account.</li>
      * <li>For images associated with WUYING Cloud Computer Pool, WUYING Cloud Application, or WUYING Workspace product lines, ensure that no WUYING instances are using the image before you delete it.</li>
-     * <li>If a WUYING Cloud Desktop template references the image, the template is also deleted when the image is deleted.</li>
-     * <li>For images that span multiple regions, deleting the image removes it from all regions.</li>
+     * <li>If a WUYING Cloud Desktop template references an image, the template is also deleted when the image is deleted.</li>
+     * <li>For images that span multiple regions, deleting the image removes the image from all regions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1315,8 +1679,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>You can delete only custom images that belong to your account.</li>
      * <li>For images associated with WUYING Cloud Computer Pool, WUYING Cloud Application, or WUYING Workspace product lines, ensure that no WUYING instances are using the image before you delete it.</li>
-     * <li>If a WUYING Cloud Desktop template references the image, the template is also deleted when the image is deleted.</li>
-     * <li>For images that span multiple regions, deleting the image removes it from all regions.</li>
+     * <li>If a WUYING Cloud Desktop template references an image, the template is also deleted when the image is deleted.</li>
+     * <li>For images that span multiple regions, deleting the image removes the image from all regions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1607,7 +1971,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a development workstation.</p>
+     * <p>Queries the details of a development host.</p>
      * 
      * @param request DescribeWuyingServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1639,7 +2003,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a development workstation.</p>
+     * <p>Queries the details of a development host.</p>
      * 
      * @param request DescribeWuyingServerRequest
      * @return DescribeWuyingServerResponse
@@ -1747,12 +2111,93 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation requires multiple calls (at least two) to obtain the connection credentials.
-     * On the first call, an application instance is allocated to the specified convenience account and the application is started. A startup task ID (<code>TaskID</code>) is returned.
-     * On subsequent calls, pass the <code>TaskID</code> request parameter to query whether the task is complete. When the returned task status (<code>TaskStatus</code>) is completed (<code>Finished</code>), the connection credentials (<code>Ticket</code>) are also returned.</p>
+     * <p>This topic describes the query usage for the monthly active user (MAU) billing scenario.</p>
+     * <h2>Before you begin</h2>
+     * <p>Obtain the cloud browser group ID under the current account. Call <code>ListBrowserInstanceGroup</code> to retrieve the ID.</p>
+     * <h2>Response</h2>
+     * <p>The response includes the current configuration, status, and authorization statistics of the browser group. The details return up to 20 bookmarks and 20 website access entries. To retrieve the complete lists, call <code>ListBrowserBookmarks</code> and <code>ListBrowserRestrictedURLs</code>.</p>
+     * <h2>What to do next</h2>
+     * <p>This operation only queries configurations and does not modify resources. After you read the returned status, perform the connection or management operation that corresponds to the status.</p>
+     * <h2>Example description</h2>
+     * <p>The <code>-</code> value in the examples indicates that the field is not applicable or not returned in the current scenario. It is not an actual string returned by the operation. Sample resource IDs are masked. Use the actual query results when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves connection credentials for a cloud application.</p>
+     * <p>Queries the configuration, status, and authorization statistics of a specified cloud browser group.</p>
+     * 
+     * @param request GetBrowserInstanceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetBrowserInstanceGroupResponse
+     */
+    public GetBrowserInstanceGroupResponse getBrowserInstanceGroupWithOptions(GetBrowserInstanceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetBrowserInstanceGroup"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetBrowserInstanceGroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This topic describes the query usage for the monthly active user (MAU) billing scenario.</p>
+     * <h2>Before you begin</h2>
+     * <p>Obtain the cloud browser group ID under the current account. Call <code>ListBrowserInstanceGroup</code> to retrieve the ID.</p>
+     * <h2>Response</h2>
+     * <p>The response includes the current configuration, status, and authorization statistics of the browser group. The details return up to 20 bookmarks and 20 website access entries. To retrieve the complete lists, call <code>ListBrowserBookmarks</code> and <code>ListBrowserRestrictedURLs</code>.</p>
+     * <h2>What to do next</h2>
+     * <p>This operation only queries configurations and does not modify resources. After you read the returned status, perform the connection or management operation that corresponds to the status.</p>
+     * <h2>Example description</h2>
+     * <p>The <code>-</code> value in the examples indicates that the field is not applicable or not returned in the current scenario. It is not an actual string returned by the operation. Sample resource IDs are masked. Use the actual query results when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the configuration, status, and authorization statistics of a specified cloud browser group.</p>
+     * 
+     * @param request GetBrowserInstanceGroupRequest
+     * @return GetBrowserInstanceGroupResponse
+     */
+    public GetBrowserInstanceGroupResponse getBrowserInstanceGroup(GetBrowserInstanceGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getBrowserInstanceGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Call protocol description: operation_type: polling, required_steps: 1.
+     * This operation may require multiple calls (at least one) to obtain the connection credential.
+     * On the first call, an application instance is allocated to the specified convenience account and the application is started. If a Ticket is returned, the result is obtained synchronously. If a startup task ID (<code>TaskId</code>) is returned, subsequent calls are required.
+     * On subsequent calls, include the <code>TaskId</code> request parameter to invoke the operation and query whether the node is complete. When the returned node status (<code>TaskStatus</code>) is completed (<code>Finished</code>), the connection credential (<code>Ticket</code>) is also returned.</p>
+     * <blockquote>
+     * <p>Prerequisites</p>
+     * <ul>
+     * <li>Before calling this operation, make sure that you have created a delivery group and authorized users for the delivery group:</li>
+     * <li><ol>
+     * <li>The API for creating a delivery group is CreateAppInstanceGroup. For more information about the parameters, see the corresponding API documentation.</li>
+     * </ol>
+     * </li>
+     * <li><ol start="2">
+     * <li>You can call the ListAppInstanceGroup operation to query the list of delivery groups. If the corresponding delivery group is not found, verify that the delivery group has been created and that the authentication credentials belong to the correct tenant.</li>
+     * </ol>
+     * </li>
+     * <li><ol start="3">
+     * <li>The API for authorizing users for a delivery group is AuthorizeInstanceGroup. For more information about the parameters, see the corresponding API documentation.</li>
+     * </ol>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the connection credential for a cloud application.</p>
      * 
      * @param request GetConnectionTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1771,6 +2216,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupIdList)) {
             body.put("AppInstanceGroupIdList", request.appInstanceGroupIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupSetId)) {
+            body.put("AppInstanceGroupSetId", request.appInstanceGroupSetId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.appInstanceId)) {
@@ -1832,12 +2281,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation requires multiple calls (at least two) to obtain the connection credentials.
-     * On the first call, an application instance is allocated to the specified convenience account and the application is started. A startup task ID (<code>TaskID</code>) is returned.
-     * On subsequent calls, pass the <code>TaskID</code> request parameter to query whether the task is complete. When the returned task status (<code>TaskStatus</code>) is completed (<code>Finished</code>), the connection credentials (<code>Ticket</code>) are also returned.</p>
+     * <p>Call protocol description: operation_type: polling, required_steps: 1.
+     * This operation may require multiple calls (at least one) to obtain the connection credential.
+     * On the first call, an application instance is allocated to the specified convenience account and the application is started. If a Ticket is returned, the result is obtained synchronously. If a startup task ID (<code>TaskId</code>) is returned, subsequent calls are required.
+     * On subsequent calls, include the <code>TaskId</code> request parameter to invoke the operation and query whether the node is complete. When the returned node status (<code>TaskStatus</code>) is completed (<code>Finished</code>), the connection credential (<code>Ticket</code>) is also returned.</p>
+     * <blockquote>
+     * <p>Prerequisites</p>
+     * <ul>
+     * <li>Before calling this operation, make sure that you have created a delivery group and authorized users for the delivery group:</li>
+     * <li><ol>
+     * <li>The API for creating a delivery group is CreateAppInstanceGroup. For more information about the parameters, see the corresponding API documentation.</li>
+     * </ol>
+     * </li>
+     * <li><ol start="2">
+     * <li>You can call the ListAppInstanceGroup operation to query the list of delivery groups. If the corresponding delivery group is not found, verify that the delivery group has been created and that the authentication credentials belong to the correct tenant.</li>
+     * </ol>
+     * </li>
+     * <li><ol start="3">
+     * <li>The API for authorizing users for a delivery group is AuthorizeInstanceGroup. For more information about the parameters, see the corresponding API documentation.</li>
+     * </ol>
+     * </li>
+     * </ul>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves connection credentials for a cloud application.</p>
+     * <p>Retrieves the connection credential for a cloud application.</p>
      * 
      * @param request GetConnectionTicketRequest
      * @return GetConnectionTicketResponse
@@ -2239,7 +2707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query the model configuration details currently bound to a specified cloud computer in the Wuying Agent Management Center, including model groups, model provider lists, and associated model information. After enabling the risk information mode, you can also identify differences between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</p>
+     * <p>You can query the model configuration details currently bound to a specified cloud computer in the Wuying Agent Management Center, including model groups, model provider lists, and associated model information. After you enable the risk information mode, you can also identify differences between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the model configuration details of a cloud computer.</p>
@@ -2290,7 +2758,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query the model configuration details currently bound to a specified cloud computer in the Wuying Agent Management Center, including model groups, model provider lists, and associated model information. After enabling the risk information mode, you can also identify differences between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</p>
+     * <p>You can query the model configuration details currently bound to a specified cloud computer in the Wuying Agent Management Center, including model groups, model provider lists, and associated model information. After you enable the risk information mode, you can also identify differences between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the model configuration details of a cloud computer.</p>
@@ -2305,7 +2773,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of multiple delivery groups that meet specified conditions, without specifying a particular delivery group.</p>
+     * <p>Queries the details of multiple delivery groups. This operation queries all delivery groups that meet the specified conditions instead of a specific delivery group.</p>
      * 
      * @param request ListAppInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2391,7 +2859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of multiple delivery groups that meet specified conditions, without specifying a particular delivery group.</p>
+     * <p>Queries the details of multiple delivery groups. This operation queries all delivery groups that meet the specified conditions instead of a specific delivery group.</p>
      * 
      * @param request ListAppInstanceGroupRequest
      * @return ListAppInstanceGroupResponse
@@ -2403,7 +2871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of session instances in a delivery group, including instance ID, instance status, creation time, update time, session status, and public IP address of the primary network interface.</p>
+     * <p>Queries the details of session instances in a delivery group, including instance IDs, instance statuses, creation time, update time, session statuses, and public IP addresses of primary network interface controllers (NICs).</p>
      * 
      * @param request ListAppInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2465,7 +2933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of session instances in a delivery group, including instance ID, instance status, creation time, update time, session status, and public IP address of the primary network interface.</p>
+     * <p>Queries the details of session instances in a delivery group, including instance IDs, instance statuses, creation time, update time, session statuses, and public IP addresses of primary network interface controllers (NICs).</p>
      * 
      * @param request ListAppInstancesRequest
      * @return ListAppInstancesResponse
@@ -2473,6 +2941,132 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAppInstancesResponse listAppInstances(ListAppInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAppInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This operation queries the list of delivery groups for which a specified user (EndUserId) has been granted <strong>delivery group-level authorization</strong>. The response includes basic information about each delivery group (ID, name, status, region, creation time, expiration time, and more) and the list of applications deployed in the delivery group.
+     * Scope of returned results:</p>
+     * <ul>
+     * <li>Only delivery groups that are authorized to the user as a whole through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are returned. Records authorized on a per-application basis through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation are not included.</li>
+     * <li>Only delivery groups whose product type matches the ProductType parameter and that have not been deleted are returned. A delivery group is not returned if its image contains no deployed applications.</li>
+     * <li>Results are sorted in reverse chronological order by the update time of the authorization record. The most recently authorized or modified delivery groups appear first.</li>
+     * </ul>
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>Call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize the delivery group to the user.</li>
+     * </ul>
+     * <h2>Parameter description</h2>
+     * <ul>
+     * <li><strong>ProductType and EndUserId are required</strong>. If ProductType is not specified, the error code <code>InvalidParameter.ProductType</code> is returned. If EndUserId is not specified, the error code <code>InvalidParameter.UserId</code> is returned.</li>
+     * <li>EndUserId performs an <strong>exact match</strong> on the username. AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName all perform <strong>fuzzy matching</strong> (a hit occurs if the value is contained). When multiple filter conditions are specified, all conditions must be met simultaneously.</li>
+     * <li>PageNumber starts from 1. Valid values of PageSize: 1 to 100.</li>
+     * <li>If the user has no authorized delivery groups that match the conditions, the operation returns normally: AppInstanceGroupModels is an empty list and TotalCount is 0.</li>
+     * </ul>
+     * <h2>Call sequence</h2>
+     * <ol>
+     * <li>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the delivery group ID, and then call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize the delivery group to the user.</li>
+     * <li>Call this operation to query the delivery groups authorized to the user and the applications deployed in each delivery group.</li>
+     * <li>To obtain an application connection ticket for the user, call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation with the AppInstanceGroupId and the AppId from the Apps list in the response.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the delivery groups for which a specified user has obtained access permissions through delivery group-level authorization by paging, with support for fuzzy filtering by delivery group ID, delivery group name, application ID, or application name.</p>
+     * 
+     * @param request ListAuthorizedAppInstanceGroupByUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAuthorizedAppInstanceGroupByUserResponse
+     */
+    public ListAuthorizedAppInstanceGroupByUserResponse listAuthorizedAppInstanceGroupByUserWithOptions(ListAuthorizedAppInstanceGroupByUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupId)) {
+            query.put("AppInstanceGroupId", request.appInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupName)) {
+            query.put("AppInstanceGroupName", request.appInstanceGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            query.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
+            query.put("EndUserId", request.endUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAuthorizedAppInstanceGroupByUser"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAuthorizedAppInstanceGroupByUserResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This operation queries the list of delivery groups for which a specified user (EndUserId) has been granted <strong>delivery group-level authorization</strong>. The response includes basic information about each delivery group (ID, name, status, region, creation time, expiration time, and more) and the list of applications deployed in the delivery group.
+     * Scope of returned results:</p>
+     * <ul>
+     * <li>Only delivery groups that are authorized to the user as a whole through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are returned. Records authorized on a per-application basis through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation are not included.</li>
+     * <li>Only delivery groups whose product type matches the ProductType parameter and that have not been deleted are returned. A delivery group is not returned if its image contains no deployed applications.</li>
+     * <li>Results are sorted in reverse chronological order by the update time of the authorization record. The most recently authorized or modified delivery groups appear first.</li>
+     * </ul>
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>Call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize the delivery group to the user.</li>
+     * </ul>
+     * <h2>Parameter description</h2>
+     * <ul>
+     * <li><strong>ProductType and EndUserId are required</strong>. If ProductType is not specified, the error code <code>InvalidParameter.ProductType</code> is returned. If EndUserId is not specified, the error code <code>InvalidParameter.UserId</code> is returned.</li>
+     * <li>EndUserId performs an <strong>exact match</strong> on the username. AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName all perform <strong>fuzzy matching</strong> (a hit occurs if the value is contained). When multiple filter conditions are specified, all conditions must be met simultaneously.</li>
+     * <li>PageNumber starts from 1. Valid values of PageSize: 1 to 100.</li>
+     * <li>If the user has no authorized delivery groups that match the conditions, the operation returns normally: AppInstanceGroupModels is an empty list and TotalCount is 0.</li>
+     * </ul>
+     * <h2>Call sequence</h2>
+     * <ol>
+     * <li>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the delivery group ID, and then call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize the delivery group to the user.</li>
+     * <li>Call this operation to query the delivery groups authorized to the user and the applications deployed in each delivery group.</li>
+     * <li>To obtain an application connection ticket for the user, call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation with the AppInstanceGroupId and the AppId from the Apps list in the response.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the delivery groups for which a specified user has obtained access permissions through delivery group-level authorization by paging, with support for fuzzy filtering by delivery group ID, delivery group name, application ID, or application name.</p>
+     * 
+     * @param request ListAuthorizedAppInstanceGroupByUserRequest
+     * @return ListAuthorizedAppInstanceGroupByUserResponse
+     */
+    public ListAuthorizedAppInstanceGroupByUserResponse listAuthorizedAppInstanceGroupByUser(ListAuthorizedAppInstanceGroupByUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAuthorizedAppInstanceGroupByUserWithOptions(request, runtime);
     }
 
     /**
@@ -2488,6 +3082,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupId)) {
             body.put("AppInstanceGroupId", request.appInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupSetId)) {
+            body.put("AppInstanceGroupSetId", request.appInstanceGroupSetId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
@@ -2537,6 +3135,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAuthorizedUserGroupsResponse listAuthorizedUserGroups(ListAuthorizedUserGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAuthorizedUserGroupsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>The target cloud browser group or delivery group set must be created, belong to the current account, and match the specified <code>ProductType</code>.</li>
+     * <li>When querying authorized users of cloud browsers, set <code>ProductType</code> to <code>CloudBrowser</code>.</li>
+     * <li><strong>Specify either <code>AppInstanceGroupId</code> or <code>AppInstanceGroupSetId</code>, but not both.</strong></li>
+     * </ul>
+     * <h2>Query notes</h2>
+     * <ul>
+     * <li>This operation returns authorization relationships and does not indicate whether users are currently online or sessions are connected.</li>
+     * <li>When querying by set, omit <code>AppId</code> and <code>AppInstancePersistentId</code>.</li>
+     * <li>Use <code>PageNumber</code> and <code>PageSize</code> for pagination and check <code>TotalCount</code> to determine whether to continue querying.</li>
+     * </ul>
+     * <h2>Example notes</h2>
+     * <p>The examples show how to set the fields. Replace resource identifiers with actual values in your account.
+     * An example value of <code>-</code> indicates that the parameter does not need to be set. Omit the corresponding parameter when calling the operation. Do not pass the character <code>-</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries authorized users of a cloud browser group with paging.</p>
+     * 
+     * @param request ListAuthorizedUsersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAuthorizedUsersResponse
+     */
+    public ListAuthorizedUsersResponse listAuthorizedUsersWithOptions(ListAuthorizedUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
+            query.put("EndUserId", request.endUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userIdFuzzy)) {
+            query.put("UserIdFuzzy", request.userIdFuzzy);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupId)) {
+            body.put("AppInstanceGroupId", request.appInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupSetId)) {
+            body.put("AppInstanceGroupSetId", request.appInstanceGroupSetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstancePersistentId)) {
+            body.put("AppInstancePersistentId", request.appInstancePersistentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAuthorizedUsers"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAuthorizedUsersResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>The target cloud browser group or delivery group set must be created, belong to the current account, and match the specified <code>ProductType</code>.</li>
+     * <li>When querying authorized users of cloud browsers, set <code>ProductType</code> to <code>CloudBrowser</code>.</li>
+     * <li><strong>Specify either <code>AppInstanceGroupId</code> or <code>AppInstanceGroupSetId</code>, but not both.</strong></li>
+     * </ul>
+     * <h2>Query notes</h2>
+     * <ul>
+     * <li>This operation returns authorization relationships and does not indicate whether users are currently online or sessions are connected.</li>
+     * <li>When querying by set, omit <code>AppId</code> and <code>AppInstancePersistentId</code>.</li>
+     * <li>Use <code>PageNumber</code> and <code>PageSize</code> for pagination and check <code>TotalCount</code> to determine whether to continue querying.</li>
+     * </ul>
+     * <h2>Example notes</h2>
+     * <p>The examples show how to set the fields. Replace resource identifiers with actual values in your account.
+     * An example value of <code>-</code> indicates that the parameter does not need to be set. Omit the corresponding parameter when calling the operation. Do not pass the character <code>-</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries authorized users of a cloud browser group with paging.</p>
+     * 
+     * @param request ListAuthorizedUsersRequest
+     * @return ListAuthorizedUsersResponse
+     */
+    public ListAuthorizedUsersResponse listAuthorizedUsers(ListAuthorizedUsersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAuthorizedUsersWithOptions(request, runtime);
     }
 
     /**
@@ -2605,6 +3315,127 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListBindInfoResponse listBindInfo(ListBindInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listBindInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This topic describes how to use this operation in the monthly active user (MAU) billing scenario.</p>
+     * <h2>Query conditions</h2>
+     * <p>You can filter by browser group identity, name, business region, office network, set, authorized user group, and status. Only one status value can be specified at a time.</p>
+     * <h2>Paging</h2>
+     * <p>Use <code>PageNumber</code> and <code>PageSize</code> for paging. Use the returned <code>TotalCount</code> to determine whether to continue querying the next page.</p>
+     * <h2>What to do next</h2>
+     * <p>To view the detailed configuration of a single browser group, invoke <code>GetBrowserInstanceGroup</code> with the returned identity.</p>
+     * <h2>Example notes</h2>
+     * <p>The <code>-</code> in the examples indicates that the field is not applicable or not returned in the current scenario. It is not an actual character string returned by the operation. Resource identities in the examples are masked. Use the actual query results in your environment.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries cloud browser groups and their current status by paging.</p>
+     * 
+     * @param request ListBrowserInstanceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListBrowserInstanceGroupResponse
+     */
+    public ListBrowserInstanceGroupResponse listBrowserInstanceGroupWithOptions(ListBrowserInstanceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupSetId)) {
+            query.put("AppInstanceGroupSetId", request.appInstanceGroupSetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            query.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.browserInstanceGroupId)) {
+            query.put("BrowserInstanceGroupId", request.browserInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.browserInstanceGroupName)) {
+            query.put("BrowserInstanceGroupName", request.browserInstanceGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudBrowserName)) {
+            query.put("CloudBrowserName", request.cloudBrowserName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
+            query.put("OfficeSiteId", request.officeSiteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tier)) {
+            query.put("Tier", request.tier);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.excludedUserGroupIds)) {
+            body.put("ExcludedUserGroupIds", request.excludedUserGroupIds);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            bodyFlat.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupIds)) {
+            body.put("UserGroupIds", request.userGroupIds);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListBrowserInstanceGroup"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListBrowserInstanceGroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This topic describes how to use this operation in the monthly active user (MAU) billing scenario.</p>
+     * <h2>Query conditions</h2>
+     * <p>You can filter by browser group identity, name, business region, office network, set, authorized user group, and status. Only one status value can be specified at a time.</p>
+     * <h2>Paging</h2>
+     * <p>Use <code>PageNumber</code> and <code>PageSize</code> for paging. Use the returned <code>TotalCount</code> to determine whether to continue querying the next page.</p>
+     * <h2>What to do next</h2>
+     * <p>To view the detailed configuration of a single browser group, invoke <code>GetBrowserInstanceGroup</code> with the returned identity.</p>
+     * <h2>Example notes</h2>
+     * <p>The <code>-</code> in the examples indicates that the field is not applicable or not returned in the current scenario. It is not an actual character string returned by the operation. Resource identities in the examples are masked. Use the actual query results in your environment.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries cloud browser groups and their current status by paging.</p>
+     * 
+     * @param request ListBrowserInstanceGroupRequest
+     * @return ListBrowserInstanceGroupResponse
+     */
+    public ListBrowserInstanceGroupResponse listBrowserInstanceGroup(ListBrowserInstanceGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listBrowserInstanceGroupWithOptions(request, runtime);
     }
 
     /**
@@ -2887,8 +3718,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query the list of model templates under a model provider template in the Wuying Agent Management Center with paging. Filtering by model group ID, model provider template ID, model template ID, and model encoding is supported. When querying by model group dimension, the default model is automatically placed at the top.
-     * Before using this operation, make sure you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * <p>You can query the list of model templates under a model provider template in the WUYING Agent Management Center with paging. Filtering by model group ID, model provider template ID, model template ID, and model encoding is supported. When querying by model group dimension, the default model is automatically pinned to the top.
+     * Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of LLM templates.</p>
@@ -2957,8 +3788,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query the list of model templates under a model provider template in the Wuying Agent Management Center with paging. Filtering by model group ID, model provider template ID, model template ID, and model encoding is supported. When querying by model group dimension, the default model is automatically placed at the top.
-     * Before using this operation, make sure you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * <p>You can query the list of model templates under a model provider template in the WUYING Agent Management Center with paging. Filtering by model group ID, model provider template ID, model template ID, and model encoding is supported. When querying by model group dimension, the default model is automatically pinned to the top.
+     * Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of LLM templates.</p>
@@ -3029,8 +3860,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can perform a paged query to retrieve the list of model provider templates under a specified model group in the WUYING Agent Management Center. Filtering by provider name, model group ID, and provider template ID is supported. Use the paging parameters to control the number of results returned per page.
-     * Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
+     * <p>You can perform a paged query to retrieve the list of model provider templates under a specified model group in the WUYING Agent Management Center. You can filter results by provider name, model group ID, and provider template ID. Paging is supported.
+     * Before you call this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of model provider templates.</p>
@@ -3099,8 +3930,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can perform a paged query to retrieve the list of model provider templates under a specified model group in the WUYING Agent Management Center. Filtering by provider name, model group ID, and provider template ID is supported. Use the paging parameters to control the number of results returned per page.
-     * Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
+     * <p>You can perform a paged query to retrieve the list of model provider templates under a specified model group in the WUYING Agent Management Center. You can filter results by provider name, model group ID, and provider template ID. Paging is supported.
+     * Before you call this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of model provider templates.</p>
@@ -3179,11 +4010,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query the model groups created in the WUYING Agent Management Center with paging. Filtering is supported by Agent provider, Agent platform, template group ID, and whether models have been configured.
-     * Before using this operation, make sure you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
+     * <p>You can use paged query to retrieve the list of model groups created in the Wuying Agent Management Center. You can filter results by Agent provider, Agent platform, template group ID, and whether models have been configured. Paging is supported.
+     * Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of model templates.</p>
+     * <p>Queries a list of model templates.</p>
      * 
      * @param tmpReq ListModelTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3265,11 +4096,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query the model groups created in the WUYING Agent Management Center with paging. Filtering is supported by Agent provider, Agent platform, template group ID, and whether models have been configured.
-     * Before using this operation, make sure you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
+     * <p>You can use paged query to retrieve the list of model groups created in the Wuying Agent Management Center. You can filter results by Agent provider, Agent platform, template group ID, and whether models have been configured. Paging is supported.
+     * Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of model templates.</p>
+     * <p>Queries a list of model templates.</p>
      * 
      * @param request ListModelTemplatesRequest
      * @return ListModelTemplatesResponse
@@ -3712,10 +4543,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the list of WUYING workstations.</p>
+     * <p>Retrieves a list of WUYING workstations.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of workstations.</p>
+     * <p>Queries a list of workstations.</p>
      * 
      * @param request ListWuyingServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3832,10 +4663,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the list of WUYING workstations.</p>
+     * <p>Retrieves a list of WUYING workstations.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of workstations.</p>
+     * <p>Queries a list of workstations.</p>
      * 
      * @param request ListWuyingServerRequest
      * @return ListWuyingServerResponse
@@ -3905,7 +4736,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the general policy of a delivery group, including the number of concurrent sessions and the session disconnection retention duration.</p>
+     * <p>Modifies the General Policy of a delivery group, including the number of concurrent sessions and the session retention duration after disconnection.</p>
      * 
      * @param tmpReq ModifyAppInstanceGroupAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3997,7 +4828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the general policy of a delivery group, including the number of concurrent sessions and the session disconnection retention duration.</p>
+     * <p>Modifies the General Policy of a delivery group, including the number of concurrent sessions and the session retention duration after disconnection.</p>
      * 
      * @param request ModifyAppInstanceGroupAttributeRequest
      * @return ModifyAppInstanceGroupAttributeResponse
@@ -4118,6 +4949,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authNotificationEnabled)) {
+            body.put("AuthNotificationEnabled", request.authNotificationEnabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cloudBrowserName)) {
             body.put("CloudBrowserName", request.cloudBrowserName);
         }
@@ -4364,6 +5199,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyWuyingServerAttributeResponse modifyWuyingServerAttributeWithOptions(ModifyWuyingServerAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.erdmaEnabled)) {
+            body.put("ErdmaEnabled", request.erdmaEnabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.password)) {
             body.put("Password", request.password);
         }
@@ -4656,6 +5495,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing and pricing</a> of WUYING Workspace.</p>
+     * <blockquote>
+     * <p>Prerequisites:</p>
+     * <ul>
+     * <li>The delivery group must be in the PUBLISHED state, and ChargeType must be set to PrePaid.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <b>summary</b> : 
      * <p>Renews a delivery group.</p>
@@ -4729,6 +5574,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing and pricing</a> of WUYING Workspace.</p>
+     * <blockquote>
+     * <p>Prerequisites:</p>
+     * <ul>
+     * <li>The delivery group must be in the PUBLISHED state, and ChargeType must be set to PrePaid.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <b>summary</b> : 
      * <p>Renews a delivery group.</p>
@@ -4803,7 +5654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restarts a cloud graphics workstation.</p>
+     * <p>Restarts a workstation.</p>
      * 
      * @param request RestartWuyingServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4844,7 +5695,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restarts a cloud graphics workstation.</p>
+     * <p>Restarts a workstation.</p>
      * 
      * @param request RestartWuyingServerRequest
      * @return RestartWuyingServerResponse
@@ -5243,8 +6094,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Warning: After the image update starts, sessions of end users accessing cloud applications will be disconnected. Proceed with caution to avoid data loss for end users.
-     * After the update is published, changes typically take about 2 minutes to take effect on the client.</p>
+     * <p>Warning: After the image update starts, sessions of end users who are accessing cloud applications will be disconnected. Proceed with caution to avoid data loss for end users.
+     * Before calling this API, the delivery group must be in the PUBLISHED, DEPLOYED, or MAINTAIN_FAILED state. You can call GetAppInstanceGroup to query the current state of the delivery group.
+     * After the update is published, you typically need to wait about 2 minutes for the changes to take effect on the client.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -5293,8 +6145,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Warning: After the image update starts, sessions of end users accessing cloud applications will be disconnected. Proceed with caution to avoid data loss for end users.
-     * After the update is published, changes typically take about 2 minutes to take effect on the client.</p>
+     * <p>Warning: After the image update starts, sessions of end users who are accessing cloud applications will be disconnected. Proceed with caution to avoid data loss for end users.
+     * Before calling this API, the delivery group must be in the PUBLISHED, DEPLOYED, or MAINTAIN_FAILED state. You can call GetAppInstanceGroup to query the current state of the delivery group.
+     * After the update is published, you typically need to wait about 2 minutes for the changes to take effect on the client.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -5386,8 +6239,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can update a model group that has been created in the WUYING Agent Management Center, including the group name, description, and model configuration information. You can modify the default model of a model group by updating the Config field. The updated configuration automatically takes effect on associated cloud desktops.
-     * Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
+     * <p>You can update a model group that has been created in the Wuying Agent Management Center, including the group name, description, and model configuration information. You can modify the default model of a model group by updating the Config field. The updated configuration automatically takes effect on associated cloud desktops.
+     * Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a model template.</p>
@@ -5438,8 +6291,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can update a model group that has been created in the WUYING Agent Management Center, including the group name, description, and model configuration information. You can modify the default model of a model group by updating the Config field. The updated configuration automatically takes effect on associated cloud desktops.
-     * Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
+     * <p>You can update a model group that has been created in the Wuying Agent Management Center, including the group name, description, and model configuration information. You can modify the default model of a model group by updating the Config field. The updated configuration automatically takes effect on associated cloud desktops.
+     * Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a model template.</p>

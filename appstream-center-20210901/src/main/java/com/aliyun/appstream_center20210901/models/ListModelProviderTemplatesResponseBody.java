@@ -11,7 +11,7 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
     public java.util.List<ListModelProviderTemplatesResponseBodyData> data;
 
     /**
-     * <p>The current page number of the query results.</p>
+     * <p>The page number of the current query result.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in the query result.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -160,7 +160,7 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
         public String providerType;
 
         /**
-         * <p>The WUYING secure gateway proxy ProviderKey.</p>
+         * <p>The ProviderKey of the WUYING secure gateway proxy.</p>
          * 
          * <strong>example:</strong>
          * <p>wuying-key-12345</p>

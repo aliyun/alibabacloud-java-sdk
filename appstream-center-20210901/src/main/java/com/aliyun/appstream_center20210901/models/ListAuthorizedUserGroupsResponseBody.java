@@ -32,7 +32,7 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -102,6 +102,15 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
         public String appInstanceGroupId;
 
         /**
+         * <p>The ID of the delivery group set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>set-3jm9d0abc00example</p>
+         */
+        @NameInMap("AppInstanceGroupSetId")
+        public String appInstanceGroupSetId;
+
+        /**
          * <p>The authorization mode.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +132,7 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
          * <p>The name of the user group.</p>
          * 
          * <strong>example:</strong>
-         * <p>用户组001</p>
+         * <p>UserGroup001</p>
          */
         @NameInMap("GroupName")
         public String groupName;
@@ -139,6 +148,14 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
         }
         public String getAppInstanceGroupId() {
             return this.appInstanceGroupId;
+        }
+
+        public ListAuthorizedUserGroupsResponseBodyUserGroups setAppInstanceGroupSetId(String appInstanceGroupSetId) {
+            this.appInstanceGroupSetId = appInstanceGroupSetId;
+            return this;
+        }
+        public String getAppInstanceGroupSetId() {
+            return this.appInstanceGroupSetId;
         }
 
         public ListAuthorizedUserGroupsResponseBodyUserGroups setAuthMode(String authMode) {

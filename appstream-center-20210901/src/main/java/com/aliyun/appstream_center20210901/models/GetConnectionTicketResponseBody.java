@@ -33,6 +33,9 @@ public class GetConnectionTicketResponseBody extends TeaModel {
 
     /**
      * <p>The avatar ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("AvatarId")
     public String avatarId;
@@ -92,9 +95,9 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     public Long tenantId;
 
     /**
-     * <p>The credentials for connecting to the cloud application.</p>
+     * <p>The credential for connecting to the cloud application.</p>
      * <blockquote>
-     * <p>This parameter is returned only on non-initial calls.</p>
+     * <p>This parameter is returned only for non-initial calls.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

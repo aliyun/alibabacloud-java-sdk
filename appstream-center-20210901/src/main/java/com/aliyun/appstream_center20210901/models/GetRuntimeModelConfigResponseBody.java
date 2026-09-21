@@ -42,13 +42,19 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
 
     public static class GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoListCreditMultiplier extends TeaModel {
         /**
-         * <p>The maximum multiplier. An empty value indicates no upper limit. For example, Min=1 with an empty Max is displayed as 1x and above.</p>
+         * <p>The maximum multiplier. A null value indicates no upper limit. For example, Min=1 with a null Max is displayed as 1x and above.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Max")
         public Float max;
 
         /**
-         * <p>The minimum multiplier. When equal to Max, it is a fixed multiplier. For example, Min=Max=2 is displayed as 2x.</p>
+         * <p>The minimum multiplier. When equal to Max, the multiplier is fixed. For example, Min=Max=2 is displayed as 2x.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Min")
         public Float min;
@@ -114,7 +120,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
 
     public static class GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoList extends TeaModel {
         /**
-         * <p>The credit consumption multiplier. An empty value indicates the model does not participate in credit-based billing.</p>
+         * <p>The credit consumption multiplier. A null value indicates that the model does not participate in credit-based billing.</p>
          */
         @NameInMap("CreditMultiplier")
         public GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoListCreditMultiplier creditMultiplier;
@@ -123,7 +129,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
          * <p>The model description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Qwen3.6原生视觉语言系列Plus模型，展现出与当前顶尖前沿模型相媲美的卓越性能，模型效果相较3.5系列显著提升。模型在Agentic coding、前端编程、Vibe coding等代码能力、多模态万物识别、OCR、物体定位等能力上显著增强</p>
+         * <p>The Qwen3.6 native vision-language series Plus model demonstrates outstanding performance comparable to current top frontier models, with significant improvements over the 3.5 series. The model features significantly enhanced capabilities in agentic coding, frontend programming, vibe coding, multimodal universal recognition, OCR, and object localization</p>
          */
         @NameInMap("Description")
         public String description;
@@ -355,7 +361,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
         public String modelTemplateName;
 
         /**
-         * <p>The model template association type (returned only when present).</p>
+         * <p>The model template association type (only when present).</p>
          * 
          * <strong>example:</strong>
          * <p>Runtime</p>

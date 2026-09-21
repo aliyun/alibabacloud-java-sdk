@@ -94,6 +94,9 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
     public static class ListDesktopAgentRuntimeResponseBodyDataAgentImInfo extends TeaModel {
         /**
          * <p>The agent IM online status (Online/Offline). Default value: Offline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Online</p>
          */
         @NameInMap("AgentImOnlineStatus")
         public String agentImOnlineStatus;
@@ -167,19 +170,25 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public String agentInstanceVersion;
 
         /**
-         * <p>The agent platform (enum name, such as ENTERPRISE, JVS, or ENTERPRISE_JVS).</p>
+         * <p>The agent platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE_AGENTIC_COMPUTER</p>
          */
         @NameInMap("AgentPlatform")
         public String agentPlatform;
 
         /**
-         * <p>The agent provider (enum name, such as OPEN_CLAW or HERMES_AGENT).</p>
+         * <p>The agent provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AgenticComputer</p>
          */
         @NameInMap("AgentProvider")
         public String agentProvider;
 
         /**
-         * <p>Indicates whether a third-party channel has been configured for the agent instance.</p>
+         * <p>Indicates whether the agent instance has a third-party channel configured.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -203,7 +212,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public String deploymentSource;
 
         /**
-         * <p>Indicates whether a model has been configured for the agent instance.</p>
+         * <p>Indicates whether the agent instance has a model configured.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -352,7 +361,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public Boolean agentUninstalled;
 
         /**
-         * <p>Indicates whether the third-party channel configuration has been modified (inconsistent with the administrator-distributed configuration).</p>
+         * <p>Indicates whether the third-party channel configuration has been modified (inconsistent with the configuration distributed by the administrator).</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -361,7 +370,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public Boolean channelModified;
 
         /**
-         * <p>Indicates whether the model configuration has been modified (inconsistent with the administrator-distributed configuration).</p>
+         * <p>Indicates whether the model configuration has been modified (inconsistent with the configuration distributed by the administrator).</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -420,7 +429,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public java.util.List<String> authUsers;
 
         /**
-         * <p>Indicates whether a third-party channel has been configured for the agent runtime.</p>
+         * <p>Indicates whether a third-party channel is configured for the agent runtime.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -471,13 +480,13 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public Boolean hasAuthUser;
 
         /**
-         * <p>The management status list, parsed from the managementStatus composite value.</p>
+         * <p>The management status list, parsed from the managementStatus combined value.</p>
          */
         @NameInMap("ManagementStatuses")
         public java.util.List<String> managementStatuses;
 
         /**
-         * <p>Indicates whether a model has been configured for the agent runtime.</p>
+         * <p>Indicates whether a model is configured for the agent runtime.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -528,7 +537,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The region location (the Chinese mainland or outside China).</p>
+         * <p>The region location (the Chinese mainland or outside the Chinese mainland).</p>
          * 
          * <strong>example:</strong>
          * <p>Mainland</p>

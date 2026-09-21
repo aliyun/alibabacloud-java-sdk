@@ -11,7 +11,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
     public java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModels> appInstanceGroupModels;
 
     /**
-     * <p>The page number of the displayed query results.</p>
+     * <p>The current page number of query results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -114,7 +114,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
          * <p>The application name.</p>
          * 
          * <strong>example:</strong>
-         * <p>办公应用</p>
+         * <p>OfficeApp</p>
          */
         @NameInMap("AppName")
         public String appName;
@@ -132,7 +132,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
          * <p>The application version name.</p>
          * 
          * <strong>example:</strong>
-         * <p>初始版本</p>
+         * <p>Initial version</p>
          */
         @NameInMap("AppVersionName")
         public String appVersionName;
@@ -307,7 +307,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public Integer amount;
 
         /**
-         * <p>The upper limit of idle sessions. When this value is specified, automatic scale-out is triggered only when the session usage exceeds <code>ScalingUsageThreshold</code> and the number of idle sessions in the delivery group is less than <code>MaxIdleAppInstanceAmount</code>. Otherwise, the delivery group is considered to have sufficient idle sessions and automatic scale-out is not triggered. This parameter allows flexible control over elastic scaling behavior and helps reduce costs.</p>
+         * <p>The upper limit of idle sessions. When this value is specified, automatic scale-out is triggered only when the session usage exceeds <code>ScalingUsageThreshold</code> and the number of idle sessions in the current delivery group is less than <code>MaxIdleAppInstanceAmount</code>. Otherwise, the delivery group is considered to have sufficient idle sessions and automatic scale-out is not triggered. This parameter provides flexible control over elastic scaling behavior and helps reduce costs.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -316,7 +316,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public Integer maxIdleAppInstanceAmount;
 
         /**
-         * <p>The maximum number of resources that can be created during scale-out.</p>
+         * <p>The maximum number of resources that can be created during a scale-out operation.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -361,7 +361,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public String nodePoolId;
 
         /**
-         * <p>The resource specification name.</p>
+         * <p>The name of the resource specification.</p>
          * 
          * <strong>example:</strong>
          * <p>无影-通用型_4核8G</p>
@@ -385,7 +385,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePoolRecurrenceSchedules> recurrenceSchedules;
 
         /**
-         * <p>The duration of no session connections, in minutes. When a resource remains in a no-session-connection state for the specified duration, automatic scale-in is triggered. Default value: 5.</p>
+         * <p>The idle duration without session connections, in minutes. When a resource remains without session connections for the specified duration, automatic scale-in is triggered. Default value: 5.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -421,7 +421,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public Integer scalingStep;
 
         /**
-         * <p>The upper threshold of session usage (%). When the session usage exceeds this threshold, automatic scale-out is triggered. The formula for session usage is: <code>session usage = current number of sessions ÷ (total number of resources × concurrent sessions per resource) × 100%</code>.</p>
+         * <p>The upper threshold of session usage (%). When the session usage exceeds this threshold, automatic scale-out is triggered. The session usage is calculated as follows: <code>Session usage = Number of current sessions ÷ (Total number of resources × Concurrent sessions per resource) × 100%</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>85</p>
@@ -430,7 +430,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public String scalingUsageThreshold;
 
         /**
-         * <p>The date when the policy expires. Format: yyyy-MM-dd.</p>
+         * <p>The date when the policy becomes inactive. Format: yyyy-MM-dd.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-09-08</p>
@@ -842,10 +842,10 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public String appInstanceGroupId;
 
         /**
-         * <p>The delivery group name.</p>
+         * <p>The name of the delivery group.</p>
          * 
          * <strong>example:</strong>
-         * <p>办公应用</p>
+         * <p>OfficeApp</p>
          */
         @NameInMap("AppInstanceGroupName")
         public String appInstanceGroupName;
@@ -902,7 +902,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public String authMode;
 
         /**
-         * <p>The sales mode.</p>
+         * <p>The billing mode.</p>
          * 
          * <strong>example:</strong>
          * <p>Node</p>
@@ -920,7 +920,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The expiration time of the delivery group.</p>
+         * <p>The expiration time of the delivery group. The value is in the ISO 8601 datetime format, including milliseconds and time zone offset. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSSXXX.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-27T16:00:00.000+00:00</p>
@@ -1004,7 +1004,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The reserved instance percentage, which is the ratio of unused sessions in the delivery group. Valid values: 0 to 99.</p>
+         * <p>The percentage of reserved instances, which is the ratio of unused sessions in the delivery group. Valid values: 0 to 99.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -1046,7 +1046,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsResourceTags> resourceTags;
 
         /**
-         * <p>The duration of no session connections, in minutes. When a resource remains in a no-session-connection state for the specified duration, automatic scale-in is triggered. Minimum value: 0.</p>
+         * <p>The idle duration without session connections, in minutes. When a resource remains without session connections for the specified duration, automatic scale-in is triggered. Minimum value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -1064,7 +1064,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public Integer scalingStep;
 
         /**
-         * <p>The upper threshold of session usage (%). When the session usage exceeds this threshold, automatic scale-out is triggered. The formula for session usage is: session usage = number of sessions in use ÷ total number of sessions × 100%. Valid values: 0 to 99.</p>
+         * <p>The upper threshold of session usage (%). When the session usage exceeds this threshold, automatic scale-out is triggered. The session usage is calculated as follows: Session usage = Number of sessions in use ÷ Total number of sessions × 100%. Valid values: 0 to 99.</p>
          * 
          * <strong>example:</strong>
          * <p>85</p>
@@ -1073,7 +1073,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public String scalingUsageThreshold;
 
         /**
-         * <p>The session disconnection retention duration, in minutes. After an end user session is disconnected, the session is retained for the specified duration before being logged off. Set this value to <code>-1</code> to retain the session indefinitely. Valid values: -1 and 3 to 300. Default value: <code>15</code>.</p>
+         * <p>The duration for which a disconnected session is retained, in minutes. After an end user session is disconnected, the session is retained for the duration specified here before being logged off. Set this parameter to <code>-1</code> to retain the session indefinitely. Valid values: -1 and 3 to 300. Default value: <code>15</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -1108,6 +1108,9 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Indicates whether mixed authorization of users and user groups is supported.</p>
+         */
         @NameInMap("SupportUserGroupMixedAuth")
         public Boolean supportUserGroupMixedAuth;
 
@@ -1118,6 +1121,8 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsTags> tags;
 
         /**
+         * <p>The authorization mode for users and user groups.</p>
+         * 
          * <strong>example:</strong>
          * <p>Mixed</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyNodePoolAmountRequest extends TeaModel {
     /**
-     * <p>The delivery group ID.</p>
+     * <p>The ID of the delivery group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,6 +63,11 @@ public class ModifyNodePoolAmountRequest extends TeaModel {
     public static class ModifyNodePoolAmountRequestNodePool extends TeaModel {
         /**
          * <p>The total number of subscription nodes after the upgrade.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This value must be greater than the current number of purchased nodes (Amount) in the delivery group. Otherwise, the API returns InvalidAmount.UnIncrease.</li>
+         * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -72,7 +77,7 @@ public class ModifyNodePoolAmountRequest extends TeaModel {
         public Integer nodeAmount;
 
         /**
-         * <p>The subscription node modification mode.</p>
+         * <p>The modification mode for subscription nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>EXPAND_FROM_POST_PAID_EXPLICIT</p>

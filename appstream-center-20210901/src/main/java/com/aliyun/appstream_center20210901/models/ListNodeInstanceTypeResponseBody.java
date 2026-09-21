@@ -120,7 +120,7 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         public Long gpuMemory;
 
         /**
-         * <p>The maximum number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. If too many sessions are connected simultaneously, the application experience may degrade. The valid values vary by resource specification. The valid values for each resource specification are as follows:</p>
+         * <p>The maximum number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. If too many sessions are connected at the same time, the application experience may degrade. The valid values vary depending on the resource specification. The valid values for each resource specification are as follows:</p>
          * <ul>
          * <li>appstreaming.general.2c4g: 1</li>
          * <li>appstreaming.general.4c8g: 1 to 2</li>
@@ -177,7 +177,7 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
          * <p>The resource specification name.</p>
          * 
          * <strong>example:</strong>
-         * <p>WUYING-General-purpose_4vCPU8GB.</p>
+         * <p>WUYING-General-purpose_4vCPU8GB</p>
          */
         @NameInMap("NodeTypeName")
         public String nodeTypeName;

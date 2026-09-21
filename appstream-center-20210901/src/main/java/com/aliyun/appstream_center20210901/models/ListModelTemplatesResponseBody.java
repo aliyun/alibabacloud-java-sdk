@@ -11,7 +11,7 @@ public class ListModelTemplatesResponseBody extends TeaModel {
     public java.util.List<ListModelTemplatesResponseBodyData> data;
 
     /**
-     * <p>The current page number of the query results.</p>
+     * <p>The page number of the current query results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -94,6 +94,9 @@ public class ListModelTemplatesResponseBody extends TeaModel {
     public static class ListModelTemplatesResponseBodyData extends TeaModel {
         /**
          * <p>The Agent platform (such as ENTERPRISE or ENTERPRISE_JVS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE_AGENTIC_COMPUTER</p>
          */
         @NameInMap("AgentPlatform")
         public String agentPlatform;
@@ -142,6 +145,9 @@ public class ListModelTemplatesResponseBody extends TeaModel {
 
         /**
          * <p>The number of models in the model group, including referenced system provider models.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("ModelCount")
         public Integer modelCount;
@@ -165,23 +171,28 @@ public class ListModelTemplatesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The group authorization scope. Valid values:</p>
-         * <ul>
-         * <li>ALL_USER: all users.</li>
-         * <li>USER_MIXED: user mixed (a mix of user groups and users, only for Common groups).</li>
-         * </ul>
+         * <p>The group authorization scope. Valid values: ALL_USER (all users) and USER_MIXED (a mix of user groups and users, only for Common groups).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL_USER</p>
          */
         @NameInMap("RefScope")
         public String refScope;
 
         /**
-         * <p>The number of authorized users in the group. Returned only when ListModelTemplates is called with refScope=USER_MIXED. Otherwise null.</p>
+         * <p>The number of authorized users in the group. This value is returned only when ListModelTemplates is called and refScope is USER_MIXED. Otherwise, the value is null.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("UserCount")
         public Integer userCount;
 
         /**
-         * <p>The number of authorized user groups in the group. Returned only when ListModelTemplates is called with refScope=USER_MIXED. Otherwise null.</p>
+         * <p>The number of authorized user groups in the group. This value is returned only when ListModelTemplates is called and refScope is USER_MIXED. Otherwise, the value is null.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("UserGroupCount")
         public Integer userGroupCount;

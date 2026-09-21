@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWuyingServerRequest extends TeaModel {
     /**
-     * <p>The number of workstations to create.</p>
+     * <p>The quantity.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class CreateWuyingServerRequest extends TeaModel {
     public Integer bandwidth;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -50,7 +50,7 @@ public class CreateWuyingServerRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The billing method.</p>
+     * <p>The billing type.</p>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -65,29 +65,47 @@ public class CreateWuyingServerRequest extends TeaModel {
     public java.util.List<CreateWuyingServerRequestDataDisk> dataDisk;
 
     /**
+     * <p>Specifies whether to enable dedicated eRDMA network interfaces.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("ErdmaEnabled")
+    public Boolean erdmaEnabled;
+
+    /**
+     * <p>The GPU driver configuration version, such as grid19.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>grid19</p>
+     */
+    @NameInMap("GpuDriverVersion")
+    public String gpuDriverVersion;
+
+    /**
      * <p>The hostname. The following limits apply:</p>
      * <ul>
-     * <li><p>A period (.) or hyphen (-) cannot be used as the first or last character, and consecutive periods or hyphens are not allowed.</p>
+     * <li><p>A period (.) or hyphen (-) cannot be used as the first or last character, and consecutive use is not allowed.</p>
      * </li>
-     * <li><p>Windows workstations: The hostname must be 2 to 15 characters in length. It cannot contain periods (.). Consecutive hyphens are not allowed, and the hostname cannot be all digits. The hostname can contain uppercase and lowercase letters, digits, and hyphens (-).</p>
+     * <li><p>Windows workstations: The hostname must be 2 to 15 characters in length. It cannot contain periods (.), consecutive hyphens, or consist entirely of digits. It can contain uppercase and lowercase letters, digits, and hyphens (-).</p>
      * </li>
      * <li><p>Linux workstations:</p>
      * <ul>
-     * <li><p>The hostname must be 2 to 64 characters in length and can contain multiple periods (.). Each segment separated by a period can contain uppercase and lowercase letters, digits, and hyphens (-).</p>
+     * <li><p>The hostname must be 2 to 64 characters in length and can contain multiple periods (.). Each segment between periods can contain uppercase and lowercase letters, digits, and hyphens (-).</p>
      * </li>
-     * <li><p>You can use the placeholder <code>${instance_id}</code> to include the instance ID in the HostName parameter. For example, if you set <code>HostName=k8s-${instance_id}</code> and the ECS instance ID is <code>i-123abc****</code>, the hostname is <code>k8s-i-123abc****</code>.</p>
+     * <li><p>You can use the placeholder <code>${instance_id}</code> to include the instance ID in the HostName parameter. For example, if you set <code>HostName=k8s-${instance_id}</code> and the created ECS instance ID is <code>i-123abc****</code>, the hostname of the instance is <code>k8s-i-123abc****</code>.</p>
      * </li>
      * </ul>
      * </li>
-     * <li><p>When you create multiple workstation instances at a time, you can use the <code>name_prefix[begin_number,bits]name_suffix</code> format to assign sequential hostnames. For example, if you set HostName to <code>ecd-[1,4]-test</code>, the hostname of the first workstation is <code>ecd-0001-test</code>, the hostname of the second workstation is <code>ecd-0002-test</code>, and so on.</p>
+     * <li><p>When creating multiple workstation instances at a time, you can use the <code>name_prefix[begin_number,bits]name_suffix</code> naming format to uniformly name multiple workstations. For example, if you set Hostname to <code>ecd-[1,4]-test</code>, the hostname of the first workstation is <code>ecd-0001-test</code>, the hostname of the second workstation is <code>ecd-0002-test</code>, and so on.</p>
      * <ul>
      * <li><p><code>name_prefix</code>: The prefix of the hostname.</p>
      * </li>
      * <li><p><code>[begin_number,bits]</code>: The sequential number in the hostname.</p>
      * <ul>
-     * <li><p><code>begin_number</code>: The starting number. Valid values: 0 to 999999. Default value: 0. If the value is invalid, it is set to 0.</p>
+     * <li><p><code>begin_number</code>: The starting number. Valid values: 0 to 999999. Default value: 0. If an invalid value is specified, the value is set to 0.</p>
      * </li>
-     * <li><p><code>bits</code>: The number of digits. Valid values: 1 to 6. Default value: 6. If the value is invalid, it is set to 6.</p>
+     * <li><p><code>bits</code>: The number of digits. Valid values: 1 to 6. Default value: 6. If an invalid value is specified, the value is set to 6.</p>
      * </li>
      * </ul>
      * </li>
@@ -104,7 +122,7 @@ public class CreateWuyingServerRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The idempotence token that ensures the uniqueness of the operation.</p>
+     * <p>The idempotency token that ensures operation uniqueness.</p>
      * 
      * <strong>example:</strong>
      * <p>6a1b8c3d</p>
@@ -121,6 +139,12 @@ public class CreateWuyingServerRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The maximum price.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.05</p>
+     */
     @NameInMap("MaxPrice")
     public Float maxPrice;
 
@@ -143,7 +167,7 @@ public class CreateWuyingServerRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The logon password of the workstation.</p>
+     * <p>The workstation logon password.</p>
      * 
      * <strong>example:</strong>
      * <p>YourPassword123</p>
@@ -161,7 +185,7 @@ public class CreateWuyingServerRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the subscription duration.</p>
+     * <p>The time unit.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -172,7 +196,7 @@ public class CreateWuyingServerRequest extends TeaModel {
     /**
      * <p>The discount ID.</p>
      * <blockquote>
-     * <p>If PromotionId is specified, the system attempts to apply the corresponding discount.</p>
+     * <p>If PromotionId is specified, the corresponding discount is applied.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -181,6 +205,12 @@ public class CreateWuyingServerRequest extends TeaModel {
     @NameInMap("PromotionId")
     public String promotionId;
 
+    /**
+     * <p>The savings plan ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>spn-ce3f5b4fk**46CY</p>
+     */
     @NameInMap("SavingPlanId")
     public String savingPlanId;
 
@@ -193,14 +223,26 @@ public class CreateWuyingServerRequest extends TeaModel {
     @NameInMap("ServerInstanceType")
     public String serverInstanceType;
 
+    /**
+     * <p>The service port range.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22/22</p>
+     */
     @NameInMap("ServerPortRange")
     public String serverPortRange;
 
+    /**
+     * <p>The sub-billing type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>postPaid</p>
+     */
     @NameInMap("SubPayType")
     public String subPayType;
 
     /**
-     * <p>The type of the system cloud disk.</p>
+     * <p>The system cloud disk type.</p>
      * 
      * <strong>example:</strong>
      * <p>cloud_auto</p>
@@ -209,7 +251,7 @@ public class CreateWuyingServerRequest extends TeaModel {
     public String systemDiskCategory;
 
     /**
-     * <p>The performance level of the system cloud disk.</p>
+     * <p>The system cloud disk performance level.</p>
      * 
      * <strong>example:</strong>
      * <p>PL0</p>
@@ -218,7 +260,7 @@ public class CreateWuyingServerRequest extends TeaModel {
     public String systemDiskPerformanceLevel;
 
     /**
-     * <p>The size of the system cloud disk. Unit: GB.</p>
+     * <p>The system cloud disk size. Unit: GB.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -227,12 +269,14 @@ public class CreateWuyingServerRequest extends TeaModel {
     public Integer systemDiskSize;
 
     /**
-     * <p>The list of vSwitches in the office network.</p>
+     * <p>The list of office network vSwitches.</p>
      */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 
     /**
+     * <p>The virtual node pool ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>vnp-0b************gyw</p>
      */
@@ -240,7 +284,7 @@ public class CreateWuyingServerRequest extends TeaModel {
     public String virtualNodePoolId;
 
     /**
-     * <p>The workstation name. When you create multiple workstations, a numeric suffix is automatically appended.</p>
+     * <p>The workstation name. When creating multiple workstations, a numeric suffix is automatically appended.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleServerName</p>
@@ -307,6 +351,22 @@ public class CreateWuyingServerRequest extends TeaModel {
     }
     public java.util.List<CreateWuyingServerRequestDataDisk> getDataDisk() {
         return this.dataDisk;
+    }
+
+    public CreateWuyingServerRequest setErdmaEnabled(Boolean erdmaEnabled) {
+        this.erdmaEnabled = erdmaEnabled;
+        return this;
+    }
+    public Boolean getErdmaEnabled() {
+        return this.erdmaEnabled;
+    }
+
+    public CreateWuyingServerRequest setGpuDriverVersion(String gpuDriverVersion) {
+        this.gpuDriverVersion = gpuDriverVersion;
+        return this;
+    }
+    public String getGpuDriverVersion() {
+        return this.gpuDriverVersion;
     }
 
     public CreateWuyingServerRequest setHostName(String hostName) {
@@ -471,7 +531,7 @@ public class CreateWuyingServerRequest extends TeaModel {
 
     public static class CreateWuyingServerRequestDataDisk extends TeaModel {
         /**
-         * <p>The type of the data cloud disk.</p>
+         * <p>The data cloud disk type.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_auto</p>
@@ -480,7 +540,7 @@ public class CreateWuyingServerRequest extends TeaModel {
         public String dataDiskCategory;
 
         /**
-         * <p>The performance level of the data cloud disk.</p>
+         * <p>The data cloud disk performance level.</p>
          * 
          * <strong>example:</strong>
          * <p>PL0</p>
@@ -489,7 +549,7 @@ public class CreateWuyingServerRequest extends TeaModel {
         public String dataDiskPerformanceLevel;
 
         /**
-         * <p>The size of the data cloud disk.</p>
+         * <p>The data cloud disk size.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

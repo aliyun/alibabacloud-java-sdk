@@ -4,6 +4,12 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class RestartWuyingServerRequest extends TeaModel {
+    /**
+     * <p>The product type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WuyingServer</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 

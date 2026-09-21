@@ -35,13 +35,13 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
      * <p>The agent platform.</p>
      * 
      * <strong>example:</strong>
-     * <p>ENTERPRISE</p>
+     * <p>ENTERPRISE_AGENTIC_COMPUTER</p>
      */
     @NameInMap("AgentPlatform")
     public String agentPlatform;
 
     /**
-     * <p>The list of agent platforms. If AgentPlatform is also specified, AgentPlatform takes precedence and this list is ignored.</p>
+     * <p>The list of agent platforms. If both AgentPlatformList and AgentPlatform are specified, AgentPlatform takes precedence and this list is ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -53,13 +53,13 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
      * <p>The agent provider name.</p>
      * 
      * <strong>example:</strong>
-     * <p>OpenClaw</p>
+     * <p>AgenticComputer</p>
      */
     @NameInMap("AgentProvider")
     public String agentProvider;
 
     /**
-     * <p>The list of agent providers. If AgentProvider is also specified, AgentProvider takes precedence and this list is ignored.</p>
+     * <p>The list of agent providers. If both AgentProviderList and AgentProvider are specified, AgentProvider takes precedence and this list is ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>OpenClaw</p>
@@ -149,7 +149,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public java.util.List<String> desktopStatuses;
 
     /**
-     * <p>Indicates whether an authorized user exists for authorization.</p>
+     * <p>Indicates whether authorization is granted to an authorized user.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -158,8 +158,8 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public Boolean hasAuthUser;
 
     /**
-     * <p>Specifies whether a risk exists. This parameter is used to filter Cloud Desktops with or without risks and takes effect only when IncludeRiskInfo is set to true.</p>
-     * <p>Set this parameter to true to return only records with risks. Set this parameter to false to return only records without risks. If you do not specify this parameter, no filtering is applied.</p>
+     * <p>Specifies whether risks exist. This parameter is used to filter Cloud Desktops with or without risks. It takes effect only when IncludeRiskInfo is set to true.</p>
+     * <p>Set this parameter to true to return only records with risks. Set this parameter to false to return only records without risks. If this parameter is not specified, no filtering is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -168,7 +168,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public Boolean hasRisk;
 
     /**
-     * <p>Specifies whether to query and return risk information. Default value: false. If set to true, the response includes the RiskInfo field, and the HasRisk filter takes effect.</p>
+     * <p>Specifies whether to query and return risk information. Default value: false. If this parameter is set to true, the RiskInfo field is included in the response, and the HasRisk filter takes effect.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -213,7 +213,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The page number. Starts from 1. Values 0 and 1 return the same result.</p>
+     * <p>The page number, starting from 1. Values 0 and 1 return the same result.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

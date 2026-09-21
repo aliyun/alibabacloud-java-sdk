@@ -10,12 +10,12 @@ public class UpdateModelTemplateRequest extends TeaModel {
      * <li><p><strong>OpenClaw / AgenticComputer scenarios:</strong>
      * Set the default model by using the <code>defaults.model.primary</code> field in the format of <code>provider name/model code</code>.</p>
      * </li>
-     * <li><p><strong>HermesAgent scenarios:</strong>
+     * <li><p><strong>HermesAgent scenario:</strong>
      * Specify the provider name by using <code>model.provider</code> and the model code by using <code>model.default</code>.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>Note:</p>
+     * <p>:</p>
      * <ul>
      * <li>When you modify the default model, the system verifies whether the specified provider and model code already exist in the model group.</li>
      * </ul>
@@ -60,6 +60,9 @@ public class UpdateModelTemplateRequest extends TeaModel {
 
     /**
      * <p>The authorization scope. This parameter is optional and can be modified only for Common model groups. Valid values: ALL_USER and USER_MIXED.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL_USER</p>
      */
     @NameInMap("RefScope")
     public String refScope;

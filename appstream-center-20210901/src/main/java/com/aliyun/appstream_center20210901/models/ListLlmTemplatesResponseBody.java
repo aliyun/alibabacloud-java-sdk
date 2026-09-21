@@ -11,7 +11,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
     public java.util.List<ListLlmTemplatesResponseBodyData> data;
 
     /**
-     * <p>The current page number of the query results.</p>
+     * <p>The page number of the current query results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,13 +93,19 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
 
     public static class ListLlmTemplatesResponseBodyDataCreditMultiplier extends TeaModel {
         /**
-         * <p>The maximum multiplier. A null value indicates no upper limit. For example, Min=1 with Max as null is displayed as 1x and above.</p>
+         * <p>The maximum multiplier. An empty value indicates no upper limit. For example, Min=1 with an empty Max is displayed as 1x and above.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Max")
         public Float max;
 
         /**
-         * <p>The minimum multiplier. When equal to Max, it represents a fixed multiplier. For example, Min=Max=2 is displayed as 2x.</p>
+         * <p>The minimum multiplier. When equal to Max, it is a fixed multiplier. For example, Min=Max=2 is displayed as 2x.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Min")
         public Float min;
@@ -166,18 +172,27 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
     public static class ListLlmTemplatesResponseBodyDataPricesPrices extends TeaModel {
         /**
          * <p>The price in string format, such as 0.2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Price")
         public String price;
 
         /**
          * <p>The price name, such as Input, Output, or Image Generation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Input</p>
          */
         @NameInMap("PriceName")
         public String priceName;
 
         /**
          * <p>The price unit, such as per image or per thousand tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>per million tokens</p>
          */
         @NameInMap("PriceUnit")
         public String priceUnit;
@@ -215,13 +230,16 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
 
     public static class ListLlmTemplatesResponseBodyDataPrices extends TeaModel {
         /**
-         * <p>The list of prices within the range.</p>
+         * <p>The list of prices within this range.</p>
          */
         @NameInMap("Prices")
         public java.util.List<ListLlmTemplatesResponseBodyDataPricesPrices> prices;
 
         /**
          * <p>The range name, such as Default or 0-1M tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         @NameInMap("RangeName")
         public String rangeName;
@@ -276,7 +294,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
         public String config;
 
         /**
-         * <p>The credit consumption multiplier (rate). A null value indicates that the model does not participate in credit-based billing.</p>
+         * <p>The credit consumption multiplier (rate). An empty value indicates that the model does not participate in credit-based billing.</p>
          */
         @NameInMap("CreditMultiplier")
         public ListLlmTemplatesResponseBodyDataCreditMultiplier creditMultiplier;
@@ -330,7 +348,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
         public String llmTemplateId;
 
         /**
-         * <p>The model information, including context window size and maximum input/output tokens.</p>
+         * <p>The model information, such as context window size and maximum input/output tokens.</p>
          */
         @NameInMap("ModelInfo")
         public java.util.Map<String, ?> modelInfo;
@@ -345,7 +363,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The list of price information.</p>
+         * <p>The list of pricing information.</p>
          */
         @NameInMap("Prices")
         public java.util.List<ListLlmTemplatesResponseBodyDataPrices> prices;
@@ -361,18 +379,27 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
 
         /**
          * <p>The publish time in ISO 8601 format, such as 2026-03-04T06:25:17.000+00:00.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-03-04T06:25:17.000+00:00</p>
          */
         @NameInMap("PublishedTime")
         public String publishedTime;
 
         /**
-         * <p>The authorization scope of the associated model group. Valid values: ALL_USER (all users), USER_MIXED (specified users and user groups), RESOURCE_MIXED (specified resources). Returned only when SmartModel is set to true.</p>
+         * <p>The authorization scope of the model group. Valid values: ALL_USER (all users), USER_MIXED (specified users and user groups), and RESOURCE_MIXED (specified resources). Returned only when SmartModel is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL_USER</p>
          */
         @NameInMap("RefScope")
         public String refScope;
 
         /**
-         * <p>The number of route policies configured under this model tier. Returned only when SmartModel is set to true. Returns 0 for tiers without configured policies.</p>
+         * <p>The number of routing policies configured under this model tier. Returned only when SmartModel is true. Returns 0 for tiers with no configured policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RoutePolicyCount")
         public Integer routePolicyCount;

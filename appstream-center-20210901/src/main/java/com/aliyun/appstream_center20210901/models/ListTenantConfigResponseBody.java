@@ -51,12 +51,18 @@ public class ListTenantConfigResponseBody extends TeaModel {
         public Boolean appInstanceGroupExpireRemind;
 
         /**
+         * <p>The support type for creating shared session delivery groups.</p>
+         * 
          * <strong>example:</strong>
          * <p>None</p>
          */
         @NameInMap("MultiSessionSupportType")
         public String multiSessionSupportType;
 
+        /**
+         * <p>The list of region IDs that support creating shared session delivery groups.
+         * Note: This field has a value only when the support type for creating shared session delivery groups is Specific.</p>
+         */
         @NameInMap("MultiSessionSupportedRegions")
         public java.util.List<String> multiSessionSupportedRegions;
 

@@ -6,13 +6,21 @@ import com.aliyun.tea.*;
 public class ListAuthorizedUserGroupsRequest extends TeaModel {
     /**
      * <p>The ID of the delivery group.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>aig-9ciijz60n4xsv****</p>
      */
     @NameInMap("AppInstanceGroupId")
     public String appInstanceGroupId;
+
+    /**
+     * <p>The ID of the delivery group set. You must specify either AppInstanceGroupSetId or AppInstanceGroupId, but not both.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>set-3jm9d0abc00example</p>
+     */
+    @NameInMap("AppInstanceGroupSetId")
+    public String appInstanceGroupSetId;
 
     /**
      * <p>The ID of the user group. This parameter is used for exact match.</p>
@@ -27,7 +35,7 @@ public class ListAuthorizedUserGroupsRequest extends TeaModel {
      * <p>The name of the user group. This parameter is used for fuzzy match.</p>
      * 
      * <strong>example:</strong>
-     * <p>用户组001</p>
+     * <p>UserGroup001</p>
      */
     @NameInMap("GroupName")
     public String groupName;
@@ -73,6 +81,14 @@ public class ListAuthorizedUserGroupsRequest extends TeaModel {
     }
     public String getAppInstanceGroupId() {
         return this.appInstanceGroupId;
+    }
+
+    public ListAuthorizedUserGroupsRequest setAppInstanceGroupSetId(String appInstanceGroupSetId) {
+        this.appInstanceGroupSetId = appInstanceGroupSetId;
+        return this;
+    }
+    public String getAppInstanceGroupSetId() {
+        return this.appInstanceGroupSetId;
     }
 
     public ListAuthorizedUserGroupsRequest setGroupId(String groupId) {

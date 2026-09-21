@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeWuyingServerRequest extends TeaModel {
     /**
-     * <p>The ID of the development workstation.</p>
+     * <p>The ID of the development host.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class ModifyWuyingServerAttributeRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable dedicated eRDMA network interfaces. Only true is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("ErdmaEnabled")
+    public Boolean erdmaEnabled;
+
+    /**
      * <p>The logon password of the workstation.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +22,12 @@ public class ModifyWuyingServerAttributeRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>The product type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WuyingServer</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
@@ -37,6 +52,14 @@ public class ModifyWuyingServerAttributeRequest extends TeaModel {
     public static ModifyWuyingServerAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyWuyingServerAttributeRequest self = new ModifyWuyingServerAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyWuyingServerAttributeRequest setErdmaEnabled(Boolean erdmaEnabled) {
+        this.erdmaEnabled = erdmaEnabled;
+        return this;
+    }
+    public Boolean getErdmaEnabled() {
+        return this.erdmaEnabled;
     }
 
     public ModifyWuyingServerAttributeRequest setPassword(String password) {

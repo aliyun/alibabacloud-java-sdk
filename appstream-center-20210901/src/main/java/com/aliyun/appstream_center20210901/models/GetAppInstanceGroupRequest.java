@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppInstanceGroupRequest extends TeaModel {
     /**
-     * <p>The delivery group ID. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID.</p>
+     * <p>The ID of the delivery group. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

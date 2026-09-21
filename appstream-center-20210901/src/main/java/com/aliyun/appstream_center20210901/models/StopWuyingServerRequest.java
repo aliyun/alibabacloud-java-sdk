@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopWuyingServerRequest extends TeaModel {
     /**
-     * <p>Specifies whether to forcibly restart the workstation. Valid values:</p>
-     * <ul>
-     * <li>True: forcibly</li>
-     * <li>False: not forcibly</li>
-     * </ul>
+     * <p>Specifies whether to forcibly restart the workstation.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -17,6 +13,12 @@ public class StopWuyingServerRequest extends TeaModel {
     @NameInMap("Force")
     public Boolean force;
 
+    /**
+     * <p>The product type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WuyingServer</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 

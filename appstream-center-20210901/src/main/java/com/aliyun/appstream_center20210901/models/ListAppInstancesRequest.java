@@ -24,7 +24,7 @@ public class ListAppInstancesRequest extends TeaModel {
     public String appInstanceId;
 
     /**
-     * <p>The list of application instance IDs. Maximum length: 100.</p>
+     * <p>The list of application instance IDs. The maximum length is 100.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -42,7 +42,7 @@ public class ListAppInstancesRequest extends TeaModel {
     public Boolean includeDeleted;
 
     /**
-     * <p>The page number of the query results to display. Default value: <code>1</code>. Specify this parameter.</p>
+     * <p>The page number of the query results to display. Default value: <code>1</code>. We recommend that you specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +51,7 @@ public class ListAppInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of query results per page. Maximum value: <code>100</code>. Default value: <code>20</code>. Specify this parameter.</p>
+     * <p>The number of query results per page. Maximum value: <code>100</code>. Default value: <code>20</code>. We recommend that you specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -69,7 +69,7 @@ public class ListAppInstancesRequest extends TeaModel {
     public java.util.List<String> status;
 
     /**
-     * <p>The list of user IDs. Maximum length: 100.</p>
+     * <p>The list of user IDs. The maximum length is 100.</p>
      */
     @NameInMap("UserIdList")
     public java.util.List<String> userIdList;

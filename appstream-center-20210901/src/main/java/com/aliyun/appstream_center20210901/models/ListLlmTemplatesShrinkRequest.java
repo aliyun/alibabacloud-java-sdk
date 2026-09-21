@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class ListLlmTemplatesShrinkRequest extends TeaModel {
     /**
      * <p>The business type. This parameter is required when SmartModel is set to true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("BizType")
     public Integer bizType;
 
     /**
-     * <p>The model code filter. Fuzzy match is supported.</p>
+     * <p>The model code used for filtering. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen3.6-plus</p>
@@ -35,7 +38,7 @@ public class ListLlmTemplatesShrinkRequest extends TeaModel {
     public String modelTemplateId;
 
     /**
-     * <p>The page number, starting from 1. Values 0 and 1 return the same result.</p>
+     * <p>The page number. Pages start from page 1. Both 0 and 1 return the same result.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -62,7 +65,12 @@ public class ListLlmTemplatesShrinkRequest extends TeaModel {
     public String providerTemplateId;
 
     /**
-     * <p>Specifies whether to query smart models. If set to true, only LLMs under system preset smart models are returned, and BizType is required. Default value: false.</p>
+     * <p>Specifies whether to query smart models. Valid values:</p>
+     * <ul>
+     * <li>true: Only LLMs under system preset smart models are returned. In this case, BizType is required.</li>
+     * <li>false: Smart model filtering is not applied.</li>
+     * </ul>
+     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

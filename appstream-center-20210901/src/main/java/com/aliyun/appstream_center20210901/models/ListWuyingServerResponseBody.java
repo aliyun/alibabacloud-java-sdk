@@ -93,7 +93,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
     public static class ListWuyingServerResponseBodyWuyingServerListDataDisk extends TeaModel {
         /**
-         * <p>The data cloud disk type.</p>
+         * <p>The type of the data cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_auto</p>
@@ -102,7 +102,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String dataDiskCategory;
 
         /**
-         * <p>The data cloud disk ID.</p>
+         * <p>The ID of the data cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>d-bp1234567890abcde</p>
@@ -111,7 +111,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String dataDiskId;
 
         /**
-         * <p>The data cloud disk sequence number.</p>
+         * <p>The sequence number of the data cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -120,7 +120,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String dataDiskNo;
 
         /**
-         * <p>The data cloud disk performance level.</p>
+         * <p>The performance level (PL) of the data cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>PL0</p>
@@ -129,7 +129,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String dataDiskPerformanceLevel;
 
         /**
-         * <p>The data cloud disk size. Unit: GB.</p>
+         * <p>The size of the data cloud disk. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -228,7 +228,11 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
     public static class ListWuyingServerResponseBodyWuyingServerListPrivateIpSets extends TeaModel {
         /**
-         * <p>Indicates whether the IP address is the primary private IP address. A value of true indicates the primary private IP address. A value of false indicates a secondary private IP address.</p>
+         * <p>Indicates whether the IP address is the primary private IP address. Valid values:</p>
+         * <ul>
+         * <li>true: The IP address is the primary private IP address.</li>
+         * <li>false: The IP address is a secondary private IP address.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -380,7 +384,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
     public static class ListWuyingServerResponseBodyWuyingServerListSessions extends TeaModel {
         /**
-         * <p>The start time of the session.</p>
+         * <p>The session start time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01T08:00:00Z</p>
@@ -422,7 +426,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
     public static class ListWuyingServerResponseBodyWuyingServerList extends TeaModel {
         /**
-         * <p>The status of adding to the virtual node pool.</p>
+         * <p>The status of adding the workstation to a virtual node pool.</p>
          * 
          * <strong>example:</strong>
          * <p>Added</p>
@@ -431,7 +435,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String addVirtualNodePoolStatus;
 
         /**
-         * <p>The tenant UID.</p>
+         * <p>The UID of the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890123456</p>
@@ -458,7 +462,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String bizRegionId;
 
         /**
-         * <p>The billing method.</p>
+         * <p>The payment method.</p>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -467,7 +471,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-08-02T16:52:11.000+00:00</p>
@@ -482,7 +486,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public java.util.List<ListWuyingServerResponseBodyWuyingServerListDataDisk> dataDisk;
 
         /**
-         * <p>The maximum number of private IP addresses per ENI, including the primary IP address.</p>
+         * <p>The maximum number of private IP addresses per elastic network interface (ENI), including the primary IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -491,7 +495,16 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public Integer eniPrivateIpAddressQuantity;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The eRDMA activation status. Valid values: disabled, enabling, enabled, and failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
+        @NameInMap("ErdmaStatus")
+        public String erdmaStatus;
+
+        /**
+         * <p>The expiration time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-09-03T16:00:00.000+00:00</p>
@@ -518,7 +531,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The image name.</p>
+         * <p>The name of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>Alibaba Cloud Linux 3.2104 LTS 64位</p>
@@ -527,13 +540,13 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String imageName;
 
         /**
-         * <p>The list of workspace instance information.</p>
+         * <p>The list of workstation instance information.</p>
          */
         @NameInMap("InstanceInfoList")
         public java.util.List<ListWuyingServerResponseBodyWuyingServerListInstanceInfoList> instanceInfoList;
 
         /**
-         * <p>The maximum price of the spot instance.</p>
+         * <p>The maximum price for the spot instance.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -560,7 +573,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p>The office network name.</p>
+         * <p>The name of the office network.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleOfficeSite</p>
@@ -569,7 +582,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String officeSiteName;
 
         /**
-         * <p>The office network type.</p>
+         * <p>The network type of the office network.</p>
          * 
          * <strong>example:</strong>
          * <p>SIMPLE</p>
@@ -578,7 +591,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String officeSiteType;
 
         /**
-         * <p>The operating system type.</p>
+         * <p>The type of the operating system.</p>
          * 
          * <strong>example:</strong>
          * <p>Linux</p>
@@ -644,6 +657,15 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String subPayType;
 
         /**
+         * <p>Whether ASP streaming connection is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("SupportASP")
+        public Boolean supportASP;
+
+        /**
          * <p>The system cloud disk type.</p>
          * 
          * <strong>example:</strong>
@@ -653,7 +675,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String systemDiskCategory;
 
         /**
-         * <p>The ID of the system cloud disk.</p>
+         * <p>The system cloud disk ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-bp1234567890abcde</p>
@@ -662,7 +684,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String systemDiskId;
 
         /**
-         * <p>The system cloud disk performance level.</p>
+         * <p>The performance level (PL) of the system cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>PL0</p>
@@ -680,7 +702,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public Integer systemDiskSize;
 
         /**
-         * <p>The ID of the timer group.</p>
+         * <p>The timer group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tg-bp1234567890abcde</p>
@@ -713,7 +735,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String virtualNodePoolId;
 
         /**
-         * <p>Indicates whether the Virtual Kubelet needs to be upgraded.</p>
+         * <p>Indicates whether a VirtualKubelet upgrade is needed.</p>
          */
         @NameInMap("VkUpgradeNeeded")
         public Boolean vkUpgradeNeeded;
@@ -821,6 +843,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
         public Integer getEniPrivateIpAddressQuantity() {
             return this.eniPrivateIpAddressQuantity;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerList setErdmaStatus(String erdmaStatus) {
+            this.erdmaStatus = erdmaStatus;
+            return this;
+        }
+        public String getErdmaStatus() {
+            return this.erdmaStatus;
         }
 
         public ListWuyingServerResponseBodyWuyingServerList setExpiredTime(String expiredTime) {
@@ -973,6 +1003,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
         public String getSubPayType() {
             return this.subPayType;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerList setSupportASP(Boolean supportASP) {
+            this.supportASP = supportASP;
+            return this;
+        }
+        public Boolean getSupportASP() {
+            return this.supportASP;
         }
 
         public ListWuyingServerResponseBodyWuyingServerList setSystemDiskCategory(String systemDiskCategory) {

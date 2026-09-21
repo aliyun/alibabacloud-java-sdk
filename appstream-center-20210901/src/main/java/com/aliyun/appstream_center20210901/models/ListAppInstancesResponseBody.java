@@ -11,7 +11,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public java.util.List<ListAppInstancesResponseBodyAppInstanceModels> appInstanceModels;
 
     /**
-     * <p>The page number of the query results to display. Specify this parameter.</p>
+     * <p>The page number of the query results to display. We recommend that you specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of query results per page. Maximum value: <code>100</code>. Specify this parameter.</p>
+     * <p>The number of query results per page. Maximum value: <code>100</code>. We recommend that you specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -93,7 +93,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
 
     public static class ListAppInstancesResponseBodyAppInstanceModelsBindInfo extends TeaModel {
         /**
-         * <p>The end user ID bound to the instance.</p>
+         * <p>The ID of the end user bound to the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>app.test</p>
@@ -159,10 +159,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         public ListAppInstancesResponseBodyAppInstanceModelsBindInfo bindInfo;
 
         /**
-         * <p>The billing type of the instance. Valid values:</p>
+         * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>PrePaid</strong>: subscription (prepaid).</li>
-         * <li><strong>PostPaid</strong>: pay-as-you-go (postpaid).<blockquote>
+         * <li><strong>PrePaid</strong>: subscription.</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go.<blockquote>
          * <p>This parameter is returned only when the billing mode of the delivery group to which this instance belongs is resource-based billing (ChargeResourceMode=Node).</p>
          * </blockquote>
          * </li>
@@ -201,9 +201,21 @@ public class ListAppInstancesResponseBody extends TeaModel {
         @NameInMap("MainEthPublicIp")
         public String mainEthPublicIp;
 
+        /**
+         * <p>The NIC ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-2ze1jetnxkm***qq7i</p>
+         */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
+        /**
+         * <p>The private IP address of the egress traffic NIC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.12.32</p>
+         */
         @NameInMap("NetworkInterfaceIp")
         public String networkInterfaceIp;
 

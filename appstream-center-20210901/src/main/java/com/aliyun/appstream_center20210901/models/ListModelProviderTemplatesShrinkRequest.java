@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListModelProviderTemplatesShrinkRequest extends TeaModel {
     /**
-     * <p>The Agent platform.</p>
+     * <p>The agent platform.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -14,7 +14,7 @@ public class ListModelProviderTemplatesShrinkRequest extends TeaModel {
     public String agentPlatform;
 
     /**
-     * <p>The Agent provider name.</p>
+     * <p>The name of the agent provider.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListModelProviderTemplatesShrinkRequest extends TeaModel {
     public String agentProvider;
 
     /**
-     * <p>The business type.</p>
+     * <p>The business type. Not all business types are supported. Only business types within the supported range are valid. Refer to the listed enumeration values.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class ModifyBrowserInstanceGroupShrinkRequest extends TeaModel {
     /**
+     * <p>Specifies whether to send notification emails for authorization and deauthorization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("AuthNotificationEnabled")
+    public Boolean authNotificationEnabled;
+
+    /**
      * <p>The browser configuration.</p>
      */
     @NameInMap("BrowserConfig")
@@ -65,6 +74,14 @@ public class ModifyBrowserInstanceGroupShrinkRequest extends TeaModel {
     public static ModifyBrowserInstanceGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyBrowserInstanceGroupShrinkRequest self = new ModifyBrowserInstanceGroupShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyBrowserInstanceGroupShrinkRequest setAuthNotificationEnabled(Boolean authNotificationEnabled) {
+        this.authNotificationEnabled = authNotificationEnabled;
+        return this;
+    }
+    public Boolean getAuthNotificationEnabled() {
+        return this.authNotificationEnabled;
     }
 
     public ModifyBrowserInstanceGroupShrinkRequest setBrowserConfigShrink(String browserConfigShrink) {

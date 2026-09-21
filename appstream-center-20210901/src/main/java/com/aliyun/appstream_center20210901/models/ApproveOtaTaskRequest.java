@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApproveOtaTaskRequest extends TeaModel {
     /**
-     * <p>The delivery group ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain this value.</p>
+     * <p>The delivery group ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class ApproveOtaTaskRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The OTA upgrade task ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain this value.</p>
+     * <p>The OTA upgrade task ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the ID.</p>
      * <blockquote>
      * <p>Each successful call to <code>ApproveOtaTask</code> causes the <code>TaskId</code> to change. Therefore, before calling this operation again, call <code>ListAppInstanceGroup</code> again to obtain the latest <code>TaskId</code>.</p>
      * </blockquote>

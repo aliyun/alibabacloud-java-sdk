@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeWuyingServerResponseBody extends TeaModel {
     /**
-     * <p>The details of the development workstation.</p>
+     * <p>The details of the development host.</p>
      */
     @NameInMap("Data")
     public DescribeWuyingServerResponseBodyData data;
@@ -88,7 +88,7 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
 
     public static class DescribeWuyingServerResponseBodyData extends TeaModel {
         /**
-         * <p>The bandwidth. Unit: Mbit/s.</p>
+         * <p>The bandwidth size, in Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -115,16 +115,16 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The time when the workstation was created.</p>
+         * <p>The creation time, in US English date and time format with a 12-hour clock.</p>
          * 
          * <strong>example:</strong>
-         * <p>2026-01-01T00:00:00Z</p>
+         * <p>Sep 2, 2026 1:46:41 PM</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The maximum number of private IP addresses per ENI, including the primary IP address.</p>
+         * <p>The maximum number of private IP addresses per NIC, including the primary IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -133,10 +133,10 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public Integer eniPrivateIpAddressQuantity;
 
         /**
-         * <p>The time when the workstation expires.</p>
+         * <p>The expiration time, in US English date and time format with a 12-hour clock.</p>
          * 
          * <strong>example:</strong>
-         * <p>2027-01-01T00:00:00Z</p>
+         * <p>Oct 3, 2026 12:00:00 AM</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
@@ -181,7 +181,7 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
          * <p>The workspace name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Default Workspace.</p>
+         * <p>Default Workspace</p>
          */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
@@ -211,13 +211,22 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public java.util.List<DescribeWuyingServerResponseBodyDataPrivateIpSets> privateIpSets;
 
         /**
-         * <p>The status of the development workstation.</p>
+         * <p>The status of the development host.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
+
+        /**
+         * <p>Whether ASP streaming connection is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("SupportASP")
+        public Boolean supportASP;
 
         /**
          * <p>The type of the system cloud disk.</p>
@@ -229,7 +238,7 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public String systemDiskCategory;
 
         /**
-         * <p>The size of the system cloud disk. Unit: GB.</p>
+         * <p>The size of the system cloud disk, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -238,7 +247,7 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public Integer systemDiskSize;
 
         /**
-         * <p>The ID of the development workstation.</p>
+         * <p>The ID of the development host.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-bp1234567890abcde</p>
@@ -247,7 +256,7 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public String wuyingServerId;
 
         /**
-         * <p>The name of the development workstation.</p>
+         * <p>The name of the development host.</p>
          * 
          * <strong>example:</strong>
          * <p>my-dev-server</p>
@@ -378,6 +387,14 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeWuyingServerResponseBodyData setSupportASP(Boolean supportASP) {
+            this.supportASP = supportASP;
+            return this;
+        }
+        public Boolean getSupportASP() {
+            return this.supportASP;
         }
 
         public DescribeWuyingServerResponseBodyData setSystemDiskCategory(String systemDiskCategory) {

@@ -42,6 +42,11 @@ public class RenewWuyingServerRequest extends TeaModel {
 
     /**
      * <p>The workstation ID.</p>
+     * <blockquote>
+     * <ul>
+     * <li>The workstation must have a completed order payment (AutoPay=true during creation or manually paid through the console payment page) before it can be renewed. Calling this API for an unpaid workstation returns WuyingServerError.NotFound.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ws-0bw2f11****dial</p>

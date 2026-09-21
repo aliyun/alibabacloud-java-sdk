@@ -8,13 +8,13 @@ public class ListModelTemplatesShrinkRequest extends TeaModel {
      * <p>The Agent platform.</p>
      * 
      * <strong>example:</strong>
-     * <p>ENTERPRISE</p>
+     * <p>ENTERPRISE_AGENTIC_COMPUTER</p>
      */
     @NameInMap("AgentPlatform")
     public String agentPlatform;
 
     /**
-     * <p>The Agent platform list. Supports COMMON. If specified together with AgentPlatform, AgentPlatform takes precedence and this list is ignored. Defaults to ENTERPRISE if no platform filter is specified. To query Common model groups, explicitly include COMMON. If filtering by Provider simultaneously, set the value to Common.</p>
+     * <p>The list of Agent platforms. Supports COMMON. If specified together with AgentPlatform, AgentPlatform takes precedence and this list is ignored. If neither platform filter is specified, the default value is ENTERPRISE. To query Common model groups, explicitly include COMMON. If filtering by Provider at the same time, set the value to Common.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -32,7 +32,7 @@ public class ListModelTemplatesShrinkRequest extends TeaModel {
     public String agentProvider;
 
     /**
-     * <p>The Agent provider list. Supports Common. If specified together with AgentProvider, AgentProvider takes precedence and this list is ignored. To query Common model groups, explicitly include COMMON in the platform filter.</p>
+     * <p>The list of Agent providers. Supports Common. If specified together with AgentProvider, AgentProvider takes precedence and this list is ignored. To query Common model groups, explicitly include COMMON in the platform filter.</p>
      * 
      * <strong>example:</strong>
      * <p>OpenClaw</p>
@@ -60,13 +60,16 @@ public class ListModelTemplatesShrinkRequest extends TeaModel {
     public Boolean hasModel;
 
     /**
-     * <p>The list of template group IDs to filter by.</p>
+     * <p>The list of template group IDs used for filtering.</p>
      */
     @NameInMap("ModelTemplateIdList")
     public String modelTemplateIdListShrink;
 
     /**
      * <p>The model group name. Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>coding-openai</p>
      */
     @NameInMap("Name")
     public String name;
@@ -90,7 +93,7 @@ public class ListModelTemplatesShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The authorization scope filter. Valid values: ALL_USER, USER_MIXED, or RESOURCE_MIXED (strictly uppercase. Case variants or unknown values return InvalidParameter). If not specified, no filtering is applied. Unlike create/update operations, the filter scenario allows RESOURCE_MIXED (to filter non-Common model groups).</p>
+     * <p>The authorization scope filter. Valid values: ALL_USER, USER_MIXED, and RESOURCE_MIXED (strictly uppercase. Case variants and unknown values return InvalidParameter). If not specified, no filtering is applied. Unlike the create/update operations, the filter scenario allows RESOURCE_MIXED (to filter non-Common model groups).</p>
      * 
      * <strong>example:</strong>
      * <p>ALL_USER</p>
@@ -99,11 +102,7 @@ public class ListModelTemplatesShrinkRequest extends TeaModel {
     public String refScope;
 
     /**
-     * <p>The template source filter. Valid values:</p>
-     * <ul>
-     * <li>User: tenant-created (default if not specified).</li>
-     * <li>System: system preset.</li>
-     * </ul>
+     * <p>The template source filter. Valid values: User (tenant-created, default if not specified) and System (system preset).</p>
      * 
      * <strong>example:</strong>
      * <p>User</p>

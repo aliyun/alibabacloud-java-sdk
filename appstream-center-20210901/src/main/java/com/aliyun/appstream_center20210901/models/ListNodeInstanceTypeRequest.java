@@ -13,6 +13,12 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    /**
+     * <p>The billing type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
@@ -35,7 +41,7 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     public Float gpu;
 
     /**
-     * <p>The GPU memory size. This parameter is meaningful for GPU-accelerated cloud desktops. Unit: MB.</p>
+     * <p>The GPU memory size. This value is meaningful for GPU-accelerated cloud desktops. Unit: MB.</p>
      * 
      * <strong>example:</strong>
      * <p>2048</p>
@@ -43,6 +49,12 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     @NameInMap("GpuMemory")
     public Integer gpuMemory;
 
+    /**
+     * <p>The current specification of the instance for specification change.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eds.proworkstation_flagship_elite_ne.32c64g.48g1x</p>
+     */
     @NameInMap("InstanceTypeForModify")
     public String instanceTypeForModify;
 
@@ -91,6 +103,12 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     @NameInMap("OrderBy")
     public String orderBy;
 
+    /**
+     * <p>The specification change type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UPGRADE</p>
+     */
     @NameInMap("OrderType")
     public String orderType;
 

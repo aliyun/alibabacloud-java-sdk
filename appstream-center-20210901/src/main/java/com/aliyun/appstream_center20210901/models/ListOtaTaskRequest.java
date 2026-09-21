@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOtaTaskRequest extends TeaModel {
     /**
-     * <p>The delivery group ID.</p>
+     * <p>The delivery group ID. You can call ListAppInstanceGroup to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

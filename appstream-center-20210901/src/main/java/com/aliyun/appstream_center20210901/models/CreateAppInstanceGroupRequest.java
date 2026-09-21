@@ -18,7 +18,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
      * <p>The name of the delivery group.</p>
      * 
      * <strong>example:</strong>
-     * <p>办公应用</p>
+     * <p>OfficeApp</p>
      */
     @NameInMap("AppInstanceGroupName")
     public String appInstanceGroupName;
@@ -72,7 +72,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The region ID of the delivery group. For information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
+     * <p>The region ID of the delivery group. For more information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -126,14 +126,14 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     public CreateAppInstanceGroupRequestNodePool nodePool;
 
     /**
-     * <p>The subscription duration of the resource when <code>ChargeType</code> is set to <code>PrePaid</code>. This parameter is required. The unit is specified by <code>PeriodUnit</code>.</p>
+     * <p>The duration for which you want to purchase resources when <code>ChargeType</code> is set to <code>PrePaid</code>. This parameter is required in this case. The unit is specified by <code>PeriodUnit</code>.</p>
      * <ul>
-     * <li><p>If <code>PeriodUnit</code> is set to <code>Week</code>, valid values:</p>
+     * <li><p>If <code>PeriodUnit</code> is set to <code>Week</code>, valid values of this parameter:</p>
      * <ul>
      * <li>1</li>
      * </ul>
      * </li>
-     * <li><p>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values:</p>
+     * <li><p>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values of this parameter:</p>
      * <ul>
      * <li>1</li>
      * <li>2</li>
@@ -141,7 +141,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
      * <li>6</li>
      * </ul>
      * </li>
-     * <li><p>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values:</p>
+     * <li><p>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values of this parameter:</p>
      * <ul>
      * <li>1</li>
      * <li>2</li>
@@ -150,7 +150,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If <code>ChargeType</code> is set to <code>PostPaid</code>, set this parameter to 1.</p>
+     * <p>When <code>ChargeType</code> is set to <code>PostPaid</code>, set this parameter to the fixed value 1.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -163,11 +163,11 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     /**
      * <p>The unit of the subscription duration when <code>ChargeType</code> is set to <code>PrePaid</code>.</p>
      * <blockquote>
-     * <p>This parameter is case-sensitive. For example, <code>Week</code> is valid, but <code>week</code> is not.
-     * If the request parameters do not match the valid combinations, such as <code>2 Week</code>, the API call succeeds but an error occurs during the order placement.</p>
+     * <p>This parameter is case-sensitive. For example, <code>Week</code> is valid, but <code>week</code> is invalid.
+     * In addition, if the request parameters do not match the valid combinations, such as <code>2 Week</code>, the API call succeeds but an error occurs during the order placement phase.</p>
      * </blockquote>
      * <blockquote>
-     * <p>If <code>ChargeType</code> is set to <code>PostPaid</code>, set this parameter to <code>Month</code>.</p>
+     * <p>When <code>ChargeType</code> is set to <code>PostPaid</code>, set this parameter to the fixed value <code>Month</code>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -178,7 +178,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The pre-opened AppId.</p>
+     * <p>The pre-opened application ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cag-b2ronxxd****</p>
@@ -218,7 +218,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     public CreateAppInstanceGroupRequestSecurityPolicy securityPolicy;
 
     /**
-     * <p>The application recycling time, in minutes. After an end user disconnects from the cloud application for a period of time, the cloud application process exits. This period is the application recycling time. Set this parameter to <code>-1</code> if you do not want to recycle the application. Valid values: -1 and 3 to 300 (integer). Default value: <code>15</code>.</p>
+     * <p>The application recycling time, in minutes. After an end user disconnects from a cloud application for a period of time, the cloud application process exits. This period is the application recycling time. Set this parameter to <code>-1</code> if you do not want to recycle the application. Valid values: -1 and 3 to 300 (integer). Default value: <code>15</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -258,13 +258,13 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     public java.util.List<String> userGroupIds;
 
     /**
-     * <p>The user information to be added to the delivery group as assigned users. This field is required if the <code>Users</code> parameter is specified.</p>
+     * <p>The information about the users to be added as assigned users of the delivery group. This parameter is required if the <code>Users</code> parameter is specified.</p>
      */
     @NameInMap("UserInfo")
     public CreateAppInstanceGroupRequestUserInfo userInfo;
 
     /**
-     * <p>The list of usernames to be added to the delivery group as assigned users.</p>
+     * <p>The list of usernames to be added as assigned users of the delivery group.</p>
      */
     @NameInMap("Users")
     public java.util.List<String> users;
@@ -548,7 +548,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
 
     public static class CreateAppInstanceGroupRequestNetworkRoutes extends TeaModel {
         /**
-         * <p>The access destination. CIDR format.</p>
+         * <p>The access destination in CIDR format.</p>
          * 
          * <strong>example:</strong>
          * <p>139.196.XX.XX/32</p>
@@ -590,13 +590,13 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
 
     public static class CreateAppInstanceGroupRequestNetwork extends TeaModel {
         /**
-         * <p>The domain name rule configuration.</p>
+         * <p>The domain name rule configurations.</p>
          */
         @NameInMap("DomainRules")
         public java.util.List<CreateAppInstanceGroupRequestNetworkDomainRules> domainRules;
 
         /**
-         * <p>The duration (in minutes) after which the public IP address is updated upon the next logon. Minimum value: 60.</p>
+         * <p>The duration in minutes after which a public IP address triggers an update upon the next logon. Minimum value: 60. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -614,7 +614,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p>The route configuration. This parameter can be configured only when the network policy type (<code>StrategyType</code>) is set to mixed mode (<code>Mixed</code>).</p>
+         * <p>The route configurations. This parameter can be configured only when the network policy type (StrategyType) is set to mixed mode (Mixed).</p>
          */
         @NameInMap("Routes")
         public java.util.List<CreateAppInstanceGroupRequestNetworkRoutes> routes;
@@ -753,7 +753,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
 
     public static class CreateAppInstanceGroupRequestNodePoolRecurrenceSchedules extends TeaModel {
         /**
-         * <p>The type of the policy execution cycle. You must specify both <code>RecurrenceType</code> and <code>RecurrenceValues</code>.</p>
+         * <p>The type of the policy execution schedule. You must specify both <code>RecurrenceType</code> and <code>RecurrenceValues</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>weekly</p>
@@ -762,19 +762,19 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         public String recurrenceType;
 
         /**
-         * <p>The list of values for the policy execution cycle.</p>
+         * <p>The list of values for the policy execution schedule.</p>
          */
         @NameInMap("RecurrenceValues")
         public java.util.List<Integer> recurrenceValues;
 
         /**
-         * <p>The list of time periods for the policy execution cycle. Requirements for time period settings:</p>
+         * <p>The list of time periods for the policy execution schedule. Requirements for time period settings:</p>
          * <ul>
-         * <li>You can add up to 3 time periods.</li>
+         * <li>You can add up to three time periods.</li>
          * <li>Time periods cannot overlap.</li>
          * <li>The interval between time periods must be at least 5 minutes.</li>
          * <li>Each time period must be at least 15 minutes long.</li>
-         * <li>All time periods combined cannot span across days.</li>
+         * <li>All time periods combined must not span across days.</li>
          * </ul>
          */
         @NameInMap("TimerPeriods")
@@ -813,7 +813,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
 
     public static class CreateAppInstanceGroupRequestNodePool extends TeaModel {
         /**
-         * <p>The maximum number of idle sessions. When this value is specified, auto scale-out is triggered only when the session usage exceeds <code>ScalingUsageThreshold</code> and the number of idle sessions in the current delivery group is less than <code>MaxIdleAppInstanceAmount</code>. Otherwise, the idle sessions are considered sufficient and no auto scale-out is performed. This parameter helps you flexibly control elastic scaling behavior and reduce costs.</p>
+         * <p>The maximum number of idle sessions. When this value is specified, automatic scale-out is triggered only when the session usage exceeds <code>ScalingUsageThreshold</code> and the number of idle sessions in the current delivery group is less than <code>MaxIdleAppInstanceAmount</code>. Otherwise, the idle sessions in the delivery group are considered sufficient and no automatic scale-out is performed. This parameter allows you to flexibly control elastic scaling behavior and reduce costs.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -822,7 +822,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         public Integer maxIdleAppInstanceAmount;
 
         /**
-         * <p>The maximum number of resources that can be created during scale-out. This field is required when <code>StrategyType</code> is set to <code>NODE_SCALING_BY_USAGE</code> (elastic resources).</p>
+         * <p>The maximum number of resources that can be created during scale-out. This parameter is required when <code>StrategyType</code> is set to <code>NODE_SCALING_BY_USAGE</code> (elastic resources).</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -835,7 +835,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
          * <blockquote>
          * <ul>
          * <li>This parameter is required for subscription resources.</li>
-         * <li>This parameter is required for pay-as-you-go resources when the scaling mode (<code>StrategyType</code>) is set to fixed quantity (<code>NODE_FIXED</code>) or auto scaling (<code>NODE_SCALING_BY_USAGE</code>).</li>
+         * <li>This parameter is required for pay-as-you-go resources when the scaling mode (<code>StrategyType</code>) is set to fixed quantity (<code>NODE_FIXED</code>) or automatic scaling (<code>NODE_SCALING_BY_USAGE</code>).</li>
          * </ul>
          * </blockquote>
          * 
@@ -846,7 +846,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         public Integer nodeAmount;
 
         /**
-         * <p>The number of concurrent sessions, which is the number of sessions that a single resource can handle simultaneously. Too many concurrent sessions may degrade the application experience. The valid values vary by resource specification. You can obtain the valid values for each specification by calling the ListNodeInstanceType operation.</p>
+         * <p>The number of concurrent sessions, which is the number of sessions that a single resource can handle simultaneously. Too many simultaneous sessions may degrade the application experience. The valid value range varies by resource specification. You can obtain the valid value range for each resource specification by calling the ListNodeInstanceType operation.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -864,16 +864,16 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         public String nodeInstanceType;
 
         /**
-         * <p>The list of policy execution cycles. This field is required when <code>StrategyType</code> (scaling mode) is set to <code>NODE_SCALING_BY_SCHEDULE</code> (scheduled scaling).</p>
+         * <p>The list of policy execution schedules. This parameter is required when <code>StrategyType</code> (scaling mode) is set to <code>NODE_SCALING_BY_SCHEDULE</code> (scheduled scaling).</p>
          */
         @NameInMap("RecurrenceSchedules")
         public java.util.List<CreateAppInstanceGroupRequestNodePoolRecurrenceSchedules> recurrenceSchedules;
 
         /**
-         * <p>The maximum duration (in minutes) that a resource without session connections is retained. When no sessions are connected to a resource, a countdown starts based on this value. The resource is released when the countdown ends. Valid values: 5 to 120. Default value: 5. The following exceptions apply:</p>
+         * <p>The maximum duration (in minutes) that a resource without session connections is retained. When no sessions are connected to a resource, a countdown starts based on the duration specified here. The resource is released when the countdown ends. Valid values: 5 to 120. Default value: 5. The following exceptions apply:</p>
          * <ul>
-         * <li>If scale-in would trigger auto scale-out again, the scale-in is not performed to avoid repeated scaling operations.</li>
-         * <li>If auto scale-out is triggered due to increased sessions during this period, the resource is not released as originally planned, and the countdown restarts.</li>
+         * <li>If the scale-in would trigger automatic scale-out again, the scale-in is not performed to avoid repeated scale-in and scale-out operations.</li>
+         * <li>If automatic scale-out is triggered due to an increase in sessions during this period, the resource is not released as originally planned, and the countdown restarts.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -883,7 +883,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         public Integer scalingDownAfterIdleMinutes;
 
         /**
-         * <p>The number of resources created per scale-out operation. Valid values: 1 to 10. This field is required when <code>StrategyType</code> is set to <code>NODE_SCALING_BY_USAGE</code> (elastic resources).</p>
+         * <p>The number of resources created per scale-out operation. Valid values: 1 to 10. This parameter is required when <code>StrategyType</code> is set to <code>NODE_SCALING_BY_USAGE</code> (elastic resources).</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -892,7 +892,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         public Integer scalingStep;
 
         /**
-         * <p>The session usage threshold (%) that triggers auto scale-out. The formula for session usage is <code>Session usage = Current sessions ÷ (Total resources × Concurrent sessions per resource) × 100%</code>. This field is required when <code>StrategyType</code> is set to <code>NODE_SCALING_BY_USAGE</code> (elastic resources). Valid values: 0 to 100. Default value: 85.</p>
+         * <p>The upper threshold of session usage (%). Automatic scale-out is triggered when the session usage exceeds this threshold. The session usage is calculated as follows: <code>Session usage = Current sessions ÷ (Total resources × Concurrent sessions per resource) × 100%</code>. This parameter is required when <code>StrategyType</code> is set to <code>NODE_SCALING_BY_USAGE</code> (elastic resources). Valid values: 0 to 100. Default value: 85.</p>
          * 
          * <strong>example:</strong>
          * <p>85</p>
@@ -901,7 +901,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         public String scalingUsageThreshold;
 
         /**
-         * <p>The date when the policy expires. Format: yyyy-MM-dd. The interval between the expiration date and the effective date must be between 7 days and 1 year (inclusive). This field is required when <code>StrategyType</code> (scaling mode) is set to <code>NODE_SCALING_BY_SCHEDULE</code> (scheduled scaling).</p>
+         * <p>The date when the policy expires. Format: yyyy-MM-dd. The interval between the expiration date and the effective date must be between 7 days and 1 year, inclusive. This parameter is required when <code>StrategyType</code> (scaling mode) is set to <code>NODE_SCALING_BY_SCHEDULE</code> (scheduled scaling).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-09-08</p>
@@ -910,7 +910,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         public String strategyDisableDate;
 
         /**
-         * <p>The date when the policy takes effect. Format: yyyy-MM-dd. The date must be equal to or later than the current date. This field is required when <code>StrategyType</code> (scaling mode) is set to <code>NODE_SCALING_BY_SCHEDULE</code> (scheduled scaling).</p>
+         * <p>The date when the policy takes effect. Format: yyyy-MM-dd. The date must be equal to or later than the current date. This parameter is required when <code>StrategyType</code> (scaling mode) is set to <code>NODE_SCALING_BY_SCHEDULE</code> (scheduled scaling).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-01</p>
@@ -922,9 +922,9 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
          * <p>The scaling mode.</p>
          * <blockquote>
          * <ul>
-         * <li><code>NODE_FIXED</code> (fixed quantity): applicable to subscription and pay-as-you-go resources.</li>
-         * <li><code>NODE_SCALING_BY_USAGE</code> (auto scaling): applicable to subscription and pay-as-you-go resources.</li>
-         * <li><code>NODE_SCALING_BY_SCHEDULE</code> (scheduled scaling): applicable only to pay-as-you-go resources.</li>
+         * <li><code>NODE_FIXED</code> (Fixed Quantity): applicable to subscription and pay-as-you-go resources.</li>
+         * <li><code>NODE_SCALING_BY_USAGE</code> (Automatic Scaling): applicable to subscription and pay-as-you-go resources.</li>
+         * <li><code>NODE_SCALING_BY_SCHEDULE</code> (Scheduled Scaling): applicable only to pay-as-you-go resources.</li>
          * </ul>
          * </blockquote>
          * 
@@ -935,7 +935,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         public String strategyType;
 
         /**
-         * <p>Specifies whether to enable the resource prefetch policy. This field is required when <code>StrategyType</code> (scaling mode) is set to <code>NODE_SCALING_BY_SCHEDULE</code> (scheduled scaling).</p>
+         * <p>Specifies whether to enable the resource prefetch policy. This parameter is required when <code>StrategyType</code> (scaling mode) is set to <code>NODE_SCALING_BY_SCHEDULE</code> (scheduled scaling).</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1056,7 +1056,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
 
     public static class CreateAppInstanceGroupRequestRuntimePolicy extends TeaModel {
         /**
-         * <p>Specifies whether to enable debug mode. To call <code>GetDebugAppInstance</code> and <code>CreateImageFromAppInstanceGroup</code>, you must set this field to <code>ON</code>.</p>
+         * <p>Specifies whether to enable debug mode. To call the GetDebugAppInstance and CreateImageFromAppInstanceGroup operations, set this parameter to ON.</p>
          * 
          * <strong>example:</strong>
          * <p>OFF</p>
@@ -1065,9 +1065,9 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         public String debugMode;
 
         /**
-         * <p>Specifies whether only one application is allowed per session.</p>
+         * <p>Specifies whether to allow only one application per session.</p>
          * <ul>
-         * <li>When enabled, if multiple applications in the delivery group are opened, a separate session is allocated for each application, consuming more sessions.</li>
+         * <li>If enabled, opening multiple applications within a delivery group allocates a separate session for each application, which consumes more sessions.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1089,9 +1089,9 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         public String persistentAppInstanceScheduleMode;
 
         /**
-         * <p>The session pre-open switch.</p>
+         * <p>Specifies whether to enable session pre-opening.</p>
          * <ul>
-         * <li>If not specified, the default value is true.</li>
+         * <li>If this parameter is not specified, the default value is true.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1110,9 +1110,9 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         public String sessionType;
 
         /**
-         * <p>The generation mode of session users.</p>
+         * <p>The generation mode for session users.</p>
          * <ul>
-         * <li>wyid: In this case, session pre-open (sessionPreOpen) must be set to false.</li>
+         * <li>wyid: In this mode, the session pre-open parameter SessionPreOpen must be set to false.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1222,8 +1222,8 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         /**
          * <p>The remote storage path for user data roaming.</p>
          * <ul>
-         * <li>If not specified, the default value is the delivery group ID.</li>
-         * <li>For cross-delivery-group (same VPC) user data roaming, set the same value for all delivery groups that participate in roaming.</li>
+         * <li>If this parameter is not specified, the default value is the delivery group ID.</li>
+         * <li>To enable user data roaming across delivery groups within the same VPC, set this parameter to the same value for all delivery groups involved.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1242,7 +1242,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         public String remoteStorageType;
 
         /**
-         * <p>The user data roaming switch.</p>
+         * <p>Specifies whether to enable user data roaming.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1319,7 +1319,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
 
     public static class CreateAppInstanceGroupRequestUserDefinePolicy extends TeaModel {
         /**
-         * <p>The custom policy content. The content must comply with the image version specifications. To use this parameter, submit a ticket to enable the whitelist.</p>
+         * <p>The custom policy content. The content must comply with the image version specifications. To use this parameter, submit a ticket to request whitelist access.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;target&quot;:&quot;agent&quot;,&quot;config&quot;:{&quot;abc&quot;:&quot;xxx&quot;}}]</p>
@@ -1344,7 +1344,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
 
     public static class CreateAppInstanceGroupRequestUserInfo extends TeaModel {
         /**
-         * <p>The user account type.</p>
+         * <p>The type of the user account.</p>
          * 
          * <strong>example:</strong>
          * <p>Simple</p>
@@ -1378,7 +1378,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         public Integer frameRate;
 
         /**
-         * <p>The height of the resolution, in pixels.</p>
+         * <p>The height of the resolution. Unit: pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>1080</p>
@@ -1387,7 +1387,7 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         public Integer sessionResolutionHeight;
 
         /**
-         * <p>The width of the resolution, in pixels.</p>
+         * <p>The width of the resolution. Unit: pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>1920</p>
@@ -1396,11 +1396,11 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         public Integer sessionResolutionWidth;
 
         /**
-         * <p>The streaming mode. Used together with the <code>Webrtc</code> parameter to specify the protocol type.</p>
+         * <p>The streaming mode. This parameter is used together with the Webrtc parameter to specify the protocol type.</p>
          * <ul>
-         * <li><code>Webrtc</code>=<code>true</code> and <code>StreamingMode</code>=<code>video</code>: WebRTC stream.</li>
-         * <li><code>Webrtc</code>=<code>false</code> and <code>StreamingMode</code>=<code>video</code>: video stream.</li>
-         * <li><code>Webrtc</code>=<code>false</code> and <code>StreamingMode</code>=<code>mix</code>: mixed stream.</li>
+         * <li>Webrtc=<code>true</code> and StreamingMode=<code>video</code>: WebRTC streaming.</li>
+         * <li>Webrtc=<code>false</code> and StreamingMode=<code>video</code>: video streaming.</li>
+         * <li>Webrtc=<code>false</code> and StreamingMode=<code>mix</code>: hybrid streaming.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1412,9 +1412,9 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         /**
          * <p>Specifies whether to use adaptive resolution.</p>
          * <ul>
-         * <li><p><code>true</code>: The session resolution follows the terminal display area. In this case, <code>SessionResolutionWidth</code> and <code>SessionResolutionHeight</code> are the maximum resolution values.</p>
+         * <li><p><code>true</code>: The session resolution follows the terminal display area changes. In this case, SessionResolutionWidth and SessionResolutionHeight specify the maximum resolution values.</p>
          * </li>
-         * <li><p><code>false</code>: The session resolution does not follow the terminal display area. In this case, the resolution is fixed to the values of <code>SessionResolutionWidth</code> and <code>SessionResolutionHeight</code>.</p>
+         * <li><p><code>false</code>: The session resolution does not follow the terminal display area changes. In this case, the resolution is fixed to the values of SessionResolutionWidth and SessionResolutionHeight.</p>
          * </li>
          * </ul>
          * 
@@ -1425,11 +1425,11 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         public Boolean terminalResolutionAdaptive;
 
         /**
-         * <p>Specifies whether to enable WebRTC. Used together with the <code>StreamingMode</code> parameter to specify the protocol type.</p>
+         * <p>Specifies whether to enable WebRTC. This parameter is used together with the StreamingMode parameter to specify the protocol type.</p>
          * <ul>
-         * <li><code>Webrtc</code>=<code>true</code> and <code>StreamingMode</code>=<code>video</code>: WebRTC stream.</li>
-         * <li><code>Webrtc</code>=<code>false</code> and <code>StreamingMode</code>=<code>video</code>: video stream.</li>
-         * <li><code>Webrtc</code>=<code>false</code> and <code>StreamingMode</code>=<code>mix</code>: mixed stream.</li>
+         * <li>Webrtc=<code>true</code> and StreamingMode=<code>video</code>: WebRTC streaming.</li>
+         * <li>Webrtc=<code>false</code> and StreamingMode=<code>video</code>: video streaming.</li>
+         * <li>Webrtc=<code>false</code> and StreamingMode=<code>mix</code>: hybrid streaming.</li>
          * </ul>
          * 
          * <strong>example:</strong>

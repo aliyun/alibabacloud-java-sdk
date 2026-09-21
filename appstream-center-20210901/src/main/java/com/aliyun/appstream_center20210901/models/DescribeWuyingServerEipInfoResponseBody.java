@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
     /**
-     * <p>The Elastic IP Address (EIP) information.</p>
+     * <p>The EIP information.</p>
      */
     @NameInMap("EipInfoModel")
     public DescribeWuyingServerEipInfoResponseBodyEipInfoModel eipInfoModel;
@@ -41,6 +41,12 @@ public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeWuyingServerEipInfoResponseBodyEipInfoModel extends TeaModel {
+        /**
+         * <p>The EIP ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-wz96s3j***mmau4pvv9</p>
+         */
         @NameInMap("EipId")
         public String eipId;
 

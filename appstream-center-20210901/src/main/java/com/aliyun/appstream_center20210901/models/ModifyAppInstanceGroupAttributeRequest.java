@@ -18,7 +18,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
      * <p>The delivery group name.</p>
      * 
      * <strong>example:</strong>
-     * <p>办公应用</p>
+     * <p>OfficeApp</p>
      */
     @NameInMap("AppInstanceGroupName")
     public String appInstanceGroupName;
@@ -39,7 +39,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
     public ModifyAppInstanceGroupAttributeRequestNodePool nodePool;
 
     /**
-     * <p>Specifies whether only one application can be opened per session.</p>
+     * <p>Specifies whether to allow only one application per session.</p>
      * <ul>
      * <li>If enabled, opening multiple applications within the delivery group allocates a separate session for each application, consuming more sessions.</li>
      * </ul>
@@ -51,7 +51,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
     public Boolean perSessionPerApp;
 
     /**
-     * <p>The AppId of the pre-open application. If the <code>PreOpenMode</code> parameter is set to <code>SINGLE_APP</code>, the <code>PreOpenAppId</code> parameter cannot be an empty string.</p>
+     * <p>The AppId of the pre-open application. If the PreOpenMode parameter is set to <code>SINGLE_APP</code>, PreOpenAppId cannot be an empty string.</p>
      * 
      * <strong>example:</strong>
      * <p>ca-b2ronxxd****</p>
@@ -85,7 +85,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
     public ModifyAppInstanceGroupAttributeRequestSecurityPolicy securityPolicy;
 
     /**
-     * <p>The session disconnection retention duration, in minutes. After an end user session is disconnected, the session is retained for the duration specified here before being logged off. Set this parameter to <code>-1</code> to retain the session indefinitely. Valid values: -1 and 3 to 300. Default value: <code>15</code>.</p>
+     * <p>The session retention duration after disconnection, in minutes. After an end user session is disconnected, the session is retained for the duration specified here before being logged off. Set this parameter to <code>-1</code> to retain the session indefinitely. Valid values: -1 and 3 to 300. Default value: <code>15</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -258,7 +258,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
 
     public static class ModifyAppInstanceGroupAttributeRequestNodePool extends TeaModel {
         /**
-         * <p>The number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. If too many sessions are connected simultaneously, the application experience may degrade. The valid value range varies depending on the resource specification. You can call the ListNodeInstanceType operation to obtain the valid value range for each resource specification.</p>
+         * <p>The number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. Too many simultaneous sessions may degrade the application experience. The valid value range varies depending on the resource specification. You can call the ListNodeInstanceType operation to obtain the valid value range for each resource specification.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -309,7 +309,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
         public Boolean resetAfterUnbind;
 
         /**
-         * <p>Specifies whether to skip user authorization verification.</p>
+         * <p>Specifies whether to skip user authorization check.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -383,9 +383,21 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
     }
 
     public static class ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfileFollow extends TeaModel {
+        /**
+         * <p>The file system ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file-0001</p>
+         */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
+        /**
+         * <p>Specifies whether to enable user data roaming.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ProfileFollowSwitch")
         public Boolean profileFollowSwitch;
 
@@ -425,6 +437,9 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
         @NameInMap("UserProfile")
         public ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfile userProfile;
 
+        /**
+         * <p>The user data roaming configuration.</p>
+         */
         @NameInMap("UserProfileFollow")
         public ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfileFollow userProfileFollow;
 

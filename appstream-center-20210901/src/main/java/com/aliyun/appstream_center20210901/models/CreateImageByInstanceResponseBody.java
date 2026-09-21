@@ -38,7 +38,7 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * <p>Indicates whether the request was successful. A value of true indicates success. A value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -102,7 +102,7 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The task ID for creating the image.</p>
+         * <p>The ID of the image creation task.</p>
          * 
          * <strong>example:</strong>
          * <p>tid-0abxi0lbih******</p>

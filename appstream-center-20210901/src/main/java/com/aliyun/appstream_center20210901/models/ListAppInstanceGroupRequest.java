@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppInstanceGroupRequest extends TeaModel {
     /**
-     * <p>The application image ID. You can obtain this value from the Image Management page in the WUYING Cloud Application console.</p>
+     * <p>The application image ID. You can obtain this value from the Image Management page in the WUYING Workspace console.</p>
      * 
      * <strong>example:</strong>
      * <p>img-8z4nztpaqvay4****</p>
@@ -23,10 +23,10 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The delivery group name. Fuzzy matching is used for the query. For example, if you set the delivery group name to <code>OfficeApp</code>, all delivery groups whose names contain <code>OfficeApp</code> are returned, such as <code>MyOfficeApp</code> and <code>OfficeAppA</code>.</p>
+     * <p>The delivery group name. Fuzzy match is used for the query. For example, if you set the delivery group name to <code>OfficeApp</code>, all delivery groups whose names contain <code>OfficeApp</code> are returned, such as <code>MyOfficeApp</code> and <code>OfficeAppA</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>办公应用</p>
+     * <p>OfficeApp</p>
      */
     @NameInMap("AppInstanceGroupName")
     public String appInstanceGroupName;
@@ -41,6 +41,8 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     public String bizRegionId;
 
     /**
+     * <p>The list of excluded authorized user group IDs.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -119,6 +121,8 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     public java.util.List<ListAppInstanceGroupRequestTag> tag;
 
     /**
+     * <p>The list of authorized user group IDs.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */

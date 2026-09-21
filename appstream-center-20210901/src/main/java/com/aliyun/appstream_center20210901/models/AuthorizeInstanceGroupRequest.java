@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class AuthorizeInstanceGroupRequest extends TeaModel {
     /**
-     * <p>交付群組 ID。可呼叫 <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> 介面取得。</p>
-     * <p>This parameter is required.</p>
+     * <p>The delivery group ID. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>aig-9ciijz60n4xsv****</p>
@@ -15,7 +14,23 @@ public class AuthorizeInstanceGroupRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>持續性工作階段 ID。</p>
+     * <p>The delivery group set ID. You must specify either AppInstanceGroupSetId or AppInstanceGroupId, but not both.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>set-3jm9d0abc00example</p>
+     */
+    @NameInMap("AppInstanceGroupSetId")
+    public String appInstanceGroupSetId;
+
+    /**
+     * <p>The persistent session ID.</p>
+     * <blockquote>
+     * <p>Metric description</p>
+     * <ul>
+     * <li>This parameter is required when the authorization mode of the delivery group is Session. You can call the ListPersistentAppInstances operation to obtain a valid ID.</li>
+     * <li>This parameter is required when ProductType is set to WuyingServer. You can call the ListPersistentAppInstances operation to obtain a valid ID.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>p-0cc7s3mw2fg4j****</p>
@@ -24,7 +39,7 @@ public class AuthorizeInstanceGroupRequest extends TeaModel {
     public String appInstancePersistentId;
 
     /**
-     * <p>授權使用者群組 ID 清單。</p>
+     * <p>The list of authorized user group IDs to grant authorization.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -33,15 +48,15 @@ public class AuthorizeInstanceGroupRequest extends TeaModel {
     public java.util.List<String> authorizeUserGroupIds;
 
     /**
-     * <p>要新增交付群組授權的使用者名稱清單。可設定 1\~100 個。</p>
+     * <p>The list of usernames to add to the delivery group authorization. You can specify 1 to 100 usernames.</p>
      */
     @NameInMap("AuthorizeUserIds")
     public java.util.List<String> authorizeUserIds;
 
     /**
-     * <p>使用者分身 ID。</p>
+     * <p>The user avatar ID.</p>
      * <blockquote>
-     * <p>此參數未開放使用。</p>
+     * <p>This parameter is not available for public use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -51,7 +66,7 @@ public class AuthorizeInstanceGroupRequest extends TeaModel {
     public String avatarId;
 
     /**
-     * <p>產品類型。</p>
+     * <p>The product type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +76,7 @@ public class AuthorizeInstanceGroupRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>取消授權使用者群組 ID 清單。</p>
+     * <p>The list of authorized user group IDs to revoke authorization.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -70,13 +85,13 @@ public class AuthorizeInstanceGroupRequest extends TeaModel {
     public java.util.List<String> unAuthorizeUserGroupIds;
 
     /**
-     * <p>要移除交付群組授權的使用者名稱清單。可設定 1\~100 個。</p>
+     * <p>The list of usernames to remove from the delivery group authorization. You can specify 1 to 100 usernames.</p>
      */
     @NameInMap("UnAuthorizeUserIds")
     public java.util.List<String> unAuthorizeUserIds;
 
     /**
-     * <p>使用者資訊。</p>
+     * <p>The user information.</p>
      */
     @NameInMap("UserMeta")
     public AuthorizeInstanceGroupRequestUserMeta userMeta;
@@ -92,6 +107,14 @@ public class AuthorizeInstanceGroupRequest extends TeaModel {
     }
     public String getAppInstanceGroupId() {
         return this.appInstanceGroupId;
+    }
+
+    public AuthorizeInstanceGroupRequest setAppInstanceGroupSetId(String appInstanceGroupSetId) {
+        this.appInstanceGroupSetId = appInstanceGroupSetId;
+        return this;
+    }
+    public String getAppInstanceGroupSetId() {
+        return this.appInstanceGroupSetId;
     }
 
     public AuthorizeInstanceGroupRequest setAppInstancePersistentId(String appInstancePersistentId) {
@@ -160,7 +183,7 @@ public class AuthorizeInstanceGroupRequest extends TeaModel {
 
     public static class AuthorizeInstanceGroupRequestUserMeta extends TeaModel {
         /**
-         * <p>AD 網域名稱。</p>
+         * <p>The AD domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -169,7 +192,7 @@ public class AuthorizeInstanceGroupRequest extends TeaModel {
         public String adDomain;
 
         /**
-         * <p>使用者類型。</p>
+         * <p>The user type.</p>
          * 
          * <strong>example:</strong>
          * <p>simple</p>

@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetConnectionTicketRequest extends TeaModel {
     /**
-     * <p>The access type. If you do not specify this parameter, both types are displayed.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>INTERNET: Internet access.</li>
-     * <li>VPC: Express Connect access.</li>
-     * </ul>
+     * <p>The access type.</p>
      * 
      * <strong>example:</strong>
      * <p>INTERNET</p>
@@ -37,13 +32,22 @@ public class GetConnectionTicketRequest extends TeaModel {
      * <p>The list of delivery groups.</p>
      * <blockquote>
      * <ul>
-     * <li>If you specify this parameter, application instances are allocated only from the specified authorized delivery groups.</li>
+     * <li>If you specify this parameter, application instances are allocated only from the specified and authorized delivery groups.</li>
      * <li>If you specify the <code>AppInstanceId</code> or <code>AppInstancePersistentId</code> parameter, this parameter is required.</li>
      * </ul>
      * </blockquote>
      */
     @NameInMap("AppInstanceGroupIdList")
     public java.util.List<String> appInstanceGroupIdList;
+
+    /**
+     * <p>The delivery group set ID used to obtain the connection credential.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>set-3jm9d0abc00example</p>
+     */
+    @NameInMap("AppInstanceGroupSetId")
+    public String appInstanceGroupSetId;
 
     /**
      * <p>The application instance ID.</p>
@@ -69,11 +73,17 @@ public class GetConnectionTicketRequest extends TeaModel {
     @NameInMap("AppInstancePersistentId")
     public String appInstancePersistentId;
 
+    /**
+     * <p>The policy ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pg-0clfzcy0adpcf****</p>
+     */
     @NameInMap("AppPolicyId")
     public String appPolicyId;
 
     /**
-     * <p>The application startup parameter. For information about how to obtain startup parameters, see <a href="https://help.aliyun.com/document_detail/426045.html">How to obtain application installation parameters and startup parameters</a>.</p>
+     * <p>The application startup parameter. This parameter is optional. You can refer to the method for specifying startup parameters in the image creation documentation and manually verify the startup parameters during image creation. This field is suitable for startup parameters with variable content, allowing API callers to set them flexibly. For more information about how to obtain startup parameters, see <a href="https://help.aliyun.com/document_detail/426045.html">How to obtain application installation parameters and startup parameters</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>/q /n</p>
@@ -114,6 +124,9 @@ public class GetConnectionTicketRequest extends TeaModel {
 
     /**
      * <p>The environment configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;userConfigReenter&quot;:&quot;NATIVE&quot;}</p>
      */
     @NameInMap("EnvironmentConfig")
     public String environmentConfig;
@@ -129,9 +142,9 @@ public class GetConnectionTicketRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The node ID.</p>
      * <blockquote>
-     * <p>This parameter is required for non-initial calls. Use this parameter to query the task status and connection credentials.</p>
+     * <p>This parameter is required for non-initial calls. Use this parameter query to invoke the node status and connection credential retrieval.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -167,6 +180,14 @@ public class GetConnectionTicketRequest extends TeaModel {
     }
     public java.util.List<String> getAppInstanceGroupIdList() {
         return this.appInstanceGroupIdList;
+    }
+
+    public GetConnectionTicketRequest setAppInstanceGroupSetId(String appInstanceGroupSetId) {
+        this.appInstanceGroupSetId = appInstanceGroupSetId;
+        return this;
+    }
+    public String getAppInstanceGroupSetId() {
+        return this.appInstanceGroupSetId;
     }
 
     public GetConnectionTicketRequest setAppInstanceId(String appInstanceId) {

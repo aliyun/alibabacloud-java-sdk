@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyNodePoolAmountShrinkRequest extends TeaModel {
     /**
-     * <p>The delivery group ID.</p>
+     * <p>The ID of the delivery group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
