@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyVulConfigRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -13,8 +13,8 @@ public class ModifyVulConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable or disable vulnerability detection. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: Enable vulnerability detection.</li>
-     * <li><strong>off</strong>: Disable vulnerability detection.</li>
+     * <li><strong>on</strong>: Enables vulnerability detection.</li>
+     * <li><strong>off</strong>: Disables vulnerability detection.</li>
      * </ul>
      * <blockquote>
      * <p>If the type is set to real risk, valid values:</p>
@@ -29,6 +29,12 @@ public class ModifyVulConfigRequest extends TeaModel {
      */
     @NameInMap("Config")
     public String config;
+
+    /**
+     * <p>Specifies whether to perform only a dry run of the request. Valid values: true: performs only a dry run without performing the actual operation. false: performs the actual request. Default value: false.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
 
     /**
      * <p>The type of vulnerability to modify. Valid values:</p>
@@ -67,6 +73,14 @@ public class ModifyVulConfigRequest extends TeaModel {
     }
     public String getConfig() {
         return this.config;
+    }
+
+    public ModifyVulConfigRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifyVulConfigRequest setType(String type) {

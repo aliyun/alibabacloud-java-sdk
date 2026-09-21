@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetServerlessAppAuthDetailRequest extends TeaModel {
     /**
-     * <p>The SAE application ID.</p>
-     * <blockquote>
-     * <p>You can call the <a href="~~ListMachineApps~~">ListMachineApps</a> operation to obtain this value.</p>
-     * </blockquote>
+     * <p>The SAE application ID. You can call <a href="~~ListMachineApps~~">ListMachineApps</a> to obtain the ID. This parameter is required. If this parameter is not specified, the API returns HTTP 400 with the error code missingParams.</p>
      * 
      * <strong>example:</strong>
      * <p>3de9f2ac-f***769226df</p>

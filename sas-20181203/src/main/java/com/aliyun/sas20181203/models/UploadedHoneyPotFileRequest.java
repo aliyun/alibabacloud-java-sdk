@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class UploadedHoneyPotFileRequest extends TeaModel {
     /**
-     * <p>The FileKey used to upload the file.</p>
+     * <p>The FileKey used for the uploaded file.</p>
      * <blockquote>
      * <p>Format: HONEYPOT_FILE/{timestamp}_{custom_file_name}</p>
      * </blockquote>
+     * <p>You must obtain this value by calling GetHoneyPotUploadPolicyInfo and use the returned Data.Key. Do not construct this value manually based on the format. First obtain the upload policy, then upload the file by using the policy, and finally call this operation to register the upload result.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +39,8 @@ public class UploadedHoneyPotFileRequest extends TeaModel {
     public String fileType;
 
     /**
-     * <p>The name of the honeypot image.</p>
+     * <p>The honeypot image name.</p>
+     * <p>Obtain valid values by calling ListAvailableHoneypot and using the HoneypotImageName field value from the response.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +50,7 @@ public class UploadedHoneyPotFileRequest extends TeaModel {
     public String honeypotImageName;
 
     /**
-     * <p>The language type of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -63,8 +65,8 @@ public class UploadedHoneyPotFileRequest extends TeaModel {
     /**
      * <p>The ID of the honeypot management node.</p>
      * <blockquote>
-     * <p>Call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain this value.
-     * Note: This parameter is required. If this parameter is not specified, the API returns InvalidParam (400). Call ListHoneypotNode to obtain a valid NodeId.</p>
+     * <p>Call <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> to obtain this value.
+     * Note: This parameter is required. If this parameter is not specified, the API returns InvalidParam(400). Call ListHoneypotNode to obtain a valid NodeId.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

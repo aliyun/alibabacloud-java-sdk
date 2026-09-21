@@ -204,18 +204,18 @@ public class ListCompressFileDetectResultResponseBody extends TeaModel {
          * <li><strong>Hacktool</strong>: Hacking tool.</li>
          * <li><strong>Engtest</strong>: DPI engine test program.</li>
          * <li><strong>Downloader</strong>: Downloader trojan.</li>
-         * <li><strong>Virus</strong>: File infector virus.</li>
+         * <li><strong>Virus</strong>: File-infecting virus.</li>
          * <li><strong>Miner</strong>: Mining programs.</li>
          * <li><strong>Worm</strong>: Worms.</li>
-         * <li><strong>DDoS</strong>: DDoS trojan.</li>
-         * <li><strong>Malware</strong>: Malware.</li>
+         * <li><strong>DDoS</strong>: DDoS Trojan.</li>
+         * <li><strong>Malware</strong>: Malicious program.</li>
          * <li><strong>Backdoor</strong>: Reverse shell backdoor.</li>
-         * <li><strong>RiskWare</strong>: Riskware.</li>
+         * <li><strong>RiskWare</strong>: Risky software.</li>
          * <li><strong>Proxytool</strong>: Proxy tool.</li>
          * <li><strong>Suspicious</strong>: Suspicious program.</li>
          * <li><strong>MalScript</strong>: Malicious script.</li>
          * <li><strong>Rootkit</strong>: Rootkit.</li>
-         * <li><strong>Exploit</strong>: Vulnerability exploits program.</li>
+         * <li><strong>Exploit</strong>: Vulnerability exploits.</li>
          * </ul>
          * <blockquote>
          * <p>This parameter is invalid when Result is 0 or 3.</p>

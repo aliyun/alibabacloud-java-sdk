@@ -14,7 +14,7 @@ public class CreateUnknownThreatDetectStrategyRequest extends TeaModel {
     public String assetSelectionType;
 
     /**
-     * <p>The number of days after the model is initially created before learning ends.</p>
+     * <p>The number of days after the model is initially created before the learning phase ends.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class CreateUnknownThreatDetectStrategyRequest extends TeaModel {
     public Integer durationDaysAfterInit;
 
     /**
-     * <p>The number of days after no new processes are added to the model before learning ends.</p>
+     * <p>The number of days after which the model ends when no new processes are added.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

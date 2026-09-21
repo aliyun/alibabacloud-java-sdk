@@ -9,6 +9,8 @@ public class InstallUniBackupAgentRequest extends TeaModel {
      * <blockquote>
      * <p>You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to obtain this parameter.</p>
      * </blockquote>
+     * <p>Before calling this operation, call DescribeUniBackupPolicies to confirm that AgentStatus is not INSTALLING. If the status is INSTALLING, wait for the current installation to complete before calling this operation.</p>
+     * <p>Before obtaining a valid PolicyId, install the Security Center agent on the ECS instance, complete database discovery or manual registration, and then call CreateUniBackupPolicy to create a backup policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

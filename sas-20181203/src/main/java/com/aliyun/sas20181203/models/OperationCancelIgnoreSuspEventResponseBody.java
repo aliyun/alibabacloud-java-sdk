@@ -54,7 +54,7 @@ public class OperationCancelIgnoreSuspEventResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The time consumed by the task, in seconds.</p>
+     * <p>The time consumed by the task. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

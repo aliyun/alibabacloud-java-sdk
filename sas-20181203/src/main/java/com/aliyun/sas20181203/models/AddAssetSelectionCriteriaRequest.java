@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddAssetSelectionCriteriaRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -23,7 +23,7 @@ public class AddAssetSelectionCriteriaRequest extends TeaModel {
     public String criteria;
 
     /**
-     * <p>The operation type for criteria. Valid values:</p>
+     * <p>The operation type for the criteria. Valid values:</p>
      * <ul>
      * <li><strong>add</strong>: adds assets.</li>
      * <li><strong>del</strong>: deletes assets.</li>
@@ -34,6 +34,12 @@ public class AddAssetSelectionCriteriaRequest extends TeaModel {
      */
     @NameInMap("CriteriaOperation")
     public String criteriaOperation;
+
+    /**
+     * <p>Specifies whether to perform only a dry run. true: performs only a dry run without executing the actual operation. false: performs the actual operation. Default value: false.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
 
     /**
      * <p>The unique identifier of the asset selection.</p>
@@ -80,6 +86,14 @@ public class AddAssetSelectionCriteriaRequest extends TeaModel {
         return this.criteriaOperation;
     }
 
+    public AddAssetSelectionCriteriaRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public AddAssetSelectionCriteriaRequest setSelectionKey(String selectionKey) {
         this.selectionKey = selectionKey;
         return this;
@@ -100,8 +114,8 @@ public class AddAssetSelectionCriteriaRequest extends TeaModel {
         /**
          * <p>The operation type. Valid values:</p>
          * <ul>
-         * <li><strong>add</strong>: adds the asset.</li>
-         * <li><strong>del</strong>: deletes the asset.</li>
+         * <li><strong>add</strong>: Add.</li>
+         * <li><strong>del</strong>: Delete.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -111,7 +125,7 @@ public class AddAssetSelectionCriteriaRequest extends TeaModel {
         public String operation;
 
         /**
-         * <p>The asset ID. If you select assets by machine, the value is the UUID of the machine. If you select assets by group, the value is the group ID. If you select assets by VPC, the value is the VPC ID.</p>
+         * <p>The asset ID. If you select assets by server, set this parameter to the UUID of the server. If you select assets by group, set this parameter to the group ID. If you select assets by VPC, set this parameter to the VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1188****</p>

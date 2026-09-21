@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyStrategyResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ModifyStrategyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>8EFA2BD9-00CD-5D69-B6B0-4EE83EAF072E</p>
@@ -23,7 +23,7 @@ public class ModifyStrategyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result returned.</p>
+     * <p>The response result.</p>
      */
     @NameInMap("Result")
     public ModifyStrategyResponseBodyResult result;
@@ -80,7 +80,7 @@ public class ModifyStrategyResponseBody extends TeaModel {
 
     public static class ModifyStrategyResponseBodyResult extends TeaModel {
         /**
-         * <p>The ID of the baseline check policy.</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8164239</p>

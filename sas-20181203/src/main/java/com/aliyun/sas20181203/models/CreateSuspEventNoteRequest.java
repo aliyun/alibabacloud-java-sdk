@@ -25,10 +25,13 @@ public class CreateSuspEventNoteRequest extends TeaModel {
     public String note;
 
     /**
-     * <p>The ID of the member accounts in the resource folder.</p>
+     * <p>The Alibaba Cloud account ID of the member account in the resource directory.</p>
      * <blockquote>
      * <p>Invoke <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> to obtain this parameter.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;

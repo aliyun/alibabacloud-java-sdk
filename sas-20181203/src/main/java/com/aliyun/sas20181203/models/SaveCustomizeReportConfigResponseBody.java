@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveCustomizeReportConfigResponseBody extends TeaModel {
     /**
-     * <p>The ID of the report.</p>
+     * <p>The report ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -14,7 +14,7 @@ public class SaveCustomizeReportConfigResponseBody extends TeaModel {
     public Long reportId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>11472B29-1A1C-5D7F-944B-7CD84319****</p>

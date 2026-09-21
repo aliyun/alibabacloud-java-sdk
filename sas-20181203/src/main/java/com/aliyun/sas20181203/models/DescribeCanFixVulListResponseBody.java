@@ -14,7 +14,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The vulnerability information returned.</p>
+     * <p>The vulnerability information returned by the query.</p>
      */
     @NameInMap("VulRecords")
     public java.util.List<DescribeCanFixVulListResponseBodyVulRecords> vulRecords;
@@ -60,7 +60,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String layer;
 
         /**
-         * <p>The detailed information about the vulnerability match.</p>
+         * <p>The details of the vulnerability match.</p>
          * 
          * <strong>example:</strong>
          * <p>python-perf version less than 0:3.10.0-693.21.1.el7</p>
@@ -93,7 +93,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The command used to fix the vulnerability.</p>
+         * <p>The command to fix the vulnerability.</p>
          * 
          * <strong>example:</strong>
          * <p>apt-get update &amp;&amp; apt-get install libseccomp2  --only-upgrade</p>
@@ -250,8 +250,8 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the vulnerability can be fixed in the console. Valid values:</p>
          * <ul>
-         * <li><strong>yes</strong>: Fixable.</li>
-         * <li><strong>no</strong>: Not fixable.</li>
+         * <li><strong>yes</strong>: The vulnerability can be fixed.</li>
+         * <li><strong>no</strong>: The vulnerability cannot be fixed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -261,10 +261,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String canFix;
 
         /**
-         * <p>Specifies whether the software package that causes the vulnerability can be upgraded through Security Center. Valid values:</p>
+         * <p>Indicates whether the software package that causes the vulnerability can be upgraded by using Security Center. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Supported.</li>
-         * <li><strong>false</strong>: Not supported.</li>
+         * <li><strong>true</strong>: The upgrade is supported.</li>
+         * <li><strong>false</strong>: The upgrade is not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -307,7 +307,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public DescribeCanFixVulListResponseBodyVulRecordsExtendContentJson extendContentJson;
 
         /**
-         * <p>The timestamp when the vulnerability was first detected, in milliseconds.</p>
+         * <p>The timestamp when the vulnerability was first detected. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1620752053000</p>
@@ -362,7 +362,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
-         * <p>The timestamp when the vulnerability was last detected, in milliseconds.</p>
+         * <p>The timestamp when the vulnerability was last detected. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1620404763000</p>
@@ -391,7 +391,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String maliciousSource;
 
         /**
-         * <p>The timestamp when the vulnerability status was modified, in milliseconds.</p>
+         * <p>The timestamp when the vulnerability status was modified. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1620404763000</p>
@@ -420,12 +420,12 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         /**
          * <p>The priority level of the vulnerability fix. Valid values:</p>
          * <ul>
-         * <li><strong>asap</strong>: High.</li>
-         * <li><strong>later</strong>: Medium.</li>
-         * <li><strong>nntf</strong>: Low.</li>
+         * <li><strong>asap</strong>: high</li>
+         * <li><strong>later</strong>: medium</li>
+         * <li><strong>nntf</strong>: low</li>
          * </ul>
          * <blockquote>
-         * <p>Fix vulnerabilities with the <strong>High</strong> priority level as soon as possible.</p>
+         * <p>Fix vulnerabilities with the <strong>high</strong> priority level as soon as possible.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -480,7 +480,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String repoNamespace;
 
         /**
-         * <p>The timestamp of the scan, in milliseconds.</p>
+         * <p>The timestamp of the scan. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649814050000</p>
@@ -547,7 +547,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
          * <p>The vulnerability type. Valid values:</p>
          * <ul>
          * <li><strong>cve</strong>: system vulnerability</li>
-         * <li><strong>sca</strong>: application vulnerability.</li>
+         * <li><strong>sca</strong>: application vulnerability</li>
          * </ul>
          * 
          * <strong>example:</strong>

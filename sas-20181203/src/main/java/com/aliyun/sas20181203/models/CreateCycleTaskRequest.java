@@ -14,6 +14,12 @@ public class CreateCycleTaskRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values: true: performs only a dry run without performing the actual operation. false: performs the actual request. Default value: false.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>Specifies whether to enable the task. Valid values:</p>
      * <ul>
      * <li><strong>1</strong>: Enable.</li>
@@ -49,7 +55,9 @@ public class CreateCycleTaskRequest extends TeaModel {
 
     /**
      * <p>The extended information field.</p>
-     * <p>Note: This parameter is actually required. If this parameter is not specified, the API returns an error. The value is a JSON-formatted string that must contain at least the targetInfo array.</p>
+     * <blockquote>
+     * <p>Note: This parameter is required. If you do not specify this parameter, the API returns an error. The value is a JSON-formatted string that must contain at least the targetInfo array.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -85,7 +93,7 @@ public class CreateCycleTaskRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The source from which the task is added.</p>
+     * <p>The source from which the task is created.</p>
      * 
      * <strong>example:</strong>
      * <p>console_batch</p>
@@ -94,7 +102,7 @@ public class CreateCycleTaskRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The task end time, in hours.</p>
+     * <p>The end time of the task, in hours.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -104,7 +112,7 @@ public class CreateCycleTaskRequest extends TeaModel {
     public Integer targetEndTime;
 
     /**
-     * <p>The task start time, in hours.</p>
+     * <p>The start time of the task, in hours.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -124,11 +132,11 @@ public class CreateCycleTaskRequest extends TeaModel {
     public String taskName;
 
     /**
-     * <p>The node type. Valid values:</p>
+     * <p>The task type. Valid values:</p>
      * <ul>
      * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan.</li>
      * <li><strong>IMAGE_SCAN</strong>: image scan.</li>
-     * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: emergency vulnerability scanning.</li>
+     * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: emergency vulnerability scan.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -149,6 +157,14 @@ public class CreateCycleTaskRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateCycleTaskRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateCycleTaskRequest setEnable(Integer enable) {

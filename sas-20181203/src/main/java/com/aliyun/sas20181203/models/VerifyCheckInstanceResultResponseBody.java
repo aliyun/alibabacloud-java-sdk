@@ -50,8 +50,8 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
         /**
          * <p>The operation code of the cloud service configuration check task. Valid values:</p>
          * <ul>
-         * <li><strong>Throttling</strong>: Rate limited.</li>
-         * <li><strong>ActionTrialUnauthorized</strong>: Unauthorized error.</li>
+         * <li><strong>Throttling</strong>: rate limit.</li>
+         * <li><strong>ActionTrialUnauthorized</strong>: unauthorized error.</li>
          * </ul>
          * 
          * <strong>example:</strong>

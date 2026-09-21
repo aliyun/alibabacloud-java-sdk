@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupedInstancesRequest extends TeaModel {
     /**
-     * <p>The page number of the first page to return. Default value: <strong>1</strong>, which indicates that the query results are returned starting from page 1.</p>
+     * <p>The page number of the first page to return. Default value: <strong>1</strong>, which indicates that results are returned starting from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -62,8 +62,8 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     /**
      * <p>Settings for whether to enable paged query. Default value: <strong>true</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Paged query is enabled.</li>
-     * <li><strong>false</strong>: Paged query is disabled. Paging is not performed.</li>
+     * <li><strong>true</strong>: Paging is enabled.</li>
+     * <li><strong>false</strong>: Paging is disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,10 +82,13 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the Alibaba Cloud account that is added as a member of a resource folder for member accounts.</p>
+     * <p>The ID of the Alibaba Cloud account that is associated with member accounts in a resource folder.</p>
      * <blockquote>
      * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;

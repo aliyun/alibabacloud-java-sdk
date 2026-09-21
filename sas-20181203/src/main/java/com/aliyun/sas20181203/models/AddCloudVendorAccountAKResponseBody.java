@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddCloudVendorAccountAKResponseBody extends TeaModel {
     /**
-     * <p>The information about the added AK.</p>
+     * <p>The AK information that is added.</p>
      */
     @NameInMap("Data")
     public AddCloudVendorAccountAKResponseBodyData data;
@@ -87,7 +87,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
          * <p>The module status. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: In use.</li>
-         * <li><strong>1</strong>: Usage exception.</li>
+         * <li><strong>1</strong>: Abnormal.</li>
          * <li><strong>2</strong>: Validity verification in progress.</li>
          * <li><strong>3</strong>: Validity verification timed out.</li>
          * </ul>
@@ -99,7 +99,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public Integer moduleServiceStatus;
 
         /**
-         * <p>The description of permissions associated with the module.</p>
+         * <p>The associate permission description for the module.</p>
          * 
          * <strong>example:</strong>
          * <p>Read permission of the cloud server or virtual machine</p>
@@ -225,7 +225,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
          * <p>The AK usage status. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: In use.</li>
-         * <li><strong>1</strong>: Usage exception.</li>
+         * <li><strong>1</strong>: Abnormal.</li>
          * <li><strong>2</strong>: Validity verification in progress.</li>
          * <li><strong>3</strong>: Validity verification timed out.</li>
          * </ul>

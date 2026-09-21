@@ -11,6 +11,17 @@ public class CreateVirusScanOnceTaskRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Specifies whether to perform only a dry run of the request. Valid values:</p>
+     * <ul>
+     * <li>true: performs only a dry run without executing the actual operation.</li>
+     * <li>false: performs the actual request.</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>The extended information field:</p>
      * <ul>
      * <li><strong>additionType</strong>: the extended scan type</li>
@@ -32,7 +43,7 @@ public class CreateVirusScanOnceTaskRequest extends TeaModel {
      * <p>The scan type of the virus scan. Valid values:</p>
      * <ul>
      * <li><strong>system</strong>: system scan</li>
-     * <li><strong>user</strong>: custom scan.</li>
+     * <li><strong>user</strong>: custom scan</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -64,6 +75,14 @@ public class CreateVirusScanOnceTaskRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateVirusScanOnceTaskRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateVirusScanOnceTaskRequest setParam(String param) {

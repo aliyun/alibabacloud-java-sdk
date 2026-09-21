@@ -17,14 +17,25 @@ public class ModifyNoticeConfigRequest extends TeaModel {
     public String bizType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. Only ASCII characters are supported. The token can be up to 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <ul>
+     * <li>true: performs a dry run without executing the actual operation.</li>
+     * <li>false: performs the actual operation.</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>The focus level. Separate multiple levels with commas (,).</p>
-     * <p>When <strong>Project</strong> is <strong>yundun_soar_incident_generate</strong> or <strong>yundun_soar_incident_update</strong>, valid values:</p>
+     * <p>When <strong>Project</strong> is set to <strong>yundun_soar_incident_generate</strong> or <strong>yundun_soar_incident_update</strong>, valid values:</p>
      * <ul>
      * <li><strong>CRITICAL</strong>: Critical.</li>
      * <li><strong>HIGH</strong>: High.</li>
@@ -32,7 +43,7 @@ public class ModifyNoticeConfigRequest extends TeaModel {
      * <li><strong>LOW</strong>: Low.</li>
      * <li><strong>INFO</strong>: Informational.</li>
      * </ul>
-     * <p>When <strong>Project</strong> is <strong>yundun_sas_antiransomware_task</strong>, valid values:</p>
+     * <p>When <strong>Project</strong> is set to <strong>yundun_sas_antiransomware_task</strong>, valid values:</p>
      * <ul>
      * <li><strong>Success</strong>: Execution succeeded.</li>
      * <li><strong>Failed</strong>: Execution failed.</li>
@@ -51,7 +62,7 @@ public class ModifyNoticeConfigRequest extends TeaModel {
      * <li><strong>yundun_security_Weekreport</strong>: Security weekly report (email only)</li>
      * <li><strong>sas_healthcheck</strong>: Baseline check</li>
      * <li><strong>yundun_defennce_antiRansomware_overflow</strong>: Anti-ransomware storage space exceeded</li>
-     * <li><strong>yundun_sas_cloudsiem_log</strong>: Cloud Threat Detection and Response (CTDR) log excess notification</li>
+     * <li><strong>yundun_sas_cloudsiem_log</strong>: Threat analysis log excess notification</li>
      * <li><strong>sas_suspicious</strong>: Security alert</li>
      * <li><strong>yundun_aegis_AV_true</strong>: Precise defense</li>
      * <li><strong>yundun_sas_ak_leakage AccessKey</strong>: AccessKey leak intelligence</li>
@@ -128,9 +139,9 @@ public class ModifyNoticeConfigRequest extends TeaModel {
      * <h4>When the BizType field is empty: valid values</h4>
      * <ul>
      * <li><strong>0</strong>: No limit.</li>
-     * <li><strong>1</strong>: Notifications are sent only between 08:00 and 22:00.</li>
+     * <li><strong>1</strong>: Notifications are sent only during 08:00-22:00.</li>
      * </ul>
-     * <h4>When the BizType field is <code>cms</code>: description</h4>
+     * <h4>When the BizType field is <code>cms</code></h4>
      * <p>Specifies the push frequency limit, in seconds. The minimum value is <strong>60</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -158,6 +169,14 @@ public class ModifyNoticeConfigRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ModifyNoticeConfigRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifyNoticeConfigRequest setFocusLevel(String focusLevel) {

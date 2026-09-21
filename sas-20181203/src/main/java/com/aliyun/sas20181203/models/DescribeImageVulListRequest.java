@@ -23,7 +23,7 @@ public class DescribeImageVulListRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The name of the cluster.</p>
+     * <p>The cluster name.</p>
      * 
      * <strong>example:</strong>
      * <p>docker-law</p>
@@ -32,7 +32,7 @@ public class DescribeImageVulListRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The ID of the container.</p>
+     * <p>The container ID.</p>
      * 
      * <strong>example:</strong>
      * <p>c08d5fc1a329a4b88950a253d082f****</p>
@@ -41,7 +41,7 @@ public class DescribeImageVulListRequest extends TeaModel {
     public String containerId;
 
     /**
-     * <p>The page number of the page to return in the query results. Default value: <strong>1</strong>, which indicates the first page.</p>
+     * <p>The page number of the page to return in the query results. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -78,7 +78,7 @@ public class DescribeImageVulListRequest extends TeaModel {
     public Boolean groupByAsset;
 
     /**
-     * <p>The name of the container image.</p>
+     * <p>The container image name.</p>
      * 
      * <strong>example:</strong>
      * <p>registry.cn-wulanchabu.aliyuncs.com/sas_test/huxin-test-001:nuxeo6-****</p>
@@ -127,11 +127,11 @@ public class DescribeImageVulListRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The priority level for fixing the vulnerability. Valid values:</p>
+     * <p>The priority of vulnerability fixing. Valid values:</p>
      * <ul>
-     * <li><strong>asap</strong>: High-priority vulnerability that must be fixed as soon as possible.</li>
-     * <li><strong>later</strong>: Medium-priority vulnerability that can be fixed later.</li>
-     * <li><strong>nntf</strong>: Low-priority vulnerability that does not need to be fixed for now.</li>
+     * <li><strong>asap</strong>: high-priority vulnerability</li>
+     * <li><strong>later</strong>: medium-priority vulnerability</li>
+     * <li><strong>nntf</strong>: low-priority vulnerability</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class DescribeImageVulListRequest extends TeaModel {
     public String necessity;
 
     /**
-     * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>, which indicates 10 vulnerability entries per page.</p>
+     * <p>Settings for paged query. The number of vulnerabilities to display on each page during paging. Default value: <strong>10</strong>, which indicates that 10 vulnerabilities are displayed on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -213,10 +213,13 @@ public class DescribeImageVulListRequest extends TeaModel {
     public String repoRegionId;
 
     /**
-     * <p>The Alibaba Cloud account ID of the member accounts in the resource directory.</p>
+     * <p>The ID of the Alibaba Cloud account that is added as one of the member accounts in a resource folder.</p>
      * <blockquote>
-     * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
@@ -263,7 +266,7 @@ public class DescribeImageVulListRequest extends TeaModel {
     public String tag;
 
     /**
-     * <p>The type of vulnerability to query. Set the value to <strong>cve</strong>, which indicates container image vulnerabilities.</p>
+     * <p>The type of the vulnerability to query. Set the value to <strong>cve</strong>, which indicates container image vulnerabilities.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -273,7 +276,7 @@ public class DescribeImageVulListRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The UUIDs of asset instances. Separate multiple UUIDs with commas (,).</p>
+     * <p>The UUIDs of the asset instances. Separate multiple UUIDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>0004a32a0305a7f6ab5ff9600d47****</p>

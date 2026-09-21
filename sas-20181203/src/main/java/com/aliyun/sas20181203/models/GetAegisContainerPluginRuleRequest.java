@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAegisContainerPluginRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the container anti-escape rule.</p>
-     * <blockquote>
-     * <p>You can call the <a href="~~ListAegisContainerPluginRule~~">ListAegisContainerPluginRule</a> operation to obtain this parameter.</p>
-     * </blockquote>
-     * <p>Note: This parameter is required. If you do not specify this parameter, the API returns a parameter validation error (HTTP 400).</p>
+     * <p>The ID of the container anti-escape rule. You can call <a href="~~ListAegisContainerPluginRule~~">ListAegisContainerPluginRule</a> to obtain the ID. This parameter is required. If this parameter is not specified, the API returns HTTP 400 with error code -101.</p>
      * 
      * <strong>example:</strong>
      * <p>1141****</p>
@@ -18,7 +14,7 @@ public class GetAegisContainerPluginRuleRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The language type for the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>

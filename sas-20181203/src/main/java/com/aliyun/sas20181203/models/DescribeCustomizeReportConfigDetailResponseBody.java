@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     /**
-     * <p>The IDs of report chart configurations. Multiple IDs are separated by commas (,).</p>
+     * <p>The IDs of the report chart configurations. Multiple IDs are separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>BIZ_STAT_QUERY_KEY_ATTACK,CUSTOM_VUL_CVE_LIST,CUSTOM_VUL_SYS_LIST,CUSTOM_VUL_WEBCMS_LIST,CUSTOM_AUTO_BREAKING_PIE,CUSTOM_AK_LEAK_LIST,KEY_HP_TAMPERPROOF,KEY_HP_DEFENCE</p>
@@ -40,7 +40,7 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     public Integer isDefault;
 
     /**
-     * <p>Indicates whether newly added accounts are included by default. Valid values:</p>
+     * <p>Indicates whether newly added accounts are connected by default. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: Yes.</li>
      * <li><strong>false</strong>: No.<blockquote>

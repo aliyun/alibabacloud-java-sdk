@@ -14,10 +14,16 @@ public class AddCheckResultWhiteListRequest extends TeaModel {
     public java.util.List<Long> checkIds;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
+
+    /**
+     * <p>Specifies whether to perform only a dry run. Valid values: true: performs only a dry run without executing the actual operation. false: performs the actual operation. Default value: false.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
 
     /**
      * <p>The instance IDs of the cloud service instances to add to the whitelist. Separate multiple instance IDs with commas (,).</p>
@@ -37,7 +43,7 @@ public class AddCheckResultWhiteListRequest extends TeaModel {
     /**
      * <p>The rule type. Default value: <strong>WHITE</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>WHITE</strong>: adds to the whitelist.</li>
+     * <li><strong>WHITE</strong>: Add to whitelist.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,6 +71,14 @@ public class AddCheckResultWhiteListRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public AddCheckResultWhiteListRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public AddCheckResultWhiteListRequest setInstanceIds(java.util.List<String> instanceIds) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveSuspEventUserSettingRequest extends TeaModel {
     /**
-     * <p>The data source of the exception. Set the value to sas.</p>
+     * <p>The source of the exception event data. Set the value to sas.</p>
      * 
      * <strong>example:</strong>
      * <p>sas</p>
@@ -14,11 +14,11 @@ public class SaveSuspEventUserSettingRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The severities of alert notifications. Valid values:</p>
+     * <p>The alert level for alert notifications. Valid values:</p>
      * <ul>
-     * <li><strong>remind</strong></li>
-     * <li><strong>suspicious</strong></li>
-     * <li><strong>serious</strong></li>
+     * <li><strong>remind</strong>: Reminder.</li>
+     * <li><strong>suspicious</strong>: Suspicious.</li>
+     * <li><strong>serious</strong>: Urgent.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,6 +27,15 @@ public class SaveSuspEventUserSettingRequest extends TeaModel {
     @NameInMap("LevelsOn")
     public String levelsOn;
 
+    /**
+     * <p>The ID of the member account in the resource directory.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 

@@ -61,7 +61,7 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     public java.util.List<String> bindAppList;
 
     /**
-     * <p>The Asset Type. Valid values:</p>
+     * <p>The Asset Type for the operation. Valid values:</p>
      * <ul>
      * <li><strong>INSTANCE</strong>: Instance.</li>
      * <li><strong>APP</strong>: Application.</li>
@@ -80,13 +80,13 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     public java.util.List<String> bindUuidList;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The search conditions for assets. This parameter is in JSON format. Pay attention to the letter case when you enter the parameter.</p>
+     * <p>The search conditions for assets. This parameter is in JSON format. Pay attention to letter case when you specify this parameter.</p>
      * <blockquote>
      * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. Call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
      * </blockquote>
@@ -96,6 +96,12 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
      */
     @NameInMap("Criteria")
     public String criteria;
+
+    /**
+     * <p>Specifies whether to perform a dry run. true: performs only a check without executing the actual operation. false: performs the actual operation. Default value: false.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
 
     /**
      * <p>The logical relationship among multiple search conditions. Valid values:</p>
@@ -243,6 +249,14 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     }
     public String getCriteria() {
         return this.criteria;
+    }
+
+    public ModifyServerlessAuthToMachineRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifyServerlessAuthToMachineRequest setLogicalExp(String logicalExp) {

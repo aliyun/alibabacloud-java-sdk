@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyAccessKeyLeakDealRequest extends TeaModel {
     /**
-     * <p>The ID of the AccessKey pair leak record.</p>
+     * <p>The ID of the AccessKey leak record.</p>
      * <blockquote>
-     * <p>Call the <a href="~~DescribeAccesskeyLeakList~~">DescribeAccesskeyLeakList</a> operation to obtain this parameter. This parameter and the <strong>IdList</strong> parameter cannot both be empty.</p>
+     * <p>Call the <a href="~~DescribeAccesskeyLeakList~~">DescribeAccesskeyLeakList</a> operation to obtain this parameter. This parameter and <strong>IdList</strong> cannot both be empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,13 +17,13 @@ public class ModifyAccessKeyLeakDealRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The IDs of the AccessKey pair leak records.</p>
+     * <p>The collection of AccessKey leak record IDs.</p>
      */
     @NameInMap("IdList")
     public java.util.List<Long> idList;
 
     /**
-     * <p>The remarks for handling the AccessKey pair leak record.</p>
+     * <p>The remarks for handling the AccessKey leak record.</p>
      * 
      * <strong>example:</strong>
      * <p>disabled.</p>
@@ -32,7 +32,7 @@ public class ModifyAccessKeyLeakDealRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The method to handle the AccessKey pair leak information. Valid values:</p>
+     * <p>The method used to handle the AccessKey leak information. Valid values:</p>
      * <ul>
      * <li><strong>manual</strong>: Manual handling.</li>
      * <li><strong>disable</strong>: Disable.</li>

@@ -82,9 +82,9 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     public String image;
 
     /**
-     * <p>The container image instance ID.</p>
+     * <p>The ID of the container image instance.</p>
      * <blockquote>
-     * <p>Invoke the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation of Container Registry and obtain the container image instance ID from the <strong>InstanceId</strong> response parameter.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation of Container Registry to obtain the container image instance ID from the <strong>InstanceId</strong> response parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class DescribeCanFixVulListRequest extends TeaModel {
      * <ul>
      * <li><strong>asap</strong>: high</li>
      * <li><strong>later</strong>: medium</li>
-     * <li><strong>nntf</strong>: low.</li>
+     * <li><strong>nntf</strong>: low</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class DescribeCanFixVulListRequest extends TeaModel {
      * <li><strong>us-east-1</strong>: US (Virginia)</li>
      * <li><strong>us-west-1</strong>: US (Silicon Valley)</li>
      * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
-     * <li><strong>eu-west-1</strong>: UK (London).</li>
+     * <li><strong>eu-west-1</strong>: UK (London)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     /**
      * <p>The ID of the image repository.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation of Container Registry and obtain the value of the <strong>RepoId</strong> response parameter.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation of Container Registry to obtain the image repository ID from the <strong>RepoId</strong> response parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -182,9 +182,9 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     public String repoId;
 
     /**
-     * <p>The container image instance ID.</p>
+     * <p>The ID of the container image instance.</p>
      * <blockquote>
-     * <p>Invoke the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation of Container Registry and obtain the container image instance ID from the <strong>InstanceId</strong> response parameter.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation of Container Registry to obtain the container image instance ID from the <strong>InstanceId</strong> response parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -231,7 +231,7 @@ public class DescribeCanFixVulListRequest extends TeaModel {
      * <li><strong>us-east-1</strong>: US (Virginia)</li>
      * <li><strong>us-west-1</strong>: US (Silicon Valley)</li>
      * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
-     * <li><strong>eu-west-1</strong>: UK (London).</li>
+     * <li><strong>eu-west-1</strong>: UK (London)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -240,6 +240,15 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     @NameInMap("RepoRegionId")
     public String repoRegionId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account of a member account in the resource folder.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
@@ -280,7 +289,7 @@ public class DescribeCanFixVulListRequest extends TeaModel {
      * <p>The vulnerability type. Valid values:</p>
      * <ul>
      * <li><strong>cve</strong>: system vulnerability</li>
-     * <li><strong>sca</strong>: application vulnerability.</li>
+     * <li><strong>sca</strong>: application vulnerability</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

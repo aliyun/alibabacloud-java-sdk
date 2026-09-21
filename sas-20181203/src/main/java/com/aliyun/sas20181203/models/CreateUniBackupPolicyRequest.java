@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUniBackupPolicyRequest extends TeaModel {
     /**
-     * <p>The name of the database account.</p>
+     * <p>The username of the database account.</p>
      * 
      * <strong>example:</strong>
      * <p>admin</p>
@@ -23,10 +23,10 @@ public class CreateUniBackupPolicyRequest extends TeaModel {
     public String accountPassword;
 
     /**
-     * <p>Specifies whether the database is manually added. Valid values:</p>
+     * <p>Specifies whether the database is manually added by the user. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><strong>true</strong>: The database is manually added.</li>
+     * <li><strong>false</strong>: The database is not manually added.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,12 +51,12 @@ public class CreateUniBackupPolicyRequest extends TeaModel {
     public String databaseType;
 
     /**
-     * <p>The policy for full data backup. The value of this parameter is a JSON string. The JSON string contains the following fields:</p>
+     * <p>The full backup policy. The value is in JSON format and contains the following fields:</p>
      * <ul>
-     * <li><strong>start</strong>: the start time of a backup task.</li>
-     * <li><strong>interval</strong>: the interval of backup tasks.</li>
+     * <li><strong>start</strong>: the start time of the backup.</li>
+     * <li><strong>interval</strong>: the interval between backups.</li>
      * <li><strong>type</strong>: the unit of the interval.</li>
-     * <li><strong>days</strong>: the days of a week on which a backup task is performed.</li>
+     * <li><strong>days</strong>: the days of the week on which backups are performed.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -67,12 +67,12 @@ public class CreateUniBackupPolicyRequest extends TeaModel {
     public java.util.Map<String, ?> fullPlan;
 
     /**
-     * <p>The policy for incremental data backup. The value of this parameter is a JSON string. The JSON string contains the following fields:</p>
+     * <p>The incremental backup policy. The value is in JSON format and contains the following fields:</p>
      * <ul>
-     * <li><strong>start</strong>: the start time of a backup task.</li>
-     * <li><strong>interval</strong>: the interval of backup tasks.</li>
+     * <li><strong>start</strong>: the start time of the backup.</li>
+     * <li><strong>interval</strong>: the interval between backups.</li>
      * <li><strong>type</strong>: the unit of the interval.</li>
-     * <li><strong>days</strong>: the days of a week on which a backup task is performed.</li>
+     * <li><strong>days</strong>: the days of the week on which backups are performed.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -83,9 +83,9 @@ public class CreateUniBackupPolicyRequest extends TeaModel {
     public java.util.Map<String, ?> incPlan;
 
     /**
-     * <p>The ID of the Elastic Compute Service (ECS) instance.</p>
+     * <p>The ID of the ECS instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeUniBackupDatabase~~">DescribeUniBackupDatabase</a> operation to query the IDs of ECS instances.</p>
+     * <p>You can call the <a href="~~DescribeUniBackupDatabase~~">DescribeUniBackupDatabase</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -96,7 +96,7 @@ public class CreateUniBackupPolicyRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the anti-ransomware policy.</p>
+     * <p>The name of the anti-ransomware backup policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class CreateUniBackupPolicyRequest extends TeaModel {
     public String policyName;
 
     /**
-     * <p>The retention period of backup data.</p>
+     * <p>The number of days for which backup data is retained.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class CreateUniBackupPolicyRequest extends TeaModel {
     public Integer retention;
 
     /**
-     * <p>The maximum network bandwidth that is allowed during data backup. Unit: bytes.</p>
+     * <p>The network bandwidth throttling for backup network bandwidth. Unit: bytes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class CreateUniBackupPolicyRequest extends TeaModel {
     public Long speedLimiter;
 
     /**
-     * <p>The region in which the server resides.</p>
+     * <p>The region in which the server protected by the backup policy resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -136,9 +136,9 @@ public class CreateUniBackupPolicyRequest extends TeaModel {
     public String uniRegionId;
 
     /**
-     * <p>The UUID of the server whose data is backed up based on the anti-ransomware policy.</p>
+     * <p>The UUID of the server that is backed up by the database anti-ransomware feature.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to obtain the UUID of the server.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

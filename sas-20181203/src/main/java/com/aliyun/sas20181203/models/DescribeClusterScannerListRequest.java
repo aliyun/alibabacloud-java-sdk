@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeClusterScannerListRequest extends TeaModel {
     /**
      * <p>The list of cluster IDs.</p>
+     * <p>You must specify at least one of StatusList and ClusterIdList. If neither is specified, the API returns HTTP 400 with the error code InvalidParam.</p>
+     * <p>Before calling this operation, make sure that an ACK cluster exists. You can obtain the cluster ID by calling the <a href="https://api.aliyun.com/document/CS/2015-12-15/DescribeClusters">DescribeClusters</a> operation of Container Service.</p>
      */
     @NameInMap("ClusterIdList")
     public java.util.List<String> clusterIdList;
@@ -26,10 +28,11 @@ public class DescribeClusterScannerListRequest extends TeaModel {
     /**
      * <p>The list of scanner statuses. Valid values:</p>
      * <ul>
-     * <li><strong>online</strong>: running</li>
-     * <li><strong>offline</strong>: offline</li>
-     * <li><strong>not_installed</strong>: not installed</li>
+     * <li><strong>online</strong>: Running.</li>
+     * <li><strong>offline</strong>: Offline.</li>
+     * <li><strong>not_installed</strong>: Not installed.</li>
      * </ul>
+     * <p>You must specify at least one of StatusList and ClusterIdList. If neither is specified, the API returns HTTP 400 with the error code InvalidParam.</p>
      */
     @NameInMap("StatusList")
     public java.util.List<String> statusList;

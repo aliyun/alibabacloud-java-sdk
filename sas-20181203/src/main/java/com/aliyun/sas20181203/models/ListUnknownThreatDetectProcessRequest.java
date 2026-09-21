@@ -7,10 +7,8 @@ public class ListUnknownThreatDetectProcessRequest extends TeaModel {
     /**
      * <p>The analysis result. Valid values:</p>
      * <ul>
-     * <li><p><strong>black</strong>: abnormal process</p>
-     * </li>
-     * <li><p><strong>white</strong>: normal process</p>
-     * </li>
+     * <li><strong>black</strong>: abnormal process</li>
+     * <li><strong>white</strong>: normal process</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class ListUnknownThreatDetectProcessRequest extends TeaModel {
     public String analyzeResult;
 
     /**
-     * <p>The page number to return.</p>
+     * <p>The page number of the current page when using paged query. This is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +27,7 @@ public class ListUnknownThreatDetectProcessRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end of the time range for the first detection, in milliseconds.</p>
+     * <p>The end of the time range during which the process was first detected. The value is a timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1768891966345</p>
@@ -38,7 +36,7 @@ public class ListUnknownThreatDetectProcessRequest extends TeaModel {
     public Long firstTimeEnd;
 
     /**
-     * <p>The start of the time range for the first detection, in milliseconds.</p>
+     * <p>The start of the time range during which the process was first detected. The value is a timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1768891966344</p>
@@ -47,7 +45,7 @@ public class ListUnknownThreatDetectProcessRequest extends TeaModel {
     public Long firstTimeStart;
 
     /**
-     * <p>The MD5 value of the file.</p>
+     * <p>The MD5 hash of the file.</p>
      * 
      * <strong>example:</strong>
      * <p>0552c44e243abdea1729d4507bce****</p>
@@ -56,7 +54,7 @@ public class ListUnknownThreatDetectProcessRequest extends TeaModel {
     public String md5;
 
     /**
-     * <p>The number of entries to return per page.</p>
+     * <p>The maximum number of entries per page when using paged query. This is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -92,13 +90,22 @@ public class ListUnknownThreatDetectProcessRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The SHA-256 value of the file.</p>
+     * <p>The SHA-256 hash of the file.</p>
      * 
      * <strong>example:</strong>
      * <p>f204693a7d2ce99d6c4434e550d985ee1c7be7cb5dd9a76094369af0d2******</p>
      */
     @NameInMap("Sha256")
     public String sha256;
+
+    /**
+     * <p>The label.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Process Tag</p>
+     */
+    @NameInMap("Tag")
+    public String tag;
 
     /**
      * <p>The UUID of the server to query.</p>
@@ -192,6 +199,14 @@ public class ListUnknownThreatDetectProcessRequest extends TeaModel {
     }
     public String getSha256() {
         return this.sha256;
+    }
+
+    public ListUnknownThreatDetectProcessRequest setTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    public String getTag() {
+        return this.tag;
     }
 
     public ListUnknownThreatDetectProcessRequest setUuid(String uuid) {

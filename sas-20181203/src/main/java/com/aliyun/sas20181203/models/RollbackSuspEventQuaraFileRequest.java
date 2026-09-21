@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RollbackSuspEventQuaraFileRequest extends TeaModel {
     /**
-     * <p>The ID of the request source. Set the value to sas.</p>
+     * <p>The source of the request. Set the value to sas.</p>
      * 
      * <strong>example:</strong>
      * <p>sas</p>
@@ -14,10 +14,8 @@ public class RollbackSuspEventQuaraFileRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The ID of the quarantined file.   </p>
-     * <blockquote>
-     * <p>If you do not configure this parameter, you cannot call the RollbackSuspEventQuaraFile operation to restore a quarantined file. You can call the <a href="~~DescribeSuspEventQuaraFiles~~">DescribeSuspEventQuaraFiles</a> operation to query the IDs of quarantined files.</p>
-     * </blockquote>
+     * <p>The ID of the quarantined file. You can call <a href="~~DescribeSuspEventQuaraFiles~~">DescribeSuspEventQuaraFiles</a> to obtain this value from the Id field in the response. This parameter is required. If this parameter is not specified, the API returns HTTP 400 with error code -101.</p>
+     * <p>Before you call this operation, make sure that the Security Center agent is installed on the ECS instance, and that file-related security events and corresponding quarantined files exist. After a file is quarantined, call DescribeSuspEventQuaraFiles to query the quarantined file ID, and then call this operation to restore the file.</p>
      * 
      * <strong>example:</strong>
      * <p>3921797</p>
@@ -25,6 +23,15 @@ public class RollbackSuspEventQuaraFileRequest extends TeaModel {
     @NameInMap("QuaraFileId")
     public Integer quaraFileId;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member account in the resource directory.</p>
+     * <blockquote>
+     * <p>You can call <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> to obtain this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
@@ -32,7 +39,7 @@ public class RollbackSuspEventQuaraFileRequest extends TeaModel {
      * <p>The source IP address of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.2.3.4</p>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

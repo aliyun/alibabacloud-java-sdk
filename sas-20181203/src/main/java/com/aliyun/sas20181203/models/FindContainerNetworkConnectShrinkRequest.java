@@ -7,8 +7,9 @@ public class FindContainerNetworkConnectShrinkRequest extends TeaModel {
     /**
      * <p>The query type of the element to query. Valid values:</p>
      * <ul>
-     * <li><strong>EDGE</strong>: connection information</li>
+     * <li><strong>EDGE</strong>: connection information.</li>
      * </ul>
+     * <p>This parameter is required. If this parameter is not specified, the service returns error code -101.</p>
      * 
      * <strong>example:</strong>
      * <p>EDGE</p>
@@ -17,7 +18,7 @@ public class FindContainerNetworkConnectShrinkRequest extends TeaModel {
     public String criteriaType;
 
     /**
-     * <p>The page number of the page to return in a paged query. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
+     * <p>The page number of the page to return in a paginated query. Default value: <strong>1</strong>, which indicates the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,12 +28,14 @@ public class FindContainerNetworkConnectShrinkRequest extends TeaModel {
 
     /**
      * <p>The destination node information, which is used to filter destination nodes.</p>
+     * <p>This parameter is required. If this parameter is not specified, the service returns error code -101.</p>
      */
     @NameInMap("DstNode")
     public String dstNodeShrink;
 
     /**
      * <p>The end time of the network connectivity. Specify a UNIX timestamp in milliseconds.</p>
+     * <p>This parameter is required. If this parameter is not specified, the service returns error code -101.</p>
      * 
      * <strong>example:</strong>
      * <p>1649260799999</p>
@@ -41,7 +44,7 @@ public class FindContainerNetworkConnectShrinkRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The maximum number of entries per page in a paged query. Default value: 20. If the PageSize parameter is left empty, 20 entries are returned by default.</p>
+     * <p>The maximum number of entries per page when paging is used. Default value: 20. If this parameter is left empty, 20 entries are returned.</p>
      * <blockquote>
      * <p>Do not leave PageSize empty.</p>
      * </blockquote>
@@ -54,12 +57,14 @@ public class FindContainerNetworkConnectShrinkRequest extends TeaModel {
 
     /**
      * <p>The source node information, which is used to filter source nodes.</p>
+     * <p>This parameter is required. If this parameter is not specified, the service returns error code -101.</p>
      */
     @NameInMap("SrcNode")
     public String srcNodeShrink;
 
     /**
      * <p>The start time of the network connectivity. Specify a UNIX timestamp in milliseconds.</p>
+     * <p>This parameter is required. If this parameter is not specified, the service returns error code -101.</p>
      * 
      * <strong>example:</strong>
      * <p>1666886400000</p>

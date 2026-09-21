@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
     /**
-     * <p>An array of process details.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListUnknownThreatDetectProcessResponseBodyData> data;
@@ -17,7 +17,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
     public ListUnknownThreatDetectProcessResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>20456DD5-5CBF-5015-9173-12CA4246B***</p>
@@ -54,16 +54,55 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListUnknownThreatDetectProcessResponseBodyDataTags extends TeaModel {
+        /**
+         * <p>The English label of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System Process</p>
+         */
+        @NameInMap("TagEn")
+        public String tagEn;
+
+        /**
+         * <p>The Chinese label of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System Process</p>
+         */
+        @NameInMap("TagZh")
+        public String tagZh;
+
+        public static ListUnknownThreatDetectProcessResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
+            ListUnknownThreatDetectProcessResponseBodyDataTags self = new ListUnknownThreatDetectProcessResponseBodyDataTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListUnknownThreatDetectProcessResponseBodyDataTags setTagEn(String tagEn) {
+            this.tagEn = tagEn;
+            return this;
+        }
+        public String getTagEn() {
+            return this.tagEn;
+        }
+
+        public ListUnknownThreatDetectProcessResponseBodyDataTags setTagZh(String tagZh) {
+            this.tagZh = tagZh;
+            return this;
+        }
+        public String getTagZh() {
+            return this.tagZh;
+        }
+
+    }
+
     public static class ListUnknownThreatDetectProcessResponseBodyData extends TeaModel {
         /**
          * <p>The analysis result. Valid values:</p>
          * <ul>
-         * <li><p><strong>black</strong>: A malicious process.</p>
-         * </li>
-         * <li><p><strong>white</strong>: A normal process.</p>
-         * </li>
-         * <li><p><strong>abnormal</strong>: An abnormal process.</p>
-         * </li>
+         * <li><strong>black</strong>: Malicious process.</li>
+         * <li><strong>white</strong>: Normal process.</li>
+         * <li><strong>abnormal</strong>: Abnormal process.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -79,7 +118,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         public String explanationZh;
 
         /**
-         * <p>The timestamp of the first occurrence.</p>
+         * <p>The timestamp when the process was first detected.</p>
          * 
          * <strong>example:</strong>
          * <p>1694576692000</p>
@@ -97,7 +136,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         public String md5;
 
         /**
-         * <p>The process ID.</p>
+         * <p>The process ID of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>2025031506350619216822625103151158982</p>
@@ -115,7 +154,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         public String processPath;
 
         /**
-         * <p>Remarks about the process.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>safe process</p>
@@ -131,6 +170,12 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
          */
         @NameInMap("Sha256")
         public String sha256;
+
+        /**
+         * <p>The process labels.</p>
+         */
+        @NameInMap("Tags")
+        public java.util.List<ListUnknownThreatDetectProcessResponseBodyDataTags> tags;
 
         public static ListUnknownThreatDetectProcessResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListUnknownThreatDetectProcessResponseBodyData self = new ListUnknownThreatDetectProcessResponseBodyData();
@@ -209,6 +254,14 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
             return this.sha256;
         }
 
+        public ListUnknownThreatDetectProcessResponseBodyData setTags(java.util.List<ListUnknownThreatDetectProcessResponseBodyDataTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListUnknownThreatDetectProcessResponseBodyDataTags> getTags() {
+            return this.tags;
+        }
+
     }
 
     public static class ListUnknownThreatDetectProcessResponseBodyPageInfo extends TeaModel {
@@ -222,7 +275,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         public String count;
 
         /**
-         * <p>The current page number.</p>
+         * <p>The page number of the current page in a paged query. This is used for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -231,7 +284,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The maximum number of entries per page in a paged query. This is used for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

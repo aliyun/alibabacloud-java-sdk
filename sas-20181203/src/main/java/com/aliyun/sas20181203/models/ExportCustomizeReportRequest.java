@@ -34,10 +34,13 @@ public class ExportCustomizeReportRequest extends TeaModel {
     public Long reportId;
 
     /**
-     * <p>The Alibaba Cloud account ID of the member accounts in the resource directory.</p>
+     * <p>The Alibaba Cloud account ID of the member account in the resource directory.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * <p>You can call <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> to obtain this parameter.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;

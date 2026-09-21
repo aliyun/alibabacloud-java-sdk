@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUuidsByVulNamesRequest extends TeaModel {
     /**
-     * <p>Specifies whether the vulnerability is handled. Valid values:</p>
+     * <p>Specifies whether the vulnerability has been handled. Valid values:</p>
      * <ul>
      * <li><strong>y</strong>: Handled.</li>
      * <li><strong>n</strong>: Not handled.</li>
@@ -58,7 +58,7 @@ public class DescribeUuidsByVulNamesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The vulnerability level. Separate multiple levels with commas (,). Valid values:</p>
+     * <p>The vulnerability severity level. Separate multiple levels with commas (,). Valid values:</p>
      * <ul>
      * <li><strong>high</strong>: High.</li>
      * <li><strong>medium</strong>: Medium.</li>
@@ -72,7 +72,7 @@ public class DescribeUuidsByVulNamesRequest extends TeaModel {
     public String level;
 
     /**
-     * <p>The priority level of the vulnerability fix. Separate multiple levels with commas (,). Valid values:</p>
+     * <p>The priority level of vulnerability fixing to query. Separate multiple levels with commas (,). Valid values:</p>
      * <ul>
      * <li><strong>asap</strong>: High.</li>
      * <li><strong>later</strong>: Medium.</li>
@@ -99,6 +99,9 @@ public class DescribeUuidsByVulNamesRequest extends TeaModel {
      * <blockquote>
      * <p>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;

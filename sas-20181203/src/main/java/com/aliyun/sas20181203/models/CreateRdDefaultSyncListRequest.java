@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRdDefaultSyncListRequest extends TeaModel {
     /**
-     * <p>The list of folder IDs in the resource directory.</p>
+     * <p>The IDs of folders in the resource directory.</p>
      * <blockquote>
      * <p>You can call <a href="~~GetRdTree~~">GetRdTree</a> to obtain folder IDs. Separate multiple folder IDs with commas (,). If you do not specify this parameter, the existing configuration list is cleared.</p>
      * </blockquote>

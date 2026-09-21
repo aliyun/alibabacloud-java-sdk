@@ -5,18 +5,22 @@ import com.aliyun.tea.*;
 
 public class ModifyEmgVulSubmitRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values: true: performs a dry run without executing the actual operation. false: performs the actual operation. Default value: false.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>The language type of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong>: Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,10 +54,8 @@ public class ModifyEmgVulSubmitRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform vulnerability detection. Valid values:</p>
      * <ul>
-     * <li><p><strong>yes</strong>: Perform vulnerability detection.</p>
-     * </li>
-     * <li><p><strong>no</strong>: Do not perform vulnerability detection.</p>
-     * </li>
+     * <li><strong>yes</strong>: Perform vulnerability detection.</li>
+     * <li><strong>no</strong>: Do not perform vulnerability detection.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -74,6 +76,14 @@ public class ModifyEmgVulSubmitRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ModifyEmgVulSubmitRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifyEmgVulSubmitRequest setLang(String lang) {

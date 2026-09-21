@@ -33,7 +33,7 @@ public class RefreshAssetsRequest extends TeaModel {
     /**
      * <p>The type of cloud product. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: server</li>
+     * <li><strong>0</strong>: cloud server</li>
      * <li><strong>1</strong>: load balancing</li>
      * <li><strong>3</strong>: ApsaraDB RDS database</li>
      * <li><strong>4</strong>: ApsaraDB for MongoDB database</li>
@@ -47,12 +47,12 @@ public class RefreshAssetsRequest extends TeaModel {
      * <li><strong>14</strong>: Apsara Devops</li>
      * <li><strong>15</strong>: access control</li>
      * <li><strong>16</strong>: Anti-DDoS</li>
-     * <li><strong>17</strong>: Web Application Firewall</li>
+     * <li><strong>17</strong>: Web application firewall</li>
      * <li><strong>18</strong>: OSS</li>
      * <li><strong>19</strong>: cloud-native relational database PolarDB</li>
      * <li><strong>20</strong>: ApsaraDB RDS for PostgreSQL database</li>
-     * <li><strong>21</strong>: Microservices Engine</li>
-     * <li><strong>22</strong>: File Storage NAS</li>
+     * <li><strong>21</strong>: microservices engine</li>
+     * <li><strong>22</strong>: file storage NAS</li>
      * <li><strong>23</strong>: Data Security Center</li>
      * <li><strong>24</strong>: EIP</li>
      * </ul>
@@ -68,6 +68,9 @@ public class RefreshAssetsRequest extends TeaModel {
      * <blockquote>
      * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
@@ -76,10 +79,10 @@ public class RefreshAssetsRequest extends TeaModel {
      * <p>The server vendor. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: Alibaba Cloud asset</li>
-     * <li><strong>1</strong>: asset outside the cloud</li>
+     * <li><strong>1</strong>: Non-cloud asset</li>
      * <li><strong>2</strong>: IDC asset</li>
-     * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>: third-party cloud asset</li>
-     * <li><strong>8</strong>: lightweight asset</li>
+     * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>: Third-party cloud asset</li>
+     * <li><strong>8</strong>: Lightweight asset</li>
      * </ul>
      * 
      * <strong>example:</strong>

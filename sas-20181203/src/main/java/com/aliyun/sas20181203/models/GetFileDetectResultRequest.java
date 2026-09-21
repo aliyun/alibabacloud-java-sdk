@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFileDetectResultRequest extends TeaModel {
     /**
-     * <p>The list of file identifiers. A maximum of 100 elements can be specified.</p>
+     * <p>The list of file identifiers. A maximum of 200 elements can be specified.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("HashKeyList")

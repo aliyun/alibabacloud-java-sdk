@@ -20,7 +20,7 @@ public class DescribeGraph4InvestigationOnlineResponseBody extends TeaModel {
     public DescribeGraph4InvestigationOnlineResponseBodyData data;
 
     /**
-     * <p>The message returned for the request.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -38,10 +38,10 @@ public class DescribeGraph4InvestigationOnlineResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The API call was successful.</li>
-     * <li><strong>false</strong>: The API call failed.</li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUnknownThreatDetectStrategyRequest extends TeaModel {
     /**
-     * <p>The page number of the current page in a paging query.</p>
+     * <p>The page number of the current page when using paged query. This is used for paging.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ListUnknownThreatDetectStrategyRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of entries to display on each page in a paging query.</p>
+     * <p>The number of entries to display on each page when using paged query. This is used for paging.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

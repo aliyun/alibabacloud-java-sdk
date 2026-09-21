@@ -11,7 +11,7 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
     public java.util.List<GetSasContainerWebDefenseRuleApplicationResponseBodyContainerWebDefenseAppList> containerWebDefenseAppList;
 
     /**
-     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>09969D2C-4FAD-429E-BFBF-9A60DEF8****</p>
@@ -53,7 +53,7 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
         /**
          * <p>The ID of the container cluster.</p>
          * <blockquote>
-         * <p>Call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

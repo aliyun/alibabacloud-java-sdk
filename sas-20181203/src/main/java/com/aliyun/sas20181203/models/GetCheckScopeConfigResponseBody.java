@@ -97,15 +97,15 @@ public class GetCheckScopeConfigResponseBody extends TeaModel {
 
     public static class GetCheckScopeConfigResponseBodyData extends TeaModel {
         /**
-         * <p>The automatic scan configuration as a JSON string. The following fields are included:</p>
+         * <p>The automatic scan configuration as a JSON string. The fields are described as follows:</p>
          * <ul>
-         * <li><strong>autoInclude</strong>: specifies whether to enable automatic scanning. Valid values: <strong>true</strong>: enabled. <strong>false</strong>: disabled.</li>
+         * <li><strong>autoInclude</strong>: specifies whether to enable automatic scan. Valid values: <strong>true</strong>: enabled. <strong>false</strong>: disabled.</li>
          * <li><strong>autoRule</strong>: the enablement configuration.</li>
          * <li><strong>ruleOperator</strong>: the enablement configuration rule. The value is <strong>include</strong>.</li>
          * <li><strong>operator</strong>: the logical operator. The value is <strong>or</strong>.</li>
          * <li><strong>rule</strong>: the rule.</li>
          * <li><strong>condition</strong>: the rule condition. Valid values: <strong>vendor</strong>: vendor. <strong>assetType</strong>: level-1 asset type. <strong>assetSubType</strong>: level-2 asset type.<blockquote>
-         * <p>For more information, see the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</p>
+         * <p>For specific meanings, refer to the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -119,8 +119,8 @@ public class GetCheckScopeConfigResponseBody extends TeaModel {
         /**
          * <p>The automatic scan configuration type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: automatic scanning is disabled</li>
-         * <li><strong>1</strong>: automatically scan newly added cloud assets</li>
+         * <li><strong>0</strong>: Automatic scan is disabled.</li>
+         * <li><strong>1</strong>: Automatically scan newly added cloud assets.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -159,8 +159,8 @@ public class GetCheckScopeConfigResponseBody extends TeaModel {
         /**
          * <p>The scan scope configuration type. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: scan by instance</li>
-         * <li><strong>3</strong>: scan all</li>
+         * <li><strong>1</strong>: scan by instance.</li>
+         * <li><strong>3</strong>: scan all.</li>
          * </ul>
          * 
          * <strong>example:</strong>

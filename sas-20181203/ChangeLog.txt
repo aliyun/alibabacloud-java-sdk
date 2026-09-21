@@ -1,3 +1,33 @@
+2026-09-21 Version: 10.2.0
+- Support API GetAgentlessTaskCountBatch.
+- Update API AddAssetSelectionCriteria: add request parameters DryRun.
+- Update API AddCheckInstanceResultWhiteList: add request parameters DryRun.
+- Update API AddCheckResultWhiteList: add request parameters DryRun.
+- Update API BindAuthToMachine: add request parameters DryRun.
+- Update API ChangeCheckConfig: add request parameters DryRun.
+- Update API CreateAssetSelectionConfig: add request parameters DryRun.
+- Update API CreateCycleTask: add request parameters DryRun.
+- Update API CreateOssScanConfig: add request parameters DryRun.
+- Update API CreateSasTrial: add request parameters DryRun.
+- Update API CreateServiceLinkedRole: add request parameters DryRun.
+- Update API CreateSimilarSecurityEventsQueryTask: add request parameters DryRun.
+- Update API CreateVirusScanOnceTask: add request parameters DryRun.
+- Update API ListUnknownThreatDetectProcess: add request parameters Tag.
+- Update API ListUnknownThreatDetectProcess: add response parameters Body.Data.$.Tags.
+- Update API ModifyCreateVulWhitelist: add request parameters DryRun.
+- Update API ModifyEmgVulSubmit: add request parameters DryRun.
+- Update API ModifyNoticeConfig: add request parameters DryRun.
+- Update API ModifyOperateVul: add request parameters DryRun.
+- Update API ModifyPostPayModuleSwitch: add request parameters DryRun.
+- Update API ModifyServerlessAuthToMachine: add request parameters DryRun.
+- Update API ModifyStartVulScan: add request parameters DryRun.
+- Update API ModifyVulConfig: add request parameters DryRun.
+- Update API OperateCommonOverallConfig: add request parameters DryRun.
+- Update API UpdatePostPaidBindRel: add request parameters DryRun.
+- Update API UpdateSelectionKeyByType: add request parameters DryRun.
+- Update API VerifyCheckInstanceResult: add request parameters DryRun.
+
+
 2026-09-15 Version: 10.1.1
 - Update API ChangeCheckScopeConfigInstance: add request parameters SelectionKey.
 - Update API CreateAgentlessScanTask: add request parameters From.

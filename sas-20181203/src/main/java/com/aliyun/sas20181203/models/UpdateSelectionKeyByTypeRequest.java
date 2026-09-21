@@ -27,6 +27,17 @@ public class UpdateSelectionKeyByTypeRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <ul>
+     * <li>true: performs only a dry run without performing the actual operation.</li>
+     * <li>false: performs the actual request.</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>The unique identifier of the asset selection.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +65,14 @@ public class UpdateSelectionKeyByTypeRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateSelectionKeyByTypeRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public UpdateSelectionKeyByTypeRequest setSelectionKey(String selectionKey) {

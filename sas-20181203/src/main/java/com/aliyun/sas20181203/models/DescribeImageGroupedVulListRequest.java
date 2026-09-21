@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageGroupedVulListRequest extends TeaModel {
     /**
-     * <p>Specifies whether to filter by agentless fix capability. true: queries only vulnerabilities that support agentless fix. false: queries vulnerabilities that are not marked as supporting agentless fix. If this parameter is not specified, no filtering is applied based on this condition.</p>
+     * <p>Specifies whether to filter by agentless fix capability. If set to true, only vulnerabilities that support agentless fix are returned. If set to false, only vulnerabilities that are not marked as supporting agentless fix are returned. If not specified, no filtering is applied based on this condition.</p>
      */
     @NameInMap("AgentlessCanFix")
     public Boolean agentlessCanFix;
@@ -86,7 +86,7 @@ public class DescribeImageGroupedVulListRequest extends TeaModel {
     public String imageTag;
 
     /**
-     * <p>Specifies whether to query vulnerabilities only for the latest image. If this parameter is not set, vulnerabilities for all images are queried. Valid values:</p>
+     * <p>Specifies whether to query vulnerabilities only for the latest image. If this parameter is not specified, vulnerabilities for all images are queried. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: No.</li>
      * <li><strong>1</strong>: Yes.</li>
@@ -123,7 +123,7 @@ public class DescribeImageGroupedVulListRequest extends TeaModel {
     /**
      * <p>The priority level for fixing the vulnerability. Valid values:</p>
      * <ul>
-     * <li><strong>asap</strong>: High-priority vulnerability that must be fixed as soon as possible.</li>
+     * <li><strong>asap</strong>: High-priority vulnerability that requires immediate fixing.</li>
      * <li><strong>later</strong>: Medium-priority vulnerability that can be fixed later.</li>
      * <li><strong>nntf</strong>: Low-priority vulnerability that does not need to be fixed for now.</li>
      * </ul>
@@ -135,7 +135,7 @@ public class DescribeImageGroupedVulListRequest extends TeaModel {
     public String necessity;
 
     /**
-     * <p>The number of image vulnerabilities to display on each page in a paging query. Default value: <strong>20</strong>, which indicates 20 image vulnerabilities per page.</p>
+     * <p>Settings for the number of image vulnerabilities to display on each page in a paging query. Default value: <strong>20</strong>, which indicates that 20 image vulnerabilities are displayed on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -202,6 +202,9 @@ public class DescribeImageGroupedVulListRequest extends TeaModel {
      * <blockquote>
      * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;

@@ -18,7 +18,7 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
     public Integer autoBind;
 
     /**
-     * <p>The edition to automatically bind when new assets are added. Valid values:</p>
+     * <p>The edition that is automatically bound when new assets are added. Valid values:</p>
      * <ul>
      * <li><strong>1</strong>: Free Edition </li>
      * <li><strong>3</strong>: Enterprise Edition</li>
@@ -40,13 +40,19 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
     public java.util.List<UpdatePostPaidBindRelRequestBindAction> bindAction;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The abbreviated name of the cloud service. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run of the request. Valid values: true: performs only a dry run without executing the actual operation. false: performs the actual operation. Default value: false.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>The abbreviation of the cloud service. Valid values:</p>
      * <ul>
      * <li><strong>sas</strong>: Security Center</li>
      * </ul>
@@ -98,6 +104,14 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdatePostPaidBindRelRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public UpdatePostPaidBindRelRequest setProductCode(String productCode) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePropertyCronDetailRequest extends TeaModel {
     /**
-     * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
+     * <p>The page number of the results to return. Default value: <strong>1</strong>, which indicates that the results start from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribePropertyCronDetailRequest extends TeaModel {
     public String extend;
 
     /**
-     * <p>The pagination token that marks the position from which you want to start reading. Leave this parameter empty to read from the beginning.</p>
+     * <p>The token that marks the current position from which to start reading. Leave this parameter empty to start reading from the beginning.</p>
      * <blockquote>
      * <p>You do not need to specify this parameter for the first call. The response includes the NextToken value for the second call. Each subsequent response includes the NextToken value for the next call.</p>
      * </blockquote>
@@ -35,7 +35,7 @@ public class DescribePropertyCronDetailRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Settings the number of scheduled task asset fingerprint information entries displayed per page in a paging query. Default value: <strong>10</strong>, which indicates that 10 entries of scheduled task asset fingerprint information are displayed per page.</p>
+     * <p>Settings the number of entries per page in a paging query. Default value: <strong>10</strong>, which indicates that 10 fingerprint entries of scheduled task assets are displayed per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -44,7 +44,7 @@ public class DescribePropertyCronDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name or IP address of the server that you want to query.</p>
+     * <p>The name or IP address of the server to query.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -57,12 +57,15 @@ public class DescribePropertyCronDetailRequest extends TeaModel {
      * <blockquote>
      * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>The task path that you want to query.</p>
+     * <p>The path of the scheduled task to query.</p>
      * 
      * <strong>example:</strong>
      * <p>/etc/cron.d/root</p>
@@ -84,7 +87,7 @@ public class DescribePropertyCronDetailRequest extends TeaModel {
     public Boolean useNextToken;
 
     /**
-     * <p>The account name of the scheduled task that you want to query.</p>
+     * <p>The account name of the scheduled task to query.</p>
      * 
      * <strong>example:</strong>
      * <p>root</p>
@@ -93,7 +96,7 @@ public class DescribePropertyCronDetailRequest extends TeaModel {
     public String user;
 
     /**
-     * <p>The UUID of the server that you want to query.</p>
+     * <p>The UUID of the server to query.</p>
      * 
      * <strong>example:</strong>
      * <p>50d213b4-3a35-427a-b8a5-04b0c7e1****</p>

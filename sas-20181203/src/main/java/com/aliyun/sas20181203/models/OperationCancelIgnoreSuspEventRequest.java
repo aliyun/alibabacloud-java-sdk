@@ -14,10 +14,13 @@ public class OperationCancelIgnoreSuspEventRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The Alibaba Cloud account ID of the member account in the resource directory.</p>
+     * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
      * <blockquote>
      * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;

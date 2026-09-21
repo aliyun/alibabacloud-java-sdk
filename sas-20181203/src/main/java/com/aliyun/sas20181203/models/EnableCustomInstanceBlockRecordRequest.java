@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableCustomInstanceBlockRecordRequest extends TeaModel {
     /**
-     * <p>The IP address that you want to block.</p>
+     * <p>The IP address for brute-force attacks prevention that you want to enable on the server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,11 @@ public class EnableCustomInstanceBlockRecordRequest extends TeaModel {
     public String blockIp;
 
     /**
-     * <p>The traffic direction from the IP address that you want to block. Valid value:</p>
+     * <p>The direction in which the brute-force attacks blocking policy blocks the IP address on the server.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><strong>in</strong></li>
-     * <li><strong>out</strong></li>
+     * <li><strong>in</strong>: inbound</li>
+     * <li><strong>out</strong>: outbound</li>
      * </ul>
      * 
      * <strong>example:</strong>

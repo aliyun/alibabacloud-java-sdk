@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSecurityEventMarkMissListRequest extends TeaModel {
     /**
-     * <p>The list of alert whitelisting rule IDs.</p>
+     * <p>The list of alert whitelist rule IDs.</p>
      */
     @NameInMap("Ids")
     public java.util.List<Long> ids;
@@ -15,6 +15,9 @@ public class DeleteSecurityEventMarkMissListRequest extends TeaModel {
      * <blockquote>
      * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;

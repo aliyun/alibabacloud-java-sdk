@@ -5,16 +5,18 @@ import com.aliyun.tea.*;
 
 public class UpdateAlarmEventRequest extends TeaModel {
     /**
-     * <p>The IDs of the alert events.</p>
+     * <p>The list of alert event IDs.</p>
+     * <p>You can call ListHoneypotAlarmEvents to obtain valid alert event IDs. Before calling this operation, ensure that honeypots are deployed and honeypot alert event data exists.</p>
+     * <p>This parameter is required. If this parameter is not specified, the API returns HTTP 400 with the error code IllegalParam.</p>
      */
     @NameInMap("AlarmEventIdList")
     public java.util.List<Long> alarmEventIdList;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,12 +26,13 @@ public class UpdateAlarmEventRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The operation that you want to perform on the alert events. Valid values:</p>
+     * <p>The processing method for the alert event. Valid values:</p>
      * <ul>
-     * <li><strong>manual_handled</strong>: handle the alert events.</li>
-     * <li><strong>ignore</strong>: igore the alert events.</li>
-     * <li><strong>cancel_ignore</strong>: remove the alert events from the whitelist.</li>
+     * <li><strong>manual_handled</strong>: Handled.</li>
+     * <li><strong>ignore</strong>: Ignored.</li>
+     * <li><strong>cancel_ignore</strong>: Removed from the whitelist.</li>
      * </ul>
+     * <p>This parameter is required. If this parameter is not specified, the API returns HTTP 400 with the error code IllegalParam.</p>
      * 
      * <strong>example:</strong>
      * <p>ignore</p>
@@ -37,6 +40,15 @@ public class UpdateAlarmEventRequest extends TeaModel {
     @NameInMap("OperationCode")
     public String operationCode;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
+     * <blockquote>
+     * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 

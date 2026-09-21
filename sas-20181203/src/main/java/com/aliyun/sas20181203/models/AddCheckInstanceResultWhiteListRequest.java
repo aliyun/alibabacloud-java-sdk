@@ -32,6 +32,17 @@ public class AddCheckInstanceResultWhiteListRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Specifies whether to perform only a dry run. Valid values:</p>
+     * <ul>
+     * <li>true: performs only a dry run without executing the actual operation.</li>
+     * <li>false: performs the actual operation.</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>The collection of asset instance IDs.</p>
      */
     @NameInMap("InstanceIds")
@@ -44,7 +55,7 @@ public class AddCheckInstanceResultWhiteListRequest extends TeaModel {
     public java.util.List<AddCheckInstanceResultWhiteListRequestInstanceList> instanceList;
 
     /**
-     * <p>The remarks. Maximum length: 65535 bytes.</p>
+     * <p>The remarks. Maximum length: 65,535 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -91,6 +102,14 @@ public class AddCheckInstanceResultWhiteListRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public AddCheckInstanceResultWhiteListRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public AddCheckInstanceResultWhiteListRequest setInstanceIds(java.util.List<String> instanceIds) {

@@ -7,8 +7,9 @@ public class DescribeUniBackupPolicyDetailRequest extends TeaModel {
     /**
      * <p>The ID of the anti-ransomware backup policy for databases.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to obtain this parameter.</p>
+     * <p>Call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to obtain this parameter.</p>
      * </blockquote>
+     * <p>If DescribeUniBackupPolicies returns an empty list, activate the anti-ransomware feature of Security Center first, make sure that the Security Center agent is installed on the ECS instance and the database has been discovered, and then call CreateUniBackupPolicy to create a backup policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

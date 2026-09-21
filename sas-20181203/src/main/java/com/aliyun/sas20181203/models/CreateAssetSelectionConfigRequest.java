@@ -22,10 +22,16 @@ public class CreateAssetSelectionConfigRequest extends TeaModel {
     public String businessType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
+
+    /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values: true: performs only a dry run without performing the actual operation. false: performs the actual request. Default value: false.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
 
     /**
      * <p>The operating system of the target asset. Valid values:</p>
@@ -52,12 +58,12 @@ public class CreateAssetSelectionConfigRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p>The target asset type. Valid values:</p>
+     * <p>The Asset Type of the target. Valid values:</p>
      * <ul>
      * <li><strong>all_instance</strong>: all servers.</li>
-     * <li><strong>instance</strong>: select by server.</li>
-     * <li><strong>group</strong>: select by group.</li>
-     * <li><strong>vpc</strong>: select by VPC.</li>
+     * <li><strong>instance</strong>: selected by server.</li>
+     * <li><strong>group</strong>: selected by group.</li>
+     * <li><strong>vpc</strong>: selected by VPC.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -86,6 +92,14 @@ public class CreateAssetSelectionConfigRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateAssetSelectionConfigRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateAssetSelectionConfigRequest setPlatform(String platform) {

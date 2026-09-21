@@ -7,8 +7,8 @@ public class ModifyWebLockStartRequest extends TeaModel {
     /**
      * <p>The defense mode. Valid values:</p>
      * <ul>
-     * <li><strong>block</strong>: block</li>
-     * <li><strong>audit</strong>: alert.</li>
+     * <li><strong>block</strong>: Block.</li>
+     * <li><strong>audit</strong>: Alert.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -20,6 +20,7 @@ public class ModifyWebLockStartRequest extends TeaModel {
 
     /**
      * <p>The protection directories. Separate multiple directories with commas (,).</p>
+     * <p>The server automatically appends a forward slash (/) to the end of the directory path during storage. Use paths with a trailing slash to avoid matching inconsistencies.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,9 +30,9 @@ public class ModifyWebLockStartRequest extends TeaModel {
     public String dir;
 
     /**
-     * <p>The folder that does not require web tamper proofing protection (excluded folder).</p>
+     * <p>The directories that do not require web tamper-proofing protection (excluded directories).</p>
      * <blockquote>
-     * <p>This parameter is required when the Defense mode <strong>Mode</strong> is set to the <strong>blacklist</strong> pattern.</p>
+     * <p>This parameter is required when the protection mode <strong>Mode</strong> is set to <strong>blacklist</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,9 +42,9 @@ public class ModifyWebLockStartRequest extends TeaModel {
     public String exclusiveDir;
 
     /**
-     * <p>The files that do not require web tamper proofing protection (excluded files).</p>
+     * <p>The files that do not require web tamper-proofing protection (excluded files).</p>
      * <blockquote>
-     * <p>This parameter is required when the Defense mode <strong>Mode</strong> is set to the <strong>blacklist</strong> pattern.</p>
+     * <p>This parameter is required when the protection mode <strong>Mode</strong> is set to <strong>blacklist</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +54,7 @@ public class ModifyWebLockStartRequest extends TeaModel {
     public String exclusiveFile;
 
     /**
-     * <p>The file types that do not require web tamper proofing protection (excluded file types). Separate multiple file types with commas (,). Valid values:</p>
+     * <p>The file types that do not require web tamper-proofing protection (excluded file types). Separate multiple file types with semicolons (;). Valid values:</p>
      * <ul>
      * <li>php</li>
      * <li>jsp</li>
@@ -71,7 +72,7 @@ public class ModifyWebLockStartRequest extends TeaModel {
      * <li>png</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required when the Defense mode <strong>Mode</strong> is set to the <strong>blacklist</strong> pattern.</p>
+     * <p>This parameter is required when the protection mode <strong>Mode</strong> is set to <strong>blacklist</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -81,7 +82,7 @@ public class ModifyWebLockStartRequest extends TeaModel {
     public String exclusiveFileType;
 
     /**
-     * <p>The file types that require web tamper proofing protection. Separate multiple file types with commas (,). Valid values:</p>
+     * <p>The file types that require web tamper-proofing protection. Separate multiple file types with semicolons (;). Valid values:</p>
      * <ul>
      * <li>php</li>
      * <li>jsp</li>
@@ -99,7 +100,7 @@ public class ModifyWebLockStartRequest extends TeaModel {
      * <li>png</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required when the Defense mode <strong>Mode</strong> is set to the <strong>whitelist</strong> pattern.</p>
+     * <p>This parameter is required when the protection mode <strong>Mode</strong> is set to <strong>whitelist</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -109,10 +110,10 @@ public class ModifyWebLockStartRequest extends TeaModel {
     public String inclusiveFileType;
 
     /**
-     * <p>The local backup path used to back up the protection directories. The format of the protection directory path may differ between Linux servers and Windows servers. Make sure that you enter the path in the correct format. The following examples show the directory formats:</p>
+     * <p>The local backup path used to securely back up the protection directories.<br>The format of the protection directory path may differ between Linux servers and Windows servers. Make sure that you enter the correct format. The following directory formats are provided for reference:</p>
      * <ul>
      * <li>Linux server: /usr/local/aegis/bak</li>
-     * <li>Windows server: C:\Program Files (x86)\Alibaba\Aegis\bak.</li>
+     * <li>Windows server: C:\Program Files (x86)\Alibaba\Aegis\bak</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -125,8 +126,8 @@ public class ModifyWebLockStartRequest extends TeaModel {
     /**
      * <p>The protection type. Valid values:</p>
      * <ul>
-     * <li><strong>whitelist</strong>: whitelist mode. Protects the specified protection directories and file types.</li>
-     * <li><strong>blacklist</strong>: blacklist mode. Protects all subdirectories, file types, and specified files in the protection directories that are not excluded.</li>
+     * <li><strong>whitelist</strong>: Whitelist mode. Protects the specified protection directories and file types.</li>
+     * <li><strong>blacklist</strong>: Blacklist mode. Protects all subdirectories, file types, and specified files under the protection directories that are not excluded.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

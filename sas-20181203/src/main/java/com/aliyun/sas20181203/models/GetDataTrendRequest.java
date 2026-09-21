@@ -12,7 +12,7 @@ public class GetDataTrendRequest extends TeaModel {
      * <li><strong>VUL_NEW</strong>: number of new vulnerability risks</li>
      * <li><strong>VUL_OPERATE</strong>: number of handled vulnerability risks</li>
      * <li><strong>SUSP_NEW</strong>: number of new alert risks</li>
-     * <li><strong>SUSP_OPERATE</strong>: number of handled alert risks.</li>
+     * <li><strong>SUSP_OPERATE</strong>: number of handled alert risks</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -45,6 +45,15 @@ public class GetDataTrendRequest extends TeaModel {
     @NameInMap("Interval")
     public Integer interval;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member accounts in the resource directory.</p>
+     * <blockquote>
+     * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 

@@ -187,7 +187,7 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
 
     public static class ListUnknownThreatDetectStrategyResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries displayed on the current page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -196,7 +196,7 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number of the current page in a paging query.</p>
+         * <p>The page number of the current page in a paged query. This is used for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -205,7 +205,7 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The maximum number of entries displayed on each page in a paging query.</p>
+         * <p>The maximum number of entries per page in a paged query. This is used for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

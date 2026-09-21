@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomizeReportListRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -18,10 +18,10 @@ public class DescribeCustomizeReportListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Specifies whether to pin the report. Valid values:</p>
+     * <p>Specifies whether the report is pinned to the top. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong></li>
-     * <li><strong>true</strong></li>
+     * <li><strong>false</strong>: No.</li>
+     * <li><strong>true</strong>: Yes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,10 +31,10 @@ public class DescribeCustomizeReportListRequest extends TeaModel {
     public Boolean pinned;
 
     /**
-     * <p>The state of the report. Valid values:</p>
+     * <p>The report status. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: disabled</li>
-     * <li><strong>1</strong>: enabled</li>
+     * <li><strong>0</strong>: Disabled.</li>
+     * <li><strong>1</strong>: Enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,12 +44,12 @@ public class DescribeCustomizeReportListRequest extends TeaModel {
     public Integer reportStatus;
 
     /**
-     * <p>The type of the report. Valid values:</p>
+     * <p>The report type. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: daily report</li>
-     * <li><strong>1</strong>: weekly report</li>
-     * <li><strong>2</strong>: monthly report</li>
-     * <li><strong>3</strong>: report whose statistics are collected in a custom time range</li>
+     * <li><strong>0</strong>: Daily report.</li>
+     * <li><strong>1</strong>: Weekly report.</li>
+     * <li><strong>2</strong>: Monthly report.</li>
+     * <li><strong>3</strong>: Custom period.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class DescribeCustomizeReportListRequest extends TeaModel {
     public Integer reportType;
 
     /**
-     * <p>The report version. Valid values:</p>
+     * <p>The security report version. Valid values:</p>
      * <ul>
      * <li><strong>1.0.0</strong></li>
      * <li><strong>2.0.0</strong></li>
@@ -71,11 +71,20 @@ public class DescribeCustomizeReportListRequest extends TeaModel {
     @NameInMap("ReportVersion")
     public String reportVersion;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member accounts in the resource directory folder.</p>
+     * <blockquote>
+     * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>The name of the report.</p>
+     * <p>The report name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

@@ -10,6 +10,12 @@ public class ModifyPostPayModuleSwitchRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to perform a dry run. Valid values: true: performs a check without executing the operation. false: executes the operation. Default value: false.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     @NameInMap("EdrModuleSwitch")
     public ModifyPostPayModuleSwitchRequestEdrModuleSwitch edrModuleSwitch;
 
@@ -103,6 +109,14 @@ public class ModifyPostPayModuleSwitchRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ModifyPostPayModuleSwitchRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifyPostPayModuleSwitchRequest setEdrModuleSwitch(ModifyPostPayModuleSwitchRequestEdrModuleSwitch edrModuleSwitch) {
@@ -226,7 +240,7 @@ public class ModifyPostPayModuleSwitchRequest extends TeaModel {
          * <li><strong>1</strong>: Enabled.</li>
          * </ul>
          * <blockquote>
-         * <p>Notice: The basic service module switch cannot be manually modified. This module is enabled when any other module is enabled, and is disabled when all other modules are disabled.</p>
+         * <p>Notice: The basic service module switch cannot be manually modified. This module is in the enabling status when any other module is enabled, and is in the shutdown status only when all other modules are disabled.</notice></p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -68,7 +68,7 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The completion status of the check. Valid values:</p>
+         * <p>The check completion status. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: Unprocessed.</li>
          * <li><strong>1</strong>: Collecting.</li>
@@ -89,7 +89,7 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
          * <li><strong>cve</strong>: Linux software vulnerability</li>
          * <li><strong>sys</strong>: Windows system vulnerability</li>
          * <li><strong>cms</strong>: Web-CMS vulnerability</li>
-         * <li><strong>sca</strong>: sca vulnerability</li>
+         * <li><strong>sca</strong>: SCA vulnerability</li>
          * </ul>
          * 
          * <strong>example:</strong>

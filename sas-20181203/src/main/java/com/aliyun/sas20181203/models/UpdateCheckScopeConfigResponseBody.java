@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCheckScopeConfigResponseBody extends TeaModel {
     /**
-     * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</p>
+     * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class UpdateCheckScopeConfigResponseBody extends TeaModel {
     public UpdateCheckScopeConfigResponseBodyData data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message of the request result.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -97,15 +97,15 @@ public class UpdateCheckScopeConfigResponseBody extends TeaModel {
 
     public static class UpdateCheckScopeConfigResponseBodyData extends TeaModel {
         /**
-         * <p>The automatic scan configuration as a JSON string. The following fields are included:</p>
+         * <p>The JSON string of the automatic scan configuration. The following fields are included:</p>
          * <ul>
-         * <li><strong>autoInclude</strong>: specifies whether to enable automatic scan. Valid values: <strong>true</strong>: enabled. <strong>false</strong>: disabled.</li>
-         * <li><strong>autoRule</strong>: the enablement configuration.</li>
-         * <li><strong>ruleOperator</strong>: the enablement configuration rule. Set the value to <strong>include</strong>.</li>
+         * <li><strong>autoInclude</strong>: specifies whether to enable automatic scanning. Valid values: <strong>true</strong>: enabled. <strong>false</strong>: disabled.</li>
+         * <li><strong>autoRule</strong>: the configuration for enabling automatic scanning.</li>
+         * <li><strong>ruleOperator</strong>: the rule operator for the configuration. Set the value to <strong>include</strong>.</li>
          * <li><strong>operator</strong>: the logical operator. Set the value to <strong>or</strong>.</li>
          * <li><strong>rule</strong>: the rule.</li>
-         * <li><strong>condition</strong>: the rule condition. Valid values: <strong>vendor</strong>: vendor. <strong>assetType</strong>: level-1 asset type. <strong>assetSubType</strong>: level-2 asset type.<blockquote>
-         * <p>For more information, refer to the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</p>
+         * <li><strong>condition</strong>: the rule condition. Valid values: <strong>vendor</strong>: vendor, <strong>assetType</strong>: primary asset type, <strong>assetSubType</strong>: secondary asset type.<blockquote>
+         * <p>For specific meanings, refer to the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -117,10 +117,10 @@ public class UpdateCheckScopeConfigResponseBody extends TeaModel {
         public String autoConfig;
 
         /**
-         * <p>The automatic scan configuration type. Valid values:</p>
+         * <p>The type of the automatic scan configuration. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: disable automatic scan</li>
-         * <li><strong>1</strong>: automatically scan newly added cloud assets</li>
+         * <li><strong>0</strong>: Automatic scan is disabled.</li>
+         * <li><strong>1</strong>: Automatically scan newly added cloud assets.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class UpdateCheckScopeConfigResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The scan scope configuration type. Valid values:</p>
+         * <p>The type of the scan scope configuration. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: scan by instance</li>
          * <li><strong>3</strong>: scan all</li>

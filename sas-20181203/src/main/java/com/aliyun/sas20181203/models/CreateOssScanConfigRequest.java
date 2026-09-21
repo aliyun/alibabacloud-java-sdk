@@ -42,7 +42,7 @@ public class CreateOssScanConfigRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The maximum number of files to decompress. Minimum value: 1. Maximum value: 1000. When the maximum number of decompressed files is exceeded, the decompression operation stops. The detection of files that have already been decompressed is not affected.</p>
+     * <p>The maximum number of files to decompress. Minimum value: 1. Maximum value: 1000. When the maximum number of decompressed files is exceeded, the decompression operation stops immediately. The scanning of files that have already been decompressed is not affected.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -51,7 +51,7 @@ public class CreateOssScanConfigRequest extends TeaModel {
     public Integer decompressMaxFileCount;
 
     /**
-     * <p>The maximum number of decompression layers when multiple levels of nested compressed files exist. Minimum value: 1. Maximum value: 5. When the maximum number of decompression layers is exceeded, the decompression operation stops. The detection of files that have already been decompressed is not affected.</p>
+     * <p>The maximum number of decompression layers when nested compressed files exist. Minimum value: 1. Maximum value: 5. When the maximum number of decompression layers is exceeded, the decompression operation stops immediately. The scanning of files that have already been decompressed is not affected.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -66,10 +66,16 @@ public class CreateOssScanConfigRequest extends TeaModel {
     public java.util.List<String> decryptionList;
 
     /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values: true: performs only a dry run without performing the actual request. false: performs the actual request. Default value: false.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>Specifies whether to enable the policy. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Enabled.</li>
-     * <li><strong>0</strong>: Disabled.</li>
+     * <li><strong>1</strong>: Enable.</li>
+     * <li><strong>0</strong>: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +106,7 @@ public class CreateOssScanConfigRequest extends TeaModel {
     public java.util.List<String> keySuffixList;
 
     /**
-     * <p>Specifies that only files whose last modification time is after the specified timestamp are scanned. Unit: milliseconds.</p>
+     * <p>Scans files whose last modification time is after the specified timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1724301769834</p>
@@ -118,7 +124,7 @@ public class CreateOssScanConfigRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Specifies whether to enable real-time incremental detection. If this parameter is set to true, the ScanDayList, StartTime, and EndTime parameters do not take effect.</p>
+     * <p>Specifies whether to enable real-time incremental scanning. If this parameter is set to true, the ScanDayList, StartTime, and EndTime parameters do not take effect.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -127,7 +133,7 @@ public class CreateOssScanConfigRequest extends TeaModel {
     public Boolean realTimeIncr;
 
     /**
-     * <p>The scan schedule. The number represents the day of the week.</p>
+     * <p>The scan schedule. The number indicates the day of the week.</p>
      */
     @NameInMap("ScanDayList")
     public java.util.List<Integer> scanDayList;
@@ -213,6 +219,14 @@ public class CreateOssScanConfigRequest extends TeaModel {
     }
     public java.util.List<String> getDecryptionList() {
         return this.decryptionList;
+    }
+
+    public CreateOssScanConfigRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateOssScanConfigRequest setEnable(Integer enable) {

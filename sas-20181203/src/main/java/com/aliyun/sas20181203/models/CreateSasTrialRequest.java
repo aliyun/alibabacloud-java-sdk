@@ -5,16 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreateSasTrialRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p>Specifies whether to perform only a dry run. true: performs only a dry run without performing the actual request. false: performs the actual request. Default value: false.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>Specifies whether the request is from the ECS console. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes.</li>
-     * <li><strong>false</strong>: no.</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +43,7 @@ public class CreateSasTrialRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The reason for applying for a trial. This parameter is required for a second trial.</p>
+     * <p>The reason for applying for the trial. This parameter is required for a second trial.</p>
      */
     @NameInMap("RequestForm")
     public CreateSasTrialRequestRequestForm requestForm;
@@ -45,12 +51,12 @@ public class CreateSasTrialRequest extends TeaModel {
     /**
      * <p>The trial type. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: trial not allowed.</li>
-     * <li><strong>1</strong>: first trial.</li>
-     * <li><strong>2</strong>: second trial.</li>
+     * <li><strong>0</strong>: Trial is not allowed.</li>
+     * <li><strong>1</strong>: First trial.</li>
+     * <li><strong>2</strong>: Second trial.</li>
      * </ul>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/2623574.html">GetCanTrySas</a> operation to obtain this parameter. A trial can be started only when the value is not 0.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2623574.html">GetCanTrySas</a> operation to obtain this parameter. The trial can be started only when the value is not 0.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -60,7 +66,7 @@ public class CreateSasTrialRequest extends TeaModel {
     public Integer tryType;
 
     /**
-     * <p>The trial version. Valid values:</p>
+     * <p>The trial edition. Valid values:</p>
      * <ul>
      * <li><strong>3</strong>: Enterprise Edition.</li>
      * <li><strong>7</strong>: Ultimate Edition.</li>
@@ -86,6 +92,14 @@ public class CreateSasTrialRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateSasTrialRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateSasTrialRequest setFromEcs(Boolean fromEcs) {
@@ -130,7 +144,7 @@ public class CreateSasTrialRequest extends TeaModel {
 
     public static class CreateSasTrialRequestRequestForm extends TeaModel {
         /**
-         * <p>The reason for applying for a trial.</p>
+         * <p>The reason for applying for the trial.</p>
          * 
          * <strong>example:</strong>
          * <p>for poc</p>

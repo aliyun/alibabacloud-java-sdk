@@ -95,22 +95,22 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
         public Integer scoreThreshold;
 
         /**
-         * <p>The type of the security score rule subkey. Valid values:</p>
+         * <p>The type of the security score rule sub-item.</p>
          * <ul>
-         * <li><strong>SS_SAS_WEAK_PW</strong>: Pending weak passwords to fix</li>
-         * <li><strong>SS_SAS_ALARM</strong>: Pending Security Center alerting to handle</li>
-         * <li><strong>SS_SAS_EMG_VUL</strong>: Pending emergency vulnerabilities to fix</li>
-         * <li><strong>SS_SAS_APP_VUL</strong>: Pending application vulnerabilities to fix</li>
-         * <li><strong>SS_SAS_SYS_VUL</strong>: Pending system vulnerability to fix</li>
-         * <li><strong>SS_SAS_CLOUD_HC</strong>: Pending Cloud Security Posture Management (CSPM) risks to handle</li>
-         * <li><strong>SS_SDDP_DATA_RISK</strong>: Pending data security risks to remediate</li>
-         * <li><strong>SS_WAF_API_RISK</strong>: Pending API security risks to handle</li>
-         * <li><strong>SS_DDOS_BH_ASSET</strong>: Assets in Black Hole Activated status</li>
-         * <li><strong>SS_SAS_AK_LEAK</strong>: Unhandled AccessKey/SecretKey leak events</li>
-         * <li><strong>SS_PRODUCT_CONNECT</strong>: Security products not Normal connected</li>
-         * <li><strong>SS_KEY_CONFIG</strong>: Key feature configuration</li>
-         * <li><strong>SS_PRODUCT_EXPIRE</strong>: Products about to expire</li>
-         * <li><strong>SS_AI_RISK</strong>: AI application risks</li>
+         * <li><strong>SS_SAS_WEAK_PW</strong>: Pending weak passwords to fix.</li>
+         * <li><strong>SS_SAS_ALARM</strong>: Pending Security Center alerts to handle.</li>
+         * <li><strong>SS_SAS_EMG_VUL</strong>: Pending emergency vulnerabilities to fix.</li>
+         * <li><strong>SS_SAS_APP_VUL</strong>: Pending application vulnerabilities to fix.</li>
+         * <li><strong>SS_SAS_SYS_VUL</strong>: Pending system vulnerabilities to fix.</li>
+         * <li><strong>SS_SAS_CLOUD_HC</strong>: Pending Cloud Security Posture Management (CSPM) risks to handle.</li>
+         * <li><strong>SS_SDDP_DATA_RISK</strong>: Pending data security risks to remediate.</li>
+         * <li><strong>SS_WAF_API_RISK</strong>: Pending API security risks to handle.</li>
+         * <li><strong>SS_DDOS_BH_ASSET</strong>: Assets in Black Hole Activated status.</li>
+         * <li><strong>SS_SAS_AK_LEAK</strong>: Unhandled AccessKey/SecretKey leak events.</li>
+         * <li><strong>SS_PRODUCT_CONNECT</strong>: Security products not in Normal connection status.</li>
+         * <li><strong>SS_KEY_CONFIG</strong>: Key feature configuration.</li>
+         * <li><strong>SS_PRODUCT_EXPIRE</strong>: Products about to expire.</li>
+         * <li><strong>SS_AI_RISK</strong>: AI application risks.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,8 +244,8 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
         /**
          * <p>The category of the security score rule. Valid values:</p>
          * <ul>
-         * <li><strong>SS_SAS_HANDLE</strong>: Security governance</li>
-         * <li><strong>SS_SAS_RESPOND</strong>: Security response</li>
+         * <li><strong>SS_SAS_HANDLE</strong>: Security governance.</li>
+         * <li><strong>SS_SAS_RESPOND</strong>: Security response.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -347,13 +347,13 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
          * <li>XPRESS_INSTALL: Security Center service authorization is not enabled.</li>
          * <li>REINFORCE_SUSPICIOUS: The anti-virus feature is not enabled.</li>
          * <li>RANSOMWARE: The anti-ransomware policy is not enabled.</li>
-         * <li>WEB_LOCK: The web tamper-proofing feature is not enabled.</li>
-         * <li>VIRUS_SCHEDULE_SCAN: The epoch virus scan policy is not enabled.</li>
+         * <li>WEB_LOCK: The tamper-proofing feature is not enabled.</li>
+         * <li>VIRUS_SCHEDULE_SCAN: The periodic virus scan policy is not enabled.</li>
          * <li>IMAGE_REPO_SCAN: The container image scan scope is not configured.</li>
          * <li>IMAGE_SCAN_TASK: The one-click container image security risk scan has not been executed.</li>
          * </ul>
          * </li>
-         * <li><p>SS_ALARM: Pending alerting.</p>
+         * <li><p>SS_ALARM: Pending alerts.</p>
          * <ul>
          * <li>ALARM_SERIOUS: One unhandled high-risk alert event exists.</li>
          * <li>ALARM_SUSPICIOUS: One unhandled medium-risk alert event exists.</li>
@@ -371,7 +371,7 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
          * </li>
          * <li><p>SS_HC: Baseline issues.</p>
          * <ul>
-         * <li>WEAK_EXPLOIT: A weak password risk that is exposed to the Internet exists.</li>
+         * <li>WEAK_EXPLOIT: A weak password risk expose to the Internet exists.</li>
          * <li>WEAK_PASSWORD: A weak password risk exists.</li>
          * <li>HC_EXPLOIT: A high-risk intrusion vulnerability exists.</li>
          * <li>HC_OTHER_WARNING: A security configuration risk exists.</li>

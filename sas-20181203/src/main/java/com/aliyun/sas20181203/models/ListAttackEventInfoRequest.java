@@ -30,7 +30,7 @@ public class ListAttackEventInfoRequest extends TeaModel {
      * <li>211: ASP WebShell upload</li>
      * <li>215: Special extension WebShell upload</li>
      * <li>ai_webshell: WebShell upload intelligent defense</li>
-     * <li>java_common_rce: Java common remote code execution (RCE) vulnerability blocked</li>
+     * <li>java_common_rce: Java common RCE vulnerability blocked</li>
      * <li>alinet_webrce: Adaptive web attack defense</li>
      * </ul>
      * 
@@ -41,7 +41,7 @@ public class ListAttackEventInfoRequest extends TeaModel {
     public String attackType;
 
     /**
-     * <p>The number of the page to return in a paged query.</p>
+     * <p>The number of the page to return in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -60,6 +60,7 @@ public class ListAttackEventInfoRequest extends TeaModel {
 
     /**
      * <p>The timestamp of the end time.</p>
+     * <p>This parameter is required. If this parameter is not specified, the API returns HTTP 400.</p>
      * 
      * <strong>example:</strong>
      * <p>1753152532550</p>
@@ -68,7 +69,7 @@ public class ListAttackEventInfoRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -81,7 +82,7 @@ public class ListAttackEventInfoRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries to return on each page in a paged query.</p>
+     * <p>The maximum number of entries to return on each page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -100,7 +101,8 @@ public class ListAttackEventInfoRequest extends TeaModel {
 
     /**
      * <p>The timestamp of the start time.</p>
-     * <p>This field is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>This parameter is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>This parameter is required. If this parameter is not specified, the API returns HTTP 400.</p>
      * 
      * <strong>example:</strong>
      * <p>1752547732549</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HandleSimilarSecurityEventsRequest extends TeaModel {
     /**
-     * <p>The rule for adding to the whitelist. For example, to add a whitelist rule based on file MD5 where the file contains the string &quot;a&quot;, set this parameter to {&quot;field&quot;:&quot;md5&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;aa&quot;}.</p>
+     * <p>The rule for adding to the whitelist. For example, to add a whitelist rule based on the file MD5 where the file contains the string &quot;a&quot;, set this parameter to {&quot;field&quot;:&quot;md5&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;aa&quot;}.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;field&quot;:&quot;md5&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;aa&quot;}</p>
@@ -14,40 +14,41 @@ public class HandleSimilarSecurityEventsRequest extends TeaModel {
     public String markMissParam;
 
     /**
-     * <p>The operation type for batch processing similar alert events.</p>
+     * <p>The operation type for batch processing alert events of the same type.</p>
      * <blockquote>
      * <p>Call the <a href="~~DescribeSecurityEventOperations~~">DescribeSecurityEventOperations</a> operation to obtain this parameter.</p>
      * </blockquote>
+     * <p>You can use kill_process to terminate a process. Obtain the specific valid operation values dynamically by calling the DescribeSecurityEventOperations operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>offline_handled</p>
+     * <p>kill_process</p>
      */
     @NameInMap("OperationCode")
     public String operationCode;
 
     /**
-     * <p>The configuration of the sub-operation for alerting event handling. The value is in JSON format.</p>
+     * <p>The configuration of the sub-operation for handling alerting events. The value is in JSON format.</p>
      * <blockquote>
      * <p>This parameter is required when <strong>OperationCode</strong> is set to <strong>kill_and_quara</strong>, <strong>block_ip</strong>, or <strong>virus_quara</strong>. For other values of <strong>OperationCode</strong>, this parameter can be left empty.</p>
      * </blockquote>
      * <blockquote>
      * <p>When <strong>OperationCode</strong> is set to <strong>block_ip</strong>, the following field is included:</p>
      * <ul>
-     * <li><strong>expireTime</strong>: the lock expiration time. Unit: milliseconds.</li>
+     * <li><strong>expireTime</strong>: The lock expiration time. Unit: milliseconds.</li>
      * </ul>
      * <p>When <strong>OperationCode</strong> is set to <strong>kill_and_quara</strong>, the following field is included:</p>
      * <ul>
-     * <li><strong>subOperation</strong>: the scan method. Valid values:<ul>
-     * <li><strong>killAndQuaraFileByMd5andPath</strong>: terminates the process and quarantines the quarantined file.</li>
-     * <li><strong>killByMd5andPath</strong>: terminates the running process.</li>
+     * <li><strong>subOperation</strong>: The method used for trojan scan. Valid values:<ul>
+     * <li><strong>killAndQuaraFileByMd5andPath</strong>: Terminates the process and moves the file to quarantined file.</li>
+     * <li><strong>killByMd5andPath</strong>: Terminates the running process.</li>
      * </ul>
      * </li>
      * </ul>
      * <p>When <strong>OperationCode</strong> is set to <strong>virus_quara</strong>, the following field is included:</p>
      * <ul>
-     * <li><strong>subOperation</strong>: the scan method. Valid values:<ul>
-     * <li><strong>quaraFileByMd5andPath</strong>: quarantines the source file of the process.</li>
+     * <li><strong>subOperation</strong>: The method used for trojan scan. Valid values:<ul>
+     * <li><strong>quaraFileByMd5andPath</strong>: Moves the source file of the process to quarantined file.</li>
      * </ul>
      * </li>
      * </ul>
@@ -69,10 +70,13 @@ public class HandleSimilarSecurityEventsRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The ID of the Alibaba Cloud account of member accounts in the resource folder.</p>
+     * <p>The ID of the Alibaba Cloud account of the member accounts in the resource folder.</p>
      * <blockquote>
      * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;

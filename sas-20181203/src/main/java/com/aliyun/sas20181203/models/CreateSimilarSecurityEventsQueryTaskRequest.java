@@ -10,6 +10,17 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to perform only a dry run of the request. Valid values:</p>
+     * <ul>
+     * <li>true: performs only a dry run without executing the actual operation.</li>
+     * <li>false: performs the actual operation.</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
@@ -17,7 +28,7 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the security alert.</p>
+     * <p>The ID of the alert event.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +66,14 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateSimilarSecurityEventsQueryTaskRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateSimilarSecurityEventsQueryTaskRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {

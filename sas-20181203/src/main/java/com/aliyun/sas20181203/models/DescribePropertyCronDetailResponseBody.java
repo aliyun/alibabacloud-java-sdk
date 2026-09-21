@@ -11,7 +11,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
     public DescribePropertyCronDetailResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The details of the fingerprint information for scheduled task assets.</p>
+     * <p>The details of the fingerprint entries of scheduled task assets returned.</p>
      */
     @NameInMap("Propertys")
     public java.util.List<DescribePropertyCronDetailResponseBodyPropertys> propertys;
@@ -56,7 +56,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
 
     public static class DescribePropertyCronDetailResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of fingerprint information entries for scheduled task assets on the current page.</p>
+         * <p>The number of fingerprint entries of scheduled task assets displayed on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -83,7 +83,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The number of scheduled task asset fingerprint information entries displayed per page in a paging query. Default value: <strong>10</strong>, which indicates that 10 entries of scheduled task asset fingerprint information are displayed per page.</p>
+         * <p>The number of fingerprint entries of scheduled task assets displayed per page in a paging query. Default value: <strong>10</strong>, which indicates that 10 fingerprint entries of scheduled task assets are displayed per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -92,7 +92,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of fingerprint information entries for scheduled task assets.</p>
+         * <p>The total number of fingerprint entries of scheduled task assets returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -149,7 +149,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
 
     public static class DescribePropertyCronDetailResponseBodyPropertys extends TeaModel {
         /**
-         * <p>The execution command of the scheduled task.</p>
+         * <p>The command executed by the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>/usr/lib64/sa/sa1 1 1</p>

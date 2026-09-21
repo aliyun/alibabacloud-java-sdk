@@ -14,7 +14,7 @@ public class AddCheckInstanceResultWhiteListResponseBody extends TeaModel {
     public java.util.Map<String, ?> data;
 
     /**
-     * <p>The unique identifier that Alibaba Cloud generated for the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ADE57832-9666-511C-9A80-B87DE2E8****</p>

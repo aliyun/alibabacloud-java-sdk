@@ -11,6 +11,17 @@ public class ModifyStartVulScanRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <ul>
+     * <li>true: performs only a dry run without performing the actual operation.</li>
+     * <li>false: performs the actual request.</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
      * <blockquote>
      * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
@@ -20,7 +31,7 @@ public class ModifyStartVulScanRequest extends TeaModel {
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>Settings for the vulnerability types to detect by using the one-click scan feature. Valid values:</p>
+     * <p>Settings for the vulnerability types to be detected by the one-click scan feature. Valid values:</p>
      * <ul>
      * <li><strong>cve</strong>: Linux software vulnerability.</li>
      * <li><strong>sys</strong>: Windows system vulnerability.</li>
@@ -41,7 +52,7 @@ public class ModifyStartVulScanRequest extends TeaModel {
     public String types;
 
     /**
-     * <p>The UUIDs of the servers. Separate multiple UUIDs with commas (,).</p>
+     * <p>The list of server UUIDs. Separate multiple UUIDs with commas (,).</p>
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/421726.html">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
@@ -63,6 +74,14 @@ public class ModifyStartVulScanRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ModifyStartVulScanRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifyStartVulScanRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {

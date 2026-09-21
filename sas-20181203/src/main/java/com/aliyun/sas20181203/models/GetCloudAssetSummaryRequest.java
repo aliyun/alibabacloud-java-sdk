@@ -24,10 +24,13 @@ public class GetCloudAssetSummaryRequest extends TeaModel {
     public Boolean isSaleData;
 
     /**
-     * <p>The ID of the member accounts in the resource folder.</p>
+     * <p>The ID of the Alibaba Cloud account of the resource directory member accounts.</p>
      * <blockquote>
-     * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
@@ -77,7 +80,7 @@ public class GetCloudAssetSummaryRequest extends TeaModel {
 
     public static class GetCloudAssetSummaryRequestCloudAssetTypes extends TeaModel {
         /**
-         * <p>The subtype of the cloud service. The asset type-subtype. Valid values:</p>
+         * <p>The subtype of the cloud service. Asset type-subtype. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: Elastic Compute Service (ECS) server<ul>
          * <li><strong>1</strong>: Cloud disk (storage)</li>
@@ -85,7 +88,7 @@ public class GetCloudAssetSummaryRequest extends TeaModel {
          * <li><strong>100</strong>: Instance</li>
          * </ul>
          * </li>
-         * <li><strong>1</strong>: Load balancing<ul>
+         * <li><strong>1</strong>: load balancing<ul>
          * <li><strong>0</strong>: Classic Load Balancer (CLB)</li>
          * <li><strong>1</strong>: Application Load Balancer (ALB)</li>
          * </ul>
@@ -146,7 +149,7 @@ public class GetCloudAssetSummaryRequest extends TeaModel {
          * <li><strong>0</strong>: Bucket</li>
          * </ul>
          * </li>
-         * <li><strong>19</strong>: Cloud-native relational database PolarDB<ul>
+         * <li><strong>19</strong>: cloud-native relational database PolarDB<ul>
          * <li><strong>0</strong>: Cluster</li>
          * </ul>
          * </li>
@@ -194,7 +197,7 @@ public class GetCloudAssetSummaryRequest extends TeaModel {
          * <p>The type of the asset. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: Elastic Compute Service (ECS) server</li>
-         * <li><strong>1</strong>: Load balancing</li>
+         * <li><strong>1</strong>: load balancing</li>
          * <li><strong>3</strong>: ApsaraDB RDS database</li>
          * <li><strong>4</strong>: ApsaraDB for MongoDB database</li>
          * <li><strong>5</strong>: Tair (Redis® OSS-Compatible) database</li>
@@ -208,7 +211,7 @@ public class GetCloudAssetSummaryRequest extends TeaModel {
          * <li><strong>16</strong>: Anti-DDoS</li>
          * <li><strong>17</strong>: Web Application Firewall (WAF)</li>
          * <li><strong>18</strong>: Object Storage Service (OSS)</li>
-         * <li><strong>19</strong>: Cloud-native relational database PolarDB</li>
+         * <li><strong>19</strong>: cloud-native relational database PolarDB</li>
          * <li><strong>20</strong>: ApsaraDB RDS for PostgreSQL database</li>
          * <li><strong>21</strong>: Microservices Engine (MSE)</li>
          * <li><strong>22</strong>: Apsara File Storage NAS</li>

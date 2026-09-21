@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeMonitorAccountsResponseBody extends TeaModel {
     /**
-     * <p>List of member account information.</p>
+     * <p>The list of member account information.</p>
      */
     @NameInMap("AccountIdInfos")
     public java.util.List<DescribeMonitorAccountsResponseBodyAccountIdInfos> accountIdInfos;
 
     /**
-     * <p>The IDs of the members.</p>
+     * <p>The list of member account IDs.</p>
      */
     @NameInMap("AccountIds")
     public java.util.List<String> accountIds;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>028CF634-5268-5660-9575-48C9ED6BF880</p>
@@ -65,7 +65,7 @@ public class DescribeMonitorAccountsResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The time when it was added to the control list, in timestamp format with second precision.</p>
+         * <p>The time when the account was added to the management list. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1760520684000</p>
@@ -74,7 +74,7 @@ public class DescribeMonitorAccountsResponseBody extends TeaModel {
         public Long addTime;
 
         /**
-         * <p>The account ID of the operator.</p>
+         * <p>The Alibaba Cloud account ID of the administrator.</p>
          * 
          * <strong>example:</strong>
          * <p>106635707417****</p>
@@ -83,10 +83,10 @@ public class DescribeMonitorAccountsResponseBody extends TeaModel {
         public String operatorUid;
 
         /**
-         * <p>Basic service switch. Values: </p>
+         * <p>The basic service switch. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Off </li>
-         * <li><strong>1</strong>: On</li>
+         * <li><strong>0</strong>: off</li>
+         * <li><strong>1</strong>: on</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -96,13 +96,13 @@ public class DescribeMonitorAccountsResponseBody extends TeaModel {
         public Integer postBasicService;
 
         /**
-         * <p>The purchased version of Cloud Security Center. Values:</p>
+         * <p>The purchased edition of Security Center. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong> or <strong>1</strong>: Free Edition </li>
-         * <li><strong>2</strong> or <strong>3</strong>: Enterprise Edition</li>
-         * <li><strong>5</strong>: Advanced Edition </li>
-         * <li><strong>6</strong>: Anti-Virus Edition </li>
-         * <li><strong>7</strong>: Flagship Edition</li>
+         * <li><strong>0</strong> or <strong>1</strong>: Free Edition</li>
+         * <li><strong>2</strong> or <strong>3</strong>: Enterprise Edition  </li>
+         * <li><strong>5</strong>: Advanced Edition  </li>
+         * <li><strong>6</strong>: Anti-virus Edition </li>
+         * <li><strong>7</strong>: Ultimate Edition</li>
          * </ul>
          * 
          * <strong>example:</strong>

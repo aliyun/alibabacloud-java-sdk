@@ -18,10 +18,13 @@ public class DeleteSuspEventNodeRequest extends TeaModel {
     public Long noteId;
 
     /**
-     * <p>The Alibaba Cloud account ID of the member account in the resource directory.</p>
+     * <p>The ID of the Alibaba Cloud account of the member accounts in the resource directory.</p>
      * <blockquote>
      * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;

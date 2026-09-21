@@ -26,10 +26,18 @@ public class CreateUniRestorePlanRequest extends TeaModel {
     public String instanceUuid;
 
     /**
-     * <p>The ID of the anti-ransomware backup policy for the database.</p>
+     * <p>The ID of the database anti-ransomware backup policy.</p>
      * <blockquote>
      * <p>Call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to obtain this parameter.</p>
      * </blockquote>
+     * <p>Before calling this operation, complete the following steps in order:</p>
+     * <ol>
+     * <li>Install the Security Center agent on the ECS instance and deploy a MySQL, Oracle, or MSSQL database.</li>
+     * <li>Call the StartDiscoverDatabaseTask operation to discover databases.</li>
+     * <li>Call the CreateUniBackupPolicy operation to create a backup policy and obtain the PolicyId.</li>
+     * <li>Wait for the policy to complete at least one successful backup.</li>
+     * </ol>
+     * <p>Dependency order: Database and agent preparation → Database discovery → Create backup policy → Successful backup → Create restoration task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

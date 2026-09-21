@@ -17,6 +17,15 @@ public class SendCustomizeReportRequest extends TeaModel {
     @NameInMap("ReportId")
     public Long reportId;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
+     * <blockquote>
+     * <p>Invoke <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> to obtain this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 

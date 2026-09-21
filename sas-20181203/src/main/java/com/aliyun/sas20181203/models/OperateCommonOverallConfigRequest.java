@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateCommonOverallConfigRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -13,8 +13,8 @@ public class OperateCommonOverallConfigRequest extends TeaModel {
     /**
      * <p>The switch status. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: Enabled.</li>
-     * <li><strong>off</strong>: Disabled.</li>
+     * <li><strong>on</strong>: enabled</li>
+     * <li><strong>off</strong>: disabled</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -23,6 +23,12 @@ public class OperateCommonOverallConfigRequest extends TeaModel {
      */
     @NameInMap("Config")
     public String config;
+
+    /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values: true: performs only a dry run without performing the actual request. false: performs the actual request. Default value: false.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
 
     /**
      * <p>Specifies whether asset configuration is required. Default value: <strong>false</strong>. Valid values:</p>
@@ -52,8 +58,8 @@ public class OperateCommonOverallConfigRequest extends TeaModel {
     /**
      * <p>The configuration type. Valid values:</p>
      * <ul>
-     * <li><strong>kdump_switch</strong>: proactive defense experience optimization</li>
-     * <li><strong>threat_detect</strong>: adaptive threat detection capability</li>
+     * <li><strong>kdump_switch</strong>: proactive defense optimization</li>
+     * <li><strong>threat_detect</strong>: adaptive threat detection</li>
      * <li><strong>suspicious_aggregation</strong>: alert association</li>
      * <li><strong>alidetect</strong>: file detection</li>
      * <li><strong>USER-ENABLE-SWITCH-TYPE_38857</strong>: Linux entry service performs high-risk operations</li>
@@ -91,8 +97,8 @@ public class OperateCommonOverallConfigRequest extends TeaModel {
      * <li><strong>USER-ENABLE-SWITCH-TYPE_54369</strong>: Windows creates WMI auto-start items</li>
      * <li><strong>USER-ENABLE-SWITCH-TYPE_50869</strong>: Linux privilege escalation to execute high-risk commands</li>
      * <li><strong>USER-ENABLE-SWITCH-TYPE_53272</strong>: Linux kernel vulnerability exploitation for privilege escalation</li>
-     * <li><strong>USER-ENABLE-SWITCH-TYPE_54395</strong>: Linux privilege escalation to read/write sensitive files</li>
-     * <li><strong>USER-ENABLE-SWITCH-TYPE_57897</strong>: Linux suspected privilege escalation behavior</li>
+     * <li><strong>USER-ENABLE-SWITCH-TYPE_54395</strong>: Linux privilege escalation to read or write sensitive files</li>
+     * <li><strong>USER-ENABLE-SWITCH-TYPE_57897</strong>: Linux suspected privilege escalation</li>
      * <li><strong>USER-ENABLE-SWITCH-TYPE_52825</strong>: Windows privilege escalation to execute high-risk commands</li>
      * <li><strong>USER-ENABLE-SWITCH-TYPE_5507</strong>: Linux malicious driver</li>
      * <li><strong>USER-ENABLE-SWITCH-TYPE_50876</strong>: Linux anti-security software</li>
@@ -150,6 +156,14 @@ public class OperateCommonOverallConfigRequest extends TeaModel {
     }
     public String getConfig() {
         return this.config;
+    }
+
+    public OperateCommonOverallConfigRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public OperateCommonOverallConfigRequest setNoTargetAsOn(Boolean noTargetAsOn) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVulWhitelistResponseBody extends TeaModel {
     /**
-     * <p>The number of entries on the current page when paging.</p>
+     * <p>The number of entries on the current page in the paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,7 +14,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The current page number when paging.</p>
+     * <p>The page number of the current page in the paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of entries per page when paging.</p>
+     * <p>The number of entries per page in the paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

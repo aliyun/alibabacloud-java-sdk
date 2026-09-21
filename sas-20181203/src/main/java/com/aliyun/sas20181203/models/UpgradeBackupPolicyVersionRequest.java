@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpgradeBackupPolicyVersionRequest extends TeaModel {
     /**
-     * <p>The ID of the anti-ransomware protection policy.</p>
+     * <p>The ID of the anti-ransomware mitigation policies.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to obtain this parameter.</p>
+     * <p>You can invoke <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> to obtain this parameter.</p>
      * </blockquote>
+     * <p>Only policy IDs with PolicyVersion set to 1.0.0 and UpgradeStatus set to NotUpgraded are supported. Otherwise, the API returns an InvalidParam fault.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

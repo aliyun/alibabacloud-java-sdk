@@ -32,8 +32,14 @@ public class VerifyCheckInstanceResultRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Specifies whether to perform only a dry run of the request. Valid values: true: checks the request without performing the actual operation. false: performs the actual operation after the request passes the check. Default value: false.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>The list of instance IDs of the affected assets for the check item.
-     * Note: This parameter is actually required. If this parameter is not specified, the API returns a 400 error (Code: -101).</p>
+     * Note: This parameter is actually required. If it is not provided, the API returns a 400 error (Code: -101).</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
@@ -77,6 +83,14 @@ public class VerifyCheckInstanceResultRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public VerifyCheckInstanceResultRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public VerifyCheckInstanceResultRequest setInstanceIds(java.util.List<String> instanceIds) {

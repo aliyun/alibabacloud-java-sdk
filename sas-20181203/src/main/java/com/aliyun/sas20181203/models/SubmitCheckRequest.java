@@ -4,11 +4,20 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class SubmitCheckRequest extends TeaModel {
+    /**
+     * <p>The Alibaba Cloud account ID of the member account in the resource directory.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>The scan range. Valid values:</p>
+     * <p>The check scope. Valid values:</p>
      * <ul>
      * <li><strong>FULL</strong>: scans all check items</li>
      * <li><strong>POLICY</strong>: scans custom-configured check items</li>

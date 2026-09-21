@@ -42,7 +42,7 @@ public class GetFileDetectResultResponseBody extends TeaModel {
 
     public static class GetFileDetectResultResponseBodyResultList extends TeaModel {
         /**
-         * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. You can use this field to determine the cause of failure.</p>
+         * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -102,7 +102,7 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         public String hashKey;
 
         /**
-         * <p>The detailed information of the error code.</p>
+         * <p>The detailed information about the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -115,7 +115,7 @@ public class GetFileDetectResultResponseBody extends TeaModel {
          * <ul>
          * <li><strong>0</strong>: Safe file.</li>
          * <li><strong>1</strong>: Suspicious file.</li>
-         * <li><strong>3</strong>: Detection in progress. Wait for the result.</li>
+         * <li><strong>3</strong>: Detection in progress. Wait for the detection to complete.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -127,14 +127,15 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         /**
          * <p>The file detection score. The mapping between score ranges and risk levels is as follows:</p>
          * <ul>
-         * <li>0-60: Safe.</li>
-         * <li>61-70: Risky.</li>
-         * <li>71-80: Suspicious.</li>
-         * <li>81-100: Malicious.</li>
+         * <li>0–60: Safe.</li>
+         * <li>61–70: Risky.</li>
+         * <li>71–80: Suspicious.</li>
+         * <li>81–100: Malicious.</li>
          * </ul>
          * <blockquote>
          * <p>Notice: A higher score indicates a more suspicious file.</p>
          * </blockquote>
+         * <p>This field is returned only when Result is 1 (suspicious file). This field is not returned when Result is 0 or 3.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -145,31 +146,32 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         /**
          * <p>The virus type. Valid values:</p>
          * <ul>
-         * <li><strong>Trojan</strong>: trojan</li>
-         * <li><strong>WebShell</strong>: web shell</li>
-         * <li><strong>Backdoor</strong>: backdoor</li>
-         * <li><strong>RansomWare</strong>: ransomware</li>
-         * <li><strong>Scanner</strong>: scanner</li>
-         * <li><strong>Stealer</strong>: credential stealer</li>
-         * <li><strong>Malbaseware</strong>: contaminated base software</li>
-         * <li><strong>Hacktool</strong>: hacking tool</li>
-         * <li><strong>Engtest</strong>: DPI engine test program</li>
-         * <li><strong>Downloader</strong>: downloader trojan</li>
-         * <li><strong>Virus</strong>: file infector virus</li>
-         * <li><strong>Miner</strong>: mining programs</li>
-         * <li><strong>Worm</strong>: worms</li>
-         * <li><strong>DDoS</strong>: DDoS Trojan</li>
-         * <li><strong>Malware</strong>: malware</li>
-         * <li><strong>RiskWare</strong>: riskware</li>
-         * <li><strong>Proxytool</strong>: proxy tool</li>
-         * <li><strong>Suspicious</strong>: suspicious program</li>
-         * <li><strong>MalScript</strong>: malicious script</li>
-         * <li><strong>Rootkit</strong>: rootkit</li>
-         * <li><strong>Exploit</strong>: vulnerability exploits</li>
+         * <li><strong>Trojan</strong>: Trojan.</li>
+         * <li><strong>WebShell</strong>: Web shell.</li>
+         * <li><strong>Backdoor</strong>: Backdoor.</li>
+         * <li><strong>RansomWare</strong>: Ransomware.</li>
+         * <li><strong>Scanner</strong>: Scanner.</li>
+         * <li><strong>Stealer</strong>: Credential stealer.</li>
+         * <li><strong>Malbaseware</strong>: Contaminated base software.</li>
+         * <li><strong>Hacktool</strong>: Hacking tool.</li>
+         * <li><strong>Engtest</strong>: DPI engine test program.</li>
+         * <li><strong>Downloader</strong>: Downloader Trojan.</li>
+         * <li><strong>Virus</strong>: File infector virus.</li>
+         * <li><strong>Miner</strong>: Mining programs.</li>
+         * <li><strong>Worm</strong>: Worms.</li>
+         * <li><strong>DDoS</strong>: DDoS Trojan.</li>
+         * <li><strong>Malware</strong>: Malware.</li>
+         * <li><strong>RiskWare</strong>: Riskware.</li>
+         * <li><strong>Proxytool</strong>: Proxy tool.</li>
+         * <li><strong>Suspicious</strong>: Suspicious program.</li>
+         * <li><strong>MalScript</strong>: Malicious script.</li>
+         * <li><strong>Rootkit</strong>: Rootkit.</li>
+         * <li><strong>Exploit</strong>: Vulnerability exploits.</li>
          * </ul>
          * <blockquote>
          * <p>This parameter is not supported when Result is 0 or 3.</p>
          * </blockquote>
+         * <p>This field is returned only when Result is 1 (suspicious file). This field is not returned when Result is 0 or 3.</p>
          * 
          * <strong>example:</strong>
          * <p>WebShell</p>

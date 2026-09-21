@@ -18,11 +18,11 @@ public class CreateSoarStrategyTaskRequest extends TeaModel {
     public Long strategyId;
 
     /**
-     * <p>The policy name. Fixed value: Automated Batch Vulnerability Fix Policy.</p>
+     * <p>The policy name. Set the value to: Automated Batch Vulnerability Fix Policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Automated Batch Vulnerability Fixing Policy for Multiple Servers</p>
+     * <p>漏洞自动化批量修复策略</p>
      */
     @NameInMap("StrategyName")
     public String strategyName;
@@ -38,24 +38,24 @@ public class CreateSoarStrategyTaskRequest extends TeaModel {
     public String strategyTaskName;
 
     /**
-     * <p>The parameter information of the policy. A string in JSONArray format with the following items:</p>
+     * <p>The parameter information of the policy. The value is a string in JSONArray format. The following items are included:</p>
      * <p>Vulnerability configuration item. Valid values:</p>
      * <ul>
      * <li>name: vluList</li>
      * <li>associationProperty: sasAllVul</li>
-     * <li>value: basic information about the vulnerability</li>
+     * <li>value: the basic information of the vulnerability.</li>
      * </ul>
      * <p>Snapshot configuration item. Valid values:</p>
      * <ul>
      * <li>name: snapshotConfig</li>
      * <li>associationProperty: snapshotConfig</li>
-     * <li>value: storage time information</li>
+     * <li>value: the storage time information.</li>
      * </ul>
      * <p>Notification configuration. Valid values:</p>
      * <ul>
      * <li>name: notifyConfig</li>
      * <li>associationProperty: notifyConfig</li>
-     * <li>value: email or DingTalk configuration information.</li>
+     * <li>value: the configuration information of email or DingTalk notifications.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

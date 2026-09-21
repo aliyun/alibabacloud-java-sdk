@@ -10,6 +10,12 @@ public class ModifyPostPayModuleSwitchShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to perform a dry run. Valid values: true: performs a check without executing the operation. false: executes the operation. Default value: false.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     @NameInMap("EdrModuleSwitch")
     public String edrModuleSwitchShrink;
 
@@ -103,6 +109,14 @@ public class ModifyPostPayModuleSwitchShrinkRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ModifyPostPayModuleSwitchShrinkRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifyPostPayModuleSwitchShrinkRequest setEdrModuleSwitchShrink(String edrModuleSwitchShrink) {
