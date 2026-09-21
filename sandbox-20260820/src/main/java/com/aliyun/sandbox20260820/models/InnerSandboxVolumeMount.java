@@ -43,18 +43,38 @@ public class InnerSandboxVolumeMount extends TeaModel {
     }
 
     public static class InnerSandboxVolumeMountAgenticFsMountPoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ap-xxxx</p>
+         */
         @NameInMap("accessPointID")
         public String accessPointID;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agentic-xxxx</p>
+         */
         @NameInMap("agenticSpaceID")
         public String agenticSpaceID;
 
+        /**
+         * <strong>example:</strong>
+         * <p>03204sl2qjiax4oxxxx</p>
+         */
         @NameInMap("fileSystemID")
         public String fileSystemID;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/mnt/agenticfs</p>
+         */
         @NameInMap("mountDir")
         public String mountDir;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ap-xxxx.xxxx-ljs60.cn-shanghai.nas.aliyuncs.com</p>
+         */
         @NameInMap("serverAddr")
         public String serverAddr;
 
@@ -106,12 +126,20 @@ public class InnerSandboxVolumeMount extends TeaModel {
     }
 
     public static class InnerSandboxVolumeMountAgenticFs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("groupID")
         public Integer groupID;
 
         @NameInMap("mountPoints")
         public java.util.List<InnerSandboxVolumeMountAgenticFsMountPoints> mountPoints;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("userID")
         public Integer userID;
 
@@ -147,9 +175,17 @@ public class InnerSandboxVolumeMount extends TeaModel {
     }
 
     public static class InnerSandboxVolumeMountNamedMountPoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>/mnt/named</p>
+         */
         @NameInMap("mountDir")
         public String mountDir;
 
+        /**
+         * <strong>example:</strong>
+         * <p>workspace</p>
+         */
         @NameInMap("volumeName")
         public String volumeName;
 
@@ -196,18 +232,38 @@ public class InnerSandboxVolumeMount extends TeaModel {
     }
 
     public static class InnerSandboxVolumeMountOssMountPoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss-bucket-test</p>
+         */
         @NameInMap("bucketName")
         public String bucketName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/</p>
+         */
         @NameInMap("bucketPath")
         public String bucketPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss-cn-shenzhen-internal.aliyuncs.com</p>
+         */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/mnt/oss</p>
+         */
         @NameInMap("mountDir")
         public String mountDir;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("readOnly")
         public Boolean readOnly;
 

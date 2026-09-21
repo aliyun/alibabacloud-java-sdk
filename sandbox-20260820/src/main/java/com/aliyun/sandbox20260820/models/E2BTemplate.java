@@ -4,24 +4,44 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class E2BTemplate extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ready</p>
+     */
     @NameInMap("buildStatus")
     public String buildStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>custom</p>
+     */
     @NameInMap("category")
     public String category;
 
     @NameInMap("containerConfiguration")
     public ContainerConfiguration containerConfiguration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("cpuCount")
     public Integer cpuCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2026-08-20T08:30:00Z</p>
+     */
     @NameInMap("createdAt")
     public String createdAt;
 
     @NameInMap("logConfiguration")
     public LogConfiguration logConfiguration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2048</p>
+     */
     @NameInMap("memoryMB")
     public Integer memoryMB;
 
@@ -34,30 +54,62 @@ public class E2BTemplate extends TeaModel {
     @NameInMap("public")
     public Boolean _public;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-****</p>
+     */
     @NameInMap("resourceGroupID")
     public String resourceGroupID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>拉取源镜像失败：认证信息无效</p>
+     */
     @NameInMap("statusReason")
     public String statusReason;
 
     @NameInMap("tags")
     public java.util.List<E2BTemplateTag> tags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5f4a2c18-****</p>
+     */
     @NameInMap("teamID")
     public String teamID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sandbox-dev</p>
+     */
     @NameInMap("teamName")
     public String teamName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>std</p>
+     */
     @NameInMap("teamPlan")
     public String teamPlan;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tm-8f3a2c7b5e14d806</p>
+     */
     @NameInMap("templateID")
     public String templateID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2026-08-21T09:15:30Z</p>
+     */
     @NameInMap("updatedAt")
     public String updatedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9c1d4e72-****</p>
+     */
     @NameInMap("userID")
     public String userID;
 

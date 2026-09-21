@@ -4,9 +4,17 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("cpu")
     public Float cpu;
 
+    /**
+     * <strong>example:</strong>
+     * <p>512</p>
+     */
     @NameInMap("diskSize")
     public Integer diskSize;
 
@@ -16,6 +24,10 @@ public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
     @NameInMap("logConfig")
     public PublicUpdateTemplateLogConfig logConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2048</p>
+     */
     @NameInMap("memorySize")
     public Integer memorySize;
 

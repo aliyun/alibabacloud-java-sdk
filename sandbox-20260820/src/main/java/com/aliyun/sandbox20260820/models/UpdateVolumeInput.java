@@ -65,12 +65,24 @@ public class UpdateVolumeInput extends TeaModel {
     }
 
     public static class UpdateVolumeInputAgenticFSVolumeConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("groupID")
         public Integer groupID;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ap-xxx.xxx-jnk89.cn-hangzhou.nas.aliyuncs.com:/</p>
+         */
         @NameInMap("serverAddr")
         public String serverAddr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("userID")
         public Integer userID;
 
@@ -106,12 +118,20 @@ public class UpdateVolumeInput extends TeaModel {
     }
 
     public static class UpdateVolumeInputMountConfigVpcConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>sg-xxxx</p>
+         */
         @NameInMap("securityGroupId")
         public String securityGroupId;
 
         @NameInMap("vSwitchIds")
         public java.util.List<String> vSwitchIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-xxxx</p>
+         */
         @NameInMap("vpcId")
         public String vpcId;
 
@@ -147,6 +167,10 @@ public class UpdateVolumeInput extends TeaModel {
     }
 
     public static class UpdateVolumeInputMountConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>acs:ram::1338904783509062:role/aliyunfcdefaultrole</p>
+         */
         @NameInMap("role")
         public String role;
 

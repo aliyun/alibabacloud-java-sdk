@@ -7,6 +7,10 @@ public class CreateTemplateStep extends TeaModel {
     @NameInMap("args")
     public java.util.List<String> args;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RUN</p>
+     */
     @NameInMap("type")
     public String type;
 

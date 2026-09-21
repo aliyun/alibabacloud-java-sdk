@@ -13,6 +13,10 @@ public class UpdateTemplateInput extends TeaModel {
     @NameInMap("networkConfiguration")
     public NetworkConfiguration networkConfiguration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5f4a2c18-****</p>
+     */
     @NameInMap("teamID")
     public String teamID;
 

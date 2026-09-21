@@ -4,12 +4,24 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class NetworkConfiguration extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PUBLIC_AND_PRIVATE</p>
+     */
     @NameInMap("networkMode")
     public String networkMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sg-****</p>
+     */
     @NameInMap("securityGroupID")
     public String securityGroupID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-****</p>
+     */
     @NameInMap("vpcID")
     public String vpcID;
 

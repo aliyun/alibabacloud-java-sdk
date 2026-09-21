@@ -4,18 +4,38 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class ListTemplateCacheResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cae5f900-8b1d-4c0e-9c2a-1a2b3c4d5e6f</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B5AD8B54-4358-5F5B-ACAA-52F2016459C6</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

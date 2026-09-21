@@ -4,9 +4,17 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class UpdateApiKeyInput extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ci-pipeline-key-v2</p>
+     */
     @NameInMap("apiKeyName")
     public String apiKeyName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2099-12-31T23:59:59Z</p>
+     */
     @NameInMap("expireTime")
     public String expireTime;
 
@@ -16,6 +24,10 @@ public class UpdateApiKeyInput extends TeaModel {
     @NameInMap("ipWhitelist")
     public java.util.List<IPConfig> ipWhitelist;
 
+    /**
+     * <strong>example:</strong>
+     * <p>inactive</p>
+     */
     @NameInMap("status")
     public String status;
 

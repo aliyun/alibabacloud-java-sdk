@@ -4,24 +4,51 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class CreateVolumeInput extends TeaModel {
+    /**
+     * <p>The AgenticBucket Volume configuration.</p>
+     */
     @NameInMap("agenticBucketVolumeConfig")
     public AgenticBucketVolumeConfig agenticBucketVolumeConfig;
 
+    /**
+     * <p>The AgenticFS Volume configuration.</p>
+     */
     @NameInMap("agenticFSVolumeConfig")
     public CreateVolumeInputAgenticFSVolumeConfig agenticFSVolumeConfig;
 
+    /**
+     * <p>The JuiceFS Volume configuration.</p>
+     */
     @NameInMap("juiceFSVolumeConfig")
     public JuiceFSVolumeConfig juiceFSVolumeConfig;
 
+    /**
+     * <p>The mount configuration.</p>
+     */
     @NameInMap("mountConfig")
     public CreateVolumeInputMountConfig mountConfig;
 
+    /**
+     * <p>The OSS Volume configuration.</p>
+     */
     @NameInMap("ossVolumeConfig")
     public OSSVolumeConfig ossVolumeConfig;
 
+    /**
+     * <p>The unique identifier of the team.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>37ddc466-****</p>
+     */
     @NameInMap("teamID")
     public String teamID;
 
+    /**
+     * <p>The name, which must be unique within the team.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workspace</p>
+     */
     @NameInMap("volumeName")
     public String volumeName;
 
@@ -87,12 +114,30 @@ public class CreateVolumeInput extends TeaModel {
     }
 
     public static class CreateVolumeInputAgenticFSVolumeConfig extends TeaModel {
+        /**
+         * <p>The groupID of the local directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("groupID")
         public Integer groupID;
 
+        /**
+         * <p>The Access Point endpoint address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-xxxx.xxxx-jnk89.cn-hangzhou.nas.aliyuncs.com:/</p>
+         */
         @NameInMap("serverAddr")
         public String serverAddr;
 
+        /**
+         * <p>The userID of the local directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("userID")
         public Integer userID;
 
@@ -128,12 +173,27 @@ public class CreateVolumeInput extends TeaModel {
     }
 
     public static class CreateVolumeInputMountConfigVpcConfig extends TeaModel {
+        /**
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-xxxx</p>
+         */
         @NameInMap("securityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The vSwitch IDs.</p>
+         */
         @NameInMap("vSwitchIds")
         public java.util.List<String> vSwitchIds;
 
+        /**
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-****</p>
+         */
         @NameInMap("vpcId")
         public String vpcId;
 
@@ -169,9 +229,18 @@ public class CreateVolumeInput extends TeaModel {
     }
 
     public static class CreateVolumeInputMountConfig extends TeaModel {
+        /**
+         * <p>The permission role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1118555931230119:role/aliyunfcdefaultrole</p>
+         */
         @NameInMap("role")
         public String role;
 
+        /**
+         * <p>The VPC configuration.</p>
+         */
         @NameInMap("vpcConfig")
         public CreateVolumeInputMountConfigVpcConfig vpcConfig;
 

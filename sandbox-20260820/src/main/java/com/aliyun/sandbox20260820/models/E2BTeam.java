@@ -7,30 +7,62 @@ public class E2BTeam extends TeaModel {
     @NameInMap("allowUpdateTeamName")
     public Boolean allowUpdateTeamName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2026-08-20T08:30:00Z</p>
+     */
     @NameInMap("createdTime")
     public String createdTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>算法团队的沙箱环境</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>std</p>
+     */
     @NameInMap("plan")
     public String plan;
 
     @NameInMap("readOnly")
     public Boolean readOnly;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-****</p>
+     */
     @NameInMap("resourceGroupID")
     public String resourceGroupID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>active</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5f4a2c18-****</p>
+     */
     @NameInMap("teamID")
     public String teamID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sandbox-dev</p>
+     */
     @NameInMap("teamName")
     public String teamName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9c1d4e72-****</p>
+     */
     @NameInMap("userID")
     public String userID;
 

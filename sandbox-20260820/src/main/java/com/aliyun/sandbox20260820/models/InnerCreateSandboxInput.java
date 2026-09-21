@@ -4,12 +4,24 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class InnerCreateSandboxInput extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("allowInternetAccess")
     public Boolean allowInternetAccess;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("autoPause")
     public Boolean autoPause;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("autoResume")
     public Boolean autoResume;
 
@@ -25,15 +37,31 @@ public class InnerCreateSandboxInput extends TeaModel {
     @NameInMap("runtime")
     public InnerSandboxRuntimeConfig runtime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("secure")
     public Boolean secure;
 
+    /**
+     * <strong>example:</strong>
+     * <p>76eeecaa-****</p>
+     */
     @NameInMap("teamID")
     public String teamID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v9vjyzw64bsu83vw0dgs</p>
+     */
     @NameInMap("templateID")
     public String templateID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>180</p>
+     */
     @NameInMap("timeout")
     public Integer timeout;
 

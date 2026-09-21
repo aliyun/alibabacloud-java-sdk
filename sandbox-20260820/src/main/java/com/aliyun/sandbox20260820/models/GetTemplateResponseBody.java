@@ -4,21 +4,45 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2026-09-19T10:00:00Z</p>
+     */
     @NameInMap("createdTime")
     public String createdTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>my-template</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B5AD8B54-4358-5F5B-ACAA-52F2016459C6</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4ph6aiy</p>
+     */
     @NameInMap("resourceGroupID")
     public String resourceGroupID;
 
@@ -28,12 +52,24 @@ public class GetTemplateResponseBody extends TeaModel {
     @NameInMap("status")
     public PublicTemplateStatus status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>13b721e6-8cc8-5df2-af13-80316f7508af</p>
+     */
     @NameInMap("teamID")
     public String teamID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>my-team</p>
+     */
     @NameInMap("teamName")
     public String teamName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>us7dxqaezw5uu7aa2cm5</p>
+     */
     @NameInMap("templateID")
     public String templateID;
 

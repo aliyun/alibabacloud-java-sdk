@@ -4,12 +4,24 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class E2BTemplateTag extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>b7e21c05-****</p>
+     */
     @NameInMap("buildID")
     public String buildID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2026-08-20T08:35:12Z</p>
+     */
     @NameInMap("createdAt")
     public String createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>latest</p>
+     */
     @NameInMap("tag")
     public String tag;
 

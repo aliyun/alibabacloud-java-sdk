@@ -7,6 +7,10 @@ public class UpdateTemplateRequest extends TeaModel {
     @NameInMap("body")
     public PublicUpdateTemplateInput body;
 
+    /**
+     * <strong>example:</strong>
+     * <p>team-a1b2c3d4e5f6</p>
+     */
     @NameInMap("teamID")
     public String teamID;
 

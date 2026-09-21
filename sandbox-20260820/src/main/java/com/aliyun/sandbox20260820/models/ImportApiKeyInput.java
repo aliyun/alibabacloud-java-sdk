@@ -4,15 +4,31 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class ImportApiKeyInput extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>migrated-key</p>
+     */
     @NameInMap("apiKeyName")
     public String apiKeyName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e2b_****</p>
+     */
     @NameInMap("apiKeyValue")
     public String apiKeyValue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2099-12-31T23:59:59Z</p>
+     */
     @NameInMap("expireTime")
     public String expireTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5f4a2c18-****</p>
+     */
     @NameInMap("teamID")
     public String teamID;
 

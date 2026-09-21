@@ -10,6 +10,10 @@ public class E2BVolume extends TeaModel {
     @NameInMap("agenticFSVolumeConfig")
     public AgenticFSVolumeConfig agenticFSVolumeConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2026-09-07T02:12:36.531000Z</p>
+     */
     @NameInMap("createdAt")
     public String createdAt;
 
@@ -22,30 +26,66 @@ public class E2BVolume extends TeaModel {
     @NameInMap("ossVolumeConfig")
     public OSSVolumeConfig ossVolumeConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-****</p>
+     */
     @NameInMap("resourceGroupID")
     public String resourceGroupID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AVAILABLE</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("statusReason")
     public String statusReason;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OSS</p>
+     */
     @NameInMap("storageClass")
     public String storageClass;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9f5a1fe9-****</p>
+     */
     @NameInMap("teamID")
     public String teamID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2026-09-07T03:48:05.274000Z</p>
+     */
     @NameInMap("updatedAt")
     public String updatedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2000****</p>
+     */
     @NameInMap("userID")
     public String userID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>25878d34-****</p>
+     */
     @NameInMap("volumeID")
     public String volumeID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>workspace</p>
+     */
     @NameInMap("volumeName")
     public String volumeName;
 

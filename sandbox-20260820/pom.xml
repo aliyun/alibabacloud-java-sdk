@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>sandbox20260820</artifactId>
-  <version>1.1.1</version>
+  <version>1.2.0</version>
   <packaging>jar</packaging>
   <name>sandbox20260820</name>
   <description>Alibaba Cloud Sandbox (20260820) SDK for Java

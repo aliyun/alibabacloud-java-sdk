@@ -4,51 +4,111 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class E2BListedSandbox extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("cpuCount")
     public Integer cpuCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10240</p>
+     */
     @NameInMap("diskSizeMB")
     public Integer diskSizeMB;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2026-09-03T02:06:37.932Z</p>
+     */
     @NameInMap("endAt")
     public String endAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("generation")
     public Integer generation;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("memoryMB")
     public Integer memoryMB;
 
     @NameInMap("metadata")
     public java.util.Map<String, String> metadata;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-****</p>
+     */
     @NameInMap("resourceGroupID")
     public String resourceGroupID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sbx-xxxx</p>
+     */
     @NameInMap("sandboxID")
     public String sandboxID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2026-09-03T02:05:37.932Z</p>
+     */
     @NameInMap("startedAt")
     public String startedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>running</p>
+     */
     @NameInMap("state")
     public String state;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9f5a1fe9-****</p>
+     */
     @NameInMap("teamID")
     public String teamID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("teamName")
     public String teamName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eco</p>
+     */
     @NameInMap("teamPlan")
     public String teamPlan;
 
+    /**
+     * <strong>example:</strong>
+     * <p>f1l97phhfw6ox18iwcfk</p>
+     */
     @NameInMap("templateID")
     public String templateID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>base</p>
+     */
     @NameInMap("templateName")
     public String templateName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2000****</p>
+     */
     @NameInMap("userID")
     public String userID;
 

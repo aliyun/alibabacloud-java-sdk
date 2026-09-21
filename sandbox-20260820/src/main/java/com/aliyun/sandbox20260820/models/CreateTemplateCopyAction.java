@@ -4,18 +4,30 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateCopyAction extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cri-****</p>
+     */
     @NameInMap("acrInstanceId")
     public String acrInstanceId;
 
     @NameInMap("enabled")
     public Boolean enabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>registry-vpc.cn-hangzhou.aliyuncs.com/sandbox-demo/python:3.12-envd</p>
+     */
     @NameInMap("image")
     public String image;
 
     @NameInMap("registryConfig")
     public CreateTemplateRegistryConfig registryConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acree</p>
+     */
     @NameInMap("registryType")
     public String registryType;
 

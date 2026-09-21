@@ -7,9 +7,17 @@ public class CreateCustomDomainInput extends TeaModel {
     @NameInMap("certConfig")
     public CertConfig certConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>沙箱预览环境入口域名</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sandbox.example.com</p>
+     */
     @NameInMap("domainName")
     public String domainName;
 

@@ -7,12 +7,20 @@ public class CreateTemplateInput extends TeaModel {
     @NameInMap("buildConfig")
     public CreateTemplateBuildConfig buildConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>python-data-analysis</p>
+     */
     @NameInMap("name")
     public String name;
 
     @NameInMap("runtimeConfig")
     public CreateTemplateRuntimeConfig runtimeConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5f4a2c18-****</p>
+     */
     @NameInMap("teamID")
     public String teamID;
 

@@ -4,27 +4,55 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class PublicUpdateTemplateSandboxConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cri-abc123</p>
+     */
     @NameInMap("acrInstanceId")
     public String acrInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("generation")
     public Integer generation;
 
+    /**
+     * <strong>example:</strong>
+     * <p>registry.cn-hangzhou.aliyuncs.com/my/ns:v1</p>
+     */
     @NameInMap("image")
     public String image;
 
+    /**
+     * <strong>example:</strong>
+     * <p>linux</p>
+     */
     @NameInMap("osType")
     public String osType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/ready</p>
+     */
     @NameInMap("readyCommand")
     public String readyCommand;
 
     @NameInMap("registryConfig")
     public PublicUpdateTemplateRegistryConfig registryConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acr</p>
+     */
     @NameInMap("registryType")
     public String registryType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/start-coroutines.sh</p>
+     */
     @NameInMap("startCommand")
     public String startCommand;
 

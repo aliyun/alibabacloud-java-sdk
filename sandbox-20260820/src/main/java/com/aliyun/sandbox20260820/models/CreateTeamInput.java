@@ -4,15 +4,31 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class CreateTeamInput extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>算法团队的沙箱环境</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>std</p>
+     */
     @NameInMap("plan")
     public String plan;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-****</p>
+     */
     @NameInMap("resourceGroupID")
     public String resourceGroupID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sandbox-dev</p>
+     */
     @NameInMap("teamName")
     public String teamName;
 

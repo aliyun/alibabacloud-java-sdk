@@ -4,9 +4,18 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class InnerSandboxRuntimeConfig extends TeaModel {
+    /**
+     * <p>The RAM role that grants the required permissions to the sandbox.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::xxxx:role/xxx_role</p>
+     */
     @NameInMap("role")
     public String role;
 
+    /**
+     * <p>The VPC configuration.</p>
+     */
     @NameInMap("vpcConfig")
     public InnerSandboxRuntimeConfigVpcConfig vpcConfig;
 
@@ -32,12 +41,27 @@ public class InnerSandboxRuntimeConfig extends TeaModel {
     }
 
     public static class InnerSandboxRuntimeConfigVpcConfig extends TeaModel {
+        /**
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-xxxx</p>
+         */
         @NameInMap("securityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The vSwitch IDs.</p>
+         */
         @NameInMap("vSwitchIds")
         public java.util.List<String> vSwitchIds;
 
+        /**
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxxx</p>
+         */
         @NameInMap("vpcId")
         public String vpcId;
 

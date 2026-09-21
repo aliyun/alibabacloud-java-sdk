@@ -4,21 +4,45 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class ApiKey extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>a1f8c3d6-****</p>
+     */
     @NameInMap("apiKeyID")
     public String apiKeyID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e2b_3f9a****b915</p>
+     */
     @NameInMap("apiKeyMask")
     public String apiKeyMask;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ci-pipeline-key</p>
+     */
     @NameInMap("apiKeyName")
     public String apiKeyName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e2b_****</p>
+     */
     @NameInMap("apiKeyValue")
     public String apiKeyValue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2026-08-20T08:30:00Z</p>
+     */
     @NameInMap("createdTime")
     public String createdTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2099-12-31T23:59:59Z</p>
+     */
     @NameInMap("expireTime")
     public String expireTime;
 
@@ -28,30 +52,66 @@ public class ApiKey extends TeaModel {
     @NameInMap("ipWhitelist")
     public java.util.List<IPConfig> ipWhitelist;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2026-09-10T14:22:07Z</p>
+     */
     @NameInMap("lastUsedTime")
     public String lastUsedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-****</p>
+     */
     @NameInMap("resourceGroupID")
     public String resourceGroupID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>generated</p>
+     */
     @NameInMap("source")
     public String source;
 
+    /**
+     * <strong>example:</strong>
+     * <p>active</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5f4a2c18-****</p>
+     */
     @NameInMap("teamID")
     public String teamID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sandbox-dev</p>
+     */
     @NameInMap("teamName")
     public String teamName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>std</p>
+     */
     @NameInMap("teamPlan")
     public String teamPlan;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9c1d4e72-****</p>
+     */
     @NameInMap("userID")
     public String userID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sandbox-admin</p>
+     */
     @NameInMap("username")
     public String username;
 

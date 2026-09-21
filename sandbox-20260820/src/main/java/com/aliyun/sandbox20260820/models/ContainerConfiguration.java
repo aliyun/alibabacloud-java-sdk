@@ -4,9 +4,17 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class ContainerConfiguration extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cri-****</p>
+     */
     @NameInMap("acrInstanceId")
     public String acrInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>registry-vpc.cn-hangzhou.aliyuncs.com/sandbox-demo/python:3.12</p>
+     */
     @NameInMap("image")
     public String image;
 
@@ -43,9 +51,17 @@ public class ContainerConfiguration extends TeaModel {
     }
 
     public static class ContainerConfigurationRegistryCredential extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Passw0rd****</p>
+         */
         @NameInMap("password")
         public String password;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sandbox-puller</p>
+         */
         @NameInMap("username")
         public String username;
 

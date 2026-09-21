@@ -4,9 +4,17 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class PublicUpdateTemplateRegistryAuthConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("password")
     public String password;
 
+    /**
+     * <strong>example:</strong>
+     * <p>my-user</p>
+     */
     @NameInMap("userName")
     public String userName;
 

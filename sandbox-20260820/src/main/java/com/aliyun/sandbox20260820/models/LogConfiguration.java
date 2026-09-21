@@ -4,9 +4,21 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class LogConfiguration extends TeaModel {
+    /**
+     * <p>The name of the Simple Log Service Logstore that receives sandbox runtime logs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sandbox-runtime</p>
+     */
     @NameInMap("logstore")
     public String logstore;
 
+    /**
+     * <p>The name of the Simple Log Service project that receives sandbox runtime logs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sandbox-log-cn-hangzhou</p>
+     */
     @NameInMap("project")
     public String project;
 

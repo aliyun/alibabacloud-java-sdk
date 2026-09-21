@@ -7,15 +7,31 @@ public class JuiceFSVolumeConfig extends TeaModel {
     @NameInMap("args")
     public java.util.List<String> args;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://127.0.0.1:8080">http://127.0.0.1:8080</a></p>
+     */
     @NameInMap("baseURL")
     public String baseURL;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/sandbox/workspace</p>
+     */
     @NameInMap("remoteDir")
     public String remoteDir;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
+     */
     @NameInMap("token")
     public String token;
 
+    /**
+     * <strong>example:</strong>
+     * <p>data</p>
+     */
     @NameInMap("volumeName")
     public String volumeName;
 

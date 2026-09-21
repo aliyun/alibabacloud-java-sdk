@@ -4,12 +4,24 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class DescribeTemplateCacheResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B5AD8B54-4358-5F5B-ACAA-52F2016459C6</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

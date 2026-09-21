@@ -13,6 +13,10 @@ public class E2BNetwork extends TeaModel {
     @NameInMap("denyOut")
     public java.util.List<String> denyOut;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sandbox.example.com</p>
+     */
     @NameInMap("maskRequestHost")
     public String maskRequestHost;
 

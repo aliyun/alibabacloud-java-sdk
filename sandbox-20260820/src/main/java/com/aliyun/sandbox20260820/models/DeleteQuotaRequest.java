@@ -1,0 +1,27 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sandbox20260820.models;
+
+import com.aliyun.tea.*;
+
+public class DeleteQuotaRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>f79d6a95-abcd-47a8-9167-eccf0622a998</p>
+     */
+    @NameInMap("tagValue")
+    public String tagValue;
+
+    public static DeleteQuotaRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteQuotaRequest self = new DeleteQuotaRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public DeleteQuotaRequest setTagValue(String tagValue) {
+        this.tagValue = tagValue;
+        return this;
+    }
+    public String getTagValue() {
+        return this.tagValue;
+    }
+
+}

@@ -4,42 +4,86 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class E2BSandbox extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>sbx-xxxx.ap-southeast-1.sandbox.aliyun.com</p>
+     */
     @NameInMap("accessEndpoint")
     public String accessEndpoint;
 
     @NameInMap("allowInternetAccess")
     public Boolean allowInternetAccess;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("cpuCount")
     public Integer cpuCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10240</p>
+     */
     @NameInMap("diskSizeMB")
     public Integer diskSizeMB;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ap-southeast-1.sandbox.aliyun.com</p>
+     */
     @NameInMap("domain")
     public String domain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2026-09-04T02:03:43.826Z</p>
+     */
     @NameInMap("endAt")
     public String endAt;
 
     @NameInMap("envVars")
     public java.util.Map<String, String> envVars;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4b1e9d07-****</p>
+     */
     @NameInMap("envdAccessToken")
     public String envdAccessToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>template-d391c80b5d1527de</p>
+     */
     @NameInMap("fcFunctionName")
     public String fcFunctionName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>c-6a9d1501-133e6f48-b3f07782dd47</p>
+     */
     @NameInMap("fcInstanceID")
     public String fcInstanceID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3a7ecd09-****</p>
+     */
     @NameInMap("fcSessionID")
     public String fcSessionID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("generation")
     public Integer generation;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("memoryMB")
     public Integer memoryMB;
 
@@ -49,36 +93,76 @@ public class E2BSandbox extends TeaModel {
     @NameInMap("network")
     public E2BNetwork network;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-****</p>
+     */
     @NameInMap("resourceGroupID")
     public String resourceGroupID;
 
     @NameInMap("runtime")
     public InnerSandboxRuntimeConfig runtime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sbx-xxxx</p>
+     */
     @NameInMap("sandboxID")
     public String sandboxID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2026-09-04T02:02:43.826Z</p>
+     */
     @NameInMap("startedAt")
     public String startedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>running</p>
+     */
     @NameInMap("state")
     public String state;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eea033af-****</p>
+     */
     @NameInMap("teamID")
     public String teamID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("teamName")
     public String teamName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eco</p>
+     */
     @NameInMap("teamPlan")
     public String teamPlan;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v9vjyzw64bsu83vw0dgs</p>
+     */
     @NameInMap("templateID")
     public String templateID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>base</p>
+     */
     @NameInMap("templateName")
     public String templateName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2000****</p>
+     */
     @NameInMap("userID")
     public String userID;
 

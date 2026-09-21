@@ -4,9 +4,17 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class PublicTemplateLogConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>sandbox-runtime</p>
+     */
     @NameInMap("logstore")
     public String logstore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sandbox-log-cn-hangzhou</p>
+     */
     @NameInMap("project")
     public String project;
 

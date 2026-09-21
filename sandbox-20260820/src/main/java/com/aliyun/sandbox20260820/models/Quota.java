@@ -4,12 +4,31 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class Quota extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("cpuCores")
     public Integer cpuCores;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
+    @NameInMap("instanceCount")
+    public Integer instanceCount;
+
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("memoryGB")
     public Integer memoryGB;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7696f4cf-****</p>
+     */
     @NameInMap("tagValue")
     public String tagValue;
 
@@ -24,6 +43,14 @@ public class Quota extends TeaModel {
     }
     public Integer getCpuCores() {
         return this.cpuCores;
+    }
+
+    public Quota setInstanceCount(Integer instanceCount) {
+        this.instanceCount = instanceCount;
+        return this;
+    }
+    public Integer getInstanceCount() {
+        return this.instanceCount;
     }
 
     public Quota setMemoryGB(Integer memoryGB) {

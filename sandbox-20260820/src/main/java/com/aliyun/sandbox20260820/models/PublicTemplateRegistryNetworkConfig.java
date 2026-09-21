@@ -4,12 +4,30 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class PublicTemplateRegistryNetworkConfig extends TeaModel {
+    /**
+     * <p>The ID of the security group used to access the image repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-****</p>
+     */
     @NameInMap("securityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>The ID of the vSwitch used to access the image repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-****</p>
+     */
     @NameInMap("vSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The ID of the VPC used to access the image repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-****</p>
+     */
     @NameInMap("vpcId")
     public String vpcId;
 

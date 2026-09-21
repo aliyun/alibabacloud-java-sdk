@@ -4,12 +4,24 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class PublicTemplate extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2026-08-20T08:30:00Z</p>
+     */
     @NameInMap("createdTime")
     public String createdTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>python-data-analysis</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-****</p>
+     */
     @NameInMap("resourceGroupID")
     public String resourceGroupID;
 
@@ -19,12 +31,24 @@ public class PublicTemplate extends TeaModel {
     @NameInMap("status")
     public PublicTemplateStatus status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5f4a2c18-****</p>
+     */
     @NameInMap("teamID")
     public String teamID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sandbox-dev</p>
+     */
     @NameInMap("teamName")
     public String teamName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tm-8f3a2c7b5e14d806</p>
+     */
     @NameInMap("templateID")
     public String templateID;
 

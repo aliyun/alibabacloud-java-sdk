@@ -7,18 +7,34 @@ public class CustomDomainResp extends TeaModel {
     @NameInMap("certConfig")
     public CertConfig certConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1755676800000</p>
+     */
     @NameInMap("createdAt")
     public Long createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>沙箱预览环境入口域名</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sandbox.example.com</p>
+     */
     @NameInMap("domainName")
     public String domainName;
 
     @NameInMap("tlsConfig")
     public TLSConfig tlsConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1755763200000</p>
+     */
     @NameInMap("updatedAt")
     public Long updatedAt;
 

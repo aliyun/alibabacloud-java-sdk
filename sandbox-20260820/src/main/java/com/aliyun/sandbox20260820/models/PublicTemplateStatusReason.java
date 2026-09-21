@@ -4,9 +4,17 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class PublicTemplateStatusReason extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>拉取源镜像失败：认证信息无效</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>build-context</p>
+     */
     @NameInMap("step")
     public String step;
 

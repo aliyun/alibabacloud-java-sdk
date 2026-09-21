@@ -4,30 +4,66 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class PublicTemplateCache extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2026-09-18T10:00:00Z</p>
+     */
     @NameInMap("createdTime")
     public String createdTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sha256:8f3c2a1b</p>
+     */
     @NameInMap("imageDigest")
     public String imageDigest;
 
+    /**
+     * <strong>example:</strong>
+     * <p>512</p>
+     */
     @NameInMap("imageSizeMB")
     public Integer imageSizeMB;
 
+    /**
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("progress")
     public Integer progress;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2026-09-18T10:05:00Z</p>
+     */
     @NameInMap("readyTime")
     public String readyTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>镜像预热任务排队中</p>
+     */
     @NameInMap("statusReason")
     public String statusReason;
 
+    /**
+     * <strong>example:</strong>
+     * <p>13b721e6-8cc8-5df2-af13-80316f7508af</p>
+     */
     @NameInMap("teamID")
     public String teamID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>us7dxqaezw5uu7aa2cm5</p>
+     */
     @NameInMap("templateID")
     public String templateID;
 

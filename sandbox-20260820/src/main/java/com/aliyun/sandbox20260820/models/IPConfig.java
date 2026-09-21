@@ -4,9 +4,17 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class IPConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>办公网出口地址</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>203.0.113.25/32</p>
+     */
     @NameInMap("ipAddress")
     public String ipAddress;
 

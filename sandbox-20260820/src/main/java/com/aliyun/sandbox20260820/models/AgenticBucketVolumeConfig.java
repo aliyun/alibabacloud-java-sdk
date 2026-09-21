@@ -4,18 +4,38 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class AgenticBucketVolumeConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>workspace01</p>
+     */
     @NameInMap("agenticBucket")
     public String agenticBucket;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sandbox-test</p>
+     */
     @NameInMap("bucketName")
     public String bucketName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("bucketPath")
     public String bucketPath;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></p>
+     */
     @NameInMap("endpoint")
     public String endpoint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("readOnly")
     public Boolean readOnly;
 

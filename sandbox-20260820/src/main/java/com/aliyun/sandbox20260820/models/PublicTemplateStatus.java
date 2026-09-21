@@ -4,12 +4,20 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class PublicTemplateStatus extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2026-08-20T08:35:12Z</p>
+     */
     @NameInMap("finishedAt")
     public String finishedAt;
 
     @NameInMap("reason")
     public PublicTemplateStatusReason reason;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ready</p>
+     */
     @NameInMap("state")
     public String state;
 

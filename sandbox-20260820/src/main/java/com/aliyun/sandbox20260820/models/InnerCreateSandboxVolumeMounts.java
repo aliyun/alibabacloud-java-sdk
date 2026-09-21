@@ -43,9 +43,17 @@ public class InnerCreateSandboxVolumeMounts extends TeaModel {
     }
 
     public static class InnerCreateSandboxVolumeMountsAgenticFsMountPoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>/mnt/agenticfs</p>
+         */
         @NameInMap("mountDir")
         public String mountDir;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ap-xxxx.03204sl2qjiax4ocdt2-ljs60.cn-shanghai.nas.aliyuncs.com</p>
+         */
         @NameInMap("serverAddr")
         public String serverAddr;
 
@@ -73,12 +81,20 @@ public class InnerCreateSandboxVolumeMounts extends TeaModel {
     }
 
     public static class InnerCreateSandboxVolumeMountsAgenticFs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("groupID")
         public Integer groupID;
 
         @NameInMap("mountPoints")
         public java.util.List<InnerCreateSandboxVolumeMountsAgenticFsMountPoints> mountPoints;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("userID")
         public Integer userID;
 
@@ -114,9 +130,17 @@ public class InnerCreateSandboxVolumeMounts extends TeaModel {
     }
 
     public static class InnerCreateSandboxVolumeMountsNamedMountPoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>/mnt/named</p>
+         */
         @NameInMap("mountDir")
         public String mountDir;
 
+        /**
+         * <strong>example:</strong>
+         * <p>workspace</p>
+         */
         @NameInMap("volumeName")
         public String volumeName;
 
@@ -163,18 +187,38 @@ public class InnerCreateSandboxVolumeMounts extends TeaModel {
     }
 
     public static class InnerCreateSandboxVolumeMountsOssMountPoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss-bucket-test</p>
+         */
         @NameInMap("bucketName")
         public String bucketName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/</p>
+         */
         @NameInMap("bucketPath")
         public String bucketPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://oss-cn-shenzhen-internal.aliyuncs.com">https://oss-cn-shenzhen-internal.aliyuncs.com</a></p>
+         */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/mnt/oss</p>
+         */
         @NameInMap("mountDir")
         public String mountDir;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("readOnly")
         public Boolean readOnly;
 

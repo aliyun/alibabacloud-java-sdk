@@ -4,18 +4,30 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class PublicUpdateTemplateCopyAction extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cri-abc123</p>
+     */
     @NameInMap("acrInstanceId")
     public String acrInstanceId;
 
     @NameInMap("enabled")
     public Boolean enabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>registry.cn-hangzhou.aliyuncs.com/my/ns:v2</p>
+     */
     @NameInMap("image")
     public String image;
 
     @NameInMap("registryConfig")
     public PublicUpdateTemplateRegistryConfig registryConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acr</p>
+     */
     @NameInMap("registryType")
     public String registryType;
 

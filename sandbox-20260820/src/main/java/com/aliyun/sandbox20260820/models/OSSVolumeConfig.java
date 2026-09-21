@@ -4,12 +4,24 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class OSSVolumeConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>sandbox-shared-data</p>
+     */
     @NameInMap("bucketName")
     public String bucketName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/workspace/</p>
+     */
     @NameInMap("bucketPath")
     public String bucketPath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
+     */
     @NameInMap("endpoint")
     public String endpoint;
 

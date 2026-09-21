@@ -4,15 +4,27 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateVPCConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::1234567890123456:role/aliyunfcdefaultrole</p>
+     */
     @NameInMap("role")
     public String role;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sg-****</p>
+     */
     @NameInMap("securityGroupId")
     public String securityGroupId;
 
     @NameInMap("vSwitchIds")
     public java.util.List<String> vSwitchIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-****</p>
+     */
     @NameInMap("vpcId")
     public String vpcId;
 
