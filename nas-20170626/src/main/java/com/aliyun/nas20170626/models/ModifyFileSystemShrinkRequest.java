@@ -5,11 +5,17 @@ import com.aliyun.tea.*;
 
 public class ModifyFileSystemShrinkRequest extends TeaModel {
     /**
-     * <p>The file system description.</p>
+     * <p>The auto-scaling configuration.</p>
+     */
+    @NameInMap("AutoUpgradeConfig")
+    public String autoUpgradeConfigShrink;
+
+    /**
+     * <p>The description of the file system.</p>
      * <p>Limits:</p>
      * <ul>
      * <li>The description must be 2 to 128 characters in length.</li>
-     * <li>The description must start with a letter or Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The description must start with a letter. It cannot start with <code>http://</code> or <code>https://</code>.</li>
      * <li>The description can contain digits, colons (:), underscores (_), or hyphens (-).</li>
      * </ul>
      * 
@@ -24,9 +30,9 @@ public class ModifyFileSystemShrinkRequest extends TeaModel {
      * <ul>
      * <li><p>General-purpose NAS: <code>31a8e4****</code>.</p>
      * </li>
-     * <li><p>Extreme NAS: must start with <code>extreme-</code>, for example, <code>extreme-0015****</code>.</p>
+     * <li><p>Extreme NAS: The ID must start with <code>extreme-</code>, for example, <code>extreme-0015****</code>.</p>
      * </li>
-     * <li><p>CPFS: must start with <code>cpfs-</code>, for example, <code>cpfs-125487****</code>.</p>
+     * <li><p>Cloud Parallel File Storage (CPFS): The ID must start with <code>cpfs-</code>, for example, <code>cpfs-125487****</code>.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -46,6 +52,14 @@ public class ModifyFileSystemShrinkRequest extends TeaModel {
     public static ModifyFileSystemShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyFileSystemShrinkRequest self = new ModifyFileSystemShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyFileSystemShrinkRequest setAutoUpgradeConfigShrink(String autoUpgradeConfigShrink) {
+        this.autoUpgradeConfigShrink = autoUpgradeConfigShrink;
+        return this;
+    }
+    public String getAutoUpgradeConfigShrink() {
+        return this.autoUpgradeConfigShrink;
     }
 
     public ModifyFileSystemShrinkRequest setDescription(String description) {

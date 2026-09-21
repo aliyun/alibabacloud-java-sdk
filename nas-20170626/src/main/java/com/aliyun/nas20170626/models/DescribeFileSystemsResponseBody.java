@@ -17,7 +17,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of file systems per page.</p>
+     * <p>The number of file systems on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -86,6 +86,70 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
     }
     public Integer getTotalCount() {
         return this.totalCount;
+    }
+
+    public static class DescribeFileSystemsResponseBodyFileSystemsFileSystemAutoUpgradeConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
+        @NameInMap("capacityUsedRatio")
+        public Integer capacityUsedRatio;
+
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("step")
+        public Integer step;
+
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
+        @NameInMap("time")
+        public Integer time;
+
+        public static DescribeFileSystemsResponseBodyFileSystemsFileSystemAutoUpgradeConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFileSystemsResponseBodyFileSystemsFileSystemAutoUpgradeConfig self = new DescribeFileSystemsResponseBodyFileSystemsFileSystemAutoUpgradeConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemAutoUpgradeConfig setCapacityUsedRatio(Integer capacityUsedRatio) {
+            this.capacityUsedRatio = capacityUsedRatio;
+            return this;
+        }
+        public Integer getCapacityUsedRatio() {
+            return this.capacityUsedRatio;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemAutoUpgradeConfig setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemAutoUpgradeConfig setStep(Integer step) {
+            this.step = step;
+            return this;
+        }
+        public Integer getStep() {
+            return this.step;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemAutoUpgradeConfig setTime(Integer time) {
+            this.time = time;
+            return this;
+        }
+        public Integer getTime() {
+            return this.time;
+        }
+
     }
 
     public static class DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap extends TeaModel {
@@ -611,6 +675,9 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @NameInMap("AutoSnapshotPolicyId")
         public String autoSnapshotPolicyId;
 
+        @NameInMap("AutoUpgradeConfig")
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemAutoUpgradeConfig autoUpgradeConfig;
+
         @NameInMap("Bandwidth")
         public Long bandwidth;
 
@@ -730,6 +797,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
         public String getAutoSnapshotPolicyId() {
             return this.autoSnapshotPolicyId;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setAutoUpgradeConfig(DescribeFileSystemsResponseBodyFileSystemsFileSystemAutoUpgradeConfig autoUpgradeConfig) {
+            this.autoUpgradeConfig = autoUpgradeConfig;
+            return this;
+        }
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemAutoUpgradeConfig getAutoUpgradeConfig() {
+            return this.autoUpgradeConfig;
         }
 
         public DescribeFileSystemsResponseBodyFileSystemsFileSystem setBandwidth(Long bandwidth) {

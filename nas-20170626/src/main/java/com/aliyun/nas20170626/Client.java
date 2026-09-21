@@ -8400,11 +8400,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ModifyFileSystemShrinkRequest request = new ModifyFileSystemShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.autoUpgradeConfig)) {
+            request.autoUpgradeConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.autoUpgradeConfig, "AutoUpgradeConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.options)) {
             request.optionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.options, "Options", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoUpgradeConfigShrink)) {
+            query.put("AutoUpgradeConfig", request.autoUpgradeConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
         }
