@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataAgentSessionRequest extends TeaModel {
     /**
-     * <p>The current DMS unit.</p>
+     * <p>The current Data Management unit.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

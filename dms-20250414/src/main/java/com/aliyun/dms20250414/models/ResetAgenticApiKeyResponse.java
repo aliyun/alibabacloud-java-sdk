@@ -3,7 +3,7 @@ package com.aliyun.dms20250414.models;
 
 import com.aliyun.tea.*;
 
-public class BatchUpdateDataLakePartitionsResponse extends TeaModel {
+public class ResetAgenticApiKeyResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class BatchUpdateDataLakePartitionsResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public BatchUpdateDataLakePartitionsResponseBody body;
+    public ResetAgenticApiKeyResponseBody body;
 
-    public static BatchUpdateDataLakePartitionsResponse build(java.util.Map<String, ?> map) throws Exception {
-        BatchUpdateDataLakePartitionsResponse self = new BatchUpdateDataLakePartitionsResponse();
+    public static ResetAgenticApiKeyResponse build(java.util.Map<String, ?> map) throws Exception {
+        ResetAgenticApiKeyResponse self = new ResetAgenticApiKeyResponse();
         return TeaModel.build(map, self);
     }
 
-    public BatchUpdateDataLakePartitionsResponse setHeaders(java.util.Map<String, String> headers) {
+    public ResetAgenticApiKeyResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class BatchUpdateDataLakePartitionsResponse extends TeaModel {
         return this.headers;
     }
 
-    public BatchUpdateDataLakePartitionsResponse setStatusCode(Integer statusCode) {
+    public ResetAgenticApiKeyResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class BatchUpdateDataLakePartitionsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public BatchUpdateDataLakePartitionsResponse setBody(BatchUpdateDataLakePartitionsResponseBody body) {
+    public ResetAgenticApiKeyResponse setBody(ResetAgenticApiKeyResponseBody body) {
         this.body = body;
         return this;
     }
-    public BatchUpdateDataLakePartitionsResponseBody getBody() {
+    public ResetAgenticApiKeyResponseBody getBody() {
         return this.body;
     }
 

@@ -11,7 +11,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
     public java.util.List<ListDataAgentSessionResponseBodyData> data;
 
     /**
-     * <p>The error code returned when the request is abnormal.</p>
+     * <p>The error code returned when the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -174,10 +174,10 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         public String customAgentId;
 
         /**
-         * <p>The usage stage of the custom agent. Valid values:</p>
+         * <p>The stage of the custom agent. Valid values:</p>
          * <ul>
          * <li><strong>debug</strong>: Debug stage.</li>
-         * <li><strong>prod</strong>: Production environment stage.</li>
+         * <li><strong>prod</strong>: Production stage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -224,9 +224,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
 
         /**
          * <p>The name of the user OSS bucket.</p>
-         * <ul>
-         * <li>Analysis process files and report outputs can be uploaded to the user-specified OSS bucket.</li>
-         * </ul>
+         * <p>Analysis process files and report outputs can be uploaded to the user-specified OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>user-oss-bucket</p>

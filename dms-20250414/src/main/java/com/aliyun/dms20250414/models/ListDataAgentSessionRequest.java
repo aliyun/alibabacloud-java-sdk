@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataAgentSessionRequest extends TeaModel {
     /**
-     * <p>The end time for session creation.</p>
+     * <p>The end time of the session creation time range.</p>
      * 
      * <strong>example:</strong>
      * <p>1770912000000</p>
@@ -14,7 +14,7 @@ public class ListDataAgentSessionRequest extends TeaModel {
     public Long createEndTime;
 
     /**
-     * <p>The start time for session creation.</p>
+     * <p>The start time of the session creation time range.</p>
      * 
      * <strong>example:</strong>
      * <p>1770825600000</p>
@@ -22,6 +22,12 @@ public class ListDataAgentSessionRequest extends TeaModel {
     @NameInMap("CreateStartTime")
     public Long createStartTime;
 
+    /**
+     * <p>The ID of the session creator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2096******</p>
+     */
     @NameInMap("CreatorId")
     public String creatorId;
 
@@ -35,7 +41,7 @@ public class ListDataAgentSessionRequest extends TeaModel {
     public String customAgentId;
 
     /**
-     * <p>The current Data Management unit.</p>
+     * <p>The current DMS unit.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -58,6 +64,9 @@ public class ListDataAgentSessionRequest extends TeaModel {
      * <li>Analysis</li>
      * <li>Coding</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Analysis</p>
      */
     @NameInMap("Mode")
     public String mode;
@@ -93,7 +102,7 @@ public class ListDataAgentSessionRequest extends TeaModel {
      * <p>The Data Agent title. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>Analyze this data for me</p>
+     * <p>Help me analyze this data</p>
      */
     @NameInMap("Title")
     public String title;
