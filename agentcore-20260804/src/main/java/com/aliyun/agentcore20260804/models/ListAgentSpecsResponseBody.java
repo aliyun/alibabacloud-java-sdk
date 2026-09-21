@@ -65,6 +65,52 @@ public class ListAgentSpecsResponseBody extends TeaModel {
 
     }
 
+    public static class ListAgentSpecsResponseBodyDataPageItemsSkillsVersionSelector extends TeaModel {
+        /**
+         * <p>The version selector type. Valid values:</p>
+         * <ul>
+         * <li>LABEL: selects by label.</li>
+         * <li>VERSION: selects by specific version.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LABEL</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        /**
+         * <p>The selector value. If the type is LABEL, this value is a label name such as latest. If the type is VERSION, this value is a specific version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>latest</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static ListAgentSpecsResponseBodyDataPageItemsSkillsVersionSelector build(java.util.Map<String, ?> map) throws Exception {
+            ListAgentSpecsResponseBodyDataPageItemsSkillsVersionSelector self = new ListAgentSpecsResponseBodyDataPageItemsSkillsVersionSelector();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAgentSpecsResponseBodyDataPageItemsSkillsVersionSelector setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public ListAgentSpecsResponseBodyDataPageItemsSkillsVersionSelector setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListAgentSpecsResponseBodyDataPageItemsSkills extends TeaModel {
         /**
          * <p>The name.</p>
@@ -74,6 +120,25 @@ public class ListAgentSpecsResponseBody extends TeaModel {
          */
         @NameInMap("name")
         public String name;
+
+        /**
+         * <p>The Skill source type. Valid values:</p>
+         * <ul>
+         * <li>REFERENCE: references the AI Registry.</li>
+         * <li>STATIC: statically bundled with the package.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>REFERENCE</p>
+         */
+        @NameInMap("sourceType")
+        public String sourceType;
+
+        /**
+         * <p>The referenced version selector. If omitted, the default value is LABEL/latest.</p>
+         */
+        @NameInMap("versionSelector")
+        public ListAgentSpecsResponseBodyDataPageItemsSkillsVersionSelector versionSelector;
 
         public static ListAgentSpecsResponseBodyDataPageItemsSkills build(java.util.Map<String, ?> map) throws Exception {
             ListAgentSpecsResponseBodyDataPageItemsSkills self = new ListAgentSpecsResponseBodyDataPageItemsSkills();
@@ -86,6 +151,22 @@ public class ListAgentSpecsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListAgentSpecsResponseBodyDataPageItemsSkills setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        public ListAgentSpecsResponseBodyDataPageItemsSkills setVersionSelector(ListAgentSpecsResponseBodyDataPageItemsSkillsVersionSelector versionSelector) {
+            this.versionSelector = versionSelector;
+            return this;
+        }
+        public ListAgentSpecsResponseBodyDataPageItemsSkillsVersionSelector getVersionSelector() {
+            return this.versionSelector;
         }
 
     }
@@ -119,7 +200,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
         public Long downloadCount;
 
         /**
-         * <p>The version currently being edited.</p>
+         * <p>The version that is currently being edited.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -173,7 +254,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
         public Integer onlineCnt;
 
         /**
-         * <p>The version currently under review.</p>
+         * <p>The version that is currently under review.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>

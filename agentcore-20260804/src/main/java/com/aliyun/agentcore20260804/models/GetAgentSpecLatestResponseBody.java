@@ -65,6 +65,44 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
 
     }
 
+    public static class GetAgentSpecLatestResponseBodyDataSkillsVersionSelector extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>LABEL</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        /**
+         * <strong>example:</strong>
+         * <p>latest</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static GetAgentSpecLatestResponseBodyDataSkillsVersionSelector build(java.util.Map<String, ?> map) throws Exception {
+            GetAgentSpecLatestResponseBodyDataSkillsVersionSelector self = new GetAgentSpecLatestResponseBodyDataSkillsVersionSelector();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAgentSpecLatestResponseBodyDataSkillsVersionSelector setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public GetAgentSpecLatestResponseBodyDataSkillsVersionSelector setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetAgentSpecLatestResponseBodyDataSkills extends TeaModel {
         /**
          * <p>The name.</p>
@@ -74,6 +112,16 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
          */
         @NameInMap("name")
         public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>REFERENCE</p>
+         */
+        @NameInMap("sourceType")
+        public String sourceType;
+
+        @NameInMap("versionSelector")
+        public GetAgentSpecLatestResponseBodyDataSkillsVersionSelector versionSelector;
 
         public static GetAgentSpecLatestResponseBodyDataSkills build(java.util.Map<String, ?> map) throws Exception {
             GetAgentSpecLatestResponseBodyDataSkills self = new GetAgentSpecLatestResponseBodyDataSkills();
@@ -86,6 +134,22 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetAgentSpecLatestResponseBodyDataSkills setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        public GetAgentSpecLatestResponseBodyDataSkills setVersionSelector(GetAgentSpecLatestResponseBodyDataSkillsVersionSelector versionSelector) {
+            this.versionSelector = versionSelector;
+            return this;
+        }
+        public GetAgentSpecLatestResponseBodyDataSkillsVersionSelector getVersionSelector() {
+            return this.versionSelector;
         }
 
     }

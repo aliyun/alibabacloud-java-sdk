@@ -29,7 +29,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The result message of the request.</p>
+     * <p>The message returned for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -106,6 +106,206 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class UpdateManagedAgentResponseBodyDataAgenticFsMounts extends TeaModel {
+        /**
+         * <p>The subdirectory under /mnt/agenticfs/ in the container. Required for each mount entry as validated by the backend. Mount targets must not be duplicated or have parent-child overlaps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/mnt/agenticfs/data</p>
+         */
+        @NameInMap("mountPath")
+        public String mountPath;
+
+        /**
+         * <p>The non-empty relative directory that exists under the AccessPoint. Required for each mount entry as validated by the backend. Root directory, absolute paths, and parent directory segments are not allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace/data</p>
+         */
+        @NameInMap("path")
+        public String path;
+
+        /**
+         * <p>Specifies whether to mount in read-only mode. Default value: false. This is not the RAM role read-only policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("readOnly")
+        public Boolean readOnly;
+
+        /**
+         * <p>The AccessPoint domain name. Required for each mount entry as validated by the backend. Do not include the protocol, port, or path. Use the DomainName from the NAS ListAccessPoints response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-0123456789abcdef0.0123456789-vlm36.cn-hangzhou.nas.aliyuncs.com</p>
+         */
+        @NameInMap("server")
+        public String server;
+
+        public static UpdateManagedAgentResponseBodyDataAgenticFsMounts build(java.util.Map<String, ?> map) throws Exception {
+            UpdateManagedAgentResponseBodyDataAgenticFsMounts self = new UpdateManagedAgentResponseBodyDataAgenticFsMounts();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateManagedAgentResponseBodyDataAgenticFsMounts setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        public UpdateManagedAgentResponseBodyDataAgenticFsMounts setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public UpdateManagedAgentResponseBodyDataAgenticFsMounts setReadOnly(Boolean readOnly) {
+            this.readOnly = readOnly;
+            return this;
+        }
+        public Boolean getReadOnly() {
+            return this.readOnly;
+        }
+
+        public UpdateManagedAgentResponseBodyDataAgenticFsMounts setServer(String server) {
+            this.server = server;
+            return this;
+        }
+        public String getServer() {
+            return this.server;
+        }
+
+    }
+
+    public static class UpdateManagedAgentResponseBodyDataConfiguredSkillsVersionSelector extends TeaModel {
+        /**
+         * <p>The version selector type. Valid values:</p>
+         * <ul>
+         * <li>LABEL: selects by label.</li>
+         * <li>VERSION: selects by specific version.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LABEL</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        /**
+         * <p>The selector value. If the type is LABEL, specify a label name such as latest. If the type is VERSION, specify a specific version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>latest</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static UpdateManagedAgentResponseBodyDataConfiguredSkillsVersionSelector build(java.util.Map<String, ?> map) throws Exception {
+            UpdateManagedAgentResponseBodyDataConfiguredSkillsVersionSelector self = new UpdateManagedAgentResponseBodyDataConfiguredSkillsVersionSelector();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateManagedAgentResponseBodyDataConfiguredSkillsVersionSelector setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public UpdateManagedAgentResponseBodyDataConfiguredSkillsVersionSelector setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class UpdateManagedAgentResponseBodyDataConfiguredSkills extends TeaModel {
+        /**
+         * <p>The skill name in the Workspace AI Registry.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>web-search</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <p>The skill source type. Valid values:</p>
+         * <ul>
+         * <li>REFERENCE: references AI Registry.</li>
+         * <li>STATIC: statically bundled with the package.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>REFERENCE</p>
+         */
+        @NameInMap("sourceType")
+        public String sourceType;
+
+        /**
+         * <p>A legacy compatibility field. Use sourceType and versionSelector for new requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
+        @NameInMap("version")
+        public String version;
+
+        /**
+         * <p>The referenced version selector. Defaults to LABEL/latest if omitted. Currently supports LABEL/latest.</p>
+         */
+        @NameInMap("versionSelector")
+        public UpdateManagedAgentResponseBodyDataConfiguredSkillsVersionSelector versionSelector;
+
+        public static UpdateManagedAgentResponseBodyDataConfiguredSkills build(java.util.Map<String, ?> map) throws Exception {
+            UpdateManagedAgentResponseBodyDataConfiguredSkills self = new UpdateManagedAgentResponseBodyDataConfiguredSkills();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateManagedAgentResponseBodyDataConfiguredSkills setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public UpdateManagedAgentResponseBodyDataConfiguredSkills setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        public UpdateManagedAgentResponseBodyDataConfiguredSkills setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+        public UpdateManagedAgentResponseBodyDataConfiguredSkills setVersionSelector(UpdateManagedAgentResponseBodyDataConfiguredSkillsVersionSelector versionSelector) {
+            this.versionSelector = versionSelector;
+            return this;
+        }
+        public UpdateManagedAgentResponseBodyDataConfiguredSkillsVersionSelector getVersionSelector() {
+            return this.versionSelector;
+        }
+
     }
 
     public static class UpdateManagedAgentResponseBodyDataEnvironmentCredentialReferences extends TeaModel {
@@ -258,13 +458,13 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
 
     public static class UpdateManagedAgentResponseBodyDataHarness extends TeaModel {
         /**
-         * <p>The harness configuration.</p>
+         * <p>The runtime harness configuration.</p>
          */
         @NameInMap("configuration")
         public UpdateManagedAgentResponseBodyDataHarnessConfiguration configuration;
 
         /**
-         * <p>The harness type.</p>
+         * <p>The runtime harness type.</p>
          * 
          * <strong>example:</strong>
          * <p>qodercli</p>
@@ -315,7 +515,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public String limitType;
 
         /**
-         * <p>Indicates whether the quota has been exceeded in the current period. This is a read-only field returned by the backend.</p>
+         * <p>Indicates whether the quota has been exceeded in the current period. This field is read-only and returned by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -324,7 +524,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public Boolean overLimit;
 
         /**
-         * <p>The quota statistical period. The value day indicates a daily period, and the value month indicates a monthly period.</p>
+         * <p>The quota statistical period. A value of day indicates daily. A value of month indicates monthly.</p>
          * 
          * <strong>example:</strong>
          * <p>day</p>
@@ -333,7 +533,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public String periodType;
 
         /**
-         * <p>The gateway quota rule status. This is a read-only field returned by the backend.</p>
+         * <p>The gateway quota rule status. This field is read-only and returned by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
@@ -342,7 +542,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public String ruleStatus;
 
         /**
-         * <p>The maximum number of tokens that can be consumed within a single period.</p>
+         * <p>The maximum number of tokens that can be consumed in a single period.</p>
          * 
          * <strong>example:</strong>
          * <p>1000000</p>
@@ -351,7 +551,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public Long usageLimit;
 
         /**
-         * <p>The number of tokens consumed in the current period. This is a read-only field returned by the backend.</p>
+         * <p>The number of tokens consumed in the current period. This field is read-only and returned by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -566,7 +766,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
 
     public static class UpdateManagedAgentResponseBodyDataOssMounts extends TeaModel {
         /**
-         * <p>The OSS bucket name. This parameter is required by backend validation for each mount entry.</p>
+         * <p>The OSS bucket name. Required for each mount entry as validated by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>bucket-001</p>
@@ -575,7 +775,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The absolute mount path in the container. This parameter is required by backend validation for each mount entry.</p>
+         * <p>The absolute mount path in the container. Required for each mount entry as validated by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>/mnt/oss/datasets</p>
@@ -584,7 +784,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public String mountPath;
 
         /**
-         * <p>The relative object prefix within the bucket. If this parameter is not specified, the entire bucket is mounted.</p>
+         * <p>The relative object prefix within the bucket. If not specified, the entire bucket is mounted.</p>
          * 
          * <strong>example:</strong>
          * <p>datasets</p>
@@ -639,7 +839,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
 
     public static class UpdateManagedAgentResponseBodyDataRuntimeCompute extends TeaModel {
         /**
-         * <p>The compute specification.</p>
+         * <p>The compute class.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -665,13 +865,13 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
 
     public static class UpdateManagedAgentResponseBodyDataRuntimeHpa extends TeaModel {
         /**
-         * <p>Specifies whether to enable auto scaling. This parameter is required by backend validation when hpa is specified.</p>
+         * <p>Specifies whether to enable auto scaling. Required when hpa is present, as validated by the backend.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>The maximum number of active sessions per sandbox. This parameter is required by backend validation when hpa is specified.</p>
+         * <p>The maximum number of active sessions per sandbox. Required when hpa is present, as validated by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -680,7 +880,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public Integer maxConcurrentSessionsPerSandbox;
 
         /**
-         * <p>The maximum number of sandboxes. This parameter is required when HPA is enabled and the value must be no less than the minimum value.</p>
+         * <p>The maximum number of sandboxes. Required when HPA is enabled and must be no less than the minimum value.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -689,7 +889,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public Integer maxSandboxCount;
 
         /**
-         * <p>The minimum number of sandboxes. This parameter is required when HPA is enabled.</p>
+         * <p>The minimum number of sandboxes. Required when HPA is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -698,7 +898,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public Integer minSandboxCount;
 
         /**
-         * <p>The session reclamation time after inactivity, in seconds. This parameter is required by backend validation when hpa is specified.</p>
+         * <p>The time in seconds before an inactive session is reclaimed. Required when hpa is present, as validated by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -755,7 +955,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
 
     public static class UpdateManagedAgentResponseBodyDataRuntimeSessionPolicy extends TeaModel {
         /**
-         * <p>The name of the HTTP header used for session affinity. This parameter takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
+         * <p>The HTTP header name used for session affinity. Takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
          * 
          * <strong>example:</strong>
          * <p>X-Session-Id</p>
@@ -848,16 +1048,101 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
 
     }
 
+    public static class UpdateManagedAgentResponseBodyDataSkillsVersionSelector extends TeaModel {
+        /**
+         * <p>The version selector type. Valid values:</p>
+         * <ul>
+         * <li>LABEL: selects by label.</li>
+         * <li>VERSION: selects by specific version.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LABEL</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        /**
+         * <p>The selector value. If the type is LABEL, specify a label name such as latest. If the type is VERSION, specify a specific version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>latest</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static UpdateManagedAgentResponseBodyDataSkillsVersionSelector build(java.util.Map<String, ?> map) throws Exception {
+            UpdateManagedAgentResponseBodyDataSkillsVersionSelector self = new UpdateManagedAgentResponseBodyDataSkillsVersionSelector();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateManagedAgentResponseBodyDataSkillsVersionSelector setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public UpdateManagedAgentResponseBodyDataSkillsVersionSelector setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class UpdateManagedAgentResponseBodyDataSkills extends TeaModel {
         /**
+         * <p>The version that has taken effect at runtime. This field is read-only.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
+        @NameInMap("appliedVersion")
+        public String appliedVersion;
+
+        /**
+         * <p>Indicates whether the skill originates from a fixed template. This field is read-only. Template items cannot be removed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("fromTemplate")
+        public Boolean fromTemplate;
+
+        /**
          * <p>The skill name.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>code-analysis</p>
          */
         @NameInMap("name")
         public String name;
+
+        /**
+         * <p>The current target version. This field is read-only.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
+        @NameInMap("resolvedVersion")
+        public String resolvedVersion;
+
+        /**
+         * <p>The skill source type. Valid values:</p>
+         * <ul>
+         * <li>REFERENCE: references AI Registry.</li>
+         * <li>STATIC: statically bundled with the package.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>REFERENCE</p>
+         */
+        @NameInMap("sourceType")
+        public String sourceType;
 
         /**
          * <p>The skill version.</p>
@@ -868,9 +1153,31 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         @NameInMap("version")
         public String version;
 
+        /**
+         * <p>The referenced version selector. Defaults to LABEL/latest if omitted.</p>
+         */
+        @NameInMap("versionSelector")
+        public UpdateManagedAgentResponseBodyDataSkillsVersionSelector versionSelector;
+
         public static UpdateManagedAgentResponseBodyDataSkills build(java.util.Map<String, ?> map) throws Exception {
             UpdateManagedAgentResponseBodyDataSkills self = new UpdateManagedAgentResponseBodyDataSkills();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateManagedAgentResponseBodyDataSkills setAppliedVersion(String appliedVersion) {
+            this.appliedVersion = appliedVersion;
+            return this;
+        }
+        public String getAppliedVersion() {
+            return this.appliedVersion;
+        }
+
+        public UpdateManagedAgentResponseBodyDataSkills setFromTemplate(Boolean fromTemplate) {
+            this.fromTemplate = fromTemplate;
+            return this;
+        }
+        public Boolean getFromTemplate() {
+            return this.fromTemplate;
         }
 
         public UpdateManagedAgentResponseBodyDataSkills setName(String name) {
@@ -881,12 +1188,36 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             return this.name;
         }
 
+        public UpdateManagedAgentResponseBodyDataSkills setResolvedVersion(String resolvedVersion) {
+            this.resolvedVersion = resolvedVersion;
+            return this;
+        }
+        public String getResolvedVersion() {
+            return this.resolvedVersion;
+        }
+
+        public UpdateManagedAgentResponseBodyDataSkills setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
         public UpdateManagedAgentResponseBodyDataSkills setVersion(String version) {
             this.version = version;
             return this;
         }
         public String getVersion() {
             return this.version;
+        }
+
+        public UpdateManagedAgentResponseBodyDataSkills setVersionSelector(UpdateManagedAgentResponseBodyDataSkillsVersionSelector versionSelector) {
+            this.versionSelector = versionSelector;
+            return this;
+        }
+        public UpdateManagedAgentResponseBodyDataSkillsVersionSelector getVersionSelector() {
+            return this.versionSelector;
         }
 
     }
@@ -897,7 +1228,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Review the code</p>
+         * <p>Please review the code</p>
          */
         @NameInMap("instruction")
         public String instruction;
@@ -937,7 +1268,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
 
     public static class UpdateManagedAgentResponseBodyDataTemplateAiRegistry extends TeaModel {
         /**
-         * <p>The name of the template in the AI registry.</p>
+         * <p>The name of the template in AI Registry.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -947,8 +1278,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The version of the template in the AI registry.</p>
-         * <p>This parameter is required.</p>
+         * <p>The version of the template in AI Registry.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -981,7 +1311,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
 
     public static class UpdateManagedAgentResponseBodyDataTemplate extends TeaModel {
         /**
-         * <p>The AI registry template configuration.</p>
+         * <p>The AI Registry template configuration.</p>
          */
         @NameInMap("aiRegistry")
         public UpdateManagedAgentResponseBodyDataTemplateAiRegistry aiRegistry;
@@ -1056,6 +1386,18 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public String agentId;
 
         /**
+         * <p>The AgenticFS additional mount list. The total number of items combined with ossMounts cannot exceed 10.</p>
+         */
+        @NameInMap("agenticFsMounts")
+        public java.util.List<UpdateManagedAgentResponseBodyDataAgenticFsMounts> agenticFsMounts;
+
+        /**
+         * <p>Contains only skills that are added or overridden by the user. Skills inherited from templates are not included. The resource model reads this field to preserve update semantics. The skills field in the request is still used for creation and update operations.</p>
+         */
+        @NameInMap("configuredSkills")
+        public java.util.List<UpdateManagedAgentResponseBodyDataConfiguredSkills> configuredSkills;
+
+        /**
          * <p>The creation mode.</p>
          * 
          * <strong>example:</strong>
@@ -1092,13 +1434,13 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The environment configuration information.</p>
+         * <p>The environment configuration.</p>
          */
         @NameInMap("environment")
         public UpdateManagedAgentResponseBodyDataEnvironment environment;
 
         /**
-         * <p>The agent harness configuration.</p>
+         * <p>The agent runtime harness.</p>
          */
         @NameInMap("harness")
         public UpdateManagedAgentResponseBodyDataHarness harness;
@@ -1131,7 +1473,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public String latestVersionStatus;
 
         /**
-         * <p>The model configuration information.</p>
+         * <p>The model configuration.</p>
          */
         @NameInMap("model")
         public UpdateManagedAgentResponseBodyDataModel model;
@@ -1146,13 +1488,13 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The network configuration information.</p>
+         * <p>The network configuration.</p>
          */
         @NameInMap("network")
         public UpdateManagedAgentResponseBodyDataNetwork network;
 
         /**
-         * <p>The list of OSS mounts. A maximum of 10 entries are supported.</p>
+         * <p>The OSS mount list. A maximum of 10 items are supported.</p>
          */
         @NameInMap("ossMounts")
         public java.util.List<UpdateManagedAgentResponseBodyDataOssMounts> ossMounts;
@@ -1173,13 +1515,13 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public UpdateManagedAgentResponseBodyDataRuntime runtime;
 
         /**
-         * <p>The number of managed agent instances grouped by sandbox phase. Current keys: PENDING (being created or initialized), RUNNING (running), HIBERNATING (entering hibernation), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (being terminated), FAILED (runtime failure). Only phases that actually occur are returned. Missing keys should be treated as 0. This field is a dynamic mapping, and new keys may be added in the future. You can use FAILED &gt; 0 to determine whether any abnormal instances exist.</p>
+         * <p>The instance counts of the managed agent grouped by sandbox phase. Current keys: PENDING (being created or initialized), RUNNING (running), HIBERNATING (entering hibernation), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (being terminated), FAILED (runtime failure). Only phases that actually occur are returned. Missing keys are treated as 0. This field is a dynamic mapping and new keys may be added in the future. The frontend can use FAILED &gt; 0 to determine whether abnormal instances exist.</p>
          */
         @NameInMap("sandboxPhaseCounts")
         public java.util.Map<String, Long> sandboxPhaseCounts;
 
         /**
-         * <p>The list of skill configurations.</p>
+         * <p>The skill configuration list.</p>
          */
         @NameInMap("skills")
         public java.util.List<UpdateManagedAgentResponseBodyDataSkills> skills;
@@ -1194,25 +1536,25 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The list of sub-agent configurations.</p>
+         * <p>The sub-agent configuration list.</p>
          */
         @NameInMap("subAgents")
         public java.util.List<UpdateManagedAgentResponseBodyDataSubAgents> subAgents;
 
         /**
-         * <p>The template configuration.</p>
+         * <p>The template configuration information.</p>
          */
         @NameInMap("template")
         public UpdateManagedAgentResponseBodyDataTemplate template;
 
         /**
-         * <p>The list of tool configurations.</p>
+         * <p>The tool configuration list.</p>
          */
         @NameInMap("tools")
         public java.util.List<UpdateManagedAgentResponseBodyDataTools> tools;
 
         /**
-         * <p>The time when the managed agent was last updated, in RFC 3339 format.</p>
+         * <p>The update time in RFC 3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01T00:00:00Z</p>
@@ -1240,6 +1582,22 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         }
         public String getAgentId() {
             return this.agentId;
+        }
+
+        public UpdateManagedAgentResponseBodyData setAgenticFsMounts(java.util.List<UpdateManagedAgentResponseBodyDataAgenticFsMounts> agenticFsMounts) {
+            this.agenticFsMounts = agenticFsMounts;
+            return this;
+        }
+        public java.util.List<UpdateManagedAgentResponseBodyDataAgenticFsMounts> getAgenticFsMounts() {
+            return this.agenticFsMounts;
+        }
+
+        public UpdateManagedAgentResponseBodyData setConfiguredSkills(java.util.List<UpdateManagedAgentResponseBodyDataConfiguredSkills> configuredSkills) {
+            this.configuredSkills = configuredSkills;
+            return this;
+        }
+        public java.util.List<UpdateManagedAgentResponseBodyDataConfiguredSkills> getConfiguredSkills() {
+            return this.configuredSkills;
         }
 
         public UpdateManagedAgentResponseBodyData setCreateMode(String createMode) {

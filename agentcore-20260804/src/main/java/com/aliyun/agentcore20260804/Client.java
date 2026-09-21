@@ -1647,7 +1647,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <p>Deletes a skill and its related version data from a specified workspace. This operation is irreversible.</p>
      * 
      * <b>summary</b> : 
@@ -1679,7 +1679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <p>Deletes a skill and its related version data from a specified workspace. This operation is irreversible.</p>
      * 
      * <b>summary</b> : 
@@ -2096,11 +2096,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Skips the regular review process and forcibly publishes the specified Skill version.</p>
+     * <h2>Operation description</h2>
+     * <p>Skips the regular review process and forcibly publishes a specified Skill version.</p>
      * 
      * <b>summary</b> : 
-     * <p>Skips the regular review process and forcibly publishes the specified Skill version.</p>
+     * <p>Skips the regular review process and forcibly publishes a specified Skill version.</p>
      * 
      * @param tmpReq ForcePublishSkillVersionRequest
      * @param headers map
@@ -2140,11 +2140,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Skips the regular review process and forcibly publishes the specified Skill version.</p>
+     * <h2>Operation description</h2>
+     * <p>Skips the regular review process and forcibly publishes a specified Skill version.</p>
      * 
      * <b>summary</b> : 
-     * <p>Skips the regular review process and forcibly publishes the specified Skill version.</p>
+     * <p>Skips the regular review process and forcibly publishes a specified Skill version.</p>
      * 
      * @param request ForcePublishSkillVersionRequest
      * @return ForcePublishSkillVersionResponse
@@ -3244,6 +3244,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>The workspace determines the account, region, and shared role. The resource ARN is constructed based on the specified fileSystemId and accessPointId. The server parameter is used to generate the policy name. This operation does not query NAS or check resource status. The response contains only the authorization URL for the target NAS policy. After completing RAM authorization, call the verification operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the RAM authorization URL for mounting AgenticFS in a workspace.</p>
+     * 
+     * @param request GetWorkspaceAgenticFsMountRamAuthorizeUrlRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWorkspaceAgenticFsMountRamAuthorizeUrlResponse
+     */
+    public GetWorkspaceAgenticFsMountRamAuthorizeUrlResponse getWorkspaceAgenticFsMountRamAuthorizeUrlWithOptions(String workspaceId, GetWorkspaceAgenticFsMountRamAuthorizeUrlRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessPointId)) {
+            query.put("accessPointId", request.accessPointId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("fileSystemId", request.fileSystemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.server)) {
+            query.put("server", request.server);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetWorkspaceAgenticFsMountRamAuthorizeUrl"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/agentic-fs/authorize"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetWorkspaceAgenticFsMountRamAuthorizeUrlResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The workspace determines the account, region, and shared role. The resource ARN is constructed based on the specified fileSystemId and accessPointId. The server parameter is used to generate the policy name. This operation does not query NAS or check resource status. The response contains only the authorization URL for the target NAS policy. After completing RAM authorization, call the verification operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the RAM authorization URL for mounting AgenticFS in a workspace.</p>
+     * 
+     * @param request GetWorkspaceAgenticFsMountRamAuthorizeUrlRequest
+     * @return GetWorkspaceAgenticFsMountRamAuthorizeUrlResponse
+     */
+    public GetWorkspaceAgenticFsMountRamAuthorizeUrlResponse getWorkspaceAgenticFsMountRamAuthorizeUrl(String workspaceId, GetWorkspaceAgenticFsMountRamAuthorizeUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getWorkspaceAgenticFsMountRamAuthorizeUrlWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description\nQueries the plug-in status of a specified workspace. Returns whether the plug-in is enabled, its lifecycle status, and the currently effective configuration. Currently, two types of plug-ins are supported: collaboration and agentloop. If a plug-in is not installed, its status is DISABLED.\n.</h2>
      * 
      * <b>summary</b> : 
@@ -3491,10 +3552,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</p>
+     * <p>Queries AgentSpec resources in a specified workspace by using paging, and supports name-based search, sorting, and filtering by owner, visibility scope, and business labels.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</p>
+     * <p>Queries AgentSpec resources in a specified workspace by using paging, and supports name-based search, sorting, and filtering by owner, visibility scope, and business labels.</p>
      * 
      * @param request ListAgentSpecsRequest
      * @param headers map
@@ -3561,10 +3622,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</p>
+     * <p>Queries AgentSpec resources in a specified workspace by using paging, and supports name-based search, sorting, and filtering by owner, visibility scope, and business labels.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</p>
+     * <p>Queries AgentSpec resources in a specified workspace by using paging, and supports name-based search, sorting, and filtering by owner, visibility scope, and business labels.</p>
      * 
      * @param request ListAgentSpecsRequest
      * @return ListAgentSpecsResponse
@@ -4609,6 +4670,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the reference relationships of a skill.</p>
+     * 
+     * @param request ListSkillReferencesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSkillReferencesResponse
+     */
+    public ListSkillReferencesResponse listSkillReferencesWithOptions(String workspaceId, String skillName, ListSkillReferencesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("pageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.selectorType)) {
+            query.put("selectorType", request.selectorType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.selectorValue)) {
+            query.put("selectorValue", request.selectorValue);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSkillReferences"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/skills/" + com.aliyun.openapiutil.Client.getEncodeParam(skillName) + "/references"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSkillReferencesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the reference relationships of a skill.</p>
+     * 
+     * @param request ListSkillReferencesRequest
+     * @return ListSkillReferencesResponse
+     */
+    public ListSkillReferencesResponse listSkillReferences(String workspaceId, String skillName, ListSkillReferencesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listSkillReferencesWithOptions(workspaceId, skillName, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <p>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</p>
@@ -4872,7 +4992,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <p>Takes the online version of a specified Skill offline so that it is no longer used as the online version.</p>
      * 
      * <b>summary</b> : 
@@ -4916,7 +5036,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <p>Takes the online version of a specified Skill offline so that it is no longer used as the online version.</p>
      * 
      * <b>summary</b> : 
@@ -4994,7 +5114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <p>Parses and checks one or more Skill ZIP packages uploaded to OSS, and returns the name, version, and conflict check results.</p>
      * 
      * <b>summary</b> : 
@@ -5038,7 +5158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <p>Parses and checks one or more Skill ZIP packages uploaded to OSS, and returns the name, version, and conflict check results.</p>
      * 
      * <b>summary</b> : 
@@ -5056,10 +5176,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>Publishes a specified Skill version to change its state to published.</p>
+     * <p>Publishes a specified Skill version to transition it to the published state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Publishes a specified Skill version to change its state to published.</p>
+     * <p>Publishes a specified Skill version to transition it to the published state.</p>
      * 
      * @param tmpReq PublishSkillVersionRequest
      * @param headers map
@@ -5100,10 +5220,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>Publishes a specified Skill version to change its state to published.</p>
+     * <p>Publishes a specified Skill version to transition it to the published state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Publishes a specified Skill version to change its state to published.</p>
+     * <p>Publishes a specified Skill version to transition it to the published state.</p>
      * 
      * @param request PublishSkillVersionRequest
      * @return PublishSkillVersionResponse
@@ -6169,7 +6289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <p>Updates the version labels and their mappings for a specified Skill.</p>
      * 
      * <b>summary</b> : 
@@ -6213,7 +6333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <p>Updates the version labels and their mappings for a specified Skill.</p>
      * 
      * <b>summary</b> : 
@@ -6712,6 +6832,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.verifyWorkspaceAcrRamAuthorizationWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Determines the shared role and target access point based on the workspace and server, checks whether the role has a mounted policy with the expected name and a type of Custom, and returns AUTHORIZED or UNAUTHORIZED. Consistent with OSS/ACR, this operation does not verify the policy body, role trust, or actual mount read/write permissions. If the upstream query fails, an error is returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the RAM authorization status of AgenticFS mounting for a workspace.</p>
+     * 
+     * @param request VerifyWorkspaceAgenticFsMountRamAuthorizationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VerifyWorkspaceAgenticFsMountRamAuthorizationResponse
+     */
+    public VerifyWorkspaceAgenticFsMountRamAuthorizationResponse verifyWorkspaceAgenticFsMountRamAuthorizationWithOptions(String workspaceId, VerifyWorkspaceAgenticFsMountRamAuthorizationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.server)) {
+            query.put("server", request.server);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VerifyWorkspaceAgenticFsMountRamAuthorization"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/agentic-fs/authorize/verify"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VerifyWorkspaceAgenticFsMountRamAuthorizationResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Determines the shared role and target access point based on the workspace and server, checks whether the role has a mounted policy with the expected name and a type of Custom, and returns AUTHORIZED or UNAUTHORIZED. Consistent with OSS/ACR, this operation does not verify the policy body, role trust, or actual mount read/write permissions. If the upstream query fails, an error is returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the RAM authorization status of AgenticFS mounting for a workspace.</p>
+     * 
+     * @param request VerifyWorkspaceAgenticFsMountRamAuthorizationRequest
+     * @return VerifyWorkspaceAgenticFsMountRamAuthorizationResponse
+     */
+    public VerifyWorkspaceAgenticFsMountRamAuthorizationResponse verifyWorkspaceAgenticFsMountRamAuthorization(String workspaceId, VerifyWorkspaceAgenticFsMountRamAuthorizationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.verifyWorkspaceAgenticFsMountRamAuthorizationWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**

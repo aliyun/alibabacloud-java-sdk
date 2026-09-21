@@ -103,6 +103,13 @@ public class ListSkillsResponseBody extends TeaModel {
         public Long downloadCount;
 
         /**
+         * <strong>example:</strong>
+         * <p>HEAD</p>
+         */
+        @NameInMap("draftMode")
+        public String draftMode;
+
+        /**
          * <p>The version that is being edited.</p>
          * 
          * <strong>example:</strong>
@@ -228,6 +235,14 @@ public class ListSkillsResponseBody extends TeaModel {
         }
         public Long getDownloadCount() {
             return this.downloadCount;
+        }
+
+        public ListSkillsResponseBodyDataPageItems setDraftMode(String draftMode) {
+            this.draftMode = draftMode;
+            return this;
+        }
+        public String getDraftMode() {
+            return this.draftMode;
         }
 
         public ListSkillsResponseBodyDataPageItems setEditingVersion(String editingVersion) {

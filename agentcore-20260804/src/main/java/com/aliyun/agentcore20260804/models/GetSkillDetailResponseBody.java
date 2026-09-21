@@ -60,6 +60,15 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public String commitMsg;
 
         /**
+         * <p>The MD5 checksum of the Skill content package for this version, used to verify content consistency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9e107d9d372bb6826bd81d3542a419d6</p>
+         */
+        @NameInMap("contentMd5")
+        public String contentMd5;
+
+        /**
          * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
@@ -78,7 +87,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The download count.</p>
+         * <p>The number of downloads.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -143,6 +152,14 @@ public class GetSkillDetailResponseBody extends TeaModel {
             return this.commitMsg;
         }
 
+        public GetSkillDetailResponseBodyDataVersions setContentMd5(String contentMd5) {
+            this.contentMd5 = contentMd5;
+            return this;
+        }
+        public String getContentMd5() {
+            return this.contentMd5;
+        }
+
         public GetSkillDetailResponseBodyDataVersions setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
@@ -203,7 +220,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
 
     public static class GetSkillDetailResponseBodyData extends TeaModel {
         /**
-         * <p>The business tag JSON array string.</p>
+         * <p>The business label JSON array string.</p>
          * 
          * <strong>example:</strong>
          * <p>Sample property value</p>
@@ -230,7 +247,16 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public Long downloadCount;
 
         /**
-         * <p>The version currently being edited.</p>
+         * <p>The draft pattern. HEAD indicates that the Skill has a persistent draft. VERSIONED indicates that each edit creates a draft with a version number. The server determines the pattern, and the invoker uses it for routing what to do next.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HEAD</p>
+         */
+        @NameInMap("draftMode")
+        public String draftMode;
+
+        /**
+         * <p>The version being edited.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -287,7 +313,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The version currently under review.</p>
+         * <p>The version under review.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -361,6 +387,14 @@ public class GetSkillDetailResponseBody extends TeaModel {
         }
         public Long getDownloadCount() {
             return this.downloadCount;
+        }
+
+        public GetSkillDetailResponseBodyData setDraftMode(String draftMode) {
+            this.draftMode = draftMode;
+            return this;
+        }
+        public String getDraftMode() {
+            return this.draftMode;
         }
 
         public GetSkillDetailResponseBodyData setEditingVersion(String editingVersion) {

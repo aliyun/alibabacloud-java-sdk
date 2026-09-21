@@ -5,6 +5,21 @@ import com.aliyun.tea.*;
 
 public class DataResourceValue extends TeaModel {
     /**
+     * <p>The content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample content</p>
+     */
+    @NameInMap("content")
+    public String content;
+
+    /**
+     * <p>The metadata.</p>
+     */
+    @NameInMap("metadata")
+    public java.util.Map<String, ?> metadata;
+
+    /**
      * <p>The name.</p>
      * 
      * <strong>example:</strong>
@@ -22,40 +37,9 @@ public class DataResourceValue extends TeaModel {
     @NameInMap("type")
     public String type;
 
-    /**
-     * <p>The content.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Sample content</p>
-     */
-    @NameInMap("content")
-    public String content;
-
-    /**
-     * <p>The metadata.</p>
-     */
-    @NameInMap("metadata")
-    public java.util.Map<String, ?> metadata;
-
     public static DataResourceValue build(java.util.Map<String, ?> map) throws Exception {
         DataResourceValue self = new DataResourceValue();
         return TeaModel.build(map, self);
-    }
-
-    public DataResourceValue setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public DataResourceValue setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
     }
 
     public DataResourceValue setContent(String content) {
@@ -72,6 +56,22 @@ public class DataResourceValue extends TeaModel {
     }
     public java.util.Map<String, ?> getMetadata() {
         return this.metadata;
+    }
+
+    public DataResourceValue setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public DataResourceValue setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

@@ -53,7 +53,7 @@ public class UploadSkillViaOssRequest extends TeaModel {
         public Boolean overwrite;
 
         /**
-         * <p>The upload version number. This parameter is optional and used as a fallback when the ZIP package contains no version information.</p>
+         * <p>The target upload version number. This parameter is optional and serves as a fallback when the ZIP package does not contain version information.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>

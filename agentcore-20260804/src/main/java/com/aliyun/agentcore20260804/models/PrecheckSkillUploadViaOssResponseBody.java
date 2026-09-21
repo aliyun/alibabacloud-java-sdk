@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public java.util.List<PrecheckSkillUploadViaOssResponseBodyData> data;
@@ -42,6 +42,15 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
 
     public static class PrecheckSkillUploadViaOssResponseBodyData extends TeaModel {
         /**
+         * <p>The draft mode: HEAD or VERSIONED, determined by the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HEAD</p>
+         */
+        @NameInMap("draftMode")
+        public String draftMode;
+
+        /**
          * <p>The version currently being edited.</p>
          * 
          * <strong>example:</strong>
@@ -64,6 +73,24 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
          */
         @NameInMap("exists")
         public Boolean exists;
+
+        /**
+         * <p>The content revision identifier of the persistent draft, used to determine whether the local cache has expired. Returned only in HEAD draft mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rev-1a2b3c4d</p>
+         */
+        @NameInMap("headRevision")
+        public String headRevision;
+
+        /**
+         * <p>The status of the persistent draft: draft, reviewing, or reviewed. Returned only in HEAD draft mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>draft</p>
+         */
+        @NameInMap("headStatus")
+        public String headStatus;
 
         /**
          * <p>The highest published version.</p>
@@ -93,7 +120,7 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
         public String parsedVersion;
 
         /**
-         * <p>The pre-check result code.</p>
+         * <p>The dry run result code.</p>
          * 
          * <strong>example:</strong>
          * <p>VALIDATION_FAILED</p>
@@ -151,6 +178,14 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public PrecheckSkillUploadViaOssResponseBodyData setDraftMode(String draftMode) {
+            this.draftMode = draftMode;
+            return this;
+        }
+        public String getDraftMode() {
+            return this.draftMode;
+        }
+
         public PrecheckSkillUploadViaOssResponseBodyData setEditingVersion(String editingVersion) {
             this.editingVersion = editingVersion;
             return this;
@@ -173,6 +208,22 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
         }
         public Boolean getExists() {
             return this.exists;
+        }
+
+        public PrecheckSkillUploadViaOssResponseBodyData setHeadRevision(String headRevision) {
+            this.headRevision = headRevision;
+            return this;
+        }
+        public String getHeadRevision() {
+            return this.headRevision;
+        }
+
+        public PrecheckSkillUploadViaOssResponseBodyData setHeadStatus(String headStatus) {
+            this.headStatus = headStatus;
+            return this;
+        }
+        public String getHeadStatus() {
+            return this.headStatus;
         }
 
         public PrecheckSkillUploadViaOssResponseBodyData setMaxPublishedVersion(String maxPublishedVersion) {

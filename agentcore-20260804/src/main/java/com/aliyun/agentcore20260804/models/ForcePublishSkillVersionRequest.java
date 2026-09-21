@@ -25,6 +25,15 @@ public class ForcePublishSkillVersionRequest extends TeaModel {
 
     public static class ForcePublishSkillVersionRequestBody extends TeaModel {
         /**
+         * <p>The commit message recorded on the release version produced by this publish operation. Takes effect in HEAD draft mode. If left empty, the draft message is used. Ignored in version Draft mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>First release version</p>
+         */
+        @NameInMap("commitMsg")
+        public String commitMsg;
+
+        /**
          * <p>Specifies whether to update the latest label.</p>
          * 
          * <strong>example:</strong>
@@ -36,6 +45,14 @@ public class ForcePublishSkillVersionRequest extends TeaModel {
         public static ForcePublishSkillVersionRequestBody build(java.util.Map<String, ?> map) throws Exception {
             ForcePublishSkillVersionRequestBody self = new ForcePublishSkillVersionRequestBody();
             return TeaModel.build(map, self);
+        }
+
+        public ForcePublishSkillVersionRequestBody setCommitMsg(String commitMsg) {
+            this.commitMsg = commitMsg;
+            return this;
+        }
+        public String getCommitMsg() {
+            return this.commitMsg;
         }
 
         public ForcePublishSkillVersionRequestBody setUpdateLatestLabel(Boolean updateLatestLabel) {
