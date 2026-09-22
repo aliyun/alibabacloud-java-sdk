@@ -2946,6 +2946,104 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
+     * <p>This operation returns the list of deployed applications in the application image used by a specified delivery group, including the application ID, name, version, icon, and the number of users currently <strong>authorized by application</strong> for each application (AuthorizedUserCount).
+     * The returned AppId is the input for per-application authorization: when you call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to add or remove authorized users for a specified application in a delivery group, pass in the AppId returned by this operation.</p>
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>The delivery group is created, and <strong>ProductType matches the product type of the delivery group</strong>. If the delivery group does not exist or the product type does not match, the error code <code>InvalidAppInstanceGroup.NotFound</code> is returned.</li>
+     * </ul>
+     * <h2>Parameter description</h2>
+     * <ul>
+     * <li><strong>AppInstanceGroupId is required</strong>. This parameter is marked as optional in the parameter table, but the error code <code>InvalidParameter.AppInstanceGroupId</code> is returned if it is not specified.</li>
+     * <li>PageNumber starts from 1. Valid values of PageSize: 1 to 100. If the values are invalid, the error codes <code>InvalidParameter.PageNumber</code> and <code>InvalidParameter.PageSize</code> are returned respectively.</li>
+     * <li>If no applications are deployed in the delivery group image, the operation returns normally: Apps is an empty list and TotalCount is 0.</li>
+     * </ul>
+     * <h2>Call sequence</h2>
+     * <ol>
+     * <li>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the delivery group ID (AppInstanceGroupId).</li>
+     * <li>Call this operation to obtain the list of deployed applications in the delivery group and the AppId of each application.</li>
+     * <li>To authorize by application, call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation with the returned AppId.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the deployed applications in the image used by a specified delivery group with paging and returns the number of users with per-application authorization for each application.</p>
+     * 
+     * @param request ListAppsByAppInstanceGroupIdRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAppsByAppInstanceGroupIdResponse
+     */
+    public ListAppsByAppInstanceGroupIdResponse listAppsByAppInstanceGroupIdWithOptions(ListAppsByAppInstanceGroupIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupId)) {
+            query.put("AppInstanceGroupId", request.appInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAppsByAppInstanceGroupId"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAppsByAppInstanceGroupIdResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This operation returns the list of deployed applications in the application image used by a specified delivery group, including the application ID, name, version, icon, and the number of users currently <strong>authorized by application</strong> for each application (AuthorizedUserCount).
+     * The returned AppId is the input for per-application authorization: when you call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to add or remove authorized users for a specified application in a delivery group, pass in the AppId returned by this operation.</p>
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>The delivery group is created, and <strong>ProductType matches the product type of the delivery group</strong>. If the delivery group does not exist or the product type does not match, the error code <code>InvalidAppInstanceGroup.NotFound</code> is returned.</li>
+     * </ul>
+     * <h2>Parameter description</h2>
+     * <ul>
+     * <li><strong>AppInstanceGroupId is required</strong>. This parameter is marked as optional in the parameter table, but the error code <code>InvalidParameter.AppInstanceGroupId</code> is returned if it is not specified.</li>
+     * <li>PageNumber starts from 1. Valid values of PageSize: 1 to 100. If the values are invalid, the error codes <code>InvalidParameter.PageNumber</code> and <code>InvalidParameter.PageSize</code> are returned respectively.</li>
+     * <li>If no applications are deployed in the delivery group image, the operation returns normally: Apps is an empty list and TotalCount is 0.</li>
+     * </ul>
+     * <h2>Call sequence</h2>
+     * <ol>
+     * <li>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the delivery group ID (AppInstanceGroupId).</li>
+     * <li>Call this operation to obtain the list of deployed applications in the delivery group and the AppId of each application.</li>
+     * <li>To authorize by application, call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation with the returned AppId.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the deployed applications in the image used by a specified delivery group with paging and returns the number of users with per-application authorization for each application.</p>
+     * 
+     * @param request ListAppsByAppInstanceGroupIdRequest
+     * @return ListAppsByAppInstanceGroupIdResponse
+     */
+    public ListAppsByAppInstanceGroupIdResponse listAppsByAppInstanceGroupId(ListAppsByAppInstanceGroupIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAppsByAppInstanceGroupIdWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
      * <p>This operation queries the list of delivery groups for which a specified user (EndUserId) has been granted <strong>delivery group-level authorization</strong>. The response includes basic information about each delivery group (ID, name, status, region, creation time, expiration time, and more) and the list of applications deployed in the delivery group.
      * Scope of returned results:</p>
      * <ul>
@@ -3070,6 +3168,122 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This operation queries the applications that a specified user is authorized to access at the application granularity. <strong>Only records authorized at the application level are returned</strong> (for example, authorizations completed through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation). Authorizations granted to an entire delivery group through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are not included in the response.
+     * The results are deduplicated by the combination of delivery group and application. Each record corresponds to one application within one delivery group.</p>
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>The user must already exist under the current account. If the user does not exist, the error code <code>User.NotFound</code> is returned. Call the <a href="https://help.aliyun.com/document_detail/436936.html">DescribeUsers</a> operation to obtain the username.</li>
+     * <li>The delivery group that contains the application must already be created, and the application must have been authorized to the user at the application level. If no per-application authorization has been performed, an empty application list is returned.</li>
+     * </ul>
+     * <h2>Parameter description</h2>
+     * <ul>
+     * <li><strong><code>EndUserId</code> and <code>ProductType</code> are required.</strong> Set <code>ProductType</code> to <code>CloudApp</code>, which indicates WUYING Cloud Application.</li>
+     * <li><code>AppInstanceGroupId</code>, <code>AppId</code>, <code>AppInstanceGroupName</code>, and <code>AppName</code> are optional filter conditions. All of them use fuzzy match and can be combined in any way. If all are omitted, all per-application authorization records for the user are returned.</li>
+     * <li>Use <code>PageNumber</code> and <code>PageSize</code> for paging. <code>PageNumber</code> starts from 1, and <code>PageSize</code> ranges from 1 to 100. Use the returned <code>TotalCount</code> to determine whether to continue querying.</li>
+     * </ul>
+     * <h2>Call sequence</h2>
+     * <ol>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> or <a href="https://help.aliyun.com/document_detail/600836.html">GetAppInstanceGroup</a> operation to obtain the delivery group ID (AppInstanceGroupId) and the application IDs of deployed applications within the delivery group (AppId in the Apps list).</li>
+     * <li>Call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to authorize the application to the target user.</li>
+     * <li>Call this operation to query the applications that the user is authorized to access.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the applications for which a specified user has obtained access permissions through per-application authorization by paging. You can filter results by delivery group ID, delivery group name, application ID, or application name using fuzzy match.</p>
+     * 
+     * @param request ListAuthorizedAppsByUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAuthorizedAppsByUserResponse
+     */
+    public ListAuthorizedAppsByUserResponse listAuthorizedAppsByUserWithOptions(ListAuthorizedAppsByUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupId)) {
+            query.put("AppInstanceGroupId", request.appInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupName)) {
+            query.put("AppInstanceGroupName", request.appInstanceGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            query.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
+            query.put("EndUserId", request.endUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAuthorizedAppsByUser"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAuthorizedAppsByUserResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This operation queries the applications that a specified user is authorized to access at the application granularity. <strong>Only records authorized at the application level are returned</strong> (for example, authorizations completed through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation). Authorizations granted to an entire delivery group through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are not included in the response.
+     * The results are deduplicated by the combination of delivery group and application. Each record corresponds to one application within one delivery group.</p>
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>The user must already exist under the current account. If the user does not exist, the error code <code>User.NotFound</code> is returned. Call the <a href="https://help.aliyun.com/document_detail/436936.html">DescribeUsers</a> operation to obtain the username.</li>
+     * <li>The delivery group that contains the application must already be created, and the application must have been authorized to the user at the application level. If no per-application authorization has been performed, an empty application list is returned.</li>
+     * </ul>
+     * <h2>Parameter description</h2>
+     * <ul>
+     * <li><strong><code>EndUserId</code> and <code>ProductType</code> are required.</strong> Set <code>ProductType</code> to <code>CloudApp</code>, which indicates WUYING Cloud Application.</li>
+     * <li><code>AppInstanceGroupId</code>, <code>AppId</code>, <code>AppInstanceGroupName</code>, and <code>AppName</code> are optional filter conditions. All of them use fuzzy match and can be combined in any way. If all are omitted, all per-application authorization records for the user are returned.</li>
+     * <li>Use <code>PageNumber</code> and <code>PageSize</code> for paging. <code>PageNumber</code> starts from 1, and <code>PageSize</code> ranges from 1 to 100. Use the returned <code>TotalCount</code> to determine whether to continue querying.</li>
+     * </ul>
+     * <h2>Call sequence</h2>
+     * <ol>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> or <a href="https://help.aliyun.com/document_detail/600836.html">GetAppInstanceGroup</a> operation to obtain the delivery group ID (AppInstanceGroupId) and the application IDs of deployed applications within the delivery group (AppId in the Apps list).</li>
+     * <li>Call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to authorize the application to the target user.</li>
+     * <li>Call this operation to query the applications that the user is authorized to access.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the applications for which a specified user has obtained access permissions through per-application authorization by paging. You can filter results by delivery group ID, delivery group name, application ID, or application name using fuzzy match.</p>
+     * 
+     * @param request ListAuthorizedAppsByUserRequest
+     * @return ListAuthorizedAppsByUserResponse
+     */
+    public ListAuthorizedAppsByUserResponse listAuthorizedAppsByUser(ListAuthorizedAppsByUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAuthorizedAppsByUserWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries the list of user groups authorized by a specified delivery group.</p>
      * 
@@ -3139,24 +3353,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This operation queries the currently authorized users of a specified delivery group (AppInstanceGroupId) or delivery group set (AppInstanceGroupSetId). It returns each user\&quot;s username, account type, email address, phone number, and the authorization mode of the associated delivery group.</p>
+     * <ul>
+     * <li>This operation returns <strong>authorization relationships</strong> and does not indicate whether users are currently online or have established connections.</li>
+     * <li>In the Cloud Browser product, a delivery group corresponds to a cloud browser group, and a delivery group ID corresponds to a browser group ID.
+     * The scope of results depends on the authorization mode of the delivery group (response parameter AuthMode):</li>
+     * <li>When the authorization mode is <code>App</code> (application-level authorization) or <code>AppInstanceGroup</code> (delivery group-level authorization): Returns users authorized through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation at the delivery group level, as well as users authorized through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation at the application level. If AppId is specified, only users <strong>authorized for that specific application</strong> are returned.</li>
+     * <li>When the authorization mode is <code>Session</code> (session-level authorization): Returns users who have been granted persistent sessions. The AppInstancePersistentIds field lists all persistent session IDs granted to each user. If AppInstancePersistentId is specified, only users granted that session are returned.</li>
+     * <li>When querying by delivery group set: Returns users authorized for the set. The response parameter AppInstanceGroupId is the primary delivery group ID of the set, and AppInstanceGroupSetId is the queried set ID.
+     * When querying by delivery group, results are sorted in descending order by authorization time, with the most recently authorized users listed first.</li>
+     * </ul>
      * <h2>Before you begin</h2>
      * <ul>
-     * <li>The target cloud browser group or delivery group set must be created, belong to the current account, and match the specified <code>ProductType</code>.</li>
-     * <li>When querying authorized users of cloud browsers, set <code>ProductType</code> to <code>CloudBrowser</code>.</li>
-     * <li><strong>Specify either <code>AppInstanceGroupId</code> or <code>AppInstanceGroupSetId</code>, but not both.</strong></li>
+     * <li>The target delivery group or delivery group set must be created, belong to the current account, and match the specified ProductType. Otherwise, a resource-not-found error code is returned.</li>
+     * <li>Users must have been authorized through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> or <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation. If no users have been authorized, the operation returns normally with an empty Users list and TotalCount of 0.</li>
      * </ul>
-     * <h2>Query notes</h2>
+     * <h2>Parameter description</h2>
      * <ul>
-     * <li>This operation returns authorization relationships and does not indicate whether users are currently online or sessions are connected.</li>
-     * <li>When querying by set, omit <code>AppId</code> and <code>AppInstancePersistentId</code>.</li>
-     * <li>Use <code>PageNumber</code> and <code>PageSize</code> for pagination and check <code>TotalCount</code> to determine whether to continue querying.</li>
+     * <li><strong>ProductType, PageNumber, and PageSize are required</strong>. If ProductType has an invalid value, the error code <code>ProductTypeInvalid</code> is returned.</li>
+     * <li><strong>Exactly one of AppInstanceGroupId and AppInstanceGroupSetId must be specified</strong>. If both or neither are specified, the error code <code>InvalidParameter.AppInstanceGroupId/AppInstanceGroupSetId</code> is returned.</li>
+     * <li><strong>AppId and AppInstancePersistentId are not supported when querying by delivery group set</strong>. If specified, the error codes <code>InvalidParameter.AppId</code> and <code>InvalidParameter.AppInstancePersistentId</code> are returned respectively.</li>
+     * <li>EndUserId performs <strong>exact matching</strong> by username. UserIdFuzzy performs <strong>fuzzy matching</strong> by username (a hit occurs if the username contains the keyword). Both can be specified simultaneously, in which case both conditions must be met.</li>
+     * <li>PageNumber starts from 1. Valid values of PageSize: 1 to 100.</li>
+     * <li>When the authorization mode is <code>App</code> or <code>AppInstanceGroup</code>, TotalCount is the number of <strong>authorization records</strong> that match the conditions. If the same user has multiple authorization records (for example, authorized for multiple applications), the records are merged into a single user entry in Users. Therefore, the number of users returned on the current page may be less than PageSize. Use TotalCount to determine whether to continue paging. When the authorization mode is <code>Session</code>, TotalCount is the deduplicated user count.</li>
      * </ul>
-     * <h2>Example notes</h2>
-     * <p>The examples show how to set the fields. Replace resource identifiers with actual values in your account.
-     * An example value of <code>-</code> indicates that the parameter does not need to be set. Omit the corresponding parameter when calling the operation. Do not pass the character <code>-</code>.</p>
+     * <h2>Call sequence</h2>
+     * <ol>
+     * <li>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the delivery group ID. For cloud browser groups, call the <a href="~~ListBrowserInstanceGroup~~">ListBrowserInstanceGroup</a> operation.</li>
+     * <li>Call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize at the delivery group level, or call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to authorize at the application level.</li>
+     * <li>Call this operation to query authorized users. To remove authorization, pass the returned EndUserId values to the UnAuthorizeUserIds parameter of the authorization operations mentioned above.</li>
+     * </ol>
+     * <h2>Error codes</h2>
+     * <ul>
+     * <li><code>ProductTypeInvalid</code>: The value of ProductType is invalid.</li>
+     * <li><code>InvalidParameter.AppInstanceGroupId/AppInstanceGroupSetId</code>: Both AppInstanceGroupId and AppInstanceGroupSetId are specified, or neither is specified.</li>
+     * <li><code>InvalidParameter.AppId</code>: AppId is specified when querying by delivery group set.</li>
+     * <li><code>InvalidParameter.AppInstancePersistentId</code>: AppInstancePersistentId is specified when querying by delivery group set.</li>
+     * <li><code>InvalidAppInstanceGroupSpecItem.NotFound</code>: The delivery group does not exist, does not belong to the current account, or the product type does not match.</li>
+     * <li><code>InvalidBrowserInstanceGroup.NotFound</code>: When ProductType is <code>CloudBrowser</code>, the cloud browser group does not exist, does not belong to the current account, or the product type does not match.</li>
+     * <li><code>InvalidAppInstanceGroupSet.NotFound</code>: The delivery group set does not exist, does not belong to the current account, the product type does not match, or the set does not have an available primary delivery group.</li>
+     * <li><code>InvalidAppInstanceGroupSet.ActivationFailed</code>: The delivery group set is not in an available state.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries authorized users of a cloud browser group with paging.</p>
+     * <p>Queries the list of authorized users for a specified delivery group or delivery group set by using paging. Supports exact or fuzzy filtering by username.</p>
      * 
      * @param request ListAuthorizedUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3222,24 +3463,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This operation queries the currently authorized users of a specified delivery group (AppInstanceGroupId) or delivery group set (AppInstanceGroupSetId). It returns each user\&quot;s username, account type, email address, phone number, and the authorization mode of the associated delivery group.</p>
+     * <ul>
+     * <li>This operation returns <strong>authorization relationships</strong> and does not indicate whether users are currently online or have established connections.</li>
+     * <li>In the Cloud Browser product, a delivery group corresponds to a cloud browser group, and a delivery group ID corresponds to a browser group ID.
+     * The scope of results depends on the authorization mode of the delivery group (response parameter AuthMode):</li>
+     * <li>When the authorization mode is <code>App</code> (application-level authorization) or <code>AppInstanceGroup</code> (delivery group-level authorization): Returns users authorized through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation at the delivery group level, as well as users authorized through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation at the application level. If AppId is specified, only users <strong>authorized for that specific application</strong> are returned.</li>
+     * <li>When the authorization mode is <code>Session</code> (session-level authorization): Returns users who have been granted persistent sessions. The AppInstancePersistentIds field lists all persistent session IDs granted to each user. If AppInstancePersistentId is specified, only users granted that session are returned.</li>
+     * <li>When querying by delivery group set: Returns users authorized for the set. The response parameter AppInstanceGroupId is the primary delivery group ID of the set, and AppInstanceGroupSetId is the queried set ID.
+     * When querying by delivery group, results are sorted in descending order by authorization time, with the most recently authorized users listed first.</li>
+     * </ul>
      * <h2>Before you begin</h2>
      * <ul>
-     * <li>The target cloud browser group or delivery group set must be created, belong to the current account, and match the specified <code>ProductType</code>.</li>
-     * <li>When querying authorized users of cloud browsers, set <code>ProductType</code> to <code>CloudBrowser</code>.</li>
-     * <li><strong>Specify either <code>AppInstanceGroupId</code> or <code>AppInstanceGroupSetId</code>, but not both.</strong></li>
+     * <li>The target delivery group or delivery group set must be created, belong to the current account, and match the specified ProductType. Otherwise, a resource-not-found error code is returned.</li>
+     * <li>Users must have been authorized through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> or <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation. If no users have been authorized, the operation returns normally with an empty Users list and TotalCount of 0.</li>
      * </ul>
-     * <h2>Query notes</h2>
+     * <h2>Parameter description</h2>
      * <ul>
-     * <li>This operation returns authorization relationships and does not indicate whether users are currently online or sessions are connected.</li>
-     * <li>When querying by set, omit <code>AppId</code> and <code>AppInstancePersistentId</code>.</li>
-     * <li>Use <code>PageNumber</code> and <code>PageSize</code> for pagination and check <code>TotalCount</code> to determine whether to continue querying.</li>
+     * <li><strong>ProductType, PageNumber, and PageSize are required</strong>. If ProductType has an invalid value, the error code <code>ProductTypeInvalid</code> is returned.</li>
+     * <li><strong>Exactly one of AppInstanceGroupId and AppInstanceGroupSetId must be specified</strong>. If both or neither are specified, the error code <code>InvalidParameter.AppInstanceGroupId/AppInstanceGroupSetId</code> is returned.</li>
+     * <li><strong>AppId and AppInstancePersistentId are not supported when querying by delivery group set</strong>. If specified, the error codes <code>InvalidParameter.AppId</code> and <code>InvalidParameter.AppInstancePersistentId</code> are returned respectively.</li>
+     * <li>EndUserId performs <strong>exact matching</strong> by username. UserIdFuzzy performs <strong>fuzzy matching</strong> by username (a hit occurs if the username contains the keyword). Both can be specified simultaneously, in which case both conditions must be met.</li>
+     * <li>PageNumber starts from 1. Valid values of PageSize: 1 to 100.</li>
+     * <li>When the authorization mode is <code>App</code> or <code>AppInstanceGroup</code>, TotalCount is the number of <strong>authorization records</strong> that match the conditions. If the same user has multiple authorization records (for example, authorized for multiple applications), the records are merged into a single user entry in Users. Therefore, the number of users returned on the current page may be less than PageSize. Use TotalCount to determine whether to continue paging. When the authorization mode is <code>Session</code>, TotalCount is the deduplicated user count.</li>
      * </ul>
-     * <h2>Example notes</h2>
-     * <p>The examples show how to set the fields. Replace resource identifiers with actual values in your account.
-     * An example value of <code>-</code> indicates that the parameter does not need to be set. Omit the corresponding parameter when calling the operation. Do not pass the character <code>-</code>.</p>
+     * <h2>Call sequence</h2>
+     * <ol>
+     * <li>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the delivery group ID. For cloud browser groups, call the <a href="~~ListBrowserInstanceGroup~~">ListBrowserInstanceGroup</a> operation.</li>
+     * <li>Call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize at the delivery group level, or call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to authorize at the application level.</li>
+     * <li>Call this operation to query authorized users. To remove authorization, pass the returned EndUserId values to the UnAuthorizeUserIds parameter of the authorization operations mentioned above.</li>
+     * </ol>
+     * <h2>Error codes</h2>
+     * <ul>
+     * <li><code>ProductTypeInvalid</code>: The value of ProductType is invalid.</li>
+     * <li><code>InvalidParameter.AppInstanceGroupId/AppInstanceGroupSetId</code>: Both AppInstanceGroupId and AppInstanceGroupSetId are specified, or neither is specified.</li>
+     * <li><code>InvalidParameter.AppId</code>: AppId is specified when querying by delivery group set.</li>
+     * <li><code>InvalidParameter.AppInstancePersistentId</code>: AppInstancePersistentId is specified when querying by delivery group set.</li>
+     * <li><code>InvalidAppInstanceGroupSpecItem.NotFound</code>: The delivery group does not exist, does not belong to the current account, or the product type does not match.</li>
+     * <li><code>InvalidBrowserInstanceGroup.NotFound</code>: When ProductType is <code>CloudBrowser</code>, the cloud browser group does not exist, does not belong to the current account, or the product type does not match.</li>
+     * <li><code>InvalidAppInstanceGroupSet.NotFound</code>: The delivery group set does not exist, does not belong to the current account, the product type does not match, or the set does not have an available primary delivery group.</li>
+     * <li><code>InvalidAppInstanceGroupSet.ActivationFailed</code>: The delivery group set is not in an available state.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries authorized users of a cloud browser group with paging.</p>
+     * <p>Queries the list of authorized users for a specified delivery group or delivery group set by using paging. Supports exact or fuzzy filtering by username.</p>
      * 
      * @param request ListAuthorizedUsersRequest
      * @return ListAuthorizedUsersResponse
@@ -4392,6 +4660,232 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>When calling this operation with a RAM user or STS credential, the <code>appstreaming:ListPublishedAppInstanceGroup</code> permission is required.
+     * A delivery group must be in the published state and have deployed applications in its image to appear in the query results. This operation only queries information. It does not create delivery groups, assign users, or grant application access permissions.</p>
+     * <h2>Query and pagination</h2>
+     * <ul>
+     * <li><strong>You must explicitly pass in <code>ProductType</code>, <code>PageNumber</code>, and <code>PageSize</code>.</strong> Page numbers start from <code>1</code>, and the page size ranges from <code>1</code> to <code>100</code>.</li>
+     * <li><code>AppInstanceGroupId</code>, <code>AppInstanceGroupName</code>, <code>AppId</code>, and <code>AppName</code> all support substring matching. You can pass them individually or in combination. When multiple conditions are specified, all conditions must be met simultaneously. When both <code>AppId</code> and <code>AppName</code> are specified, the same application must satisfy both conditions.</li>
+     * <li>If an optional filter parameter is not specified or is set to an empty string, that condition is not applied. Query results are sorted by delivery group creation time from newest to oldest. A delivery group is not returned multiple times even if it contains multiple matching applications.</li>
+     * <li><code>ExcludeUserId</code> excludes delivery groups in which all applications have been directly authorized to the specified user. It cannot be used to determine whether the user has no access permissions at all.</li>
+     * <li><code>AppId</code> and <code>AppName</code> only filter delivery groups. <strong>They do not restrict the returned <code>Apps</code> list to only the matched applications.</strong></li>
+     * </ul>
+     * <h2>Invoke sequence</h2>
+     * <ol>
+     * <li>Invoke a query with <code>PageNumber=1</code> and the desired <code>PageSize</code>. For WUYING Cloud Application common scenarios, use <code>ProductType=CloudApp</code>.</li>
+     * <li>Read <code>AppInstanceGroupModels</code>. To retrieve the next page, keep the product type and filter conditions unchanged and increment <code>PageNumber</code>. If no delivery groups match, the total count is <code>0</code> and the list is empty. If the page number exceeds the result range, the list may also be empty, but the total count still represents the total number of matching delivery groups.</li>
+     * <li>To retrieve details of a single delivery group, pass the full <code>AppInstanceGroupId</code> from the response and the same <code>ProductType</code> to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
+     * The masked identifiers in the examples are for format demonstration purposes. Replace them with your actual identifiers when invoking the operation.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries published delivery groups and their application information for a specified product type under the current Alibaba Cloud account by using paging. Supports filtering by delivery group, application, and user authorization status.</p>
+     * 
+     * @param request ListPublishedAppInstanceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPublishedAppInstanceGroupResponse
+     */
+    public ListPublishedAppInstanceGroupResponse listPublishedAppInstanceGroupWithOptions(ListPublishedAppInstanceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupId)) {
+            query.put("AppInstanceGroupId", request.appInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupName)) {
+            query.put("AppInstanceGroupName", request.appInstanceGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            query.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeUserId)) {
+            query.put("ExcludeUserId", request.excludeUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPublishedAppInstanceGroup"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPublishedAppInstanceGroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>When calling this operation with a RAM user or STS credential, the <code>appstreaming:ListPublishedAppInstanceGroup</code> permission is required.
+     * A delivery group must be in the published state and have deployed applications in its image to appear in the query results. This operation only queries information. It does not create delivery groups, assign users, or grant application access permissions.</p>
+     * <h2>Query and pagination</h2>
+     * <ul>
+     * <li><strong>You must explicitly pass in <code>ProductType</code>, <code>PageNumber</code>, and <code>PageSize</code>.</strong> Page numbers start from <code>1</code>, and the page size ranges from <code>1</code> to <code>100</code>.</li>
+     * <li><code>AppInstanceGroupId</code>, <code>AppInstanceGroupName</code>, <code>AppId</code>, and <code>AppName</code> all support substring matching. You can pass them individually or in combination. When multiple conditions are specified, all conditions must be met simultaneously. When both <code>AppId</code> and <code>AppName</code> are specified, the same application must satisfy both conditions.</li>
+     * <li>If an optional filter parameter is not specified or is set to an empty string, that condition is not applied. Query results are sorted by delivery group creation time from newest to oldest. A delivery group is not returned multiple times even if it contains multiple matching applications.</li>
+     * <li><code>ExcludeUserId</code> excludes delivery groups in which all applications have been directly authorized to the specified user. It cannot be used to determine whether the user has no access permissions at all.</li>
+     * <li><code>AppId</code> and <code>AppName</code> only filter delivery groups. <strong>They do not restrict the returned <code>Apps</code> list to only the matched applications.</strong></li>
+     * </ul>
+     * <h2>Invoke sequence</h2>
+     * <ol>
+     * <li>Invoke a query with <code>PageNumber=1</code> and the desired <code>PageSize</code>. For WUYING Cloud Application common scenarios, use <code>ProductType=CloudApp</code>.</li>
+     * <li>Read <code>AppInstanceGroupModels</code>. To retrieve the next page, keep the product type and filter conditions unchanged and increment <code>PageNumber</code>. If no delivery groups match, the total count is <code>0</code> and the list is empty. If the page number exceeds the result range, the list may also be empty, but the total count still represents the total number of matching delivery groups.</li>
+     * <li>To retrieve details of a single delivery group, pass the full <code>AppInstanceGroupId</code> from the response and the same <code>ProductType</code> to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
+     * The masked identifiers in the examples are for format demonstration purposes. Replace them with your actual identifiers when invoking the operation.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries published delivery groups and their application information for a specified product type under the current Alibaba Cloud account by using paging. Supports filtering by delivery group, application, and user authorization status.</p>
+     * 
+     * @param request ListPublishedAppInstanceGroupRequest
+     * @return ListPublishedAppInstanceGroupResponse
+     */
+    public ListPublishedAppInstanceGroupResponse listPublishedAppInstanceGroup(ListPublishedAppInstanceGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listPublishedAppInstanceGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>When you call this operation by using a RAM user or Security Token Service (STS) credential, you must have the <code>appstreaming:ListPublishedApps</code> permission.
+     * Only delivery groups in the published state whose images contain deployed applications are included in the query results. This operation only queries information. It does not create delivery groups or grant or revoke application access permissions.</p>
+     * <h2>Response granularity</h2>
+     * <p>Results are returned on a per-delivery-group-plus-application basis. If the same application is deployed in multiple published delivery groups, a separate record is returned for each combination. <code>TotalCount</code> also reflects the number of such combinations. The list is sorted by the creation time of the delivery group in descending order.</p>
+     * <h2>Query and pagination</h2>
+     * <ul>
+     * <li><strong>You must explicitly specify <code>ProductType</code>, <code>PageNumber</code>, and <code>PageSize</code>.</strong> Page numbers start from <code>1</code>, and the page size ranges from <code>1</code> to <code>100</code>. Invalid values return error codes <code>InvalidParameter.PageNumber</code> and <code>InvalidParameter.PageSize</code>, respectively.</li>
+     * <li><code>AppInstanceGroupId</code>, <code>AppInstanceGroupName</code>, <code>AppId</code>, and <code>AppName</code> all support substring matching. You can specify them individually or in combination. When multiple conditions are specified, all conditions must be met.</li>
+     * <li>If an optional filter parameter is not specified or is set to an empty string, filtering is not applied for that condition.</li>
+     * <li><code>ExcludeUserId</code> excludes applications that have been authorized to the specified user by application, which helps you find applications that can still be authorized to that user. <strong>Access permissions granted through delivery-group-level authorization or user groups are not evaluated by this condition.</strong></li>
+     * </ul>
+     * <h2>Invocation sequence</h2>
+     * <ol>
+     * <li>Initiate a query with <code>PageNumber=1</code> and the desired <code>PageSize</code>. For WUYING Cloud Application common scenarios, use <code>ProductType=CloudApp</code>.</li>
+     * <li>Read <code>Apps</code>. To retrieve the next page, increment <code>PageNumber</code> while keeping the product type and filter conditions unchanged. If no results match, <code>TotalCount</code> is <code>0</code> and <code>Apps</code> is an empty list. If the page number exceeds the result range, <code>Apps</code> may also be empty, but <code>TotalCount</code> still indicates the total number of matching records.</li>
+     * <li>To authorize users for a specific application by application, pass the returned <code>AppInstanceGroupId</code>, <code>AppId</code>, and the same <code>ProductType</code> to <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a>. To view delivery group details, pass <code>AppInstanceGroupId</code> and <code>ProductType</code> to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
+     * The masked identities in the examples are for format demonstration purposes. Replace them with your actual identities when you invoke the operation.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries deployed applications in published delivery groups under the current Alibaba Cloud account for a specified product type by paging, and returns each application along with its delivery group and the number of authorized users by application. Supports filtering by delivery group, application, and user authorization status.</p>
+     * 
+     * @param request ListPublishedAppsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPublishedAppsResponse
+     */
+    public ListPublishedAppsResponse listPublishedAppsWithOptions(ListPublishedAppsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupId)) {
+            query.put("AppInstanceGroupId", request.appInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupName)) {
+            query.put("AppInstanceGroupName", request.appInstanceGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            query.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeUserId)) {
+            query.put("ExcludeUserId", request.excludeUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPublishedApps"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPublishedAppsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>When you call this operation by using a RAM user or Security Token Service (STS) credential, you must have the <code>appstreaming:ListPublishedApps</code> permission.
+     * Only delivery groups in the published state whose images contain deployed applications are included in the query results. This operation only queries information. It does not create delivery groups or grant or revoke application access permissions.</p>
+     * <h2>Response granularity</h2>
+     * <p>Results are returned on a per-delivery-group-plus-application basis. If the same application is deployed in multiple published delivery groups, a separate record is returned for each combination. <code>TotalCount</code> also reflects the number of such combinations. The list is sorted by the creation time of the delivery group in descending order.</p>
+     * <h2>Query and pagination</h2>
+     * <ul>
+     * <li><strong>You must explicitly specify <code>ProductType</code>, <code>PageNumber</code>, and <code>PageSize</code>.</strong> Page numbers start from <code>1</code>, and the page size ranges from <code>1</code> to <code>100</code>. Invalid values return error codes <code>InvalidParameter.PageNumber</code> and <code>InvalidParameter.PageSize</code>, respectively.</li>
+     * <li><code>AppInstanceGroupId</code>, <code>AppInstanceGroupName</code>, <code>AppId</code>, and <code>AppName</code> all support substring matching. You can specify them individually or in combination. When multiple conditions are specified, all conditions must be met.</li>
+     * <li>If an optional filter parameter is not specified or is set to an empty string, filtering is not applied for that condition.</li>
+     * <li><code>ExcludeUserId</code> excludes applications that have been authorized to the specified user by application, which helps you find applications that can still be authorized to that user. <strong>Access permissions granted through delivery-group-level authorization or user groups are not evaluated by this condition.</strong></li>
+     * </ul>
+     * <h2>Invocation sequence</h2>
+     * <ol>
+     * <li>Initiate a query with <code>PageNumber=1</code> and the desired <code>PageSize</code>. For WUYING Cloud Application common scenarios, use <code>ProductType=CloudApp</code>.</li>
+     * <li>Read <code>Apps</code>. To retrieve the next page, increment <code>PageNumber</code> while keeping the product type and filter conditions unchanged. If no results match, <code>TotalCount</code> is <code>0</code> and <code>Apps</code> is an empty list. If the page number exceeds the result range, <code>Apps</code> may also be empty, but <code>TotalCount</code> still indicates the total number of matching records.</li>
+     * <li>To authorize users for a specific application by application, pass the returned <code>AppInstanceGroupId</code>, <code>AppId</code>, and the same <code>ProductType</code> to <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a>. To view delivery group details, pass <code>AppInstanceGroupId</code> and <code>ProductType</code> to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
+     * The masked identities in the examples are for format demonstration purposes. Replace them with your actual identities when you invoke the operation.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries deployed applications in published delivery groups under the current Alibaba Cloud account for a specified product type by paging, and returns each application along with its delivery group and the number of authorized users by application. Supports filtering by delivery group, application, and user authorization status.</p>
+     * 
+     * @param request ListPublishedAppsRequest
+     * @return ListPublishedAppsResponse
+     */
+    public ListPublishedAppsResponse listPublishedApps(ListPublishedAppsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listPublishedAppsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <blockquote>
      * <p>The regions returned by this operation are not all available regions. For information about available regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Supported regions</a>.</p>
      * </blockquote>
@@ -4506,6 +5000,135 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTagCloudResourcesResponse listTagCloudResources(ListTagCloudResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagCloudResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation complies with the Alibaba Cloud tagging standard and is used to query tags bound to Elastic Cloud Application (China) delivery groups. You can query tags bound to resources by resource ID, or filter resources that have specific tags bound by tag key-value pairs.</p>
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>A delivery group is created. You can call the ListAppInstanceGroup operation to obtain the delivery group ID.</li>
+     * <li>Tags are bound to the delivery group. You can bind tags by calling the TagResources operation, or by using the console or the Tag service.</li>
+     * </ul>
+     * <h2>Parameter description</h2>
+     * <ul>
+     * <li><strong>ResourceType is required</strong>. Only <code>APPINSTANCEGROUP</code> (delivery group) is supported. If you specify other values, the error code <code>InvalidResourceType.Invalid</code> is returned.</li>
+     * <li><strong>Specify at least one of ResourceId.N and Tag.N</strong>. If neither is specified, the error code <code>MissingParameter.ResourceIdsOrTags</code> is returned.<ul>
+     * <li>If only ResourceId.N is specified: all tags attached to the specified resources are returned.</li>
+     * <li>If only Tag.N is specified: all resources that have the specified tags attached and their matching tags are returned.</li>
+     * <li>If both are specified: only records of the specified resources that have the specified tags attached are returned.</li>
+     * </ul>
+     * </li>
+     * <li>Tag.N.Key is required. If it is empty, the error code <code>InvalidTagPolicy.KeyInvalid</code> is returned. Tag.N.Value is optional. If it is not specified, the value of the tag key is not restricted, which means any tag value under the key is matched.</li>
+     * <li>Multiple Tag.N conditions have an AND relationship. A resource is returned only if it has all specified tags attached.</li>
+     * </ul>
+     * <h2>Response description</h2>
+     * <ul>
+     * <li>Each record in the response corresponds to a resource-tag key-value pair. If a resource has multiple tags bound, multiple records are returned.</li>
+     * <li>TotalCount indicates the number of records returned.</li>
+     * <li>This operation returns all matching results at a time. An empty NextToken value indicates that no more data is available.</li>
+     * </ul>
+     * <h2>Invocation sequence</h2>
+     * <ol>
+     * <li>Invoke the ListAppInstanceGroup operation to obtain the delivery group ID.</li>
+     * <li>Invoke the TagResources operation to attach tags to the delivery group.</li>
+     * <li>Invoke this operation to query tag bindings by resource ID or tag conditions.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries tags bound to one or more delivery groups, or filters delivery groups that have specific tags bound by tag key-value pairs.</p>
+     * 
+     * @param request ListTagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTagResourcesResponse
+     */
+    public ListTagResourcesResponse listTagResourcesWithOptions(ListTagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            body.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            body.put("ResourceType", request.resourceType);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            bodyFlat.put("Tag", request.tag);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTagResources"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation complies with the Alibaba Cloud tagging standard and is used to query tags bound to Elastic Cloud Application (China) delivery groups. You can query tags bound to resources by resource ID, or filter resources that have specific tags bound by tag key-value pairs.</p>
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>A delivery group is created. You can call the ListAppInstanceGroup operation to obtain the delivery group ID.</li>
+     * <li>Tags are bound to the delivery group. You can bind tags by calling the TagResources operation, or by using the console or the Tag service.</li>
+     * </ul>
+     * <h2>Parameter description</h2>
+     * <ul>
+     * <li><strong>ResourceType is required</strong>. Only <code>APPINSTANCEGROUP</code> (delivery group) is supported. If you specify other values, the error code <code>InvalidResourceType.Invalid</code> is returned.</li>
+     * <li><strong>Specify at least one of ResourceId.N and Tag.N</strong>. If neither is specified, the error code <code>MissingParameter.ResourceIdsOrTags</code> is returned.<ul>
+     * <li>If only ResourceId.N is specified: all tags attached to the specified resources are returned.</li>
+     * <li>If only Tag.N is specified: all resources that have the specified tags attached and their matching tags are returned.</li>
+     * <li>If both are specified: only records of the specified resources that have the specified tags attached are returned.</li>
+     * </ul>
+     * </li>
+     * <li>Tag.N.Key is required. If it is empty, the error code <code>InvalidTagPolicy.KeyInvalid</code> is returned. Tag.N.Value is optional. If it is not specified, the value of the tag key is not restricted, which means any tag value under the key is matched.</li>
+     * <li>Multiple Tag.N conditions have an AND relationship. A resource is returned only if it has all specified tags attached.</li>
+     * </ul>
+     * <h2>Response description</h2>
+     * <ul>
+     * <li>Each record in the response corresponds to a resource-tag key-value pair. If a resource has multiple tags bound, multiple records are returned.</li>
+     * <li>TotalCount indicates the number of records returned.</li>
+     * <li>This operation returns all matching results at a time. An empty NextToken value indicates that no more data is available.</li>
+     * </ul>
+     * <h2>Invocation sequence</h2>
+     * <ol>
+     * <li>Invoke the ListAppInstanceGroup operation to obtain the delivery group ID.</li>
+     * <li>Invoke the TagResources operation to attach tags to the delivery group.</li>
+     * <li>Invoke this operation to query tag bindings by resource ID or tag conditions.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries tags bound to one or more delivery groups, or filters delivery groups that have specific tags bound by tag key-value pairs.</p>
+     * 
+     * @param request ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
+    public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listTagResourcesWithOptions(request, runtime);
     }
 
     /**
@@ -4674,6 +5297,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListWuyingServerResponse listWuyingServer(ListWuyingServerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listWuyingServerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This operation returns the list of available zone IDs for the current Alibaba Cloud account based on the specified region, product type, and operating system type. A typical use case is to check which zones are available before creating a resource that requires a vSwitch, and then select a vSwitch in one of those zones.
+     * This operation only queries information. It does not create resources or incur fees.</p>
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>When calling this operation with a RAM user or STS credential, the <code>appstreaming:ListAppInstanceType</code> permission is required. If the permission is insufficient, the error code <code>Forbidden.NoPermission</code> is returned.</li>
+     * <li><strong><code>ProductType</code>, <code>BizRegionId</code>, and <code>OsType</code> are all required.</strong> If any of these parameters is missing, empty, or set to an unrecognized value, the error code <code>InvalidParameter.ValueInvalid</code> is returned.</li>
+     * <li><code>BizRegionId</code> must be a region ID supported by WUYING Cloud Application. Call <a href="~~ListRegions~~">ListRegions</a> first to obtain the supported region IDs.</li>
+     * </ul>
+     * <h2>Call sequence</h2>
+     * <ol>
+     * <li>Call <a href="~~ListRegions~~">ListRegions</a> to obtain the supported region IDs.</li>
+     * <li>Call this operation with the region ID, target product type, and operating system type, and read the returned <code>ListZonesModel.Zones</code>.</li>
+     * <li>When creating a resource that requires a vSwitch, select a vSwitch in one of the returned zones. For example, pass the corresponding vSwitch ID when calling <a href="~~CreateAppInstanceGroup~~">CreateAppInstanceGroup</a> or <a href="~~CreateWuyingServer~~">CreateWuyingServer</a>.
+     * The returned zone list is determined by the available resources in the current region and may change over time. Query the list in real time before creating resources instead of caching it for extended periods.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of available zone IDs for a specified region, product type, and operating system type.</p>
+     * 
+     * @param request ListZonesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListZonesResponse
+     */
+    public ListZonesResponse listZonesWithOptions(ListZonesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            query.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.osType)) {
+            query.put("OsType", request.osType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListZones"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListZonesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This operation returns the list of available zone IDs for the current Alibaba Cloud account based on the specified region, product type, and operating system type. A typical use case is to check which zones are available before creating a resource that requires a vSwitch, and then select a vSwitch in one of those zones.
+     * This operation only queries information. It does not create resources or incur fees.</p>
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>When calling this operation with a RAM user or STS credential, the <code>appstreaming:ListAppInstanceType</code> permission is required. If the permission is insufficient, the error code <code>Forbidden.NoPermission</code> is returned.</li>
+     * <li><strong><code>ProductType</code>, <code>BizRegionId</code>, and <code>OsType</code> are all required.</strong> If any of these parameters is missing, empty, or set to an unrecognized value, the error code <code>InvalidParameter.ValueInvalid</code> is returned.</li>
+     * <li><code>BizRegionId</code> must be a region ID supported by WUYING Cloud Application. Call <a href="~~ListRegions~~">ListRegions</a> first to obtain the supported region IDs.</li>
+     * </ul>
+     * <h2>Call sequence</h2>
+     * <ol>
+     * <li>Call <a href="~~ListRegions~~">ListRegions</a> to obtain the supported region IDs.</li>
+     * <li>Call this operation with the region ID, target product type, and operating system type, and read the returned <code>ListZonesModel.Zones</code>.</li>
+     * <li>When creating a resource that requires a vSwitch, select a vSwitch in one of the returned zones. For example, pass the corresponding vSwitch ID when calling <a href="~~CreateAppInstanceGroup~~">CreateAppInstanceGroup</a> or <a href="~~CreateWuyingServer~~">CreateWuyingServer</a>.
+     * The returned zone list is determined by the available resources in the current region and may change over time. Query the list in real time before creating resources instead of caching it for extended periods.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of available zone IDs for a specified region, product type, and operating system type.</p>
+     * 
+     * @param request ListZonesRequest
+     * @return ListZonesResponse
+     */
+    public ListZonesResponse listZones(ListZonesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listZonesWithOptions(request, runtime);
     }
 
     /**
@@ -5932,6 +6643,116 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>When you use a RAM user or Security Token Service (STS) credential to call this operation, you must have the <code>appstreaming:TagResources</code> permission.
+     * The resources to which you want to bind tags must belong to the current Alibaba Cloud account. <strong>This operation currently supports only delivery group resources.</strong> You can set <code>ResourceType</code> only to <code>APPINSTANCEGROUP</code>. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain delivery group IDs.</p>
+     * <h2>Tag rules</h2>
+     * <ul>
+     * <li>In a single request, you can bind up to <strong>20 tags</strong> to up to <strong>50 resources</strong>. Duplicate resource IDs are automatically deduplicated.</li>
+     * <li>A tag key must be 1 to 128 characters in length. A tag value must be 0 to 256 characters in length. Both are case-sensitive.</li>
+     * <li>A tag key cannot start with <code>aliyun</code> or <code>acs:</code> (case-insensitive). Neither tag keys nor tag values can contain <code>http://</code> or <code>https://</code>.</li>
+     * <li>Tag keys in the same request must be unique. Otherwise, the error code <code>InvalidTag.Duplicated</code> is returned.</li>
+     * <li>Each tag key on a resource can correspond to only one tag value. If the tag key already exists on the resource, the tag value is updated to the new value.</li>
+     * <li>A maximum of 20 custom tags can be bound to a single resource. If this limit is exceeded, the error code <code>ResourceTag.CustomTagCountExceed</code> is returned.</li>
+     * </ul>
+     * <h2>Results</h2>
+     * <ul>
+     * <li><strong>If any specified delivery group does not exist or does not belong to the current account, the entire request fails.</strong> The error code <code>InvalidAppInstanceGroup.NotFound</code> is returned, and no tags are bound to any resource.</li>
+     * <li>If the binding succeeds, the response contains only <code>RequestId</code> and does not return tag details.</li>
+     * <li>If multiple resources are specified and only some of them fail to be bound, the operation still returns a success response without failure details. Call <code>ListTagResources</code> to verify the binding results. If only one resource is specified and the binding fails, the operation returns the corresponding error code.</li>
+     * </ul>
+     * <h2>Call sequence</h2>
+     * <ol>
+     * <li>Call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the IDs of the delivery groups to which you want to add tags.</li>
+     * <li>Call this operation with <code>ResourceType=APPINSTANCEGROUP</code>, <code>ResourceId.N</code>, and <code>Tag.N.Key</code>/<code>Tag.N.Value</code>.</li>
+     * <li>To view the tags bound to resources, call <code>ListTagResources</code>. To unbind tags, call <code>UntagResources</code>.
+     * The masked identifiers in the examples are used to demonstrate the format. Replace them with your actual identifiers when you call the operation.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates and binds tags to specified China Office (Chinese: Wuying) delivery groups in compliance with Alibaba Cloud tag specifications. If a tag key already exists on a resource, the tag value is updated to the value specified in the current request. Currently, only delivery group (<code>APPINSTANCEGROUP</code>) resource types are supported.</p>
+     * 
+     * @param request TagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TagResourcesResponse
+     */
+    public TagResourcesResponse tagResourcesWithOptions(TagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            body.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            body.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            body.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TagResources"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>When you use a RAM user or Security Token Service (STS) credential to call this operation, you must have the <code>appstreaming:TagResources</code> permission.
+     * The resources to which you want to bind tags must belong to the current Alibaba Cloud account. <strong>This operation currently supports only delivery group resources.</strong> You can set <code>ResourceType</code> only to <code>APPINSTANCEGROUP</code>. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain delivery group IDs.</p>
+     * <h2>Tag rules</h2>
+     * <ul>
+     * <li>In a single request, you can bind up to <strong>20 tags</strong> to up to <strong>50 resources</strong>. Duplicate resource IDs are automatically deduplicated.</li>
+     * <li>A tag key must be 1 to 128 characters in length. A tag value must be 0 to 256 characters in length. Both are case-sensitive.</li>
+     * <li>A tag key cannot start with <code>aliyun</code> or <code>acs:</code> (case-insensitive). Neither tag keys nor tag values can contain <code>http://</code> or <code>https://</code>.</li>
+     * <li>Tag keys in the same request must be unique. Otherwise, the error code <code>InvalidTag.Duplicated</code> is returned.</li>
+     * <li>Each tag key on a resource can correspond to only one tag value. If the tag key already exists on the resource, the tag value is updated to the new value.</li>
+     * <li>A maximum of 20 custom tags can be bound to a single resource. If this limit is exceeded, the error code <code>ResourceTag.CustomTagCountExceed</code> is returned.</li>
+     * </ul>
+     * <h2>Results</h2>
+     * <ul>
+     * <li><strong>If any specified delivery group does not exist or does not belong to the current account, the entire request fails.</strong> The error code <code>InvalidAppInstanceGroup.NotFound</code> is returned, and no tags are bound to any resource.</li>
+     * <li>If the binding succeeds, the response contains only <code>RequestId</code> and does not return tag details.</li>
+     * <li>If multiple resources are specified and only some of them fail to be bound, the operation still returns a success response without failure details. Call <code>ListTagResources</code> to verify the binding results. If only one resource is specified and the binding fails, the operation returns the corresponding error code.</li>
+     * </ul>
+     * <h2>Call sequence</h2>
+     * <ol>
+     * <li>Call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the IDs of the delivery groups to which you want to add tags.</li>
+     * <li>Call this operation with <code>ResourceType=APPINSTANCEGROUP</code>, <code>ResourceId.N</code>, and <code>Tag.N.Key</code>/<code>Tag.N.Value</code>.</li>
+     * <li>To view the tags bound to resources, call <code>ListTagResources</code>. To unbind tags, call <code>UntagResources</code>.
+     * The masked identifiers in the examples are used to demonstrate the format. Replace them with your actual identifiers when you call the operation.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates and binds tags to specified China Office (Chinese: Wuying) delivery groups in compliance with Alibaba Cloud tag specifications. If a tag key already exists on a resource, the tag value is updated to the value specified in the current request. Currently, only delivery group (<code>APPINSTANCEGROUP</code>) resource types are supported.</p>
+     * 
+     * @param request TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.tagResourcesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Unbinds secondary private IP addresses from a development host.</p>
      * 
@@ -6089,6 +6910,124 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UntagCloudResourcesResponse untagCloudResources(UntagCloudResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.untagCloudResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>When calling this operation with a RAM user or STS credential, the <code>appstreaming:UntagResources</code> permission is required.
+     * The resources from which you want to unbind tags must belong to the current Alibaba Cloud account. <strong>This operation currently supports only delivery group resources.</strong> You can set <code>ResourceType</code> only to <code>APPINSTANCEGROUP</code>. You can obtain delivery group IDs by calling <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a>, and query tags that are bound to a resource by calling <a href="~~ListTagResources~~">ListTagResources</a>.</p>
+     * <h2>Parameter description</h2>
+     * <ul>
+     * <li>You can unbind tags from up to <strong>50 resources</strong> in a single request. Duplicate resource IDs are automatically deduplicated.</li>
+     * <li><strong>Specify at least one of <code>TagKey.N</code> and <code>All</code>.</strong> If neither is specified, or if <code>TagKey.N</code> is not specified and <code>All</code> is set to <code>false</code>, the error code <code>InvalidParameter.TagKeyListOrAll</code> is returned.<ul>
+     * <li>If <code>TagKey.N</code> is specified: only the tags that correspond to the specified tag keys are unbound. You can specify up to 20 tag keys at a time. The <code>All</code> parameter is ignored.</li>
+     * <li>If <code>TagKey.N</code> is not specified and <code>All=true</code>: all custom tags on the resource are unbound, including Wuying system tags that start with <code>System/</code> and were attached by calling <a href="~~TagResources~~">TagResources</a>.</li>
+     * </ul>
+     * </li>
+     * <li>If a specified tag key does not exist on the resource, the tag key is skipped and no error is returned.</li>
+     * <li>Tag keys that start with <code>System/</code> are Wuying system tags. Only <code>System/Scheduler/GRAYSCALE</code> and <code>System/Scheduler/STOP_NEW_USER_CONNECTION</code> are supported. If you specify other tag keys that start with <code>System/</code>, the error code <code>InvalidTagPolicy.KeyInvalid</code> or <code>InvalidTag.SystemKeyNotAllow</code> is returned.</li>
+     * </ul>
+     * <h2>Execution results</h2>
+     * <ul>
+     * <li><strong>If any specified delivery group does not exist or does not belong to the current account, the entire request fails</strong> with the error code <code>InvalidAppInstanceGroup.NotFound</code>, and no tags are unbound from any resource.</li>
+     * <li>On success, the response contains only <code>RequestId</code> and does not return tag details.</li>
+     * <li>When multiple resources are specified and only some fail to have tags unbound, the operation still returns success and the response does not contain failure details. Call <a href="~~ListTagResources~~">ListTagResources</a> to verify the unbinding results. When only one resource is specified and the unbinding fails, the operation returns the corresponding error code directly.</li>
+     * </ul>
+     * <h2>Call sequence</h2>
+     * <ol>
+     * <li>Call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain delivery group IDs. To check which tag keys are bound to a resource, call <a href="~~ListTagResources~~">ListTagResources</a>.</li>
+     * <li>Call this operation with <code>ResourceType=APPINSTANCEGROUP</code> and <code>ResourceId.N</code>, and specify <code>TagKey.N</code> or <code>All=true</code> to indicate the tags to unbind.</li>
+     * <li>To rebind tags, call <a href="~~TagResources~~">TagResources</a>.
+     * The masked identifiers in the examples are for format demonstration purposes only. Replace them with your actual identifiers when making calls.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Unbinds tags from specified Wuying delivery groups in compliance with Alibaba Cloud tagging standards. You can unbind specific tags by tag key or unbind all custom tags from a resource at once by setting <code>All=true</code> without specifying tag keys. Currently, only the delivery group (<code>APPINSTANCEGROUP</code>) resource type is supported.</p>
+     * 
+     * @param request UntagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UntagResourcesResponse
+     */
+    public UntagResourcesResponse untagResourcesWithOptions(UntagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.all)) {
+            body.put("All", request.all);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            body.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            body.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagKey)) {
+            body.put("TagKey", request.tagKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UntagResources"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>When calling this operation with a RAM user or STS credential, the <code>appstreaming:UntagResources</code> permission is required.
+     * The resources from which you want to unbind tags must belong to the current Alibaba Cloud account. <strong>This operation currently supports only delivery group resources.</strong> You can set <code>ResourceType</code> only to <code>APPINSTANCEGROUP</code>. You can obtain delivery group IDs by calling <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a>, and query tags that are bound to a resource by calling <a href="~~ListTagResources~~">ListTagResources</a>.</p>
+     * <h2>Parameter description</h2>
+     * <ul>
+     * <li>You can unbind tags from up to <strong>50 resources</strong> in a single request. Duplicate resource IDs are automatically deduplicated.</li>
+     * <li><strong>Specify at least one of <code>TagKey.N</code> and <code>All</code>.</strong> If neither is specified, or if <code>TagKey.N</code> is not specified and <code>All</code> is set to <code>false</code>, the error code <code>InvalidParameter.TagKeyListOrAll</code> is returned.<ul>
+     * <li>If <code>TagKey.N</code> is specified: only the tags that correspond to the specified tag keys are unbound. You can specify up to 20 tag keys at a time. The <code>All</code> parameter is ignored.</li>
+     * <li>If <code>TagKey.N</code> is not specified and <code>All=true</code>: all custom tags on the resource are unbound, including Wuying system tags that start with <code>System/</code> and were attached by calling <a href="~~TagResources~~">TagResources</a>.</li>
+     * </ul>
+     * </li>
+     * <li>If a specified tag key does not exist on the resource, the tag key is skipped and no error is returned.</li>
+     * <li>Tag keys that start with <code>System/</code> are Wuying system tags. Only <code>System/Scheduler/GRAYSCALE</code> and <code>System/Scheduler/STOP_NEW_USER_CONNECTION</code> are supported. If you specify other tag keys that start with <code>System/</code>, the error code <code>InvalidTagPolicy.KeyInvalid</code> or <code>InvalidTag.SystemKeyNotAllow</code> is returned.</li>
+     * </ul>
+     * <h2>Execution results</h2>
+     * <ul>
+     * <li><strong>If any specified delivery group does not exist or does not belong to the current account, the entire request fails</strong> with the error code <code>InvalidAppInstanceGroup.NotFound</code>, and no tags are unbound from any resource.</li>
+     * <li>On success, the response contains only <code>RequestId</code> and does not return tag details.</li>
+     * <li>When multiple resources are specified and only some fail to have tags unbound, the operation still returns success and the response does not contain failure details. Call <a href="~~ListTagResources~~">ListTagResources</a> to verify the unbinding results. When only one resource is specified and the unbinding fails, the operation returns the corresponding error code directly.</li>
+     * </ul>
+     * <h2>Call sequence</h2>
+     * <ol>
+     * <li>Call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain delivery group IDs. To check which tag keys are bound to a resource, call <a href="~~ListTagResources~~">ListTagResources</a>.</li>
+     * <li>Call this operation with <code>ResourceType=APPINSTANCEGROUP</code> and <code>ResourceId.N</code>, and specify <code>TagKey.N</code> or <code>All=true</code> to indicate the tags to unbind.</li>
+     * <li>To rebind tags, call <a href="~~TagResources~~">TagResources</a>.
+     * The masked identifiers in the examples are for format demonstration purposes only. Replace them with your actual identifiers when making calls.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Unbinds tags from specified Wuying delivery groups in compliance with Alibaba Cloud tagging standards. You can unbind specific tags by tag key or unbind all custom tags from a resource at once by setting <code>All=true</code> without specifying tag keys. Currently, only the delivery group (<code>APPINSTANCEGROUP</code>) resource type is supported.</p>
+     * 
+     * @param request UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
+    public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.untagResourcesWithOptions(request, runtime);
     }
 
     /**

@@ -5,30 +5,28 @@ import com.aliyun.tea.*;
 
 public class ListAuthorizedUsersRequest extends TeaModel {
     /**
-     * <p>The application ID used to filter authorization relationships.</p>
-     * <p>Set this parameter when querying authorized users of a specific application. This parameter is not required when querying cloud browser groups or delivery group sets.</p>
+     * <p>The application ID. Specifies the application to filter users who are <strong>authorized for that specific application</strong> (authorized through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation). This parameter applies to delivery groups with the <code>App</code> authorization mode. Obtain the application ID from the Apps list returned by the <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a> operation.</p>
+     * <p>If not specified, all authorized users under the delivery group are returned. This parameter is not supported when querying by delivery group set.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>ca-i87mycyn419nu****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>The delivery group ID. When querying cloud browsers, set this parameter to the browser group ID.</p>
-     * <p>Specify either this parameter or <code>AppInstanceGroupSetId</code>, but not both.</p>
+     * <p>The delivery group ID. Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain this value. For cloud browser groups, specify the browser group ID returned by the <a href="~~ListBrowserInstanceGroup~~">ListBrowserInstanceGroup</a> operation.</p>
+     * <p><strong>Exactly one of this parameter and AppInstanceGroupSetId must be specified.</strong></p>
      * 
      * <strong>example:</strong>
-     * <p>big-3jm9d0abc00example</p>
+     * <p>aig-9ciijz60n4xsv****</p>
      */
     @NameInMap("AppInstanceGroupId")
     public String appInstanceGroupId;
 
     /**
      * <p>The delivery group set ID.</p>
-     * <p>Specify either this parameter or <code>AppInstanceGroupId</code>, but not both. When querying by set, omit <code>AppId</code> and <code>AppInstancePersistentId</code>.</p>
+     * <p><strong>Exactly one of this parameter and AppInstanceGroupId must be specified.</strong> When querying by set, do not specify AppId or AppInstancePersistentId. Otherwise, a parameter error is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>set-3jm9d0abc00example</p>
@@ -37,17 +35,17 @@ public class ListAuthorizedUsersRequest extends TeaModel {
     public String appInstanceGroupSetId;
 
     /**
-     * <p>The persistent session ID used to filter authorization relationships. This parameter applies to delivery groups that use session-based authorization.</p>
-     * <p>This parameter is not required when querying delivery group sets.</p>
+     * <p>The persistent session ID. Specifies the persistent session to filter users who are granted that session. This parameter applies to delivery groups with the <code>Session</code> authorization mode. Call the <a href="~~ListPersistentAppInstances~~">ListPersistentAppInstances</a> operation to obtain this value.</p>
+     * <p>If specified, only users granted that session are returned. However, the response parameter AppInstancePersistentIds still lists all persistent sessions granted to each user. This parameter is not supported when querying by delivery group set.</p>
      * 
      * <strong>example:</strong>
-     * <p>ai-3jm9d0abc00example</p>
+     * <p>p-0cc7s3mw2fg4j****</p>
      */
     @NameInMap("AppInstancePersistentId")
     public String appInstancePersistentId;
 
     /**
-     * <p>Performs an exact match by authorized username. If this parameter is not specified, results are not filtered by exact username.</p>
+     * <p>The username for <strong>exact matching</strong>. If not specified, no filtering by exact username is applied. Can be specified together with UserIdFuzzy, in which case both conditions must be met.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -56,7 +54,7 @@ public class ListAuthorizedUsersRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The page number. This parameter is required. Pages start from page 1.</p>
+     * <p>The page number, starting from 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,7 +64,8 @@ public class ListAuthorizedUsersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of records per page. This parameter is required. Maximum value: 100.</p>
+     * <p>The number of records per page. Valid values: 1 to 100.</p>
+     * <p>When the authorization mode is <code>App</code> or <code>AppInstanceGroup</code>, pagination is based on authorization records. Multiple authorization records for the same user are merged into a single user entry. Therefore, the actual number of users returned on the current page may be less than this value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,17 +75,28 @@ public class ListAuthorizedUsersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The product type. Set this parameter to <code>CloudBrowser</code> when querying authorized users of cloud browsers.</p>
+     * <p>The product type. The value must match the product type of the queried delivery group or delivery group set. If the value does not match, a resource-not-found error code is returned.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>CloudApp: Wuying Cloud Application.</li>
+     * <li>CloudBrowser: Cloud Browser.</li>
+     * <li>WuyingServer: Enterprise Edition Workstation.</li>
+     * <li>WuyingWorkstation: Personal Edition Linggou Container Workstation.</li>
+     * <li>WuyingWorkstationTeam: Linggou Team Edition Container Workstation.</li>
+     * <li>WuyingWorkstationBusiness: Linggou Dedicated Edition Container Workstation.</li>
+     * <li>AndroidCloud: Cloud Phone.</li>
+     * <li>AIAgent: AgentBay (AI agent).</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>CloudBrowser</p>
+     * <p>CloudApp</p>
      */
     @NameInMap("ProductType")
     public String productType;
 
     /**
-     * <p>Performs a fuzzy match by text contained in the authorized username.</p>
+     * <p>The username keyword for <strong>fuzzy matching</strong>. A match occurs if the username contains this keyword. For example, if you specify <code>ali</code>, both <code>alice</code> and <code>ali.wang</code> are returned. If not specified, no keyword-based filtering is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>ali</p>
