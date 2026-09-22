@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DownloadSkillVersionViaOssResponseBody extends TeaModel {
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/artifacts/example.zip">https://example.com/artifacts/example.zip</a></p>

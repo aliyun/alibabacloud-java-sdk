@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSkillsRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return per page.</p>
+     * <p>The maximum number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class ListSkillsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The sort field. The value download_count is supported. Default value: gmt_modified.</p>
+     * <p>The field by which to sort results. The value download_count is supported. Default value: gmt_modified.</p>
      * 
      * <strong>example:</strong>
      * <p>download_count</p>

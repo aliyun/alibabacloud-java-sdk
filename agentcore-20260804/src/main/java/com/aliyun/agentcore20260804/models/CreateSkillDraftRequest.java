@@ -62,7 +62,7 @@ public class CreateSkillDraftRequest extends TeaModel {
         public String skillName;
 
         /**
-         * <p>The draft version number to assign. If not specified, the version number is automatically incremented.</p>
+         * <p>The draft version number. If not specified, the version number is automatically incremented.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.2</p>

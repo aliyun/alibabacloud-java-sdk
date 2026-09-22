@@ -67,6 +67,12 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
 
     public static class GetAgentSpecLatestResponseBodyDataSkillsVersionSelector extends TeaModel {
         /**
+         * <p>The version selector type. Valid values:</p>
+         * <ul>
+         * <li>LABEL: selects by label.</li>
+         * <li>VERSION: selects by specific version.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>LABEL</p>
          */
@@ -74,6 +80,8 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The selector value. If the type is LABEL, this value is a label name such as latest. If the type is VERSION, this value is a specific version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>latest</p>
          */
@@ -114,12 +122,21 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The Skill source type. Valid values:</p>
+         * <ul>
+         * <li>REFERENCE: references AI Registry.</li>
+         * <li>STATIC: statically bundled with the package.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>REFERENCE</p>
          */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <p>The version selector for the reference. Defaults to LABEL/latest if omitted.</p>
+         */
         @NameInMap("versionSelector")
         public GetAgentSpecLatestResponseBodyDataSkillsVersionSelector versionSelector;
 
@@ -183,7 +200,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The download count.</p>
+         * <p>The number of downloads.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -228,7 +245,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>The list of skill references.</p>
+         * <p>The list of Skill references.</p>
          */
         @NameInMap("skills")
         public java.util.List<GetAgentSpecLatestResponseBodyDataSkills> skills;

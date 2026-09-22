@@ -11,7 +11,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
     public UpdateManagedAgentRequestBody body;
 
     /**
-     * <p>The reserved idempotency token. The backend does not guarantee idempotency in the current release.</p>
+     * <p>The reserved idempotency token. The backend does not provide idempotency guarantees in the current release.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-1</p>
@@ -42,7 +42,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBodyAgenticFsMounts extends TeaModel {
         /**
-         * <p>The subdirectory under /mnt/agenticfs/ in the container. Required for each mount entry as validated by the backend. Mount targets must not be duplicated or have parent-child overlaps.</p>
+         * <p>The subdirectory under /mnt/agenticfs/ in the container. Required for each mount item as validated by the backend. Mount targets must not be duplicated or have parent-child overlaps.</p>
          * 
          * <strong>example:</strong>
          * <p>/mnt/agenticfs/data</p>
@@ -51,7 +51,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public String mountPath;
 
         /**
-         * <p>The non-empty relative directory that exists under the AccessPoint. Required for each mount entry as validated by the backend. Root directory, absolute paths, and parent directory segments are not allowed.</p>
+         * <p>A non-empty relative directory that exists under the AccessPoint. Required for each mount item as validated by the backend. Root directories, absolute paths, and parent directory segments are not allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace/data</p>
@@ -60,7 +60,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public String path;
 
         /**
-         * <p>Specifies whether to mount in read-only mode. Default value: false. This is not the RAM role read-only policy.</p>
+         * <p>Specifies whether to mount in read-only mode. Default value: false. This is not a RAM role read-only policy.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -69,7 +69,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public Boolean readOnly;
 
         /**
-         * <p>The AccessPoint domain name. Required for each mount entry as validated by the backend. Do not include the protocol, port, or path. Use the DomainName from the NAS ListAccessPoints response.</p>
+         * <p>The AccessPoint domain name. Required for each mount item as validated by the backend. Do not include the protocol, port, or path. Use the DomainName value from the NAS ListAccessPoints response.</p>
          * 
          * <strong>example:</strong>
          * <p>ap-0123456789abcdef0.0123456789-vlm36.cn-hangzhou.nas.aliyuncs.com</p>
@@ -224,7 +224,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBodyHarnessConfiguration extends TeaModel {
         /**
-         * <p>The connector service account key.</p>
+         * <p>The Connector Service Account Key.</p>
          * 
          * <strong>example:</strong>
          * <p>key-xxxx</p>
@@ -233,7 +233,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public String connectorServiceAccountKey;
 
         /**
-         * <p>The connector service account name.</p>
+         * <p>The Connector Service Account Name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-connector-key</p>
@@ -305,7 +305,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBodyModelQuota extends TeaModel {
         /**
-         * <p>Specifies whether to enable token quota. Default value: true. Set to false to disable and delete existing quota rules.</p>
+         * <p>Specifies whether to enable the token quota. Default value: true. Set to false to disable and delete existing quota rules.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -314,7 +314,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The quota limit type. Required when quota is enabled, as validated by the backend. Fixed value: token.</p>
+         * <p>The quota limit type. Required when the quota is enabled, as validated by the backend. Fixed value: token.</p>
          * 
          * <strong>example:</strong>
          * <p>token</p>
@@ -323,11 +323,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public String limitType;
 
         /**
-         * <p>The quota statistical period. Required when quota is enabled, as validated by the backend. Valid values:</p>
-         * <ul>
-         * <li>day: daily.</li>
-         * <li>month: monthly.</li>
-         * </ul>
+         * <p>The statistical period for the quota. Required when the quota is enabled, as validated by the backend. Valid values: day (daily) and month (monthly).</p>
          * 
          * <strong>example:</strong>
          * <p>day</p>
@@ -336,7 +332,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public String periodType;
 
         /**
-         * <p>The maximum number of tokens allowed within a single period. Required when quota is enabled, as validated by the backend. The value must be greater than 0.</p>
+         * <p>The maximum number of tokens that can be consumed within a single period. Required when the quota is enabled, as validated by the backend. The value must be greater than 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1000000</p>
@@ -528,7 +524,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBodyOssMounts extends TeaModel {
         /**
-         * <p>The OSS bucket name. Required for each mount entry as validated by the backend.</p>
+         * <p>The OSS bucket name. Required for each mount item as validated by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>bucket-001</p>
@@ -537,7 +533,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The absolute mount path in the container. Required for each mount entry as validated by the backend.</p>
+         * <p>The absolute mount path in the container. Required for each mount item as validated by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>/mnt/oss/datasets</p>
@@ -633,7 +629,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The maximum number of active sessions per sandbox. Required when hpa is present, as validated by the backend.</p>
+         * <p>The maximum number of active sessions per Sandbox. Required when hpa is present, as validated by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -642,7 +638,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public Integer maxConcurrentSessionsPerSandbox;
 
         /**
-         * <p>The maximum number of sandboxes. Required when HPA is enabled and must be no less than the minimum value.</p>
+         * <p>The maximum number of Sandboxes. Required when HPA is enabled and must be greater than or equal to the minimum value.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -651,7 +647,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public Integer maxSandboxCount;
 
         /**
-         * <p>The minimum number of sandboxes. Required when HPA is enabled.</p>
+         * <p>The minimum number of Sandboxes. Required when HPA is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -660,7 +656,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public Integer minSandboxCount;
 
         /**
-         * <p>The time in seconds before an inactive session is reclaimed. Required when hpa is present, as validated by the backend.</p>
+         * <p>The time-to-live (TTL) for a session after inactivity, in seconds. Required when hpa is present, as validated by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -717,7 +713,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBodyRuntimeSessionPolicy extends TeaModel {
         /**
-         * <p>The HTTP header name used for session affinity. Takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
+         * <p>The name of the HTTP header used for session affinity. This parameter takes effect only when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
          * 
          * <strong>example:</strong>
          * <p>X-Session-Id</p>
@@ -767,7 +763,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public UpdateManagedAgentRequestBodyRuntimeCompute compute;
 
         /**
-         * <p>The sandbox auto scaling and session configuration.</p>
+         * <p>The Sandbox auto scaling and session configuration.</p>
          */
         @NameInMap("hpa")
         public UpdateManagedAgentRequestBodyRuntimeHpa hpa;
@@ -814,8 +810,8 @@ public class UpdateManagedAgentRequest extends TeaModel {
         /**
          * <p>The version selector type. Valid values:</p>
          * <ul>
-         * <li>LABEL: selects by label.</li>
-         * <li>VERSION: selects by specific version.</li>
+         * <li>LABEL: select by label.</li>
+         * <li>VERSION: select by specific version.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -870,7 +866,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         /**
          * <p>The skill source type. Valid values:</p>
          * <ul>
-         * <li>REFERENCE: references AI Registry.</li>
+         * <li>REFERENCE: referenced from AI Registry.</li>
          * <li>STATIC: statically bundled with the package.</li>
          * </ul>
          * 
@@ -890,7 +886,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public String version;
 
         /**
-         * <p>The referenced version selector. Defaults to LABEL/latest if omitted. Currently supports LABEL/latest.</p>
+         * <p>The version selector for the reference. Defaults to LABEL/latest if omitted. Currently supports LABEL/latest.</p>
          */
         @NameInMap("versionSelector")
         public UpdateManagedAgentRequestBodySkillsVersionSelector versionSelector;
@@ -934,6 +930,48 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     }
 
+    public static class UpdateManagedAgentRequestBodySubAgentsSkills extends TeaModel {
+        /**
+         * <p>The skill name used by the sub-agent. Declared as optional for compatibility, but the backend validates that each entry is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>web-search</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <p>The optional version number. If omitted, set to null, or left blank, the latest version is resolved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
+        @NameInMap("version")
+        public String version;
+
+        public static UpdateManagedAgentRequestBodySubAgentsSkills build(java.util.Map<String, ?> map) throws Exception {
+            UpdateManagedAgentRequestBodySubAgentsSkills self = new UpdateManagedAgentRequestBodySubAgentsSkills();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateManagedAgentRequestBodySubAgentsSkills setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public UpdateManagedAgentRequestBodySubAgentsSkills setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+    }
+
     public static class UpdateManagedAgentRequestBodySubAgents extends TeaModel {
         /**
          * <p>The sub-agent instruction.</p>
@@ -955,6 +993,12 @@ public class UpdateManagedAgentRequest extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The skills exclusively used by this sub-agent. Skill names must be unique within the same sub-agent. If this parameter is not specified or an empty array is passed, no skills are configured.</p>
+         */
+        @NameInMap("skills")
+        public java.util.List<UpdateManagedAgentRequestBodySubAgentsSkills> skills;
+
         public static UpdateManagedAgentRequestBodySubAgents build(java.util.Map<String, ?> map) throws Exception {
             UpdateManagedAgentRequestBodySubAgents self = new UpdateManagedAgentRequestBodySubAgents();
             return TeaModel.build(map, self);
@@ -974,6 +1018,14 @@ public class UpdateManagedAgentRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public UpdateManagedAgentRequestBodySubAgents setSkills(java.util.List<UpdateManagedAgentRequestBodySubAgentsSkills> skills) {
+            this.skills = skills;
+            return this;
+        }
+        public java.util.List<UpdateManagedAgentRequestBodySubAgentsSkills> getSkills() {
+            return this.skills;
         }
 
     }
@@ -1089,7 +1141,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBody extends TeaModel {
         /**
-         * <p>The AgenticFS mount list. Omit to retain existing values, pass [] to clear, or pass a non-empty array for full replacement. null is rejected. Combined with OSS mounts, a maximum of 10 entries are allowed.</p>
+         * <p>Omit to retain existing values, pass [] to clear, or pass a non-empty array for full replacement. null is rejected. Combined with OSS mounts, a maximum of 10 items are allowed.</p>
          */
         @NameInMap("agenticFsMounts")
         public java.util.List<UpdateManagedAgentRequestBodyAgenticFsMounts> agenticFsMounts;
@@ -1146,7 +1198,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public UpdateManagedAgentRequestBodyNetwork network;
 
         /**
-         * <p>The OSS mount list. A maximum of 10 entries are allowed. Pass an empty array to clear existing mounts.</p>
+         * <p>The list of OSS mounts. A maximum of 10 items are allowed. Pass an empty array to clear existing mounts.</p>
          */
         @NameInMap("ossMounts")
         public java.util.List<UpdateManagedAgentRequestBodyOssMounts> ossMounts;
@@ -1158,13 +1210,13 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public UpdateManagedAgentRequestBodyRuntime runtime;
 
         /**
-         * <p>The skill configuration list.</p>
+         * <p>The list of skill configurations.</p>
          */
         @NameInMap("skills")
         public java.util.List<UpdateManagedAgentRequestBodySkills> skills;
 
         /**
-         * <p>The sub-agent configuration list.</p>
+         * <p>The list of sub-agent configurations.</p>
          */
         @NameInMap("subAgents")
         public java.util.List<UpdateManagedAgentRequestBodySubAgents> subAgents;
@@ -1176,7 +1228,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public UpdateManagedAgentRequestBodyTemplate template;
 
         /**
-         * <p>The tool configuration list.</p>
+         * <p>The list of tool configurations.</p>
          */
         @NameInMap("tools")
         public java.util.List<UpdateManagedAgentRequestBodyTools> tools;

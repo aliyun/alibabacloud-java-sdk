@@ -11,7 +11,7 @@ public class ListSkillsResponseBody extends TeaModel {
     public ListSkillsResponseBodyData data;
 
     /**
-     * <p>The maximum number of entries to return per page.</p>
+     * <p>The maximum number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -103,6 +103,13 @@ public class ListSkillsResponseBody extends TeaModel {
         public Long downloadCount;
 
         /**
+         * <p>The draft mode. Valid values:</p>
+         * <ul>
+         * <li>HEAD: The Skill has a persistent draft.</li>
+         * <li>VERSIONED: Each edit creates a versioned draft.</li>
+         * </ul>
+         * <p>The value is determined by the server. The caller uses this value to render the status column.</p>
+         * 
          * <strong>example:</strong>
          * <p>HEAD</p>
          */
@@ -110,7 +117,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public String draftMode;
 
         /**
-         * <p>The version that is being edited.</p>
+         * <p>The version that is being edited. In HEAD draft mode, the value is HEAD.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -167,7 +174,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The version that is under review.</p>
+         * <p>The version that is under review. In HEAD draft mode, the value is HEAD.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
