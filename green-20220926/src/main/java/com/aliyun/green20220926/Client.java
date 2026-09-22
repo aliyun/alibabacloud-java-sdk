@@ -1985,7 +1985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Exports call usage statistics.</p>
+     * <p>Exports call volume.</p>
      * 
      * @param request ExportCipStatsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2013,6 +2013,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.label)) {
             body.put("Label", request.label);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            body.put("Query", request.query);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
@@ -2055,7 +2059,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Exports call usage statistics.</p>
+     * <p>Exports call volume.</p>
      * 
      * @param request ExportCipStatsRequest
      * @return ExportCipStatsResponse

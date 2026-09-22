@@ -32,7 +32,7 @@ public class ExportCipStatsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The description of the error code.</p>
+     * <p>The detailed description of the error code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>

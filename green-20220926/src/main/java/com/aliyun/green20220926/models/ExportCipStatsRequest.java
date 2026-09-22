@@ -29,8 +29,8 @@ public class ExportCipStatsRequest extends TeaModel {
     /**
      * <p>The export type. Valid values:</p>
      * <ul>
-     * <li><strong>level</strong>: export by risk level.</li>
-     * <li><strong>label</strong>: export by label.</li>
+     * <li><strong>level</strong>: Export by risk level.</li>
+     * <li><strong>label</strong>: Export by label.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,6 +47,15 @@ public class ExportCipStatsRequest extends TeaModel {
      */
     @NameInMap("Label")
     public String label;
+
+    /**
+     * <p>The query condition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Classify&quot;:&quot;guard-scene&quot;}</p>
+     */
+    @NameInMap("Query")
+    public String query;
 
     /**
      * <p>The region ID.</p>
@@ -96,11 +105,11 @@ public class ExportCipStatsRequest extends TeaModel {
     /**
      * <p>The type. Valid values:</p>
      * <ul>
-     * <li><strong>cip</strong>: Content Moderation invocation volume statistics.</li>
-     * <li><strong>risk_level</strong>: Content Moderation risk level statistics.</li>
-     * <li><strong>content_moderation</strong>: AI safety guardrail content compliance risk level and tag statistics.</li>
-     * <li><strong>sensitive_data</strong>: AI safety guardrail sensitive data risk level and tag statistics.</li>
-     * <li><strong>prompt_attack</strong>: AI safety guardrail prompt risk level and tag statistics.</li>
+     * <li><strong>cip</strong>: Content Moderation invoke volume statistics.</li>
+     * <li><strong>risk_level</strong>: Content Moderation security risk level statistics.</li>
+     * <li><strong>content_moderation</strong>: AI Safety Guardrail content compliance risk level and tag statistics.</li>
+     * <li><strong>sensitive_data</strong>: AI Safety Guardrail sensitive data risk level and tag statistics.</li>
+     * <li><strong>prompt_attack</strong>: AI Safety Guardrail prompt risk level and tag statistics.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -144,6 +153,14 @@ public class ExportCipStatsRequest extends TeaModel {
     }
     public String getLabel() {
         return this.label;
+    }
+
+    public ExportCipStatsRequest setQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    public String getQuery() {
+        return this.query;
     }
 
     public ExportCipStatsRequest setRegionId(String regionId) {
