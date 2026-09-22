@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLaunchTemplateResponseBody extends TeaModel {
     /**
-     * <p>The launch template ID.</p>
+     * <p>The ID of the launch template.</p>
      * 
      * <strong>example:</strong>
      * <p>lt-m5eiaupmvm2op9d****</p>
@@ -14,7 +14,7 @@ public class CreateLaunchTemplateResponseBody extends TeaModel {
     public String launchTemplateId;
 
     /**
-     * <p>The launch template version number.</p>
+     * <p>The version number of the launch template.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

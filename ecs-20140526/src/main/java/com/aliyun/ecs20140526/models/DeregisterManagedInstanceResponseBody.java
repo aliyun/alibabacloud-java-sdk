@@ -51,7 +51,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         public String activationId;
 
         /**
-         * <p>The version number of Cloud Assistant Agent.</p>
+         * <p>The version number of the Cloud Assistant Agent.</p>
          * 
          * <strong>example:</strong>
          * <p>2.2.0.102</p>
@@ -105,7 +105,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
-         * <p>The number of times that Cloud Assistant tasks were run on the managed instance.</p>
+         * <p>The number of times that Cloud Assistant tasks were executed on the managed instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -114,7 +114,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         public Long invocationCount;
 
         /**
-         * <p>The time when the last Cloud Assistant task was run.</p>
+         * <p>The time when the last Cloud Assistant task was executed. The time is displayed in ISO 8601 format in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-20T09:00:40Z</p>
@@ -123,7 +123,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         public String lastInvokedTime;
 
         /**
-         * <p>The machine ID of the managed instance.</p>
+         * <p>The machine code of the managed instance.</p>
          * 
          * <strong>example:</strong>
          * <p>e03231b37ab14e53b5795ad625fc****</p>
@@ -150,7 +150,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         public String osVersion;
 
         /**
-         * <p>The time when the managed instance was registered.</p>
+         * <p>The time when the managed instance was registered. The time is displayed in ISO 8601 format in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-20T08:57:56Z</p>

@@ -52,17 +52,17 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The value of the MachineId parameter specified when registering the managed instance. A maximum of 36 characters are allowed.
-     * Example registration script:</p>
+     * <p>The value of the MachineId parameter specified when the managed instance was registered. The value can be up to 36 characters in length.
+     * Sample registration script:</p>
      * <pre><code>aliyun-service --register \\
-     *   --RegionId=ap-southeast-1 \\
+     *   --RegionId=cn-hangznou \\
      *   --ActivationId=xxxxxxxxxxx \\
      *   --ActivationCode=xxxxxxxxx \\
-     *   --MachineId=xxxxxx \\ # Optional parameter that specifies the unique identifier of the machine
+     *   --MachineId=xxxxxx \\ # Optional parameter that specifies the unique identifier of the machine.
      *   --ForceResue                 
      * </code></pre>
      * <ul>
-     * <li>If MachineId and ForceResult are specified during registration, Cloud Assistant generates a fixed managed instance ID for this MachineId.</li>
+     * <li>If MachineId and ForceResult are specified during registration, Cloud Assistant generates a fixed managed instance ID for the MachineId.</li>
      * <li>If MachineId is not explicitly specified, Cloud Assistant automatically generates a MachineId value based on the hardware information of the machine.</li>
      * <li>Recommendation: Explicitly specify MachineId and ForceResult to mark the mapping between managed instances and on-premises machines.</li>
      * </ul>
@@ -74,7 +74,7 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     public String machineId;
 
     /**
-     * <p>The maximum number of entries per page for a paging query.</p>
+     * <p>The maximum number of entries per page in a paging query.</p>
      * <p>Maximum value: 50.</p>
      * <p>Default value: 10.</p>
      * 
@@ -136,7 +136,7 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID. Currently supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), Hong Kong (China), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).</p>
+     * <p>The region ID. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), Hong Kong (China), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).</p>
      * <p>You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query region IDs and other information.</p>
      * <p>This parameter is required.</p>
      * 
@@ -319,7 +319,7 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     public static class DescribeManagedInstancesRequestTag extends TeaModel {
         /**
          * <p>The tag key of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <p>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
+         * <p>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
          * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>

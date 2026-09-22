@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: If the value is not specified or is less than 10, the default value is 10. If the value is greater than 100, the default value is 100.</p>
+     * <p>The number of entries per page in a paged query. Maximum value: 100. Default value: If the value is not specified or is less than 10, the default value is 10. If the value is greater than 100, the default value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries that match the query conditions. This parameter is optional and may not be returned by default.</p>
+     * <p>The total number of entries that match the request conditions. This is an optional parameter and may not be returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -144,7 +144,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The resource type for which the O&amp;M window is configured.</p>
+         * <p>The type of resource for which the O&amp;M window is configured.</p>
          * 
          * <strong>example:</strong>
          * <p>Tag</p>
@@ -191,7 +191,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
 
     public static class DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowListTimePeriodRangeList extends TeaModel {
         /**
-         * <p>The end time of the maintenance time window.</p>
+         * <p>The end time of the maintenance time window. Format: &quot;Day of the week,HH:mm&quot;. Example: Monday,22:00.</p>
          * 
          * <strong>example:</strong>
          * <p>Monday,22:00</p>
@@ -200,7 +200,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The start time of the maintenance time window.</p>
+         * <p>The start time of the maintenance time window. Format: &quot;Day of the week,HH:mm&quot;. Example: Monday,22:00.</p>
          * 
          * <strong>example:</strong>
          * <p>Monday,22:00</p>
@@ -233,7 +233,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
 
     public static class DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowListTimePeriod extends TeaModel {
         /**
-         * <p>The cycle type. Valid values:</p>
+         * <p>The type of the recurrence cycle. Valid values:</p>
          * <ul>
          * <li>Daily: daily recurrence.</li>
          * <li>Weekly: weekly recurrence.</li>
@@ -246,7 +246,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
         public String periodUnit;
 
         /**
-         * <p>The time ranges within the recurring cycle of the O&amp;M window (UTC time zone).</p>
+         * <p>The time ranges within the recurrence cycle of the O&amp;M window (in UTC).</p>
          */
         @NameInMap("RangeList")
         public java.util.List<DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowListTimePeriodRangeList> rangeList;
@@ -326,7 +326,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
         public String planWindowName;
 
         /**
-         * <p>The supported maintenance actions.</p>
+         * <p>The supported maintenance action.</p>
          * 
          * <strong>example:</strong>
          * <p>Reboot</p>
@@ -341,7 +341,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
         public DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowListTargetResource targetResource;
 
         /**
-         * <p>The recurring cycle of the window.</p>
+         * <p>The recurrence cycle of the window.</p>
          */
         @NameInMap("TimePeriod")
         public DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowListTimePeriod timePeriod;

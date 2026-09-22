@@ -15,7 +15,7 @@ public class DescribeKeyPairsRequest extends TeaModel {
     public Boolean includePublicKey;
 
     /**
-     * <p>The fingerprint of the key pair. The public key fingerprint format is defined in RFC 4716 and uses the MD5 message digest algorithm. For more information, see <a href="https://tools.ietf.org/html/rfc4716">RFC 4716</a>.</p>
+     * <p>The fingerprint of the key pair. The public key fingerprint format is defined in RFC 4716 and uses the MD5 message digest algorithm. For more information, refer to <a href="https://tools.ietf.org/html/rfc4716">RFC 4716</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ABC1234567</p>

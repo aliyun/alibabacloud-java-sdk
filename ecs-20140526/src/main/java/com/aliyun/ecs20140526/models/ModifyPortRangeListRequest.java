@@ -181,11 +181,11 @@ public class ModifyPortRangeListRequest extends TeaModel {
         /**
          * <p>The port range. Valid values of N: 0 to 200. Settings:</p>
          * <ul>
-         * <li><p>The number of entries cannot exceed the maximum entry capacity (<code>MaxEntries</code>).</p>
+         * <li><p>The number of entries cannot exceed the maximum number of entries (MaxEntries).</p>
          * </li>
-         * <li><p>You cannot specify duplicate values for <code>PortRange</code>.</p>
+         * <li><p>You cannot specify duplicate PortRange values.</p>
          * </li>
-         * <li><p>The value cannot be the same as the value of the <code>RemoveEntry.N.PortRange</code> parameter.</p>
+         * <li><p>The value cannot be the same as a RemoveEntry.N.PortRange parameter value.</p>
          * </li>
          * </ul>
          * 
@@ -222,9 +222,9 @@ public class ModifyPortRangeListRequest extends TeaModel {
         /**
          * <p>The port range. Valid values of N: 0 to 200. Settings:</p>
          * <ul>
-         * <li><p>You cannot specify duplicate values for <code>PortRange</code>.</p>
+         * <li><p>You cannot specify duplicate PortRange values.</p>
          * </li>
-         * <li><p>The value cannot be the same as the value of the <code>AddEntry.N.PortRange</code> parameter.</p>
+         * <li><p>The value cannot be the same as an AddEntry.N.PortRange parameter value.</p>
          * </li>
          * </ul>
          * 

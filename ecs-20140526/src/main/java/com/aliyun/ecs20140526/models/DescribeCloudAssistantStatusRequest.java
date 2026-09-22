@@ -14,7 +14,7 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The maximum number of entries per page for a paged query. If <strong>InstanceId</strong> is specified, this parameter is ignored.</p>
+     * <p>The maximum number of entries per page for a paged query. If <strong>InstanceId</strong> is set, this parameter is ignored.</p>
      * <p>Maximum value: 50.</p>
      * <p>Default value: 10.</p>
      * 

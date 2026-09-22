@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSendFileResultsRequest extends TeaModel {
     /**
-     * <p>The instance ID. If you specify this parameter, all file sending records of the specified instance are queried.</p>
+     * <p>The instance ID. After you specify this parameter, all file sending records of the instance are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>i-hz0jdfwd9f****</p>
@@ -14,7 +14,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The overall sending status of the file. The overall status depends on the combined execution status of all instances in the sending task. Valid values:</p>
+     * <p>The overall sending status of the file. The overall status depends on the common execution status of all target instances. Valid values:</p>
      * <ul>
      * <li>Pending: The system is validating or sending the file. The overall status is Pending if the file sending status of at least one instance is Pending.</li>
      * <li>Running: The file is being sent on instances. The overall status is Running if the file sending status of at least one instance is Running.</li>
@@ -50,7 +50,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The file name. If you specify this parameter, all sending records of the file with the specified name are queried.</p>
+     * <p>The name of the file. After you specify this parameter, all sending records of the file are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>test.txt</p>
@@ -75,7 +75,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging operations.</p>
+     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging queries.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging operations.</p>
+     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging queries.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the file sending task belongs. After you specify this parameter, you must also specify ResourceGroupId when sending a file. This parameter allows you to filter file sending results by resource group.</p>
+     * <p>The ID of the resource group to which the file sending task belongs. After you specify this parameter, you must also specify ResourceGroupId when sending files. This way, you can filter the file sending results of the specified resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -121,7 +121,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeSendFileResultsRequestTag> tag;
@@ -254,7 +254,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public static class DescribeSendFileResultsRequestTag extends TeaModel {
         /**
          * <p>The tag key of the file sending task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <p>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
+         * <p>If you use one tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that are attached with all specified tags cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
          * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>

@@ -19,7 +19,7 @@ public class RedeployDedicatedHostRequest extends TeaModel {
      * <ul>
      * <li><p>Reboot: stops ECS instance before migration.</p>
      * </li>
-     * <li><p>LiveMigrationFirst: migrates ECS instance without stopping it. You must specify the DedicatedHostId parameter. This value does not support changing ECS instance type during migration. If live migration fails, cold migration is performed by default.</p>
+     * <li><p>LiveMigrationFirst: migrates ECS instance without stopping it. You must specify the DedicatedHostId parameter. This value does not support changing ECS instance type during migration. If live migration fails, the system performs stop-and-migrate by default.</p>
      * </li>
      * </ul>
      * <p>Default value: Reboot.</p>

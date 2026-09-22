@@ -7,8 +7,8 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
     /**
      * <p>The address family of the prefix list. Valid values:</p>
      * <ul>
-     * <li>IPv4</li>
-     * <li>IPv6</li>
+     * <li>IPv4.</li>
+     * <li>IPv6.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
     public String addressFamily;
 
     /**
-     * <p>The time when the prefix list was created.</p>
+     * <p>The time when the prefix list was created. The time is displayed in ISO 8601 format in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-02-20T07:11Z</p>

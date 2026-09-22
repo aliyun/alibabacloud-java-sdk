@@ -30,14 +30,14 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
      * <p>The collection of network connectivity tracking configuration information.</p>
      * <p>Before you use this parameter, read <a href="https://help.aliyun.com/document_detail/2865958.html">Connection timeout management</a>.</p>
      * <blockquote>
-     * <p>This parameter is returned only when the <code>Attribute</code> input parameter is set to <code>connectionTrackingConfiguration</code>.</p>
+     * <p>This parameter is returned only when the Attribute input parameter is set to connectionTrackingConfiguration.</p>
      * </blockquote>
      */
     @NameInMap("ConnectionTrackingConfiguration")
     public DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration connectionTrackingConfiguration;
 
     /**
-     * <p>The time when the network interface controller (NIC) was created.</p>
+     * <p>The time when the network interface controller (NIC) was created. The time is in ISO 8601 format and displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-12-25T12:31:31Z</p>
@@ -78,7 +78,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     /**
      * <p>The ID of the instance to which the network interface controller (NIC) is attached.</p>
      * <blockquote>
-     * <p>Network interface controllers (NICs) that are managed and controlled by other Alibaba Cloud services do not return an instance ID.</p>
+     * <p>Network interface controllers (NICs) that are managed and controlled by other Alibaba Cloud services do not return instance IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -130,10 +130,10 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig networkInterfaceTrafficConfig;
 
     /**
-     * <p>The communication pattern of the network interface controller (NIC). Valid values:</p>
+     * <p>The communication mode of the network interface controller (NIC). Valid values:</p>
      * <ul>
-     * <li>Standard: uses the TCP communication pattern.</li>
-     * <li>HighPerformance: enables the Elastic RDMA Interface (ERI) and uses the RDMA communication pattern.</li>
+     * <li>Standard: TCP communication mode is used.</li>
+     * <li>HighPerformance: Elastic RDMA Interface (ERI) is enabled and RDMA communication mode is used.</li>
      * </ul>
      * <blockquote>
      * <p>The HighPerformance parameter value is supported only by the c7re RDMA enhanced instance family.</p>
@@ -175,18 +175,18 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     /**
      * <p>The number of queues for the Elastic Network Interface (ENI).</p>
      * <ul>
-     * <li><p>If the Elastic Network Interface (ENI) is a primary network interface controller (NIC): the default number of queues for the primary network interface controller (NIC) based on the instance type is returned.</p>
+     * <li><p>If the ENI is a primary network interface controller (NIC): the default number of queues for the primary NIC that the instance type allows is returned.</p>
      * </li>
-     * <li><p>If the Elastic Network Interface (ENI) is a secondary ENI:</p>
+     * <li><p>If the ENI is a secondary ENI:</p>
      * <ul>
      * <li>If the secondary ENI is in the InUse state:<ul>
-     * <li>If the number of queues has not been modified, the default number of queues for the secondary ENI based on the instance type is returned.</li>
-     * <li>If the number of queues has been modified, the modified number of queues is returned.</li>
+     * <li>If the number of queues for the secondary ENI has not been modified, the default number of queues for the secondary ENI that the instance type allows is returned.</li>
+     * <li>If the number of queues for the secondary ENI has been modified, the modified number of queues is returned.</li>
      * </ul>
      * </li>
      * <li>If the secondary ENI is in the active (Available) state:<ul>
-     * <li>If the number of queues has not been modified, an empty value is returned.</li>
-     * <li>If the number of queues has been modified, the modified number of queues is returned.</li>
+     * <li>If the number of queues for the secondary ENI has not been modified, an empty value is returned.</li>
+     * <li>If the number of queues for the secondary ENI has been modified, the modified number of queues is returned.</li>
      * </ul>
      * </li>
      * </ul>
@@ -278,7 +278,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
      * <li>Detaching: being detached.</li>
      * <li>Deleting: being deleted.</li>
      * </ul>
-     * <p>Default value: empty, which indicates that network interface controllers (NICs) in all statuses are queried.</p>
+     * <p>Default value: empty, which indicates that network interface controllers (NICs) in all states are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>Available</p>
@@ -911,7 +911,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public Integer tcpClosedAndTimeWaitTimeout;
 
         /**
-         * <p>The timeout period for TCP connections in the established state. Unit: seconds. Valid values: [30, 60, 80, 100, 200, 300, 500, 700, 910].</p>
+         * <p>The timeout period for TCP connections in the ESTABLISHED state. Unit: seconds. Valid values: [30, 60, 80, 100, 200, 300, 500, 700, 910].</p>
          * 
          * <strong>example:</strong>
          * <p>910</p>
@@ -1166,7 +1166,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig extends TeaModel {
         /**
-         * <p>The communication pattern of the network interface controller (NIC).</p>
+         * <p>The communication mode of the network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>HighPerformance</p>

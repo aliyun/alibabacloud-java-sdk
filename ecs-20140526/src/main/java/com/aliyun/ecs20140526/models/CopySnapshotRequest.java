@@ -13,7 +13,7 @@ public class CopySnapshotRequest extends TeaModel {
     public java.util.List<CopySnapshotRequestArn> arn;
 
     /**
-     * <p>Guarantees the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique across different requests. The value of ClientToken can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>Ensures the idempotence of the request. The value is generated from your client and must be unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -22,7 +22,7 @@ public class CopySnapshotRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the destination region to which to copy the snapshot.</p>
+     * <p>The ID of the destination region for the new snapshot.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class CopySnapshotRequest extends TeaModel {
     public Boolean encrypted;
 
     /**
-     * <p>The customer master key (CMK) in Key Management Service (KMS) in the destination region.</p>
+     * <p>The customer master key (CMK) in the destination region.</p>
      * 
      * <strong>example:</strong>
      * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
@@ -116,7 +116,7 @@ public class CopySnapshotRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The retention period of the new snapshot, in days. The snapshot is automatically released when the retention period expires. Valid values: 1 to 65536.</p>
+     * <p>The retention period of the new snapshot, in days. The snapshot undergoes automatic release when the retention period expires. Valid values: 1 to 65536.</p>
      * <p>Default value: null, which indicates that the snapshot is not subject to automatic release.</p>
      * 
      * <strong>example:</strong>

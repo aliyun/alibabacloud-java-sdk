@@ -35,7 +35,7 @@ public class CreateActivationRequest extends TeaModel {
     /**
      * <p>The default instance name prefix. The prefix must be 2 to 50 characters in length and must start with a letter. It cannot start with a special character or digit. It can contain only periods (.), underscores (_), hyphens (-), and colons (:). It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * <p>Instances registered with the activation code created by this operation use this name as a prefix to generate sequential instance names. You can also specify a new instance name when registering a managed instance to override this default value.</p>
-     * <p>When registering a managed instance, if you specify the InstanceName value, the name <code>&lt;InstanceName&gt;-001</code> is generated, where the number of digits in <code>001</code> depends on the number of digits in the <code>InstanceCount</code> value. If you do not specify the InstanceName value, the hostname of the host is used as the instance name.</p>
+     * <p>When registering a managed instance, if a value is specified for InstanceName, the name <code>&lt;InstanceName&gt;-001</code> is generated, where the number of digits in <code>001</code> depends on the number of digits in the <code>InstanceCount</code> value. If no value is specified for InstanceName, the hostname of the host is used as the instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-InstanceName</p>
@@ -60,7 +60,7 @@ public class CreateActivationRequest extends TeaModel {
 
     /**
      * <p>The region ID. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), Hong Kong (China), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).
-     * You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the region IDs and other information.</p>
+     * You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query region IDs and other information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -212,7 +212,7 @@ public class CreateActivationRequest extends TeaModel {
     public static class CreateActivationRequestTag extends TeaModel {
         /**
          * <p>The tag key of the managed instance activation code. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <p>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count with all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
+         * <p>If you use a single tag to filter resources, the resource count with the tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count with all the specified tags attached cannot exceed 1000. If the resource count exceeds 1000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
          * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>

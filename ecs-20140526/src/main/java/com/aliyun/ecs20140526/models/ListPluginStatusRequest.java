@@ -22,7 +22,7 @@ public class ListPluginStatusRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The plugin name. The full character set is supported. The name can be up to 255 characters in length.</p>
+     * <p>The plugin name. Full character set is supported. The name can be up to 255 characters in length.</p>
      * <ul>
      * <li><p>If you do not specify this parameter, the status of all installed plugins on the instance is queried.</p>
      * <blockquote>
@@ -56,7 +56,7 @@ public class ListPluginStatusRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to go offline. Use NextToken and MaxResults to perform a paging query instead.</p>
+     * <p>This parameter will be offline soon. Use NextToken and MaxResults to complete paged query operations. Paging is handled by these parameters instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -67,7 +67,7 @@ public class ListPluginStatusRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to go offline. Use NextToken and MaxResults to perform a paging query instead.</p>
+     * <p>This parameter will be offline soon. Use NextToken and MaxResults to complete paged query operations. Paging is handled by these parameters instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

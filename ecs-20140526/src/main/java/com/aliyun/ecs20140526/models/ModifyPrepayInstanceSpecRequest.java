@@ -65,7 +65,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The target instance type for the Upgrade/Downgrade. For valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a> or invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a>.</p>
+     * <p>The target instance type for the upgrade or downgrade. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a> or invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,14 +75,14 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>Specifies whether to support cross-cluster Upgrade/Downgrade of instance types. Valid values:</p>
+     * <p>Specifies whether to support cross-cluster upgrade or downgrade of instance types. Valid values:</p>
      * <ul>
      * <li>true: Cross-cluster instance type changes are supported.</li>
      * <li>false: Cross-cluster instance type changes are not supported.</li>
      * </ul>
      * <p>Default value: false.</p>
      * <p>When the <code>MigrateAcrossZone</code> parameter is set to <code>true</code>, take note of the following items after you upgrade the Elastic Compute Service instance based on the response:</p>
-     * <p>VPC-type instances: For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is changed to an I/O optimized instance, the disk device names and software authorization codes of the server change. For Linux instances, basic disks (cloud) are identified as xvda or xvdb. Ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vda or vdb.</p>
+     * <p>VPC-type instances: For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is changed to an I/O optimized instance, the disk device names and software authorization codes of the server change. For Linux instances, basic disks (cloud) are identified as xvda or xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vda or vdb.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -317,7 +317,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
          * <ul>
          * <li>cloud_efficiency: ultra disk.</li>
          * <li>cloud_ssd: standard SSD.<blockquote>
-         * <p>This parameter is valid only when you upgrade from a <a href="https://help.aliyun.com/document_detail/55263.html">retired instance type</a> to an <a href="https://help.aliyun.com/document_detail/25378.html">instance family that is available for purchase</a> and change a non-I/O optimized instance to an I/O optimized instance.</p>
+         * <p>This parameter is valid only when you upgrade from a <a href="https://help.aliyun.com/document_detail/55263.html">retired instance type</a> to an <a href="https://help.aliyun.com/document_detail/25378.html">in-stock instance family</a> and change a non-I/O optimized instance to an I/O optimized instance. For more information about how to change instance types, see <a href="https://help.aliyun.com/document_detail/25378.html">Increase Quota</a>.</p>
          * </blockquote>
          * </li>
          * </ul>

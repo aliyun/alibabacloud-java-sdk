@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCommandRequest extends TeaModel {
     /**
-     * <p>The command ID. You can call <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> to query all available command IDs.</p>
+     * <p>The command ID. You can call the <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> operation to query all available command IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

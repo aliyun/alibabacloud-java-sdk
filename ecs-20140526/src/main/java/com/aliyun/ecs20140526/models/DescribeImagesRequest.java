@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImagesRequest extends TeaModel {
     /**
-     * <p>The scenario in which the image is used. Valid values:</p>
+     * <p>The scenario in which the image is to be used. Valid values:</p>
      * <ul>
      * <li>CreateEcs (default): instance creation.</li>
      * <li>ChangeOS: system disk replacement or operating system replacement.</li>
@@ -34,8 +34,8 @@ public class DescribeImagesRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request.</p>
      * <ul>
-     * <li>true: Only a dry run is performed. The system checks whether your AccessKey pair is valid, whether Resource Access Management (RAM) user authorization is granted, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned. The request does not send the actual query.</li>
-     * <li>false: A normal request is sent. If the check succeeds, a 2XX HTTP status code is returned and the resource status is directly queried.</li>
+     * <li>true: Only a dry run is performed. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is granted the required authorization, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned. No request is sent.</li>
+     * <li>false: A normal request is sent. If the check succeeds, a 2XX HTTP status code is returned and the resource status is queried directly.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -46,7 +46,7 @@ public class DescribeImagesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The list of filter conditions used to query resources.</p>
+     * <p>The list of filter conditions when querying resources.</p>
      */
     @NameInMap("Filter")
     public java.util.List<DescribeImagesRequestFilter> filter;
@@ -84,7 +84,7 @@ public class DescribeImagesRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The name of the image. Fuzzy search is supported.</p>
+     * <p>The image name. Fuzzy search is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>testImageName</p>
@@ -196,7 +196,7 @@ public class DescribeImagesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for a paging query. Settings this parameter to specify the number of entries to return on each page.</p>
+     * <p>The number of entries per page for paging queries. Settings this parameter to specify the number of entries to return on each page.</p>
      * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -283,7 +283,7 @@ public class DescribeImagesRequest extends TeaModel {
     /**
      * <p>Specifies whether the image is available.</p>
      * <blockquote>
-     * <p>An available image indicates that the image can be immediately used to create instances. For more availability scenarios, see <a href="https://help.aliyun.com/document_detail/3044728.html">Image instant availability</a>.</p>
+     * <p>An available image indicates that the image can be used immediately to create an instance. For more availability scenarios, see <a href="https://help.aliyun.com/document_detail/3044728.html">Image instant availability</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -295,8 +295,8 @@ public class DescribeImagesRequest extends TeaModel {
     /**
      * <p>Specifies whether the image is running on ECS instances. Valid values:</p>
      * <ul>
-     * <li>instance: The image is in use and running on ECS instances.</li>
-     * <li>none: The image is idle and not running on any ECS instances.</li>
+     * <li>instance: The image is in use by ECS instances.</li>
+     * <li>none: The image is idle and not used by any ECS instances.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -536,7 +536,7 @@ public class DescribeImagesRequest extends TeaModel {
 
     public static class DescribeImagesRequestFilter extends TeaModel {
         /**
-         * <p>The filter key used to query resources. Valid values:</p>
+         * <p>The filter key when querying resources. Valid values:</p>
          * <ul>
          * <li>When this parameter is set to <code>CreationStartTime</code>, you can query resources created after the specified time point (<code>Filter.N.Value</code>).</li>
          * <li>When this parameter is set to <code>CreationEndTime</code>, you can query resources created before the specified time point (<code>Filter.N.Value</code>).</li>
@@ -552,9 +552,9 @@ public class DescribeImagesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The filter value used to query resources.</p>
+         * <p>The filter value when querying resources.</p>
          * <ul>
-         * <li><p>When <code>Filter.N.Key</code> is set to <code>CreationStartTime</code> or <code>CreationEndTime</code>, the format is <code>yyyy-MM-ddTHH:mmZ</code>, in UTC+0 time zone.</p>
+         * <li><p>When <code>Filter.N.Key</code> is set to <code>CreationStartTime</code> or <code>CreationEndTime</code>, the format is <code>yyyy-MM-ddTHH:mmZ</code>, using the UTC+0 time zone.</p>
          * </li>
          * <li><p>When <code>Filter.N.Key</code> is set to <code>NetworkType</code>, valid network type values include <code>vpc</code> and <code>classic</code>.</p>
          * </li>
@@ -595,7 +595,7 @@ public class DescribeImagesRequest extends TeaModel {
     public static class DescribeImagesRequestTag extends TeaModel {
         /**
          * <p>The tag key of the image. Valid values of N: 1 to 20.</p>
-         * <p>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count that has all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
+         * <p>When you use a single tag to filter resources, the resource count with this tag cannot exceed 1000. When you use multiple tags to filter resources, the resource count that are attached to all specified tags cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>

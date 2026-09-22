@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DescribeImageFromFamilyRequest extends TeaModel {
     /**
      * <p>The name of the image family.</p>
-     * <p>Image families are supported for custom images, public images, community images, and shared images. For more information, see <a href="https://help.aliyun.com/document_detail/174241.html">Image family overview</a>.</p>
+     * <p>Custom images, public images, community images, and shared images all support image families. For more information, see <a href="https://help.aliyun.com/document_detail/174241.html">Image family overview</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

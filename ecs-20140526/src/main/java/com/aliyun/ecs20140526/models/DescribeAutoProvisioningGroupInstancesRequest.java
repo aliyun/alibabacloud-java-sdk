@@ -32,7 +32,7 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Settings for the paging query.</p>
+     * <p>The number of entries per page when you use paging queries. Settings:</p>
      * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -43,7 +43,7 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the auto-provisioning group. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The ID of the region in which the auto-provisioning group resides. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

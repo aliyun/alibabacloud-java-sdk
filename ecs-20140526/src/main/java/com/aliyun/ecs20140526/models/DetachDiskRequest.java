@@ -11,11 +11,11 @@ public class DetachDiskRequest extends TeaModel {
      * <li>false: The disk is not released together with the instance. The disk is retained as a pay-as-you-go data disk.</li>
      * </ul>
      * <p>Default value: true</p>
-     * <p>Take note of the following items:</p>
+     * <p>Note:</p>
      * <ul>
      * <li>Disks with the multi-attach feature enabled do not support this parameter.</li>
-     * <li>If the disk to be detached is a data disk, the default value is <code>false</code>.</li>
-     * <li>If the disk to be detached is an <code>elastic ephemeral disk</code>, you must set <code>DeleteWithInstance</code> to <code>true</code>.</li>
+     * <li>If you detach a data disk, the default value is <code>false</code>.</li>
+     * <li>If the disk that you want to detach is an <code>elastic ephemeral disk</code>, you must set <code>DeleteWithInstance</code> to <code>true</code>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class DetachDiskRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The instance ID of the ECS instance from which you want to uninstall the disk that is attached to it.</p>
+     * <p>The ID of the ECS instance to which the disk is attached.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

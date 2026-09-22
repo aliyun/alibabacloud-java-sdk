@@ -8,7 +8,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
      * <p>The property of the Elastic Network Interface (ENI). Valid values:</p>
      * <p>attachment: queries the attachment information of member network interface controllers (NICs) for a trunk network interface controller (NIC). This parameter is in invitational preview and is not available for use.</p>
      * <p>connectionTrackingConfiguration: queries the network connectivity tracking configuration.</p>
-     * <p>Default value:</p>
+     * <p>Default value: empty.</p>
      * 
      * <strong>example:</strong>
      * <p>attachment</p>
@@ -33,7 +33,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the network interface controller (NIC). You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the network interface controller (NIC). You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

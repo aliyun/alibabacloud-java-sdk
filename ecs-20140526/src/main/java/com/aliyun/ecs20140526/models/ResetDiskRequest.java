@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetDiskRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud disk to be rolled back.</p>
+     * <p>The ID of the disk to be rolled back.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,8 +17,8 @@ public class ResetDiskRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li>true: performs a dry run without actually rolling back the cloud disk. The system checks whether required parameters are specified, whether the request format is valid, and whether resource status constraints are met. If the check fails, the corresponding error message is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
-     * <li>false: performs a dry run and sends the request. If the check succeeds, the cloud disk rollback operation is initiated.</li>
+     * <li>true: performs a dry run without actually rolling back the disk. The system checks whether required parameters are specified, whether the request format is valid, and whether resource status constraints are met. If the check fails, the corresponding error message is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li>false: performs a dry run and sends the request. If the check succeeds, the disk rollback operation is initiated.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -41,7 +41,7 @@ public class ResetDiskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the snapshot to use for rolling back the cloud disk.</p>
+     * <p>The ID of the snapshot to use for rolling back the disk.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

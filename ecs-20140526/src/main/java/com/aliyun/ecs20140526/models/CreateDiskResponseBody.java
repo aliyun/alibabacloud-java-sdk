@@ -14,9 +14,9 @@ public class CreateDiskResponseBody extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The generated order ID.</p>
+     * <p>The order ID.</p>
      * <blockquote>
-     * <p>An order ID is returned only when a subscription disk is created.</p>
+     * <p>The order ID is returned only when you create a subscription disk.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

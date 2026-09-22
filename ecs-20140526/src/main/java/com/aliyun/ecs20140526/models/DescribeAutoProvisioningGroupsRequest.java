@@ -31,6 +31,9 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     @NameInMap("AutoProvisioningGroupStatus")
     public java.util.List<String> autoProvisioningGroupStatus;
 
+    /**
+     * <p>The type of the auto-provisioning group. Valid values: request, maintain, and candidate.</p>
+     */
     @NameInMap("AutoProvisioningGroupTypes")
     public java.util.List<String> autoProvisioningGroupTypes;
 
@@ -41,7 +44,7 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the paging query to return.</p>
+     * <p>The page number of the list to return in a paging query.</p>
      * <p>Minimum value: 1.</p>
      * <p>Default value: 1.</p>
      * 
@@ -52,7 +55,7 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in the paging query. Settings:</p>
+     * <p>The number of entries per page in a paging query.</p>
      * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 

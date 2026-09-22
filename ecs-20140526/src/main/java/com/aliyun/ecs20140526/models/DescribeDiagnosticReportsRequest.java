@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosticReportsRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries per page for paging. Maximum value: 100.</p>
+     * <p>The number of entries per page for a paged query. Maximum value: 100.</p>
      * <p>Default value:</p>
      * <ul>
-     * <li>If this parameter is not set, the default value is 10.</li>
-     * <li>If the value you set is greater than 100, the default value is 100.</li>
+     * <li>If this parameter is not specified, the default value is 10.</li>
+     * <li>If the specified value is greater than 100, the default value is 100.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class DescribeDiagnosticReportsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the <code>NextToken</code> value returned in the previous call. You do not need to set this parameter for the first request.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -52,8 +52,8 @@ public class DescribeDiagnosticReportsRequest extends TeaModel {
     /**
      * <p>The severity level. Valid values:</p>
      * <ul>
-     * <li>Unknown: The initial state, which indicates that the diagnosis has not started or the diagnosis process exited abnormally. No diagnostic conclusion is available.</li>
-     * <li>Normal: The diagnosis is normal and no issues are found.</li>
+     * <li>Unknown: The initial state, which indicates that the diagnostic has not started or the diagnostic process exited abnormally. No diagnostic conclusion is available.</li>
+     * <li>Normal: The diagnostic is normal. No issues are found.</li>
      * <li>Info: Related information is available and may be associated with an exception.</li>
      * <li>Warn: Related information is available and may cause an exception.</li>
      * <li>Critical: A critical exception exists.</li>
@@ -68,9 +68,9 @@ public class DescribeDiagnosticReportsRequest extends TeaModel {
     /**
      * <p>The report status. Valid values:</p>
      * <ul>
-     * <li>InProgress: The diagnosis is in progress.</li>
-     * <li>Failed: The diagnosis failed.</li>
-     * <li>Finished: The diagnosis is complete.</li>
+     * <li>InProgress: The diagnostic is in progress.</li>
+     * <li>Failed: The diagnostic failed.</li>
+     * <li>Finished: The diagnostic is complete.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -73,7 +73,7 @@ public class DescribeDeploymentSetsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for a paged query.</p>
+     * <p>The number of entries per page for the paged query.</p>
      * <p>Maximum value: 50.</p>
      * <p>Default value: 10.</p>
      * 
@@ -102,9 +102,9 @@ public class DescribeDeploymentSetsRequest extends TeaModel {
     /**
      * <p>The deployment strategy. Valid values:</p>
      * <ul>
-     * <li>Availability: high availability.</li>
-     * <li>AvailabilityGroup: high availability for deployment set groups.</li>
-     * <li>LowLatency: low network latency.</li>
+     * <li>Availability: high availability strategy.</li>
+     * <li>AvailabilityGroup: high availability group strategy.</li>
+     * <li>LowLatency: low network latency strategy.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class DescribeDeploymentSetsRequest extends TeaModel {
     /**
      * <p>The deployment type. Valid values:</p>
      * <ul>
-     * <li>host: physical server</li>
+     * <li>host: physical machine</li>
      * <li>sw: vSwitch</li>
      * <li>rack: rack</li>
      * </ul>

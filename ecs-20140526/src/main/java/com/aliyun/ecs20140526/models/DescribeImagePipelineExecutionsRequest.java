@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     /**
-     * <p>The ID of the image build task.</p>
+     * <p>The image build task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exec-5fb8facb8ed7427c****</p>
@@ -14,7 +14,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public String executionId;
 
     /**
-     * <p>The ID of the image template.</p>
+     * <p>The image template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ip-2ze5tsl5bp6nf2b3****</p>
@@ -23,7 +23,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public String imagePipelineId;
 
     /**
-     * <p>The maximum number of entries per page for paging. Valid values: 1 to 500.</p>
+     * <p>The maximum number of entries per page for paging queries. Valid values: 1 to 500.</p>
      * <p>Default value: 50.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the value of NextToken returned in the previous call. You do not need to set this parameter for the first request.</p>
+     * <p>The query token. Set the value to the NextToken value returned in the previous call to this operation. You do not need to set this parameter for the first request.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -66,21 +66,21 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     /**
      * <p>The status of the image build task. You can specify multiple values at the same time. Separate multiple values with commas (,). Example: <code>BUILDING,DISTRIBUTING</code>. Valid values:</p>
      * <ul>
-     * <li>PREPARING: The task is being prepared. Resources such as the temporary intermediate instance are being created.</li>
-     * <li>REPAIRING: The task is being repaired. The source image is being repaired.</li>
-     * <li>BUILDING: The task is being built. Custom commands are being run and the image is being created.</li>
+     * <li>PREPARING: The task is being prepared. Resources such as temporary intermediate instances are being created.</li>
+     * <li>REPAIRING: The source image is being repaired.</li>
+     * <li>BUILDING: The task is building. Custom commands are being run and the image is being created.</li>
      * <li>TESTING: The task is being tested. Custom test commands are being run.</li>
-     * <li>DISTRIBUTING: The task is being distributed. Image copying and sharing are being performed.</li>
+     * <li>DISTRIBUTING: The image is being distributed. Image copying and sharing are being performed.</li>
      * <li>RELEASING: Resources are being reclaimed. Temporary resources generated during the build process are being released.</li>
      * <li>SUCCESS: The task succeeded.</li>
      * <li>PARTITION_SUCCESS: The task partially succeeded. The image was built, but exceptions may have occurred during distribution or resource cleanup.</li>
-     * <li>FAILED: The task failed.</li>
+     * <li>FAILED: The task failed to build the image.</li>
      * <li>TEST_FAILED: The test failed. The image was created, but the test failed.</li>
-     * <li>CANCELLING: The task is being canceled.</li>
-     * <li>CANCELLED: The task was canceled.</li>
+     * <li>CANCELLING: The build process is being canceled.</li>
+     * <li>CANCELLED: The build process was canceled.</li>
      * </ul>
      * <blockquote>
-     * <p>If this parameter is empty, image build tasks in all states are queried.</p>
+     * <p>If this parameter is empty, image build tasks in all states are queried by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -190,7 +190,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
 
     public static class DescribeImagePipelineExecutionsRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. Valid values of N: 1 to 20.</p>
+         * <p>The tag key. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -199,7 +199,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. Valid values of N: 1 to 20.</p>
+         * <p>The tag value. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

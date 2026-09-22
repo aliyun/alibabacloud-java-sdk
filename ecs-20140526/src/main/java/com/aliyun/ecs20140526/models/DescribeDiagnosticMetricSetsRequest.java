@@ -25,7 +25,7 @@ public class DescribeDiagnosticMetricSetsRequest extends TeaModel {
     public java.util.List<String> metricSetIds;
 
     /**
-     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request.</p>
+     * <p>The pagination token. Set this parameter to the value of <code>NextToken</code> returned in the previous call. You do not need to set this parameter for the first request.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>

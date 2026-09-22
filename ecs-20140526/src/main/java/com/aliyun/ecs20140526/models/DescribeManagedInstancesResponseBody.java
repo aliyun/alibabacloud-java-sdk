@@ -29,7 +29,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page as specified in the request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -111,7 +111,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
     public static class DescribeManagedInstancesResponseBodyInstancesTags extends TeaModel {
         /**
          * <p>The tag key of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <p>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
+         * <p>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
          * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -233,7 +233,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
-         * <p>The number of times that Cloud Assistant tasks were run on the managed instance.</p>
+         * <p>The number of times that Cloud Assistant tasks have been executed on the managed instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -242,7 +242,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         public Long invocationCount;
 
         /**
-         * <p>The time when the last Cloud Assistant task was run.</p>
+         * <p>The time when the last Cloud Assistant task was executed. The time is displayed in ISO 8601 format in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-20T09:00:40Z</p>
@@ -251,7 +251,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         public String lastInvokedTime;
 
         /**
-         * <p>The machine ID of the managed instance.</p>
+         * <p>The machine code of the managed instance.</p>
          * 
          * <strong>example:</strong>
          * <p>e03231b37ab14e53b5795ad625fc****</p>
@@ -269,7 +269,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The version of the operating system.</p>
+         * <p>The version information of the operating system.</p>
          * 
          * <strong>example:</strong>
          * <p>Linux_#38~18.04.1-Ubuntu SMP Wed Jan 6 18:26:30 UTC 2021_x86_64</p>
@@ -278,7 +278,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         public String osVersion;
 
         /**
-         * <p>The registration time of the managed instance.</p>
+         * <p>The time when the managed instance was registered. The time is displayed in ISO 8601 format in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-20T08:57:56Z</p>

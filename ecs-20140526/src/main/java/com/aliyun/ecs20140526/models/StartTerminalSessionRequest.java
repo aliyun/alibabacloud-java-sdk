@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartTerminalSessionRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -26,9 +26,9 @@ public class StartTerminalSessionRequest extends TeaModel {
     public String commandLine;
 
     /**
-     * <p>The network type of the WebSocket URL required for the remote connection to the instance. Valid values:</p>
+     * <p>The network type of the WebSocket URL required for establishing a remote connection to the instance. Valid values:</p>
      * <ul>
-     * <li>Internet: public network. This is the default value.</li>
+     * <li>Internet: Internet. This is the default value.</li>
      * <li>Intranet: internal network.</li>
      * </ul>
      * 
@@ -68,7 +68,7 @@ public class StartTerminalSessionRequest extends TeaModel {
     public String passwordName;
 
     /**
-     * <p>The port number of the ECS instance for data forwarding. After this parameter is set, the Cloud Assistant Agent forwards data to the specified port number for port forwarding. For example, SSH uses port 22.</p>
+     * <p>The port number of the ECS instance for data forwarding. After this parameter is set, Cloud Assistant Agent forwards data to the specified port for port forwarding. For example, SSH uses port 22.</p>
      * <p>Default value: empty, which indicates that no port number is set for data forwarding.</p>
      * 
      * <strong>example:</strong>
@@ -243,7 +243,7 @@ public class StartTerminalSessionRequest extends TeaModel {
 
         /**
          * <p>The KMS key ID.
-         * Note:</p>
+         * Precautions:</p>
          * <ul>
          * <li>Only KMS symmetric keys are supported.</li>
          * <li>This parameter can be specified only when the encryption mode is set to Kms.</li>
@@ -256,13 +256,13 @@ public class StartTerminalSessionRequest extends TeaModel {
         public String KMSKeyId;
 
         /**
-         * <p>The encryption pattern. Valid values:</p>
+         * <p>The secret key encryption pattern. Valid values:</p>
          * <ul>
-         * <li>Auto: Uses automatically negotiated secret key encryption for the session.</li>
+         * <li>Auto: Uses an automatically negotiated key to encrypt the session.</li>
          * <li>Kms: Uses a KMS key to encrypt the session.</li>
          * <li>Default value: Auto.</li>
          * </ul>
-         * <p>Note:</p>
+         * <p>Precautions:</p>
          * <ul>
          * <li>This parameter can be specified only when session encryption is enabled.</li>
          * </ul>

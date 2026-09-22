@@ -208,7 +208,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public String architecture;
 
         /**
-         * <p>The time when the image was created.</p>
+         * <p>The time when the image was created. The time follows the ISO 8601 standard in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-01-10T01:01:10Z</p>
@@ -260,7 +260,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
          * <ul>
          * <li>system: public image.</li>
          * <li>self: your custom image.</li>
-         * <li>others: shared image from other users.</li>
+         * <li>others: public image of another user.</li>
          * <li>marketplace: Alibaba Cloud Marketplace image.</li>
          * </ul>
          * 
@@ -316,7 +316,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public Boolean isSupportCloudinit;
 
         /**
-         * <p>Indicates whether the image can run on an I/O optimized instance.</p>
+         * <p>Indicates whether the image can be used on I/O optimized instances.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -401,10 +401,10 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public DescribeImageFromFamilyResponseBodyImageTags tags;
 
         /**
-         * <p>The type of resource that references the image. Valid values:</p>
+         * <p>The type of resource to which the image is associated. Valid values:</p>
          * <ul>
-         * <li>instance: One or more ECS instances have been created from the image.</li>
-         * <li>none: No ECS instances have been created from the image.</li>
+         * <li>instance: one or more ECS instances have been created from the image.</li>
+         * <li>none: no ECS instances have been created from the image.</li>
          * </ul>
          * 
          * <strong>example:</strong>

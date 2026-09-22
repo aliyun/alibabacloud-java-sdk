@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceSecurityOptionsRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,10 +14,10 @@ public class ModifyInstanceSecurityOptionsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The secure boot setting of the instance is not modified.</li>
-     * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, the secure boot setting of the instance is modified.</li>
+     * <li>true: performs only a dry run. The secure boot setting of the instance is not modified. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits.</li>
+     * <li>false: performs a dry run and sends the request. If the request passes the dry run, the secure boot setting of the instance is modified.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -28,7 +28,7 @@ public class ModifyInstanceSecurityOptionsRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to enable UEFI Secure Boot. Valid values:</p>
+     * <p>Specifies whether to enable UEFI secure boot. Valid values:</p>
      * <ul>
      * <li>true: Enabled.</li>
      * <li>false: Disabled.</li>
@@ -56,7 +56,7 @@ public class ModifyInstanceSecurityOptionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/api-ecs-2014-05-26-describeregions">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/api-ecs-2014-05-26-describeregions">DescribeRegions</a> to query the most recent list of regions.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

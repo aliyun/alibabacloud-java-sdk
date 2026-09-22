@@ -62,7 +62,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
          * <p>The description of the diagnostic metric set.</p>
          * 
          * <strong>example:</strong>
-         * <p>远程连接问题诊断</p>
+         * <p>Remote connection diagnostics</p>
          */
         @NameInMap("Description")
         public String description;
@@ -86,7 +86,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
          * <p>The name of the diagnostic metric set.</p>
          * 
          * <strong>example:</strong>
-         * <p>远程连接问题诊断</p>
+         * <p>Remote connection diagnostics</p>
          */
         @NameInMap("MetricSetName")
         public String metricSetName;

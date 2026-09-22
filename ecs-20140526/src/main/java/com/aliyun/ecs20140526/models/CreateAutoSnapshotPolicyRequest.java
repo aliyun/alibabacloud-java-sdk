@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     /**
-     * <p>The association type between the automatic snapshot policy and the target resource. Valid values:</p>
+     * <p>The association type between the automatic snapshot policy and target resources. Valid values:</p>
      * <ul>
-     * <li>AssociatedWithDisk: associated with a disk.</li>
-     * <li>AssociatedWithInstanceTag: associated with an instance tag.</li>
+     * <li>AssociatedWithDisk: associate with a disk.</li>
+     * <li>AssociatedWithInstanceTag: associate with an instance tag.</li>
      * </ul>
      * <p>Default value: AssociatedWithDisk.</p>
      * <blockquote>
-     * <p>Currently, association with instance tags is supported only in the Malaysia (Kuala Lumpur), Malaysia (Johor), Philippines (Manila), UK (London), France (Paris), Saudi Arabia (Riyadh) - Partner, UAE (Dubai), China North 5 (Hohhot), China Northwest 2 (Zhongwei), and China Southwest 1 (Chengdu) regions.</p>
+     * <p>Currently, only the following regions support association with instance tags: Malaysia (Kuala Lumpur), Malaysia (Johor), Philippines (Manila), UK (London), France (Paris), Saudi Arabia (Riyadh) - Partner, UAE (Dubai), China North 5 (Hohhot), China Northwest 2 (Zhongwei), China Southwest 1 (Chengdu), Brazil (São Paulo), Thailand (Bangkok), China South 3 (Guangzhou), China South 2 (Heyuan), Hong Kong (China), Germany (Frankfurt), Mexico, US (Virginia), China East 1 (Hangzhou), China North 1 (Qingdao), China North 2 (Beijing), China East 2 (Shanghai), Singapore, Japan (Tokyo), South Korea (Seoul), China South 1 (Shenzhen), China North 6 (Ulanqab), and China North 3 (Zhangjiakou).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -22,10 +22,10 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public String associationType;
 
     /**
-     * <p>The retention period of cross-region snapshot copies. Unit: days. Valid values:</p>
+     * <p>The retention period of cross-region snapshot replicas. Unit: days. Valid values:</p>
      * <ul>
-     * <li>-1: Snapshot copies are permanently retained.</li>
-     * <li>1 to 65535: Snapshot copies are retained for the specified number of days.</li>
+     * <li>-1: Snapshot replicas are permanently retained.</li>
+     * <li>1 to 65535: Snapshot replicas are retained for the specified number of days.</li>
      * </ul>
      * <p>Default value: -1.</p>
      * 
@@ -42,7 +42,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration copyEncryptionConfiguration;
 
     /**
-     * <p>Specifies whether to allow automatic cross-region replication.</p>
+     * <p>Specifies whether to allow automatic cross-region replication. Valid values:</p>
      * <ul>
      * <li>true: Allowed.</li>
      * <li>false: Not allowed.</li>
@@ -90,7 +90,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public java.util.List<CreateAutoSnapshotPolicyRequestTag> tag;
 
     /**
-     * <p>The destination region to which to copy snapshots. You can specify only one destination region.</p>
+     * <p>The destination region to which snapshots are replicated across regions. You can set only one destination region.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;cn-hangzhou&quot;]</p>
@@ -116,7 +116,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public String autoSnapshotPolicyName;
 
     /**
-     * <p>The region ID of the automatic snapshot policy. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region to which the automatic snapshot policy belongs. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -126,10 +126,10 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The days of the week on which automatic snapshots are created. Unit: day. The cycle is weekly. Valid values: 1 to 7. For example, 1 indicates Monday. Format description:</p>
+     * <p>The days of the week on which automatic snapshots are created. Unit: days. The cycle is weekly. Valid values: 1 to 7. For example, 1 indicates Monday. Format description:</p>
      * <ul>
      * <li>The parameter value must be a JSON array. For example, [&quot;1&quot;\] indicates that automatic snapshots are created every Monday.</li>
-     * <li>To create multiple automatic snapshots within a week, specify multiple days and separate them with commas (,). You can specify a maximum of 7 days. For example, [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;\] indicates that automatic snapshots are created every Monday, Wednesday, and Friday.</li>
+     * <li>To create multiple automatic snapshots within a week, specify multiple days separated by commas (,). You can specify up to 7 days. For example, [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;\] indicates that automatic snapshots are created every Monday, Wednesday, and Friday.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -155,13 +155,13 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public Integer retentionDays;
 
     /**
-     * <p>The points in time at which automatic snapshots are created. The time is displayed in UTC+8. Unit: hours. Valid values: 0 to 23, which represent the 24 points in time from 00:00 to 23:00. For example, 1 indicates 01:00. Format description:</p>
+     * <p>The points in time at which automatic snapshots are created. The time is displayed in UTC+8. Unit: hours. Valid values: 0 to 23, which represent 00:00 to 23:00 (a total of 24 points in time). For example, 1 indicates 01:00. Format description:</p>
      * <ul>
      * <li>The parameter value must be a JSON array. For example, [&quot;1&quot;\] indicates that automatic snapshots are created at 01:00.</li>
-     * <li>To create multiple automatic snapshots within a day, specify multiple points in time and separate them with commas (,). You can specify a maximum of 24 points in time. For example, [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;\] indicates that automatic snapshots are created at 01:00, 03:00, and 05:00.</li>
+     * <li>To create multiple automatic snapshots within a day, specify multiple points in time separated by commas (,). You can specify up to 24 points in time. For example, [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;\] indicates that automatic snapshots are created at 01:00, 03:00, and 05:00.</li>
      * </ul>
      * <blockquote>
-     * <p>If a disk contains a large amount of data and the time required to create a single automatic snapshot exceeds the interval between two consecutive points in time, the next point in time is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as the points in time for automatic snapshot creation. The snapshot creation starts at 09:00 and is completed at 10:20, which takes 80 minutes. The system skips the 10:00 point in time and creates the next automatic snapshot at 11:00.</p>
+     * <p>If a disk contains a large amount of data and the time required to create a single automatic snapshot exceeds the interval between two consecutive points in time, the next point in time is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as the points in time for automatic snapshot creation. Because the disk contains a large amount of data, the snapshot creation starts at 09:00 and is completed at 10:20, which takes 80 minutes. The system skips the 10:00 point in time and creates the next automatic snapshot at 11:00.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -401,7 +401,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
         public Boolean encrypted;
 
         /**
-         * <p>The key ID of the KMS key used for encrypted cross-region snapshot backup.</p>
+         * <p>The KMS key ID used for encrypted cross-region snapshot backup.</p>
          * 
          * <strong>example:</strong>
          * <p>0e478b7a-4262-4802-b8cb-00d3fb40826X</p>
@@ -487,6 +487,9 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
          * <p>The tag key.</p>
          * <p>Valid values of N: 1 to 5.</p>
          * <p>The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
@@ -498,6 +501,9 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
          * <blockquote>
          * <p>If you pass in an empty value or an empty string, it indicates any value.</p>
          * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

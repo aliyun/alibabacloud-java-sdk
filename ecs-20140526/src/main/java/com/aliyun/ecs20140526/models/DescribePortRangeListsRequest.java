@@ -20,7 +20,7 @@ public class DescribePortRangeListsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call to this operation. You do not need to set this parameter for the first request.</p>
      * 
      * <strong>example:</strong>
      * <p>727d41872117f2816343eeb432fbc5bfd21dc824589d2a4be0b5e8707e68181f</p>
@@ -60,7 +60,7 @@ public class DescribePortRangeListsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1000. You can invoke <a href="https://help.aliyun.com/document_detail/2716558.html">ListResourceGroups</a> to query the list of resource groups.</p>
+     * <p>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1,000. You can invoke <a href="https://help.aliyun.com/document_detail/2716558.html">ListResourceGroups</a> to query the list of resource groups.</p>
      * <blockquote>
      * <p>Filtering by the default resource group is not supported.</p>
      * </blockquote>
@@ -179,7 +179,7 @@ public class DescribePortRangeListsRequest extends TeaModel {
     public static class DescribePortRangeListsRequestTag extends TeaModel {
         /**
          * <p>The tag key of the instance. Valid values of N: 1 to 20.</p>
-         * <p>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> to query resources.</p>
+         * <p>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count that has all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> to query resources.</p>
          * 
          * <strong>example:</strong>
          * <p>key for PortRangeList</p>

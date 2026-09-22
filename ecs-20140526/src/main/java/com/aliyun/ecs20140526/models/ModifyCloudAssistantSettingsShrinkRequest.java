@@ -39,7 +39,7 @@ public class ModifyCloudAssistantSettingsShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The Cloud Assistant resource usage configuration. This parameter takes effect only when the Cloud Assistant Agent version meets the following minimum requirements:</p>
+     * <p>The Cloud Assistant resource usage configuration. This setting takes effect only when the Cloud Assistant Agent version is not earlier than the following versions:</p>
      * <ul>
      * <li><p>Windows: 2.1.4.1065</p>
      * </li>

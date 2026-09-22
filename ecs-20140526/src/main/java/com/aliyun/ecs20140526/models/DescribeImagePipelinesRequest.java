@@ -33,7 +33,7 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token. Set this parameter to the value of <code>NextToken</code> returned by the previous call. You do not need to set this parameter for the first request.</p>
+     * <p>The pagination token. Set the value to the <code>NextToken</code> value returned in the previous call to this operation. You do not need to set this parameter for the first request.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>

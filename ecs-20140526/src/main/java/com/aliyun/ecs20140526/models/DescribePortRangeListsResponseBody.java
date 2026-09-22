@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePortRangeListsResponseBody extends TeaModel {
     /**
-     * <p>The pagination token returned in this call. If this value is empty, no more data is available.</p>
+     * <p>The pagination token returned in this call. If the return value is empty, no more data is available.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>
@@ -110,7 +110,7 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
         public Integer associationCount;
 
         /**
-         * <p>The time when the port range list was created.</p>
+         * <p>The time when the port range list was created. The time is in ISO 8601 format and displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-04T07:11Z</p>

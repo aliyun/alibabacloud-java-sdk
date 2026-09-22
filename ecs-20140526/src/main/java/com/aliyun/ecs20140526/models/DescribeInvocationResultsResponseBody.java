@@ -414,7 +414,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>The number of entries per page in the paging query settings.</p>
+         * <p>The number of entries per page set for paging queries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

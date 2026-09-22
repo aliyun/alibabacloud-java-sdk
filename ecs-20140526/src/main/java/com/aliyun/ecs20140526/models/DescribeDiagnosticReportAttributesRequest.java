@@ -15,7 +15,7 @@ public class DescribeDiagnosticReportAttributesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The diagnostic report ID.</p>
+     * <p>The ID of the diagnostic report.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

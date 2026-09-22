@@ -14,9 +14,9 @@ public class SendFileRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The content of the file. The file content cannot exceed 32 KB after Base64 encoding.</p>
+     * <p>The content of the file. After Base64 encoding, the content cannot exceed 32 KB in size.</p>
      * <ul>
-     * <li>If <code>ContentType</code> is set to <code>PlainText</code>, this parameter specifies the plain text content.</li>
+     * <li>If <code>ContentType</code> is set to <code>PlainText</code>, this parameter specifies the content in plaintext.</li>
      * <li>If <code>ContentType</code> is set to <code>Base64</code>, this parameter specifies the Base64-encoded content.</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -31,7 +31,7 @@ public class SendFileRequest extends TeaModel {
      * <p>The content type of the file. Valid values:</p>
      * <ul>
      * <li>PlainText: plain text.</li>
-     * <li>Base64: Base64-encoded.</li>
+     * <li>Base64: Base64 encoding.</li>
      * </ul>
      * <p>Default value: PlainText.</p>
      * 
@@ -42,7 +42,7 @@ public class SendFileRequest extends TeaModel {
     public String contentType;
 
     /**
-     * <p>The description of the file. The full character set is supported. The description cannot exceed 512 characters in length.</p>
+     * <p>The description. The full character set is supported. The description cannot exceed 512 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a test file.</p>
@@ -51,9 +51,9 @@ public class SendFileRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The group of the file. This parameter takes effect only on Linux instances. Default value: root. The value cannot exceed 64 characters in length.</p>
+     * <p>The user group of the file. This parameter takes effect only on Linux instances. Default value: root. The value cannot exceed 64 characters in length.</p>
      * <blockquote>
-     * <p>If you specify a different user group, make sure that the user group exists on the instance.</p>
+     * <p>If you specify another user group, make sure that the user group exists on the instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -75,7 +75,7 @@ public class SendFileRequest extends TeaModel {
     /**
      * <p>The owner of the file. This parameter takes effect only on Linux instances. Default value: root. The value cannot exceed 64 characters in length.</p>
      * <blockquote>
-     * <p>If you specify a different user, make sure that the user exists on the instance.</p>
+     * <p>If you specify another user, make sure that the user exists on the instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -137,7 +137,7 @@ public class SendFileRequest extends TeaModel {
     /**
      * <p>The ID of the resource group for file sending. If you specify this parameter:</p>
      * <ul>
-     * <li><p>The ECS instances specified by InstanceId must belong to this resource group.</p>
+     * <li><p>The ECS instance specified by InstanceId must belong to this resource group.</p>
      * </li>
      * <li><p>You can filter file sending results by specifying this parameter when you call <a href="https://help.aliyun.com/document_detail/184117.html">DescribeSendFileResults</a>.</p>
      * </li>
@@ -162,7 +162,7 @@ public class SendFileRequest extends TeaModel {
     public java.util.List<SendFileRequestTag> tag;
 
     /**
-     * <p>The destination directory on the target ECS instances where the file is sent. If the directory does not exist, it is automatically created. The directory path cannot exceed 255 characters in length.</p>
+     * <p>The destination folder on the target ECS instances for the file to be sent. If the folder does not exist, automatic creation is performed. The value cannot exceed 255 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -345,7 +345,7 @@ public class SendFileRequest extends TeaModel {
     public static class SendFileRequestTag extends TeaModel {
         /**
          * <p>The key of the tag for file sending. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <p>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count with all the specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> to query the resources.</p>
+         * <p>If you use a single tag to filter resources, the resource count with the tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
          * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
