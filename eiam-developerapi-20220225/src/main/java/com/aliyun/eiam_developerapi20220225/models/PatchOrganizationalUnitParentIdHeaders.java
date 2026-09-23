@@ -3,29 +3,26 @@ package com.aliyun.eiam_developerapi20220225.models;
 
 import com.aliyun.tea.*;
 
-public class ObtainCredentialHeaders extends TeaModel {
+public class PatchOrganizationalUnitParentIdHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The authentication information. Format: Bearer ${access_token}. </p>
-     * <blockquote>
-     * <p>Enter the Access Token issued by IDaaS.</p>
-     * </blockquote>
+     * <p>The authentication information. Format: Bearer access_token.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Bearer xxxxxx</p>
+     * <p>Bearer xxxx</p>
      */
     @NameInMap("Authorization")
     public String authorization;
 
-    public static ObtainCredentialHeaders build(java.util.Map<String, ?> map) throws Exception {
-        ObtainCredentialHeaders self = new ObtainCredentialHeaders();
+    public static PatchOrganizationalUnitParentIdHeaders build(java.util.Map<String, ?> map) throws Exception {
+        PatchOrganizationalUnitParentIdHeaders self = new PatchOrganizationalUnitParentIdHeaders();
         return TeaModel.build(map, self);
     }
 
-    public ObtainCredentialHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
+    public PatchOrganizationalUnitParentIdHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
         this.commonHeaders = commonHeaders;
         return this;
     }
@@ -33,7 +30,7 @@ public class ObtainCredentialHeaders extends TeaModel {
         return this.commonHeaders;
     }
 
-    public ObtainCredentialHeaders setAuthorization(String authorization) {
+    public PatchOrganizationalUnitParentIdHeaders setAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
     }

@@ -131,7 +131,7 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
         public String accessKeySecret;
 
         /**
-         * <p>The expiration time of the token (UTC).</p>
+         * <p>The token expiration time (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-20T04:27:09Z</p>
@@ -198,7 +198,7 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
         public String accessKeyId;
 
         /**
-         * <p>The expiration time of the STS Token (UTC).</p>
+         * <p>The STS Token expiration time (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-20T04:27:09Z</p>
@@ -216,7 +216,7 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
         public String secretAccessKey;
 
         /**
-         * <p>The session token of the temporary credentials.</p>
+         * <p>The session security token of the temporary credentials.</p>
          * 
          * <strong>example:</strong>
          * <p>FwoDYXdzEJzfSjIr5bSEsj4g7BihPWGWHz****</p>
@@ -264,15 +264,39 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
     }
 
     public static class ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredentialTencentCloudStsToken extends TeaModel {
+        /**
+         * <p>The STS Token expiration time (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-20T04:27:09Z</p>
+         */
         @NameInMap("expiration")
         public String expiration;
 
+        /**
+         * <p>The access key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AKIDq2UjXVflTbnaxpFl0RFdN9yj****</p>
+         */
         @NameInMap("tmpSecretId")
         public String tmpSecretId;
 
+        /**
+         * <p>The secret access key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3fGkJjyI+ZHWTxnq8VJHtYGRg****</p>
+         */
         @NameInMap("tmpSecretKey")
         public String tmpSecretKey;
 
+        /**
+         * <p>The session security token of the temporary credentials.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aHv1Z6aO7sxRbV4G2vjAij50jdew5Kaa****</p>
+         */
         @NameInMap("token")
         public String token;
 
@@ -317,7 +341,7 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
 
     public static class ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredential extends TeaModel {
         /**
-         * <p>The expiration time of the temporary access credentials for the cloud account role, in UNIX timestamp format and in seconds.</p>
+         * <p>The expiration time of the temporary access credentials for the cloud account role, in UNIX timestamp format (seconds).</p>
          * 
          * <strong>example:</strong>
          * <p>1767196800</p>
@@ -340,6 +364,9 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
         @NameInMap("awsStsToken")
         public ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredentialAwsStsToken awsStsToken;
 
+        /**
+         * <p>The STS Token representing a Tencent Cloud role.</p>
+         */
         @NameInMap("tencentCloudStsToken")
         public ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredentialTencentCloudStsToken tencentCloudStsToken;
 

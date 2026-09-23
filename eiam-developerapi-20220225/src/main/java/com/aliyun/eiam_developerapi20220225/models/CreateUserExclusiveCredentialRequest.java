@@ -11,6 +11,12 @@ public class CreateUserExclusiveCredentialRequest extends TeaModel {
     @NameInMap("credentialContent")
     public CreateUserExclusiveCredentialRequestCredentialContent credentialContent;
 
+    /**
+     * <p>The external unique identifier of the credential.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>YNWLVQAZMNRROYWKxxx</p>
+     */
     @NameInMap("credentialExternalId")
     public String credentialExternalId;
 
@@ -70,6 +76,12 @@ public class CreateUserExclusiveCredentialRequest extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Specifies whether to return the encrypted ciphertext of the credential.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("returnCiphertext")
     public Boolean returnCiphertext;
 

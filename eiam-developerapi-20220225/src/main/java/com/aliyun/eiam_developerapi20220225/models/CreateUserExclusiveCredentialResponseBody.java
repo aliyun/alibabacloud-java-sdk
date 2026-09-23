@@ -4,6 +4,12 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class CreateUserExclusiveCredentialResponseBody extends TeaModel {
+    /**
+     * <p>The encrypted ciphertext of the credential.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eyJraWQiOiJBVVRIU0tFWxxxxx</p>
+     */
     @NameInMap("credentialCiphertext")
     public String credentialCiphertext;
 

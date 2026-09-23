@@ -19,7 +19,7 @@ public class ObtainCloudAccountRoleAccessCredentialRequest extends TeaModel {
      * Constraints:</p>
      * <ul>
      * <li>The minimum value cannot be less than 900 seconds.</li>
-     * <li>The maximum value is subject to the maximum session duration of the cloud provider role or service account. For example, the default maximum session duration for an AWS role is 3600 seconds.</li>
+     * <li>The maximum value is subject to the maximum session duration limit of the cloud provider role or service account. For example, the default maximum session limit for an AWS role is 3600 seconds.</li>
      * </ul>
      * 
      * <strong>example:</strong>

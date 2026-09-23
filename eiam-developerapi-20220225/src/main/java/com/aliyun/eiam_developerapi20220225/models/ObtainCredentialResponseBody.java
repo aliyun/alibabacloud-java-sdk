@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ObtainCredentialResponseBody extends TeaModel {
     /**
-     * <p>The creation time of the credential, formatted as a Unix timestamp in milliseconds.</p>
+     * <p>The creation time, in UNIX timestamp format. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1649830225000</p>
@@ -14,18 +14,16 @@ public class ObtainCredentialResponseBody extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>The detailed content of the credential. The structure of this object depends on the value of <code>credentialType</code>.</p>
+     * <p>The credential content.</p>
      */
     @NameInMap("credentialContent")
     public ObtainCredentialResponseBodyCredentialContent credentialContent;
 
     /**
-     * <p>Indicates how the credential was created. Valid values:</p>
+     * <p>The creation type of the credential. Valid values:</p>
      * <ul>
-     * <li><p><code>system_init</code>: System-initiated.</p>
-     * </li>
-     * <li><p><code>user_custom</code>: User-created.</p>
-     * </li>
+     * <li>system_init: Created by the system.</li>
+     * <li>user_custom: Created by the user.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,6 +32,12 @@ public class ObtainCredentialResponseBody extends TeaModel {
     @NameInMap("credentialCreationType")
     public String credentialCreationType;
 
+    /**
+     * <p>The external unique identifier of the credential.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23528e9957304f57b98112c72788b5xxxxx</p>
+     */
     @NameInMap("credentialExternalId")
     public String credentialExternalId;
 
@@ -65,12 +69,10 @@ public class ObtainCredentialResponseBody extends TeaModel {
     public String credentialName;
 
     /**
-     * <p>The usage scenario for the credential. Valid values:</p>
+     * <p>The Scenarios label of the credential. Valid values:</p>
      * <ul>
-     * <li><p><code>llm</code>: For use with a large language model.</p>
-     * </li>
-     * <li><p><code>saas</code>: For use with a third-party SaaS application.</p>
-     * </li>
+     * <li>llm: Large language model.</li>
+     * <li>saas: Third-party SaaS service.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,7 +82,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
     public String credentialScenarioLabel;
 
     /**
-     * <p>The sharing scope of the credential, such as whether it is exclusive to a specific account.</p>
+     * <p>The credential sharing scope.</p>
      * 
      * <strong>example:</strong>
      * <p>user_exclusive</p>
@@ -89,7 +91,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
     public String credentialSharingScope;
 
     /**
-     * <p>The ID of the credential\&quot;s subject.</p>
+     * <p>The subject ID that the credential belongs to.</p>
      * 
      * <strong>example:</strong>
      * <p>apt_werthgfdsasffxxxxx</p>
@@ -98,9 +100,9 @@ public class ObtainCredentialResponseBody extends TeaModel {
     public String credentialSubjectId;
 
     /**
-     * <p>The credential\&quot;s subject type. Valid values:</p>
+     * <p>The subject type that the credential belongs to. Valid values:</p>
      * <ul>
-     * <li><code>authentication_token_provider</code>: An authentication token provider.</li>
+     * <li>authentication_token_provider: Authentication token provider.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,10 +114,8 @@ public class ObtainCredentialResponseBody extends TeaModel {
     /**
      * <p>The credential type. Valid values:</p>
      * <ul>
-     * <li><p><code>api_key</code>: The credential is an API key.</p>
-     * </li>
-     * <li><p><code>oauth_client</code>: The credential represents an OAuth client.</p>
-     * </li>
+     * <li>api_key: API Key authentication credential.</li>
+     * <li>oauth_client: OAuth client authentication credential.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the account that exclusively owns the credential. This field is present only when <code>credentialSharingScope</code> is <code>user_exclusive</code>.</p>
+     * <p>The exclusive account ID of the credential.</p>
      * 
      * <strong>example:</strong>
      * <p>user_xxx</p>
@@ -152,12 +152,10 @@ public class ObtainCredentialResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The status of the credential. Valid values:</p>
+     * <p>The credential status. Valid values:</p>
      * <ul>
-     * <li><p><code>enabled</code>: The credential can be used.</p>
-     * </li>
-     * <li><p><code>disabled</code>: The credential cannot be used.</p>
-     * </li>
+     * <li>enabled: Enabled.</li>
+     * <li>disabled: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -167,7 +165,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The last update time of the credential, formatted as a Unix timestamp in milliseconds.</p>
+     * <p>The update time, in UNIX timestamp format. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1649830227000</p>
@@ -318,7 +316,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
 
     public static class ObtainCredentialResponseBodyCredentialContentApiKeyContent extends TeaModel {
         /**
-         * <p>The API key value.</p>
+         * <p>The value of the API Key.</p>
          * 
          * <strong>example:</strong>
          * <p>sk-nsklncmwizncxxxx</p>
@@ -343,7 +341,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
 
     public static class ObtainCredentialResponseBodyCredentialContentOauthClientContent extends TeaModel {
         /**
-         * <p>The <code>client_id</code> for OAuth 2.0.</p>
+         * <p>The client_id of the OAuth protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>dmvncmxersdxxxxxx</p>
@@ -352,7 +350,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
         public String clientId;
 
         /**
-         * <p>The <code>client_secret</code> for OAuth 2.0.</p>
+         * <p>The client_secret of the OAuth protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>nsklnertyt5ddwizncxxxx</p>
@@ -385,13 +383,13 @@ public class ObtainCredentialResponseBody extends TeaModel {
 
     public static class ObtainCredentialResponseBodyCredentialContent extends TeaModel {
         /**
-         * <p>Contains details for an API key credential. Returned only when <code>credentialType</code> is <code>api_key</code>.</p>
+         * <p>The credential content of the API Key credential type.</p>
          */
         @NameInMap("apiKeyContent")
         public ObtainCredentialResponseBodyCredentialContentApiKeyContent apiKeyContent;
 
         /**
-         * <p>Contains details for an OAuth client credential. Returned only when <code>credentialType</code> is <code>oauth_client</code>.</p>
+         * <p>The credential content of the OAuth client authentication credential type.</p>
          */
         @NameInMap("oauthClientContent")
         public ObtainCredentialResponseBodyCredentialContentOauthClientContent oauthClientContent;

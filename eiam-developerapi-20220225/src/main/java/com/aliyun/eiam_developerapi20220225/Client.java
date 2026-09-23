@@ -9,14 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("eu-central-1", "eiam-developerapi.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "eiam-developerapi.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "eiam-developerapi.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "eiam-developerapi.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "eiam-developerapi.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "eiam-developerapi.ap-northeast-2.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("eiam-developerapi", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -381,7 +373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
-     * Ensure that the Access Token you provide has the &quot;Manage Static Credentials&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</p>
+     * Ensure that the Access Token you pass in has the &quot;Manage Static Credentials&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</p>
      * <blockquote>
      * <p>The corresponding scope is <code>urn:cloud:idaas:pam|credential:manage</code>.</p>
      * </blockquote>
@@ -459,7 +451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
-     * Ensure that the Access Token you provide has the &quot;Manage Static Credentials&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</p>
+     * Ensure that the Access Token you pass in has the &quot;Manage Static Credentials&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</p>
      * <blockquote>
      * <p>The corresponding scope is <code>urn:cloud:idaas:pam|credential:manage</code>.</p>
      * </blockquote>
@@ -2390,7 +2382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This API authenticates and authorizes requests based on an Access Token issued by IDaaS.
-     * Ensure that the Access Token has the &quot;Obtain Cloud Role Access Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</p>
+     * Ensure that the Access Token you provide has the &quot;Obtain Cloud Role Access Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</p>
      * <blockquote>
      * <p>The corresponding scope is <code>urn:cloud:idaas:pam|cloud_account_role:obtain_access_credential</code>.</p>
      * </blockquote>
@@ -2444,7 +2436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This API authenticates and authorizes requests based on an Access Token issued by IDaaS.
-     * Ensure that the Access Token has the &quot;Obtain Cloud Role Access Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</p>
+     * Ensure that the Access Token you provide has the &quot;Obtain Cloud Role Access Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</p>
      * <blockquote>
      * <p>The corresponding scope is <code>urn:cloud:idaas:pam|cloud_account_role:obtain_access_credential</code>.</p>
      * </blockquote>
@@ -2463,14 +2455,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API uses an access token from IDaaS for authentication and authorization.
-     * The access token must have permissions to obtain static credentials for the built-in privileged access management (PAM) application in IDaaS.</p>
+     * <p>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
+     * Ensure that the Access Token you pass in has the &quot;Obtain Static Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</p>
      * <blockquote>
-     * <p>The required scope is <code>urn:cloud:idaas:pam|credential:obtain</code>.</p>
+     * <p>The corresponding scope is <code>urn:cloud:idaas:pam|credential:obtain</code>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the plaintext of a secret.</p>
+     * <p>Queries credential information and retrieves the credential plaintext.</p>
      * 
      * @param request ObtainCredentialRequest
      * @param headers ObtainCredentialHeaders
@@ -2513,14 +2505,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API uses an access token from IDaaS for authentication and authorization.
-     * The access token must have permissions to obtain static credentials for the built-in privileged access management (PAM) application in IDaaS.</p>
+     * <p>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
+     * Ensure that the Access Token you pass in has the &quot;Obtain Static Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</p>
      * <blockquote>
-     * <p>The required scope is <code>urn:cloud:idaas:pam|credential:obtain</code>.</p>
+     * <p>The corresponding scope is <code>urn:cloud:idaas:pam|credential:obtain</code>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the plaintext of a secret.</p>
+     * <p>Queries credential information and retrieves the credential plaintext.</p>
      * 
      * @param request ObtainCredentialRequest
      * @return ObtainCredentialResponse
@@ -2772,6 +2764,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         PatchOrganizationalUnitHeaders headers = new PatchOrganizationalUnitHeaders();
         return this.patchOrganizationalUnitWithOptions(instanceId, applicationId, organizationalUnitId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Moves an organizational unit.</p>
+     * 
+     * @param request PatchOrganizationalUnitParentIdRequest
+     * @param headers PatchOrganizationalUnitParentIdHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PatchOrganizationalUnitParentIdResponse
+     */
+    public PatchOrganizationalUnitParentIdResponse patchOrganizationalUnitParentIdWithOptions(String instanceId, String applicationId, String organizationalUnitId, PatchOrganizationalUnitParentIdRequest request, PatchOrganizationalUnitParentIdHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.parentId)) {
+            body.put("parentId", request.parentId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PatchOrganizationalUnitParentId"),
+            new TeaPair("version", "2022-02-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/" + com.aliyun.openapiutil.Client.getEncodeParam(applicationId) + "/organizationalUnits/" + com.aliyun.openapiutil.Client.getEncodeParam(organizationalUnitId) + "/parentId"),
+            new TeaPair("method", "PATCH"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new PatchOrganizationalUnitParentIdResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Moves an organizational unit.</p>
+     * 
+     * @param request PatchOrganizationalUnitParentIdRequest
+     * @return PatchOrganizationalUnitParentIdResponse
+     */
+    public PatchOrganizationalUnitParentIdResponse patchOrganizationalUnitParentId(String instanceId, String applicationId, String organizationalUnitId, PatchOrganizationalUnitParentIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        PatchOrganizationalUnitParentIdHeaders headers = new PatchOrganizationalUnitParentIdHeaders();
+        return this.patchOrganizationalUnitParentIdWithOptions(instanceId, applicationId, organizationalUnitId, request, headers, runtime);
     }
 
     /**
