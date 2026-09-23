@@ -43,6 +43,7 @@ public class GetServiceCredentialResponseBody extends TeaModel {
     public static class GetServiceCredentialResponseBodyServiceCredential extends TeaModel {
         /**
          * <p>The creation time.</p>
+         * <p>Format: RFC 3339 (UTC), for example, 2026-03-15T09:20:58Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-03-15T09:20:58Z</p>
@@ -51,7 +52,9 @@ public class GetServiceCredentialResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The expiration time. This field is not returned for permanent service credentials.</p>
+         * <p>The expiration time.
+         * This field is not returned for permanent service credentials.</p>
+         * <p>Format: RFC 3339 (UTC), for example, 2026-04-15T09:20:58Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-15T09:20:58Z</p>

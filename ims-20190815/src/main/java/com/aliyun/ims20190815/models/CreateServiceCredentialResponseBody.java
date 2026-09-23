@@ -42,7 +42,7 @@ public class CreateServiceCredentialResponseBody extends TeaModel {
 
     public static class CreateServiceCredentialResponseBodyServiceCredential extends TeaModel {
         /**
-         * <p>The time when the service credential was created.</p>
+         * <p>The time when the service credential was created. The time follows RFC 3339 (UTC). Example: 2026-01-01T10:05:24Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01T10:05:24Z</p>
@@ -51,8 +51,7 @@ public class CreateServiceCredentialResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The expiration time of the service credential.
-         * This field is not returned for permanently valid service credentials.</p>
+         * <p>The expiration time of the service credential. This field is not returned for service credentials that never expire. The time follows RFC 3339 (UTC). Example: 2026-02-01T10:05:24Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-02-01T10:05:24Z</p>
@@ -64,7 +63,7 @@ public class CreateServiceCredentialResponseBody extends TeaModel {
         public String expirationTime;
 
         /**
-         * <p>The service credential ID.</p>
+         * <p>The ID of the service credential.</p>
          * 
          * <strong>example:</strong>
          * <p>SC*************</p>
@@ -73,7 +72,7 @@ public class CreateServiceCredentialResponseBody extends TeaModel {
         public String serviceCredentialId;
 
         /**
-         * <p>The service credential name.</p>
+         * <p>The name of the service credential.</p>
          * 
          * <strong>example:</strong>
          * <p>yourServiceCredentialName</p>
@@ -91,7 +90,7 @@ public class CreateServiceCredentialResponseBody extends TeaModel {
         public String serviceCredentialSecret;
 
         /**
-         * <p>The Alibaba Cloud service name.</p>
+         * <p>The service name of the Alibaba Cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx.aliyuncs.com</p>
@@ -100,7 +99,12 @@ public class CreateServiceCredentialResponseBody extends TeaModel {
         public String serviceName;
 
         /**
-         * <p>The status of the service credential.</p>
+         * <p>The status of the service credential. Valid values:</p>
+         * <ul>
+         * <li>Active: enabled.</li>
+         * <li>Inactive: disabled.</li>
+         * <li>Expired: expired.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Active</p>

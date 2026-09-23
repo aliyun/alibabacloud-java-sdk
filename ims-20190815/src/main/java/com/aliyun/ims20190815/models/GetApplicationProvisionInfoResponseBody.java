@@ -119,6 +119,13 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
         public String accountId;
 
         /**
+         * <strong>example:</strong>
+         * <p>ThirdParty</p>
+         */
+        @NameInMap("AppCategory")
+        public String appCategory;
+
+        /**
          * <p>The ID of the application.</p>
          * 
          * <strong>example:</strong>
@@ -135,6 +142,13 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
          */
         @NameInMap("AppName")
         public String appName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>AllowAll</p>
+         */
+        @NameInMap("AssignmentType")
+        public String assignmentType;
 
         /**
          * <p>The time when the application was installed. The value is a timestamp.</p>
@@ -161,6 +175,13 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("NeedPrincipalConsent")
+        public Boolean needPrincipalConsent;
+
+        /**
          * <p>The update time. The value is a timestamp.</p>
          * 
          * <strong>example:</strong>
@@ -182,6 +203,14 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
             return this.accountId;
         }
 
+        public GetApplicationProvisionInfoResponseBodyApplicationProvisionInfo setAppCategory(String appCategory) {
+            this.appCategory = appCategory;
+            return this;
+        }
+        public String getAppCategory() {
+            return this.appCategory;
+        }
+
         public GetApplicationProvisionInfoResponseBodyApplicationProvisionInfo setAppId(String appId) {
             this.appId = appId;
             return this;
@@ -196,6 +225,14 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public GetApplicationProvisionInfoResponseBodyApplicationProvisionInfo setAssignmentType(String assignmentType) {
+            this.assignmentType = assignmentType;
+            return this;
+        }
+        public String getAssignmentType() {
+            return this.assignmentType;
         }
 
         public GetApplicationProvisionInfoResponseBodyApplicationProvisionInfo setCreateDate(String createDate) {
@@ -220,6 +257,14 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
         }
         public String getDisplayName() {
             return this.displayName;
+        }
+
+        public GetApplicationProvisionInfoResponseBodyApplicationProvisionInfo setNeedPrincipalConsent(Boolean needPrincipalConsent) {
+            this.needPrincipalConsent = needPrincipalConsent;
+            return this;
+        }
+        public Boolean getNeedPrincipalConsent() {
+            return this.needPrincipalConsent;
         }
 
         public GetApplicationProvisionInfoResponseBodyApplicationProvisionInfo setUpdateDate(String updateDate) {

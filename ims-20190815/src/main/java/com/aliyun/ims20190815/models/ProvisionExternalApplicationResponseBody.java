@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ProvisionExternalApplicationResponseBody extends TeaModel {
     /**
-     * <p>The information about the external application.</p>
+     * <p>The external application information.</p>
      */
     @NameInMap("ExternalApplication")
     public ProvisionExternalApplicationResponseBodyExternalApplication externalApplication;
@@ -110,7 +110,7 @@ public class ProvisionExternalApplicationResponseBody extends TeaModel {
 
     public static class ProvisionExternalApplicationResponseBodyExternalApplication extends TeaModel {
         /**
-         * <p>The name of the application principal. The value is in the <code>&lt;app_name&gt;@app.&lt;account_id&gt;.onaliyun.com</code> format.</p>
+         * <p>The application principal name in the format of <code>&lt;app_name&gt;@app.&lt;account_id&gt;.onaliyun.com</code>.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:GiteePrd@app.177242285274">GiteePrd@app.177242285274</a>****.onaliyun.com</p>
@@ -119,7 +119,7 @@ public class ProvisionExternalApplicationResponseBody extends TeaModel {
         public String appPrincipalName;
 
         /**
-         * <p>The time when the application was installed. The value is a timestamp.</p>
+         * <p>The installation timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1603693518000</p>
@@ -128,13 +128,13 @@ public class ProvisionExternalApplicationResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>The information about the scopes of permissions that are granted to the application.</p>
+         * <p>The permission scope information of the application.</p>
          */
         @NameInMap("DelegatedScope")
         public ProvisionExternalApplicationResponseBodyExternalApplicationDelegatedScope delegatedScope;
 
         /**
-         * <p>The display name of the application.</p>
+         * <p>The display name.</p>
          * 
          * <strong>example:</strong>
          * <p>GiteeAliyun</p>
@@ -143,7 +143,7 @@ public class ProvisionExternalApplicationResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The external application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>403550611646604****</p>
@@ -152,7 +152,7 @@ public class ProvisionExternalApplicationResponseBody extends TeaModel {
         public String foreignAppId;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the external application belongs.</p>
+         * <p>The Alibaba Cloud account ID to which the external application is installed.</p>
          * 
          * <strong>example:</strong>
          * <p>157242285274****</p>
@@ -161,7 +161,7 @@ public class ProvisionExternalApplicationResponseBody extends TeaModel {
         public String tenantId;
 
         /**
-         * <p>The update time. The value is a timestamp.</p>
+         * <p>The update timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1603693518000</p>

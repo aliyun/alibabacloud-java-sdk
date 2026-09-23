@@ -14,7 +14,7 @@ public class UpdateUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the RAM user.</p>
+     * <p>The Resource Access Management (RAM) user information.</p>
      */
     @NameInMap("User")
     public UpdateUserResponseBodyUser user;
@@ -42,7 +42,7 @@ public class UpdateUserResponseBody extends TeaModel {
 
     public static class UpdateUserResponseBodyUser extends TeaModel {
         /**
-         * <p>The description.</p>
+         * <p>The comments.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a cloud computing engineer.</p>
@@ -51,7 +51,8 @@ public class UpdateUserResponseBody extends TeaModel {
         public String comments;
 
         /**
-         * <p>The time when the RAM user was created.</p>
+         * <p>The time when the Resource Access Management (RAM) user was created.</p>
+         * <p>Format: RFC 3339 (UTC). Example: 2020-10-12T09:12:00Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-12T09:12:00Z</p>
@@ -60,7 +61,7 @@ public class UpdateUserResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>The display name of the RAM user.</p>
+         * <p>The display name of the Resource Access Management (RAM) user.</p>
          * 
          * <strong>example:</strong>
          * <p>new</p>
@@ -69,9 +70,9 @@ public class UpdateUserResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The email address of the RAM user.</p>
+         * <p>The email address of the Resource Access Management (RAM) user.</p>
          * <blockquote>
-         * <p>This parameter is valid only on the China site (aliyun.com).</p>
+         * <p>This parameter is applicable only to China site (aliyun.com).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -81,7 +82,8 @@ public class UpdateUserResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>The last time when the RAM user logged on to the Alibaba Cloud Management Console.</p>
+         * <p>The most recent time when the Resource Access Management (RAM) user logged on to the console.</p>
+         * <p>Format: RFC 3339 (UTC). Example: 2020-10-12T09:12:00Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-12T09:12:00Z</p>
@@ -90,9 +92,9 @@ public class UpdateUserResponseBody extends TeaModel {
         public String lastLoginDate;
 
         /**
-         * <p>The mobile phone number of the RAM user.</p>
+         * <p>The mobile phone number of the Resource Access Management (RAM) user.</p>
          * <blockquote>
-         * <p>This parameter is valid only on the China site (aliyun.com).</p>
+         * <p>This parameter is applicable only to China site (aliyun.com).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -102,14 +104,11 @@ public class UpdateUserResponseBody extends TeaModel {
         public String mobilePhone;
 
         /**
-         * <p>The source of the RAM user. Valid values:</p>
+         * <p>The synchronization type. Valid values:</p>
          * <ul>
-         * <li><p>Manual: The RAM user is manually created in the RAM console.</p>
-         * </li>
-         * <li><p>SCIM: The RAM user is mapped by using System for Cross-domain Identity Management (SCIM).</p>
-         * </li>
-         * <li><p>CloudSSO: The RAM user is mapped from a CloudSSO user.</p>
-         * </li>
+         * <li>Manual: The Resource Access Management (RAM) user was manually created in RAM.</li>
+         * <li>SCIM: The Resource Access Management (RAM) user was created by using the System for Cross-domain Identity Management protocol.</li>
+         * <li>CloudSSO: The user was created by using CloudSSO.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,7 +118,8 @@ public class UpdateUserResponseBody extends TeaModel {
         public String provisionType;
 
         /**
-         * <p>The time when the information about the RAM user was updated.</p>
+         * <p>The time when the Resource Access Management (RAM) user was last updated.</p>
+         * <p>Format: RFC 3339 (UTC). Example: 2020-10-13T09:19:49Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-13T09:19:49Z</p>
@@ -128,7 +128,7 @@ public class UpdateUserResponseBody extends TeaModel {
         public String updateDate;
 
         /**
-         * <p>The ID of the RAM user.</p>
+         * <p>The ID of the Resource Access Management (RAM) user.</p>
          * 
          * <strong>example:</strong>
          * <p>20732900249392****</p>
@@ -137,7 +137,7 @@ public class UpdateUserResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The logon name of the RAM user.</p>
+         * <p>The logon name of the Resource Access Management (RAM) user.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:new@example.onaliyun.com">new@example.onaliyun.com</a></p>

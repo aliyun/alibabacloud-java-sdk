@@ -16,7 +16,7 @@ public class GetServiceCredentialRequest extends TeaModel {
 
     /**
      * <p>The logon name of the Resource Access Management (RAM) user.
-     * If not specified, the service credential of the current caller identity that invokes this operation is retrieved.</p>
+     * If not specified, the service credential of the current identity that invokes this operation is retrieved.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>

@@ -101,9 +101,6 @@ public class UpdateApplicationResponseBody extends TeaModel {
     }
 
     public static class UpdateApplicationResponseBodyApplicationDelegatedScope extends TeaModel {
-        /**
-         * <p>The information about the permissions that are granted on the application.</p>
-         */
         @NameInMap("PredefinedScopes")
         public UpdateApplicationResponseBodyApplicationDelegatedScopePredefinedScopes predefinedScopes;
 
@@ -152,7 +149,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
         public Integer accessTokenValidity;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the application belongs.</p>
+         * <p>The Alibaba Cloud account ID to which the application belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>177242285274****</p>
@@ -188,7 +185,8 @@ public class UpdateApplicationResponseBody extends TeaModel {
         public String appType;
 
         /**
-         * <p>The time when the application was created.</p>
+         * <p>The creation time.</p>
+         * <p>Format: RFC 3339 (UTC). Example: 2020-10-23T08:06:57Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-23T08:06:57Z</p>
@@ -197,7 +195,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>The information about the permissions that are granted on the application.</p>
+         * <p>The permission scope information of the application.</p>
          */
         @NameInMap("DelegatedScope")
         public UpdateApplicationResponseBodyApplicationDelegatedScope delegatedScope;
@@ -212,7 +210,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>Indicates whether the application can be installed by using other Alibaba Cloud accounts.</p>
+         * <p>Indicates whether the application is allowed to be installed by other accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -223,10 +221,8 @@ public class UpdateApplicationResponseBody extends TeaModel {
         /**
          * <p>The OAuth protocol version of the application. Valid values:</p>
          * <ul>
-         * <li><p><code>2.0</code>: OAuth 2.0</p>
-         * </li>
-         * <li><p><code>2.1</code>: OAuth 2.1</p>
-         * </li>
+         * <li><code>2.0</code>: OAuth 2.0 protocol.</li>
+         * <li><code>2.1</code>: OAuth 2.1 protocol.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -235,9 +231,6 @@ public class UpdateApplicationResponseBody extends TeaModel {
         @NameInMap("ProtocolVersion")
         public String protocolVersion;
 
-        /**
-         * <p>The redirect URLs.</p>
-         */
         @NameInMap("RedirectUris")
         public UpdateApplicationResponseBodyApplicationRedirectUris redirectUris;
 
@@ -251,7 +244,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
         public Integer refreshTokenValidity;
 
         /**
-         * <p>Indicates whether a secret is required.</p>
+         * <p>Indicates whether an application secret is required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -260,7 +253,8 @@ public class UpdateApplicationResponseBody extends TeaModel {
         public Boolean secretRequired;
 
         /**
-         * <p>The time when the application was updated.</p>
+         * <p>The update time.</p>
+         * <p>Format: RFC 3339 (UTC). Example: 2020-10-23T08:06:57Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-23T08:06:57Z</p>

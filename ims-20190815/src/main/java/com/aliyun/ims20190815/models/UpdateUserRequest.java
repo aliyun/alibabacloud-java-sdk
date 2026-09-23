@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateUserRequest extends TeaModel {
     /**
-     * <p>The new description of the RAM user.</p>
-     * <p>The description must be 1 to 128 characters in length.</p>
+     * <p>The new comments.</p>
+     * <p>The comments must be 1 to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a cloud computing engineer.</p>
@@ -15,7 +15,7 @@ public class UpdateUserRequest extends TeaModel {
     public String newComments;
 
     /**
-     * <p>The new display name of the RAM user.</p>
+     * <p>The new display name of the Resource Access Management (RAM) user.</p>
      * <p>The name must be 1 to 24 characters in length.</p>
      * 
      * <strong>example:</strong>
@@ -25,9 +25,9 @@ public class UpdateUserRequest extends TeaModel {
     public String newDisplayName;
 
     /**
-     * <p>The new email address of the RAM user.</p>
+     * <p>The new email address of the Resource Access Management (RAM) user.</p>
      * <blockquote>
-     * <p>This parameter is valid only on the China site (aliyun.com).</p>
+     * <p>This parameter is applicable only to China site (aliyun.com).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,10 +37,10 @@ public class UpdateUserRequest extends TeaModel {
     public String newEmail;
 
     /**
-     * <p>The new mobile phone number of the RAM user.</p>
-     * <p>Format: \<Country code>-\<Mobile phone number>.</p>
+     * <p>The new mobile phone number of the Resource Access Management (RAM) user.</p>
+     * <p>Format: area code-phone number.</p>
      * <blockquote>
-     * <p>This parameter is valid only on the China site (aliyun.com).</p>
+     * <p>This parameter is applicable only to China site (aliyun.com).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,9 +50,9 @@ public class UpdateUserRequest extends TeaModel {
     public String newMobilePhone;
 
     /**
-     * <p>The new logon name of the RAM user.</p>
-     * <p>The name is in the format of <code>&lt;username&gt;@&lt;AccountAlias&gt;.onaliyun.com</code>. <code>&lt;username&gt;</code> indicates the name of the RAM user. <code>&lt;AccountAlias&gt;.onaliyun.com</code> indicates the default domain name.</p>
-     * <p>The value of <code>NewUserPrincipalName</code> must be <code>1 to 128</code> characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The value of <code>&lt;username&gt;</code> must be <code>1 to 64</code> characters in length.</p>
+     * <p>The new logon name of the Resource Access Management (RAM) user.</p>
+     * <p>The format is <code>&lt;username&gt;@&lt;AccountAlias&gt;.onaliyun.com</code>, where <code>&lt;username&gt;</code> is the RAM username and <code>&lt;AccountAlias&gt;.onaliyun.com</code> is the default domain name.</p>
+     * <p>The <code>UserPrincipalName</code> must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The <code>&lt;username&gt;</code> must be 1 to 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:new@example.onaliyun.com">new@example.onaliyun.com</a></p>
@@ -61,9 +61,9 @@ public class UpdateUserRequest extends TeaModel {
     public String newUserPrincipalName;
 
     /**
-     * <p>The ID of the RAM user.</p>
+     * <p>The ID of the specified Resource Access Management (RAM) user.</p>
      * <blockquote>
-     * <p>You must specify only one of the following parameters: <code>UserPrincipalName</code> and <code>UserId</code>.</p>
+     * <p>You must specify either the <code>UserPrincipalName</code> or <code>UserId</code> parameter, but not both.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -73,9 +73,9 @@ public class UpdateUserRequest extends TeaModel {
     public String userId;
 
     /**
-     * <p>The logon name of the RAM user.</p>
+     * <p>The logon name of the specified Resource Access Management (RAM) user.</p>
      * <blockquote>
-     * <p>You must specify only one of the following parameters: <code>UserPrincipalName</code> and <code>UserId</code>.</p>
+     * <p>You must specify either the <code>UserPrincipalName</code> or <code>UserId</code> parameter, but not both.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

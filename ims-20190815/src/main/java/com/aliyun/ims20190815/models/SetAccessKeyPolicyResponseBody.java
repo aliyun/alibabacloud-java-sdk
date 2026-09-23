@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetAccessKeyPolicyResponseBody extends TeaModel {
     /**
-     * <p>The AccessKey ID.</p>
+     * <p>The access key ID.</p>
      * 
      * <strong>example:</strong>
      * <p>LTAI*******************</p>

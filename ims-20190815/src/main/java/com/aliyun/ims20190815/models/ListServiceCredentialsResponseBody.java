@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListServiceCredentialsResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether there is a next page of results.</p>
+     * <p>Indicates whether there is a next page.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results.</p>
+     * <p>The token used to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>EXAMPLE*******</p>
@@ -94,6 +94,7 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
     public static class ListServiceCredentialsResponseBodyServiceCredentials extends TeaModel {
         /**
          * <p>The time when the service credential was created.</p>
+         * <p>Format: RFC 3339 (UTC). Example: 2026-05-07T05:49:57Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-07T05:49:57Z</p>
@@ -103,6 +104,7 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
 
         /**
          * <p>The expiration time. This field is not returned for permanent service credentials.</p>
+         * <p>Format: RFC 3339 (UTC). Example: 2026-06-07T05:49:57Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-07T05:49:57Z</p>
@@ -132,7 +134,7 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
         public String serviceCredentialName;
 
         /**
-         * <p>The service name of the Alibaba Cloud service.</p>
+         * <p>The Alibaba Cloud service name.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx.aliyuncs.com</p>

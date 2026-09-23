@@ -109,11 +109,17 @@ public class ListApplicationProvisionInfosResponseBody extends TeaModel {
         @NameInMap("AccountId")
         public String accountId;
 
+        @NameInMap("AppCategory")
+        public String appCategory;
+
         @NameInMap("AppId")
         public String appId;
 
         @NameInMap("AppName")
         public String appName;
+
+        @NameInMap("AssignmentType")
+        public String assignmentType;
 
         @NameInMap("CreateDate")
         public String createDate;
@@ -123,6 +129,9 @@ public class ListApplicationProvisionInfosResponseBody extends TeaModel {
 
         @NameInMap("DisplayName")
         public String displayName;
+
+        @NameInMap("NeedPrincipalConsent")
+        public Boolean needPrincipalConsent;
 
         @NameInMap("UpdateDate")
         public String updateDate;
@@ -140,6 +149,14 @@ public class ListApplicationProvisionInfosResponseBody extends TeaModel {
             return this.accountId;
         }
 
+        public ListApplicationProvisionInfosResponseBodyApplicationProvisionInfosApplicationProvisionInfo setAppCategory(String appCategory) {
+            this.appCategory = appCategory;
+            return this;
+        }
+        public String getAppCategory() {
+            return this.appCategory;
+        }
+
         public ListApplicationProvisionInfosResponseBodyApplicationProvisionInfosApplicationProvisionInfo setAppId(String appId) {
             this.appId = appId;
             return this;
@@ -154,6 +171,14 @@ public class ListApplicationProvisionInfosResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public ListApplicationProvisionInfosResponseBodyApplicationProvisionInfosApplicationProvisionInfo setAssignmentType(String assignmentType) {
+            this.assignmentType = assignmentType;
+            return this;
+        }
+        public String getAssignmentType() {
+            return this.assignmentType;
         }
 
         public ListApplicationProvisionInfosResponseBodyApplicationProvisionInfosApplicationProvisionInfo setCreateDate(String createDate) {
@@ -178,6 +203,14 @@ public class ListApplicationProvisionInfosResponseBody extends TeaModel {
         }
         public String getDisplayName() {
             return this.displayName;
+        }
+
+        public ListApplicationProvisionInfosResponseBodyApplicationProvisionInfosApplicationProvisionInfo setNeedPrincipalConsent(Boolean needPrincipalConsent) {
+            this.needPrincipalConsent = needPrincipalConsent;
+            return this;
+        }
+        public Boolean getNeedPrincipalConsent() {
+            return this.needPrincipalConsent;
         }
 
         public ListApplicationProvisionInfosResponseBodyApplicationProvisionInfosApplicationProvisionInfo setUpdateDate(String updateDate) {

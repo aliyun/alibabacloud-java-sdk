@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAccountSummaryResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>81313F5E-3C85-478F-BCC9-E1B70E4556DB</p>
@@ -14,7 +14,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An overview of the Alibaba Cloud account.</p>
+     * <p>The overview information of the Alibaba Cloud account.</p>
      */
     @NameInMap("SummaryMap")
     public GetAccountSummaryResponseBodySummaryMap summaryMap;
@@ -42,7 +42,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
 
     public static class GetAccountSummaryResponseBodySummaryMap extends TeaModel {
         /**
-         * <p>The maximum number of access keys that a RAM user can have.</p>
+         * <p>The maximum number of AccessKey pairs that each Resource Access Management (RAM) user can have.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -51,7 +51,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         public Integer accessKeysPerUserQuota;
 
         /**
-         * <p>The maximum number of access keys that an Alibaba Cloud account can have.</p>
+         * <p>The maximum number of AccessKey pairs for the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -60,7 +60,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         public Integer accountAccessKeysPerAccountQuota;
 
         /**
-         * <p>The maximum number of custom policies that can be attached to a user group.</p>
+         * <p>The maximum number of custom policies that can be attached to each user group.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -69,7 +69,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         public Integer attachedPoliciesPerGroupQuota;
 
         /**
-         * <p>The maximum number of custom policies that can be attached to a RAM role.</p>
+         * <p>The maximum number of custom policies that can be attached to each RAM role.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -78,7 +78,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         public Integer attachedPoliciesPerRoleQuota;
 
         /**
-         * <p>The maximum number of custom policies that can be attached to a RAM user.</p>
+         * <p>The maximum number of custom policies that can be attached to each RAM user.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -87,7 +87,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         public Integer attachedPoliciesPerUserQuota;
 
         /**
-         * <p>The maximum number of system policies that can be attached to a user group.</p>
+         * <p>The maximum number of system policies that can be attached to each user group.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -96,7 +96,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         public Integer attachedSystemPoliciesPerGroupQuota;
 
         /**
-         * <p>The maximum number of system policies that can be attached to a RAM role.</p>
+         * <p>The maximum number of system policies that can be attached to each RAM role.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -105,7 +105,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         public Integer attachedSystemPoliciesPerRoleQuota;
 
         /**
-         * <p>The maximum number of system policies that can be attached to a RAM user.</p>
+         * <p>The maximum number of system policies that can be attached to each RAM user.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -113,11 +113,17 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         @NameInMap("AttachedSystemPoliciesPerUserQuota")
         public Integer attachedSystemPoliciesPerUserQuota;
 
+        /**
+         * <p>The maximum number of authorized clients that each RAM user can have.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AuthorizedClientPerUserQuota")
         public Integer authorizedClientPerUserQuota;
 
         /**
-         * <p>The maximum number of conditions allowed in a network access control policy for an account or an access key.</p>
+         * <p>The maximum number of policy entries that can be specified in an account-level or AccessKey-level network access restriction policy.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -135,7 +141,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         public Integer groups;
 
         /**
-         * <p>The maximum number of user groups to which a RAM user can be added.</p>
+         * <p>The maximum number of user groups that each Resource Access Management (RAM) user can join.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -153,7 +159,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         public Integer groupsQuota;
 
         /**
-         * <p>The maximum number of IP addresses or CIDR blocks allowed in a network access control policy for an account or an access key.</p>
+         * <p>The maximum number of IP addresses that can be specified in an account-level or AccessKey-level network access restriction policy.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -162,7 +168,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         public Integer IPItemsPerAKPolicyQuota;
 
         /**
-         * <p>The number of virtual MFA devices.</p>
+         * <p>The number of virtual multi-factor authentication devices.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>
@@ -171,7 +177,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         public Integer MFADevices;
 
         /**
-         * <p>The number of virtual MFA devices in use.</p>
+         * <p>The number of virtual multi-factor authentication devices in use.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -198,7 +204,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         public Integer policiesQuota;
 
         /**
-         * <p>The maximum character length of a policy document.</p>
+         * <p>The maximum length of the access policy content.</p>
          * 
          * <strong>example:</strong>
          * <p>2048</p>
@@ -225,7 +231,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         public Integer rolesQuota;
 
         /**
-         * <p>The maximum number of service-specific credentials that a RAM user can create for each service.</p>
+         * <p>The maximum number of API keys that each user can create for each service.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -234,7 +240,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         public Integer serviceCredentialsPerUserPerServiceQuota;
 
         /**
-         * <p>The number of RAM users.</p>
+         * <p>The number of Resource Access Management (RAM) users.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -243,7 +249,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         public Integer users;
 
         /**
-         * <p>The maximum number of RAM users that can be created.</p>
+         * <p>The maximum number of Resource Access Management (RAM) users that can be created.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -252,7 +258,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         public Integer usersQuota;
 
         /**
-         * <p>The maximum number of versions that can be created for a policy.</p>
+         * <p>The maximum number of access policy versions.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -261,7 +267,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         public Integer versionsPerPolicyQuota;
 
         /**
-         * <p>The maximum number of virtual MFA devices that can be created.</p>
+         * <p>The maximum number of virtual multi-factor authentication devices that can be created.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>

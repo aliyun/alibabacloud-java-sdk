@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ProvisionExternalApplicationRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The ID of the external application that was created by another Alibaba Cloud account and can be installed by the current account. The application IDs returned by <code>ListApplications</code> for the current account are not applicable. <code>ListExternalApplications</code> and <code>ListApplicationProvisionInfos</code> only query installed records and cannot discover external application IDs that have not been installed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class ProvisionExternalApplicationRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The permissions that are granted to the application. Separate multiple permissions with a semicolon (;).</p>
+     * <p>The permission scopes granted to the application. You can specify multiple scopes separated by semicolons (;).</p>
      * <blockquote>
-     * <p>For more information about the supported permissions, see <a href="https://help.aliyun.com/document_detail/93693.html">Overview</a>.</p>
+     * <p>For supported permission scopes, refer to &quot;OAuth Scopes&quot; in <a href="https://help.aliyun.com/document_detail/93693.html">OAuth application overview</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

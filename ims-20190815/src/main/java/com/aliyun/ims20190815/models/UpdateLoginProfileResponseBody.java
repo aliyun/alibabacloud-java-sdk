@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLoginProfileResponseBody extends TeaModel {
     /**
-     * <p>The console logon settings.</p>
+     * <p>The console logon information.</p>
      */
     @NameInMap("LoginProfile")
     public UpdateLoginProfileResponseBodyLoginProfile loginProfile;
@@ -42,7 +42,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
 
     public static class UpdateLoginProfileResponseBodyLoginProfile extends TeaModel {
         /**
-         * <p>Indicates whether to automatically disable console logon for an inactive account. This feature is enabled by default and cannot be disabled.</p>
+         * <p>Indicates whether console logon is automatically disabled when the idle disable conditions are met. This feature is enabled by default and cannot be disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -51,7 +51,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
         public String autoDisableLoginStatus;
 
         /**
-         * <p>Indicates whether MFA is enforced for the user.</p>
+         * <p>Indicates whether the user is required to enable multi-factor authentication (MFA).</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -60,7 +60,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
         public Boolean MFABindRequired;
 
         /**
-         * <p>Indicates whether the RAM user must reset the password at the next logon.</p>
+         * <p>Indicates whether the Resource Access Management (RAM) user is required to reset the password at the next logon.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -69,15 +69,12 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
         public Boolean passwordResetRequired;
 
         /**
-         * <p>The status of the initial password. An initial password is the one set when a logon profile is created or console logon is re-enabled.</p>
+         * <p>The status of the initial password. The initial password refers to the password that is set when console logon is newly created or re-enabled.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>&quot;NotInitial&quot;: Not an initial password.</p>
-         * </li>
-         * <li><p>&quot;InitialValid&quot;: The initial password is valid.</p>
-         * </li>
-         * <li><p>&quot;InitialExpired&quot;: The initial password has expired.</p>
-         * </li>
+         * <li>NotInitial: The password is not an initial password.</li>
+         * <li>InitialValid: The initial password is valid.</li>
+         * <li>InitialExpired: The initial password has expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -87,7 +84,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
         public String passwordStatus;
 
         /**
-         * <p>Indicates whether password logon to the console is enabled or disabled.</p>
+         * <p>Indicates whether console password logon is enabled or disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>
@@ -96,7 +93,8 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the logon profile was updated.</p>
+         * <p>The update time.</p>
+         * <p>Format: RFC 3339 (UTC). Example: 2020-10-14T07:48:41Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-14T07:48:41Z</p>
@@ -105,7 +103,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
         public String updateDate;
 
         /**
-         * <p>The logon name of the RAM user.</p>
+         * <p>The logon name of the Resource Access Management (RAM) user.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@example11.onaliyun.com">test@example11.onaliyun.com</a></p>

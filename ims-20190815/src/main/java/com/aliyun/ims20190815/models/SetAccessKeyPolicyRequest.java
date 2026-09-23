@@ -16,7 +16,7 @@ public class SetAccessKeyPolicyRequest extends TeaModel {
     public String accessKeyPolicy;
 
     /**
-     * <p>The AccessKey ID.</p>
+     * <p>The access key ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class SetAccessKeyPolicyRequest extends TeaModel {
 
     /**
      * <p>The logon name of the RAM user. </p>
-     * <p>If this parameter is left empty, the network access restriction policy is set for the specified AccessKey pair of the current user by default.</p>
+     * <p>If this parameter is left empty, the network access restriction policy is set for the specified access key of the current user by default.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>

@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ListServiceCredentialsRequest extends TeaModel {
     /**
      * <p>Specifies whether to query service credentials for all Resource Access Management (RAM) users under the Alibaba Cloud account.</p>
-     * <p>If this parameter is set to true, you cannot specify UserPrincipalName at the same time.</p>
+     * <p>When the value is true, you cannot specify UserPrincipalName at the same time.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -30,7 +30,7 @@ public class ListServiceCredentialsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results. You do not need to specify this parameter for the first API call.</p>
+     * <p>The token used to retrieve the next page of results. This parameter is not required for the first API call.</p>
      * 
      * <strong>example:</strong>
      * <p>EXAMPLE*******</p>
@@ -42,7 +42,7 @@ public class ListServiceCredentialsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The service name of the Alibaba Cloud service.</p>
+     * <p>The Alibaba Cloud service name.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx.aliyuncs.com</p>
