@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDefenseTemplateRequest extends TeaModel {
     /**
-     * <p>The description of the protection template.</p>
+     * <p>The description of the protection template that you want to modify.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -14,9 +14,31 @@ public class ModifyDefenseTemplateRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The details of the template. For more information, see the Detail parameter in <a href="https://help.aliyun.com/document_detail/461613.html">CreateDefenseTemplate</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;trafficFeature&quot;:&quot;{\&quot;global\&quot;:0,\&quot;excludeStatus\&quot;:1,\&quot;conditions\&quot;:[{\&quot;key\&quot;:\&quot;URL\&quot;,\&quot;opValue\&quot;:\&quot;not-contain\&quot;,\&quot;values\&quot;:\&quot;test\&quot;}]}&quot;}</p>
+     */
+    @NameInMap("Detail")
+    public String detail;
+
+    /**
+     * <p>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: A dry run request is sent. The system checks whether the request meets the execution conditions without performing the specified operation. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</li>
+     * <li><strong>false</strong>: A normal request is sent. The specified operation is performed after the request passes the check.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +49,7 @@ public class ModifyDefenseTemplateRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region in which the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -51,7 +73,7 @@ public class ModifyDefenseTemplateRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The ID of the protection template to modify.</p>
+     * <p>The ID of the protection template that you want to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,9 +83,9 @@ public class ModifyDefenseTemplateRequest extends TeaModel {
     public Long templateId;
 
     /**
-     * <p>The name of the protection template. The name must be 1 to 255 characters long and can contain Chinese characters, letters, digits, underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the protection template that you want to modify. The name must be 1 to 255 characters in length and can contain Chinese characters, letters, digits, underscores (_), periods (.), and hyphens (-).</p>
      * <blockquote>
-     * <p>Template names must be unique for the same protection scenario (<strong>DefenseScene</strong>).</p>
+     * <p>Template names within the same protection scenario (<strong>DefenseScene</strong>) must be unique.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -84,6 +106,22 @@ public class ModifyDefenseTemplateRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyDefenseTemplateRequest setDetail(String detail) {
+        this.detail = detail;
+        return this;
+    }
+    public String getDetail() {
+        return this.detail;
+    }
+
+    public ModifyDefenseTemplateRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifyDefenseTemplateRequest setInstanceId(String instanceId) {

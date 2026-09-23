@@ -1,3 +1,23 @@
+2026-09-23 Version: 6.8.6
+- Update API CopyDefenseTemplate: add request parameters DryRun.
+- Update API CreateDefenseRule: add request parameters DryRun.
+- Update API CreateDefenseTemplate: add request parameters Detail.
+- Update API CreateDefenseTemplate: add request parameters DryRun.
+- Update API DeleteDefenseRule: add request parameters DryRun.
+- Update API DeleteDefenseTemplate: add request parameters DryRun.
+- Update API DescribeApisecApiResources: add request parameters ApiIds.
+- Update API DescribeDefenseResourceTemplates: add response parameters Body.Templates.$.Detail.
+- Update API DescribeDefenseTemplate: add response parameters Body.Template.Detail.
+- Update API DescribeDefenseTemplates: add response parameters Body.Templates.$.Detail.
+- Update API ModifyDefenseRule: add request parameters DryRun.
+- Update API ModifyDefenseRuleStatus: add request parameters DryRun.
+- Update API ModifyDefenseTemplate: add request parameters Detail.
+- Update API ModifyDefenseTemplate: add request parameters DryRun.
+- Update API ModifyDefenseTemplateStatus: add request parameters DryRun.
+- Update API ModifyResourceLogStatus: add request parameters DryRun.
+- Update API ModifyTemplateResources: add request parameters DryRun.
+
+
 2026-08-20 Version: 6.8.5
 - Update API DescribeChargeModule: add request parameters ChargeUnit.
 - Update API DescribeChargeModule: add response parameters Body.ChargeModules.$.ChargeUnit.

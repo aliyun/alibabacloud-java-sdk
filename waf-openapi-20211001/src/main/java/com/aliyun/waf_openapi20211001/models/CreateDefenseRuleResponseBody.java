@@ -14,7 +14,7 @@ public class CreateDefenseRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The IDs of the created protection rules. Multiple IDs are separated by commas (,).</p>
+     * <p>The IDs of the created protection rules. Multiple protection rule IDs are separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>22215,23354,462165</p>

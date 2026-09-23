@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDefenseTemplateResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D7861F61-5B61-46CE-A47C-6B19160D5EB0</p>
@@ -14,7 +14,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the protection template.</p>
+     * <p>The template information.</p>
      */
     @NameInMap("Template")
     public DescribeDefenseTemplateResponseBodyTemplate template;
@@ -42,7 +42,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
 
     public static class DescribeDefenseTemplateResponseBodyTemplate extends TeaModel {
         /**
-         * <p>The scenario in which the protection template is used. For more information, see the description of the <strong>DefenseScene</strong> parameter in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> operation.</p>
+         * <p>The protection scenario. For more information, see the <strong>DefenseScene</strong> parameter in <a href="~~CreateDefenseRule~~">CreateDefenseRule</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>waf_group</p>
@@ -51,16 +51,12 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
         public String defenseScene;
 
         /**
-         * <p>The sub-scenario of the protection template. Valid values:</p>
+         * <p>The protection template sub-scenario. Valid values:</p>
          * <ul>
-         * <li><p><strong>web</strong>: the bot management template for website protection.</p>
-         * </li>
-         * <li><p><strong>app</strong>: the bot management template for app protection.</p>
-         * </li>
-         * <li><p><strong>basic</strong>: the basic bot management template.</p>
-         * </li>
-         * <li><p><strong>bot_custom_acl</strong>: the bot management template for custom protection rules.</p>
-         * </li>
+         * <li><strong>web</strong>: bot management web protection scenario template.</li>
+         * <li><strong>app</strong>: bot management app protection scenario template.</li>
+         * <li><strong>basic</strong>: bot management basic protection template.</li>
+         * <li><strong>bot_custom_acl</strong>: bot management advanced custom rule protection template.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -79,7 +75,16 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The most recent time the protection template was modified. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The detailed template information. For more information, see the Detail parameter in <a href="https://help.aliyun.com/document_detail/461613.html">CreateDefenseTemplate</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;trafficFeature&quot;:&quot;{\&quot;global\&quot;:0,\&quot;excludeStatus\&quot;:1,\&quot;conditions\&quot;:[{\&quot;key\&quot;:\&quot;URL\&quot;,\&quot;opValue\&quot;:\&quot;not-contain\&quot;,\&quot;values\&quot;:\&quot;test\&quot;}]}&quot;}</p>
+         */
+        @NameInMap("Detail")
+        public java.util.Map<String, ?> detail;
+
+        /**
+         * <p>The time when the protection template was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1665283642000</p>
@@ -88,7 +93,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>The ID of the protection template.</p>
+         * <p>The ID of the protection rule template.</p>
          * 
          * <strong>example:</strong>
          * <p>10097</p>
@@ -97,7 +102,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
         public Long templateId;
 
         /**
-         * <p>The name of the protection template.</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
          * <p>test0621</p>
@@ -106,7 +111,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>The origin of the protection template. A value of <strong>custom</strong> indicates that the template is user-defined.</p>
+         * <p>The source of the protection template. The value custom indicates that the template is user-defined.</p>
          * 
          * <strong>example:</strong>
          * <p>custom</p>
@@ -117,10 +122,8 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
         /**
          * <p>The status of the protection template. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: disabled.</p>
-         * </li>
-         * <li><p><strong>1</strong>: enabled.</p>
-         * </li>
+         * <li><strong>0</strong>: Disabled.</li>
+         * <li><strong>1</strong>: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,12 +133,10 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
         public Integer templateStatus;
 
         /**
-         * <p>The type of the protection template. Valid values:</p>
+         * <p>The protection templatetype. Valid values:</p>
          * <ul>
-         * <li><p><strong>user_default</strong>: the default template.</p>
-         * </li>
-         * <li><p><strong>user_custom</strong>: a custom template.</p>
-         * </li>
+         * <li><strong>user_default</strong>: user default protection.</li>
+         * <li><strong>user_custom</strong>: user custom protection.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,6 +172,14 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeDefenseTemplateResponseBodyTemplate setDetail(java.util.Map<String, ?> detail) {
+            this.detail = detail;
+            return this;
+        }
+        public java.util.Map<String, ?> getDetail() {
+            return this.detail;
         }
 
         public DescribeDefenseTemplateResponseBodyTemplate setGmtModified(Long gmtModified) {

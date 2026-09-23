@@ -16,10 +16,10 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     /**
      * <p>The sub-scenario of the protection template. Valid values:</p>
      * <ul>
-     * <li><strong>web</strong>: BOT management web protection scenario template.</li>
-     * <li><strong>app</strong>: BOT management app protection scenario template.</li>
-     * <li><strong>basic</strong>: BOT management basic protection template.</li>
-     * <li><strong>bot_custom_acl</strong>: BOT management advanced custom rule protection template.</li>
+     * <li><strong>web</strong>: bot management web protection scenario template.</li>
+     * <li><strong>app</strong>: bot management app protection scenario template.</li>
+     * <li><strong>basic</strong>: bot management basic protection template.</li>
+     * <li><strong>bot_custom_acl</strong>: bot management advanced custom rule protection template.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number to return in a paging query request. Default value: <strong>1</strong>.</p>
+     * <p>The page number to return in a paging request. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +51,7 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paging query. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page when paging. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -75,7 +75,7 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the protected object, protection group, or the ID of the protected asset.</p>
+     * <p>The name of the protected object, the name of the protected object group, or the ID of the protected asset.</p>
      * <blockquote>
      * <p>This parameter is used together with the ResourceType parameter. Both parameters must have values for filtering to take effect.</p>
      * </blockquote>
@@ -137,8 +137,8 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     /**
      * <p>The templatetype of the protection template. Valid values:</p>
      * <ul>
-     * <li><strong>user_default</strong>: user default protection.</li>
-     * <li><strong>user_custom</strong>: user custom protection.</li>
+     * <li><strong>user_default</strong>: default protection.</li>
+     * <li><strong>user_custom</strong>: custom protection.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,9 +5,22 @@ import com.aliyun.tea.*;
 
 public class ModifyResourceLogStatusRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: A dry run request is sent. The system checks whether the request meets the execution conditions without performing the specified operation. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Log.Control.DryRunOperation is returned.</li>
+     * <li><strong>false</strong>: A normal request is sent. The specified operation is performed after the request passes the check.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -81,11 +94,11 @@ public class ModifyResourceLogStatusRequest extends TeaModel {
      * <ul>
      * <li><p><strong>true</strong>: Enabled.</p>
      * </li>
-     * <li><p><strong>false</strong>: Disabled.</p>
+     * <li><p><strong>false</strong>: Shutdown.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>To enable Tracing Analysis, you must first enable the log status <strong>Status</strong> for the protected object.</p>
+     * <p>To enable Tracing Analysis, you must first enable the log status <strong>Status</strong> of the protected object.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -97,6 +110,14 @@ public class ModifyResourceLogStatusRequest extends TeaModel {
     public static ModifyResourceLogStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyResourceLogStatusRequest self = new ModifyResourceLogStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyResourceLogStatusRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifyResourceLogStatusRequest setInstanceId(String instanceId) {

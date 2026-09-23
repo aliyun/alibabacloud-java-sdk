@@ -71,17 +71,17 @@ public class DescribeDefenseTemplatesResponseBody extends TeaModel {
          * </li>
          * <li><p><strong>whitelist</strong>: whitelist.</p>
          * </li>
-         * <li><p><strong>region_block</strong>: Location Blacklist.</p>
+         * <li><p><strong>region_block</strong>: location blacklist.</p>
          * </li>
          * <li><p><strong>custom_response</strong>: custom response.</p>
          * </li>
-         * <li><p><strong>cc</strong>: HTTP flood protection.</p>
+         * <li><p><strong>cc</strong>: HTTP flood mitigation.</p>
          * </li>
          * <li><p><strong>tamperproof</strong>: web tamper proofing.</p>
          * </li>
          * <li><p><strong>dlp</strong>: data leak prevention.</p>
          * </li>
-         * <li><p><strong>bot_manager</strong>: new BOT management.</p>
+         * <li><p><strong>bot_manager</strong>: new bot management.</p>
          * </li>
          * </ul>
          * 
@@ -94,10 +94,10 @@ public class DescribeDefenseTemplatesResponseBody extends TeaModel {
         /**
          * <p>The sub-scenario of the protection template. Valid values:</p>
          * <ul>
-         * <li><strong>web</strong>: BOT management web protection scenario template.</li>
-         * <li><strong>app</strong>: BOT management app protection scenario template.</li>
-         * <li><strong>basic</strong>: BOT management basic protection template.</li>
-         * <li><strong>bot_custom_acl</strong>: BOT management advanced custom rule protection template.</li>
+         * <li><strong>web</strong>: bot management web protection scenario template.</li>
+         * <li><strong>app</strong>: bot management app protection scenario template.</li>
+         * <li><strong>basic</strong>: bot management basic protection template.</li>
+         * <li><strong>bot_custom_acl</strong>: bot management advanced custom rule protection template.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,16 @@ public class DescribeDefenseTemplatesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The creation time of the protection template. The value is a timestamp in milliseconds.</p>
+         * <p>The detailed template information. For more information, see the Detail parameter in <a href="https://help.aliyun.com/document_detail/461613.html">CreateDefenseTemplate</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;trafficFeature&quot;:&quot;{\&quot;global\&quot;:0,\&quot;excludeStatus\&quot;:1,\&quot;conditions\&quot;:[{\&quot;key\&quot;:\&quot;URL\&quot;,\&quot;opValue\&quot;:\&quot;not-contain\&quot;,\&quot;values\&quot;:\&quot;test\&quot;}]}&quot;}</p>
+         */
+        @NameInMap("Detail")
+        public java.util.Map<String, ?> detail;
+
+        /**
+         * <p>The time when the protection template was created. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1683776070000</p>
@@ -143,7 +152,7 @@ public class DescribeDefenseTemplatesResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>The source of the protection template. The value is custom, which indicates user-defined.</p>
+         * <p>The source of the protection template. The value custom indicates that the template is user-defined.</p>
          * 
          * <strong>example:</strong>
          * <p>custom</p>
@@ -167,8 +176,8 @@ public class DescribeDefenseTemplatesResponseBody extends TeaModel {
         /**
          * <p>The templatetype of the protection template. Valid values:</p>
          * <ul>
-         * <li><strong>user_default</strong>: user default protection.</li>
-         * <li><strong>user_custom</strong>: user custom protection.</li>
+         * <li><strong>user_default</strong>: default protection.</li>
+         * <li><strong>user_custom</strong>: custom protection.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -204,6 +213,14 @@ public class DescribeDefenseTemplatesResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeDefenseTemplatesResponseBodyTemplates setDetail(java.util.Map<String, ?> detail) {
+            this.detail = detail;
+            return this;
+        }
+        public java.util.Map<String, ?> getDetail() {
+            return this.detail;
         }
 
         public DescribeDefenseTemplatesResponseBodyTemplates setGmtModified(Long gmtModified) {

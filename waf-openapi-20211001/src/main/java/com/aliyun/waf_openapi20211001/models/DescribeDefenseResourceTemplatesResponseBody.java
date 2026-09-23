@@ -42,7 +42,7 @@ public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
 
     public static class DescribeDefenseResourceTemplatesResponseBodyTemplates extends TeaModel {
         /**
-         * <p>The protection scenario. For more information, refer to the <strong>DefenseScene</strong> parameter in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</p>
+         * <p>The protection scenario. For more information, see the <strong>DefenseScene</strong> parameter in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>whitelist</p>
@@ -53,9 +53,9 @@ public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
         /**
          * <p>The sub-scenario of the protection template. Valid values:</p>
          * <ul>
-         * <li><strong>web</strong>: the bot management web protection scenario template.</li>
-         * <li><strong>app</strong>: the bot management app protection scenario template.</li>
-         * <li><strong>basic</strong>: the bot management basic protection template.</li>
+         * <li><strong>web</strong>: bot management web protection scenario template.</li>
+         * <li><strong>app</strong>: bot management app protection scenario template.</li>
+         * <li><strong>basic</strong>: bot management basic protection template.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -72,6 +72,15 @@ public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
          */
         @NameInMap("Description")
         public String description;
+
+        /**
+         * <p>The detailed template information. For more information, see the Detail parameter in <a href="https://help.aliyun.com/document_detail/461613.html">CreateDefenseTemplate</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;trafficFeature&quot;:&quot;{\&quot;global\&quot;:0,\&quot;excludeStatus\&quot;:1,\&quot;conditions\&quot;:[{\&quot;key\&quot;:\&quot;URL\&quot;,\&quot;opValue\&quot;:\&quot;not-contain\&quot;,\&quot;values\&quot;:\&quot;test\&quot;}]}&quot;}</p>
+         */
+        @NameInMap("Detail")
+        public java.util.Map<String, ?> detail;
 
         /**
          * <p>The time when the protection template was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
@@ -162,6 +171,14 @@ public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeDefenseResourceTemplatesResponseBodyTemplates setDetail(java.util.Map<String, ?> detail) {
+            this.detail = detail;
+            return this;
+        }
+        public java.util.Map<String, ?> getDetail() {
+            return this.detail;
         }
 
         public DescribeDefenseResourceTemplatesResponseBodyTemplates setGmtModified(Long gmtModified) {

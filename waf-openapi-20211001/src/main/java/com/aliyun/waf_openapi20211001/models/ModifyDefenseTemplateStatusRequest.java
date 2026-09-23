@@ -5,9 +5,22 @@ import com.aliyun.tea.*;
 
 public class ModifyDefenseTemplateStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Sends a dry run request. The system checks whether the request meets the execution conditions without performing the specified operation. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</li>
+     * <li><strong>false</strong>: Sends a normal request. The specified operation is performed after the request passes the check.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,11 +31,11 @@ public class ModifyDefenseTemplateStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: The Chinese mainland.</p>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
-     * <li><p><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</p>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
      * </li>
      * </ul>
      * 
@@ -42,7 +55,7 @@ public class ModifyDefenseTemplateStatusRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The ID of the protection template.</p>
+     * <p>The ID of the protection rule template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,12 +65,10 @@ public class ModifyDefenseTemplateStatusRequest extends TeaModel {
     public Long templateId;
 
     /**
-     * <p>The new status of the protection rule template. Valid values:</p>
+     * <p>The status of the protection template that you want to set. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: Disabled.</p>
-     * </li>
-     * <li><p><strong>1</strong>: Enabled.</p>
-     * </li>
+     * <li><strong>0</strong>: Disabled.</li>
+     * <li><strong>1</strong>: Enabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -70,6 +81,14 @@ public class ModifyDefenseTemplateStatusRequest extends TeaModel {
     public static ModifyDefenseTemplateStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDefenseTemplateStatusRequest self = new ModifyDefenseTemplateStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDefenseTemplateStatusRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifyDefenseTemplateStatusRequest setInstanceId(String instanceId) {

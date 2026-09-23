@@ -8,53 +8,53 @@ public class CreateDefenseRuleRequest extends TeaModel {
      * <p>The WAF protection scenario to create.</p>
      * <p>When the protection rule type <strong>DefenseType</strong> is set to <strong>template</strong>, valid values:</p>
      * <ul>
-     * <li><p><strong>waf_group</strong>: Basic Web Protection.</p>
+     * <li><p><strong>waf_group</strong>: basic protection.</p>
      * </li>
-     * <li><p><strong>waf_base</strong>: new version of Web core protection.</p>
+     * <li><p><strong>waf_base</strong>: new version of Web Core Protection.</p>
      * </li>
-     * <li><p><strong>antiscan</strong>: scan protection.</p>
+     * <li><p><strong>antiscan</strong>: Scan Protection.</p>
      * </li>
-     * <li><p><strong>ip_blacklist</strong>: IP blacklist.</p>
+     * <li><p><strong>ip_blacklist</strong>: IP Blacklist.</p>
      * </li>
-     * <li><p><strong>custom_acl</strong>: custom rules.</p>
+     * <li><p><strong>custom_acl</strong>: Custom Rule.</p>
      * </li>
-     * <li><p><strong>whitelist</strong>: whitelist.</p>
+     * <li><p><strong>whitelist</strong>: Whitelist.</p>
      * </li>
      * <li><p><strong>region_block</strong>: Location Blacklist.</p>
      * </li>
-     * <li><p><strong>custom_response</strong>: legacy custom response.</p>
+     * <li><p><strong>custom_response</strong>: legacy Custom Response.</p>
      * </li>
-     * <li><p><strong>cc</strong>: HTTP flood mitigation.</p>
+     * <li><p><strong>cc</strong>: HTTP Flood Protection.</p>
      * </li>
      * <li><p><strong>tamperproof</strong>: web tamper proofing.</p>
      * </li>
-     * <li><p><strong>dlp</strong>: information leak prevention.</p>
+     * <li><p><strong>dlp</strong>: Information Leak Prevention.</p>
      * </li>
      * <li><p><strong>spike_throttle</strong>: peak traffic throttling.</p>
      * </li>
-     * <li><p><strong>bot_manager</strong>: bot management.</p>
+     * <li><p><strong>bot_manager</strong>: BOT Management.</p>
      * </li>
      * </ul>
      * <p>When the protection rule type <strong>DefenseType</strong> is set to <strong>resource</strong>, valid values:</p>
      * <ul>
-     * <li><p><strong>account_identifier</strong>: account extraction.</p>
+     * <li><p><strong>account_identifier</strong>: Account Extraction.</p>
      * </li>
-     * <li><p><strong>custom_response</strong>: new version of custom response.</p>
+     * <li><p><strong>custom_response</strong>: new version of Custom Response.</p>
      * </li>
-     * <li><p><strong>waf_codec</strong>: decoding.</p>
+     * <li><p><strong>waf_codec</strong>: Decoding.</p>
      * </li>
-     * <li><p><strong>websdk</strong>: WebSDK integration.</p>
+     * <li><p><strong>websdk</strong>: WebSDK Integration.</p>
      * </li>
      * </ul>
      * <p>When the protection rule type <strong>DefenseType</strong> is set to <strong>global</strong>, valid values:</p>
      * <ul>
-     * <li><p><strong>regular_custom</strong>: custom regular expression.</p>
+     * <li><p><strong>regular_custom</strong>: Custom Regex.</p>
      * </li>
-     * <li><p><strong>address_book</strong>: address book.</p>
+     * <li><p><strong>address_book</strong>: Address Book.</p>
      * </li>
-     * <li><p><strong>custom_response</strong>: new version of custom response.</p>
+     * <li><p><strong>custom_response</strong>: new version of Custom Response.</p>
      * <blockquote>
-     * <p> The custom response in global configurations can be referenced by protected objects or rules. When custom response rules are referenced at different levels, the effective priority is: rule level &gt; protected object level &gt; default page.</p>
+     * <p>For the custom response in global configuration, users can reference it at the protected object or rule level. When custom response rules are referenced at different dimensions, the actual effective logic is: rule level &gt; protected object level &gt; default page.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -76,9 +76,22 @@ public class CreateDefenseRuleRequest extends TeaModel {
     public String defenseType;
 
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: A dry run request is sent. The system only checks whether the request meets the execution conditions without performing the specified operation. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</li>
+     * <li><strong>false</strong>: A normal request is sent. The specified operation is performed after the request passes the check.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of your current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -90,6 +103,12 @@ public class CreateDefenseRuleRequest extends TeaModel {
 
     /**
      * <p>The region where the WAF instance resides. Valid values:</p>
+     * <ul>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -98,7 +117,10 @@ public class CreateDefenseRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The protection object associated with the rule to create.</p>
+     * <p>The protected object associated with the rule to be created.</p>
+     * <blockquote>
+     * <p>This parameter is required only when <strong>DefenseType</strong> is set to <strong>resource</strong>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>sec****-waf</p>
@@ -116,9 +138,9 @@ public class CreateDefenseRuleRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The rule configuration content, which is a JSON string constructed from a series of parameters.</p>
+     * <p>The rule configuration content, which is a string converted from a JSON-formatted array of parameters.</p>
      * <blockquote>
-     * <p> The specific parameters vary depending on the <strong>mitigation setting type</strong> (<strong>DefenseScene</strong>) that you specify. For more information, refer to <strong>Protection rule parameter description</strong>.</p>
+     * <p>The specific parameters vary depending on the specified <strong>protection rule type</strong> (<strong>DefenseScene</strong>). For more information, refer to <strong>Protection rule parameter descriptions</strong>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -129,10 +151,10 @@ public class CreateDefenseRuleRequest extends TeaModel {
     public String rules;
 
     /**
-     * <p>The ID of the protection template for which you want to create a protection rule.</p>
+     * <p>The ID of the protection template for the protection rule to be created.</p>
      * <blockquote>
      * <p>This parameter is required only when <strong>DefenseType</strong> is set to <strong>template</strong>.
-     * There is an upper limit on the number of rules that can be created in a protection template. For more information, see <strong>Rule quantity limits</strong>. If the number of rules has reached the upper limit, you can call the <a href="https://help.aliyun.com/document_detail/461613.html">CreateDefenseTemplate</a> operation to create a new protection template. You can also call the <a href="https://help.aliyun.com/document_detail/461422.html">ModifyDefenseRule</a> operation to modify an existing rule.</p>
+     * There is an upper limit on the number of rules that can be created within the same protection template. For specific limits, refer to <strong>Rule quantity limits</strong>. When the rule quantity has reached the upper limit, you can call the <a href="https://help.aliyun.com/document_detail/461613.html">CreateDefenseTemplate</a> operation to create a new protection template. You can also call the <a href="https://help.aliyun.com/document_detail/461422.html">ModifyDefenseRule</a> operation to modify an existing rule.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -160,6 +182,14 @@ public class CreateDefenseRuleRequest extends TeaModel {
     }
     public String getDefenseType() {
         return this.defenseType;
+    }
+
+    public CreateDefenseRuleRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateDefenseRuleRequest setInstanceId(String instanceId) {

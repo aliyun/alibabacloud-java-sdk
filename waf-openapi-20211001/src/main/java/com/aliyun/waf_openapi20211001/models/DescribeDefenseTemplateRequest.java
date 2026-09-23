@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDefenseTemplateRequest extends TeaModel {
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -33,7 +33,7 @@ public class DescribeDefenseTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The Alibaba Cloud resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -42,7 +42,7 @@ public class DescribeDefenseTemplateRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The ID of the protection template that you want to query.</p>
+     * <p>The ID of the protection template to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

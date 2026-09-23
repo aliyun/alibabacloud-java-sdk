@@ -23,6 +23,12 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     public String apiId;
 
     /**
+     * <p>The list of API IDs.</p>
+     */
+    @NameInMap("ApiIds")
+    public java.util.List<String> apiIds;
+
+    /**
      * <p>The request method of the API. Valid values:</p>
      * <ul>
      * <li><strong>GET</strong>: GET request.</li>
@@ -44,9 +50,9 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     /**
      * <p>The status of the API. Valid values:</p>
      * <ul>
-     * <li><strong>NewbornInterface</strong>: newly added.</li>
-     * <li><strong>OfflineInterface</strong>: inactive.</li>
-     * <li><strong>normal</strong>: normal.</li>
+     * <li><strong>NewbornInterface</strong>: New.</li>
+     * <li><strong>OfflineInterface</strong>: Inactive.</li>
+     * <li><strong>normal</strong>: Normal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,9 +76,9 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     /**
      * <p>The service object. Valid values:</p>
      * <ul>
-     * <li><strong>PublicAPI</strong>: public service.</li>
-     * <li><strong>ThirdpartAPI</strong>: third-party collaboration.</li>
-     * <li><strong>InternalAPI</strong>: internal office.</li>
+     * <li><strong>PublicAPI</strong>: Public service.</li>
+     * <li><strong>ThirdpartAPI</strong>: Third-party collaboration.</li>
+     * <li><strong>InternalAPI</strong>: Internal office.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,8 +90,8 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether the API has an authentication field. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: has authentication.</li>
-     * <li><strong>1</strong>: does not have authentication.</li>
+     * <li><strong>0</strong>: Has authentication.</li>
+     * <li><strong>1</strong>: Does not have authentication.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -118,8 +124,8 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether the API is followed. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: followed.</li>
-     * <li><strong>0</strong>: not followed.</li>
+     * <li><strong>1</strong>: Followed.</li>
+     * <li><strong>0</strong>: Not followed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -180,8 +186,8 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><strong>desc</strong>: descending order (default).</li>
-     * <li><strong>asc</strong>: ascending order.</li>
+     * <li><strong>desc</strong>: Descending order (default).</li>
+     * <li><strong>asc</strong>: Ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -191,7 +197,7 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     public String orderWay;
 
     /**
-     * <p>The page number to return in a paging query. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
+     * <p>The page number of the page to return in a paged query. Default value: <strong>1</strong>, which indicates the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -200,7 +206,7 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page in a paging query. Default value: <strong>10</strong>, which indicates that each page contains 10 entries.</p>
+     * <p>The number of entries to return on each page in a paged query. Default value: <strong>10</strong>, which indicates 10 entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -209,7 +215,7 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -247,10 +253,10 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     /**
      * <p>The sensitivity level of the API. Valid values:</p>
      * <ul>
-     * <li><strong>L1</strong>: high sensitivity.</li>
-     * <li><strong>L2</strong>: medium sensitivity.</li>
-     * <li><strong>L3</strong>: low sensitivity.</li>
-     * <li><strong>N</strong>: not sensitive.</li>
+     * <li><strong>L1</strong>: High sensitivity.</li>
+     * <li><strong>L2</strong>: Medium sensitivity.</li>
+     * <li><strong>L3</strong>: Low sensitivity.</li>
+     * <li><strong>N</strong>: Not sensitive.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -299,6 +305,14 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     }
     public String getApiId() {
         return this.apiId;
+    }
+
+    public DescribeApisecApiResourcesRequest setApiIds(java.util.List<String> apiIds) {
+        this.apiIds = apiIds;
+        return this;
+    }
+    public java.util.List<String> getApiIds() {
+        return this.apiIds;
     }
 
     public DescribeApisecApiResourcesRequest setApiMethod(String apiMethod) {

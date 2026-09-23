@@ -5,9 +5,22 @@ import com.aliyun.tea.*;
 
 public class CopyDefenseTemplateRequest extends TeaModel {
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: A dry run request is sent. The system checks whether the request meets the execution conditions without performing the specified operation. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</li>
+     * <li><strong>false</strong>: A normal request is sent. The specified operation is performed after the request passes the check.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +31,7 @@ public class CopyDefenseTemplateRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -33,7 +46,7 @@ public class CopyDefenseTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the WAF instance belongs.</p>
+     * <p>The Alibaba Cloud resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -42,7 +55,7 @@ public class CopyDefenseTemplateRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The ID of the protection template that you want to copy.</p>
+     * <p>The ID of the mitigation template to copy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +67,14 @@ public class CopyDefenseTemplateRequest extends TeaModel {
     public static CopyDefenseTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         CopyDefenseTemplateRequest self = new CopyDefenseTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CopyDefenseTemplateRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CopyDefenseTemplateRequest setInstanceId(String instanceId) {

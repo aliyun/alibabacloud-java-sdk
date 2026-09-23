@@ -14,6 +14,19 @@ public class DeleteDefenseRuleRequest extends TeaModel {
     public String defenseType;
 
     /**
+     * <p>Specifies whether to enable the DryRun dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: A dry run request is sent. The system checks whether the request meets the execution conditions without performing the specified operation. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</li>
+     * <li><strong>false</strong>: A normal request is sent. The specified operation is performed after the request passes the check.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
      * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
@@ -42,7 +55,7 @@ public class DeleteDefenseRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The protection object associated with the rule to delete.</p>
+     * <p>The protected object associated with the rule to delete.</p>
      * <blockquote>
      * <p>This parameter is required only when <strong>DefenseType</strong> is set to <strong>resource</strong>.</p>
      * </blockquote>
@@ -95,6 +108,14 @@ public class DeleteDefenseRuleRequest extends TeaModel {
     }
     public String getDefenseType() {
         return this.defenseType;
+    }
+
+    public DeleteDefenseRuleRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public DeleteDefenseRuleRequest setInstanceId(String instanceId) {

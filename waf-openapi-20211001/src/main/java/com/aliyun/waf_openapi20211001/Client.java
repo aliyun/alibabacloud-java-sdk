@@ -288,7 +288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Copies a protection template.</p>
+     * <p>Copies the current mitigation template and generates a new mitigation template.</p>
      * 
      * @param request CopyDefenseTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -297,6 +297,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CopyDefenseTemplateResponse copyDefenseTemplateWithOptions(CopyDefenseTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -332,7 +336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Copies a protection template.</p>
+     * <p>Copies the current mitigation template and generates a new mitigation template.</p>
      * 
      * @param request CopyDefenseTemplateRequest
      * @return CopyDefenseTemplateResponse
@@ -800,7 +804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a web core protection rule.</p>
+     * <p>Creates a Web core protection rule.</p>
      * 
      * @param request CreateDefenseRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -815,6 +819,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.defenseType)) {
             query.put("DefenseType", request.defenseType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
@@ -862,7 +870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a web core protection rule.</p>
+     * <p>Creates a Web core protection rule.</p>
      * 
      * @param request CreateDefenseRuleRequest
      * @return CreateDefenseRuleResponse
@@ -893,6 +901,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.detail)) {
+            query.put("Detail", request.detail);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
@@ -2145,6 +2161,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DefenseType", request.defenseType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -2260,7 +2280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a protection rule template.</p>
+     * <p>Deletes a protection template.</p>
      * 
      * @param request DeleteDefenseTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2269,6 +2289,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDefenseTemplateResponse deleteDefenseTemplateWithOptions(DeleteDefenseTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -2304,7 +2328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a protection rule template.</p>
+     * <p>Deletes a protection template.</p>
      * 
      * @param request DeleteDefenseTemplateRequest
      * @return DeleteDefenseTemplateResponse
@@ -3243,6 +3267,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.apiId)) {
             query.put("ApiId", request.apiId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.apiIds)) {
+            query.put("ApiIds", request.apiIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.apiMethod)) {
@@ -6072,7 +6100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the protection templates of a protected object or a protected object group.</p>
+     * <p>Queries the protection templates of a protected object or protected object group.</p>
      * 
      * @param request DescribeDefenseResourceTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6136,7 +6164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the protection templates of a protected object or a protected object group.</p>
+     * <p>Queries the protection templates of a protected object or protected object group.</p>
      * 
      * @param request DescribeDefenseResourceTemplatesRequest
      * @return DescribeDefenseResourceTemplatesResponse
@@ -6494,7 +6522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specific protection template.</p>
+     * <p>Queries a single protection template.</p>
      * 
      * @param request DescribeDefenseTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6538,7 +6566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specific protection template.</p>
+     * <p>Queries a single protection template.</p>
      * 
      * @param request DescribeDefenseTemplateRequest
      * @return DescribeDefenseTemplateResponse
@@ -13991,6 +14019,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DefenseType", request.defenseType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -14124,6 +14156,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DefenseType", request.defenseType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -14246,7 +14282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a defense template.</p>
+     * <p>Modifies a protection template.</p>
      * 
      * @param request ModifyDefenseTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14257,6 +14293,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.detail)) {
+            query.put("Detail", request.detail);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
@@ -14298,7 +14342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a defense template.</p>
+     * <p>Modifies a protection template.</p>
      * 
      * @param request ModifyDefenseTemplateRequest
      * @return ModifyDefenseTemplateResponse
@@ -14310,7 +14354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the status of a protection rule template.</p>
+     * <p>Modifies the status of a protection template.</p>
      * 
      * @param request ModifyDefenseTemplateStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14319,6 +14363,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyDefenseTemplateStatusResponse modifyDefenseTemplateStatusWithOptions(ModifyDefenseTemplateStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -14358,7 +14406,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the status of a protection rule template.</p>
+     * <p>Modifies the status of a protection template.</p>
      * 
      * @param request ModifyDefenseTemplateStatusRequest
      * @return ModifyDefenseTemplateStatusResponse
@@ -15625,6 +15673,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -15684,7 +15736,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Attaches protected objects to or detaches protected objects from a protection template.</p>
+     * <p>Associates or disassociates protected resources with or from a protection template.</p>
      * 
      * @param request ModifyTemplateResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15703,6 +15755,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.bindResources)) {
             query.put("BindResources", request.bindResources);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
@@ -15752,7 +15808,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Attaches protected objects to or detaches protected objects from a protection template.</p>
+     * <p>Associates or disassociates protected resources with or from a protection template.</p>
      * 
      * @param request ModifyTemplateResourcesRequest
      * @return ModifyTemplateResourcesResponse

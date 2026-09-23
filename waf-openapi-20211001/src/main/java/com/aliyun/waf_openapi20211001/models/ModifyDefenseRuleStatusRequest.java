@@ -14,6 +14,21 @@ public class ModifyDefenseRuleStatusRequest extends TeaModel {
     public String defenseType;
 
     /**
+     * <p>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: A dry run request is sent. Only the request conditions are checked, and the specified operation is not performed. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong>: A normal request is sent. The specified operation is performed after the request passes the check.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
@@ -27,7 +42,7 @@ public class ModifyDefenseRuleStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region in which the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -64,7 +79,7 @@ public class ModifyDefenseRuleStatusRequest extends TeaModel {
     public Long ruleId;
 
     /**
-     * <p>The status that you want to set for the protection rule. Valid values: </p>
+     * <p>The status of the protection rule that you want to modify. Valid values: </p>
      * <ul>
      * <li><strong>0</strong>: disabled.  </li>
      * <li><strong>1</strong>: enabled.</li>
@@ -97,6 +112,14 @@ public class ModifyDefenseRuleStatusRequest extends TeaModel {
     }
     public String getDefenseType() {
         return this.defenseType;
+    }
+
+    public ModifyDefenseRuleStatusRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifyDefenseRuleStatusRequest setInstanceId(String instanceId) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBotRuleLabelsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries per page in a paged query. Valid values: 1 to 200. Default value: 20. This parameter is used for paging.</p>
+     * <p>The number of entries per page in a paged query. Valid values: 1 to 200. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,9 +14,9 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page. If a value is returned for this parameter, the next page exists.</p>
+     * <p>The pagination token for the next page. If a next page exists, this field returns a value.</p>
      * <blockquote>
-     * <p>If this parameter has a return value, the next page exists. Use the returned NextToken value as a request parameter to retrieve the next page of data. Repeat until no value is returned, which indicates that all data has been retrieved.</p>
+     * <p>If this parameter returns a value, a next page exists. Use the returned <strong>NextToken</strong> as a request parameter to retrieve the next page of data. Repeat until no value is returned, which indicates that all data has been retrieved.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D7861F61-5B61-46CE-A47C-6B19****5EB0</p>
@@ -96,7 +96,7 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
 
     public static class DescribeBotRuleLabelsResponseBodyRuleLabels extends TeaModel {
         /**
-         * <p>The crawler behavior corresponding to the rule tag.</p>
+         * <p>The crawler behavior corresponding to the rule tag. Valid values:</p>
          * <ul>
          * <li><strong>malicious</strong>: malicious crawler.</li>
          * <li><strong>suspicious</strong>: suspected crawler.</li>
@@ -112,12 +112,12 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
         /**
          * <p>The default action. Valid values:</p>
          * <ul>
-         * <li><strong>block</strong>: Block.</li>
-         * <li><strong>monitor</strong>: Monitor.</li>
+         * <li><strong>block</strong>: block.</li>
+         * <li><strong>monitor</strong>: monitor.</li>
          * <li><strong>js</strong>: JavaScript verification.</li>
          * <li><strong>captcha</strong>: slider CAPTCHA.</li>
          * <li><strong>captcha_strict</strong>: strict slider CAPTCHA.</li>
-         * <li><strong>bypass</strong>: Allow.</li>
+         * <li><strong>bypass</strong>: allow.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,10 +136,10 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
         public String defaultConfig;
 
         /**
-         * <p>The default status of the tag rule.</p>
+         * <p>The default status of the tag rule. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: The rule is enabled.</li>
-         * <li><strong>0</strong>: The rule is disabled.</li>
+         * <li><strong>1</strong>: enabled.</li>
+         * <li><strong>0</strong>: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,10 +158,10 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
         public String labelKey;
 
         /**
-         * <p>The tag status.</p>
+         * <p>The tag status. Valid values:</p>
          * <ul>
-         * <li><strong>online</strong>: Online.</li>
-         * <li><strong>wait_offline</strong>: Pending offline.</li>
+         * <li><strong>online</strong>: online.</li>
+         * <li><strong>wait_offline</strong>: pending offline.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
         public String labelType;
 
         /**
-         * <p>The set of bot management protection scenarios to which the rule belongs. Multiple scenarios are separated by commas (,). Valid values:</p>
+         * <p>The collection of bot management protection scenarios to which the rule belongs. Multiple scenarios are separated by commas (,). Valid values:</p>
          * <ul>
          * <li><strong>web</strong>: Web protection scenario.</li>
          * <li><strong>app</strong>: App protection scenario.</li>

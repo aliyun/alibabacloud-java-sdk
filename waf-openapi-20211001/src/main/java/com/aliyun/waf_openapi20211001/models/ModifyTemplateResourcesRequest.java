@@ -5,27 +5,40 @@ import com.aliyun.tea.*;
 
 public class ModifyTemplateResourcesRequest extends TeaModel {
     /**
-     * <p>The IDs of the protected assets to attach. The value is in the [<strong>&quot;XX1&quot;,&quot;XX2&quot;,...</strong>] format.</p>
+     * <p>The IDs of the protected assets to associate, in the format of [&quot;XX1&quot;,&quot;XX2&quot;,...].</p>
      */
     @NameInMap("BindAssets")
     public java.util.List<String> bindAssets;
 
     /**
-     * <p>The protected object groups to attach. The value is in the [<strong>&quot;group1&quot;,&quot;group2&quot;,...</strong>] format.</p>
+     * <p>The protected object groups to associate, in the format of [<strong>&quot;group1&quot;,&quot;group2&quot;,...</strong>].</p>
      */
     @NameInMap("BindResourceGroups")
     public java.util.List<String> bindResourceGroups;
 
     /**
-     * <p>The protected objects to attach. The value is in the [<strong>&quot;XX1&quot;,&quot;XX2&quot;,...</strong>] format.</p>
+     * <p>The protected objects to associate, in the format of [<strong>&quot;XX1&quot;,&quot;XX2&quot;,...</strong>].</p>
      */
     @NameInMap("BindResources")
     public java.util.List<String> bindResources;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: A dry run request is sent. The system checks whether the request meets the execution conditions without performing the specified operation. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</li>
+     * <li><strong>false</strong>: A normal request is sent. The specified operation is performed after the request passes the check.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -70,19 +83,19 @@ public class ModifyTemplateResourcesRequest extends TeaModel {
     public Long templateId;
 
     /**
-     * <p>The IDs of the protected assets to detach. The value is in the [<strong>&quot;XX1&quot;,&quot;XX2&quot;,...</strong>] format.</p>
+     * <p>The IDs of the protected assets to disassociate, in the format of [&quot;XX1&quot;,&quot;XX2&quot;,...].</p>
      */
     @NameInMap("UnbindAssets")
     public java.util.List<String> unbindAssets;
 
     /**
-     * <p>The protected object groups to detach. The value is in the [<strong>&quot;group1&quot;,&quot;group2&quot;,...</strong>] format.</p>
+     * <p>The protected object groups to disassociate, in the format of [<strong>&quot;group1&quot;,&quot;group2&quot;,...</strong>].</p>
      */
     @NameInMap("UnbindResourceGroups")
     public java.util.List<String> unbindResourceGroups;
 
     /**
-     * <p>The protected objects to detach. The value is in the [<strong>&quot;XX1&quot;,&quot;XX2&quot;,...</strong>] format.</p>
+     * <p>The protected objects to disassociate, in the format of [<strong>&quot;XX1&quot;,&quot;XX2&quot;,...</strong>].</p>
      */
     @NameInMap("UnbindResources")
     public java.util.List<String> unbindResources;
@@ -114,6 +127,14 @@ public class ModifyTemplateResourcesRequest extends TeaModel {
     }
     public java.util.List<String> getBindResources() {
         return this.bindResources;
+    }
+
+    public ModifyTemplateResourcesRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifyTemplateResourcesRequest setInstanceId(String instanceId) {

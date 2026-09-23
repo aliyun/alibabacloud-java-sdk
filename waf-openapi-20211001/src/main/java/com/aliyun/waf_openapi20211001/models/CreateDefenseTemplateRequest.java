@@ -15,7 +15,7 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     public String defenseScene;
 
     /**
-     * <p>The sub-scenario of the protection template. This parameter is supported only for advanced bot management scenarios.</p>
+     * <p>The sub-scenario of the protection template. This parameter is supported only for the advanced bot management scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>web</p>
@@ -33,9 +33,36 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The detailed template information, which is a JSON-formatted string. Different key-value pairs represent different attributes of the protected object. For more information, see the Detail description.</p>
+     * <blockquote>
+     * <p>This parameter applies only to the new version of basic protection (<strong>waf_base</strong>) and the new version of bot management (<strong>bot_manager</strong>) protection scenarios. This parameter is required for the new version of bot management (<strong>bot_manager</strong>) protection scenario.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;trafficFeature&quot;:&quot;{\&quot;global\&quot;:0,\&quot;excludeStatus\&quot;:1,\&quot;conditions\&quot;:[{\&quot;key\&quot;:\&quot;URL\&quot;,\&quot;opValue\&quot;:\&quot;not-contain\&quot;,\&quot;values\&quot;:\&quot;test\&quot;}]}&quot;}</p>
+     */
+    @NameInMap("Detail")
+    public String detail;
+
+    /**
+     * <p>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: A dry run request is sent. The system checks whether the request meets the execution conditions without performing the specified operation. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong>: A normal request is sent. The specified operation is performed after the request passes the check.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -70,7 +97,7 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The name of the protection template to create. The name must be 1 to 255 characters in length and can contain Chinese characters, letters, digits, underscores (_), periods (.), or hyphens (-).</p>
+     * <p>The name of the protection template to create. The name must be 1 to 255 characters in length and can contain Chinese characters, letters, digits, underscores (_), periods (.), and hyphens (-).</p>
      * <blockquote>
      * <p>Template names must be unique within the same protection scenario (<strong>DefenseScene</strong>).</p>
      * </blockquote>
@@ -123,7 +150,7 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     /**
      * <p>The protected object groups to unbind when creating a default protection template. Use the format [<strong>&quot;group1&quot;,&quot;group2&quot;,……</strong>].</p>
      * <blockquote>
-     * <p>This parameter takes effect only when you create a <strong>default template</strong> (the value of <strong>TemplateType</strong> is <strong>user_default</strong>).</p>
+     * <p>This parameter takes effect only when creating a <strong>default template</strong> (when <strong>TemplateType</strong> is set to <strong>user_default</strong>).</p>
      * </blockquote>
      */
     @NameInMap("UnbindResourceGroups")
@@ -132,7 +159,7 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     /**
      * <p>The protected objects to unbind when creating a default protection template. Use the format [<strong>&quot;XX1&quot;,&quot;XX2&quot;,……</strong>].</p>
      * <blockquote>
-     * <p>This parameter takes effect only when you create a <strong>default template</strong> (the value of <strong>TemplateType</strong> is <strong>user_default</strong>).</p>
+     * <p>This parameter takes effect only when creating a <strong>default template</strong> (when <strong>TemplateType</strong> is set to <strong>user_default</strong>).</p>
      * </blockquote>
      */
     @NameInMap("UnbindResources")
@@ -165,6 +192,22 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateDefenseTemplateRequest setDetail(String detail) {
+        this.detail = detail;
+        return this;
+    }
+    public String getDetail() {
+        return this.detail;
+    }
+
+    public CreateDefenseTemplateRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateDefenseTemplateRequest setInstanceId(String instanceId) {
