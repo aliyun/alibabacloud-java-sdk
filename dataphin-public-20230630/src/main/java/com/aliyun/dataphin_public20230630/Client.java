@@ -9,13 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-beijing", "dataphin-public.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "dataphin-public.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "dataphin-public.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "dataphin-public.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "dataphin-public.cn-shenzhen.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dataphin-public", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -1895,17 +1888,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>This API creates a new dataset in a specified project.</li>
+     * <li>This API operation creates a dataset in a specified project.</li>
      * <li><code>ProjectId</code> is a required parameter that specifies the ID of the project in which to create the dataset.</li>
      * <li><code>CreateCommand</code> is a complex object that contains the configuration information required to create the dataset.</li>
-     * <li><code>Name</code>, <code>Type</code>, <code>ContentType</code>, and <code>Scenario</code> are required fields that specify the dataset name, type, content type, and scenarios respectively.</li>
+     * <li><code>Name</code>, <code>Type</code>, <code>ContentType</code>, and <code>Scenario</code> are required fields that specify the dataset name, type, content type, and scenarios.</li>
      * <li><code>FileStorageConfig</code> and <code>MetadataStorageConfig</code> in <code>VersionConfig</code> can be configured as needed.</li>
      * <li>If you need a real-time meta table configuration, provide the <code>RealtimeMetaTableConfig</code> information.</li>
      * <li>Ensure that all required fields are correctly specified. Otherwise, the request failed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a new dataset under a specified project. Available since v6.2.0.</p>
+     * <p>Creates a dataset in a specified project. Online version: v6.2.0.</p>
      * 
      * @param tmpReq CreateDatasetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1959,17 +1952,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>This API creates a new dataset in a specified project.</li>
+     * <li>This API operation creates a dataset in a specified project.</li>
      * <li><code>ProjectId</code> is a required parameter that specifies the ID of the project in which to create the dataset.</li>
      * <li><code>CreateCommand</code> is a complex object that contains the configuration information required to create the dataset.</li>
-     * <li><code>Name</code>, <code>Type</code>, <code>ContentType</code>, and <code>Scenario</code> are required fields that specify the dataset name, type, content type, and scenarios respectively.</li>
+     * <li><code>Name</code>, <code>Type</code>, <code>ContentType</code>, and <code>Scenario</code> are required fields that specify the dataset name, type, content type, and scenarios.</li>
      * <li><code>FileStorageConfig</code> and <code>MetadataStorageConfig</code> in <code>VersionConfig</code> can be configured as needed.</li>
      * <li>If you need a real-time meta table configuration, provide the <code>RealtimeMetaTableConfig</code> information.</li>
      * <li>Ensure that all required fields are correctly specified. Otherwise, the request failed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a new dataset under a specified project. Available since v6.2.0.</p>
+     * <p>Creates a dataset in a specified project. Online version: v6.2.0.</p>
      * 
      * @param request CreateDatasetRequest
      * @return CreateDatasetResponse
@@ -3837,7 +3830,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除集群。</p>
+     * <p>Deletes a cluster. Online version: v6.3.0.</p>
      * 
      * @param request DeleteComputeClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3877,7 +3870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除集群。</p>
+     * <p>Deletes a cluster. Online version: v6.3.0.</p>
      * 
      * @param request DeleteComputeClusterRequest
      * @return DeleteComputeClusterResponse
@@ -9221,7 +9214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询所有大模型服务供应商和可用模型列表</p>
+     * <p>Queries all large language model service providers and available models. Available since v6.3.0.</p>
      * 
      * @param request GetLlmModelProvidersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9257,7 +9250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询所有大模型服务供应商和可用模型列表</p>
+     * <p>Queries all large language model service providers and available models. Available since v6.3.0.</p>
      * 
      * @param request GetLlmModelProvidersRequest
      * @return GetLlmModelProvidersResponse
@@ -11473,6 +11466,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetSecuritySecretKeyResponse getSecuritySecretKey(GetSecuritySecretKeyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getSecuritySecretKeyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the details of a published API based on the AppKey.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the Dataphin server version.</p>
+     * 
+     * @param request GetServerVersionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetServerVersionResponse
+     */
+    public GetServerVersionResponse getServerVersionWithOptions(GetServerVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.env)) {
+            query.put("Env", request.env);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opUserId)) {
+            query.put("OpUserId", request.opUserId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetServerVersion"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetServerVersionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the details of a published API based on the AppKey.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the Dataphin server version.</p>
+     * 
+     * @param request GetServerVersionRequest
+     * @return GetServerVersionResponse
+     */
+    public GetServerVersionResponse getServerVersion(GetServerVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getServerVersionWithOptions(request, runtime);
     }
 
     /**
@@ -17471,7 +17522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes a tenant member. Only superusers and system administrators can call this API operation.</p>
+     * <p>Removes a tenant member. Only super administrators and system administrators can invoke this API operation.</p>
      * 
      * @param tmpReq RemoveTenantMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17519,7 +17570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes a tenant member. Only superusers and system administrators can call this API operation.</p>
+     * <p>Removes a tenant member. Only super administrators and system administrators can invoke this API operation.</p>
      * 
      * @param request RemoveTenantMemberRequest
      * @return RemoveTenantMemberResponse
@@ -19117,7 +19168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改集群。</p>
+     * <p>Modifies a cluster. Online version: v6.3.0.</p>
      * 
      * @param tmpReq UpdateComputeClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19169,7 +19220,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改集群。</p>
+     * <p>Modifies a cluster. Online version: v6.3.0.</p>
      * 
      * @param request UpdateComputeClusterRequest
      * @return UpdateComputeClusterResponse
@@ -19241,13 +19292,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>该 API 用于更新特定项目下已存在的问题清单的状态。</li>
+     * <li>This API operation updates the status of existing issue checklists under a specific project.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>根据治理项id，批量修改问题清单对象的状态。</p>
+     * <p>Batch updates the status of issue checklist objects by governance item ID. Online since v6.3.0.</p>
      * 
      * @param tmpReq UpdateDataAssetsGovernObjectStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19295,13 +19346,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>该 API 用于更新特定项目下已存在的问题清单的状态。</li>
+     * <li>This API operation updates the status of existing issue checklists under a specific project.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>根据治理项id，批量修改问题清单对象的状态。</p>
+     * <p>Batch updates the status of issue checklist objects by governance item ID. Online since v6.3.0.</p>
      * 
      * @param request UpdateDataAssetsGovernObjectStatusRequest
      * @return UpdateDataAssetsGovernObjectStatusResponse

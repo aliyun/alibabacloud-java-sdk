@@ -15,6 +15,8 @@ public class RemoveTenantMemberRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator user.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -59,7 +61,7 @@ public class RemoveTenantMemberRequest extends TeaModel {
 
     public static class RemoveTenantMemberRequestRemoveCommand extends TeaModel {
         /**
-         * <p>The source ID of the user.</p>
+         * <p>The user source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -69,6 +71,8 @@ public class RemoveTenantMemberRequest extends TeaModel {
         public String sourceId;
 
         /**
+         * <p>The source type.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyun</p>
          */

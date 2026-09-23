@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDataAssetsGovernObjectStatusResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class UpdateDataAssetsGovernObjectStatusResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The number of affected records.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class UpdateDataAssetsGovernObjectStatusResponseBody extends TeaModel {
     public Integer data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class UpdateDataAssetsGovernObjectStatusResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The backend exception details.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -33,6 +41,8 @@ public class UpdateDataAssetsGovernObjectStatusResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>82E78D6B-AA8F-1FEF-8AA3-5C9DA2A79140</p>
      */
@@ -40,6 +50,8 @@ public class UpdateDataAssetsGovernObjectStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

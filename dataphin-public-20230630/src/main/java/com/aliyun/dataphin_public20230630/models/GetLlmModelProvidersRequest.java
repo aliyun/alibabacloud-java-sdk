@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLlmModelProvidersRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetLlmModelProvidersRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator user.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

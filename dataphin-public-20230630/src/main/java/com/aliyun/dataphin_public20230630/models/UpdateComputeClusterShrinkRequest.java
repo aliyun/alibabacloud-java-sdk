@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateComputeClusterShrinkRequest extends TeaModel {
     /**
+     * <p>The cluster configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterConfig")
     public String clusterConfigShrink;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class UpdateComputeClusterShrinkRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +32,8 @@ public class UpdateComputeClusterShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator user.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDataAssetsGovernObjectStatusRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class UpdateDataAssetsGovernObjectStatusRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator user.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -21,6 +24,7 @@ public class UpdateDataAssetsGovernObjectStatusRequest extends TeaModel {
     public String opUserId;
 
     /**
+     * <p>The update command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -56,23 +60,30 @@ public class UpdateDataAssetsGovernObjectStatusRequest extends TeaModel {
     }
 
     public static class UpdateDataAssetsGovernObjectStatusRequestUpdateCommand extends TeaModel {
+        /**
+         * <p>Specifies whether to notify the owner. This parameter takes effect only when the status is reverted to NEW.</p>
+         */
         @NameInMap("AlertOwners")
         public Boolean alertOwners;
 
         /**
+         * <p>The list of governance object IDs.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("GovernObjectIds")
         public java.util.List<Long> governObjectIds;
 
         /**
+         * <p>The operation description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>问题已修复</p>
+         * <p>Issue fixed</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
+         * <p>The target status. Valid values: FINISHED / NEW / IGNORE / CANCEL_IGNORE.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

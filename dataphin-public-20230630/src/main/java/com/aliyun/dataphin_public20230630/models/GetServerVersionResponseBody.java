@@ -3,9 +3,9 @@ package com.aliyun.dataphin_public20230630.models;
 
 import com.aliyun.tea.*;
 
-public class RemoveTenantMemberResponseBody extends TeaModel {
+public class GetServerVersionResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,16 @@ public class RemoveTenantMemberResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code returned by the backend.</p>
+     * <p>The Dataphin server version number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6.4.0.994114</p>
+     */
+    @NameInMap("Data")
+    public String data;
+
+    /**
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +32,7 @@ public class RemoveTenantMemberResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -32,7 +41,7 @@ public class RemoveTenantMemberResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
@@ -49,12 +58,12 @@ public class RemoveTenantMemberResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static RemoveTenantMemberResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        RemoveTenantMemberResponseBody self = new RemoveTenantMemberResponseBody();
+    public static GetServerVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetServerVersionResponseBody self = new GetServerVersionResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public RemoveTenantMemberResponseBody setCode(String code) {
+    public GetServerVersionResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -62,7 +71,15 @@ public class RemoveTenantMemberResponseBody extends TeaModel {
         return this.code;
     }
 
-    public RemoveTenantMemberResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public GetServerVersionResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
+    }
+
+    public GetServerVersionResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -70,7 +87,7 @@ public class RemoveTenantMemberResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public RemoveTenantMemberResponseBody setMessage(String message) {
+    public GetServerVersionResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -78,7 +95,7 @@ public class RemoveTenantMemberResponseBody extends TeaModel {
         return this.message;
     }
 
-    public RemoveTenantMemberResponseBody setRequestId(String requestId) {
+    public GetServerVersionResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -86,7 +103,7 @@ public class RemoveTenantMemberResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public RemoveTenantMemberResponseBody setSuccess(Boolean success) {
+    public GetServerVersionResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

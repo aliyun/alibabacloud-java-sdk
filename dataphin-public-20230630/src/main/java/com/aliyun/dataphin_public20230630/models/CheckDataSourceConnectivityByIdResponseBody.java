@@ -14,7 +14,7 @@ public class CheckDataSourceConnectivityByIdResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The connectivity check result of the data source.</p>
+     * <p>The result of the data source connectivity check.</p>
      */
     @NameInMap("Data")
     public Boolean data;
@@ -29,7 +29,7 @@ public class CheckDataSourceConnectivityByIdResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>

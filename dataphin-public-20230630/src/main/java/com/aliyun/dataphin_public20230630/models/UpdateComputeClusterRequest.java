@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateComputeClusterRequest extends TeaModel {
     /**
+     * <p>The cluster configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterConfig")
     public UpdateComputeClusterRequestClusterConfig clusterConfig;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class UpdateComputeClusterRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +32,8 @@ public class UpdateComputeClusterRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator user.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -74,7 +79,7 @@ public class UpdateComputeClusterRequest extends TeaModel {
 
     public static class UpdateComputeClusterRequestClusterConfigClusterSafetyControl extends TeaModel {
         /**
-         * <p>管控模式。CREATE_COMPUTE_SOURCE：有创建计算源权限即可使用；USER_DEFINE：仅白名单用户/用户组可用</p>
+         * <p>The control mode.</p>
          * 
          * <strong>example:</strong>
          * <p>CREATE_COMPUTE_SOURCE</p>
@@ -82,9 +87,15 @@ public class UpdateComputeClusterRequest extends TeaModel {
         @NameInMap("ClusterSafetyAuthType")
         public String clusterSafetyAuthType;
 
+        /**
+         * <p>The list of whitelist user group IDs.</p>
+         */
         @NameInMap("UserGroupIds")
         public java.util.List<String> userGroupIds;
 
+        /**
+         * <p>The list of whitelist user IDs.</p>
+         */
         @NameInMap("UserIds")
         public java.util.List<String> userIds;
 
@@ -121,6 +132,7 @@ public class UpdateComputeClusterRequest extends TeaModel {
 
     public static class UpdateComputeClusterRequestClusterConfigConfigList extends TeaModel {
         /**
+         * <p>The configuration item.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +142,7 @@ public class UpdateComputeClusterRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the configuration item.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,19 +175,28 @@ public class UpdateComputeClusterRequest extends TeaModel {
     }
 
     public static class UpdateComputeClusterRequestClusterConfig extends TeaModel {
+        /**
+         * <p>The list of cluster administrator IDs.</p>
+         */
         @NameInMap("ClusterAdmins")
         public java.util.List<String> clusterAdmins;
 
+        /**
+         * <p>The cluster security control configuration.</p>
+         */
         @NameInMap("ClusterSafetyControl")
         public UpdateComputeClusterRequestClusterConfigClusterSafetyControl clusterSafetyControl;
 
         /**
+         * <p>The connection configuration items.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ConfigList")
         public java.util.List<UpdateComputeClusterRequestClusterConfigConfigList> configList;
 
         /**
+         * <p>The cluster description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -182,6 +204,7 @@ public class UpdateComputeClusterRequest extends TeaModel {
         public String des;
 
         /**
+         * <p>The cluster name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +214,7 @@ public class UpdateComputeClusterRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The cluster type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,6 +224,8 @@ public class UpdateComputeClusterRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>The cluster version.</p>
+         * 
          * <strong>example:</strong>
          * <p>CDH6</p>
          */

@@ -65,6 +65,13 @@ public class SyncDepartmentUserRequest extends TeaModel {
         public java.util.List<String> departmentIdList;
 
         /**
+         * <strong>example:</strong>
+         * <p>aliyun</p>
+         */
+        @NameInMap("SourceType")
+        public String sourceType;
+
+        /**
          * <p>The user ID in the user system. This value is the unique identifier of the user.</p>
          * <p>This parameter is required.</p>
          * 
@@ -85,6 +92,14 @@ public class SyncDepartmentUserRequest extends TeaModel {
         }
         public java.util.List<String> getDepartmentIdList() {
             return this.departmentIdList;
+        }
+
+        public SyncDepartmentUserRequestSyncDepartmentUserCommandDeptUserMapping setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
         }
 
         public SyncDepartmentUserRequestSyncDepartmentUserCommandDeptUserMapping setSourceUserId(String sourceUserId) {
