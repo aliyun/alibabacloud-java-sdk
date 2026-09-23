@@ -60,6 +60,13 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
+         * <strong>example:</strong>
+         * <p>eni-2z******</p>
+         */
+        @NameInMap("EniId")
+        public String eniId;
+
+        /**
          * <p>The notes about the channel.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +148,14 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
         }
         public String getDBClusterId() {
             return this.DBClusterId;
+        }
+
+        public DescribeNetworkChannelResponseBodyChannelInfos setEniId(String eniId) {
+            this.eniId = eniId;
+            return this;
+        }
+        public String getEniId() {
+            return this.eniId;
         }
 
         public DescribeNetworkChannelResponseBodyChannelInfos setNotes(String notes) {

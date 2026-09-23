@@ -73,6 +73,13 @@ public class CreateNetworkChannelRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <strong>example:</strong>
+     * <p>sg-2z********</p>
+     */
+    @NameInMap("SecurityGroupId")
+    public String securityGroupId;
+
+    /**
      * <p>The name of the destination instance.</p>
      * 
      * <strong>example:</strong>
@@ -191,6 +198,14 @@ public class CreateNetworkChannelRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreateNetworkChannelRequest setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
     }
 
     public CreateNetworkChannelRequest setTargetDBClusterId(String targetDBClusterId) {
