@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCostCenterRuleRequest extends TeaModel {
     /**
-     * <p>Financial unit ID</p>
+     * <p>The financial unit ID.</p>
      * 
      * <strong>example:</strong>
      * <p>485938</p>
@@ -14,13 +14,13 @@ public class ModifyCostCenterRuleRequest extends TeaModel {
     public Long costCenterId;
 
     /**
-     * <p>Rule expression</p>
+     * <p>The rule expression.</p>
      */
     @NameInMap("FilterExpression")
     public ModifyCostCenterRuleRequestFilterExpression filterExpression;
 
     /**
-     * <p>Level-1 marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+     * <p>The primary sales channel ID. If left empty, the channel ID of the current user is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
@@ -29,7 +29,7 @@ public class ModifyCostCenterRuleRequest extends TeaModel {
     public String nbid;
 
     /**
-     * <p>Owner of the financial unit (deprecated)</p>
+     * <p>The owner of the financial unit. (Deprecated)</p>
      * 
      * <strong>example:</strong>
      * <p>1234567812345678</p>
@@ -76,7 +76,7 @@ public class ModifyCostCenterRuleRequest extends TeaModel {
 
     public static class ModifyCostCenterRuleRequestFilterExpressionFilterValues extends TeaModel {
         /**
-         * <p>Condition filter key</p>
+         * <p>The condition filter key.</p>
          * 
          * <strong>example:</strong>
          * <p>TAG-test-xxx-key</p>
@@ -85,16 +85,16 @@ public class ModifyCostCenterRuleRequest extends TeaModel {
         public String code;
 
         /**
-         * <p>Condition filter key name (deprecated)</p>
+         * <p>The condition filter key name. (Deprecated)</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("CodeName")
         public String codeName;
 
         /**
-         * <p>Association between code and value</p>
+         * <p>The association between the code and value.</p>
          * 
          * <strong>example:</strong>
          * <p>IN</p>
@@ -103,7 +103,7 @@ public class ModifyCostCenterRuleRequest extends TeaModel {
         public String selectType;
 
         /**
-         * <p>Condition filter value list</p>
+         * <p>The list of condition filter values.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -149,7 +149,7 @@ public class ModifyCostCenterRuleRequest extends TeaModel {
 
     public static class ModifyCostCenterRuleRequestFilterExpression extends TeaModel {
         /**
-         * <p>Operation type</p>
+         * <p>The operation type.</p>
          * 
          * <strong>example:</strong>
          * <p>NARY</p>
@@ -158,28 +158,28 @@ public class ModifyCostCenterRuleRequest extends TeaModel {
         public String expressionType;
 
         /**
-         * <p>Sub-condition filter</p>
+         * <p>The sub-condition filter.</p>
          */
         @NameInMap("FilterValues")
         public ModifyCostCenterRuleRequestFilterExpressionFilterValues filterValues;
 
         /**
-         * <p>Filter condition (deprecated)</p>
+         * <p>The filter condition. (Deprecated)</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("Operand")
         public Object operand;
 
         /**
-         * <p>Condition expression</p>
+         * <p>The conditional expression.</p>
          */
         @NameInMap("Operands")
         public java.util.List<?> operands;
 
         /**
-         * <p>Relational expression</p>
+         * <p>The relational expression.</p>
          * 
          * <strong>example:</strong>
          * <p>AND</p>

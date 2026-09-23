@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCostCenterRuleShrinkRequest extends TeaModel {
     /**
-     * <p>Financial unit ID</p>
+     * <p>The financial unit ID.</p>
      * 
      * <strong>example:</strong>
      * <p>485938</p>
@@ -14,13 +14,13 @@ public class CreateCostCenterRuleShrinkRequest extends TeaModel {
     public Long costCenterId;
 
     /**
-     * <p>Rule expression</p>
+     * <p>The rule expression.</p>
      */
     @NameInMap("FilterExpression")
     public String filterExpressionShrink;
 
     /**
-     * <p>First-level marketplace ID. If left empty, the ID of the marketplace to which the current user belongs is used by default.</p>
+     * <p>The level-1 marketplace ID. If left empty, the marketplace ID of the current user is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2084210001</p>

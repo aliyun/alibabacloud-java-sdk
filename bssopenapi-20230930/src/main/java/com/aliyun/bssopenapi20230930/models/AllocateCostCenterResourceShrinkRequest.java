@@ -7,7 +7,7 @@ public class AllocateCostCenterResourceShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the source cost center. This parameter is required.</p>
      * <ul>
-     * <li>0 indicates that the cost center is unallocated.</li>
+     * <li>0 indicates the unallocated cost center.</li>
      * <li>A value greater than 0 indicates an allocated cost center ID.</li>
      * </ul>
      * 
@@ -45,8 +45,8 @@ public class AllocateCostCenterResourceShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the destination cost center. Valid values:</p>
      * <ul>
-     * <li>-1: moves the allocated resource to the unallocated state.</li>
-     * <li>A value greater than 0: allocates the resource to the specified cost center.</li>
+     * <li>-1: moves allocated resources back to the unallocated state.</li>
+     * <li>A value greater than 0: allocates resources to the specified cost center.</li>
      * </ul>
      * 
      * <strong>example:</strong>

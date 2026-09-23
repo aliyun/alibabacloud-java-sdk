@@ -1,3 +1,17 @@
+2026-09-23 Version: 2.0.0
+- Support API AddCreditSeats.
+- Support API CreateCreditSeat.
+- Support API ReduceCreditSeats.
+- Support API RenewCreditSeat.
+- Support API UpgradeCreditSeat.
+- Delete API CheckBudgetNameExists.
+- Delete API CreateBudget.
+- Delete API DeleteBudget.
+- Delete API DescribeBudget.
+- Delete API DescribeBudgets.
+- Delete API UpdateBudget.
+
+
 2026-09-09 Version: 1.11.3
 - Update API SetFundAccountCreditAmount: add request parameters CancelCredit.
 

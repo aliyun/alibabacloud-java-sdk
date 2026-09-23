@@ -3,7 +3,7 @@ package com.aliyun.bssopenapi20230930.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteBudgetResponse extends TeaModel {
+public class ReduceCreditSeatsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DeleteBudgetResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DeleteBudgetResponseBody body;
+    public ReduceCreditSeatsResponseBody body;
 
-    public static DeleteBudgetResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteBudgetResponse self = new DeleteBudgetResponse();
+    public static ReduceCreditSeatsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ReduceCreditSeatsResponse self = new ReduceCreditSeatsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteBudgetResponse setHeaders(java.util.Map<String, String> headers) {
+    public ReduceCreditSeatsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DeleteBudgetResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteBudgetResponse setStatusCode(Integer statusCode) {
+    public ReduceCreditSeatsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DeleteBudgetResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteBudgetResponse setBody(DeleteBudgetResponseBody body) {
+    public ReduceCreditSeatsResponse setBody(ReduceCreditSeatsResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteBudgetResponseBody getBody() {
+    public ReduceCreditSeatsResponseBody getBody() {
         return this.body;
     }
 

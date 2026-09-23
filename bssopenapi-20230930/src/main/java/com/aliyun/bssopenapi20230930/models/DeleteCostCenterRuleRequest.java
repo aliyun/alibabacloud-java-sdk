@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCostCenterRuleRequest extends TeaModel {
     /**
-     * <p>Financial unit ID.</p>
+     * <p>The cost center ID.</p>
      * 
      * <strong>example:</strong>
      * <p>637127</p>
@@ -14,14 +14,14 @@ public class DeleteCostCenterRuleRequest extends TeaModel {
     public Long costCenterId;
 
     /**
-     * <p>Rule expression.
-     * <strong>This field does not need to be entered during the delete operation.</strong></p>
+     * <p>The rule expression.
+     * <strong>This field does not need to be specified for delete operations.</strong></p>
      */
     @NameInMap("FilterExpression")
     public DeleteCostCenterRuleRequestFilterExpression filterExpression;
 
     /**
-     * <p>Level-1 marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+     * <p>The primary marketplace ID. If left empty, the marketplace ID of the current user is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
@@ -60,7 +60,7 @@ public class DeleteCostCenterRuleRequest extends TeaModel {
 
     public static class DeleteCostCenterRuleRequestFilterExpressionFilterValues extends TeaModel {
         /**
-         * <p>The condition filter key.</p>
+         * <p>The filter condition key.</p>
          * 
          * <strong>example:</strong>
          * <p>TAG-test-xxx-key</p>
@@ -69,16 +69,16 @@ public class DeleteCostCenterRuleRequest extends TeaModel {
         public String code;
 
         /**
-         * <p>The condition filter key name.</p>
+         * <p>The name of the filter condition key.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("CodeName")
         public String codeName;
 
         /**
-         * <p>The association between Code and value.</p>
+         * <p>The association between code and value.</p>
          * 
          * <strong>example:</strong>
          * <p>IN</p>
@@ -87,7 +87,7 @@ public class DeleteCostCenterRuleRequest extends TeaModel {
         public String selectType;
 
         /**
-         * <p>The condition filter values.</p>
+         * <p>The filter condition values.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -151,7 +151,7 @@ public class DeleteCostCenterRuleRequest extends TeaModel {
          * <p>The filter condition (no longer used).</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("Operand")
         public Object operand;

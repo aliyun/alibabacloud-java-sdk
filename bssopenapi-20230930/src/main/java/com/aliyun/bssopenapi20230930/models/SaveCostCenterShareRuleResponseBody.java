@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveCostCenterShareRuleResponseBody extends TeaModel {
     /**
-     * <p>The metadata of the response.</p>
+     * <p>The response struct metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

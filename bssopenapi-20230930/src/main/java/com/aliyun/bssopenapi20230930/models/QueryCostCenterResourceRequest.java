@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryCostCenterResourceRequest extends TeaModel {
     /**
-     * <p>The ID of the cost center.</p>
+     * <p>The ID of the financial unit.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -14,13 +14,13 @@ public class QueryCostCenterResourceRequest extends TeaModel {
     public Long costCenterId;
 
     /**
-     * <p>The list of enterprises and accounts. An empty value indicates querying the current account.</p>
+     * <p>The list of enterprises and accounts. If this parameter is empty, the current account is queried.</p>
      */
     @NameInMap("EcIdAccountIds")
     public java.util.List<QueryCostCenterResourceRequestEcIdAccountIds> ecIdAccountIds;
 
     /**
-     * <p>The maximum number of records per query.</p>
+     * <p>The maximum number of records to return in a single query.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class QueryCostCenterResourceRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The first-level marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+     * <p>The ID of the primary marketplace. If this parameter is empty, the marketplace ID of the current user is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
@@ -38,7 +38,7 @@ public class QueryCostCenterResourceRequest extends TeaModel {
     public String nbid;
 
     /**
-     * <p>The token for the next query. An empty NextToken indicates that there are no more results.</p>
+     * <p>The token for the next query. If this parameter is empty, no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>CAESEgoQCg4KCmd</p>
@@ -47,7 +47,7 @@ public class QueryCostCenterResourceRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The owner user ID of the cost center.</p>
+     * <p>The ID of the owner of the financial unit.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567812345678</p>
@@ -110,13 +110,13 @@ public class QueryCostCenterResourceRequest extends TeaModel {
 
     public static class QueryCostCenterResourceRequestEcIdAccountIds extends TeaModel {
         /**
-         * <p>The list of accessed accounts. An empty value indicates that all accounts under the current entity ID are selected.</p>
+         * <p>The list of account IDs to access. If this parameter is empty, all accounts under the current entity ID are selected.</p>
          */
         @NameInMap("AccountIds")
         public java.util.List<Long> accountIds;
 
         /**
-         * <p>The enterprise entity ID.</p>
+         * <p>The ID of the enterprise entity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

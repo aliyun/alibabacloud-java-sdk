@@ -14,13 +14,13 @@ public class QueryCostCenterRuleRequest extends TeaModel {
     public Long costCenterId;
 
     /**
-     * <p>List of enterprises and accounts. If empty, queries the current account itself.</p>
+     * <p>The list of enterprises and accounts. If this parameter is left empty, the current account is queried.</p>
      */
     @NameInMap("EcIdAccountIds")
     public java.util.List<QueryCostCenterRuleRequestEcIdAccountIds> ecIdAccountIds;
 
     /**
-     * <p>Primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+     * <p>The ID of the primary marketplace. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
@@ -59,13 +59,13 @@ public class QueryCostCenterRuleRequest extends TeaModel {
 
     public static class QueryCostCenterRuleRequestEcIdAccountIds extends TeaModel {
         /**
-         * <p>List of accounts to access. If empty, all accounts under the current entity ID are selected.</p>
+         * <p>The list of accounts to access. If this parameter is left empty, all accounts under the current entity ID are selected.</p>
          */
         @NameInMap("AccountIds")
         public java.util.List<Long> accountIds;
 
         /**
-         * <p>Enterprise entity ID.</p>
+         * <p>The enterprise entity ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

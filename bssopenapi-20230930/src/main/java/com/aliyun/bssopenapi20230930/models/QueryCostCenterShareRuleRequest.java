@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryCostCenterShareRuleRequest extends TeaModel {
     /**
-     * <p>The list of enterprises and accounts. If empty, the current account is queried.</p>
+     * <p>The list of enterprises and accounts. An empty value indicates that the current account is queried.</p>
      */
     @NameInMap("EcIdAccountIds")
     public java.util.List<QueryCostCenterShareRuleRequestEcIdAccountIds> ecIdAccountIds;
@@ -93,13 +93,13 @@ public class QueryCostCenterShareRuleRequest extends TeaModel {
 
     public static class QueryCostCenterShareRuleRequestEcIdAccountIds extends TeaModel {
         /**
-         * <p>The list of accounts to access. If empty, all accounts under the current entity ID are selected.</p>
+         * <p>The list of accounts to access. An empty value indicates that all accounts under the current entity ID are selected.</p>
          */
         @NameInMap("AccountIds")
         public java.util.List<Long> accountIds;
 
         /**
-         * <p>The ID of the enterprise entity.</p>
+         * <p>The enterprise entity ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

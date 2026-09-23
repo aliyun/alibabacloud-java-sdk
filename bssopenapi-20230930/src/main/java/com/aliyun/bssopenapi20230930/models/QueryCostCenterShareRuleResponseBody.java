@@ -20,7 +20,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The response struct metadata.</p>
+     * <p>The metadata of the response structure.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -500,7 +500,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public String shareRuleType;
 
         /**
-         * <p>The rule information of the destination financial unit.</p>
+         * <p>The rule information of the target financial unit.</p>
          */
         @NameInMap("ToCostCenterShareRuleDetails")
         public java.util.List<QueryCostCenterShareRuleResponseBodyDataToCostCenterShareRuleDetails> toCostCenterShareRuleDetails;

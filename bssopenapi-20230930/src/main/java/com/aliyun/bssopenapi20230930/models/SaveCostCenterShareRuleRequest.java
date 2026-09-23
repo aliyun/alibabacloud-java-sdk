@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class SaveCostCenterShareRuleRequest extends TeaModel {
     /**
-     * <p>The list of sharing rules to create.</p>
+     * <p>The list of allocation rules to create.</p>
      */
     @NameInMap("CreateShareRuleList")
     public java.util.List<SaveCostCenterShareRuleRequestCreateShareRuleList> createShareRuleList;
 
     /**
-     * <p>The list of sharing rules to modify.</p>
+     * <p>The list of allocation rules to update.</p>
      */
     @NameInMap("ModifyShareRuleList")
     public java.util.List<SaveCostCenterShareRuleRequestModifyShareRuleList> modifyShareRuleList;
 
     /**
-     * <p>The primary marketplace ID. If left empty, the marketplace ID of the current user is used by default.</p>
+     * <p>The ID of the level-1 sales channel. If this parameter is left empty, the ID of the sales channel to which the current user belongs is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
@@ -26,7 +26,7 @@ public class SaveCostCenterShareRuleRequest extends TeaModel {
     public String nbid;
 
     /**
-     * <p>The user ID of the cost center owner.</p>
+     * <p>The ID of the user who owns the financial unit.</p>
      * 
      * <strong>example:</strong>
      * <p>1977800748053695</p>
@@ -35,7 +35,7 @@ public class SaveCostCenterShareRuleRequest extends TeaModel {
     public Long ownerAccountId;
 
     /**
-     * <p>The list of sharing rules to delete.</p>
+     * <p>The list of allocation rules to delete.</p>
      */
     @NameInMap("RemoveShareRuleList")
     public java.util.List<Long> removeShareRuleList;
@@ -87,19 +87,19 @@ public class SaveCostCenterShareRuleRequest extends TeaModel {
 
     public static class SaveCostCenterShareRuleRequestCreateShareRuleList extends TeaModel {
         /**
-         * <p>The list of source cost centers.</p>
+         * <p>The list of source financial units.</p>
          */
         @NameInMap("FromCostCenterList")
         public java.util.List<Long> fromCostCenterList;
 
         /**
-         * <p>The list of sharing ratios.</p>
+         * <p>The list of allocation ratios.</p>
          */
         @NameInMap("ShareRatioList")
         public java.util.List<Double> shareRatioList;
 
         /**
-         * <p>The name of the sharing rule.</p>
+         * <p>The name of the allocation rule.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -108,7 +108,7 @@ public class SaveCostCenterShareRuleRequest extends TeaModel {
         public String shareRuleName;
 
         /**
-         * <p>The type of the sharing rule.</p>
+         * <p>The type of the allocation rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class SaveCostCenterShareRuleRequest extends TeaModel {
         public String shareType;
 
         /**
-         * <p>The list of target cost centers.</p>
+         * <p>The list of destination financial units.</p>
          */
         @NameInMap("ToCostCenterList")
         public java.util.List<Long> toCostCenterList;
@@ -172,19 +172,19 @@ public class SaveCostCenterShareRuleRequest extends TeaModel {
 
     public static class SaveCostCenterShareRuleRequestModifyShareRuleList extends TeaModel {
         /**
-         * <p>The list of source cost centers.</p>
+         * <p>The list of source financial units.</p>
          */
         @NameInMap("FromCostCenterList")
         public java.util.List<Long> fromCostCenterList;
 
         /**
-         * <p>The list of sharing ratios.</p>
+         * <p>The list of allocation ratios.</p>
          */
         @NameInMap("ShareRatioList")
         public java.util.List<Double> shareRatioList;
 
         /**
-         * <p>The ID of the sharing rule.</p>
+         * <p>The ID of the allocation rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +194,7 @@ public class SaveCostCenterShareRuleRequest extends TeaModel {
         public Long shareRuleId;
 
         /**
-         * <p>The name of the sharing rule.</p>
+         * <p>The name of the allocation rule.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -203,7 +203,7 @@ public class SaveCostCenterShareRuleRequest extends TeaModel {
         public String shareRuleName;
 
         /**
-         * <p>The type of the sharing rule.</p>
+         * <p>The type of the allocation rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class SaveCostCenterShareRuleRequest extends TeaModel {
         public String shareType;
 
         /**
-         * <p>The list of target cost centers.</p>
+         * <p>The list of destination financial units.</p>
          */
         @NameInMap("ToCostCenterList")
         public java.util.List<Long> toCostCenterList;

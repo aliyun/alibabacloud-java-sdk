@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryCostByCostCenterRequest extends TeaModel {
     /**
-     * <p>Billing month (format: YYYYMM)</p>
+     * <p>The billing cycle month in the format of YYYYMM.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class QueryCostByCostCenterRequest extends TeaModel {
     public Integer billingMonth;
 
     /**
-     * <p>Whether to display data rows with zero payable amount</p>
+     * <p>Specifies whether to display data rows with a payable amount of 0.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -24,7 +24,7 @@ public class QueryCostByCostCenterRequest extends TeaModel {
     public Boolean displayZeroAmountBills;
 
     /**
-     * <p>Whether to aggregate and display by cost center level</p>
+     * <p>Specifies whether to display results grouped by financial unit level.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -33,7 +33,7 @@ public class QueryCostByCostCenterRequest extends TeaModel {
     public Boolean groupByCostCenterLevel;
 
     /**
-     * <p>Cost type</p>
+     * <p>The cost type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class QueryCostByCostCenterRequest extends TeaModel {
     public String metrics;
 
     /**
-     * <p>Account ID that owns the resource</p>
+     * <p>The account ID of the resource ownership.</p>
      * 
      * <strong>example:</strong>
      * <p>1374729705039203</p>

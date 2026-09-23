@@ -21,7 +21,7 @@ public class QueryCostCenterShrinkRequest extends TeaModel {
     public String ecIdAccountIdsShrink;
 
     /**
-     * <p>The ID of the primary sales channel. If this parameter is left empty, the sales channel ID of the current user is used by default.</p>
+     * <p>The ID of the primary marketplace. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
@@ -30,7 +30,7 @@ public class QueryCostCenterShrinkRequest extends TeaModel {
     public String nbid;
 
     /**
-     * <p>The ID of the user who owns the financial unit.</p>
+     * <p>The ID of the user who owns the cost center.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class QueryCostCenterShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the parent financial unit. A value of -1 indicates the root financial unit.</p>
+     * <p>The ID of the parent cost center. A value of -1 indicates the root cost center.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -3,7 +3,7 @@ package com.aliyun.bssopenapi20230930.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateBudgetResponse extends TeaModel {
+public class RenewCreditSeatResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class UpdateBudgetResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public UpdateBudgetResponseBody body;
+    public RenewCreditSeatResponseBody body;
 
-    public static UpdateBudgetResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateBudgetResponse self = new UpdateBudgetResponse();
+    public static RenewCreditSeatResponse build(java.util.Map<String, ?> map) throws Exception {
+        RenewCreditSeatResponse self = new RenewCreditSeatResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateBudgetResponse setHeaders(java.util.Map<String, String> headers) {
+    public RenewCreditSeatResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class UpdateBudgetResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateBudgetResponse setStatusCode(Integer statusCode) {
+    public RenewCreditSeatResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class UpdateBudgetResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdateBudgetResponse setBody(UpdateBudgetResponseBody body) {
+    public RenewCreditSeatResponse setBody(RenewCreditSeatResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdateBudgetResponseBody getBody() {
+    public RenewCreditSeatResponseBody getBody() {
         return this.body;
     }
 

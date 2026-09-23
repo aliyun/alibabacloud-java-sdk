@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCostCenterRequest extends TeaModel {
     /**
-     * <p>Cost center ID.</p>
+     * <p>The cost center ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteCostCenterRequest extends TeaModel {
     public Long costCenterId;
 
     /**
-     * <p>First-level marketplace ID. If left empty, the marketplace ID of the current user is used by default.</p>
+     * <p>The ID of the primary marketplace. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
@@ -24,7 +24,7 @@ public class DeleteCostCenterRequest extends TeaModel {
     public String nbid;
 
     /**
-     * <p>User ID of the cost center owner.</p>
+     * <p>The ID of the user who owns the cost center.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

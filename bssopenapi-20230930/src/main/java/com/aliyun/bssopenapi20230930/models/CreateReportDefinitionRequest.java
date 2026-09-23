@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateReportDefinitionRequest extends TeaModel {
     /**
-     * <p>The start billing cycle for push. After successful subscription, the system automatically pushes data from the start billing cycle to the current time. This parameter is invalid for monthly bill PDF subscriptions and does not re-push historical data. Data within the last year can be pushed.</p>
+     * <p>The start billing cycle for push. After a successful subscription, the system automatically pushes data from the start billing cycle to the current time. This parameter is invalid for monthly bill PDF subscriptions and does not trigger re-push of historical data. Data within the last year can be pushed.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-05</p>
@@ -14,7 +14,7 @@ public class CreateReportDefinitionRequest extends TeaModel {
     public String beginBillingCycle;
 
     /**
-     * <p>Email subscription configuration. Specifies whether to include enterprise multi-account members in the bill.</p>
+     * <p>An email subscription configuration. Specifies whether to include enterprise multi-account members in the bill.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class CreateReportDefinitionRequest extends TeaModel {
     public String mcTableName;
 
     /**
-     * <p>The primary sales site ID. If left empty, the system uses the site ID of the current user by default.</p>
+     * <p>The primary sales site ID. If this parameter is left empty, the site ID of the current user is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
@@ -50,7 +50,7 @@ public class CreateReportDefinitionRequest extends TeaModel {
     public String nbid;
 
     /**
-     * <p>Email subscription configuration. Specifies whether to skip sending emails when no bills are available.</p>
+     * <p>An email subscription configuration. Specifies whether to skip sending emails when no bills are available.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -68,7 +68,7 @@ public class CreateReportDefinitionRequest extends TeaModel {
     public String ossBucketName;
 
     /**
-     * <p>The UID of the OSS owner that stores the files. If this is a Bid/Reseller subscription and you need to push to a sub-account\&quot;s OSS, specify this parameter. The account must be a sub-account of the calling account, and the AliyunConsumeDump2OSSRole permission must be granted to this account. Regular users do not need to specify this parameter. The default value is the calling account.</p>
+     * <p>The UID of the OSS owner that stores the files. If you are a Bid/Reseller subscriber and need to push files to a sub-account\&quot;s OSS, specify this parameter. The account must be a sub-account of the calling account, and the AliyunConsumeDump2OSSRole permission must be granted to this account. Regular users do not need to specify this parameter. The default value is the calling account.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567812345678</p>
@@ -86,7 +86,7 @@ public class CreateReportDefinitionRequest extends TeaModel {
     public String ossBucketPath;
 
     /**
-     * <p>The subscription source. Valid values: OSS, MC, or MSC_EMAIL.</p>
+     * <p>The subscription source. Valid values: OSS, MC, and MSC_EMAIL.</p>
      * 
      * <strong>example:</strong>
      * <p>OSS</p>
@@ -112,13 +112,13 @@ public class CreateReportDefinitionRequest extends TeaModel {
     public String reportType;
 
     /**
-     * <p>The user-specified subscription fields.</p>
+     * <p>The fields specified by the user for subscription.</p>
      */
     @NameInMap("SelectedFields")
     public java.util.List<String> selectedFields;
 
     /**
-     * <p>Email subscription configuration. Specifies whether to include bill attachments in emails.</p>
+     * <p>An email subscription configuration. Specifies whether to include bill attachments in emails.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -127,7 +127,7 @@ public class CreateReportDefinitionRequest extends TeaModel {
     public String sendWithAttach;
 
     /**
-     * <p>Email subscription configuration. Specifies whether to split attachments by user ID.</p>
+     * <p>An email subscription configuration. Specifies whether to split attachments by user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

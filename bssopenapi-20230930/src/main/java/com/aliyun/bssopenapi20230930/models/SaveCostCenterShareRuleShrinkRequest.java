@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class SaveCostCenterShareRuleShrinkRequest extends TeaModel {
     /**
-     * <p>The list of sharing rules to create.</p>
+     * <p>The list of allocation rules to create.</p>
      */
     @NameInMap("CreateShareRuleList")
     public String createShareRuleListShrink;
 
     /**
-     * <p>The list of sharing rules to modify.</p>
+     * <p>The list of allocation rules to update.</p>
      */
     @NameInMap("ModifyShareRuleList")
     public String modifyShareRuleListShrink;
 
     /**
-     * <p>The primary marketplace ID. If left empty, the marketplace ID of the current user is used by default.</p>
+     * <p>The ID of the level-1 sales channel. If this parameter is left empty, the ID of the sales channel to which the current user belongs is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
@@ -26,7 +26,7 @@ public class SaveCostCenterShareRuleShrinkRequest extends TeaModel {
     public String nbid;
 
     /**
-     * <p>The user ID of the cost center owner.</p>
+     * <p>The ID of the user who owns the financial unit.</p>
      * 
      * <strong>example:</strong>
      * <p>1977800748053695</p>
@@ -35,7 +35,7 @@ public class SaveCostCenterShareRuleShrinkRequest extends TeaModel {
     public Long ownerAccountId;
 
     /**
-     * <p>The list of sharing rules to delete.</p>
+     * <p>The list of allocation rules to delete.</p>
      */
     @NameInMap("RemoveShareRuleList")
     public String removeShareRuleListShrink;

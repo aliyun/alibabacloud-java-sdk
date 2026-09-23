@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyCostCenterResponseBody extends TeaModel {
     /**
-     * <p>The list of data entries.</p>
+     * <p>The data list.</p>
      */
     @NameInMap("CostCenterOperateDto")
     public java.util.List<ModifyCostCenterResponseBodyCostCenterOperateDto> costCenterOperateDto;
 
     /**
-     * <p>The metadata of the response.</p>
+     * <p>The response struct metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -59,7 +59,7 @@ public class ModifyCostCenterResponseBody extends TeaModel {
 
     public static class ModifyCostCenterResponseBodyCostCenterOperateDto extends TeaModel {
         /**
-         * <p>The ID of the cost center.</p>
+         * <p>The cost center ID.</p>
          * 
          * <strong>example:</strong>
          * <p>485938</p>
@@ -77,7 +77,7 @@ public class ModifyCostCenterResponseBody extends TeaModel {
         public Boolean isSuccess;
 
         /**
-         * <p>The ID of the owner to which the cost center belongs.</p>
+         * <p>The ID of the user who owns the cost center.</p>
          * 
          * <strong>example:</strong>
          * <p>1314839403940987</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOrderDetailRequest extends TeaModel {
     /**
-     * <p>The UID of the enterprise multi-account member managed by the current account. Leave this parameter empty if this scenario does not apply.</p>
+     * <p>The UID of a member account managed by the current account in a multi-account enterprise scenario. Leave this parameter empty if this scenario does not apply.</p>
      * 
      * <strong>example:</strong>
      * <p>1715322405372273</p>

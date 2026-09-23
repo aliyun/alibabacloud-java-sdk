@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOrdersRequest extends TeaModel {
     /**
-     * <p>The end of the order creation time range. If not specified, orders created within the most recent hour are queried. Format: YYYY-MM-ddTHH:mm:ssZ. Time zone: UTC.</p>
+     * <p>The end of the time range for order creation. By default, orders created within the most recent 1 hour are queried. Format: YYYY-MM-ddTHH:mm:ssZ. Time zone: UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2016-05-23T12:00:00Z</p>
@@ -14,7 +14,7 @@ public class GetOrdersRequest extends TeaModel {
     public String createTimeEnd;
 
     /**
-     * <p>The start of the order creation time range. If not specified, orders created within the most recent hour are queried. Format: YYYY-MM-ddTHH:mm:ssZ. Time zone: UTC.</p>
+     * <p>The start of the time range for order creation. By default, orders created within the most recent 1 hour are queried. Format: YYYY-MM-ddTHH:mm:ssZ. Time zone: UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2016-05-23T13:00:00Z</p>
@@ -23,7 +23,7 @@ public class GetOrdersRequest extends TeaModel {
     public String createTimeStart;
 
     /**
-     * <p>The UID of a member account in an enterprise with multiple member accounts. Leave this parameter empty if this scenario does not apply.</p>
+     * <p>The UID of a member account in the enterprise multi-account management. Leave this parameter empty if this scenario does not apply.</p>
      * 
      * <strong>example:</strong>
      * <p>1779628988149763</p>
@@ -80,10 +80,10 @@ public class GetOrdersRequest extends TeaModel {
      * <ul>
      * <li>Unpaid: unpaid.</li>
      * <li>Paid: paid.</li>
-     * <li>Cancelled: canceled.</li>
+     * <li>Cancelled: cancelled.</li>
      * </ul>
      * <blockquote>
-     * <p>For refund orders, set this parameter to NULL.</p>
+     * <p>For refund orders, this parameter can be set to NULL.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCostCenterResponseBody extends TeaModel {
     /**
-     * <p>Cost center ID.</p>
+     * <p>The cost center ID.</p>
      * 
      * <strong>example:</strong>
      * <p>485938</p>
@@ -23,7 +23,7 @@ public class DeleteCostCenterResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>Response metadata.</p>
+     * <p>The metadata of the response struct.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -32,7 +32,7 @@ public class DeleteCostCenterResponseBody extends TeaModel {
     public Object metadata;
 
     /**
-     * <p>User ID of the cost center owner.</p>
+     * <p>The ID of the user who owns the cost center.</p>
      * 
      * <strong>example:</strong>
      * <p>1314839403940987</p>
@@ -41,7 +41,7 @@ public class DeleteCostCenterResponseBody extends TeaModel {
     public Long ownerAccountId;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C1BD134E-D914-6AE0-1901-AEB2A99FA205</p>

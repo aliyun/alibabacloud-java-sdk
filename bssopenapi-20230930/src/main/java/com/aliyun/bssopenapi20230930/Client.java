@@ -154,6 +154,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>席位新增</p>
+     * 
+     * @param request AddCreditSeatsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddCreditSeatsResponse
+     */
+    public AddCreditSeatsResponse addCreditSeatsWithOptions(AddCreditSeatsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configs)) {
+            query.put("Configs", request.configs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.seats)) {
+            query.put("Seats", request.seats);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subscriptionType)) {
+            query.put("SubscriptionType", request.subscriptionType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddCreditSeats"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddCreditSeatsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>席位新增</p>
+     * 
+     * @param request AddCreditSeatsRequest
+     * @return AddCreditSeatsResponse
+     */
+    public AddCreditSeatsResponse addCreditSeats(AddCreditSeatsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addCreditSeatsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Allocates resource instances (instance-based and attached-resource-based) from a source cost center to a destination cost center.</p>
      * 
      * @param tmpReq AllocateCostCenterResourceRequest
@@ -329,177 +393,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Checks whether a specified budgetName exists.</p>
-     * 
-     * @param request CheckBudgetNameExistsRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return CheckBudgetNameExistsResponse
-     */
-    public CheckBudgetNameExistsResponse checkBudgetNameExistsWithOptions(CheckBudgetNameExistsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
-            query.put("Nbid", request.nbid);
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.budgetName)) {
-            body.put("BudgetName", request.budgetName);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CheckBudgetNameExists"),
-            new TeaPair("version", "2023-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckBudgetNameExistsResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Checks whether a specified budgetName exists.</p>
-     * 
-     * @param request CheckBudgetNameExistsRequest
-     * @return CheckBudgetNameExistsResponse
-     */
-    public CheckBudgetNameExistsResponse checkBudgetNameExists(CheckBudgetNameExistsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.checkBudgetNameExistsWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Creates a budget.</p>
-     * 
-     * @param tmpReq CreateBudgetRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return CreateBudgetResponse
-     */
-    public CreateBudgetResponse createBudgetWithOptions(CreateBudgetRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        CreateBudgetShrinkRequest request = new CreateBudgetShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.cycleQuota)) {
-            request.cycleQuotaShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.cycleQuota, "CycleQuota", "json");
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ecIdAccountIds)) {
-            request.ecIdAccountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ecIdAccountIds, "EcIdAccountIds", "json");
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.queryFilter)) {
-            request.queryFilterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.queryFilter, "QueryFilter", "json");
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.warnConfs)) {
-            request.warnConfsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.warnConfs, "WarnConfs", "json");
-        }
-
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIdsShrink)) {
-            query.put("EcIdAccountIds", request.ecIdAccountIdsShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
-            query.put("Nbid", request.nbid);
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.budgetName)) {
-            body.put("BudgetName", request.budgetName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.budgetType)) {
-            body.put("BudgetType", request.budgetType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
-            body.put("Comment", request.comment);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.cycleEndPeriod)) {
-            body.put("CycleEndPeriod", request.cycleEndPeriod);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.cycleQuotaShrink)) {
-            body.put("CycleQuota", request.cycleQuotaShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.cycleStartPeriod)) {
-            body.put("CycleStartPeriod", request.cycleStartPeriod);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.cycleType)) {
-            body.put("CycleType", request.cycleType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.metric)) {
-            body.put("Metric", request.metric);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.queryFilterShrink)) {
-            body.put("QueryFilter", request.queryFilterShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.quota)) {
-            body.put("Quota", request.quota);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.quotaType)) {
-            body.put("QuotaType", request.quotaType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.warnConfsShrink)) {
-            body.put("WarnConfs", request.warnConfsShrink);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateBudget"),
-            new TeaPair("version", "2023-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBudgetResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Creates a budget.</p>
-     * 
-     * @param request CreateBudgetRequest
-     * @return CreateBudgetResponse
-     */
-    public CreateBudgetResponse createBudget(CreateBudgetRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createBudgetWithOptions(request, runtime);
-    }
-
-    /**
      * <b>description</b> :
      * <p>Creates one or more cost centers.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create Cost Center</p>
+     * <p>Creates cost centers.</p>
      * 
      * @param tmpReq CreateCostCenterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -544,7 +442,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Creates one or more cost centers.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create Cost Center</p>
+     * <p>Creates cost centers.</p>
      * 
      * @param request CreateCostCenterRequest
      * @return CreateCostCenterResponse
@@ -556,7 +454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a financial unit auto-allocation rule</p>
+     * <p>Creates an automatic allocation rule for a financial unit.</p>
      * 
      * @param tmpReq CreateCostCenterRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -604,7 +502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a financial unit auto-allocation rule</p>
+     * <p>Creates an automatic allocation rule for a financial unit.</p>
      * 
      * @param request CreateCostCenterRuleRequest
      * @return CreateCostCenterRuleResponse
@@ -612,6 +510,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateCostCenterRuleResponse createCostCenterRule(CreateCostCenterRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createCostCenterRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建坐席</p>
+     * 
+     * @param request CreateCreditSeatRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCreditSeatResponse
+     */
+    public CreateCreditSeatResponse createCreditSeatWithOptions(CreateCreditSeatRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            query.put("PeriodUnit", request.periodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subscriptionConfigs)) {
+            query.put("SubscriptionConfigs", request.subscriptionConfigs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subscriptionType)) {
+            query.put("SubscriptionType", request.subscriptionType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCreditSeat"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCreditSeatResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建坐席</p>
+     * 
+     * @param request CreateCreditSeatRequest
+     * @return CreateCreditSeatResponse
+     */
+    public CreateCreditSeatResponse createCreditSeat(CreateCreditSeatRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCreditSeatWithOptions(request, runtime);
     }
 
     /**
@@ -834,19 +804,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When calling this operation, note the following:</p>
+     * <p>When you call this operation, note the following items:</p>
      * <ul>
-     * <li>A user can subscribe to one type of bill file at a time.</li>
-     * <li>Except for monthly bill PDFs, after subscription, starting from the next day, the system pushes a bill file that contains full detailed data from the beginning of the current month to date. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</li>
+     * <li>You can subscribe to one type of bill file at a time.</li>
+     * <li>Except for monthly bill PDFs, after you subscribe, the system pushes a bill file that contains full detailed data from the beginning of the current month to the present day starting from the next day. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</li>
      * <li>Monthly bill PDFs are pushed before the 4th of each month for the previous month.</li>
-     * <li>Bill files generated on a daily basis may have latency. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. Pull the full file for the previous month at the beginning of each month.<blockquote>
-     * <p>Apply for permissions as described in the documentation: <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Bill subscription</a></p>
+     * <li>Bill files generated on a daily basis may be delayed. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. We recommend that you pull the full file for the previous month at the beginning of each month.<blockquote>
+     * <p>Apply for permissions by following the instructions in <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Billing subscription</a>.</p>
      * </blockquote>
      * </li>
-     * <li>This subscription is the same feature as Expenses and Costs - Bill Subscription. Subscriptions are shared between the two.</li>
-     * <li>When subscribing to a directory under a bucket, ensure the directory name complies with the naming conventions:<ul>
+     * <li>This subscription shares the same functionality as the Expenses and Costs - Billing Subscription feature. Subscriptions are synchronized between the two.</li>
+     * <li>When you subscribe to a directory under a bucket, make sure the directory name complies with the naming conventions:<ul>
      * <li>Emojis are not allowed. Use valid UTF-8 characters.</li>
-     * <li>/ is used to separate paths and can quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</li>
+     * <li>Use / to separate paths and quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</li>
      * <li>Subdirectories named .. are not allowed.</li>
      * <li>The total length must be 1 to 254 characters.</li>
      * </ul>
@@ -862,7 +832,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </li>
      * </ul>
      * </li>
-     * <li>Monthly bill PDF type files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format is the same.</li>
+     * <li>Monthly bill PDF files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format remains the same.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -958,19 +928,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When calling this operation, note the following:</p>
+     * <p>When you call this operation, note the following items:</p>
      * <ul>
-     * <li>A user can subscribe to one type of bill file at a time.</li>
-     * <li>Except for monthly bill PDFs, after subscription, starting from the next day, the system pushes a bill file that contains full detailed data from the beginning of the current month to date. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</li>
+     * <li>You can subscribe to one type of bill file at a time.</li>
+     * <li>Except for monthly bill PDFs, after you subscribe, the system pushes a bill file that contains full detailed data from the beginning of the current month to the present day starting from the next day. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</li>
      * <li>Monthly bill PDFs are pushed before the 4th of each month for the previous month.</li>
-     * <li>Bill files generated on a daily basis may have latency. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. Pull the full file for the previous month at the beginning of each month.<blockquote>
-     * <p>Apply for permissions as described in the documentation: <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Bill subscription</a></p>
+     * <li>Bill files generated on a daily basis may be delayed. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. We recommend that you pull the full file for the previous month at the beginning of each month.<blockquote>
+     * <p>Apply for permissions by following the instructions in <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Billing subscription</a>.</p>
      * </blockquote>
      * </li>
-     * <li>This subscription is the same feature as Expenses and Costs - Bill Subscription. Subscriptions are shared between the two.</li>
-     * <li>When subscribing to a directory under a bucket, ensure the directory name complies with the naming conventions:<ul>
+     * <li>This subscription shares the same functionality as the Expenses and Costs - Billing Subscription feature. Subscriptions are synchronized between the two.</li>
+     * <li>When you subscribe to a directory under a bucket, make sure the directory name complies with the naming conventions:<ul>
      * <li>Emojis are not allowed. Use valid UTF-8 characters.</li>
-     * <li>/ is used to separate paths and can quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</li>
+     * <li>Use / to separate paths and quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</li>
      * <li>Subdirectories named .. are not allowed.</li>
      * <li>The total length must be 1 to 254 characters.</li>
      * </ul>
@@ -986,7 +956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </li>
      * </ul>
      * </li>
-     * <li>Monthly bill PDF type files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format is the same.</li>
+     * <li>Monthly bill PDF files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format remains the same.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1001,61 +971,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Deletes a budget.</p>
-     * 
-     * @param request DeleteBudgetRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DeleteBudgetResponse
-     */
-    public DeleteBudgetResponse deleteBudgetWithOptions(DeleteBudgetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
-            query.put("Nbid", request.nbid);
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.budgetName)) {
-            body.put("BudgetName", request.budgetName);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteBudget"),
-            new TeaPair("version", "2023-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteBudgetResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Deletes a budget.</p>
-     * 
-     * @param request DeleteBudgetRequest
-     * @return DeleteBudgetResponse
-     */
-    public DeleteBudgetResponse deleteBudget(DeleteBudgetRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteBudgetWithOptions(request, runtime);
-    }
-
-    /**
      * <b>description</b> :
-     * <p>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</p>
+     * <p>This operation is in canary release and is available only to specific whitelisted users. Calling this operation too frequently may cause performance issues such as response timeouts.</p>
      * 
      * <b>summary</b> : 
-     * <p>Delete Cost Center</p>
+     * <p>Deletes a cost center.</p>
      * 
      * @param request DeleteCostCenterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1095,10 +1015,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</p>
+     * <p>This operation is in canary release and is available only to specific whitelisted users. Calling this operation too frequently may cause performance issues such as response timeouts.</p>
      * 
      * <b>summary</b> : 
-     * <p>Delete Cost Center</p>
+     * <p>Deletes a cost center.</p>
      * 
      * @param request DeleteCostCenterRequest
      * @return DeleteCostCenterResponse
@@ -1110,10 +1030,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</p>
+     * <p>This API is in canary release and is available only to specific whitelisted users. Calling this API too frequently may cause performance issues such as response timeouts.</p>
      * 
      * <b>summary</b> : 
-     * <p>Delete financial unit automatic allocation rule</p>
+     * <p>Deletes an automatic allocation rule for a cost center.</p>
      * 
      * @param tmpReq DeleteCostCenterRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1161,10 +1081,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</p>
+     * <p>This API is in canary release and is available only to specific whitelisted users. Calling this API too frequently may cause performance issues such as response timeouts.</p>
      * 
      * <b>summary</b> : 
-     * <p>Delete financial unit automatic allocation rule</p>
+     * <p>Deletes an automatic allocation rule for a cost center.</p>
      * 
      * @param request DeleteCostCenterRuleRequest
      * @return DeleteCostCenterRuleResponse
@@ -1286,122 +1206,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteReportDefinitionResponse deleteReportDefinition(DeleteReportDefinitionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteReportDefinitionWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Query a Single Budget</p>
-     * 
-     * @param request DescribeBudgetRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DescribeBudgetResponse
-     */
-    public DescribeBudgetResponse describeBudgetWithOptions(DescribeBudgetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
-            query.put("Nbid", request.nbid);
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.budgetName)) {
-            body.put("BudgetName", request.budgetName);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeBudget"),
-            new TeaPair("version", "2023-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBudgetResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Query a Single Budget</p>
-     * 
-     * @param request DescribeBudgetRequest
-     * @return DescribeBudgetResponse
-     */
-    public DescribeBudgetResponse describeBudget(DescribeBudgetRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeBudgetWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Queries a list of budgets.</p>
-     * 
-     * @param request DescribeBudgetsRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DescribeBudgetsResponse
-     */
-    public DescribeBudgetsResponse describeBudgetsWithOptions(DescribeBudgetsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
-            query.put("Nbid", request.nbid);
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.budgetName)) {
-            body.put("BudgetName", request.budgetName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.budgetType)) {
-            body.put("BudgetType", request.budgetType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.expireStatus)) {
-            body.put("ExpireStatus", request.expireStatus);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
-            body.put("PageNo", request.pageNo);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            body.put("PageSize", request.pageSize);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeBudgets"),
-            new TeaPair("version", "2023-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBudgetsResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Queries a list of budgets.</p>
-     * 
-     * @param request DescribeBudgetsRequest
-     * @return DescribeBudgetsResponse
-     */
-    public DescribeBudgetsResponse describeBudgets(DescribeBudgetsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeBudgetsWithOptions(request, runtime);
     }
 
     /**
@@ -2240,7 +2044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specific order for a user or a reseller\&quot;s customer.</p>
+     * <p>Queries the details of a specific order for a user or a reseller customer.</p>
      * 
      * @param request GetOrderDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2280,7 +2084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specific order for a user or a reseller\&quot;s customer.</p>
+     * <p>Queries the details of a specific order for a user or a reseller customer.</p>
      * 
      * @param request GetOrderDetailRequest
      * @return GetOrderDetailResponse
@@ -2292,7 +2096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the order list of a user or a reseller customer. By default, this operation queries orders created within the most recent hour. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</p>
+     * <p>Queries the order list of a user or a reseller customer. By default, orders created within the most recent 1 hour are queried. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</p>
      * 
      * @param request GetOrdersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2364,7 +2168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the order list of a user or a reseller customer. By default, this operation queries orders created within the most recent hour. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</p>
+     * <p>Queries the order list of a user or a reseller customer. By default, orders created within the most recent 1 hour are queried. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</p>
      * 
      * @param request GetOrdersRequest
      * @return GetOrdersResponse
@@ -2926,7 +2730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Modifies one or more cost centers.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modify cost centers</p>
+     * <p>Modifies one or more cost centers.</p>
      * 
      * @param tmpReq ModifyCostCenterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2971,7 +2775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Modifies one or more cost centers.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modify cost centers</p>
+     * <p>Modifies one or more cost centers.</p>
      * 
      * @param request ModifyCostCenterRequest
      * @return ModifyCostCenterResponse
@@ -2983,10 +2787,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Modify one or more financial units</p>
+     * <p>Modifies one or more financial units.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modify financial unit rules</p>
+     * <p>Modifies the automatic allocation rule of a financial unit.</p>
      * 
      * @param tmpReq ModifyCostCenterRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3038,10 +2842,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Modify one or more financial units</p>
+     * <p>Modifies one or more financial units.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modify financial unit rules</p>
+     * <p>Modifies the automatic allocation rule of a financial unit.</p>
      * 
      * @param request ModifyCostCenterRuleRequest
      * @return ModifyCostCenterRuleResponse
@@ -3121,10 +2925,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query cost center expense overview results for a specified billing period</p>
+     * <p>Queries the cost overview results of a financial unit for a specified billing cycle.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query cost center expense overview</p>
+     * <p>Queries the cost overview of financial units.</p>
      * 
      * @param request QueryCostByCostCenterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3172,10 +2976,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query cost center expense overview results for a specified billing period</p>
+     * <p>Queries the cost overview results of a financial unit for a specified billing cycle.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query cost center expense overview</p>
+     * <p>Queries the cost overview of financial units.</p>
      * 
      * @param request QueryCostByCostCenterRequest
      * @return QueryCostByCostCenterResponse
@@ -3187,10 +2991,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries a parent financial unit and its child financial units.</p>
+     * <p>Queries a parent cost center and its child cost centers.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries financial units.</p>
+     * <p>Queries cost centers.</p>
      * 
      * @param tmpReq QueryCostCenterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3248,10 +3052,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries a parent financial unit and its child financial units.</p>
+     * <p>Queries a parent cost center and its child cost centers.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries financial units.</p>
+     * <p>Queries cost centers.</p>
      * 
      * @param request QueryCostCenterRequest
      * @return QueryCostCenterResponse
@@ -3263,7 +3067,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of resource instances that belong to a cost center of the user. When CostCenterId is 0, it queries unallocated primary and sub-resource instances.</p>
+     * <p>Queries the list of resource instances that belong to a financial unit of a user. If CostCenterId is set to 0, unallocated primary and sub-resource instances are queried.</p>
      * 
      * @param request QueryCostCenterResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3317,7 +3121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of resource instances that belong to a cost center of the user. When CostCenterId is 0, it queries unallocated primary and sub-resource instances.</p>
+     * <p>Queries the list of resource instances that belong to a financial unit of a user. If CostCenterId is set to 0, unallocated primary and sub-resource instances are queried.</p>
      * 
      * @param request QueryCostCenterResourceRequest
      * @return QueryCostCenterResourceResponse
@@ -3329,10 +3133,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query parent cost center and its child cost centers.</p>
+     * <p>Queries a parent cost center and its child cost centers.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query cost center rules</p>
+     * <p>Queries the automatic allocation rules of a cost center.</p>
      * 
      * @param request QueryCostCenterRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3374,10 +3178,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query parent cost center and its child cost centers.</p>
+     * <p>Queries a parent cost center and its child cost centers.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query cost center rules</p>
+     * <p>Queries the automatic allocation rules of a cost center.</p>
      * 
      * @param request QueryCostCenterRuleRequest
      * @return QueryCostCenterRuleResponse
@@ -3455,7 +3259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Provides the SLA compensation details list for a user. Only data from the last two months is available.</p>
+     * <p>Queries the SLA compensation details list for a user. Only data from the last two months is available.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the SLA compensation list for a user.</p>
@@ -3520,7 +3324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Provides the SLA compensation details list for a user. Only data from the last two months is available.</p>
+     * <p>Queries the SLA compensation details list for a user. Only data from the last two months is available.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the SLA compensation list for a user.</p>
@@ -3535,7 +3339,135 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies cost center sharing rules, including creating, modifying, and deleting sharing rules.</p>
+     * <p>减席位</p>
+     * 
+     * @param request ReduceCreditSeatsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReduceCreditSeatsResponse
+     */
+    public ReduceCreditSeatsResponse reduceCreditSeatsWithOptions(ReduceCreditSeatsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subscriptionType)) {
+            query.put("SubscriptionType", request.subscriptionType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReduceCreditSeats"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReduceCreditSeatsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>减席位</p>
+     * 
+     * @param request ReduceCreditSeatsRequest
+     * @return ReduceCreditSeatsResponse
+     */
+    public ReduceCreditSeatsResponse reduceCreditSeats(ReduceCreditSeatsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.reduceCreditSeatsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>整体续费席位</p>
+     * 
+     * @param request RenewCreditSeatRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RenewCreditSeatResponse
+     */
+    public RenewCreditSeatResponse renewCreditSeatWithOptions(RenewCreditSeatRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            query.put("PeriodUnit", request.periodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subscriptionType)) {
+            query.put("SubscriptionType", request.subscriptionType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RenewCreditSeat"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RenewCreditSeatResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>整体续费席位</p>
+     * 
+     * @param request RenewCreditSeatRequest
+     * @return RenewCreditSeatResponse
+     */
+    public RenewCreditSeatResponse renewCreditSeat(RenewCreditSeatRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.renewCreditSeatWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies cost allocation rules for financial units, including creating, updating, and deleting allocation rules.</p>
      * 
      * @param tmpReq SaveCostCenterShareRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3597,7 +3529,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies cost center sharing rules, including creating, modifying, and deleting sharing rules.</p>
+     * <p>Modifies cost allocation rules for financial units, including creating, updating, and deleting allocation rules.</p>
      * 
      * @param request SaveCostCenterShareRuleRequest
      * @return SaveCostCenterShareRuleResponse
@@ -3782,13 +3714,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>Call QueryMonthlySlaList to obtain the claimable months and records.</li>
+     * <li>Call QueryMonthlySlaList to retrieve the claimable months and records.</li>
      * <li>Claim by month or by record.
      * Note: Only compensation for the last two months can be claimed. Historical compensation has been automatically issued.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>User claims coupons for the last two months.</p>
+     * <p>Claims SLA compensation coupons for the last two months.</p>
      * 
      * @param request SubmitSlaCouponApplyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3835,13 +3767,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>Call QueryMonthlySlaList to obtain the claimable months and records.</li>
+     * <li>Call QueryMonthlySlaList to retrieve the claimable months and records.</li>
      * <li>Claim by month or by record.
      * Note: Only compensation for the last two months can be claimed. Historical compensation has been automatically issued.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>User claims coupons for the last two months.</p>
+     * <p>Claims SLA compensation coupons for the last two months.</p>
      * 
      * @param request SubmitSlaCouponApplyRequest
      * @return SubmitSlaCouponApplyResponse
@@ -3853,100 +3785,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a budget.</p>
+     * <p>升级席位</p>
      * 
-     * @param tmpReq UpdateBudgetRequest
+     * @param request UpgradeCreditSeatRequest
      * @param runtime runtime options for this request RuntimeOptions
-     * @return UpdateBudgetResponse
+     * @return UpgradeCreditSeatResponse
      */
-    public UpdateBudgetResponse updateBudgetWithOptions(UpdateBudgetRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        UpdateBudgetShrinkRequest request = new UpdateBudgetShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.cycleQuota)) {
-            request.cycleQuotaShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.cycleQuota, "CycleQuota", "json");
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ecIdAccountIds)) {
-            request.ecIdAccountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ecIdAccountIds, "EcIdAccountIds", "json");
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.queryFilter)) {
-            request.queryFilterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.queryFilter, "QueryFilter", "json");
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.warnConfs)) {
-            request.warnConfsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.warnConfs, "WarnConfs", "json");
-        }
-
+    public UpgradeCreditSeatResponse upgradeCreditSeatWithOptions(UpgradeCreditSeatRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIdsShrink)) {
-            query.put("EcIdAccountIds", request.ecIdAccountIdsShrink);
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
-            query.put("Nbid", request.nbid);
+        if (!com.aliyun.teautil.Common.isUnset(request.configs)) {
+            query.put("Configs", request.configs);
         }
 
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.budgetName)) {
-            body.put("BudgetName", request.budgetName);
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.budgetType)) {
-            body.put("BudgetType", request.budgetType);
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
-            body.put("Comment", request.comment);
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.cycleEndPeriod)) {
-            body.put("CycleEndPeriod", request.cycleEndPeriod);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.cycleQuotaShrink)) {
-            body.put("CycleQuota", request.cycleQuotaShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.cycleStartPeriod)) {
-            body.put("CycleStartPeriod", request.cycleStartPeriod);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.cycleType)) {
-            body.put("CycleType", request.cycleType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.metric)) {
-            body.put("Metric", request.metric);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.originalBudgetName)) {
-            body.put("OriginalBudgetName", request.originalBudgetName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.queryFilterShrink)) {
-            body.put("QueryFilter", request.queryFilterShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.quota)) {
-            body.put("Quota", request.quota);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.quotaType)) {
-            body.put("QuotaType", request.quotaType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.warnConfsShrink)) {
-            body.put("WarnConfs", request.warnConfsShrink);
+        if (!com.aliyun.teautil.Common.isUnset(request.subscriptionType)) {
+            query.put("SubscriptionType", request.subscriptionType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateBudget"),
+            new TeaPair("action", "UpgradeCreditSeat"),
             new TeaPair("version", "2023-09-30"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
@@ -3956,18 +3832,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateBudgetResponse());
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradeCreditSeatResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a budget.</p>
+     * <p>升级席位</p>
      * 
-     * @param request UpdateBudgetRequest
-     * @return UpdateBudgetResponse
+     * @param request UpgradeCreditSeatRequest
+     * @return UpgradeCreditSeatResponse
      */
-    public UpdateBudgetResponse updateBudget(UpdateBudgetRequest request) throws Exception {
+    public UpgradeCreditSeatResponse upgradeCreditSeat(UpgradeCreditSeatRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateBudgetWithOptions(request, runtime);
+        return this.upgradeCreditSeatWithOptions(request, runtime);
     }
 }

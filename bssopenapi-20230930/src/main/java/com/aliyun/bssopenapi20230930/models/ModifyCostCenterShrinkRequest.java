@@ -12,7 +12,7 @@ public class ModifyCostCenterShrinkRequest extends TeaModel {
     public String costCenterEntityListShrink;
 
     /**
-     * <p>The level-1 marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
+     * <p>The primary marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2684201000001</p>

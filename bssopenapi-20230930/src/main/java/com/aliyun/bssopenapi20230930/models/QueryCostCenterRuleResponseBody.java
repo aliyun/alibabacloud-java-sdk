@@ -38,7 +38,7 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
     public String gmtModified;
 
     /**
-     * <p>The ID of the cost center auto-allocation rule.</p>
+     * <p>The ID of the cost center automatic allocation rule.</p>
      * 
      * <strong>example:</strong>
      * <p>32048</p>
@@ -49,8 +49,8 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
     /**
      * <p>The deletion status. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: active.</li>
-     * <li><strong>1</strong>: inactive.</li>
+     * <li><strong>0</strong>: Active.</li>
+     * <li><strong>1</strong>: Inactive.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
     public Integer isDeleted;
 
     /**
-     * <p>Response structure metadata.</p>
+     * <p>The response struct metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -69,7 +69,7 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
     public Object metadata;
 
     /**
-     * <p>The owner user of the cost center.</p>
+     * <p>The owner of the cost center.</p>
      * 
      * <strong>example:</strong>
      * <p>1977800748053695</p>
@@ -78,7 +78,7 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
     public Long ownerAccountId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>UUID</p>
@@ -98,8 +98,8 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
     /**
      * <p>The status. Valid values:</p>
      * <ul>
-     * <li>on: active.</li>
-     * <li>off: inactive.</li>
+     * <li>on: Active.</li>
+     * <li>off: Inactive.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -215,13 +215,13 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
          * <p>The condition filter key name (deprecated).</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("CodeName")
         public String codeName;
 
         /**
-         * <p>The association between code and value.</p>
+         * <p>The association between the code and value.</p>
          * 
          * <strong>example:</strong>
          * <p>IN</p>
@@ -230,7 +230,7 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
         public String selectType;
 
         /**
-         * <p>The attribute value types corresponding to the module code. Valid values:</p>
+         * <p>The attribute value type corresponding to the module Code. Valid values:</p>
          * <ul>
          * <li>single_float: single value type.</li>
          * <li>range_float: range value type.</li>
@@ -298,13 +298,13 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
          * <p>The filter condition (deprecated).</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("Operand")
         public Object operand;
 
         /**
-         * <p>The condition expression.</p>
+         * <p>The conditional expression.</p>
          */
         @NameInMap("Operands")
         public java.util.List<?> operands;

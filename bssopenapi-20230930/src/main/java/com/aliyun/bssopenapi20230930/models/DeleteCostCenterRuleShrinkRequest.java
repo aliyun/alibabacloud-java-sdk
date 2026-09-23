@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCostCenterRuleShrinkRequest extends TeaModel {
     /**
-     * <p>Financial unit ID.</p>
+     * <p>The cost center ID.</p>
      * 
      * <strong>example:</strong>
      * <p>637127</p>
@@ -14,14 +14,14 @@ public class DeleteCostCenterRuleShrinkRequest extends TeaModel {
     public Long costCenterId;
 
     /**
-     * <p>Rule expression.
-     * <strong>This field does not need to be entered during the delete operation.</strong></p>
+     * <p>The rule expression.
+     * <strong>This field does not need to be specified for delete operations.</strong></p>
      */
     @NameInMap("FilterExpression")
     public String filterExpressionShrink;
 
     /**
-     * <p>Level-1 marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+     * <p>The primary marketplace ID. If left empty, the marketplace ID of the current user is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
