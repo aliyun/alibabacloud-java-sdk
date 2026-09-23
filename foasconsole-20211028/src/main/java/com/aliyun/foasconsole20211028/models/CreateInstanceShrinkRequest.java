@@ -77,7 +77,7 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     public String extra;
 
     /**
-     * <p>Specifies whether to enable zone-disaster recovery resources.</p>
+     * <p>Specifies whether to use zone-disaster recovery resources.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -117,7 +117,7 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The type of monitoring and alerting service. You can select Application Real-Time Monitoring Service (ARMS) or CloudMonitor.</p>
+     * <p>The type of the monitoring and alerting service. You can select ARMS or CloudMonitor.</p>
      * 
      * <strong>example:</strong>
      * <p>TAIHAO</p>

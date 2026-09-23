@@ -77,7 +77,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String extra;
 
     /**
-     * <p>Specifies whether to enable zone-disaster recovery resources.</p>
+     * <p>Specifies whether to use zone-disaster recovery resources.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -117,7 +117,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The type of monitoring and alerting service. You can select Application Real-Time Monitoring Service (ARMS) or CloudMonitor.</p>
+     * <p>The type of the monitoring and alerting service. You can select ARMS or CloudMonitor.</p>
      * 
      * <strong>example:</strong>
      * <p>TAIHAO</p>
@@ -503,7 +503,7 @@ public class CreateInstanceRequest extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The memory size for zone-disaster recovery. The value is active memory allocated for high availability (HA).</p>
+         * <p>The memory size for zone-disaster recovery high availability (HA).</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -621,10 +621,11 @@ public class CreateInstanceRequest extends TeaModel {
          * <p>false</p>
          */
         @NameInMap("FullyManaged")
+        @Deprecated
         public Boolean fullyManaged;
 
         /**
-         * <p>The Object Storage Service (OSS) storage.</p>
+         * <p>The OSS storage configurations.</p>
          */
         @NameInMap("Oss")
         public CreateInstanceRequestStorageOss oss;
@@ -634,6 +635,7 @@ public class CreateInstanceRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public CreateInstanceRequestStorage setFullyManaged(Boolean fullyManaged) {
             this.fullyManaged = fullyManaged;
             return this;

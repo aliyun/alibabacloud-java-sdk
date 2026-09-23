@@ -1611,7 +1611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the estimated refund amount after converting your Flink instance from subscription to pay-as-you-go. After the conversion, your usage is metered hourly and bills are generated accordingly.</p>
+     * <p>Queries the estimated refund amount after your Flink instance is switched from subscription to pay-as-you-go. After the switch, your usage is metered hourly and billed accordingly.</p>
      * 
      * @param request QueryConvertPrepayInstancePriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1647,7 +1647,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the estimated refund amount after converting your Flink instance from subscription to pay-as-you-go. After the conversion, your usage is metered hourly and bills are generated accordingly.</p>
+     * <p>Queries the estimated refund amount after your Flink instance is switched from subscription to pay-as-you-go. After the switch, your usage is metered hourly and billed accordingly.</p>
      * 
      * @param request QueryConvertPrepayInstancePriceRequest
      * @return QueryConvertPrepayInstancePriceResponse
@@ -1931,10 +1931,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/renewal-policy">pricing</a> of Realtime Compute for Apache Flink.</em>*</p>
+     * <p><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/renewal-policy">pricing</a> of the fully managed Flink service.</em>*</p>
      * 
      * <b>summary</b> : 
-     * <p>Renews a subscription Realtime Compute for Apache Flink workspace.</p>
+     * <p>Renews a subscription fully managed Flink workspace.</p>
      * 
      * @param request RenewInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1986,10 +1986,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/renewal-policy">pricing</a> of Realtime Compute for Apache Flink.</em>*</p>
+     * <p><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/renewal-policy">pricing</a> of the fully managed Flink service.</em>*</p>
      * 
      * <b>summary</b> : 
-     * <p>Renews a subscription Realtime Compute for Apache Flink workspace.</p>
+     * <p>Renews a subscription fully managed Flink workspace.</p>
      * 
      * @param request RenewInstanceRequest
      * @return RenewInstanceResponse

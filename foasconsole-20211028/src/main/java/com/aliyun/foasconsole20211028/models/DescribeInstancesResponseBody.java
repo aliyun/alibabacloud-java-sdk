@@ -1084,7 +1084,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyInstancesStorage extends TeaModel {
         /**
-         * <p>Indicates whether fully managed storage is selected. Valid values:</p>
+         * <p>Specifies whether fully managed storage is selected. Valid values:</p>
          * <ul>
          * <li>true: Used.</li>
          * <li>false: Not used.</li>
@@ -1371,7 +1371,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
-         * <p>The VPC description.</p>
+         * <p>The description of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>“”</p>
@@ -1667,7 +1667,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The time when the instance was created. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1629879567394</p>
@@ -1676,7 +1676,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Long resourceCreateTime;
 
         /**
-         * <p>The overdue time.</p>
+         * <p>The time when the instance expires. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1637337600000</p>

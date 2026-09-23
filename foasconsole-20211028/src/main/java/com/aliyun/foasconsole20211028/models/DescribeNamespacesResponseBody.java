@@ -38,7 +38,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
      * <li>true: Successful.</li>
      * <li>false: Failed.</li>
@@ -130,9 +130,21 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespacesResponseBodyNamespacesElasticResourceSpec extends TeaModel {
+        /**
+         * <p>The maximum CPU limit for pay-as-you-go resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>The maximum memory limit for pay-as-you-go resources. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MemoryGB")
         public Integer memoryGB;
 
@@ -160,9 +172,21 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespacesResponseBodyNamespacesGuaranteedResourceSpec extends TeaModel {
+        /**
+         * <p>The number of CPUs for subscription resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>The memory size for subscription resources. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MemoryGB")
         public Integer memoryGB;
 
@@ -233,7 +257,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
 
     public static class DescribeNamespacesResponseBodyNamespacesResourceUsed extends TeaModel {
         /**
-         * <p>The number of used CPUs.</p>
+         * <p>The number of CPUs used.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -241,11 +265,17 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         @NameInMap("Cpu")
         public Float cpu;
 
+        /**
+         * <p>The number of compute units (CUs) used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Cu")
         public Float cu;
 
         /**
-         * <p>The amount of used memory.</p>
+         * <p>The amount of memory used.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -348,9 +378,18 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The subscription resources allocated to the namespace.</p>
+         */
         @NameInMap("GuaranteedResourceSpec")
         public DescribeNamespacesResponseBodyNamespacesGuaranteedResourceSpec guaranteedResourceSpec;
 
+        /**
+         * <p>Indicates whether zone-disaster recovery is enabled for the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Ha")
         public Boolean ha;
 

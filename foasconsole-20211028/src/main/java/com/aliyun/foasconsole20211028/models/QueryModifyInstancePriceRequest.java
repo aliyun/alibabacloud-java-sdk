@@ -144,7 +144,7 @@ public class QueryModifyInstancePriceRequest extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The memory size for zone-disaster recovery.</p>
+         * <p>The active memory size for zone-disaster recovery.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>

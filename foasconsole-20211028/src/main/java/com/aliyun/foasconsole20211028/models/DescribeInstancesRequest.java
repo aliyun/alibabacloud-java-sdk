@@ -14,7 +14,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String architectureType;
 
     /**
-     * <p>The payment type.</p>
+     * <p>The billing method.</p>
      * 
      * <strong>example:</strong>
      * <p>PRE</p>

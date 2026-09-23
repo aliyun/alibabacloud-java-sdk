@@ -68,7 +68,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         public String cheapRate;
 
         /**
-         * <p>The reduced list price total.</p>
+         * <p>The list price total after the price reduction.</p>
          * 
          * <strong>example:</strong>
          * <p>6000</p>
@@ -104,7 +104,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         public String originalStandAmount;
 
         /**
-         * <p>The price reduction start time.</p>
+         * <p>The price reduction start time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-04T21:10:26+08:00</p>
@@ -187,7 +187,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         public String promotionName;
 
         /**
-         * <p>The coupon ID.</p>
+         * <p>The coupon number.</p>
          * 
          * <strong>example:</strong>
          * <p>500011220010099</p>
@@ -254,7 +254,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
          * <p>The promotion rule description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Purchase for 1 year or more to enjoy a 15% discount off the list price</p>
+         * <p>Purchase for 1 year or more and enjoy a 15% discount off the list price</p>
          */
         @NameInMap("Description")
         public String description;
@@ -335,7 +335,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         public Boolean isContractActivity;
 
         /**
-         * <p>The Lingxiao request ID.</p>
+         * <p>The Lingxiao request ID of the call.</p>
          * 
          * <strong>example:</strong>
          * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
@@ -374,7 +374,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         public java.util.List<QueryModifyInstancePriceResponseBodyPriceInfoRules> rules;
 
         /**
-         * <p>The discounted price based on the official website discount.</p>
+         * <p>The discounted price based on the list discount.</p>
          * 
          * <strong>example:</strong>
          * <p>1231</p>
@@ -383,7 +383,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         public String standDiscountPrice;
 
         /**
-         * <p>The official website discount price or direct sales contract discount price.</p>
+         * <p>The list discount price or direct sales contract discount price.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>

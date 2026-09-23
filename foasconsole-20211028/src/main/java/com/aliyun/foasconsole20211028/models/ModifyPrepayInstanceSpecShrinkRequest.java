@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyPrepayInstanceSpecShrinkRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable zone-disaster recovery resources for the workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -12,6 +17,8 @@ public class ModifyPrepayInstanceSpecShrinkRequest extends TeaModel {
     public Boolean ha;
 
     /**
+     * <p>The resource specifications for zone-disaster recovery.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -19,6 +26,8 @@ public class ModifyPrepayInstanceSpecShrinkRequest extends TeaModel {
     public String haResourceSpecShrink;
 
     /**
+     * <p>The list of vSwitch IDs in the secondary zone for zone-disaster recovery.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -26,6 +35,8 @@ public class ModifyPrepayInstanceSpecShrinkRequest extends TeaModel {
     public String haVSwitchIdsShrink;
 
     /**
+     * <p>The ID of the secondary zone for zone-disaster recovery.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -43,7 +54,7 @@ public class ModifyPrepayInstanceSpecShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

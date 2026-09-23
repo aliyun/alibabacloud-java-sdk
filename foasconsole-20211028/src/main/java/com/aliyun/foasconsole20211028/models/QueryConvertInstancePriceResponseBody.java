@@ -68,7 +68,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
         public String cheapRate;
 
         /**
-         * <p>The standard total price after the price reduction.</p>
+         * <p>The total list price after the price reduction.</p>
          * 
          * <strong>example:</strong>
          * <p>8000</p>
@@ -95,7 +95,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
         public String monthPrice;
 
         /**
-         * <p>The original standard total price.</p>
+         * <p>The original total list price.</p>
          * 
          * <strong>example:</strong>
          * <p>12000</p>
@@ -104,7 +104,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
         public String originalStandAmount;
 
         /**
-         * <p>The start time of the price reduction.</p>
+         * <p>The start time of the price reduction, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-08-21T02:06:00Z</p>
@@ -254,7 +254,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
          * <p>The description of the promotion rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Purchase for 1 year or more and enjoy a 15% discount off the official price</p>
+         * <p>Purchase for 1 year or more and enjoy a 15% discount off the list price</p>
          */
         @NameInMap("Description")
         public String description;
@@ -326,7 +326,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
         public Float discountAmount;
 
         /**
-         * <p>Indicates whether the enterprise discount is applied.</p>
+         * <p>Indicates whether an enterprise discount is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -347,7 +347,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>An unpaid order exists. Pay or cancel the existing order first</p>
+         * <p>An unpaid order exists. Pay for or cancel the existing order first</p>
          */
         @NameInMap("Message")
         public String message;
@@ -374,7 +374,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
         public java.util.List<QueryConvertInstancePriceResponseBodyPriceInfoRules> rules;
 
         /**
-         * <p>The discounted price based on the official website discount.</p>
+         * <p>The promotional price based on the standard discount from the official website.</p>
          * 
          * <strong>example:</strong>
          * <p>21321</p>
@@ -383,7 +383,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
         public String standDiscountPrice;
 
         /**
-         * <p>The official website discounted price or direct sales contract discounted price.</p>
+         * <p>The standard discounted price on the official website or the direct sales contract discounted price.</p>
          * 
          * <strong>example:</strong>
          * <p>32432</p>
