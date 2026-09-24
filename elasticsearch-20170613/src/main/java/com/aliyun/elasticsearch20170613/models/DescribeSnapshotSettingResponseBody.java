@@ -51,7 +51,13 @@ public class DescribeSnapshotSettingResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The automatic backup time configuration, which uses a Quartz Cron expression.</p>
+         * <p>The list of indexes to back up.</p>
+         */
+        @NameInMap("Indices")
+        public java.util.List<String> indices;
+
+        /**
+         * <p>The automatic backup time configuration, specified as a Quartz Cron expression.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 01 ? * * *</p>
@@ -70,6 +76,14 @@ public class DescribeSnapshotSettingResponseBody extends TeaModel {
         }
         public Boolean getEnable() {
             return this.enable;
+        }
+
+        public DescribeSnapshotSettingResponseBodyResult setIndices(java.util.List<String> indices) {
+            this.indices = indices;
+            return this;
+        }
+        public java.util.List<String> getIndices() {
+            return this.indices;
         }
 
         public DescribeSnapshotSettingResponseBodyResult setQuartzRegex(String quartzRegex) {

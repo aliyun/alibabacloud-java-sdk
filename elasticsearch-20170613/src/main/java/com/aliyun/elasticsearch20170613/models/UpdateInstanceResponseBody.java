@@ -4,9 +4,21 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The error code. This parameter is returned only when an exception occurs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InstanceNotFound</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The error message. This parameter is returned only when an exception occurs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified cluster does not exist. Check the cluster status and try again.</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -297,7 +309,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The internal-facing access endpoint of the instance for private network access.</p>
+         * <p>The internal-facing access domain name of the instance for private network access.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-abc.elasticsearch.aliyuncs.com</p>
@@ -353,8 +365,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li>prepaid: subscription.</li>
-         * <li>postpaid: pay-as-you-go.</li>
+         * <li>prepaid: Subscription.</li>
+         * <li>postpaid: Pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -51,6 +51,12 @@ public class UpdateSnapshotSettingResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The list of indexes to back up.</p>
+         */
+        @NameInMap("indices")
+        public java.util.List<String> indices;
+
+        /**
          * <p>The automatic backup start time.</p>
          * 
          * <strong>example:</strong>
@@ -70,6 +76,14 @@ public class UpdateSnapshotSettingResponseBody extends TeaModel {
         }
         public Boolean getEnable() {
             return this.enable;
+        }
+
+        public UpdateSnapshotSettingResponseBodyResult setIndices(java.util.List<String> indices) {
+            this.indices = indices;
+            return this;
+        }
+        public java.util.List<String> getIndices() {
+            return this.indices;
         }
 
         public UpdateSnapshotSettingResponseBodyResult setQuartzRegex(String quartzRegex) {
