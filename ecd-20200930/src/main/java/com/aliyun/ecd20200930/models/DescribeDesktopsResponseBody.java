@@ -11,7 +11,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
     public java.util.List<DescribeDesktopsResponseBodyDesktops> desktops;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * <p>The pagination token for the next query. If this parameter is empty, no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -254,7 +254,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
          * <ul>
          * <li>cloud_efficiency (ultra cloud disk)<ul>
          * <li>cloud_auto (ultra-fast cloud disk)</li>
-         * <li>cloud_essd (enhanced standard SSD cloud disk. Only specific types are supported.)</li>
+         * <li>cloud_essd (enhanced standard SSD. Only specific types are supported.)</li>
          * </ul>
          * </li>
          * </ul>
@@ -461,7 +461,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
     public static class DescribeDesktopsResponseBodyDesktopsOsUpdatePackages extends TeaModel {
         /**
-         * <p>The NAS file system description.</p>
+         * <p>The description of the NAS file system.</p>
          * 
          * <strong>example:</strong>
          * <p>newDescription</p>
@@ -618,7 +618,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
     public static class DescribeDesktopsResponseBodyDesktopsSessions extends TeaModel {
         /**
-         * <p>The ID of the user connected to the cloud desktop.</p>
+         * <p>The ID of the user who is connected to the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>29615820929547****</p>
@@ -1083,7 +1083,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public Long memory;
 
         /**
-         * <p>The ID of the secondary ENI created by the cloud desktop service for the RAM or AD user. This value cannot be modified.</p>
+         * <p>The ID of the secondary network interface controller (NIC) created by the cloud desktop service for the RAM or AD user. This value cannot be modified.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -1092,7 +1092,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public String networkInterfaceId;
 
         /**
-         * <p>The IP address of the secondary ENI created by the cloud desktop service for the RAM or AD user.</p>
+         * <p>The IP address of the secondary NIC created by the cloud desktop service for the RAM or AD user.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -1209,6 +1209,20 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public String protocolType;
 
         /**
+         * <strong>example:</strong>
+         * <p>rp-xxx</p>
+         */
+        @NameInMap("ReservePoolId")
+        public String reservePoolId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>reserve-pool</p>
+         */
+        @NameInMap("ReservePoolName")
+        public String reservePoolName;
+
+        /**
          * <p>The list of enterprise resource group information.</p>
          */
         @NameInMap("ResourceGroups")
@@ -1257,7 +1271,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public String snapshotPolicyName;
 
         /**
-         * <p>The start time of the query. The time is in the ISO 8601 standard and in UTC+0, in the format of <code>yyyy-mm-ddthh:mm:ssz</code>.</p>
+         * <p>The start time of the query. The time is in the ISO 8601 standard and in UTC+0. Format: <code>yyyy-mm-ddthh:mm:ssz</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-27T02:20:10Z</p>
@@ -1337,6 +1351,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
          */
         @NameInMap("VolumeEncryptionKey")
         public String volumeEncryptionKey;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
+         */
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         /**
          * <p>The type of the zone. Default value: <code>AvailabilityZone</code>, which indicates a regular cloud zone.</p>
@@ -1808,6 +1829,22 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             return this.protocolType;
         }
 
+        public DescribeDesktopsResponseBodyDesktops setReservePoolId(String reservePoolId) {
+            this.reservePoolId = reservePoolId;
+            return this;
+        }
+        public String getReservePoolId() {
+            return this.reservePoolId;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setReservePoolName(String reservePoolName) {
+            this.reservePoolName = reservePoolName;
+            return this;
+        }
+        public String getReservePoolName() {
+            return this.reservePoolName;
+        }
+
         public DescribeDesktopsResponseBodyDesktops setResourceGroups(java.util.List<DescribeDesktopsResponseBodyDesktopsResourceGroups> resourceGroups) {
             this.resourceGroups = resourceGroups;
             return this;
@@ -1926,6 +1963,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public String getVolumeEncryptionKey() {
             return this.volumeEncryptionKey;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
         public DescribeDesktopsResponseBodyDesktops setZoneType(String zoneType) {

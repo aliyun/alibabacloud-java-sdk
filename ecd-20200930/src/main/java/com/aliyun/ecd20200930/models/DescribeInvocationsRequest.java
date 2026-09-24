@@ -23,7 +23,7 @@ public class DescribeInvocationsRequest extends TeaModel {
     public String contentEncoding;
 
     /**
-     * <p>The cloud desktop ID. If you specify a cloud desktop, all script execution records of the cloud desktop are queried.</p>
+     * <p>The cloud desktop ID. If you specify a cloud desktop, all script execution records for that cloud desktop are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>ecd-7w78ozhjcwa3u****</p>
@@ -34,7 +34,7 @@ public class DescribeInvocationsRequest extends TeaModel {
     /**
      * <p>The list of cloud desktop IDs.</p>
      * <blockquote>
-     * <p>The <code>DesktopId</code> parameter will be deprecated. Use this parameter to pass the list of cloud desktop IDs.</p>
+     * <p>The DesktopId parameter will be deprecated. Use this parameter to pass the list of cloud desktop IDs.</p>
      * </blockquote>
      */
     @NameInMap("DesktopIds")
@@ -50,13 +50,13 @@ public class DescribeInvocationsRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>Specifies whether to return the execution results of all cloud desktops when the remote command is executed on multiple cloud desktops.</p>
+     * <p>Specifies whether to return the execution results of all cloud desktops when a remote command is executed on multiple cloud desktops.</p>
      */
     @NameInMap("IncludeInvokeDesktops")
     public Boolean includeInvokeDesktops;
 
     /**
-     * <p>Specifies whether to return the output information of the script execution in the results.</p>
+     * <p>Specifies whether to return the output of the script execution in the results.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -74,7 +74,7 @@ public class DescribeInvocationsRequest extends TeaModel {
     public String invokeId;
 
     /**
-     * <p>The overall execution status of the script. The overall execution status depends on the combined execution status of one or more cloud desktops in the execution.</p>
+     * <p>The overall execution status of the script. The overall execution status is determined by the combined execution status of one or more cloud desktops in the invocation.</p>
      * 
      * <strong>example:</strong>
      * <p>Finished</p>
@@ -105,7 +105,7 @@ public class DescribeInvocationsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

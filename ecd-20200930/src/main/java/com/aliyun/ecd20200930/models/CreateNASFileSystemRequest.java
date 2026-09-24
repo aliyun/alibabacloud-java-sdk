@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateNASFileSystemRequest extends TeaModel {
     /**
+     * <p>The capacity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3600</p>
+     */
+    @NameInMap("Capacity")
+    public Long capacity;
+
+    /**
      * <p>The description of the NAS file system.</p>
      * 
      * <strong>example:</strong>
@@ -14,13 +23,22 @@ public class CreateNASFileSystemRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to use a Key Management Service (KMS) managed key to encrypt data stored in the file system. Encrypted data does not need to be decrypted during read and write operations.</p>
+     * <p>Specifies whether the file system uses a key managed by Key Management Service (KMS) to encrypt data stored on the file system. Encrypted data does not need to be decrypted during read and write operations.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("EncryptType")
     public String encryptType;
+
+    /**
+     * <p>The file system type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>standard</p>
+     */
+    @NameInMap("FileSystemType")
+    public String fileSystemType;
 
     /**
      * <p>The name of the NAS file system. The name must meet the following requirements: The name must be 2 to 128 characters in length and can contain letters and Chinese characters. The name must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, underscores (_), or hyphens (-).</p>
@@ -45,7 +63,7 @@ public class CreateNASFileSystemRequest extends TeaModel {
      * <p>The protocol type.</p>
      * 
      * <strong>example:</strong>
-     * <p>ASP</p>
+     * <p>SMB</p>
      */
     @NameInMap("ProtocolType")
     public String protocolType;
@@ -74,6 +92,14 @@ public class CreateNASFileSystemRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateNASFileSystemRequest setCapacity(Long capacity) {
+        this.capacity = capacity;
+        return this;
+    }
+    public Long getCapacity() {
+        return this.capacity;
+    }
+
     public CreateNASFileSystemRequest setDescription(String description) {
         this.description = description;
         return this;
@@ -88,6 +114,14 @@ public class CreateNASFileSystemRequest extends TeaModel {
     }
     public String getEncryptType() {
         return this.encryptType;
+    }
+
+    public CreateNASFileSystemRequest setFileSystemType(String fileSystemType) {
+        this.fileSystemType = fileSystemType;
+        return this;
+    }
+    public String getFileSystemType() {
+        return this.fileSystemType;
     }
 
     public CreateNASFileSystemRequest setName(String name) {

@@ -103,7 +103,7 @@ public class DownloadCdsFileResponseBody extends TeaModel {
         public String expirationSecond;
 
         /**
-         * <p>The expiration time of the file download URL.</p>
+         * <p>The expiration time of the file download URL. The time follows the ISO 8601 standard in UTC and is accurate to milliseconds. Format: yyyy-MM-ddTHH:mm:ss.SSSZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-18T02:55:49.795Z</p>

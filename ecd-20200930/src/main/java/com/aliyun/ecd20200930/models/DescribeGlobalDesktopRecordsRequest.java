@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     /**
-     * <p>The business channel. Valid values:
-     * Enterprise: Enterprise Edition.
-     * Business: Business Edition.</p>
+     * <p>The business channel. Valid values:</p>
+     * <ul>
+     * <li>Enterprise: Enterprise Edition.</li>
+     * <li>Business: Business Edition.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Enterprise</p>
@@ -37,7 +39,7 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public java.util.List<String> desktopStatusList;
 
     /**
-     * <p>The cloud desktop specifications. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the supported specification IDs for cloud desktops.</p>
+     * <p>The cloud desktop specifications. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the specification IDs supported by cloud desktops.</p>
      * 
      * <strong>example:</strong>
      * <p>eds.enterprise_office.2c4g</p>
@@ -46,7 +48,7 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public String desktopType;
 
     /**
-     * <p>The end time. The maximum interval between the start time and end time is 30 days. Supported format:</p>
+     * <p>The end time. The interval between the start time and end time cannot exceed 30 days. Supported format:</p>
      * <ul>
      * <li>Format: YYYY-MM-DDThh:mm:ssZ.</li>
      * </ul>
@@ -82,7 +84,7 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The sort field. If not specified, results are sorted by creation time in descending order. Valid values:</p>
+     * <p>The sort field. If this parameter is not specified, results are sorted by creation time in descending order. Valid values:</p>
      * <ul>
      * <li>uptime: sorts by cloud desktop uptime.</li>
      * </ul>
@@ -94,7 +96,7 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The page number of the current page when using paging.<br>Default value: 1.</p>
+     * <p>The page number of the current page in a paged query.<br>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -147,7 +149,7 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>The sort order. Default value: ascending order. Valid values:</p>
+     * <p>The sort order. Default value: Asc. Valid values:</p>
      * <ul>
      * <li>Asc: ascending order.</li>
      * <li>Desc: descending order.</li>

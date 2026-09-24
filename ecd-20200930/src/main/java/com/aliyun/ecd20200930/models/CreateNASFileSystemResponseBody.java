@@ -41,6 +41,15 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
     public String officeSiteId;
 
     /**
+     * <p>The protocol type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SMB</p>
+     */
+    @NameInMap("ProtocolType")
+    public String protocolType;
+
+    /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
@@ -84,6 +93,14 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
     }
     public String getOfficeSiteId() {
         return this.officeSiteId;
+    }
+
+    public CreateNASFileSystemResponseBody setProtocolType(String protocolType) {
+        this.protocolType = protocolType;
+        return this;
+    }
+    public String getProtocolType() {
+        return this.protocolType;
     }
 
     public CreateNASFileSystemResponseBody setRequestId(String requestId) {

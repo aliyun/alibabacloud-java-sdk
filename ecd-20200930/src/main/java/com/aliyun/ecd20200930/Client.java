@@ -3828,16 +3828,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before creating cloud computers, complete the following preparations:</p>
+     * <p>Before creating cloud desktops, complete the following preparations:</p>
      * <ul>
-     * <li>Create an office network (formerly workspace) and users. For related API operations or documentation, refer to:<ul>
-     * <li>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</li>
-     * <li>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</li>
+     * <li>Create an office network (formerly workspace) and users. For more information about the related API operations or documentation, see:<ul>
+     * <li>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</li>
+     * <li>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</li>
      * </ul>
      * </li>
      * <li>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or confirm that an existing policy is available.
      * <strong>Call examples:</strong><details>
-     * <summary>Example of creating with a template</summary></li>
+     * <summary>Example of creating a cloud desktop by using a template</summary></li>
      * </ul>
      * <pre><code>{
      *   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
@@ -3851,7 +3851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * </details>
      * <details>
-     * <summary>Example of creating without a template</summary>
+     * <summary>Example of creating a cloud desktop without a template</summary>
      * ```
      * {
      *   "RegionId": "cn-hangzhou",
@@ -3871,7 +3871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * ```
      * </details>
      * <details>
-     * <summary>Example of creating a monthly hourly package</summary>
+     * <summary>Example of creating a cloud desktop with a monthly hourly package</summary>
      * ```
      * {
      *   "RegionId": "cn-hangzhou",
@@ -3896,7 +3896,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * ```
      * </details>
      * <details>
-     * <summary>Example of creating an Agent resource</summary>
+     * <summary>Example of creating an agent resource</summary>
      * ```
      * {
      *   "RegionId": "cn-hangzhou",
@@ -3916,10 +3916,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * }
      * ```
      * </details>
-     * To have cloud computers automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
+     * To have the cloud desktop automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
      * 
      * <b>summary</b> : 
-     * <p>Creates one or more cloud computers. If user information is provided during creation, the cloud computers are assigned directly.</p>
+     * <p>Creates one or more cloud desktops. If user information is specified during creation, the cloud desktops are directly assigned to the users.</p>
      * 
      * @param tmpReq CreateDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4062,6 +4062,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResellerOwnerUid", request.resellerOwnerUid);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.reservePoolId)) {
+            query.put("ReservePoolId", request.reservePoolId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
@@ -4133,16 +4137,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before creating cloud computers, complete the following preparations:</p>
+     * <p>Before creating cloud desktops, complete the following preparations:</p>
      * <ul>
-     * <li>Create an office network (formerly workspace) and users. For related API operations or documentation, refer to:<ul>
-     * <li>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</li>
-     * <li>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</li>
+     * <li>Create an office network (formerly workspace) and users. For more information about the related API operations or documentation, see:<ul>
+     * <li>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</li>
+     * <li>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</li>
      * </ul>
      * </li>
      * <li>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or confirm that an existing policy is available.
      * <strong>Call examples:</strong><details>
-     * <summary>Example of creating with a template</summary></li>
+     * <summary>Example of creating a cloud desktop by using a template</summary></li>
      * </ul>
      * <pre><code>{
      *   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
@@ -4156,7 +4160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * </details>
      * <details>
-     * <summary>Example of creating without a template</summary>
+     * <summary>Example of creating a cloud desktop without a template</summary>
      * ```
      * {
      *   "RegionId": "cn-hangzhou",
@@ -4176,7 +4180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * ```
      * </details>
      * <details>
-     * <summary>Example of creating a monthly hourly package</summary>
+     * <summary>Example of creating a cloud desktop with a monthly hourly package</summary>
      * ```
      * {
      *   "RegionId": "cn-hangzhou",
@@ -4201,7 +4205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * ```
      * </details>
      * <details>
-     * <summary>Example of creating an Agent resource</summary>
+     * <summary>Example of creating an agent resource</summary>
      * ```
      * {
      *   "RegionId": "cn-hangzhou",
@@ -4221,10 +4225,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * }
      * ```
      * </details>
-     * To have cloud computers automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
+     * To have the cloud desktop automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
      * 
      * <b>summary</b> : 
-     * <p>Creates one or more cloud computers. If user information is provided during creation, the cloud computers are assigned directly.</p>
+     * <p>Creates one or more cloud desktops. If user information is specified during creation, the cloud desktops are directly assigned to the users.</p>
      * 
      * @param request CreateDesktopsRequest
      * @return CreateDesktopsResponse
@@ -4593,12 +4597,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateNASFileSystemResponse createNASFileSystemWithOptions(CreateNASFileSystemRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.capacity)) {
+            query.put("Capacity", request.capacity);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.encryptType)) {
             query.put("EncryptType", request.encryptType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemType)) {
+            query.put("FileSystemType", request.fileSystemType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
@@ -5742,10 +5754,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, note the following items:</p>
+     * <p>When you call this operation, take note of the following items:</p>
      * <ul>
      * <li>Most parameters in the instance launch template are optional. When you create a template, Alibaba Cloud does not strictly verify the existence or validity of parameter values. Parameter values are validated only when you create an instance by using the template.</li>
-     * <li>For parameters that have region attributes in the template, if the region does not match when you create a cloud computer by using the template, these parameters do not take effect.</li>
+     * <li>For region-specific parameters in the template, if the region does not match when you create a cloud computer by using the template, these parameters do not take effect.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5789,6 +5801,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
             body.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            body.put("InstanceName", request.instanceName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.period)) {
@@ -5870,10 +5886,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, note the following items:</p>
+     * <p>When you call this operation, take note of the following items:</p>
      * <ul>
      * <li>Most parameters in the instance launch template are optional. When you create a template, Alibaba Cloud does not strictly verify the existence or validity of parameter values. Parameter values are validated only when you create an instance by using the template.</li>
-     * <li>For parameters that have region attributes in the template, if the region does not match when you create a cloud computer by using the template, these parameters do not take effect.</li>
+     * <li>For region-specific parameters in the template, if the region does not match when you create a cloud computer by using the template, these parameters do not take effect.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7419,7 +7435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After the template is deleted, cloud computers that were created based on the template are not affected, and resources associated with the template are not affected.</p>
+     * <p>After a template is deleted, cloud computers that were created based on the template are not affected, and resources associated with the template are not affected.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a custom cloud computer template.</p>
@@ -7458,7 +7474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After the template is deleted, cloud computers that were created based on the template are not affected, and resources associated with the template are not affected.</p>
+     * <p>After a template is deleted, cloud computers that were created based on the template are not affected, and resources associated with the template are not affected.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a custom cloud computer template.</p>
@@ -8133,7 +8149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The cloud disk team list is synchronized from the Wuying client &gt; User Management &gt; Organization Structure. To use team spaces, shift users to a specified organization in the User Management interface. Users can then see the team space menu bar in the cloud disk client.</p>
+     * <p>The cloud disk team list is obtained through synchronization from the Wuying client &gt; User Management &gt; organization structure. To use team spaces, shift users to a specified organization in the User Management interface. Users can then see the team space menu bar in the cloud disk client.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of cloud disk team spaces.</p>
@@ -8184,7 +8200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The cloud disk team list is synchronized from the Wuying client &gt; User Management &gt; Organization Structure. To use team spaces, shift users to a specified organization in the User Management interface. Users can then see the team space menu bar in the cloud disk client.</p>
+     * <p>The cloud disk team list is obtained through synchronization from the Wuying client &gt; User Management &gt; organization structure. To use team spaces, shift users to a specified organization in the User Management interface. Users can then see the team space menu bar in the cloud disk client.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of cloud disk team spaces.</p>
@@ -9530,6 +9546,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.reservePoolId)) {
+            query.put("ReservePoolId", request.reservePoolId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
@@ -10198,14 +10218,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>China site users should select Shanghai as the site. International site users should select Singapore.</li>
+     * <li>China site users must select Shanghai as the site. International site users must select Singapore.</li>
      * <li>By default, both deleted and non-deleted cloud desktops are queried.</li>
      * <li>Deleted cloud desktops can only be queried if they were deleted within the last three months.</li>
      * <li>Sort conditions cannot be used together with other conditions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the basic information of all recent cloud desktops and their corresponding usage duration records.</p>
+     * <p>Queries the basic information about all recent cloud desktops and the corresponding usage duration records.</p>
      * 
      * @param request DescribeGlobalDesktopRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10310,14 +10330,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>China site users should select Shanghai as the site. International site users should select Singapore.</li>
+     * <li>China site users must select Shanghai as the site. International site users must select Singapore.</li>
      * <li>By default, both deleted and non-deleted cloud desktops are queried.</li>
      * <li>Deleted cloud desktops can only be queried if they were deleted within the last three months.</li>
      * <li>Sort conditions cannot be used together with other conditions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the basic information of all recent cloud desktops and their corresponding usage duration records.</p>
+     * <p>Queries the basic information about all recent cloud desktops and the corresponding usage duration records.</p>
      * 
      * @param request DescribeGlobalDesktopRecordsRequest
      * @return DescribeGlobalDesktopRecordsResponse
@@ -10766,7 +10786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>After you run a command, it does not necessarily succeed or produce the expected results. Check the actual execution results based on the response values returned by this operation.</li>
+     * <li>After you run a command, the command is not guaranteed to succeed or produce the expected results. Check the actual execution results based on the response of this operation.</li>
      * <li>You can query execution information from the last two weeks. A maximum of 100,000 execution records are retained.</li>
      * </ul>
      * 
@@ -10848,7 +10868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>After you run a command, it does not necessarily succeed or produce the expected results. Check the actual execution results based on the response values returned by this operation.</li>
+     * <li>After you run a command, the command is not guaranteed to succeed or produce the expected results. Check the actual execution results based on the response of this operation.</li>
      * <li>You can query execution information from the last two weeks. A maximum of 100,000 execution records are retained.</li>
      * </ul>
      * 
@@ -12176,6 +12196,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeRecordFileResponse describeRecordFileWithOptions(DescribeRecordFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.auditStatus)) {
+            query.put("AuditStatus", request.auditStatus);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
             query.put("DesktopId", request.desktopId);
         }
@@ -12447,7 +12471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the renewal price of a Wuying product.</p>
+     * <p>Queries the renewal price of an Elastic Desktop Service product.</p>
      * 
      * @param request DescribeRenewalPriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12507,7 +12531,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the renewal price of a Wuying product.</p>
+     * <p>Queries the renewal price of an Elastic Desktop Service product.</p>
      * 
      * @param request DescribeRenewalPriceRequest
      * @return DescribeRenewalPriceResponse
@@ -13582,12 +13606,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation uses a centralized domain name. The access point is in the China (Shanghai) region. Other regions are not supported.</li>
-     * <li>The cloud computer status information returned by this operation has a 1 to 3 second delay from the actual values.</li>
+     * <li>This operation uses a centralized endpoint in the Shanghai region. Calls from other regions are not supported.</li>
+     * <li>The cloud desktop status information returned by this operation has a 1 to 3 second delay from the actual values.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves cloud computer information for a vulnerability.</p>
+     * <p>Retrieves cloud desktop information for a vulnerability.</p>
      * 
      * @param request DescribeVulDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13596,12 +13620,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeVulDesktopsResponse describeVulDesktopsWithOptions(DescribeVulDesktopsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionStatus)) {
+            query.put("ConnectionStatus", request.connectionStatus);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cveId)) {
             query.put("CveId", request.cveId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.desktopIdList)) {
             query.put("DesktopIdList", request.desktopIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopStatus)) {
+            query.put("DesktopStatus", request.desktopStatus);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.includeFixResult)) {
@@ -13676,12 +13708,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation uses a centralized domain name. The access point is in the China (Shanghai) region. Other regions are not supported.</li>
-     * <li>The cloud computer status information returned by this operation has a 1 to 3 second delay from the actual values.</li>
+     * <li>This operation uses a centralized endpoint in the Shanghai region. Calls from other regions are not supported.</li>
+     * <li>The cloud desktop status information returned by this operation has a 1 to 3 second delay from the actual values.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves cloud computer information for a vulnerability.</p>
+     * <p>Retrieves cloud desktop information for a vulnerability.</p>
      * 
      * @param request DescribeVulDesktopsRequest
      * @return DescribeVulDesktopsResponse
@@ -14511,6 +14543,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries desktop data statistics by different dimensions.</p>
+     * 
+     * @param request GetAggregatedDesktopsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAggregatedDesktopsResponse
+     */
+    public GetAggregatedDesktopsResponse getAggregatedDesktopsWithOptions(GetAggregatedDesktopsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregationFactor)) {
+            query.put("AggregationFactor", request.aggregationFactor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchRegionId)) {
+            query.put("SearchRegionId", request.searchRegionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAggregatedDesktops"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAggregatedDesktopsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries desktop data statistics by different dimensions.</p>
+     * 
+     * @param request GetAggregatedDesktopsRequest
+     * @return GetAggregatedDesktopsResponse
+     */
+    public GetAggregatedDesktopsResponse getAggregatedDesktops(GetAggregatedDesktopsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAggregatedDesktopsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves the details of a folder copy asynchronous node based on the AsyncTaskId parameter returned by the CopyCdsFile operation.</p>
      * 
      * @param request GetAsyncTaskRequest
@@ -14559,7 +14643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires in 10 minutes.</p>
+     * <p>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires after 10 minutes.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the connection credential for a cloud computer.</p>
@@ -14571,6 +14655,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetConnectionTicketResponse getConnectionTicketWithOptions(GetConnectionTicketRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientType)) {
+            query.put("ClientType", request.clientType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.commandContent)) {
             query.put("CommandContent", request.commandContent);
         }
@@ -14630,7 +14718,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires in 10 minutes.</p>
+     * <p>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires after 10 minutes.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the connection credential for a cloud computer.</p>
@@ -19448,7 +19536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Warning: To ensure compatibility with the logic for unset parameters and default upgrades in the template, this operation uses a full-parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</p>
+     * <p>Warning: To ensure compatibility with unset parameters and default upgrade logic in the template, this operation uses full parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -19488,6 +19576,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
             body.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            body.put("InstanceName", request.instanceName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.period)) {
@@ -19570,7 +19662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Warning: To ensure compatibility with the logic for unset parameters and default upgrades in the template, this operation uses a full-parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</p>
+     * <p>Warning: To ensure compatibility with unset parameters and default upgrade logic in the template, this operation uses full parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -19586,10 +19678,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation only modifies the name and description of a custom cloud computer template. To modify the parameters of a custom cloud computer template, use <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a>.</p>
+     * <p>This operation is used only to modify the name and description of a custom cloud computer template. To modify the parameters of a custom cloud computer template, use <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the basic information of a custom cloud computer template, including the template name and description.</p>
+     * <p>Modifies the basic information of a custom cloud computer template, including the template name and template description.</p>
      * 
      * @param request ModifyTemplateBaseInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19600,6 +19692,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            body.put("InstanceName", request.instanceName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
@@ -19629,10 +19725,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation only modifies the name and description of a custom cloud computer template. To modify the parameters of a custom cloud computer template, use <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a>.</p>
+     * <p>This operation is used only to modify the name and description of a custom cloud computer template. To modify the parameters of a custom cloud computer template, use <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the basic information of a custom cloud computer template, including the template name and description.</p>
+     * <p>Modifies the basic information of a custom cloud computer template, including the template name and template description.</p>
      * 
      * @param request ModifyTemplateBaseInfoRequest
      * @return ModifyTemplateBaseInfoResponse
@@ -20086,6 +20182,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryActiveUserStatisticResponse queryActiveUserStatistic(QueryActiveUserStatisticRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryActiveUserStatisticWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the connection duration statistics of authorized users based on specified conditions. Statistics can be collected by daily cumulative duration or by individual session details.</p>
+     * 
+     * @param request QueryAuthUserConnectDurationListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryAuthUserConnectDurationListResponse
+     */
+    public QueryAuthUserConnectDurationListResponse queryAuthUserConnectDurationListWithOptions(QueryAuthUserConnectDurationListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.comparisonOperator)) {
+            query.put("ComparisonOperator", request.comparisonOperator);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataDate)) {
+            query.put("DataDate", request.dataDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isAdUser)) {
+            query.put("IsAdUser", request.isAdUser);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statisticType)) {
+            query.put("StatisticType", request.statisticType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.threshold)) {
+            query.put("Threshold", request.threshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            query.put("UserName", request.userName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withDetail)) {
+            query.put("WithDetail", request.withDetail);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryAuthUserConnectDurationList"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryAuthUserConnectDurationListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the connection duration statistics of authorized users based on specified conditions. Statistics can be collected by daily cumulative duration or by individual session details.</p>
+     * 
+     * @param request QueryAuthUserConnectDurationListRequest
+     * @return QueryAuthUserConnectDurationListResponse
+     */
+    public QueryAuthUserConnectDurationListResponse queryAuthUserConnectDurationList(QueryAuthUserConnectDurationListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryAuthUserConnectDurationListWithOptions(request, runtime);
     }
 
     /**

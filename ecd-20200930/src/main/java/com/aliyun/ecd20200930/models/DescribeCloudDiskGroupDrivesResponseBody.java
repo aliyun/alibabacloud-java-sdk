@@ -11,7 +11,7 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
     public java.util.List<DescribeCloudDiskGroupDrivesResponseBodyCloudDriveGroups> cloudDriveGroups;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total count.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
     public Long count;
 
     /**
-     * <p>The token for the next query. If NextToken is empty, no more results are available.</p>
+     * <p>The pagination token for the next query. If this parameter is empty, no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>MTA0MjA=</p>
@@ -38,7 +38,7 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -92,6 +92,15 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudDiskGroupDrivesResponseBodyCloudDriveGroups extends TeaModel {
+        /**
+         * <p>The authorization dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ROSTER</p>
+         */
+        @NameInMap("AuthDimension")
+        public String authDimension;
+
         /**
          * <p>The creation time. The time is in the ISO 8601 standard in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
@@ -176,6 +185,14 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
         public static DescribeCloudDiskGroupDrivesResponseBodyCloudDriveGroups build(java.util.Map<String, ?> map) throws Exception {
             DescribeCloudDiskGroupDrivesResponseBodyCloudDriveGroups self = new DescribeCloudDiskGroupDrivesResponseBodyCloudDriveGroups();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCloudDiskGroupDrivesResponseBodyCloudDriveGroups setAuthDimension(String authDimension) {
+            this.authDimension = authDimension;
+            return this;
+        }
+        public String getAuthDimension() {
+            return this.authDimension;
         }
 
         public DescribeCloudDiskGroupDrivesResponseBodyCloudDriveGroups setCreateTime(String createTime) {

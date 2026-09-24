@@ -42,7 +42,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoPricePromotions extends TeaModel {
         /**
-         * <p>The promotion rule description.</p>
+         * <p>The description of the promotion rule.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -51,7 +51,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         public String optionCode;
 
         /**
-         * <p>The promotion description.</p>
+         * <p>The description of the promotion.</p>
          * 
          * <strong>example:</strong>
          * <p>New product launch, enjoy discounts now</p>
@@ -243,7 +243,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
          * <p>The rule description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Get 15% off the list price when you purchase a 1-year subscription</p>
+         * <p>Purchase for 1 year or more and enjoy a 15% discount off the list price</p>
          */
         @NameInMap("Description")
         public String description;

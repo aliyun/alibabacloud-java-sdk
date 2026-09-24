@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeNASFileSystemsResponseBody extends TeaModel {
     /**
-     * <p>The NAS file system information.</p>
+     * <p>The NAS file system information list.</p>
      */
     @NameInMap("FileSystems")
     public java.util.List<DescribeNASFileSystemsResponseBodyFileSystems> fileSystems;
 
     /**
-     * <p>The pagination token for the next query. If NextToken is empty, no more results exist.</p>
+     * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -200,6 +200,15 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public java.util.List<DescribeNASFileSystemsResponseBodyFileSystemsAppInstanceGroups> appInstanceGroups;
 
         /**
+         * <p>The bandwidth.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>720</p>
+         */
+        @NameInMap("Bandwidth")
+        public Long bandwidth;
+
+        /**
          * <p>The total capacity of the NAS file system. Unit: GiB.</p>
          * <ul>
          * <li>If the storage type is Capacity, the capacity is fixed at 10 PiB (10485760 GiB).</li>
@@ -213,7 +222,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public Long capacity;
 
         /**
-         * <p>The time when the NAS file system was created.</p>
+         * <p>The time when the NAS file system was created. The time is in the ISO 8601 format in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-05-10T11:39Z</p>
@@ -332,6 +341,9 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         @NameInMap("OfficeSites")
         public java.util.List<DescribeNASFileSystemsResponseBodyFileSystemsOfficeSites> officeSites;
 
+        /**
+         * <p>The product type of the NAS file system.</p>
+         */
         @NameInMap("ProductType")
         public String productType;
 
@@ -375,6 +387,12 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         @NameInMap("Scene")
         public String scene;
 
+        /**
+         * <p>The capacity quota of the NAS file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SizeQuota")
         public Long sizeQuota;
 
@@ -397,7 +415,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public Boolean supportAcl;
 
         /**
-         * <p>The zone ID.</p>
+         * <p>The zone.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-f</p>
@@ -424,6 +442,14 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         }
         public java.util.List<DescribeNASFileSystemsResponseBodyFileSystemsAppInstanceGroups> getAppInstanceGroups() {
             return this.appInstanceGroups;
+        }
+
+        public DescribeNASFileSystemsResponseBodyFileSystems setBandwidth(Long bandwidth) {
+            this.bandwidth = bandwidth;
+            return this;
+        }
+        public Long getBandwidth() {
+            return this.bandwidth;
         }
 
         public DescribeNASFileSystemsResponseBodyFileSystems setCapacity(Long capacity) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The operation result. A value of <code>success</code> indicates success. Otherwise, an error message is returned.</p>
+     * <p>The modification result. A value of <code>success</code> indicates success. Otherwise, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -65,7 +65,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation is successful.</p>
+     * <p>Indicates whether the operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -170,7 +170,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The data cloud disk size. Unit: GiB.</p>
+         * <p>The size of the data cloud disk. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -212,7 +212,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public Integer cpuCount;
 
         /**
-         * <p>The GPU memory information. This field is displayed only when the specification is a graphics-accelerated type.</p>
+         * <p>The GPU memory information. This field is displayed only when the specification is a graphics type.</p>
          * 
          * <strong>example:</strong>
          * <p>4GiB</p>
@@ -273,6 +273,15 @@ public class DescribeTemplatesResponseBody extends TeaModel {
          */
         @NameInMap("SubnetId")
         public String subnetId;
+
+        /**
+         * <p>The virtual node pool ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vnp-0bw*******</p>
+         */
+        @NameInMap("VirtualNodePoolId")
+        public String virtualNodePoolId;
 
         /**
          * <p>Indicates whether disk encryption is enabled.</p>
@@ -359,6 +368,14 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
         public String getSubnetId() {
             return this.subnetId;
+        }
+
+        public DescribeTemplatesResponseBodyDataRegionConfigList setVirtualNodePoolId(String virtualNodePoolId) {
+            this.virtualNodePoolId = virtualNodePoolId;
+            return this;
+        }
+        public String getVirtualNodePoolId() {
+            return this.virtualNodePoolId;
         }
 
         public DescribeTemplatesResponseBodyDataRegionConfigList setVolumeEncryptionEnable(Boolean volumeEncryptionEnable) {
@@ -471,7 +488,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public Boolean autoPay;
 
         /**
-         * <p>Indicates whether auto-renewal is enabled for the subscription shared cloud computer.</p>
+         * <p>Indicates whether auto-renewal is enabled for subscription shared cloud computers.</p>
          */
         @NameInMap("AutoRenew")
         public Boolean autoRenew;
@@ -510,7 +527,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The creation time of the template (UTC).</p>
+         * <p>The time when the template was created (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-25T05:18:46.000+00:00</p>
@@ -519,7 +536,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The update time of the template (UTC).</p>
+         * <p>The time when the template was last updated (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-25T05:18:46.000+00:00</p>
@@ -546,7 +563,33 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String imageType;
 
         /**
-         * <p>The subscription duration of the subscription shared cloud computer. This parameter takes effect only when ChargeType is set to PrePaid, and is required in that case. The unit is specified by PeriodUnit.</p>
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myHost</p>
+         */
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        /**
+         * <p>The subscription duration of the subscription shared cloud computer. This parameter takes effect and is required only when <code>ChargeType</code> is set to <code>PrePaid</code>. The unit is specified by <code>PeriodUnit</code>.</p>
+         * <ul>
+         * <li>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values:<ul>
+         * <li>1</li>
+         * <li>2</li>
+         * <li>3</li>
+         * <li>6</li>
+         * </ul>
+         * </li>
+         * <li>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values:<ul>
+         * <li>1</li>
+         * <li>2</li>
+         * <li>3</li>
+         * <li>4</li>
+         * <li>5</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -555,7 +598,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public Integer period;
 
         /**
-         * <p>The unit of the subscription billing duration. Billable methods use this parameter to specify the time unit.</p>
+         * <p>The unit of the duration for the subscription billable methods.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -564,7 +607,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String periodUnit;
 
         /**
-         * <p>The policy group ID.</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-0caoeogkhz*****</p>
@@ -573,7 +616,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String policyGroupId;
 
         /**
-         * <p>Indicates whether the cloud computer automatically switches to pay-as-you-go billing after the duration plan is exhausted.</p>
+         * <p>Indicates whether the cloud computer automatically switches to pay-as-you-go billing after the duration package is exhausted.</p>
          */
         @NameInMap("PostPaidAfterUsedUp")
         public Boolean postPaidAfterUsedUp;
@@ -678,7 +721,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String timerGroupId;
 
         /**
-         * <p>The per-user usage duration plan.</p>
+         * <p>The per-user duration package.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -769,6 +812,14 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
         public String getImageType() {
             return this.imageType;
+        }
+
+        public DescribeTemplatesResponseBodyData setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
         }
 
         public DescribeTemplatesResponseBodyData setPeriod(Integer period) {

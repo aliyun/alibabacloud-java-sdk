@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeVulDesktopsRequest extends TeaModel {
     /**
-     * <p>The CVE ID.</p>
+     * <p>The connection status of the cloud desktop. Valid values: CONNECTED and DISCONNECTED.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Connected</p>
+     */
+    @NameInMap("ConnectionStatus")
+    public String connectionStatus;
+
+    /**
+     * <p>The CVE ID of the vulnerability.</p>
      * 
      * <strong>example:</strong>
      * <p>CVE-2026-43284</p>
@@ -14,10 +23,19 @@ public class DescribeVulDesktopsRequest extends TeaModel {
     public String cveId;
 
     /**
-     * <p>The list of cloud computer IDs.</p>
+     * <p>The list of cloud desktop IDs.</p>
      */
     @NameInMap("DesktopIdList")
     public java.util.List<String> desktopIdList;
+
+    /**
+     * <p>The running status of the cloud desktop.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
+    @NameInMap("DesktopStatus")
+    public String desktopStatus;
 
     /**
      * <p>Specifies whether to include patch update results.</p>
@@ -29,7 +47,11 @@ public class DescribeVulDesktopsRequest extends TeaModel {
     public Boolean includeFixResult;
 
     /**
-     * <p>The language type of the returned information.</p>
+     * <p>The language of the returned information. Valid values:</p>
+     * <ul>
+     * <li><strong>ch</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ch</p>
@@ -58,7 +80,7 @@ public class DescribeVulDesktopsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Specifies whether to include only cloud computers on which fix tasks were executed in the current month.</p>
+     * <p>Specifies whether to include only cloud desktops that have had fix tasks executed in the current month.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -112,7 +134,7 @@ public class DescribeVulDesktopsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The region ID used to filter cloud computer information for a specific region.</p>
+     * <p>The region ID used to filter cloud desktop information for a specific region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -127,14 +149,14 @@ public class DescribeVulDesktopsRequest extends TeaModel {
     public java.util.List<String> statusList;
 
     /**
-     * <p>The security level of the intrusion prevention event. Valid values:</p>
+     * <p>The severity level of the intrusion prevention event. Valid values:</p>
      * <ul>
-     * <li><strong>low</strong>: Low risk.</li>
-     * <li><strong>medium</strong>: Medium risk.</li>
-     * <li><strong>critical</strong>: High risk.</li>
+     * <li><strong>low</strong>: Low.</li>
+     * <li><strong>medium</strong>: Medium.</li>
+     * <li><strong>critical</strong>: Critical.</li>
      * </ul>
      * <blockquote>
-     * <p>If you do not set this parameter, vulnerabilities of all security levels are queried.</p>
+     * <p>If you do not set this parameter, vulnerabilities of all severity levels are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -146,6 +168,14 @@ public class DescribeVulDesktopsRequest extends TeaModel {
     public static DescribeVulDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVulDesktopsRequest self = new DescribeVulDesktopsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVulDesktopsRequest setConnectionStatus(String connectionStatus) {
+        this.connectionStatus = connectionStatus;
+        return this;
+    }
+    public String getConnectionStatus() {
+        return this.connectionStatus;
     }
 
     public DescribeVulDesktopsRequest setCveId(String cveId) {
@@ -162,6 +192,14 @@ public class DescribeVulDesktopsRequest extends TeaModel {
     }
     public java.util.List<String> getDesktopIdList() {
         return this.desktopIdList;
+    }
+
+    public DescribeVulDesktopsRequest setDesktopStatus(String desktopStatus) {
+        this.desktopStatus = desktopStatus;
+        return this;
+    }
+    public String getDesktopStatus() {
+        return this.desktopStatus;
     }
 
     public DescribeVulDesktopsRequest setIncludeFixResult(Boolean includeFixResult) {

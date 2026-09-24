@@ -14,6 +14,15 @@ public class ModifyTemplateBaseInfoRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The instance name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>myHost</p>
+     */
+    @NameInMap("InstanceName")
+    public String instanceName;
+
+    /**
      * <p>The template ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +36,7 @@ public class ModifyTemplateBaseInfoRequest extends TeaModel {
      * <p>The template name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Shanghai template1</p>
+     * <p>ShanghaiTemplate1</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
@@ -43,6 +52,14 @@ public class ModifyTemplateBaseInfoRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyTemplateBaseInfoRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     public ModifyTemplateBaseInfoRequest setTemplateId(String templateId) {

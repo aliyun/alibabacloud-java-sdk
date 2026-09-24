@@ -110,8 +110,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String endUserId;
 
         /**
-         * <p>The session creation time.
-         * The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The time when the session was created. The time is in the ISO 8601 standard (UTC): yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-31T06:56:45Z</p>
@@ -162,7 +161,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The creation time of the cloud desktop. The time is in the ISO 8601 standard (UTC).</p>
+         * <p>The time when the cloud desktop was created. The time is in the ISO 8601 standard (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-06T08:28Z</p>
@@ -249,6 +248,15 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public Long latestConnectionTime;
 
         /**
+         * <p>The latest end time of the current session. The time is in the ISO 8601 standard (UTC): yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-09-14T05:01:12Z</p>
+         */
+        @NameInMap("LatestSessionEndTime")
+        public String latestSessionEndTime;
+
+        /**
          * <p>The memory of the cloud desktop. Unit: MiB.</p>
          * 
          * <strong>example:</strong>
@@ -298,7 +306,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The specific operating system model.</p>
+         * <p>The specific operating system version.</p>
          * 
          * <strong>example:</strong>
          * <p>Windows 10</p>
@@ -350,7 +358,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public java.util.List<DescribeGlobalDesktopRecordsResponseBodySessionsSessions> sessions;
 
         /**
-         * <p>The UNIX timestamp of the cloud desktop status change. Unit: milliseconds.</p>
+         * <p>The UNIX timestamp when the cloud desktop status changed. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1760583xxxx</p>
@@ -489,6 +497,14 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         }
         public Long getLatestConnectionTime() {
             return this.latestConnectionTime;
+        }
+
+        public DescribeGlobalDesktopRecordsResponseBodySessions setLatestSessionEndTime(String latestSessionEndTime) {
+            this.latestSessionEndTime = latestSessionEndTime;
+            return this;
+        }
+        public String getLatestSessionEndTime() {
+            return this.latestSessionEndTime;
         }
 
         public DescribeGlobalDesktopRecordsResponseBodySessions setMemory(Long memory) {

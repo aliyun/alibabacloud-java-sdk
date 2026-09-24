@@ -34,7 +34,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -43,7 +43,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The list of cloud computers affected by the vulnerability.</p>
+     * <p>The details of cloud desktops affected by the vulnerability.</p>
      */
     @NameInMap("VulDesktops")
     public java.util.List<DescribeVulDesktopsResponseBodyVulDesktops> vulDesktops;
@@ -95,7 +95,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
 
     public static class DescribeVulDesktopsResponseBodyVulDesktopsCves extends TeaModel {
         /**
-         * <p>The CVE ID.</p>
+         * <p>The CVE ID of the vulnerability.</p>
          * 
          * <strong>example:</strong>
          * <p>CVE-2026-62690</p>
@@ -140,7 +140,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
         public String impactScore;
 
         /**
-         * <p>The reference URL.</p>
+         * <p>The reference URL for the vulnerability details.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62690">https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62690</a></p>
@@ -149,7 +149,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
         public String referenceUrl;
 
         /**
-         * <p>The release time. The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The release time. The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-11 07:00:00</p>
@@ -324,6 +324,15 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
         public String configGroupId;
 
         /**
+         * <p>The connection status of the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Connected</p>
+         */
+        @NameInMap("ConnectionStatus")
+        public String connectionStatus;
+
+        /**
          * <p>The number of vulnerabilities.</p>
          * 
          * <strong>example:</strong>
@@ -333,19 +342,28 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
         public Integer cveCount;
 
         /**
-         * <p>The list of vulnerability details.</p>
+         * <p>The vulnerability details.</p>
          */
         @NameInMap("Cves")
         public java.util.List<DescribeVulDesktopsResponseBodyVulDesktopsCves> cves;
 
         /**
-         * <p>The ID of the cloud computer affected by the vulnerability.</p>
+         * <p>The ID of the cloud desktop affected by the vulnerability.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-0jtd4z5binubxe32e</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
+
+        /**
+         * <p>The running status of the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
+        @NameInMap("DesktopStatus")
+        public String desktopStatus;
 
         /**
          * <p>Indicates whether the activation code is disabled.</p>
@@ -357,7 +375,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
         public Boolean disabled;
 
         /**
-         * <p>The time when the vulnerability was first discovered.</p>
+         * <p>The time when the vulnerability was first detected. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-05 00:00:00</p>
@@ -366,13 +384,13 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
         public String firstFoundTime;
 
         /**
-         * <p>The list of fix records for the cloud computer.</p>
+         * <p>The fix records of the cloud desktop.</p>
          */
         @NameInMap("FixRecords")
         public java.util.List<DescribeVulDesktopsResponseBodyVulDesktopsFixRecords> fixRecords;
 
         /**
-         * <p>The list of patch IDs.</p>
+         * <p>The patch IDs.</p>
          */
         @NameInMap("PatchIds")
         public java.util.List<String> patchIds;
@@ -426,6 +444,14 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
             return this.configGroupId;
         }
 
+        public DescribeVulDesktopsResponseBodyVulDesktops setConnectionStatus(String connectionStatus) {
+            this.connectionStatus = connectionStatus;
+            return this;
+        }
+        public String getConnectionStatus() {
+            return this.connectionStatus;
+        }
+
         public DescribeVulDesktopsResponseBodyVulDesktops setCveCount(Integer cveCount) {
             this.cveCount = cveCount;
             return this;
@@ -448,6 +474,14 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
         }
         public String getDesktopId() {
             return this.desktopId;
+        }
+
+        public DescribeVulDesktopsResponseBodyVulDesktops setDesktopStatus(String desktopStatus) {
+            this.desktopStatus = desktopStatus;
+            return this;
+        }
+        public String getDesktopStatus() {
+            return this.desktopStatus;
         }
 
         public DescribeVulDesktopsResponseBodyVulDesktops setDisabled(Boolean disabled) {

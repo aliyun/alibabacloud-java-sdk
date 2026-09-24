@@ -5,6 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeRecordFileRequest extends TeaModel {
     /**
+     * <p>The audit status. Valid values:</p>
+     * <ul>
+     * <li>AI_ANALYZED: AI analysis completed.</li>
+     * <li>REVIEWING: Under review.</li>
+     * <li>REVIEWED: Reviewed.</li>
+     * <li>UNREVIEWED: Not reviewed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>REVIEWING</p>
+     */
+    @NameInMap("AuditStatus")
+    public String auditStatus;
+
+    /**
      * <p>The Cloud Desktop ID.</p>
      * 
      * <strong>example:</strong>
@@ -41,9 +56,9 @@ public class DescribeRecordFileRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The field used for sorting. If this parameter is not specified, the results are sorted by recording start time in descending order. Valid values:</p>
+     * <p>The field used for sorting. If not specified, results are sorted by recording start time in descending order. Valid values:</p>
      * <ul>
-     * <li>startTime: recording start time.</li>
+     * <li>startTime: the recording start time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,7 +90,7 @@ public class DescribeRecordFileRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of rows per page in a paging query.</p>
+     * <p>The maximum number of rows per page in a paged query. This parameter is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -129,8 +144,8 @@ public class DescribeRecordFileRequest extends TeaModel {
     /**
      * <p>The status of the screen recording file. Valid values:</p>
      * <ul>
-     * <li>0: uploaded.</li>
-     * <li>1: uploading.</li>
+     * <li>0: Upload succeeded.</li>
+     * <li>1: Uploading.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -142,6 +157,14 @@ public class DescribeRecordFileRequest extends TeaModel {
     public static DescribeRecordFileRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRecordFileRequest self = new DescribeRecordFileRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeRecordFileRequest setAuditStatus(String auditStatus) {
+        this.auditStatus = auditStatus;
+        return this;
+    }
+    public String getAuditStatus() {
+        return this.auditStatus;
     }
 
     public DescribeRecordFileRequest setDesktopId(String desktopId) {

@@ -43,7 +43,7 @@ public class ModifyTemplateRequest extends TeaModel {
     /**
      * <p>The description of the template. The description must meet the following requirements:</p>
      * <ul>
-     * <li>The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</li>
      * <li>The description can contain Chinese characters, letters, digits, spaces, and special characters. Line breaks are supported.</li>
      * </ul>
      * 
@@ -54,13 +54,22 @@ public class ModifyTemplateRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the cloud computer image. You can query the ID on the Image Management page. System images and custom images are supported.</p>
+     * <p>The cloud computer image ID. You can query the ID on the image management page. System images, custom images, and other image types are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>m-gx2x1dhsmusr2****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
+
+    /**
+     * <p>The instance name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wework-aim-test</p>
+     */
+    @NameInMap("InstanceName")
+    public String instanceName;
 
     /**
      * <p>The subscription duration of the subscription cloud computer. This parameter takes effect and is required only when <code>ChargeType</code> is set to <code>PrePaid</code>. The unit is specified by <code>PeriodUnit</code>.</p>
@@ -131,7 +140,7 @@ public class ModifyTemplateRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags of the cloud computer in key-value format. You can specify up to 20 tags.</p>
+     * <p>The cloud computer tags in key-value format. You can specify up to 20 tags.</p>
      */
     @NameInMap("ResourceTagList")
     public java.util.List<ModifyTemplateRequestResourceTagList> resourceTagList;
@@ -145,7 +154,7 @@ public class ModifyTemplateRequest extends TeaModel {
     /**
      * <p>The type of the system cloud disk.</p>
      * <blockquote>
-     * <p>Only high frequency and graphics cloud computer specifications support ESSD cloud disks.</p>
+     * <p>Only high frequency and GPU-accelerated cloud computer specifications support ESSD cloud disks.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -155,7 +164,7 @@ public class ModifyTemplateRequest extends TeaModel {
     public String systemDiskPerformanceLevel;
 
     /**
-     * <p>The size of the system cloud disk. Unit: GiB. Valid values: 40 to 500. The value must be a multiple of 10.</p>
+     * <p>The size of the system cloud disk. Unit: GiB. Valid values: 40 to 500, in increments of 10 GiB.</p>
      * <blockquote>
      * <p>The system cloud disk size cannot be smaller than the size of the configured image.</p>
      * </blockquote>
@@ -179,8 +188,8 @@ public class ModifyTemplateRequest extends TeaModel {
     /**
      * <p>The name of the template. The name must meet the following requirements:</p>
      * <ul>
-     * <li>The name must be 2 to 126 characters in length.</li>
-     * <li>The name must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The name must be 2 to 126 characters in length and can contain letters and Chinese characters.</li>
+     * <li>The name must start with a letter or a Chinese character. The name cannot start with <code>http://</code> or <code>https://</code>.</li>
      * <li>The name can contain letters, digits, Chinese characters, colons (:), underscores (_), or hyphens (-). Periods (.) are not supported.</li>
      * </ul>
      * 
@@ -200,7 +209,7 @@ public class ModifyTemplateRequest extends TeaModel {
     public String timerGroupId;
 
     /**
-     * <p>The per-user usage duration plan.</p>
+     * <p>The duration plan for a single user.</p>
      * 
      * <strong>example:</strong>
      * <p>120</p>
@@ -267,6 +276,14 @@ public class ModifyTemplateRequest extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
+    }
+
+    public ModifyTemplateRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     public ModifyTemplateRequest setPeriod(Integer period) {
@@ -392,7 +409,7 @@ public class ModifyTemplateRequest extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The size of the data cloud disk. Unit: GiB. Valid values: 40 to 2040. The value must be a multiple of 10.</p>
+         * <p>The size of the data cloud disk. Unit: GiB. Valid values: 40 to 2040, in increments of 10 GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -452,7 +469,7 @@ public class ModifyTemplateRequest extends TeaModel {
         public String resourceInstanceType;
 
         /**
-         * <p>The ID of the automatic snapshot policy.</p>
+         * <p>The automatic snapshot policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-35fvn8m2*****</p>
@@ -468,6 +485,15 @@ public class ModifyTemplateRequest extends TeaModel {
          */
         @NameInMap("SubnetId")
         public String subnetId;
+
+        /**
+         * <p>The virtual node pool ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vnp-0bz55ic*******</p>
+         */
+        @NameInMap("VirtualNodePoolId")
+        public String virtualNodePoolId;
 
         /**
          * <p>Specifies whether to enable disk encryption.</p>
@@ -530,6 +556,14 @@ public class ModifyTemplateRequest extends TeaModel {
         }
         public String getSubnetId() {
             return this.subnetId;
+        }
+
+        public ModifyTemplateRequestRegionConfigList setVirtualNodePoolId(String virtualNodePoolId) {
+            this.virtualNodePoolId = virtualNodePoolId;
+            return this;
+        }
+        public String getVirtualNodePoolId() {
+            return this.virtualNodePoolId;
         }
 
         public ModifyTemplateRequestRegionConfigList setVolumeEncryptionEnable(Boolean volumeEncryptionEnable) {

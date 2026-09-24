@@ -7,8 +7,8 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     /**
      * <p>The instance ID. The value depends on the resource type (ResourceType) for which you want to query the renewal price:</p>
      * <ul>
-     * <li>If <code>ResourceType</code> is set to <code>Desktop</code> (to query the renewal price of a cloud computer), set <code>InstanceId</code> to the cloud computer ID.</li>
-     * <li>If <code>ResourceType</code> is set to <code>DesktopGroup</code> (to query the renewal price of a cloud computer pool), set <code>InstanceId</code> to the cloud computer pool ID.</li>
+     * <li>If <code>ResourceType</code> is set to <code>Desktop</code> (to query the renewal price of a cloud desktop), set <code>InstanceId</code> to the cloud desktop ID.</li>
+     * <li>If <code>ResourceType</code> is set to <code>DesktopGroup</code> (to query the renewal price of a cloud desktop pool), set <code>InstanceId</code> to the cloud desktop pool ID.</li>
      * <li>If <code>ResourceType</code> is set to <code>Bandwidth</code> (to query the renewal price of premium Internet bandwidth), set <code>InstanceId</code> to the premium Internet bandwidth ID.</li>
      * </ul>
      * 
@@ -57,7 +57,7 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Wuying Workspace.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +67,7 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of the resource ownership user in reseller pattern. You do not need to specify this parameter in non-reseller pattern.</p>
+     * <p>The user ID of the resource ownership in the reseller pattern. You do not need to specify this parameter if you are not using the reseller pattern.</p>
      * 
      * <strong>example:</strong>
      * <p>1017457975738750</p>

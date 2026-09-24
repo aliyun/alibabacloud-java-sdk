@@ -59,7 +59,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
 
     public static class DescribeInvocationsResponseBodyInvocationsInvokeDesktops extends TeaModel {
         /**
-         * <p>The creation time of the script process.</p>
+         * <p>The time when the script process was created. The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-20T06:15:54Z</p>
@@ -86,7 +86,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String desktopName;
 
         /**
-         * <p>The length of the truncated and discarded text after the text length in the Output field exceeded 24 KB.</p>
+         * <p>The length of the truncated and discarded text after the text length in the Output field exceeds 24 KB.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -95,7 +95,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public Integer dropped;
 
         /**
-         * <p>The error code indicating the reason for command delivery failure or execution failure. Valid values:</p>
+         * <p>The error code that indicates the reason for a command delivery failure or execution failure. Valid values:</p>
          * <ul>
          * <li>Empty: The command ran normally.</li>
          * <li>InstanceNotExists: The specified cloud desktop does not exist or has been released.</li>
@@ -120,7 +120,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The detailed reason for command delivery failure or execution failure. Valid values:</p>
+         * <p>The detailed information about the reason for a command delivery failure or execution failure. Valid values:</p>
          * <ul>
          * <li>Empty: The command ran normally.</li>
          * <li>the specified instance does not exists: The specified cloud desktop does not exist or has been released.</li>
@@ -154,7 +154,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public Long exitCode;
 
         /**
-         * <p>The end time of the script process.</p>
+         * <p>The time when the script process ended. The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-20T06:15:56Z</p>
@@ -163,7 +163,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The script process status on a single cloud desktop.</p>
+         * <p>The script execution status on a single cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -181,10 +181,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String jvsAgentId;
 
         /**
-         * <p>The output information of the script process.</p>
+         * <p>The output of the script process.</p>
          * <ul>
-         * <li>If the request parameter <code>IncludeOutput</code> is set to false, Output is not returned.</li>
-         * <li>If the request parameter <code>ContentEncoding</code> is set to Base64, Output is the Base64-encoded output information.</li>
+         * <li>If the request parameter IncludeOutput is set to false, Output is not returned.</li>
+         * <li>If the request parameter ContentEncoding is set to Base64, Output is the Base64-encoded output.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public Integer repeats;
 
         /**
-         * <p>The time when the script process started running on the cloud desktop.</p>
+         * <p>The time when the script process started running on the cloud desktop. The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-20T06:15:55Z</p>
@@ -212,7 +212,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The time when the execution was stopped, if StopInvocation was called.</p>
+         * <p>The time when the execution was stopped, if StopInvocation was called. The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-25T09:15:47Z</p>
@@ -221,7 +221,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String stopTime;
 
         /**
-         * <p>The update time of the task status.</p>
+         * <p>The time when the task status was last updated. The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-25T06:15:56Z</p>
@@ -376,7 +376,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String commandType;
 
         /**
-         * <p>The creation time of the task.</p>
+         * <p>The time when the task was created. The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-19T09:15:46Z</p>
@@ -387,8 +387,8 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         /**
          * <p>The cloud desktop scenario. Valid values:</p>
          * <ul>
-         * <li>Classic: the classic cloud desktop scenario.</li>
-         * <li>JvsClaw: the JVS Claw cloud desktop scenario.</li>
+         * <li>Classic: Classic cloud desktop scenario.</li>
+         * <li>JvsClaw: JVS Claw cloud desktop scenario.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -407,26 +407,26 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String endUserId;
 
         /**
-         * <p>The overall execution status of the script. The overall execution status depends on the combined execution status of all cloud desktops in this call. Valid values:</p>
+         * <p>The overall execution status of the script. The overall execution status is determined by the combined execution status of all cloud desktops in this invocation. Valid values:</p>
          * <ul>
          * <li>Pending: The system is validating or sending the command. The overall execution status is Pending if at least one cloud desktop has a script execution status of Pending.</li>
          * <li>Running: The command is running on the cloud desktop. The overall execution status is Running if at least one cloud desktop has a script execution status of Running.</li>
          * <li>Success: The overall execution status is Success if the script execution status on each cloud desktop is Stopped or Success, and at least one cloud desktop has a script execution status of Success.</li>
-         * <li>Failed: The overall execution status is Failed if the script execution status on each cloud desktop is Stopped or Failed. The return value is Failed when one or more of the following statuses occur on a cloud desktop:<ul>
-         * <li>Command validation failed (Invalid)</li>
-         * <li>Command delivery failed (Aborted)</li>
-         * <li>Command execution completed with a non-zero exit code (Failed)</li>
-         * <li>Command execution timed out (Timeout)</li>
-         * <li>Command execution encountered an exception (Error)</li>
+         * <li>Failed: The overall execution status is Failed if the script execution status on each cloud desktop is Stopped or Failed. The return value is Failed if one or more of the following statuses occur on a cloud desktop:<ul>
+         * <li>Command validation failed (Invalid).</li>
+         * <li>Command delivery failed (Aborted).</li>
+         * <li>Command execution completed but the exit code is non-zero (Failed).</li>
+         * <li>Command execution timed out (Timeout).</li>
+         * <li>Command execution encountered an exception (Error).</li>
          * </ul>
          * </li>
          * <li>Stopping: The task is being stopped. The overall execution status is Stopping if at least one instance has a script execution status of Stopping.</li>
-         * <li>Stopped: The task has been stopped. The overall execution status is Stopped if the script execution status on all instances is Stopped. The return value is Stopped when the script execution status on an instance is one of the following:<ul>
-         * <li>Task cancelled (Cancelled)</li>
-         * <li>Task terminated (Terminated)</li>
+         * <li>Stopped: The task is stopped. The overall execution status is Stopped if the script execution status on all instances is Stopped. The return value is Stopped if the script execution status on an instance is one of the following:<ul>
+         * <li>Task cancelled (Cancelled).</li>
+         * <li>Task terminated (Terminated).</li>
          * </ul>
          * </li>
-         * <li>PartialFailed: The overall execution status is PartialFailed if some instances succeeded and some instances failed. The overall execution status is PartialFailed if the script execution status on each instance is Success, Failed, or Stopped.</li>
+         * <li>PartialFailed: The overall execution status is PartialFailed if some instances succeeded and some instances failed. The script execution status on each instance is Success, Failed, or Stopped.</li>
          * </ul>
          * 
          * <strong>example:</strong>

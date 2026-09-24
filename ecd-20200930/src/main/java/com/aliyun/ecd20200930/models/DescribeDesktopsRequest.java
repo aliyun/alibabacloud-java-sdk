@@ -27,7 +27,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The cloud computer pool ID. If <code>DesktopId</code> is specified, <code>DesktopGroupId</code> is ignored. If <code>DesktopId</code> is empty, the system retrieves the IDs of all cloud computers in the cloud computer pool specified by <code>DesktopGroupId</code>.</p>
+     * <p>The cloud computer pool ID. If <code>DesktopId</code> is specified, <code>DesktopGroupId</code> is ignored. If <code>DesktopId</code> is empty, the system retrieves the DesktopId values of all cloud computers in the cloud computer pool specified by <code>DesktopGroupId</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>dg-2i8qxpv6t1a03****</p>
@@ -63,7 +63,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String desktopStatus;
 
     /**
-     * <p>The cloud computer status list.</p>
+     * <p>The list of cloud computer statuses.</p>
      */
     @NameInMap("DesktopStatusList")
     public java.util.List<String> desktopStatusList;
@@ -160,6 +160,9 @@ public class DescribeDesktopsRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to include automatic snapshot policy information in the response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IncludeAutoSnapshotPolicy")
     public Boolean includeAutoSnapshotPolicy;
@@ -174,7 +177,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String managementFlag;
 
     /**
-     * <p>The maximum number of entries per page for a paged query.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * <ul>
      * <li>Maximum value: 100.</li>
      * <li>Default value: 10.</li>
@@ -187,7 +190,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Specifies whether multiple resources exist.</p>
+     * <p>Specifies whether there are multiple resources.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -195,11 +198,17 @@ public class DescribeDesktopsRequest extends TeaModel {
     @NameInMap("MultiResource")
     public Boolean multiResource;
 
+    /**
+     * <p>The private IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.1.1</p>
+     */
     @NameInMap("NetworkInterfaceIp")
     public String networkInterfaceIp;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * <p>The pagination token for the next query. If this parameter is empty, no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -276,6 +285,12 @@ public class DescribeDesktopsRequest extends TeaModel {
     @NameInMap("ProtocolType")
     public String protocolType;
 
+    /**
+     * <p>The public IP address of the instance to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>121.199.28.39</p>
+     */
     @NameInMap("PublicIp")
     public String publicIp;
 
@@ -307,6 +322,9 @@ public class DescribeDesktopsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ReservePoolId")
+    public String reservePoolId;
+
     /**
      * <p>The resource group ID.</p>
      * 
@@ -335,7 +353,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String subPayType;
 
     /**
-     * <p>The tags. A tag is a key-value pair that is used to mark resources. You can use tags to group and manage cloud computers for easy searching and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud computers</a>.</p>
+     * <p>The tags. A tag consists of a key-value pair and is used to mark resources. You can use tags to group and manage cloud computers for easy searching and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud computers</a>.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDesktopsRequestTag> tag;
@@ -634,6 +652,14 @@ public class DescribeDesktopsRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DescribeDesktopsRequest setReservePoolId(String reservePoolId) {
+        this.reservePoolId = reservePoolId;
+        return this;
+    }
+    public String getReservePoolId() {
+        return this.reservePoolId;
+    }
+
     public DescribeDesktopsRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -676,7 +702,7 @@ public class DescribeDesktopsRequest extends TeaModel {
 
     public static class DescribeDesktopsRequestTag extends TeaModel {
         /**
-         * <p>The tag key. If you specify <code>Tag</code>, <code>Key</code> is required. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, contain <code>http://</code> or <code>https://</code>, or consist of only spaces.</p>
+         * <p>The tag key. If you specify <code>Tag</code>, <code>Key</code> is required. The tag key cannot exceed 128 characters, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>. It also cannot consist of only spaces.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -685,7 +711,7 @@ public class DescribeDesktopsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value. The tag value cannot exceed 128 characters, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

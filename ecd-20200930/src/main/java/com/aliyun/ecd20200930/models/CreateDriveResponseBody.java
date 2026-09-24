@@ -191,9 +191,7 @@ public class CreateDriveResponseBody extends TeaModel {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>true</p>
          */
         @NameInMap("ProfileRoaming")
         public Boolean profileRoaming;

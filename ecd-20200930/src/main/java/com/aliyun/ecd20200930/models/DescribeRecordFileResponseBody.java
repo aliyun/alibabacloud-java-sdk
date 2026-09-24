@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRecordFileResponseBody extends TeaModel {
     /**
-     * <p>The details of the recording files.</p>
+     * <p>The details of the recording file list.</p>
      */
     @NameInMap("RecordFiles")
     public java.util.List<DescribeRecordFileResponseBodyRecordFiles> recordFiles;
@@ -20,7 +20,7 @@ public class DescribeRecordFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -118,6 +118,12 @@ public class DescribeRecordFileResponseBody extends TeaModel {
 
     public static class DescribeRecordFileResponseBodyRecordFiles extends TeaModel {
         /**
+         * <p>The audit status list.</p>
+         */
+        @NameInMap("AuditStatus")
+        public java.util.List<String> auditStatus;
+
+        /**
          * <p>The Cloud Desktop ID.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +133,7 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The name of the Cloud Desktop.</p>
+         * <p>The Cloud Desktop name.</p>
          * 
          * <strong>example:</strong>
          * <p>fvt-ecd</p>
@@ -151,7 +157,7 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         public java.util.List<DescribeRecordFileResponseBodyRecordFilesEventDetails> eventDetails;
 
         /**
-         * <p>The name of the file.</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
          * <p>Task3</p>
@@ -160,7 +166,7 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The size of the file. Unit: bytes.</p>
+         * <p>The file size. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>139</p>
@@ -178,7 +184,7 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         public String policyId;
 
         /**
-         * <p>The time when the recording ended. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * <p>The recording end time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-18T06:02:25Z</p>
@@ -196,7 +202,7 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         public Long recordExpire;
 
         /**
-         * <p>The time when the recording started. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * <p>The recording start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-18T06:02:25Z</p>
@@ -249,8 +255,8 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         /**
          * <p>The status of the screen recording file. Valid values:</p>
          * <ul>
-         * <li>0: uploaded.</li>
-         * <li>1: uploading.</li>
+         * <li>0: Upload succeeded.</li>
+         * <li>1: Uploading.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,6 +268,14 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         public static DescribeRecordFileResponseBodyRecordFiles build(java.util.Map<String, ?> map) throws Exception {
             DescribeRecordFileResponseBodyRecordFiles self = new DescribeRecordFileResponseBodyRecordFiles();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeRecordFileResponseBodyRecordFiles setAuditStatus(java.util.List<String> auditStatus) {
+            this.auditStatus = auditStatus;
+            return this;
+        }
+        public java.util.List<String> getAuditStatus() {
+            return this.auditStatus;
         }
 
         public DescribeRecordFileResponseBodyRecordFiles setDesktopId(String desktopId) {
