@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class AiTryOnResponseBody extends TeaModel {
     /**
+     * <p>The error code. This parameter is not returned if the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The result struct.</p>
+     */
     @NameInMap("Data")
     public AiTryOnResponseBodyData data;
 
     /**
+     * <p>The error message. This parameter is not returned if the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,13 +29,17 @@ public class AiTryOnResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID. Used to uniquely identify a request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2728332e-72c1-9c0d-8869-5781b2cd25d4</p>
+     * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the call is successful. Valid values: true and false.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -82,6 +93,8 @@ public class AiTryOnResponseBody extends TeaModel {
 
     public static class AiTryOnResponseBodyDataUsageMap extends TeaModel {
         /**
+         * <p>The number of processed images.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -89,6 +102,8 @@ public class AiTryOnResponseBody extends TeaModel {
         public Long processedImageCount;
 
         /**
+         * <p>The resolution of the processed image.</p>
+         * 
          * <strong>example:</strong>
          * <p>1K</p>
          */
@@ -120,6 +135,8 @@ public class AiTryOnResponseBody extends TeaModel {
 
     public static class AiTryOnResponseBodyData extends TeaModel {
         /**
+         * <p>The height of the result image, in pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>1360</p>
          */
@@ -127,6 +144,8 @@ public class AiTryOnResponseBody extends TeaModel {
         public String imageHeight;
 
         /**
+         * <p>The URL of the virtual try-on result image.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/virtual-try-on-result.png">https://example.com/virtual-try-on-result.png</a></p>
          */
@@ -134,6 +153,8 @@ public class AiTryOnResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
+         * <p>The width of the result image, in pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>768</p>
          */
@@ -141,6 +162,8 @@ public class AiTryOnResponseBody extends TeaModel {
         public String imageWidth;
 
         /**
+         * <p>The usage details.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;ProcessedImageCount&quot;:1,&quot;Resolution&quot;:&quot;1K&quot;}</p>
          */

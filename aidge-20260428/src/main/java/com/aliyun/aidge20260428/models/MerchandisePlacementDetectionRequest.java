@@ -32,6 +32,9 @@ public class MerchandisePlacementDetectionRequest extends TeaModel {
     @NameInMap("RagId")
     public String ragId;
 
+    @NameInMap("Rule")
+    public String rule;
+
     /**
      * <p>The business type (reserved for future routing by business line). The current release supports skincare.</p>
      * 
@@ -68,6 +71,14 @@ public class MerchandisePlacementDetectionRequest extends TeaModel {
     }
     public String getRagId() {
         return this.ragId;
+    }
+
+    public MerchandisePlacementDetectionRequest setRule(String rule) {
+        this.rule = rule;
+        return this;
+    }
+    public String getRule() {
+        return this.rule;
     }
 
     public MerchandisePlacementDetectionRequest setType(String type) {

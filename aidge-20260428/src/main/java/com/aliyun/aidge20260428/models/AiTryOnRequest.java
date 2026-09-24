@@ -5,15 +5,18 @@ import com.aliyun.tea.*;
 
 public class AiTryOnRequest extends TeaModel {
     /**
+     * <p>The URL of the clothing image. Only one image is supported. The URL must be a publicly accessible <code>http</code>/<code>https</code> address. The image must be in JPG, JPEG, PNG, BMP, or WEBP format, with a resolution between 256 × 256 and 2049 × 2049 pixels, and a file size of no more than 10 MB.<br></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="https://example.com/cloth.png">https://example.com/cloth.png</a></p>
+     * <p><a href="https://ae01.alicdn.com/kf/S342f0070dc9f4be09a6cbed34e90dc8fs.jpg">https://ae01.alicdn.com/kf/S342f0070dc9f4be09a6cbed34e90dc8fs.jpg</a></p>
      */
     @NameInMap("ClothImageUrl")
     public String clothImageUrl;
 
     /**
+     * <p>The clothing type. If specified, the value must be one of the following: tops/bottoms/dresses/tops_and_bottoms/shoes/hats. If not specified, the system automatically identifies the type.</p>
+     * 
      * <strong>example:</strong>
      * <p>tops</p>
      */
@@ -21,15 +24,17 @@ public class AiTryOnRequest extends TeaModel {
     public String clothType;
 
     /**
+     * <p>The URL of the model image. Only one image is supported. The URL must be a publicly accessible <code>http</code>/<code>https</code> address. The image must be in JPG, JPEG, PNG, BMP, or WEBP format, with a resolution between 256 × 256 and 2049 × 2049 pixels, and a file size of no more than 10 MB.<br></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="https://example.com/model.png">https://example.com/model.png</a></p>
+     * <p><a href="https://ae01.alicdn.com/kf/S342f0070dc9f4be09a6cbed34e90dc8fs.jpg">https://ae01.alicdn.com/kf/S342f0070dc9f4be09a6cbed34e90dc8fs.jpg</a></p>
      */
     @NameInMap("ModelImageUrl")
     public String modelImageUrl;
 
     /**
+     * <p>The output image resolution. The synchronous API supports only 1K.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
