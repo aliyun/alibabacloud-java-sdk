@@ -97,7 +97,7 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
 
     public static class ImageTranslationPlusResponseBodyData extends TeaModel {
         /**
-         * <p>The asynchronous task ID. Use this ID to poll for results through the queryTaskResult API operation.</p>
+         * <p>The asynchronous task ID. Use this ID to poll for results through the queryTaskResult operation.</p>
          * 
          * <strong>example:</strong>
          * <p>task-abc123</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MerchandisePlacementDetectionResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter is not returned if the call is successful.</p>
+     * <p>The error code. This parameter is not returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
     public MerchandisePlacementDetectionResponseBodyData data;
 
     /**
-     * <p>The error message. This parameter is not returned if the call is successful.</p>
+     * <p>The error message. This parameter is not returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -156,7 +156,7 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
 
     public static class MerchandisePlacementDetectionResponseBodyDataDataTopk extends TeaModel {
         /**
-         * <p>The recall rank of the product.</p>
+         * <p>The recall rank.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -232,16 +232,16 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
 
     public static class MerchandisePlacementDetectionResponseBodyDataData extends TeaModel {
         /**
-         * <p>The position coordinates of the detection box in the format [x1,y1,x2,y2].</p>
+         * <p>The detection box position coordinates in the format [x1,y1,x2,y2].</p>
          */
         @NameInMap("Bbox")
         public java.util.List<Float> bbox;
 
         /**
-         * <p>The failure reason for the detection box. The value is null if the detection is successful.</p>
+         * <p>The failure reason for a single detection box. The value is null if the detection is successful.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;Embedding failed&quot;</p>
+         * <p>&quot;embedding failed&quot;</p>
          */
         @NameInMap("Error")
         public String error;
@@ -325,7 +325,7 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
         public Integer boxCount;
 
         /**
-         * <p>The list of recall details for each detection box.</p>
+         * <p>The list of retrieval details for each detection box.</p>
          */
         @NameInMap("Data")
         public java.util.List<MerchandisePlacementDetectionResponseBodyDataData> data;

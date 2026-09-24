@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MerchandisePlacementDetectionRequest extends TeaModel {
     /**
-     * <p>Specify this parameter to use a custom API version. If you created a custom API during the trial phase, you can find the corresponding ApiId in the product console under <strong>Intelligent Inspection &gt; API Management &gt; My APIs</strong>.</p>
+     * <p>Specify this parameter to use a custom API version. If you created a custom API during the trial phase, you can find the corresponding ApiId in the product console under Intelligent Inspection &gt; API Management &gt; My API.</p>
      * 
      * <strong>example:</strong>
      * <p>api_xxx</p>
@@ -14,7 +14,7 @@ public class MerchandisePlacementDetectionRequest extends TeaModel {
     public String apiId;
 
     /**
-     * <p>The URL of the shelf or floor-stack photo to be recognized (accessible over the Internet or from OSS).</p>
+     * <p>The URL of the original shelf or floor stack image to be recognized (accessible over the Internet or through OSS).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class MerchandisePlacementDetectionRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>The ID of the customer-specific SKU vector library, which determines which library is used for recall. The library must be created in advance through the library creation process.</p>
+     * <p>The ID of the customer-specific SKU vector library, which determines which library is used for retrieval. The library must be created in advance through the library creation process.</p>
      * 
      * <strong>example:</strong>
      * <p>rag_xxx</p>
@@ -32,14 +32,20 @@ public class MerchandisePlacementDetectionRequest extends TeaModel {
     @NameInMap("RagId")
     public String ragId;
 
+    /**
+     * <p>The custom rule. Enter a detection prompt as the workflow input parameter rule. When this parameter is specified, the type parameter is not required (a dedicated rule branch is used). If Rule is empty, you must specify Type to start detection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Please identify all visible beverage products in the image and return only a JSON array. Output format example: [{&quot;bbox_2d&quot;:[100,200,250,600],&quot;sku_name&quot;:&quot;Coca-Cola&quot;}]</p>
+     */
     @NameInMap("Rule")
     public String rule;
 
     /**
-     * <p>The business type (reserved for future routing by business line). The current release supports skincare.</p>
+     * <p>The business type (reserved for future routing by business line). The current release supports skincare &amp; lotion.</p>
      * 
      * <strong>example:</strong>
-     * <p>skincare</p>
+     * <p>水乳</p>
      */
     @NameInMap("Type")
     public String type;

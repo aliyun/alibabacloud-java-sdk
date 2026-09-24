@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TextTranslateRequest extends TeaModel {
     /**
-     * <p>This field represents your identity and facilitates communication for various issues. If you are an Alibaba internal organization, specify a value based on your actual scenario, such as BU name-product or BU name-chat. If you are an external Alibaba partner, specify the full name of your company. This company name must be consistent with the company name used when you registered your Alibaba Cloud account.</p>
+     * <p>This field represents your identity and facilitates subsequent communication on various issues. If you are an Alibaba internal organization, specify a value based on your actual scenario, such as BU name-product or BU name-chat. If you are an external Alibaba partner, specify the full name of your company. This company name must be consistent with the company name used when you registered your Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>MyCompany-Chat</p>
@@ -14,7 +14,7 @@ public class TextTranslateRequest extends TeaModel {
     public String bizName;
 
     /**
-     * <p>The format type of the source text. This parameter is optional. Valid values: text (plain text format) and html (web page format that preserves HTML tags).</p>
+     * <p>The format type of the source text. This parameter is optional. Valid values: text (plain text format) and html (web page format, which preserves HTML tags).</p>
      * 
      * <strong>example:</strong>
      * <p>text</p>
@@ -23,7 +23,7 @@ public class TextTranslateRequest extends TeaModel {
     public String formatType;
 
     /**
-     * <p>The intervention glossary ID. This parameter is optional. You must create the glossary separately in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</p>
+     * <p>The intervention glossary ID. This parameter is optional. You must create the glossary separately in the console and provide its ID. If the provided glossary ID is empty, the translation results are not modified.</p>
      * 
      * <strong>example:</strong>
      * <p>glossary_1</p>
@@ -32,7 +32,7 @@ public class TextTranslateRequest extends TeaModel {
     public String glossary;
 
     /**
-     * <p>The source language code. If not specified, the language is automatically detected. This parameter is optional. You can set it to auto for language detection. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping table</a>.</p>
+     * <p>The source language code. This parameter is optional. If you do not specify this parameter, the source language is automatically detected. You can set this parameter to auto for language detection. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping table</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>auto</p>
@@ -41,7 +41,7 @@ public class TextTranslateRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
-     * <p>The list of texts to be translated. This parameter is required. The total character length cannot exceed 50,000, and the list length cannot exceed 50.</p>
+     * <p>The list of texts to translate. This parameter is required. The total character length cannot exceed 50,000, and the list length cannot exceed 50.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class TextTranslateRequest extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <p>The business scenario identifier. You can pass in only one of the following values. When specified, the translation engine invokes the corresponding industry terminology library and style strategy to produce translations that better fit the industry. If this field is not specified or an invalid value is passed, the general translation strategy is used. Valid values:</p>
+     * <p>The business scenario identifier. You can pass in only one of the following values. After you specify this parameter, the translation engine invokes the terminology library and style strategy for the corresponding industry to produce translations that better fit the industry. If this field is not specified or is specified incorrectly, the general translation strategy is used. Valid values:</p>
      * <ul>
      * <li>e-commerce-title: cross-border e-commerce product title translation.</li>
      * <li>e-commerce-description: cross-border e-commerce product description translation.</li>

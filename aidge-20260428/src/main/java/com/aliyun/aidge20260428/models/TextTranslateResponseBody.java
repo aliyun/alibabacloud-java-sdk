@@ -29,7 +29,7 @@ public class TextTranslateResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, used to uniquely identify a request.</p>
+     * <p>The request ID, which uniquely identifies a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>922E43BB-EE0E-1A29-B143-BB91BB3EA6AB</p>
