@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAiOutboundTaskRequest extends TeaModel {
     /**
-     * <p>The concurrent rate for automated outbound calls.</p>
+     * <p>The concurrency for automatic outbound calls.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,19 +14,16 @@ public class UpdateAiOutboundTaskRequest extends TeaModel {
     public Integer concurrentRate;
 
     /**
-     * <p>The job description. It can contain 0 to 100 characters.</p>
+     * <p>The task description. The description can be up to 100 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>房产销售</p>
+     * <p>PropertySales</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The job execution time.</p>
-     * <blockquote>
-     * <p>The end time must be later than the start time.</p>
-     * </blockquote>
+     * <p>The task execution time. Use a JSON object to configure time periods by day of the week. The start and end values must be in the HH:mm format. The end time must be later than the start time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +33,7 @@ public class UpdateAiOutboundTaskRequest extends TeaModel {
     public String executionTime;
 
     /**
-     * <p>Fixed dialing ratio for predictive outbound calls. Valid values: <strong>≥1</strong>.</p>
+     * <p>The fixed call ratio for predictive outbound calls. Valid values: <strong>≥ 1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1.2</p>
@@ -45,7 +42,7 @@ public class UpdateAiOutboundTaskRequest extends TeaModel {
     public Float forecastCallRate;
 
     /**
-     * <p>The skill group ID (for predictive outbound calls) or IVR ID (for automated outbound calls).</p>
+     * <p>The skill group ID for predictive outbound calls, or the IVR ID for automatic outbound calls.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +52,8 @@ public class UpdateAiOutboundTaskRequest extends TeaModel {
     public Long handlerId;
 
     /**
-     * <p>AICCS instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
+     * <p>The ID of the Artificial Intelligence Cloud Call Service (AICCS) instance.
+     * You can obtain the instance ID from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,20 +63,20 @@ public class UpdateAiOutboundTaskRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Job name. Length: 1 to 15 characters.</p>
+     * <p>The task name. The name must be 1 to 15 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxx外呼</p>
+     * <p>SampleOutboundCall</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The policy for handling duplicate callee numbers.</p>
+     * <p>The called number deduplication policy. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Remove duplicates within the job.</li>
-     * <li><strong>1</strong>: Do not remove duplicates within the job.</li>
+     * <li><strong>0</strong>: Deduplicate within the task.</li>
+     * <li><strong>1</strong>: Do not deduplicate within the task.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -89,24 +87,24 @@ public class UpdateAiOutboundTaskRequest extends TeaModel {
     public Integer numRepeated;
 
     /**
-     * <p>Outbound caller numbers.</p>
+     * <p>The outbound caller numbers.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OutboundNums")
     public java.util.List<String> outboundNums;
 
     /**
-     * <p>Failed-call retry policy.</p>
+     * <p>The failed recall policy.</p>
      * <blockquote>
-     * <p>If empty, no retry is performed when an outbound call fails.</p>
+     * <p>If this parameter is left empty, the system does not recall when an outbound call fails.</p>
      * </blockquote>
      */
     @NameInMap("RecallRule")
     public UpdateAiOutboundTaskRequestRecallRule recallRule;
 
     /**
-     * <p>The job ID.</p>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/312260.html">CreateAiOutboundTask</a> API and check the <strong>Data</strong> field in the response, or invoke the <a href="https://help.aliyun.com/document_detail/2718026.html">GetAiOutboundTaskList</a> API and check the <strong>TaskId</strong> field in the response.</p>
+     * <p>The task ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/312260.html">CreateAiOutboundTask</a> operation and check the <strong>Data</strong> parameter in the response, or call the <a href="https://help.aliyun.com/document_detail/2718026.html">GetAiOutboundTaskList</a> operation and check the <strong>TaskId</strong> parameter in the response.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -210,7 +208,7 @@ public class UpdateAiOutboundTaskRequest extends TeaModel {
 
     public static class UpdateAiOutboundTaskRequestRecallRule extends TeaModel {
         /**
-         * <p>Number of retries after a failed call. Valid values: <strong>1 to 3</strong>.</p>
+         * <p>The number of failed recall attempts. Valid values: <strong>1 to 3</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -219,7 +217,7 @@ public class UpdateAiOutboundTaskRequest extends TeaModel {
         public Integer count;
 
         /**
-         * <p>Time interval between retries after a failed call. Valid values: <strong>1 to 60</strong>, unit: minutes.</p>
+         * <p>The interval between failed recall attempts. Valid values: <strong>1 to 60</strong>. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

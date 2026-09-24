@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySkillGroupsResponseBody extends TeaModel {
     /**
-     * <p>Current page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,13 +14,13 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Data.</p>
+     * <p>The data.</p>
      */
     @NameInMap("Data")
     public java.util.List<QuerySkillGroupsResponseBodyData> data;
 
     /**
-     * <p>Number of items per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
     public Integer onePageSize;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
@@ -38,7 +38,7 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -47,7 +47,7 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
     public Integer totalPage;
 
     /**
-     * <p>Total number of records.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>76</p>
@@ -110,7 +110,7 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
 
     public static class QuerySkillGroupsResponseBodyData extends TeaModel {
         /**
-         * <p>Skill group channel type.</p>
+         * <p>The channel type of the skill group.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -119,25 +119,25 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
         public Integer channelType;
 
         /**
-         * <p>Skill group description.</p>
+         * <p>The description of the skill group.</p>
          * 
          * <strong>example:</strong>
-         * <p>自动化技能组</p>
+         * <p>Automation skill group</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Skill group display name.</p>
+         * <p>The display name of the skill group.</p>
          * 
          * <strong>example:</strong>
-         * <p>自动化技能组</p>
+         * <p>Automation skill group</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
-         * <p>Skill group ID.</p>
+         * <p>The ID of the skill group.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -146,10 +146,10 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
         public Long skillGroupId;
 
         /**
-         * <p>Skill group name.</p>
+         * <p>The name of the skill group.</p>
          * 
          * <strong>example:</strong>
-         * <p>自动化技能组</p>
+         * <p>Automation skill group</p>
          */
         @NameInMap("SkillGroupName")
         public String skillGroupName;

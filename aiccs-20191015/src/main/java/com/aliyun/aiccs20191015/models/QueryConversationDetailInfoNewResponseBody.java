@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason for access denial.</p>
+     * <p>The detailed reason why access was denied.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -23,7 +23,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned result data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public QueryConversationDetailInfoNewResponseBodyData data;
@@ -126,7 +126,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
          * <p>The tag description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Evaluate the customer\&quot;s interest in the model and purchase likelihood.</p>
+         * <p>Evaluate the customer\&quot;s interest in the vehicle model and purchase likelihood</p>
          */
         @NameInMap("OutputTagDescription")
         public String outputTagDescription;
@@ -135,7 +135,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
          * <p>The tag name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Customer intent level.</p>
+         * <p>Customer intent level</p>
          */
         @NameInMap("OutputTagName")
         public String outputTagName;
@@ -144,7 +144,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
          * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;High (very positive, high probability of conversion)&quot;]</p>
+         * <p>[&quot;High (very positive, high conversion probability)&quot;]</p>
          */
         @NameInMap("OutputTagValue")
         public String outputTagValue;
@@ -309,6 +309,8 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
         public String batchId;
 
         /**
+         * <p>The branch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>68</p>
          */
@@ -330,14 +332,14 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
          * <li>CALL_FORWARDING: Call forwarding.</li>
          * <li>INCOMING_CALL_BARRED: Incoming call barred.</li>
          * <li>CALL_REJECTED: Call rejected.</li>
-         * <li>ANSWERED: User answered.</li>
+         * <li>ANSWERED: Answered by the user.</li>
          * <li>USER_BUSY: Callee busy.</li>
          * <li>POWERED_OFF: Powered off.</li>
          * <li>NO_USER_RESPONSE: Out of service area.</li>
-         * <li>OPERATOR_BLOCK: Operator blocked.</li>
+         * <li>OPERATOR_BLOCK: Blocked by the carrier.</li>
          * <li>OTHERS: Other status.</li>
          * <li>SUSPEND: Service suspended.</li>
-         * <li>CANCEL: Caller canceled.</li>
+         * <li>CANCEL: Canceled by the caller.</li>
          * <li>INVALID_NUMBER: Invalid number.</li>
          * <li>UNAVAILABLE: Temporarily unavailable.</li>
          * <li>NETWORK_BUSY: Network busy.</li>
@@ -369,7 +371,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
         public String callerPhone;
 
         /**
-         * <p>The chat record information. The structure is a JSON array, sorted in chronological order. The format is as follows:</p>
+         * <p>The chat record information. The structure is a JSON array, and the chat records are sorted in chronological order. The format is as follows:</p>
          * <pre><code class="language-json">[
          *     {
          *         &quot;content&quot;:&quot;Chat content&quot;,
@@ -381,7 +383,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>[
          *   {
-         *     &quot;content&quot;: &quot;111Hello, age 222, gender male, I am the official consultant of ** Auto, we have a new model **; ** is now available, starting at ** yuan, ** minutes to break * units, would you like to learn more?&quot;,
+         *     &quot;content&quot;: &quot;111Hello, age 222, gender male, I am the official consultant of ** Auto. We have a new model called **; ** is now available, starting at ** RMB. It sold * units in ** minutes. Would you like to learn more?&quot;,
          *     &quot;role&quot;: &quot;assistant&quot;
          *   },
          *   {
@@ -415,7 +417,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
         public String detailId;
 
         /**
-         * <p>The call duration in seconds. The value is 0 if the call is not connected.</p>
+         * <p>The call duration. The value is 0 if the call is not connected. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -434,7 +436,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
          * <p>The failure reason.</p>
          * 
          * <strong>example:</strong>
-         * <p>Actively canceled.</p>
+         * <p>Actively canceled</p>
          */
         @NameInMap("FailedReason")
         public String failedReason;
@@ -471,7 +473,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
         public String majorIntent;
 
         /**
-         * <p>The variable information used at runtime, stored in this field as key-value pairs.</p>
+         * <p>The variable information used at runtime, stored in key-value format in this field.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -479,7 +481,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
          *   &quot;phoneNumber&quot;: &quot;777&quot;,
          *   &quot;distance&quot;: &quot;555&quot;,
          *   &quot;mendian&quot;: &quot;444&quot;,
-         *   &quot;sex&quot;: &quot;male&quot;,
+         *   &quot;sex&quot;: &quot;Male&quot;,
          *   &quot;name&quot;: &quot;111&quot;,
          *   &quot;age&quot;: &quot;222&quot;
          * }</p>

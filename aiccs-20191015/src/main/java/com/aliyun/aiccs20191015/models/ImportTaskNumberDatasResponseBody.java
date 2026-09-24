@@ -14,7 +14,7 @@ public class ImportTaskNumberDatasResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The request status code. <code>OK</code> indicates that the request was successful.</p>
+     * <p>The request status code. OK indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -32,7 +32,7 @@ public class ImportTaskNumberDatasResponseBody extends TeaModel {
     public Long data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -50,12 +50,10 @@ public class ImportTaskNumberDatasResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request succeeded.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: Successful.</li>
+     * <li><strong>false</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

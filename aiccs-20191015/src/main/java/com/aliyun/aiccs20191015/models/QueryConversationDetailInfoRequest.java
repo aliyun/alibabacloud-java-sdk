@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryConversationDetailInfoRequest extends TeaModel {
     /**
-     * <p>The batch ID. This ID is returned by the <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operation when you import callee data. You can view this ID on the <strong>execution history</strong> page by navigating to <strong>call task management</strong> &gt; <strong>details</strong>.</p>
+     * <p>The task batch ID. This is the batch ID returned when callee data is imported. View the task batch ID on the <strong>Call Task Management</strong> &gt; <strong>Details</strong> &gt; <strong>Execution Records</strong> page, or use the batch ID returned when importing callee data by calling the <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class QueryConversationDetailInfoRequest extends TeaModel {
     public String batchId;
 
     /**
-     * <p>The detail ID. You can find this ID in the upper-left corner of the page by navigating to <strong>call task management</strong> &gt; <strong>details</strong> &gt; <strong>execution history</strong> &gt; <strong>completed</strong> &gt; <strong>call details</strong>, or get it by calling the <a href="https://help.aliyun.com/document_detail/2926853.html">QueryAiCallDetailPage</a> operation.</p>
+     * <p>The task detail ID. View the task detail ID in the upper-left corner of the <strong>Call Task Management</strong> &gt; <strong>Details</strong> &gt; <strong>Execution Records</strong> &gt; <strong>Completed</strong> &gt; <strong>Call Details</strong> page, or retrieve it by calling the <a href="https://help.aliyun.com/document_detail/2926853.html">QueryAiCallDetailPage</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class QueryConversationDetailInfoRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The task ID. You can find this ID on the <strong>call task management</strong> page or get it by calling the <a href="https://help.aliyun.com/document_detail/2926799.html">QueryAiCallTaskPage</a> operation.</p>
+     * <p>The task ID. View the task ID on the <strong>Call Task Management</strong> page or retrieve it by calling the <a href="https://help.aliyun.com/document_detail/2926799.html">QueryAiCallTaskPage</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

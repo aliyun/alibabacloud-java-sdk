@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddModelApplicationShrinkRequest extends TeaModel {
     /**
-     * <p>The number of concurrent requests per second (CPS).</p>
+     * <p>The number of concurrent requests for the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,13 +19,13 @@ public class AddModelApplicationShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试应用</p>
+     * <p>TestApplication</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
     /**
-     * <p>Specifies whether to push an event notification when a call is connected. The default value is false.</p>
+     * <p>Specifies whether to enable call-connected event push. Disabled by default.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -34,10 +34,10 @@ public class AddModelApplicationShrinkRequest extends TeaModel {
     public Boolean callConnectedTriggerModel;
 
     /**
-     * <p>The scene name.</p>
+     * <p>The scenario name.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试场景</p>
+     * <p>TestScenario</p>
      */
     @NameInMap("DyvmsSceneName")
     public String dyvmsSceneName;
@@ -80,7 +80,7 @@ public class AddModelApplicationShrinkRequest extends TeaModel {
     public Long muteDuration;
 
     /**
-     * <p>The number of consecutive mute events that trigger an automatic hang-up.</p>
+     * <p>The number of consecutive mute events before the system proactively hangs up the call.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -95,7 +95,7 @@ public class AddModelApplicationShrinkRequest extends TeaModel {
      * <p>The prompt.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试提示词。</p>
+     * <p>Test prompt</p>
      */
     @NameInMap("Prompt")
     public String prompt;
@@ -110,16 +110,16 @@ public class AddModelApplicationShrinkRequest extends TeaModel {
     public Long qualificationId;
 
     /**
-     * <p>The name of the qualification.</p>
+     * <p>The qualification name.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试资质</p>
+     * <p>TestQualification</p>
      */
     @NameInMap("QualificationName")
     public String qualificationName;
 
     /**
-     * <p>The URL of the audio file for the opening line. This parameter is required if <code>StartWordType</code> is set to <code>1</code>.</p>
+     * <p>The URL of the recorded audio file for the opening statement. This parameter is required when the opening statement type is set to 1.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://xxxxxxxx.wav">https://xxxxxxxx.wav</a></p>
@@ -134,7 +134,7 @@ public class AddModelApplicationShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The source. The value must be <code>USER</code>.</p>
+     * <p>The source. Fixed value: USER.</p>
      * 
      * <strong>example:</strong>
      * <p>USER</p>
@@ -146,7 +146,7 @@ public class AddModelApplicationShrinkRequest extends TeaModel {
      * <p>The speech script content.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试话术。</p>
+     * <p>Test speech script</p>
      */
     @NameInMap("SpeechContent")
     public String speechContent;
@@ -161,37 +161,36 @@ public class AddModelApplicationShrinkRequest extends TeaModel {
     public Long speechId;
 
     /**
-     * <p>The opening line.</p>
+     * <p>The opening statement.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>你好，这是一句开场白。</p>
+     * <p>Hello, this is an opening statement</p>
      */
     @NameInMap("StartWord")
     public String startWord;
 
     /**
-     * <p>The type of the opening line.</p>
+     * <p>The type of the opening statement.</p>
      * 
      * <strong>example:</strong>
-     * <p>0：文本
-     * 1：录音</p>
+     * <p>0</p>
      */
     @NameInMap("StartWordType")
     public Long startWordType;
 
     /**
-     * <p>The TTS configuration, including voice, volume, speech speed, and more.</p>
+     * <p>The text-to-speech (TTS) configuration, including voice, volume, and speed.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TtsConfig")
     public String ttsConfigShrink;
 
     /**
-     * <p>The purpose of the application.</p>
+     * <p>The usage description.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试用途</p>
+     * <p>TestUsage</p>
      */
     @NameInMap("UsageDesc")
     public String usageDesc;

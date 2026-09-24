@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PageQueryAgentListNewRequest extends TeaModel {
     /**
-     * <p>The agent ID.</p>
+     * <p>Agent ID</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>
@@ -17,13 +17,22 @@ public class PageQueryAgentListNewRequest extends TeaModel {
      * <p>The agent name.</p>
      * 
      * <strong>example:</strong>
-     * <p>智能客服助手</p>
+     * <p>Intelligent Customer Service Assistant</p>
      */
     @NameInMap("AgentName")
     public String agentName;
 
     /**
-     * <p>Indicates whether the agent is available for outbound calls. The value is <code>true</code> if the agent\&quot;s current deployment branch has a published version.</p>
+     * <p>Specifies whether to return only candidate agents that are configurable for inbound calls.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("InboundConfigurableOnly")
+    public Boolean inboundConfigurableOnly;
+
+    /**
+     * <p>Specifies whether the agent is available for outbound calls. A value of True indicates that the current deployment branch of the agent has a published version and is available for outbound calls.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +41,7 @@ public class PageQueryAgentListNewRequest extends TeaModel {
     public Boolean isAvailable;
 
     /**
-     * <p>The page index. This parameter is deprecated. Use <code>PageNo</code> instead.</p>
+     * <p>The page number. This parameter is deprecated. Use PageNo instead.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,13 +59,31 @@ public class PageQueryAgentListNewRequest extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
+
+    /**
+     * <p>The service direction.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value</p>
+     */
+    @NameInMap("ServiceDirection")
+    public String serviceDirection;
+
+    /**
+     * <p>The source template ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23</p>
+     */
+    @NameInMap("TemplateId")
+    public Long templateId;
 
     public static PageQueryAgentListNewRequest build(java.util.Map<String, ?> map) throws Exception {
         PageQueryAgentListNewRequest self = new PageQueryAgentListNewRequest();
@@ -77,6 +104,14 @@ public class PageQueryAgentListNewRequest extends TeaModel {
     }
     public String getAgentName() {
         return this.agentName;
+    }
+
+    public PageQueryAgentListNewRequest setInboundConfigurableOnly(Boolean inboundConfigurableOnly) {
+        this.inboundConfigurableOnly = inboundConfigurableOnly;
+        return this;
+    }
+    public Boolean getInboundConfigurableOnly() {
+        return this.inboundConfigurableOnly;
     }
 
     public PageQueryAgentListNewRequest setIsAvailable(Boolean isAvailable) {
@@ -109,6 +144,22 @@ public class PageQueryAgentListNewRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public PageQueryAgentListNewRequest setServiceDirection(String serviceDirection) {
+        this.serviceDirection = serviceDirection;
+        return this;
+    }
+    public String getServiceDirection() {
+        return this.serviceDirection;
+    }
+
+    public PageQueryAgentListNewRequest setTemplateId(Long templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public Long getTemplateId() {
+        return this.templateId;
     }
 
 }

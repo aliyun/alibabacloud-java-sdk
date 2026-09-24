@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryTouchListResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class QueryTouchListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Description of the status code.</p>
+     * <p>The status code description.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -23,7 +23,7 @@ public class QueryTouchListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>865658FD-80DE-5D49-ABEB-F3CC9863F4F1</p>
@@ -32,15 +32,15 @@ public class QueryTouchListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Data result.</p>
+     * <p>The data result.</p>
      */
     @NameInMap("ResultData")
     public QueryTouchListResponseBodyResultData resultData;
 
     /**
-     * <p>Indicates whether the API call succeeded. Valid values:  </p>
+     * <p>Indicates whether the API call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Succeeded.  </li>
+     * <li><strong>true</strong>: Successful.</li>
      * <li><strong>false</strong>: Failed.</li>
      * </ul>
      * 
@@ -97,7 +97,7 @@ public class QueryTouchListResponseBody extends TeaModel {
 
     public static class QueryTouchListResponseBodyResultDataDataExtAttrs extends TeaModel {
         /**
-         * <p>Inbound call caller number.</p>
+         * <p>The calling number for inbound calls.</p>
          * 
          * <strong>example:</strong>
          * <p>187****0000</p>
@@ -106,7 +106,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public String ani;
 
         /**
-         * <p>For outbound calls, this is the called number. For inbound calls, this is also the called number.</p>
+         * <p>The called number for both outbound and inbound calls.</p>
          * 
          * <strong>example:</strong>
          * <p>05712688****</p>
@@ -115,12 +115,12 @@ public class QueryTouchListResponseBody extends TeaModel {
         public String dnis;
 
         /**
-         * <p>Satisfaction Level. Valid values:  </p>
+         * <p>The satisfaction level. Valid values:</p>
          * <ul>
-         * <li><strong>2</strong>: Level 2 satisfaction.  </li>
-         * <li><strong>3</strong>: Level 3 satisfaction.  </li>
-         * <li><strong>4</strong>: Level 4 satisfaction.  </li>
-         * <li><strong>5</strong>: Level 5 satisfaction.</li>
+         * <li><strong>2</strong>: 2-level satisfaction.</li>
+         * <li><strong>3</strong>: 3-level satisfaction.</li>
+         * <li><strong>4</strong>: 4-level satisfaction.</li>
+         * <li><strong>5</strong>: 5-level satisfaction.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Integer evaluationLevel;
 
         /**
-         * <p>Satisfaction rating. Valid values:</p>
+         * <p>The satisfaction score. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: Very dissatisfied.</li>
          * <li><strong>2</strong>: Dissatisfied.</li>
@@ -146,7 +146,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Integer evaluationScore;
 
         /**
-         * <p>Evaluation solution.</p>
+         * <p>The evaluation Solutions.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -155,7 +155,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Integer evaluationSolution;
 
         /**
-         * <p>Evaluation status. Valid values:</p>
+         * <p>The evaluation status. Valid values:</p>
          * <ul>
          * <li><strong>-1</strong>: Evaluation not initiated.</li>
          * <li><strong>0</strong>: Not evaluated.</li>
@@ -169,7 +169,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Integer evaluationStatus;
 
         /**
-         * <p>Duration until first response (unit: seconds).</p>
+         * <p>The first response duration, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -178,7 +178,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Integer onlineJoinRespInterval;
 
         /**
-         * <p>Online session source.</p>
+         * <p>The online session source.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -187,7 +187,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Integer onlineSessionSource;
 
         /**
-         * <p>Outbound call caller number.</p>
+         * <p>The calling number for outbound calls.</p>
          * 
          * <strong>example:</strong>
          * <p>05712688****</p>
@@ -276,7 +276,7 @@ public class QueryTouchListResponseBody extends TeaModel {
 
     public static class QueryTouchListResponseBodyResultDataData extends TeaModel {
         /**
-         * <p>Tenant ID.</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>905</p>
@@ -285,7 +285,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Long buId;
 
         /**
-         * <p>Session ID.</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4f8807a9de024507a3090b5b66a8****</p>
@@ -294,7 +294,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public String channelId;
 
         /**
-         * <p>Contact channel.</p>
+         * <p>The touch channel.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -303,7 +303,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Integer channelType;
 
         /**
-         * <p>Session end time. UNIX timestamp format (unit: milliseconds).</p>
+         * <p>The session end time. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1611207976000</p>
@@ -312,16 +312,16 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Long closeTime;
 
         /**
-         * <p>Skill group name.</p>
+         * <p>The skill group name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试1</p>
+         * <p>Test1</p>
          */
         @NameInMap("CommonQueueName")
         public String commonQueueName;
 
         /**
-         * <p>Department ID.</p>
+         * <p>The department ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -330,19 +330,19 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Long depId;
 
         /**
-         * <p>Extension fields.</p>
+         * <p>The extended fields.</p>
          */
         @NameInMap("ExtAttrs")
         public QueryTouchListResponseBodyResultDataDataExtAttrs extAttrs;
 
         /**
-         * <p>Large object.</p>
+         * <p>The large field.</p>
          */
         @NameInMap("ExtAttrsString")
         public java.util.Map<String, ?> extAttrsString;
 
         /**
-         * <p>Feedback.</p>
+         * <p>The feedback.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -351,7 +351,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public String feedback;
 
         /**
-         * <p>Conversation pickup time, in UNIX timestamp format (unit: milliseconds).</p>
+         * <p>The session pickup time. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1611209971000</p>
@@ -360,7 +360,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Long firstTime;
 
         /**
-         * <p>Conversation initiator.</p>
+         * <p>The session initiator.</p>
          * 
          * <strong>example:</strong>
          * <p>6400665****</p>
@@ -369,7 +369,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Long fromId;
 
         /**
-         * <p>Creation Time, in UNIX timestamp format (unit: milliseconds).</p>
+         * <p>The creation time. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1611209971000</p>
@@ -378,7 +378,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Update Time. UNIX timestamp format (unit: milliseconds).</p>
+         * <p>The update time. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1611207979000</p>
@@ -387,7 +387,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>Membership ID.</p>
+         * <p>The member ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6400665****</p>
@@ -396,16 +396,16 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Long memberId;
 
         /**
-         * <p>Membership name.</p>
+         * <p>The member name.</p>
          * 
          * <strong>example:</strong>
-         * <p>访客</p>
+         * <p>Visitor</p>
          */
         @NameInMap("MemberName")
         public String memberName;
 
         /**
-         * <p>Parent contact ID.</p>
+         * <p>The parent touch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -414,7 +414,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Long parentTouchId;
 
         /**
-         * <p>Skill group ID.</p>
+         * <p>The skill group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -423,7 +423,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Long queueId;
 
         /**
-         * <p>Service agent ID.</p>
+         * <p>The agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>67****</p>
@@ -432,7 +432,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Long servicerId;
 
         /**
-         * <p>Service agent name.</p>
+         * <p>The agent name.</p>
          * 
          * <strong>example:</strong>
          * <p>1390000****</p>
@@ -441,11 +441,11 @@ public class QueryTouchListResponseBody extends TeaModel {
         public String servicerName;
 
         /**
-         * <p>Contact status. Valid values:  </p>
+         * <p>The touch status. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Incoming call received.  </li>
-         * <li><strong>2</strong>: Agent has joined.  </li>
-         * <li><strong>3</strong>: In conversation.  </li>
+         * <li><strong>1</strong>: Queued.</li>
+         * <li><strong>2</strong>: Agent connected.</li>
+         * <li><strong>3</strong>: In call.</li>
          * <li><strong>4</strong>: Ended.</li>
          * </ul>
          * 
@@ -456,7 +456,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>Change owner list.</p>
+         * <p>The transfer list.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -465,7 +465,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public String switchUser;
 
         /**
-         * <p>Conversation recipient.</p>
+         * <p>The session receiver.</p>
          * 
          * <strong>example:</strong>
          * <p>67****</p>
@@ -474,15 +474,15 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Long toId;
 
         /**
-         * <p>The reason why the session ended. Valid values:  </p>
+         * <p>The session end reason. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Unknown.  </li>
-         * <li><strong>1</strong>: Contact failed.  </li>
-         * <li><strong>2</strong>: Terminated by customer.  </li>
-         * <li><strong>3</strong>: Terminated by agent.  </li>
-         * <li><strong>4</strong>: Call abnormally interrupted.  </li>
-         * <li><strong>5</strong>: Terminated due to change owner.  </li>
-         * <li><strong>6</strong>: Terminated by system.</li>
+         * <li><strong>0</strong>: Unknown.</li>
+         * <li><strong>1</strong>: Touch unsuccessful.</li>
+         * <li><strong>2</strong>: Customer terminated.</li>
+         * <li><strong>3</strong>: Agent terminated.</li>
+         * <li><strong>4</strong>: Call abnormally interrupted.</li>
+         * <li><strong>5</strong>: Transfer terminated.</li>
+         * <li><strong>6</strong>: System terminated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -492,7 +492,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public String touchContent;
 
         /**
-         * <p>End reason.</p>
+         * <p>The end reason.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -501,7 +501,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Integer touchEndReason;
 
         /**
-         * <p>Touch ID.</p>
+         * <p>The contact ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1386****</p>
@@ -510,7 +510,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public String touchId;
 
         /**
-         * <p>Conversation duration (unit: seconds).</p>
+         * <p>The session duration, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -519,7 +519,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public String touchTime;
 
         /**
-         * <p>Touch type. Valid values:</p>
+         * <p>The touch type. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: Active touch.</li>
          * <li><strong>2</strong>: Passive touch.</li>
@@ -532,7 +532,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Integer touchType;
 
         /**
-         * <p>User touch ID.</p>
+         * <p>The user touch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1386****</p>
@@ -773,7 +773,7 @@ public class QueryTouchListResponseBody extends TeaModel {
 
     public static class QueryTouchListResponseBodyResultData extends TeaModel {
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -782,7 +782,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>Data.</p>
+         * <p>The data.</p>
          */
         @NameInMap("Data")
         public java.util.List<QueryTouchListResponseBodyResultDataData> data;
@@ -797,7 +797,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Boolean empty;
 
         /**
-         * <p>The page number of the next page.</p>
+         * <p>The next page number.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -806,7 +806,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Integer nextPage;
 
         /**
-         * <p>Page size.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -815,7 +815,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Integer onePageSize;
 
         /**
-         * <p>Previous page number.</p>
+         * <p>The previous page number.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -824,7 +824,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Integer previousPage;
 
         /**
-         * <p>Total number of pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -833,7 +833,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public Integer totalPage;
 
         /**
-         * <p>Total number of query results.</p>
+         * <p>The total number of results.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

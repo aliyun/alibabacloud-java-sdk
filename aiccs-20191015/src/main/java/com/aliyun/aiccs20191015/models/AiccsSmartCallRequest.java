@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AiccsSmartCallRequest extends TeaModel {
     /**
-     * <p>Whether the initial audio playback file is interruptible. The default value is <strong>true</strong>, which means the initial audio playback file can be interrupted.</p>
+     * <p>Specifies whether the opening audio file can be interrupted. Default value: <strong>true</strong>, which indicates that the opening audio file can be interrupted.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class AiccsSmartCallRequest extends TeaModel {
     public Boolean actionCodeBreak;
 
     /**
-     * <p>Interrupts based on the user\&quot;s continuous speaking duration. Takes effect only when ActionCodeBreak is <strong>true</strong>. Unit: milliseconds.</p>
+     * <p>The interruption threshold based on the duration of continuous user speech. This parameter takes effect only when ActionCodeBreak is set to <strong>true</strong>. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>120</p>
@@ -23,7 +23,7 @@ public class AiccsSmartCallRequest extends TeaModel {
     public Integer actionCodeTimeBreak;
 
     /**
-     * <p>Acoustic model ID.</p>
+     * <p>The acoustic model ID.</p>
      * 
      * <strong>example:</strong>
      * <p>23387****</p>
@@ -32,21 +32,21 @@ public class AiccsSmartCallRequest extends TeaModel {
     public String asrAlsAmId;
 
     /**
-     * <p>ASR foundation model.</p>
+     * <p>The ASR foundation model.</p>
      * <ul>
      * <li><strong>customer_service_8k</strong>: Mandarin.</li>
      * <li><strong>dialect_customer_service_8k</strong>: Heavy accent.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>When invoking the <strong>SendCcoSmartCall</strong> API, you must specify an ASR model. We recommend that you provide either the <strong>asrModelId</strong> or <strong>AsrBaseId</strong> parameter.</li>
+     * <li>When calling the <strong>SendCcoSmartCall</strong> operation, specify the ASR model to use. Specify either <strong>asrModelId</strong> or <strong>AsrBaseId</strong>.</li>
      * </ul>
      * </blockquote>
      * <ul>
      * <li>If only <strong>asrModelId</strong> is set, the specified ASR model is used.</li>
      * <li>If only <strong>AsrBaseId</strong> is set, the specified ASR foundation model is used.</li>
-     * <li>If neither parameter is set, the default ASR foundation model is used. By default, <strong>AsrBaseId</strong> is <strong>customer_service_8k</strong>, which corresponds to the Mandarin ASR foundation model.</li>
-     * <li>If both parameters are set, confirm that they correctly correspond to each other.</li>
+     * <li>If neither is set, the default ASR foundation model is used. The default value of <strong>AsrBaseId</strong> is <strong>customer_service_8k</strong>, which indicates the Mandarin ASR foundation model.</li>
+     * <li>If both are set, make sure they correspond correctly.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class AiccsSmartCallRequest extends TeaModel {
     public String asrBaseId;
 
     /**
-     * <p>ASR model ID. You can view the ASR model ID on the <a href="https://aiccs.console.aliyun.com/sentence/model/private?spm=a2c4g.11186623.0.0.7f9b2964fYSGv4">ASR Model Management page</a>.</p>
+     * <p>The ASR model ID. View the ASR model ID on the <a href="https://aiccs.console.aliyun.com/sentence/model/private?spm=a2c4g.11186623.0.0.7f9b2964fYSGv4">ASR Model Management page</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>bf71664d30d2478fb8cb8c39c6b6****</p>
@@ -65,7 +65,7 @@ public class AiccsSmartCallRequest extends TeaModel {
     public String asrModelId;
 
     /**
-     * <p>Hotword ID. You can view the ASR hotword ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Hotword Management Page</a>.</p>
+     * <p>The hot word ID. View the ASR hot word ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Hot Word Management page</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>6689****</p>
@@ -74,8 +74,8 @@ public class AiccsSmartCallRequest extends TeaModel {
     public String asrVocabularyId;
 
     /**
-     * <p>ID of the background audio file played during the conversation between the user and the robot.  </p>
-     * <p>You can log on to the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>, choose <strong>Intelligent Interaction &gt; Audio File Management</strong>, and click <strong>View</strong> to check the corresponding audio ID.</p>
+     * <p>The ID of the background audio file played during the conversation between the user and the robot.</p>
+     * <p>Log on to the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>, choose <strong>Intelligent Interaction &gt; Voice File Management</strong>, and click <strong>Details</strong> to view the corresponding voice ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2d4c-4e78-8d2a-afbb06cf****.wav</p>
@@ -84,7 +84,7 @@ public class AiccsSmartCallRequest extends TeaModel {
     public String backgroundFileCode;
 
     /**
-     * <p>This parameter is currently not supported.</p>
+     * <p>This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class AiccsSmartCallRequest extends TeaModel {
     public Integer backgroundSpeed;
 
     /**
-     * <p>The parameter is not supported yet.</p>
+     * <p>This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -102,7 +102,7 @@ public class AiccsSmartCallRequest extends TeaModel {
     public Integer backgroundVolume;
 
     /**
-     * <p>Called number. Only numbers in the Chinese mainland are supported.</p>
+     * <p>The called number. Only numbers in the Chinese mainland are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -112,8 +112,8 @@ public class AiccsSmartCallRequest extends TeaModel {
     public String calledNumber;
 
     /**
-     * <p>The caller ID displayed to the callee. This must be a number you have purchased.</p>
-     * <p>You can log on to the <a href="https://aiccs.console.aliyun.com/overview?spm=a2c4g.11186623.0.0.7f9bf9658X6jte">Contact Center console</a> to view your purchased numbers.</p>
+     * <p>The China-based number displayed to the called party. The number must be a purchased number.</p>
+     * <p>You can log on to the <a href="https://aiccs.console.aliyun.com/overview?spm=a2c4g.11186623.0.0.7f9bf9658X6jte">Contact Center console</a> to view purchased numbers.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -123,7 +123,7 @@ public class AiccsSmartCallRequest extends TeaModel {
     public String calledShowNumber;
 
     /**
-     * <p>A dynamic extension ID reserved for the caller, which is returned in the webhook address to serve as the customer\&quot;s developer identity.</p>
+     * <p>The dynamic extension ID reserved for the caller. This ID is returned in the callback URL for the caller\&quot;s development identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>2234****</p>
@@ -132,21 +132,21 @@ public class AiccsSmartCallRequest extends TeaModel {
     public String dynamicId;
 
     /**
-     * <p>Early media speech recognition identity. When set to <strong>true</strong>, it records the reason why the call was not answered. Default value: <strong>false</strong>, meaning disabled.</p>
+     * <p>The early media speech recognition flag. If set to <strong>true</strong>, the reason for unanswered calls is recorded. Default value: <strong>false</strong>, which indicates that this feature is disabled.</p>
      * <blockquote>
-     * <p>To enable early media speech recognition, you must manually set this parameter to <strong>true</strong>.</p>
+     * <p>To enable early media speech recognition, manually set this parameter to <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>fasle</p>
+     * <p>false</p>
      */
     @NameInMap("EarlyMediaAsr")
     public Boolean earlyMediaAsr;
 
     /**
-     * <p>Whether to execute ITN during post-processing.  </p>
+     * <p>Specifies whether to perform Inverse Text Normalization (ITN) in post-processing.</p>
      * <blockquote>
-     * <p>When set to <strong>true</strong>, Chinese numerals are converted to Arabic numerals in the output. The default value is <strong>false</strong>.</p>
+     * <p>If set to <strong>true</strong>, Chinese numerals are converted to Arabic numerals in the output. Default value: <strong>false</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -156,10 +156,10 @@ public class AiccsSmartCallRequest extends TeaModel {
     public Boolean enableITN;
 
     /**
-     * <p>Silence duration. This parameter defines how long the call waits for user speech before ending the call. The unit is milliseconds, and valid values range from <strong>1000 to 20000</strong>.</p>
+     * <p>The silence duration. Specifies how long the user remains silent before the call ends. Unit: milliseconds. Valid values: <strong>1000</strong> to <strong>20000</strong>.</p>
      * <ul>
-     * <li>If the specified value is outside this range, <strong>MuteTime</strong> defaults to <strong>10000</strong>.</li>
-     * <li>This parameter can be dynamically updated during the call. The last set value takes effect.</li>
+     * <li>If the specified value is not within the valid range, the default value of MuteTime is <strong>10000</strong>.</li>
+     * <li>This parameter can be dynamically set during the call. The last setting takes effect.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -169,7 +169,8 @@ public class AiccsSmartCallRequest extends TeaModel {
     public Integer muteTime;
 
     /**
-     * <p>An ID reserved for the caller. This ID will be returned to the caller in the receipt message.<br>It is a string with a length of 1 to 15 bytes.</p>
+     * <p>The ID reserved for the caller. This ID is returned to the caller in the receipt message.
+     * The value is a string of 1 to 15 bytes in length.</p>
      * 
      * <strong>example:</strong>
      * <p>222356****</p>
@@ -181,10 +182,10 @@ public class AiccsSmartCallRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Pause duration. Specifies how long the user must pause to indicate the end of a sentence. Unit: milliseconds. Valid range: <strong>300–1200</strong>.</p>
+     * <p>The pause duration. Specifies how long the user pauses before a sentence is considered complete. Unit: milliseconds. Valid values: <strong>300</strong> to <strong>1200</strong>.</p>
      * <ul>
-     * <li>If the specified value is outside this range, PauseTime defaults to <strong>800</strong>.</li>
-     * <li>Only the first setting takes effect; subsequent settings are ignored.</li>
+     * <li>If the specified value is not within the valid range, the default value of PauseTime is <strong>800</strong>.</li>
+     * <li>Only the initial setting takes effect. Subsequent settings are ignored.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -194,7 +195,7 @@ public class AiccsSmartCallRequest extends TeaModel {
     public Integer pauseTime;
 
     /**
-     * <p>The parameter is not supported yet.</p>
+     * <p>This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -203,7 +204,7 @@ public class AiccsSmartCallRequest extends TeaModel {
     public Integer playTimes;
 
     /**
-     * <p>Product name. Default value: <strong>aiccs</strong>.</p>
+     * <p>The product name. Default value: <strong>aiccs</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>aiccs</p>
@@ -212,7 +213,7 @@ public class AiccsSmartCallRequest extends TeaModel {
     public String prodCode;
 
     /**
-     * <p>Whether to record during the call.</p>
+     * <p>Specifies whether to record the call.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -227,7 +228,7 @@ public class AiccsSmartCallRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Maximum call duration, in seconds. The call is automatically disconnected after timeout.</p>
+     * <p>The maximum call duration. Unit: seconds. The call is automatically hung up after the timeout period.</p>
      * 
      * <strong>example:</strong>
      * <p>120</p>
@@ -236,7 +237,7 @@ public class AiccsSmartCallRequest extends TeaModel {
     public Integer sessionTimeout;
 
     /**
-     * <p>This parameter is not currently supported.</p>
+     * <p>This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -245,10 +246,10 @@ public class AiccsSmartCallRequest extends TeaModel {
     public Integer speed;
 
     /**
-     * <p>Whether to configure TTS voice parameters.</p>
+     * <p>Specifies whether to configure TTS voice parameters.</p>
      * <ul>
-     * <li>If set to <strong>true</strong>, you must use the TtsStyle, TtsVolume, and TtsSpeed parameters to define the voice style.</li>
-     * <li>If set to <strong>false</strong>, related parameters are not required and will have no effect even if configured.</li>
+     * <li>true: Configure the voice style by using the TtsStyle, TtsColume, and TtsSpeed parameters.</li>
+     * <li>false: No configuration is required. Even if these parameters are set, they do not take effect.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -258,7 +259,7 @@ public class AiccsSmartCallRequest extends TeaModel {
     public Boolean ttsConf;
 
     /**
-     * <p>Speech speed when playing TTS variables. Valid values range from <strong>-200 to 200</strong>. The default value is <strong>0</strong>.</p>
+     * <p>The speech speed for TTS variable playback. Valid values: <strong>-200</strong> to <strong>200</strong>. Default value: <strong>0</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -267,7 +268,7 @@ public class AiccsSmartCallRequest extends TeaModel {
     public Integer ttsSpeed;
 
     /**
-     * <p>Voice style used during TTS variable playback. Default value: <strong>xiaoyun</strong>. For available styles, see the voice style list.</p>
+     * <p>The voice style for TTS variable playback. Default value: <strong>xiaoyun</strong>. For specific styles, refer to the voice style list.</p>
      * 
      * <strong>example:</strong>
      * <p>xiaoyun</p>
@@ -276,7 +277,7 @@ public class AiccsSmartCallRequest extends TeaModel {
     public String ttsStyle;
 
     /**
-     * <p>The volume for TTS variable playback. Valid values range from <strong>0 to 100</strong>. The default value is <strong>0</strong>.</p>
+     * <p>The volume for TTS variable playback. Valid values: <strong>0</strong> to <strong>100</strong>. Default value: <strong>0</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -285,10 +286,10 @@ public class AiccsSmartCallRequest extends TeaModel {
     public Integer ttsVolume;
 
     /**
-     * <p>The Intelligent Outbound Call playback audio file supports both network files and TTS. Multiple files and TTS parameters can be mixed for playback, separated by commas (,). The replacement values for TTS parameters are specified in <strong>VoiceCodeParam</strong>.</p>
+     * <p>The intelligent outbound call audio file. Network files and text-to-speech (TTS) are supported. You can mix multiple files and TTS parameters, separated by commas (,). The replacement values for TTS parameters are specified in <strong>VoiceCodeParam</strong>.</p>
      * <ul>
-     * <li>When the playback file is a network file: Set the VoiceCode parameter to a publicly accessible URL of the audio file. We recommend using a WAV-formatted audio file with a sampling frequency of 8000 Hz or 16000 Hz.</li>
-     * <li>When the playback file uses TTS: Set the VoiceCode parameter to a variable name such as $name$, and define the corresponding content for this variable in VoiceCodeParam.</li>
+     * <li>If the audio file is a network file, set VoiceCode to a URL of the audio file that allows public network access. Use a WAV format audio file with a sampling frequency of 8000 Hz or 16000 Hz.</li>
+     * <li>If the audio file uses TTS, set VoiceCode to a variable name such as $name$, and set the corresponding content for the variable in VoiceCodeParam.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -299,16 +300,16 @@ public class AiccsSmartCallRequest extends TeaModel {
     public String voiceCode;
 
     /**
-     * <p>TTS parameter string in JSON format. It must correspond to the TTS parameters of VoiceCode.</p>
+     * <p>The TTS parameter string in JSON format. This parameter must correspond to the TTS parameters in VoiceCode.</p>
      * 
      * <strong>example:</strong>
-     * <p>“{\”name\”:\”喂，你好\”}”</p>
+     * <p>&quot;{\&quot;name\&quot;:\&quot;Hello\&quot;}&quot;</p>
      */
     @NameInMap("VoiceCodeParam")
     public String voiceCodeParam;
 
     /**
-     * <p>The volume for playing user audio. Valid values range from <strong>-4 to 4</strong>. We recommend setting it to <strong>1</strong>.</p>
+     * <p>The volume for playing user audio. Valid values: <strong>-4</strong> to <strong>4</strong>. Set this parameter to <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

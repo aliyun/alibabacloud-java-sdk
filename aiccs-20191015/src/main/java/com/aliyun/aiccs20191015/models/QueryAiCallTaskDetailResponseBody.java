@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAiCallTaskDetailResponseBody extends TeaModel {
     /**
-     * <p>The access denial details. This field is returned only when RAM authentication fails.</p>
+     * <p>The details about the access denial. This parameter is returned only when the RAM permission verification fails.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -29,7 +29,7 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
     public QueryAiCallTaskDetailResponseBodyData data;
 
     /**
-     * <p>The error message. This parameter is not returned for successful calls.</p>
+     * <p>The error message. This parameter is not returned if the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>Invalid parameter</p>
@@ -47,7 +47,7 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: Successful.</li>
      * <li><strong>false</strong>: Failed.</li>
@@ -114,7 +114,7 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
 
     public static class QueryAiCallTaskDetailResponseBodyDataCallTimes extends TeaModel {
         /**
-         * <p>The end time.</p>
+         * <p>The end time in the format of HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>09:00:00</p>
@@ -123,7 +123,7 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time in the format of HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>12:00:00</p>
@@ -156,7 +156,7 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
 
     public static class QueryAiCallTaskDetailResponseBodyDataCallableTimes extends TeaModel {
         /**
-         * <p>The end time.</p>
+         * <p>The end time in the format of HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>18:00:00</p>
@@ -165,7 +165,7 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time in the format of HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>10:00:00</p>
@@ -198,7 +198,7 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
 
     public static class QueryAiCallTaskDetailResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the published agent.</p>
+         * <p>The code of the published agent.</p>
          * 
          * <strong>example:</strong>
          * <p>1180**************</p>
@@ -210,21 +210,25 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
          * <p>The agent name.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestAgent</p>
+         * <p>Test agent</p>
          */
         @NameInMap("AgentName")
         public String agentName;
 
         /**
+         * <p>The application code.</p>
+         * 
          * <strong>example:</strong>
-         * <p>SampleValue</p>
+         * <p>Sample value</p>
          */
         @NameInMap("ApplicationCode")
         public String applicationCode;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>SampleValue</p>
+         * <p>Sample value</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
@@ -236,7 +240,7 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
         public java.util.List<String> callDays;
 
         /**
-         * <p>The expiration date of outbound call details (specific deadline).</p>
+         * <p>The expiration date of outbound call details (specific deadline) in the format of YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-07-30 20:00:20</p>
@@ -245,7 +249,7 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
         public String callExpireDate;
 
         /**
-         * <p>The expiration duration of outbound call details, in minutes.</p>
+         * <p>The expiration duration of outbound call details. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -254,10 +258,10 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
         public Long callExpireMinutes;
 
         /**
-         * <p>The outbound call validity type. Valid values:</p>
-         * <p>0: Permanently valid.
-         * 1: Valid for a period of time after import.
-         * 2: Valid until a specified time.</p>
+         * <p>The expiration type of outbound calls. Valid values:</p>
+         * <p>0: permanently valid.
+         * 1: valid for a period of time after import.
+         * 2: valid until a specified time.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -272,7 +276,7 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
         public java.util.List<QueryAiCallTaskDetailResponseBodyDataCallTimes> callTimes;
 
         /**
-         * <p>The callable time periods for the current outbound call instance.</p>
+         * <p>The callable time periods of the current outbound call instance.</p>
          */
         @NameInMap("CallableTimes")
         public java.util.List<QueryAiCallTaskDetailResponseBodyDataCallableTimes> callableTimes;
@@ -296,20 +300,26 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
         public Long concurrentCount;
 
         /**
+         * <p>The line encoding.</p>
+         * 
          * <strong>example:</strong>
-         * <p>SampleValue</p>
+         * <p>Sample value</p>
          */
         @NameInMap("LineEncoding")
         public String lineEncoding;
 
         /**
+         * <p>The phone number of the custom line.</p>
+         * 
          * <strong>example:</strong>
-         * <p>SampleValue</p>
+         * <p>Sample value</p>
          */
         @NameInMap("LinePhoneNum")
         public String linePhoneNum;
 
         /**
+         * <p>The phone number type. Valid values: 0 indicates an Alibaba Cloud number. 1 indicates a custom line provided by the customer.</p>
+         * 
          * <strong>example:</strong>
          * <p>17</p>
          */
@@ -357,7 +367,7 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
         public Long retryInterval;
 
         /**
-         * <p>The list of reasons that allow retry on failure.</p>
+         * <p>The list of failure reasons that allow retry.</p>
          */
         @NameInMap("RetryReasons")
         public java.util.List<String> retryReasons;
@@ -372,7 +382,7 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The start type. Valid values:</p>
+         * <p>The start mode. Valid values:</p>
          * <ul>
          * <li><p>IMMEDIATE: Start immediately.</p>
          * </li>
@@ -399,7 +409,7 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
          * <p>The task name.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestTask</p>
+         * <p>Test task</p>
          */
         @NameInMap("TaskName")
         public String taskName;

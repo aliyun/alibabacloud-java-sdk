@@ -7,13 +7,10 @@ public class ImportTaskNumberDatasRequest extends TeaModel {
     /**
      * <p>The data type. Valid values:</p>
      * <ul>
-     * <li><p>EXCEL</p>
-     * </li>
-     * <li><p>JSON</p>
-     * <blockquote>
-     * <p>Notice: </p>
+     * <li>EXCEL</li>
+     * <li>JSON<blockquote>
+     * <p>Notice: API calls currently support only the JSON data type.</p>
      * </blockquote>
-     * <p>API calls currently support only the JSON data type.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -34,7 +31,7 @@ public class ImportTaskNumberDatasRequest extends TeaModel {
     /**
      * <p>The OSS file path. This parameter is optional.</p>
      * <blockquote>
-     * <p>Importing data by specifying an OSS file path is not available because API calls currently support only the JSON data type.</p>
+     * <p>API calls do not currently support the Excel data type. Therefore, uploading an OSS file path is currently unavailable.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,7 +44,7 @@ public class ImportTaskNumberDatasRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>If <code>DataType</code> is set to <code>JSON</code>, you must use this parameter to upload the data. You can import up to 1,000 records per request.</p>
+     * <p>If DataType is set to JSON, upload data through this field. A maximum of 1000 records can be uploaded at a time.</p>
      */
     @NameInMap("PhoneNumberList")
     public java.util.List<java.util.Map<String, ?>> phoneNumberList;
@@ -59,7 +56,7 @@ public class ImportTaskNumberDatasRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the call task.</p>
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

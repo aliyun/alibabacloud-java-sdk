@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateModelApplicationRequest extends TeaModel {
     /**
-     * <p>The application code.</p>
+     * <p>The code of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
      * <p>The name of the model application.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试应用</p>
+     * <p>TestApplication</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
@@ -51,7 +51,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public Boolean callAssistantRecognize;
 
     /**
-     * <p>Specifies whether to enable call-connected event push. Disabled by default.</p>
+     * <p>Specifies whether to enable call-connected event push. This feature is disabled by default.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -60,7 +60,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public Boolean callConnectedTriggerModel;
 
     /**
-     * <p>The enumeration of allowed key digits, separated by commas, such as 1,2,3. Maximum of 20 values.</p>
+     * <p>The enumeration of allowed key digits, specified as comma-separated text such as 1,2,3. A maximum of 20 values are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -69,7 +69,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public String dtmfAllowedDigits;
 
     /**
-     * <p>Specifies whether to enable automatic validation of key values.</p>
+     * <p>Specifies whether to enable automatic key value validation.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -98,8 +98,8 @@ public class UpdateModelApplicationRequest extends TeaModel {
     /**
      * <p>The action to take when the input is out of range. Valid values:</p>
      * <ul>
-     * <li>RETURN_MODEL: return to the model</li>
-     * <li>AUTO_RETRY: automatically retry</li>
+     * <li>RETURN_MODEL</li>
+     * <li>AUTO_RETRY</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,7 +109,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public String dtmfOutOfRangeAction;
 
     /**
-     * <p>The number of retry attempts (PlayTimes). Valid values: 1 to 3. Takes effect only when DtmfOutOfRangeAction is set to AUTO_RETRY.</p>
+     * <p>The number of retry attempts (PlayTimes). Valid values: 1 to 3. This parameter takes effect only when DtmfOutOfRangeAction is set to AUTO_RETRY.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -118,15 +118,17 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public Long dtmfRetryPlayTimes;
 
     /**
-     * <p>The custom retry prompt text. Maximum length: 50 characters. If left empty, the default message is used.</p>
+     * <p>The custom retry prompt text. The maximum length is 50 characters. If this parameter is left empty, the default prompt &quot;Invalid input. Enter again.&quot; is used.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试文本</p>
+     * <p>Sample text</p>
      */
     @NameInMap("DtmfRetryPromptText")
     public String dtmfRetryPromptText;
 
     /**
+     * <p>The maximum number of DTMF key sending attempts.</p>
+     * 
      * <strong>example:</strong>
      * <p>90</p>
      */
@@ -134,6 +136,8 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public Long dtmfSendMaxCount;
 
     /**
+     * <p>The timeout period for waiting for DTMF key sending.</p>
+     * 
      * <strong>example:</strong>
      * <p>58</p>
      */
@@ -141,10 +145,10 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public Long dtmfSendWaitTimeout;
 
     /**
-     * <p>The scenario name.</p>
+     * <p>The name of the scenario.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试场景</p>
+     * <p>TestScenario</p>
      */
     @NameInMap("DyvmsSceneName")
     public String dyvmsSceneName;
@@ -159,6 +163,8 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public Boolean enableDtmfReceive;
 
     /**
+     * <p>Specifies whether to enable DTMF key sending.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -166,7 +172,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public Boolean enableDtmfSend;
 
     /**
-     * <p>Specifies whether to enable Morse code configuration. Disabled by default.</p>
+     * <p>Specifies whether to enable Morse code configuration. This feature is disabled by default.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -181,7 +187,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public UpdateModelApplicationRequestInterruptConfig interruptConfig;
 
     /**
-     * <p>The model code.</p>
+     * <p>The code of the model.</p>
      * 
      * <strong>example:</strong>
      * <p>1231</p>
@@ -190,7 +196,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public String modelCode;
 
     /**
-     * <p>The model version.</p>
+     * <p>The version of the model.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -217,7 +223,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public Long muteDuration;
 
     /**
-     * <p>The number of consecutive mute events after which the system proactively hangs up.</p>
+     * <p>The number of consecutive mute events before the system proactively hangs up.</p>
      * 
      * <strong>example:</strong>
      * <p>70</p>
@@ -250,13 +256,13 @@ public class UpdateModelApplicationRequest extends TeaModel {
      * <p>The prompt.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试提示词</p>
+     * <p>TestPrompt</p>
      */
     @NameInMap("Prompt")
     public String prompt;
 
     /**
-     * <p>The qualification ID.</p>
+     * <p>The ID of the qualification.</p>
      * 
      * <strong>example:</strong>
      * <p>61</p>
@@ -265,10 +271,10 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public Long qualificationId;
 
     /**
-     * <p>The qualification name.</p>
+     * <p>The name of the qualification.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试质检</p>
+     * <p>TestQualification</p>
      */
     @NameInMap("QualificationName")
     public String qualificationName;
@@ -307,16 +313,16 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The speech script content.</p>
+     * <p>The content of the speech script.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试话术</p>
+     * <p>TestSpeechScript</p>
      */
     @NameInMap("SpeechContent")
     public String speechContent;
 
     /**
-     * <p>The speech script ID.</p>
+     * <p>The ID of the speech script.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -328,7 +334,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
      * <p>The opening statement.</p>
      * 
      * <strong>example:</strong>
-     * <p>你好，这是个测试开场白</p>
+     * <p>Hello, this is a test opening statement</p>
      */
     @NameInMap("StartWord")
     public String startWord;
@@ -337,8 +343,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
      * <p>The type of the opening statement.</p>
      * 
      * <strong>example:</strong>
-     * <p>0：文本
-     * 1：录音</p>
+     * <p>0</p>
      */
     @NameInMap("StartWordType")
     public Long startWordType;
@@ -353,7 +358,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
      * <p>The usage description.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试用途</p>
+     * <p>TestUsage</p>
      */
     @NameInMap("UsageDesc")
     public String usageDesc;
@@ -710,7 +715,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
         public Long interruptNum;
 
         /**
-         * <p>The interruption protection duration.</p>
+         * <p>The interrupt protection duration.</p>
          * 
          * <strong>example:</strong>
          * <p>16.417547</p>
@@ -743,13 +748,13 @@ public class UpdateModelApplicationRequest extends TeaModel {
 
     public static class UpdateModelApplicationRequestInterruptConfig extends TeaModel {
         /**
-         * <p>The configuration for consecutive interruption prevention.</p>
+         * <p>The continuous interruption prevention configuration.</p>
          */
         @NameInMap("AvoidInterruptDTO")
         public UpdateModelApplicationRequestInterruptConfigAvoidInterruptDTO avoidInterruptDTO;
 
         /**
-         * <p>Specifies whether to enable consecutive interruption prevention.</p>
+         * <p>Specifies whether to enable the continuous interruption prevention feature.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -758,7 +763,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
         public Boolean enableAvoidInterrupt;
 
         /**
-         * <p>Specifies whether to enable the interruption filler word configuration.</p>
+         * <p>Specifies whether to enable the interrupt filler word configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -767,7 +772,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
         public Boolean enableInterruptBackchannel;
 
         /**
-         * <p>Specifies whether to prevent interruption during the entire opening statement.</p>
+         * <p>Specifies whether to disable interruption during the entire opening statement.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -776,13 +781,16 @@ public class UpdateModelApplicationRequest extends TeaModel {
         public Boolean enableStartwordEntireNotInterrupt;
 
         /**
-         * <p>Specifies whether to enable the no-interruption configuration for the opening statement.</p>
+         * <p>Specifies whether to enable the opening line no-interrupt configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableStartwordNotInterrupt")
         public Boolean enableStartwordNotInterrupt;
 
         /**
-         * <p>The protection duration for the opening statement.</p>
+         * <p>The opening line protection duration.</p>
          * 
          * <strong>example:</strong>
          * <p>1.4699</p>
@@ -856,7 +864,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
         public Boolean backgroundEnabled;
 
         /**
-         * <p>The background sound ID.</p>
+         * <p>The ID of the background sound.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -865,11 +873,11 @@ public class UpdateModelApplicationRequest extends TeaModel {
         public Long backgroundSound;
 
         /**
-         * <p>The background sound volume. Valid values:</p>
+         * <p>The background sound volume (ID). Valid values:</p>
          * <ul>
-         * <li>0: low</li>
-         * <li>1: medium</li>
-         * <li>2: high</li>
+         * <li>0: low.</li>
+         * <li>1: medium.</li>
+         * <li>2: high.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -897,7 +905,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
         public Boolean mixingEnabled;
 
         /**
-         * <p>The mixing template ID.</p>
+         * <p>The ID of the mixing template.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -942,7 +950,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
         public Long ttsVolume;
 
         /**
-         * <p>The voice code.</p>
+         * <p>The code of the voice.</p>
          * 
          * <strong>example:</strong>
          * <p>12123213123</p>
@@ -953,9 +961,9 @@ public class UpdateModelApplicationRequest extends TeaModel {
         /**
          * <p>The voice type. Valid values:</p>
          * <ul>
-         * <li>SYSTEM: system voice</li>
-         * <li>COSYCLONE: cloned voice</li>
-         * <li>BL-CUSTOM: custom premium cloned voice</li>
+         * <li>SYSTEM: system voice.</li>
+         * <li>COSYCLONE: cloned voice.</li>
+         * <li>BL-CUSTOM: custom premium cloned voice.</li>
          * </ul>
          * 
          * <strong>example:</strong>

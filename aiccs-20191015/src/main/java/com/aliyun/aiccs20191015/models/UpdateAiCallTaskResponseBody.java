@@ -25,9 +25,9 @@ public class UpdateAiCallTaskResponseBody extends TeaModel {
     /**
      * <p>The update result. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Updated.</p>
+     * <li><p><strong>true</strong>: The update is successful.</p>
      * </li>
-     * <li><p><strong>false</strong>: Failed to update.</p>
+     * <li><p><strong>false</strong>: The update failed.</p>
      * </li>
      * </ul>
      * 

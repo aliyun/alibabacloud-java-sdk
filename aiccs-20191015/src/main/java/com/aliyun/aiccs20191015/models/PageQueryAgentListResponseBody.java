@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PageQueryAgentListResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason for the access denial.</p>
+     * <p>The detailed reason why access was denied.</p>
      * 
      * <strong>example:</strong>
      * <p>Access Denied</p>
@@ -29,10 +29,10 @@ public class PageQueryAgentListResponseBody extends TeaModel {
     public PageQueryAgentListResponseBodyData data;
 
     /**
-     * <p>The description of the status code.</p>
+     * <p>The status code description.</p>
      * 
      * <strong>example:</strong>
-     * <p>成功</p>
+     * <p>Succeeded</p>
      */
     @NameInMap("Message")
     public String message;
@@ -47,12 +47,10 @@ public class PageQueryAgentListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: Successful.</li>
+     * <li><strong>false</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -128,7 +126,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
          * <p>The agent name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试智能体</p>
+         * <p>TestAgent</p>
          */
         @NameInMap("AgentName")
         public String agentName;
@@ -143,19 +141,19 @@ public class PageQueryAgentListResponseBody extends TeaModel {
         public String applicationCode;
 
         /**
-         * <p>The reason for the review failure.</p>
+         * <p>The reason for review failure.</p>
          * 
          * <strong>example:</strong>
-         * <p>请补充流程说明</p>
+         * <p>Provide additional process description</p>
          */
         @NameInMap("AuditReason")
         public String auditReason;
 
         /**
-         * <p>The reason for the build failure.</p>
+         * <p>The reason for build failure.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统错误</p>
+         * <p>System error</p>
          */
         @NameInMap("BuildFailReason")
         public String buildFailReason;
@@ -164,13 +162,13 @@ public class PageQueryAgentListResponseBody extends TeaModel {
          * <p>The business scenario name.</p>
          * 
          * <strong>example:</strong>
-         * <p>个人客户线索转化</p>
+         * <p>Personal customer lead conversion</p>
          */
         @NameInMap("BusinessTypeName")
         public String businessTypeName;
 
         /**
-         * <p>The time the agent was created.</p>
+         * <p>The creation time, in the format of YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-28 17:10:17</p>
@@ -182,13 +180,13 @@ public class PageQueryAgentListResponseBody extends TeaModel {
          * <p>The agent description.</p>
          * 
          * <strong>example:</strong>
-         * <p>用于日常测试</p>
+         * <p>Used for daily testing</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The time the agent was last online.</p>
+         * <p>The most recent online time, in the format of YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-28 14:38:15</p>
@@ -197,7 +195,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
         public String lastOnlineTime;
 
         /**
-         * <p>The time the agent was last modified.</p>
+         * <p>The most recent modification time, in the format of YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-28 17:10:17</p>
@@ -343,7 +341,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
 
     public static class PageQueryAgentListResponseBodyData extends TeaModel {
         /**
-         * <p>A list of agents.</p>
+         * <p>The list of agent data.</p>
          */
         @NameInMap("List")
         public java.util.List<PageQueryAgentListResponseBodyDataList> list;
@@ -358,7 +356,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
         public Long pageNo;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -367,7 +365,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The total count of entries.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>14</p>

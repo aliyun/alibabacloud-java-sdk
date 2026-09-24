@@ -38,10 +38,10 @@ public class ListTaskDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The operation was successful.</li>
-     * <li><strong>false</strong>: The operation failed.</li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -137,7 +137,7 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public Integer duration;
 
         /**
-         * <p>The end time.</p>
+         * <p>The end time in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-05-20 00:03:00</p>
@@ -164,7 +164,7 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public Integer retryCurTimes;
 
         /**
-         * <p>The retry count.</p>
+         * <p>The total number of retries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,7 +173,7 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public Integer retryTimes;
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-05-20 00:00:00</p>
@@ -348,7 +348,7 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The list of task details.</p>
+         * <p>The list of task records.</p>
          */
         @NameInMap("Record")
         public java.util.List<ListTaskDetailResponseBodyDataRecord> record;
