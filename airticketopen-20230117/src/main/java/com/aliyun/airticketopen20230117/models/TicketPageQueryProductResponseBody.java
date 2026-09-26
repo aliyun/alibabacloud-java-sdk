@@ -1187,6 +1187,44 @@ public class TicketPageQueryProductResponseBody extends TeaModel {
 
     }
 
+    public static class TicketPageQueryProductResponseBodyDataProductsSellerAgent extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>飞猪景区乐园旗舰店</p>
+         */
+        @NameInMap("AgentName")
+        public String agentName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("AgentType")
+        public Integer agentType;
+
+        public static TicketPageQueryProductResponseBodyDataProductsSellerAgent build(java.util.Map<String, ?> map) throws Exception {
+            TicketPageQueryProductResponseBodyDataProductsSellerAgent self = new TicketPageQueryProductResponseBodyDataProductsSellerAgent();
+            return TeaModel.build(map, self);
+        }
+
+        public TicketPageQueryProductResponseBodyDataProductsSellerAgent setAgentName(String agentName) {
+            this.agentName = agentName;
+            return this;
+        }
+        public String getAgentName() {
+            return this.agentName;
+        }
+
+        public TicketPageQueryProductResponseBodyDataProductsSellerAgent setAgentType(Integer agentType) {
+            this.agentType = agentType;
+            return this;
+        }
+        public Integer getAgentType() {
+            return this.agentType;
+        }
+
+    }
+
     public static class TicketPageQueryProductResponseBodyDataProductsSession extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -2055,6 +2093,9 @@ public class TicketPageQueryProductResponseBody extends TeaModel {
         @NameInMap("ScenicId")
         public Long scenicId;
 
+        @NameInMap("SellerAgent")
+        public TicketPageQueryProductResponseBodyDataProductsSellerAgent sellerAgent;
+
         @NameInMap("Session")
         public TicketPageQueryProductResponseBodyDataProductsSession session;
 
@@ -2067,13 +2108,6 @@ public class TicketPageQueryProductResponseBody extends TeaModel {
 
         @NameInMap("Spu")
         public TicketPageQueryProductResponseBodyDataProductsSpu spu;
-
-        /**
-         * <strong>example:</strong>
-         * <p>飞猪景区乐园旗舰店</p>
-         */
-        @NameInMap("SupplierName")
-        public String supplierName;
 
         @NameInMap("TicketKind")
         public TicketPageQueryProductResponseBodyDataProductsTicketKind ticketKind;
@@ -2182,6 +2216,14 @@ public class TicketPageQueryProductResponseBody extends TeaModel {
             return this.scenicId;
         }
 
+        public TicketPageQueryProductResponseBodyDataProducts setSellerAgent(TicketPageQueryProductResponseBodyDataProductsSellerAgent sellerAgent) {
+            this.sellerAgent = sellerAgent;
+            return this;
+        }
+        public TicketPageQueryProductResponseBodyDataProductsSellerAgent getSellerAgent() {
+            return this.sellerAgent;
+        }
+
         public TicketPageQueryProductResponseBodyDataProducts setSession(TicketPageQueryProductResponseBodyDataProductsSession session) {
             this.session = session;
             return this;
@@ -2204,14 +2246,6 @@ public class TicketPageQueryProductResponseBody extends TeaModel {
         }
         public TicketPageQueryProductResponseBodyDataProductsSpu getSpu() {
             return this.spu;
-        }
-
-        public TicketPageQueryProductResponseBodyDataProducts setSupplierName(String supplierName) {
-            this.supplierName = supplierName;
-            return this;
-        }
-        public String getSupplierName() {
-            return this.supplierName;
         }
 
         public TicketPageQueryProductResponseBodyDataProducts setTicketKind(TicketPageQueryProductResponseBodyDataProductsTicketKind ticketKind) {

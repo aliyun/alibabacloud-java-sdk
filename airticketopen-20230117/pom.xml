@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>airticketopen20230117</artifactId>
-  <version>9.0.2</version>
+  <version>10.0.0</version>
   <packaging>jar</packaging>
   <name>airticketopen20230117</name>
   <description>Alibaba Cloud airticketOpen (20230117) SDK for Java
@@ -41,12 +41,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.26</version>
+      <version>0.2.28</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.12</version>
+      <version>0.3.16</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
