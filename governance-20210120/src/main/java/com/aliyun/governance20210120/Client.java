@@ -9,12 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("eu-central-1", "governance.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "governance.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "governance.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "governance.ap-southeast-1.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("governance", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -150,6 +144,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateAccountFactoryBaselineResponse createAccountFactoryBaseline(CreateAccountFactoryBaselineRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createAccountFactoryBaselineWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Disables and unsubscribes from Cloud Governance Center.</p>
+     * 
+     * @param request DecommissionGovernanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DecommissionGovernanceResponse
+     */
+    public DecommissionGovernanceResponse decommissionGovernanceWithOptions(DecommissionGovernanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DecommissionGovernance"),
+            new TeaPair("version", "2021-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DecommissionGovernanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Disables and unsubscribes from Cloud Governance Center.</p>
+     * 
+     * @param request DecommissionGovernanceRequest
+     * @return DecommissionGovernanceResponse
+     */
+    public DecommissionGovernanceResponse decommissionGovernance(DecommissionGovernanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.decommissionGovernanceWithOptions(request, runtime);
     }
 
     /**
@@ -906,6 +944,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListEvaluationScoreHistoryResponse listEvaluationScoreHistory(ListEvaluationScoreHistoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listEvaluationScoreHistoryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Activates Cloud Governance Center.</p>
+     * 
+     * @param request OpenGovernanceServiceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return OpenGovernanceServiceResponse
+     */
+    public OpenGovernanceServiceResponse openGovernanceServiceWithOptions(OpenGovernanceServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "OpenGovernanceService"),
+            new TeaPair("version", "2021-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OpenGovernanceServiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Activates Cloud Governance Center.</p>
+     * 
+     * @param request OpenGovernanceServiceRequest
+     * @return OpenGovernanceServiceResponse
+     */
+    public OpenGovernanceServiceResponse openGovernanceService(OpenGovernanceServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.openGovernanceServiceWithOptions(request, runtime);
     }
 
     /**
