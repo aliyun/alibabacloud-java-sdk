@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
     /**
-     * <p>Specifies whether the instance is managed. Valid values:</p>
-     * <ul>
-     * <li>1: Managed.</li>
-     * <li>0: Not managed.</li>
-     * </ul>
+     * <p>Specifies whether the instance is managed. Valid values: 1 (managed) and 0 (not managed).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +47,7 @@ public class ListInstancesRequest extends TeaModel {
     public String certificateType;
 
     /**
-     * <p>The page number of the current page in a paged query. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the current page in a paging query. Settings the current page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -60,11 +56,7 @@ public class ListInstancesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The instance type. Valid values:</p>
-     * <ul>
-     * <li>BUY: formal certificate.</li>
-     * <li>TEST: test certificate.</li>
-     * </ul>
+     * <p>The instance type. Valid values: BUY (official certificate) and TEST (test certificate).</p>
      * 
      * <strong>example:</strong>
      * <p>BUY</p>
@@ -93,8 +85,8 @@ public class ListInstancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to return only instances that meet server deployment conditions. Valid values:</p>
      * <ul>
-     * <li>1: Yes.</li>
-     * <li>0: No.</li>
+     * <li>1: is.</li>
+     * <li>0: no.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,7 +96,7 @@ public class ListInstancesRequest extends TeaModel {
     public Integer serverDeployFlag;
 
     /**
-     * <p>The number of instances to display per page in a paged query. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
+     * <p>The number of instances to display per page in a paging query. Settings the number of instances displayed per page. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -116,12 +108,12 @@ public class ListInstancesRequest extends TeaModel {
      * <p>The instance status. Valid values:</p>
      * <ul>
      * <li><strong>inactive</strong>: Pending use.</li>
-     * <li><strong>pending</strong>: Under review. The latest certificate is being reviewed.</li>
+     * <li><strong>pending</strong>: Under review. The latest certificate is being submitted for review.</li>
      * <li><strong>willExpire</strong>: The instance is about to expire.</li>
      * <li><strong>expired</strong>: The instance has expired.</li>
      * <li><strong>refund</strong>: Refunded.</li>
      * <li><strong>normal</strong>: Normal.</li>
-     * <li><strong>closed</strong>: Closed. The instance is unavailable.</li>
+     * <li><strong>closed</strong>: Shutdown and unavailable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -129,6 +121,15 @@ public class ListInstancesRequest extends TeaModel {
      */
     @NameInMap("Status")
     public String status;
+
+    /**
+     * <p>The version type. Valid values: basic (Basic Edition), standard (Standard Edition), professional (Professional Edition), and ultimate (Ultimate Edition).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>professional</p>
+     */
+    @NameInMap("VersionType")
+    public String versionType;
 
     public static ListInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesRequest self = new ListInstancesRequest();
@@ -221,6 +222,14 @@ public class ListInstancesRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListInstancesRequest setVersionType(String versionType) {
+        this.versionType = versionType;
+        return this;
+    }
+    public String getVersionType() {
+        return this.versionType;
     }
 
 }

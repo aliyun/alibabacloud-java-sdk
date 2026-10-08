@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the current page in a paged query.</p>
+     * <p>The page number of the current page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -149,12 +149,12 @@ public class ListInstancesResponseBody extends TeaModel {
         public String brand;
 
         /**
-         * <p>The global certificate ID, in the format of certificate ID + &quot;-&quot; + site region ID. This ID is commonly used across Alibaba Cloud services.</p>
+         * <p>The global certificate ID, in the format of certificate ID + &quot;-&quot; + site region ID. This ID is commonly used across Alibaba Cloud services. Valid values:</p>
          * <ul>
-         * <li>China site: certificate ID + &quot;-cn-hangzhou&quot;</li>
-         * <li>International site: certificate ID + &quot;-ap-southeast-1&quot;</li>
+         * <li>For the China site: certificate ID + &quot;-cn-hangzhou&quot;.</li>
+         * <li>For the China site (Chinese): certificate ID + &quot;-ap-southeast-1&quot;.</li>
          * </ul>
-         * <p>For example, if the certificate ID is 123, the CertIdentifier on the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier on the international site is &quot;123-ap-southeast-1&quot;.</p>
+         * <p>For example, if the certificate ID is 123, the CertIdentifier on the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier on the China site (Chinese) is &quot;123-ap-southeast-1&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>21795675-cn-hangzhou</p>
@@ -190,7 +190,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String certificateName;
 
         /**
-         * <p>The end time of the latest certificate. The value is a UNIX timestamp in seconds. This field is empty if no certificate has been issued.</p>
+         * <p>The end time of the latest certificate. The value is a UNIX timestamp in seconds. This value is empty if no certificate has been issued.</p>
          * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
@@ -199,7 +199,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long certificateNotAfter;
 
         /**
-         * <p>The start time of the latest certificate. The value is a UNIX timestamp in seconds. This field is empty if no certificate has been issued.</p>
+         * <p>The start time of the latest certificate. The value is a UNIX timestamp in seconds. This value is empty if no certificate has been issued.</p>
          * 
          * <strong>example:</strong>
          * <p>1776988800000</p>
@@ -241,7 +241,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String certificateType;
 
         /**
-         * <p>The domain name bound to the certificate.</p>
+         * <p>The domain name attached to the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>test.com</p>
@@ -259,7 +259,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer fullDomainCount;
 
         /**
-         * <p>The expiration time of the instance. The value is a UNIX timestamp in seconds. This field is empty if no certificate has been issued.</p>
+         * <p>The expiration time of the instance. The value is a UNIX timestamp in seconds. This value is empty if no certificate has been issued.</p>
          * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
@@ -277,7 +277,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The start time of the instance. The value is a UNIX timestamp in seconds. This field is empty if no certificate has been issued.</p>
+         * <p>The start time of the instance. The value is a UNIX timestamp in seconds. This value is empty if no certificate has been issued.</p>
          * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
@@ -286,11 +286,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long instanceStartTime;
 
         /**
-         * <p>The instance type. Valid values:</p>
-         * <ul>
-         * <li>BUY: formal certificate.</li>
-         * <li>TEST: test certificate.</li>
-         * </ul>
+         * <p>The instance type. Valid values: BUY (official certificate) and TEST (test certificate).</p>
          * 
          * <strong>example:</strong>
          * <p>BUY</p>
@@ -363,12 +359,12 @@ public class ListInstancesResponseBody extends TeaModel {
          * <p>The instance status. Valid values:</p>
          * <ul>
          * <li><strong>inactive</strong>: Pending use.</li>
-         * <li><strong>pending</strong>: Under review. The latest certificate is being reviewed.</li>
+         * <li><strong>pending</strong>: Under review. The latest certificate commit is under review.</li>
          * <li><strong>willExpire</strong>: The instance is about to expire.</li>
          * <li><strong>expired</strong>: The instance has expired.</li>
          * <li><strong>refund</strong>: Refunded.</li>
          * <li><strong>normal</strong>: Normal.</li>
-         * <li><strong>closed</strong>: Closed. The instance is unavailable.</li>
+         * <li><strong>closed</strong>: Shutdown and unavailable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -378,19 +374,13 @@ public class ListInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The list of cloud services to which the latest certificate is deployed.</p>
+         * <p>The deployment list of cloud services for the latest certificate.</p>
          */
         @NameInMap("UsingProductList")
         public java.util.List<String> usingProductList;
 
         /**
-         * <p>The version type. Valid values:</p>
-         * <ul>
-         * <li>basic: Basic Edition.</li>
-         * <li>standard: Standard Edition.</li>
-         * <li>professional: Professional Edition.</li>
-         * <li>ultimate: Ultimate Edition.</li>
-         * </ul>
+         * <p>The version type. Valid values: basic (Basic Edition), standard (Standard Edition), professional (Professional Edition), and ultimate (Ultimate Edition).</p>
          * 
          * <strong>example:</strong>
          * <p>professional</p>
