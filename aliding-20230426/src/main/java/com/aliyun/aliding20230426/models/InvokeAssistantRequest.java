@@ -609,6 +609,121 @@ public class InvokeAssistantRequest extends TeaModel {
 
     }
 
+    public static class InvokeAssistantRequestMessagesContentPartsFile extends TeaModel {
+        @NameInMap("bytes")
+        public String bytes;
+
+        @NameInMap("mimeType")
+        public String mimeType;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("uri")
+        public String uri;
+
+        public static InvokeAssistantRequestMessagesContentPartsFile build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantRequestMessagesContentPartsFile self = new InvokeAssistantRequestMessagesContentPartsFile();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantRequestMessagesContentPartsFile setBytes(String bytes) {
+            this.bytes = bytes;
+            return this;
+        }
+        public String getBytes() {
+            return this.bytes;
+        }
+
+        public InvokeAssistantRequestMessagesContentPartsFile setMimeType(String mimeType) {
+            this.mimeType = mimeType;
+            return this;
+        }
+        public String getMimeType() {
+            return this.mimeType;
+        }
+
+        public InvokeAssistantRequestMessagesContentPartsFile setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public InvokeAssistantRequestMessagesContentPartsFile setUri(String uri) {
+            this.uri = uri;
+            return this;
+        }
+        public String getUri() {
+            return this.uri;
+        }
+
+    }
+
+    public static class InvokeAssistantRequestMessagesContentParts extends TeaModel {
+        @NameInMap("data")
+        public Object data;
+
+        @NameInMap("file")
+        public InvokeAssistantRequestMessagesContentPartsFile file;
+
+        @NameInMap("kind")
+        public String kind;
+
+        @NameInMap("metadata")
+        public java.util.Map<String, ?> metadata;
+
+        @NameInMap("text")
+        public String text;
+
+        public static InvokeAssistantRequestMessagesContentParts build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantRequestMessagesContentParts self = new InvokeAssistantRequestMessagesContentParts();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantRequestMessagesContentParts setData(Object data) {
+            this.data = data;
+            return this;
+        }
+        public Object getData() {
+            return this.data;
+        }
+
+        public InvokeAssistantRequestMessagesContentParts setFile(InvokeAssistantRequestMessagesContentPartsFile file) {
+            this.file = file;
+            return this;
+        }
+        public InvokeAssistantRequestMessagesContentPartsFile getFile() {
+            return this.file;
+        }
+
+        public InvokeAssistantRequestMessagesContentParts setKind(String kind) {
+            this.kind = kind;
+            return this;
+        }
+        public String getKind() {
+            return this.kind;
+        }
+
+        public InvokeAssistantRequestMessagesContentParts setMetadata(java.util.Map<String, ?> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+        public java.util.Map<String, ?> getMetadata() {
+            return this.metadata;
+        }
+
+        public InvokeAssistantRequestMessagesContentParts setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
     public static class InvokeAssistantRequestMessagesContentStructViewPartsDataPart extends TeaModel {
         @NameInMap("data")
         public Object data;
@@ -1070,8 +1185,17 @@ public class InvokeAssistantRequest extends TeaModel {
         @NameInMap("dingNormalCard")
         public InvokeAssistantRequestMessagesContentDingNormalCard dingNormalCard;
 
+        @NameInMap("extensions")
+        public java.util.List<String> extensions;
+
         @NameInMap("markdown")
         public InvokeAssistantRequestMessagesContentMarkdown markdown;
+
+        @NameInMap("metadata")
+        public java.util.Map<String, ?> metadata;
+
+        @NameInMap("parts")
+        public java.util.List<InvokeAssistantRequestMessagesContentParts> parts;
 
         @NameInMap("structView")
         public InvokeAssistantRequestMessagesContentStructView structView;
@@ -1117,12 +1241,36 @@ public class InvokeAssistantRequest extends TeaModel {
             return this.dingNormalCard;
         }
 
+        public InvokeAssistantRequestMessagesContent setExtensions(java.util.List<String> extensions) {
+            this.extensions = extensions;
+            return this;
+        }
+        public java.util.List<String> getExtensions() {
+            return this.extensions;
+        }
+
         public InvokeAssistantRequestMessagesContent setMarkdown(InvokeAssistantRequestMessagesContentMarkdown markdown) {
             this.markdown = markdown;
             return this;
         }
         public InvokeAssistantRequestMessagesContentMarkdown getMarkdown() {
             return this.markdown;
+        }
+
+        public InvokeAssistantRequestMessagesContent setMetadata(java.util.Map<String, ?> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+        public java.util.Map<String, ?> getMetadata() {
+            return this.metadata;
+        }
+
+        public InvokeAssistantRequestMessagesContent setParts(java.util.List<InvokeAssistantRequestMessagesContentParts> parts) {
+            this.parts = parts;
+            return this;
+        }
+        public java.util.List<InvokeAssistantRequestMessagesContentParts> getParts() {
+            return this.parts;
         }
 
         public InvokeAssistantRequestMessagesContent setStructView(InvokeAssistantRequestMessagesContentStructView structView) {
