@@ -34,7 +34,7 @@ public class CreateDataSourceSharedRuleRequest extends TeaModel {
      * <p>The user with which you want to share the data source. If you do not configure this parameter, the data source is shared to an entire workspace.</p>
      * 
      * <strong>example:</strong>
-     * <p>110755000****</p>
+     * <p>1107550004253538</p>
      */
     @NameInMap("SharedUser")
     public String sharedUser;

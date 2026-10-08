@@ -48,7 +48,7 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
      * <p>The rule name. The name can be a combination of digits, English letters, Chinese characters, and half-width or full-width punctuation. The maximum length is 255 characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>The table cannot be empty.</p>
+     * <p>The table cannot be empty</p>
      */
     @NameInMap("Name")
     public String name;
@@ -565,17 +565,17 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
          * <p>The name of the metric to sample. This parameter is not required when a template is used.</p>
          * <ul>
          * <li>Count: the number of rows in the table.</li>
-         * <li>Min: the minimum value of the field.</li>
-         * <li>Max: the maximum value of the field.</li>
-         * <li>Avg: the average value of the field.</li>
-         * <li>DistinctCount: the number of distinct values in the field.</li>
-         * <li>DistinctPercent: the ratio of the number of distinct values in the field to the total number of rows.</li>
-         * <li>DuplicatedCount: the number of duplicate values in the field.</li>
-         * <li>DuplicatedPercent: the ratio of the number of duplicate values in the field to the total number of rows.</li>
+         * <li>Min: the minimum value of the column.</li>
+         * <li>Max: the maximum value of the column.</li>
+         * <li>Avg: the average value of the column.</li>
+         * <li>DistinctCount: the number of distinct values in the column.</li>
+         * <li>DistinctPercent: the ratio of the number of distinct values in the column to the total number of rows.</li>
+         * <li>DuplicatedCount: the number of duplicate values in the column.</li>
+         * <li>DuplicatedPercent: the ratio of the number of duplicate values in the column to the total number of rows.</li>
          * <li>TableSize: the size of the table.</li>
-         * <li>NullValueCount: the number of rows in which the field is null.</li>
-         * <li>NullValuePercent: the percentage of rows in which the field is null.</li>
-         * <li>GroupCount: the number of data rows for each value after aggregation by field value.</li>
+         * <li>NullValueCount: the number of rows in which the column is null.</li>
+         * <li>NullValuePercent: the percentage of rows in which the column is null.</li>
+         * <li>GroupCount: the number of data rows for each value after aggregation by column value.</li>
          * <li>CountNotIn: the number of rows that do not match the enumerated values.</li>
          * <li>CountDistinctNotIn: the number of distinct values that do not match the enumerated values.</li>
          * <li>UserDefinedSql: sample collection by using custom SQL.</li>

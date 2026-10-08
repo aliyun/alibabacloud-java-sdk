@@ -62,16 +62,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String functionType;
 
     /**
-     * <p>The function parameter description, corresponding to the parameter description field in the Create Function form.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>ALL_ALLOWD</p>
-     * </li>
-     * <li><p>FAILURE_ALLOWED</p>
-     * </li>
-     * <li><p>ALL_DENIED</p>
-     * </li>
-     * </ul>
+     * <p>The description of the function input parameters, corresponding to the Parameter Description field in the Create Function form.</p>
      * 
      * <strong>example:</strong>
      * <p>List of strings to be connected</p>
@@ -89,7 +80,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The unique identifier of the DataWorks workspace, which is the identifier at the top of the Data Studio page where you switch workspaces.</p>
+     * <p>The unique identifier of the DataWorks workspace, which is the English identifier at the top of the Data Studio page where you switch workspaces.</p>
      * <p>Either this parameter or ProjectId must be specified to identify the target DataWorks workspace for this API call.</p>
      * 
      * <strong>example:</strong>

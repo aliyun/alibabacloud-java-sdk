@@ -31,7 +31,7 @@ public class CreateNodeRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The scenario in which the node is created. This parameter determines whether the node is created in the manual node area or the data development area. DATAWORKS_MANUAL_WORKFLOW can be used only when ContainerId is specified and the container is a manual workflow.</p>
+     * <p>The scenario in which the node is created. This parameter determines whether the node is created in the manual node area or the Data Studio area. DATAWORKS_MANUAL_WORKFLOW can be used only when ContainerId is specified and the container is a manual workflow.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>DATAWORKS_PROJECT: project directory.</li>
@@ -51,19 +51,19 @@ public class CreateNodeRequest extends TeaModel {
      * <blockquote>
      * <p>How to quickly obtain a FlowSpec template?</p>
      * <ul>
-     * <li>In DataStudio, open a node, click Versions on the right side, view the latest version, and then view the scheduling configuration. This provides the FlowSpec description for the current node. You can use the FlowSpec description in the version to quickly build a template that meets your requirements.</li>
+     * <li>In Data Studio, open a node, click Versions on the right side, view the latest version, and then view the scheduling configuration. This provides the FlowSpec description for the current node. You can use the FlowSpec description in the version to quickly build a template that meets your requirements.</li>
      * </ul>
      * </blockquote>
      * <blockquote>
      * <p>How to specify the node content?</p>
      * <ul>
-     * <li>Specify the node content in the $.spec.nodes[*].script.content field.</li>
+     * <li>Specify the node content in the $.spec.nodes[\*\].script.content field.</li>
      * </ul>
      * </blockquote>
      * <blockquote>
      * <p>How to configure the content of a batch synchronization node?</p>
      * <ul>
-     * <li>Write a script by following Step 4 in <a href="https://www.alibabacloud.com/help/en/dataworks/user-guide/configure-a-batch-synchronization-node-by-using-the-code-editor">Configure a batch synchronization node by using the code editor</a>, and specify the content in the $.spec.nodes[*].script.content field. Alternatively, create a batch synchronization node on the page and obtain the script content by viewing the version.</li>
+     * <li>Write a script by following Step 4 in <a href="https://www.alibabacloud.com/help/en/dataworks/user-guide/configure-a-batch-synchronization-node-by-using-the-code-editor">Configure a batch synchronization node by using the code editor</a>, and specify the content in the $.spec.nodes[\*\].script.content field. Alternatively, create a batch synchronization node on the page and obtain the script content by viewing the version.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>

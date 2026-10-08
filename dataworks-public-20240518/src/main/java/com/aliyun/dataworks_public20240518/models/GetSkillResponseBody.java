@@ -81,7 +81,7 @@ public class GetSkillResponseBody extends TeaModel {
          * <p><strong>The content of the SKILL.md file.</strong></p>
          * 
          * <strong>example:</strong>
-         * <p>把大象装冰箱需要3步，把冰箱门打开，把大象放进去，把冰箱门关上。</p>
+         * <p>Putting an elephant in a refrigerator takes three steps: open the refrigerator door, put the elephant inside, and close the door.</p>
          */
         @NameInMap("Body")
         public String body;
@@ -108,7 +108,7 @@ public class GetSkillResponseBody extends TeaModel {
          * <p><strong>The Skill description.</strong></p>
          * 
          * <strong>example:</strong>
-         * <p>数据分析技能</p>
+         * <p>Data analysis skill</p>
          */
         @NameInMap("Description")
         public String description;

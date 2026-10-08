@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecPipelineRunStageRequest extends TeaModel {
     /**
-     * <p>The code of the publish flow stage. For the specific value, see the response of the GetPipelineRun operation.</p>
+     * <p>The code of the deployment process stage. For the specific value, see the response of the GetPipelineRun operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ExecPipelineRunStageRequest extends TeaModel {
     public String code;
 
     /**
-     * <p>The unique identifier of the publish flow.</p>
+     * <p>The unique identifier of the deployment process.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

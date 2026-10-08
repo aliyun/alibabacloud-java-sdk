@@ -42,7 +42,7 @@ public class CreateBusinessRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The unique identifier of the DataWorks workspace, which is the English identifier displayed in the workspace switcher at the top of the DataStudio page. You must specify either this parameter or ProjectId to determine the DataWorks workspace on which the API operation is performed.</p>
+     * <p>The unique identifier of the DataWorks workspace, which is the English identifier displayed in the workspace switcher at the top of the Data Studio page. You must specify either this parameter or ProjectId to determine the DataWorks workspace on which the API operation is performed.</p>
      * 
      * <strong>example:</strong>
      * <p>dw_project</p>
@@ -53,7 +53,7 @@ public class CreateBusinessRequest extends TeaModel {
     /**
      * <p>The functional module to which the business process belongs. Valid values:</p>
      * <ul>
-     * <li>NORMAL: DataStudio.</li>
+     * <li>NORMAL: Data Studio.</li>
      * <li>MANUAL_BIZ: Manual business process.</li>
      * </ul>
      * 

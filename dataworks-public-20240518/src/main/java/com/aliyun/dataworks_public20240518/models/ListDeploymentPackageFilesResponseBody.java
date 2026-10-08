@@ -265,10 +265,10 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         /**
          * <p>The functional module to which the file belongs. Valid values:</p>
          * <ul>
-         * <li>NORMAL: data development.</li>
+         * <li>NORMAL: Data Studio.</li>
          * <li>MANUAL: manual task.</li>
          * <li>MANUAL_BIZ: manual workflow.</li>
-         * <li>SKIP: dry-run scheduling in data development.</li>
+         * <li>SKIP: dry-run scheduling in Data Studio.</li>
          * <li>ADHOCQUERY: ad hoc query.</li>
          * <li>COMPONENT: component management.</li>
          * </ul>

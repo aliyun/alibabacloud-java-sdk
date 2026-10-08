@@ -128,7 +128,7 @@ public class ListFilesResponseBody extends TeaModel {
          * <li>true: The file automatically parses code.</li>
          * <li>false: The file does not automatically parse code.</li>
          * </ul>
-         * <p>This parameter corresponds to the &quot;Code Parsing&quot; option when you select &quot;Same Cycle&quot; in &quot;Scheduling Configuration &gt; Scheduling Dependencies&quot; for a DataStudio task in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>This parameter corresponds to the &quot;Code Parsing&quot; option when you select &quot;Same Cycle&quot; in &quot;Scheduling Configuration &gt; Scheduling Dependencies&quot; for a Data Studio task in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -311,10 +311,10 @@ public class ListFilesResponseBody extends TeaModel {
         /**
          * <p>The functional module to which the file belongs. Valid values:</p>
          * <ul>
-         * <li>NORMAL: DataStudio.</li>
+         * <li>NORMAL: Data Studio.</li>
          * <li>MANUAL: manual node.</li>
          * <li>MANUAL_BIZ: manual workflow.</li>
-         * <li>SKIP: dry-run scheduling in DataStudio.</li>
+         * <li>SKIP: dry-run scheduling in Data Studio.</li>
          * <li>ADHOCQUERY: ad hoc query.</li>
          * <li>COMPONENT: component management.</li>
          * </ul>

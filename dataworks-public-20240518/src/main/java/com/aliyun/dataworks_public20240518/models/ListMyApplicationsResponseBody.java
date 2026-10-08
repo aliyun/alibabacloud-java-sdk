@@ -437,7 +437,7 @@ public class ListMyApplicationsResponseBody extends TeaModel {
          * <p>The reason for the application.</p>
          * 
          * <strong>example:</strong>
-         * <p>业务需要</p>
+         * <p>Business requirement</p>
          */
         @NameInMap("Reason")
         public String reason;

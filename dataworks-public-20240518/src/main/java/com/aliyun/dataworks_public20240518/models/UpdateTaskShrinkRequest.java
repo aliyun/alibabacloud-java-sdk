@@ -67,7 +67,7 @@ public class UpdateTaskShrinkRequest extends TeaModel {
      * <p>The instance generation mode. Valid values:</p>
      * <ul>
      * <li>T+1: The instance is generated the next day.</li>
-     * <li>Immediately: The instance is generated immediately. Note: Only periodic instances whose scheduled time is at least ten minutes after the node publish time are generated normally. During the full instance generation period (22:00 to 24:00), real-time instance generation is not available. You can submit and publish nodes, but new nodes do not automatically generate instances.</li>
+     * <li>Immediately: The instance is generated immediately. Note: Only periodic instances whose scheduled time is at least ten minutes after the node deployment time are generated normally. During the full instance generation period (22:00 to 24:00), real-time instance generation is not available. You can submit and deploy nodes, but new nodes do not automatically generate instances.</li>
      * </ul>
      * 
      * <strong>example:</strong>

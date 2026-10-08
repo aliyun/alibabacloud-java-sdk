@@ -52,6 +52,9 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the workflow.</p>
+         * <blockquote>
+         * <p>This field is of type Long in SDK versions earlier than 8.0.0 and String in SDK version 8.0.0 and later. This change does not affect normal SDK usage; the parameter is still returned according to the type defined in the SDK. Upgrading the SDK across version 8.0.0 may cause compilation failures due to the type change. In this case, manually update the data type.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>463497880880954XXXX</p>
@@ -178,7 +181,7 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
         public String spec;
 
         /**
-         * <p>The ID of the workflow on the scheduling side after publishing.</p>
+         * <p>The ID of the workflow on the scheduling side after deployment.</p>
          * 
          * <strong>example:</strong>
          * <p>700006657495</p>

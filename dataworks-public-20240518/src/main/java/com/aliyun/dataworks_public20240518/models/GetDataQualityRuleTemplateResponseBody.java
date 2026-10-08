@@ -95,17 +95,17 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
          * <p>The name of the metric to be sampled:</p>
          * <ul>
          * <li>Count: the number of rows in the table.</li>
-         * <li>Min: the minimum value of the field.</li>
-         * <li>Max: the maximum value of the field.</li>
-         * <li>Avg: the average value of the field.</li>
-         * <li>DistinctCount: the number of distinct values of the field.</li>
-         * <li>DistinctPercent: the ratio of the number of distinct values of the field to the number of data rows.</li>
-         * <li>DuplicatedCount: the number of duplicate values of the field.</li>
-         * <li>DuplicatedPercent: the ratio of the number of duplicate values of the field to the number of data rows.</li>
+         * <li>Min: the minimum value of the column.</li>
+         * <li>Max: the maximum value of the column.</li>
+         * <li>Avg: the average value of the column.</li>
+         * <li>DistinctCount: the number of distinct values of the column.</li>
+         * <li>DistinctPercent: the ratio of the number of distinct values of the column to the number of data rows.</li>
+         * <li>DuplicatedCount: the number of duplicate values of the column.</li>
+         * <li>DuplicatedPercent: the ratio of the number of duplicate values of the column to the number of data rows.</li>
          * <li>TableSize: the size of the table.</li>
-         * <li>NullValueCount: the number of rows in which the field is null.</li>
-         * <li>NullValuePercent: the percentage of rows in which the field is null.</li>
-         * <li>GroupCount: the number of data rows corresponding to each value after aggregation by field value.</li>
+         * <li>NullValueCount: the number of rows in which the column is null.</li>
+         * <li>NullValuePercent: the percentage of rows in which the column is null.</li>
+         * <li>GroupCount: the number of data rows corresponding to each value after aggregation by column value.</li>
          * <li>CountNotIn: the number of rows whose enumerated values do not match.</li>
          * <li>CountDistinctNotIn: the number of distinct values whose enumerated values do not match.</li>
          * <li>UserDefinedSql: collects samples by using a custom SQL statement.</li>

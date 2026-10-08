@@ -264,9 +264,9 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
          * <p>The workflow parameters.</p>
          * 
          * <strong>example:</strong>
-         * <p>Periodic workflow:
+         * <p>Scheduled workflow:
          * key1=value1 key2=value2
-         * Manual workflow:
+         * Manual business flow:
          * {&quot;key1&quot;:&quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</p>
          */
         @NameInMap("WorkflowParameters")

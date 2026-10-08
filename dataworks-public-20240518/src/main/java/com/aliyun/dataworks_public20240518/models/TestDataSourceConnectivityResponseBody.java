@@ -121,13 +121,13 @@ public class TestDataSourceConnectivityResponseBody extends TeaModel {
          * <p>The error message returned if the connectivity test fails. No such a message is returned if the connectivity test is successful.</p>
          * 
          * <strong>example:</strong>
-         * <p>连接数据库失败</p>
+         * <p>Failed to connect to the database.</p>
          */
         @NameInMap("ConnectMessage")
         public String connectMessage;
 
         /**
-         * <p>The result of the connectivity test. Valid values: Connectable: The network can be connected. ConfigError: The network can be connected, but the configurations are incorrect. Unreachable: The network cannot be connected. Unsupport: An error is reported due to other causes. For example, the desired resource group is being initialized.</p>
+         * <p>The result of the connectivity test. Valid values: Connectable: The network can be connected. ConfigError: The network can be connected, but the configurations are incorrect. Unreachable: The network cannot be connected. Unsupport: The scenario is not supported. For example, the desired resource group is being initialized.</p>
          * 
          * <strong>example:</strong>
          * <p>Connectable</p>

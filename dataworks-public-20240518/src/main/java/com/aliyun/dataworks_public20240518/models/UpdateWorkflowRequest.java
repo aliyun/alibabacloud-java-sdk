@@ -55,7 +55,7 @@ public class UpdateWorkflowRequest extends TeaModel {
      * <p>The instance generation mode. Valid values:</p>
      * <ul>
      * <li>T+1: Instances are generated the next day.</li>
-     * <li>Immediately: Instances are generated immediately. Periodic instances are generated only if the scheduled time of the workflow is at least 10 minutes after the workflow is published. During the full instance generation period (22:00 to 24:00), real-time instance generation is not available. You can submit and publish workflows during this period, but instances are not regenerated after submission.</li>
+     * <li>Immediately: Instances are generated immediately. Periodic instances are generated only if the scheduled time of the workflow is at least 10 minutes after the workflow is deployed. During the full instance generation period (22:00 to 24:00), real-time instance generation is not available. You can submit and deploy workflows during this period, but instances are not regenerated after submission.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -1245,7 +1245,7 @@ public class UpdateWorkflowRequest extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The effective period of the epoch trigger. This parameter takes effect only when type is set to Scheduler. Format: <code>yyyy-mm-dd hh:mm:ss</code>.</p>
+         * <p>The time when the periodic trigger takes effect. This parameter takes effect only when type is set to Scheduler. Format: <code>yyyy-mm-dd hh:mm:ss</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1970-01-01 00:00:00</p>

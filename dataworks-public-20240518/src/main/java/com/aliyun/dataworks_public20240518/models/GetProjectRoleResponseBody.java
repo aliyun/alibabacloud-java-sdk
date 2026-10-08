@@ -11,7 +11,7 @@ public class GetProjectRoleResponseBody extends TeaModel {
     public GetProjectRoleResponseBodyProjectRole projectRole;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>82F28E60-CF48-5EDF-AB25-D806847B97D1</p>

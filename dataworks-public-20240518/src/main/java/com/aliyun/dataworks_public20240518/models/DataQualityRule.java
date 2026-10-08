@@ -44,7 +44,7 @@ public class DataQualityRule extends TeaModel {
     public Long id;
 
     /**
-     * <p>The rule name. The name can contain digits, letters, Chinese characters, and half-width or full-width punctuation marks. The name can be up to 255 characters in length.</p>
+     * <p>The rule name. The name can contain digits, English letters, Chinese characters, and half-width or full-width punctuation marks. The name can be up to 255 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>Table cannot be empty</p>

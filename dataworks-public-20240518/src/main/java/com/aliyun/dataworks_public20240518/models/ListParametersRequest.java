@@ -62,14 +62,11 @@ public class ListParametersRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>The field to sort the parameters by. Specify the value in the &quot;FieldName SortOrder&quot; format. The Asc sort order is optional. Supported values are:</p>
+     * <p>The list of fields to sort the parameters by. Specify the value in the &quot;FieldName SortOrder&quot; format. The Asc sort order is optional. Supported values are:</p>
      * <ul>
-     * <li><p>ModifyTime (Desc/Asc)</p>
-     * </li>
-     * <li><p>CreateTime (Desc/Asc)</p>
-     * </li>
-     * <li><p>Name (Desc/Asc)</p>
-     * </li>
+     * <li>ModifyTime (Desc/Asc)</li>
+     * <li>CreateTime (Desc/Asc)</li>
+     * <li>Name (Desc/Asc)</li>
      * </ul>
      * 
      * <strong>example:</strong>

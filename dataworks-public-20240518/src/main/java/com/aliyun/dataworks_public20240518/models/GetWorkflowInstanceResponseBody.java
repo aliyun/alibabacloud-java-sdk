@@ -84,7 +84,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
 
     public static class GetWorkflowInstanceResponseBodyWorkflowInstance extends TeaModel {
         /**
-         * <p>The data timestamp.</p>
+         * <p>The business date.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -113,10 +113,8 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         /**
          * <p>The environment of the workspace. Valid values:</p>
          * <ul>
-         * <li><p>Prod</p>
-         * </li>
-         * <li><p>Dev</p>
-         * </li>
+         * <li>Prod: production environment</li>
+         * <li>Dev: development environment</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -254,7 +252,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The unified pipeline instance ID. For all pipeline instances triggered under the same data timestamp in a single trigger, this field value is identical.</p>
+         * <p>The unified workflow instance ID. This field has the same value for all workflow instances for the same business date within a single trigger.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -275,9 +273,9 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
          * <p>The workflow parameters.</p>
          * 
          * <strong>example:</strong>
-         * <p>周期工作流：
+         * <p>Scheduled workflow：
          * key1=value1 key2=value2
-         * 手动业务流程：
+         * Manual workflow：
          * {&quot;key1&quot;:&quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</p>
          */
         @NameInMap("WorkflowParameters")

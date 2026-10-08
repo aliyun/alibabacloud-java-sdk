@@ -23,7 +23,7 @@ public class UpdateComputeResourceRequest extends TeaModel {
     public String connectionProperties;
 
     /**
-     * <p>The category of the computing resource to be added. Different types have different subtypes and corresponding parameter schema constraints. Examples: InstanceMode and UrlMode.</p>
+     * <p>The category of the computing resource to be added. Different types have different subtypes and corresponding parameter schema constraints. Examples: InstanceMode (instance mode) and UrlMode (connection string mode).</p>
      * 
      * <strong>example:</strong>
      * <p>InstanceMode</p>
@@ -35,7 +35,7 @@ public class UpdateComputeResourceRequest extends TeaModel {
      * <p>The description of the computing resource. The maximum length is 3000 characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>Level description</p>
+     * <p>Table level description</p>
      */
     @NameInMap("Description")
     public String description;

@@ -30,11 +30,11 @@ public class ImportWorkflowDefinitionRequest extends TeaModel {
      * <blockquote>
      * <p>How to quickly obtain a FlowSpec template?</p>
      * <ul>
-     * <li>Open a workflow in DataStudio, and then click &quot;Show Spec&quot; in the upper-right corner to obtain the FlowSpec description of the current workflow. You can use this FlowSpec description to quickly build a template that meets your requirements.</li>
+     * <li>Open a workflow in Data Studio, and then click &quot;Show Spec&quot; in the upper-right corner to obtain the FlowSpec description of the current workflow. You can use this FlowSpec description to quickly build a template that meets your requirements.</li>
      * </ul>
      * </blockquote>
      * <blockquote>
-     * <p>Notice: This operation supports creating a workflow and its internal nodes at the same time. Pay attention to the IDs specified in the FlowSpec. If a specified ID already exists, the operation becomes an update. Only when no ID is specified or the ID does not exist does the operation become a create.</p>
+     * <p>&lt;notice&gt;This operation supports creating a workflow and its internal nodes at the same time. Pay attention to the IDs specified in the FlowSpec. If a specified ID already exists, the operation becomes an update. Only when no ID is specified or the ID does not exist does the operation become a create.&gt;&lt;/notice&gt;</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

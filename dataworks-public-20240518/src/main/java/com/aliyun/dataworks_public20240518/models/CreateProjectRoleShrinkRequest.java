@@ -8,7 +8,7 @@ public class CreateProjectRoleShrinkRequest extends TeaModel {
      * <p>The client token.</p>
      * 
      * <strong>example:</strong>
-     * <p>保留字段</p>
+     * <p>Reserved field</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;

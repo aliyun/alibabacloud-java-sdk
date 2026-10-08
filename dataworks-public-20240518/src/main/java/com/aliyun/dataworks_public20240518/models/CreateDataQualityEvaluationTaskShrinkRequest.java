@@ -63,6 +63,10 @@ public class CreateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
 
     /**
      * <p>The extended configuration. The value is a JSON-formatted string. This parameter takes effect only for EMR-type data quality monitors.</p>
+     * <ul>
+     * <li>queue: The YARN queue used for EMR data quality checks. By default, the queue configured for the current project is used.</li>
+     * <li>sqlEngine: The SQL engine used for EMR data quality checks. Valid values: HIVE_SQL and SPARK_SQL.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>{ &quot;queue&quot;: &quot;default&quot;, &quot;sqlEngine&quot;: &quot;SPARK_SQL&quot; }</p>

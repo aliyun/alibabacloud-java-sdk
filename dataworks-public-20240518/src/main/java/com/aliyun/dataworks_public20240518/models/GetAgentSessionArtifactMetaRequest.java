@@ -59,7 +59,7 @@ public class GetAgentSessionArtifactMetaRequest extends TeaModel {
 
     public static class GetAgentSessionArtifactMetaRequestParams extends TeaModel {
         /**
-         * <p>The path of the artifact.</p>
+         * <p>The path of the artifact. Required.</p>
          * 
          * <strong>example:</strong>
          * <p>mock/mock_report.md</p>
@@ -68,7 +68,7 @@ public class GetAgentSessionArtifactMetaRequest extends TeaModel {
         public String artifactPath;
 
         /**
-         * <p>The ID of the session.</p>
+         * <p>The ID of the session. Required.</p>
          * 
          * <strong>example:</strong>
          * <p>sess_0f12abc34</p>

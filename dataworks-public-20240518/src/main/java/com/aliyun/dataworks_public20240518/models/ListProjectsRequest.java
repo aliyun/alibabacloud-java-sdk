@@ -9,13 +9,13 @@ public class ListProjectsRequest extends TeaModel {
      * <p>This parameter is used to query the information about workspaces that belong to a specific resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmzbn****</p>
+     * <p>rg-acfmzbn7pti3zff</p>
      */
     @NameInMap("AliyunResourceGroupId")
     public String aliyunResourceGroupId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags. This parameter queries workspaces that have any of the specified tag key-value pairs.</p>
      */
     @NameInMap("AliyunResourceTags")
     public java.util.List<ListProjectsRequestAliyunResourceTags> aliyunResourceTags;
@@ -36,13 +36,7 @@ public class ListProjectsRequest extends TeaModel {
     public Boolean devEnvironmentEnabled;
 
     /**
-     * <p>Specifies whether the Develop role is disabled. Valid values:</p>
-     * <ul>
-     * <li><p>false (default)</p>
-     * </li>
-     * <li><p>true</p>
-     * </li>
-     * </ul>
+     * <p>Specifies whether the developer role is disabled. Valid values: false (enabled, default) and true (disabled). This parameter filters workspaces by whether the developer role is enabled or disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -96,27 +90,7 @@ public class ListProjectsRequest extends TeaModel {
     public Boolean paiTaskEnabled;
 
     /**
-     * <p>The status of the workspaces. Valid values:</p>
-     * <ul>
-     * <li><p>Available</p>
-     * </li>
-     * <li><p>Initializing</p>
-     * </li>
-     * <li><p>InitFailed</p>
-     * </li>
-     * <li><p>Forbidden</p>
-     * </li>
-     * <li><p>Deleting</p>
-     * </li>
-     * <li><p>DeleteFailed</p>
-     * </li>
-     * <li><p>Frozen</p>
-     * </li>
-     * <li><p>Updating</p>
-     * </li>
-     * <li><p>UpdateFailed</p>
-     * </li>
-     * </ul>
+     * <p>The status of the workspaces. Valid values: Available (running normally), Initializing (initializing), InitFailed (initialization failed), Forbidden (manually disabled), Deleting (being deleted), DeleteFailed (deletion failed), Frozen (frozen due to overdue payments), Updating (being updated), and UpdateFailed (update failed). This parameter filters workspaces by the specified status.</p>
      * 
      * <strong>example:</strong>
      * <p>Available</p>

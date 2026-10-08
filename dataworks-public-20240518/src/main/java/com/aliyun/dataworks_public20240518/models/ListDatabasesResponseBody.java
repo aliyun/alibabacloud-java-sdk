@@ -83,7 +83,7 @@ public class ListDatabasesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of records returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

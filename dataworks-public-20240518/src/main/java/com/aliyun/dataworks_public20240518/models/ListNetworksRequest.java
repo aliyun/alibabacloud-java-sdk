@@ -27,22 +27,18 @@ public class ListNetworksRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Serverless_res_group_524257424564736_6831777003****</p>
+     * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The fields used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</p>
+     * <p>The fields used for sorting. Fields such as scheduled time and start time are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</p>
      * <ul>
-     * <li><p>Id (Desc/Asc): the network ID</p>
-     * </li>
-     * <li><p>Status (Desc/Asc): the network status</p>
-     * </li>
-     * <li><p>CreateUser (Desc/Asc): the user who created the network</p>
-     * </li>
-     * <li><p>CreateTime (Desc/Asc): the time when the network was created</p>
-     * </li>
+     * <li>Id (Desc/Asc): the network ID</li>
+     * <li>Status (Desc/Asc): the network status</li>
+     * <li>CreateUser (Desc/Asc): the user who created the network</li>
+     * <li>CreateTime (Desc/Asc): the time when the network was created</li>
      * </ul>
      * <p>Default value: CreateTime Asc.</p>
      * 

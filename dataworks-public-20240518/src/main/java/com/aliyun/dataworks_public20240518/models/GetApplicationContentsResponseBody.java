@@ -453,7 +453,7 @@ public class GetApplicationContentsResponseBody extends TeaModel {
          * <p>The application reason.</p>
          * 
          * <strong>example:</strong>
-         * <p>业务需要</p>
+         * <p>Business requirement</p>
          */
         @NameInMap("Reason")
         public String reason;

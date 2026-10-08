@@ -178,6 +178,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The business date.</p>
+         * <p>The value is a 13-digit number, for example, 1710239005403.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -187,6 +188,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The creation time.</p>
+         * <p>The value is a 13-digit number, for example, 1710239005403.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -220,6 +222,10 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The project environment.</p>
+         * <ul>
+         * <li>Prod: production.</li>
+         * <li>Dev: development.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Prod</p>
@@ -229,6 +235,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The time when the instance finished running.</p>
+         * <p>The value is a 13-digit number, for example, 1710239005403.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -247,6 +254,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The modification time.</p>
+         * <p>The value is a 13-digit number, for example, 1710239005403.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -292,6 +300,10 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The project environment.</p>
+         * <ul>
+         * <li>Prod: production.</li>
+         * <li>Dev: development.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Prod</p>
@@ -346,6 +358,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The time when the instance started running.</p>
+         * <p>The value is a 13-digit number, for example, 1710239005403.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -355,6 +368,17 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The instance running status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>NotRun: not run.</li>
+         * <li>Running: running.</li>
+         * <li>WaitTime: waiting for TriggerTime.</li>
+         * <li>CheckingCondition: checking branch conditions.</li>
+         * <li>WaitResource: waiting for resources.</li>
+         * <li>Failure: execution failed.</li>
+         * <li>Success: execution succeeded.</li>
+         * <li>Checking: submitted for data quality checking.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -364,6 +388,11 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The dependency type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Normal: same-cycle dependency.</li>
+         * <li>CrossCycle: cross-cycle dependency.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -400,6 +429,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The timeout period for task execution, in seconds.</p>
+         * <p>Note: The scheduling system rounds the configured value to whole hours.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -424,6 +454,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The scheduled trigger time.</p>
+         * <p>The value is a 13-digit number, for example, 1710239005403.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -433,6 +464,11 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The trigger type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Scheduler: triggered by a scheduling cycle.</li>
+         * <li>Manual: triggered manually.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Scheduler</p>
@@ -460,6 +496,15 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The type of the workflow instance to which the instance belongs.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SmokeTest: test.</li>
+         * <li>SupplementData: data backfill.</li>
+         * <li>Manual: manual.</li>
+         * <li>ManualWorkflow: manual workflow.</li>
+         * <li>Normal: scheduled run.</li>
+         * <li>ManualFlow: manually executed business workflow.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -894,6 +939,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The business date.</p>
+         * <p>The value is a 13-digit number, for example, 1710239005403.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -903,6 +949,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The creation time.</p>
+         * <p>The value is a 13-digit number, for example, 1710239005403.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -936,6 +983,10 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The environment of the target data source. Valid values:</p>
+         * <ul>
+         * <li>Dev: development environment.</li>
+         * <li>Prod: production environment.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Prod</p>
@@ -945,6 +996,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The time when the instance finished running.</p>
+         * <p>The value is a 13-digit number, for example, 1710239005403.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -963,6 +1015,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The modification time.</p>
+         * <p>The value is a 13-digit number, for example, 1710239005403.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -1047,6 +1100,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The time when the instance started running.</p>
+         * <p>The value is a 13-digit number, for example, 1710239005403.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -1056,6 +1110,18 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The instance running status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>NotRun: not run.</li>
+         * <li>Running: running.</li>
+         * <li>WaitTime: waiting for TriggerTime.</li>
+         * <li>CheckingCondition: checking branch conditions.</li>
+         * <li>WaitResource: waiting for resources.</li>
+         * <li>Failure: execution failed.</li>
+         * <li>Success: execution succeeded.</li>
+         * <li>Checking: submitted for data quality checking.</li>
+         * <li>WaitTrigger: waiting for an external trigger. Trigger-based nodes enter this state after the waiting period.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -1092,6 +1158,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The timeout period for task execution, in seconds.</p>
+         * <p>Note: The scheduling system rounds the configured value to whole hours.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -1116,6 +1183,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The scheduled trigger time.</p>
+         * <p>The value is a 13-digit number, for example, 1710239005403.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -1125,6 +1193,11 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The trigger type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Scheduler: triggered by a scheduling cycle.</li>
+         * <li>Manual: triggered manually.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Scheduler</p>
@@ -1152,6 +1225,14 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The type of the workflow instance to which the instance belongs.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Normal: scheduled run.</li>
+         * <li>Manual: manual task.</li>
+         * <li>SmokeTest: test.</li>
+         * <li>SupplementData: data backfill.</li>
+         * <li>ManualWorkflow: manual workflow.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -1434,6 +1515,11 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
     public static class ListUpstreamTaskInstancesResponseBodyPagingInfoUpstreamTaskInstances extends TeaModel {
         /**
          * <p>The dependency type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Normal: same-cycle dependency.</li>
+         * <li>CrossCycle: cross-cycle dependency.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>

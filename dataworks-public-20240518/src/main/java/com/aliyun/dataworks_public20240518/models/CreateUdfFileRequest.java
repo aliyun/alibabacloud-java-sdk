@@ -96,7 +96,7 @@ public class CreateUdfFileRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The unique identifier of the DataWorks workspace, which is the identifier at the top of the Data Studio page where you switch workspaces.</p>
+     * <p>The unique identifier of the DataWorks workspace, which is the English identifier at the top of the Data Studio page where you switch workspaces.</p>
      * 
      * <strong>example:</strong>
      * <p>dw_project</p>

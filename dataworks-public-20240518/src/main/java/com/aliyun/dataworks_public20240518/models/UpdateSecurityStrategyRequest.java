@@ -24,7 +24,7 @@ public class UpdateSecurityStrategyRequest extends TeaModel {
      * <p><strong>The policy description.</strong></p>
      * 
      * <strong>example:</strong>
-     * <p>控制数据分析模块的查询结果安全行为</p>
+     * <p>Controls the security behavior of query results in the Data Analysis module</p>
      */
     @NameInMap("Description")
     public String description;
@@ -43,7 +43,7 @@ public class UpdateSecurityStrategyRequest extends TeaModel {
      * <p><strong>The policy name.</strong></p>
      * 
      * <strong>example:</strong>
-     * <p>默认数据分析策略</p>
+     * <p>Default data analysis policy</p>
      */
     @NameInMap("Name")
     public String name;
@@ -145,7 +145,7 @@ public class UpdateSecurityStrategyRequest extends TeaModel {
          * <p>The display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>查询结果-单次展示记录值上限</p>
+         * <p>Query results - Maximum number of records per display</p>
          */
         @NameInMap("DisplayName")
         public String displayName;

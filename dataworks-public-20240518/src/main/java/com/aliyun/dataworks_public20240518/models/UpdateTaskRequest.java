@@ -67,7 +67,7 @@ public class UpdateTaskRequest extends TeaModel {
      * <p>The instance generation mode. Valid values:</p>
      * <ul>
      * <li>T+1: The instance is generated the next day.</li>
-     * <li>Immediately: The instance is generated immediately. Note: Only periodic instances whose scheduled time is at least ten minutes after the node publish time are generated normally. During the full instance generation period (22:00 to 24:00), real-time instance generation is not available. You can submit and publish nodes, but new nodes do not automatically generate instances.</li>
+     * <li>Immediately: The instance is generated immediately. Note: Only periodic instances whose scheduled time is at least ten minutes after the node deployment time are generated normally. During the full instance generation period (22:00 to 24:00), real-time instance generation is not available. You can submit and deploy nodes, but new nodes do not automatically generate instances.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -785,7 +785,7 @@ public class UpdateTaskRequest extends TeaModel {
         public String cron;
 
         /**
-         * <p>The epoch type. This parameter takes effect when Type is set to Scheduler and the cron expression specifies timed scheduling at a specific hour. Default value: Daily. Valid values:</p>
+         * <p>The cycle type. This parameter takes effect when Type is set to Scheduler and the cron expression specifies timed scheduling at a specific hour. Default value: Daily. Valid values:</p>
          * <ul>
          * <li>Daily: daily scheduling.</li>
          * <li>NotDaily: hourly scheduling.</li>
@@ -821,7 +821,7 @@ public class UpdateTaskRequest extends TeaModel {
         public String recurrence;
 
         /**
-         * <p>The effective period of the epoch trigger. This parameter takes effect when Type is set to Scheduler. Format: <code>yyyy-mm-dd hh:mm:ss</code>.</p>
+         * <p>The time when the periodic trigger takes effect. This parameter takes effect when Type is set to Scheduler. Format: <code>yyyy-mm-dd hh:mm:ss</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1970-01-01 00:00:00</p>

@@ -138,13 +138,13 @@ public class CreateMcpServerRequest extends TeaModel {
 
     public static class CreateMcpServerRequestVisibilityScope extends TeaModel {
         /**
-         * <p>The list of project IDs that are visible. This parameter takes effect when Visibility is set to <code>PROJECT</code>.</p>
+         * <p>The IDs of the projects in which the MCP Server is visible. This parameter takes effect when Visibility is set to <code>PROJECT</code>.</p>
          */
         @NameInMap("ProjectIds")
         public java.util.List<String> projectIds;
 
         /**
-         * <p>The list of user IDs that are visible. This parameter takes effect when Visibility is set to <code>USER</code>.</p>
+         * <p>The IDs of the users to whom the MCP Server is visible. This parameter takes effect when Visibility is set to <code>USER</code>.</p>
          */
         @NameInMap("UserIds")
         public java.util.List<String> userIds;

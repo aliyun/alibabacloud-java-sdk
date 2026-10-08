@@ -14,7 +14,7 @@ public class ListPipelineRunItemsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The requested page number, used for pagination.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

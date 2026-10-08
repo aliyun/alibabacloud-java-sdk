@@ -14,7 +14,7 @@ public class Column extends TeaModel {
      * <p>The comment.</p>
      * 
      * <strong>example:</strong>
-     * <p>字段1</p>
+     * <p>Column 1</p>
      */
     @NameInMap("Comment")
     public String comment;
@@ -30,7 +30,7 @@ public class Column extends TeaModel {
 
     /**
      * <p>The ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
-     * <p>The format is <code>${EntityType}:${instance ID or encoded URL}:${DataCatalogIdentity}:${DatabaseName}:${PatternName}:${TableName}:${ColumnName}</code>. Use an empty character as a placeholder for levels that do not exist.</p>
+     * <p>The format is <code>${EntityType}:${instance ID or encoded URL}:${DataCatalogIdentity}:${DatabaseName}:${SchemaName}:${TableName}:${ColumnName}</code>. Use an empty character as a placeholder for levels that do not exist.</p>
      * <blockquote>
      * <p>For MaxCompute and DLF types, use an empty string as a placeholder for the instance ID. For MaxCompute, the database name is the MaxCompute project name. Projects with the three-layer model enabled must include the schema name. For projects without the three-layer model enabled, use an empty string as a placeholder for the schema name.</p>
      * </blockquote>
@@ -44,11 +44,19 @@ public class Column extends TeaModel {
      * <p><code>holo-column:instance_id::database_name:schema_name:table_name:column_name</code></p>
      * <p><code>mysql-column:(instance_id|encoded_jdbc_url)::database_name::table_name:column_name</code></p>
      * <blockquote>
-     * <p>Where<br><code>instance_id</code>: The instance ID. This is required when the data source is registered in instance mode.<br><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. This is required when the data source is registered by using a connection string.<br><code>catalog_id</code>: The DLF catalog ID.<br><code>project_name</code>: The MaxCompute project name.<br><code>database_name</code>: The database name.<br><code>schema_name</code>: The schema name. For MaxCompute, this is required only when the three-layer model is enabled for the project. If the three-layer model is not enabled, use an empty string as a placeholder.<br><code>table_name</code>: The table name.<br><code>column_name</code>: The column name.</p>
+     * <p>Where  </p>
+     * <p><code>instance_id</code>: The instance ID. This is required when the data source is registered in instance mode.  </p>
+     * <p><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. This is required when the data source is registered by using a connection string.  </p>
+     * <p><code>catalog_id</code>: The DLF catalog ID.  </p>
+     * <p><code>project_name</code>: The MaxCompute project name.  </p>
+     * <p><code>database_name</code>: The database name.  </p>
+     * <p><code>schema_name</code>: The schema name. For MaxCompute, this is required only when the three-layer model is enabled for the project. If the three-layer model is not enabled, use an empty string as a placeholder.  </p>
+     * <p><code>table_name</code>: The table name.  </p>
+     * <p><code>column_name</code>: The column name.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>maxcompute-column:123456::test_project:default:test_tbl:col1</p>
+     * <p>maxcompute-column:::project_name:[schema_name]:table_name:column_name</p>
      */
     @NameInMap("Id")
     public String id;
@@ -57,7 +65,7 @@ public class Column extends TeaModel {
      * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>col1</p>
+     * <p>column_name</p>
      */
     @NameInMap("Name")
     public String name;
@@ -96,7 +104,7 @@ public class Column extends TeaModel {
      * <p>The table ID. For more information, see the <code>Table</code> object.</p>
      * 
      * <strong>example:</strong>
-     * <p>maxcompute-table:123456::test_project:default:test_tbl</p>
+     * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
      */
     @NameInMap("TableId")
     public String tableId;
@@ -214,7 +222,7 @@ public class Column extends TeaModel {
          * <p>The business description of the field. Currently, only MaxCompute, HMS (EMR cluster), and DLF types are supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>字段1的业务描述</p>
+         * <p>Business description of column 1</p>
          */
         @NameInMap("Description")
         public String description;

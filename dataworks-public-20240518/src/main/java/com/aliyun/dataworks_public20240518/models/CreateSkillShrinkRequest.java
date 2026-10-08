@@ -17,7 +17,7 @@ public class CreateSkillShrinkRequest extends TeaModel {
      * <p>The <strong>Skill description</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>数据分析技能</p>
+     * <p>Data analytics skill.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -56,7 +56,7 @@ public class CreateSkillShrinkRequest extends TeaModel {
      * <p>The <strong>version note</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>初版</p>
+     * <p>Initial version.</p>
      */
     @NameInMap("VersionNote")
     public String versionNote;

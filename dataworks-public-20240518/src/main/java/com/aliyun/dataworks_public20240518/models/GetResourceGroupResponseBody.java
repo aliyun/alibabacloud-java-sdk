@@ -245,7 +245,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         /**
          * <p>The type of the resource group. Valid values:</p>
          * <ul>
-         * <li>CommonV2: new-version resource group.</li>
+         * <li>CommonV2: new-version general-purpose resource group.</li>
          * <li>ExclusiveDataIntegration: exclusive data integration resource group.</li>
          * <li>ExclusiveScheduler: exclusive scheduling resource group.</li>
          * <li>ExclusiveDataService: exclusive data service resource group.</li>

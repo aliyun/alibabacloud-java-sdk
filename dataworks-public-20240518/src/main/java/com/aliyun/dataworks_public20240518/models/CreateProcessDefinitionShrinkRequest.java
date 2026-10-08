@@ -25,7 +25,7 @@ public class CreateProcessDefinitionShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>这是一个示例策略</p>
+     * <p>This is a sample policy</p>
      */
     @NameInMap("Description")
     public String description;
@@ -41,7 +41,7 @@ public class CreateProcessDefinitionShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>我的审批策略</p>
+     * <p>My Approval Policy</p>
      */
     @NameInMap("Name")
     public String name;

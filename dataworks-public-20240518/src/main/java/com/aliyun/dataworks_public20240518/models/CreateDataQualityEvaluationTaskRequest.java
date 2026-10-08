@@ -63,6 +63,10 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
     /**
      * <p>The extended configuration. The value is a JSON-formatted string. This parameter takes effect only for EMR-type data quality monitors.</p>
+     * <ul>
+     * <li>queue: The YARN queue used for EMR data quality checks. By default, the queue configured for the current project is used.</li>
+     * <li>sqlEngine: The SQL engine used for EMR data quality checks. Valid values: HIVE_SQL and SPARK_SQL.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>{ &quot;queue&quot;: &quot;default&quot;, &quot;sqlEngine&quot;: &quot;SPARK_SQL&quot; }</p>
@@ -187,6 +191,14 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
         /**
          * <p>The comparison operator.</p>
+         * <ul>
+         * <li>&gt;</li>
+         * <li>&gt;=</li>
+         * <li>&lt;</li>
+         * <li>&lt;=</li>
+         * <li>!=</li>
+         * <li>=</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <blockquote>
@@ -254,6 +266,14 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
         /**
          * <p>The comparison operator.</p>
+         * <ul>
+         * <li>&gt;</li>
+         * <li>&gt;=</li>
+         * <li>&lt;</li>
+         * <li>&lt;=</li>
+         * <li>!=</li>
+         * <li>=</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>=</p>
@@ -320,6 +340,14 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
         /**
          * <p>The comparison operator.</p>
+         * <ul>
+         * <li>&gt;</li>
+         * <li>&gt;=</li>
+         * <li>&lt;</li>
+         * <li>&lt;=</li>
+         * <li>!=</li>
+         * <li>=</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <blockquote>
@@ -436,6 +464,13 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
         /**
          * <p>The threshold calculation method.</p>
+         * <ul>
+         * <li>Fixed</li>
+         * <li>Fluctation</li>
+         * <li>FluctationDiscreate</li>
+         * <li>Auto</li>
+         * <li>Average</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Fixed</p>
@@ -486,6 +521,9 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
         /**
          * <p>The handler type:</p>
+         * <ul>
+         * <li>SaveErrorData: Retains problematic data.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>SaveErrorData</p>
@@ -666,6 +704,10 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
         /**
          * <p>The severity level of the rule for the business (corresponding to strong or weak rules on the page). Valid values:</p>
+         * <ul>
+         * <li>Normal</li>
+         * <li>High</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>High</p>
@@ -777,6 +819,9 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
         /**
          * <p>The hook type. Currently, only one type is supported:</p>
+         * <ul>
+         * <li>BlockTaskInstance: Blocks the scheduling task from continuing to run. If the data quality monitor is triggered by a scheduling task, Hook.Condition is evaluated after quality monitoring completes to determine whether the scheduling task is blocked from continuing.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>BlockTaskInstance</p>
@@ -832,6 +877,9 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
     public static class CreateDataQualityEvaluationTaskRequestNotificationsNotificationsNotificationReceivers extends TeaModel {
         /**
          * <p>The additional parameter settings for sending alerts. The value is in JSON format. The following keys are supported:</p>
+         * <ul>
+         * <li>atAll: Specifies whether to mention all members in the group when sending DingTalk alerts. This setting takes effect when ReceiverType is DingdingUrl.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>{  &quot;atAll&quot;: true }</p>
@@ -841,6 +889,13 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
         /**
          * <p>The type of the alert recipient.</p>
+         * <ul>
+         * <li>WebhookUrl: Custom webhook URL.</li>
+         * <li>FeishuUrl: Lark alert URL.</li>
+         * <li>DingdingUrl: DingTalk alert URL.</li>
+         * <li>WeixinUrl: WeCom alert URL.</li>
+         * <li>AliUid: Alibaba Cloud user ID.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>DingdingUrl</p>

@@ -17,7 +17,7 @@ public class ListProjectRolesShrinkRequest extends TeaModel {
     public String namesShrink;
 
     /**
-     * <p>The page number. Used for paging.</p>
+     * <p>The requested page number. Used for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +36,7 @@ public class ListProjectRolesShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
-     * <p>This parameter specifies the DataWorks workspace for this API invoke operation.</p>
+     * <p>This parameter specifies the DataWorks workspace to use for this API call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,10 +46,10 @@ public class ListProjectRolesShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The type of the workspace role. Valid values:</p>
+     * <p>The role type of the workspace. Valid values:</p>
      * <ul>
-     * <li>UserCustom: user-defined role.</li>
-     * <li>System: system role.</li>
+     * <li>UserCustom: user-defined role</li>
+     * <li>System: system role</li>
      * </ul>
      * 
      * <strong>example:</strong>

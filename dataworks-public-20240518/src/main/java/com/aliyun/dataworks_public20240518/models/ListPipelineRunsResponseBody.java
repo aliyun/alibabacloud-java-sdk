@@ -232,7 +232,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
          * <p>The description of the deployment pipeline run.</p>
          * 
          * <strong>example:</strong>
-         * <p>Release process description</p>
+         * <p>发布流程描述信息</p>
          */
         @NameInMap("Description")
         public String description;

@@ -775,6 +775,7 @@ public class ListNodesResponseBody extends TeaModel {
     public static class ListNodesResponseBodyPagingInfoNodesStrategy extends TeaModel {
         /**
          * <p>The mode for generating instances.</p>
+         * <p>Valid values: T+1 and Immediately.</p>
          * 
          * <strong>example:</strong>
          * <p>T+1</p>
@@ -793,6 +794,7 @@ public class ListNodesResponseBody extends TeaModel {
 
         /**
          * <p>The mode that specifies whether reruns are allowed.</p>
+         * <p>Valid values: Allowed, Denied, and FailureAllowed.</p>
          * 
          * <strong>example:</strong>
          * <p>Allowed</p>
@@ -1030,7 +1032,7 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyPagingInfoNodes extends TeaModel {
         /**
-         * <p>The timestamp when the data development node was created.</p>
+         * <p>The timestamp when the Data Studio node was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1722910655000</p>
@@ -1054,9 +1056,9 @@ public class ListNodesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The unique identifier of the data development node.</p>
+         * <p>The unique identifier of the Data Studio node.</p>
          * <blockquote>
-         * <p>Notice: This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <strong>This change does not affect normal SDK usage, and the parameter is still returned in the type defined in the SDK</strong>. Only when upgrading across SDK version 8.0.0, the type change may cause project compilation failures, and you must manually correct the data type.</p>
+         * <p>&lt;notice&gt;This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <strong>This change does not affect normal SDK usage, and the parameter is still returned in the type defined in the SDK</strong>. Only when upgrading across SDK version 8.0.0, the type change may cause project compilation failures, and you must manually correct the data type.&gt;&lt;/notice&gt;</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1072,7 +1074,7 @@ public class ListNodesResponseBody extends TeaModel {
         public ListNodesResponseBodyPagingInfoNodesInputs inputs;
 
         /**
-         * <p>The timestamp when the data development node was last modified.</p>
+         * <p>The timestamp when the Data Studio node was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1722910655000</p>
@@ -1096,7 +1098,7 @@ public class ListNodesResponseBody extends TeaModel {
         public ListNodesResponseBodyPagingInfoNodesOutputs outputs;
 
         /**
-         * <p>The owner of the data development node.</p>
+         * <p>The owner of the Data Studio node.</p>
          * 
          * <strong>example:</strong>
          * <p>110755000425XXXX</p>
@@ -1115,6 +1117,12 @@ public class ListNodesResponseBody extends TeaModel {
 
         /**
          * <p>The scheduling type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Normal: The task is executed normally.</li>
+         * <li>Pause: The node is paused and blocks downstream nodes that depend on it.</li>
+         * <li>Skip: The node performs a dry run. The system immediately returns success with a run duration of 0 seconds, does not block downstream nodes, and does not consume resources.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -1306,7 +1314,7 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>The list of data development nodes.</p>
+         * <p>The list of Data Studio nodes.</p>
          */
         @NameInMap("Nodes")
         public java.util.List<ListNodesResponseBodyPagingInfoNodes> nodes;

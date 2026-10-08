@@ -166,17 +166,17 @@ public class CreateDataQualityRuleTemplateRequest extends TeaModel {
          * <p>The name of the sampling metric. Valid values:</p>
          * <ul>
          * <li>Count: the number of table rows.</li>
-         * <li>Min: the minimum value of a field.</li>
-         * <li>Max: the maximum value of a field.</li>
-         * <li>Avg: the average value of a field.</li>
-         * <li>DistinctCount: the number of distinct values in a field.</li>
+         * <li>Min: the minimum value of a column.</li>
+         * <li>Max: the maximum value of a column.</li>
+         * <li>Avg: the average value of a column.</li>
+         * <li>DistinctCount: the number of distinct values in a column.</li>
          * <li>DistinctPercent: the ratio of distinct values to the total number of rows.</li>
-         * <li>DuplicatedCount: the number of duplicate values in a field.</li>
+         * <li>DuplicatedCount: the number of duplicate values in a column.</li>
          * <li>DuplicatedPercent: the ratio of duplicate values to the total number of rows.</li>
          * <li>TableSize: the table size.</li>
-         * <li>NullValueCount: the number of rows where the field value is null.</li>
-         * <li>NullValuePercent: the ratio of rows where the field value is null.</li>
-         * <li>GroupCount: the count of rows for each value after aggregation by field value.</li>
+         * <li>NullValueCount: the number of rows where the column value is null.</li>
+         * <li>NullValuePercent: the ratio of rows where the column value is null.</li>
+         * <li>GroupCount: the count of rows for each value after aggregation by column value.</li>
          * <li>CountNotIn: the number of rows that do not match the enumerated values.</li>
          * <li>CountDistinctNotIn: the number of distinct values that do not match the enumerated values.</li>
          * <li>UserDefinedSql: sample collection through a custom SQL statement.</li>

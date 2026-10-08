@@ -15,7 +15,7 @@ public class UpdateComponentRequest extends TeaModel {
     public String componentId;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

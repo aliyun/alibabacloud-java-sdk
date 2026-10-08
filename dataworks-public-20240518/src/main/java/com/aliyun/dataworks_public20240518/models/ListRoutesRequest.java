@@ -32,7 +32,7 @@ public class ListRoutesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The unique identifier of the general quota.</p>
+     * <p>The unique identifier of the general-purpose resource group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

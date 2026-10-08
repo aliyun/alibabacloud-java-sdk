@@ -25,7 +25,7 @@ public class UpdateFolderRequest extends TeaModel {
     public String folderName;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID. You must specify either this parameter or the ProjectIdentifier parameter to identify the DataWorks workspace when you call this operation.</p>
+     * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the workspace configuration page to query the ID. You must specify either this parameter or the ProjectIdentifier parameter to identify the DataWorks workspace when you call this operation.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -34,7 +34,7 @@ public class UpdateFolderRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace page to query the workspace name. You must specify either this parameter or the ProjectId parameter to identify the DataWorks workspace when you call this operation.</p>
+     * <p>The name of the DataWorks workspace. You can log on to the DataWorks console and go to the workspace configuration page to query the workspace name. You must specify either this parameter or the ProjectId parameter to identify the DataWorks workspace when you call this operation.</p>
      * 
      * <strong>example:</strong>
      * <p>dw_project</p>

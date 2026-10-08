@@ -1044,7 +1044,7 @@ public class GetDIJobResponseBody extends TeaModel {
         public java.util.List<GetDIJobResponseBodyPagingInfoDestinationDataSourceSettings> destinationDataSourceSettings;
 
         /**
-         * <p>The type of the destination data source. Valid values: <code>Hologres</code>, <code>OSS-HDFS</code>, <code>OSS</code>, <code>MaxCompute</code>, <code>LogHub</code>, <code>StarRocks</code>, <code>DataHub</code>, <code>AnalyticDB for MySQL</code>, <code>Kafka</code>, and <code>Hive</code>.</p>
+         * <p>The type of the destination data source. Valid values: <code>Hologres</code>, <code>OSS-HDFS</code>, <code>OSS</code>, <code>MaxCompute</code>, <code>LogHub</code>, <code>StarRocks</code>, <code>DataHub</code>, <code>AnalyticDB_For_MySQL</code>, <code>Kafka</code>, and <code>Hive</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Hologres</p>
@@ -1079,18 +1079,12 @@ public class GetDIJobResponseBody extends TeaModel {
         /**
          * <p>The status of the job. Valid values:</p>
          * <ul>
-         * <li><p><code>Finished</code>: The job is complete.</p>
-         * </li>
-         * <li><p><code>Failed</code>: The job failed.</p>
-         * </li>
-         * <li><p><code>Running</code>: The job is running.</p>
-         * </li>
-         * <li><p><code>Initialized</code>: The job is initialized but has not started.</p>
-         * </li>
-         * <li><p><code>Stopping</code>: The job is being stopped.</p>
-         * </li>
-         * <li><p><code>Stop</code>: The job is stopped.</p>
-         * </li>
+         * <li><code>Finished</code>: The job completed successfully.</li>
+         * <li><code>Failed</code>: The job failed.</li>
+         * <li><code>Running</code>: The job is running.</li>
+         * <li><code>Initialized</code>: The job is initialized but has not started.</li>
+         * <li><code>Stopping</code>: The job is being stopped.</li>
+         * <li><code>Stop</code>: The job is stopped.</li>
          * </ul>
          * 
          * <strong>example:</strong>

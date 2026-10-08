@@ -236,10 +236,10 @@ public class GetFileVersionResponseBody extends TeaModel {
         /**
          * <p>The functional module to which the file belongs. Valid values:</p>
          * <ul>
-         * <li>0: NORMAL (DataStudio)</li>
+         * <li>0: NORMAL (Data Studio)</li>
          * <li>1: MANUAL (manual node)</li>
          * <li>2: MANUAL_BIZ (manual workflow)</li>
-         * <li>3: SKIP (dry-run scheduling in DataStudio)</li>
+         * <li>3: SKIP (dry-run scheduling in Data Studio)</li>
          * <li>10: ADHOCQUERY (ad hoc query)</li>
          * <li>30: COMPONENT (component management)</li>
          * </ul>

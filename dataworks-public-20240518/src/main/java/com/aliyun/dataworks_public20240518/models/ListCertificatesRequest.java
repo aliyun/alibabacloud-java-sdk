@@ -32,7 +32,7 @@ public class ListCertificatesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The order in which you want to sort the certificate files. Valid values: Desc: descending order ASC: ascending order Default value: Asc</p>
+     * <p>The order in which you want to sort the certificate files. Valid values: Desc: descending order Asc: ascending order Default value: Asc</p>
      * 
      * <strong>example:</strong>
      * <p>Asc</p>

@@ -32,7 +32,7 @@ public class MetaEntityDef extends TeaModel {
      * <p>The display name.</p>
      * 
      * <strong>example:</strong>
-     * <p>业务API</p>
+     * <p>Business API</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
@@ -41,7 +41,7 @@ public class MetaEntityDef extends TeaModel {
      * <p>The entity type.</p>
      * 
      * <strong>example:</strong>
-     * <p>custom_entity-biz_api</p>
+     * <p>custom_entity-customer_api</p>
      */
     @NameInMap("EntityType")
     public String entityType;
@@ -68,7 +68,7 @@ public class MetaEntityDef extends TeaModel {
      * <p>The name of the type definition.</p>
      * 
      * <strong>example:</strong>
-     * <p>biz_api</p>
+     * <p>customer_api</p>
      */
     @NameInMap("Name")
     public String name;

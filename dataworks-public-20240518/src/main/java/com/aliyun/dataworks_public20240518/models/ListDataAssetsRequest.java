@@ -190,7 +190,7 @@ public class ListDataAssetsRequest extends TeaModel {
     public static class ListDataAssetsRequestTags extends TeaModel {
         /**
          * <p>The custom tag key specified by the user.</p>
-         * <p>The tag key can be up to 64 characters in length, cannot start with <code>dw:</code>, and supports only letters, digits, and the following special characters: <code>-@#*&lt;&gt;|[]()+=&amp;%$!~</code>.</p>
+         * <p>The tag key can be up to 64 characters in length, cannot start with <code>dw:</code>, and supports only Chinese characters, letters, digits, and the following special characters: <code>-@#*&lt;&gt;|[]()+=&amp;%$!~</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>key</p>

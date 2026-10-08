@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class GetSchemaRequest extends TeaModel {
     /**
      * <p>The ID. You can refer to the ListSchemas operation and <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
-     * <p>The format is <code>${EntityType}:${Instance ID or escaped URL}:${Catalog ID}:${Database name}:${Schema name}&lt;/code&gt;</code>. Use empty strings as placeholders for missing levels.</p>
+     * <p>The format is <code>${EntityType}:${Instance ID or escaped URL}:${Catalog ID}:${Database name}:${Schema name}</code>. Use empty strings as placeholders for missing levels.</p>
      * <blockquote>
      * <p>For the MaxCompute type, use an empty string as the placeholder for the instance ID level. The database name is the MaxCompute project name, and the project must have the three-level model enabled.</p>
      * </blockquote>
@@ -14,9 +14,9 @@ public class GetSchemaRequest extends TeaModel {
      * <p><code>maxcompute-schema:::project_name:schema_name</code> (The three-level model is enabled for the MaxCompute project.)</p>
      * <p><code>holo-schema:instance_id::database_name:schema_name</code></p>
      * <blockquote>
-     * <p><br><code>instance_id</code>: The Hologres instance ID<br>
-     * . <code>database_name</code>: The database name<br>
-     * . <code>database_name</code>: The MaxCompute project name<br>
+     * <p>&lt;br&gt;<code>instance_id</code>: The Hologres instance ID&lt;br&gt;
+     * . <code>database_name</code>: The database name&lt;br&gt;
+     * . <code>project_name</code>: The MaxCompute project name&lt;br&gt;
      * . <code>schema_name</code>: The schema name.</p>
      * </blockquote>
      * <p>This parameter is required.</p>

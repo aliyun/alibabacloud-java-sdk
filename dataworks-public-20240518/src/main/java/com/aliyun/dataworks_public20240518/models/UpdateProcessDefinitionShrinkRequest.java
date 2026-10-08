@@ -23,7 +23,7 @@ public class UpdateProcessDefinitionShrinkRequest extends TeaModel {
      * <p>The description of the process definition.</p>
      * 
      * <strong>example:</strong>
-     * <p>lwt_ide_simple 项目 MaxCompute 表审批策略</p>
+     * <p>MaxCompute table approval policy for the lwt_ide_simple project</p>
      */
     @NameInMap("Description")
     public String description;
@@ -42,7 +42,7 @@ public class UpdateProcessDefinitionShrinkRequest extends TeaModel {
      * <p>The name of the process definition.</p>
      * 
      * <strong>example:</strong>
-     * <p>MaxCompute 表审批</p>
+     * <p>MaxCompute table approval</p>
      */
     @NameInMap("Name")
     public String name;

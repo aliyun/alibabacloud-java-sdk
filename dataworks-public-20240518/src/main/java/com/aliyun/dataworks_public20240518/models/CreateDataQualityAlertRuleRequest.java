@@ -86,7 +86,7 @@ public class CreateDataQualityAlertRuleRequest extends TeaModel {
         public String extension;
 
         /**
-         * <p>The object type of the alerting accept object.</p>
+         * <p>The alert recipient type.</p>
          * <ul>
          * <li>AliUid</li>
          * <li>WebhookUrl</li>

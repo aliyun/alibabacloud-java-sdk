@@ -11,7 +11,7 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
     public ListTaskOperationLogsResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
@@ -42,13 +42,27 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
 
     public static class ListTaskOperationLogsResponseBodyPagingInfoOperationLogs extends TeaModel {
         /**
-         * <p>The time when the operation log was generated.</p>
+         * <p>The time when the operation logs are generated.</p>
+         * <p>The format is a 13-digit number, such as <code>1710239005403</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
+
+        /**
+         * <p>The object type. Valid values:</p>
+         * <ul>
+         * <li>Task: node</li>
+         * <li>TaskInstance: node instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TaskInstance</p>
+         */
+        @NameInMap("ObjectType")
+        public String objectType;
 
         /**
          * <p>The operation content.</p>
@@ -60,7 +74,7 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
         public String operationContent;
 
         /**
-         * <p>The serial number of the operation.</p>
+         * <p>The operation sequence number.</p>
          * 
          * <strong>example:</strong>
          * <p>1111</p>
@@ -69,7 +83,7 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
         public Long operationSeq;
 
         /**
-         * <p>The ID of the task on which the operation was performed.</p>
+         * <p>The ID of the node on which the operation was performed.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -78,7 +92,16 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
         public Long taskId;
 
         /**
-         * <p>The account ID of the operator.</p>
+         * <p>The ID of the node instance on which the operation was performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
+        @NameInMap("TaskInstanceId")
+        public Long taskInstanceId;
+
+        /**
+         * <p>The account ID of the user who performed the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -97,6 +120,14 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public ListTaskOperationLogsResponseBodyPagingInfoOperationLogs setObjectType(String objectType) {
+            this.objectType = objectType;
+            return this;
+        }
+        public String getObjectType() {
+            return this.objectType;
         }
 
         public ListTaskOperationLogsResponseBodyPagingInfoOperationLogs setOperationContent(String operationContent) {
@@ -123,6 +154,14 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
             return this.taskId;
         }
 
+        public ListTaskOperationLogsResponseBodyPagingInfoOperationLogs setTaskInstanceId(Long taskInstanceId) {
+            this.taskInstanceId = taskInstanceId;
+            return this;
+        }
+        public Long getTaskInstanceId() {
+            return this.taskInstanceId;
+        }
+
         public ListTaskOperationLogsResponseBodyPagingInfoOperationLogs setUser(String user) {
             this.user = user;
             return this;
@@ -135,7 +174,7 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
 
     public static class ListTaskOperationLogsResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>The operation logs.</p>
+         * <p>The list of operation logs.</p>
          */
         @NameInMap("OperationLogs")
         public java.util.List<ListTaskOperationLogsResponseBodyPagingInfoOperationLogs> operationLogs;
@@ -159,7 +198,7 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

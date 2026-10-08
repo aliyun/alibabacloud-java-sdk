@@ -58,7 +58,7 @@ public class ListAlertRulesShrinkRequest extends TeaModel {
     public String taskIdsShrink;
 
     /**
-     * <p>The alert triggering condition.</p>
+     * <p>The list of alert types.</p>
      */
     @NameInMap("Types")
     public String typesShrink;

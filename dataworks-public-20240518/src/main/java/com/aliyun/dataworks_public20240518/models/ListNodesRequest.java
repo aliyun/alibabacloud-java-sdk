@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class ListNodesRequest extends TeaModel {
     /**
      * <p>Leave this parameter empty if not specified. The filter condition: within the specified container. Specify the container ID. This parameter is not related to the resource group (ResourceGroupId).</p>
+     * <p>This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. This change does not affect normal SDK usage; the field is returned in the type defined in the SDK. When upgrading across SDK version 8.0.0, the type change may cause compilation failures. In this case, manually correct the data type.</p>
      * 
      * <strong>example:</strong>
      * <p>860438872620113XXXX</p>
@@ -85,14 +86,11 @@ public class ListNodesRequest extends TeaModel {
     public String rerunMode;
 
     /**
-     * <p>The scene in which the node resides. Leave this parameter empty if not specified. This parameter corresponds to the partition of the left-side navigation pane in DataStudio. Valid values:</p>
+     * <p>The scene in which the node resides. Leave this parameter empty if not specified. This parameter corresponds to the partition of the left-side navigation pane in Data Studio. Valid values:</p>
      * <ul>
-     * <li><p>DataworksProject: project folder.</p>
-     * </li>
-     * <li><p>DataworksManualWorkflow: manual workflow.</p>
-     * </li>
-     * <li><p>DataworksManualTask: manual node.</p>
-     * </li>
+     * <li>DataworksProject: project folder.</li>
+     * <li>DataworksManualWorkflow: manual workflow.</li>
+     * <li>DataworksManualTask: manual node.</li>
      * </ul>
      * 
      * <strong>example:</strong>

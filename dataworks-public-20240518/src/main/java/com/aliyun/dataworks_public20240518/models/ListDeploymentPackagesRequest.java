@@ -77,7 +77,7 @@ public class ListDeploymentPackagesRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The unique identifier of the DataWorks workspace, which is the English identifier displayed in the workspace switcher at the top of the DataStudio page. You must specify either this parameter or the ProjectId parameter to determine the DataWorks workspace for this API call.</p>
+     * <p>The unique identifier of the DataWorks workspace, which is the English identifier displayed in the workspace switcher at the top of the Data Studio page. You must specify either this parameter or the ProjectId parameter to determine the DataWorks workspace for this API call.</p>
      * 
      * <strong>example:</strong>
      * <p>dw_project</p>

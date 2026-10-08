@@ -8,7 +8,7 @@ public class CreateParameterRequest extends TeaModel {
      * <p>The description of the parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>This is a test parameter.</p>
+     * <p>这是一个测试参数</p>
      */
     @NameInMap("Description")
     public String description;

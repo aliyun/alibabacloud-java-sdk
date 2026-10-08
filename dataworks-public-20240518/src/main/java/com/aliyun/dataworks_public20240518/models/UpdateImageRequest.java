@@ -297,7 +297,7 @@ public class UpdateImageRequest extends TeaModel {
         /**
          * <p>The image sub-module. Valid values:</p>
          * <ul>
-         * <li>Scheduler: data development.</li>
+         * <li>Scheduler: Data Studio.</li>
          * </ul>
          * 
          * <strong>example:</strong>

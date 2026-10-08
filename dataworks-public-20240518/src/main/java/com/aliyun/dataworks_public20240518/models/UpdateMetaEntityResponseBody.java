@@ -14,7 +14,7 @@ public class UpdateMetaEntityResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the update operation.</p>
+     * <p>The updated entity or the result of the write operation.</p>
      */
     @NameInMap("Result")
     public UpdateMetaEntityResponseBodyResult result;

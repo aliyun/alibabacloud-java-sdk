@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateNodeResponseBody extends TeaModel {
     /**
-     * <p>The unique identifier of the data development node.</p>
+     * <p>The unique identifier of the Data Studio node.</p>
      * <blockquote>
-     * <p>Notice: This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <strong>This change does not affect normal SDK usage, and the parameter is still returned in the type defined in the SDK</strong>. Only when you upgrade across SDK version 8.0.0, the type change may cause project compilation failures, and you need to manually correct the data type.</p>
+     * <p>&lt;notice&gt;This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <strong>This change does not affect normal SDK usage, and the parameter is still returned in the type defined in the SDK</strong>. Only when you upgrade across SDK version 8.0.0, the type change may cause project compilation failures, and you need to manually correct the data type.&gt;&lt;/notice&gt;</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTaskAsyncShrinkRequest extends TeaModel {
     /**
-     * <p>The client unique code of the node, which uniquely identifies a node. This code is used for asynchronous operations and idempotence. If you do not specify this parameter during creation, the system automatically generates one. The code is uniquely bound to the resource ID. When updating or deleting a resource, if you specify this parameter, it must be the same as the client unique code specified during creation.</p>
+     * <p>The client unique code of the node, used to uniquely identify a node. This code is used for asynchronous processing and idempotence. If you do not specify this parameter when creating a node, the system automatically generates a value and binds it to the resource ID. If you specify this parameter when updating or deleting a resource, the value must match the client unique code used when the resource was created.</p>
      * 
      * <strong>example:</strong>
      * <p>Workflow_0bc5213917368545132902xxxxxxxx</p>
@@ -66,8 +66,8 @@ public class UpdateTaskAsyncShrinkRequest extends TeaModel {
     /**
      * <p>The instance generation mode. Valid values:</p>
      * <ul>
-     * <li>T+1: Generates instances the next day.</li>
-     * <li>Immediately: Generates instances immediately. Note: Only periodic instances whose scheduled time is at least 10 minutes after the node publish time are generated. During the full instance generation period (22:00 to 24:00), real-time instance generation is not available. You can submit and publish nodes, but new nodes do not automatically generate instances.</li>
+     * <li>T+1: generates instances the next day.</li>
+     * <li>Immediately: generates instances immediately. Note: only periodic instances whose scheduled time is more than 10 minutes after the node publish time are generated normally. During the full-to-instance conversion period (22:00–24:00), real-time instance conversion is not supported. You can submit and publish nodes, but new nodes are not automatically converted to instances.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -110,11 +110,11 @@ public class UpdateTaskAsyncShrinkRequest extends TeaModel {
     public Integer rerunInterval;
 
     /**
-     * <p>Specifies whether the node can be rerun. Valid values:</p>
+     * <p>The configuration that specifies whether the node can be rerun. Valid values:</p>
      * <ul>
-     * <li>AllDenied: Cannot be rerun regardless of success or failure.</li>
-     * <li>FailureAllowed: Can be rerun only upon failure.</li>
-     * <li>AllAllowed: Can be rerun regardless of success or failure.</li>
+     * <li>AllDenied: the node cannot be rerun regardless of whether it succeeds or fails.</li>
+     * <li>FailureAllowed: the node can be rerun only if it fails.</li>
+     * <li>AllAllowed: the node can be rerun regardless of whether it succeeds or fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -124,7 +124,7 @@ public class UpdateTaskAsyncShrinkRequest extends TeaModel {
     public String rerunMode;
 
     /**
-     * <p>The number of retries. This parameter takes effect when the node is configured to allow reruns.</p>
+     * <p>The number of retries. This parameter takes effect only when the node is configured to allow reruns.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -133,25 +133,25 @@ public class UpdateTaskAsyncShrinkRequest extends TeaModel {
     public Integer rerunTimes;
 
     /**
-     * <p>The runtime environment configuration, such as schedule resource group information.</p>
+     * <p>The runtime environment configuration, such as the resource group information.</p>
      */
     @NameInMap("RuntimeResource")
     public String runtimeResourceShrink;
 
     /**
-     * <p>The script information.</p>
+     * <p>The runtime script information.</p>
      */
     @NameInMap("Script")
     public String scriptShrink;
 
     /**
-     * <p>The list of data asset tags to bind.</p>
+     * <p>The list of data asset tags to attach.</p>
      */
     @NameInMap("Tags")
     public String tagsShrink;
 
     /**
-     * <p>The timeout setting for scheduling configuration.</p>
+     * <p>The timeout period defined in the scheduling configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

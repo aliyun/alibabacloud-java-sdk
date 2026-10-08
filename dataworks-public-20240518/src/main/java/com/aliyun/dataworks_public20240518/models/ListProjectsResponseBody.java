@@ -123,13 +123,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public Boolean devEnvironmentEnabled;
 
         /**
-         * <p>Indicates whether the Develop role is disabled. Valid values:</p>
-         * <ul>
-         * <li><p>false (default)</p>
-         * </li>
-         * <li><p>true</p>
-         * </li>
-         * </ul>
+         * <p>Indicates whether the developer role is disabled. Valid values: false (enabled) and true (disabled).</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -189,27 +183,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public Boolean paiTaskEnabled;
 
         /**
-         * <p>The status of the workspace. Valid values:</p>
-         * <ul>
-         * <li><p>Available</p>
-         * </li>
-         * <li><p>Initializing</p>
-         * </li>
-         * <li><p>InitFailed</p>
-         * </li>
-         * <li><p>Forbidden</p>
-         * </li>
-         * <li><p>Deleting</p>
-         * </li>
-         * <li><p>DeleteFailed</p>
-         * </li>
-         * <li><p>Frozen</p>
-         * </li>
-         * <li><p>Updating</p>
-         * </li>
-         * <li><p>UpdateFailed</p>
-         * </li>
-         * </ul>
+         * <p>The status of the workspace. Valid values: Available (running normally), Initializing (initializing), InitFailed (initialization failed), Forbidden (manually disabled), Deleting (being deleted), DeleteFailed (deletion failed), Frozen (frozen due to overdue payments), Updating (being updated), and UpdateFailed (update failed).</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>

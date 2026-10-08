@@ -12,13 +12,7 @@ public class UnTagDataAssetsRequest extends TeaModel {
     public java.util.List<String> dataAssetIds;
 
     /**
-     * <p>The type of the data asset. Valid values:</p>
-     * <ul>
-     * <li><p>ACS::DataWorks::Table</p>
-     * </li>
-     * <li><p>ACS::DataWorks::Task</p>
-     * </li>
-     * </ul>
+     * <p>The type of the data asset. Valid values: ACS::DataWorks::Table (data table) and ACS::DataWorks::Task (scheduled task).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

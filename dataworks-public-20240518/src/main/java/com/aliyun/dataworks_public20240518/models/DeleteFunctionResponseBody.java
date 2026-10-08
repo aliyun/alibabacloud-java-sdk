@@ -16,10 +16,8 @@ public class DeleteFunctionResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: successful</li>
+     * <li>false: failed</li>
      * </ul>
      * 
      * <strong>example:</strong>

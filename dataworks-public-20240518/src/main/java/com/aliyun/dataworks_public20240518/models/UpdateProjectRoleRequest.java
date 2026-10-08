@@ -31,7 +31,7 @@ public class UpdateProjectRoleRequest extends TeaModel {
     public java.util.List<UpdateProjectRoleRequestModulePermissions> modulePermissions;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the Storage Management page to obtain the ID.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the Workspace Management page to obtain the ID.</p>
      * <p>This parameter specifies the DataWorks workspace for this API invocation.</p>
      * <p>This parameter is required.</p>
      * 
@@ -90,7 +90,7 @@ public class UpdateProjectRoleRequest extends TeaModel {
          * <li>8: DataService Studio</li>
          * <li>9: Data Integration</li>
          * <li>10: Data Modeling (DataBlau DDM)</li>
-         * <li>11: DataStudio</li>
+         * <li>11: Data Studio</li>
          * <li>12: Data Quality</li>
          * <li>13: Data Governance Center</li>
          * <li>14: Operation Center</li>

@@ -15,7 +15,7 @@ public class AbolishPipelineRunRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can logon to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the storage management page to obtain the ID.</p>
+     * <p>The ID of the DataWorks workspace. You can logon to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
      * <p>This parameter specifies the DataWorks workspace for this API invoke operation.</p>
      * <p>This parameter is required.</p>
      * 

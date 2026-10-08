@@ -19,7 +19,7 @@ public class CreateRouteRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>10001</p>
+     * <p>1000</p>
      */
     @NameInMap("NetworkId")
     public Long networkId;

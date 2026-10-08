@@ -61,6 +61,12 @@ public class ListSchemasRequest extends TeaModel {
      * <blockquote>
      * <p>If you want to query the information about a MaxCompute schema, specify an empty string at the Instance ID level as a placeholder and a MaxCompute project name at the Database name level. Make sure that the schema feature is enabled for the MaxCompute project.</p>
      * </blockquote>
+     * <p>Common ParentMetaEntityId formats:</p>
+     * <ul>
+     * <li><code>maxcompute-project:::project_name</code>: The MaxCompute project must have the schema feature enabled.</li>
+     * <li><code>holo-database:instance_id::database_name</code></li>
+     * </ul>
+     * <p><code>instance_id</code>: Hologres instance ID. <code>database_name</code>: database name. <code>project_name</code>: MaxCompute project name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

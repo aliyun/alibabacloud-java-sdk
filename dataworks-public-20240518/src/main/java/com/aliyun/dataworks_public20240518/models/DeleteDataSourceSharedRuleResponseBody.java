@@ -8,7 +8,7 @@ public class DeleteDataSourceSharedRuleResponseBody extends TeaModel {
      * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>64B-587A-8CED-969E1973887F****</p>
+     * <p>64B-587A-8CED-969E1973887FXXX-TT</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -30,7 +30,7 @@ public class StartDIJobRequest extends TeaModel {
     public Boolean forceToRerun;
 
     /**
-     * <p>The ID of the synchronization task.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

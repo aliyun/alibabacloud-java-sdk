@@ -60,7 +60,7 @@ public class CreateDataQualityScanRequest extends TeaModel {
     public java.util.List<CreateDataQualityScanRequestParameters> parameters;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the workspace configuration page to obtain the workspace ID. This parameter is required to specify the target DataWorks workspace for this API operation.</p>
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://dataworks.console.aliyun.com/overview">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID. This parameter is required to specify the target DataWorks workspace for this API operation.</p>
      * 
      * <strong>example:</strong>
      * <p>101</p>
@@ -75,7 +75,7 @@ public class CreateDataQualityScanRequest extends TeaModel {
     public CreateDataQualityScanRequestRuntimeResource runtimeResource;
 
     /**
-     * <p>Spec code for the content of the data quality monitoring.</p>
+     * <p>Spec code for the content of the data quality monitoring. For more information, see <a href="https://help.aliyun.com/document_detail/2963394.html">Data quality Spec configuration description</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -429,7 +429,7 @@ public class CreateDataQualityScanRequest extends TeaModel {
 
     public static class CreateDataQualityScanRequestRuntimeResource extends TeaModel {
         /**
-         * <p>The default number of CUs configured for task running.</p>
+         * <p>The number of CUs configured for task running.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>

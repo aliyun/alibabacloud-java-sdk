@@ -145,13 +145,13 @@ public class UpdateSkillRequest extends TeaModel {
 
     public static class UpdateSkillRequestVisibilityScope extends TeaModel {
         /**
-         * <p>The list of visible project IDs.</p>
+         * <p>The IDs of the projects in which the Skill is visible.</p>
          */
         @NameInMap("ProjectIds")
         public java.util.List<String> projectIds;
 
         /**
-         * <p>The list of visible user IDs.</p>
+         * <p>The IDs of the users to whom the Skill is visible.</p>
          */
         @NameInMap("UserIds")
         public java.util.List<String> userIds;

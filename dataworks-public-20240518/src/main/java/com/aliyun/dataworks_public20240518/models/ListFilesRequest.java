@@ -145,10 +145,10 @@ public class ListFilesRequest extends TeaModel {
     /**
      * <p>The functional module to which the file belongs. Valid values:</p>
      * <ul>
-     * <li>NORMAL: DataStudio.</li>
+     * <li>NORMAL: Data Studio.</li>
      * <li>MANUAL: manual node.</li>
      * <li>MANUAL_BIZ: manual workflow.</li>
-     * <li>SKIP: dry-run scheduling in DataStudio.</li>
+     * <li>SKIP: dry-run scheduling in Data Studio.</li>
      * <li>ADHOCQUERY: ad hoc query.</li>
      * <li>COMPONENT: component management.</li>
      * </ul>

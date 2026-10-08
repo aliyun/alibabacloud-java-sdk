@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LoadAgentSessionResponseBody extends TeaModel {
     /**
-     * <p>The error object of the SSE frame. This field is present when an error occurs.</p>
+     * <p>The error object of the SSE frame. This field is present when an error occurs. The returned content conforms to the Agent Client Protocol (ACP). For more information, see <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;code&quot;: 400, &quot;errorCode&quot;: &quot;0x50000000001&quot;, &quot;message&quot;: &quot;not exist session&quot;, &quot;data&quot;: null}</p>
@@ -32,7 +32,7 @@ public class LoadAgentSessionResponseBody extends TeaModel {
     public String jsonrpc;
 
     /**
-     * <p>The method of the SSE frame.</p>
+     * <p>The method of the SSE frame. The returned content conforms to the Agent Client Protocol (ACP). For more information, see <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>session/update</p>
@@ -41,7 +41,7 @@ public class LoadAgentSessionResponseBody extends TeaModel {
     public String method;
 
     /**
-     * <p>The parameters of the SSE frame.</p>
+     * <p>The parameters of the SSE frame. The returned content conforms to the Agent Client Protocol (ACP). For more information, see <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;sessionId&quot;:&quot;af4f5ef8-e8f5-481c-ad1f-94886c6c0aed&quot;,&quot;update&quot;:{&quot;sessionUpdate&quot;:&quot;agent_message_chunk&quot;,&quot;content&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;hello world&quot;}}}</p>
@@ -59,7 +59,7 @@ public class LoadAgentSessionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result object of the SSE frame. This field is present when the operation is successful.</p>
+     * <p>The result object of the SSE frame. This field is present when the operation is successful. The returned content conforms to the Agent Client Protocol (ACP). For more information, see <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;stopReason&quot;:&quot;end_turn&quot;}</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class Dataset extends TeaModel {
     /**
-     * <p>The description of the dataset. The length cannot exceed 1024 characters.</p>
+     * <p>The description of the dataset. The length must be less than 1024 characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试数据集</p>
+     * <p>Test dataset</p>
      */
     @NameInMap("Comment")
     public String comment;
@@ -34,13 +34,13 @@ public class Dataset extends TeaModel {
     /**
      * <p>The data type. Valid values:</p>
      * <ul>
-     * <li>COMMON</li>
-     * <li>PIC</li>
-     * <li>TEXT</li>
-     * <li>TABLE</li>
-     * <li>VIDEO</li>
-     * <li>AUDIO</li>
-     * <li>INDEX</li>
+     * <li>COMMON: general</li>
+     * <li>PIC: image</li>
+     * <li>TEXT: text</li>
+     * <li>TABLE: table</li>
+     * <li>VIDEO: video</li>
+     * <li>AUDIO: audio</li>
+     * <li>INDEX: index</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,7 +80,7 @@ public class Dataset extends TeaModel {
     public Long modifyTime;
 
     /**
-     * <p>The dataset name. It must be a non-empty string and cannot exceed 128 characters.</p>
+     * <p>The dataset name. It must be a non-empty string and must be less than 128 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>test_dataset</p>

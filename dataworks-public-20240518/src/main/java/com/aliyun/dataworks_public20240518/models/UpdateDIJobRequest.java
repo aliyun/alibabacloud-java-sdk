@@ -427,12 +427,9 @@ public class UpdateDIJobRequest extends TeaModel {
         /**
          * <p>The handling action. Valid values:</p>
          * <ul>
-         * <li><p><code>Ignore</code>: Ignores the DDL message.</p>
-         * </li>
-         * <li><p><code>Critical</code>: Reports an error and terminates the synchronization job.</p>
-         * </li>
-         * <li><p><code>Normal</code>: Processes the DDL message normally.</p>
-         * </li>
+         * <li><code>Ignore</code>: Ignores the DDL message.</li>
+         * <li><code>Critical</code>: Reports an error.</li>
+         * <li><code>Normal</code>: Processes the DDL message normally.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -442,23 +439,7 @@ public class UpdateDIJobRequest extends TeaModel {
         public String action;
 
         /**
-         * <p>The DDL type. Valid values:</p>
-         * <ul>
-         * <li><p><code>RenameColumn</code></p>
-         * </li>
-         * <li><p><code>ModifyColumn</code></p>
-         * </li>
-         * <li><p><code>CreateTable</code></p>
-         * </li>
-         * <li><p><code>TruncateTable</code></p>
-         * </li>
-         * <li><p><code>DropTable</code></p>
-         * </li>
-         * <li><p><code>DropColumn</code></p>
-         * </li>
-         * <li><p><code>AddColumn</code></p>
-         * </li>
-         * </ul>
+         * <p>The DDL type. Valid values: RenameColumn (rename a column), ModifyColumn (modify a column), CreateTable (create a table), TruncateTable (clear a table), DropTable (delete a table), DropColumn (delete a column), and AddColumn (add a column).</p>
          * 
          * <strong>example:</strong>
          * <p>AddColumn</p>
@@ -1078,80 +1059,58 @@ public class UpdateDIJobRequest extends TeaModel {
          * <li>Rename rule (<code>Rename</code>)</li>
          * </ol>
          * <ul>
-         * <li><p>Example: <code>{&quot;expression&quot;:&quot;${srcDatasourceName}_${srcDatabaseName}_0922&quot;}</code></p>
-         * </li>
-         * <li><p><code>expression</code>: The expression for the rename transformation rule. The expression supports variables, including <code>${srcDatasourceName}</code> (source data source name), <code>${srcDatabaseName}</code> (source database name), and <code>${srcTableName}</code> (source table name).</p>
-         * </li>
+         * <li>Example: <code>{&quot;expression&quot;:&quot;${srcDatasourceName}_${srcDatabaseName}_0922&quot;}</code></li>
+         * <li><code>expression</code>: The expression for the rename transformation rule. The expression supports variables, including <code>${srcDatasourceName}</code> (source data source name), <code>${srcDatabaseName}</code> (source database name), and <code>${srcTableName}</code> (source table name).</li>
          * </ul>
          * <ol start="2">
          * <li>Add column rule (<code>AddColumn</code>)</li>
          * </ol>
          * <ul>
-         * <li><p>Example: <code>{&quot;columns&quot;:[{&quot;columnName&quot;:&quot;my_add_column&quot;,&quot;columnValueType&quot;:&quot;Constant&quot;,&quot;columnValue&quot;:&quot;123&quot;}]}</code></p>
-         * </li>
-         * <li><p>If this rule is not specified, no columns are added.</p>
-         * </li>
-         * <li><p><code>columnName</code>: The name of the column to add.</p>
-         * </li>
-         * <li><p><code>columnValueType</code>: The value type of the added column. Valid values: <code>Constant</code> and <code>Variable</code>.</p>
-         * </li>
-         * <li><p><code>columnValue</code>: The value of the added column. If <code>columnValueType</code> is <code>Constant</code>, the value is a custom constant of the string type. If <code>columnValueType</code> is <code>Variable</code>, the value is a built-in variable. Valid built-in variables: <code>EXECUTE_TIME</code> (execution time, Long type), <code>DB_NAME_SRC</code> (source database name, String type), <code>DATASOURCE_NAME_SRC</code> (source data source name, String type), <code>TABLE_NAME_SRC</code> (source table name, String type), <code>DB_NAME_DEST</code> (destination database name, String type), <code>DATASOURCE_NAME_DEST</code> (destination data source name, String type), <code>TABLE_NAME_DEST</code> (destination table name, String type), and <code>DB_NAME_SRC_TRANSED</code> (transformed database name, String type).</p>
-         * </li>
+         * <li>Example: <code>{&quot;columns&quot;:[{&quot;columnName&quot;:&quot;my_add_column&quot;,&quot;columnValueType&quot;:&quot;Constant&quot;,&quot;columnValue&quot;:&quot;123&quot;}]}</code></li>
+         * <li>If this rule is not specified, no columns are added or copied.</li>
+         * <li><code>columnName</code>: The name of the column to add.</li>
+         * <li><code>columnValueType</code>: The value type of the added column. Valid values: <code>Constant</code> and <code>Variable</code>.</li>
+         * <li><code>columnValue</code>: The value of the added column. If <code>columnValueType</code> is <code>Constant</code>, the value is a custom constant of the string type. If <code>columnValueType</code> is <code>Variable</code>, the value is a built-in variable. Valid built-in variables: <code>EXECUTE_TIME</code> (execution time, Long type), <code>DB_NAME_SRC</code> (source database name, String type), <code>DATASOURCE_NAME_SRC</code> (source data source name, String type), <code>TABLE_NAME_SRC</code> (source table name, String type), <code>DB_NAME_DEST</code> (destination database name, String type), <code>DATASOURCE_NAME_DEST</code> (destination data source name, String type), <code>TABLE_NAME_DEST</code> (destination table name, String type), and <code>DB_NAME_SRC_TRANSED</code> (transformed database name, String type).</li>
          * </ul>
          * <ol start="3">
          * <li>Define primary key rule (<code>DefinePrimaryKey</code>)</li>
          * </ol>
          * <ul>
-         * <li><p>Example: <code>{&quot;columns&quot;:[&quot;ukcolumn1&quot;,&quot;ukcolumn2&quot;]}</code></p>
-         * </li>
-         * <li><p>If this rule is not specified, the primary key of the source is used by default.</p>
-         * </li>
-         * <li><p>Data Integration does not modify the structure of an existing destination table. If a specified primary key column does not exist in the table, the synchronization job fails.</p>
-         * </li>
-         * <li><p>When a destination table is automatically created, Data Integration includes the defined primary key columns in the structure. If a specified primary key column is not in the destination column set, the synchronization job fails.</p>
-         * </li>
+         * <li>Example: <code>{&quot;columns&quot;:[&quot;ukcolumn1&quot;,&quot;ukcolumn2&quot;]}</code></li>
+         * <li>If this rule is not specified, the primary key of the source is used by default.</li>
+         * <li>Data Integration does not modify the structure of an existing destination table. If a specified primary key column does not exist in the table, the synchronization job fails to start.</li>
+         * <li>When a destination table is automatically created, Data Integration includes the defined primary key columns in the structure. If a specified primary key column is not in the destination column set, the synchronization job fails to start.</li>
          * </ul>
          * <ol start="4">
          * <li>DML handling rule (<code>HandleDml</code>)</li>
          * </ol>
          * <ul>
-         * <li><p>Example: <code>{&quot;dmlPolicies&quot;:[{&quot;dmlType&quot;:&quot;Delete&quot;,&quot;dmlAction&quot;:&quot;Filter&quot;,&quot;filterCondition&quot;:&quot;id &gt; 1&quot;}]}</code></p>
-         * </li>
-         * <li><p>If this rule is not specified, the default action for <code>Insert</code>, <code>Update</code>, and <code>Delete</code> operations is <code>Normal</code>.</p>
-         * </li>
-         * <li><p><code>dmlType</code>: The DML operation type. Valid values: <code>Insert</code>, <code>Update</code>, and <code>Delete</code>.</p>
-         * </li>
-         * <li><p><code>dmlAction</code>: The DML handling policy. Valid values: <code>Normal</code> (process the operation), <code>Ignore</code> (ignore the operation), <code>Filter</code> (conditionally process the operation, used when <code>dmlType</code> is <code>Update</code> or <code>Delete</code>), and <code>LogicalDelete</code> (perform a logical delete).</p>
-         * </li>
-         * <li><p><code>filterCondition</code>: The DML filter condition, used when <code>dmlAction</code> is <code>Filter</code>.</p>
-         * </li>
+         * <li>Example: <code>{&quot;dmlPolicies&quot;:[{&quot;dmlType&quot;:&quot;Delete&quot;,&quot;dmlAction&quot;:&quot;Filter&quot;,&quot;filterCondition&quot;:&quot;id &gt; 1&quot;}]}</code></li>
+         * <li>If this rule is not specified, the default action for <code>Insert</code>, <code>Update</code>, and <code>Delete</code> operations is <code>Normal</code>.</li>
+         * <li><code>dmlType</code>: The DML operation type. Valid values: <code>Insert</code>, <code>Update</code>, and <code>Delete</code>.</li>
+         * <li><code>dmlAction</code>: The DML handling policy. Valid values: <code>Normal</code> (process the operation), <code>Ignore</code> (ignore the operation), <code>Filter</code> (conditionally process the operation, used when <code>dmlType</code> is <code>Update</code> or <code>Delete</code>), and <code>LogicalDelete</code> (perform a logical delete).</li>
+         * <li><code>filterCondition</code>: The DML filter condition, used when <code>dmlAction</code> is <code>Filter</code>.</li>
          * </ul>
          * <ol start="5">
          * <li>Incremental condition rule (<code>DefineIncrementalCondition</code>)</li>
          * </ol>
          * <ul>
-         * <li><p>Example: <code>{&quot;where&quot;:&quot;id &gt; 0&quot;}</code></p>
-         * </li>
-         * <li><p>The <code>WHERE</code> clause for the incremental condition.</p>
-         * </li>
+         * <li>Example: <code>{&quot;where&quot;:&quot;id &gt; 0&quot;}</code></li>
+         * <li>The <code>WHERE</code> clause for the incremental condition.</li>
          * </ul>
          * <ol start="6">
          * <li>Periodic scheduling rule (<code>DefineCycleScheduleSettings</code>)</li>
          * </ol>
          * <ul>
-         * <li><p>Example: <code>{&quot;cronExpress&quot;:&quot; * * * * * *&quot;, &quot;cycleType&quot;:&quot;1&quot;}</code></p>
-         * </li>
-         * <li><p>Specifies the scheduling parameters for a periodic job.</p>
-         * </li>
+         * <li>Example: <code>{&quot;cronExpress&quot;:&quot; * * * * * *&quot;, &quot;cycleType&quot;:&quot;1&quot;}</code></li>
+         * <li>Specifies the scheduling parameters for a periodic job.</li>
          * </ul>
          * <ol start="7">
          * <li>Define partition key rule (<code>DefinePartitionKey</code>)</li>
          * </ol>
          * <ul>
-         * <li><p>Example: <code>{&quot;columns&quot;:[&quot;id&quot;]}</code></p>
-         * </li>
-         * <li><p>Specifies the partition key.</p>
-         * </li>
+         * <li>Example: <code>{&quot;columns&quot;:[&quot;id&quot;]}</code></li>
+         * <li>Specifies the partition key.</li>
          * </ul>
          * 
          * <strong>example:</strong>

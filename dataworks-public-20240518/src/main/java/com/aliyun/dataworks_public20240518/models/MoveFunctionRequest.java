@@ -18,10 +18,8 @@ public class MoveFunctionRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The unique identifier of the UDF.</p>
-     * <blockquote>
-     * <p>Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect normal SDK usage; the parameter will still be returned according to the type defined in the SDK.. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
-     * </blockquote>
+     * <p>The destination path, without the function name.</p>
+     * <p>For example, to move the <code>test</code> function to <code>root/demo/test</code>, set this parameter to <code>root/demo</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +29,7 @@ public class MoveFunctionRequest extends TeaModel {
     public String path;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the ID.</p>
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the ID.</p>
      * <p>This parameter indicates the DataWorks workspace to which the API operation is applied.</p>
      * <p>This parameter is required.</p>
      * 

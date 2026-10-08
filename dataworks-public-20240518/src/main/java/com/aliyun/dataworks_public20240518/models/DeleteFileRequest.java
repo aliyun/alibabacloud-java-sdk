@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFileRequest extends TeaModel {
     /**
-     * <p>The file ID. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to obtain the folder ID.</p>
+     * <p>The file ID. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to obtain the file ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteFileRequest extends TeaModel {
     public Long fileId;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the ID.</p>
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the ID.</p>
      * <p>You must specify either this parameter or the ProjectIdentifier parameter to identify the DataWorks workspace when you call this operation.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DeleteFileRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The name of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the name.</p>
+     * <p>The name of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to query the name.</p>
      * <p>You must specify either this parameter or the ProjectId parameter to identify the DataWorks workspace when you call this operation.</p>
      * 
      * <strong>example:</strong>

@@ -93,7 +93,7 @@ public class ListDIJobMetricsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The metric data.</p>
+         * <p>The metric series, consisting of sampling times and sampled values at different points in time.</p>
          */
         @NameInMap("SeriesList")
         public java.util.List<ListDIJobMetricsResponseBodyPagingInfoJobMetricsSeriesList> seriesList;

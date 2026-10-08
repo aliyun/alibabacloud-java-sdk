@@ -45,7 +45,7 @@ public class GetAgentResponseBody extends TeaModel {
          * <p>The sub-agent display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>子助手</p>
+         * <p>Sub-assistant</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -401,7 +401,7 @@ public class GetAgentResponseBody extends TeaModel {
          * <p><strong>The description.</strong></p>
          * 
          * <strong>example:</strong>
-         * <p>数据分析助手</p>
+         * <p>Data analysis assistant</p>
          */
         @NameInMap("Description")
         public String description;
@@ -410,7 +410,7 @@ public class GetAgentResponseBody extends TeaModel {
          * <p><strong>The display name.</strong></p>
          * 
          * <strong>example:</strong>
-         * <p>我的助手</p>
+         * <p>My assistant</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -484,7 +484,7 @@ public class GetAgentResponseBody extends TeaModel {
          * <p><strong>The system prompt.</strong></p>
          * 
          * <strong>example:</strong>
-         * <p>你是一个数据分析助手。</p>
+         * <p>You are a data analysis assistant.</p>
          */
         @NameInMap("SystemPrompt")
         public String systemPrompt;

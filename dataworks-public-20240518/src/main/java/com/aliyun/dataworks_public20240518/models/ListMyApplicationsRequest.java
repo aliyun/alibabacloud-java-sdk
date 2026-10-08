@@ -45,7 +45,7 @@ public class ListMyApplicationsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Filters by resource with exact or wildcard matching. The resource description is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.</p>
+     * <p>Filters by resource with exact or generalized matching. The resource description is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.</p>
      * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for International site</a></p>
      */
     @NameInMap("Resource")

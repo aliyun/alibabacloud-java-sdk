@@ -102,10 +102,7 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
         public String condition;
 
         /**
-         * <p>The type of the callback event. Valid values:</p>
-         * <ul>
-         * <li>BlockTaskInstance: An auto triggered node is blocked.</li>
-         * </ul>
+         * <p>The subsequent action type. BlockTaskInstance: blocks execution of a DataWorks task instance.</p>
          * 
          * <strong>example:</strong>
          * <p>BlockTaskInstance</p>
@@ -382,7 +379,7 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
 
     public static class DataQualityEvaluationTaskInstanceTaskTrigger extends TeaModel {
         /**
-         * <p>The IDs of the auto triggered nodes of which the instances are successfully run. This parameter takes effect only if the Type parameter is set to ByScheduledTaskInstance.</p>
+         * <p>Specifies the scheduled nodes whose instances can trigger the quality evaluation task after running successfully. This setting takes effect when type is ByScheduledTaskInstance.</p>
          */
         @NameInMap("TaskIds")
         public java.util.List<Long> taskIds;
@@ -433,7 +430,7 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
         public Long dataSourceId;
 
         /**
-         * <p>The callback configurations of the task during the instance lifecycle. Blocking an auto triggered node is a type of callback event. Only this type is supported.</p>
+         * <p>The callback settings during the lifecycle of the data quality evaluation task instance. Currently, only one hook that blocks a scheduled task is supported.</p>
          */
         @NameInMap("Hooks")
         public java.util.List<DataQualityEvaluationTaskInstanceTaskHooks> hooks;
@@ -448,10 +445,10 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the data quality monitoring task. The name can be up to 255 characters in length and can contain digits, letters, and punctuation marks.</p>
+         * <p>The name of the data quality monitoring task. The name can be up to 255 characters in length and can contain digits, English letters, Chinese characters, and half-width or full-width punctuation marks.</p>
          * 
          * <strong>example:</strong>
-         * <p>质量校验任务</p>
+         * <p>Data quality evaluation task</p>
          */
         @NameInMap("Name")
         public String name;
@@ -472,7 +469,7 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The configuration of the data source. The value of the queue field is default, and that of the sqlEngine field can be SPARK_SQL, KYUUBI, PRESTO_SQL, or HIVE_SQL to collect EMR data. The value default indicates the YARN queue for E-MapReduce (EMR) tasks.</p>
+         * <p>The settings used when accessing the data source. Currently, only the EMR YARN queue and the SQL engine used to collect EMR tables can be specified. Supported SQL engines: SPARK_SQL, KYUUBI, PRESTO_SQL, and HIVE_SQL.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;queue&quot;: &quot;default&quot;, &quot;sqlEngine&quot;: &quot;SPARK_SQL&quot; }</p>

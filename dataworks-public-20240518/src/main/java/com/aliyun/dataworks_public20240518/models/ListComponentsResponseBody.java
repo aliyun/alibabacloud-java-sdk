@@ -309,7 +309,7 @@ public class ListComponentsResponseBody extends TeaModel {
         public java.util.List<ListComponentsResponseBodyPagingInfoComponentsInputs> inputs;
 
         /**
-         * <p>The timestamp when the publishing process was modified.</p>
+         * <p>The timestamp when the deployment process was modified.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>

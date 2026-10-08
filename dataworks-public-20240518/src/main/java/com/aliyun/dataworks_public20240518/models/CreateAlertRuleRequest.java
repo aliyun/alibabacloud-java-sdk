@@ -176,7 +176,7 @@ public class CreateAlertRuleRequest extends TeaModel {
         public Integer intervalInMinutes;
 
         /**
-         * <p>The maximum number of alerts within a calendar year. Valid values: 1 to 10000.</p>
+         * <p>The maximum number of alerts within a calendar day. Valid values: 1 to 10000.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

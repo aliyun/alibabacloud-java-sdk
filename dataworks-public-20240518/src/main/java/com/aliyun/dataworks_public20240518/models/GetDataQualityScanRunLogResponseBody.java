@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataQualityScanRunLogResponseBody extends TeaModel {
     /**
-     * <p>The node task logs information.</p>
+     * <p>The task log information.</p>
      */
     @NameInMap("LogSegment")
     public GetDataQualityScanRunLogResponseBodyLogSegment logSegment;
@@ -42,7 +42,7 @@ public class GetDataQualityScanRunLogResponseBody extends TeaModel {
 
     public static class GetDataQualityScanRunLogResponseBodyLogSegment extends TeaModel {
         /**
-         * <p>The node task logs.</p>
+         * <p>The task logs.</p>
          * 
          * <strong>example:</strong>
          * <p>Running on Serverless_resource_group_xxxxx

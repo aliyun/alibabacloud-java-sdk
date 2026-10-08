@@ -562,17 +562,17 @@ public class CreateDataQualityRuleRequest extends TeaModel {
          * <p>The name of the metric to be sampled. You do not need to specify this parameter when a template is used.</p>
          * <ul>
          * <li>Count: the number of rows in the table.</li>
-         * <li>Min: the minimum value of the field.</li>
-         * <li>Max: the maximum value of the field.</li>
-         * <li>Avg: the average value of the field.</li>
-         * <li>DistinctCount: the number of distinct values of the field.</li>
-         * <li>DistinctPercent: the ratio of the number of distinct values of the field to the number of data rows.</li>
-         * <li>DuplicatedCount: the number of duplicate values of the field.</li>
-         * <li>DuplicatedPercent: the ratio of the number of duplicate values of the field to the number of data rows.</li>
+         * <li>Min: the minimum value of the column.</li>
+         * <li>Max: the maximum value of the column.</li>
+         * <li>Avg: the average value of the column.</li>
+         * <li>DistinctCount: the number of distinct values of the column.</li>
+         * <li>DistinctPercent: the ratio of the number of distinct values of the column to the number of data rows.</li>
+         * <li>DuplicatedCount: the number of duplicate values of the column.</li>
+         * <li>DuplicatedPercent: the ratio of the number of duplicate values of the column to the number of data rows.</li>
          * <li>TableSize: the size of the table.</li>
-         * <li>NullValueCount: the number of rows in which the field is null.</li>
-         * <li>NullValuePercent: the ratio of rows in which the field is null.</li>
-         * <li>GroupCount: the values aggregated by field value and the corresponding number of data rows for each value.</li>
+         * <li>NullValueCount: the number of rows in which the column is null.</li>
+         * <li>NullValuePercent: the ratio of rows in which the column is null.</li>
+         * <li>GroupCount: the values aggregated by column value and the corresponding number of data rows for each value.</li>
          * <li>CountNotIn: the number of rows whose enum values do not match.</li>
          * <li>CountDistinctNotIn: the number of distinct values that do not match the enum values.</li>
          * <li>UserDefinedSql: collects samples by using a custom SQL statement.</li>

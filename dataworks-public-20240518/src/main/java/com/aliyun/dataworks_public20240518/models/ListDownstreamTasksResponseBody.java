@@ -67,7 +67,7 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
 
     public static class ListDownstreamTasksResponseBodyPagingInfoDownstreamTasksTaskRuntimeResource extends TeaModel {
         /**
-         * <p>The default number of compute units (CUs) configured for task running.</p>
+         * <p>The number of compute units (CUs) configured for task running.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -144,15 +144,7 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</p>
-         * <ul>
-         * <li><p>Pause</p>
-         * </li>
-         * <li><p>Skip</p>
-         * </li>
-         * <li><p>Normal</p>
-         * </li>
-         * </ul>
+         * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values: Pause (paused), Skip (dry run), and Normal (normal execution).</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -292,13 +284,7 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The environment of the workspace. Valid values:</p>
-         * <ul>
-         * <li><p>Prod</p>
-         * </li>
-         * <li><p>Dev</p>
-         * </li>
-         * </ul>
+         * <p>The environment of the workspace. Valid values: Prod (production) and Dev (development).</p>
          * 
          * <strong>example:</strong>
          * <p>Prod</p>
@@ -316,13 +302,7 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The instance generation mode. Valid values:</p>
-         * <ul>
-         * <li><p>T+1</p>
-         * </li>
-         * <li><p>Immediately</p>
-         * </li>
-         * </ul>
+         * <p>The instance generation mode. Valid values: T+1 (generate the next day) and Immediately (generate immediately).</p>
          * 
          * <strong>example:</strong>
          * <p>T+1</p>
@@ -713,7 +693,7 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
 
     public static class ListDownstreamTasksResponseBodyPagingInfoTasksRuntimeResource extends TeaModel {
         /**
-         * <p>The default number of compute units (CUs) configured for task running.</p>
+         * <p>The number of compute units (CUs) configured for task running.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -940,13 +920,7 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The environment of the workspace. Valid values:</p>
-         * <ul>
-         * <li><p>Prod</p>
-         * </li>
-         * <li><p>Dev</p>
-         * </li>
-         * </ul>
+         * <p>The environment of the workspace. Valid values: Prod (production) and Dev (development).</p>
          * 
          * <strong>example:</strong>
          * <p>Prod</p>
@@ -964,13 +938,7 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The instance generation mode. Valid values:</p>
-         * <ul>
-         * <li><p>T+1</p>
-         * </li>
-         * <li><p>Immediately</p>
-         * </li>
-         * </ul>
+         * <p>The instance generation mode. Valid values: T+1 (generate the next day) and Immediately (generate immediately).</p>
          * 
          * <strong>example:</strong>
          * <p>T+1</p>

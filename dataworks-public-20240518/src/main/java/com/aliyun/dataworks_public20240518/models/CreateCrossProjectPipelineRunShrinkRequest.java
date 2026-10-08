@@ -46,8 +46,8 @@ public class CreateCrossProjectPipelineRunShrinkRequest extends TeaModel {
     /**
      * <p>The deployment type. Valid values:</p>
      * <ul>
-     * <li>Offline: Offline deployment.</li>
-     * <li>Online: Online deployment.</li>
+     * <li>Offline: Deployment to take the object offline.</li>
+     * <li>Online: Deployment to bring the object online.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

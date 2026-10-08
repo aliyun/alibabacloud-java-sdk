@@ -23,7 +23,7 @@ public class UpdateProcessDefinitionRequest extends TeaModel {
      * <p>The description of the process definition.</p>
      * 
      * <strong>example:</strong>
-     * <p>lwt_ide_simple 项目 MaxCompute 表审批策略</p>
+     * <p>MaxCompute table approval policy for the lwt_ide_simple project</p>
      */
     @NameInMap("Description")
     public String description;
@@ -42,7 +42,7 @@ public class UpdateProcessDefinitionRequest extends TeaModel {
      * <p>The name of the process definition.</p>
      * 
      * <strong>example:</strong>
-     * <p>MaxCompute 表审批</p>
+     * <p>MaxCompute table approval</p>
      */
     @NameInMap("Name")
     public String name;
@@ -124,30 +124,18 @@ public class UpdateProcessDefinitionRequest extends TeaModel {
         /**
          * <p>The approver type for the node. Valid values:</p>
          * <ul>
-         * <li><p><code>DataWorksProjectRole</code>: A workspace role.</p>
-         * </li>
-         * <li><p><code>DataWorksProjectMember</code>: A workspace member.</p>
-         * </li>
-         * <li><p><code>TableAdministrator</code>: A table administrator.</p>
-         * </li>
-         * <li><p><code>TableOrProjectAdministrator</code>: The administrator of the table or project.</p>
-         * </li>
-         * <li><p><code>AliyunResourceOwner</code>: An Alibaba Cloud account.</p>
-         * </li>
-         * <li><p><code>MaxComputeRole</code>: A MaxCompute administrator.</p>
-         * </li>
-         * <li><p><code>DLFAdmin</code>: A DlfLegacy administrator.</p>
-         * </li>
-         * <li><p><code>DLFNextAdmin</code>: A DLFNext administrator.</p>
-         * </li>
-         * <li><p><code>TenantRole</code>: A tenant role.</p>
-         * </li>
-         * <li><p><code>EmrAdministrator</code>: An EMR administrator.</p>
-         * </li>
-         * <li><p><code>LindormAdministrator</code>: A Lindorm administrator.</p>
-         * </li>
-         * <li><p><code>AliyunRamUser</code>: A RAM user.</p>
-         * </li>
+         * <li><code>DataWorksProjectRole</code>: A workspace role.</li>
+         * <li><code>DataWorksProjectMember</code>: A workspace member.</li>
+         * <li><code>TableAdministrator</code>: A table owner.</li>
+         * <li><code>TableOrProjectAdministrator</code>: The administrator of the table or workspace.</li>
+         * <li><code>AliyunResourceOwner</code>: An Alibaba Cloud account.</li>
+         * <li><code>MaxComputeRole</code>: A MaxCompute administrator.</li>
+         * <li><code>DLFAdmin</code>: A DlfLegacy administrator.</li>
+         * <li><code>DLFNextAdmin</code>: A DLFNext administrator.</li>
+         * <li><code>TenantRole</code>: A tenant role.</li>
+         * <li><code>EmrAdministrator</code>: An EMR administrator.</li>
+         * <li><code>LindormAdministrator</code>: A Lindorm administrator.</li>
+         * <li><code>AliyunRamUser</code>: A RAM user.</li>
          * </ul>
          * 
          * <strong>example:</strong>

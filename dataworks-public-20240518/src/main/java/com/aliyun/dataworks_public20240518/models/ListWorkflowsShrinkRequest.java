@@ -72,16 +72,7 @@ public class ListWorkflowsShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The field used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</p>
-     * <ul>
-     * <li><p>ModifyTime (Desc/Asc)</p>
-     * </li>
-     * <li><p>CreateTime (Desc/Asc)</p>
-     * </li>
-     * <li><p>Id (Desc/Asc)</p>
-     * </li>
-     * </ul>
-     * <p>Default value: Id Desc.</p>
+     * <p>The field used for sorting. Fields such as ModifyTime and CreateTime are supported. Format: sort field + sort order (Desc/Asc). Asc can be omitted. Valid values: ModifyTime (Desc/Asc), CreateTime (Desc/Asc), and Id (Desc/Asc). Default value: Id Desc.</p>
      * 
      * <strong>example:</strong>
      * <p>Id Desc</p>

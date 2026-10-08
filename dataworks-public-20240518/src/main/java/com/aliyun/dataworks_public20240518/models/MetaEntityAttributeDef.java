@@ -14,13 +14,13 @@ public class MetaEntityAttributeDef extends TeaModel {
      * <p>Attribute description</p>
      * 
      * <strong>example:</strong>
-     * <p>层级描述</p>
+     * <p>Hierarchy description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>Indicates whether the attribute appears on the product page. Default is true.</p>
+     * <p>Indicates whether the attribute appears on the details page. Default is true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +32,7 @@ public class MetaEntityAttributeDef extends TeaModel {
      * <p>Display name. It can be up to 32 characters long.</p>
      * 
      * <strong>example:</strong>
-     * <p>API编码</p>
+     * <p>API code</p>
      */
     @NameInMap("DisplayName")
     public String displayName;

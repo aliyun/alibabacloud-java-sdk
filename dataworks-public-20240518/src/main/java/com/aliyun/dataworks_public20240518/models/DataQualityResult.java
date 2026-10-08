@@ -369,7 +369,7 @@ public class DataQualityResult extends TeaModel {
 
     public static class DataQualityResultRuleCheckingConfig extends TeaModel {
         /**
-         * <p>The method that is used to query the referenced samples. To obtain some types of thresholds, you need to query reference values. In this example, an expression is used to indicate the query method of referenced samples.</p>
+         * <p>Some types of thresholds require querying reference samples and aggregating their values to calculate the comparison threshold. An expression specifies how to query these reference samples.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
@@ -433,7 +433,7 @@ public class DataQualityResult extends TeaModel {
 
     public static class DataQualityResultRuleErrorHandlers extends TeaModel {
         /**
-         * <p>The SQL statement that is used to filter failed tasks. If the rule is defined by custom SQL statements, you must specify an SQL statement to filter failed tasks.</p>
+         * <p>For a custom SQL rule, you must specify an SQL statement to filter problematic data.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT * FROM tb_api_log WHERE id IS NULL</p>
@@ -695,10 +695,10 @@ public class DataQualityResult extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the rule. The name can be up to 255 characters in length and can contain digits, letters, and punctuation marks.</p>
+         * <p>The name of the rule. The name can be up to 255 characters in length and can contain digits, English letters, Chinese characters, and half-width or full-width punctuation marks.</p>
          * 
          * <strong>example:</strong>
-         * <p>表不能为空</p>
+         * <p>The table must not be empty</p>
          */
         @NameInMap("Name")
         public String name;
@@ -737,7 +737,7 @@ public class DataQualityResult extends TeaModel {
          * <p>The template used by the rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>system::user_defined</p>
+         * <p>SYSTEM:user_defined_sql</p>
          */
         @NameInMap("TemplateCode")
         public String templateCode;

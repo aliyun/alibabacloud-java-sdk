@@ -134,13 +134,13 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
         /**
          * <p>The status of the deployed item. Valid values:</p>
          * <ul>
-         * <li>UNPUBLISHED(0): not published</li>
-         * <li>SUCCESS(1): published successfully</li>
-         * <li>ERROR(2): publishing failed</li>
+         * <li>UNPUBLISHED(0): not deployed</li>
+         * <li>SUCCESS(1): deployed successfully</li>
+         * <li>ERROR(2): deployment failed</li>
          * <li>CLONED(3): cloned successfully</li>
-         * <li>DEPLOY_ERROR(4): publishing failed</li>
+         * <li>DEPLOY_ERROR(4): deployment failed</li>
          * <li>CLONING(5): cloning in progress</li>
-         * <li>REJECT(6): publishing rejected</li>
+         * <li>REJECT(6): deployment rejected</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
 
     public static class GetDeploymentPackageResponseBodyDataDeployment extends TeaModel {
         /**
-         * <p>The check status of the nodes involved in the deployment package. When the target environment is the development environment (toEnvironment=1), you can publish the file to the production environment only when the Status of the deployment package is 1 and CheckingStatus is empty.</p>
+         * <p>The check status of the nodes involved in the deployment package. When the target environment is the development environment (toEnvironment=1), you can deploy the file to the production environment only when the Status of the deployment package is 1 and CheckingStatus is empty.</p>
          * <ul>
          * <li>7: The check failed.</li>
          * <li>8: The check is in progress.</li>
@@ -276,7 +276,7 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The target environment to which the file information is published. Valid values:</p>
+         * <p>The target environment to which the file information is deployed. Valid values:</p>
          * <ul>
          * <li>1: development environment</li>
          * <li>2: production environment</li>

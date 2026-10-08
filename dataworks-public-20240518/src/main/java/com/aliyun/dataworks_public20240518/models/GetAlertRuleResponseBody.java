@@ -60,7 +60,7 @@ public class GetAlertRuleResponseBody extends TeaModel {
          * <li>WebhookUrl: custom webhook URL.</li>
          * <li>DingdingUrl: DingTalk webhook URL.</li>
          * <li>FeishuUrl: Lark webhook URL.</li>
-         * <li>WeixinUrl: WeChat webhook URL.</li>
+         * <li>WeixinUrl: WeCom webhook URL.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -652,8 +652,8 @@ public class GetAlertRuleResponseBody extends TeaModel {
          * <li>InstanceKeyword: failed instance contains keyword.</li>
          * <li>InstanceErrorCount: number of failed instances.</li>
          * <li>InstanceErrorPercentage: percentage of failed instances.</li>
-         * <li>ResourceGroupPercentage: schedule resource utilization.</li>
-         * <li>ResourceGroupWaitCount: number of instances waiting for schedule resources.</li>
+         * <li>ResourceGroupPercentage: resource group utilization.</li>
+         * <li>ResourceGroupWaitCount: number of instances waiting for resource group resources.</li>
          * </ul>
          * 
          * <strong>example:</strong>

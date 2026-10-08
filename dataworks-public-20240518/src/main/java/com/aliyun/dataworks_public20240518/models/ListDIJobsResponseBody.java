@@ -52,7 +52,7 @@ public class ListDIJobsResponseBody extends TeaModel {
         public Long DIJobId;
 
         /**
-         * <p>The type of the destination data source. Valid values: <code>Hologres</code>, <code>OSS-HDFS</code>, <code>OSS</code>, <code>MaxCompute</code>, <code>LogHub</code>, <code>StarRocks</code>, <code>DataHub</code>, <code>AnalyticDB_For_MySQL</code>, <code>Kafka</code>, and <code>Hive</code>.</p>
+         * <p>The type of the destination data source. Valid values: <code>Hologres</code>, <code>OSS-HDFS</code>, <code>OSS</code>, <code>MaxCompute</code>, <code>Loghub</code>, <code>STARROCKS</code>, <code>DataHub</code>, <code>ANALYTICDB_FOR_MYSQL</code>, <code>Kafka</code>, and <code>Hive</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Hologres</p>
@@ -135,7 +135,7 @@ public class ListDIJobsResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The type of the source data source. Valid values: <code>PolarDB</code>, <code>MySQL</code>, <code>Kafka</code>, <code>LogHub</code>, <code>Hologres</code>, <code>Oracle</code>, <code>OceanBase</code>, <code>MongoDB</code>, <code>RedShift</code>, <code>Hive</code>, <code>SQLServer</code>, <code>Doris</code>, and <code>ClickHouse</code>.</p>
+         * <p>The type of the source data source. Valid values: <code>PolarDB</code>, <code>MySQL</code>, <code>Kafka</code>, <code>Loghub</code>, <code>Hologres</code>, <code>Oracle</code>, <code>OceanBase</code>, <code>MongoDB</code>, <code>RedShift</code>, <code>Hive</code>, <code>SqlServer</code>, <code>Doris</code>, and <code>ClickHouse</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Mysql</p>

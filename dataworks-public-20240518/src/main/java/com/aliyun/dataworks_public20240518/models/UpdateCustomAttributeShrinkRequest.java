@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomAttributeShrinkRequest extends TeaModel {
     /**
-     * <p>The new description for the custom attribute. It must be 256 characters or less.</p>
+     * <p>The new description for the custom attribute. It must be less than 256 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>test comment</p>
@@ -23,10 +23,10 @@ public class UpdateCustomAttributeShrinkRequest extends TeaModel {
     public Boolean displayEnabled;
 
     /**
-     * <p>The new display name for the custom attribute. It must be 128 characters or less.</p>
+     * <p>The new display name for the custom attribute. It must be less than 128 characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>业务负责人</p>
+     * <p>Business owner</p>
      */
     @NameInMap("DisplayName")
     public String displayName;

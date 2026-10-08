@@ -25,7 +25,7 @@ public class GetFileVersionRequest extends TeaModel {
     public Integer fileVersion;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can click the small wrench icon in the upper-right corner of the page to go to the storage management page and view the ID.</p>
+     * <p>The ID of the DataWorks workspace. You can click the small wrench icon in the upper-right corner of the page to go to the workspace management page and view the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1000011</p>
@@ -34,7 +34,7 @@ public class GetFileVersionRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The unique identifier of the DataWorks workspace, which is the English identifier displayed at the top of the DataStudio page for switching workspaces.</p>
+     * <p>The unique identifier of the DataWorks workspace, which is the English identifier displayed at the top of the Data Studio page for switching workspaces.</p>
      * <p>You must set either this parameter or ProjectId to determine the DataWorks workspace for this API call.</p>
      * 
      * <strong>example:</strong>

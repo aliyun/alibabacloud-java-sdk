@@ -70,7 +70,7 @@ public class GetWorkflowResponseBody extends TeaModel {
         public String upstreamOutput;
 
         /**
-         * <p>The ancestor task ID. This parameter is returned only if <code>cross-cycle scheduling dependencies</code> or <code>same-cycle scheduling dependencies</code> and the node input are not configured.</p>
+         * <p>The ID of the upstream task. This field is returned for cross-cycle dependencies on other nodes, or for same-cycle dependencies when input content is not specified. It is not returned in other cases.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -225,7 +225,7 @@ public class GetWorkflowResponseBody extends TeaModel {
 
     public static class GetWorkflowResponseBodyWorkflowTasksRuntimeResource extends TeaModel {
         /**
-         * <p>The default number of compute units (CUs) configured for task running.</p>
+         * <p>The number of compute units (CUs) configured for task running.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -335,13 +335,7 @@ public class GetWorkflowResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The environment of the workspace. Valid values:</p>
-         * <ul>
-         * <li><p>Prod</p>
-         * </li>
-         * <li><p>Dev</p>
-         * </li>
-         * </ul>
+         * <p>The environment of the workspace. Valid values: Prod (production) and Dev (development).</p>
          * 
          * <strong>example:</strong>
          * <p>Prod</p>
@@ -463,15 +457,7 @@ public class GetWorkflowResponseBody extends TeaModel {
         public Integer timeout;
 
         /**
-         * <p>The running mode of the task after it is triggered. Valid values:</p>
-         * <ul>
-         * <li><p>Pause</p>
-         * </li>
-         * <li><p>Skip</p>
-         * </li>
-         * <li><p>Normal</p>
-         * </li>
-         * </ul>
+         * <p>The running mode of the task after it is triggered. Valid values: Pause (paused), Skip (dry run), and Normal (normal execution).</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -700,15 +686,7 @@ public class GetWorkflowResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The running mode of the workflow after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</p>
-         * <ul>
-         * <li><p>Pause</p>
-         * </li>
-         * <li><p>Skip</p>
-         * </li>
-         * <li><p>Normal</p>
-         * </li>
-         * </ul>
+         * <p>The running mode of the workflow after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values: Pause (paused), Skip (dry run), and Normal (normal execution).</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>

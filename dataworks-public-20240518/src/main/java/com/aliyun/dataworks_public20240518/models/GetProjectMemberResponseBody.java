@@ -147,10 +147,8 @@ public class GetProjectMemberResponseBody extends TeaModel {
         /**
          * <p>The status of the Workspace member.</p>
          * <ul>
-         * <li><p>Normal: The member is active.</p>
-         * </li>
-         * <li><p>Disabled: The member is disabled.</p>
-         * </li>
+         * <li>Normal: The member is active.</li>
+         * <li>Forbidden: The member is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

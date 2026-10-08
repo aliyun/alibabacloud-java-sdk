@@ -28,10 +28,8 @@ public class UpdateWorkflowDefinitionRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The unique identifier of the Data Studio workflow.</p>
-     * <blockquote>
-     * <p>Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
-     * </blockquote>
+     * <p>The FlowSpec information that describes this workflow. For specification details, see FlowSpec.</p>
+     * <p>This operation updates only the workflow\&quot;s own information. Internal node information described in FlowSpec is not updated.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

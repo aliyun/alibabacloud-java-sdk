@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTaskAsyncResponseBody extends TeaModel {
     /**
-     * <p>The operation ID, which is used to obtain the result of the asynchronous node update. You can call the UpdateTaskAsync operation to obtain the result.</p>
+     * <p>The operation ID, used to retrieve the result of the asynchronous node update. You can obtain this value from the <code>UpdateTaskAsync</code> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>e15ad21c-b0e9-4792-8f55-b037xxxxxxxx</p>
@@ -14,7 +14,7 @@ public class UpdateTaskAsyncResponseBody extends TeaModel {
     public String operationId;
 
     /**
-     * <p>The request ID. You can use this ID to troubleshoot issues.</p>
+     * <p>The unique ID of this request. If an error occurs, you can use this ID to troubleshoot the issue.</p>
      * 
      * <strong>example:</strong>
      * <p>10000001</p>

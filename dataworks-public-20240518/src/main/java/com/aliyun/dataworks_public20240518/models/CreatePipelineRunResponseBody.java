@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePipelineRunResponseBody extends TeaModel {
     /**
-     * <p>The unique identifier of the publish process.</p>
+     * <p>The unique identifier of the deployment process.</p>
      * 
      * <strong>example:</strong>
      * <p>a7ef0634-20ec-4a7c-a214-54020f91XXXX</p>

@@ -726,7 +726,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The timeout period for task execution. Unit: seconds.</p>
-         * <p>Note: The scheduling system rounds the configured value to the nearest hour.</p>
+         * <p>Note: The scheduling system rounds the configured value to whole hours.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>

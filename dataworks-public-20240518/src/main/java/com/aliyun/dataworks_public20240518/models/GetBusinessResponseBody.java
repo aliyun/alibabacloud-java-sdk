@@ -159,7 +159,7 @@ public class GetBusinessResponseBody extends TeaModel {
         public String projectId;
 
         /**
-         * <p>The functional module to which the business process belongs. Valid values: NORMAL (DataStudio) and MANUAL_BIZ (manual business process).</p>
+         * <p>The functional module to which the business process belongs. Valid values: NORMAL (Data Studio) and MANUAL_BIZ (manual business process).</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>

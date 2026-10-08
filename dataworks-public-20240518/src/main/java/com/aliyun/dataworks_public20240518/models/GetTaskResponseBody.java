@@ -95,7 +95,7 @@ public class GetTaskResponseBody extends TeaModel {
         public String upstreamOutput;
 
         /**
-         * <p>The ancestor task ID. This parameter is returned only if <code>cross-cycle scheduling dependencies</code> or <code>same-cycle scheduling dependencies</code> and the node input are not configured.</p>
+         * <p>The ID of the upstream task. This field is returned for cross-cycle dependencies on other nodes, or for same-cycle dependencies when input content is not configured. It is not returned in other cases.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -147,14 +147,10 @@ public class GetTaskResponseBody extends TeaModel {
         /**
          * <p>The type. Valid values:</p>
          * <ul>
-         * <li><p>Constant: constant</p>
-         * </li>
-         * <li><p>PassThrough: node output</p>
-         * </li>
-         * <li><p>System: variable</p>
-         * </li>
-         * <li><p>NodeOutput: script output</p>
-         * </li>
+         * <li>Constant: constant</li>
+         * <li>PassThrough: parameter node output</li>
+         * <li>System: variable</li>
+         * <li>NodeOutput: script output</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -263,14 +259,10 @@ public class GetTaskResponseBody extends TeaModel {
         /**
          * <p>The type. Valid values:</p>
          * <ul>
-         * <li><p>Constant: constant</p>
-         * </li>
-         * <li><p>PassThrough: node output</p>
-         * </li>
-         * <li><p>System: variable</p>
-         * </li>
-         * <li><p>NodeOutput: script output</p>
-         * </li>
+         * <li>Constant: constant</li>
+         * <li>PassThrough: parameter node output</li>
+         * <li>System: variable</li>
+         * <li>NodeOutput: script output</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -357,7 +349,7 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyTaskRuntimeResource extends TeaModel {
         /**
-         * <p>The default number of compute units (CUs) configured for task running.</p>
+         * <p>The number of compute units (CUs) configured for task running.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -483,7 +475,7 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyTaskSubTasksSubTasksRuntimeResource extends TeaModel {
         /**
-         * <p>The default number of CUs configured for task running.</p>
+         * <p>The number of CUs configured for task running.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -562,12 +554,9 @@ public class GetTaskResponseBody extends TeaModel {
         /**
          * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</p>
          * <ul>
-         * <li><p>Pause</p>
-         * </li>
-         * <li><p>Skip</p>
-         * </li>
-         * <li><p>Normal</p>
-         * </li>
+         * <li>Pause: paused</li>
+         * <li>Skip: dry run</li>
+         * <li>Normal: normal operation</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1153,12 +1142,9 @@ public class GetTaskResponseBody extends TeaModel {
         /**
          * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</p>
          * <ul>
-         * <li><p>Pause</p>
-         * </li>
-         * <li><p>Skip</p>
-         * </li>
-         * <li><p>Normal</p>
-         * </li>
+         * <li>Pause: paused</li>
+         * <li>Skip: dry run</li>
+         * <li>Normal: normal operation</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1303,7 +1289,7 @@ public class GetTaskResponseBody extends TeaModel {
         public String envType;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The unique identifier of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -1323,10 +1309,8 @@ public class GetTaskResponseBody extends TeaModel {
         /**
          * <p>The instance generation mode. Valid values:</p>
          * <ul>
-         * <li><p>T+1</p>
-         * </li>
-         * <li><p>Immediately</p>
-         * </li>
+         * <li>T+1: generated the next day</li>
+         * <li>Immediately: generated immediately</li>
          * </ul>
          * 
          * <strong>example:</strong>

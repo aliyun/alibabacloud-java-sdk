@@ -23,12 +23,10 @@ public class ListCatalogsShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The order in which the tables are sorted. Default value: Asc. Valid values:</p>
+     * <p>The order in which the catalogs are sorted. Default value: Asc. Valid values:</p>
      * <ul>
-     * <li><p>Asc: ascending order.</p>
-     * </li>
-     * <li><p>Desc: descending order.</p>
-     * </li>
+     * <li>Asc: ascending order.</li>
+     * <li>Desc: descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,13 +57,11 @@ public class ListCatalogsShrinkRequest extends TeaModel {
      * <p>The parent entity ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
      * <p>Currently, only the DLF and StarRocks types are supported.</p>
      * <ul>
-     * <li><p>For the DLF type, you can query all catalog lists. The format of <code>ParentMetaEntityId</code> is <code>DLF</code>.</p>
-     * </li>
-     * <li><p>For the StarRocks type, you can query the catalogs of a specific instance. The format of <code>ParentMetaEntityId</code> <code>is StarRocks:(instance_id|encoded_jdbc_url)</code>.</p>
-     * </li>
+     * <li>For the DLF type, you can query all catalog lists. The format of <code>ParentMetaEntityId</code> is <code>dlf</code>.</li>
+     * <li>For the StarRocks type, you can query the catalogs of a specific instance. The format of <code>ParentMetaEntityId</code> is <code>starrocks:(instance_id|encoded_jdbc_url)</code>.</li>
      * </ul>
      * <blockquote>
-     * <p><br><code>instance_id</code>: The instance ID. Required if the data source is registered in instance mode.<br>
+     * <p>&lt;br&gt;<code>instance_id</code>: The instance ID. Required if the data source is registered in instance mode.&lt;br&gt;
      * <code>encoded_jdbc_url</code>: The JDBC connection string encoded with URL encoding. Required if the data source is registered in connection-string mode.</p>
      * </blockquote>
      * <p>This parameter is required.</p>

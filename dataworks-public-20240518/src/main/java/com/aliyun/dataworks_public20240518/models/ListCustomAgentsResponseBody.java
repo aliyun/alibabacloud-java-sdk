@@ -54,7 +54,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
          * <p>A description of the custom agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>数据分析助手</p>
+         * <p>Data analysis assistant</p>
          */
         @NameInMap("Description")
         public String description;
@@ -63,7 +63,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
          * <p>The display name of the custom agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>我的助手</p>
+         * <p>My assistant</p>
          */
         @NameInMap("DisplayName")
         public String displayName;

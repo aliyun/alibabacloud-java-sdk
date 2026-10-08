@@ -17,11 +17,11 @@ public class ExecPipelineRunStageResponseBody extends TeaModel {
      * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
      * <li>true: The call is successful.</li>
-     * <li>false: The call failed.<blockquote>
-     * <p>Notice: This only indicates whether the stage is triggered, not the execution result of the publish stage.</p>
-     * </blockquote>
-     * </li>
+     * <li>false: The call failed.</li>
      * </ul>
+     * <blockquote>
+     * <p>&lt;notice&gt;This only indicates whether the stage is triggered, not the execution result of the deployment stage.&gt;&lt;/notice&gt;</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>true</p>

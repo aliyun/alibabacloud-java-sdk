@@ -14,7 +14,7 @@ public class Table extends TeaModel {
      * <p>The comment.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试表</p>
+     * <p>Test table</p>
      */
     @NameInMap("Comment")
     public String comment;
@@ -30,7 +30,7 @@ public class Table extends TeaModel {
 
     /**
      * <p>The ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
-     * <p>The format is <code>${EntityType}:${instance ID or encoded URL}:${DataFolderIdentity}:${DatabaseName}:${PatternName}:${TableName}</code>. Use an empty character as a placeholder for levels that do not exist.</p>
+     * <p>The format is <code>${EntityType}:${instance ID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}:${SchemaName}:${TableName}</code>. Use an empty character as a placeholder for levels that do not exist.</p>
      * <blockquote>
      * <p>For maxcompute and dlf types, use an empty string as a placeholder for the instance ID. For the maxcompute type, the database name is the MaxCompute project name. Projects with the three-layer model enabled require a schema name. For projects without the three-layer model enabled, use an empty string as a placeholder for the schema name.</p>
      * </blockquote>
@@ -44,14 +44,18 @@ public class Table extends TeaModel {
      * <p><code>holo-table:instance_id::database_name:schema_name:table_name</code></p>
      * <p><code>mysql-table:(instance_id|encoded_jdbc_url)::database_name::table_name</code></p>
      * <blockquote>
-     * <p>Where<br><code>instance_id</code>: The instance ID. This is required when the data source is registered in instance mode.<br><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. This is required when the data source is registered by using a connection string.<br><code>catalog_id</code>: The DLF catalog ID.<br><code>project_name</code>: The MaxCompute project name.<br><code>database_name</code>: The database name.<br><code>schema_name</code>: The schema name. For the maxcompute type, this is required only when the three-layer model is enabled for the project. If the three-layer model is not enabled, use an empty string as a placeholder.<br><code>table_name</code>: The table name.</p>
+     * <p>Where  </p>
+     * <p><code>instance_id</code>: The instance ID. This is required when the data source is registered in instance mode.  </p>
+     * <p><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. This is required when the data source is registered by using a connection string.  </p>
+     * <p><code>catalog_id</code>: The DLF catalog ID.  </p>
+     * <p><code>project_name</code>: The MaxCompute project name.  </p>
+     * <p><code>database_name</code>: The database name.  </p>
+     * <p><code>schema_name</code>: The schema name. For the maxcompute type, this is required only when the three-layer model is enabled for the project. If the three-layer model is not enabled, use an empty string as a placeholder.  </p>
+     * <p><code>table_name</code>: The table name.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>maxcompute-table:123456XXX::test_project::test_tbl
-     * dlf-table:123456XXX:test_catalog:test_db::test_tbl
-     * hms-table:c-abc123xxx::test_db::test_tbl
-     * holo-table:h-abc123xxx::test_db:test_schema:test_tbl</p>
+     * <p>dlf-table::catalog_id:database_name::table_name</p>
      */
     @NameInMap("Id")
     public String id;
@@ -69,7 +73,7 @@ public class Table extends TeaModel {
      * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>test_tbl</p>
+     * <p>table_name</p>
      */
     @NameInMap("Name")
     public String name;
@@ -77,10 +81,8 @@ public class Table extends TeaModel {
     /**
      * <p>The parent-level metadata entity ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
      * <ul>
-     * <li><p>For types that support schemas (<code>maxcompute/holo/postgresql/sqlserver/hybriddb_for_postgresql/oracle, where the maxcompute type requires the Layer 3 model to be enabled for the project</code>), ParentMetaEntityId is the database pattern to which the table belongs. The format is <code>${EntityType}:${instance ID or encoded URL}:${DataFolderIdentity}:${DatabaseName}:${PatternName}</code>. Use an empty character as a placeholder for levels that do not exist.</p>
-     * </li>
-     * <li><p>For other types, ParentMetaEntityId is the database to which the table belongs. The format is <code>${EntityType}:${instance ID or encoded URL}:${DataFolderIdentity}:${DatabaseName}</code>. Use an empty character as a placeholder for levels that do not exist.</p>
-     * </li>
+     * <li>For types that support schemas (<code>maxcompute/holo/postgresql/sqlserver/hybriddb_for_postgresql/oracle, where the maxcompute type requires the three-layer model to be enabled for the project</code>), ParentMetaEntityId is the database schema to which the table belongs. The format is <code>${EntityType}:${instance ID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}:${SchemaName}</code>. Use an empty character as a placeholder for levels that do not exist.</li>
+     * <li>For other types, ParentMetaEntityId is the database to which the table belongs. The format is <code>${EntityType}:${instance ID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}</code>. Use an empty character as a placeholder for levels that do not exist.</li>
      * </ul>
      * <blockquote>
      * <p>For maxcompute and dlf types, use an empty string as a placeholder for the instance ID. For the maxcompute type, the database name is the MaxCompute project name.</p>
@@ -96,15 +98,17 @@ public class Table extends TeaModel {
      * <p><code>holo-schema:instance_id::database_name:schema_name</code></p>
      * <p><code>mysql-database:(instance_id|encoded_jdbc_url)::database_name</code></p>
      * <blockquote>
-     * <p>Where<br><code>instance_id</code>: The instance ID. This is required when the data source is registered in instance mode.<br><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. This is required when the data source is registered by using a connection string.<br><code>catalog_id</code>: The DLF catalog ID.<br><code>project_name</code>: The MaxCompute project name.<br><code>database_name</code>: The database name.<br><code>schema_name</code>: The schema name.</p>
+     * <p>Where  </p>
+     * <p><code>instance_id</code>: The instance ID. This is required when the data source is registered in instance mode.  </p>
+     * <p><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. This is required when the data source is registered by using a connection string.  </p>
+     * <p><code>catalog_id</code>: The DLF catalog ID.  </p>
+     * <p><code>project_name</code>: The MaxCompute project name.  </p>
+     * <p><code>database_name</code>: The database name.  </p>
+     * <p><code>schema_name</code>: The schema name.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>maxcompute-schema:123456XXX::test_project_with_schema:default
-     * maxcompute-project:123456XXX::test_project_without_schema
-     * dlf-database:123456XXX:test_catalog:test_db
-     * hms-database:c-abc123xxx::test_db
-     * holo-schema:h-abc123xxx::test_db:test_schema</p>
+     * <p>dlf-database::catalog_id:database_name</p>
      */
     @NameInMap("ParentMetaEntityId")
     public String parentMetaEntityId;
@@ -240,7 +244,7 @@ public class Table extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试类目</p>
+         * <p>Test category</p>
          */
         @NameInMap("Name")
         public String name;
@@ -492,7 +496,7 @@ public class Table extends TeaModel {
          * <p>The usage instructions.</p>
          * 
          * <strong>example:</strong>
-         * <h2>使用说明</h2>
+         * <h2>Usage instructions</h2>
          */
         @NameInMap("Readme")
         public String readme;

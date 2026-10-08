@@ -54,7 +54,7 @@ public class ListSkillsResponseBody extends TeaModel {
          * <p><strong>The Skill description.</strong></p>
          * 
          * <strong>example:</strong>
-         * <p>数据分析技能</p>
+         * <p>Data analysis skill</p>
          */
         @NameInMap("Description")
         public String description;

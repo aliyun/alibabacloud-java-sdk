@@ -58,7 +58,7 @@ public class ListAlertRulesRequest extends TeaModel {
     public java.util.List<Long> taskIds;
 
     /**
-     * <p>The alert triggering condition.</p>
+     * <p>The list of alert types.</p>
      */
     @NameInMap("Types")
     public java.util.List<String> types;

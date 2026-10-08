@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDIJobMetricsRequest extends TeaModel {
     /**
-     * <p>The ID of the synchronization task.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>11265</p>

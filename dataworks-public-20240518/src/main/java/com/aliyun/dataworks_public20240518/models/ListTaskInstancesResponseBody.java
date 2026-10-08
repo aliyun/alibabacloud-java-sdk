@@ -380,7 +380,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
          * <li>WaitResource: waiting for resources.</li>
          * <li>Failure: execution failed.</li>
          * <li>Success: execution succeeded.</li>
-         * <li>Checking: submitted for qualityrule check.</li>
+         * <li>Checking: submitted for data quality check.</li>
          * <li>WaitTrigger: waiting for an external trigger. Trigger-based nodes enter this status after the waiting period.</li>
          * </ul>
          * 
@@ -419,7 +419,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The timeout period for node execution, in seconds.</p>
-         * <p>Note: The scheduling system rounds the configured value to the nearest hour.</p>
+         * <p>Note: The scheduling system rounds the configured value to whole hours.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -518,7 +518,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
          * <li>Manual: manually triggered.</li>
          * <li>ManualWorkflow: manual workflow.</li>
          * <li>Normal: periodic scheduling.</li>
-         * <li>ManualFlow: manually triggered workflow.</li>
+         * <li>ManualFlow: manually executed business flow.</li>
          * </ul>
          * 
          * <strong>example:</strong>

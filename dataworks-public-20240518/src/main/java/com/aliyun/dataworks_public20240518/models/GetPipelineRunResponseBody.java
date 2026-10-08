@@ -116,7 +116,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
          * <ul>
          * <li>Deploy: deploy operation</li>
          * <li>Check: check operation</li>
-         * <li>Offline: offline operation</li>
+         * <li>Offline: undeploy operation</li>
          * <li>Build: build operation</li>
          * <li>Delete: delete operation</li>
          * </ul>

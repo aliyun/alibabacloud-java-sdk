@@ -80,7 +80,7 @@ public class GetComponentResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>Parameter</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>dim_whse_epet_warehouse_jz_storage_stock_lot_relation_id</p>
@@ -107,7 +107,7 @@ public class GetComponentResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The region ID, such as ap-southeast-1. The region ID is automatically parsed from your endpoint.</p>
+         * <p>The region information, usually the region where the service is located. For example, cn-shanghai specifies China (Shanghai), and cn-zhangjiakou specifies China (Zhangjiakou). You do not need to specify RegionId because it is automatically parsed from the endpoint that you call.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
