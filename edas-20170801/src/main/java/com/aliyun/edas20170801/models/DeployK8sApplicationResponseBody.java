@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeployK8sApplicationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the change process. You can call the GetChangeOrderInfo operation to query the change process ID. For more information, see <a href="https://help.aliyun.com/document_detail/62072.html">GetChangeOrderInfo</a>.</p>
+     * <p>The ID of the change process. You can call the GetChangeOrderInfo operation to obtain it. For more information, see <a href="https://help.aliyun.com/document_detail/62072.html">GetChangeOrderInfo</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cd65b247-****-475b-ad4b-7039040d625c</p>
@@ -14,7 +14,7 @@ public class DeployK8sApplicationResponseBody extends TeaModel {
     public String changeOrderId;
 
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The status of the interface or a POP error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DeployK8sApplicationResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The additional information that is returned.</p>
+     * <p>Additional information.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class DeployK8sApplicationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>a5281053-08e4-47a5-b2ab-5c0323de*****</p>

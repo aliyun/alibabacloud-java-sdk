@@ -27,8 +27,10 @@ public class GetScalingRulesRequest extends TeaModel {
     /**
      * <p>The type of the scaling rule. You can leave this parameter empty. Valid values:</p>
      * <ul>
-     * <li>SCALE_IN: scale-in rules</li>
-     * <li>SCALE_OUT: scale-out rules</li>
+     * <li><p>SCALE_IN: scale-in rules</p>
+     * </li>
+     * <li><p>SCALE_OUT: scale-out rules</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

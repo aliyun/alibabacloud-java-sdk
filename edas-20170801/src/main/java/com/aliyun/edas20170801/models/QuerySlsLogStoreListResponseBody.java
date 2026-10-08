@@ -96,7 +96,7 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
          * <p>The type of the logging service.</p>
          * 
          * <strong>example:</strong>
-         * <p>Log Service</p>
+         * <p>SLS log service</p>
          */
         @NameInMap("ConsumerSide")
         public String consumerSide;
@@ -137,8 +137,10 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
         /**
          * <p>The source of logs. Valid values:</p>
          * <ul>
-         * <li>Standard output: stdout.log</li>
-         * <li>File log: the directory that stores logs</li>
+         * <li><p>Standard output: stdout.log</p>
+         * </li>
+         * <li><p>File log: the directory that stores logs</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

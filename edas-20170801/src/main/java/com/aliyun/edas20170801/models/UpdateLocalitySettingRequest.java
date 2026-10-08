@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLocalitySettingRequest extends TeaModel {
     /**
+     * <p>The ID of the application. You can call the <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a> operation to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,13 @@ public class UpdateLocalitySettingRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>Specifies whether the setting is active:</p>
+     * <ul>
+     * <li><p>true: The setting is active.</p>
+     * </li>
+     * <li><p>false: The setting is not active.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +31,7 @@ public class UpdateLocalitySettingRequest extends TeaModel {
     public Boolean enabled;
 
     /**
+     * <p>The ID of the namespace. This ID cannot be changed after the namespace is created. The format is [unk]physical space identifier[unk].</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +41,7 @@ public class UpdateLocalitySettingRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The ID of the region where the elastic compute unit (ECU) is located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +51,8 @@ public class UpdateLocalitySettingRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The total number of items that satisfy the threshold expression.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */

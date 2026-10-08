@@ -159,8 +159,10 @@ public class GetSecureTokenResponseBody extends TeaModel {
         /**
          * <p>The type of the Microservices Engine (MSE) registry.</p>
          * <ul>
-         * <li>default: the shared registry of EDAS</li>
-         * <li>exclusive_mse: MSE Nacos registry</li>
+         * <li><p>default: the shared registry of EDAS</p>
+         * </li>
+         * <li><p>exclusive_mse: MSE Nacos registry</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

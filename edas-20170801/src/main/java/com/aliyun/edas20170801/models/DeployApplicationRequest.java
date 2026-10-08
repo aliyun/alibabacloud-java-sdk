@@ -26,8 +26,10 @@ public class DeployApplicationRequest extends TeaModel {
     /**
      * <p>The number of batches per instance group.</p>
      * <ul>
-     * <li>If you specify an ID when you set the GroupId parameter, the application is deployed to the specified instance group. The minimum number of batches that can be specified is 1. The maximum number of batches is the maximum number of ECS instances in the Normal state in the instance group. The actual value falls in the range of [1, specified number]. The specified number of batches equals the number of ECS instances in the specified instance group.</li>
-     * <li>If you set the GroupId parameter to all, the application is deployed to all instance groups. The minimum number of batches that can be specified is 1. The maximum number of batches is the number of ECS instances in the instance group that has the largest number of ECS instances in the Normal state.</li>
+     * <li><p>If you specify an ID when you set the GroupId parameter, the application is deployed to the specified instance group. The minimum number of batches that can be specified is 1. The maximum number of batches is the maximum number of ECS instances in the Normal state in the instance group. The actual value falls in the range of [1, specified number]. The specified number of batches equals the number of ECS instances in the specified instance group.</p>
+     * </li>
+     * <li><p>If you set the GroupId parameter to all, the application is deployed to all instance groups. The minimum number of batches that can be specified is 1. The maximum number of batches is the number of ECS instances in the instance group that has the largest number of ECS instances in the Normal state.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,8 +41,10 @@ public class DeployApplicationRequest extends TeaModel {
     /**
      * <p>The wait time between deployment batches for the application. Unit: minutes.</p>
      * <ul>
-     * <li>Default value: 0. If no wait time between deployment batches is needed, set this parameter to 0.</li>
-     * <li>Maximum value: 5.</li>
+     * <li><p>Default value: 0. If no wait time between deployment batches is needed, set this parameter to 0.</p>
+     * </li>
+     * <li><p>Maximum value: 5.</p>
+     * </li>
      * </ul>
      * <p>If many deployment batches are needed, we recommend that you specify a small value for this parameter. Otherwise, the application deployment is time-consuming.</p>
      * 
@@ -53,13 +57,17 @@ public class DeployApplicationRequest extends TeaModel {
     /**
      * <p>The build package number of EDAS Container.</p>
      * <ul>
-     * <li>You do not need to set the parameter if you do not need to change the EDAS Container version during the deployment.</li>
-     * <li>Set the parameter if you need to update the EDAS Container version of the application during the deployment.</li>
+     * <li><p>You do not need to set the parameter if you do not need to change the EDAS Container version during the deployment.</p>
+     * </li>
+     * <li><p>Set the parameter if you need to update the EDAS Container version of the application during the deployment.</p>
+     * </li>
      * </ul>
      * <p>You can query the build package number by using one of the following methods:</p>
      * <ul>
-     * <li>Call the ListBuildPack operation. For more information, see <a href="https://help.aliyun.com/document_detail/149391.html">ListBuildPack</a>.</li>
-     * <li>Obtain the value in the <strong>Build package number</strong> column of the <a href="https://help.aliyun.com/document_detail/92614.html">Release notes for EDAS Container</a> topic. For example, <code>59</code> indicates <code>EDAS Container 3.5.8</code>.</li>
+     * <li><p>Call the ListBuildPack operation. For more information, see <a href="https://help.aliyun.com/document_detail/149391.html">ListBuildPack</a>.</p>
+     * </li>
+     * <li><p>Obtain the value in the <strong>Build package number</strong> column of the <a href="https://help.aliyun.com/document_detail/92614.html">Release notes for EDAS Container</a> topic. For example, <code>59</code> indicates <code>EDAS Container 3.5.8</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,15 +79,21 @@ public class DeployApplicationRequest extends TeaModel {
     /**
      * <p>The IDs of the components used by the application. The parameter is not applicable to High-Speed Framework (HSF) applications. You can call the ListComponents operation to query the component IDs. For more information, see <a href="https://help.aliyun.com/document_detail/423223.html">ListComponents</a>.</p>
      * <ul>
-     * <li>If you have specified the component IDs when you create the application, you do not need to set the parameter when you deploy the application.</li>
-     * <li>Set the parameter if you need to update the component versions for the application during the deployment.</li>
+     * <li><p>If you have specified the component IDs when you create the application, you do not need to set the parameter when you deploy the application.</p>
+     * </li>
+     * <li><p>Set the parameter if you need to update the component versions for the application during the deployment.</p>
+     * </li>
      * </ul>
      * <p>Valid values for common application components:</p>
      * <ul>
-     * <li>4: Apache Tomcat 7.0.91</li>
-     * <li>7: Apache Tomcat 8.5.42</li>
-     * <li>5: OpenJDK 1.8.x</li>
-     * <li>6: OpenJDK 1.7.x</li>
+     * <li><p>4: Apache Tomcat 7.0.91</p>
+     * </li>
+     * <li><p>7: Apache Tomcat 8.5.42</p>
+     * </li>
+     * <li><p>5: OpenJDK 1.8.x</p>
+     * </li>
+     * <li><p>6: OpenJDK 1.7.x</p>
+     * </li>
      * </ul>
      * <p>For more information, see the Common application parameters section of the <a href="https://help.aliyun.com/document_detail/423185.html">InsertApplication</a> topic.</p>
      * 
@@ -90,7 +104,7 @@ public class DeployApplicationRequest extends TeaModel {
     public String componentIds;
 
     /**
-     * <p>The deployment mode of the application. Valid values: <code>url</code> and <code>image</code>. The image value is deprecated. You can deploy an application to a Swarm cluster only by using an image.``</p>
+     * <p>The deployment mode of the application. Valid values: <code>url</code> and <code>image</code>. The image value is deprecated. You can deploy an application to a Swarm cluster only by using an image.\<code>\\</code></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -113,9 +127,12 @@ public class DeployApplicationRequest extends TeaModel {
      * <ul>
      * <li><p>true: Canary release is selected.</p>
      * <ul>
-     * <li>To implement a canary release, specify the GroupId parameter, which specifies the ID of the instance group for the canary release.</li>
-     * <li>Canary release can be selected as the deployment method for only one batch.</li>
-     * <li>After the canary release is complete, the application is released in regular mode. The Batch parameter specifies the number of batches.</li>
+     * <li><p>To implement a canary release, specify the GroupId parameter, which specifies the ID of the instance group for the canary release.</p>
+     * </li>
+     * <li><p>Canary release can be selected as the deployment method for only one batch.</p>
+     * </li>
+     * <li><p>After the canary release is complete, the application is released in regular mode. The Batch parameter specifies the number of batches.</p>
+     * </li>
      * </ul>
      * </li>
      * <li><p>false: Single-batch release or phased release is selected.</p>
@@ -161,8 +178,10 @@ public class DeployApplicationRequest extends TeaModel {
     /**
      * <p>The mode in which the deployment batches are triggered. Valid values:</p>
      * <ul>
-     * <li>0: automatic.</li>
-     * <li>1: You must manually trigger the next batch. You can manually click <strong>Proceed to Next Batch</strong> in the console or call the ContinuePipeline operation to proceed to the next batch. We recommend that you choose the automatic mode when you call an API operation to deploy the application. For more information, see <a href="https://help.aliyun.com/document_detail/126990.html">ContinuePipeline</a>.</li>
+     * <li><p>0: automatic.</p>
+     * </li>
+     * <li><p>1: You must manually trigger the next batch. You can manually click <strong>Proceed to Next Batch</strong> in the console or call the ContinuePipeline operation to proceed to the next batch. We recommend that you choose the automatic mode when you call an API operation to deploy the application. For more information, see <a href="https://help.aliyun.com/document_detail/126990.html">ContinuePipeline</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

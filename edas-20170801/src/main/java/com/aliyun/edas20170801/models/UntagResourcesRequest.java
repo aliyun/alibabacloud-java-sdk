@@ -7,8 +7,10 @@ public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all existing tags from the specified resources. Default value: false. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: removes all existing tags from the specified resources.</li>
-     * <li><strong>false</strong>: does not remove all existing tags from the specified resources.</li>
+     * <li><p><strong>true</strong>: removes all existing tags from the specified resources.</p>
+     * </li>
+     * <li><p><strong>false</strong>: does not remove all existing tags from the specified resources.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>All existing tags of a resource are removed only if the <strong>tagKeys</strong> parameter is left empty and the <strong>DeleteAll</strong> parameter is set to true.</p>
@@ -43,8 +45,10 @@ public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>The type of the resource. Valid values:</p>
      * <ul>
-     * <li><strong>application</strong>: Enterprise Distributed Application Service (EDAS) application</li>
-     * <li><strong>cluster</strong>: EDAS cluster</li>
+     * <li><p><strong>application</strong>: Enterprise Distributed Application Service (EDAS) application</p>
+     * </li>
+     * <li><p><strong>cluster</strong>: EDAS cluster</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

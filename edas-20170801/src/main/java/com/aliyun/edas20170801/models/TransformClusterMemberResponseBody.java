@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TransformClusterMemberResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The status code of the response.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class TransformClusterMemberResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p><code>Transform submit success!</code> is returned if the request is successful.</p>
+     * <p>The data returned. If the request is successful, <code>Transform submit success!</code> is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Transform submit success!</p>
@@ -23,7 +23,7 @@ public class TransformClusterMemberResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The additional information that is returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

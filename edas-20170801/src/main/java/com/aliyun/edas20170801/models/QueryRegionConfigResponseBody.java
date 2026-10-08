@@ -206,7 +206,7 @@ public class QueryRegionConfigResponseBody extends TeaModel {
          * <p>The configured name of the region.</p>
          * 
          * <strong>example:</strong>
-         * <p>China (Beijing)</p>
+         * <p>华北2</p>
          */
         @NameInMap("Name")
         public String name;

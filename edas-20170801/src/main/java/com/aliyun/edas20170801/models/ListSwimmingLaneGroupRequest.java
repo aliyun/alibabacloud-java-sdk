@@ -15,7 +15,7 @@ public class ListSwimmingLaneGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the namespace.</p>
-     * <p>The ID of a custom namespace is in the region ID:namespace identifier format. Example: cn-beijing:test.\
+     * <p>The ID of a custom namespace is in the region ID:namespace identifier format. Example: cn-beijing:test.<br>
      * The ID of the default namespace is in the region ID format. Example: cn-beijing.</p>
      * <p>This parameter is required.</p>
      * 

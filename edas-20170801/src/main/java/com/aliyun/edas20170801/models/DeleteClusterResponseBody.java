@@ -16,8 +16,10 @@ public class DeleteClusterResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the cluster is deleted. Valid values:</p>
      * <ul>
-     * <li>true: The cluster is deleted.</li>
-     * <li>false: The cluster is not deleted.</li>
+     * <li><p>true: The cluster is deleted.</p>
+     * </li>
+     * <li><p>false: The cluster is not deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

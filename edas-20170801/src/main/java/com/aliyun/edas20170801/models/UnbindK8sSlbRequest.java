@@ -35,8 +35,10 @@ public class UnbindK8sSlbRequest extends TeaModel {
     /**
      * <p>The type of the SLB instance. Valid values:</p>
      * <ul>
-     * <li><strong>internet</strong>: Internet-facing SLB instance</li>
-     * <li><strong>intranet</strong>: internal-facing SLB instance</li>
+     * <li><p><strong>internet</strong>: Internet-facing SLB instance</p>
+     * </li>
+     * <li><p><strong>intranet</strong>: internal-facing SLB instance</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

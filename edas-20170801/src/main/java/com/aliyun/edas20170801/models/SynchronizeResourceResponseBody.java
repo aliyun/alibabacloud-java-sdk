@@ -43,8 +43,10 @@ public class SynchronizeResourceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the resources are synchronized. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The resources are synchronized.</li>
-     * <li><strong>false</strong>: The resources fail to be synchronized.</li>
+     * <li><p><strong>true</strong>: The resources are synchronized.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The resources fail to be synchronized.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class InsertApplicationResponseBody extends TeaModel {
     /**
-     * <p>The information about the created application.</p>
+     * <p>The application object that is returned after the application is created.</p>
      */
     @NameInMap("ApplicationInfo")
     public InsertApplicationResponseBodyApplicationInfo applicationInfo;
 
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class InsertApplicationResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The message that is returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>The application name test-hsy-C5039-paas-6 had been created successfully.</p>
@@ -76,7 +76,7 @@ public class InsertApplicationResponseBody extends TeaModel {
 
     public static class InsertApplicationResponseBodyApplicationInfo extends TeaModel {
         /**
-         * <p>The ID of the application. The ID is the unique identifier of the application in EDAS.</p>
+         * <p>The ID of the application. This ID is the unique identifier of an EDAS application.</p>
          * 
          * <strong>example:</strong>
          * <p>6c733bcd-6efb-47a1-8226-cf722c******</p>
@@ -105,8 +105,10 @@ public class InsertApplicationResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the application is a Docker application. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The application is a Docker application.</li>
-         * <li><strong>false</strong>: The application is not a Docker application.</li>
+         * <li><p><strong>true</strong>: The application is a Docker application.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The application is not a Docker application.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,7 +118,7 @@ public class InsertApplicationResponseBody extends TeaModel {
         public Boolean dockerize;
 
         /**
-         * <p>The owner of the application. The owner is the user who created the application.</p>
+         * <p>The owner of the application. This is the user who created the application.</p>
          * 
          * <strong>example:</strong>
          * <p>249763358688********</p>
@@ -125,7 +127,7 @@ public class InsertApplicationResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The port used by the created application. Default value: 8080. You can call the UpdateContainerConfiguration operation to change the port. For more information, see <a href="https://help.aliyun.com/document_detail/149403.html">UpdateContainerConfiguration</a>.</p>
+         * <p>The default port of the application is 8080. You can call the UpdateContainerConfiguration operation to change the port. For more information, see <a href="https://help.aliyun.com/document_detail/149403.html">UpdateContainerConfiguration</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -143,7 +145,7 @@ public class InsertApplicationResponseBody extends TeaModel {
         public String regionName;
 
         /**
-         * <p>The ID of the user who created the application.</p>
+         * <p>The user ID of the application owner.</p>
          * 
          * <strong>example:</strong>
          * <p>tdy218@1362469756xxxxxx</p>

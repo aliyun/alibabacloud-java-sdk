@@ -1,3 +1,7 @@
+2026-10-08 Version: 2.2.0
+- Support API MigrateApplication.
+
+
 2025-11-03 Version: 2.1.0
 - Support API DescribeLocalitySetting.
 - Update API DeployK8sApplication: add request parameters SecurityContext.

@@ -87,8 +87,10 @@ public class DescribeAppInstanceListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the application was released in canary release mode.</p>
          * <ul>
-         * <li><code>true</code>: The application was released in canary release mode.</li>
-         * <li><code>false</code>: The application was not released in canary release mode</li>
+         * <li><p><code>true</code>: The application was released in canary release mode.</p>
+         * </li>
+         * <li><p><code>false</code>: The application was not released in canary release mode</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

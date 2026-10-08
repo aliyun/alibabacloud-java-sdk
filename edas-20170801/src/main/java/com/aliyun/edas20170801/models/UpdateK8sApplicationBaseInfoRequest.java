@@ -36,7 +36,7 @@ public class UpdateK8sApplicationBaseInfoRequest extends TeaModel {
      * <p>The owner of the application. The value can be up to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>Tom</p>
+     * <p>John Doe</p>
      */
     @NameInMap("Owner")
     public String owner;

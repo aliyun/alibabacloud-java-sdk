@@ -7,8 +7,10 @@ public class ListEcsNotInClusterRequest extends TeaModel {
     /**
      * <p>The network type. Valid values:</p>
      * <ul>
-     * <li>1: classic network</li>
-     * <li>2: virtual private cloud (VPC)</li>
+     * <li><p>1: classic network</p>
+     * </li>
+     * <li><p>2: virtual private cloud (VPC)</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

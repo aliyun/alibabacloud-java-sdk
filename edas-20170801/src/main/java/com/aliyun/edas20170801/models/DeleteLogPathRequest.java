@@ -17,11 +17,16 @@ public class DeleteLogPathRequest extends TeaModel {
     /**
      * <p>The absolute path of the log directory that you want to remove. The value must start and end with a forward slash (<code>/</code>) and must contain <code>/log</code> or <code>/logs</code>. The following directories are the default log directories in Enterprise Distributed Application Service (EDAS):</p>
      * <ul>
-     * <li>/home/admin/edas-container/logs/</li>
-     * <li>/home/admin/taobao-tomcat-7.0.59/logs/</li>
-     * <li>/home/admin/taobao-tomcat-production-7.0.59.3/logs/</li>
-     * <li>/home/admin/taobao-tomcat-production-7.0.70/logs/</li>
-     * <li>/home/admin/edas-agent/logs/</li>
+     * <li><p>/home/admin/edas-container/logs/</p>
+     * </li>
+     * <li><p>/home/admin/taobao-tomcat-7.0.59/logs/</p>
+     * </li>
+     * <li><p>/home/admin/taobao-tomcat-production-7.0.59.3/logs/</p>
+     * </li>
+     * <li><p>/home/admin/taobao-tomcat-production-7.0.70/logs/</p>
+     * </li>
+     * <li><p>/home/admin/edas-agent/logs/</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

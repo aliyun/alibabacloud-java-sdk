@@ -24,7 +24,7 @@ public class BindK8sSlbRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The frontend port. Valid values: 1 to 65535.</p>
+     * <p>The frontend port. The value must be an integer from 1 to 65,535.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -33,10 +33,12 @@ public class BindK8sSlbRequest extends TeaModel {
     public String port;
 
     /**
-     * <p>The scheduling algorithm for the SLB instance. If you do not specify this parameter, the default value rr is used. Valid values:</p>
+     * <p>The scheduling algorithm. If you do not specify this parameter, \<code>rr\\</code> is used. Valid values:</p>
      * <ul>
-     * <li>wrr: weighted round-robin scheduling. Backend servers that have higher weights receive more requests than those that have lower weights.</li>
-     * <li>rr: round-robin scheduling. Requests are sequentially distributed to backend servers.</li>
+     * <li><p>wrr: weighted round-robin. Backend servers with higher weights receive more requests.</p>
+     * </li>
+     * <li><p>rr: round-robin. Requests are distributed to backend servers in sequence.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,15 +48,21 @@ public class BindK8sSlbRequest extends TeaModel {
     public String scheduler;
 
     /**
-     * <p>The information about the ports. This parameter is required if you want to configure multi-port mappings or use a protocol other than TCP. You must set this parameter to a JSON array. Example: [{&quot;targetPort&quot;:8080,&quot;port&quot;:82,&quot;loadBalancerProtocol&quot;:&quot;TCP&quot;},{&quot;port&quot;:81,&quot;certId&quot;:&quot;1362469756373809_16c185d6fa2_1914500329_-xxxxxxx&quot;,&quot;targetPort&quot;:8181,&quot;lo adBalancerProtocol&quot;:&quot;HTTPS&quot;}]</p>
+     * <p>The information about the service ports. Use this parameter to configure multiple listeners or use protocols other than TCP.
+     * This parameter must be a JSON array. Example:
+     * [{&quot;targetPort&quot;:8080,&quot;port&quot;:82,&quot;loadBalancerProtocol&quot;:&quot;TCP&quot;},{&quot;port&quot;:81,&quot;certId&quot;:&quot;1362469756373809_16c185d6fa2_1914500329_-xxxxxxx&quot;,&quot;targetPort&quot;:8181,&quot;loadBalancerProtocol&quot;:&quot;HTTPS&quot;}]</p>
      * <ul>
-     * <li>port: The frontend port. Valid values: 1 to 65535. This parameter is required. Each port must be unique.</li>
-     * <li>targetPort: The backend port. Valid values: 1 to 65535. This parameter is required.</li>
-     * <li>loadBalancerProtocol: This parameter is required. Valid values: TCP and HTTPS. If the HTTP protocol is used, set this parameter to TCP.</li>
-     * <li>certId: the ID of the certificate. This parameter is required if the HTTPS protocol is used. You can purchase an SLB instance in the SLB console.</li>
+     * <li><p>port: Required. The frontend port. The value must be an integer from 1 to 65,535. Each port number must be unique.</p>
+     * </li>
+     * <li><p>targetPort: Required. The backend port. The value must be an integer from 1 to 65,535.</p>
+     * </li>
+     * <li><p>loadBalancerProtocol: Required. The frontend protocol. Valid values: TCP and HTTPS. For HTTP, use TCP.</p>
+     * </li>
+     * <li><p>certId: Required if you use the HTTPS protocol. You can purchase a certificate in the SLB console.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>The ServicePortInfos parameter is specified to support multi-port mappings. If you want this parameter to take effect, make sure that you have set the AppId, ClusterId, Type, and SlbId parameters.</p>
+     * <p>This parameter is used to configure multiple listeners. You must use it with the appId, clusterId, type, and slbId parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -64,7 +72,7 @@ public class BindK8sSlbRequest extends TeaModel {
     public String servicePortInfos;
 
     /**
-     * <p>The ID of the SLB instance. If you leave this parameter empty, Enterprise Distributed Application Service (EDAS) automatically purchases an SLB instance.</p>
+     * <p>The ID of the SLB instance. If you do not specify this parameter, EDAS automatically purchases a new SLB instance.</p>
      * 
      * <strong>example:</strong>
      * <p>lb-2ze1quax9t****iz82bjt</p>
@@ -73,7 +81,7 @@ public class BindK8sSlbRequest extends TeaModel {
     public String slbId;
 
     /**
-     * <p>The protocol used by the SLB instance. Valid values: TCP, HTTP, and HTTPS.</p>
+     * <p>The frontend protocol for the SLB instance. Valid values: TCP, HTTP, and HTTPS.</p>
      * 
      * <strong>example:</strong>
      * <p>TCP</p>
@@ -82,14 +90,20 @@ public class BindK8sSlbRequest extends TeaModel {
     public String slbProtocol;
 
     /**
-     * <p>The instance type of the SLB instance. Valid values:</p>
+     * <p>The specification of the SLB instance.</p>
      * <ul>
-     * <li>slb.s1.small</li>
-     * <li>slb.s2.small</li>
-     * <li>slb.s2.medium</li>
-     * <li>slb.s3.small</li>
-     * <li>slb.s3.medium</li>
-     * <li>slb.s3.large</li>
+     * <li><p>slb.s1.small</p>
+     * </li>
+     * <li><p>slb.s2.small</p>
+     * </li>
+     * <li><p>slb.s2.medium</p>
+     * </li>
+     * <li><p>slb.s3.small</p>
+     * </li>
+     * <li><p>slb.s3.medium</p>
+     * </li>
+     * <li><p>slb.s3.large</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,7 +113,7 @@ public class BindK8sSlbRequest extends TeaModel {
     public String specification;
 
     /**
-     * <p>The backend port, which is also the service port of the application. Valid values: 1 to 65535.</p>
+     * <p>The backend port. This port is also the service port of the application. The value must be an integer from 1 to 65,535.</p>
      * 
      * <strong>example:</strong>
      * <p>8080</p>
@@ -108,10 +122,12 @@ public class BindK8sSlbRequest extends TeaModel {
     public String targetPort;
 
     /**
-     * <p>The type of the SLB instance. Valid values:</p>
+     * <p>The type of the SLB instance.</p>
      * <ul>
-     * <li>internet: Internet-facing SLB instance</li>
-     * <li>intranet: internal-facing SLB instance</li>
+     * <li><p>internet: an internet-facing SLB instance.</p>
+     * </li>
+     * <li><p>intranet: an internal-facing SLB instance.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RestartK8sApplicationRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
+     * <p>The ID of the application. You can call the ListApplication operation to obtain this ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class RestartK8sApplicationRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The timeout period of the change process. Unit: seconds.</p>
+     * <p>The timeout period for the change process, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>

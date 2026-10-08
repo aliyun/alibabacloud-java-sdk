@@ -111,11 +111,16 @@ public class ListK8sSecretsResponseBody extends TeaModel {
         /**
          * <p>The state of the SSL certificate. Valid values:</p>
          * <ul>
-         * <li>normal: The SSL certificate is valid.</li>
-         * <li>invalid: The SSL certificate is invalid.</li>
-         * <li>expired: The SSL certificate has expired.</li>
-         * <li>not_yet_valid: The SSL certificate is currently invalid.</li>
-         * <li>about_to_expire: The SSL certificate is about to expire.</li>
+         * <li><p>normal: The SSL certificate is valid.</p>
+         * </li>
+         * <li><p>invalid: The SSL certificate is invalid.</p>
+         * </li>
+         * <li><p>expired: The SSL certificate has expired.</p>
+         * </li>
+         * <li><p>not_yet_valid: The SSL certificate is currently invalid.</p>
+         * </li>
+         * <li><p>about_to_expire: The SSL certificate is about to expire.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -357,8 +362,10 @@ public class ListK8sSecretsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the data is Base64-encoded. Valid values:</p>
          * <ul>
-         * <li>true: The data is Base64-encoded.</li>
-         * <li>false: The data is not Base64-encoded.</li>
+         * <li><p>true: The data is Base64-encoded.</p>
+         * </li>
+         * <li><p>false: The data is not Base64-encoded.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -457,8 +464,10 @@ public class ListK8sSecretsResponseBody extends TeaModel {
         /**
          * <p>The type of the Secret. Valid values:</p>
          * <ul>
-         * <li>Opaque: user-defined data</li>
-         * <li>kubernetes.io/tls: Transport Layer Security (TLS) certificate</li>
+         * <li><p>Opaque: user-defined data</p>
+         * </li>
+         * <li><p>kubernetes.io/tls: Transport Layer Security (TLS) certificate</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

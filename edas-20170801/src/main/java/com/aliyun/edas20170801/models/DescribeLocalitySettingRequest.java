@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLocalitySettingRequest extends TeaModel {
     /**
+     * <p>The ID of the application. To obtain the application ID, call the ListApplication operation. For more information, see <a href="https://help.aliyun.com/document_detail/423162.html">ListApplication</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeLocalitySettingRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The ID of the microservices namespace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DescribeLocalitySettingRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

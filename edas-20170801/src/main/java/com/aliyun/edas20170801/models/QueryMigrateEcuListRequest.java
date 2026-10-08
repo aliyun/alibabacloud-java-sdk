@@ -7,8 +7,10 @@ public class QueryMigrateEcuListRequest extends TeaModel {
     /**
      * <p>The ID of the namespace.</p>
      * <ul>
-     * <li>The ID of a custom namespace is in the <code>region ID:namespace identifier</code> format. Example: <code>cn-beijing:test</code>.</li>
-     * <li>The ID of the default namespace is in the <code>region ID</code> format. Example: <code>cn-beijing</code>.</li>
+     * <li><p>The ID of a custom namespace is in the <code>region ID:namespace identifier</code> format. Example: <code>cn-beijing:test</code>.</p>
+     * </li>
+     * <li><p>The ID of the default namespace is in the <code>region ID</code> format. Example: <code>cn-beijing</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -7,8 +7,10 @@ public class InsertOrUpdateRegionRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable remote debugging. Valid values:</p>
      * <ul>
-     * <li>true: enables remote debugging.</li>
-     * <li>false: disables remote debugging.</li>
+     * <li><p>true: enables remote debugging.</p>
+     * </li>
+     * <li><p>false: disables remote debugging.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,8 +59,10 @@ public class InsertOrUpdateRegionRequest extends TeaModel {
     /**
      * <p>The ID of the namespace.</p>
      * <ul>
-     * <li>The ID of a custom namespace is in the <code>Region ID:Namespace identifier</code> format. Example: cn-beijing:tdy218.</li>
-     * <li>The ID of the default namespace is in the <code>region ID</code> format. Example: cn-beijing.</li>
+     * <li><p>The ID of a custom namespace is in the <code>Region ID:Namespace identifier</code> format. Example: cn-beijing:tdy218.</p>
+     * </li>
+     * <li><p>The ID of the default namespace is in the <code>region ID</code> format. Example: cn-beijing.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -71,8 +75,10 @@ public class InsertOrUpdateRegionRequest extends TeaModel {
     /**
      * <p>The type of the registry.</p>
      * <ul>
-     * <li>default: the shared registry of Enterprise Distributed Application Service (EDAS)</li>
-     * <li>exclusive_mse: a Microservices Engine (MSE) registry</li>
+     * <li><p>default: the shared registry of Enterprise Distributed Application Service (EDAS)</p>
+     * </li>
+     * <li><p>exclusive_mse: a Microservices Engine (MSE) registry</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

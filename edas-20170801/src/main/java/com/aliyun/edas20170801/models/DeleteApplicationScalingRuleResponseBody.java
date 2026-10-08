@@ -11,7 +11,7 @@ public class DeleteApplicationScalingRuleResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>5d6fa0bc-cc3**********</p>

@@ -17,8 +17,10 @@ public class DeleteClusterRequest extends TeaModel {
     /**
      * <p>The type of the cluster ID. Valid values:</p>
      * <ul>
-     * <li>0: specifies the ID of the cluster in Enterprise Distributed Application Service (EDAS).</li>
-     * <li>1: specifies the ID of the ACK cluster.</li>
+     * <li><p>0: specifies the ID of the cluster in Enterprise Distributed Application Service (EDAS).</p>
+     * </li>
+     * <li><p>1: specifies the ID of the ACK cluster.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -96,8 +96,10 @@ public class GetContainerConfigurationResponseBody extends TeaModel {
         /**
          * <p>The maximum number of threads in the Tomcat container.</p>
          * <ul>
-         * <li>If no instance group is specified, the configuration of the application is returned.</li>
-         * <li>If no application is specified, the default configuration is returned.</li>
+         * <li><p>If no instance group is specified, the configuration of the application is returned.</p>
+         * </li>
+         * <li><p>If no application is specified, the default configuration is returned.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,8 +111,10 @@ public class GetContainerConfigurationResponseBody extends TeaModel {
         /**
          * <p>The Uniform Resource Identifier (URI) encoding scheme. Valid values: ISO-8859-1, GBK, GB2312, and UTF-8.</p>
          * <ul>
-         * <li>If no instance group is specified, the configuration of the application is returned.</li>
-         * <li>If no application is specified, the default configuration is returned.</li>
+         * <li><p>If no instance group is specified, the configuration of the application is returned.</p>
+         * </li>
+         * <li><p>If no application is specified, the default configuration is returned.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -122,8 +126,10 @@ public class GetContainerConfigurationResponseBody extends TeaModel {
         /**
          * <p>Indicates whether useBodyEncodingForURI is enabled in the Tomcat container.</p>
          * <ul>
-         * <li>If no instance group is specified, the configuration of the application is returned.</li>
-         * <li>If no application is specified, the default configuration is returned.</li>
+         * <li><p>If no instance group is specified, the configuration of the application is returned.</p>
+         * </li>
+         * <li><p>If no application is specified, the default configuration is returned.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

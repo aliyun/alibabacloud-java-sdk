@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindSlbResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class BindSlbResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data that is returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public BindSlbResponseBodyData data;
 
     /**
-     * <p>The additional information that is returned.</p>
+     * <p>Additional information.</p>
      * 
      * <strong>example:</strong>
      * <p>bind slb success</p>
@@ -29,7 +29,7 @@ public class BindSlbResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>23DR4FDXXXXXXXXXX</p>
@@ -112,7 +112,7 @@ public class BindSlbResponseBody extends TeaModel {
         public String extVServerGroupId;
 
         /**
-         * <p>The ID of the internal-facing SLB instance.</p>
+         * <p>The ID of the internal SLB instance.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-wz96ph63r************</p>
@@ -121,7 +121,7 @@ public class BindSlbResponseBody extends TeaModel {
         public String slbId;
 
         /**
-         * <p>The IP address of the internal-facing SLB instance.</p>
+         * <p>The IP address of the internal SLB instance.</p>
          * 
          * <strong>example:</strong>
          * <p>192.16*.<em>.</em></p>
@@ -130,7 +130,7 @@ public class BindSlbResponseBody extends TeaModel {
         public String slbIp;
 
         /**
-         * <p>The name of the internal-facing SLB instance.</p>
+         * <p>The name of the internal SLB instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test**********</p>
@@ -139,7 +139,7 @@ public class BindSlbResponseBody extends TeaModel {
         public String slbName;
 
         /**
-         * <p>The listener port for the SLB instance.</p>
+         * <p>The listener port of the SLB instance.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -148,7 +148,7 @@ public class BindSlbResponseBody extends TeaModel {
         public Integer slbPort;
 
         /**
-         * <p>The ID of the vServer group for the internal-facing SLB instance.</p>
+         * <p>The ID of the internal vServer group.</p>
          * 
          * <strong>example:</strong>
          * <p>“”</p>

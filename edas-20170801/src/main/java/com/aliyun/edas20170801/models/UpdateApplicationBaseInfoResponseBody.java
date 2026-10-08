@@ -87,10 +87,14 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
         /**
          * <p>The deployment type of the application. Valid values:</p>
          * <ul>
-         * <li>War: The application is deployed by using a WAR package.</li>
-         * <li>FatJar: The application is deployed by using a JAR package.</li>
-         * <li>Image: The application is deployed by using an image.</li>
-         * <li>If this parameter is empty, the application is not deployed.</li>
+         * <li><p>War: The application is deployed by using a WAR package.</p>
+         * </li>
+         * <li><p>FatJar: The application is deployed by using a JAR package.</p>
+         * </li>
+         * <li><p>Image: The application is deployed by using an image.</p>
+         * </li>
+         * <li><p>If this parameter is empty, the application is not deployed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -120,12 +124,18 @@ public class UpdateApplicationBaseInfoResponseBody extends TeaModel {
         /**
          * <p>The type of the cluster. Valid values:</p>
          * <ul>
-         * <li>0: normal Docker cluster</li>
-         * <li>1: Swarm cluster</li>
-         * <li>2: ECS cluster</li>
-         * <li>3: self-managed Kubernetes cluster in EDAS</li>
-         * <li>4: cluster in which Pandora automatically registers applications</li>
-         * <li>5: Container Service for Kubernetes (ACK) clusters</li>
+         * <li><p>0: normal Docker cluster</p>
+         * </li>
+         * <li><p>1: Swarm cluster</p>
+         * </li>
+         * <li><p>2: ECS cluster</p>
+         * </li>
+         * <li><p>3: self-managed Kubernetes cluster in EDAS</p>
+         * </li>
+         * <li><p>4: cluster in which Pandora automatically registers applications</p>
+         * </li>
+         * <li><p>5: Container Service for Kubernetes (ACK) clusters</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

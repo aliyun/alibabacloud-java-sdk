@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeDeployGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class ChangeDeployGroupRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the elastic compute component (ECC) that corresponds to the ECS instance for which you want to change the application instance group. You can call the ListApplicationEcc operation to query the ECC ID. For more information, see <a href="https://help.aliyun.com/document_detail/199277.html">ListApplicationEcc</a>.</p>
+     * <p>The Elastic Compute Container (ECC) ID of the ECS instance whose group you want to change. Call the ListApplicationEcc operation to query the ECC ID of an application. For more information, see <a href="https://help.aliyun.com/document_detail/199277.html">ListApplicationEcc</a>.</p>
      * <blockquote>
-     * <p>You can change the application instance group for only one ECS instance at a time.</p>
+     * <p>You can change the group for only one ECS instance at a time.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,7 +28,7 @@ public class ChangeDeployGroupRequest extends TeaModel {
     public String eccInfo;
 
     /**
-     * <p>Specifies whether to forcibly change the application instance group if the deployment package version of the ECC is different from that of the application instance group.</p>
+     * <p>Specifies whether to force the change when the deployment package version of the ECC is different from the deployment package version of the application group.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -37,7 +37,7 @@ public class ChangeDeployGroupRequest extends TeaModel {
     public Boolean forceStatus;
 
     /**
-     * <p>The name of the application instance group. Examples: group_a and group_b. The parameter value for the default application instance group is <code>_DEFAULT_GROUP</code>. The name can be up to 64 characters in length.</p>
+     * <p>The name of the application group, such as \<code>group_a\\</code> and \<code>group_b\\</code>. The GroupName for the default group is <code>_DEFAULT_GROUP</code>. The name can be up to 64 characters long.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

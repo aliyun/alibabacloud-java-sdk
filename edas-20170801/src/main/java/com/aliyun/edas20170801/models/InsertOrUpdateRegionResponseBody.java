@@ -87,8 +87,10 @@ public class InsertOrUpdateRegionResponseBody extends TeaModel {
         /**
          * <p>Indicates whether remote debugging is enabled. Valid values:</p>
          * <ul>
-         * <li>true: Remote debugging is enabled.</li>
-         * <li>false: Remote debugging is disabled.</li>
+         * <li><p>true: Remote debugging is enabled.</p>
+         * </li>
+         * <li><p>false: Remote debugging is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,8 +120,10 @@ public class InsertOrUpdateRegionResponseBody extends TeaModel {
         /**
          * <p>The ID of the namespace.</p>
          * <ul>
-         * <li>The ID of a custom namespace is in the <code>region ID:namespace identifier</code> format. Example: cn-beijing:tdy218.</li>
-         * <li>The ID of the default namespace is in the <code>region ID</code> format. Example: cn-beijing.</li>
+         * <li><p>The ID of a custom namespace is in the <code>region ID:namespace identifier</code> format. Example: cn-beijing:tdy218.</p>
+         * </li>
+         * <li><p>The ID of the default namespace is in the <code>region ID</code> format. Example: cn-beijing.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

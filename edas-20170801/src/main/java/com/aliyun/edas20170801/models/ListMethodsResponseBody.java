@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMethodsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ListMethodsResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned message that indicates whether the request is successful.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -31,9 +31,6 @@ public class ListMethodsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about service methods.</p>
-     */
     @NameInMap("ServiceMethodList")
     public ListMethodsResponseBodyServiceMethodList serviceMethodList;
 
@@ -113,45 +110,21 @@ public class ListMethodsResponseBody extends TeaModel {
     }
 
     public static class ListMethodsResponseBodyServiceMethodListServiceMethod extends TeaModel {
-        /**
-         * <p>The name of the application.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>App</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
         @NameInMap("InputParams")
         public ListMethodsResponseBodyServiceMethodListServiceMethodInputParams inputParams;
 
-        /**
-         * <p>The name of the service method.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>echo</p>
-         */
         @NameInMap("MethodName")
         public String methodName;
 
-        /**
-         * <p>The return type of the service method.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>java.lang.string</p>
-         */
         @NameInMap("Output")
         public String output;
 
         @NameInMap("ParamTypes")
         public ListMethodsResponseBodyServiceMethodListServiceMethodParamTypes paramTypes;
 
-        /**
-         * <p>The name of the service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>com.alibaba.edas.demo.EchoService</p>
-         */
         @NameInMap("ServiceName")
         public String serviceName;
 

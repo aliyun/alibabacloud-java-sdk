@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationScalingRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplicationlink</a>.</p>
+     * <p>The application ID. To get this ID, call the <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>78194c76-3dca-418e-a263-cccd1ab4****</p>
@@ -14,7 +14,7 @@ public class CreateApplicationScalingRuleRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>Configure custom elastic behavior, refer to the example for specific data structure.</p>
+     * <p>The configuration for custom scaling behaviors. For more information about the data structure, see the example.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -46,10 +46,12 @@ public class CreateApplicationScalingRuleRequest extends TeaModel {
     public String scalingBehaviour;
 
     /**
-     * <p>Specifies whether to enable the auto scaling policy. Valid values:</p>
+     * <p>Specifies whether to enable the Auto Scaling rule.</p>
      * <ul>
-     * <li><strong>true</strong>: enables the auto scaling policy.</li>
-     * <li><strong>false</strong>: disables the auto scaling policy.</li>
+     * <li><p><strong>true</strong>: enables the rule.</p>
+     * </li>
+     * <li><p><strong>false</strong>: disables the rule.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +70,7 @@ public class CreateApplicationScalingRuleRequest extends TeaModel {
     public String scalingRuleMetric;
 
     /**
-     * <p>The name of the auto scaling policy. The name must start with a lowercase letter, and can contain lowercase letters, digits, and hyphens (-). The name must be 1 to 32 characters in length.</p>
+     * <p>The name of the Auto Scaling rule. The name must start with a lowercase letter. It can contain lowercase letters, digits, and hyphens (-). The name must be 1 to 32 characters long.</p>
      * 
      * <strong>example:</strong>
      * <p>cpu-trigger</p>
@@ -86,7 +88,7 @@ public class CreateApplicationScalingRuleRequest extends TeaModel {
     public String scalingRuleTimer;
 
     /**
-     * <p>The trigger policy for the auto scaling policy. Set the value in the JSON format by using the ScalingRuleTriggerDTO class. For more information, see Additional information about request parameters.</p>
+     * <p>The trigger policy. Set this parameter to a JSON string of the ScalingRuleTriggerDTO object. For more information about the format, see Additional information about request parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>ScalingRuleTriggerDTO{......}</p>
@@ -95,7 +97,7 @@ public class CreateApplicationScalingRuleRequest extends TeaModel {
     public String scalingRuleTrigger;
 
     /**
-     * <p>The type of the auto scaling policy. Set the value to <strong>trigger</strong>.</p>
+     * <p>The type of the Auto Scaling rule. Only the <strong>trigger</strong> type is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>trigger</p>

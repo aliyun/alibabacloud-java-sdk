@@ -78,8 +78,10 @@ public class GetK8sAppPrecheckResultResponseBody extends TeaModel {
         /**
          * <p>Specifies whether the precheck of the item was interrupted:</p>
          * <ul>
-         * <li>true: The precheck of the item was interrupted.</li>
-         * <li>false: The precheck of the item was not interrupted.</li>
+         * <li><p>true: The precheck of the item was interrupted.</p>
+         * </li>
+         * <li><p>false: The precheck of the item was not interrupted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -100,8 +102,10 @@ public class GetK8sAppPrecheckResultResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the precheck item passed the precheck:</p>
          * <ul>
-         * <li>true: The precheck item passed the precheck.</li>
-         * <li>false: The precheck item failed the precheck.</li>
+         * <li><p>true: The precheck item passed the precheck.</p>
+         * </li>
+         * <li><p>false: The precheck item failed the precheck.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -114,7 +118,7 @@ public class GetK8sAppPrecheckResultResponseBody extends TeaModel {
          * <p>The reason why the precheck item failed the precheck or the precheck of the item was interrupted. This parameter is left empty when the application passed the precheck.</p>
          * 
          * <strong>example:</strong>
-         * <p>The Kubernetes cluster is disconnected from the EDAS control plane.</p>
+         * <p>K8s集群失联。</p>
          */
         @NameInMap("Reason")
         public String reason;
@@ -169,7 +173,7 @@ public class GetK8sAppPrecheckResultResponseBody extends TeaModel {
          * <p>The reason why the application failed the precheck. This parameter is left empty when the application passed the precheck.</p>
          * 
          * <strong>example:</strong>
-         * <p>The Kubernetes cluster is disconnected from the EDAS control plane.</p>
+         * <p>K8s cluster disconnected.</p>
          */
         @NameInMap("Reason")
         public String reason;
@@ -177,9 +181,12 @@ public class GetK8sAppPrecheckResultResponseBody extends TeaModel {
         /**
          * <p>The precheck state for the application change. Valid values:</p>
          * <ul>
-         * <li>checking: The application is being prechecked.</li>
-         * <li>pass: The application passed the precheck.</li>
-         * <li>failed: The application failed the precheck.</li>
+         * <li><p>checking: The application is being prechecked.</p>
+         * </li>
+         * <li><p>pass: The application passed the precheck.</p>
+         * </li>
+         * <li><p>failed: The application failed the precheck.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -22,9 +22,6 @@ public class ListAliyunRegionResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The details of the regions.</p>
-     */
     @NameInMap("RegionEntityList")
     public ListAliyunRegionResponseBodyRegionEntityList regionEntityList;
 
@@ -75,21 +72,9 @@ public class ListAliyunRegionResponseBody extends TeaModel {
     }
 
     public static class ListAliyunRegionResponseBodyRegionEntityListRegionEntity extends TeaModel {
-        /**
-         * <p>The ID of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <p>The name of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>China East 1 (Hangzhou)</p>
-         */
         @NameInMap("Name")
         public String name;
 

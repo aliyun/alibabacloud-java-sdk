@@ -17,12 +17,14 @@ public class ListEcuByRegionRequest extends TeaModel {
     /**
      * <p>The ID of the namespace.</p>
      * <ul>
-     * <li>The ID of a custom namespace is in the <code>region ID:namespace identifier</code> format. Example: cn-beijing:tdy218.</li>
-     * <li>The ID of the default namespace is in the <code>region ID</code> format. Example: cn-beijing.</li>
+     * <li><p>The ID of a custom namespace is in the <code>region ID:namespace identifier</code> format. Example: cn-beijing:tdy218.</p>
+     * </li>
+     * <li><p>The ID of the default namespace is in the <code>region ID</code> format. Example: cn-beijing.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>cn-beijing or cn-beijing:tdy218</p>
+     * <p>Cn-beijing or cn-beijing:tdy218</p>
      */
     @NameInMap("LogicalRegionId")
     public String logicalRegionId;

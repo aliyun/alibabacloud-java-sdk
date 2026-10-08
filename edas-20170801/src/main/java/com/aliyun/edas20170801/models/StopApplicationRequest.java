@@ -17,8 +17,10 @@ public class StopApplicationRequest extends TeaModel {
     /**
      * <p>The ID of the elastic compute container (ECC) that corresponds to the Elastic Compute Service (ECS) instance on which you want to stop the application. You can call the QueryApplicationStatus operation to query the ECC ID. For more information, see <a href="https://help.aliyun.com/document_detail/149394.html">QueryApplicationStatus</a>.</p>
      * <ul>
-     * <li>If you want to stop the application on multiple ECS instances, separate the ECC IDs with commas (,).</li>
-     * <li>If you leave this parameter empty, the application will be stopped on all ECS instances.</li>
+     * <li><p>If you want to stop the application on multiple ECS instances, separate the ECC IDs with commas (,).</p>
+     * </li>
+     * <li><p>If you leave this parameter empty, the application will be stopped on all ECS instances.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

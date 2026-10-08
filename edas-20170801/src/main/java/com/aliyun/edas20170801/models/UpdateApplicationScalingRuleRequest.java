@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationScalingRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
+     * <p>The ID of the application. Call the <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a> operation to obtain this ID.</p>
      * 
      * <strong>example:</strong>
      * <p>78194c76-3dca-418e-a263-cccd1ab4****</p>
@@ -14,7 +14,7 @@ public class UpdateApplicationScalingRuleRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The behavior of the auto scaling. See the example for the data structure.</p>
+     * <p>The configuration of custom scaling behaviors. For more information about the data structure, see the example.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;scaleUp&quot;:{&quot;stabilizationWindowSeconds&quot;:&quot;0&quot;,&quot;selectPolicy&quot;:&quot;Max&quot;,&quot;policies&quot;:[{&quot;type&quot;:&quot;Pods&quot;,&quot;value&quot;:5,&quot;periodSeconds&quot;:15}]},&quot;scaleDown&quot;:{&quot;stabilizationWindowSeconds&quot;:&quot;300&quot;,&quot;selectPolicy&quot;:&quot;Max&quot;,&quot;policies&quot;:[{&quot;type&quot;:&quot;Percent&quot;,&quot;value&quot;:200,&quot;periodSeconds&quot;:15}]}}</p>
@@ -23,10 +23,12 @@ public class UpdateApplicationScalingRuleRequest extends TeaModel {
     public String scalingBehaviour;
 
     /**
-     * <p>Specifies whether to enable the auto scaling policy. Valid values:</p>
+     * <p>The status of the Auto Scaling policy.</p>
      * <ul>
-     * <li><strong>true</strong>: enables the auto scaling policy.</li>
-     * <li><strong>false</strong>: disables the auto scaling policy.</li>
+     * <li><p><strong>true</strong>: enabled</p>
+     * </li>
+     * <li><p><strong>false</strong>: disabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +47,7 @@ public class UpdateApplicationScalingRuleRequest extends TeaModel {
     public String scalingRuleMetric;
 
     /**
-     * <p>The name of the auto scaling policy.</p>
+     * <p>The name of the Auto Scaling policy.</p>
      * 
      * <strong>example:</strong>
      * <p>cpu-trigger</p>
@@ -63,7 +65,7 @@ public class UpdateApplicationScalingRuleRequest extends TeaModel {
     public String scalingRuleTimer;
 
     /**
-     * <p>The trigger policy for the auto scaling policy. Set this parameter in the JSON format by using the ScalingRuleTriggerDTO class. For more information, see Additional description of request parameters.</p>
+     * <p>The trigger policy, which is a JSON string of a ScalingRuleTriggerDTO object. For more information about the format, see the Additional information about request parameters section.</p>
      * 
      * <strong>example:</strong>
      * <p>ScalingRuleTriggerDTO{......}</p>
@@ -72,9 +74,9 @@ public class UpdateApplicationScalingRuleRequest extends TeaModel {
     public String scalingRuleTrigger;
 
     /**
-     * <p>The type of the auto scaling policy.</p>
+     * <p>The type of the Auto Scaling policy. Only the following type is supported:</p>
      * <ul>
-     * <li>Set the value to trigger.</li>
+     * <li>trigger: a trigger-based policy.</li>
      * </ul>
      * 
      * <strong>example:</strong>

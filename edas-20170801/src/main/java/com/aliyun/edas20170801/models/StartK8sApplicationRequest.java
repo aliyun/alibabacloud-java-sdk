@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartK8sApplicationRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can query the application ID by calling the ListApplication operation. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
+     * <p>The ID of the application. You can call the ListApplication operation to obtain the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class StartK8sApplicationRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The number of instances on which you want to start the application.</p>
+     * <p>The number of application instances to start.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -24,7 +24,7 @@ public class StartK8sApplicationRequest extends TeaModel {
     public Integer replicas;
 
     /**
-     * <p>The timeout period of the change process. Valid values: 1 to 1800. Default value: 600. Unit: seconds.</p>
+     * <p>The timeout period for the change process, in seconds. Valid values: 1 to 1800. Default value: 600.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>

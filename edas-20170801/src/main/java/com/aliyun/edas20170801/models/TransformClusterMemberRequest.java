@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class TransformClusterMemberRequest extends TeaModel {
     /**
-     * <p>The ID of the instance that you want to import or migrate. Separate multiple IDs with commas (,).</p>
+     * <p>The IDs of the ECS instances. Separate multiple IDs with a comma (,).</p>
      * <ul>
-     * <li>An instance may not belong to a cluster, but an instance can belong to only one cluster at most.</li>
-     * <li>The ECS instances and the destination cluster must be in the same virtual private cloud (VPC).</li>
+     * <li><p>The instances must be in the same VPC as the target cluster.</p>
+     * </li>
+     * <li><p>An instance can belong to only one cluster at a time.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +21,7 @@ public class TransformClusterMemberRequest extends TeaModel {
     public String instanceIds;
 
     /**
-     * <p>The logon password of the ECS instance that you want to import or migrate to the cluster.</p>
+     * <p>The logon password to set for the instances.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,7 +31,7 @@ public class TransformClusterMemberRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The ID of the destination cluster.</p>
+     * <p>The ID of the target cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -27,8 +27,10 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The type of the resource. Valid values:</p>
      * <ul>
-     * <li><strong>application</strong>: Enterprise Distributed Application Service (EDAS) application</li>
-     * <li><strong>cluster</strong>: EDAS cluster</li>
+     * <li><p><strong>application</strong>: Enterprise Distributed Application Service (EDAS) application</p>
+     * </li>
+     * <li><p><strong>cluster</strong>: EDAS cluster</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -41,10 +43,14 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The key-value pairs. When you set this parameter, take note of the following limits:</p>
      * <ul>
-     * <li>You can add up to 20 tags to a resource.</li>
-     * <li>The tag key cannot start with <strong>aliyun</strong> or <strong>acs:</strong>. It cannot contain <strong>http://</strong> or <strong>https://</strong>.</li>
-     * <li>The tag key or tag value can be up to 128 characters in length, and can contain letters, digits, hyphens (-), commas (,), asterisks (\*), forward slashes (/), question marks (?), and colons (:).</li>
-     * <li>Set this parameter to a JSON array.</li>
+     * <li><p>You can add up to 20 tags to a resource.</p>
+     * </li>
+     * <li><p>The tag key cannot start with <strong>aliyun</strong> or <strong>acs:</strong>. It cannot contain <strong>http\://</strong> or <strong>https\://</strong>.</p>
+     * </li>
+     * <li><p>The tag key or tag value can be up to 128 characters in length, and can contain letters, digits, hyphens (-), commas (,), asterisks (\*), forward slashes (/), question marks (?), and colons (:).</p>
+     * </li>
+     * <li><p>Set this parameter to a JSON array.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -17,8 +17,10 @@ public class DescribeAppInstanceListRequest extends TeaModel {
     /**
      * <p>Specifies whether to return the information about the node in which the pod resides.</p>
      * <ul>
-     * <li><code>true</code>: returns the information about the node in which the pod resides</li>
-     * <li><code>false</code>: does not return the information about the node in which the pod resides</li>
+     * <li><p><code>true</code>: returns the information about the node in which the pod resides</p>
+     * </li>
+     * <li><p><code>false</code>: does not return the information about the node in which the pod resides</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

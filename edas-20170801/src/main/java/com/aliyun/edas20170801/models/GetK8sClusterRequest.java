@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetK8sClusterRequest extends TeaModel {
     /**
-     * <p>The type of the Kubernetes cluster. Valid values:</p>
+     * <p>The type of the Kubernetes cluster:</p>
      * <ul>
-     * <li>5: ACK cluster</li>
-     * <li>7: self-managed Kubernetes cluster</li>
+     * <li><p>5: an ACK cluster.</p>
+     * </li>
+     * <li><p>7: a self-managed Kubernetes cluster.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class GetK8sClusterRequest extends TeaModel {
     public Integer clusterType;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The number of the page to return for a paged query. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +29,7 @@ public class GetK8sClusterRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 1000.</p>
+     * <p>The number of entries to return on each page for a paged query. The default value is 1000.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -36,7 +38,7 @@ public class GetK8sClusterRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,10 +48,12 @@ public class GetK8sClusterRequest extends TeaModel {
     public String regionTag;
 
     /**
-     * <p>The subtype of the cluster. Valid values:</p>
+     * <p>The subtype of the cluster:</p>
      * <ul>
-     * <li>Ask: Serverless Kubernetes cluster</li>
-     * <li>ManagedKubernetes: ACK cluster</li>
+     * <li><p>Ask: an ASK cluster.</p>
+     * </li>
+     * <li><p>ManagedKubernetes: an ACK cluster.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

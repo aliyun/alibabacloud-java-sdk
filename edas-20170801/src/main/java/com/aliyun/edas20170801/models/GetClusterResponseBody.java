@@ -87,11 +87,16 @@ public class GetClusterResponseBody extends TeaModel {
         /**
          * <p>The import status of the cluster. Valid values:</p>
          * <ul>
-         * <li>1: The cluster is imported.</li>
-         * <li>2: The cluster fails to be imported.</li>
-         * <li>3: The cluster is being imported.</li>
-         * <li>4: The cluster is deleted.</li>
-         * <li>0: The cluster is not imported.</li>
+         * <li><p>1: The cluster is imported.</p>
+         * </li>
+         * <li><p>2: The cluster fails to be imported.</p>
+         * </li>
+         * <li><p>3: The cluster is being imported.</p>
+         * </li>
+         * <li><p>4: The cluster is deleted.</p>
+         * </li>
+         * <li><p>0: The cluster is not imported.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -112,12 +117,18 @@ public class GetClusterResponseBody extends TeaModel {
         /**
          * <p>The type of the cluster. Valid values:</p>
          * <ul>
-         * <li>0: regular Docker cluster</li>
-         * <li>1: Swarm cluster</li>
-         * <li>2: Elastic Compute Service (ECS) cluster</li>
-         * <li>3: self-managed Kubernetes cluster in EDAS</li>
-         * <li>4: cluster in which Pandora automatically registers applications</li>
-         * <li>5: ACK cluster</li>
+         * <li><p>0: regular Docker cluster</p>
+         * </li>
+         * <li><p>1: Swarm cluster</p>
+         * </li>
+         * <li><p>2: Elastic Compute Service (ECS) cluster</p>
+         * </li>
+         * <li><p>3: self-managed Kubernetes cluster in EDAS</p>
+         * </li>
+         * <li><p>4: cluster in which Pandora automatically registers applications</p>
+         * </li>
+         * <li><p>5: ACK cluster</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -201,8 +212,10 @@ public class GetClusterResponseBody extends TeaModel {
         /**
          * <p>The network type of the cluster. Valid values:</p>
          * <ul>
-         * <li>1: classic network</li>
-         * <li>2: virtual private cloud (VPC)</li>
+         * <li><p>1: classic network</p>
+         * </li>
+         * <li><p>2: virtual private cloud (VPC)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,10 +236,14 @@ public class GetClusterResponseBody extends TeaModel {
         /**
          * <p>The overcommit ratio supported by a Docker cluster. Valid values:</p>
          * <ul>
-         * <li>1: 1:1, which means that resources are not overcommitted.</li>
-         * <li>2: 1:2, which means that resources are overcommitted by 1:2.</li>
-         * <li>4: 1:4, which means that resources are overcommitted by 1:4.</li>
-         * <li>8: 1:8, which means that resources are overcommitted by 1:8.</li>
+         * <li><p>1: 1:1, which means that resources are not overcommitted.</p>
+         * </li>
+         * <li><p>2: 1:2, which means that resources are overcommitted by 1:2.</p>
+         * </li>
+         * <li><p>4: 1:4, which means that resources are overcommitted by 1:4.</p>
+         * </li>
+         * <li><p>8: 1:8, which means that resources are overcommitted by 1:8.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -35,8 +35,10 @@ public class QuerySlsLogStoreListRequest extends TeaModel {
     /**
      * <p>The type of data that is collected by Log Service. Valid values:</p>
      * <ul>
-     * <li>file: the file type</li>
-     * <li>stdout: the standard output type</li>
+     * <li><p>file: the file type</p>
+     * </li>
+     * <li><p>stdout: the standard output type</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

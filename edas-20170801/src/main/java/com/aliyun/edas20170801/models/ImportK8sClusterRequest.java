@@ -17,8 +17,10 @@ public class ImportK8sClusterRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the integration with Alibaba Cloud Service Mesh (ASM). Valid values:</p>
      * <ul>
-     * <li>true: Enables the integration with ASM.</li>
-     * <li>false: Disables the integration with ASM.</li>
+     * <li><p>true: Enables the integration with ASM.</p>
+     * </li>
+     * <li><p>false: Disables the integration with ASM.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

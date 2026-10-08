@@ -7,7 +7,7 @@ public class ListScaleOutEcuRequest extends TeaModel {
     /**
      * <p>The ID of the application. Specify this parameter if you want to query the available ECUs in the cluster where the application is deployed.</p>
      * <blockquote>
-     * <p> Specify at least one of the ClusterId and AppId parameters as the query parameter.</p>
+     * <p>Specify at least one of the ClusterId and AppId parameters as the query parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -58,8 +58,10 @@ public class ListScaleOutEcuRequest extends TeaModel {
     /**
      * <p>The ID of the namespace.</p>
      * <ul>
-     * <li>The ID of a custom namespace is in the <code>region ID:namespace identifier</code> format. Example: cn-beijing:test.</li>
-     * <li>The ID of the default namespace is in the <code>region ID</code> format. Example: cn-beijing.</li>
+     * <li><p>The ID of a custom namespace is in the <code>region ID:namespace identifier</code> format. Example: cn-beijing:test.</p>
+     * </li>
+     * <li><p>The ID of the default namespace is in the <code>region ID</code> format. Example: cn-beijing.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

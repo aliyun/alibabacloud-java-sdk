@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MigrateEcuResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The status code of the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,10 +14,12 @@ public class MigrateEcuResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>The data returned.</p>
      * <ul>
-     * <li>true: The request is successful.</li>
-     * <li>false: The request fails.</li>
+     * <li><p>true: The operation was successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class MigrateEcuResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The additional information that is returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -36,7 +38,7 @@ public class MigrateEcuResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>04B0ABAF-95F2-42B6-A7B1****</p>

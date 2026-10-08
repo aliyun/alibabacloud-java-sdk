@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetApplicationResponseBody extends TeaModel {
     /**
-     * <p>The details of the application.</p>
+     * <p>The application information.</p>
      */
     @NameInMap("Application")
     public GetApplicationResponseBodyApplication application;
 
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class GetApplicationResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The additional information that is returned.</p>
+     * <p>The additional information.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class GetApplicationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F8DFGED-K98***************</p>
@@ -76,7 +76,7 @@ public class GetApplicationResponseBody extends TeaModel {
 
     public static class GetApplicationResponseBodyApplication extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cfac****-847e-4325-ad56-b5c2bc54****</p>
@@ -85,14 +85,18 @@ public class GetApplicationResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The current status of the Kubernetes application, which is used to determine whether the application is in a stable state. If the application is in an unstable state, related configuration operations are prohibited. Valid values:</p>
+         * <p>The current phase of the Kubernetes application. This helps determine if the application is stable. Configuration operations are prohibited when the application is in an unstable state.</p>
          * <ul>
-         * <li>ready: The application is in the ready state and can be changed.</li>
-         * <li>progressive: The application is being changed.</li>
-         * <li>pending: The application change is blocked.</li>
-         * <li>failed: The application fails to be changed.</li>
+         * <li><p>ready: The application is ready and can be changed.</p>
+         * </li>
+         * <li><p>progressing: The application is being changed.</p>
+         * </li>
+         * <li><p>pending: The application change is blocked.</p>
+         * </li>
+         * <li><p>failed: The application change failed.</p>
+         * </li>
          * </ul>
-         * <p>In these states, ready is a stable state and other states are unstable.</p>
+         * <p>The ready phase is stable. Other phases are unstable.</p>
          * 
          * <strong>example:</strong>
          * <p>ready</p>
@@ -101,11 +105,14 @@ public class GetApplicationResponseBody extends TeaModel {
         public String appPhase;
 
         /**
-         * <p>The deployment type of the application. Valid values:</p>
+         * <p>The deployment type of the application:</p>
          * <ul>
-         * <li>War: The application is deployed by using a WAR package.</li>
-         * <li>FatJar: The application is deployed by using a JAR package.</li>
-         * <li>Empty: The application is not deployed.</li>
+         * <li><p>War: The application is deployed from a WAR package.</p>
+         * </li>
+         * <li><p>FatJar: The application is deployed from a JAR package.</p>
+         * </li>
+         * <li><p>Empty: The application is not deployed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,7 +122,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String applicationType;
 
         /**
-         * <p>The build package number of Enterprise Distributed Application Service (EDAS) Container.</p>
+         * <p>The ID of the container version.</p>
          * 
          * <strong>example:</strong>
          * <p>59</p>
@@ -124,7 +131,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public Long buildPackageId;
 
         /**
-         * <p>The ID of the ECS cluster in which the application is deployed.</p>
+         * <p>The ID of the ECS cluster where the application is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>5ffc5895-<strong><strong>-b03a-c223c6c3</strong></strong></p>
@@ -133,13 +140,18 @@ public class GetApplicationResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The type of the cluster. Valid values:</p>
+         * <p>The type of the application cluster:</p>
          * <ul>
-         * <li>0: regular Docker cluster</li>
-         * <li>1: Swarm cluster</li>
-         * <li>2: ECS cluster</li>
-         * <li>3: Kubernetes cluster</li>
-         * <li>4: cluster in which Pandora automatically registers applications</li>
+         * <li><p>0: A regular Docker cluster.</p>
+         * </li>
+         * <li><p>1: A Swarm cluster.</p>
+         * </li>
+         * <li><p>2: An ECS cluster.</p>
+         * </li>
+         * <li><p>3: A Kubernetes cluster.</p>
+         * </li>
+         * <li><p>4: A Pandora application cluster that supports automatic registration.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,7 +170,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The time when the application was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The UNIX timestamp when the application was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1610550324226</p>
@@ -176,10 +188,12 @@ public class GetApplicationResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the application is a Docker application. Valid values:</p>
+         * <p>Indicates whether the application is a Docker application:</p>
          * <ul>
-         * <li>false: The application is not a Docker application.</li>
-         * <li>true: The application is a Docker application.</li>
+         * <li><p>false: The application is not a Docker application.</p>
+         * </li>
+         * <li><p>true: The application is a Docker application.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,21 +203,23 @@ public class GetApplicationResponseBody extends TeaModel {
         public Boolean dockerize;
 
         /**
-         * <p>The email address of the account.</p>
+         * <p>The email address.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="mailto:xxxx@gmail.com">xxxx@gmail.com</a></p>
+         * <p>****@***.com</p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
-         * <p>Indicates whether the port health check is enabled. Valid values:</p>
+         * <p>Indicates whether the port health check is enabled:</p>
          * <ul>
-         * <li>true: The port health check is enabled.</li>
-         * <li>false: The port health check is disabled.</li>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false: Disabled.</p>
+         * </li>
          * </ul>
-         * <p>If the port health check is enabled, EDAS checks whether a port exists during application startup. If the port exists, the application is considered to have started.</p>
+         * <p>If enabled, EDAS checks if the port is in use during application startup. If the port is in use, the application is considered started.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -212,12 +228,14 @@ public class GetApplicationResponseBody extends TeaModel {
         public Boolean enablePortCheck;
 
         /**
-         * <p>Indicates whether the URL health check is enabled. Valid values:</p>
+         * <p>Indicates whether the URL health check is enabled:</p>
          * <ul>
-         * <li>true: The URL health check is enabled.</li>
-         * <li>false: The URL health check is disabled.</li>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false: Disabled.</p>
+         * </li>
          * </ul>
-         * <p>If the URL health check is enabled, EDAS attempts to detect the specified URL during application startup. If EDAS detects the specified URL, the application is considered to have started.</p>
+         * <p>If enabled, EDAS probes the specified URL during application startup. If the URL is accessible, the application is considered started.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -226,7 +244,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public Boolean enableUrlCheck;
 
         /**
-         * <p>The ID of the Internet-facing SLB instance that is bound to the application.</p>
+         * <p>The ID of the public-facing SLB instance attached to the application.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-bp1vceck3s3b9xs6x****</p>
@@ -235,7 +253,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String extSlbId;
 
         /**
-         * <p>The IP address of the Internet-facing Server Load Balancer (SLB) instance that is bound to the application.</p>
+         * <p>The public IP address of the SLB instance attached to the application.</p>
          * 
          * <strong>example:</strong>
          * <p>47.114.xxx.xx</p>
@@ -244,7 +262,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String extSlbIp;
 
         /**
-         * <p>The name of the Internet-facing SLB instance that is bound to the application.</p>
+         * <p>The name of the public-facing SLB instance attached to the application.</p>
          * 
          * <strong>example:</strong>
          * <p>aa8eee383db084f42aebc4d9f52c****</p>
@@ -252,6 +270,12 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("ExtSlbName")
         public String extSlbName;
 
+        /**
+         * <p>Indicates whether the current user has management permissions on the application. This parameter is available only in RAM authentication mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HaveManageAccess")
         public String haveManageAccess;
 
@@ -265,7 +289,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String healthCheckUrl;
 
         /**
-         * <p>The number of instances deployed with the application.</p>
+         * <p>The number of instances in the application.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -274,7 +298,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public Integer instanceCount;
 
         /**
-         * <p>The memory size of the application instance. Unit: MB.</p>
+         * <p>The memory size for the application instance, in MB.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -301,7 +325,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String nameSpace;
 
         /**
-         * <p>The ID of the user who created the application.</p>
+         * <p>The creator of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>ouou@117274586608****</p>
@@ -319,7 +343,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The ID of the region in which the application is deployed.</p>
+         * <p>The ID of the region where the application is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -327,11 +351,17 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekz****</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The number of running instances for the application.</p>
+         * <p>The number of running application instances.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -340,7 +370,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public Integer runningInstanceCount;
 
         /**
-         * <p>The ID of the internal-facing SLB instance that is bound to the application.</p>
+         * <p>The ID of the internal-facing SLB instance attached to the application.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-bp<strong><strong>ck3s3b9xs6x</strong></strong></p>
@@ -349,7 +379,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String slbId;
 
         /**
-         * <p>The information about the internal-facing SLB instance that is bound to the application.</p>
+         * <p>Information about the internal-facing SLB instance attached to the application.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -358,16 +388,16 @@ public class GetApplicationResponseBody extends TeaModel {
         public String slbInfo;
 
         /**
-         * <p>The IP address of the internal-facing SLB instance that is bound to the application.</p>
+         * <p>The IP address of the internal-facing SLB instance attached to the application.</p>
          * 
          * <strong>example:</strong>
-         * <p>192.168.0.100</p>
+         * <p>192.<em><strong>.</strong></em>.***</p>
          */
         @NameInMap("SlbIp")
         public String slbIp;
 
         /**
-         * <p>The name of the internal-facing SLB instance that is bound to the application.</p>
+         * <p>The name of the internal-facing SLB instance attached to the application.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -376,7 +406,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String slbName;
 
         /**
-         * <p>The port of the internal-facing SLB instance that is bound to the application.</p>
+         * <p>The port of the internal-facing SLB instance attached to the application.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -393,6 +423,12 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The workload type used to create the application. Supported types are Deployment and StatefulSet. This parameter does not apply to ECS applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StatefulSet</p>
+         */
         @NameInMap("WorkloadType")
         public String workloadType;
 

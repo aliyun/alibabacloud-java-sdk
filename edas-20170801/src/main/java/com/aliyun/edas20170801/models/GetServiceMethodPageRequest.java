@@ -61,8 +61,10 @@ public class GetServiceMethodPageRequest extends TeaModel {
     /**
      * <p>The source of the data. Valid values:</p>
      * <ul>
-     * <li>agent: Use this value if you use the service query feature of the latest version to pass the query result.</li>
-     * <li>registry: Use this value if you use the service query feature of the earlier version to pass the query result.</li>
+     * <li><p>agent: Use this value if you use the service query feature of the latest version to pass the query result.</p>
+     * </li>
+     * <li><p>registry: Use this value if you use the service query feature of the earlier version to pass the query result.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -137,9 +139,12 @@ public class GetServiceMethodPageRequest extends TeaModel {
     /**
      * <p>The type of the service. Valid values:</p>
      * <ul>
-     * <li>dubbo: Dubbo service</li>
-     * <li>springCloud: Spring Cloud service</li>
-     * <li>hsf: High-speed Service Framework (HSF) service</li>
+     * <li><p>dubbo: Dubbo service</p>
+     * </li>
+     * <li><p>springCloud: Spring Cloud service</p>
+     * </li>
+     * <li><p>hsf: High-speed Service Framework (HSF) service</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

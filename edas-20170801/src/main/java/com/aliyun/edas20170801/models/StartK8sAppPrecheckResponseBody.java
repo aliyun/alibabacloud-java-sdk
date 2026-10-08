@@ -77,6 +77,9 @@ public class StartK8sAppPrecheckResponseBody extends TeaModel {
     public static class StartK8sAppPrecheckResponseBodyData extends TeaModel {
         /**
          * <p>The jobs and the details about the jobs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cluster health check.</p>
          */
         @NameInMap("Jobs")
         public java.util.List<String> jobs;

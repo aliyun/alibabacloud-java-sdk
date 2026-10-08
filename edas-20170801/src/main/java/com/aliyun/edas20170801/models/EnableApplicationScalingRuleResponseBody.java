@@ -342,8 +342,10 @@ public class EnableApplicationScalingRuleResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the auto scaling policy is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The auto scaling policy is enabled.</li>
-         * <li><strong>false</strong>: The auto scaling policy is disabled.</li>
+         * <li><p><strong>true</strong>: The auto scaling policy is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The auto scaling policy is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

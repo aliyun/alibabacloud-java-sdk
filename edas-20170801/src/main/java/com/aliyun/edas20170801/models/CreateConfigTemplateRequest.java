@@ -25,12 +25,18 @@ public class CreateConfigTemplateRequest extends TeaModel {
     /**
      * <p>The data format of the configuration template. Valid values:</p>
      * <ul>
-     * <li>JSON: JSON format</li>
-     * <li>XML: XML format</li>
-     * <li>YAML: YAML format</li>
-     * <li>Properties: .properties format</li>
-     * <li>KeyValue: key-value pairs</li>
-     * <li>Custom: custom format</li>
+     * <li><p>JSON: JSON format</p>
+     * </li>
+     * <li><p>XML: XML format</p>
+     * </li>
+     * <li><p>YAML: YAML format</p>
+     * </li>
+     * <li><p>Properties: .properties format</p>
+     * </li>
+     * <li><p>KeyValue: key-value pairs</p>
+     * </li>
+     * <li><p>Custom: custom format</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

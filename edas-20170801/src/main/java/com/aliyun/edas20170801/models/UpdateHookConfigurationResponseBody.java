@@ -78,8 +78,10 @@ public class UpdateHookConfigurationResponseBody extends TeaModel {
         /**
          * <p>Indicates whether a mount failure is ignored. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: A mount failure is ignored.</li>
-         * <li><strong>false</strong>: A mount failure is not ignored.</li>
+         * <li><p><strong>true</strong>: A mount failure is ignored.</p>
+         * </li>
+         * <li><p><strong>false</strong>: A mount failure is not ignored.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

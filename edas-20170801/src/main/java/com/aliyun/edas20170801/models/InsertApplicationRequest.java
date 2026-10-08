@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InsertApplicationRequest extends TeaModel {
     /**
-     * <p>The name of the application. The name can contain only digits, letters, hyphens (-), and underscores (_) and must start with a letter. The name can be up to 36 characters in length.</p>
+     * <p>The name of the application. The name can contain only digits, letters, hyphens (-), and underscores (_). It must start with a letter and can be up to 36 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,12 @@ public class InsertApplicationRequest extends TeaModel {
     public String applicationName;
 
     /**
-     * <p>The build package number of EDAS Container. This parameter is required if you create a High-Speed Service Framework (HSF) application. You can query the build package number by using one of the following methods:</p>
+     * <p>The build package number of EDAS-Container. This parameter is required when you create a High-speed Service Framework (HSF) application. You can obtain the build package number in one of the following ways:</p>
      * <ul>
-     * <li>Call the ListBuildPack operation. For more information, see <a href="https://help.aliyun.com/document_detail/149391.html">ListBuildPack</a>.</li>
-     * <li>Obtain the value in the <strong>Build package number</strong> column of the <a href="https://help.aliyun.com/document_detail/92614.html">Release notes for EDAS Container</a> topic.</li>
+     * <li><p>Call the ListBuildPack operation. For more information, see <a href="https://help.aliyun.com/document_detail/149391.html">ListBuildPack</a>.</p>
+     * </li>
+     * <li><p>Obtain the build package number from the <strong>Build Package Number</strong> column in the <a href="https://help.aliyun.com/document_detail/92614.html">Container versions</a> table.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +30,7 @@ public class InsertApplicationRequest extends TeaModel {
     public Integer buildPackId;
 
     /**
-     * <p>The ID of the ECS cluster in which you want to create the application. If you specify an ID, the application is created in the specified ECS cluster. If you leave this parameter empty, the application is created in the default cluster. We recommend that you specify this parameter.</p>
+     * <p>The ID of the ECS cluster. Specify this parameter to create the application in a specific ECS cluster. If you leave this parameter empty, the application is created in the default cluster. We recommend that you specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>13136119-f384-4f50-b76e-xxxxxxxxxxx</p>
@@ -37,16 +39,20 @@ public class InsertApplicationRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The ID of the application component. You can call the ListComponents operation to query the component IDs. For more information, see <a href="https://help.aliyun.com/document_detail/97502.html">ListComponents</a>.</p>
-     * <p>This parameter is required if the application runs in Apache Tomcat or in a standard Java application runtime environment. The Apache Tomcat application runtime environment is applicable to Dubbo applications that are deployed by using WAR packages. A standard Java application runtime environment is applicable to Spring Boot or Spring Cloud applications that are deployed by using JAR packages.</p>
-     * <p>Valid values for common application components:</p>
+     * <p>The ID of the application component. You can call the ListComponents operation to query the component ID. For more information, see <a href="https://help.aliyun.com/document_detail/97502.html">ListComponents</a>.</p>
+     * <p>This parameter is required if the application runs in an Apache Tomcat container (for Dubbo applications that are deployed in a WAR package) or a standard Java application runtime environment (for Spring Boot or Spring Cloud applications that are deployed in a JAR package).</p>
+     * <p>The following application component IDs are commonly used:</p>
      * <ul>
-     * <li>4: Apache Tomcat 7.0.91</li>
-     * <li>7: Apache Tomcat 8.5.42</li>
-     * <li>5: OpenJDK 1.8.x</li>
-     * <li>6: OpenJDK 1.7.x</li>
+     * <li><p>4: Apache Tomcat 7.0.91</p>
+     * </li>
+     * <li><p>7: Apache Tomcat 8.5.42</p>
+     * </li>
+     * <li><p>5: OpenJDK 1.8.x</p>
+     * </li>
+     * <li><p>6: OpenJDK 1.7.x</p>
+     * </li>
      * </ul>
-     * <p>This parameter is available only for Java SDK 2.57.3 or later, or Python SDK 2.57.3 or later. Assume that you use an SDK that is not provided by EDAS, for example, aliyun-python-sdk-core, aliyun-java-sdk-core, and Alibaba Cloud CLI. In this case, you can directly specify this parameter.</p>
+     * <p>To set this parameter, you must update the Java or Python software development kit (SDK) to version 2.57.3 or later. If you do not use an EDAS SDK, such as aliyun-python-sdk-core, aliyun-java-sdk-core, or Alibaba Cloud CLI, you can set this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -55,7 +61,7 @@ public class InsertApplicationRequest extends TeaModel {
     public String componentIds;
 
     /**
-     * <p>The number of CPU cores that can be used by the application container in a Swarm cluster. \<em>\<em>This parameter is deprecated.\</em>\</em></p>
+     * <p>\<em>\</em>(Deprecated)\<em>\</em> The number of CPU cores for the application container in a Swarm cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -73,7 +79,7 @@ public class InsertApplicationRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The value of <code>ecu_id</code> of the ECS instance to be added during scale-out. The ECU ID is the unique identity for an ECS instance that is imported to EDAS. Separate multiple values of <code>ecu_id</code> with commas (,). You can call the ListScaleOutEcu operation to query the value of <code>ecu_id</code>. For more information, see <a href="https://help.aliyun.com/document_detail/149371.html">ListScaleOutEcu</a>.</p>
+     * <p>The \<code>ecu_id\\</code> of the ECS instance to which you want to scale out the application. The \<code>ecu_id\\</code> is the unique ID of an ECS instance that is imported to EDAS. To specify multiple \<code>ecu_id\\</code>s, separate them with commas (,). You can call the ListScaleOutEcu operation to query the \<code>ecu_id\\</code>. For more information, see <a href="https://help.aliyun.com/document_detail/149371.html">ListScaleOutEcu</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>07bd417a-b863-477d-<strong><strong>-</strong></strong>********</p>
@@ -84,8 +90,10 @@ public class InsertApplicationRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the port health check. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enable the port health check.</li>
-     * <li><strong>false</strong>: does not enable the port health check.</li>
+     * <li><p><strong>true</strong>: Enabled</p>
+     * </li>
+     * <li><p><strong>false</strong>: Disabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -95,10 +103,12 @@ public class InsertApplicationRequest extends TeaModel {
     public Boolean enablePortCheck;
 
     /**
-     * <p>Specifies whether to enable the URL health check. Valid values:</p>
+     * <p>Specifies whether to enable the health check URL. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables the URL health check.</li>
-     * <li><strong>false</strong>: does not enable the URL health check.</li>
+     * <li><p><strong>true</strong>: Enabled</p>
+     * </li>
+     * <li><p><strong>false</strong>: Disabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -117,7 +127,8 @@ public class InsertApplicationRequest extends TeaModel {
     public String healthCheckUrl;
 
     /**
-     * <p>The script to mount. Set the value in the JSON format. Example: <code>[{&quot;ignoreFail&quot;:false,&quot;name&quot;:&quot;postprepareInstanceEnvironmentOnScaleOut&quot;,&quot;script&quot;:&quot;ls&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;postdeleteInstanceDataOnScaleIn&quot;,&quot;script&quot;:&quot;&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;prestartInstance&quot;,&quot;script&quot;:&quot;&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;poststartInstance&quot;,&quot;script&quot;:&quot;&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;prestopInstance&quot;,&quot;script&quot;:&quot;&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;poststopInstance&quot;,&quot;script&quot;:&quot;&quot;}]</code></p>
+     * <p>The configuration of the mounted script. The value is a JSON string. Example:
+     * <code>[{&quot;ignoreFail&quot;:false,&quot;name&quot;:&quot;postprepareInstanceEnvironmentOnScaleOut&quot;,&quot;script&quot;:&quot;ls&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;postdeleteInstanceDataOnScaleIn&quot;,&quot;script&quot;:&quot;&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;prestartInstance&quot;,&quot;script&quot;:&quot;&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;poststartInstance&quot;,&quot;script&quot;:&quot;&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;prestopInstance&quot;,&quot;script&quot;:&quot;&quot;},{&quot;ignoreFail&quot;:true,&quot;name&quot;:&quot;poststopInstance&quot;,&quot;script&quot;:&quot;&quot;}]</code></p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;ignoreFail&quot;:false,&quot;name&quot;:&quot;postprepareInstanceEnvironmentOnScaleOut&quot;,&quot;script&quot;:&quot;ls&quot;}]</p>
@@ -126,7 +137,7 @@ public class InsertApplicationRequest extends TeaModel {
     public String hooks;
 
     /**
-     * <p>The version of the Java Development Kit (JDK) used to deploy the application. **This parameter is deprecated.</p>
+     * <p><strong>(Deprecated)</strong> The version of the Java Development Kit (JDK) that the application uses.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -144,10 +155,12 @@ public class InsertApplicationRequest extends TeaModel {
     public String jvmOptions;
 
     /**
-     * <p>The ID of the microservices namespace. To query the ID of a microservices namespace, you can choose <strong>Resource Management</strong> &gt; <strong>Microservice Namespaces</strong> in the left-side navigation pane of the EDAS console or call the ListUserDefineRegion operation. For more information, see <a href="https://help.aliyun.com/document_detail/149377.html">ListUserDefineRegion</a>.</p>
+     * <p>The ID of the microservices namespace. In the EDAS console, choose <strong>Resource Management</strong> &gt; <strong>Microservices Namespace</strong> in the navigation pane on the left to view the ID of the microservices namespace. You can also call the ListUserDefineRegion operation to query the ID. For more information, see <a href="https://help.aliyun.com/document_detail/149377.html">ListUserDefineRegion</a>.</p>
      * <ul>
-     * <li>This parameter is required if the cluster you specify is not deployed in the default microservices namespace. Otherwise, the message <code>application regionId is different with cluster regionId!</code> appears.</li>
-     * <li>If the cluster you specify is deployed in the default microservices namespace, you do not need to specify this parameter. Set this parameter to the ID of the microservices namespace in which the cluster you specify is deployed.</li>
+     * <li><p>If the specified cluster is not in the default microservices namespace, you must specify this parameter. Otherwise, the \<code>application regionId is different with cluster regionId!\\</code> error is reported.</p>
+     * </li>
+     * <li><p>If the cluster is in the default microservices namespace, you do not need to specify this parameter. The microservices namespace of the application must be the same as the microservices namespace of the specified cluster.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -166,7 +179,7 @@ public class InsertApplicationRequest extends TeaModel {
     public Integer maxHeapSize;
 
     /**
-     * <p>The size of the permanent generation heap memory. Unit: MB.</p>
+     * <p>The size of the permanent generation memory. Unit: MB.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -175,7 +188,7 @@ public class InsertApplicationRequest extends TeaModel {
     public Integer maxPermSize;
 
     /**
-     * <p>The memory size that can be used by the application container in a Swarm cluster. \<em>\<em>This parameter is deprecated.\</em>\</em></p>
+     * <p>\<em>\</em>(Deprecated)\<em>\</em> The memory size for the application container in a Swarm cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>2048</p>
@@ -193,7 +206,7 @@ public class InsertApplicationRequest extends TeaModel {
     public Integer minHeapSize;
 
     /**
-     * <p>The type of the application deployment package. Valid values: war and jar.</p>
+     * <p>The format of the application deployment package. Valid values: war and jar.</p>
      * 
      * <strong>example:</strong>
      * <p>war</p>
@@ -202,7 +215,7 @@ public class InsertApplicationRequest extends TeaModel {
     public String packageType;
 
     /**
-     * <p>The reserved port for the application. This parameter is deprecated.</p>
+     * <p>\<em>\</em>(Deprecated)\<em>\</em> The reserved port of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>8090</p>
@@ -220,7 +233,7 @@ public class InsertApplicationRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The version of Apache Tomcat. **This parameter is deprecated.</p>
+     * <p><strong>(Deprecated)</strong> The version of Apache Tomcat.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>

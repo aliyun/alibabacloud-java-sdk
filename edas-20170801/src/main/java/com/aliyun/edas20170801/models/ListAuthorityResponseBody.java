@@ -4,9 +4,6 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListAuthorityResponseBody extends TeaModel {
-    /**
-     * <p>The permissions.</p>
-     */
     @NameInMap("AuthorityList")
     public ListAuthorityResponseBodyAuthorityList authorityList;
 
@@ -75,39 +72,15 @@ public class ListAuthorityResponseBody extends TeaModel {
     }
 
     public static class ListAuthorityResponseBodyAuthorityListAuthorityActionListAction extends TeaModel {
-        /**
-         * <p>The code of the permission.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The description of the permission.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Create an application</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the permission group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The name of the permission.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Create an application</p>
-         */
         @NameInMap("Name")
         public String name;
 
@@ -170,36 +143,15 @@ public class ListAuthorityResponseBody extends TeaModel {
     }
 
     public static class ListAuthorityResponseBodyAuthorityListAuthority extends TeaModel {
-        /**
-         * <p>The set of permissions.</p>
-         */
         @NameInMap("ActionList")
         public ListAuthorityResponseBodyAuthorityListAuthorityActionList actionList;
 
-        /**
-         * <p>The description of the permission group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Operations on applications</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the permission group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The name of the permission group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Application management</p>
-         */
         @NameInMap("Name")
         public String name;
 

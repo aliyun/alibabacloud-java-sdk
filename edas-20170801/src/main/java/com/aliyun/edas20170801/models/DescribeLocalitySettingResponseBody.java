@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeLocalitySettingResponseBody extends TeaModel {
     /**
+     * <p>The status code. A value of 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>This parameter is not in use.</p>
+     */
     @NameInMap("Data")
     public DescribeLocalitySettingResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class DescribeLocalitySettingResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class DescribeLocalitySettingResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1053-08e4-47a5-b2ab-5c0323de****</p>
      */
@@ -36,6 +47,14 @@ public class DescribeLocalitySettingResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The result of the request.</p>
+     * <ul>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -97,6 +116,8 @@ public class DescribeLocalitySettingResponseBody extends TeaModel {
 
     public static class DescribeLocalitySettingResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the feature is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -104,6 +125,8 @@ public class DescribeLocalitySettingResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p>The threshold.</p>
+         * 
          * <strong>example:</strong>
          * <p>15</p>
          */

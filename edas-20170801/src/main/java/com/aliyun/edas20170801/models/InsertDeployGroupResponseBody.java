@@ -87,8 +87,10 @@ public class InsertDeployGroupResponseBody extends TeaModel {
         /**
          * <p>The version of the deployment package for the application.</p>
          * <ul>
-         * <li>If the application is deployed, a string of random numbers is returned.</li>
-         * <li>If the application is not deployed, the return value is empty.</li>
+         * <li><p>If the application is deployed, a string of random numbers is returned.</p>
+         * </li>
+         * <li><p>If the application is not deployed, the return value is empty.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -127,9 +129,12 @@ public class InsertDeployGroupResponseBody extends TeaModel {
         /**
          * <p>The type of the instance group. Valid values:</p>
          * <ul>
-         * <li>0: the default group.</li>
-         * <li>1: a group for which canary traffic management is not enabled.</li>
-         * <li>2: a group for which canary traffic management is enabled.</li>
+         * <li><p>0: the default group.</p>
+         * </li>
+         * <li><p>1: a group for which canary traffic management is not enabled.</p>
+         * </li>
+         * <li><p>2: a group for which canary traffic management is enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -150,8 +155,10 @@ public class InsertDeployGroupResponseBody extends TeaModel {
         /**
          * <p>The version of the deployment package that was used to deploy an application in the instance group.</p>
          * <ul>
-         * <li>If an application is deployed in the instance group, a string of random numbers is returned.</li>
-         * <li>If no application is deployed in the instance group, the return value is empty.</li>
+         * <li><p>If an application is deployed in the instance group, a string of random numbers is returned.</p>
+         * </li>
+         * <li><p>If no application is deployed in the instance group, the return value is empty.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

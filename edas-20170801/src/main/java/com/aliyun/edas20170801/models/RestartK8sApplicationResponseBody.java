@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RestartK8sApplicationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the change process.</p>
+     * <p>The ID of the change process for this operation.</p>
      * 
      * <strong>example:</strong>
      * <p>*********-ed2ae98de18d</p>
@@ -14,7 +14,7 @@ public class RestartK8sApplicationResponseBody extends TeaModel {
     public String changeOrderId;
 
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The status of the API call or a POP error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class RestartK8sApplicationResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The additional information that is returned.</p>
+     * <p>Additional information.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

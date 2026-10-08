@@ -22,9 +22,6 @@ public class QueryMigrateRegionListResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The namespaces.</p>
-     */
     @NameInMap("RegionEntityList")
     public QueryMigrateRegionListResponseBodyRegionEntityList regionEntityList;
 
@@ -75,21 +72,9 @@ public class QueryMigrateRegionListResponseBody extends TeaModel {
     }
 
     public static class QueryMigrateRegionListResponseBodyRegionEntityListRegionEntity extends TeaModel {
-        /**
-         * <p>The name of the namespace.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Beta</p>
-         */
         @NameInMap("RegionName")
         public String regionName;
 
-        /**
-         * <p>The ID of the namespace.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-beijing:beta</p>
-         */
         @NameInMap("RegionNo")
         public String regionNo;
 

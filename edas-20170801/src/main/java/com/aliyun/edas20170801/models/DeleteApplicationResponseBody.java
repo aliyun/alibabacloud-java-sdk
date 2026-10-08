@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteApplicationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the change process.</p>
+     * <p>The ID of the change flow.</p>
      * 
      * <strong>example:</strong>
      * <p>0b8e3c0b-5818-430*************</p>
@@ -14,7 +14,7 @@ public class DeleteApplicationResponseBody extends TeaModel {
     public String changeOrderId;
 
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The status of the call or a POP error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DeleteApplicationResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The additional information that is returned.</p>
+     * <p>Additional information.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

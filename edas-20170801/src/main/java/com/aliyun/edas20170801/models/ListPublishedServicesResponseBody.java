@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPublishedServicesResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ListPublishedServicesResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The message that is returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -22,14 +22,11 @@ public class ListPublishedServicesResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The published services.</p>
-     */
     @NameInMap("PublishedServicesList")
     public ListPublishedServicesResponseBodyPublishedServicesList publishedServicesList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1D6FC-4307-4583-BA6F-215F3857E****</p>
@@ -113,34 +110,12 @@ public class ListPublishedServicesResponseBody extends TeaModel {
     }
 
     public static class ListPublishedServicesResponseBodyPublishedServicesListListPublishedServices extends TeaModel {
-        /**
-         * <p>The ID of the application.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ECD1D6FC-4307-4583-BA6F-215F3857E****</p>
-         */
         @NameInMap("AppId")
         public String appId;
 
-        /**
-         * <p>Indicates whether the application runs in a Docker container. Valid values:</p>
-         * <ul>
-         * <li>true: The application runs in a Docker container.</li>
-         * <li>false: The application does not run in a Docker container.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("DockerApplication")
         public Boolean dockerApplication;
 
-        /**
-         * <p>A reserved parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
-         */
         @NameInMap("Group2Ip")
         public String group2Ip;
 
@@ -150,30 +125,12 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         @NameInMap("Ips")
         public ListPublishedServicesResponseBodyPublishedServicesListListPublishedServicesIps ips;
 
-        /**
-         * <p>The name of the published service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>providers:com.****</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The type of the published service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>RESTful</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The version of the published services.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>--</p>
-         */
         @NameInMap("Version")
         public String version;
 

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListSlbRequest extends TeaModel {
     /**
-     * <p>The type of the IP addresses. Valid values:</p>
+     * <p>The address type. Valid values:</p>
      * <ul>
-     * <li>Internet: Users can connect to the SLB instance over the Internet.</li>
-     * <li>Intranet: Users can connect to the SLB instance over the internal network.</li>
+     * <li>Internet: public address.</li>
+     * <li>Intranet: private network address.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class ListSlbRequest extends TeaModel {
     public String addressType;
 
     /**
-     * <p>The type of the SLB instance. Valid values:</p>
+     * <p>The SLB type. Valid values:</p>
      * <ul>
-     * <li>clb: Classic Load Balancer (CLB)</li>
-     * <li>alb: Application Load Balancer (ALB)</li>
+     * <li>clb: classic load balancing.</li>
+     * <li>alb: application load balancing.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class ListSlbRequest extends TeaModel {
     public String slbType;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC).</p>
+     * <p>The VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1f90rfybszjogyw****</p>

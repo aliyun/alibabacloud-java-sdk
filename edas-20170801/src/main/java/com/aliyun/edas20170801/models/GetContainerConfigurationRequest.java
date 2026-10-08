@@ -17,8 +17,10 @@ public class GetContainerConfigurationRequest extends TeaModel {
     /**
      * <p>The ID of the instance group.</p>
      * <ul>
-     * <li>If this parameter is specified, this operation queries the Tomcat configuration of the instance group.</li>
-     * <li>If this parameter is not specified, this operation queries the Tomcat configuration of the application.</li>
+     * <li><p>If this parameter is specified, this operation queries the Tomcat configuration of the instance group.</p>
+     * </li>
+     * <li><p>If this parameter is not specified, this operation queries the Tomcat configuration of the application.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

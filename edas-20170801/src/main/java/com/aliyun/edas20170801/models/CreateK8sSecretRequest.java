@@ -43,8 +43,10 @@ public class CreateK8sSecretRequest extends TeaModel {
     /**
      * <p>The data of the Secret. The value must be a JSON array that contains the following information:</p>
      * <ul>
-     * <li>Key: Secret key</li>
-     * <li>Value: Secret value</li>
+     * <li><p>Key: Secret key</p>
+     * </li>
+     * <li><p>Value: Secret value</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,8 +76,10 @@ public class CreateK8sSecretRequest extends TeaModel {
     /**
      * <p>The Secret type. Valid values:</p>
      * <ul>
-     * <li>Opaque: user-defined data</li>
-     * <li>kubernetes.io/tls: Transport Layer Security (TLS) certificate</li>
+     * <li><p>Opaque: user-defined data</p>
+     * </li>
+     * <li><p>kubernetes.io/tls: Transport Layer Security (TLS) certificate</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -45,10 +45,14 @@ public class StartK8sAppPrecheckRequest extends TeaModel {
      * <p>The ID of the application component. You can call the ListComponents operation to query application components. This parameter must be specified when the application runs in Apache Tomcat or in a standard Java application runtime environment. The Apache Tomcat application runtime environment is applicable to Dubbo applications that are deployed by using WAR packages. A standard Java application runtime environment is applicable to Spring Boot or Spring Cloud applications that are deployed by using JAR packages.</p>
      * <p>Valid values for regular application component IDs:</p>
      * <ul>
-     * <li>4: Apache Tomcat 7.0.91</li>
-     * <li>5: OpenJDK 1.8.x</li>
-     * <li>6: OpenJDK 1.7.x</li>
-     * <li>7: Apache Tomcat 8.5.42</li>
+     * <li><p>4: Apache Tomcat 7.0.91</p>
+     * </li>
+     * <li><p>5: OpenJDK 1.8.x</p>
+     * </li>
+     * <li><p>6: OpenJDK 1.7.x</p>
+     * </li>
+     * <li><p>7: Apache Tomcat 8.5.42</p>
+     * </li>
      * </ul>
      * <p>This parameter is available only for Java SDK 2.57.3 or later, or Python SDK 2.57.3 or later. Assume that you use an SDK that is not provided by Enterprise Distributed Application Service (EDAS), such as aliyun-python-sdk-core, aliyun-java-sdk-core, and Alibaba Cloud CLI. In this case, you can directly specify this parameter.</p>
      * 
@@ -61,9 +65,12 @@ public class StartK8sAppPrecheckRequest extends TeaModel {
     /**
      * <p>The configuration for mounting a Kubernetes ConfigMap or Secret to a directory in an elastic container instance. The following parameters are included in the configuration:</p>
      * <ul>
-     * <li>name: the name of the Kubernetes ConfigMap or Secret.</li>
-     * <li>type: the type of the API object that you want to mount. You can mount a Kubernetes ConfigMap or Secret.</li>
-     * <li>mountPath: the mount path. The mount path must be an absolute path that starts with a forward slash (/).</li>
+     * <li><p>name: the name of the Kubernetes ConfigMap or Secret.</p>
+     * </li>
+     * <li><p>type: the type of the API object that you want to mount. You can mount a Kubernetes ConfigMap or Secret.</p>
+     * </li>
+     * <li><p>mountPath: the mount path. The mount path must be an absolute path that starts with a forward slash (/).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,9 +82,12 @@ public class StartK8sAppPrecheckRequest extends TeaModel {
     /**
      * <p>The configuration for mounting a Kubernetes emptyDir volume to a directory in an elastic container instance. The following parameters are included in the configuration:</p>
      * <ul>
-     * <li>mountPath: The mount path in the container. This parameter is required.</li>
-     * <li>readOnly: (Optional) The mount mode. The value true indicates the read-only mode. The value false indicates the read and write mode. Default value: false.</li>
-     * <li>subPathExpr: (Optional) The regular expression that is used to match the subdirectory.</li>
+     * <li><p>mountPath: The mount path in the container. This parameter is required.</p>
+     * </li>
+     * <li><p>readOnly: (Optional) The mount mode. The value true indicates the read-only mode. The value false indicates the read and write mode. Default value: false.</p>
+     * </li>
+     * <li><p>subPathExpr: (Optional) The regular expression that is used to match the subdirectory.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,7 +109,16 @@ public class StartK8sAppPrecheckRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;name&quot;:&quot;appname&quot;,&quot;valueFrom&quot;:{&quot;configMapKeyRef&quot;:{&quot;name&quot;:&quot;appconf&quot;,&quot;key&quot;:&quot;name&quot;}}}]</p>
+     * <p>[
+     *       {
+     *             &quot;name&quot;: &quot;appname&quot;,
+     *             &quot;valueFrom&quot;: {
+     *                   &quot;configMapKeyRef&quot;: {
+     *                         &quot;name&quot;: &quot;appconf&quot;
+     *                   }
+     *             }
+     *       }
+     * ]</p>
      */
     @NameInMap("EnvFroms")
     public String envFroms;
@@ -133,10 +152,14 @@ public class StartK8sAppPrecheckRequest extends TeaModel {
     /**
      * <p>The configuration of Java startup parameters for a Java application. These startup parameters involve the memory, application, garbage collection (GC) policy, tools, service registration and discovery, and custom configurations. Proper parameter settings help reduce the GC overheads, shorten the server response time, and improve the throughput. Set this parameter to a JSON string. In the example, original indicates the configuration value, and startup indicates a startup parameter. The system automatically concatenates all startup values as the settings of Java startup parameters for the application. To delete this configuration, leave the parameter value empty by entering <code>&quot;&quot;</code> or <code>&quot;{}&quot;</code>. The following parameters are included in the configuration:</p>
      * <ul>
-     * <li>InitialHeapSize: the initial size of the heap memory.</li>
-     * <li>MaxHeapSize: the maximum size of the heap memory.</li>
-     * <li>CustomParams: the custom parameters, such as JVM -D parameters.</li>
-     * <li>Other parameters: You can view the JSON structure submitted by the frontend.</li>
+     * <li><p>InitialHeapSize: the initial size of the heap memory.</p>
+     * </li>
+     * <li><p>MaxHeapSize: the maximum size of the heap memory.</p>
+     * </li>
+     * <li><p>CustomParams: the custom parameters, such as JVM -D parameters.</p>
+     * </li>
+     * <li><p>Other parameters: You can view the JSON structure submitted by the frontend.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -184,9 +207,12 @@ public class StartK8sAppPrecheckRequest extends TeaModel {
     /**
      * <p>The configurations that are used when the host files are mounted to the container on which the application is running. Example: <code>[{&quot;type&quot;:&quot;&quot;,&quot;nodePath&quot;:&quot;/localfiles&quot;,&quot;mountPath&quot;:&quot;/app/files&quot;},{&quot;type&quot;:&quot;Directory&quot;,&quot;nodePath&quot;:&quot;/mnt&quot;,&quot;mountPath&quot;:&quot;/app/storage&quot;}\\]</code>. Description:</p>
      * <ul>
-     * <li><code>nodePath</code>: the host path.</li>
-     * <li><code>mountPath</code>: the path in the container.</li>
-     * <li><code>type</code>: the mounting type.</li>
+     * <li><p><code>nodePath</code>: the host path.</p>
+     * </li>
+     * <li><p><code>mountPath</code>: the path in the container.</p>
+     * </li>
+     * <li><p><code>type</code>: the mounting type.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -221,8 +247,10 @@ public class StartK8sAppPrecheckRequest extends TeaModel {
      * </li>
      * <li><p>mountPaths: the directory to which you want to mount the PVC. You can configure multiple directories. You can set the following two parameters for each mount directory:</p>
      * <ul>
-     * <li>mountPath: the mount path. The mount path must be an absolute path that starts with a forward slash (/).</li>
-     * <li>readOnly: the mount mode. The value true indicates the read-only mode. The value false indicates the read and write mode. Default value: false.</li>
+     * <li><p>mountPath: the mount path. The mount path must be an absolute path that starts with a forward slash (/).</p>
+     * </li>
+     * <li><p>readOnly: the mount mode. The value true indicates the read-only mode. The value false indicates the read and write mode. Default value: false.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>

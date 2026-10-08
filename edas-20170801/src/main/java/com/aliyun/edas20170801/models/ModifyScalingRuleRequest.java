@@ -36,8 +36,10 @@ public class ModifyScalingRuleRequest extends TeaModel {
     /**
      * <p>The relationship among the conditions that trigger a scale-in.</p>
      * <ul>
-     * <li>OR: one of the conditions</li>
-     * <li>AND: all conditions</li>
+     * <li><p>OR: one of the conditions</p>
+     * </li>
+     * <li><p>AND: all conditions</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,8 +69,10 @@ public class ModifyScalingRuleRequest extends TeaModel {
     /**
      * <p>Specifies whether to allow scale-ins.</p>
      * <ul>
-     * <li>true: allows scale-ins.</li>
-     * <li>false: does not allow scale-ins.</li>
+     * <li><p>true: allows scale-ins.</p>
+     * </li>
+     * <li><p>false: does not allow scale-ins.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -125,8 +129,10 @@ public class ModifyScalingRuleRequest extends TeaModel {
     /**
      * <p>The multi-zone scaling policy. Valid values:</p>
      * <ul>
-     * <li>PRIORITY: The vSwitch that is first selected has the highest priority.</li>
-     * <li>BALANCE: This policy evenly distributes instances across zones in which the vSwitches reside.</li>
+     * <li><p>PRIORITY: The vSwitch that is first selected has the highest priority.</p>
+     * </li>
+     * <li><p>BALANCE: This policy evenly distributes instances across zones in which the vSwitches reside.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -147,8 +153,10 @@ public class ModifyScalingRuleRequest extends TeaModel {
     /**
      * <p>The relationship among the conditions that trigger a scale-out.</p>
      * <ul>
-     * <li>OR: one of the conditions</li>
-     * <li>AND: all conditions</li>
+     * <li><p>OR: one of the conditions</p>
+     * </li>
+     * <li><p>AND: all conditions</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -223,8 +231,10 @@ public class ModifyScalingRuleRequest extends TeaModel {
     /**
      * <p>The source of the instance to be added during a scale-out. Valid values:</p>
      * <ul>
-     * <li>NEW: elastic resources</li>
-     * <li>AVAILABLE: existing resources If you prefer existing resources to elastic resources, set this parameter to AVAILABLE_FIRST.</li>
+     * <li><p>NEW: elastic resources</p>
+     * </li>
+     * <li><p>AVAILABLE: existing resources If you prefer existing resources to elastic resources, set this parameter to AVAILABLE_FIRST.</p>
+     * </li>
      * </ul>
      * <p>If you set this parameter to NEW or AVAILABLE_FIRST, you must specify the auto-scaling parameters. If you set this parameter to NEW, instances are created based on a launch template or the specifications of an existing instance.</p>
      * 
@@ -237,8 +247,10 @@ public class ModifyScalingRuleRequest extends TeaModel {
     /**
      * <p>The instance handling mode during a scale-in. Valid values:</p>
      * <ul>
-     * <li>release: When a scale-in is performed, instances that are no longer used are released.</li>
-     * <li>recycle: When a scale-in is performed, instances that are no longer used are stopped and reclaimed.</li>
+     * <li><p>release: When a scale-in is performed, instances that are no longer used are released.</p>
+     * </li>
+     * <li><p>recycle: When a scale-in is performed, instances that are no longer used are stopped and reclaimed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

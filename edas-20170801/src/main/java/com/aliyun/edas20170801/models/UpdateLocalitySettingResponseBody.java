@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateLocalitySettingResponseBody extends TeaModel {
     /**
+     * <p>The status code of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The result of the update.</p>
+     */
     @NameInMap("Data")
     public UpdateLocalitySettingResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class UpdateLocalitySettingResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class UpdateLocalitySettingResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>a5281053-08e4-47a5-b2ab-5c0323de*****</p>
      */
@@ -36,6 +47,8 @@ public class UpdateLocalitySettingResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -97,6 +110,8 @@ public class UpdateLocalitySettingResponseBody extends TeaModel {
 
     public static class UpdateLocalitySettingResponseBodyData extends TeaModel {
         /**
+         * <p>Whether it is active.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -104,6 +119,8 @@ public class UpdateLocalitySettingResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p>The threshold of the ECU.</p>
+         * 
          * <strong>example:</strong>
          * <p>15</p>
          */

@@ -75,21 +75,9 @@ public class InsertSwimmingLaneGroupResponseBody extends TeaModel {
     }
 
     public static class InsertSwimmingLaneGroupResponseBodyDataApplicationListApplication extends TeaModel {
-        /**
-         * <p>The ID of the application.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>bdb251cc-02a6-48dd-891b-2ab21b25****</p>
-         */
         @NameInMap("AppId")
         public String appId;
 
-        /**
-         * <p>The name of the application.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-app</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
@@ -178,9 +166,6 @@ public class InsertSwimmingLaneGroupResponseBody extends TeaModel {
     }
 
     public static class InsertSwimmingLaneGroupResponseBodyData extends TeaModel {
-        /**
-         * <p>The list of all applications that are related to the lane group.</p>
-         */
         @NameInMap("ApplicationList")
         public InsertSwimmingLaneGroupResponseBodyDataApplicationList applicationList;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetK8sApplicationRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
+     * <p>The ID of the application. You can call the <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a> operation to obtain the application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,12 @@ public class GetK8sApplicationRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The source from which data is queried.</p>
+     * <p>The source of the query.</p>
      * <ul>
-     * <li>If you leave this parameter empty, a common query is performed.</li>
-     * <li>If you set the value to deploy, you query application information from the deployment page.</li>
+     * <li><p>If this parameter is empty, a regular query is performed.</p>
+     * </li>
+     * <li><p>deploy: The query is initiated from the deployment page.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
