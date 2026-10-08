@@ -11,7 +11,7 @@ public class CreateFunctionInput extends TeaModel {
     public InputCodeLocation code;
 
     /**
-     * <p>The CPU specification of the function, in vCPUs. The value must be a multiple of 0.05 vCPU. Minimum value: 0.05. Maximum value: 16. The ratio of cpu to memorySize (in GB) must be between 1:1 and 1:4.</p>
+     * <p>The CPU specification of the function in vCPU. The value must be a multiple of 0.05 vCPU. The minimum value is 0.05 and the maximum value is 16. The ratio of cpu to memorySize (in GB) must be between 1:1 and 1:4.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class CreateFunctionInput extends TeaModel {
     public Float cpu;
 
     /**
-     * <p>The configuration for the custom container runtime. After this parameter is configured, the function can use a custom container image for execution. Specify either code or customContainerConfig.</p>
+     * <p>The configuration of the custom container runtime. After successful configuration, the function can use a custom container image to execute the function. Specify either code or customContainerConfig.</p>
      */
     @NameInMap("customContainerConfig")
     public CustomContainerConfig customContainerConfig;
@@ -49,10 +49,10 @@ public class CreateFunctionInput extends TeaModel {
     /**
      * <p>Specifies whether to disable STS token injection. Valid values:</p>
      * <ul>
-     * <li>None: STS tokens are injected in all methods.</li>
-     * <li>Env: STS tokens are not injected through environment variables.</li>
-     * <li>Request: STS tokens are not injected in requests, including context and headers.</li>
-     * <li>All: STS tokens are not injected in any method.</li>
+     * <li>None: Injects STS tokens in all methods.</li>
+     * <li>Env: Does not inject STS tokens into environment variables.</li>
+     * <li>Request: Does not inject STS tokens into requests, including context and headers.</li>
+     * <li>All: Does not inject STS tokens in any method.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,14 +62,14 @@ public class CreateFunctionInput extends TeaModel {
     public String disableInjectCredentials;
 
     /**
-     * <p>Specifies whether to disable the creation of on-demand instances. If this feature is enabled, on-demand instances are not created and only provisioned instances can be used.</p>
+     * <p>Specifies whether to disable the creation of on-demand instances. After this feature is enabled, on-demand instances are not created and only provisioned instances can be used.</p>
      */
     @NameInMap("disableOndemand")
     @Deprecated
     public Boolean disableOndemand;
 
     /**
-     * <p>The disk specification of the function, in MB. Valid values: 512 and 10240.</p>
+     * <p>The disk specification of the function in MB. Valid values: 512 and 10240.</p>
      * 
      * <strong>example:</strong>
      * <p>512</p>
@@ -78,7 +78,7 @@ public class CreateFunctionInput extends TeaModel {
     public Integer diskSize;
 
     /**
-     * <p>Specifies whether to allow provisioned instances of GPU functions to be long-running. When this feature is enabled, function instances are not injected with STS tokens.</p>
+     * <p>Specifies whether to allow provisioned instances of GPU functions to be long-running. When this feature is enabled, function instances that are created are not injected with STS tokens.</p>
      */
     @NameInMap("enableLongLiving")
     @Deprecated
@@ -91,7 +91,7 @@ public class CreateFunctionInput extends TeaModel {
     public java.util.Map<String, String> environmentVariables;
 
     /**
-     * <p>The name of the function. The name can contain only letters, digits, underscores (_), and hyphens (-). The name cannot start with a digit or hyphen (-). The name must be 1 to 64 characters in length.</p>
+     * <p>The name of the function. The name can contain only letters, digits, underscores (_), and hyphens (-). It cannot start with a digit or hyphen (-). The name must be 1 to 64 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class CreateFunctionInput extends TeaModel {
     public GPUConfig gpuConfig;
 
     /**
-     * <p>The function entry point. The specific format depends on the runtime.</p>
+     * <p>The function entry point. The specific format is related to the runtime.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class CreateFunctionInput extends TeaModel {
     public String handler;
 
     /**
-     * <p>The deferred release time of the instance.</p>
+     * <p>The instance deferred release time.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -141,7 +141,7 @@ public class CreateFunctionInput extends TeaModel {
     public String instanceIsolationMode;
 
     /**
-     * <p>The instance lifecycle hook configuration.</p>
+     * <p>The instance lifecycle hook method configuration.</p>
      */
     @NameInMap("instanceLifecycleConfig")
     public InstanceLifecycleConfig instanceLifecycleConfig;
@@ -155,11 +155,14 @@ public class CreateFunctionInput extends TeaModel {
     @NameInMap("internetAccess")
     public Boolean internetAccess;
 
+    /**
+     * <p>The JuiceFs mount configuration.</p>
+     */
     @NameInMap("juiceFsConfig")
     public JuiceFsConfig juiceFsConfig;
 
     /**
-     * <p>The list of layers. Multiple layers are merged in descending order of array index. Files in a layer with a smaller index overwrite files with the same name in a layer with a larger index.</p>
+     * <p>The list of layers. Multiple layers are merged in descending order of array index. Content from a layer with a smaller index overwrites files with the same name from a layer with a larger index.</p>
      */
     @NameInMap("layers")
     public java.util.List<String> layers;
@@ -171,7 +174,7 @@ public class CreateFunctionInput extends TeaModel {
     public LogConfig logConfig;
 
     /**
-     * <p>The memory specification of the function, in MB. The value must be a multiple of 64 MB. Minimum value: 128. Maximum value: 32768 (32 GB). The ratio of cpu to memorySize (in GB) must be between 1:1 and 1:4.</p>
+     * <p>The memory specification of the function in MB. The value must be a multiple of 64 MB. The minimum value is 128 MB and the maximum value is 32 GB. The ratio of cpu to memorySize (in GB) must be between 1:1 and 1:4.</p>
      * 
      * <strong>example:</strong>
      * <p>512</p>
@@ -183,7 +186,7 @@ public class CreateFunctionInput extends TeaModel {
     public MicroSandboxConfig microSandboxConfig;
 
     /**
-     * <p>The NAS configuration. After this parameter is configured, the function can access the specified NAS resources.</p>
+     * <p>The NAS configuration. After you configure this parameter, the function can access the specified NAS resources.</p>
      */
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
@@ -195,7 +198,7 @@ public class CreateFunctionInput extends TeaModel {
     public OSSMountConfig ossMountConfig;
 
     /**
-     * <p>The PolarFs configuration. After this parameter is configured, the function can access the specified PolarFs resources.</p>
+     * <p>The PolarFs configuration. After you configure this parameter, the function can access the specified PolarFs resources.</p>
      */
     @NameInMap("polarFsConfig")
     public PolarFsConfig polarFsConfig;
@@ -204,7 +207,7 @@ public class CreateFunctionInput extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The RAM role that the user grants to Function Compute. After this parameter is set, Function Compute assumes this role to generate temporary access credentials. You can use the temporary access credentials of this role in the function to access specified Alibaba Cloud services, such as OSS and OTS.</p>
+     * <p>The RAM role that you grant to Function Compute. After the role is configured, Function Compute assumes this role to generate temporary access credentials. You can use the temporary access credentials of this role in the function to access specified Alibaba Cloud services such as OSS and OTS.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::188077086902****:role/fc-test</p>
@@ -213,7 +216,7 @@ public class CreateFunctionInput extends TeaModel {
     public String role;
 
     /**
-     * <p>The runtime environment of the function. Supported runtimes: nodejs12, nodejs14, nodejs16, nodejs18, nodejs20, go1, python3, python3.9, python3.10, python3.12, java8, java11, php7.2, dotnetcore3.1, custom, custom.debian10, custom.debian11, custom.debian12, and custom-container.</p>
+     * <p>The runtime environment of the function. Currently supported runtime environments include: nodejs12, nodejs14, nodejs16, nodejs18, nodejs20, go1, python3, python3.9, python3.10, python3.12, java8, java11, php7.2, dotnetcore3.1, custom, custom.debian10, custom.debian11, custom.debian12, and custom-container.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -223,7 +226,7 @@ public class CreateFunctionInput extends TeaModel {
     public String runtime;
 
     /**
-     * <p>The affinity policy for Function Compute invocation requests. To implement request affinity for the MCP SSE protocol, set this parameter to MCP_SSE. To use cookie-based affinity, set this parameter to GENERATED_COOKIE. To use header-based affinity, set this parameter to HEADER_FIELD. If this parameter is not set or is set to NONE, no affinity is applied and requests are routed based on the default scheduling policy of Function Compute.</p>
+     * <p>The session affinity policy for Function Compute invocation requests. To implement request affinity for the MCP SSE protocol, set this parameter to MCP_SSE. To use cookie-based affinity, set this parameter to GENERATED_COOKIE. To use header-based affinity, set this parameter to HEADER_FIELD. If this parameter is not set or is set to NONE, no affinity is applied and requests are routed based on the default scheduling policy of Function Compute.</p>
      * 
      * <strong>example:</strong>
      * <p>MCP_SSE</p>
@@ -232,7 +235,7 @@ public class CreateFunctionInput extends TeaModel {
     public String sessionAffinity;
 
     /**
-     * <p>The affinity configuration that corresponds to the sessionAffinity type. For MCP_SSE affinity, specify MCPSSESessionAffinityConfig. For cookie-based affinity, specify CookieSessionAffinityConfig. For header field affinity, specify HeaderFieldSessionAffinityConfig.</p>
+     * <p>The session affinity configuration that corresponds to the sessionAffinity type. For MCP_SSE affinity, configure MCPSSESessionAffinityConfig. For cookie-based affinity, configure CookieSessionAffinityConfig. For header field affinity, configure HeaderFieldSessionAffinityConfig.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;sseEndpointPath\&quot;:\&quot;/sse\&quot;, \&quot;sessionConcurrencyPerInstance\&quot;:20}</p>
@@ -247,7 +250,7 @@ public class CreateFunctionInput extends TeaModel {
     public java.util.List<Tag> tags;
 
     /**
-     * <p>The timeout period for function execution, in seconds. Minimum value: 1. Maximum value: 86400. Default value: 3. The function is terminated if it exceeds this time limit.</p>
+     * <p>The timeout period for function execution in seconds. The minimum value is 1, the maximum value is 86400, and the default value is 3. The function is terminated if it exceeds this time limit.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -256,13 +259,13 @@ public class CreateFunctionInput extends TeaModel {
     public Integer timeout;
 
     /**
-     * <p>The Tracing Analysis configuration. After Function Compute is integrated with Tracing Analysis, you can record the time consumed by requests in Function Compute, view the cold start time of functions, and record the time consumed within functions.</p>
+     * <p>The tracing configuration. After Function Compute is integrated with Tracing Analysis, you can record the time consumed by requests in Function Compute, view the cold start time of functions, and record the time consumed by internal operations of functions.</p>
      */
     @NameInMap("tracingConfig")
     public TracingConfig tracingConfig;
 
     /**
-     * <p>The VPC configuration. After this parameter is configured, the function can access the specified VPC resources.</p>
+     * <p>The VPC configuration. After you configure this parameter, the function can access the specified VPC resources.</p>
      */
     @NameInMap("vpcConfig")
     public VPCConfig vpcConfig;

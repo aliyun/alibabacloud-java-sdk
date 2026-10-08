@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MicroSandboxConfig extends TeaModel {
     /**
-     * <p>The ID of the ACR Enterprise Edition image repository instance. Used in pair with MicroSandbox images. This parameter is optional. If not provided, the server resolves it as needed.</p>
+     * <p>The instance ID of the Container Registry (ACR) Enterprise Edition image repository. This parameter is used together with MicroSandbox images. This parameter is optional. If not provided, the server resolves it as needed.</p>
      */
     @NameInMap("acrInstanceId")
     public String acrInstanceId;
@@ -16,9 +16,15 @@ public class MicroSandboxConfig extends TeaModel {
     @NameInMap("image")
     public String image;
 
+    /**
+     * <p>The operating system type.</p>
+     */
     @NameInMap("osType")
     public String osType;
 
+    /**
+     * <p>The ready command.</p>
+     */
     @NameInMap("readyCommand")
     public String readyCommand;
 
@@ -28,6 +34,9 @@ public class MicroSandboxConfig extends TeaModel {
     @NameInMap("registryConfig")
     public RegistryConfig registryConfig;
 
+    /**
+     * <p>The start command.</p>
+     */
     @NameInMap("startCommand")
     public String startCommand;
 

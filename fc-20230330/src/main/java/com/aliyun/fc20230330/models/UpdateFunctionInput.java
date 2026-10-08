@@ -11,7 +11,7 @@ public class UpdateFunctionInput extends TeaModel {
     public InputCodeLocation code;
 
     /**
-     * <p>The CPU specification of the function. Unit: vCPU. The value must be a multiple of 0.05 vCPU.</p>
+     * <p>The CPU specification of the function in vCPU. The value must be a multiple of 0.05 vCPU.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class UpdateFunctionInput extends TeaModel {
     public Float cpu;
 
     /**
-     * <p>The configuration of the custom container runtime. After this parameter is configured, the function can use a custom container image for execution. Specify either code or customContainerConfig.</p>
+     * <p>The custom container runtime configuration. After this parameter is configured, the function can use a custom container image for execution. Specify either code or customContainerConfig.</p>
      */
     @NameInMap("customContainerConfig")
     public CustomContainerConfig customContainerConfig;
@@ -49,10 +49,10 @@ public class UpdateFunctionInput extends TeaModel {
     /**
      * <p>Specifies whether to disable STS token injection. Valid values:</p>
      * <ul>
-     * <li>None: STS tokens are injected in all methods.</li>
-     * <li>Env: STS tokens are not injected through environment variables.</li>
-     * <li>Request: STS tokens are not injected through requests, including context and headers.</li>
-     * <li>All: STS tokens are not injected in any method.</li>
+     * <li>None: Injects STS tokens in all methods.</li>
+     * <li>Env: Does not inject STS tokens through environment variables.</li>
+     * <li>Request: Does not inject STS tokens through requests, including context and headers.</li>
+     * <li>All: Does not inject STS tokens in any method.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,14 +62,14 @@ public class UpdateFunctionInput extends TeaModel {
     public String disableInjectCredentials;
 
     /**
-     * <p>Specifies whether to disable the creation of on-demand instances. If this feature is enabled, on-demand instances are not created, and only provisioned instances can be used.</p>
+     * <p>Specifies whether to disable the creation of on-demand instances. After this feature is enabled, on-demand instances are not created, and only provisioned instances can be used.</p>
      */
     @NameInMap("disableOndemand")
     @Deprecated
     public Boolean disableOndemand;
 
     /**
-     * <p>The disk specification of the function. Unit: MB. Valid values: 512 and 10240.</p>
+     * <p>The disk specification of the function in MB. Valid values: 512 and 10240.</p>
      * 
      * <strong>example:</strong>
      * <p>512</p>
@@ -97,7 +97,7 @@ public class UpdateFunctionInput extends TeaModel {
     public GPUConfig gpuConfig;
 
     /**
-     * <p>The function entry point. The specific format depends on the runtime.</p>
+     * <p>The function entry point. The specific format is related to the runtime.</p>
      * 
      * <strong>example:</strong>
      * <p>index.handler</p>
@@ -106,7 +106,7 @@ public class UpdateFunctionInput extends TeaModel {
     public String handler;
 
     /**
-     * <p>The deferred release time of the instance.</p>
+     * <p>The delayed release time of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -130,7 +130,7 @@ public class UpdateFunctionInput extends TeaModel {
     public String instanceIsolationMode;
 
     /**
-     * <p>The instance lifecycle hook configuration.</p>
+     * <p>The instance lifecycle hook method configuration.</p>
      */
     @NameInMap("instanceLifecycleConfig")
     public InstanceLifecycleConfig instanceLifecycleConfig;
@@ -144,11 +144,14 @@ public class UpdateFunctionInput extends TeaModel {
     @NameInMap("internetAccess")
     public Boolean internetAccess;
 
+    /**
+     * <p>The JuiceFs mount configuration.</p>
+     */
     @NameInMap("juiceFsConfig")
     public JuiceFsConfig juiceFsConfig;
 
     /**
-     * <p>The list of layers. Multiple layers are merged in descending order of array index. Files in a layer with a smaller index overwrite files with the same name in a layer with a larger index.</p>
+     * <p>The list of layers. Multiple layers are merged in descending order of array index. Content from a layer with a smaller index overwrites files with the same name from a layer with a larger index.</p>
      */
     @NameInMap("layers")
     public java.util.List<String> layers;
@@ -160,7 +163,7 @@ public class UpdateFunctionInput extends TeaModel {
     public LogConfig logConfig;
 
     /**
-     * <p>The memory specification of the function. Unit: MB. The value must be a multiple of 64 MB. The memory specification varies based on the function instance type.</p>
+     * <p>The memory specification of the function in MB. The value must be a multiple of 64 MB. The memory specification varies depending on the function instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>512</p>
@@ -190,7 +193,7 @@ public class UpdateFunctionInput extends TeaModel {
     public PolarFsConfig polarFsConfig;
 
     /**
-     * <p>The Alibaba Cloud Resource Access Management (RAM) role that grants Function Compute the required permissions. Scenarios include: 1. Sending logs generated by the function to your Logstore. 2. Generating temporary access tokens for the function to access other cloud resources during the execute procedure.</p>
+     * <p>The RAM role that grants Function Compute the required permissions. Scenarios include: 1. Sending logs generated by the function to your Logstore. 2. Generating temporary access tokens for the function to access other cloud resources during the execute procedure.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::188077086902****:role/fc-test</p>
@@ -208,7 +211,7 @@ public class UpdateFunctionInput extends TeaModel {
     public String runtime;
 
     /**
-     * <p>The affinity policy for Function Compute invocation requests. To implement request affinity for the MCP SSE protocol, set this parameter to MCP_SSE. To use cookie-based affinity, set this parameter to GENERATED_COOKIE. To use header-based affinity, set this parameter to HEADER_FIELD. If this parameter is not set or is set to NONE, no affinity is applied, and requests are routed based on the default scheduling policy of Function Compute.</p>
+     * <p>The session affinity policy for Function Compute invocation requests. To implement request affinity for the MCP SSE protocol, set this parameter to MCP_SSE. To use cookie-based affinity, set this parameter to GENERATED_COOKIE. To use header-based affinity, set this parameter to HEADER_FIELD. If this parameter is not set or is set to NONE, no affinity is applied, and requests are routed based on the default scheduling policy of Function Compute.</p>
      * 
      * <strong>example:</strong>
      * <p>MCP_SSE</p>
@@ -217,7 +220,7 @@ public class UpdateFunctionInput extends TeaModel {
     public String sessionAffinity;
 
     /**
-     * <p>The affinity configuration that corresponds to the sessionAffinity type. For MCP_SSE affinity, configure MCPSSESessionAffinityConfig. For cookie-based affinity, configure CookieSessionAffinityConfig. For header field affinity, configure HeaderFieldSessionAffinityConfig.</p>
+     * <p>The session affinity configuration that corresponds to the sessionAffinity type. For MCP_SSE affinity, populate the MCPSSESessionAffinityConfig configuration. For cookie-based affinity, populate the CookieSessionAffinityConfig configuration. For header field affinity, populate the HeaderFieldSessionAffinityConfig configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;sseEndpointPath\&quot;:\&quot;/sse\&quot;, \&quot;sessionConcurrencyPerInstance\&quot;:20}</p>
@@ -226,7 +229,7 @@ public class UpdateFunctionInput extends TeaModel {
     public String sessionAffinityConfig;
 
     /**
-     * <p>The timeout period for function execution. Unit: seconds. Minimum value: 1. Default value: 3. The function is terminated if it exceeds this time limit.</p>
+     * <p>The timeout period for function execution, in seconds. Minimum value: 1. Default value: 3. The function is terminated if it exceeds this time limit.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
