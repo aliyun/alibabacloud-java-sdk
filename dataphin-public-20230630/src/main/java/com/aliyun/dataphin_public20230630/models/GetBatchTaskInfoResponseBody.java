@@ -105,6 +105,192 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
         return this.taskInfo;
     }
 
+    public static class GetBatchTaskInfoResponseBodyTaskInfoConditionScheduleParamList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>失败重跑</p>
+         */
+        @NameInMap("ConditionName")
+        public String conditionName;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 30 * * * ?</p>
+         */
+        @NameInMap("CronExpression")
+        public String cronExpression;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("Enable")
+        public Boolean enable;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("FollowScheduleParam")
+        public Boolean followScheduleParam;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("NodeStatus")
+        public Integer nodeStatus;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;EXPRESSION_GROUP&quot;,&quot;operator&quot;:&quot;or&quot;}</p>
+         */
+        @NameInMap("ScheduleConditionJson")
+        public String scheduleConditionJson;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:30</p>
+         */
+        @NameInMap("ScheduleTime")
+        public String scheduleTime;
+
+        public static GetBatchTaskInfoResponseBodyTaskInfoConditionScheduleParamList build(java.util.Map<String, ?> map) throws Exception {
+            GetBatchTaskInfoResponseBodyTaskInfoConditionScheduleParamList self = new GetBatchTaskInfoResponseBodyTaskInfoConditionScheduleParamList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfoConditionScheduleParamList setConditionName(String conditionName) {
+            this.conditionName = conditionName;
+            return this;
+        }
+        public String getConditionName() {
+            return this.conditionName;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfoConditionScheduleParamList setCronExpression(String cronExpression) {
+            this.cronExpression = cronExpression;
+            return this;
+        }
+        public String getCronExpression() {
+            return this.cronExpression;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfoConditionScheduleParamList setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfoConditionScheduleParamList setFollowScheduleParam(Boolean followScheduleParam) {
+            this.followScheduleParam = followScheduleParam;
+            return this;
+        }
+        public Boolean getFollowScheduleParam() {
+            return this.followScheduleParam;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfoConditionScheduleParamList setNodeStatus(Integer nodeStatus) {
+            this.nodeStatus = nodeStatus;
+            return this;
+        }
+        public Integer getNodeStatus() {
+            return this.nodeStatus;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfoConditionScheduleParamList setScheduleConditionJson(String scheduleConditionJson) {
+            this.scheduleConditionJson = scheduleConditionJson;
+            return this;
+        }
+        public String getScheduleConditionJson() {
+            return this.scheduleConditionJson;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfoConditionScheduleParamList setScheduleTime(String scheduleTime) {
+            this.scheduleTime = scheduleTime;
+            return this;
+        }
+        public String getScheduleTime() {
+            return this.scheduleTime;
+        }
+
+    }
+
+    public static class GetBatchTaskInfoResponseBodyTaskInfoContextParamList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("DefaultValue")
+        public String defaultValue;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>输出条数</p>
+         */
+        @NameInMap("Desc")
+        public String desc;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cnt</p>
+         */
+        @NameInMap("ParamKey")
+        public String paramKey;
+
+        public static GetBatchTaskInfoResponseBodyTaskInfoContextParamList build(java.util.Map<String, ?> map) throws Exception {
+            GetBatchTaskInfoResponseBodyTaskInfoContextParamList self = new GetBatchTaskInfoResponseBodyTaskInfoContextParamList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfoContextParamList setDefaultValue(String defaultValue) {
+            this.defaultValue = defaultValue;
+            return this;
+        }
+        public String getDefaultValue() {
+            return this.defaultValue;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfoContextParamList setDesc(String desc) {
+            this.desc = desc;
+            return this;
+        }
+        public String getDesc() {
+            return this.desc;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfoContextParamList setParamKey(String paramKey) {
+            this.paramKey = paramKey;
+            return this;
+        }
+        public String getParamKey() {
+            return this.paramKey;
+        }
+
+    }
+
     public static class GetBatchTaskInfoResponseBodyTaskInfoCustomScheduleConfig extends TeaModel {
         /**
          * <p>The end time in the format of HH:mm.</p>
@@ -505,6 +691,20 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
 
     public static class GetBatchTaskInfoResponseBodyTaskInfo extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>7305621095333696</p>
+         */
+        @NameInMap("BaseScheduleTemplateId")
+        public Long baseScheduleTemplateId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>天级调度模板</p>
+         */
+        @NameInMap("BaseScheduleTemplateName")
+        public String baseScheduleTemplateName;
+
+        /**
          * <p>The task code.</p>
          * 
          * <strong>example:</strong>
@@ -512,6 +712,33 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
          */
         @NameInMap("Code")
         public String code;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("ConditionScheduleEnable")
+        public Boolean conditionScheduleEnable;
+
+        @NameInMap("ConditionScheduleParamList")
+        public java.util.List<GetBatchTaskInfoResponseBodyTaskInfoConditionScheduleParamList> conditionScheduleParamList;
+
+        /**
+         * <strong>example:</strong>
+         * <p>7305621095333697</p>
+         */
+        @NameInMap("ConditionScheduleTemplateId")
+        public Long conditionScheduleTemplateId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>条件调度模板</p>
+         */
+        @NameInMap("ConditionScheduleTemplateName")
+        public String conditionScheduleTemplateName;
+
+        @NameInMap("ContextParamList")
+        public java.util.List<GetBatchTaskInfoResponseBodyTaskInfoContextParamList> contextParamList;
 
         /**
          * <p>The cron expression for automatic scheduling. Refer to the Linux cron expression syntax.</p>
@@ -563,6 +790,27 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
          */
         @NameInMap("DataSourceSchema")
         public String dataSourceSchema;
+
+        /**
+         * <strong>example:</strong>
+         * <p>/sql/protocolv1/o/xxx</p>
+         */
+        @NameInMap("DevHttpPath")
+        public String devHttpPath;
+
+        /**
+         * <strong>example:</strong>
+         * <p>rg-def456</p>
+         */
+        @NameInMap("DevResourceGroupId")
+        public String devResourceGroupId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>默认资源组</p>
+         */
+        @NameInMap("DevResourceGroupName")
+        public String devResourceGroupName;
 
         /**
          * <p>The user ID of the development owner.</p>
@@ -759,6 +1007,13 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
         public Integer priority;
 
         /**
+         * <strong>example:</strong>
+         * <p>/sql/protocolv1/o/yyy</p>
+         */
+        @NameInMap("ProdHttpPath")
+        public String prodHttpPath;
+
+        /**
          * <p>The project ID.</p>
          * 
          * <strong>example:</strong>
@@ -787,6 +1042,20 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
          */
         @NameInMap("Rerunable")
         public Boolean rerunable;
+
+        /**
+         * <strong>example:</strong>
+         * <p>rg-abc123</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>默认资源组</p>
+         */
+        @NameInMap("ResourceGroupName")
+        public String resourceGroupName;
 
         /**
          * <p>The scheduling period. Valid values:</p>
@@ -838,6 +1107,9 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("TaskTagList")
+        public java.util.List<String> taskTagList;
+
         /**
          * <p>The task type. For more information, refer to the API operation for creating a batch task.</p>
          * 
@@ -853,9 +1125,39 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
         @NameInMap("UpStreamList")
         public java.util.List<GetBatchTaskInfoResponseBodyTaskInfoUpStreamList> upStreamList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9999-12-31</p>
+         */
+        @NameInMap("ValidEndDate")
+        public String validEndDate;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2026-01-01</p>
+         */
+        @NameInMap("ValidStartDate")
+        public String validStartDate;
+
         public static GetBatchTaskInfoResponseBodyTaskInfo build(java.util.Map<String, ?> map) throws Exception {
             GetBatchTaskInfoResponseBodyTaskInfo self = new GetBatchTaskInfoResponseBodyTaskInfo();
             return TeaModel.build(map, self);
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfo setBaseScheduleTemplateId(Long baseScheduleTemplateId) {
+            this.baseScheduleTemplateId = baseScheduleTemplateId;
+            return this;
+        }
+        public Long getBaseScheduleTemplateId() {
+            return this.baseScheduleTemplateId;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfo setBaseScheduleTemplateName(String baseScheduleTemplateName) {
+            this.baseScheduleTemplateName = baseScheduleTemplateName;
+            return this;
+        }
+        public String getBaseScheduleTemplateName() {
+            return this.baseScheduleTemplateName;
         }
 
         public GetBatchTaskInfoResponseBodyTaskInfo setCode(String code) {
@@ -864,6 +1166,46 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
         }
         public String getCode() {
             return this.code;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfo setConditionScheduleEnable(Boolean conditionScheduleEnable) {
+            this.conditionScheduleEnable = conditionScheduleEnable;
+            return this;
+        }
+        public Boolean getConditionScheduleEnable() {
+            return this.conditionScheduleEnable;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfo setConditionScheduleParamList(java.util.List<GetBatchTaskInfoResponseBodyTaskInfoConditionScheduleParamList> conditionScheduleParamList) {
+            this.conditionScheduleParamList = conditionScheduleParamList;
+            return this;
+        }
+        public java.util.List<GetBatchTaskInfoResponseBodyTaskInfoConditionScheduleParamList> getConditionScheduleParamList() {
+            return this.conditionScheduleParamList;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfo setConditionScheduleTemplateId(Long conditionScheduleTemplateId) {
+            this.conditionScheduleTemplateId = conditionScheduleTemplateId;
+            return this;
+        }
+        public Long getConditionScheduleTemplateId() {
+            return this.conditionScheduleTemplateId;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfo setConditionScheduleTemplateName(String conditionScheduleTemplateName) {
+            this.conditionScheduleTemplateName = conditionScheduleTemplateName;
+            return this;
+        }
+        public String getConditionScheduleTemplateName() {
+            return this.conditionScheduleTemplateName;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfo setContextParamList(java.util.List<GetBatchTaskInfoResponseBodyTaskInfoContextParamList> contextParamList) {
+            this.contextParamList = contextParamList;
+            return this;
+        }
+        public java.util.List<GetBatchTaskInfoResponseBodyTaskInfoContextParamList> getContextParamList() {
+            return this.contextParamList;
         }
 
         public GetBatchTaskInfoResponseBodyTaskInfo setCronExpression(String cronExpression) {
@@ -912,6 +1254,30 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
         }
         public String getDataSourceSchema() {
             return this.dataSourceSchema;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfo setDevHttpPath(String devHttpPath) {
+            this.devHttpPath = devHttpPath;
+            return this;
+        }
+        public String getDevHttpPath() {
+            return this.devHttpPath;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfo setDevResourceGroupId(String devResourceGroupId) {
+            this.devResourceGroupId = devResourceGroupId;
+            return this;
+        }
+        public String getDevResourceGroupId() {
+            return this.devResourceGroupId;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfo setDevResourceGroupName(String devResourceGroupName) {
+            this.devResourceGroupName = devResourceGroupName;
+            return this;
+        }
+        public String getDevResourceGroupName() {
+            return this.devResourceGroupName;
         }
 
         public GetBatchTaskInfoResponseBodyTaskInfo setDevelopOwnerId(String developOwnerId) {
@@ -1106,6 +1472,14 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
             return this.priority;
         }
 
+        public GetBatchTaskInfoResponseBodyTaskInfo setProdHttpPath(String prodHttpPath) {
+            this.prodHttpPath = prodHttpPath;
+            return this;
+        }
+        public String getProdHttpPath() {
+            return this.prodHttpPath;
+        }
+
         public GetBatchTaskInfoResponseBodyTaskInfo setProjectId(Long projectId) {
             this.projectId = projectId;
             return this;
@@ -1136,6 +1510,22 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
         }
         public Boolean getRerunable() {
             return this.rerunable;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfo setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfo setResourceGroupName(String resourceGroupName) {
+            this.resourceGroupName = resourceGroupName;
+            return this;
+        }
+        public String getResourceGroupName() {
+            return this.resourceGroupName;
         }
 
         public GetBatchTaskInfoResponseBodyTaskInfo setSchedulePeriod(String schedulePeriod) {
@@ -1170,6 +1560,14 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
             return this.status;
         }
 
+        public GetBatchTaskInfoResponseBodyTaskInfo setTaskTagList(java.util.List<String> taskTagList) {
+            this.taskTagList = taskTagList;
+            return this;
+        }
+        public java.util.List<String> getTaskTagList() {
+            return this.taskTagList;
+        }
+
         public GetBatchTaskInfoResponseBodyTaskInfo setTaskType(Integer taskType) {
             this.taskType = taskType;
             return this;
@@ -1184,6 +1582,22 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
         }
         public java.util.List<GetBatchTaskInfoResponseBodyTaskInfoUpStreamList> getUpStreamList() {
             return this.upStreamList;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfo setValidEndDate(String validEndDate) {
+            this.validEndDate = validEndDate;
+            return this;
+        }
+        public String getValidEndDate() {
+            return this.validEndDate;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfo setValidStartDate(String validStartDate) {
+            this.validStartDate = validStartDate;
+            return this;
+        }
+        public String getValidStartDate() {
+            return this.validStartDate;
         }
 
     }

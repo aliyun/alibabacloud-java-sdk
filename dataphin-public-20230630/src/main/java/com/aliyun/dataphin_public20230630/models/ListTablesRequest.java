@@ -59,7 +59,6 @@ public class ListTablesRequest extends TeaModel {
     public static class ListTablesRequestListQuery extends TeaModel {
         /**
          * <p>The asset catalog, such as the project name or business unit name.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>LD_test01_dev</p>
@@ -75,6 +74,13 @@ public class ListTablesRequest extends TeaModel {
          */
         @NameInMap("Keyword")
         public String keyword;
+
+        /**
+         * <strong>example:</strong>
+         * <p>30012011</p>
+         */
+        @NameInMap("OwnerId")
+        public String ownerId;
 
         /**
          * <p>The page number. Default value: 1.</p>
@@ -93,6 +99,9 @@ public class ListTablesRequest extends TeaModel {
          */
         @NameInMap("PageSize")
         public Integer pageSize;
+
+        @NameInMap("SubTypes")
+        public java.util.List<String> subTypes;
 
         public static ListTablesRequestListQuery build(java.util.Map<String, ?> map) throws Exception {
             ListTablesRequestListQuery self = new ListTablesRequestListQuery();
@@ -115,6 +124,14 @@ public class ListTablesRequest extends TeaModel {
             return this.keyword;
         }
 
+        public ListTablesRequestListQuery setOwnerId(String ownerId) {
+            this.ownerId = ownerId;
+            return this;
+        }
+        public String getOwnerId() {
+            return this.ownerId;
+        }
+
         public ListTablesRequestListQuery setPageNo(Integer pageNo) {
             this.pageNo = pageNo;
             return this;
@@ -129,6 +146,14 @@ public class ListTablesRequest extends TeaModel {
         }
         public Integer getPageSize() {
             return this.pageSize;
+        }
+
+        public ListTablesRequestListQuery setSubTypes(java.util.List<String> subTypes) {
+            this.subTypes = subTypes;
+            return this;
+        }
+        public java.util.List<String> getSubTypes() {
+            return this.subTypes;
         }
 
     }

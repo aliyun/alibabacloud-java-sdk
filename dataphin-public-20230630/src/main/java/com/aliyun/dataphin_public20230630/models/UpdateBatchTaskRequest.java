@@ -59,6 +59,172 @@ public class UpdateBatchTaskRequest extends TeaModel {
         return this.updateCommand;
     }
 
+    public static class UpdateBatchTaskRequestUpdateCommandConditionScheduleParamList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>condition1</p>
+         */
+        @NameInMap("ConditionName")
+        public String conditionName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0 0 1 * * ?</p>
+         */
+        @NameInMap("CronExpression")
+        public String cronExpression;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("Enable")
+        public Boolean enable;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("FollowScheduleParam")
+        public Boolean followScheduleParam;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("NodeStatus")
+        public Integer nodeStatus;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;EXPRESSION&quot;,&quot;operator&quot;:&quot;or&quot;}</p>
+         */
+        @NameInMap("ScheduleConditionJson")
+        public String scheduleConditionJson;
+
+        /**
+         * <strong>example:</strong>
+         * <p>01:00</p>
+         */
+        @NameInMap("ScheduleTime")
+        public String scheduleTime;
+
+        public static UpdateBatchTaskRequestUpdateCommandConditionScheduleParamList build(java.util.Map<String, ?> map) throws Exception {
+            UpdateBatchTaskRequestUpdateCommandConditionScheduleParamList self = new UpdateBatchTaskRequestUpdateCommandConditionScheduleParamList();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateBatchTaskRequestUpdateCommandConditionScheduleParamList setConditionName(String conditionName) {
+            this.conditionName = conditionName;
+            return this;
+        }
+        public String getConditionName() {
+            return this.conditionName;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommandConditionScheduleParamList setCronExpression(String cronExpression) {
+            this.cronExpression = cronExpression;
+            return this;
+        }
+        public String getCronExpression() {
+            return this.cronExpression;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommandConditionScheduleParamList setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommandConditionScheduleParamList setFollowScheduleParam(Boolean followScheduleParam) {
+            this.followScheduleParam = followScheduleParam;
+            return this;
+        }
+        public Boolean getFollowScheduleParam() {
+            return this.followScheduleParam;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommandConditionScheduleParamList setNodeStatus(Integer nodeStatus) {
+            this.nodeStatus = nodeStatus;
+            return this;
+        }
+        public Integer getNodeStatus() {
+            return this.nodeStatus;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommandConditionScheduleParamList setScheduleConditionJson(String scheduleConditionJson) {
+            this.scheduleConditionJson = scheduleConditionJson;
+            return this;
+        }
+        public String getScheduleConditionJson() {
+            return this.scheduleConditionJson;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommandConditionScheduleParamList setScheduleTime(String scheduleTime) {
+            this.scheduleTime = scheduleTime;
+            return this;
+        }
+        public String getScheduleTime() {
+            return this.scheduleTime;
+        }
+
+    }
+
+    public static class UpdateBatchTaskRequestUpdateCommandContextParamList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("DefaultValue")
+        public String defaultValue;
+
+        /**
+         * <strong>example:</strong>
+         * <p>测试参数</p>
+         */
+        @NameInMap("Desc")
+        public String desc;
+
+        /**
+         * <strong>example:</strong>
+         * <p>param1</p>
+         */
+        @NameInMap("ParamKey")
+        public String paramKey;
+
+        public static UpdateBatchTaskRequestUpdateCommandContextParamList build(java.util.Map<String, ?> map) throws Exception {
+            UpdateBatchTaskRequestUpdateCommandContextParamList self = new UpdateBatchTaskRequestUpdateCommandContextParamList();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateBatchTaskRequestUpdateCommandContextParamList setDefaultValue(String defaultValue) {
+            this.defaultValue = defaultValue;
+            return this;
+        }
+        public String getDefaultValue() {
+            return this.defaultValue;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommandContextParamList setDesc(String desc) {
+            this.desc = desc;
+            return this;
+        }
+        public String getDesc() {
+            return this.desc;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommandContextParamList setParamKey(String paramKey) {
+            this.paramKey = paramKey;
+            return this;
+        }
+        public String getParamKey() {
+            return this.paramKey;
+        }
+
+    }
+
     public static class UpdateBatchTaskRequestUpdateCommandCustomScheduleConfig extends TeaModel {
         /**
          * <p>The end time in the format of HH:mm.</p>
@@ -454,6 +620,13 @@ public class UpdateBatchTaskRequest extends TeaModel {
 
     public static class UpdateBatchTaskRequestUpdateCommand extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>7305621095333696</p>
+         */
+        @NameInMap("BaseScheduleTemplateId")
+        public Long baseScheduleTemplateId;
+
+        /**
          * <p>The code of the node.</p>
          * <p>This parameter is required.</p>
          * 
@@ -462,6 +635,26 @@ public class UpdateBatchTaskRequest extends TeaModel {
          */
         @NameInMap("Code")
         public String code;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("ConditionScheduleEnable")
+        public Boolean conditionScheduleEnable;
+
+        @NameInMap("ConditionScheduleParamList")
+        public java.util.List<UpdateBatchTaskRequestUpdateCommandConditionScheduleParamList> conditionScheduleParamList;
+
+        /**
+         * <strong>example:</strong>
+         * <p>7305621095333697</p>
+         */
+        @NameInMap("ConditionScheduleTemplateId")
+        public Long conditionScheduleTemplateId;
+
+        @NameInMap("ContextParamList")
+        public java.util.List<UpdateBatchTaskRequestUpdateCommandContextParamList> contextParamList;
 
         /**
          * <p>The cron expression for automatic scheduling. Refer to Linux cron expressions.</p>
@@ -504,6 +697,20 @@ public class UpdateBatchTaskRequest extends TeaModel {
          */
         @NameInMap("DataSourceSchema")
         public String dataSourceSchema;
+
+        /**
+         * <strong>example:</strong>
+         * <p>/sql/protocolv1/o/xxx</p>
+         */
+        @NameInMap("DevHttpPath")
+        public String devHttpPath;
+
+        /**
+         * <strong>example:</strong>
+         * <p>rg-def456</p>
+         */
+        @NameInMap("DevResourceGroupId")
+        public String devResourceGroupId;
 
         /**
          * <p>The list of development owner IDs.</p>
@@ -574,6 +781,9 @@ public class UpdateBatchTaskRequest extends TeaModel {
         @NameInMap("NodeStatus")
         public Integer nodeStatus;
 
+        @NameInMap("OpsOwnerIdList")
+        public java.util.List<String> opsOwnerIdList;
+
         /**
          * <p>The list of custom parameters.</p>
          */
@@ -590,6 +800,13 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public Integer priority;
 
         /**
+         * <strong>example:</strong>
+         * <p>/sql/protocolv1/o/yyy</p>
+         */
+        @NameInMap("ProdHttpPath")
+        public String prodHttpPath;
+
+        /**
          * <p>The ID of the project to which the node belongs.</p>
          * <p>This parameter is required.</p>
          * 
@@ -604,6 +821,13 @@ public class UpdateBatchTaskRequest extends TeaModel {
          */
         @NameInMap("PythonModuleList")
         public java.util.List<String> pythonModuleList;
+
+        /**
+         * <strong>example:</strong>
+         * <p>rg-abc123</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         /**
          * <p>The schedule period. Valid values:</p>
@@ -628,6 +852,9 @@ public class UpdateBatchTaskRequest extends TeaModel {
         @NameInMap("SparkClientInfo")
         public UpdateBatchTaskRequestUpdateCommandSparkClientInfo sparkClientInfo;
 
+        @NameInMap("TaskTagList")
+        public java.util.List<String> taskTagList;
+
         /**
          * <p>The node type. Valid values:</p>
          * <ul>
@@ -650,9 +877,31 @@ public class UpdateBatchTaskRequest extends TeaModel {
         @NameInMap("UpStreamList")
         public java.util.List<UpdateBatchTaskRequestUpdateCommandUpStreamList> upStreamList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9999-12-31</p>
+         */
+        @NameInMap("ValidEndDate")
+        public String validEndDate;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2026-01-01</p>
+         */
+        @NameInMap("ValidStartDate")
+        public String validStartDate;
+
         public static UpdateBatchTaskRequestUpdateCommand build(java.util.Map<String, ?> map) throws Exception {
             UpdateBatchTaskRequestUpdateCommand self = new UpdateBatchTaskRequestUpdateCommand();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateBatchTaskRequestUpdateCommand setBaseScheduleTemplateId(Long baseScheduleTemplateId) {
+            this.baseScheduleTemplateId = baseScheduleTemplateId;
+            return this;
+        }
+        public Long getBaseScheduleTemplateId() {
+            return this.baseScheduleTemplateId;
         }
 
         public UpdateBatchTaskRequestUpdateCommand setCode(String code) {
@@ -661,6 +910,38 @@ public class UpdateBatchTaskRequest extends TeaModel {
         }
         public String getCode() {
             return this.code;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommand setConditionScheduleEnable(Boolean conditionScheduleEnable) {
+            this.conditionScheduleEnable = conditionScheduleEnable;
+            return this;
+        }
+        public Boolean getConditionScheduleEnable() {
+            return this.conditionScheduleEnable;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommand setConditionScheduleParamList(java.util.List<UpdateBatchTaskRequestUpdateCommandConditionScheduleParamList> conditionScheduleParamList) {
+            this.conditionScheduleParamList = conditionScheduleParamList;
+            return this;
+        }
+        public java.util.List<UpdateBatchTaskRequestUpdateCommandConditionScheduleParamList> getConditionScheduleParamList() {
+            return this.conditionScheduleParamList;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommand setConditionScheduleTemplateId(Long conditionScheduleTemplateId) {
+            this.conditionScheduleTemplateId = conditionScheduleTemplateId;
+            return this;
+        }
+        public Long getConditionScheduleTemplateId() {
+            return this.conditionScheduleTemplateId;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommand setContextParamList(java.util.List<UpdateBatchTaskRequestUpdateCommandContextParamList> contextParamList) {
+            this.contextParamList = contextParamList;
+            return this;
+        }
+        public java.util.List<UpdateBatchTaskRequestUpdateCommandContextParamList> getContextParamList() {
+            return this.contextParamList;
         }
 
         public UpdateBatchTaskRequestUpdateCommand setCronExpression(String cronExpression) {
@@ -701,6 +982,22 @@ public class UpdateBatchTaskRequest extends TeaModel {
         }
         public String getDataSourceSchema() {
             return this.dataSourceSchema;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommand setDevHttpPath(String devHttpPath) {
+            this.devHttpPath = devHttpPath;
+            return this;
+        }
+        public String getDevHttpPath() {
+            return this.devHttpPath;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommand setDevResourceGroupId(String devResourceGroupId) {
+            this.devResourceGroupId = devResourceGroupId;
+            return this;
+        }
+        public String getDevResourceGroupId() {
+            return this.devResourceGroupId;
         }
 
         public UpdateBatchTaskRequestUpdateCommand setDevelopOwnerIdList(java.util.List<String> developOwnerIdList) {
@@ -759,6 +1056,14 @@ public class UpdateBatchTaskRequest extends TeaModel {
             return this.nodeStatus;
         }
 
+        public UpdateBatchTaskRequestUpdateCommand setOpsOwnerIdList(java.util.List<String> opsOwnerIdList) {
+            this.opsOwnerIdList = opsOwnerIdList;
+            return this;
+        }
+        public java.util.List<String> getOpsOwnerIdList() {
+            return this.opsOwnerIdList;
+        }
+
         public UpdateBatchTaskRequestUpdateCommand setParamList(java.util.List<UpdateBatchTaskRequestUpdateCommandParamList> paramList) {
             this.paramList = paramList;
             return this;
@@ -773,6 +1078,14 @@ public class UpdateBatchTaskRequest extends TeaModel {
         }
         public Integer getPriority() {
             return this.priority;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommand setProdHttpPath(String prodHttpPath) {
+            this.prodHttpPath = prodHttpPath;
+            return this;
+        }
+        public String getProdHttpPath() {
+            return this.prodHttpPath;
         }
 
         public UpdateBatchTaskRequestUpdateCommand setProjectId(Long projectId) {
@@ -791,6 +1104,14 @@ public class UpdateBatchTaskRequest extends TeaModel {
             return this.pythonModuleList;
         }
 
+        public UpdateBatchTaskRequestUpdateCommand setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public UpdateBatchTaskRequestUpdateCommand setSchedulePeriod(String schedulePeriod) {
             this.schedulePeriod = schedulePeriod;
             return this;
@@ -807,6 +1128,14 @@ public class UpdateBatchTaskRequest extends TeaModel {
             return this.sparkClientInfo;
         }
 
+        public UpdateBatchTaskRequestUpdateCommand setTaskTagList(java.util.List<String> taskTagList) {
+            this.taskTagList = taskTagList;
+            return this;
+        }
+        public java.util.List<String> getTaskTagList() {
+            return this.taskTagList;
+        }
+
         public UpdateBatchTaskRequestUpdateCommand setTaskType(Integer taskType) {
             this.taskType = taskType;
             return this;
@@ -821,6 +1150,22 @@ public class UpdateBatchTaskRequest extends TeaModel {
         }
         public java.util.List<UpdateBatchTaskRequestUpdateCommandUpStreamList> getUpStreamList() {
             return this.upStreamList;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommand setValidEndDate(String validEndDate) {
+            this.validEndDate = validEndDate;
+            return this;
+        }
+        public String getValidEndDate() {
+            return this.validEndDate;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommand setValidStartDate(String validStartDate) {
+            this.validStartDate = validStartDate;
+            return this;
+        }
+        public String getValidStartDate() {
+            return this.validStartDate;
         }
 
     }

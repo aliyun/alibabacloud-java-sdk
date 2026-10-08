@@ -772,6 +772,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>批量交接资产。</p>
+     * 
+     * @param tmpReq BatchHandoverAssetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchHandoverAssetResponse
+     */
+    public BatchHandoverAssetResponse batchHandoverAssetWithOptions(BatchHandoverAssetRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BatchHandoverAssetShrinkRequest request = new BatchHandoverAssetShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.handoverCommand)) {
+            request.handoverCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.handoverCommand, "HandoverCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opUserId)) {
+            query.put("OpUserId", request.opUserId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.handoverCommandShrink)) {
+            body.put("HandoverCommand", request.handoverCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchHandoverAsset"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchHandoverAssetResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量交接资产。</p>
+     * 
+     * @param request BatchHandoverAssetRequest
+     * @return BatchHandoverAssetResponse
+     */
+    public BatchHandoverAssetResponse batchHandoverAsset(BatchHandoverAssetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchHandoverAssetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Checks the connectivity of a compute source.</p>
      * 
      * @param tmpReq CheckComputeSourceConnectivityRequest
@@ -992,6 +1052,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CheckDataSourceConnectivityByIdResponse checkDataSourceConnectivityById(CheckDataSourceConnectivityByIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.checkDataSourceConnectivityByIdWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>在指定调度资源组上异步发起数据源连通性检查，立即返回检查任务ID（Data）；任务结果通过 GetCheckConnectivityJobByJobId 轮询。与 CheckDataSourceConnectivity 的区别：本接口的检查任务在客户指定的调度资源组上执行，适用于 Dataphin 服务端与目标数据源网络不通的场景。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>在指定调度资源组上检查数据源连通性</p>
+     * 
+     * @param tmpReq CheckDataSourceConnectivityOnResourceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckDataSourceConnectivityOnResourceGroupResponse
+     */
+    public CheckDataSourceConnectivityOnResourceGroupResponse checkDataSourceConnectivityOnResourceGroupWithOptions(CheckDataSourceConnectivityOnResourceGroupRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CheckDataSourceConnectivityOnResourceGroupShrinkRequest request = new CheckDataSourceConnectivityOnResourceGroupShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.checkCommand)) {
+            request.checkCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.checkCommand, "CheckCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opUserId)) {
+            query.put("OpUserId", request.opUserId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.checkCommandShrink)) {
+            body.put("CheckCommand", request.checkCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckDataSourceConnectivityOnResourceGroup"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckDataSourceConnectivityOnResourceGroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>在指定调度资源组上异步发起数据源连通性检查，立即返回检查任务ID（Data）；任务结果通过 GetCheckConnectivityJobByJobId 轮询。与 CheckDataSourceConnectivity 的区别：本接口的检查任务在客户指定的调度资源组上执行，适用于 Dataphin 服务端与目标数据源网络不通的场景。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>在指定调度资源组上检查数据源连通性</p>
+     * 
+     * @param request CheckDataSourceConnectivityOnResourceGroupRequest
+     * @return CheckDataSourceConnectivityOnResourceGroupResponse
+     */
+    public CheckDataSourceConnectivityOnResourceGroupResponse checkDataSourceConnectivityOnResourceGroup(CheckDataSourceConnectivityOnResourceGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkDataSourceConnectivityOnResourceGroupWithOptions(request, runtime);
     }
 
     /**
@@ -1886,19 +2012,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API operation creates a dataset in a specified project.</li>
+     * <li>This API creates a new dataset in the specified project.</li>
      * <li><code>ProjectId</code> is a required parameter that specifies the ID of the project in which to create the dataset.</li>
      * <li><code>CreateCommand</code> is a complex object that contains the configuration information required to create the dataset.</li>
      * <li><code>Name</code>, <code>Type</code>, <code>ContentType</code>, and <code>Scenario</code> are required fields that specify the dataset name, type, content type, and scenarios.</li>
      * <li><code>FileStorageConfig</code> and <code>MetadataStorageConfig</code> in <code>VersionConfig</code> can be configured as needed.</li>
-     * <li>If you need a real-time meta table configuration, provide the <code>RealtimeMetaTableConfig</code> information.</li>
-     * <li>Ensure that all required fields are correctly specified. Otherwise, the request failed.</li>
+     * <li>If you need real-time meta-table configuration, provide the <code>RealtimeMetaTableConfig</code> information.</li>
+     * <li>Make sure all required fields are correctly filled in. Otherwise, the request failed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a dataset in a specified project. Online version: v6.2.0.</p>
+     * <p>Creates a new dataset in the specified project. Available since v6.2.0.</p>
      * 
      * @param tmpReq CreateDatasetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1950,19 +2076,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API operation creates a dataset in a specified project.</li>
+     * <li>This API creates a new dataset in the specified project.</li>
      * <li><code>ProjectId</code> is a required parameter that specifies the ID of the project in which to create the dataset.</li>
      * <li><code>CreateCommand</code> is a complex object that contains the configuration information required to create the dataset.</li>
      * <li><code>Name</code>, <code>Type</code>, <code>ContentType</code>, and <code>Scenario</code> are required fields that specify the dataset name, type, content type, and scenarios.</li>
      * <li><code>FileStorageConfig</code> and <code>MetadataStorageConfig</code> in <code>VersionConfig</code> can be configured as needed.</li>
-     * <li>If you need a real-time meta table configuration, provide the <code>RealtimeMetaTableConfig</code> information.</li>
-     * <li>Ensure that all required fields are correctly specified. Otherwise, the request failed.</li>
+     * <li>If you need real-time meta-table configuration, provide the <code>RealtimeMetaTableConfig</code> information.</li>
+     * <li>Make sure all required fields are correctly filled in. Otherwise, the request failed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a dataset in a specified project. Online version: v6.2.0.</p>
+     * <p>Creates a new dataset in the specified project. Available since v6.2.0.</p>
      * 
      * @param request CreateDatasetRequest
      * @return CreateDatasetResponse
@@ -2550,7 +2676,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of published APIs by appKey.</p>
+     * <p>Queries the details of published APIs based on the appKey.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a row-level permission.</p>
@@ -2601,7 +2727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of published APIs by appKey.</p>
+     * <p>Queries the details of published APIs based on the appKey.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a row-level permission.</p>
@@ -7252,6 +7378,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>按任务ID查询数据源连通性检查任务的最新状态与错误信息，用于轮询 CheckDataSourceConnectivityOnResourceGroup 返回的异步任务。任务不存在时 Data 为空。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>按任务ID查询数据源连通性检查任务</p>
+     * 
+     * @param request GetCheckConnectivityJobByJobIdRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCheckConnectivityJobByJobIdResponse
+     */
+    public GetCheckConnectivityJobByJobIdResponse getCheckConnectivityJobByJobIdWithOptions(GetCheckConnectivityJobByJobIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opUserId)) {
+            query.put("OpUserId", request.opUserId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCheckConnectivityJobByJobId"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCheckConnectivityJobByJobIdResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>按任务ID查询数据源连通性检查任务的最新状态与错误信息，用于轮询 CheckDataSourceConnectivityOnResourceGroup 返回的异步任务。任务不存在时 Data 为空。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>按任务ID查询数据源连通性检查任务</p>
+     * 
+     * @param request GetCheckConnectivityJobByJobIdRequest
+     * @return GetCheckConnectivityJobByJobIdResponse
+     */
+    public GetCheckConnectivityJobByJobIdResponse getCheckConnectivityJobByJobId(GetCheckConnectivityJobByJobIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCheckConnectivityJobByJobIdWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Queries the details of connectivity tasks that have been tested for a specified data source ID.</p>
      * 
      * <b>summary</b> : 
@@ -11528,6 +11712,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取集成源表的描述与元数据信息（表描述+字段列表）。支持项目/计算源表、数据源直查表、外部采集数据源三种来源；结果为实时查询；外部数据源需先完成元数据采集。</p>
+     * 
+     * @param tmpReq GetSourceTableMetaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSourceTableMetaResponse
+     */
+    public GetSourceTableMetaResponse getSourceTableMetaWithOptions(GetSourceTableMetaRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetSourceTableMetaShrinkRequest request = new GetSourceTableMetaShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.context)) {
+            request.contextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.context, "Context", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.query)) {
+            request.queryShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.query, "Query", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opUserId)) {
+            query.put("OpUserId", request.opUserId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contextShrink)) {
+            body.put("Context", request.contextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryShrink)) {
+            body.put("Query", request.queryShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSourceTableMeta"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSourceTableMetaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取集成源表的描述与元数据信息（表描述+字段列表）。支持项目/计算源表、数据源直查表、外部采集数据源三种来源；结果为实时查询；外部数据源需先完成元数据采集。</p>
+     * 
+     * @param request GetSourceTableMetaRequest
+     * @return GetSourceTableMetaResponse
+     */
+    public GetSourceTableMetaResponse getSourceTableMeta(GetSourceTableMetaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSourceTableMetaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves the Spark client information of the cluster associated with a compute source.</p>
      * 
      * @param request GetSparkLocalClientInfoRequest
@@ -12116,6 +12368,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetSupplementDagrunInstanceResponse getSupplementDagrunInstance(GetSupplementDagrunInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getSupplementDagrunInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询表资产清单详情。</p>
+     * 
+     * @param request GetTableRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTableResponse
+     */
+    public GetTableResponse getTableWithOptions(GetTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opUserId)) {
+            query.put("OpUserId", request.opUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableGuid)) {
+            query.put("TableGuid", request.tableGuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTable"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTableResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询表资产清单详情。</p>
+     * 
+     * @param request GetTableRequest
+     * @return GetTableResponse
+     */
+    public GetTableResponse getTable(GetTableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getTableWithOptions(request, runtime);
     }
 
     /**
@@ -13536,6 +13840,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAuthorizedDataServiceApiDetailsResponse listAuthorizedDataServiceApiDetails(ListAuthorizedDataServiceApiDetailsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAuthorizedDataServiceApiDetailsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询离线计算任务列表，支持按任务名称模糊检索、按产出表名精确定位构建该表的任务并获取其文件ID</p>
+     * 
+     * @param tmpReq ListBatchTasksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListBatchTasksResponse
+     */
+    public ListBatchTasksResponse listBatchTasksWithOptions(ListBatchTasksRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListBatchTasksShrinkRequest request = new ListBatchTasksShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.batchTaskQuery)) {
+            request.batchTaskQueryShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.batchTaskQuery, "BatchTaskQuery", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opUserId)) {
+            query.put("OpUserId", request.opUserId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.batchTaskQueryShrink)) {
+            body.put("BatchTaskQuery", request.batchTaskQueryShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListBatchTasks"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListBatchTasksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询离线计算任务列表，支持按任务名称模糊检索、按产出表名精确定位构建该表的任务并获取其文件ID</p>
+     * 
+     * @param request ListBatchTasksRequest
+     * @return ListBatchTasksResponse
+     */
+    public ListBatchTasksResponse listBatchTasks(ListBatchTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listBatchTasksWithOptions(request, runtime);
     }
 
     /**
@@ -15255,6 +15619,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>获取租户指定项目类型下的项目角色列表。返回角色列表中 roleType 字段标识角色类型：</p>
+     * <ul>
+     * <li>BUILD_IN：内置角色</li>
+     * <li>CUSTOM：自定义角色
+     * 请求参数 ProjectType 必填，可选值为：BASIC（基础模式项目）、DEV（开发环境项目）、PROD（生产环境项目）、TAG（标签平台项目）。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>获取项目角色列表</p>
+     * 
+     * @param request ListProjectRolesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProjectRolesResponse
+     */
+    public ListProjectRolesResponse listProjectRolesWithOptions(ListProjectRolesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opUserId)) {
+            query.put("OpUserId", request.opUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectType)) {
+            query.put("ProjectType", request.projectType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProjectRoles"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProjectRolesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>获取租户指定项目类型下的项目角色列表。返回角色列表中 roleType 字段标识角色类型：</p>
+     * <ul>
+     * <li>BUILD_IN：内置角色</li>
+     * <li>CUSTOM：自定义角色
+     * 请求参数 ProjectType 必填，可选值为：BASIC（基础模式项目）、DEV（开发环境项目）、PROD（生产环境项目）、TAG（标签平台项目）。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>获取项目角色列表</p>
+     * 
+     * @param request ListProjectRolesRequest
+     * @return ListProjectRolesResponse
+     */
+    public ListProjectRolesResponse listProjectRoles(ListProjectRolesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listProjectRolesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Retrieves a list of projects.</p>
      * 
@@ -15978,6 +16410,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询租户下的调度模板列表</p>
+     * 
+     * @param tmpReq ListScheduleTemplatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListScheduleTemplatesResponse
+     */
+    public ListScheduleTemplatesResponse listScheduleTemplatesWithOptions(ListScheduleTemplatesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListScheduleTemplatesShrinkRequest request = new ListScheduleTemplatesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.listScheduleTemplatesCommand)) {
+            request.listScheduleTemplatesCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.listScheduleTemplatesCommand, "ListScheduleTemplatesCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opUserId)) {
+            query.put("OpUserId", request.opUserId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.listScheduleTemplatesCommandShrink)) {
+            body.put("ListScheduleTemplatesCommand", request.listScheduleTemplatesCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListScheduleTemplates"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListScheduleTemplatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询租户下的调度模板列表</p>
+     * 
+     * @param request ListScheduleTemplatesRequest
+     * @return ListScheduleTemplatesResponse
+     */
+    public ListScheduleTemplatesResponse listScheduleTemplates(ListScheduleTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listScheduleTemplatesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the data classification list by paging.</p>
      * 
      * @param tmpReq ListSecurityClassifyRequest
@@ -16398,6 +16890,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTenantMembersResponse listTenantMembers(ListTenantMembersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTenantMembersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>获取租户角色列表。返回角色列表中 roleType 字段标识角色类型：</p>
+     * <ul>
+     * <li>BUILD_IN：内置角色</li>
+     * <li>CUSTOM：自定义角色（即租户自定义创建的角色）
+     * 本接口无需额外业务入参，tenantId 由 POP 网关上下文自动注入。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>获取租户角色列表</p>
+     * 
+     * @param request ListTenantRolesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTenantRolesResponse
+     */
+    public ListTenantRolesResponse listTenantRolesWithOptions(ListTenantRolesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opUserId)) {
+            query.put("OpUserId", request.opUserId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTenantRoles"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTenantRolesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>获取租户角色列表。返回角色列表中 roleType 字段标识角色类型：</p>
+     * <ul>
+     * <li>BUILD_IN：内置角色</li>
+     * <li>CUSTOM：自定义角色（即租户自定义创建的角色）
+     * 本接口无需额外业务入参，tenantId 由 POP 网关上下文自动注入。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>获取租户角色列表</p>
+     * 
+     * @param request ListTenantRolesRequest
+     * @return ListTenantRolesResponse
+     */
+    public ListTenantRolesResponse listTenantRoles(ListTenantRolesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listTenantRolesWithOptions(request, runtime);
     }
 
     /**
@@ -18076,6 +18632,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>启动增全量一体化实例。</p>
+     * 
+     * @param tmpReq StartPipelineIntegratedTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartPipelineIntegratedTaskResponse
+     */
+    public StartPipelineIntegratedTaskResponse startPipelineIntegratedTaskWithOptions(StartPipelineIntegratedTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        StartPipelineIntegratedTaskShrinkRequest request = new StartPipelineIntegratedTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.context)) {
+            request.contextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.context, "Context", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.startCommand)) {
+            request.startCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.startCommand, "StartCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opUserId)) {
+            query.put("OpUserId", request.opUserId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contextShrink)) {
+            body.put("Context", request.contextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startCommandShrink)) {
+            body.put("StartCommand", request.startCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartPipelineIntegratedTask"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartPipelineIntegratedTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启动增全量一体化实例。</p>
+     * 
+     * @param request StartPipelineIntegratedTaskRequest
+     * @return StartPipelineIntegratedTaskResponse
+     */
+    public StartPipelineIntegratedTaskResponse startPipelineIntegratedTask(StartPipelineIntegratedTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startPipelineIntegratedTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Stops an ad hoc query task.</p>
      * 
      * @param request StopAdHocTaskRequest
@@ -18128,6 +18752,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StopAdHocTaskResponse stopAdHocTask(StopAdHocTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopAdHocTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量停止增全量一体化实例。</p>
+     * 
+     * @param tmpReq StopPipelineIntegratedTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopPipelineIntegratedTaskResponse
+     */
+    public StopPipelineIntegratedTaskResponse stopPipelineIntegratedTaskWithOptions(StopPipelineIntegratedTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        StopPipelineIntegratedTaskShrinkRequest request = new StopPipelineIntegratedTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.context)) {
+            request.contextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.context, "Context", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.stopCommand)) {
+            request.stopCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.stopCommand, "StopCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opUserId)) {
+            query.put("OpUserId", request.opUserId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contextShrink)) {
+            body.put("Context", request.contextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stopCommandShrink)) {
+            body.put("StopCommand", request.stopCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopPipelineIntegratedTask"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopPipelineIntegratedTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量停止增全量一体化实例。</p>
+     * 
+     * @param request StopPipelineIntegratedTaskRequest
+     * @return StopPipelineIntegratedTaskResponse
+     */
+    public StopPipelineIntegratedTaskResponse stopPipelineIntegratedTask(StopPipelineIntegratedTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopPipelineIntegratedTaskWithOptions(request, runtime);
     }
 
     /**
@@ -18565,6 +19257,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>同步用户的部门映射关系。支持为指定用户设置部门，或通过传入空列表 departmentIdList 清除该用户已设置的全部部门。
+     * 使用说明：</p>
+     * <ul>
+     * <li>departmentIdList 为 null（未传）：直接报错，防止调用方误清空；</li>
+     * <li>departmentIdList 为空列表 []：显式清除该 sourceUserId 对应的全部部门映射；</li>
+     * <li>departmentIdList 为非空列表：全量覆盖，先删除该用户全部旧部门映射，再插入新列表中的部门。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Synchronizes department member information.</p>
      * 
@@ -18613,6 +19314,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>同步用户的部门映射关系。支持为指定用户设置部门，或通过传入空列表 departmentIdList 清除该用户已设置的全部部门。
+     * 使用说明：</p>
+     * <ul>
+     * <li>departmentIdList 为 null（未传）：直接报错，防止调用方误清空；</li>
+     * <li>departmentIdList 为空列表 []：显式清除该 sourceUserId 对应的全部部门映射；</li>
+     * <li>departmentIdList 为非空列表：全量覆盖，先删除该用户全部旧部门映射，再插入新列表中的部门。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Synchronizes department member information.</p>
      * 

@@ -3,10 +3,8 @@ package com.aliyun.dataphin_public20230630.models;
 
 import com.aliyun.tea.*;
 
-public class SyncDepartmentUserResponseBody extends TeaModel {
+public class CheckDataSourceConnectivityOnResourceGroupResponseBody extends TeaModel {
     /**
-     * <p>The request error code. OK indicates a successful request.</p>
-     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -14,17 +12,13 @@ public class SyncDepartmentUserResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response result.</p>
-     * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>129837xxxx</p>
      */
     @NameInMap("Data")
-    public Boolean data;
+    public String data;
 
     /**
-     * <p>The HTTP status code returned by the backend.</p>
-     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -32,8 +26,6 @@ public class SyncDepartmentUserResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request error message.</p>
-     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -41,8 +33,6 @@ public class SyncDepartmentUserResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -50,17 +40,18 @@ public class SyncDepartmentUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
-    public static SyncDepartmentUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        SyncDepartmentUserResponseBody self = new SyncDepartmentUserResponseBody();
+    public static CheckDataSourceConnectivityOnResourceGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CheckDataSourceConnectivityOnResourceGroupResponseBody self = new CheckDataSourceConnectivityOnResourceGroupResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public SyncDepartmentUserResponseBody setCode(String code) {
+    public CheckDataSourceConnectivityOnResourceGroupResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -68,15 +59,15 @@ public class SyncDepartmentUserResponseBody extends TeaModel {
         return this.code;
     }
 
-    public SyncDepartmentUserResponseBody setData(Boolean data) {
+    public CheckDataSourceConnectivityOnResourceGroupResponseBody setData(String data) {
         this.data = data;
         return this;
     }
-    public Boolean getData() {
+    public String getData() {
         return this.data;
     }
 
-    public SyncDepartmentUserResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public CheckDataSourceConnectivityOnResourceGroupResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -84,7 +75,7 @@ public class SyncDepartmentUserResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public SyncDepartmentUserResponseBody setMessage(String message) {
+    public CheckDataSourceConnectivityOnResourceGroupResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -92,7 +83,7 @@ public class SyncDepartmentUserResponseBody extends TeaModel {
         return this.message;
     }
 
-    public SyncDepartmentUserResponseBody setRequestId(String requestId) {
+    public CheckDataSourceConnectivityOnResourceGroupResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -100,7 +91,7 @@ public class SyncDepartmentUserResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public SyncDepartmentUserResponseBody setSuccess(Boolean success) {
+    public CheckDataSourceConnectivityOnResourceGroupResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
