@@ -8,7 +8,7 @@ public class Label extends TeaModel {
      * <p>The centric score of the tag. This indicates whether the tag is the main subject in the image. The value ranges from 0 to 1. A higher value indicates higher confidence that the tag is the main subject of the image.</p>
      * 
      * <strong>example:</strong>
-     * <p>0.877</p>
+     * <p>0.7319999933242798</p>
      */
     @NameInMap("CentricScore")
     public Float centricScore;
@@ -32,7 +32,7 @@ public class Label extends TeaModel {
      * <p>The tag confidence level. The value ranges from 0 (lowest confidence) to 1 (highest confidence).</p>
      * 
      * <strong>example:</strong>
-     * <p>0.95</p>
+     * <p>0.9891784601980591</p>
      */
     @NameInMap("LabelConfidence")
     public Float labelConfidence;
@@ -41,7 +41,7 @@ public class Label extends TeaModel {
      * <p>The tag level. Valid values are 1, 2, and 3, representing first-level, second-level, and third-level tags, respectively.</p>
      * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>1</p>
      */
     @NameInMap("LabelLevel")
     public Long labelLevel;

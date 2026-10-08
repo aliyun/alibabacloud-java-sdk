@@ -15,7 +15,7 @@ public class BatchGetFigureClusterShrinkRequest extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>The cluster IDs.</p>
+     * <p>The array of group object IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ObjectIds")

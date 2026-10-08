@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class SmartClusterConfig extends TeaModel {
+    /**
+     * <p>The figure clustering configuration.</p>
+     */
     @NameInMap("Figure")
     public FigureClusterConfig figure;
 

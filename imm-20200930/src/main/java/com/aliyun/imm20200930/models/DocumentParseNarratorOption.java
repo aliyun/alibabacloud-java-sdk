@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DocumentParseNarratorOption extends TeaModel {
     /**
-     * <p>The summary of the document.</p>
+     * <p>The article reading guide.</p>
      */
     @NameInMap("Narrate")
     public Boolean narrate;

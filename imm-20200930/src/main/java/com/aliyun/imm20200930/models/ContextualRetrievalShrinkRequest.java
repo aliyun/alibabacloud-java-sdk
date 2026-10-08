@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ContextualRetrievalShrinkRequest extends TeaModel {
     /**
-     * <p>The dataset.</p>
+     * <p>The dataset used for retrieval.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,14 +15,14 @@ public class ContextualRetrievalShrinkRequest extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>The conversation or tool invocation history. The latest message is at the end of the list (with an index number of n-1), whereas the earliest message is at the beginning of the list (with an index number of 0). Historical messages must be provided in user-assistant pairs. The maximum number of messages that you can specify is 2\*n+1. The current question cannot exceed 1,000 characters in length. The maximum number of historical messages allowed is 100.</p>
+     * <p>The conversation history and tool calling history. The latest message is at the end (index n-1), and the oldest message is at the beginning (index 0). The messages must be in user-assistant pairs, with a total count of 2*n+1, and the length of the latest question cannot exceed 1,000 characters. The conversation history is limited to 100 messages.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Messages")
     public String messagesShrink;
 
     /**
-     * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/zh/imm/getting-started/create-a-project-1?spm=a2c4g.11186623.help-menu-search-62354.d_0">CreateProject</a>.</p>
+     * <p>The name of the project. For more information about how to obtain the project name, see <a href="https://www.alibabacloud.com/help/en/imm/getting-started/create-a-project-1">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class ContextualRetrievalShrinkRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>Indicates whether to enable recall-only (embedding-based search). If you set this parameter to true, returned results have not been re-ranked and can be ranked in custom order. Default value: false.</p>
+     * <p>Specifies whether to enable only the recall process (embedding search). If this parameter is set to true, the returned data is not reranked, which allows you to customize the reranking process. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -41,7 +41,7 @@ public class ContextualRetrievalShrinkRequest extends TeaModel {
     public Boolean recallOnly;
 
     /**
-     * <p>The IDs of clusters from which results are retrieved.</p>
+     * <p>The list of smart cluster IDs, which are used to retrieve files within specific smart clusters.</p>
      */
     @NameInMap("SmartClusterIds")
     public String smartClusterIdsShrink;

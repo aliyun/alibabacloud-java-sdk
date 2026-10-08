@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PersonReferenceConfig extends TeaModel {
     /**
-     * <p>Specifies whether to enable person referencing. Set to <code>true</code> to enable this feature. The default value is <code>false</code>.</p>
+     * <p>Specifies whether to enable character reference configuration. Default value: false.</p>
      */
     @NameInMap("Enable")
     public Boolean enable;

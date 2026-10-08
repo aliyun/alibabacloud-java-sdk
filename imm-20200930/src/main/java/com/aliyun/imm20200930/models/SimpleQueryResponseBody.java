@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class SimpleQueryResponseBody extends TeaModel {
     /**
-     * <p>The aggregations. This parameter is returned only when the value of the Aggregations request parameter is not empty.</p>
+     * <p>The list of aggregation field information. This parameter is returned only when Aggregations in the request is not empty.</p>
      */
     @NameInMap("Aggregations")
     public java.util.List<SimpleQueryResponseBodyAggregations> aggregations;
 
     /**
-     * <p>The files. This parameter is returned only when the value of the Aggregations request parameter is empty.</p>
+     * <p>The list of file information. This parameter is returned only when Aggregations in the request is empty.</p>
      */
     @NameInMap("Files")
     public java.util.List<File> files;
 
     /**
-     * <p>The pagination token is used in the next request to retrieve a new page of results if the total number of results exceeds the value of the MaxResults parameter.</p>
-     * <p>It can be used in the next request to retrieve a new page of results.</p>
-     * <p>If NextToken is empty, no next page exists.</p>
+     * <p>The token used for pagination when the total number of files exceeds the value of MaxResults.</p>
+     * <p>When you list file information next time, set NextToken to this value to return the remaining results.</p>
+     * <p>This parameter has a value only when not all files are returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class SimpleQueryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of total hits.</p>
+     * <p>The number of matched records.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -93,7 +93,7 @@ public class SimpleQueryResponseBody extends TeaModel {
 
     public static class SimpleQueryResponseBodyAggregationsGroups extends TeaModel {
         /**
-         * <p>The number of results in the grouped aggregation.</p>
+         * <p>The total count of the grouping and aggregation.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -102,7 +102,7 @@ public class SimpleQueryResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The value for the grouped aggregation.</p>
+         * <p>The value of the grouping and aggregation.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -135,7 +135,7 @@ public class SimpleQueryResponseBody extends TeaModel {
 
     public static class SimpleQueryResponseBodyAggregations extends TeaModel {
         /**
-         * <p>The name of the field.</p>
+         * <p>The name of the aggregation field.</p>
          * 
          * <strong>example:</strong>
          * <p>Size</p>
@@ -144,13 +144,13 @@ public class SimpleQueryResponseBody extends TeaModel {
         public String field;
 
         /**
-         * <p>The grouped aggregations. This parameter is returned only when the group operator is specified in the Aggregations request parameter.</p>
+         * <p>The list of grouping and aggregation results. This parameter is returned only when an Operation of the group type exists in Aggregations of the request.</p>
          */
         @NameInMap("Groups")
         public java.util.List<SimpleQueryResponseBodyAggregationsGroups> groups;
 
         /**
-         * <p>The operator.</p>
+         * <p>The aggregation operation for the aggregation field.</p>
          * 
          * <strong>example:</strong>
          * <p>sum</p>
@@ -159,7 +159,7 @@ public class SimpleQueryResponseBody extends TeaModel {
         public String operation;
 
         /**
-         * <p>The statistical result.</p>
+         * <p>The statistical result of the aggregation.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>

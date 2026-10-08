@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetFigureClusterResponseBody extends TeaModel {
     /**
-     * <p>The information about the face cluster.</p>
+     * <p>The detailed information of the clustering group.</p>
      */
     @NameInMap("FigureCluster")
     public FigureCluster figureCluster;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>5F74C5C9-5AC0-49F9-914D-E01589D3****</p>

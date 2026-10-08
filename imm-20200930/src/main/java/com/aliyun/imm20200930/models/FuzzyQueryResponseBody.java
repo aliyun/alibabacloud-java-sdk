@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class FuzzyQueryResponseBody extends TeaModel {
     /**
-     * <p>The files.</p>
+     * <p>The list of file information.</p>
      */
     @NameInMap("Files")
     public java.util.List<File> files;
 
     /**
-     * <p>A pagination token.</p>
-     * <p>It can be used in the next request to retrieve a new page of results.</p>
-     * <p>If NextToken is empty, no next page exists.</p>
+     * <p>The token used for pagination when the total number of files exceeds the value of MaxResults.</p>
+     * <p>When you list file information next time, set NextToken to this value to return the remaining results.</p>
+     * <p>This parameter is returned only when not all files are returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,7 +23,7 @@ public class FuzzyQueryResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1B3D5E0A-D8B8-4DA0-8127-ED32C851****</p>
@@ -32,7 +32,7 @@ public class FuzzyQueryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of hits.</p>
+     * <p>The number of matched records.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

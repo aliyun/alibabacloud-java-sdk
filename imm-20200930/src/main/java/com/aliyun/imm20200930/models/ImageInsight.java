@@ -5,14 +5,6 @@ import com.aliyun.tea.*;
 
 public class ImageInsight extends TeaModel {
     /**
-     * <p>Image summary.</p>
-     * <blockquote>
-     * <p> Not supported.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>无。</p>
-     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -20,16 +12,17 @@ public class ImageInsight extends TeaModel {
     public String caption;
 
     /**
-     * <p>The description of the image.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>图片中有一人，穿着深色西装外套，内搭白色衬衫。背景为渐变的浅蓝色至灰色。</p>
-     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
     @NameInMap("Description")
     public String description;
+
+    /**
+     * <p>The multilingual image content.</p>
+     */
+    @NameInMap("MultilingualContent")
+    public java.util.Map<String, MultilingualContentEntry> multilingualContent;
 
     public static ImageInsight build(java.util.Map<String, ?> map) throws Exception {
         ImageInsight self = new ImageInsight();
@@ -50,6 +43,14 @@ public class ImageInsight extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ImageInsight setMultilingualContent(java.util.Map<String, MultilingualContentEntry> multilingualContent) {
+        this.multilingualContent = multilingualContent;
+        return this;
+    }
+    public java.util.Map<String, MultilingualContentEntry> getMultilingualContent() {
+        return this.multilingualContent;
     }
 
 }

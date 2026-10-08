@@ -38,7 +38,7 @@ public class TrimPolicy extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>true</p>
      */
     @NameInMap("DisableDeleteUnusedPicture")
     public Boolean disableDeleteUnusedPicture;

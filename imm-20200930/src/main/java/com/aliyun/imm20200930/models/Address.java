@@ -44,7 +44,7 @@ public class Address extends TeaModel {
      * <p>The BCP 47 language code.</p>
      * 
      * <strong>example:</strong>
-     * <p>zh-Hans</p>
+     * <p>zh-hans</p>
      */
     @NameInMap("Language")
     public String language;

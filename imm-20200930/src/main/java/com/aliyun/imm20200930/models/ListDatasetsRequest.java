@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDatasetsRequest extends TeaModel {
     /**
-     * <p>The maximum number of datasets to return. Valid values: 0 to 200.</p>
-     * <p>If this parameter is left empty or set to 0, 100 datasets are returned.</p>
+     * <p>The maximum number of datasets to return. Valid values: 0 to 200. If you do not specify this parameter or set it to 0, the default value 100 is used.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -16,9 +15,9 @@ public class ListDatasetsRequest extends TeaModel {
 
     /**
      * <p>The pagination token.</p>
-     * <p>If the total number of datasets is greater than the value of MaxResults, you must specify this parameter. The list is returned in lexicographic order starting from the value of NextToken.</p>
+     * <p>If the total number of datasets exceeds the value of MaxResults, this token is used for pagination. The list of dataset information is returned in lexicographical order starting from NextToken.</p>
      * <blockquote>
-     * <p> The first time you call this operation in a query, set this parameter to null.</p>
+     * <p>When you call this operation for the first time in a query, leave this parameter empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +27,7 @@ public class ListDatasetsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The dataset prefix.</p>
+     * <p>The prefix of the dataset name.</p>
      * 
      * <strong>example:</strong>
      * <p>dataset</p>
@@ -37,7 +36,7 @@ public class ListDatasetsRequest extends TeaModel {
     public String prefix;
 
     /**
-     * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+     * <p>The name of the project. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

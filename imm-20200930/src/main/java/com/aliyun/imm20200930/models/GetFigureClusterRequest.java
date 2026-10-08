@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFigureClusterRequest extends TeaModel {
     /**
-     * <p>The dataset name.<a href="~~CreateDataset~~"></a></p>
+     * <p>The name of the dataset. For more information about how to obtain the dataset name, see <a href="~~CreateDataset~~">CreateDataset</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetFigureClusterRequest extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>The ID of the face clustering task. You can obtain the ID from the face clustering information returned after you call the <a href="~~QueryFigureClusters~~">QueryFigureClusters</a> operation.</p>
+     * <p>The object ID of the clustering group. You can obtain the object ID from the face group information returned by <a href="~~QueryFigureClusters~~">QueryFigureClusters</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetFigureClusterRequest extends TeaModel {
     public String objectId;
 
     /**
-     * <p>The project name.<a href="~~CreateProject~~"></a></p>
+     * <p>The name of the project. For more information about how to obtain the project name, see <a href="~~CreateProject~~">CreateProject</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

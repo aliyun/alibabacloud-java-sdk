@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryStoriesShrinkRequest extends TeaModel {
     /**
-     * <p>The time range in which stories were created.</p>
+     * <p>The creation time range of the story.</p>
      */
     @NameInMap("CreateTimeRange")
     public String createTimeRangeShrink;
 
     /**
-     * <p>The custom labels in key-value pairs.</p>
+     * <p>The custom label key-value pairs. Only stories that match the specified label pairs are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>key=value</p>
@@ -20,7 +20,7 @@ public class QueryStoriesShrinkRequest extends TeaModel {
     public String customLabels;
 
     /**
-     * <p>The name of the dataset.<a href="~~478160~~"></a></p>
+     * <p>The name of the dataset. For more information about how to obtain the name, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,13 +30,13 @@ public class QueryStoriesShrinkRequest extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>The IDs of the face clusters.</p>
+     * <p>The IDs of the figure clusters.</p>
      */
     @NameInMap("FigureClusterIds")
     public String figureClusterIdsShrink;
 
     /**
-     * <p>The maximum number of entries to return. Valid values: 1 to 100. Default value: 100.</p>
+     * <p>The maximum number of entries to return in a single call. Valid values: 1 to 100. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,7 +45,7 @@ public class QueryStoriesShrinkRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If you do not specify this token in the next request, results are returned from the beginning.</p>
+     * <p>The pagination token. If this parameter is left empty, the query starts from the beginning. To query the next page, set this parameter to the NextToken value returned in the previous call.</p>
      * 
      * <strong>example:</strong>
      * <p>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpw****</p>
@@ -54,7 +54,7 @@ public class QueryStoriesShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the story.</p>
+     * <p>The ID of the story object.</p>
      * 
      * <strong>example:</strong>
      * <p>id1</p>
@@ -63,11 +63,11 @@ public class QueryStoriesShrinkRequest extends TeaModel {
     public String objectId;
 
     /**
-     * <p>The sort order. Valid values:</p>
+     * <p>The sorting order. Valid values:</p>
      * <ul>
-     * <li><p>asc: in ascending order.</p>
+     * <li><p>asc: Ascending order.</p>
      * </li>
-     * <li><p>desc: in descending order.</p>
+     * <li><p>desc: Descending order.</p>
      * </li>
      * </ul>
      * 
@@ -78,7 +78,7 @@ public class QueryStoriesShrinkRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The name of the project.<a href="~~478153~~"></a></p>
+     * <p>The name of the project. For more information about how to obtain the name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,15 +88,15 @@ public class QueryStoriesShrinkRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The sort field. Valid values:</p>
+     * <p>The field used for sorting. Valid values:</p>
      * <ul>
-     * <li><p>CreateTime: sorts by story creation time.</p>
+     * <li><p>CreateTime: Sorts by story creation time.</p>
      * </li>
-     * <li><p>StoryName: sorts by story name.</p>
+     * <li><p>StoryName: Sorts by story name.</p>
      * </li>
-     * <li><p>StoryStartTime: sorts by story start time.</p>
+     * <li><p>StoryStartTime: Sorts by story start time.</p>
      * </li>
-     * <li><p>StoryEndTime: sorts by story end time.</p>
+     * <li><p>StoryEndTime: Sorts by story end time.</p>
      * </li>
      * </ul>
      * 
@@ -107,7 +107,7 @@ public class QueryStoriesShrinkRequest extends TeaModel {
     public String sort;
 
     /**
-     * <p>The time range for the creation time of the last photo or video in the story.</p>
+     * <p>The end time range of the photos or videos in the story.</p>
      */
     @NameInMap("StoryEndTimeRange")
     public String storyEndTimeRangeShrink;
@@ -122,13 +122,13 @@ public class QueryStoriesShrinkRequest extends TeaModel {
     public String storyName;
 
     /**
-     * <p>The time range for the creation time of the first photo or video in the story.</p>
+     * <p>The start time range of the photos or videos in the story.</p>
      */
     @NameInMap("StoryStartTimeRange")
     public String storyStartTimeRangeShrink;
 
     /**
-     * <p>The subtype of the story. For a list of valid values, see <a href="https://help.aliyun.com/document_detail/2743998.html">Story types and subtypes</a>.</p>
+     * <p>The subtype of the story. For valid values, see <a href="https://help.aliyun.com/document_detail/2743998.html">Story types and subtypes</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>SeasonHighlights</p>
@@ -137,7 +137,7 @@ public class QueryStoriesShrinkRequest extends TeaModel {
     public String storySubType;
 
     /**
-     * <p>The type of the story. For a list of valid values, see <a href="https://help.aliyun.com/document_detail/2743998.html">Story types and subtypes</a>.</p>
+     * <p>The type of the story. For valid values, see <a href="https://help.aliyun.com/document_detail/2743998.html">Story types and subtypes</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>TimeMemory</p>
@@ -148,9 +148,9 @@ public class QueryStoriesShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to return empty stories. Valid values:</p>
      * <ul>
-     * <li><p>true (The default value)</p>
+     * <li><p>true: Returns empty stories. This is the default value.</p>
      * </li>
-     * <li><p>false</p>
+     * <li><p>false: Does not return empty stories.</p>
      * </li>
      * </ul>
      * 

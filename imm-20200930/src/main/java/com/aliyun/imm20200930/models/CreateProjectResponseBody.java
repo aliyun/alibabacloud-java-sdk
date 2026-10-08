@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateProjectResponseBody extends TeaModel {
     /**
-     * <p>The project information. Click Project to view details.</p>
+     * <p>The project information. For more information, see Project.</p>
      */
     @NameInMap("Project")
     public Project project;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>7F7D235C-76FF-4B65-800C-8238AE3F****</p>

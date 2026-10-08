@@ -10,6 +10,9 @@ public class DatasetConfig extends TeaModel {
     @NameInMap("Insights")
     public InsightsConfig insights;
 
+    /**
+     * <p>The reverse image search configuration.</p>
+     */
     @NameInMap("ReverseImage")
     public ReverseImageConfig reverseImage;
 

@@ -63,7 +63,7 @@ public class TargetImage extends TeaModel {
         public String format;
 
         /**
-         * <p>Animation frame rate, in frames per second</p>
+         * <p>FrameRate</p>
          * 
          * <strong>example:</strong>
          * <p>25</p>
@@ -81,7 +81,7 @@ public class TargetImage extends TeaModel {
         public Double height;
 
         /**
-         * <p>Time interval between animation frames, in seconds</p>
+         * <p>Interval</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -90,7 +90,7 @@ public class TargetImage extends TeaModel {
         public Double interval;
 
         /**
-         * <p>Total number of animation frames to generate</p>
+         * <p>Number</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -99,7 +99,7 @@ public class TargetImage extends TeaModel {
         public Integer number;
 
         /**
-         * <p>Scaling method</p>
+         * <p>ScaleType</p>
          * 
          * <strong>example:</strong>
          * <p>crop</p>
@@ -117,7 +117,7 @@ public class TargetImage extends TeaModel {
         public Double startTime;
 
         /**
-         * <p>The URI of the animation.</p>
+         * <p>URI</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +127,7 @@ public class TargetImage extends TeaModel {
         public String URI;
 
         /**
-         * <p>Output width, in pixels</p>
+         * <p>Width</p>
          * 
          * <strong>example:</strong>
          * <p>1280</p>
@@ -216,7 +216,7 @@ public class TargetImage extends TeaModel {
 
     public static class TargetImageSnapshots extends TeaModel {
         /**
-         * <p>Image format</p>
+         * <p>Format</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +226,7 @@ public class TargetImage extends TeaModel {
         public String format;
 
         /**
-         * <p>Output height, in pixels</p>
+         * <p>Height</p>
          * 
          * <strong>example:</strong>
          * <p>960</p>
@@ -235,7 +235,7 @@ public class TargetImage extends TeaModel {
         public Double height;
 
         /**
-         * <p>Time interval between snapshots, in seconds</p>
+         * <p>Interval</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -251,7 +251,7 @@ public class TargetImage extends TeaModel {
         public String mode;
 
         /**
-         * <p>The sequence number of the snapshot.</p>
+         * <p>Number</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -260,7 +260,7 @@ public class TargetImage extends TeaModel {
         public Integer number;
 
         /**
-         * <p>Scaling method</p>
+         * <p>ScaleType</p>
          * 
          * <strong>example:</strong>
          * <p>crop</p>
@@ -269,7 +269,7 @@ public class TargetImage extends TeaModel {
         public String scaleType;
 
         /**
-         * <p>The start time of the snapshot.</p>
+         * <p>StartTime</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -285,7 +285,7 @@ public class TargetImage extends TeaModel {
         public Integer threshold;
 
         /**
-         * <p>OSS URI where snapshots are stored</p>
+         * <p>URI</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -295,7 +295,7 @@ public class TargetImage extends TeaModel {
         public String URI;
 
         /**
-         * <p>The width of the snapshot.</p>
+         * <p>Width</p>
          * 
          * <strong>example:</strong>
          * <p>1280</p>
@@ -392,7 +392,7 @@ public class TargetImage extends TeaModel {
 
     public static class TargetImageSprites extends TeaModel {
         /**
-         * <p>Image format</p>
+         * <p>Format</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -402,7 +402,7 @@ public class TargetImage extends TeaModel {
         public String format;
 
         /**
-         * <p>Time interval between sprites, in seconds</p>
+         * <p>Interval</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -411,7 +411,7 @@ public class TargetImage extends TeaModel {
         public Double interval;
 
         /**
-         * <p>Margin around the sprite grid, in pixels</p>
+         * <p>Margin</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -427,7 +427,7 @@ public class TargetImage extends TeaModel {
         public String mode;
 
         /**
-         * <p>Total number of sprites to generate</p>
+         * <p>Number</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -436,7 +436,7 @@ public class TargetImage extends TeaModel {
         public Integer number;
 
         /**
-         * <p>Padding between sprite tiles, in pixels</p>
+         * <p>Pad</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -445,7 +445,7 @@ public class TargetImage extends TeaModel {
         public Integer pad;
 
         /**
-         * <p>Output height after scaling, in pixels</p>
+         * <p>ScaleHeight</p>
          * 
          * <strong>example:</strong>
          * <p>960</p>
@@ -454,7 +454,7 @@ public class TargetImage extends TeaModel {
         public Float scaleHeight;
 
         /**
-         * <p>Scaling method</p>
+         * <p>ScaleType</p>
          * 
          * <strong>example:</strong>
          * <p>crop</p>
@@ -463,7 +463,7 @@ public class TargetImage extends TeaModel {
         public String scaleType;
 
         /**
-         * <p>Output width after scaling, in pixels</p>
+         * <p>ScaleWidth</p>
          * 
          * <strong>example:</strong>
          * <p>1280</p>
@@ -488,7 +488,7 @@ public class TargetImage extends TeaModel {
         public Integer threshold;
 
         /**
-         * <p>Height of each sprite tile, in pixels</p>
+         * <p>TileHeight</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -497,7 +497,7 @@ public class TargetImage extends TeaModel {
         public Integer tileHeight;
 
         /**
-         * <p>Width of each sprite tile, in pixels</p>
+         * <p>TileWidth</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>

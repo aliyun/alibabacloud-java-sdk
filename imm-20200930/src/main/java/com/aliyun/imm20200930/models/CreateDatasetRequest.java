@@ -32,7 +32,7 @@ public class CreateDatasetRequest extends TeaModel {
     public Long datasetMaxFileCount;
 
     /**
-     * <p>The maximum number of metadata relationships per dataset. Default value: 100000000000.</p>
+     * <p>The maximum number of metadata relations per dataset. Default value: 100000000000.</p>
      * 
      * <strong>example:</strong>
      * <p>100000000000</p>
@@ -41,7 +41,7 @@ public class CreateDatasetRequest extends TeaModel {
     public Long datasetMaxRelationCount;
 
     /**
-     * <p>The maximum total file size per dataset, in bytes. After this limit is exceeded, no more indexes can be added. Default value: 90000000000000000.</p>
+     * <p>The maximum total size of files per dataset. If the limit is exceeded, no more indexes can be added. Default value: 90000000000000000. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>90000000000000000</p>
@@ -50,7 +50,7 @@ public class CreateDatasetRequest extends TeaModel {
     public Long datasetMaxTotalFileSize;
 
     /**
-     * <p>The dataset name. The name must be unique within the same project. The following naming rules apply:</p>
+     * <p>The name of the dataset. The name must be unique within a project. The name must meet the following requirements:</p>
      * <ul>
      * <li>The name must be 1 to 128 characters in length.</li>
      * <li>The name can contain only letters, digits, hyphens (-), and underscores (_).</li>
@@ -65,7 +65,7 @@ public class CreateDatasetRequest extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>The description of the dataset. The description can be 1 to 256 characters in length. Default value: empty.</p>
+     * <p>The description of the dataset. The description must be 1 to 256 characters in length. Default value: empty.</p>
      * 
      * <strong>example:</strong>
      * <p>immtest</p>
@@ -74,7 +74,7 @@ public class CreateDatasetRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
+     * <p>The name of the project. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,7 +84,7 @@ public class CreateDatasetRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The workflow template ID. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>. Default value: empty.</p>
+     * <p>The ID of the workflow template. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>. Default value: empty.</p>
      * 
      * <strong>example:</strong>
      * <p>Official:ImageManagement</p>

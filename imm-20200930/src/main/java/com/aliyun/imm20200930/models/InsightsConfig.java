@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class InsightsConfig extends TeaModel {
+    /**
+     * <p>The image content-aware configuration.</p>
+     */
     @NameInMap("Image")
     public ImageInsightsConfig image;
 

@@ -15,7 +15,7 @@ public class SemanticQueryShrinkRequest extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>The maximum number of entries to return. Valid values: 1 to 1000.</p>
+     * <p>The maximum number of data records to return in this request. Value range: (0,100].</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -24,14 +24,13 @@ public class SemanticQueryShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The types of the media that you want to query. Default value:</p>
-     * <p>[&quot;image&quot;]</p>
+     * <p>The media types to search. If this parameter is left empty, the default value is:</p>
      */
     @NameInMap("MediaTypes")
     public String mediaTypesShrink;
 
     /**
-     * <p>This parameter is no longer available.</p>
+     * <p>This parameter is no longer provided.</p>
      * 
      * <strong>example:</strong>
      * <p>Reserved. Not supported yet.</p>
@@ -50,7 +49,8 @@ public class SemanticQueryShrinkRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The content of the query that you input.</p>
+     * <p><notice>Either this parameter or the SourceURI parameter must be specified.</notice>
+     * The content for semantic search.</p>
      * 
      * <strong>example:</strong>
      * <p>Scenery of Hangzhou in April 2021</p>
@@ -59,12 +59,10 @@ public class SemanticQueryShrinkRequest extends TeaModel {
     public String query;
 
     /**
-     * <blockquote>
-     * <p>Either this parameter or the Query parameter must be specified. This parameter is valid only for image searches on datasets configured with a search-by-image workflow.</p>
-     * </blockquote>
-     * <p>URI of the source data for retrieval.
-     * The URI must be in the oss\://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the full path of the file that contains the file name extension.</p>
-     * <p>Contact us if you need to configure a workflow template.</p>
+     * <p><notice>Either this parameter or the Query parameter must be specified. This parameter is currently valid only when the search type is specified as image and the dataset is configured with a workflow template for image-to-image search.</notice>
+     * The storage address of the source data used for retrieval. The storage address supports OSS URIs.</p>
+     * <p>The OSS address format is oss://${Bucket}/${Object}, where ${Bucket} is the name of the OSS bucket that resides in the same region as the current project, and ${Object} is the full path of the file including the file name extension.</p>
+     * <p>If you need to configure the corresponding workflow template, <a href="https://help.aliyun.com/document_detail/84454.html">contact us</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://test-bucket/test-object</p>
@@ -73,10 +71,8 @@ public class SemanticQueryShrinkRequest extends TeaModel {
     public String sourceURI;
 
     /**
-     * <blockquote>
-     * <p>Either this parameter or the SourceURI parameter must be specified.</p>
-     * </blockquote>
-     * <p>The content of the query that you input.</p>
+     * <p>Specifies the specific fields to return instead of all existing metadata fields. This helps reduce the size of the returned struct.</p>
+     * <p>If this parameter is left empty, all fields are returned.</p>
      */
     @NameInMap("WithFields")
     public String withFieldsShrink;

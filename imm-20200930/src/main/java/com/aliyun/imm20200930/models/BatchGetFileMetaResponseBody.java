@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchGetFileMetaResponseBody extends TeaModel {
     /**
-     * <p>The metadata returned.</p>
+     * <p>The file metadata.</p>
      */
     @NameInMap("Files")
     public java.util.List<File> files;

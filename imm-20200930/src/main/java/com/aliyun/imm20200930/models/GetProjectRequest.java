@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetProjectRequest extends TeaModel {
     /**
-     * <p>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
+     * <p>The name of the project. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,15 +15,13 @@ public class GetProjectRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>Specifies whether to collect file statistics. Default value: false, which indicates that file statistics are not collected.</p>
+     * <p>Specifies whether to collect file statistics. Default value: false.</p>
      * <ul>
-     * <li><p>File statistics are collected. The FileCount and TotalFileSize values in the returned Project struct are valid.</p>
-     * </li>
-     * <li><p>File statistics are not collected. The FileCount and TotalFileSize values in the returned Project struct may be inaccurate or zero.</p>
-     * </li>
+     * <li>true: File statistics are collected. The FileCount and TotalFileSize fields in the Project struct are accurate and valid.</li>
+     * <li>false: File statistics are not collected. The FileCount and TotalFileSize fields in the Project struct may be inaccurate or both be 0.</li>
      * </ul>
      * <blockquote>
-     * <p>Notice: Only files in datasets created before December 20, 2025 can be counted.</p>
+     * <p>Notice: File statistics are supported only for datasets created before December 20, 2025.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

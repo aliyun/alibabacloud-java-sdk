@@ -5,25 +5,28 @@ import com.aliyun.tea.*;
 
 public class FigureClusterConfig extends TeaModel {
     /**
-     * <p>Whether to automatically group similar figures into clusters.</p>
+     * <p>Specifies whether to allow IMM to perform classification tasks on files in the dataset. Default value: False.</p>
      */
     @NameInMap("AutoClustering")
     public Boolean autoClustering;
 
     /**
-     * <p>Whether to automatically generate metadata for each cluster, such as a representative cover image.</p>
+     * <p>Indicates whether IMM is allowed to perform automatic creation of new groups. Default value: False.</p>
      */
     @NameInMap("AutoGenerate")
     public Boolean autoGenerate;
 
     /**
-     * <p>An array of strings specifying the clustering strategies to use.</p>
+     * <p>The features supported by figure clustering.</p>
      */
     @NameInMap("EnabledFeatures")
     public java.util.List<String> enabledFeatures;
 
     /**
-     * <p>The minimum number of figures required to form a cluster.</p>
+     * <p>The minimum threshold for the number of entities when automatic generation of new groups is allowed. Default value: 3.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("MinEntityCount")
     public Long minEntityCount;

@@ -107,7 +107,7 @@ public class Dataset extends TeaModel {
      * <p>The workflow template ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>Official:ImageManagement</p>
+     * <p>DefaultId</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

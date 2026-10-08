@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHighlightTaskShrinkRequest extends TeaModel {
     /**
-     * <p>The China authorization configuration. <strong>Leave this parameter empty unless you have specific requirements.</strong></p>
+     * <p>The chained authorization configuration. <strong>Leave this parameter empty unless otherwise required.</strong></p>
      */
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
@@ -25,10 +25,9 @@ public class CreateHighlightTaskShrinkRequest extends TeaModel {
     /**
      * <p>The highlight recognition mode. Valid values:</p>
      * <ul>
-     * <li><p>Scene: scene and frame recognition.</p>
-     * </li>
-     * <li><p>Average (default): average slice recognition.</p>
-     * </li>
+     * <li>Scene: scene and frame recognition</li>
+     * <li>Average: average clip recognition
+     * Default value: Average.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +37,7 @@ public class CreateHighlightTaskShrinkRequest extends TeaModel {
     public String mode;
 
     /**
-     * <p>The message notification configuration. For more information, click Notification. For the format of asynchronous notification messages, see <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/asynchronous-notification-message-examples">Asynchronous notification message format</a>.</p>
+     * <p>The message notification configuration. For more information, see Notification. For the format of asynchronous notification messages, see <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/asynchronous-notification-message-examples">Asynchronous notification message format</a>.</p>
      */
     @NameInMap("Notification")
     public String notificationShrink;
@@ -51,7 +50,7 @@ public class CreateHighlightTaskShrinkRequest extends TeaModel {
     public String outputShrink;
 
     /**
-     * <p>The project name.</p>
+     * <p>The name of the project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,15 +60,14 @@ public class CreateHighlightTaskShrinkRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The list of media resources to process.
-     * A maximum of 10 videos are supported.</p>
+     * <p>The list of media resources to be processed. You can specify up to 10 videos.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Sources")
     public String sourcesShrink;
 
     /**
-     * <p>The custom tags used to search for and filter asynchronous tasks.</p>
+     * <p>The custom tags used to search and filter asynchronous tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;test&quot;:&quot;val1&quot;}</p>
@@ -80,12 +78,9 @@ public class CreateHighlightTaskShrinkRequest extends TeaModel {
     /**
      * <p>The processing type. Valid values:</p>
      * <ul>
-     * <li><p>Retrieval: highlight extraction.</p>
-     * </li>
-     * <li><p>Concat: video composition.</p>
-     * </li>
-     * <li><p>Compose: one-click video production.</p>
-     * </li>
+     * <li>Retrieval: highlight extraction</li>
+     * <li>Concat: video composition</li>
+     * <li>Compose: one-click video creation</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -96,7 +91,7 @@ public class CreateHighlightTaskShrinkRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The custom information, which is returned in asynchronous message notifications.</p>
+     * <p>The custom user data, which is returned in asynchronous message notifications.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;ID&quot;: &quot;testuid&quot;,&quot;Name&quot;: &quot;test-user&quot;,&quot;Avatar&quot;: &quot;<a href="http://test.com/testuid%22%7D">http://test.com/testuid&quot;}</a></p>

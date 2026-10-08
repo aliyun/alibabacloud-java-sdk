@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDatasetShrinkRequest extends TeaModel {
     /**
-     * <p>The maximum number of bindings for each dataset. Valid values: 1 to 10.</p>
+     * <p>The maximum number of bindings per dataset. Valid values: 1 to 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -16,7 +16,7 @@ public class UpdateDatasetShrinkRequest extends TeaModel {
     /**
      * <p>The maximum number of metadata entities (including data files, file relationships, and clustering groups) in each dataset. The maximum value is 2^63-1.</p>
      * <blockquote>
-     * <p>This is a reserved parameter and is not enforced during use.</p>
+     * <p>This is a reserved parameter and no actual limits are enforced.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class UpdateDatasetShrinkRequest extends TeaModel {
     /**
      * <p>The maximum number of metadata relationships in each dataset. The maximum value is 2^63-1.</p>
      * <blockquote>
-     * <p>This is a reserved parameter and is not enforced during use.</p>
+     * <p>This is a reserved parameter and no actual limits are enforced.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class UpdateDatasetShrinkRequest extends TeaModel {
     public Long datasetMaxRelationCount;
 
     /**
-     * <p>The maximum total file size in each dataset. After this limit is exceeded, no more indexes can be added. The maximum value is 2^63-1. Unit: bytes.</p>
+     * <p>The maximum total size of files in each dataset. If the limit is exceeded, no more indexes can be added. The maximum value is 2^63-1. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>90000000000000000</p>
@@ -56,7 +56,7 @@ public class UpdateDatasetShrinkRequest extends TeaModel {
     public Long datasetMaxTotalFileSize;
 
     /**
-     * <p>The dataset name. For information about how to obtain the dataset name, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
+     * <p>The name of the dataset. For more information about how to obtain the dataset name, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,7 +75,7 @@ public class UpdateDatasetShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
+     * <p>The name of the project. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,7 +85,7 @@ public class UpdateDatasetShrinkRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The workflow template ID. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</p>
+     * <p>The ID of the workflow template. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Official:ImageManagement</p>

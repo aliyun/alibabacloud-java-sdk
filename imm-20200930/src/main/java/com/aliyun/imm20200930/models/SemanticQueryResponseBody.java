@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SemanticQueryResponseBody extends TeaModel {
     /**
-     * <p>The files.</p>
+     * <p>The list of files.</p>
      */
     @NameInMap("Files")
     public java.util.List<File> files;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>2C5C1E0F-D8B8-4DA0-8127-EC32C771****</p>
