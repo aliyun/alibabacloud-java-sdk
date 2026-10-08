@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5******</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -18,16 +18,13 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
      * <p>The name of the database.</p>
      * 
      * <strong>example:</strong>
-     * <p>RDS_MySQL</p>
+     * <p>testdb</p>
      */
     @NameInMap("DBName")
     public String DBName;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.**</p>
-     * <blockquote>
-     * <p>The end time must be later than the start time.</p>
-     * </blockquote>
+     * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,9 +34,9 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the node.</p>
+     * <p>The node ID.</p>
      * <blockquote>
-     * <p>This parameter is available only for instances that run RDS Cluster Edition. You can specify this parameter to query the logs of a specified node. If this parameter is not specified, the logs of the primary node are returned by default.</p>
+     * <p>Notice: This parameter is applicable only to Cluster Edition instances. You can specify this parameter to query the logs of a specific node. If you do not specify this parameter, the logs of the primary node are returned by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -55,7 +52,10 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Valid values: any integer greater than 0 that does not exceed the maximum value of Integer.</p>
+     * <blockquote>
+     * <p>Default value: <strong>1</strong>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -64,7 +64,10 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid value: <strong>30 to 200</strong>. Default value: <strong>30</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>30</strong> to <strong>100</strong>.</p>
+     * <blockquote>
+     * <p>Default value: <strong>30</strong>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -79,7 +82,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The unique ID of the SQL statement. The ID is used to obtain the slow query logs of the SQL statement.</p>
+     * <p>The unique identifier of the SQL statement in the slow query log statistics. You can use this parameter to obtain the slow query log details of the SQL statement.</p>
      * 
      * <strong>example:</strong>
      * <p>U2FsdGVk****</p>
@@ -88,7 +91,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String SQLHASH;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time of the query. The start time must be within the last 30 days. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

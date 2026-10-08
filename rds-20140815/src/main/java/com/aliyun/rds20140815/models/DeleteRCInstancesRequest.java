@@ -5,23 +5,23 @@ import com.aliyun.tea.*;
 
 public class DeleteRCInstancesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run for this release operation. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and insufficient inventory errors.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, the instance is created.</li>
+     * <li><strong>true</strong>: Performs a dry run without releasing the instance.</li>
+     * <li><strong>false</strong> (default): Sends a normal request and directly releases the instance after the request passes the check.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to forcefully release a running instance. Valid values:</p>
+     * <p>Specifies whether to forcefully release running instances. Valid values:</p>
      * <ul>
-     * <li><strong>Yes</strong></li>
-     * <li><strong>No</strong> (default)</li>
+     * <li><strong>Yes</strong>: Forcefully releases the instances.</li>
+     * <li><strong>No</strong> (default): Does not forcefully release the instances.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class DeleteRCInstancesRequest extends TeaModel {
     public Boolean force;
 
     /**
-     * <p>The details of the instance.</p>
+     * <p>The instance details.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
@@ -47,14 +47,10 @@ public class DeleteRCInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to release an expired subscription instance. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
-     * </ul>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>None</p>
      */
     @NameInMap("TerminateSubscription")
     public Boolean terminateSubscription;

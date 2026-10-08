@@ -7,17 +7,17 @@ public class ModifyParameterGroupRequest extends TeaModel {
     /**
      * <p>The modification mode of the parameter template. Valid values:</p>
      * <ul>
-     * <li><strong>Collectivity</strong> (default): adds new parameters or modifies parameters in the original parameter template.</li>
-     * </ul>
+     * <li><p><strong>Collectivity</strong> (default): adds or updates parameters.</p>
      * <blockquote>
-     * <p> If you set the ModifyMode parameter to Collectivity, the system adds the value of the <strong>Parameters</strong> parameter to the original parameter template or modifies the corresponding parameters in the original parameter template. Other parameters in the original parameter template are not affected.</p>
+     * <p>The parameters that you specify in the <strong>Parameters</strong> parameter are added to or updated in the existing parameter template. Other parameters in the existing parameter template are not affected.</p>
      * </blockquote>
-     * <ul>
-     * <li><strong>Individual</strong>: overwrites original parameters.</li>
-     * </ul>
+     * </li>
+     * <li><p><strong>Individual</strong>: overwrites the parameter template.</p>
      * <blockquote>
-     * <p> If you set the ModifyMode parameter to Individual, the system uses the value of the <strong>Parameters</strong> parameter to overwrite the parameter settings in the original parameter template.</p>
+     * <p>The existing parameter template is replaced with the parameters that you specify in the <strong>Parameters</strong> parameter.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Collectivity</p>
@@ -29,9 +29,9 @@ public class ModifyParameterGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The new description of the parameter template. The description can be up to 200 characters in length.</p>
+     * <p>The description of the parameter template. The description can be up to 200 characters in length.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the original description of the parameter template is retained.</p>
+     * <p>If you do not specify this parameter, the original parameter template description is retained.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -51,13 +51,13 @@ public class ModifyParameterGroupRequest extends TeaModel {
     public String parameterGroupId;
 
     /**
-     * <p>The parameter template name.</p>
+     * <p>The name of the parameter template.</p>
      * <ul>
-     * <li>The name can contain letters, digits, periods (.), and underscores (_). It must start with a letter.</li>
-     * <li>It can be 8 to 64 characters in length.</li>
+     * <li>The name must start with a letter and can contain letters, digits, periods (.), and underscores (_).</li>
+     * <li>The name must be 8 to 64 characters in length.</li>
      * </ul>
      * <blockquote>
-     * <p>If you do not specify this parameter, the original name of the parameter template is retained.</p>
+     * <p>If you do not specify this parameter, the original parameter template name is retained.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -67,12 +67,12 @@ public class ModifyParameterGroupRequest extends TeaModel {
     public String parameterGroupName;
 
     /**
-     * <p>A JSON string that consists of parameters and their values in the parameter template. Format: {&quot;Parameter 1&quot;:&quot;Value of Parameter 1&quot;,&quot;Parameter 2&quot;:&quot;Value of Parameter 2&quot;...}. For more information about the parameters that can be modified, see <a href="https://help.aliyun.com/document_detail/96063.html">Modify the parameters of an ApsaraDB RDS for MySQL instance</a> or <a href="https://help.aliyun.com/document_detail/96751.html">Modify the parameters of an ApsaraDB RDS for PostgreSQL instance</a>.</p>
+     * <p>A JSON string that consists of parameters and their values. Format: {&quot;Parameter 1&quot;:&quot;Value 1&quot;,&quot;Parameter 2&quot;:&quot;Value 2&quot;...}. For more information about the parameters that can be modified, see <a href="https://help.aliyun.com/document_detail/96063.html">Configure the parameters of an ApsaraDB RDS for MySQL instance</a> or <a href="https://help.aliyun.com/document_detail/96751.html">Configure the parameters of an ApsaraDB RDS for PostgreSQL instance</a>.</p>
      * <blockquote>
      * <ul>
-     * <li>If <strong>ModifyMode</strong> is set to <strong>Individual</strong> and this parameter is specified, the new parameters overwrite the parameters in the original parameter template.</li>
-     * <li>If you set <strong>ModifyMode</strong> to <strong>Collectivity</strong> and specify this parameter, the new parameters are added to the original parameter template, or the parameters in the original parameter template are modified.</li>
-     * <li>If you do not specify this parameter, the parameters in the original parameter template remain unchanged.</li>
+     * <li>If <strong>ModifyMode</strong> is set to <strong>Individual</strong>, the parameters that you specify overwrite the existing parameter template.</li>
+     * <li>If <strong>ModifyMode</strong> is set to <strong>Collectivity</strong>, the parameters that you specify are added to or updated in the existing parameter template. Other parameters in the existing parameter template are not affected.</li>
+     * <li>If you do not specify this parameter, the original parameter information is retained.</li>
      * </ul>
      * </blockquote>
      * 
@@ -83,9 +83,9 @@ public class ModifyParameterGroupRequest extends TeaModel {
     public String parameters;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
      * <blockquote>
-     * <p> The region of a parameter template cannot be changed. You can call the CloneParameterGroup operation to replicate a parameter template to a specific region.</p>
+     * <p>The region of a parameter template cannot be changed. You can call the CloneParameterGroup operation to copy a parameter template to another region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

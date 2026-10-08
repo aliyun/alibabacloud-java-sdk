@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAccountResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D4D4BE8A-DD46-440A-BFCD-EE31DA81C9DD</p>

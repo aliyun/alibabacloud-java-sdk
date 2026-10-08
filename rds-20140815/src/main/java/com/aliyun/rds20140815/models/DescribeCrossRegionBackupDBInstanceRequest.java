@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeCrossRegionBackupDBInstanceRequest extends TeaModel {
     /**
-     * <p>The instance ID. Up to 30 instance IDs are allowed in a single request. If you enter more than one instance ID, separate them with commas (,).</p>
+     * <p>The instance ID. You can specify up to 30 instance IDs at a time. Separate multiple instance IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -17,7 +17,7 @@ public class DescribeCrossRegionBackupDBInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Valid values: any non-zero positive integer.</p>
+     * <p>The page number. Valid values: any integer greater than 0 that does not exceed the maximum value of the Integer data type.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeCrossRegionBackupDBInstanceRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Default value: 30.</p>
+     * <p>The number of entries per page. Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -36,7 +36,7 @@ public class DescribeCrossRegionBackupDBInstanceRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSecretResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DF4961DD-16F5-5B24-BD4C-0C7788F7ADAF</p>
@@ -14,7 +14,7 @@ public class DeleteSecretResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ARN of the credential for the Data API account.</p>
+     * <p>The user credential of the Data API account.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:rds:cn-hangzhou:1335786***:dbInstance/rm-bp1m7l3j63****</p>
@@ -23,7 +23,7 @@ public class DeleteSecretResponseBody extends TeaModel {
     public String secretArn;
 
     /**
-     * <p>The name of the credential.</p>
+     * <p>The name of the user credential.</p>
      * 
      * <strong>example:</strong>
      * <p>Foo</p>
@@ -34,8 +34,8 @@ public class DeleteSecretResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

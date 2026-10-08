@@ -4,24 +4,12 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class RunRCCommandResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>c-7d2a745b412b4601b2d47f6a768d****</p>
-     */
     @NameInMap("CommandId")
     public String commandId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>t-7d2a745b412b4601b2d47f6a768d****</p>
-     */
     @NameInMap("InvokeId")
     public String invokeId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>06B220E2-EAC5-4DBE-A1FC-1B62DB6A****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

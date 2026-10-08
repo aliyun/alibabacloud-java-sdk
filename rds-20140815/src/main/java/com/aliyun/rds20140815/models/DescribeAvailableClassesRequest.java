@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableClassesRequest extends TeaModel {
     /**
-     * <p>The RDS edition of the instance. Valid values:</p>
+     * <p>The instance edition. Valid values:</p>
      * <ul>
-     * <li><p>Regular instance</p>
+     * <li><p>Regular instances</p>
      * <ul>
-     * <li><strong>Basic</strong>: RDS Basic Edition</li>
-     * <li><strong>HighAvailability</strong>: RDS High-availability Edition</li>
-     * <li><strong>cluster</strong>: RDS Cluster Edition for ApsaraDB RDS for MySQL</li>
-     * <li><strong>AlwaysOn</strong>: RDS Cluster Edition for ApsaraDB RDS for SQL Server</li>
+     * <li><strong>Basic</strong>: Basic Edition</li>
+     * <li><strong>HighAvailability</strong>: high-availability series</li>
+     * <li><strong>cluster</strong>: Cluster Edition (applicable only to MySQL and PostgreSQL)</li>
+     * <li><strong>AlwaysOn</strong>: SQL Server Cluster Edition</li>
      * <li><strong>Finance</strong>: RDS Enterprise Edition</li>
      * </ul>
      * </li>
-     * <li><p>Serverless instance</p>
+     * <li><p>Serverless instances</p>
      * <ul>
-     * <li><strong>serverless_basic</strong>: RDS Basic Edition. This edition is available only for serverless instances that run MySQL and PostgreSQL.</li>
-     * <li><strong>serverless_standard</strong>: RDS High-availability Edition for ApsaraDB RDS for MySQL.</li>
-     * <li><strong>serverless_ha</strong>: RDS High-availability Edition for ApsaraDB RDS for SQL Server.</li>
+     * <li><strong>serverless_basic</strong>: Serverless Basic Edition (applicable only to MySQL and PostgreSQL)</li>
+     * <li><strong>serverless_standard</strong>: Serverless high availability series (applicable only to MySQL and PostgreSQL)</li>
+     * <li><strong>serverless_ha</strong>: SQL Server Serverless high availability series</li>
      * </ul>
      * <blockquote>
-     * <p>If you create a serverless instance, you must specify this parameter.</p>
+     * <p>This parameter is required when you create a serverless instance.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -38,19 +38,19 @@ public class DescribeAvailableClassesRequest extends TeaModel {
     /**
      * <p>The commodity code of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>bards</strong>: The instance is a pay-as-you-go primary instance. This value is available at the China site (aliyun.com).</li>
-     * <li><strong>rds</strong>: The instance is a subscription primary instance. This value is available at the China site (aliyun.com).</li>
-     * <li><strong>rords</strong>: The instance is a pay-as-you-go read-only instance. This value is available at the China site (aliyun.com).</li>
-     * <li><strong>rds_rordspre_public_cn</strong>: The instance is a subscription read-only instance. This value is available at the China site (aliyun.com).</li>
-     * <li><strong>bards_intl</strong>: The instance is a pay-as-you-go primary instance. This value is available at the International site (alibabacloud.com).</li>
-     * <li><strong>rds_intl</strong>: The instance is a subscription primary instance. This value is available at the International site (alibabacloud.com).</li>
-     * <li><strong>rords_intl</strong>: The instance is a pay-as-you-go read-only instance. This value is available at the International site (alibabacloud.com).</li>
-     * <li><strong>rds_rordspre_public_intl</strong>: The instance is a subscription read-only instance. This value is available at the International site (alibabacloud.com).</li>
-     * <li><strong>rds_serverless_public_cn</strong>: The instance is a serverless instance. This value is available at the China site (aliyun.com).</li>
-     * <li><strong>rds_serverless_public_intl</strong>: The instance is a serverless instance. This value is available at the International site (alibabacloud.com).</li>
+     * <li><strong>bards</strong>: pay-as-you-go primary instance (China site)</li>
+     * <li><strong>rds</strong>: subscription primary instance (China site)</li>
+     * <li><strong>rords</strong>: pay-as-you-go read-only instance (China site)</li>
+     * <li><strong>rds_rordspre_public_cn</strong>: subscription read-only instance (China site)</li>
+     * <li><strong>bards_intl</strong>: pay-as-you-go primary instance (international site)</li>
+     * <li><strong>rds_intl</strong>: subscription primary instance (international site)</li>
+     * <li><strong>rords_intl</strong>: pay-as-you-go read-only instance (international site)</li>
+     * <li><strong>rds_rordspre_public_intl</strong>: subscription read-only instance (international site)</li>
+     * <li><strong>rds_serverless_public_cn</strong>: serverless (China site)</li>
+     * <li><strong>rds_serverless_public_intl</strong>: serverless (international site)</li>
      * </ul>
      * <blockquote>
-     * <p>If you want to query the price of a read-only instance, you must specify this parameter.</p>
+     * <p>This parameter is required when you query a read-only instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,22 +63,24 @@ public class DescribeAvailableClassesRequest extends TeaModel {
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The storage type of the instance. Valid values:</p>
+     * <p>The instance storage type. Valid values:</p>
      * <ul>
-     * <li><strong>local_ssd</strong>: local SSD. This is the recommended storage type.</li>
-     * <li><strong>cloud_ssd</strong>: standard SSD.</li>
-     * <li><strong>cloud_essd</strong>: performance level 1 (PL1) Enterprise SSD (ESSD)</li>
-     * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
-     * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
+     * <li><strong>general_essd</strong>: premium performance disk</li>
+     * <li><strong>local_ssd</strong>: local SSD</li>
+     * <li><strong>cloud_ssd</strong>: standard SSD</li>
+     * <li><strong>cloud_essd0</strong>: PL0 ESSD cloud disk</li>
+     * <li><strong>cloud_essd</strong>: PL1 ESSD cloud disk</li>
+     * <li><strong>cloud_essd2</strong>: PL2 ESSD cloud disk</li>
+     * <li><strong>cloud_essd3</strong>: PL3 ESSD cloud disk</li>
      * </ul>
      * <blockquote>
-     * <p> Serverless instances use only PL1 ESSDs. If you want to create a serverless instance, you must set this parameter to <strong>cloud_essd</strong>.</p>
+     * <p>Serverless instances support only PL1 ESSD cloud disks. Set this parameter to <strong>cloud_essd</strong>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -89,7 +91,7 @@ public class DescribeAvailableClassesRequest extends TeaModel {
     public String DBInstanceStorageType;
 
     /**
-     * <p>The database engine that is run by the instance. Valid values:</p>
+     * <p>The database engine of the instance. Valid values:</p>
      * <ul>
      * <li><strong>MySQL</strong></li>
      * <li><strong>SQLServer</strong></li>
@@ -107,19 +109,19 @@ public class DescribeAvailableClassesRequest extends TeaModel {
     /**
      * <p>The database engine version of the instance. Valid values:</p>
      * <ul>
-     * <li><p>Regular instance</p>
+     * <li><p>Regular instances</p>
      * <ul>
-     * <li>Valid values if you set Engine to MySQL: <strong>5.5, 5.6, 5.7, and 8.0</strong></li>
-     * <li>Valid values if you set Engine to SQLServer: <strong>2008r2, 08r2_ent_ha, 2012, 2012_ent_ha, 2012_std_ha, 2012_web, 2014_std_ha, 2016_ent_ha, 2016_std_ha, 2016_web, 2017_std_ha, 2017_ent, 2019_std_ha, and 2019_ent</strong></li>
-     * <li>Valid values if you set Engine to PostgreSQL: <strong>10.0, 11.0, 12.0, 13.0, 14.0, and 15.0</strong></li>
-     * <li>Valid value when you set Engine to MariaDB: <strong>10.3</strong></li>
+     * <li>MySQL: <strong>5.5, 5.6, 5.7, 8.0</strong></li>
+     * <li>SQL Server: <strong>2008r2, 08r2_ent_ha, 2012, 2012_ent_ha, 2012_std_ha, 2012_web, 2014_std_ha, 2016_ent_ha, 2016_std_ha, 2016_web, 2017_std_ha, 2017_ent, 2019_std_ha, 2019_ent</strong></li>
+     * <li>PostgreSQL: <strong>10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0</strong></li>
+     * <li>MariaDB: <strong>10.3</strong></li>
      * </ul>
      * </li>
-     * <li><p>Serverless instance</p>
+     * <li><p>Serverless instances</p>
      * <ul>
-     * <li>Valid values if you set Engine to MySQL: <strong>5.7</strong> and <strong>8.0</strong></li>
-     * <li>Valid values if you set Engine to SQLServer: <strong>2016_std_sl</strong>, <strong>2017_std_sl</strong>, and <strong>2019_std_sl</strong></li>
-     * <li>Valid value if you set Engine to PostgreSQL: <strong>14.0</strong></li>
+     * <li>MySQL: <strong>5.7</strong>, <strong>8.0</strong></li>
+     * <li>SQL Server: <strong>2016_std_sl</strong>, <strong>2017_std_sl</strong>, <strong>2019_std_sl</strong></li>
+     * <li>PostgreSQL: <strong>14.0, 15.0, 16.0, 17.0</strong></li>
      * </ul>
      * <blockquote>
      * <p>ApsaraDB RDS for MariaDB does not support serverless instances.</p>
@@ -152,7 +154,7 @@ public class DescribeAvailableClassesRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The type of order. Set the value to <strong>BUY</strong></p>
+     * <p>The order type. The only valid value is <strong>BUY</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>BUY</p>
@@ -161,7 +163,7 @@ public class DescribeAvailableClassesRequest extends TeaModel {
     public String orderType;
 
     /**
-     * <p>The region ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the region ID of the instance.</p>
+     * <p>The region ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -174,14 +176,14 @@ public class DescribeAvailableClassesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The zone ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the zone ID of the instance.</p>
+     * <p>The zone ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the zone ID.</p>
      * <blockquote>
-     * <p> If the DescribeDBInstanceAttribute operation returns multiple zones, you must specify only one of the returned zones. For example, if the DescribeDBInstanceAttribute operation returns <code>cn-hangzhou-MAZ9(g,h)</code>, you can set this parameter to <code>cn-hangzhou-g</code> or <code>cn-hangzhou-h</code>.</p>
+     * <p>If DescribeDBInstanceAttribute returns a multi-zone value (such as <code>cn-hangzhou-MAZ9(g,h)</code>), specify a single zone. Example: <code>cn-hangzhou-g</code> or <code>cn-hangzhou-j</code>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou-h</p>
+     * <p>cn-hangzhou-j</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

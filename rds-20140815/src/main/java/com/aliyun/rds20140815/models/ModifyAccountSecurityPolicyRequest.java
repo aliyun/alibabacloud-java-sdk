@@ -14,7 +14,7 @@ public class ModifyAccountSecurityPolicyRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> operation to query the instance ID.</p>
+     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,14 +24,14 @@ public class ModifyAccountSecurityPolicyRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The custom password policy for the account of the ApsaraDB RDS for SQL Server instance. The following policies are supported:</p>
+     * <p>The custom password policy for ApsaraDB RDS for SQL Server accounts. The following policies are supported:</p>
      * <ul>
-     * <li><code>{&quot;account security policy&quot;: {&quot;MaximumPasswordAge&quot;: Specify the maximum password age}}</code>: You can configure only the maximum password age. After the maximum password age is reached, you must change the password.</li>
-     * <li><code>{&quot;accountSecurityPolicy&quot;: {&quot;MaximumPasswordAge&quot;: Specify the minimum password age}}</code>: You can configure only the minimum password age. During the specified period, you cannot change the password.</li>
-     * <li><code>{&quot;accountSecurityPolicy&quot;: {&quot;MaximumPasswordAge&quot;: Specify the maximum password age, &quot;MinimumPasswordAge&quot;: Specify the minimum password age}}</code>: You can configure the maximum and minimum password age at the same time.</li>
+     * <li>Set only the maximum password age. After this period expires, the password must be changed: <code>{&quot;accountSecurityPolicy&quot;: {&quot;MaximumPasswordAge&quot;: Specify the maximum age}}</code></li>
+     * <li>Set only the minimum password age. The password cannot be changed again within this period: <code>{&quot;accountSecurityPolicy&quot;: {&quot;MaximumPasswordAge&quot;: Specify the minimum age}}</code></li>
+     * <li>Set both the maximum and minimum password ages: <code>{&quot;accountSecurityPolicy&quot;: {&quot;MaximumPasswordAge&quot;: Specify the maximum age, &quot;MinimumPasswordAge&quot;: Specify the minimum age}}</code></li>
      * </ul>
      * <blockquote>
-     * <p> The minimum password age cannot be greater than the maximum password age. Valid values for the minimum password age: 0 to 998. Valid values for the maximum password age: 0 to 999.</p>
+     * <p>The minimum password age (valid values: 0 to 998) cannot be greater than the maximum password age (valid values: 0 to 999).</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

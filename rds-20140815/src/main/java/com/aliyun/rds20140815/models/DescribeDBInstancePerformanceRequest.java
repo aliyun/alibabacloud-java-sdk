@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancePerformanceRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * <p>The end time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</p>
      * <blockquote>
-     * <p> The time span between the beginning time and the end time must be longer than the monitoring frequency. Otherwise, this operation may return an empty array.</p>
+     * <p>The interval between the start time and end time must be greater than the monitoring frequency of your instance. Otherwise, an empty list may be returned.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,20 +28,20 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The performance metrics that you want to query. Separate multiple values with commas (,). You can specify up to 30 values. For more information, see <a href="https://help.aliyun.com/document_detail/26316.html">Performance parameters</a>.</p>
+     * <p>The performance metrics that you want to query. Separate multiple values with commas (,). You can specify up to 30 metrics. For more information, see <a href="https://help.aliyun.com/document_detail/26316.html">Performance parameters</a>.</p>
      * <blockquote>
-     * <p> If you set <strong>Key</strong> to <strong>MySQL_SpaceUsage</strong> or <strong>SQLServer_SpaceUsage</strong>, you can query the monitoring data within only one day.</p>
+     * <p>If <strong>Key</strong> is set to <strong>MySQL_SpaceUsage</strong> or <strong>SQLServer_SpaceUsage</strong>, only monitoring data within the last day can be queried.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>MySQL_Sessions</p>
+     * <p>MySQL_NetworkTraffic</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The unique identifier of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>339****</p>
@@ -53,9 +53,9 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * <p>The start time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</p>
      * <blockquote>
-     * <p> The time span between the beginning time and the end time must be longer than the monitoring frequency. Otherwise, this operation may return an empty array.</p>
+     * <p>The interval between the start time and end time must be greater than the monitoring frequency of your instance. Otherwise, an empty list may be returned.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class ModifyDBDescriptionRequest extends TeaModel {
     /**
-     * <p>The description of the database.</p>
+     * <p>The database description.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test database A</p>
+     * <p>testdb01</p>
      */
     @NameInMap("DBDescription")
     public String DBDescription;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>testDB01</p>
+     * <p>testdb</p>
      */
     @NameInMap("DBName")
     public String DBName;

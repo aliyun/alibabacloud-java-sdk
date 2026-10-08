@@ -7,11 +7,11 @@ public class ModifyRCDiskSpecRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true (default)</strong>: automatically completes the payment. Make sure that your account balance is sufficient.</li>
-     * <li><strong>false</strong>: does not automatically complete the payment. An unpaid order is generated.</li>
+     * <li><strong>true</strong> (default): Automatic payment is enabled. Make sure that your account balance is sufficient.</li>
+     * <li><strong>false</strong>: Only an order is generated. No payment is made.</li>
      * </ul>
      * <blockquote>
-     * <p> If your account balance is insufficient, you can set the AutoPay parameter to false. In this case, an unpaid order is generated. You can complete the payment in the Expenses and Costs console.</p>
+     * <p>If your payment method has an insufficient balance, set AutoPay to false. An unpaid order is generated. You can log on to the ApsaraDB RDS console to complete the payment.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,12 +21,12 @@ public class ModifyRCDiskSpecRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The new disk type. Valid values:</p>
+     * <p>The type of the cloud disk. Valid values:</p>
      * <ul>
-     * <li><strong>cloud_essd</strong>: ESSD.</li>
-     * <li><strong>cloud_auto</strong>: ESSD AutoPL disk</li>
+     * <li><strong>cloud_essd</strong> (default): ESSD cloud disk.</li>
+     * <li><strong>cloud_auto</strong>: ESSD AutoPL cloud disk.</li>
+     * <li><strong>cloud_ssd</strong>: standard SSD.</li>
      * </ul>
-     * <p>This parameter is empty by default.</p>
      * 
      * <strong>example:</strong>
      * <p>cloud_essd</p>
@@ -44,10 +44,10 @@ public class ModifyRCDiskSpecRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values: Valid values:</p>
+     * <p>Specifies whether to perform a dry run for this operation. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run and does not perform the actual request. The system checks the request parameters, request syntax, limits, and available resources.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.</li>
+     * <li><strong>true</strong>: A dry run is performed without executing the change. The check items include request parameters, request format, business limits, and inventory.</li>
+     * <li><strong>false</strong> (default): A normal request is sent. After the check is passed, the change is directly executed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,11 +57,14 @@ public class ModifyRCDiskSpecRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The PL of the disk. Valid values:</p>
+     * <p>The performance level (PL) of the ESSD cloud disk. Valid values:</p>
      * <ul>
-     * <li><strong>PL1</strong> (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
-     * <li><strong>PL2</strong>: A single ESSD delivers up to 100,000 random read/write IOPS.</li>
-     * <li><strong>PL3</strong>: A single ESSD delivers up to 1,000,000 random read/write IOPS.</li>
+     * <li><p><strong>PL1</strong> (default): A maximum of 50,000 random read/write IOPS per disk.</p>
+     * </li>
+     * <li><p><strong>PL2</strong>: A maximum of 100,000 random read/write IOPS per disk.</p>
+     * </li>
+     * <li><p><strong>PL3</strong>: A maximum of 1,000,000 random read/write IOPS per disk.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +74,7 @@ public class ModifyRCDiskSpecRequest extends TeaModel {
     public String performanceLevel;
 
     /**
-     * <p>The ID of the region in which the instance resides.</p>
+     * <p>The region ID of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

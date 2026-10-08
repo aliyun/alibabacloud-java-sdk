@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to delete all tags of the instance. Valid values:</p>
+     * <p>Specifies whether to unbind all tags from the instance. Valid values:</p>
      * <ul>
      * <li><strong>true</strong></li>
      * <li><strong>false</strong></li>
      * </ul>
      * <p>Default value: <strong>false</strong>.</p>
      * <blockquote>
-     * <p>This parameter is valid if parameters that contain <strong>TagKey.N</strong> are not specified.</p>
+     * <p>This parameter takes effect only when <strong>TagKey.N</strong> is not specified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UntagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query available region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The instance ID. You can remove tags from N instances at a time. Valid values of N: <strong>1</strong> to <strong>50</strong>.</p>
+     * <p>The list of instance IDs. You can unbind tags from up to N instances at a time. Valid values of N: <strong>1</strong> to <strong>50</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,14 @@ public class UntagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to <strong>INSTANCE</strong>.</p>
+     * <p>The resource type. Valid values:</p>
+     * <ul>
+     * <li><strong>INSTANCE</strong>: regular ApsaraDB RDS instance.</li>
+     * <li><strong>CUSTOM</strong>: RDS Custom instance.</li>
+     * <li><strong>CUSTOMDEPLOYMENTSET</strong>: RDS Custom deployment set.</li>
+     * <li><strong>CUSTOMDISK</strong>: RDS Custom cloud disk.</li>
+     * <li><strong>CUSTOMSNAPSHOT</strong>: RDS Custom snapshot.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +68,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of tag keys. You can delete N tag keys at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. The value of this parameter cannot be an empty string.</p>
+     * <p>The list of tag keys. You can remove up to N tag keys at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. Empty strings are not allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>testkey1</p>

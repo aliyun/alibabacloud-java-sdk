@@ -7,48 +7,18 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
     @NameInMap("DeploymentSets")
     public DescribeRCDeploymentSetsResponseBodyDeploymentSets deploymentSets;
 
-    /**
-     * <p>The page number.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The region ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>39265F46-EC77-4036-8AC4-F035F32F6BE2</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -256,6 +226,9 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
     }
 
     public static class DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSet extends TeaModel {
+        @NameInMap("AccountId")
+        public String accountId;
+
         @NameInMap("Capacities")
         public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetCapacities capacities;
 
@@ -298,6 +271,14 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
         public static DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSet build(java.util.Map<String, ?> map) throws Exception {
             DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSet self = new DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSet();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSet setAccountId(String accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public String getAccountId() {
+            return this.accountId;
         }
 
         public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSet setCapacities(DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetCapacities capacities) {

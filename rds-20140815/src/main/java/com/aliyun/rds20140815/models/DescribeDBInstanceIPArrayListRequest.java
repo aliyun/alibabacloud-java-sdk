@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceIPArrayListRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -21,13 +21,13 @@ public class DescribeDBInstanceIPArrayListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The network type of the IP address whitelist. Valid values:</p>
+     * <p>The network type of the whitelist. Valid values:</p>
      * <ul>
-     * <li><strong>Classic</strong>: classic network in enhanced whitelist mode</li>
-     * <li><strong>VPC</strong>: virtual private cloud (VPC) in enhanced whitelist mode</li>
-     * <li><strong>MIX</strong>: standard whitelist mode</li>
+     * <li><strong>Classic</strong>: classic network in the enhanced whitelist mode.</li>
+     * <li><strong>VPC</strong>: virtual private cloud (VPC) in the enhanced whitelist mode.</li>
+     * <li><strong>MIX</strong>: general whitelist mode.</li>
      * </ul>
-     * <p>By default, this operation returns IP address whitelists of all network types.</p>
+     * <p>By default, the IP whitelist of all network types is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>VPC</p>

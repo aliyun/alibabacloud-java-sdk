@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AllocateInstancePublicConnectionRequest extends TeaModel {
     /**
-     * <p>The Tabular Data Stream (TDS) port of the instance for which Babelfish is enabled.</p>
+     * <p>The TDS port number of Babelfish for RDS PostgreSQL.</p>
      * <blockquote>
-     * <p>This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see <a href="https://help.aliyun.com/document_detail/428613.html">Introduction to Babelfish</a>.</p>
+     * <p>This parameter is applicable only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for RDS PostgreSQL, see <a href="https://help.aliyun.com/document_detail/428613.html">Introduction to Babelfish</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     public String babelfishPort;
 
     /**
-     * <p>The prefix of the public endpoint. A valid public endpoint is in the following format: <code>Prefix.Database engine.rds.aliyuncs.com</code>. Example: <code>test1234.mysql.rds.aliyuncs.com</code>.</p>
+     * <p>The prefix of the public endpoint. The complete public endpoint is in the format of <code>Prefix.DPI engine.rds.aliyuncs.com</code>. Example: <code>test1234.mysql.rds.aliyuncs.com</code>.</p>
      * <blockquote>
-     * <p>The value can be 5 to 40 characters in length and can contain letters, digits, and hyphens (-). The value cannot contain any of the following characters: ~ ! # % ^ &amp; \* = + | {} ; : \&quot; &quot; , &lt;&gt; / ?</p>
+     * <p>The prefix must be 5 to 40 characters in length and cannot contain Chinese characters or invalid characters (\~!#%^&amp;*=+|{}\&quot;:&quot;,&lt;&gt;/?). The prefix can contain letters, digits, and hyphens (-).</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -30,20 +30,20 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     public String connectionStringPrefix;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5*****</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The name of the dedicated cluster to which the instance belongs. This parameter is available only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.</p>
+     * <p>The name of the group to which the general-purpose ApsaraDB RDS for MySQL instance in a dedicated cluster belongs.</p>
      * 
      * <strong>example:</strong>
-     * <p>rgc-bp1tkv8*****</p>
+     * <p>rgc-bp1tkv8****</p>
      */
     @NameInMap("GeneralGroupName")
     public String generalGroupName;
@@ -57,7 +57,7 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     /**
      * <p>The PgBouncer port.</p>
      * <blockquote>
-     * <p>This parameter is available only for instances that run PostgreSQL.</p>
+     * <p>This parameter is applicable only to ApsaraDB RDS for PostgreSQL instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -67,7 +67,7 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     public String PGBouncerPort;
 
     /**
-     * <p>The public port of the instance. Valid values: <strong>1000 to 5999</strong>.</p>
+     * <p>The public port. Valid values: <strong>1000 to 5999</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

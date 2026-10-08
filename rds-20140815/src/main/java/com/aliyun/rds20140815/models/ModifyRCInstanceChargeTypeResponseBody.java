@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
     /**
-     * <p>The billing method.</p>
+     * <p>The billing method. Valid values:</p>
      * <ul>
      * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
      * <li><strong>PREPAY</strong>: subscription.</li>
@@ -18,16 +18,16 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The time when the instance expires.</p>
+     * <p>The expiration time.</p>
      * <blockquote>
-     * <p> If you change the billing method from subscription to pay-as-you-go, this parameter is not returned.</p>
+     * <p>This parameter is not returned if the billing method is changed to pay-as-you-go.</p>
      * </blockquote>
      */
     @NameInMap("ExpiredTime")
     public java.util.List<String> expiredTime;
 
     /**
-     * <p>The reserved parameter. This parameter is not supported.</p>
+     * <p>Reserved parameter. Not supported.</p>
      */
     @NameInMap("FeeOfInstances")
     public java.util.List<ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances> feeOfInstances;
@@ -111,7 +111,7 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
 
     public static class ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances extends TeaModel {
         /**
-         * <p>The reserved parameter. This parameter is not supported.</p>
+         * <p>Reserved parameter. Not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -120,7 +120,7 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The reserved parameter. This parameter is not supported.</p>
+         * <p>Reserved parameter. Not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -129,7 +129,7 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
         public String fee;
 
         /**
-         * <p>The reserved parameter. This parameter is not supported.</p>
+         * <p>Reserved parameter. Not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>

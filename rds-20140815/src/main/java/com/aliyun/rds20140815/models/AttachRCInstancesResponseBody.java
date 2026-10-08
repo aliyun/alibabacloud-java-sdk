@@ -14,7 +14,7 @@ public class AttachRCInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The response results.</p>
      */
     @NameInMap("Responses")
     public java.util.List<AttachRCInstancesResponseBodyResponses> responses;
@@ -59,7 +59,7 @@ public class AttachRCInstancesResponseBody extends TeaModel {
 
     public static class AttachRCInstancesResponseBodyResponses extends TeaModel {
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The status code returned.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -68,7 +68,7 @@ public class AttachRCInstancesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The node ID.</p>
+         * <p>The RDS Custom instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rc-e2g521l55k038cr8****</p>
@@ -77,9 +77,9 @@ public class AttachRCInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The message returned.</p>
+         * <p>The message returned for the request.</p>
          * <blockquote>
-         * <p> If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, exception information such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

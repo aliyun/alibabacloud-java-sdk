@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRCClusterConfigResponseBody extends TeaModel {
     /**
-     * <p>The kubeconfig file of the cluster.</p>
+     * <p>The cluster access configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>apiVersion: v1****</p>
@@ -14,7 +14,7 @@ public class DescribeRCClusterConfigResponseBody extends TeaModel {
     public String config;
 
     /**
-     * <p>The expiration time of the kubeconfig file. Format: the UTC time in the RFC3339 format.</p>
+     * <p>The expiration time of the KubeConfig. Format: UTC time in RFC 3339 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-03-10T09:56:17Z</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCustinsResourceRequest extends TeaModel {
     /**
-     * <p>The deadline for the modification.</p>
+     * <p>The adjustment time.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-12-31 23:59:06</p>
@@ -14,7 +14,7 @@ public class ModifyCustinsResourceRequest extends TeaModel {
     public String adjustDeadline;
 
     /**
-     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the instance ID.</p>
+     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ModifyCustinsResourceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The increase rate in percentage.</p>
+     * <p>The increase ratio. Unit: %.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,7 +45,7 @@ public class ModifyCustinsResourceRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The original value. This parameter must be specified when the <strong>ResourceType</strong> parameter is set to <strong>instance</strong>.</p>
+     * <p>The original value. This parameter is required when <strong>ResourceType</strong> is set to <strong>instance</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -54,7 +54,7 @@ public class ModifyCustinsResourceRequest extends TeaModel {
     public String restoreOriginalSpecification;
 
     /**
-     * <p>The target value. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. The value must be greater than 0 and can contain up to three decimal places.</p>
+     * <p>The target value. This parameter is applicable to target tracking rules and predictive rules. The value of TargetValue can contain up to three decimal places and must be greater than 0.</p>
      * 
      * <strong>example:</strong>
      * <p>3000</p>

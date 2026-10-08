@@ -4,21 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class SyncRCKeyPairRequest extends TeaModel {
-    /**
-     * <p>The name of the key pair.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>customer_keypairs</p>
-     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
-    /**
-     * <p>The region ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyImportTaskRequest extends TeaModel {
     /**
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class ModifyImportTaskRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>RETRY_IMPORT: retries the import task.</li>
+     * <li>CANCEL: cancels the task.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +32,7 @@ public class ModifyImportTaskRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the destination region. You can call DescribeRegions to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,7 @@ public class ModifyImportTaskRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

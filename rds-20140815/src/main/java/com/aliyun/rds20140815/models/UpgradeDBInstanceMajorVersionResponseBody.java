@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceMajorVersionResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pgm-bp1gm3yh0ht1****</p>
@@ -14,7 +14,7 @@ public class UpgradeDBInstanceMajorVersionResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>21128667463****</p>
@@ -23,7 +23,7 @@ public class UpgradeDBInstanceMajorVersionResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>006729E5-2A33-5955-89E3-651D3F44EBE6</p>
@@ -32,7 +32,7 @@ public class UpgradeDBInstanceMajorVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>Reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>416980000</p>

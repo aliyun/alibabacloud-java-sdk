@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDatabaseConfigResponseBody extends TeaModel {
     /**
-     * <p>The code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,10 +14,10 @@ public class ModifyDatabaseConfigResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
@@ -26,7 +26,7 @@ public class ModifyDatabaseConfigResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>8B993DA9-5272-5414-94E3-4CA8BA0146C2</p>
+     * <p>F5C79A20-E931-5389-BC04-DEBA2D3ABD8D</p>
      */
     @NameInMap("RequestId")
     public String requestId;

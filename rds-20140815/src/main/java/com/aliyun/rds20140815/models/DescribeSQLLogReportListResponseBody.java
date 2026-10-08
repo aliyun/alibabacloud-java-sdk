@@ -17,7 +17,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of SQL log reports on the current page.</p>
+     * <p>The number of SQL log running reports on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -35,7 +35,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>

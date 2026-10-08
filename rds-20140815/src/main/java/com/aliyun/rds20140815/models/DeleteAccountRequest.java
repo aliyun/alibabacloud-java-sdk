@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAccountRequest extends TeaModel {
     /**
-     * <p>The name of the account.</p>
+     * <p>The name of the database account that you want to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteAccountRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

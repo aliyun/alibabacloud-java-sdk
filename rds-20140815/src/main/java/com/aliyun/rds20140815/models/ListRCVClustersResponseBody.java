@@ -4,10 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ListRCVClustersResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>07F6177E-6DE4-408A-BB4F-0723301340F3</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,35 +31,91 @@ public class ListRCVClustersResponseBody extends TeaModel {
         return this.VClusters;
     }
 
+    public static class ListRCVClustersResponseBodyVClustersMysqlOperator extends TeaModel {
+        @NameInMap("DashboardPublicEndpoint")
+        public String dashboardPublicEndpoint;
+
+        @NameInMap("DashboardUsername")
+        public String dashboardUsername;
+
+        @NameInMap("DashboardVpcEndpoint")
+        public String dashboardVpcEndpoint;
+
+        @NameInMap("DeployTime")
+        public String deployTime;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static ListRCVClustersResponseBodyVClustersMysqlOperator build(java.util.Map<String, ?> map) throws Exception {
+            ListRCVClustersResponseBodyVClustersMysqlOperator self = new ListRCVClustersResponseBodyVClustersMysqlOperator();
+            return TeaModel.build(map, self);
+        }
+
+        public ListRCVClustersResponseBodyVClustersMysqlOperator setDashboardPublicEndpoint(String dashboardPublicEndpoint) {
+            this.dashboardPublicEndpoint = dashboardPublicEndpoint;
+            return this;
+        }
+        public String getDashboardPublicEndpoint() {
+            return this.dashboardPublicEndpoint;
+        }
+
+        public ListRCVClustersResponseBodyVClustersMysqlOperator setDashboardUsername(String dashboardUsername) {
+            this.dashboardUsername = dashboardUsername;
+            return this;
+        }
+        public String getDashboardUsername() {
+            return this.dashboardUsername;
+        }
+
+        public ListRCVClustersResponseBodyVClustersMysqlOperator setDashboardVpcEndpoint(String dashboardVpcEndpoint) {
+            this.dashboardVpcEndpoint = dashboardVpcEndpoint;
+            return this;
+        }
+        public String getDashboardVpcEndpoint() {
+            return this.dashboardVpcEndpoint;
+        }
+
+        public ListRCVClustersResponseBodyVClustersMysqlOperator setDeployTime(String deployTime) {
+            this.deployTime = deployTime;
+            return this;
+        }
+        public String getDeployTime() {
+            return this.deployTime;
+        }
+
+        public ListRCVClustersResponseBodyVClustersMysqlOperator setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class ListRCVClustersResponseBodyVClusters extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>cd21387ea640145bab79a78276c1a****</p>
-         */
         @NameInMap("ClusterId")
         public String clusterId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
+        @NameInMap("ClusterName")
+        public String clusterName;
+
         @NameInMap("InstanceCount")
         public Long instanceCount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
+        @NameInMap("MysqlOperator")
+        public ListRCVClustersResponseBodyVClustersMysqlOperator mysqlOperator;
+
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("SupportDiskPerformanceLevel")
         public java.util.List<String> supportDiskPerformanceLevel;
 
-        /**
-         * <strong>example:</strong>
-         * <p>vpc-2zeqj40j2ce0s5yhg****</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -80,6 +132,14 @@ public class ListRCVClustersResponseBody extends TeaModel {
             return this.clusterId;
         }
 
+        public ListRCVClustersResponseBodyVClusters setClusterName(String clusterName) {
+            this.clusterName = clusterName;
+            return this;
+        }
+        public String getClusterName() {
+            return this.clusterName;
+        }
+
         public ListRCVClustersResponseBodyVClusters setInstanceCount(Long instanceCount) {
             this.instanceCount = instanceCount;
             return this;
@@ -88,12 +148,28 @@ public class ListRCVClustersResponseBody extends TeaModel {
             return this.instanceCount;
         }
 
+        public ListRCVClustersResponseBodyVClusters setMysqlOperator(ListRCVClustersResponseBodyVClustersMysqlOperator mysqlOperator) {
+            this.mysqlOperator = mysqlOperator;
+            return this;
+        }
+        public ListRCVClustersResponseBodyVClustersMysqlOperator getMysqlOperator() {
+            return this.mysqlOperator;
+        }
+
         public ListRCVClustersResponseBodyVClusters setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListRCVClustersResponseBodyVClusters setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public ListRCVClustersResponseBodyVClusters setSupportDiskPerformanceLevel(java.util.List<String> supportDiskPerformanceLevel) {

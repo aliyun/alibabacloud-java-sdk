@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-bpxxxxx</p>
+     * <p>rm-bp****</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DA2ECBA0-4745-4491-9166-799FF8984AC9</p>
@@ -23,7 +23,7 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The new minor engine version of the instance.</p>
+     * <p>The target minor engine version to which the instance is upgraded.</p>
      * 
      * <strong>example:</strong>
      * <p>xcluster80_20210305</p>
@@ -32,10 +32,10 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
     public String targetMinorVersion;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>226917****</p>
+     * <p>226917711</p>
      */
     @NameInMap("TaskId")
     public String taskId;

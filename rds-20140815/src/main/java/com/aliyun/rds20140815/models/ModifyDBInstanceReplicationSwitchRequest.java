@@ -15,10 +15,10 @@ public class ModifyDBInstanceReplicationSwitchRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>Specifies whether to enable the native replication feature. Valid values:</p>
+     * <p>Specifies whether to enable or disable native replication mode. Valid values:</p>
      * <ul>
-     * <li><strong>ON</strong></li>
-     * <li><strong>OFF</strong></li>
+     * <li><strong>ON</strong>: Enable native replication.</li>
+     * <li><strong>OFF</strong>: Disable native replication.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -29,7 +29,7 @@ public class ModifyDBInstanceReplicationSwitchRequest extends TeaModel {
     public String externalReplication;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class ModifyDBInstanceReplicationSwitchRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID. You can leave this parameter empty.</p>
+     * <p>The resource group ID. This parameter can be left empty.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>

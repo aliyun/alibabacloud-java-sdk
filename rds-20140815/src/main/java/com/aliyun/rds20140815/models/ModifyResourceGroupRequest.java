@@ -8,17 +8,17 @@ public class ModifyResourceGroupRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOCzxxxxxx</p>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-bpxxxxx</p>
+     * <p>rm-bp****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -30,11 +30,11 @@ public class ModifyResourceGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The resource group ID. You can call the ListResourceGroups operation to obtain the resource group ID.</p>
+     * <p>The resource group ID. You can call ListResourceGroups to query the resource group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acxxxxx</p>
+     * <p>rg-ac****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -49,7 +49,7 @@ public class ModifyResourceGroupRequest extends TeaModel {
      * <p>The resource type.</p>
      * 
      * <strong>example:</strong>
-     * <p>Instance</p>
+     * <p>For example, the default resource type Custom is Instance</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

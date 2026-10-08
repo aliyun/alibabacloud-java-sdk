@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListClassesResponseBody extends TeaModel {
     /**
-     * <p>The list of instance specifications.</p>
+     * <p>The list of instance type information.</p>
      */
     @NameInMap("Items")
     public java.util.List<ListClassesResponseBodyItems> items;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -20,7 +20,7 @@ public class ListClassesResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CF8D35BF-263D-4F7B-883A-1163B79A9EC6</p>
@@ -59,7 +59,7 @@ public class ListClassesResponseBody extends TeaModel {
 
     public static class ListClassesResponseBodyItems extends TeaModel {
         /**
-         * <p>The code of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a> and <a href="https://help.aliyun.com/document_detail/145759.html">Read-only ApsaraDB RDS instance types</a>.</p>
+         * <p>The instance type code. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a> and <a href="https://help.aliyun.com/document_detail/145759.html">Read-only instance types</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql.n1.micro.1</p>
@@ -68,16 +68,16 @@ public class ListClassesResponseBody extends TeaModel {
         public String classCode;
 
         /**
-         * <p>The instance family. For more information, see <a href="https://help.aliyun.com/document_detail/57184.html">Overview of instance families</a>.</p>
+         * <p>The instance family. For more information, see <a href="https://help.aliyun.com/document_detail/57184.html">Instance families</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>General</p>
+         * <p>general-purpose</p>
          */
         @NameInMap("ClassGroup")
         public String classGroup;
 
         /**
-         * <p>The number of CPU cores that are supported by the instance type. Unit: cores.</p>
+         * <p>The number of CPU cores for the instance type. Unit: cores.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -86,7 +86,7 @@ public class ListClassesResponseBody extends TeaModel {
         public String cpu;
 
         /**
-         * <p>The size of the encrypted memory that is supported by the security-enhanced instance type. Unit: GB.</p>
+         * <p>The encrypted memory size for the security-enhanced instance family. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -95,10 +95,10 @@ public class ListClassesResponseBody extends TeaModel {
         public String encryptedMemory;
 
         /**
-         * <p>The architecture of the instance type. Valid values:</p>
+         * <p>The architecture type of the instance type. Valid values:</p>
          * <ul>
-         * <li>If the architecture of the instance type is <strong>x86</strong>, an empty string is returned by default.</li>
-         * <li>If the architecture of the instance type is <strong>ARM</strong>, <strong>arm</strong> is returned.</li>
+         * <li>If the instance uses the <strong>x86</strong> architecture, this parameter is empty by default.</li>
+         * <li>If the instance uses the <strong>arm</strong> architecture, <strong>arm</strong> is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,7 +108,7 @@ public class ListClassesResponseBody extends TeaModel {
         public String instructionSetArch;
 
         /**
-         * <p>The maximum number of connections that are supported by the instance type. Unit: connections.</p>
+         * <p>The maximum number of connections for the instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -117,7 +117,7 @@ public class ListClassesResponseBody extends TeaModel {
         public String maxConnections;
 
         /**
-         * <p>The maximum I/O bandwidth that is supported by the instance type. Unit: Mbit/s.</p>
+         * <p>The maximum I/O bandwidth for the instance type. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>1024Mbps</p>
@@ -126,7 +126,7 @@ public class ListClassesResponseBody extends TeaModel {
         public String maxIOMBPS;
 
         /**
-         * <p>The maximum input/output operations per second (IOPS) that is supported by the instance type. Unit: operations per second.</p>
+         * <p>The maximum IOPS for the instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -135,23 +135,28 @@ public class ListClassesResponseBody extends TeaModel {
         public String maxIOPS;
 
         /**
-         * <p>The memory size that is supported by the instance type. Unit: GB.</p>
+         * <p>The memory size for the instance type. Unit: GB.</p>
          * 
          * <strong>example:</strong>
-         * <p>1 GB (RDS Basic Edition)</p>
+         * <p>1GB</p>
          */
         @NameInMap("MemoryClass")
         public String memoryClass;
 
         /**
-         * <p>The fee that you must pay for the instance type.</p>
+         * <p>The price for the instance type.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <ul>
+         * <li>Unit: cents (CNY).</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
          * <ul>
          * <li>Unit: cents (USD).</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>If you set <strong>CommodityCode</strong> to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.</li>
-         * <li>If you set <strong>CommodityCode</strong> to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.</li>
+         * <li>If you set the <strong>CommodityCode</strong> parameter to a pay-as-you-go commodity code, this parameter indicates the hourly price.</li>
+         * <li>If you set the <strong>CommodityCode</strong> parameter to a subscription commodity code, this parameter indicates the monthly price.</li>
          * </ul>
          * </blockquote>
          * 
@@ -162,22 +167,20 @@ public class ListClassesResponseBody extends TeaModel {
         public String referencePrice;
 
         /**
-         * <p>The RDS edition of the instance. Valid values:</p>
+         * <p>The instance edition. Valid values:</p>
          * <ul>
-         * <li><p>Regular instance</p>
-         * <ul>
-         * <li><strong>Basic</strong>: RDS Basic Edition</li>
-         * <li><strong>HighAvailability</strong>: RDS High-availability Edition</li>
-         * <li><strong>cluster</strong>: RDS Cluster Edition for ApsaraDB RDS for MySQL or PostgreSQL</li>
-         * <li><strong>AlwaysOn</strong>: RDS Cluster Edition for ApsaraDB RDS for SQL Server</li>
-         * <li><strong>Finance</strong>: RDS Basic Edition for serverless instances</li>
+         * <li>Regular instances<ul>
+         * <li><strong>Basic</strong>: Basic Edition.</li>
+         * <li><strong>HighAvailability</strong>: High availability series.</li>
+         * <li><strong>cluster</strong>: MySQL or PostgreSQL Cluster Edition.</li>
+         * <li><strong>AlwaysOn</strong>: SQL Server Cluster Edition.</li>
+         * <li><strong>Finance</strong>: RDS Enterprise Edition.</li>
          * </ul>
          * </li>
-         * <li><p>Serverless instance</p>
-         * <ul>
-         * <li><strong>serverless_basic</strong>: RDS Basic Edition for serverless instances. This edition is available only for instances that run MySQL and PostgreSQL.</li>
-         * <li><strong>serverless_standard</strong>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run MySQL and PostgreSQL.</li>
-         * <li><strong>serverless_ha</strong>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run SQL Server.</li>
+         * <li>Serverless instances<ul>
+         * <li><strong>serverless_basic</strong>: Serverless Basic Edition. (Applicable only to MySQL and PostgreSQL)</li>
+         * <li><strong>serverless_standard</strong>: Serverless high availability series. (Applicable only to MySQL and PostgreSQL)</li>
+         * <li><strong>serverless_ha</strong>: SQL Server Serverless high availability series.</li>
          * </ul>
          * </li>
          * </ul>
@@ -189,7 +192,7 @@ public class ListClassesResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The storage type of the instance.</p>
+         * <p>The instance storage type.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_essd</p>

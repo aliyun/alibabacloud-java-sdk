@@ -7,10 +7,10 @@ public class DescribeCharacterSetNameRequest extends TeaModel {
     /**
      * <p>The type of the database engine. Valid values:</p>
      * <ul>
-     * <li><strong>mysql</strong></li>
-     * <li><strong>mssql</strong></li>
-     * <li><strong>PostgreSQL</strong></li>
-     * <li><strong>MariaDB</strong></li>
+     * <li><strong>mysql</strong>: MySQL</li>
+     * <li><strong>mssql</strong>: SQL Server</li>
+     * <li><strong>PostgreSQL</strong>: PostgreSQL</li>
+     * <li><strong>MariaDB</strong>: MariaDB</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +27,7 @@ public class DescribeCharacterSetNameRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call DescribeRegions to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class DescribeCharacterSetNameRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
+     * <p>The resource group ID. You can call DescribeDBInstanceAttribute to query the resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy*****</p>

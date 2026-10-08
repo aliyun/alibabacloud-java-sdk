@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckCreateDdrDBInstanceResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the data of the source instance can be restored across regions. Valid values:</p>
+     * <p>Indicates whether the disaster recovery instance can be created. Valid values:</p>
      * <ul>
      * <li><strong>true</strong></li>
      * <li><strong>false</strong></li>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceDetailResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the instance is in the active state.</p>
+     * <p>The activation state.</p>
      * 
      * <strong>example:</strong>
      * <p>Invalid</p>
@@ -14,7 +14,7 @@ public class DescribeDBInstanceDetailResponseBody extends TeaModel {
     public String activationState;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-bp6wjk5xxxxxxxxxx</p>
@@ -23,7 +23,7 @@ public class DescribeDBInstanceDetailResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The type of the license.</p>
+     * <p>The license type.</p>
      * 
      * <strong>example:</strong>
      * <p>Normal</p>
@@ -32,7 +32,7 @@ public class DescribeDBInstanceDetailResponseBody extends TeaModel {
     public String licenseType;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -41,7 +41,7 @@ public class DescribeDBInstanceDetailResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>06B220E2-EAC5-4DBE-A1FC-1B62DB6A****</p>

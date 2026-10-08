@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyHADiagnoseConfigRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -18,7 +18,7 @@ public class ModifyHADiagnoseConfigRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call DescribeRegions to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,10 +34,10 @@ public class ModifyHADiagnoseConfigRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The availability check method of the instance. Valid values:</p>
+     * <p>The availability detection method of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>SHORT</strong>: Alibaba Cloud uses short-lived connections to check the availability of the instance.</li>
-     * <li><strong>LONG</strong>: Alibaba Cloud uses persistent connections to check the availability of the instance.</li>
+     * <li><strong>SHORT</strong>: short-lived connection</li>
+     * <li><strong>LONG</strong>: persistent connection</li>
      * </ul>
      * 
      * <strong>example:</strong>

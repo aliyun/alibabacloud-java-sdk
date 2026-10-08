@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SwitchReplicationLinkRequest extends TeaModel {
     /**
-     * <p>The ID of the source or primary instance.</p>
+     * <p>The ID of the source instance, which is the primary instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class SwitchReplicationLinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the destination DR instance.</p>
+     * <p>The name of the target disaster recovery instance to which you want to switch.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class SwitchReplicationLinkRequest extends TeaModel {
     public String targetInstanceName;
 
     /**
-     * <p>The ID of the region in which the destination DR instance resides.</p>
+     * <p>The region of the target disaster recovery instance to which you want to switch.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

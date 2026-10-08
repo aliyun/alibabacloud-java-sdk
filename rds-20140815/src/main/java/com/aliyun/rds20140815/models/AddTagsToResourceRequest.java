@@ -8,10 +8,10 @@ public class AddTagsToResourceRequest extends TeaModel {
     public java.util.List<AddTagsToResourceRequestTag> tag;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -19,12 +19,12 @@ public class AddTagsToResourceRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p> You can enter up to 30 instance IDs in a single request. If you enter more than one instance ID, you must separate the instance IDs with commas (,).</p>
+     * <p>You can specify up to 30 instance IDs for a batch operation. Separate multiple instance IDs with commas (,).</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -36,11 +36,11 @@ public class AddTagsToResourceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query available region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hagnzhou</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -61,13 +61,13 @@ public class AddTagsToResourceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags that you want to add. Each tag consists of a tag key and a tag value. You can specify a maximum of five tags in the following format for each request: {&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}.</p>
+     * <p>The list of tags to bind, including TagKey and TagValue. You can specify up to 5 pairs at a time. Format: {&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}.</p>
      * <blockquote>
-     * <p> The tag key is required and the tag value is optional.</p>
+     * <p>TagKey cannot be empty, but TagValue can be empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>{“key1”:”value1”,“key2”:””}</p>
+     * <p>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;&quot;}</p>
      */
     @NameInMap("Tags")
     public String tags;
@@ -176,7 +176,7 @@ public class AddTagsToResourceRequest extends TeaModel {
 
     public static class AddTagsToResourceRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the first tag that you want to add. Each tag consists of a tag key and a tag value. You can specify up to five tags in a single request. You cannot specify an empty string as the tag key. You can specify an empty string as the tag value.</p>
+         * <p>The key of the first tag. Each tag consists of a TagKey and a TagValue. You can specify up to 5 pairs at a time. TagKey cannot be empty, but TagValue can be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -185,7 +185,7 @@ public class AddTagsToResourceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the first tag that you want to add. Each tag consists of a tag key and a tag value. You can specify up to five tags in a single request. You cannot specify an empty string as the tag key. You can specify an empty string as the tag value.</p>
+         * <p>The value of the first tag. Each tag consists of a TagKey and a TagValue. You can specify up to 5 pairs at a time. TagKey cannot be empty, but TagValue can be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>

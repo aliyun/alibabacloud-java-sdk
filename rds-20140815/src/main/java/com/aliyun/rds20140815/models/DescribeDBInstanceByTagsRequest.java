@@ -8,16 +8,16 @@ public class DescribeDBInstanceByTagsRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOCz*****</p>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6w**********</p>
+     * <p>rm-uf6w****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -29,7 +29,7 @@ public class DescribeDBInstanceByTagsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number. Valid values: any non-zero positive integer that does not exceed the maximum value of the Integer data type.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class DescribeDBInstanceByTagsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>30 to 100</strong>. Default value: <strong>30</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>30</strong> to <strong>100</strong>. Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -48,7 +48,7 @@ public class DescribeDBInstanceByTagsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call DescribeRegions to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

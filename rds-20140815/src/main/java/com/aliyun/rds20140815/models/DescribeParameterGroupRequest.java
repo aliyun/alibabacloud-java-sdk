@@ -8,7 +8,7 @@ public class DescribeParameterGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The parameter template ID. You can call the DescribeParameterGroups operation to query the parameter template ID.</p>
+     * <p>The parameter template ID. You can call the <a href="~~DescribeParameterGroups~~">DescribeParameterGroups</a> operation to query the parameter template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeParameterGroupRequest extends TeaModel {
     public String parameterGroupId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

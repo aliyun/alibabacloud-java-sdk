@@ -8,7 +8,7 @@ public class TagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,14 @@ public class TagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to <strong>INSTANCE</strong>.</p>
+     * <p>The resource type. Valid values:</p>
+     * <ul>
+     * <li><strong>INSTANCE</strong>: regular ApsaraDB RDS instance.</li>
+     * <li><strong>CUSTOM</strong>: RDS Custom instance.</li>
+     * <li><strong>CUSTOMDEPLOYMENTSET</strong>: RDS Custom deployment set.</li>
+     * <li><strong>CUSTOMDISK</strong>: RDS Custom cloud disk.</li>
+     * <li><strong>CUSTOMSNAPSHOT</strong>: RDS Custom snapshot.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -112,7 +119,10 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. You can create N tag keys at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. The value of this parameter cannot be an empty string.</p>
+         * <p>The tag key. Empty values and duplicate values are <strong>not allowed</strong>.</p>
+         * <blockquote>
+         * <p>An existing tag key is overwritten by a new tag key with the same name.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -122,7 +132,7 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. You can create N tag values at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. The value of this parameter can be an empty string.</p>
+         * <p>The tag value. Empty values are <strong>allowed</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>testvalue1</p>

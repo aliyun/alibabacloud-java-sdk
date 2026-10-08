@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBProxyRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeDBProxyRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>A deprecated parameter. You do not need to specify this parameter.</p>
+     * <p>A deprecated parameter. You do not need to configure this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>normal</p>
@@ -27,7 +27,7 @@ public class DescribeDBProxyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call DescribeRegions to obtain the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -36,10 +36,10 @@ public class DescribeDBProxyRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmy*****</p>
+     * <p>rg-acfmy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

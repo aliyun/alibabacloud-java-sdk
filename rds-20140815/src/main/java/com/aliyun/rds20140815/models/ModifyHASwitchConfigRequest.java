@@ -9,20 +9,20 @@ public class ModifyHASwitchConfigRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The mode of the automatic primary/secondary switchover feature. Valid values:</p>
+     * <p>The primary/secondary switchover setting. Valid values:</p>
      * <ul>
-     * <li><strong>Auto</strong>: The automatic primary/secondary switchover feature is enabled. The system automatically switches your workloads over from the instance to its secondary instance in the event of a fault.</li>
-     * <li><strong>Manual</strong>: The automatic primary/secondary switchover feature is disabled. You must manually switch your workloads over from the instance to its secondary instance in the event of a fault.</li>
+     * <li><strong>Auto</strong>: The system automatically switches over between the primary and secondary instances upon a fault.</li>
+     * <li><strong>Manual</strong>: Temporarily disables automatic switchover.</li>
      * </ul>
      * <p>Default value: <strong>Auto</strong>.</p>
      * <blockquote>
-     * <p> If you set this parameter to <strong>Manual</strong>, you must specify the <strong>ManualHATime</strong> parameter.</p>
+     * <p>If you set this parameter to <strong>Manual</strong>, you must also specify the <strong>ManualHATime</strong> parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,9 +32,9 @@ public class ModifyHASwitchConfigRequest extends TeaModel {
     public String HAConfig;
 
     /**
-     * <p>The time to disable the automatic primary/secondary switchover feature. The time can range from the current time to 23:59:59 seven days later. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The deadline for temporarily disabling automatic switchover. You can set this parameter to a point in time up to 23:59:59 seven days later. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * <blockquote>
-     * <p> This parameter takes effect only when you set the <strong>HAConfig</strong> parameter to <strong>Manual</strong>.</p>
+     * <p>This parameter takes effect only when <strong>HAConfig</strong> is set to <strong>Manual</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class ModifyHASwitchConfigRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

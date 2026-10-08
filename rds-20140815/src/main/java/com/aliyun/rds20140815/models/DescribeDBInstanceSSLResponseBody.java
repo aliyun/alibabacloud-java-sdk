@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     /**
-     * <p>The method that is used to verify the instance. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
+     * <p>The authentication method of the ApsaraDB RDS for PostgreSQL instance with cloud disks. Valid values:</p>
      * <ul>
      * <li><strong>cert</strong></li>
      * <li><strong>prefer</strong></li>
      * <li><strong>verify-ca</strong></li>
-     * <li><strong>verify-full</strong> (supported only when the instance runs PostgreSQL 12 or later)</li>
+     * <li><strong>verify-full</strong> (supported by ApsaraDB RDS for PostgreSQL 12 and later)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,10 +20,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String ACL;
 
     /**
-     * <p>The type of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:</p>
+     * <p>The server certificate type of the ApsaraDB RDS for PostgreSQL instance with cloud disks. Valid values:</p>
      * <ul>
-     * <li><strong>aliyun</strong>: a cloud certificate</li>
-     * <li><strong>custom</strong>: a custom certificate</li>
+     * <li><strong>aliyun</strong>: The cloud certificate is used.</li>
+     * <li><strong>custom</strong>: A custom certificate is used.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String CAType;
 
     /**
-     * <p>The public key of the CA that issues client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
+     * <p>The public key of the client certificate authority (CA) for the ApsaraDB RDS for PostgreSQL instance with cloud disks.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----MIID*****viXk=-----END CERTIFICATE-----</p>
@@ -42,8 +42,8 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String clientCACert;
 
     /**
-     * <p>The time when the public key of the CA that issues client certificates expires. This parameter is supported only when the instance runs PostgreSQL with cloud disks. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and must be in UTC.</p>
-     * <p>This parameter is not supported.</p>
+     * <p>The expiration time of the public key of the client certificate authorization authority (CA) for the ApsaraDB RDS for PostgreSQL instance with cloud disks. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>This parameter is not supported. You can ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -54,7 +54,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String clientCACertExpireTime;
 
     /**
-     * <p>The certificate revocation list (CRL) that contains revoked client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
+     * <p>The client certificate revocation certificate file of the ApsaraDB RDS for PostgreSQL instance with cloud disks.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN X509 CRL-----MIIB****19mg==-----END X509 CRL-----</p>
@@ -63,7 +63,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String clientCertRevocationList;
 
     /**
-     * <p>The endpoint that is protected by SSL encryption.</p>
+     * <p>The endpoint that is protected by SSL.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-bp162dfr55g47****.mysql.rds.aliyuncs.com</p>
@@ -72,10 +72,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String connectionString;
 
     /**
-     * <p>Indicates whether the <a href="https://help.aliyun.com/document_detail/95715.html">forceful SSL encryption</a> feature is enabled. This parameter is supported only for RDS for SQL Server instances.</p>
+     * <p>Indicates whether the <a href="https://help.aliyun.com/document_detail/95715.html">forced Secure Sockets Layer (SSL) encryption feature</a> is enabled for the ApsaraDB RDS for SQL Server instance. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: The feature is enabled.</li>
-     * <li><strong>0</strong>: The feature is disabled.</li>
+     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,11 +85,11 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String forceEncryption;
 
     /**
-     * <p>The status of the SSL link. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
+     * <p>The current SSL link configuration status of the ApsaraDB RDS for PostgreSQL instance with cloud disks. Valid values:</p>
      * <ul>
-     * <li><strong>success</strong>: The SSL link is successfully configured.</li>
-     * <li><strong>setting</strong>: The SSL link is being configured.</li>
-     * <li><strong>failed</strong>: The SSL link failed to be configured.</li>
+     * <li><strong>success</strong>: Successful.</li>
+     * <li><strong>setting</strong>: Being configured.</li>
+     * <li><strong>failed</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,7 +99,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String lastModifyStatus;
 
     /**
-     * <p>The reason why the SSL link stays in the current state. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
+     * <p>The reason for the current SSL link configuration status of the ApsaraDB RDS for PostgreSQL instance with cloud disks.</p>
      * 
      * <strong>example:</strong>
      * <p>Modify DB Instance SSL Config.</p>
@@ -108,12 +108,12 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String modifyStatusReason;
 
     /**
-     * <p>The method that is used to verify the replication permission. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:</p>
+     * <p>The authentication method for replication permissions of the ApsaraDB RDS for PostgreSQL instance with cloud disks. Valid values:</p>
      * <ul>
      * <li><strong>cert</strong></li>
      * <li><strong>prefer</strong></li>
      * <li><strong>verify-ca</strong></li>
-     * <li><strong>verify-full</strong> (supported only when the instance runs PostgreSQL 12 or later)</li>
+     * <li><strong>verify-full</strong> (supported by ApsaraDB RDS for PostgreSQL 12 and later)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -123,7 +123,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String replicationACL;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7705151C-E242-55AF-9929-2A3C39D979D2</p>
@@ -134,18 +134,23 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the SSL certificate needs to be updated. Valid values:</p>
      * <blockquote>
-     * <p> An SSL certificate remains valid for one year. Before the used SSL certificate expires, you must update the validity period of the SSL certificate. If you do not update the validity period of the SSL certificate, your application or client that uses encrypted network connections cannot connect to your RDS instance.</p>
+     * <p>The SSL certificate is valid for one year. If the certificate is not renewed after it expires, client programs that use encrypted connections cannot connect to the instance.</p>
      * </blockquote>
-     * <p><strong>RDS instances that run MySQL and SQL Server</strong></p>
+     * <details>
+     * <summary>MySQL and SQL Server</summary>
+     * 
      * <ul>
-     * <li><strong>No</strong>: The SSL certificate does not need to be updated.</li>
-     * <li><strong>Yes</strong>: The SSL certificate needs to be updated.</li>
+     * <li><strong>No</strong>: No update is required.</li>
+     * <li><strong>Yes</strong>: An update is required.</details></li>
      * </ul>
-     * <p><strong>RDS instances that run PostgreSQL</strong></p>
+     * <details>
+     * <summary>PostgreSQL</summary>
+     * 
      * <ul>
-     * <li><strong>0</strong>: The SSL certificate does not need to be updated.</li>
-     * <li><strong>1</strong>: The SSL certificate needs to be updated.</li>
+     * <li><strong>0</strong>: No update is required.</li>
+     * <li><strong>1</strong>: An update is required.</li>
      * </ul>
+     * </details>
      * 
      * <strong>example:</strong>
      * <p>Yes</p>
@@ -154,7 +159,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String requireUpdate;
 
     /**
-     * <p>The server certificate that needs to be updated. This parameter is supported only when the instance runs PostgreSQL with cloud disk.</p>
+     * <p>The list of server certificates that need to be updated for the ApsaraDB RDS for PostgreSQL instance with cloud disks.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -165,7 +170,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String requireUpdateItem;
 
     /**
-     * <p>The reason why the server certificate needs to be updated. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
+     * <p>The reason why the certificates need to be updated for the ApsaraDB RDS for PostgreSQL instance with cloud disks.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -176,7 +181,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String requireUpdateReason;
 
     /**
-     * <p>The time when the server certificate was created. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is valid only when the CAType parameter value is aliyun.</p>
+     * <p>The creation time of the server certificate for the ApsaraDB RDS for PostgreSQL instance with cloud disks. This parameter is valid only when CAType is set to aliyun.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -187,17 +192,22 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String SSLCreateTime;
 
     /**
-     * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
-     * <p><strong>RDS instances that run MySQL and SQL Server</strong></p>
+     * <p>The SSL encryption status. Valid values:</p>
+     * <details>
+     * <summary>MySQL and SQL Server</summary>
+     * 
      * <ul>
-     * <li><strong>Yes</strong>: SSL encryption is enabled.</li>
-     * <li><strong>No</strong>: SSL encryption is disabled.</li>
+     * <li><strong>Yes</strong>: Enabled.</li>
+     * <li><strong>No</strong>: Disabled.</details></li>
      * </ul>
-     * <p><strong>RDS instances that run PostgreSQL</strong></p>
+     * <details>
+     * <summary>PostgreSQL</summary>
+     * 
      * <ul>
-     * <li><strong>on</strong>: SSL encryption is enabled.</li>
-     * <li><strong>off</strong>: SSL encryption is disabled.</li>
+     * <li><strong>on</strong>: Enabled.</li>
+     * <li><strong>off</strong>: Disabled.</li>
      * </ul>
+     * </details>
      * 
      * <strong>example:</strong>
      * <p>Yes</p>
@@ -206,16 +216,16 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String SSLEnabled;
 
     /**
-     * <p>The time when the SSL certificate expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and must be in UTC.</p>
+     * <p>The expiration time of the SSL certificate. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
-     * <p>2022-10-11T08:16:43Z</p>
+     * <p>2025-06-16T08:16:43Z</p>
      */
     @NameInMap("SSLExpireTime")
     public String SSLExpireTime;
 
     /**
-     * <p>The URL of the certificate that is used to issue the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disk.</p>
+     * <p>The URL of the CA certificate that is used to issue the server certificate for the ApsaraDB RDS for PostgreSQL instance with cloud disks.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -226,7 +236,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String serverCAUrl;
 
     /**
-     * <p>The content of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
+     * <p>The content of the server certificate for the ApsaraDB RDS for PostgreSQL instance with cloud disks.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----MIID*****QqEP-----END CERTIFICATE-----</p>
@@ -235,7 +245,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String serverCert;
 
     /**
-     * <p>The private key of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
+     * <p>The private key of the server certificate for the ApsaraDB RDS for PostgreSQL instance with cloud disks.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN PRIVATE KEY-----MIIE****ihfg==-----END PRIVATE KEY-----</p>
@@ -244,7 +254,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String serverKey;
 
     /**
-     * <p>The <a href="https://help.aliyun.com/document_detail/95715.html">minimum Transport Layer Security (TLS) version</a>. Valid values: 1.0, 1.1, and 1.2. This parameter is supported only for ApsaraDB RDS for SQL Server instances.</p>
+     * <p>The specified <a href="https://help.aliyun.com/document_detail/95715.html">minimum TLS version</a> for the ApsaraDB RDS for SQL Server instance. Valid values: 1.0, 1.1, and 1.2.</p>
      * 
      * <strong>example:</strong>
      * <p>1.1</p>

@@ -14,7 +14,7 @@ public class DeletePostgresExtensionsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DeletePostgresExtensionsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The database on which the extension is installed. If you want to specify multiple databases, separate the databases with commas (,).</p>
+     * <p>The database in which the extension is installed. Separate multiple databases with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class DeletePostgresExtensionsRequest extends TeaModel {
     public String DBNames;
 
     /**
-     * <p>The name of the extension. If you want to specify multiple extensions, separate the extension names with commas (,).</p>
+     * <p>The extension name. Separate multiple extensions with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class DeletePostgresExtensionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>

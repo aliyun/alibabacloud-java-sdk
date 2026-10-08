@@ -8,13 +8,13 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
      * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The number of distributed transaction whitelists.</p>
+     * <p>The number of entries in the distributed transaction whitelist.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

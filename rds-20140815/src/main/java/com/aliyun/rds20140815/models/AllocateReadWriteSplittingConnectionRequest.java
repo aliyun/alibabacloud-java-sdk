@@ -5,32 +5,32 @@ import com.aliyun.tea.*;
 
 public class AllocateReadWriteSplittingConnectionRequest extends TeaModel {
     /**
-     * <p>The prefix of the read-only routing endpoint. The prefix must be unique. It can be up to 30 characters in length and can contain lowercase letters and hyphens (-). It must start with a lowercase letter.</p>
+     * <p>The prefix of the read-only endpoint. The prefix must be unique, can contain lowercase letters and hyphens (-), must start with a letter, and cannot exceed 30 characters in length.</p>
      * <blockquote>
-     * <p> The default prefix consists of the name of the primary instance followed by the letters rw.</p>
+     * <p>By default, the prefix is in the format of &quot;instance name + rw&quot;.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>rr-m5exxxxx-rw.mysql.rds.aliyuncs.com</p>
+     * <p>rr-m5e****-rw.mysql.rds.aliyuncs.com</p>
      */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
 
     /**
-     * <p>The primary instance ID. You can call the DescribeDBInstances operation to query the primary instance ID.</p>
+     * <p>The ID of the primary instance. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The method that is used to assign read weights. Valid values:</p>
+     * <p>The mode of read weight distribution. Valid values:</p>
      * <ul>
-     * <li><strong>Standard</strong>: The system automatically assigns read weights to the primary and read-only instances based on the specifications of these instances.</li>
-     * <li><strong>Custom</strong>: You must manually assign a read weight to each instance.</li>
+     * <li><strong>Standard</strong>: Read weights are automatically assigned based on instance specifications.</li>
+     * <li><strong>Custom</strong>: Read weights are manually assigned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,9 +40,9 @@ public class AllocateReadWriteSplittingConnectionRequest extends TeaModel {
     public String distributionType;
 
     /**
-     * <p>The threshold of the latency that is allowed on the read-only instances. Valid values: 0 to 7200. Default value: 30. Unit: seconds.</p>
+     * <p>The latency threshold. Valid values: 0 to 7200. Unit: seconds. Default value: 30.</p>
      * <blockquote>
-     * <p> If the latency on a read-only instance exceeds the specified threshold, ApsaraDB RDS does not forward read requests to the read-only instance.</p>
+     * <p>When the latency of a read-only instance exceeds this threshold, read traffic is not routed to the instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -52,13 +52,13 @@ public class AllocateReadWriteSplittingConnectionRequest extends TeaModel {
     public String maxDelayTime;
 
     /**
-     * <p>The network type of the read-only routing endpoint. Valid values:</p>
+     * <p>The network type of the read-only endpoint. Valid values:</p>
      * <ul>
-     * <li><strong>Internet</strong></li>
-     * <li><strong>Intranet</strong></li>
+     * <li><strong>Internet</strong>: public endpoint.</li>
+     * <li><strong>Intranet</strong>: internal endpoint.</li>
      * </ul>
      * <blockquote>
-     * <p> The default value is Intranet. Make sure that the network type of the read-only routing endpoint is the same as that of the primary instance.</p>
+     * <p>The default value is Intranet, and the network type of the internal endpoint is the same as that of the primary instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -74,7 +74,7 @@ public class AllocateReadWriteSplittingConnectionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The port that is associated with the read-only routing endpoint. Valid values: 1000 to 5999. Default value: 1433.</p>
+     * <p>The port of the read-only endpoint. Valid values: 1000 to 5999. Default value: 1433.</p>
      * 
      * <strong>example:</strong>
      * <p>1433</p>
@@ -89,22 +89,24 @@ public class AllocateReadWriteSplittingConnectionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The read weights of the primary instance and its read-only instances. The read weight is increased in increments of 100. The maximum value is 10000.</p>
+     * <p>The read weight distribution, which specifies the ratio of read requests that are routed to the primary instance and read-only instances. The value is incremented in steps of 100. Maximum value: 10000.</p>
      * <ul>
-     * <li>For ApsaraDB RDS instances, the value of this parameter is in the following format: <code>{&quot;&lt;ID of the read-only instance &gt;&quot;:&lt;Weight&gt;,&quot;master&quot;:&lt;Weight&gt;,&quot;slave&quot;:&lt;Weight&gt;}</code>.</li>
-     * <li>For ApsaraDB MyBase instances, the value of this parameter is in the following format: <code>[{&quot;instanceName&quot;:&quot;&lt;Primary instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;master&quot;},{&quot;instanceName&quot;:&quot;&lt;Primary instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;slave&quot;},{&quot;instanceName&quot;:&quot;&lt;Read-only instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;master&quot;}]</code></li>
+     * <li>Format for ApsaraDB RDS instances: <code>{&quot;&lt;Read-only instance ID&gt;&quot;:&lt;Weight&gt;,&quot;master&quot;:&lt;Weight&gt;,&quot;slave&quot;:&lt;Weight&gt;}</code></li>
+     * <li>Format for MyBASE instances: <code>[{&quot;instanceName&quot;:&quot;&lt;Primary instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;master&quot;},{&quot;instanceName&quot;:&quot;&lt;Primary instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;slave&quot;},{&quot;instanceName&quot;:&quot;&lt;Read-only instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;master&quot;}]</code></li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>This parameter must be specified when <strong>DistributionType</strong> is set to <strong>Custom</strong>.</p>
-     * </li>
-     * <li><p>If <strong>DistributionType</strong> is set to <strong>Standard</strong>, this parameter is invalid.</p>
-     * </li>
+     * <li>This parameter is required when <strong>DistributionType</strong> is set to <strong>Custom</strong>.</li>
+     * <li>This parameter is invalid when <strong>DistributionType</strong> is set to <strong>Standard</strong>.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;rm-bp1**********&quot;:800,&quot;master&quot;:400,&quot;slave&quot;:400}</p>
+     * <p>{
+     *       &quot;rm-bp1****&quot;: 800,
+     *       &quot;master&quot;: 400,
+     *       &quot;slave&quot;: 400
+     * }</p>
      */
     @NameInMap("Weight")
     public String weight;

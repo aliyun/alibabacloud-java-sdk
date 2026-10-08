@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteRCClusterNodesRequest extends TeaModel {
     /**
-     * <p>The instance IDs.</p>
+     * <p>The list of instance IDs.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
@@ -28,7 +28,7 @@ public class DeleteRCClusterNodesRequest extends TeaModel {
     /**
      * <p>The virtual private cloud (VPC) ID.</p>
      * <blockquote>
-     * <p> This is a reserved parameter.</p>
+     * <p>Reserved parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

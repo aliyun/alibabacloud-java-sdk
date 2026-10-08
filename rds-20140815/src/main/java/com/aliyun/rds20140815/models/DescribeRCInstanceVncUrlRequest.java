@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRCInstanceVncUrlRequest extends TeaModel {
     /**
-     * <p>The database engine. Valid values:</p>
+     * <p>The database engine type. Valid values:</p>
      * <ul>
      * <li><strong>mssql</strong>: SQL Server</li>
      * <li><strong>mysql</strong>: MySQL</li>

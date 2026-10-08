@@ -8,13 +8,13 @@ public class CloneDBInstanceResponseBody extends TeaModel {
      * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>100789370****</p>
@@ -26,7 +26,7 @@ public class CloneDBInstanceResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</p>
+     * <p>1E43AAE0-BEE8-43DA-860D-EAF2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

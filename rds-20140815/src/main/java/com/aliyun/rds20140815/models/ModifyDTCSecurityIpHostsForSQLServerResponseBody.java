@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>The ApsaraDB RDS instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The result of the IP address whitelist configuration. Valid values:</p>
+     * <p>The result of configuring the whitelist. Valid values:</p>
      * <ul>
-     * <li><strong>Success</strong></li>
-     * <li><strong>Fail</strong></li>
+     * <li><strong>Success</strong>: The configuration is successful.</li>
+     * <li><strong>Fail</strong>: The configuration failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class ModifyDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The task ID of the configuration task.</p>
      * 
      * <strong>example:</strong>
      * <p>178968983</p>

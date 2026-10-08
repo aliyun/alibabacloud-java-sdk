@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically create database proxies. Valid values:</p>
+     * <p>Specifies whether to automatically create a database proxy. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: automatically creates database proxies. By default, general-purpose database proxies are created.</li>
-     * <li><strong>false</strong>: does not automatically create database proxies.</li>
+     * <li><p><strong>true</strong>: enables automatic creation. By default, a general-purpose database proxy is created.</p>
+     * </li>
+     * <li><p><strong>false</strong>: does not enable automatic creation of a database proxy.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +20,13 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public Boolean autoCreateProxy;
 
     /**
-     * <p>Specifies whether to automatically complete the payment. Valid values:</p>
-     * <ol>
-     * <li><strong>true</strong>: automatically completes the payment. Make sure that your account balance is sufficient.</li>
-     * <li><strong>false</strong>: does not automatically complete the payment. An unpaid order is generated.</li>
-     * </ol>
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: enables automatic payment. Make sure that your account balance is sufficient.</li>
+     * <li><strong>false</strong>: generates an order without charging your account.</li>
+     * </ul>
      * <blockquote>
-     * <p> Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
+     * <p>The default value is true. If your payment method has an insufficient balance, set AutoPay to false. In this case, an unpaid order is generated. You can log on to the ApsaraDB RDS console to complete the payment.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -34,15 +36,15 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable the auto-renewal feature for the read-only instance. If you set the PayType parameter to Prepaid, you must also specify this parameter. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal. This parameter is required only for subscription instances. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables the feature.</li>
-     * <li><strong>false</strong>: disables the feature.</li>
+     * <li><strong>true</strong>: enables auto-renewal.</li>
+     * <li><strong>false</strong>: disables auto-renewal.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>If you set the Period parameter to Month, the auto-renewal cycle is one month.</li>
-     * <li>If you set the Period parameter to Year, the auto-renewal cycle is one year.</li>
+     * <li>If you purchase the instance on a monthly basis, the auto-renewal cycle is one month.</li>
+     * <li>If you purchase the instance on a yearly basis, the auto-renewal cycle is one year.</li>
      * </ul>
      * </blockquote>
      * 
@@ -53,10 +55,10 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String autoRenew;
 
     /**
-     * <p>Specifies whether to use a coupon. Valid values:</p>
+     * <p>Specifies whether to use coupons. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: uses a coupon.</li>
-     * <li><strong>false</strong> (default): does not use a coupon.</li>
+     * <li><strong>true</strong>: uses coupons.</li>
+     * <li><strong>false</strong> (default): does not use coupons.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,17 +67,15 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
-    /**
-     * <p>A reserved parameter. You do not need to specify this parameter.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("BpeEnabled")
     public String bpeEnabled;
 
     /**
-     * <p>An invalid parameter. You do not need to specify this parameter.</p>
+     * <p>Specifies whether to enable the I/O performance burst feature for <a href="https://help.aliyun.com/document_detail/2340501.html">Premium ESSDs</a>. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: enables the feature.</li>
+     * <li><strong>false</strong>: disables the feature.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -84,14 +84,15 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public Boolean burstingEnabled;
 
     /**
-     * <p>The RDS edition of the instance. Valid values:</p>
+     * <p>The instance edition. Valid values:</p>
      * <ul>
-     * <li><strong>Basic</strong>: RDS Basic Edition</li>
-     * <li><strong>HighAvailability</strong> (default): RDS High-availability Edition</li>
-     * <li><strong>AlwaysOn</strong>: RDS Cluster Edition</li>
+     * <li><strong>Basic</strong>: Basic Edition</li>
+     * <li><strong>HighAvailability</strong>: High-availability Edition (default)</li>
+     * <li><strong>AlwaysOn</strong>: Cluster Edition</li>
      * </ul>
+     * <p>&lt;props=&quot;china&quot;&gt;* <strong>Finance</strong>: Finance Edition</p>
      * <blockquote>
-     * <p> The read-only instances of the primary instance that run PostgreSQL and use cloud disks run RDS Basic Edition. Therefore, set this parameter to <strong>Basic</strong>.</p>
+     * <p>The read-only instances of ApsaraDB RDS for PostgreSQL cloud disk instances use the Basic Edition. You must set this parameter to <strong>Basic</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -109,33 +110,39 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("CustomExtraInfo")
     public String customExtraInfo;
 
     /**
-     * <p>The instance type of the read-only instance. For more information, see <a href="https://help.aliyun.com/document_detail/145759.html">Read-only instance types</a>. We recommend that you specify an instance type whose specifications are higher than or equal to the specifications of the instance type of the primary instance. If the specifications of the read-only instance are lower than the specifications of the primary instance, the read-only instance may encounter issues such as high latency and heavy load.</p>
+     * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/145759.html">Read-only instance types</a>. We recommend that the specifications of the read-only instance be equal to or higher than those of the primary instance. Otherwise, the read-only instance may experience high latency and heavy loads.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rds.mys2.small</p>
+     * <p>mysqlro.n2.small.1c</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
     /**
-     * <p>The description of the read-only instance. The description must be 2 to 256 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The value must start with a letter</p>
+     * <p>The instance description. The description must be 2 to 256 characters in length and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter or a Chinese character.</p>
      * <blockquote>
-     * <p>The value cannot start with <a href="http://https://%E3%80%82">http:// or https://.</a></p>
+     * <p>The description cannot start with http:// or https://.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>Test read-only instance</p>
+     * <p>testReadOnly</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
     /**
-     * <p>The primary instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The primary instance ID. You can call <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -145,7 +152,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The storage capacity of the read-only instance. The storage capacity of the read-only instance must be greater than or equal to that of the primary instance. For more information, see the <strong>Storage capacity</strong> column in <a href="https://help.aliyun.com/document_detail/145759.html">Read-only instance types</a>. This value must be a multiple of 5. Unit: GB.</p>
+     * <p>Instance storage capacity. Instance storage capacity of the read-only instance must be greater than or equal to that of the primary instance. For more information, see the <strong>Storage capacity</strong> column in <a href="https://help.aliyun.com/document_detail/145759.html">Read-only instance types</a>. The value is incremented in units of 5 GB. Unit: GB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -157,16 +164,17 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     /**
      * <p>The storage type of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>local_ssd</strong>: local SSDs</li>
+     * <li><strong>local_ssd</strong>: Premium Local SSDs</li>
      * <li><strong>cloud_ssd</strong>: standard SSDs</li>
-     * <li><strong>cloud_essd</strong>: enhanced SSDs (ESSDs) of performance level 1 (PL1)</li>
-     * <li><strong>cloud_essd2</strong>: ESSDs of PL2</li>
-     * <li><strong>cloud_essd3</strong>: ESSDs of PL3</li>
+     * <li><strong>cloud_essd</strong>: PL1 ESSDs</li>
+     * <li><strong>cloud_essd2</strong>: PL2 ESSDs</li>
+     * <li><strong>cloud_essd3</strong>: PL3 ESSDs</li>
+     * <li><strong>general_essd</strong>: Premium ESSDs</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>If the primary instance runs MySQL with local disks, you must set this parameter to <strong>local_ssd</strong>. If the primary instance runs MySQL with cloud disks, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.</li>
-     * <li>If the primary instance runs SQL Server, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.</li>
+     * <li>If the primary ApsaraDB RDS for MySQL instance uses Premium Local SSDs, only <strong>local_ssd</strong> is supported. If the primary ApsaraDB RDS for MySQL instance uses cloud disks, premium performance disk storage types are supported.</li>
+     * <li>ApsaraDB RDS for SQL Server supports premium performance disk storage types.</li>
      * </ul>
      * </blockquote>
      * 
@@ -177,7 +185,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String DBInstanceStorageType;
 
     /**
-     * <p>The ID of the dedicated cluster to which the read-only instance belongs. This parameter is valid when you create the read-only instance in a dedicated cluster.</p>
+     * <p>The dedicated cluster ID. This parameter is required when you create a read-only instance in a dedicated cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>dhg-4n****</p>
@@ -186,13 +194,13 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String dedicatedHostGroupId;
 
     /**
-     * <p>Specifies whether to enable the release protection feature for the read-only instance. Valid values:</p>
+     * <p>Specifies whether to enable the release protection feature for the instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong>: enables release protection.</li>
+     * <li><strong>false</strong>: disables release protection. (default)</li>
      * </ul>
      * <blockquote>
-     * <p> You can enable the release protection feature for the read-only instance only when you set the <strong>PayType</strong> parameter to <strong>Postpaid</strong>.</p>
+     * <p>This feature is supported only when the <strong>billing method</strong> is <strong>pay-as-you-go</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -202,11 +210,11 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public Boolean deletionProtection;
 
     /**
-     * <p>The version of the database engine. The read-only instance and the primary instance must run the same major engine version.</p>
+     * <p>The database engine version. The version must be the same as that of the primary instance.</p>
      * <ul>
-     * <li>If the read-only instance runs MySQL, set this parameter to <strong>5.6</strong>, <strong>5.7</strong>, or <strong>8.0</strong>.</li>
-     * <li>If the read-only instance runs MySQL, set this parameter to <strong>2017_ent, 2019_ent, or 2022_ent</strong>.</li>
-     * <li>If the read-only instance runs PostgreSQL, set this parameter to <strong>10.0, 11.0, 12.0, 13.0, 14.0, or 15.0</strong>.</li>
+     * <li>Valid values for MySQL: <strong>5.6</strong>, <strong>5.7</strong>, and <strong>8.0</strong>.</li>
+     * <li>Valid values for SQL Server: <strong>2017_ent, 2019_ent, and 2022_ent</strong>.</li>
+     * <li>Valid values for PostgreSQL: <strong>10.0, 11.0, 12.0, 13.0, 14.0, and 15.0</strong>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -217,10 +225,10 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>A reserved parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>test</p>
      */
     @NameInMap("GdnInstanceName")
     public String gdnInstanceName;
@@ -228,12 +236,12 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     /**
      * <p>The network type of the read-only instance. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong></li>
-     * <li><strong>Classic</strong></li>
+     * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+     * <li><strong>Classic</strong>: classic network</li>
      * </ul>
-     * <p>Default value: VPC. If you set this parameter to VPC, you must also specify the <strong>VPCId</strong> and <strong>VSwitchId</strong> parameters.</p>
+     * <p>By default, a VPC-connected instance is created. You must also specify <strong>VPCId</strong> and <strong>VSwitchId</strong>.</p>
      * <blockquote>
-     * <p> The network type of the read-only instance can be different from the network type of the primary instance.</p>
+     * <p>The network type of the read-only instance can be different from that of the primary instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -243,23 +251,37 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String instanceNetworkType;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>A reserved parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>test</p>
      */
     @NameInMap("InstructionSetArch")
     public String instructionSetArch;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2527067.html">Buffer Pool Extension (BPE)</a> feature for Premium ESSDs. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: enables the feature.</li>
+     * <li><strong>0</strong>: does not enable the feature.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>0</p>
      */
     @NameInMap("IoAccelerationEnabled")
     public String ioAccelerationEnabled;
 
+    /**
+     * <p>Specifies whether to create a DuckDB-based analytical instance. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: creates a DuckDB-based analytical instance.</li>
+     * <li><strong>false</strong>: does not create a DuckDB-based analytical instance.</li>
+     * </ul>
+     * <blockquote>
+     * <p>Only ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL support DuckDB-based analytical instances.</p>
+     * </blockquote>
+     */
     @NameInMap("IsAnalyticReadOnlyIns")
     public Boolean isAnalyticReadOnlyIns;
 
@@ -270,7 +292,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The billing method of the read-only instance. Valid values:</p>
+     * <p>The billing method. Valid values:</p>
      * <ul>
      * <li><strong>Postpaid</strong>: pay-as-you-go</li>
      * <li><strong>Prepaid</strong>: subscription</li>
@@ -284,10 +306,10 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The renewal cycle of the read-only instance. Valid values:</p>
+     * <p>The subscription type of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>Year</strong></li>
-     * <li><strong>Month</strong></li>
+     * <li><strong>Year</strong>: yearly subscription</li>
+     * <li><strong>Month</strong>: monthly subscription</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -297,7 +319,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The port that can be initialized when you create a read-only ApsaraDB RDS for MySQL instance.</p>
+     * <p>The port that is initialized when you create a read-only instance for an ApsaraDB RDS for MySQL primary instance.</p>
      * <p>Valid values: 1000 to 65534.</p>
      * 
      * <strong>example:</strong>
@@ -307,7 +329,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String port;
 
     /**
-     * <p>The private IP address of the read-only instance. The private IP address must be within the CIDR block that is supported by the specified vSwitch. The system assigns a private IP address to the read-only instance based on the values of the <strong>VPCId</strong> and <strong>VSwitchId</strong> parameters.</p>
+     * <p>The internal IP address of the read-only instance. The IP address must be within the address range of the specified vSwitch. The system automatically allocates an internal IP address based on the values of <strong>VPCId</strong> and <strong>VSwitchId</strong> by default.</p>
      * 
      * <strong>example:</strong>
      * <p>172.16.XX.XX</p>
@@ -319,13 +341,13 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
      * <p>The coupon code.</p>
      * 
      * <strong>example:</strong>
-     * <p>717446260784</p>
+     * <p>71744626****</p>
      */
     @NameInMap("PromotionCode")
     public String promotionCode;
 
     /**
-     * <p>The region ID. The read-only instance and the primary instance must reside in the same region. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. The read-only instance must reside in the same region as the primary instance. You can call <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -335,7 +357,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>
@@ -350,7 +372,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the host on which the primary instance resides. This parameter is valid when you create the read-only instance in a dedicated cluster.</p>
+     * <p>The host ID of the primary instance in the dedicated cluster. This parameter is required when you create a read-only instance in a dedicated cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp****</p>
@@ -359,31 +381,31 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String targetDedicatedHostIdForMaster;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>A reserved parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>test</p>
      */
     @NameInMap("TddlBizType")
     public String tddlBizType;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>A reserved parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>test</p>
      */
     @NameInMap("TddlRegionConfig")
     public String tddlRegionConfig;
 
     /**
-     * <p>The subscription duration of the read-only instance. Valid values:</p>
+     * <p>The subscription duration. Valid values:</p>
      * <ul>
-     * <li>If you set the <strong>Period</strong> parameter to <strong>Year</strong>, the value of the <strong>UsedTime</strong> parameter ranges from <strong>1</strong> to <strong>5</strong>.</li>
-     * <li>If you set the <strong>Period</strong> parameter to <strong>Month</strong>, the value of the <strong>UsedTime</strong> parameter ranges from <strong>1</strong> to <strong>9</strong>.</li>
+     * <li>If <strong>Period</strong> is set to <strong>Year</strong>, the valid values of <strong>UsedTime</strong> are <strong>1</strong> to <strong>5</strong>.</li>
+     * <li>If <strong>Period</strong> is set to <strong>Month</strong>, the valid values of <strong>UsedTime</strong> are <strong>1</strong> to <strong>9</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p>If you set the <strong>PayType</strong> parameter to <strong>Prepaid</strong>, you must specify the UsedTime parameter.</p>
+     * <p>This parameter is required when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -393,11 +415,11 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String usedTime;
 
     /**
-     * <p>The virtual private cloud (VPC) ID of the read-only instance. If you leave the <strong>InstanceNetworkType</strong> parameter empty or set it to <strong>VPC</strong>, you must also specify this parameter.</p>
+     * <p>The VPC ID of the read-only instance. This parameter is required when <strong>InstanceNetworkType</strong> is left empty or set to <strong>VPC</strong>.</p>
      * <blockquote>
      * <ul>
-     * <li>If the primary instance uses local disks, the read-only instance and the primary instance can belong to the same VPC or different VPCs.</li>
-     * <li>If the primary instance uses cloud disks, the read-only instance and the primary instance must belong to the same VPC.</li>
+     * <li>If the storage type of the primary instance is Premium Local SSDs, the read-only instance can use any VPC.</li>
+     * <li>If the storage type of the primary instance is cloud disks, the VPC of the read-only instance must be the same as that of the primary instance.</li>
      * </ul>
      * </blockquote>
      * 
@@ -408,7 +430,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String VPCId;
 
     /**
-     * <p>The vSwitch ID of the read-only instance. If you leave the <strong>InstanceNetworkType</strong> parameter empty or set it to <strong>VPC</strong>, you must specify the VSwitchId parameter.</p>
+     * <p>The vSwitch ID of the read-only instance. This parameter is required when <strong>InstanceNetworkType</strong> is left empty or set to <strong>VPC</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-uf6adz52c2p****</p>
@@ -417,11 +439,11 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The zone ID. You can call the DescribeRegions operation to query the zone ID.</p>
+     * <p>The zone ID. You can call <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> to query the most recent zone list.</p>
      * <ul>
-     * <li>If you use the single-zone deployment method, set this parameter to the ID of one zone. Example: <code>cn-hangzhou-b</code>.</li>
-     * <li>If you use the multi-zone deployment method, set this parameter to the IDs of multiple zones and separate the IDs with colons (:). Example: <code>cn-hangzhou-b:cn-hangzhou-c</code>.</li>
-     * <li>The number of zone IDs that you specify must be less than or equal to the number of nodes created for the read-only instance. If you create a read-only instance that runs RDS Basic Edition, only one node is provisioned. If you create a read-only instance that runs RDS High-availability Edition, one primary node and one secondary node are provisioned.</li>
+     * <li>For single-zone deployment, specify one zone ID, such as <code>cn-hangzhou-b</code>.</li>
+     * <li>For multi-zone deployment, specify multiple zone IDs separated by colons (:), such as <code>cn-hangzhou-b:cn-hangzhou-c</code>.</li>
+     * <li>The number of specified zones must be less than or equal to the number of nodes in the read-only instance. A Basic Edition read-only instance contains only one node. A High-availability Edition read-only instance contains two nodes (one primary node and one secondary node).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

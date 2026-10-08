@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class ModifyDBNodeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically complete the payment. Valid values:</p>
+     * <p>Specifies whether to automatically complete automatic payment. Valid values:</p>
      * <ol>
-     * <li><strong>true</strong>: automatically completes the payment. Make sure that your account balance is sufficient.</li>
-     * <li><strong>false</strong>: does not automatically complete the payment. An unpaid order is generated.</li>
+     * <li><p><strong>true</strong>: Automatic payment is automatically completed. Make sure that your account balance is sufficient.</p>
+     * </li>
+     * <li><p><strong>false</strong>: An order is generated but no payment is made.</p>
+     * </li>
      * </ol>
      * <blockquote>
-     * <p> The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to pay for the order.</p>
+     * <p>Default value: true. If your payment method has insufficient balance, set AutoPay to false. In this case, an unpaid order is generated. You can log on to the ApsaraDB RDS console to complete automatic payment.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -40,7 +42,7 @@ public class ModifyDBNodeRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The new storage capacity of the instance. Unit: GB For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
+     * <p>The new instance storage capacity. Unit: GB. For details, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -51,7 +53,7 @@ public class ModifyDBNodeRequest extends TeaModel {
     /**
      * <p>The storage type of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>cloud_essd</strong>: performance level 1 (PL1) enhanced SSD (ESSD)</li>
+     * <li><strong>cloud_essd</strong>: PL1 ESSD</li>
      * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
      * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
      * </ul>
@@ -63,19 +65,19 @@ public class ModifyDBNodeRequest extends TeaModel {
     public String DBInstanceStorageType;
 
     /**
-     * <p>The information about the node.</p>
+     * <p>The node information.</p>
      * <blockquote>
-     * <p> This parameter is used for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.</p>
+     * <p>This parameter is used for MySQL Cluster Edition instances.</p>
      * </blockquote>
      */
     @NameInMap("DBNode")
     public java.util.List<ModifyDBNodeRequestDBNode> DBNode;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values: Valid values:</p>
+     * <p>Specifies whether to perform a dry run for this node modification. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run and does not perform the actual request. The system checks items such as the request parameters, request format, service limits, and available resources.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.</li>
+     * <li><strong>true</strong>: A dry run is performed without executing the modification. The system checks items such as request parameters, request format, business limits, and inventory.</li>
+     * <li><strong>false</strong>: A request is sent. After the request passes the check, the modification is directly executed. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,10 +87,10 @@ public class ModifyDBNodeRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The time when you want the change to take effect. Valid values:</p>
+     * <p>The effective period. Valid values:</p>
      * <ul>
-     * <li><strong>Immediate</strong> (default): The change immediately takes effect.</li>
-     * <li><strong>MaintainTime</strong>: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
+     * <li><strong>Immediate</strong> (default): The modification takes effect immediately.</li>
+     * <li><strong>MaintainTime</strong>: The modification takes effect during the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,13 +106,13 @@ public class ModifyDBNodeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to asynchronously perform the operation. Valid values:</p>
+     * <p>Specifies whether to asynchronously execute the provisioning. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong> (default): sends only the order. The operation is asynchronously performed.</li>
-     * <li><strong>false</strong>: sends the request. After the request passes the check, the operation is directly performed.</li>
+     * <li><strong>true</strong>: The request only submits an order, and the modification is asynchronously executed. This is the default value.</li>
+     * <li><strong>false</strong>: After the request passes the check, the modification is directly executed.</li>
      * </ul>
      * <blockquote>
-     * <p> The default value is true, which indicates that the change operation is asynchronously performed. If you set this parameter to false, the change operation is simultaneously performed. This prolongs the response time of the operation.</p>
+     * <p>Default value: true. The modification is asynchronously executed. If you set this parameter to false, the modification is synchronously executed, and the response time is relatively longer.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -236,7 +238,7 @@ public class ModifyDBNodeRequest extends TeaModel {
 
     public static class ModifyDBNodeRequestDBNode extends TeaModel {
         /**
-         * <p>The specification information about the node.</p>
+         * <p>The node specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql.n2.medium.xc</p>
@@ -248,7 +250,7 @@ public class ModifyDBNodeRequest extends TeaModel {
          * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rn-6256r4a87xvv7he5p</p>
+         * <p>rn-6256r4a87xvv7****</p>
          */
         @NameInMap("nodeId")
         public String nodeId;

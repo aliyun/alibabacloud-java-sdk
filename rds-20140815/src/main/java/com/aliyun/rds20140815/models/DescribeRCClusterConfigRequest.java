@@ -14,9 +14,9 @@ public class DescribeRCClusterConfigRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The validity period of the temporary kubeconfig file. Unit: minutes. Valid values: 15 to 4320.</p>
+     * <p>The validity period of the temporary KubeConfig. Unit: minutes. Valid values: 15 (15 minutes) to 4320 (3 days).</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system specifies a longer validity period. The validity period is returned in the <code>expiration</code> parameter.</p>
+     * <p>If this parameter is not specified, the system automatically determines a longer validity period. The specific expiration time is indicated by the value of the <code>expiration</code> field in the response.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,9 +26,9 @@ public class DescribeRCClusterConfigRequest extends TeaModel {
     public Integer temporaryDurationMinutes;
 
     /**
-     * <p>The virtual private cloud (VPC) ID.</p>
+     * <p>The ID of the virtual private cloud (VPC).</p>
      * <blockquote>
-     * <p> This is a reserved parameter.</p>
+     * <p>Reserved parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

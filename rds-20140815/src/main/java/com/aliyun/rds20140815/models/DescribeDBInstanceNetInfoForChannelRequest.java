@@ -8,13 +8,13 @@ public class DescribeDBInstanceNetInfoForChannelRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>0c593ea1-3bea-11e9-b96b-88**********</p>
+     * <p>0c593ea1-3bea-11e9-b96b-88****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,10 +24,10 @@ public class DescribeDBInstanceNetInfoForChannelRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The type of the endpoint to query. Valid values:</p>
+     * <p>The type of endpoint to query. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: a regular endpoint. This is the default value.</li>
-     * <li><strong>1</strong>: a read/write splitting endpoint that is assigned after the shared proxy feature is enabled.</li>
+     * <li><strong>0</strong> (default): regular endpoints.</li>
+     * <li><strong>1</strong>: read/write splitting endpoints of the shared database proxy.</li>
      * </ul>
      * 
      * <strong>example:</strong>

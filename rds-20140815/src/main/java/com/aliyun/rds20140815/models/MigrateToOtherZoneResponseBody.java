@@ -8,22 +8,22 @@ public class MigrateToOtherZoneResponseBody extends TeaModel {
      * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The ID of the order. This parameter is returned only when the instance runs MySQL.</p>
+     * <p>The order ID. This parameter is applicable only to ApsaraDB RDS for MySQL instances.</p>
      * 
      * <strong>example:</strong>
-     * <p>213341575990728</p>
+     * <p>21334157599****</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>65BDA532-28AF-4122-AA39-B382721EEE64</p>

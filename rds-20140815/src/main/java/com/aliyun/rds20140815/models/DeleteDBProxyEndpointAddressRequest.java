@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDBProxyEndpointAddressRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,15 +15,18 @@ public class DeleteDBProxyEndpointAddressRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The network type of the proxy endpoint. Valid values:</p>
+     * <p>The network type of the database proxy endpoint to delete. Valid values:</p>
      * <ul>
      * <li><strong>Public</strong>: Internet</li>
-     * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
-     * <li><strong>Classic</strong>: classic network</li>
+     * <li><strong>VPC</strong>: internal network (VPC)</li>
+     * <li><strong>Classic</strong>: internal network (classic network)</li>
      * </ul>
-     * <p>If the instance runs MySQL, the default value of this parameter is <strong>Classic</strong>.</p>
+     * <p>Default value: <strong>Classic</strong>.</p>
      * <blockquote>
-     * <p>If the instance runs PostgreSQL, you must set this parameter to <strong>Public</strong> or <strong>VPC</strong>.</p>
+     * <ul>
+     * <li>You cannot delete the internal endpoint that is created by default.</li>
+     * <li>ApsaraDB RDS for PostgreSQL supports only <strong>Public</strong> and <strong>VPC</strong>.</li>
+     * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -34,7 +37,7 @@ public class DeleteDBProxyEndpointAddressRequest extends TeaModel {
     public String DBProxyConnectStringNetType;
 
     /**
-     * <p>The proxy endpoint ID. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.</p>
+     * <p>The ID of the database proxy endpoint. You can call DescribeDBProxyEndpoint to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +47,7 @@ public class DeleteDBProxyEndpointAddressRequest extends TeaModel {
     public String DBProxyEndpointId;
 
     /**
-     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * <p>A deprecated parameter. You do not need to configure this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>normal</p>
@@ -53,7 +56,7 @@ public class DeleteDBProxyEndpointAddressRequest extends TeaModel {
     public String DBProxyEngineType;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call DescribeRegions to query the available regions.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

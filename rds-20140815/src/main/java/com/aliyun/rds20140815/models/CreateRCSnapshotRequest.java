@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateRCSnapshotRequest extends TeaModel {
     /**
-     * <p>The snapshot description. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
-     * <p>By default, this parameter is left empty.</p>
+     * <p>The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>Default value: null.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -24,19 +24,19 @@ public class CreateRCSnapshotRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p>This parameter is deprecated and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
-     * <p>none</p>
+     * <p>None</p>
      */
     @NameInMap("InstantAccess")
     public Boolean instantAccess;
 
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p>This parameter is deprecated and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
-     * <p>none</p>
+     * <p>None</p>
      */
     @NameInMap("InstantAccessRetentionDays")
     public Integer instantAccessRetentionDays;
@@ -51,15 +51,17 @@ public class CreateRCSnapshotRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>rc-t8q22a87745hf8****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The retention period of the snapshot. Valid values: 1 to 65536. Unit: days. The snapshot is automatically released when its retention period expires.</p>
-     * <p>By default, this parameter is left empty, which specifies that the snapshot is not automatically released.</p>
+     * <p>Settings for the retention period of the snapshot. Unit: days. The snapshot is subject to automatic release after the retention period expires. Valid values: 1 to 65536.</p>
+     * <p>Default value: null, which indicates that the snapshot is not subject to automatic release.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -67,14 +69,17 @@ public class CreateRCSnapshotRequest extends TeaModel {
     @NameInMap("RetentionDays")
     public Integer retentionDays;
 
+    /**
+     * <p>The tag details.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateRCSnapshotRequestTag> tag;
 
     /**
-     * <p>This parameter has been deprecated.</p>
+     * <p>This parameter is deprecated and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou-b</p>
+     * <p>None</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -158,15 +163,19 @@ public class CreateRCSnapshotRequest extends TeaModel {
 
     public static class CreateRCSnapshotRequestTag extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>testRC</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>test01</p>
          */
         @NameInMap("Value")
         public String value;

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteRCSnapshotRequest extends TeaModel {
     /**
-     * <p>Specifies whether to forcefully delete the snapshot that is used to create cloud disks. Valid values:</p>
+     * <p>Specifies whether to force delete a snapshot that has been used to create a cloud disk. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: forcefully deletes the snapshot After the snapshot is forcefully deleted, the cloud disks created from the snapshot cannot be re-initialized.</li>
-     * <li><strong>false</strong>(default): does not forcefully delete the snapshot.</li>
+     * <li><strong>true</strong>: Force deletes the snapshot. After the snapshot is forcefully deleted, the cloud disk cannot be reinitialized.</li>
+     * <li><strong>false</strong> (default): Does not force delete the snapshot.</li>
      * </ul>
      * 
      * <strong>example:</strong>

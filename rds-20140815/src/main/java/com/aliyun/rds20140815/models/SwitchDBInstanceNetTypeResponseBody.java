@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class SwitchDBInstanceNetTypeResponseBody extends TeaModel {
     /**
-     * <p>The endpoint that is used to connect to the instance after the switch of endpoints.</p>
+     * <p>The database endpoint after the switch.</p>
      * 
      * <strong>example:</strong>
-     * <p>new**********.mysql.rds.aliyuncs.com</p>
+     * <p>new****.mysql.rds.aliyuncs.com</p>
      */
     @NameInMap("NewConnectionString")
     public String newConnectionString;
 
     /**
-     * <p>The endpoint that is used to connect to the instance before the switch of endpoints.</p>
+     * <p>The database endpoint before the switch.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-bp1**************.mysql.rds.aliyuncs.com</p>
+     * <p>rm-bp1****.mysql.rds.aliyuncs.com</p>
      */
     @NameInMap("OldConnectionString")
     public String oldConnectionString;

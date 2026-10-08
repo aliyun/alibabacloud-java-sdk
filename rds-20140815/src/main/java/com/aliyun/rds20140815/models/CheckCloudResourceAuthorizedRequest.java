@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CheckCloudResourceAuthorizedRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-t4n7j9eb52y7c1960</p>
+     * <p>rm-t4n****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -20,7 +20,7 @@ public class CheckCloudResourceAuthorizedRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call DescribeRegions to query the available regions.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -32,7 +32,7 @@ public class CheckCloudResourceAuthorizedRequest extends TeaModel {
      * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmy**********</p>
+     * <p>rg-acfmy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -47,7 +47,7 @@ public class CheckCloudResourceAuthorizedRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The destination region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The ID of the target region. You can call DescribeRegions to query the available regions.</p>
      * 
      * <strong>example:</strong>
      * <p>us-east-1</p>

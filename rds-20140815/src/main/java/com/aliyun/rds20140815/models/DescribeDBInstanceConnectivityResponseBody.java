@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceConnectivityResponseBody extends TeaModel {
     /**
-     * <p>The error code for connection diagnosis. Valid values:</p>
+     * <p>The error code of the connection diagnostics. Valid values:</p>
      * <ul>
      * <li><strong>SRC_IP_NOT_IN_USER_WHITELIST</strong>: The source IP address is not added to the whitelist.</li>
-     * <li><strong>CONNECTION_ABNORMAL</strong>: The connection to the cluster is normal.</li>
+     * <li><strong>CONNECTION_ABNORMAL</strong>: The connection is normal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeDBInstanceConnectivityResponseBody extends TeaModel {
     public String connCheckErrorCode;
 
     /**
-     * <p>The error message for connection diagnosis.</p>
+     * <p>The error message of the connection diagnostics.</p>
      * 
      * <strong>example:</strong>
      * <p>Src ip:39.106.64.59 not in user whitelist</p>
@@ -27,7 +27,7 @@ public class DescribeDBInstanceConnectivityResponseBody extends TeaModel {
     public String connCheckErrorMessage;
 
     /**
-     * <p>The connection diagnosis result. Valid values:</p>
+     * <p>The result of the connection diagnostics. Valid values:</p>
      * <ul>
      * <li><strong>Success</strong></li>
      * <li><strong>Failed</strong></li>
@@ -49,7 +49,7 @@ public class DescribeDBInstanceConnectivityResponseBody extends TeaModel {
     public String dbInstanceName;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>D880212A-F21F-5722-8422-BD06B2874CC3</p>

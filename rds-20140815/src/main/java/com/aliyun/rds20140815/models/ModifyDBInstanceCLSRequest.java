@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceCLSRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,22 @@ public class ModifyDBInstanceCLSRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The encryption algorithm. Valid values:</p>
+     * <ul>
+     * <li>AES_128_CBC</li>
+     * <li>AES_128_GCM</li>
+     * <li>AES_128_CTR</li>
+     * <li>AES_128_ECB</li>
+     * <li>AES_256_CBC</li>
+     * <li>AES_256_GCM</li>
+     * <li>AES_256_CTR</li>
+     * <li>AES_256_ECB</li>
+     * <li>SM4_128_CBC</li>
+     * <li>SM4_128_GCM</li>
+     * <li>SM4_128_CTR</li>
+     * <li>SM4_128_ECB</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AES_256_GCM</p>
      */
@@ -21,29 +38,47 @@ public class ModifyDBInstanceCLSRequest extends TeaModel {
     public String encryptionAlgorithm;
 
     /**
+     * <p>The encryption key ID. This parameter is required when you use a KMS key.</p>
+     * 
      * <strong>example:</strong>
-     * <p>acs:kms:cn-hangzhou:123456789:key/xxxxx</p>
+     * <p>749c1df7-<strong><strong>-</strong></strong>-<strong><strong>-</strong></strong></p>
      */
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
     /**
+     * <p>The column encryption key mode. Valid values:</p>
+     * <ul>
+     * <li>client_key: configures a user-generated random key on the client side.</li>
+     * <li>kms_key: configures a custom key by using Alibaba Cloud Key Management Service (KMS).</li>
+     * </ul>
+     * <blockquote>
+     * <p> After an instance is configured to use KMS for key management, you can no longer switch to the client-side random key mode.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
-     * <p>KMS</p>
+     * <p>kms_key</p>
      */
     @NameInMap("EncryptionKeyMode")
     public String encryptionKeyMode;
 
     /**
+     * <p>The column encryption status. Valid values:</p>
+     * <ul>
+     * <li>1: Encryption is enabled.</li>
+     * <li>0: Encryption is disabled.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Enabled</p>
+     * <p>1</p>
      */
     @NameInMap("EncryptionStatus")
     public String encryptionStatus;
 
     /**
+     * <p>Specifies whether to rotate the key.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -63,13 +98,20 @@ public class ModifyDBInstanceCLSRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The global resource descriptor of the RAM role, used to specify the role to assume. For details, see RAM role overview.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only when the column encryption key pattern is set to kms_key. If you do not specify this parameter, the internal default value is used.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
-     * <p>acs:123456789:role/aliyunrdsinstanceencryptiondefaultrole</p>
+     * <p>acs:ram::1406926****:role/aliyunrdsinstanceencryptiondefaultrole</p>
      */
     @NameInMap("RoleArn")
     public String roleArn;
 
     /**
+     * <p>Specifies whether to enable the whitelist mode. A value of true indicates that only columns in the whitelist are encrypted. A value of false indicates that all columns are encrypted.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

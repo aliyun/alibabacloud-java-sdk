@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceEncryptionKeyRequest extends TeaModel {
     /**
-     * <p>The ID of the instance You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the IDs of instances.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The ID of the custom key.</p>
+     * <p>The custom key ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>749c1df7-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
+     * <p>749c1df7-<strong><strong>-</strong></strong>-<strong><strong>-</strong></strong></p>
      */
     @NameInMap("EncryptionKey")
     public String encryptionKey;
@@ -29,7 +29,7 @@ public class DescribeDBInstanceEncryptionKeyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the DescribeRegions operation to query the available regions.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -47,7 +47,7 @@ public class DescribeDBInstanceEncryptionKeyRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The ID of the destination region. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The destination region ID. You can call the DescribeRegions operation to query the available regions.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-qingdao</p>

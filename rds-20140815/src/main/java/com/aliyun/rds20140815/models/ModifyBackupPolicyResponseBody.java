@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyResponseBody extends TeaModel {
     /**
-     * <p>The method that is used to compress backups. Valid values:</p>
+     * <p>The backup compression method. Valid values:</p>
      * <ul>
-     * <li><strong>0:</strong> Backups are not compressed.</li>
-     * <li><strong>1</strong>: Backups are compressed by using the zlib tool.</li>
-     * <li><strong>2</strong>: Backups are compressed in parallel by using the zlib tool.</li>
-     * <li><strong>4</strong>: Backups are compressed by using the QuickLZ tool and can be used to restore individual databases and tables.</li>
-     * <li><strong>8</strong>: Backups are compressed by using the QuickLZ tool but cannot be used to restore individual databases or tables. This value is supported only for instances that run MySQL 8.0.</li>
+     * <li><strong>0</strong>: not compressed.</li>
+     * <li><strong>1</strong>: zlib compression.</li>
+     * <li><strong>2</strong>: parallel zlib compression.</li>
+     * <li><strong>4</strong>: quicklz compression with database and table restoration enabled.</li>
+     * <li><strong>8</strong>: MySQL 8.0 quicklz compression without database and table restoration support.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,17 +24,20 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
      * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceID")
     public String DBInstanceID;
 
     /**
-     * <p>Indicates whether the log backup feature is enabled. Valid values:</p>
+     * <p>Indicates whether instance log backup is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: The feature is enabled.</li>
-     * <li><strong>0</strong>: The feature is disabled.</li>
+     * <li><strong>1</strong>: enabled.</li>
+     * <li><strong>0</strong>: disabled.</li>
      * </ul>
+     * <blockquote>
+     * <p>Instance log backup for SQL Server instances is enabled by default and cannot be disabled.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -42,8 +45,14 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
     @NameInMap("EnableBackupLog")
     public String enableBackupLog;
 
+    @NameInMap("EnableIncrementDataBackup")
+    public Boolean enableIncrementDataBackup;
+
+    @NameInMap("EnablePitrProtection")
+    public Boolean enablePitrProtection;
+
     /**
-     * <p>Specifies whether to forcefully delete log backup files from the instance when the storage usage of the instance exceeds 80% or the amount of remaining storage on the instance is less than 5 GB.</p>
+     * <p>Indicates whether binary logs are unconditionally cleaned up when the storage usage of a <strong>MySQL</strong> instance exceeds 80% or the remaining storage is less than 5 GB.</p>
      * 
      * <strong>example:</strong>
      * <p>Disable</p>
@@ -51,8 +60,11 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
     @NameInMap("HighSpaceUsageProtection")
     public String highSpaceUsageProtection;
 
+    @NameInMap("IncBackupInterval")
+    public Integer incBackupInterval;
+
     /**
-     * <p>The number of hours for which log backup files are retained on the instance.</p>
+     * <p>The number of hours for which instance log backups are retained on the local storage of a <strong>MySQL</strong> instance.</p>
      * 
      * <strong>example:</strong>
      * <p>18</p>
@@ -61,7 +73,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
     public Integer localLogRetentionHours;
 
     /**
-     * <p>The maximum storage usage that is allowed for log backup files on the instance.</p>
+     * <p>The maximum loop space usage of binary logs for a <strong>MySQL</strong> instance.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -70,7 +82,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
     public String localLogRetentionSpace;
 
     /**
-     * <p>The number of binary log files on the instance.</p>
+     * <p>The number of binary logs retained locally for a <strong>MySQL</strong> instance.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -79,7 +91,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
     public Integer logBackupLocalRetentionNumber;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DA147739-AEAD-4417-9089-65E9B1D8240D</p>
@@ -116,12 +128,36 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
         return this.enableBackupLog;
     }
 
+    public ModifyBackupPolicyResponseBody setEnableIncrementDataBackup(Boolean enableIncrementDataBackup) {
+        this.enableIncrementDataBackup = enableIncrementDataBackup;
+        return this;
+    }
+    public Boolean getEnableIncrementDataBackup() {
+        return this.enableIncrementDataBackup;
+    }
+
+    public ModifyBackupPolicyResponseBody setEnablePitrProtection(Boolean enablePitrProtection) {
+        this.enablePitrProtection = enablePitrProtection;
+        return this;
+    }
+    public Boolean getEnablePitrProtection() {
+        return this.enablePitrProtection;
+    }
+
     public ModifyBackupPolicyResponseBody setHighSpaceUsageProtection(String highSpaceUsageProtection) {
         this.highSpaceUsageProtection = highSpaceUsageProtection;
         return this;
     }
     public String getHighSpaceUsageProtection() {
         return this.highSpaceUsageProtection;
+    }
+
+    public ModifyBackupPolicyResponseBody setIncBackupInterval(Integer incBackupInterval) {
+        this.incBackupInterval = incBackupInterval;
+        return this;
+    }
+    public Integer getIncBackupInterval() {
+        return this.incBackupInterval;
     }
 
     public ModifyBackupPolicyResponseBody setLocalLogRetentionHours(Integer localLogRetentionHours) {

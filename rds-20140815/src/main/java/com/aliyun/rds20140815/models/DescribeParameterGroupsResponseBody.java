@@ -17,11 +17,11 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether parameter templates exist in the specified region. Valid values:</p>
+     * <p><strong>[Deprecated]</strong> Indicates whether the specified region has parameter templates. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false<blockquote>
-     * <p>Notice: This parameter is deprecated.</p>
+     * <li>true: No parameter templates exist.</li>
+     * <li>false: Parameter templates exist.<blockquote>
+     * <p>Warning: This parameter is deprecated and is not recommended.</p>
      * </blockquote>
      * </li>
      * </ul>

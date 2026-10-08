@@ -5,20 +5,20 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceDescriptionRequest extends TeaModel {
     /**
-     * <p>The name of the instance.</p>
+     * <p>The name of the ApsaraDB RDS instance.</p>
      * <blockquote>
      * <p>The name must be 2 to 64 characters in length.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Instance in Alibaba Cloud test environment</p>
+     * <p>testInstance</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

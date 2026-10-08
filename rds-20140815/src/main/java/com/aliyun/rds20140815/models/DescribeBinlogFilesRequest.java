@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeBinlogFilesRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time.</p>
-     * <p>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time of the query. The end time must be later than the start time.</p>
+     * <p>Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DescribeBinlogFilesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Pages start from 1.</p>
+     * <p>The page number. Valid values: any integer greater than 0 that does not exceed the maximum value of Integer.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -59,8 +59,8 @@ public class DescribeBinlogFilesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query.</p>
-     * <p>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time of the query.</p>
+     * <p>Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

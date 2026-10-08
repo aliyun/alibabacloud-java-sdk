@@ -5,6 +5,22 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceCLSResponseBody extends TeaModel {
     /**
+     * <p>The encryption algorithm. Valid values:</p>
+     * <ul>
+     * <li>AES_128_CBC</li>
+     * <li>AES_128_GCM</li>
+     * <li>AES_128_CTR</li>
+     * <li>AES_128_ECB</li>
+     * <li>AES_256_CBC</li>
+     * <li>AES_256_GCM</li>
+     * <li>AES_256_CTR</li>
+     * <li>AES_256_ECB</li>
+     * <li>SM4_128_CBC</li>
+     * <li>SM4_128_GCM</li>
+     * <li>SM4_128_CTR</li>
+     * <li>SM4_128_ECB</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AES_256_GCM</p>
      */
@@ -12,20 +28,36 @@ public class DescribeDBInstanceCLSResponseBody extends TeaModel {
     public String algorithm;
 
     /**
+     * <p>The custom KMS master key ID.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only when the column encryption key pattern is set to kms_key. If this parameter is not specified, the current column encryption key settings of the database remain unchanged.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
-     * <p>acs:kms:cn-hangzhou:123456789:key/xxxxx</p>
+     * <p>749c1df7-<strong><strong>-</strong></strong>-<strong><strong>-</strong></strong></p>
      */
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
     /**
+     * <p>The column encryption key mode. Valid values:</p>
+     * <ul>
+     * <li>client_key: configures a user-generated random key on the client side.</li>
+     * <li>kms_key: configures a custom key by using Alibaba Cloud Key Management Service (KMS).</li>
+     * </ul>
+     * <blockquote>
+     * <p> After an instance is configured to use KMS for key management, you can no longer switch back to the client-side random key mode.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
-     * <p>KMS</p>
+     * <p>kms_key</p>
      */
     @NameInMap("EncryptionKeyMode")
     public String encryptionKeyMode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D0073A98-52F1-3075-8256-3943F*******</p>
      */
@@ -33,6 +65,8 @@ public class DescribeDBInstanceCLSResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the whitelist mode is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

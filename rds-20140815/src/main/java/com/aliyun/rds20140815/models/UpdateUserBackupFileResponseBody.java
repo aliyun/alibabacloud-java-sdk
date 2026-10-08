@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateUserBackupFileResponseBody extends TeaModel {
     /**
-     * <p>The ID of the backup file.</p>
+     * <p>The user backup ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>b-g14d0m772f7b********</p>
+     * <p>b-lvn2365ev9f1****</p>
      */
     @NameInMap("BackupId")
     public String backupId;
@@ -17,7 +17,7 @@ public class UpdateUserBackupFileResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>6A236067-4727-4B42-92CF-734E417ED69A</p>
+     * <p>29EBB093-DBD8-5EEB-841D-E611B88CDE4B</p>
      */
     @NameInMap("RequestId")
     public String requestId;

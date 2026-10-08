@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
     /**
+     * <p>The instance name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>rdsaiiabnaiiabn</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
@@ -15,6 +17,8 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
     public DescribeDBInstanceSwitchLogResponseBodyItems items;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,13 +26,17 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
-     * <p>60</p>
+     * <p>30</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D1CA494F-CC13-4EB6-8C4D-5352EE4045BD</p>
      */
@@ -36,8 +44,10 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries on the current page.</p>
+     * 
      * <strong>example:</strong>
-     * <p>5</p>
+     * <p>2</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;

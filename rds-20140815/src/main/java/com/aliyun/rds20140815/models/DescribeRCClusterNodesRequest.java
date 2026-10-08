@@ -19,8 +19,6 @@ public class DescribeRCClusterNodesRequest extends TeaModel {
     public String nodePoolId;
 
     /**
-     * <p>The page number.</p>
-     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,32 +26,18 @@ public class DescribeRCClusterNodesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>.</p>
-     * <p>Default value: <strong>30</strong>.</p>
-     * 
      * <strong>example:</strong>
-     * <p>30</p>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    /**
-     * <p>The region ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The virtual private cloud (VPC) ID.</p>
-     * <blockquote>
-     * <p> This is a reserved parameter.</p>
-     * </blockquote>
-     * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>vpc-2zet5c7111r33zbie****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

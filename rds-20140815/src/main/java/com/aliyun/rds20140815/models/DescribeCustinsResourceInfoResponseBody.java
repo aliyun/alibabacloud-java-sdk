@@ -42,7 +42,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
 
     public static class DescribeCustinsResourceInfoResponseBodyData extends TeaModel {
         /**
-         * <p>The deadline for the CPU adjustment.</p>
+         * <p>The deadline for CPU adjustment.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-25</p>
@@ -51,7 +51,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
         public String cpuAdjustDeadline;
 
         /**
-         * <p>The maximum percentage of the system CPU resources that the instance can use.</p>
+         * <p>The maximum adjustable CPU ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -60,7 +60,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
         public String cpuAdjustableMaxRatio;
 
         /**
-         * <p>The maximum CPU utilization.</p>
+         * <p>The maximum CPU usage.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -69,7 +69,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
         public String cpuAdjustableMaxValue;
 
         /**
-         * <p>The CPU utilization.</p>
+         * <p>The CPU usage.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -78,7 +78,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
         public String cpuIncreaseRatio;
 
         /**
-         * <p>The CPU utilization. Unit: percentage.</p>
+         * <p>The CPU usage. Unit: %.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -90,13 +90,13 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-wz92gn1ll9fe5d3a4</p>
+         * <p>rm-wz9s06u4drm******</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
-         * <p>The maximum IOPS.</p>
+         * <p>The maximum number of I/O requests per second.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -105,7 +105,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
         public String iopsAdjustableMaxValue;
 
         /**
-         * <p>The deadline for the adjustment of the maximum number of connections.</p>
+         * <p>The deadline for maximum connection adjustment.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-25</p>
@@ -141,7 +141,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
         public String maxConnIncreaseRatioValue;
 
         /**
-         * <p>The deadline for the adjustment of the maximum IOPS.</p>
+         * <p>The deadline for maximum IOPS adjustment.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-25</p>
@@ -150,7 +150,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
         public String maxIopsAdjustDeadline;
 
         /**
-         * <p>The maximum IOPS.</p>
+         * <p>The maximum number of I/O requests per second.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -159,7 +159,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
         public String maxIopsIncreaseRatio;
 
         /**
-         * <p>The maximum IOPS that can be supported by the instance.</p>
+         * <p>The maximum number of I/O requests per second.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -168,7 +168,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
         public String maxIopsIncreaseRatioValue;
 
         /**
-         * <p>The maximum percentage of the system memory that the instance can use.</p>
+         * <p>The maximum adjustable memory ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -177,7 +177,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
         public String memAdjustableMaxRatio;
 
         /**
-         * <p>The maximum value of the resources to be evaluated.</p>
+         * <p>The maximum value of the resource to be evaluated.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -186,7 +186,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
         public String memAdjustableMaxValue;
 
         /**
-         * <p>The deadline for the memory adjustment.</p>
+         * <p>The deadline for memory adjustment.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-25</p>
@@ -195,10 +195,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
         public String memoryAdjustDeadline;
 
         /**
-         * <p>The memory increase percentage.</p>
+         * <p>The memory increase ratio.</p>
          * 
          * <strong>example:</strong>
-         * <p>2023-10-25</p>
+         * <p>20</p>
          */
         @NameInMap("MemoryIncreaseRatio")
         public String memoryIncreaseRatio;
@@ -213,7 +213,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
         public String memoryIncreaseRatioValue;
 
         /**
-         * <p>The number of CPUs of the instance.</p>
+         * <p>The number of CPU cores of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -231,7 +231,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
         public String originMaxConn;
 
         /**
-         * <p>The maximum IOPS.</p>
+         * <p>The maximum number of I/O requests per second.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -240,7 +240,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
         public String originMaxIops;
 
         /**
-         * <p>The actual memory used. Unit: MB.</p>
+         * <p>The actual memory usage. Unit: MB.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

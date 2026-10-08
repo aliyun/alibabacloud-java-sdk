@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityIpsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -17,7 +17,7 @@ public class ModifySecurityIpsResponseBody extends TeaModel {
      * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>115855279</p>
+     * <p>11585****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

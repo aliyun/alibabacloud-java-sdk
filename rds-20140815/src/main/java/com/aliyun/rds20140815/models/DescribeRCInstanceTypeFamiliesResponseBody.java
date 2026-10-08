@@ -4,18 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRCInstanceTypeFamiliesResponseBody extends TeaModel {
-    /**
-     * <p>The instance families.</p>
-     */
     @NameInMap("InstanceTypeFamilies")
     public DescribeRCInstanceTypeFamiliesResponseBodyInstanceTypeFamilies instanceTypeFamilies;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>F2911788-25E8-42E5-A3A3-1B38D263F01E</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -41,18 +32,9 @@ public class DescribeRCInstanceTypeFamiliesResponseBody extends TeaModel {
     }
 
     public static class DescribeRCInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily extends TeaModel {
-        /**
-         * <p>The description of the instance family.</p>
-         */
         @NameInMap("InstanceTypeFamilyDesc")
         public String instanceTypeFamilyDesc;
 
-        /**
-         * <p>The ID of the instance family.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>x.6cm</p>
-         */
         @NameInMap("InstanceTypeFamilyId")
         public String instanceTypeFamilyId;
 
@@ -80,9 +62,6 @@ public class DescribeRCInstanceTypeFamiliesResponseBody extends TeaModel {
     }
 
     public static class DescribeRCInstanceTypeFamiliesResponseBodyInstanceTypeFamilies extends TeaModel {
-        /**
-         * <p>The instance family.</p>
-         */
         @NameInMap("InstanceTypeFamily")
         public java.util.List<DescribeRCInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily> instanceTypeFamily;
 

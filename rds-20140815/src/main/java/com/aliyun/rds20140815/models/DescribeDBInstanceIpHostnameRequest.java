@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceIpHostnameRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> operation to query the instance ID.</p>
+     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -21,7 +21,7 @@ public class DescribeDBInstanceIpHostnameRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/2628783.html">DescribeDBInstanceAttribute</a> operation to query the region ID.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/2628783.html">DescribeDBInstanceAttribute</a> to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

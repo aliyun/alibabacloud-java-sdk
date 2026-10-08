@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReceiveDBInstanceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the disaster recovery instance after the switchover.</p>
+     * <p>The instance ID of the disaster recovery instance after the switchover is complete.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-tr2whku*****</p>

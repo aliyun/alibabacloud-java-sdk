@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRCNodePoolRequest extends TeaModel {
     /**
-     * <p>The ID of the ACK Edge cluster in which the RDS Custom instance resides.</p>
+     * <p>The ID of the RDS Custom container cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>c463aaa89e2b84cacacfbf23c4867****</p>

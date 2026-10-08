@@ -10,8 +10,8 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
     /**
      * <p>The network type of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong>: a virtual private cloud (VPC)</li>
-     * <li><strong>Classic</strong>: classic network</li>
+     * <li><strong>VPC</strong>: virtual private cloud (VPC).</li>
+     * <li><strong>Classic</strong>: classic network.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
     public String instanceNetworkType;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>61DF1F28-F409-50C0-B90A-CCE82D44****</p>

@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class TerminateMigrateTaskRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The ID of the ApsaraDB RDS for SQL Server instance. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-bp159vfbu******</p>
+     * <p>rm-bp159vf****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The migration task ID. You can call the DescribeMigrateTasks operation to query the migration task ID.</p>
+     * <p>The ID of the backup migration task. You can call DescribeMigrateTasks to query the task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

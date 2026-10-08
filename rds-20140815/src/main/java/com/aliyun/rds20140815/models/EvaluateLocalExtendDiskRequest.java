@@ -9,7 +9,7 @@ public class EvaluateLocalExtendDiskRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-m5e999iqm65******</p>
+     * <p>rm-wz9s06u4drm******</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
@@ -18,7 +18,7 @@ public class EvaluateLocalExtendDiskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> to query available regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class EvaluateLocalExtendDiskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The new storage capacity. Unit: GB.</p>
+     * <p>The storage capacity after the expansion. Unit: GB.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>

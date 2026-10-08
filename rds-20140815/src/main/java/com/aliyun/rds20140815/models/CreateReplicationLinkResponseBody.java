@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateReplicationLinkResponseBody extends TeaModel {
     /**
-     * <p>The ID of the DR instance.</p>
+     * <p>The instance ID of the disaster recovery instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>pgm-****.pg.rds.aliyuncs.com</p>
+     * <p>PostgreSQL：pgm-<strong><strong>.pg.rds.aliyuncs.com
+     * SQL Server：92</strong></strong></p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -17,7 +18,7 @@ public class CreateReplicationLinkResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>9F8C06AD-3F37-57A0-ABBF-ABD7824F55CE</p>
+     * <p>442FC501-C4DD-1349-B70A-DE13D189072E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -26,7 +27,7 @@ public class CreateReplicationLinkResponseBody extends TeaModel {
      * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>564532302</p>
+     * <p>159****</p>
      */
     @NameInMap("TaskId")
     public Long taskId;
@@ -35,7 +36,7 @@ public class CreateReplicationLinkResponseBody extends TeaModel {
      * <p>The task name.</p>
      * 
      * <strong>example:</strong>
-     * <p>test01</p>
+     * <p>zbtest</p>
      */
     @NameInMap("TaskName")
     public String taskName;

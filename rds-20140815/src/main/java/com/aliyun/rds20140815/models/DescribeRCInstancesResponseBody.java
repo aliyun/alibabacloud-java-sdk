@@ -23,7 +23,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The details of the instance.</p>
+     * <p>The instance information.</p>
      */
     @NameInMap("RCInstances")
     public java.util.List<DescribeRCInstancesResponseBodyRCInstances> RCInstances;
@@ -38,7 +38,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -92,15 +92,43 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeRCInstancesResponseBodyRCInstancesTagResources extends TeaModel {
+        /**
+         * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rc-t8q22a87745hf8******</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The resource type.</p>
+         * <ul>
+         * <li><code>ALIYUN::RDS::INSTANCE</code>: ApsaraDB RDS instance.</li>
+         * <li><code>ALIYUN::RDS::CUSTOM</code>: RDS Custom instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::RDS::CUSTOM</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRC</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -144,15 +172,43 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeRCInstancesResponseBodyRCInstancesTags extends TeaModel {
+        /**
+         * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rc-t8q22a87745hf8******</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The resource type.</p>
+         * <ul>
+         * <li><code>ALIYUN::RDS::INSTANCE</code>: ApsaraDB RDS instance.</li>
+         * <li><code>ALIYUN::RDS::CUSTOM</code>: RDS Custom instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::RDS::CUSTOM</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRC</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -196,15 +252,36 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeRCInstancesResponseBodyRCInstancesVpcAttributes extends TeaModel {
+        /**
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("NatIpAddress")
         public String natIpAddress;
 
+        /**
+         * <p>The private IP address.</p>
+         */
         @NameInMap("PrivateIpAddress")
         public java.util.List<String> privateIpAddress;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1nb3pv03878tgnj****</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf6f7l4fg90****</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -251,6 +328,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @NameInMap("AutoRenew")
         public Boolean autoRenew;
 
+        @NameInMap("ClusterId")
+        public String clusterId;
+
         /**
          * <p>The cluster name.</p>
          * 
@@ -260,9 +340,25 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The number of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>Indicates whether the instance can be added to an ACK cluster. If the parameter settings for this field is <strong>1</strong>, the created instance can be added to an ACK cluster by calling the <strong>AttachRCInstances</strong> API operation, which enables efficient management of container applications.</p>
+         * <ul>
+         * <li><strong>1</strong>: Yes.</li>
+         * <li><strong>0</strong> (default): No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CreateMode")
         public String createMode;
 
@@ -275,11 +371,17 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @NameInMap("DbType")
         public String dbType;
 
+        /**
+         * <p>The deployment set ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-bp14k1xvolvsy4z3****</p>
+         */
         @NameInMap("DeploymentSetId")
         public String deploymentSetId;
 
         /**
-         * <p>The instance description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -294,11 +396,20 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @NameInMap("EcsHostName")
         public String ecsHostName;
 
+        /**
+         * <p>The time when the instance expires. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC+0.</p>
+         * <blockquote>
+         * <p>The expiration time displayed on the console is UTC+8.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-05-02T16:00:00Z</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
-         * <p>The time when the task was created. The time is displayed in GMT.</p>
+         * <p>The task creation time (GMT).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-22 07:56:53.0</p>
@@ -310,7 +421,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
          * <p>The host IP address.</p>
          * 
          * <strong>example:</strong>
-         * <p>172.30.XXX.XXX</p>
+         * <p>172.16.XX.XX</p>
          */
         @NameInMap("HostIp")
         public String hostIp;
@@ -324,9 +435,25 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @NameInMap("HostName")
         public String hostName;
 
+        /**
+         * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun_3_x64_20G_alibase_20250117.vhd</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription.</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
+         */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
@@ -340,21 +467,49 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>k8s-node</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The instance type.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2844823.html">RDS Custom instance type list</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql.x2.xlarge.6cm</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The instance family.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2844823.html">RDS Custom instance type list</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x.6cm</p>
+         */
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
+        /**
+         * <p>The memory size. Unit: MiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16384</p>
+         */
         @NameInMap("Memory")
         public Integer memory;
 
+        /**
+         * <p>The node type. If the value <strong>rds_vnode</strong> is returned, the node is a container node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds_vnode</p>
+         */
         @NameInMap("NodeType")
         public String nodeType;
 
@@ -372,6 +527,12 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @NameInMap("OSType")
         public String OSType;
 
+        /**
+         * <p>The public IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121.89.XX.XX</p>
+         */
         @NameInMap("PublicIp")
         public String publicIp;
 
@@ -384,9 +545,25 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-2vcbcivwfxiozhtp****</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The bidding strategy for pay-as-you-go instances. Valid values:</p>
+         * <ul>
+         * <li><strong>NoSpot</strong>: A regular pay-as-you-go instance.</li>
+         * <li><strong>SpotAsPriceGo</strong>: The system automatically bids, following the current market price.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
+         */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
@@ -400,14 +577,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         /**
          * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li><strong>Pending</strong></li>
-         * <li><strong>Running</strong></li>
-         * <li><strong>Starting</strong></li>
-         * <li><strong>Stopping</strong></li>
-         * <li><strong>Stopped</strong></li>
+         * <li><strong>Pending</strong>: Being created.</li>
+         * <li><strong>Running</strong>: Running.</li>
+         * <li><strong>Starting</strong>: Being started.</li>
+         * <li><strong>Stopping</strong>: Being stopped.</li>
+         * <li><strong>Stopped</strong>: Stopped.</li>
          * </ul>
          * <blockquote>
-         * <p> If the value returned for the DescribeRCInstances operation is different from the value that is returned for the <strong>DescribeRCInstanceAttribute</strong> operation, the value returned for the <strong>DescribeRCInstanceAttribute</strong> operation shall prevail.</p>
+         * <p>The instance status returned by this operation may be delayed. If the value differs from the value returned by the <strong>DescribeRCInstanceAttribute</strong> operation, the value returned by <strong>DescribeRCInstanceAttribute</strong> prevails.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -419,13 +596,21 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @NameInMap("StoppedMode")
         public String stoppedMode;
 
+        /**
+         * <p>The details of the instances and tags.</p>
+         */
         @NameInMap("TagResources")
         public java.util.List<DescribeRCInstancesResponseBodyRCInstancesTagResources> tagResources;
 
+        /**
+         * <p>The tag details.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeRCInstancesResponseBodyRCInstancesTags> tags;
 
         /**
+         * <p>The VPC attributes.</p>
+         * 
          * <strong>if can be null:</strong>
          * <p>true</p>
          */
@@ -433,7 +618,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         public DescribeRCInstancesResponseBodyRCInstancesVpcAttributes vpcAttributes;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf6f7l4fg90****</p>
@@ -441,6 +626,12 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-j</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -455,6 +646,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
         public Boolean getAutoRenew() {
             return this.autoRenew;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstances setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
         }
 
         public DescribeRCInstancesResponseBodyRCInstances setClusterName(String clusterName) {

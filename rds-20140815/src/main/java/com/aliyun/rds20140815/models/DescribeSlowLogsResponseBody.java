@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -23,10 +23,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The database engine of the instance.</p>
+     * <p>The database engine type.</p>
      * 
      * <strong>example:</strong>
-     * <p>MySQL</p>
+     * <p>SQLServer</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -35,7 +35,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
     public DescribeSlowLogsResponseBodyItems items;
 
     /**
-     * <p>The number of the page returned.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +44,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of SQL statements that are returned on the current page.</p>
+     * <p>The number of SQL statements on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -65,13 +65,13 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
      * <p>The start date of the query.</p>
      * 
      * <strong>example:</strong>
-     * <p>2011-05-30Z</p>
+     * <p>2011-05-01Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The total number of entries that are returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

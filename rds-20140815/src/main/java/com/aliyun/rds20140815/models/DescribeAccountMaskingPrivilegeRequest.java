@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountMaskingPrivilegeRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeAccountMaskingPrivilegeRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The database name.</p>
+     * 
      * <strong>example:</strong>
      * <p>myDB</p>
      */
@@ -24,6 +27,8 @@ public class DescribeAccountMaskingPrivilegeRequest extends TeaModel {
     public String ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ap-southeast-1</p>
      */
@@ -37,6 +42,8 @@ public class DescribeAccountMaskingPrivilegeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The account name. You can specify a specific account to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>rds</p>
      */

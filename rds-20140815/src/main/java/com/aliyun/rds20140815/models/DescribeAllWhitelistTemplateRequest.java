@@ -7,8 +7,8 @@ public class DescribeAllWhitelistTemplateRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable fuzzy search. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeAllWhitelistTemplateRequest extends TeaModel {
     public Boolean fuzzySearch;
 
     /**
-     * <p>The number of entries to return on each page. Enumerated valid values: 10, 30, and 50.</p>
+     * <p>The number of records per page. Valid values: 10, 30, and 50.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class DescribeAllWhitelistTemplateRequest extends TeaModel {
     public Integer pageNumbers;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the available regions.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -47,10 +47,10 @@ public class DescribeAllWhitelistTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID. For more information about resource groups, see related documentation.</p>
+     * <p>The resource group ID. For more information about resource groups, see What is a resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmyhigxskzysy</p>
+     * <p>rg-acfmyhigx******</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -62,7 +62,7 @@ public class DescribeAllWhitelistTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the IP whitelist template. If you specify this parameter when you perform a fuzzy search, you can call the DescribeWhitelistTemplate operation to query the name of the whitelist template during the fuzzy search.</p>
+     * <p>The name of the whitelist template. Specify this parameter for fuzzy search. Fuzzy match is supported for template names. You can call the DescribeWhitelistTemplate operation to obtain the template name.</p>
      * 
      * <strong>example:</strong>
      * <p>template</p>

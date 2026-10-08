@@ -8,7 +8,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
     public DescribeLogBackupFilesResponseBodyItems items;
 
     /**
-     * <p>The page number of the page returned.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total size of log files. Unit: bytes.</p>
+     * <p>The total size of all log files. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>2300</p>

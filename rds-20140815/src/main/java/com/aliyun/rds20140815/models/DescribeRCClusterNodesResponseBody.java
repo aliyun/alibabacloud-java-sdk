@@ -4,23 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRCClusterNodesResponseBody extends TeaModel {
-    /**
-     * <p>The details of the nodes.</p>
-     */
     @NameInMap("Nodes")
     public java.util.List<DescribeRCClusterNodesResponseBodyNodes> nodes;
 
-    /**
-     * <p>The pagination information.</p>
-     */
     @NameInMap("Page")
     public DescribeRCClusterNodesResponseBodyPage page;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>16C62438-491B-5C02-9B49-BA924A1372A2</p>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -56,103 +48,48 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
 
     public static class DescribeRCClusterNodesResponseBodyNodes extends TeaModel {
         /**
-         * <p>The time when the node was created.</p>
-         * 
          * <strong>example:</strong>
-         * <p>2024-10-21T07:20:09Z</p>
+         * <p>2026-01-06T22:22:16.00+08:00</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The container version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1.0</p>
-         */
         @NameInMap("DockerVersion")
         public String dockerVersion;
 
-        /**
-         * <p>The image ID of the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>m-2oqiu973jwcxe****</p>
-         */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
-         * <p>The node ID.</p>
-         * 
          * <strong>example:</strong>
-         * <p>rc-u79597n5f54s5bnz****</p>
+         * <p>vn-uoeaq5a51g0vk473****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The node role. Valid values:</p>
-         * <ul>
-         * <li><strong>Master</strong>: master node</li>
-         * <li><strong>Worker</strong>: worker node</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Master</p>
-         */
         @NameInMap("InstanceRole")
         public String instanceRole;
 
-        /**
-         * <p>The IP address.</p>
-         */
         @NameInMap("IpAddresses")
         public java.util.List<String> ipAddresses;
 
-        /**
-         * <p>Indicates whether the node is provided by Alibaba Cloud. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("IsAliyunNode")
         public Boolean isAliyunNode;
 
         /**
-         * <p>The node name, which is the identifier of the RDS Custom node in the cluster.</p>
-         * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou.192.168.XXX.XXX</p>
+         * <p>vn-uoeaq5a51g0vk473****</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
-         * <p>The node pool ID.</p>
-         * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>rcnpf5e3ee4a65104cf0801f94850d37****</p>
          */
         @NameInMap("NodePoolId")
         public String nodePoolId;
 
-        /**
-         * <p>Indicates whether the node is ready. Valid values:</p>
-         * <ul>
-         * <li><strong>Ready</strong>: The node is ready.</li>
-         * <li><strong>NotReady</strong>: The node is not ready.</li>
-         * <li><strong>Unknown</strong>: The status of the node is unknown.</li>
-         * <li><strong>Offline</strong>: The node is offline.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Ready</p>
-         */
         @NameInMap("NodeStatus")
         public String nodeStatus;
 
@@ -163,25 +100,10 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
         @NameInMap("PodCount")
         public Long podCount;
 
-        /**
-         * <p>The runtime of the ACK cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-10-21T07:20:09Z</p>
-         */
         @NameInMap("RuntimeVersion")
         public String runtimeVersion;
 
         /**
-         * <p>The node status. Valid values:</p>
-         * <ul>
-         * <li><strong>pending</strong></li>
-         * <li><strong>running</strong></li>
-         * <li><strong>starting</strong></li>
-         * <li><strong>stopping</strong></li>
-         * <li><strong>stopped</strong></li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>running</p>
          */
@@ -301,17 +223,13 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
 
     public static class DescribeRCClusterNodesResponseBodyPage extends TeaModel {
         /**
-         * <p>The page number.</p>
-         * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Long pageNumber;
 
         /**
-         * <p>The maximum number of entries returned per page.</p>
-         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -319,10 +237,8 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
-         * 
          * <strong>example:</strong>
-         * <p>4</p>
+         * <p>5</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

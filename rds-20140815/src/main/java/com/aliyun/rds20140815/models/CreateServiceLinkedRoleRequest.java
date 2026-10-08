@@ -8,7 +8,7 @@ public class CreateServiceLinkedRoleRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call DescribeRegions to query the available regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,10 +24,11 @@ public class CreateServiceLinkedRoleRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the service-linked role.</p>
+     * <p>The service-linked role. Valid values:</p>
      * <ul>
-     * <li><strong>AliyunServiceRoleForRdsPgsqlOnEcs</strong>: the service-linked role for ApsaraDB RDS for PostgreSQL.</li>
-     * <li><strong>AliyunServiceRoleForRDSProxyOnEcs</strong>: the service-linked role for the database proxy feature of ApsaraDB RDS for PostgreSQL.</li>
+     * <li><strong>AliyunServiceRoleForRds</strong>: the service-linked role associate with ApsaraDB RDS for MySQL.</li>
+     * <li><strong>AliyunServiceRoleForRdsPgsqlOnEcs</strong>: the service-linked role associate with ApsaraDB RDS for PostgreSQL.</li>
+     * <li><strong>AliyunServiceRoleForRDSProxyOnEcs</strong>: the service-linked role associate with the database proxy of ApsaraDB RDS for PostgreSQL.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

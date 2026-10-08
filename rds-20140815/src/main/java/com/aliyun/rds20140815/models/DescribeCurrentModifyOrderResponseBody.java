@@ -42,7 +42,7 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
 
     public static class DescribeCurrentModifyOrderResponseBodyModifyOrder extends TeaModel {
         /**
-         * <p>The instance family of the instance.</p>
+         * <p>The instance family.</p>
          * 
          * <strong>example:</strong>
          * <p>x</p>
@@ -51,7 +51,7 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
         public String classGroup;
 
         /**
-         * <p>The number of CPU cores that are supported by the instance type. Unit: cores.</p>
+         * <p>The number of CPU cores for the instance type. Unit: cores.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -69,10 +69,10 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
         public String dbInstanceId;
 
         /**
-         * <p>The effective time. Valid values:</p>
+         * <p>The effective period. Valid values:</p>
          * <ul>
-         * <li><strong>Immediate</strong>: This is the default value.</li>
-         * <li><strong>MaintainTime</strong>: The effective time is within the maintenance window. For more information, see <a href="https://help.aliyun.com/document_detail/610402.html">ModifyDBInstanceMaintainTime</a>.</li>
+         * <li><strong>Immediate</strong> (default): The specification change takes effect immediately.</li>
+         * <li><strong>MaintainTime</strong>: The specification change takes effect during the maintenance window. For more information, see <a href="https://help.aliyun.com/document_detail/610402.html">ModifyDBInstanceMaintainTime</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -82,16 +82,16 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
         public String effectiveTime;
 
         /**
-         * <p>The description of the instance.</p>
+         * <p>The mark.</p>
          * 
          * <strong>example:</strong>
-         * <p>eyJ2IjoibWV0YS5rOHMuaW8vdjEiLCJydiI6MTg2MjEwOTkwLCJzdGFydCI6InNob3BpZnktdXNlci1jb3JlXHUwMDAwIn0</p>
+         * <p>None</p>
          */
         @NameInMap("Mark")
         public String mark;
 
         /**
-         * <p>The memory capacity that is supported by the instance type. Unit: GB.</p>
+         * <p>The memory capacity for the instance type. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -100,7 +100,7 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
         public String memoryClass;
 
         /**
-         * <p>The status of the task.</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>Succeed,Scheduled,Running,Cancelling,Canceled,Waiting</p>
@@ -109,7 +109,7 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The storage capacity of the instance.</p>
+         * <p>The storage description.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -118,7 +118,7 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
         public String storage;
 
         /**
-         * <p>The new instance type of the instance. Valid values:</p>
+         * <p>The target instance type for the specification change.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql.x2.medium.2c</p>

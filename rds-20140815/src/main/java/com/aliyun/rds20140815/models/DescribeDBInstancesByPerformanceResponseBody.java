@@ -8,7 +8,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
     public DescribeDBInstancesByPerformanceResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The number of instances on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>28</p>
@@ -26,7 +26,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>23907437-79B9-411A-9EE6-75A8F0F1C619</p>
@@ -35,7 +35,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of instances returned by the query.</p>
      * 
      * <strong>example:</strong>
      * <p>28</p>

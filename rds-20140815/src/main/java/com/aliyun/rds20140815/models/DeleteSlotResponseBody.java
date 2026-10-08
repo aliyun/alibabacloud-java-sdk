@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSlotResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2875D608-A228-53D7-B8C9-35F13EDCF36D</p>
@@ -14,7 +14,7 @@ public class DeleteSlotResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The name of the replication slot.</p>
+     * <p>The replication slot name.</p>
      * 
      * <strong>example:</strong>
      * <p>slot_test01</p>

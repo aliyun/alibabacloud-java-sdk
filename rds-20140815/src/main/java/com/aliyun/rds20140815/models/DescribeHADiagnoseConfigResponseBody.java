@@ -14,10 +14,10 @@ public class DescribeHADiagnoseConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The availability check method of the instance. Valid values:</p>
+     * <p>The availability check method that Alibaba Cloud uses for the ApsaraDB RDS instance. Valid values:</p>
      * <ul>
-     * <li><strong>LONG</strong>: Alibaba Cloud uses persistent connections to check the availability of the instance.</li>
-     * <li><strong>SHORT</strong>: Alibaba Cloud uses short-lived connections to check the availability of the instance.</li>
+     * <li><strong>LONG</strong>: persistent connection.</li>
+     * <li><strong>SHORT</strong>: short-lived connection.</li>
      * </ul>
      * 
      * <strong>example:</strong>

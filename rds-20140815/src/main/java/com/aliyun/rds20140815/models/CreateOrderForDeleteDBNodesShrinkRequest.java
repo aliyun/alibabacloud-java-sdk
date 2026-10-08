@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateOrderForDeleteDBNodesShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically complete the payment. Valid values:</p>
+     * <p>Specifies whether to automatically complete automatic payment. Valid values:</p>
      * <ol>
-     * <li><strong>true</strong>: You must make sure that your account balance is sufficient.</li>
-     * <li><strong>false</strong>: An unpaid order is generated.</li>
+     * <li><p><strong>true</strong>: automatically completes automatic payment. Make sure that your account balance is sufficient.</p>
+     * </li>
+     * <li><p><strong>false</strong>: generates the order without completing automatic payment.</p>
+     * </li>
      * </ol>
      * <blockquote>
-     * <p> Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
+     * <p>Default value: true. If your payment method has insufficient balance, set AutoPay to false. In this case, an unpaid order is generated. You can log on to the ApsaraDB RDS console to complete automatic payment.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -24,7 +26,7 @@ public class CreateOrderForDeleteDBNodesShrinkRequest extends TeaModel {
      * <p>The additional business information about the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;shopCartItemId\&quot;:\&quot;25******\&quot;,\&quot;produceDriver\&quot;:\&quot;NoOrder\&quot;,\&quot;aliyun_shopcart_order_source\&quot;:\&quot;fromShopcart\&quot;,\&quot;shopCartId\&quot;:\&quot;10190203suffix20230509******\&quot;}</p>
+     * <p>None</p>
      */
     @NameInMap("BusinessInfo")
     public String businessInfo;
@@ -41,14 +43,14 @@ public class CreateOrderForDeleteDBNodesShrinkRequest extends TeaModel {
     /**
      * <p>The commodity code. Valid values:</p>
      * <ul>
-     * <li><strong>bards</strong>: The instance is a pay-as-you-go primary instance.</li>
-     * <li><strong>rds</strong>: The instance is a subscription primary instance.</li>
-     * <li><strong>rords</strong>: The instance is a pay-as-you-go read-only instance.</li>
-     * <li><strong>rds_rordspre_public_cn</strong>: The instance is a subscription read-only instance.</li>
-     * <li><strong>bards_intl</strong>: The instance is a pay-as-you-go primary instance.</li>
-     * <li><strong>rds_intl</strong>: The instance is a subscription primary instance.</li>
-     * <li><strong>rords_intl</strong>: The instance is a pay-as-you-go read-only instance.</li>
-     * <li><strong>rds_rordspre_public_intl</strong>: The instance is a subscription read-only instance.</li>
+     * <li><strong>bards</strong>: pay-as-you-go primary instance</li>
+     * <li><strong>rds</strong>: subscription primary instance</li>
+     * <li><strong>rords</strong>: pay-as-you-go read-only instance</li>
+     * <li><strong>rds_rordspre_public_cn</strong>: subscription read-only instance</li>
+     * <li><strong>bards_intl</strong>: pay-as-you-go primary instance</li>
+     * <li><strong>rds_intl</strong>: subscription primary instance</li>
+     * <li><strong>rords_intl</strong>: pay-as-you-go read-only instance</li>
+     * <li><strong>rds_rordspre_public_intl</strong>: subscription read-only instance</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -59,23 +61,23 @@ public class CreateOrderForDeleteDBNodesShrinkRequest extends TeaModel {
     public String commodityCode;
 
     /**
-     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> to query the instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-8vb******</p>
+     * <p>rm-8vb9******</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>An array that consists of information about the ID of the node.</p>
+     * <p>The list of node IDs.</p>
      */
     @NameInMap("DBNodeId")
     public String DBNodeIdShrink;
 
     /**
-     * <p>The database engine version of the instance. Valid values:</p>
-     * <p>Valid values if you set Engine to MySQL: <strong>5.5, 5.6, 5.7, and 8.0</strong></p>
+     * <p>The current database engine version. Valid values:</p>
+     * <p>MySQL: <strong>5.5, 5.6, 5.7, 8.0</strong></p>
      * 
      * <strong>example:</strong>
      * <p>5.7</p>
@@ -84,10 +86,10 @@ public class CreateOrderForDeleteDBNodesShrinkRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The type of the database node. Valid values:</p>
+     * <p>The database node type. Valid values:</p>
      * <ul>
-     * <li><strong>Master</strong>: the primary node</li>
-     * <li><strong>Slave</strong>: the secondary node</li>
+     * <li><strong>Master</strong>: primary node</li>
+     * <li><strong>Slave</strong>: secondary node</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,7 +111,7 @@ public class CreateOrderForDeleteDBNodesShrinkRequest extends TeaModel {
     public String promotionCode;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -118,7 +120,7 @@ public class CreateOrderForDeleteDBNodesShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resources.</p>
+     * <p>The resource.</p>
      * 
      * <strong>example:</strong>
      * <p>buy</p>

@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class ReleaseInstancePublicConnectionRequest extends TeaModel {
     /**
-     * <p>The public endpoint. You can call the DescribeDBInstanceNetInfo operation to query the public endpoint.</p>
+     * <p>The public endpoint. You can call DescribeDBInstanceNetInfo to query the public endpoint.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxx.mysql.rds.aliyuncs.com</p>
+     * <p>rm-uf6wjk5****.mysql.rds.aliyuncs.com</p>
      */
     @NameInMap("CurrentConnectionString")
     public String currentConnectionString;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceResponseBody extends TeaModel {
     /**
+     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> to query the instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm-uf6wjk5****</p>
      */
@@ -12,6 +14,8 @@ public class ModifyDBInstanceResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>221172852******</p>
      */
@@ -19,6 +23,8 @@ public class ModifyDBInstanceResponseBody extends TeaModel {
     public Long orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>17F57FEE-EA4F-4337-8D2E-9C23CAA63D74</p>
      */

@@ -23,10 +23,10 @@ public class ModifyDBInstanceMetricsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The application scope of this modification. Valid values:</p>
+     * <p>The scope of the modification. Valid values:</p>
      * <ul>
-     * <li><strong>instance</strong>: This modification is applied only to the current instance.</li>
-     * <li><strong>region</strong>: This modification is applied to all ApsaraDB RDS for PostgreSQL instances that are equipped with the same type of storage media as the current instance in the region to which the current instance belongs.</li>
+     * <li><strong>instance</strong>: instance level.</li>
+     * <li><strong>region</strong>: region level.</li>
      * </ul>
      * 
      * <strong>example:</strong>

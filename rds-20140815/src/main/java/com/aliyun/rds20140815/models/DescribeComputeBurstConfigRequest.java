@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeComputeBurstConfigRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of requests and prevent repeated requests from being submitted. You can use the client to generate the value, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
@@ -30,7 +30,7 @@ public class DescribeComputeBurstConfigRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region in which the instance resides.</p>
+     * <p>The region ID of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

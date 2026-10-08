@@ -8,7 +8,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
     public DescribeDBInstancesByExpireTimeResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page. Valid values: any <strong>non-zero</strong> positive integer.</p>
+     * <p>The page number. The value must be greater than <strong>0</strong> and must not exceed the maximum value of the Integer data type.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of instances returned on the current page.</p>
+     * <p>The number of instances on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -27,7 +27,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -36,7 +36,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

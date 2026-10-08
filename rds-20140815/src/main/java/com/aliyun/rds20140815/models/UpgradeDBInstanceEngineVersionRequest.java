@@ -5,29 +5,29 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The effective time. Valid values:</p>
+     * <p>The effective period. Valid values:</p>
      * <ul>
-     * <li><strong>Immediate</strong>: This is the default value.</li>
-     * <li><strong>MaintainTime</strong>: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
+     * <li><strong>Immediate</strong> (default): The upgrade takes effect immediately.</li>
+     * <li><strong>MaintainTime</strong>: The upgrade takes effect during the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     public String effectiveTime;
 
     /**
-     * <p>The major engine version that the new instance runs. Valid values:</p>
+     * <p>The target database engine version. Valid values:</p>
      * <ul>
      * <li><strong>8.0</strong></li>
      * <li><strong>5.7</strong></li>

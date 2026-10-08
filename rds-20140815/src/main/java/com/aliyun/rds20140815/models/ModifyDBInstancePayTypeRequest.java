@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstancePayTypeRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID of the target instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-bp1842vmucoa5w874</p>
+     * <p>rm-bp****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The billing method of the instance. The value is fixed as <strong>Prepaid</strong>, which indicates the subscription billing method.</p>
+     * <p>The billing method. Set the value to <strong>Prepaid</strong>, which specifies the subscription billing method.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ModifyDBInstancePayTypeRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The renewal cycle of the instance.</p>
+     * <p>The unit of the subscription duration. Valid values:</p>
      * <ul>
      * <li><strong>Year</strong></li>
      * <li><strong>Month</strong></li>
@@ -42,10 +42,10 @@ public class ModifyDBInstancePayTypeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The subscription duration of the instance. Valid values:</p>
+     * <p>The subscription duration:</p>
      * <ul>
-     * <li>If you set the <strong>Period</strong> parameter to <strong>Year</strong>, the value of the <strong>UsedTime</strong> parameter ranges from 1 to 5.</li>
-     * <li>If you set the <strong>Period</strong> parameter to <strong>Month</strong>, the value of the <strong>UsedTime</strong> parameter ranges from 1 to 11.</li>
+     * <li>If <strong>Period</strong> is set to <strong>Year</strong>, valid values are 1 to 5.</li>
+     * <li>If <strong>Period</strong> is set to <strong>Month</strong>, valid values are 1 to 11.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -4,11 +4,18 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRCMetricListRequest extends TeaModel {
+    /**
+     * <p>Queries the monitoring data of specified resources in batches for Custom for SQL Server.
+     * Format: a collection of <code>key:value</code> pairs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;instanceId&quot;:&quot;rc-l9hv3rv74ql7oa******&quot;},{&quot;instanceId&quot;:&quot;rc-b532l1uj8n6sex******&quot;}]</p>
+     */
     @NameInMap("Dimensions")
     public String dimensions;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Example: <code>2024-08-06 10:15:00</code>.</p>
+     * <p>The end of the time range to query. Specify the time in the <code>2024-08-06 10:15:00</code> format. The end time must be later than the start time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-08-06 10:15:00</p>
@@ -17,7 +24,7 @@ public class DescribeRCMetricListRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The reserved parameter.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -26,7 +33,7 @@ public class DescribeRCMetricListRequest extends TeaModel {
     public String express;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The instance ID. This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>rc-dh2jf9n6j4s14926****</p>
@@ -35,11 +42,8 @@ public class DescribeRCMetricListRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of records per page for paging query.</p>
      * <p>Default value: 1000.</p>
-     * <blockquote>
-     * <p> The maximum value of the Length parameter in a request is 1440.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -48,7 +52,7 @@ public class DescribeRCMetricListRequest extends TeaModel {
     public String length;
 
     /**
-     * <p>The metric that you want to use. For more information, see <a href="https://cms.console.aliyun.com/metric-meta/acs_ecs_dashboard/ecs">CloudMonitor metrics</a>.</p>
+     * <p>The <a href="https://cms.console.aliyun.com/metric-meta/acs_ecs_dashboard/ecs">monitoring metric</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,16 +65,17 @@ public class DescribeRCMetricListRequest extends TeaModel {
      * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
-     * <p>6178f1825f9fb76ce0b5e8707e68181f</p>
+     * <p>6178f1825f9fb76ce0b5e8707e******</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The statistical period of the monitoring data.</p>
-     * <p>Set the value to 60 or an integer multiple of 60.</p>
-     * <p>Unit: seconds.</p>
-     * <p>Default value: 60.</p>
+     * <p>The statistical period of the monitoring data. Unit: seconds. Valid values:</p>
+     * <ul>
+     * <li>60 (default)</li>
+     * <li>An integer multiple of 60</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -88,7 +93,7 @@ public class DescribeRCMetricListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Example: <code>2024-08-06 10:05:00</code>.</p>
+     * <p>The beginning of the time range to query. Specify the time in the <code>2024-08-06 10:05:00</code> format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-08-06 10:05:00</p>

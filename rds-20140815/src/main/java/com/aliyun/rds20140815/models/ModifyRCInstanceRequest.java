@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModifyRCInstanceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the automatic payment feature. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong> (default): enables the feature. You must make sure that your account balance is sufficient.</li>
-     * <li><strong>false</strong>: disables the feature. An unpaid order is generated.</li>
-     * </ul>
-     * <blockquote>
-     * <p> If your account balance is insufficient, you can set AutoPay to false. In this case, an unpaid order is generated. You can complete the payment in the Expenses and Costs console.</p>
+     * <li><strong>true</strong> (default): Automatic payment is enabled. Make sure that your account balance is sufficient.</li>
+     * <li><strong>false</strong>: An order is generated but payment is not automatically made.<blockquote>
+     * <p>If your payment method balance is insufficient, set the parameter AutoPay to false. An unpaid order is generated, and you can log on to the ApsaraDB RDS console to complete the payment.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -20,17 +20,33 @@ public class ModifyRCInstanceRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>Specifies whether to automatically use coupons. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong> (default): Coupons are automatically used.</li>
+     * <li><strong>false</strong>: Coupons are not used.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you use coupons and then perform a downgrade, the amount deducted by coupons is not refunded.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
+    @NameInMap("BusinessInfo")
+    public String businessInfo;
+
     /**
-     * <p>The type of the change that you want to perform on the instance. Valid values:</p>
+     * <p>The type of the Upgrade/Downgrade. Valid values:</p>
      * <blockquote>
-     * <p> This parameter is optional. The system can automatically determine whether the instance change is an upgrade or a downgrade. If you want to specify this parameter, take note of the following items:</p>
+     * <p>This parameter does not need to be uploaded. The system can automatically determine whether the change is an upgrade or a downgrade. If you upload this parameter, follow the rules below.</p>
      * </blockquote>
      * <ul>
-     * <li><strong>Upgrade</strong> (default): upgrades the instance type. Make sure that your account balance is sufficient.</li>
-     * <li><strong>Down</strong>: downgrades the instance type. If the new instance type specified by InstanceType has lower specifications than the current instance type, set Direction to Down.</li>
+     * <li><strong>Up</strong> (default): Upgrades the instance type. Make sure that your account payment method balance is sufficient.</li>
+     * <li><strong>Down</strong>: Downgrades the instance type. Set Direction to down when the instance type specified by InstanceType is lower than the current instance type.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,10 +56,10 @@ public class ModifyRCInstanceRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and resource inventory.</li>
-     * <li><strong>false</strong>: performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.</li>
+     * <li><strong>true</strong>: Performs a dry run without creating the instance. The system checks items such as the request parameters, request format, service limits, and available resources.</li>
+     * <li><strong>false</strong> (default): Sends the request. If the request passes the check, the instance is created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +78,7 @@ public class ModifyRCInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The new instance type. For more information about the instance types that are supported by RDS Custom instances, see <a href="https://help.aliyun.com/document_detail/2844823.html">Instance types of RDS Custom instances</a>.</p>
+     * <p>The target instance type. For information about the instance types supported by RDS Custom instances, see <a href="https://help.aliyun.com/document_detail/2844823.html">RDS Custom instance types</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>mysql.i8.large.2cm</p>
@@ -70,12 +86,41 @@ public class ModifyRCInstanceRequest extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>The coupon code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>72329885****</p>
+     */
     @NameInMap("PromotionCode")
     public String promotionCode;
 
+    /**
+     * <p>The restart time of the instance.</p>
+     * <ul>
+     * <li>If <strong>RebootWhenFinished</strong> is set to <strong>false</strong> and the instance status is <strong>Running</strong>, you <strong>must</strong> set a restart time within 48 hours.</li>
+     * <li>The time follows the ISO 8601 standard in UTC+0. Format: <code>yyyy-MM-ddTHH:mmZ</code>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-04-03T12:05Z</p>
+     */
     @NameInMap("RebootTime")
     public String rebootTime;
 
+    /**
+     * <p>Specifies whether to immediately restart the instance after the specification change is complete. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong> (default): The instance is restarted immediately.</li>
+     * <li><strong>false</strong>: The instance is not restarted.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If the instance is in the <strong>Stopped</strong> state, the instance remains in the Stopped state and is not restarted even if you set <code>RebootWhenFinished=true</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("RebootWhenFinished")
     public Boolean rebootWhenFinished;
 
@@ -107,6 +152,14 @@ public class ModifyRCInstanceRequest extends TeaModel {
     }
     public Boolean getAutoUseCoupon() {
         return this.autoUseCoupon;
+    }
+
+    public ModifyRCInstanceRequest setBusinessInfo(String businessInfo) {
+        this.businessInfo = businessInfo;
+        return this;
+    }
+    public String getBusinessInfo() {
+        return this.businessInfo;
     }
 
     public ModifyRCInstanceRequest setDirection(String direction) {

@@ -5,20 +5,20 @@ import com.aliyun.tea.*;
 
 public class SwitchDBInstanceHARequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The time when the switching takes effect. Valid values:</p>
+     * <p>The effective period. Valid values:</p>
      * <ul>
-     * <li><strong>Immediate</strong>: The switching immediately takes effect.</li>
-     * <li><strong>MaintainTime</strong>: The switching takes effect during the maintenance time.</li>
+     * <li><strong>Immediate</strong>: The switchover is executed immediately.</li>
+     * <li><strong>MaintainTime</strong>: The switchover is executed during the maintenance window.</li>
      * </ul>
      * <p>Default value: <strong>Immediate</strong>.</p>
      * 
@@ -29,10 +29,10 @@ public class SwitchDBInstanceHARequest extends TeaModel {
     public String effectiveTime;
 
     /**
-     * <p>Specifies whether to enable forcible switching. Valid values:</p>
+     * <p>The switchover method. Valid values:</p>
      * <ul>
-     * <li><strong>Yes</strong></li>
-     * <li><strong>No</strong></li>
+     * <li><strong>Yes</strong>: A forced switchover is performed.</li>
+     * <li><strong>No</strong>: A non-forced switchover is performed.</li>
      * </ul>
      * <p>Default value: <strong>No</strong>.</p>
      * 
@@ -43,7 +43,7 @@ public class SwitchDBInstanceHARequest extends TeaModel {
     public String force;
 
     /**
-     * <p>The secondary instance ID. You can call the DescribeDBInstanceHAConfig operation to query the secondary instance ID.</p>
+     * <p>The unique ID of the secondary instance. You can call DescribeDBInstanceHAConfig to query this value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

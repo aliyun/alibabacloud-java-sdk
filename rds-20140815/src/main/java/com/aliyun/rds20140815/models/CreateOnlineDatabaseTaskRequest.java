@@ -7,11 +7,11 @@ public class CreateOnlineDatabaseTaskRequest extends TeaModel {
     /**
      * <p>The consistency check method after the database is open. Valid values:</p>
      * <ul>
-     * <li><strong>SyncExecuteDBCheck</strong>: synchronous database check</li>
-     * <li><strong>AsyncExecuteDBCheck</strong>: asynchronous database check</li>
+     * <li><strong>SyncExecuteDBCheck</strong>: synchronous database check.</li>
+     * <li><strong>AsyncExecuteDBCheck</strong>: asynchronous database check.</li>
      * </ul>
      * <blockquote>
-     * <p>The check methods are supported for RDS instances that run SQL Server 2008 R2.</p>
+     * <p>Compatible with SQL Server 2008 R2.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -31,17 +31,17 @@ public class CreateOnlineDatabaseTaskRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class CreateOnlineDatabaseTaskRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>The ID of the migration task.</p>
+     * <p>The migration task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,20 +5,20 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceHAConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk543xxxxx</p>
+     * <p>rm-uf6wjk543****</p>
      */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
 
     /**
-     * <p>The HA mode of the instance.</p>
+     * <p>The High-availability Mode. Valid values:</p>
      * <ul>
-     * <li>RPO: Data consistency is preferred. The instance ensures data reliability to minimize data losses. If you have high requirements on data consistency, select this mode.</li>
-     * <li>RTO: Service availability is preferred. The instance restores the database service at the earliest opportunity to ensure service availability. If you have high requirements for service availability, select this mode.</li>
+     * <li>RPO: Data consistency is preferred. The instance ensures data reliability to the greatest extent, which minimizes the amount of data loss. Use RPO mode if you have high requirements for data consistency.</li>
+     * <li>RTO: Instance availability is preferred. The instance recovers services as soon as possible, which maximizes the active time. Use RTO mode if you have high requirements for database uptime.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -41,16 +41,13 @@ public class ModifyDBInstanceHAConfigRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The data replication mode of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/96055.html">Data replication mode</a>.</p>
+     * <p>The data replication method. Valid values:</p>
      * <ul>
-     * <li>Semi-sync: the semi-synchronous mode.</li>
-     * <li>Sync: the synchronous mode.</li>
-     * <li>gAsyncg: the asynchronous mode.</li>
-     * <li>Mgr: the MySQL group replication (MGR) mode. This mode is available only for the China site (aliyun.com).</li>
+     * <li>Semi-sync: semi-synchronous replication.</li>
+     * <li>Sync: synchronous replication.</li>
+     * <li>Async: asynchronous replication.</li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.</p>
-     * </blockquote>
+     * <p>&lt;props=&quot;china&quot;&gt;- Mgr: MySQL Group Replication.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

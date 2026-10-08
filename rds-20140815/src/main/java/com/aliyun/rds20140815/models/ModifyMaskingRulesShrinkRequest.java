@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyMaskingRulesShrinkRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ModifyMaskingRulesShrinkRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The database name.</p>
+     * 
      * <strong>example:</strong>
      * <p>myDB</p>
      */
@@ -21,6 +24,8 @@ public class ModifyMaskingRulesShrinkRequest extends TeaModel {
     public String DBName;
 
     /**
+     * <p>The name of the default encryption or masking algorithm.</p>
+     * 
      * <strong>example:</strong>
      * <p>sm4-128-gcm</p>
      */
@@ -28,6 +33,8 @@ public class ModifyMaskingRulesShrinkRequest extends TeaModel {
     public String defaultAlgo;
 
     /**
+     * <p>Specifies whether the rule is enabled. Valid values: true and false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -35,6 +42,8 @@ public class ModifyMaskingRulesShrinkRequest extends TeaModel {
     public String enabled;
 
     /**
+     * <p>The rule algorithms. You can specify multiple algorithms. Masking algorithms can include additional parameters. Format: {name: algorithm1}, {name: algorithm2, params: {encryption position, encryption length}}.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;name&quot;: &quot;sha256&quot;},
      *         {&quot;name&quot;:&quot;sm4-128-gcm&quot;}]</p>
@@ -46,6 +55,8 @@ public class ModifyMaskingRulesShrinkRequest extends TeaModel {
     public String ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ap-southeast-1</p>
      */
@@ -58,10 +69,14 @@ public class ModifyMaskingRulesShrinkRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The rule configuration in JSON string format.</p>
+     */
     @NameInMap("RuleConfig")
     public String ruleConfigShrink;
 
     /**
+     * <p>The name of the rule to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

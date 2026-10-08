@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the monitored instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>lsmexxxxxxx</p>
+     * <p>lsme****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>An internal parameter. You do not need to specify this parameter.</p>
+     * <p>An internal parameter. You can ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>normal</p>

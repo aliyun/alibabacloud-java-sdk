@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRCMetricListResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,18 +14,18 @@ public class DescribeRCMetricListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The monitoring data.</p>
+     * <p>The list of monitoring data.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;timestamp\&quot;:1722909960000,\&quot;instanceId\&quot;:\&quot;rc-dh2jf9n6j4s14926****\&quot;,\&quot;userId\&quot;:\&quot;1695619988087373\&quot;,\&quot;Minimum\&quot;:0.097,\&quot;Maximum\&quot;:0.097,\&quot;Average\&quot;:0.097},{\&quot;timestamp\&quot;:1722910020000,\&quot;instanceId\&quot;:\&quot;rc-dh2jf9n6j4s14926****\&quot;,\&quot;userId\&quot;:\&quot;1695619988087373\&quot;,\&quot;Minimum\&quot;:0.093,\&quot;Maximum\&quot;:0.093,\&quot;Average\&quot;:0.093}]</p>
+     * <p>[{\&quot;timestamp\&quot;:1722909960000,\&quot;instanceId\&quot;:\&quot;rc-dh2jf9n6j4s14926****\&quot;,\&quot;userId\&quot;:\&quot;1695619988******\&quot;,\&quot;Minimum\&quot;:0.097,\&quot;Maximum\&quot;:0.097,\&quot;Average\&quot;:0.097},{\&quot;timestamp\&quot;:1722910020000,\&quot;instanceId\&quot;:\&quot;rc-dh2jf9n6j4s14926****\&quot;,\&quot;userId\&quot;:\&quot;1695619988******\&quot;,\&quot;Minimum\&quot;:0.093,\&quot;Maximum\&quot;:0.093,\&quot;Average\&quot;:0.093}]</p>
      */
     @NameInMap("Datapoints")
     public String datapoints;
 
     /**
-     * <p>The message that is returned for the request.</p>
+     * <p>The returned message.</p>
      * <blockquote>
-     * <p> If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+     * <p>This parameter returns <strong>Successful</strong> if the request is successful. If the request fails, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class DescribeRCMetricListResponseBody extends TeaModel {
      * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
-     * <p>6178f1825f9fb76ce0b5e8707e68181f</p>
+     * <p>6178f1825f9fb76ce0b5e8707e******</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -64,8 +64,8 @@ public class DescribeRCMetricListResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

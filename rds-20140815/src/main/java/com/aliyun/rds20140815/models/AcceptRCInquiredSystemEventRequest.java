@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class AcceptRCInquiredSystemEventRequest extends TeaModel {
     /**
-     * <p>The ID of the system event.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>e-2zeielxl1qzq8slb****</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -18,11 +14,7 @@ public class AcceptRCInquiredSystemEventRequest extends TeaModel {
     public String eventId;
 
     /**
-     * <p>The region ID of the system event.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>

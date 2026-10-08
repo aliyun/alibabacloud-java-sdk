@@ -23,7 +23,7 @@ public class UpgradeDBInstanceMajorVersionPrecheckResponseBody extends TeaModel 
     public String requestId;
 
     /**
-     * <p>The new major engine version of the instance.</p>
+     * <p>The major engine version of the target instance.</p>
      * 
      * <strong>example:</strong>
      * <p>12.0</p>

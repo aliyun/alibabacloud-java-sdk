@@ -14,10 +14,10 @@ public class DescribeDBInstancesAsCsvRequest extends TeaModel {
     public Boolean cachedAsync;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the IDs of instances.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query instance IDs.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -35,7 +35,7 @@ public class DescribeDBInstancesAsCsvRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call DescribeRegions to query available region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,10 +45,10 @@ public class DescribeDBInstancesAsCsvRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmy*****</p>
+     * <p>rg-acfmy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

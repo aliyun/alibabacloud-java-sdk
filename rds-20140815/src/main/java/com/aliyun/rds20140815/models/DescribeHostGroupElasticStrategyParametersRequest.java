@@ -15,7 +15,7 @@ public class DescribeHostGroupElasticStrategyParametersRequest extends TeaModel 
     public String dedicatedHostGroupName;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

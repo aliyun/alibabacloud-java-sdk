@@ -8,7 +8,7 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
     public DescribeCrossRegionBackupDBInstanceResponseBodyItems items;
 
     /**
-     * <p>The total number of items returned for cross-region backup settings.</p>
+     * <p>The number of items in the cross-region backup settings list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
     public Integer itemsNumbers;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number. Valid values: any integer greater than 0 that does not exceed the maximum value of the Integer data type.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

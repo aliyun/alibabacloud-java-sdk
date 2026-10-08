@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCollationTimeZoneRequest extends TeaModel {
     /**
-     * <p>The character set collation of the instance. By default, the system does not modify the character set collation of the instance. Valid values:</p>
+     * <p>The system character set collation. By default, the value is not modified. Valid values:</p>
      * <ul>
      * <li><strong>Chinese_PRC_CI_AS</strong></li>
      * <li><strong>Chinese_PRC_CS_AS</strong></li>
@@ -22,12 +22,12 @@ public class ModifyCollationTimeZoneRequest extends TeaModel {
      * <blockquote>
      * <ul>
      * <li>The default character set collation of the instance is <strong>Chinese_PRC_CI_AS</strong>.</li>
-     * <li>You must specify one of the <strong>Collation</strong> and <strong>Timezone</strong> parameters.</li>
+     * <li>You must specify at least one of <strong>Collation</strong> and <strong>Timezone</strong>.</li>
      * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>Latin1_General_CI_AS</p>
+     * <p>Chinese_PRC_CS_AS</p>
      */
     @NameInMap("Collation")
     public String collation;
@@ -37,7 +37,7 @@ public class ModifyCollationTimeZoneRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-bp15qi0nd1u27****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -52,11 +52,11 @@ public class ModifyCollationTimeZoneRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The time zone of the instance. By default, the system does not modify the time zone.</p>
+     * <p>The system time zone. By default, the value is not modified.</p>
      * <blockquote>
      * <ul>
      * <li>The default time zone of the instance is <strong>China Standard Time</strong>.</li>
-     * <li>You must specify one of the <strong>Collation</strong> and <strong>Timezone</strong> parameters.</li>
+     * <li>You must specify at least one of <strong>Collation</strong> and <strong>Timezone</strong>.</li>
      * </ul>
      * </blockquote>
      * 

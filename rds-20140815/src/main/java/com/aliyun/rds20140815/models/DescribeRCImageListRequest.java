@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeRCImageListRequest extends TeaModel {
     /**
-     * <p>The image architecture. Valid values:</p>
+     * <p>The system architecture of the image. Valid values:</p>
      * <ul>
-     * <li>x86_64</li>
-     * <li>arm64</li>
+     * <li>x86_64.</li>
+     * <li>arm64.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,12 +17,30 @@ public class DescribeRCImageListRequest extends TeaModel {
     @NameInMap("Architecture")
     public String architecture;
 
+    /**
+     * <p>The image ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-2oqiu973jwcxe****</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The image name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_image_name</p>
+     */
     @NameInMap("ImageName")
     public String imageName;
 
+    /**
+     * <p>Queries available images for the specified instance type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql.x2.xlarge.6cm</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
@@ -55,7 +73,7 @@ public class DescribeRCImageListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The image type. Set the value to <strong>self</strong>.</p>
+     * <p>The image type. Currently, only <strong>self</strong> is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>self</p>

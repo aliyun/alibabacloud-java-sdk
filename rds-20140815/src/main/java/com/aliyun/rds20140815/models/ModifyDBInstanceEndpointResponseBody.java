@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceEndpointResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The returned fields.</p>
      */
     @NameInMap("Data")
     public ModifyDBInstanceEndpointResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F2911788-25E8-42E5-A3A3-1B38D263F01E</p>
@@ -51,7 +51,7 @@ public class ModifyDBInstanceEndpointResponseBody extends TeaModel {
         public String DBInstanceEndpointId;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-****</p>

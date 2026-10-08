@@ -8,7 +8,7 @@ public class CloneParameterGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The description of the parameter template in the destination region.</p>
+     * <p>The description of the parameter template that is copied to the destination region.</p>
      * 
      * <strong>example:</strong>
      * <p>CloneGroup1</p>
@@ -17,7 +17,7 @@ public class CloneParameterGroupRequest extends TeaModel {
     public String parameterGroupDesc;
 
     /**
-     * <p>The ID of the parameter template. You can call the DescribeParameterGroups operation to query the parameter template ID.</p>
+     * <p>The ID of the source parameter template. You can call the <a href="https://help.aliyun.com/document_detail/144491.html">DescribeParameterGroups</a> operation to query the parameter template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class CloneParameterGroupRequest extends TeaModel {
     public String parameterGroupId;
 
     /**
-     * <p>The name of the parameter template in the destination region.</p>
+     * <p>The name of the parameter template that is copied to the destination region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class CloneParameterGroupRequest extends TeaModel {
     public String parameterGroupName;
 
     /**
-     * <p>The ID of the source region to which the parameter template belongs. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID of the source parameter template. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class CloneParameterGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. You can leave this parameter empty.</p>
+     * <p>The resource group ID. This parameter can be left empty.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>
@@ -62,7 +62,7 @@ public class CloneParameterGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the destination region. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The ID of the destination region. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

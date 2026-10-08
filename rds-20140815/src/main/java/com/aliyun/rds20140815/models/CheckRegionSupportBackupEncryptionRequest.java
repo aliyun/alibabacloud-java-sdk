@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckRegionSupportBackupEncryptionRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm-wz91q53f9*******</p>
      */
@@ -12,6 +14,7 @@ public class CheckRegionSupportBackupEncryptionRequest extends TeaModel {
     public String DBInstanceID;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

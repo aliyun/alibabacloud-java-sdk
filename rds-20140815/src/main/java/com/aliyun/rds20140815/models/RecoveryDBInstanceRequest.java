@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class RecoveryDBInstanceRequest extends TeaModel {
     /**
-     * <p>The backup set ID. You can call the DescribeBackups operation to query the backup set ID.</p>
-     * <p>If you specify this parameter, you do not need to specify <strong>DBInstanceId</strong>.</p>
+     * <p>The backup set ID. You can call the DescribeBackups operation to query backup sets.</p>
+     * <p>If you specify this parameter, the <strong>DBInstanceId</strong> parameter is optional.</p>
      * <blockquote>
-     * <p> You must specify at least one of the <strong>BackupId</strong> or <strong>RestoreTime</strong> parameters.</p>
+     * <p>You must specify at least one of <strong>BackupId</strong> and <strong>RestoreTime</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,61 +21,61 @@ public class RecoveryDBInstanceRequest extends TeaModel {
      * <p>The instance type of the new instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>rds.mysql.s2.large</p>
+     * <p>mssql.x4.medium.s1</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
     /**
-     * <p>The ID of the original instance.</p>
+     * <p>The instance ID of the original instance.</p>
      * <blockquote>
      * <ul>
-     * <li>If you specify BackupId, you do not need to specify this parameter.</li>
-     * <li>If you specify RestoreTime, you must also specify this parameter.</li>
+     * <li>If you want to recover data by backup set (by specifying the BackupId parameter), this parameter is optional.</li>
+     * <li>If you want to recover data to a point in time (by specifying the RestoreTime parameter), this parameter is required.</li>
      * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>rm-xxxxxxxx1</p>
+     * <p>rm-bp18****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The storage capacity of the new instance. Unit: GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
+     * <p>The instance storage capacity of the new instance. Unit: GB. For details, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
      * <blockquote>
-     * <p> You must set this parameter to a value that is greater than or equal to the storage capacity of the original instance.</p>
+     * <p>The disk space of the new instance cannot be smaller than that of the original instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>5</p>
+     * <p>40</p>
      */
     @NameInMap("DBInstanceStorage")
     public Integer DBInstanceStorage;
 
     /**
-     * <p>The storage type of the new instance. Valid values:</p>
+     * <p>The instance storage type of the new instance. Valid values:</p>
      * <ul>
-     * <li><strong>local_ssd/ephemeral_ssd</strong>: local SSD</li>
-     * <li><strong>cloud_ssd</strong>: standard SSD.</li>
-     * <li><strong>cloud_essd</strong>: enhanced SSD (ESSD)</li>
+     * <li><strong>local_ssd/ephemeral_ssd</strong>: local SSD.</li>
+     * <li><strong>cloud_ssd</strong>: standard SSD cloud disk.</li>
+     * <li><strong>cloud_essd</strong>: Enterprise SSD (ESSD) cloud disk.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>local_ssd</p>
+     * <p>cloud_essd</p>
      */
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
 
     /**
-     * <p>The name of the database. When you restore data to a new instance, the format of the database name is <code>Original database name 1,New database name 2</code>.</p>
+     * <p>The database name. To restore data to a new instance, use the following format: <code>Original database name 1,New database name 2</code>.</p>
      * <blockquote>
-     * <p> For more information about how to restore data to an existing instance, see <a href="https://help.aliyun.com/document_detail/2628854.html">CopyDatabaseBetweenInstances</a>.</p>
+     * <p>To restore data to an existing instance, see <a href="https://help.aliyun.com/document_detail/2628854.html">CopyDatabaseBetweenInstances</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Restore databases to a new instance: test1,test2. Restore databases to an existing instance: {&quot;test1&quot;:&quot;newtest1&quot;,&quot;test2&quot;:&quot;newtest2&quot;}</p>
+     * <p>test1,test2</p>
      */
     @NameInMap("DbNames")
     public String dbNames;
@@ -83,10 +83,10 @@ public class RecoveryDBInstanceRequest extends TeaModel {
     /**
      * <p>The network type of the new instance. Valid values:</p>
      * <ul>
-     * <li><strong>Classic</strong></li>
-     * <li><strong>VPC</strong></li>
+     * <li><strong>Classic</strong>: classic network.</li>
+     * <li><strong>VPC</strong>: virtual private cloud (VPC).</li>
      * </ul>
-     * <p>By default, the new instance uses the same network type as the original instance.</p>
+     * <p>Default value: the network type of the original instance.</p>
      * 
      * <strong>example:</strong>
      * <p>VPC</p>
@@ -108,13 +108,13 @@ public class RecoveryDBInstanceRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The unit that is used to calculate the billing cycle of the new instance. This parameter takes effect only when you select the subscription billing method for the new instance. Valid values:</p>
+     * <p>The unit of the subscription duration of the new instance. Valid values:</p>
      * <ul>
-     * <li><strong>Year</strong></li>
-     * <li><strong>Month</strong></li>
+     * <li><strong>Year</strong>: year.</li>
+     * <li><strong>Month</strong>: month.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter must be specified when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
+     * <p>This parameter is required if <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -124,10 +124,10 @@ public class RecoveryDBInstanceRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The internal IP address of the new instance. The internal IP address must be within the CIDR block that is supported by the specified vSwitch. The system automatically assigns an internal IP address based on the values of the <strong>VPCId</strong> and <strong>VSwitchId</strong> parameters.</p>
+     * <p>The internal IP address of the new instance. The IP address must be within the IP address range of the specified vSwitch. By default, the system automatically assigns an IP address based on the values of <strong>VPCId</strong> and <strong>VSwitchId</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>172.XXX.XXX.69</p>
+     * <p>172.XX.XX.69</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -136,8 +136,8 @@ public class RecoveryDBInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The point in time to which you want to restore data. The point in time must fall within the specified log backup retention period. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
-     * <p>If you specify this parameter, you must also specify <strong>DBInstanceId</strong>.</p>
+     * <p>Any point in time within the backup retention period. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+     * <p>If you specify this parameter, the <strong>DBInstanceId</strong> parameter is required.</p>
      * <blockquote>
      * <p>You must specify at least one of <strong>BackupId</strong> and <strong>RestoreTime</strong>.</p>
      * </blockquote>
@@ -149,22 +149,22 @@ public class RecoveryDBInstanceRequest extends TeaModel {
     public String restoreTime;
 
     /**
-     * <p>The ID of the destination instance.</p>
+     * <p>The instance ID of the target instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-bp17****</p>
      */
     @NameInMap("TargetDBInstanceId")
     public String targetDBInstanceId;
 
     /**
-     * <p>The subscription duration of the instance. Valid values:</p>
+     * <p>The subscription duration of the new instance. Valid values:</p>
      * <ul>
-     * <li>Valid values when <strong>Period</strong> is set to <strong>Year</strong>: <strong>1 to 3</strong>.****</li>
-     * <li>Valid values when <strong>Period</strong> is set to <strong>Month</strong>: <strong>1 to 9</strong>.****</li>
+     * <li>If <strong>Period</strong> is set to <strong>Year</strong>, the value of <strong>UsedTime</strong> ranges from <strong>1 to 3</strong>.</li>
+     * <li>If <strong>Period</strong> is set to <strong>Month</strong>, the value of <strong>UsedTime</strong> ranges from <strong>1 to 9</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter must be specified when PayType is set to <strong>Prepaid</strong>.</p>
+     * <p>This parameter is required if <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -177,16 +177,16 @@ public class RecoveryDBInstanceRequest extends TeaModel {
      * <p>The VPC ID of the new instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>vpc-xxxxxxxxxxx</p>
+     * <p>vpc-****</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
 
     /**
-     * <p>The vSwitch ID of the new instance. If you specify more than one vSwitch ID, you must separate the IDs with commas (,).</p>
+     * <p>The vSwitch ID of the new instance. Separate multiple values with commas (,).</p>
      * 
      * <strong>example:</strong>
-     * <p>vsw-xxxxxxxxxxx</p>
+     * <p>vsw-****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

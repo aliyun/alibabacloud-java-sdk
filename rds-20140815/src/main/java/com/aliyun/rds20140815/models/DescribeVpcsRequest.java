@@ -11,6 +11,8 @@ public class DescribeVpcsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -18,6 +20,8 @@ public class DescribeVpcsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -25,6 +29,8 @@ public class DescribeVpcsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The cloud product type.</p>
+     * 
      * <strong>example:</strong>
      * <p>rds</p>
      */
@@ -32,6 +38,8 @@ public class DescribeVpcsRequest extends TeaModel {
     public String product;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -39,6 +47,8 @@ public class DescribeVpcsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmxxtz*****</p>
      */
@@ -55,6 +65,8 @@ public class DescribeVpcsRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The ID of the VPC. Specify this parameter to query a specific VPC.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-bp1bva4qkmvqt******</p>
      */
@@ -62,6 +74,8 @@ public class DescribeVpcsRequest extends TeaModel {
     public String vpcId;
 
     /**
+     * <p>The zone ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing-g</p>
      */

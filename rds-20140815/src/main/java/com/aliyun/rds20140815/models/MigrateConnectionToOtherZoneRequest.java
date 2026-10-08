@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MigrateConnectionToOtherZoneRequest extends TeaModel {
     /**
-     * <p>The endpoint of the instance. The endpoint is specified when you create the instance.</p>
+     * <p>The endpoint of the instance. This parameter is specified when the instance is created and is used to generate the connection string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class MigrateConnectionToOtherZoneRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the zone.</p>
+     * <p>The zone ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

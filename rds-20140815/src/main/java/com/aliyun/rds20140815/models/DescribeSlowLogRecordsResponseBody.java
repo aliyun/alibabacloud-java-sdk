@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5*******</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The type of the database engine.</p>
+     * <p>The database engine type.</p>
      * 
      * <strong>example:</strong>
      * <p>MySQL</p>
@@ -35,7 +35,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of SQL log reports on the current page.</p>
+     * <p>The number of SQL statements on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +44,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4DBB1BB0-E5D8-4D41-B1C9-142364DB****</p>
@@ -53,7 +53,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

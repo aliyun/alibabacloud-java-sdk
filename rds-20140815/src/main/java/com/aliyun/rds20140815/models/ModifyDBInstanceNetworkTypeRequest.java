@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     /**
-     * <p>The number of days for which you want to retain the classic network endpoint. Valid values: <strong>1 to 120</strong>. Default value: <strong>7</strong>.</p>
+     * <p>The number of days for which the classic network address reservation is retained. Valid values: <strong>1 to 120</strong>. Unit: days. Default value: <strong>7</strong>.</p>
      * <blockquote>
-     * <p>If you set the <strong>RetainClassic</strong> parameter to <strong>True</strong>, you must also specify this parameter.</p>
+     * <p>This parameter is required if <strong>RetainClassic</strong> is set to <strong>True</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,17 +17,17 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     public String classicExpiredDays;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The network type after the modification. Set the value to <strong>VPC</strong>.</p>
+     * <p>The target network type. Set the value to <strong>VPC</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,18 +43,18 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The internal IP address of the instance. The internal IP address must be within the CIDR block supported by the specified vSwitch. The system automatically assigns a private IP address to an instance based on the values of <strong>VPCId</strong> and <strong>VSwitchId</strong>.</p>
+     * <p>Settings for the internal network IP address of the instance. The IP address must be within the address range of the specified vSwitch. By default, the system automatically allocates an IP address based on the values of <strong>VPCId</strong> and <strong>VSwitchId</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>172.10.40.25</p>
+     * <p>172.10.XX.XX</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
     /**
-     * <p>The number of days for which you want to retain the read/write splitting endpoint of the classic network type. Valid values: <strong>1 to 120</strong>. Default value: <strong>7</strong>.</p>
+     * <p>The number of days for which the read/write splitting endpoint of the classic network type is retained for address reservation. Valid values: <strong>1 to 120</strong>. Unit: days. Default value: <strong>7</strong>.</p>
      * <blockquote>
-     * <p> This parameter takes effect only when a read/write splitting endpoint of the classic network type exists and the <strong>RetainClassic</strong> parameter is set to <strong>True</strong>.</p>
+     * <p>This parameter takes effect only when the instance has a classic network type read/write splitting endpoint and <strong>RetainClassic</strong> is set to <strong>True</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -64,13 +64,13 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     public Integer readWriteSplittingClassicExpiredDays;
 
     /**
-     * <p>The internal IP address that corresponds to the read/write splitting endpoint of the instance. The internal IP address must be within the CIDR block supported by the specified vSwitch. The system automatically assigns a private IP address to an instance based on the values of <strong>VPCId</strong> and <strong>VSwitchId</strong>.</p>
+     * <p>Settings for the internal network read/write splitting IP address of the instance. The IP address must be within the address range of the specified vSwitch. By default, the system automatically allocates an IP address based on the values of <strong>VPCId</strong> and <strong>VSwitchId</strong>.</p>
      * <blockquote>
-     * <p> This parameter is valid when a read/write splitting endpoint of the classic network type exists.</p>
+     * <p>This parameter takes effect only when the instance has a classic network type read/write splitting endpoint.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>192.168.0.22</p>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("ReadWriteSplittingPrivateIpAddress")
     public String readWriteSplittingPrivateIpAddress;
@@ -84,8 +84,8 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to retain the classic network endpoint. Valid values:</p>
      * <ul>
-     * <li><strong>True</strong>: retains the classic network endpoint.</li>
-     * <li><strong>False</strong> (default): does not retain the classic network endpoint.</li>
+     * <li><strong>True</strong>: The classic network endpoint is retained.</li>
+     * <li><strong>False</strong> (default): The classic network endpoint is not retained.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -95,19 +95,19 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     public String retainClassic;
 
     /**
-     * <p>The VPC ID.</p>
+     * <p>VPC ID。</p>
      * 
      * <strong>example:</strong>
-     * <p>vpc-uf6f7l4fg90xxxxxx</p>
+     * <p>vpc-uf6f7l4fg90****</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
 
     /**
-     * <p>The ID of the vSwitch. This parameter is required if the <strong>VPCId</strong> parameter is specified.</p>
+     * <p>The vSwitch ID. This parameter is required if <strong>VPCId</strong> is specified.</p>
      * 
      * <strong>example:</strong>
-     * <p>vsw-uf6adz52c2pxxxxx</p>
+     * <p>vsw-uf6adz52c2p****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

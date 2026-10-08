@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeADInfoResponseBody extends TeaModel {
     /**
-     * <p>The DNS information about the AD domain.</p>
+     * <p>The DNS information of the AD domain.</p>
      * 
      * <strong>example:</strong>
      * <p>100.100.XX.XX</p>
@@ -14,7 +14,7 @@ public class DescribeADInfoResponseBody extends TeaModel {
     public String ADDNS;
 
     /**
-     * <p>The service IP address of the AD domain.</p>
+     * <p>The IP address of the AD domain server.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -25,9 +25,9 @@ public class DescribeADInfoResponseBody extends TeaModel {
     /**
      * <p>The status of the AD domain. Valid values:</p>
      * <ul>
-     * <li><strong>-1</strong>: The instance is being added to the AD domain.</li>
-     * <li><strong>0</strong>: The instance fails to be added to the AD domain.</li>
-     * <li><strong>1</strong>: The instance is added to the AD domain.</li>
+     * <li><strong>-1</strong>: The instance is being joined to the AD domain.</li>
+     * <li><strong>0</strong>: Failed to join the AD domain.</li>
+     * <li><strong>1</strong>: Joined the AD domain.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,10 +37,10 @@ public class DescribeADInfoResponseBody extends TeaModel {
     public String ADStatus;
 
     /**
-     * <p>The cause of the error.</p>
+     * <p>The reason for the exception.</p>
      * 
      * <strong>example:</strong>
-     * <p>XXXX</p>
+     * <hr>
      */
     @NameInMap("AbnormalReason")
     public String abnormalReason;

@@ -14,7 +14,7 @@ public class MigrateConnectionToOtherZoneResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error details.</p>
      * 
      * <strong>example:</strong>
      * <p>Invalid Parameter.</p>
@@ -23,7 +23,7 @@ public class MigrateConnectionToOtherZoneResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>65BDA532-28AF-4122-AA39-B382721EEE64</p>

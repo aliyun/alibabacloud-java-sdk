@@ -16,8 +16,8 @@ public class DescribeSQLCollectorPolicyResponseBody extends TeaModel {
     /**
      * <p>The status of the SQL Explorer (SQL Audit) feature. Valid values:</p>
      * <ul>
-     * <li><strong>Enable</strong></li>
-     * <li><strong>Disabled</strong></li>
+     * <li><strong>Enable</strong>: enabled.</li>
+     * <li><strong>Disabled</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

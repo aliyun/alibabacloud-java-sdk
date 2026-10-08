@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReplaceRCInstanceSystemDiskRequest extends TeaModel {
     /**
-     * <p>The image ID that is used when you reinstall the OS.</p>
+     * <p>The ID of the image to use when reinstalling the operating system.</p>
      * 
      * <strong>example:</strong>
      * <p>m-2zec4lvlhcdkyd13****</p>
@@ -23,7 +23,7 @@ public class ReplaceRCInstanceSystemDiskRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The reserved parameter. This parameter is not supported.</p>
+     * <p>A reserved parameter. This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -32,7 +32,7 @@ public class ReplaceRCInstanceSystemDiskRequest extends TeaModel {
     public Boolean isLocalDisk;
 
     /**
-     * <p>The name of the new key pair. If you do not specify this parameter, you must reset the key pair after the OS is reinstalled.</p>
+     * <p>The name of the new key pair. If you do not specify this parameter, you must reset the key pair after the reinstallation is complete.</p>
      * 
      * <strong>example:</strong>
      * <p>testKeyPairName</p>
@@ -41,10 +41,10 @@ public class ReplaceRCInstanceSystemDiskRequest extends TeaModel {
     public String keyPairName;
 
     /**
-     * <p>The new logon password of the RDS Custom instance. If you do not specify this parameter, you must reset the logon password after the OS is reinstalled.</p>
+     * <p>The new logon password of the RDS Custom instance. If you do not specify this parameter, you must reset the logon password after the reinstallation is complete.</p>
      * <ul>
-     * <li>The value must be 8 to 30 characters in length.</li>
-     * <li>The value must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Supported special characters include: ( ) \` ~ ! @ # $ % ^ &amp; \* - _ + =</li>
+     * <li>The password must be 8 to 30 characters in length.</li>
+     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Supported special characters are: ()`~!@#$%^&amp;*-_+=.</li>
      * </ul>
      * 
      * <strong>example:</strong>

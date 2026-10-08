@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceKeywordsResponseBody extends TeaModel {
     /**
-     * <p>The type of reserved keyword returned.</p>
+     * <p>The type of reserved keywords, which indicates whether the reserved keywords are for account names or database names.</p>
      * 
      * <strong>example:</strong>
      * <p>account</p>
@@ -14,7 +14,7 @@ public class DescribeInstanceKeywordsResponseBody extends TeaModel {
     public String key;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</p>

@@ -7,8 +7,8 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends TeaModel {
     /**
      * <p>The direction of the rule. Valid values:</p>
      * <ul>
-     * <li><strong>ingress</strong>: the inbound security group rule.</li>
-     * <li><strong>egress</strong>: the outbound security group rule.</li>
+     * <li><strong>ingress</strong>: inbound.</li>
+     * <li><strong>egress</strong>: outbound.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the security group.</p>
+     * <p>The security group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-2ze27hs990o2hn9****</p>
@@ -36,7 +36,7 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The information about the security group.</p>
+     * <p>The security group information.</p>
      */
     @NameInMap("SecurityGroupPermissions")
     public java.util.List<AuthorizeRCSecurityGroupPermissionRequestSecurityGroupPermissions> securityGroupPermissions;
@@ -80,7 +80,7 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends TeaModel {
 
     public static class AuthorizeRCSecurityGroupPermissionRequestSecurityGroupPermissions extends TeaModel {
         /**
-         * <p>The destination CIDR block for outbound access control. CIDR blocks and IPv4 addresses are supported.</p>
+         * <p>The destination IP address range for outbound authorization. CIDR format and IPv4 IP address ranges are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.1/12</p>
@@ -89,13 +89,13 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends TeaModel {
         public String destCidrIp;
 
         /**
-         * <p>The protocol type supported by the rule. The value is not case-sensitive. Valid values:</p>
+         * <p>The protocol type. This parameter is case-insensitive. Valid values: </p>
          * <ul>
          * <li><strong>ICMP</strong></li>
          * <li><strong>GRE</strong></li>
          * <li><strong>TCP</strong></li>
          * <li><strong>UDP</strong></li>
-         * <li><strong>ALL</strong>: All protocols are supported.</li>
+         * <li><strong>ALL</strong>: all protocols.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends TeaModel {
         public String ipProtocol;
 
         /**
-         * <p>The action that you want to specify in the rule.</p>
+         * <p>The authorization policy.</p>
          * 
          * <strong>example:</strong>
          * <p>Accept</p>
@@ -114,12 +114,12 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends TeaModel {
         public String policy;
 
         /**
-         * <p>The range of destination ports that correspond to the transport layer protocol of the destination security group. Valid values:</p>
+         * <p>The range of destination ports for the transport layer protocol. Valid values:</p>
          * <ul>
-         * <li>The value is in the X/Y format when IpProtocol is set to TCP or UDP. X specifies the start port number and Y specifies the end port number. X and Y range from <strong>1</strong> to <strong>65535</strong>. The start port number and the end port number are separated by a forward slash (/). Correct example: <strong>1/200</strong>. Incorrect example: <strong>200/1</strong>.</li>
-         * <li>Valid value when IpProtocol is set to ICMP: <strong>-1/-1</strong>.</li>
-         * <li>Valid value when IpProtocol is set to GRE: <strong>-1/-1</strong>.</li>
-         * <li>Valid value when IpProtocol is set to ALL: <strong>-1/-1</strong>.</li>
+         * <li>TCP/UDP: valid values are <strong>1</strong> to <strong>65535</strong>. Separate the start port and the end port with a forward slash (/). Example of a valid value: <strong>1/200</strong>. Example of an invalid value: <strong>200/1</strong>.</li>
+         * <li>ICMP: <strong>-1/-1</strong>.</li>
+         * <li>GRE: <strong>-1/-1</strong>.</li>
+         * <li>If IpProtocol is set to all: <strong>-1/-1</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends TeaModel {
         public String portRange;
 
         /**
-         * <p>The priority of the rule. Valid values: 1 to 100. A smaller value indicates a higher priority. When multiple security group rules have the same priority, drop rules take precedence.</p>
+         * <p>The priority of the rule. Valid values: 1 to 100. A smaller value indicates a higher priority. If two security group rules have the same priority, the deny rule takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -138,7 +138,7 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The source CIDR block for inbound access control. CIDR blocks and IPv4 addresses are supported.</p>
+         * <p>The source IP address range for inbound authorization. CIDR format and IPv4 IP address ranges are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.1/12</p>
@@ -147,12 +147,12 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends TeaModel {
         public String sourceCidrIp;
 
         /**
-         * <p>The range of port numbers that correspond to the transport layer protocol for the source security group. Valid values:</p>
+         * <p>The range of source ports for the transport layer protocol. Valid values:</p>
          * <ul>
-         * <li>The value is in the X/Y format when IpProtocol is set to TCP or UDP. X specifies the start port number and Y specifies the end port number. X and Y range from <strong>1</strong> to <strong>65535</strong>. The start port number and the end port number are separated by a forward slash (/). Correct example: <strong>1/200</strong>. Incorrect example: <strong>200/1</strong>.</li>
-         * <li>Valid value when IpProtocol is set to ICMP: <strong>-1/-1</strong>.</li>
-         * <li>Valid value when IpProtocol is set to GRE: <strong>-1/-1</strong>.</li>
-         * <li>Valid value when IpProtocol is set to ALL: <strong>-1/-1</strong>.</li>
+         * <li>TCP/UDP: valid values are <strong>1</strong> to <strong>65535</strong>. Separate the start port and the end port with a forward slash (/). Example of a valid value: <strong>1/200</strong>. Example of an invalid value: <strong>200/1</strong>.</li>
+         * <li>ICMP: <strong>-1/-1</strong>.</li>
+         * <li>GRE: <strong>-1/-1</strong>.</li>
+         * <li>If IpProtocol is set to all: <strong>-1/-1</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>

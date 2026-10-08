@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceNetworkTypeResponseBody extends TeaModel {
     /**
-     * <p>The endpoint that is used to connect to the instance.</p>
+     * <p>The endpoint of the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-bp1*****************.mysql.rds.aliyuncs.com</p>
+     * <p>rm-bp1****.mysql.rds.aliyuncs.com</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -23,7 +23,7 @@ public class ModifyDBInstanceNetworkTypeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1025486523574</p>

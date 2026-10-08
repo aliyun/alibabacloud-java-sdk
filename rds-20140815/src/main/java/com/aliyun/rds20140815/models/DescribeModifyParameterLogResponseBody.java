@@ -8,13 +8,13 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
      * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The database engine of the instance.</p>
+     * <p>The database engine type.</p>
      * 
      * <strong>example:</strong>
      * <p>mysql</p>
@@ -23,7 +23,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>The database engine version of the instance.</p>
+     * <p>The database engine version.</p>
      * 
      * <strong>example:</strong>
      * <p>5.6</p>
@@ -62,7 +62,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of log records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableRecoveryTimeRequest extends TeaModel {
     /**
-     * <p>The ID of the cross-region data backup file. You can call the DescribeCrossRegionBackups operation to query the backup file ID.</p>
+     * <p>The ID of the cross-region backup file. You can call the DescribeCrossRegionBackups operation to query the backup set ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>14***</p>
+     * <p>12493****</p>
      */
     @NameInMap("CrossBackupId")
     public Integer crossBackupId;
@@ -18,7 +18,7 @@ public class DescribeAvailableRecoveryTimeRequest extends TeaModel {
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5*****</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -30,7 +30,7 @@ public class DescribeAvailableRecoveryTimeRequest extends TeaModel {
      * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
+     * <p>cn-chengdu</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -39,7 +39,7 @@ public class DescribeAvailableRecoveryTimeRequest extends TeaModel {
      * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmy*****</p>
+     * <p>rg-acfmy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeDBInstanceEndpointsResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>777C4593-8053-427B-****105593277CAB</p>
@@ -280,7 +280,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         public DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpoints DBInstanceEndpoints;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-u****</p>
@@ -289,7 +289,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
-         * <p>The version of the IP protocol. Valid values:</p>
+         * <p>The IP address protocol version. Valid values:</p>
          * <ul>
          * <li><strong>ipv4</strong></li>
          * <li><strong>ipv6</strong></li>

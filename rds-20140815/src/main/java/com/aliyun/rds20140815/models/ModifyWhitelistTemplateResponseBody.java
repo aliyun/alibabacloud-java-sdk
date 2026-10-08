@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyWhitelistTemplateResponseBody extends TeaModel {
     /**
-     * <p>The response code returned. Valid values:</p>
+     * <p>The response code. Valid values:</p>
      * <ul>
-     * <li><strong>200</strong>: success</li>
-     * <li><strong>400</strong>: client error</li>
-     * <li><strong>401</strong>: identity authentication failed</li>
-     * <li><strong>404</strong>: request page not found</li>
-     * <li><strong>500</strong>: server error</li>
+     * <li><strong>200</strong>: Normal.</li>
+     * <li><strong>400</strong>: Client error.</li>
+     * <li><strong>401</strong>: Authentication failed.</li>
+     * <li><strong>404</strong>: Request page not found.</li>
+     * <li><strong>500</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,17 +21,17 @@ public class ModifyWhitelistTemplateResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data list.</p>
      */
     @NameInMap("Data")
     public ModifyWhitelistTemplateResponseBodyData data;
 
     /**
-     * <p>The HTTP status code returned. Valid values:</p>
+     * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>200</strong>: success</li>
-     * <li><strong>400</strong>: client error</li>
-     * <li><strong>500</strong>: server error</li>
+     * <li><strong>200</strong>: Normal.</li>
+     * <li><strong>400</strong>: Client error.</li>
+     * <li><strong>500</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class ModifyWhitelistTemplateResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Each request has a unique ID, which facilitates troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</p>
@@ -61,8 +61,8 @@ public class ModifyWhitelistTemplateResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Successful.</li>
+     * <li><strong>false</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -126,10 +126,10 @@ public class ModifyWhitelistTemplateResponseBody extends TeaModel {
 
     public static class ModifyWhitelistTemplateResponseBodyData extends TeaModel {
         /**
-         * <p>The status code returned. Valid values:</p>
+         * <p>The return status. Valid values:</p>
          * <ul>
-         * <li><strong>ok</strong>: The request is successful.</li>
-         * <li><strong>error</strong>: The request fails.</li>
+         * <li><strong>ok</strong>: Normal return.</li>
+         * <li><strong>error</strong>: Error return.</li>
          * </ul>
          * 
          * <strong>example:</strong>

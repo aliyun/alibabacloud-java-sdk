@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class ResizeRCInstanceDiskRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the automatic payment feature for the instance. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong> (default): enables the feature. Make sure that your account balance is sufficient.</li>
-     * <li><strong>false</strong>: disables the feature. An unpaid order is generated.</li>
-     * </ul>
-     * <blockquote>
-     * <p> If your account balance is insufficient, you can set AutoPay to false. In this case, an unpaid order is generated. You can complete the payment in the Expenses and Costs console.</p>
+     * <li><strong>true</strong> (default): Automatic payment is enabled. Make sure that your account balance is sufficient.</li>
+     * <li><strong>false</strong>: Only an order is generated. No payment is made.<blockquote>
+     * <p>If your payment method has an insufficient balance, set AutoPay to false. An unpaid order is generated. You can log on to the ApsaraDB RDS console to complete the payment.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -20,14 +20,20 @@ public class ResizeRCInstanceDiskRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>The cloud disk ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rcd-x4462840nwinu6rr61m5o</p>
+     */
     @NameInMap("DiskId")
     public String diskId;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and insufficient inventory errors.</li>
-     * <li><strong>false</strong>: performs a dry run and performs the actual request. If the request passes the dry run, the instance is created.</li>
+     * <li><strong>true</strong>: performs a dry run without creating the instance. The system checks items such as the request parameters, request format, service limits, and available resources.</li>
+     * <li><strong>false</strong> (default): sends the request. If the request passes the check, the instance is created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +52,7 @@ public class ResizeRCInstanceDiskRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The new disk size. Unit: GiB.</p>
+     * <p>The size of the disk after expansion. Unit: GiB.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -64,10 +70,10 @@ public class ResizeRCInstanceDiskRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The method that you want to use to resize the disk. Valid values:</p>
+     * <p>The method used to expand the disk. Valid values:</p>
      * <ul>
-     * <li><strong>offline</strong> (default): resizes disks offline. After you resize a disk offline, you must restart the instance for the resizing operation to take effect.</li>
-     * <li><strong>online</strong>: resizes disks online. After you resize a disk online, the resizing operation takes effect immediately and you do not need to restart the instance.</li>
+     * <li><strong>offline</strong> (default): Offline expansion. You must restart the instance for the expansion to take effect.</li>
+     * <li><strong>online</strong>: Online expansion. The expansion takes effect without restarting the instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -4,9 +4,21 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRCInstancesRequest extends TeaModel {
+    @NameInMap("ClusterId")
+    public String clusterId;
+
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DescriptionForFuzzy")
+    public String descriptionForFuzzy;
+
+    /**
+     * <p>Queries instances by host IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.16.XX.XX</p>
+     */
     @NameInMap("HostIp")
     public String hostIp;
 
@@ -14,18 +26,33 @@ public class DescribeRCInstancesRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The instance ID. This parameter is used to query a single instance.</p>
+     * <blockquote>
+     * <p>If no instance ID is specified (neither <strong>InstanceId</strong> nor <strong>InstanceIds</strong> is passed), the operation returns detailed information about all RDS Custom instances in the specified region.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>rm-2ze704f*****</p>
+     * <p>rc-i2p26bde8bckf141****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The instance IDs.</p>
+     * <p>This parameter is used to query multiple instances at a time. Separate multiple instance IDs with commas (,). A maximum of 100 IDs are supported. Input format: <code>[&quot;InstanceID1&quot;,&quot;InstanceID2&quot;]</code>.</p>
+     * <blockquote>
+     * <p>If both <strong>InstanceIds</strong> and <strong>InstanceId</strong> are specified, the value of <strong>InstanceIds</strong> takes precedence.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;rc-i2p26bde8bckf141****&quot;,&quot;rc-l1753m982otq2s2m****&quot;]</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     /**
+     * <p>The instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>k8s-node</p>
      */
@@ -33,9 +60,8 @@ public class DescribeRCInstancesRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The page number.</p>
-     * <p>Page starts from page 1.</p>
-     * <p>Default value: 1.</p>
+     * <p>The page number of the instance status list.</p>
+     * <p>Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,9 +70,8 @@ public class DescribeRCInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
-     * <p>Maximum value: 100.</p>
-     * <p>Default value: 10.</p>
+     * <p>The number of entries per page for a paged query.</p>
+     * <p>Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -54,11 +79,17 @@ public class DescribeRCInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Queries instances by public IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>121.89.XX.XX</p>
+     */
     @NameInMap("PublicIp")
     public String publicIp;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -66,14 +97,33 @@ public class DescribeRCInstancesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The instance status. Valid values:</p>
+     * <ul>
+     * <li><strong>Pending</strong>: Being created.</li>
+     * <li><strong>Running</strong>: Running.</li>
+     * <li><strong>Starting</strong>: Being started.</li>
+     * <li><strong>Stopping</strong>: Being stopped.</li>
+     * <li><strong>Stopped</strong>: Stopped.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Queries instances by the specified tag. Input format: <code>{&quot;TagKey&quot;:&quot;TagValue&quot;}</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;testRC&quot;:&quot;test01&quot;}</p>
+     */
     @NameInMap("Tag")
     public String tag;
 
     /**
-     * <p>The virtual private cloud (VPC) ID.</p>
+     * <p>The ID of the virtual private cloud (VPC).</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-uf6f7l4fg90****</p>
@@ -86,12 +136,28 @@ public class DescribeRCInstancesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeRCInstancesRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
     public DescribeRCInstancesRequest setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public DescribeRCInstancesRequest setDescriptionForFuzzy(String descriptionForFuzzy) {
+        this.descriptionForFuzzy = descriptionForFuzzy;
+        return this;
+    }
+    public String getDescriptionForFuzzy() {
+        return this.descriptionForFuzzy;
     }
 
     public DescribeRCInstancesRequest setHostIp(String hostIp) {

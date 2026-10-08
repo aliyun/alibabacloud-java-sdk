@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartDBInstanceRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,11 @@ public class StartDBInstanceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The data migration method of the instance. This parameter is available only for instances that are created in dedicated clusters. Valid values:</p>
+     * <p>This parameter is supported only for dedicated cluster instances. The migration method of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong> (default): The system preferentially upgrades or downgrades the instance without a migration. If the resources on the host on which the instance resides are insufficient, the system migrates the instance to another suitable host.</li>
-     * <li><strong>1</strong>: The system upgrades or downgrades the instance without a migration. If the upgrade or downgrade is not supported, the system reports an error.</li>
-     * <li><strong>2</strong>: The system migrates the data of the instance from the host on which the instance resides to another host. You must also specify <strong>DedicatedHostGroupId</strong>, <strong>TargetDedicatedHostIdForMaster</strong>, and <strong>TargetDedicatedHostIdForSlave</strong>. If you set DBInstanceTransType to 2, you cannot migrate the data of the instance to the host on which the instance resides. If you migrate the data of the instance to the host on which the instance resides, the migration fails.</li>
+     * <li><strong>0</strong>: Default value. The system preferentially performs a local specification change. If local resources are insufficient, a cross-instance migration is performed.</li>
+     * <li><strong>1</strong>: Local specification change. If the system determines that the instance does not support a local specification change, an error is returned.</li>
+     * <li><strong>2</strong>: Cross-instance migration. The instance is migrated to a specified host. You must specify <strong>DedicatedHostGroupId</strong>, <strong>TargetDedicatedHostIdForMaster</strong>, and <strong>TargetDedicatedHostIdForSlave</strong>. The instance cannot be migrated to the host on which it currently resides. Otherwise, the migration fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class StartDBInstanceRequest extends TeaModel {
     public Integer DBInstanceTransType;
 
     /**
-     * <p>The dedicated cluster ID. This parameter is supported if you call this operation to suspend an RDS instance in the dedicated cluster. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.</p>
+     * <p>This operation also supports starting an ApsaraDB RDS instance in a dedicated cluster. In this case, specify the dedicated cluster ID. You can call DescribeDedicatedHostGroups to query the dedicated cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dhg-39****</p>
@@ -38,11 +38,11 @@ public class StartDBInstanceRequest extends TeaModel {
     public String dedicatedHostGroupId;
 
     /**
-     * <p>The effective time. This parameter is available only for instances that are created in dedicated clusters.</p>
+     * <p>This parameter is supported only for dedicated cluster instances. The effective period. Valid values:</p>
      * <ul>
-     * <li><strong>Immediate</strong></li>
-     * <li><strong>MaintainTime</strong>: The change takes effect during the planned maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
-     * <li><strong>SpecificTime</strong>: The change takes effect at a specified point in time.</li>
+     * <li><strong>Immediate</strong>: The operation takes effect immediately.</li>
+     * <li><strong>MaintainTime</strong>: The operation takes effect during the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
+     * <li><strong>SpecificTime</strong>: The operation takes effect at a specified time.</li>
      * </ul>
      * <p>Default value: MaintainTime.</p>
      * 
@@ -53,7 +53,7 @@ public class StartDBInstanceRequest extends TeaModel {
     public String effectiveTime;
 
     /**
-     * <p>The database engine version of the instance. This parameter is available only for instances that are created in dedicated clusters.</p>
+     * <p>This parameter is supported only for dedicated cluster instances. The database engine version.</p>
      * 
      * <strong>example:</strong>
      * <p>5.7</p>
@@ -65,7 +65,7 @@ public class StartDBInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call DescribeRegions to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -80,9 +80,9 @@ public class StartDBInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The switching time. This parameter is available only for instances that are created in dedicated clusters. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>This parameter is supported only for dedicated cluster instances. The specified switchover time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
      * <blockquote>
-     * <p>This parameter must be specified when <strong>EffectiveTime</strong> is set to <strong>Specified</strong>.</p>
+     * <p>This parameter is required when <strong>EffectiveTime</strong> is set to <strong>Specified</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -92,7 +92,7 @@ public class StartDBInstanceRequest extends TeaModel {
     public String specifiedTime;
 
     /**
-     * <p>The storage capacity of the instance. This parameter is available only for instances that are created in dedicated clusters. Valid values: <strong>5 to 2000</strong>. Unit: GB. If you do not specify this parameter, the storage capacity of the instance remains unchanged.</p>
+     * <p>This parameter is supported only for dedicated cluster instances. The custom storage capacity. Valid values: <strong>5 to 2000</strong>. Unit: GB. If you do not specify this parameter, the storage capacity remains unchanged.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -101,7 +101,7 @@ public class StartDBInstanceRequest extends TeaModel {
     public Integer storage;
 
     /**
-     * <p>The instance type of the required instance. This parameter is available only for instances that are created in dedicated clusters.</p>
+     * <p>This parameter is supported only for dedicated cluster instances. The instance type of the target instance.</p>
      * 
      * <strong>example:</strong>
      * <p>rds.ebmhfc6.20xlarge</p>
@@ -110,7 +110,7 @@ public class StartDBInstanceRequest extends TeaModel {
     public String targetDBInstanceClass;
 
     /**
-     * <p>A deprecated parameter. You do not need to specify this parameter.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not need to be configured.</p>
      * 
      * <strong>example:</strong>
      * <p>dh-bp****</p>
@@ -119,9 +119,9 @@ public class StartDBInstanceRequest extends TeaModel {
     public String targetDedicatedHostIdForLog;
 
     /**
-     * <p>The ID of the host on which the primary instance is created. This parameter is available only for instances that are created in dedicated clusters.</p>
+     * <p>This parameter is supported only for dedicated cluster instances. Specifies the ID of the destination host for the primary node.</p>
      * <blockquote>
-     * <p>This parameter must be specified when <strong>DBInstanceTransType</strong> is set to <strong>2</strong>.</p>
+     * <p>This parameter is required when <strong>DBInstanceTransType</strong> is set to <strong>2</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -131,9 +131,9 @@ public class StartDBInstanceRequest extends TeaModel {
     public String targetDedicatedHostIdForMaster;
 
     /**
-     * <p>The ID of the host on which the secondary instance is created. This parameter is available only for instances that are created in dedicated clusters.</p>
+     * <p>This parameter is supported only for dedicated cluster instances. Specifies the ID of the destination host for the secondary node.</p>
      * <blockquote>
-     * <p>This parameter must be specified when <strong>DBInstanceTransType</strong> is set to <strong>2</strong>.</p>
+     * <p>This parameter is required when <strong>DBInstanceTransType</strong> is set to <strong>2</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class StartDBInstanceRequest extends TeaModel {
     public String targetDedicatedHostIdForSlave;
 
     /**
-     * <p>The vSwitch ID. This parameter is available only for instances that are created in dedicated clusters.</p>
+     * <p>This parameter is supported only for dedicated cluster instances. The vSwitch ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-****</p>
@@ -152,7 +152,7 @@ public class StartDBInstanceRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The zone ID. This parameter is available only for instances that are created in dedicated clusters.</p>
+     * <p>This parameter is supported only for dedicated cluster instances. The zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-a</p>

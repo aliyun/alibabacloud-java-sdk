@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMaskingRulesShrinkRequest extends TeaModel {
     /**
-     * <p>instance ID</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateMaskingRulesShrinkRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>Database name</p>
+     * <p>The database name.</p>
      * 
      * <strong>example:</strong>
      * <p>testdb</p>
@@ -24,7 +24,7 @@ public class CreateMaskingRulesShrinkRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>Name of the default encryption or masking algorithm</p>
+     * <p>The name of the default encryption or masking algorithm.</p>
      * 
      * <strong>example:</strong>
      * <p>aes-128-gcm</p>
@@ -33,7 +33,7 @@ public class CreateMaskingRulesShrinkRequest extends TeaModel {
     public String defaultAlgo;
 
     /**
-     * <p>Rule algorithm. Multiple algorithms can be selected. Masking Algorithm can include additional parameters. Format: {name: algorithm1}, {name: algorithm2, params: {encryption position, number of encrypted characters}}</p>
+     * <p>The rule algorithms. You can specify multiple algorithms. Masking algorithms can include additional parameters. Format: {name: algorithm1}, {name: algorithm2, params: {encryption position, encryption length}}.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;name&quot;: &quot;aes-128-gcm&quot;},
@@ -46,7 +46,7 @@ public class CreateMaskingRulesShrinkRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>Region ID</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ap-southeast-1</p>
@@ -61,13 +61,13 @@ public class CreateMaskingRulesShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Rule configuration, in JSON string format, containing matching rules for databases, tables, and columns</p>
+     * <p>The rule configuration in JSON string format, which contains matching rules for databases, tables, and columns.</p>
      */
     @NameInMap("RuleConfig")
     public String ruleConfigShrink;
 
     /**
-     * <p>Rule Name (only one rule name is supported per request)</p>
+     * <p>The rule name. Only one rule name can be specified at a time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

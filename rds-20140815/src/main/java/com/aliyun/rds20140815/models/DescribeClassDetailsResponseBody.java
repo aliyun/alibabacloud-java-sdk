@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeClassDetailsResponseBody extends TeaModel {
     /**
-     * <p>The RDS edition of the instance. Valid values:</p>
+     * <p>The edition. Valid values:</p>
      * <ul>
-     * <li><strong>Basic</strong>: RDS Basic Edition</li>
-     * <li><strong>HighAvailability</strong>: RDS High-availability Edition</li>
-     * <li><strong>AlwaysOn</strong>: RDS Cluster Edition</li>
+     * <li><strong>Basic</strong>: Basic Edition</li>
+     * <li><strong>HighAvailability</strong>: High-availability Edition</li>
+     * <li><strong>AlwaysOn</strong>: Cluster Edition</li>
      * <li><strong>Finance</strong>: RDS Enterprise Edition</li>
      * </ul>
      * 
@@ -20,7 +20,7 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
     public String category;
 
     /**
-     * <p>The code of the instance type.</p>
+     * <p>The instance type code.</p>
      * 
      * <strong>example:</strong>
      * <p>mysql.n2.medium.1</p>
@@ -29,7 +29,7 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
     public String classCode;
 
     /**
-     * <p>The instance family of the instance.</p>
+     * <p>The instance family.</p>
      * 
      * <strong>example:</strong>
      * <p>x</p>
@@ -38,7 +38,7 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
     public String classGroup;
 
     /**
-     * <p>The number of CPU cores that are supported by the instance type. Unit: cores.</p>
+     * <p>The number of CPU cores for the instance type. Unit: cores.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -47,13 +47,13 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
     public String cpu;
 
     /**
-     * <p>The storage type of the instance. Valid values:</p>
+     * <p>The storage type. Valid values:</p>
      * <ul>
-     * <li><strong>local_ssd</strong>: local SSDs</li>
-     * <li><strong>cloud_ssd</strong>: standard SSDs</li>
-     * <li><strong>cloud_essd</strong>: enhanced SSDs (ESSDs) of performance level 1 (PL1)</li>
-     * <li><strong>cloud_essd2</strong>: ESSDs of PL2</li>
-     * <li><strong>cloud_essd3</strong>: ESSD of PL3</li>
+     * <li><strong>local_ssd</strong>: local SSD</li>
+     * <li><strong>cloud_ssd</strong>: standard SSD</li>
+     * <li><strong>cloud_essd</strong>: PL1 ESSD</li>
+     * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
+     * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
     public String DBInstanceStorageType;
 
     /**
-     * <p>The architecture of the instance.</p>
+     * <p>The architecture.</p>
      * 
      * <strong>example:</strong>
      * <p>x86</p>
@@ -81,7 +81,7 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
     public String maxConnections;
 
     /**
-     * <p>The maximum I/O bandwidth that is supported by the instance type. Unit: Mbit/s.</p>
+     * <p>The maximum I/O bandwidth for the instance type. Unit: Mbit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -90,7 +90,7 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
     public String maxIOMBPS;
 
     /**
-     * <p>The maximum input/output operations per second (IOPS) that is supported by the instance type. Unit: operations per second.</p>
+     * <p>The maximum IOPS for the instance type. Unit: operations per second.</p>
      * 
      * <strong>example:</strong>
      * <p>N/A</p>
@@ -99,7 +99,7 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
     public String maxIOPS;
 
     /**
-     * <p>The memory size. Unit: GB.</p>
+     * <p>The memory capacity. Unit: GB.</p>
      * 
      * <strong>example:</strong>
      * <p>2GB</p>
@@ -109,11 +109,12 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
 
     /**
      * <p>The price.</p>
-     * <p>Unit: cents (US dollars).</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Unit: cents (CNY).
+     * &lt;props=&quot;intl&quot;&gt;Unit: cents (USD).</p>
      * <blockquote>
      * <ul>
-     * <li>If you set the CommodityCode parameter to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.</li>
-     * <li>If you set the CommodityCode parameter to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.</li>
+     * <li>If you set the CommodityCode parameter to a pay-as-you-go commodity code, the hourly price is returned.</li>
+     * <li>If you set the CommodityCode parameter to a subscription commodity code, the monthly price is returned.</li>
      * </ul>
      * </blockquote>
      * 

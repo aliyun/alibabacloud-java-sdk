@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCloudMigrationTaskResponseBody extends TeaModel {
     /**
-     * <p>The name of the instance.</p>
+     * <p>The name of the target instance.</p>
      * 
      * <strong>example:</strong>
      * <p>pgm-bp102g323jd4****</p>
@@ -14,7 +14,7 @@ public class CreateCloudMigrationTaskResponseBody extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8B993DA9-5272-5414-94E3-4CA8BA0146C2</p>
@@ -23,7 +23,7 @@ public class CreateCloudMigrationTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>440437220</p>
@@ -32,7 +32,7 @@ public class CreateCloudMigrationTaskResponseBody extends TeaModel {
     public Long taskId;
 
     /**
-     * <p>The name of the task.</p>
+     * <p>The task name.</p>
      * 
      * <strong>example:</strong>
      * <p>362c6c7a-4d20-4eac-898c-1495ceab374c</p>

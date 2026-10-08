@@ -5,23 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceProxyConfigurationResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the mechanism that is used to mitigate brute-force attacks is enabled:</p>
+     * <p>Indicates whether brute-force attacks protection is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>Enable</strong></li>
-     * <li><strong>Disable</strong></li>
+     * <li><strong>Enable</strong>: Enabled.</li>
+     * <li><strong>Disable</strong>: Disabled.</li>
      * </ul>
-     * <p>The return value is a JSON string. Example:</p>
+     * <p>The return value is a JSON character string in the following format:</p>
      * <pre><code>{&quot;status&quot;:&quot;Disable&quot;, &quot;check_interval_seconds&quot;: 60,
      *           &quot;max_failed_login_attempts&quot;: 60, &quot;blocking_seconds&quot;: 600}
      * </code></pre>
-     * <p>Description:</p>
+     * <p>Parameter description and value ranges:</p>
      * <ul>
-     * <li><p>Each client allows {max_failed_login_attempts} logon attempts that fail due to incorrect passwords within {check_interval_seconds} seconds. If one more such attempt is conducted, the client must wait for {blocking_seconds} seconds before you can try again.</p>
-     * </li>
-     * <li><p>Valid values:</p>
-     * <ul>
+     * <li>For each client, a maximum of max_failed_login_attempts fault password logon attempts are allowed within check_interval_seconds seconds. If the limit is exceeded, the client IP address is blocked for blocking_seconds seconds.</li>
+     * <li>Value ranges:<ul>
      * <li>check_interval_seconds: <strong>30 to 600</strong>. Unit: seconds.</li>
-     * <li>max_failed_login_attempts: <strong>10 to 5000</strong>. Unit: times.</li>
+     * <li>max_failed_login_attempts: <strong>10 to 5000</strong>. Unit: attempts.</li>
      * <li>blocking_seconds: <strong>30 to 3600</strong>. Unit: seconds.</li>
      * </ul>
      * </li>
@@ -34,12 +32,12 @@ public class DescribeDBInstanceProxyConfigurationResponseBody extends TeaModel {
     public String attacksProtectionConfiguration;
 
     /**
-     * <p>Indicates whether the short-lived connection optimization feature is enabled.</p>
+     * <p>Indicates whether short-lived connection optimization is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>Enable</strong></li>
-     * <li><strong>Disable</strong></li>
+     * <li><strong>Enable</strong>: Enabled.</li>
+     * <li><strong>Disable</strong>: Disabled.</li>
      * </ul>
-     * <p>In this case, the return value is a JSON string. Examples:</p>
+     * <p>The return value is a JSON string in the following format:</p>
      * <pre><code>{&quot;status&quot;:&quot;Disable&quot;}.
      * </code></pre>
      * 
@@ -59,13 +57,13 @@ public class DescribeDBInstanceProxyConfigurationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the transparent switchover feature is enabled.</p>
+     * <p>Indicates whether transparent switchover is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>Enable</strong></li>
-     * <li><strong>Disable</strong></li>
+     * <li><strong>Enable</strong>: Enabled.</li>
+     * <li><strong>Disable</strong>: Disabled.</li>
      * </ul>
-     * <p>The return value is a JSON string. Example:</p>
-     * <pre><code>{&quot;status&quot;:&quot;Enable&quot;}
+     * <p>The return value is a JSON string in the following format:</p>
+     * <pre><code>{&quot;status&quot;:&quot;Enable&quot;}.
      * </code></pre>
      * 
      * <strong>example:</strong>

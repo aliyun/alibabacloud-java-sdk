@@ -9,13 +9,13 @@ public class DescribeOssDownloadsRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The migration task ID. You can call the DescribeMigrateTasks operation to query the migration task ID.</p>
+     * <p>The ID of the migration task. You can call the DescribeMigrateTasks operation to query the migration task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,10 +28,10 @@ public class DescribeOssDownloadsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmy*****</p>
+     * <p>rg-acfmy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

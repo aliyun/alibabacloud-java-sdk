@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateMigrateTaskResponseBody extends TeaModel {
     /**
-     * <p>The type of the migration task. Valid values:</p>
+     * <p>The type of the cloud migration task. Valid values:</p>
      * <ul>
-     * <li><strong>FULL</strong>: The migration task migrates full backup files.</li>
-     * <li><strong>UPDF</strong>: The migration task migrates incremental or log backup files.</li>
+     * <li><strong>FULL</strong>: performs a restore operation by using a full backup file.</li>
+     * <li><strong>UPDF</strong>: restores incremental data by using an incremental backup file or log file.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,13 +21,13 @@ public class CreateMigrateTaskResponseBody extends TeaModel {
      * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk******</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
      * 
      * <strong>example:</strong>
      * <p>test02</p>
@@ -36,16 +36,16 @@ public class CreateMigrateTaskResponseBody extends TeaModel {
     public String DBName;
 
     /**
-     * <p>The ID of the migration task.</p>
+     * <p>The migration task ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>564******</p>
+     * <p>564563****</p>
      */
     @NameInMap("MigrateTaskId")
     public String migrateTaskId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>866F5EB8-4650-4061-87F0-379F6F968BCE</p>

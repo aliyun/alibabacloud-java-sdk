@@ -14,7 +14,7 @@ public class ModifyDBNodeResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>20793850608****</p>

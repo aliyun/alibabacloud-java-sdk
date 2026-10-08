@@ -8,26 +8,26 @@ public class DescribeAccountsRequest extends TeaModel {
      * <p>The name of the database account.</p>
      * 
      * <strong>example:</strong>
-     * <p>test1</p>
+     * <p>zhttest</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
      * <blockquote>
-     * <p> This parameter is not supported for RDS instances that run SQL Server 2017 on RDS Cluster Edition.</p>
+     * <p>SQL Server 2017 Cluster Edition instances are not supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5*****</p>
+     * <p>rm-bp1v6z81ho9******</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>. Pages start from page 1.</p>
+     * <p>The page number. Default value: <strong>1</strong>. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +36,7 @@ public class DescribeAccountsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>30 to 200</strong>. Default value: <strong>30</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>30</strong> to <strong>200</strong>. Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>

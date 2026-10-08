@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAnalyticdbByPrimaryDBInstanceResponseBody extends TeaModel {
     /**
-     * <p>The number of associated analytic instances.</p>
+     * <p>The number of associated analytical instances.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

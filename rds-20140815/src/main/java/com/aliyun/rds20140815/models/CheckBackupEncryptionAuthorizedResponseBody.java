@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CheckBackupEncryptionAuthorizedResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the account is authorized. Valid values:</p>
+     * <ul>
+     * <li>0: Not authorized.</li>
+     * <li>1: Authorized.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +18,8 @@ public class CheckBackupEncryptionAuthorizedResponseBody extends TeaModel {
     public String authorizationState;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CB07C463-7428-50AA-9E39-********</p>
      */
@@ -19,6 +27,8 @@ public class CheckBackupEncryptionAuthorizedResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The Alibaba Resource Name (ARN) of the service-linked role associated with Cloud Hardware Security Module (CloudHSM) for backup encryption.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::1139916************:role/AliyunServiceRoleForRdsBackupEncryption</p>
      */

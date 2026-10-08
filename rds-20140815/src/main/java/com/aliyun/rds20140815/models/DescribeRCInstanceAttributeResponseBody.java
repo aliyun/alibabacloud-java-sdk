@@ -4,13 +4,23 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether auto-renewal is enabled for the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     /**
      * <p>The ID of the cluster to which the instance belongs.</p>
      * <blockquote>
-     * <p> This parameter will be deprecated. We recommend that you use other parameters to ensure compatibility.</p>
+     * <p>This parameter will be deprecated. For better compatibility, use other parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,7 +30,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The number of CPU cores.</p>
+     * <p>The number of vCPUs.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -28,6 +38,16 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("Cpu")
     public Integer cpu;
 
+    /**
+     * <p>Indicates whether the instance has joined an ACK cluster. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: Yes.</li>
+     * <li><strong>0</strong>: No.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("CreateMode")
     public Integer createMode;
 
@@ -41,7 +61,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public String creationTime;
 
     /**
-     * <p>The performance mode of the burstable instance.</p>
+     * <p>The running mode of the burstable instance.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -52,11 +72,21 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("DataDisks")
     public DescribeRCInstanceAttributeResponseBodyDataDisks dataDisks;
 
+    /**
+     * <p>The database type. Valid values:</p>
+     * <ul>
+     * <li><strong>mssql</strong>: SQL Server</li>
+     * <li><strong>mysql</strong>: MySQL</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql</p>
+     */
     @NameInMap("DbType")
     public String dbType;
 
     /**
-     * <p>The attributes of the dedicated hosts.</p>
+     * <p>The dedicated host attributes.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -64,11 +94,24 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("DedicatedHostAttribute")
     public DescribeRCInstanceAttributeResponseBodyDedicatedHostAttribute dedicatedHostAttribute;
 
+    /**
+     * <p>Indicates whether the release protection feature is enabled. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
 
     /**
-     * <p>The ID of the deployment set.</p>
+     * <p>The deployment set ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ds-uf6c8qerk019bj1l****</p>
@@ -86,7 +129,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The reserved parameter.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -95,7 +138,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public String diskType;
 
     /**
-     * <p>The Elastic Compute Service (ECS) instance family.</p>
+     * <p>The corresponding ECS instance family.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g6.2xlarge</p>
@@ -104,16 +147,18 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public String ecsInstanceType;
 
     /**
-     * <p>The elastic IP address (EIP) associated with the instance.</p>
+     * <p>The elastic IP address (EIP) binding information.</p>
      */
     @NameInMap("EipAddress")
     public DescribeRCInstanceAttributeResponseBodyEipAddress eipAddress;
 
     /**
-     * <p>Indicates whether the Jumbo Frame feature is enabled for the instance. Valid values:</p>
+     * <p>Indicates whether the Jumbo frame feature is enabled for the instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: Enabled.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -131,14 +176,29 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
+    /**
+     * <p>The number of GPUs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Gpu")
     public Integer gpu;
 
+    /**
+     * <p>The GPU type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NVIDIA V100</p>
+     */
     @NameInMap("GpuTypes")
     public String gpuTypes;
 
     /**
-     * <p>The instance hostname.</p>
+     * <p>The hostname of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>iZ2zej1n3cin51rlmby****</p>
@@ -147,10 +207,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The storage type of the host. Valid values:</p>
+     * <p>The host storage type. Valid values:</p>
      * <ul>
-     * <li><strong>dhg_cloud_ssd</strong>: ESSD</li>
-     * <li><strong>dhg_local_ssd</strong>: local SSD</li>
+     * <li><strong>dhg_cloud_ssd</strong>: ESSD cloud disk.</li>
+     * <li><strong>dhg_local_ssd</strong>: local standard SSD.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -160,7 +220,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public String hostType;
 
     /**
-     * <p>The image ID of the instance.</p>
+     * <p>The ID of the image that the instance is running.</p>
      * 
      * <strong>example:</strong>
      * <p>m-2oqiu973jwcxe****</p>
@@ -171,6 +231,16 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("InnerIpAddress")
     public DescribeRCInstanceAttributeResponseBodyInnerIpAddress innerIpAddress;
 
+    /**
+     * <p>The billing method. Valid values:</p>
+     * <ul>
+     * <li><strong>PrePaid</strong>: subscription</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
+     */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
@@ -193,10 +263,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The network type. Valid values:</p>
+     * <p>The network type. Valid values: </p>
      * <ul>
-     * <li><strong>classic</strong></li>
-     * <li><strong>vpc</strong></li>
+     * <li><strong>classic</strong>: classic network.</li>
+     * <li><strong>vpc</strong>: VPC.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -206,7 +276,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public String instanceNetworkType;
 
     /**
-     * <p>The instance type of the instance.</p>
+     * <p>The instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>mysql.x4.xlarge.6cm</p>
@@ -215,13 +285,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The billing method for network usage. Valid values:</p>
+     * <p>The billing method for Internet bandwidth. Valid values:</p>
      * <ul>
-     * <li><strong>PayByBandwidth</strong>: pay-by-bandwidth</li>
-     * <li><strong>PayByTraffic</strong>: pay-by-data-transfer</li>
+     * <li><strong>PayByBandwidth</strong>: pay-by-bandwidth.</li>
+     * <li><strong>PayByTraffic</strong>: pay-by-data-transfer.</li>
      * </ul>
      * <blockquote>
-     * <p> If the <strong>pay-by-traffic</strong> billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
+     * <p>In the <strong>pay-by-data-transfer</strong> mode, the peak inbound and outbound bandwidths are both bandwidth upper limits and are not guaranteed. When resource contention occurs, the peak bandwidth may be throttled. If your business requires guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -231,7 +301,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public String internetChargeType;
 
     /**
-     * <p>The maximum inbound bandwidth from the Internet. Unit: Mbit/s.</p>
+     * <p>The maximum inbound Internet bandwidth. Unit: Mbit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -240,7 +310,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public Integer internetMaxBandwidthIn;
 
     /**
-     * <p>The maximum outbound bandwidth to the Internet. Unit: Mbit/s.</p>
+     * <p>The maximum outbound Internet bandwidth. Unit: Mbit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -249,10 +319,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public Integer internetMaxBandwidthOut;
 
     /**
-     * <p>Indicates whether the instance is I/O optimized.</p>
+     * <p>Indicates whether the instance is an I/O optimized instance.</p>
      * <ul>
-     * <li><strong>optimized</strong>: The instance is I/O optimized.</li>
-     * <li><strong>none</strong>: The instance is not I/O optimized.</li>
+     * <li><strong>optimized</strong>: I/O optimization enabled.</li>
+     * <li><strong>none</strong>: not I/O optimized.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -271,7 +341,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public String keyPairName;
 
     /**
-     * <p>The memory capacity of the instance. Unit: MiB.</p>
+     * <p>The memory size. Unit: MiB.</p>
      * 
      * <strong>example:</strong>
      * <p>8192</p>
@@ -279,6 +349,12 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("Memory")
     public Integer memory;
 
+    /**
+     * <p>The node type. If <strong>rds_vnode</strong> is returned, the node is a container node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds_vnode</p>
+     */
     @NameInMap("NodeType")
     public String nodeType;
 
@@ -306,6 +382,12 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aeky6z354ks****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -321,17 +403,27 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("SerialNumber")
     public String serialNumber;
 
+    /**
+     * <p>The bidding strategy for the pay-as-you-go instance. Valid values:</p>
+     * <ul>
+     * <li><strong>NoSpot</strong>: a regular pay-as-you-go instance.</li>
+     * <li><strong>SpotAsPriceGo</strong>: the system automatically bids, following the current market price.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NoSpot</p>
+     */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
     /**
      * <p>The instance status. Valid values:</p>
      * <ul>
-     * <li><strong>Pending</strong></li>
-     * <li><strong>Running</strong></li>
-     * <li><strong>Starting</strong></li>
-     * <li><strong>Stopping</strong></li>
-     * <li><strong>Stopped</strong></li>
+     * <li><strong>Pending</strong>: being created.</li>
+     * <li><strong>Running</strong>: running.</li>
+     * <li><strong>Starting</strong>: starting.</li>
+     * <li><strong>Stopping</strong>: stopping.</li>
+     * <li><strong>Stopped</strong>: stopped.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -341,11 +433,11 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the billing of the instance continues after the instance is stopped. Valid values:</p>
+     * <p>Indicates whether the instance continues to be billed after it is stopped. Valid values:</p>
      * <ul>
-     * <li><strong>KeepCharging</strong>: The billing of the instance continues after the instance is stopped, and resources are retained for the instance.</li>
-     * <li><strong>StopCharging</strong>: The billing of the instance stops after the instance is stopped. After the instance is stopped, resources such as CPU cores, memory resources, and public IP address are released. The instance may be unable to restart if some required resources are out of stock in the current region.</li>
-     * <li><strong>Not-applicable</strong>: The No Fees for Stopped Instances feature is not supported for the instance.</li>
+     * <li><strong>KeepCharging</strong>: The instance continues to be billed after it is stopped. Inventory resources are reserved for the instance.</li>
+     * <li><strong>StopCharging</strong>: The instance is not billed after it is stopped. After the instance is stopped, its resources such as vCPUs, memory, and public IP addresses are released. Whether the instance can be restarted depends on the available resource inventory in the current region.</li>
+     * <li><strong>Not-applicable</strong>: The instance does not support the No Fees for Stopped Instances feature.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -354,19 +446,31 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("StoppedMode")
     public String stoppedMode;
 
+    /**
+     * <p>The system cloud disk specifications.</p>
+     */
     @NameInMap("SystemDisk")
     public DescribeRCInstanceAttributeResponseBodySystemDisk systemDisk;
 
     @NameInMap("Tags")
     public DescribeRCInstanceAttributeResponseBodyTags tags;
 
+    /**
+     * <p>The custom data of the instance, in Base64-encoded format.</p>
+     * <blockquote>
+     * <p>If the instance does not have custom data, an empty string is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>IyEvYmluL3NoCmVjaG8gXCJIZWxsbyBXb3JsZC4gVGhlIHRpbWUgaXMgbm93ICQoZGF0ZSAtUikhXCIgfCB0ZWUgL3Jvb3QvdXNlcmRhdGFfdGVzdDA2MjB0d28udHh0</p>
+     */
     @NameInMap("UserData")
     public String userData;
 
     /**
-     * <p>The virtual LAN (VLAN) ID of the instance.</p>
+     * <p>The VLAN ID of the instance.</p>
      * <blockquote>
-     * <p> This parameter will be deprecated. We recommend that you use other parameters to ensure compatibility.</p>
+     * <p>This parameter will be deprecated. For better compatibility, use other parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -376,7 +480,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public String vlanId;
 
     /**
-     * <p>The virtual private cloud (VPC) attributes of the instance.</p>
+     * <p>The VPC attributes.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -920,7 +1024,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeRCInstanceAttributeResponseBodyDedicatedHostAttribute extends TeaModel {
         /**
-         * <p>The ID of the dedicated host.</p>
+         * <p>The dedicated host ID.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -962,7 +1066,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeRCInstanceAttributeResponseBodyEipAddress extends TeaModel {
         /**
-         * <p>The EIP ID.</p>
+         * <p>The ID of the EIP.</p>
          * 
          * <strong>example:</strong>
          * <p>eip-bp14k3rz6cbg6zxbe****</p>
@@ -971,7 +1075,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         public String allocationId;
 
         /**
-         * <p>The maximum Internet bandwidth of the EIP. Unit: Mbit/s.</p>
+         * <p>The Internet bandwidth throttling of the EIP. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -980,14 +1084,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         public Integer bandwidth;
 
         /**
-         * <p>The billing method of the Internet-facing instance. Valid values:</p>
+         * <p>The billing method for the public network instance. Valid values:</p>
          * <ul>
-         * <li><strong>paybytraffic:</strong> pay-by-data-transfer</li>
-         * <li><strong>paybybandwidth</strong>: pay-by-bandwidth</li>
-         * </ul>
-         * <blockquote>
-         * <p> If the <strong>pay-by-traffic</strong> billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
+         * <li><strong>paybytraffic</strong>: pay-by-data-transfer.</li>
+         * <li><strong>paybybandwidth</strong>: pay-by-bandwidth.<blockquote>
+         * <p>In <strong>pay-by-data-transfer</strong> mode, the peak inbound and outbound bandwidths are both bandwidth upper limits and are not guaranteed. When resource contention occurs, the peak bandwidth may be throttled. If your business requires guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>paybytraffic</p>
@@ -996,7 +1100,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         public String internetChargeType;
 
         /**
-         * <p>The EIP.</p>
+         * <p>The EIP address.</p>
          * 
          * <strong>example:</strong>
          * <p>8.147.XXX.XXX</p>
@@ -1139,18 +1243,64 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeRCInstanceAttributeResponseBodySystemDisk extends TeaModel {
+        /**
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("DeleteWithInstance")
         public Boolean deleteWithInstance;
 
+        /**
+         * <p>Indicates whether the cloud disk is encrypted. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Encrypted.</li>
+         * <li><strong>false</strong>: Not encrypted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Encrypted")
         public String encrypted;
 
+        /**
+         * <p>The type of the system cloud disk. Valid values:</p>
+         * <ul>
+         * <li><strong>cloud_efficiency</strong>: ultra cloud disk.</li>
+         * <li><strong>cloud_ssd</strong>: standard SSD.</li>
+         * <li><strong>cloud_essd</strong>: ESSD.</li>
+         * <li><strong>cloud_auto</strong>: premium performance disk.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
+         */
         @NameInMap("SystemDiskCategory")
         public String systemDiskCategory;
 
+        /**
+         * <p>The performance level (PL) of the system cloud disk when it is an ESSD. When the system cloud disk is a standard SSD, this parameter is not returned. Valid values:</p>
+         * <ul>
+         * <li><strong>PL0</strong></li>
+         * <li><strong>PL1</strong></li>
+         * <li><strong>PL2</strong></li>
+         * <li><strong>PL3</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
+         */
         @NameInMap("SystemDiskPerformanceLevel")
         public String systemDiskPerformanceLevel;
 
+        /**
+         * <p>The size of the system cloud disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("SystemDiskSize")
         public Long systemDiskSize;
 
@@ -1293,7 +1443,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeRCInstanceAttributeResponseBodyVpcAttributes extends TeaModel {
         /**
-         * <p>The network address translation (NAT) IP address of the instance. The NAT IP address is used by instances in different VPCs for communication.</p>
+         * <p>The IP address of the cloud service, which is used for network communication between VPC-connected cloud services.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>

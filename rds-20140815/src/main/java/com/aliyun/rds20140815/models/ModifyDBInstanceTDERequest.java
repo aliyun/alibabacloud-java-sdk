@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceTDERequest extends TeaModel {
     /**
-     * <p>The file that contains the certificate.\
-     * Format:</p>
+     * <p>The certificate file.</p>
+     * <p>Format:</p>
      * <ul>
-     * <li>Public endpoint: <code>oss-&lt;The ID of the region&gt;.aliyuncs.com:&lt;The name of the bucket&gt;:&lt;The name of the certificate file&gt;</code> (The file name contains the extension.)</li>
-     * <li>Internal endpoint: <code>oss-&lt;The ID of the region&gt;-internal.aliyuncs.com:&lt;The name of the bucket&gt;:&lt;The name of the certificate file&gt;</code> (The file name contains the extension.)</li>
+     * <li>Public endpoint: <code>oss-&lt;RegionId&gt;.aliyuncs.com:&lt;BucketName&gt;:&lt;CertificateFileName (with file extension)&gt;</code></li>
+     * <li>Internal network endpoint: <code>oss-&lt;RegionId&gt;-internal.aliyuncs.com:&lt;BucketName&gt;:&lt;CertificateFileName (with file extension)&gt;</code></li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</li>
+     * <li>This parameter is active only for SQL Server 2019 Standard Edition, 2022 Standard Edition, 2025 Standard Edition, and SQL Server Enterprise instance instances.</li>
+     * <li>You can call <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> to query active region IDs.</li>
      * </ul>
      * </blockquote>
      * 
@@ -25,7 +25,7 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     public String certificate;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,9 +35,9 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The name of the database for which you want to enable TDE. You can specify up to 50 database names in a single request. If you specify multiple database names, separate the database names with commas (,).</p>
+     * <p>The name of the database for which you want to enable TDE. You can specify multiple database names separated by commas (,). You can specify up to 50 database names.</p>
      * <blockquote>
-     * <p>This parameter is available and must be specified only when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</p>
+     * <p>This parameter is active and required only for SQL Server 2019 Standard Edition, 2022 Standard Edition, 2025 Standard Edition, and SQL Server Enterprise instance instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,9 +47,9 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>The ID of the custom key.</p>
+     * <p>The custom key ID.</p>
      * <blockquote>
-     * <p>This parameter is available when the instance runs MySQL or PostgreSQL.</p>
+     * <p>This parameter is available only for ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,13 +59,13 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     public String encryptionKey;
 
     /**
-     * <p>Specifies whether to replace the key. Valid values:</p>
+     * <p>Specifies whether to rotate the key. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong>: Rotate the key.</li>
+     * <li><strong>false</strong> (default): Do not rotate the key.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is available for only ApsaraDB RDS for PostgreSQL instances.</p>
+     * <p>This parameter is available only for ApsaraDB RDS for PostgreSQL instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -81,9 +81,9 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The password of the certificate.</p>
+     * <p>The certificate password.</p>
      * <blockquote>
-     * <p>This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</p>
+     * <p>This parameter is active only for SQL Server 2019 Standard Edition, 2022 Standard Edition, 2025 Standard Edition, and SQL Server Enterprise instance instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -93,16 +93,16 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     public String passWord;
 
     /**
-     * <p>The file that contains the private key of the certificate.\
-     * Format:</p>
+     * <p>The private key file.</p>
+     * <p>Format:</p>
      * <ul>
-     * <li>Public endpoint: <code>oss-&lt;The ID of the region&gt;.aliyuncs.com:&lt;The name of the bucket&gt;:&lt;The name of the file that contains the private key&gt;</code> (The file name contains the extension.)</li>
-     * <li>Internal endpoint: <code>oss-&lt;The ID of the region&gt;-internal.aliyuncs.com:&lt;The name of the bucket&gt;:&lt;The name of the file that contains the private key&gt;</code> (The file name contains the extension.)</li>
+     * <li>Public endpoint: <code>oss-&lt;RegionId&gt;.aliyuncs.com:&lt;BucketName&gt;:&lt;PrivateKeyFileName (with file extension)&gt;</code></li>
+     * <li>Internal network endpoint: <code>oss-&lt;RegionId&gt;-internal.aliyuncs.com:&lt;BucketName&gt;:&lt;PrivateKeyFileName (with file extension)&gt;</code></li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</li>
+     * <li>This parameter is active only for SQL Server 2019 Standard Edition, 2022 Standard Edition, 2025 Standard Edition, and SQL Server Enterprise instance instances.</li>
+     * <li>You can call <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> to query active region IDs.</li>
      * </ul>
      * </blockquote>
      * 
@@ -119,9 +119,9 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</p>
+     * <p>The global resource descriptor of the RAM role. The resource descriptor is used to specify a RAM role. For details, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</p>
      * <blockquote>
-     * <p>This parameter is available when the instance runs MySQL or PostgreSQL.</p>
+     * <p>This parameter is available only for ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -131,9 +131,9 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     public String roleArn;
 
     /**
-     * <p>The status of TDE. Valid values:</p>
+     * <p>The TDE status. Valid values:</p>
      * <ul>
-     * <li><strong>Enabled</strong></li>
+     * <li><strong>Enabled</strong> </li>
      * <li><strong>Disabled</strong></li>
      * </ul>
      * <p>This parameter is required.</p>

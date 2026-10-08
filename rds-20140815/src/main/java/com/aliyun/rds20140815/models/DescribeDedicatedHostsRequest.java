@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostsRequest extends TeaModel {
     /**
-     * <p>Specifies whether instances can be deployed on the host. Valid values:</p>
+     * <p>Specifies whether the host allows instance allocation. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Instances cannot be deployed on the host.</li>
-     * <li><strong>1</strong>: Instances can be deployed on the host.</li>
+     * <li><strong>0</strong>: Instance allocation is not allowed.</li>
+     * <li><strong>1</strong>: Instance allocation is allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public String dedicatedHostGroupId;
 
     /**
-     * <p>The ID of the host in the dedicated cluster.</p>
+     * <p>The host ID in the dedicated cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>ch-t4nn100ddxxxxxxxx</p>
@@ -36,14 +36,14 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public String dedicatedHostId;
 
     /**
-     * <p>The status of the host. Valid values:</p>
+     * <p>The host status. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: creating</li>
+     * <li><strong>0</strong>: being created</li>
      * <li><strong>1</strong>: running</li>
-     * <li><strong>2</strong>: faulty</li>
-     * <li><strong>3</strong>: being replaced</li>
-     * <li><strong>4</strong>: deprecated</li>
-     * <li><strong>5</strong>: deleting</li>
+     * <li><strong>2</strong>: down</li>
+     * <li><strong>3</strong>: offline (host being replaced)</li>
+     * <li><strong>4</strong>: offline</li>
+     * <li><strong>5</strong>: deleted</li>
      * <li><strong>6</strong>: restarting</li>
      * </ul>
      * 
@@ -56,8 +56,8 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     /**
      * <p>The storage type of the host. Valid values:</p>
      * <ul>
-     * <li><strong>dhg_cloud_ssd</strong>: enhanced SSD (ESSD)</li>
-     * <li><strong>dhg_local_ssd</strong>: local SSD</li>
+     * <li><strong>dhg_cloud_ssd</strong>: ESSD cloud disk.</li>
+     * <li><strong>dhg_local_ssd</strong>: local standard SSD.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

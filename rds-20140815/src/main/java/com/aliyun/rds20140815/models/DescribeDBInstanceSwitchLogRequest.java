@@ -5,17 +5,20 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceSwitchLogRequest extends TeaModel {
     /**
+     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>rdsaiiabnaiiabn</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
+     * <p>The end time of the query. The end time must be later than the start time. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2018-06-11T15:00Z</p>
+     * <p>2026-04-02T00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -27,6 +30,9 @@ public class DescribeDBInstanceSwitchLogRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. Valid values: values greater than 0 and not exceeding the maximum value of Integer.
+     * Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -34,6 +40,8 @@ public class DescribeDBInstanceSwitchLogRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Maximum value: 100. Default value: 30.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -41,6 +49,11 @@ public class DescribeDBInstanceSwitchLogRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID. You can call DescribeRegions to obtain the region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -54,10 +67,11 @@ public class DescribeDBInstanceSwitchLogRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The start time of the query. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2014-06-11T15:00Z</p>
+     * <p>2026-04-01T00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

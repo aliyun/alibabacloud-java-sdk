@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListUserBackupFilesResponseBody extends TeaModel {
     /**
-     * <p>The information about the full backup files.</p>
+     * <p>The list of user backup file details.</p>
      */
     @NameInMap("Records")
     public java.util.List<ListUserBackupFilesResponseBodyRecords> records;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AD67C22F-64F3-4448-A9A8-D1606D242879</p>
@@ -42,16 +42,16 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
 
     public static class ListUserBackupFilesResponseBodyRecords extends TeaModel {
         /**
-         * <p>The ID of the full backup file.</p>
+         * <p>The user backup ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>b-kwwvr7v8t7of********</p>
+         * <p>b-kwwvr7v8t7of****</p>
          */
         @NameInMap("BackupId")
         public String backupId;
 
         /**
-         * <p>The information about the binary log file that contains incremental data. If incremental data is generated during the full backup, this parameter is returned.</p>
+         * <p>The binary log file information in the backup file. This parameter is returned if incremental data exists during the backup process.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;binlogPosition\&quot;:\&quot;154\&quot;,\&quot;binlogFile\&quot;:\&quot;0.000002\&quot;}</p>
@@ -60,7 +60,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public String binlogInfo;
 
         /**
-         * <p>The description of the full backup file.</p>
+         * <p>The comment of the user backup.</p>
          * 
          * <strong>example:</strong>
          * <p>BackupTest</p>
@@ -69,7 +69,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The time when the system started to import the full backup file. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the user backup import started. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1623231084000</p>
@@ -78,7 +78,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The database engine of the instance.</p>
+         * <p>The database engine.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql</p>
@@ -96,7 +96,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
-         * <p>The time when the full backup file is successfully imported. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the user backup was successfully imported. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1623231750000</p>
@@ -105,7 +105,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The time when the full backup file is successfully imported. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the user backup import was completed. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1623231750000</p>
@@ -114,7 +114,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public String modificationTime;
 
         /**
-         * <p>The name of the OSS bucket in which the full backup file is stored as an object.</p>
+         * <p>The name of the OSS bucket in which the user backup file is stored.</p>
          * 
          * <strong>example:</strong>
          * <p>BackupTest</p>
@@ -123,7 +123,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public String ossBucket;
 
         /**
-         * <p>The metadata of the full backup file. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</p>
+         * <p>The metadata of the user backup file. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;Accept-Ranges\&quot;:\&quot;bytes\&quot;,\&quot;Connection\&quot;:\&quot;keep-alive\&quot;,\&quot;Content-Length\&quot;:81014337,\&quot;Content-Type\&quot;:\&quot;application/octet-stream\&quot;,\&quot;Date\&quot;:1623309548000,\&quot;ETag\&quot;:\&quot;889FE9E5FCEBFE4781829488A352863B-1\&quot;,\&quot;Last-Modified\&quot;:1622186844000,\&quot;Server\&quot;:\&quot;AliyunOSS\&quot;,\&quot;x-oss-hash-crc64ecma\&quot;:\&quot;5793608435727323129\&quot;,\&quot;x-oss-object-type\&quot;:\&quot;Multipart\&quot;,\&quot;x-oss-request-id\&quot;:\&quot;60C1BCEC92572F37318BD499\&quot;,\&quot;x-oss-server-time\&quot;:\&quot;166\&quot;,\&quot;x-oss-storage-class\&quot;:\&quot;Standard\&quot;}</p>
@@ -132,7 +132,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public String ossFileMetaData;
 
         /**
-         * <p>The name of the full backup file that is stored as an object in an OSS bucket.</p>
+         * <p>The name of the user backup file in OSS.</p>
          * 
          * <strong>example:</strong>
          * <p>backup_qp.xb</p>
@@ -141,7 +141,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public String ossFileName;
 
         /**
-         * <p>The path of the full backup file that is stored as an object in an OSS bucket.</p>
+         * <p>The path of the user backup file in OSS.</p>
          * 
          * <strong>example:</strong>
          * <p>test/backup_qp.xb</p>
@@ -150,7 +150,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public String ossFilePath;
 
         /**
-         * <p>The size of the full backup file that is stored as an object in an OSS bucket. Unit: KB.</p>
+         * <p>The size of the user backup file in OSS. Unit: KB.</p>
          * 
          * <strong>example:</strong>
          * <p>79115</p>
@@ -159,16 +159,16 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public Long ossFileSize;
 
         /**
-         * <p>The URL to download the full backup file from the OSS bucket.</p>
+         * <p>The OSS download URL of the user backup file.</p>
          * 
          * <strong>example:</strong>
-         * <p>https://<strong><strong><strong>.oss-ap-</strong></strong></strong>**.aliyuncs.com/backup_qp.xb</p>
+         * <p>https://<strong><strong>.oss-ap-</strong></strong>.aliyuncs.com/backup_qp.xb</p>
          */
         @NameInMap("OssUrl")
         public String ossUrl;
 
         /**
-         * <p>The reason why the full backup file failed to be imported.</p>
+         * <p>The reason why the user backup file failed to be imported.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -177,7 +177,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>The amount of storage that is required to restore the data of the full backup file. Unit: GB.</p>
+         * <p>The storage space required to restore the user backup. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -186,7 +186,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public String restoreSize;
 
         /**
-         * <p>The retention period of the full backup file. Unit: days.</p>
+         * <p>The retention period of the user backup file. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -195,13 +195,13 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public Integer retention;
 
         /**
-         * <p>The status of the full backup file. Valid values:</p>
+         * <p>The status of the user backup file. Valid values:</p>
          * <ul>
-         * <li><strong>Importing</strong>: The full backup file is being imported.</li>
-         * <li><strong>Failed</strong>: The full backup file fails to be imported.</li>
-         * <li><strong>CheckSucccess</strong>: The full backup file passes the check.</li>
-         * <li><strong>BackupSuccess</strong>: The full backup file is imported.</li>
-         * <li><strong>Deleted</strong>: The full backup file is deleted.</li>
+         * <li><strong>Importing</strong>: The backup is being imported.</li>
+         * <li><strong>Failed</strong>: The import failed.</li>
+         * <li><strong>CheckSuccess</strong>: The verification passed.</li>
+         * <li><strong>BackupSuccess</strong>: The import succeeded.</li>
+         * <li><strong>Deleted</strong>: The backup is deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -211,7 +211,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The zone ID of the full backup file.</p>
+         * <p>The zone ID of the user backup.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-b</p>

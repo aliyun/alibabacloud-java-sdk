@@ -8,13 +8,13 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public Boolean allowDDL;
 
     /**
-     * <p>Specify the point in time at which the system collects the statistics of the instance.</p>
+     * <p>Specifies when to execute statistics information collection on the database.</p>
      * <ul>
-     * <li><strong>Before</strong>: The system collects the statistics of the instance before the switchover to ensure service stability. If the instance contains a large amount of data, the upgrade may require a long period of time.</li>
-     * <li><strong>After</strong>: The system collects the statistics of the instance after the switchover to accelerate the upgrade. After the upgrade, if you access tables for which no statistics are generated, the query plans may be inaccurate, and your database service may be unavailable during peak hours.</li>
+     * <li><strong>Before</strong>: Execute collection before the switchover. This ensures business stability. If the instance has a large data volume, the upgrade may take a long time.</li>
+     * <li><strong>After</strong>: Execute collection after the switchover. The upgrade is faster. Accessing tables without generated statistics information after the upgrade may cause inaccurate execution plans. During peak hours, this may cause the database to break down.</li>
      * </ul>
      * <blockquote>
-     * <p> If you set the SwitchOver parameter to false, the value Before specifies that the system collects the statistics of the instance before the instance starts to process read and write requests, and the value After specifies that the system collects the statistics of the instance after the instance starts to process read and write requests.</p>
+     * <p>For non-switchover scenarios, &quot;before switchover&quot; means statistics information is collected before the new instance is opened for read/write, and &quot;after switchover&quot; means statistics information is collected after the new instance is opened for read/write.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,10 +27,10 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public String customExtraInfo;
 
     /**
-     * <p>The new instance type of the instance. The new CPU and memory specifications of the instance must be higher than or equal to the original CPU and memory specifications. If you set the <strong>UpgradeMode</strong> parameter to <strong>inPlaceUpgrade</strong>, you <strong>do not need to configure</strong> this parameter.</p>
-     * <p>For example, you can upgrade the instance type from <code>pg.n2.small.2c</code> to <code>pg.n2.medium.2c</code>. The pg.n2.small.2c instance type provides 1 CPU core and 2 GB of memory. The pg.n2.medium.2c instance type provides 2 CPU cores and 4 GB of memory.</p>
+     * <p>The instance type after the upgrade. The CPU and memory configurations must be greater than or equal to those of the original instance type. If <strong>UpgradeMode</strong> is set to <strong>inPlaceUpgrade</strong> or <strong>zeroDownTimeUpgrade</strong>, <strong>you do not need to configure</strong> this parameter.</p>
+     * <p>For example, if the original instance type is <code>pg.n2.small.2c</code> with 1 CPU core and 2 GB of memory, you can upgrade it to <code>pg.n2.medium.2c</code> with 2 CPU cores and 4 GB of memory.</p>
      * <blockquote>
-     * <p> For more information about the instance types of ApsaraDB RDS for PostgreSQL instances, see <a href="https://help.aliyun.com/document_detail/276990.html">Instance types for primary ApsaraDB RDS for PostgreSQL instances</a>.</p>
+     * <p>For the instance type codes of ApsaraDB RDS for PostgreSQL, refer to <a href="https://help.aliyun.com/document_detail/276990.html">Primary ApsaraDB RDS for PostgreSQL instance types</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>The ID of the original instance.</p>
+     * <p>The instance ID of the original instance.</p>
      * 
      * <strong>example:</strong>
      * <p>pgm-bp1gm3yh0ht1****</p>
@@ -49,16 +49,16 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The new storage capacity of the instance. Unit: GB If you set the <strong>UpgradeMode</strong> parameter to <strong>inPlaceUpgrade</strong>, you <strong>do not need to configure</strong> this parameter.</p>
+     * <p>The instance storage capacity after the upgrade. Unit: GB. If <strong>UpgradeMode</strong> (upgrade pattern) is set to <strong>inPlaceUpgrade</strong> or <strong>zeroDownTimeUpgrade</strong>, <strong>you do not need to configure</strong> this parameter.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>PL1 ESSD</strong>: 20 GB to 32,000 GB</li>
-     * <li><strong>PL2 ESSD</strong>: 500 GB to 3,200 GB</li>
-     * <li><strong>PL3 ESSD</strong>: 1,500 GB to 3,200 GB</li>
-     * <li><strong>General ESSD</strong>: 40 GB to 2,000 GB</li>
+     * <li><strong>PL1 ESSD cloud disk</strong>: 20 GB to 3200 GB</li>
+     * <li><strong>PL2 ESSD cloud disk</strong>: 500 GB to 3200 GB</li>
+     * <li><strong>PL3 ESSD cloud disk</strong>: 1500 GB to 3200 GB</li>
+     * <li><strong>Premium performance disk</strong>: 40 GB to 2000 GB</li>
      * </ul>
      * <blockquote>
-     * <p> If the original instance uses local disks, you can reduce the storage capacity of the instance when you upgrade the major engine version of the instance. For more information about the minimum storage capacity, see <a href="https://help.aliyun.com/document_detail/203309.html">Upgrade the major engine version</a>.</p>
+     * <p>When upgrading the major engine version of an instance with Premium Local SSDs, storage capacity reduction is supported. For the minimum storage capacity, refer to <a href="https://help.aliyun.com/document_detail/203309.html">Upgrade the major engine version of a database</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -68,20 +68,20 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public Integer DBInstanceStorage;
 
     /**
-     * <p>The storage type of the instance that runs the required major engine version.</p>
+     * <p>The storage type of the instance after the upgrade.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li><strong>cloud_ssd</strong>: standard SSD</li>
-     * <li><strong>cloud_essd</strong>: performance level 1 (PL1) Enterprise SSD (ESSD)</li>
+     * <li><strong>cloud_essd</strong>: PL1 ESSD</li>
      * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
      * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
-     * <li><strong>general_essd</strong>: general ESSD</li>
+     * <li><strong>general_essd</strong>: premium performance disk</li>
      * </ul>
-     * <p>The major engine version upgrade feature is developed based on snapshots for cloud disks. You can select a storage type after the upgrade based on the following items:</p>
+     * <p>The major engine version upgrade feature is based on cloud disk snapshots. The supported storage types after the upgrade are as follows:</p>
      * <ul>
-     * <li>If the original instance uses standard SSDs, set this parameter to cloud_ssd.</li>
-     * <li>If the original instance uses ESSDs, set this parameter to cloud_essd, cloud_essd2, cloud_essd3, or general_essd.</li>
-     * <li>If the original instance uses local SSDs, set this parameter to cloud_essd, cloud_essd2, cloud_essd3, or general_essd.</li>
+     * <li>If the original instance uses a standard SSD, you can select standard SSD.</li>
+     * <li>If the original instance uses an ESSD cloud disk, you can select PL1 ESSD, PL2 ESSD, PL3 ESSD, or premium performance disk.</li>
+     * <li>If the original instance uses Premium Local SSDs, you can select PL1 ESSD, PL2 ESSD, PL3 ESSD, or premium performance disk.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,8 +91,8 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public String DBInstanceStorageType;
 
     /**
-     * <p>The network type of the new instance. Set the value to VPC. The major engine version upgrade feature is supported only for instances that reside in VPCs.</p>
-     * <p>If the original instance resides in the classic network, you must migrate the instance to a VPC before you call this operation. For more information about how to view or change the network type of an instance, see <a href="https://help.aliyun.com/document_detail/96761.html">Change the network type of an ApsaraDB RDS for PostgreSQL instance</a>.</p>
+     * <p>The network type of the instance after the upgrade. Set this parameter to VPC. Only VPC-connected instances support major engine version upgrades.</p>
+     * <p>If the network type is classic network, switch to VPC first. For information about how to view or switch the network type, refer to <a href="https://help.aliyun.com/document_detail/96761.html">Switch the network type</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>VPC</p>
@@ -101,9 +101,9 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public String instanceNetworkType;
 
     /**
-     * <p>The billing method. Set the value to Postpaid.</p>
+     * <p>The billing method of the instance. Set this parameter to Postpaid for pay-as-you-go billing.</p>
      * <blockquote>
-     * <p> For more information about how to change the billing method of an instance after the upgrade, see <a href="https://help.aliyun.com/document_detail/96743.html">Change the billing method of an instance from pay-as-you-go to subscription</a>.</p>
+     * <p>If you want to change the billing method after the upgrade, refer to <a href="https://help.aliyun.com/document_detail/96743.html">Switch from pay-as-you-go to subscription</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -114,7 +114,7 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * <p>Reserved parameter. You do not need to configure this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -123,7 +123,7 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The internal IP address of the new instance. You do not need to specify this parameter. The system automatically assigns an internal IP address based on the values of the VPCId and vSwitchId parameters.</p>
+     * <p>You do not need to configure this parameter. It specifies the internal IP address of the target instance. The system automatically assigns an IP address based on VPCId and vSwitchId by default.</p>
      * 
      * <strong>example:</strong>
      * <p>172.16.XX.XX</p>
@@ -135,29 +135,27 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to switch your workloads over to the instance that runs the required major engine version based on your business requirements.</p>
+     * <p>The switchover configuration. Specifies whether to switch traffic to the new version instance based on your business requirements.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The system automatically switches workloads over to the instance. This configuration method is used to perform an upgrade after you verify that the new major engine version is compatible with your workloads.</li>
-     * <li><strong>false</strong>: The system does not automatically switch your workloads over to the instance. In most cases, this configuration method is used to test whether the new major engine version is compatible with your workloads before you perform the upgrade.</li>
+     * <li><strong>true</strong>: Switchover is performed and automatic switchover is enabled. This option is typically used to execute the formal upgrade after confirming that your business can run stably on the new version.</li>
+     * <li><strong>false</strong>: Switchover is not performed and automatic switchover is not enabled. This option is typically used to test the compatibility of your application with the new version before the formal upgrade.</li>
      * </ul>
      * <blockquote>
+     * <ul>
+     * <li>If you select switchover:<ul>
+     * <li>Switchover cannot be rolled back after execution. Proceed with caution.</li>
+     * <li>During the switchover procedure, the original instance becomes read-only and writes are not allowed. Execute the switchover during off-peak hours.</li>
+     * <li>If read-only instances are created for the original instance, you cannot select switchover. You can only upgrade the instance without switchover, and the original read-only instances are not cloned. After the upgrade, create new PostgreSQL read-only instances for the new version instance.</li>
+     * </ul>
+     * </li>
+     * <li>If you do not select switchover:<ul>
+     * <li>The business on the original instance is not affected during migration.</li>
+     * <li>To upgrade the instance without switchover, change the database connection address in your application to the database connection address of the new instance after migration is complete. For information about how to view the connection address, refer to <a href="https://help.aliyun.com/document_detail/96788.html">View or modify the internal and public endpoints and port numbers</a>.</li>
+     * </ul>
+     * </li>
+     * </ul>
      * </blockquote>
-     * <ul>
-     * <li><p>If you set this parameter to true, you must take note of the following items:</p>
-     * <ul>
-     * <li>After the switchover is complete, you cannot roll your workloads back to the original instance. Proceed with caution.</li>
-     * <li>During the switchover, the original instance processes only read requests. We recommend that you perform the switchover during off-peak hours.</li>
-     * <li>If read-only instances are attached to the original instance, you can set this parameter only to false. In this case, the read-only instances that are attached to the original instance cannot be cloned. After the upgrade is complete, you must create read-only instances for the instance.</li>
-     * </ul>
-     * </li>
-     * <li><p>If you set this parameter to false, you must take note of the following items:</p>
-     * <ul>
-     * <li>The data migration does not interrupt your workloads on the original instance.</li>
-     * <li>After data is migrated to the instance that runs the required major engine version, you must update the endpoint configuration in your application. This update requires you to replace the endpoint of the original instance with the endpoint of the instance that runs the required major engine version. For more information about how to view the endpoint of an instance, see <a href="https://help.aliyun.com/document_detail/96788.html">Viewing and change of the internal and public endpoints and port numbers</a>.</li>
-     * </ul>
-     * </li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -166,7 +164,7 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public String switchOver;
 
     /**
-     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * <p>Reserved parameter. You do not need to configure this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-07-10T13:15:12Z</p>
@@ -175,11 +173,11 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public String switchTime;
 
     /**
-     * <p>The point in time at which the workloads are switched over. This parameter is used together with the SwitchOver parameter. This parameter is available only when you set the <strong>SwitchOver</strong> parameter to <strong>true</strong>.</p>
+     * <p>This parameter is used together with SwitchOver and takes effect only when <strong>SwitchOver</strong> is set to <strong>true</strong>. Specifies the switchover time.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>Immediate</strong>: The workloads are immediately switched over.</li>
-     * <li><strong>MaintainTime</strong>: The workloads are switched over within the maintenance window that you specify. You can call the ModifyDBInstanceMaintainTime operation to change the maintenance window of an instance.</li>
+     * <li><strong>Immediate</strong>: The switchover takes effect immediately.</li>
+     * <li><strong>MaintainTime</strong>: The switchover takes effect during the maintenance window. You can call the ModifyDBInstanceMaintainTime operation to modify the maintenance window.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -189,9 +187,9 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public String switchTimeMode;
 
     /**
-     * <p>The major engine version of the new instance. The value of this parameter must be the major engine version on which an upgrade check is performed.</p>
+     * <p>The target major engine version of the instance after the upgrade. This value must be the same as the target version specified during the pre-upgrade check.</p>
      * <blockquote>
-     * <p> You can call the UpgradeDBInstanceMajorVersionPrecheck operation to perform an upgrade check.</p>
+     * <p>You can call the UpgradeDBInstanceMajorVersionPrecheck operation to perform a pre-upgrade check for the major engine version upgrade.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -201,10 +199,11 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public String targetMajorVersion;
 
     /**
-     * <p>The upgrade mode. This parameter is required when you set the <strong>SwitchOver</strong> parameter to <strong>true</strong>. Valid values:</p>
+     * <p>The upgrade pattern. Configure this parameter when <strong>SwitchOver</strong> is set to <strong>true</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>inPlaceUpgrade</strong>: local upgrade. The major engine version upgrade is performed on the original instance, and no new instance is created. After the upgrade, the original instance runs the required major engine version and inherits the original orders, name, tags, alert rules in CloudMonitor, and backup settings.</li>
-     * <li><strong>blueGreenDeployment</strong>: blue-green deployment. After the major engine version of the instance is upgraded, the original instance is retained and a new instance is created. Fees are generated for the new instance based on the billing method that you specified. However, no fees are generated for the creation of the new instance. After the upgrade is complete, fees are generated for both the original and new instances and the new instance cannot enjoy the discounts provided for the original instance.</li>
+     * <li><strong>inPlaceUpgrade</strong>: In-place upgrade. The major engine version upgrade task is executed on the original instance without creating a new version instance. After the upgrade, the original instance inherits the existing order, instance name, tags, CloudMonitor alert rules, and backup rules.</li>
+     * <li><strong>blueGreenDeployment</strong>: Blue-green deployment. The major engine version upgrade retains the original instance and creates a new version instance. The new instance is free of charge during creation. After the new instance is created, fees are incurred and the billing method may change. After the upgrade, both the original and new instances incur fees, and the new instance does not inherit the discounts of the original instance.</li>
+     * <li><strong>zeroDownTimeUpgrade</strong>: Zero-downtime upgrade. The system uses pg_upgrade to upgrade the original instance to the target version and uses native logical replication for incremental updates. Active switchover is supported during the upgrade procedure, and you can validate the higher version instance before the switchover. From the start of the upgrade until the active switchover, the instance maintains normal read/write operations. During the switchover, the read-only duration is at the second level.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -214,7 +213,7 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public String upgradeMode;
 
     /**
-     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * <p>Reserved parameter. You do not need to configure this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -223,7 +222,7 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public String usedTime;
 
     /**
-     * <p>The virtual private cloud (VPC) ID of the instance. If you set the <strong>UpgradeMode</strong> parameter to <strong>inPlaceUpgrade</strong>, you <strong>do not need to configure</strong> this parameter.</p>
+     * <p>The VPC ID. If <strong>UpgradeMode</strong> is set to <strong>inPlaceUpgrade</strong> or <strong>zeroDownTimeUpgrade</strong>, <strong>you do not need to configure</strong> this parameter.</p>
      * <p>You can call the DescribeDBInstanceAttribute operation to query the VPC ID of the original instance.</p>
      * 
      * <strong>example:</strong>
@@ -233,13 +232,13 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public String VPCId;
 
     /**
-     * <p>The vSwitch ID of the instance that runs the required major engine version. If you set the <strong>UpgradeMode</strong> parameter to <strong>inPlaceUpgrade</strong>, you <strong>do not need to configure</strong> this parameter.</p>
+     * <p>The vSwitch ID of the target instance. If <strong>UpgradeMode</strong> (upgrade pattern) is set to <strong>inPlaceUpgrade</strong> or <strong>zeroDownTimeUpgrade</strong>, <strong>you do not need to configure</strong> this parameter.</p>
      * <ul>
-     * <li>If the original instance runs RDS Basic Edition, configure the vSwitch ID for the instance that runs the required major engine version.</li>
-     * <li>If the original instance runs RDS High-availability Edition, configure the vSwitch IDs for the instance that runs the required major engine version and its secondary instance. Separate the vSwitch IDs with commas (,).</li>
+     * <li>If the original instance is a Basic Edition instance, specify the vSwitch ID of the target instance.</li>
+     * <li>If the original instance is a high-availability series instance, you can specify the vSwitch IDs of the target primary and secondary instances, separated by commas (,).</li>
      * </ul>
      * <blockquote>
-     * <p> The vSwitches that you specify must reside in the same zone as the original instance. You can call the DescribeVSwitches operation to query the vSwitch IDs.</p>
+     * <p>The target vSwitch must be in the same zone as the original instance. You can call the DescribeVSwitches operation to query vSwitches.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -249,32 +248,32 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the zone to which the primary instance that runs the required major engine version belongs. If you set the <strong>UpgradeMode</strong> parameter to <strong>inPlaceUpgrade</strong>, you <strong>do not need to configure</strong> this parameter.</p>
+     * <p>The primary zone ID of the target instance. If <strong>UpgradeMode</strong> is set to <strong>inPlaceUpgrade</strong> or <strong>zeroDownTimeUpgrade</strong>, <strong>you do not need to configure</strong> this parameter.</p>
      * <p>You can call the DescribeRegions operation to query zone IDs.</p>
-     * <p>You can select a zone that belongs to the region in which the original instance resides.</p>
+     * <p>ApsaraDB RDS for PostgreSQL allows you to deploy the new instance in a different zone within the same region as the original instance after the upgrade.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou-h</p>
+     * <p>cn-hangzhou-j</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
 
     /**
-     * <p>The ID of the zone to which the secondary instance runs the required major engine version belongs. This parameter is available only when the original instance runs RDS High-availability Edition. If you set the <strong>UpgradeMode</strong> parameter to <strong>inPlaceUpgrade</strong>, you <strong>do not need to configure</strong> this parameter.</p>
-     * <p>You can select a zone that belongs to the region in which the original instance resides.</p>
+     * <p>This parameter can be configured only when the original instance is a high-availability series instance. Specifies the secondary zone ID of the target instance. If <strong>UpgradeMode</strong> (upgrade pattern) is set to <strong>inPlaceUpgrade</strong> or <strong>zeroDownTimeUpgrade</strong>, <strong>you do not need to configure</strong> this parameter.</p>
+     * <p>ApsaraDB RDS for PostgreSQL allows you to deploy the new secondary instance in a different zone within the same region as the original instance after the upgrade.</p>
      * <p>You can call the DescribeRegions operation to query zone IDs.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou-h</p>
+     * <p>cn-hangzhou-j</p>
      */
     @NameInMap("ZoneIdSlave1")
     public String zoneIdSlave1;
 
     /**
-     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * <p>Reserved parameter. You do not need to configure this parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou-h</p>
+     * <p>cn-hangzhou-j</p>
      */
     @NameInMap("ZoneIdSlave2")
     public String zoneIdSlave2;

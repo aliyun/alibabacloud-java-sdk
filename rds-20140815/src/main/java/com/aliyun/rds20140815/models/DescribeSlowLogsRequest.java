@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogsRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -24,9 +24,9 @@ public class DescribeSlowLogsRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. The time span between the start time and the end time cannot exceed 31 days. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>Z format. The time must be in UTC.</p>
+     * <p>The end date of the query. The end date must be later than or equal to the start date, and the interval between the start date and the end date cannot exceed 31 days. Format: <i>yyyy-MM-dd</i>Z (UTC).</p>
      * <blockquote>
-     * <p> If the end date of the query is the same as the start date of the query, you can query the logs that are generated at 08:00 on the start date of the query. You can query the slow logs within a maximum time range of 24 hours.</p>
+     * <p>If the end date is the same as the start date, the query starts from 08:00 on the start date and covers up to 24 hours of slow query log statistics.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -43,7 +43,7 @@ public class DescribeSlowLogsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Pages start from 1.</p>
+     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -68,15 +68,15 @@ public class DescribeSlowLogsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The dimension based on which the system sorts the entries to return. Valid values:</p>
+     * <p>The sorting criterion. Valid values:</p>
      * <ul>
-     * <li><strong>TotalExecutionCounts</strong>: The system sorts the entries to return based on the number of times that SQL statements are executed.</li>
-     * <li><strong>TotalQueryTimes</strong>: The system sorts the entries to return based on the total execution duration.</li>
-     * <li><strong>TotalLogicalReads</strong>: The system sorts the entries to return based on the total number of logical reads.</li>
-     * <li><strong>TotalPhysicalReads</strong>: The system sorts the entries to return based on the total number of physical reads.</li>
+     * <li><strong>TotalExecutionCounts</strong>: sorted by total number of executions in descending order.</li>
+     * <li><strong>TotalQueryTimes</strong>: sorted by total execution duration in descending order.</li>
+     * <li><strong>TotalLogicalReads</strong>: sorted by total number of logical reads in descending order.</li>
+     * <li><strong>TotalPhysicalReads</strong>: sorted by total number of physical reads in descending order.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is supported only for instances that run SQL Server 2008 R2.</p>
+     * <p>This parameter is supported only for SQL Server 2008 R2 instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class DescribeSlowLogsRequest extends TeaModel {
     public String sortKey;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>Z format. The time must be in UTC.</p>
+     * <p>The start date of the query. Format: <i>yyyy-MM-dd</i>Z (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

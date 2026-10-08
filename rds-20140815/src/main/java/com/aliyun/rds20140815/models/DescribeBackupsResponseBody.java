@@ -8,7 +8,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public DescribeBackupsResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1A6D328C-84B8-40DC-BF49-6C73984D7494</p>
@@ -44,7 +44,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public Long totalEcsSnapshotSize;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

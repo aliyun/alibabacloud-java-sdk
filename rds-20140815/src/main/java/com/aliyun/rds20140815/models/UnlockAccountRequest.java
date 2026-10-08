@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnlockAccountRequest extends TeaModel {
     /**
-     * <p>The account that you want to unlock. You can unlock a single account at a time.</p>
+     * <p>The name of the account that you want to unlock. You can unlock only one account at a time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,11 @@ public class UnlockAccountRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>pgm-bpxxxxx</p>
+     * <p>pgm-bp****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

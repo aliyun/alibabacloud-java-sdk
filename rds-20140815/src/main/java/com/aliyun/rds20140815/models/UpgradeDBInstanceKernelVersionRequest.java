@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can invoke DescribeDBInstances to query the instance ID.</p>
      * <blockquote>
      * <ul>
-     * <li>If your instance runs PostgreSQL, you must make sure that the instance uses <strong>cloud disks</strong>. If the instance uses local disks, you must call the <a href="https://help.aliyun.com/document_detail/26230.html">RestartDBInstance</a> operation to restart the instance. The system automatically updates the minor engine version of the instance to the latest version during the restart.</li>
-     * <li>If your instance runs SQL Server, you must make sure that the instance runs SQL Server 2019.</li>
+     * <li>The storage type of the ApsaraDB RDS for PostgreSQL instance must be <strong>cloud disks</strong>. For an instance with Premium Local SSDs, you can invoke the <a href="https://help.aliyun.com/document_detail/26230.html">RestartDBInstance</a> operation to restart the instance, which automatically upgrades the instance to the latest minor engine version.</li>
+     * <li>Only the 2019 version of ApsaraDB RDS for SQL Server supports minor engine version upgrades.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-bpxxxxx</p>
+     * <p>rm-bp****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -30,9 +30,9 @@ public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The update time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The specified time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * <blockquote>
-     * <p>This parameter takes effect only when you set <strong>UpgradeTime</strong> to <strong>SpecifyTime</strong>.</p>
+     * <p>This parameter takes effect only when <strong>UpgradeTime</strong> is set to <strong>SpecifyTime</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -42,23 +42,20 @@ public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
     public String switchTime;
 
     /**
-     * <p>The minor engine version to which you want to update. Format:</p>
+     * <p>The minor database engine version to which you want to upgrade. Format:</p>
      * <ul>
-     * <li><p><strong>PostgreSQL</strong>: <code>rds_postgres_&lt;Major engine version&gt;00_&lt;Minor engine version&gt;</code>. Example: <code>rds_postgres_1200_20200830</code>.</p>
-     * </li>
-     * <li><p><strong>MySQL</strong>: <code>&lt;RDS edition and MySQL version&gt;_&lt;Minor engine version&gt;</code>. Examples: <code>rds_20200229</code>, <code>xcluster_20200229</code>, and <code>xcluster80_20200229</code>. The following RDS editions and MySQL versions are supported:</p>
-     * <ul>
-     * <li><strong>rds</strong>: RDS Basic Edition or RDS High-availability Edition</li>
-     * <li><strong>xcluster</strong>: MySQL 5.7 on RDS Enterprise Edition</li>
-     * <li><strong>xcluster80</strong>: MySQL 8.0 on RDS Enterprise Edition</li>
+     * <li><strong>PostgreSQL</strong>: <code>rds_postgres_&lt;Major version number&gt;00_&lt;Minor version number&gt;</code>. Example for version 12 with minor version 20200830: <code>rds_postgres_1200_20200830</code>.</li>
+     * <li><strong>MySQL</strong>: <code>&lt;Instance version&gt;_&lt;Minor version number&gt;</code>. Examples: <code>rds_20200229</code>, <code>xcluster_20200229</code>, or <code>xcluster80_20200229</code>. The instance version can be one of the following:<ul>
+     * <li><strong>rds</strong>: high-availability series or Basic Edition.</li>
+     * <li><strong>xcluster</strong>: MySQL 5.7 RDS Enterprise Edition.</li>
+     * <li><strong>xcluster80</strong>: MySQL 8.0 RDS Enterprise Edition.</li>
      * </ul>
      * </li>
-     * <li><p><strong>SQLServer</strong>: <code>&lt;Minor engine version&gt;</code>. Example: <code>15.0.4073.23</code>.</p>
-     * </li>
+     * <li><strong>SQLServer</strong>: <code>&lt;Minor version number&gt;</code>. Example: <code>15.0.4073.23</code>.</li>
      * </ul>
-     * <p>If you do not specify this parameter, the instance is updated to the latest minor engine version.</p>
+     * <p>If you do not specify this parameter, the instance is upgraded to the latest minor engine version by default.</p>
      * <blockquote>
-     * <p> For more information about minor engine versions, see <a href="https://help.aliyun.com/document_detail/126002.html">Release notes of AliPG</a>, <a href="https://help.aliyun.com/document_detail/96060.html">Release notes of AliSQL</a>, and <a href="https://help.aliyun.com/document_detail/213577.html">Release notes of minor engine versions of ApsaraDB RDS for SQL Server</a>.</p>
+     * <p>For minor engine version numbers, see <a href="https://help.aliyun.com/document_detail/126002.html">Release notes of ApsaraDB RDS for PostgreSQL minor engine versions</a>, <a href="https://help.aliyun.com/document_detail/96060.html">Release notes of ApsaraDB RDS for MySQL minor engine versions</a>, and <a href="https://help.aliyun.com/document_detail/213577.html">Release notes of ApsaraDB RDS for SQL Server minor engine versions</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -68,11 +65,11 @@ public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
     public String targetMinorVersion;
 
     /**
-     * <p>The time when the update takes effect. Valid values:</p>
+     * <p>The upgrade time. Valid values:</p>
      * <ul>
-     * <li><strong>Immediate</strong> (default): The update takes effect immediately.</li>
-     * <li><strong>MaintainTime</strong>: The update takes effect during the maintenance window that you specify. For more information about how to change the maintenance window, see ModifyDBInstanceMaintainTime.</li>
-     * <li><strong>SpecifyTime</strong>: The update takes effect at the point in time you specify.</li>
+     * <li><strong>Immediate</strong> (default): The upgrade takes effect immediately.</li>
+     * <li><strong>MaintainTime</strong>: The upgrade takes effect during the maintenance window. To modify the maintenance window, call ModifyDBInstanceMaintainTime.</li>
+     * <li><strong>SpecifyTime</strong>: The upgrade takes effect at a specified time.</li>
      * </ul>
      * 
      * <strong>example:</strong>

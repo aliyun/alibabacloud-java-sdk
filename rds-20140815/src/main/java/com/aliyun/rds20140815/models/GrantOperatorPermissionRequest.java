@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class GrantOperatorPermissionRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The expiration time of the permissions. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The expiration time of the permissions. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,10 +31,10 @@ public class GrantOperatorPermissionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The permissions that you want to grant to the service account. Valid values:</p>
+     * <p>The authorization type. Valid values:</p>
      * <ul>
-     * <li><strong>Control</strong>: the configuration permissions, which allow you to view and modify configurations of the instance.</li>
-     * <li><strong>Data</strong>: the data permissions, which allow you to view schemas, indexes, and SQL statements of the instance.</li>
+     * <li><strong>Control</strong>: configuration permissions. You can view and modify instance configurations.</li>
+     * <li><strong>Data</strong>: database permissions. You can view table schemas, indexes, and SQL statements.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

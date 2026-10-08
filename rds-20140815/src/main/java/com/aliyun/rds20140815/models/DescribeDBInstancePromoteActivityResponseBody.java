@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account.</p>
+     * <p>The Alibaba Cloud account ID.</p>
      * 
      * <strong>example:</strong>
      * <p>22973492**********</p>
@@ -15,21 +15,21 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li>China site: 26842</li>
+     * <li>Chinese site: 26842</li>
      * <li>International site: 26888</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>268**</p>
+     * <p>26888</p>
      */
     @NameInMap("Bid")
     public String bid;
 
     /**
-     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the instance ID.</p>
+     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> to query the instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5******</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -38,13 +38,13 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
      * <p>The instance name.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5******</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
-     * <p>The type of the database engine. Valid values:</p>
+     * <p>The database engine type. Valid values: </p>
      * <ul>
      * <li><strong>MySQL</strong></li>
      * <li><strong>PostgreSQL</strong></li>
@@ -58,10 +58,10 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
     public String DBType;
 
     /**
-     * <p>The activity information about the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2391834.html">Instance activities</a>.</p>
+     * <p>The dynamic property of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2391834.html">Instance dynamics</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>1 (indicates that the target instance is not participating in any promotions)</p>
      */
     @NameInMap("IsActivity")
     public String isActivity;

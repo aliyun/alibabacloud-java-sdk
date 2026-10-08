@@ -8,7 +8,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
     public DescribeDBInstancesForCloneResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -17,7 +17,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The number of instances on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -26,7 +26,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</p>
@@ -35,7 +35,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>120</p>

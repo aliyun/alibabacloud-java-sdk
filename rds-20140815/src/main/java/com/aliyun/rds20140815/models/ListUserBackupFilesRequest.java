@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class ListUserBackupFilesRequest extends TeaModel {
     /**
-     * <p>The ID of the full backup file.</p>
+     * <p>The user backup ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>b-kwwvr7v8t7of********</p>
+     * <p>b-kwwvr7v8t7of****</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
-     * <p>The description of the full backup file.</p>
+     * <p>The comment of the user backup to query.</p>
      * <blockquote>
-     * <p>The system implements a fuzzy match based on the value of this parameter.</p>
+     * <p>You can enter part of the comment for fuzzy matching.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,10 +26,10 @@ public class ListUserBackupFilesRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The URL from which you can download the full backup file that is stored as an object in an Object Storage Service (OSS) bucket. For more information about how to obtain the URL, see <a href="https://help.aliyun.com/document_detail/39607.html">Obtain the access URL after you upload objects</a>.</p>
+     * <p>The OSS download URL of the user backup file. For information about how to obtain the OSS download URL of a user backup file, see <a href="https://help.aliyun.com/document_detail/39607.html">How do I obtain the URL of an uploaded object?</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>https://<strong><strong><strong>.oss-ap-</strong></strong></strong>**.aliyuncs.com/backup_qp.xb</p>
+     * <p>https://<strong><strong>.oss-ap-</strong></strong>.aliyuncs.com/backup_qp.xb</p>
      */
     @NameInMap("OssUrl")
     public String ossUrl;
@@ -38,7 +38,7 @@ public class ListUserBackupFilesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call DescribeRegions to query the available regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,10 +48,10 @@ public class ListUserBackupFilesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.</p>
+     * <p>The resource group ID. You can call DescribeDBInstanceAttribute to query the resource group ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmy*****</p>
+     * <p>rg-acfmy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -63,13 +63,13 @@ public class ListUserBackupFilesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The status of the full backup file. Valid values:</p>
+     * <p>The status of the user backup file. Valid values:</p>
      * <ul>
-     * <li><strong>Importing</strong>: The full backup file is being imported.</li>
-     * <li><strong>Failed</strong>: The full backup file fails to be imported.</li>
-     * <li><strong>CheckSucccess</strong>: The full backup file passes the check.</li>
-     * <li><strong>BackupSuccess</strong>: The full backup file is imported.</li>
-     * <li><strong>Deleted</strong>: The full backup file is deleted.</li>
+     * <li><strong>Importing</strong>: The backup is being imported.</li>
+     * <li><strong>Failed</strong>: The import failed.</li>
+     * <li><strong>CheckSuccess</strong>: The verification passed.</li>
+     * <li><strong>BackupSuccess</strong>: The import succeeded.</li>
+     * <li><strong>Deleted</strong>: The backup is deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class ListUserBackupFilesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tag that is added to the full backup file.</p>
+     * <p>The tag information used to query the user backup.</p>
      * 
      * <strong>example:</strong>
      * <p>key1:value1</p>

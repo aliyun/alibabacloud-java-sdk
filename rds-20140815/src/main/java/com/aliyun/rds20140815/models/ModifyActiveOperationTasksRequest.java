@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyActiveOperationTasksRequest extends TeaModel {
     /**
-     * <p>The O\&amp;M task ID. Separate multiple IDs with commas (,).</p>
+     * <p>The O&amp;M task IDs. Separate multiple IDs with commas (,).</p>
      * <blockquote>
-     * <p> You can call the DescribeActiveOperationTask operation to query the O\&amp;M task ID.</p>
+     * <p>You can call DescribeActiveOperationTasks to obtain O&amp;M task IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,17 +18,15 @@ public class ModifyActiveOperationTasksRequest extends TeaModel {
     public String ids;
 
     /**
-     * <p>Specifies whether to immediately start scheduling. Valid values:</p>
+     * <p>Specifies whether to immediately start the execution scheduling.</p>
      * <ul>
-     * <li>0 (default): no</li>
-     * <li>1: yes</li>
+     * <li>0: No. This is the default value.</li>
+     * <li>1: Yes.<blockquote>
+     * <ul>
+     * <li>If the value is 0, the SwitchTime parameter takes effect. If the value is 1, the SwitchTime parameter does not take effect. The task start time is set to the current time, and the switchover time is automatically calculated based on the new start time.</li>
+     * <li>Immediately starting the execution scheduling does not mean an immediate switchover. Instead, the task immediately enters the Preparing state. After the preparation is complete, the switchover is performed. You can call DescribeActiveOperationTasks and check the value of the PrepareInterval response parameter to obtain the preparation time.</li>
      * </ul>
-     * <blockquote>
      * </blockquote>
-     * <ul>
-     * <li><p>If you set this parameter to 0, the SwitchTime parameter takes effect. If you set this parameter to 1, the SwitchTime parameter does not take effect. In this case, the start time of the task is the current time, and the system determines the switching time based on the start time.</p>
-     * </li>
-     * <li><p>Immediate scheduling specifies that the task enters the preparing state instead of being executed immediately. After the preparation is complete, the switchover is performed. You can call the DescribeActiveOperationTasks to query the preparation time that is returned for the PrepareInterval parameter.</p>
      * </li>
      * </ul>
      * 
@@ -54,9 +52,9 @@ public class ModifyActiveOperationTasksRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The scheduled switching time that you want to specify. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The scheduled switchover time to set. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
      * <blockquote>
-     * <p> The time that is specified by the SwitchTime parameter cannot be later than the time that is specified by the Deadline parameter. You can call the DescribeActiveOperationTasks operation to query the value of the Deadline parameter in the response.</p>
+     * <p>The time cannot be later than the latest operation time. You can call DescribeActiveOperationTasks and check the value of the Deadline response parameter to obtain the latest operation time.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

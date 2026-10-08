@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeHASwitchConfigResponseBody extends TeaModel {
     /**
-     * <p>The status of the automatic primary/secondary switchover feature. Valid values:</p>
+     * <p>The automatic primary/secondary switchover setting. Valid values:</p>
      * <ul>
-     * <li><strong>Auto:</strong> The automatic primary/secondary switchover feature is enabled. The system automatically switches your workloads over from the instance to its secondary instance in the event of a fault.</li>
-     * <li><strong>Manual:</strong> The automatic primary/secondary switchover feature is temporarily disabled.</li>
+     * <li><strong>Auto</strong>: The system automatically switches over between the primary and secondary instances upon a fault.</li>
+     * <li><strong>Manual</strong>: Automatic switchover has been temporarily disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeHASwitchConfigResponseBody extends TeaModel {
     public String HAConfig;
 
     /**
-     * <p>The time when the automatic primary/secondary switchover feature is enabled again. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The deadline for the temporary disabling of automatic switchover. The time follows the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-08-29T15:00:00Z</p>
@@ -27,7 +27,7 @@ public class DescribeHASwitchConfigResponseBody extends TeaModel {
     public String manualHATime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4FDF4B79-2741-4C5F-8C76-4B953FC5C2B1</p>

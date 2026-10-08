@@ -8,7 +8,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     public DescribeDBInstanceAttributeResponseBodyItems items;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -204,6 +204,47 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDrReplicaInfo extends TeaModel {
+        @NameInMap("InsName")
+        public String insName;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("UnitCode")
+        public String unitCode;
+
+        public static DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDrReplicaInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDrReplicaInfo self = new DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDrReplicaInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDrReplicaInfo setInsName(String insName) {
+            this.insName = insName;
+            return this;
+        }
+        public String getInsName() {
+            return this.insName;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDrReplicaInfo setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDrReplicaInfo setUnitCode(String unitCode) {
+            this.unitCode = unitCode;
+            return this;
+        }
+        public String getUnitCode() {
+            return this.unitCode;
+        }
+
+    }
+
     public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtraDBInstanceIds extends TeaModel {
         @NameInMap("DBInstanceId")
         public java.util.List<String> DBInstanceId;
@@ -392,6 +433,47 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeWarmStandbyInfo extends TeaModel {
+        @NameInMap("InsName")
+        public String insName;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("UnitCode")
+        public String unitCode;
+
+        public static DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeWarmStandbyInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeWarmStandbyInfo self = new DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeWarmStandbyInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeWarmStandbyInfo setInsName(String insName) {
+            this.insName = insName;
+            return this;
+        }
+        public String getInsName() {
+            return this.insName;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeWarmStandbyInfo setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeWarmStandbyInfo setUnitCode(String unitCode) {
+            this.unitCode = unitCode;
+            return this;
+        }
+        public String getUnitCode() {
+            return this.unitCode;
+        }
+
+    }
+
     public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute extends TeaModel {
         @NameInMap("AccountMaxQuantity")
         public Integer accountMaxQuantity;
@@ -510,6 +592,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("DisasterRecoveryInstances")
         public String disasterRecoveryInstances;
 
+        @NameInMap("DrReplicaInfo")
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDrReplicaInfo drReplicaInfo;
+
         @NameInMap("Engine")
         public String engine;
 
@@ -581,6 +666,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         @NameInMap("MultipleTempUpgrade")
         public Boolean multipleTempUpgrade;
+
+        @NameInMap("NodePerformance")
+        public String nodePerformance;
 
         @NameInMap("OptimizedWritesInfo")
         public String optimizedWritesInfo;
@@ -663,6 +751,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         @NameInMap("VpcId")
         public String vpcId;
+
+        @NameInMap("WarmStandbyInfo")
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeWarmStandbyInfo warmStandbyInfo;
 
         @NameInMap("ZoneId")
         public String zoneId;
@@ -987,6 +1078,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             return this.disasterRecoveryInstances;
         }
 
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setDrReplicaInfo(DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDrReplicaInfo drReplicaInfo) {
+            this.drReplicaInfo = drReplicaInfo;
+            return this;
+        }
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDrReplicaInfo getDrReplicaInfo() {
+            return this.drReplicaInfo;
+        }
+
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setEngine(String engine) {
             this.engine = engine;
             return this;
@@ -1177,6 +1276,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public Boolean getMultipleTempUpgrade() {
             return this.multipleTempUpgrade;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setNodePerformance(String nodePerformance) {
+            this.nodePerformance = nodePerformance;
+            return this;
+        }
+        public String getNodePerformance() {
+            return this.nodePerformance;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setOptimizedWritesInfo(String optimizedWritesInfo) {
@@ -1385,6 +1492,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getVpcId() {
             return this.vpcId;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setWarmStandbyInfo(DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeWarmStandbyInfo warmStandbyInfo) {
+            this.warmStandbyInfo = warmStandbyInfo;
+            return this;
+        }
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeWarmStandbyInfo getWarmStandbyInfo() {
+            return this.warmStandbyInfo;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setZoneId(String zoneId) {

@@ -39,7 +39,7 @@ public class DescribeDBInstanceConnectivityRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The source IP address.</p>
+     * <p>The source IP address of the user.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

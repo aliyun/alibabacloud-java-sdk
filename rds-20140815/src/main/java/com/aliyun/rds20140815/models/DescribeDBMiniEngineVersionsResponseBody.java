@@ -8,13 +8,13 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
      * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5*****</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,13 +23,13 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
     public Integer maxRecordsPerPage;
 
     /**
-     * <p>The details of the minor engine version.</p>
+     * <p>The list of minor engine versions.</p>
      */
     @NameInMap("MinorVersionItems")
     public java.util.List<DescribeDBMiniEngineVersionsResponseBodyMinorVersionItems> minorVersionItems;
 
     /**
-     * <p>The page number returned.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +47,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -110,19 +110,16 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
 
     public static class DescribeDBMiniEngineVersionsResponseBodyMinorVersionItems extends TeaModel {
         /**
-         * <p>The PostgreSQL version to which the minor engine version corresponds. For more information, see <a href="https://help.aliyun.com/document_detail/126002.html">Release notes for AliPG</a>.</p>
-         * <blockquote>
-         * <p> This parameter is available only for instances that run <strong>PostgreSQL</strong>.</p>
-         * </blockquote>
+         * <p>The community minor version that corresponds to the minor engine version.</p>
          * 
          * <strong>example:</strong>
-         * <p>13.6</p>
+         * <p>5.7.38</p>
          */
         @NameInMap("CommunityMinorVersion")
         public String communityMinorVersion;
 
         /**
-         * <p>The database engine that corresponds to the minor engine version.</p>
+         * <p>The database engine that corresponds to the minor version.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -131,7 +128,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The database engine version that corresponds to the minor engine version.</p>
+         * <p>The database engine version that corresponds to the minor version.</p>
          * 
          * <strong>example:</strong>
          * <p>5.7</p>
@@ -151,11 +148,11 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         /**
          * <p>The expiration status of the minor engine version. Valid values:</p>
          * <ul>
-         * <li><strong>vaild</strong></li>
-         * <li><strong>expired</strong></li>
+         * <li><strong>vaild</strong>: Milvus version is valid.</li>
+         * <li><strong>expired</strong>: Milvus version has expired.</li>
          * </ul>
          * <blockquote>
-         * <p> If the minor engine version is in the Offline state, the minor engine version is discontinued. In this case, ignore the expiration status. If the minor engine version is in the Online state and the expiration state is expired, the minor engine version expires. If the expiration state is vaild, the minor engine version is still in its lifecycle.</p>
+         * <p>If the offline status is Offline, Milvus version has been taken offline and the expiration status is ignored. If the offline status is Online and the expiration status is expired, Milvus version has exceeded its lifecycle. If the offline status is Online and the expiration status is vaild, Milvus version is still within its lifecycle.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -165,7 +162,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         public String expireStatus;
 
         /**
-         * <p>An internal parameter. You do not need to specify this parameter.</p>
+         * <p>An internal parameter. You can ignore this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -174,7 +171,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         public Boolean isHotfixVersion;
 
         /**
-         * <p>The minor engine version.</p>
+         * <p>The version number of the minor engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>rds_20220731</p>
@@ -183,11 +180,11 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         public String minorVersion;
 
         /**
-         * <p>The RDS edition of the instance that runs the minor engine version. Valid values:</p>
+         * <p>The instance edition that corresponds to the minor version. Valid values:</p>
          * <ul>
-         * <li><strong>Basic</strong>: RDS Basic Edition</li>
-         * <li><strong>HighAvailability</strong>: RDS High-availability Edition</li>
-         * <li><strong>Finance</strong>: RDS Enterprise Edition</li>
+         * <li><strong>Basic</strong>: Basic Edition.</li>
+         * <li><strong>HighAvailability</strong>: high-availability series.</li>
+         * <li><strong>Finance</strong>: RDS Enterprise Edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,7 +194,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         public String nodeType;
 
         /**
-         * <p>The URL of the release notes for the minor engine version.</p>
+         * <p>The URL of the release notes for the minor version.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com">https://example.com</a></p>
@@ -208,8 +205,8 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         /**
          * <p>The release type. Valid values:</p>
          * <ul>
-         * <li><strong>LTS</strong>: a long-term version</li>
-         * <li><strong>BETA</strong>: a preview version</li>
+         * <li><strong>LTS</strong>: Long-term support version.</li>
+         * <li><strong>BETA</strong>: Preview version.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -219,13 +216,13 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         public String releaseType;
 
         /**
-         * <p>The status of the minor engine version. Valid values:</p>
+         * <p>The offline status of the minor engine version. Valid values:</p>
          * <ul>
-         * <li><strong>Offline</strong>: discontinued</li>
-         * <li><strong>Online</strong>: available</li>
+         * <li><strong>Offline</strong>: Milvus version has been taken offline.</li>
+         * <li><strong>Online</strong>: Milvus version is online.</li>
          * </ul>
          * <blockquote>
-         * <p> If the minor engine version is in the Offline state, the minor engine version is discontinued. In this case, ignore the expiration status. If the minor engine version is in the Online state and the expiration state is expired, the minor engine version expires. If the expiration state is vaild, the minor engine version is still in its lifecycle.</p>
+         * <p>If the offline status is Offline, Milvus version has been taken offline and the expiration status is ignored. If the offline status is Online and the expiration status is expired, Milvus version has exceeded its lifecycle. If the offline status is Online and the expiration status is vaild, Milvus version is still within its lifecycle.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -237,11 +234,11 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         /**
          * <p>The tag that corresponds to the minor engine version. Valid values:</p>
          * <ul>
-         * <li><strong>pgsql_docker_image</strong>: tag of common instances</li>
-         * <li><strong>pgsql_babelfish_image</strong>: tag of instances for which Babelfish is enabled</li>
+         * <li><strong>pgsql_docker_image</strong>: general instance tag.</li>
+         * <li><strong>pgsql_babelfish_image</strong>: Babelfish instance tag.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is available only for instances that run <strong>PostgreSQL</strong>.</p>
+         * <p>This value is returned only for <strong>PostgreSQL</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

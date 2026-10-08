@@ -7,8 +7,8 @@ public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
     /**
      * <p>The authorization status. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: authorized</li>
-     * <li><strong>0</strong>: not authorized</li>
+     * <li><strong>1</strong>: Authorized.</li>
+     * <li><strong>0</strong>: Not authorized.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</p>
+     * <p>The global resource descriptor of the role, which is used to specify a specific role. For details, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::1406926****:role/aliyunrdsinstanceencryptiondefaultrole</p>

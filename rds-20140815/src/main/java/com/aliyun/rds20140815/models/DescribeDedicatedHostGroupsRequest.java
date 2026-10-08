@@ -14,12 +14,12 @@ public class DescribeDedicatedHostGroupsRequest extends TeaModel {
     public String dedicatedHostGroupId;
 
     /**
-     * <p>The image based on which the hosts in the dedicated clusters are created. Valid values:</p>
+     * <p>The host image based on which you want to query dedicated clusters. Valid values:</p>
      * <ul>
-     * <li><strong>WindowsWithMssqlStdLicense</strong>: a Windows image that contains the licenses of SQL Server Standard Edition</li>
-     * <li><strong>WindowsWithMssqlEntLisence</strong>: a Windows image that contains the licenses of SQL Server Enterprise Edition</li>
-     * <li><strong>WindowsWithMssqlWebLisence</strong>: a Windows image that contains the licenses of SQL Server Web Edition</li>
-     * <li><strong>AliLinux</strong>: a Linux image</li>
+     * <li><strong>WindowsWithMssqlStdLicense</strong>: Windows (with SQL Server Standard Edition license).</li>
+     * <li><strong>WindowsWithMssqlEntLisence</strong>: Windows (with SQL Server Enterprise Edition license).</li>
+     * <li><strong>WindowsWithMssqlWebLisence</strong>: Windows (with SQL Server Web Edition license).</li>
+     * <li><strong>AliLinux</strong>: Linux.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DescribeDedicatedHostGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query available region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

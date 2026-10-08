@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceDelayedReplicationTimeResponseBody extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>The instance ID of the read-only instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5*****</p>
+     * <p>rr-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The replication latency of the read-only instance. Unit: seconds.</p>
+     * <p>The replication delay time of the read-only instance. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

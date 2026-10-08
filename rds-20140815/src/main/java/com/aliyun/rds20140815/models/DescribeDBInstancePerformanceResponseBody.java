@@ -8,13 +8,13 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
      * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The end time of the query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * <p>The end time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2012-06-19T15:00Z</p>
@@ -23,7 +23,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The database engine of the instance.</p>
+     * <p>The database engine type.</p>
      * 
      * <strong>example:</strong>
      * <p>MySQL</p>
@@ -44,7 +44,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start time of the query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * <p>The start time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2012-06-10T15:00Z</p>

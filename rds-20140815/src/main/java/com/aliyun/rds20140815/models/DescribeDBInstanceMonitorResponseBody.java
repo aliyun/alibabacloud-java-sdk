@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceMonitorResponseBody extends TeaModel {
     /**
-     * <p>The monitoring frequency. Unit: seconds.</p>
+     * <p>The interval at which monitoring data is collected. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>

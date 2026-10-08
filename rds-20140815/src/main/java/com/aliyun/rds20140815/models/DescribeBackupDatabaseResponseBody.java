@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupDatabaseResponseBody extends TeaModel {
     /**
-     * <p>The name of the database. Format: &quot;db1,db2&quot;.</p>
+     * <p>The database names, in the format of &quot;db1,db2&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>db1,db2</p>
@@ -14,10 +14,10 @@ public class DescribeBackupDatabaseResponseBody extends TeaModel {
     public String databaseNames;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</p>
+     * <p>08A3B71B-FE08-xxxx-974F-CC7EA6DBxxxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;

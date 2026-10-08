@@ -8,7 +8,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
     public DescribeDBInstancesAsCsvResponseBodyItems items;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A444291****</p>

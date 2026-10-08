@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckRegionSupportBackupEncryptionResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>081FAAD5-9E56-5BE7-A495-*******</p>
      */
@@ -12,6 +14,8 @@ public class CheckRegionSupportBackupEncryptionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether backup encryption is supported. Valid values: true and false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

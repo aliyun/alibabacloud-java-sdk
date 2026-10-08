@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateOrderForDeleteDBNodesResponseBody extends TeaModel {
     /**
-     * <p>The instance ID</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-7xv******</p>
+     * <p>rm-7x******</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

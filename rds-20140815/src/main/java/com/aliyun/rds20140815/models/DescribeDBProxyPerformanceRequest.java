@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeDBProxyPerformanceRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-t4n3axxxxx</p>
+     * <p>rm-t4n3a****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * <p>A reserved parameter. You do not need to configure this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>normal</p>
@@ -26,27 +26,37 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     /**
      * <p>The type of the database proxy instance. Valid values:</p>
      * <ul>
-     * <li>common: the general-purpose database proxy</li>
-     * <li>exclusive: the dedicated database proxy</li>
+     * <li>common: general-purpose database proxy</li>
+     * <li>exclusive: dedicated database proxy</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>DedicatedProxy</p>
+     * <p>exclusive</p>
      */
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;
 
     /**
-     * <p>Dimension.</p>
+     * <p>The aggregation dimension. Valid values. The service and server values cannot be specified at the same time.</p>
+     * <ul>
+     * <li><p>service: aggregates monitoring metrics by proxy endpoint.</p>
+     * </li>
+     * <li><p>node: aggregates monitoring metrics by proxy node.</p>
+     * </li>
+     * <li><p>server: aggregates monitoring metrics by database node.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>service</p>
+     * <p>service,node
+     * server,node
+     * service</p>
      */
     @NameInMap("Dimension")
     public String dimension;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time of the query. The end time must be later than the start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,19 +66,19 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The performance metrics that you want to query.</p>
-     * <p>If the instance runs MySQL, you can query only the <strong>Maxscale_CpuUsage</strong> performance metric, which indicates the CPU utilization of the instance.</p>
-     * <p>If the instance runs PostgreSQL, you can query the following performance metrics:</p>
+     * <p>The performance metrics.</p>
+     * <p>RDS MySQL supports only <strong>Maxscale_CpuUsage</strong>: CPU utilization.</p>
+     * <p>RDS PostgreSQL supports the following performance metrics:</p>
      * <ul>
-     * <li><strong>Maxscale_TotalConns</strong>: the number of connections per second</li>
-     * <li><strong>Maxscale_CurrentConns</strong>: the number of connections that are established</li>
+     * <li><strong>Maxscale_TotalConns</strong>: connection rate</li>
+     * <li><strong>Maxscale_CurrentConns</strong>: current connections</li>
      * <li><strong>Maxscale_DownFlows</strong>: outbound traffic</li>
      * <li><strong>Maxscale_UpFlows</strong>: inbound traffic</li>
-     * <li><strong>Maxscale_QPS</strong>: QPS</li>
-     * <li><strong>Maxscale_MemUsage</strong>: memory usage</li>
+     * <li><strong>Maxscale_QPS</strong>: request rate (QPS)</li>
+     * <li><strong>Maxscale_MemUsage</strong>: memory utilization</li>
      * <li><strong>Maxscale_CpuUsage</strong>: CPU utilization</li>
      * </ul>
-     * <p>If you want to query more than one performance metric, separate the performance metrics with commas (,). You can specify up to six performance metrics in a single request.</p>
+     * <p>To query multiple performance metrics, separate them with commas (,). You can query up to six performance metrics at a time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,7 +91,7 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call DescribeRegions to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -97,7 +107,7 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,40 +5,40 @@ import com.aliyun.tea.*;
 
 public class DescribeMetaListRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set from which you want to restore data. You can call the DescribeBackups operation to query the IDs of data backup files.</p>
+     * <p>The ID of the backup set used for the query. You can call DescribeBackups to query the backup set ID.</p>
      * <blockquote>
-     * <p> This parameter is required when you set the <strong>RestoreType</strong> parameter to <strong>BackupSetID</strong>.</p>
+     * <p>This parameter is required when <strong>RestoreType</strong> is set to <strong>BackupSetID</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>14358</p>
+     * <p>14***</p>
      */
     @NameInMap("BackupSetID")
     public Long backupSetID;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The name of the database to query. The system implements exact match based on the value of this parameter and returns the name of the matched database and the names of all tables contained in the database.</p>
+     * <p>The name of the database to query. This parameter supports exact match and returns the specified database name and all tables in the database.</p>
      * <blockquote>
-     * <p>If you leave this parameter empty, the system returns all databases that are created on the instance.</p>
+     * <p>If you leave this parameter empty, a list of all databases is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -51,9 +51,9 @@ public class DescribeMetaListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Valid values: any non-zero positive integer.**** Default value: <strong>1</strong>.</p>
+     * <p>The page number. Valid values: greater than <strong>0</strong> and up to the maximum value of Integer. Default value: <strong>1</strong>.</p>
      * <blockquote>
-     * <p>This parameter only takes effect when you specify the <strong>PageSize</strong> parameter.</p>
+     * <p>This parameter takes effect only when it is specified together with <strong>PageSize</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,9 +63,9 @@ public class DescribeMetaListRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>1</strong>.</p>
+     * <p>The number of entries per page. Default value: <strong>1</strong>.</p>
      * <blockquote>
-     * <p>This parameter only takes effect when you specify the <strong>PageIndex</strong> parameter.</p>
+     * <p>This parameter takes effect only when it is specified together with <strong>PageIndex</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -75,9 +75,9 @@ public class DescribeMetaListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the database to query. The system implements fuzzy match based on the value of this parameter and returns only the name of the matched database.</p>
+     * <p>The name of the database to query. This parameter supports fuzzy match and returns only the matched database names without table names.</p>
      * <blockquote>
-     * <p>For example, if you set the value to <code>test</code>, the system returns <code>testdb1</code> and <code>testdb2</code>. Then, you can specify the <strong>GetDbName</strong> parameter to query tables in the required database.</p>
+     * <p>For example, if you specify <code>test</code>, the databases <code>testdb1</code> and <code>testdb2</code> are matched. After you identify the target database, specify the exact database name by using the <strong>GetDbName</strong> parameter to query all tables in the database.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class DescribeMetaListRequest extends TeaModel {
      * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmy*****</p>
+     * <p>rg-acfmy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -102,9 +102,9 @@ public class DescribeMetaListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The point in time to which you want to restore data. The specified point in time must be earlier than the current time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC. You can call the DescribeBackups operation to query the restorable time range.</p>
+     * <p>The point in time used for the query. The value must be earlier than the current time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC). You can call DescribeBackups to query available time points.</p>
      * <blockquote>
-     * <p> This parameter must be specified when the <strong>RestoreType</strong> parameter is set to <strong>RestoreTime</strong>.</p>
+     * <p>This parameter is required when <strong>RestoreType</strong> is set to <strong>RestoreTime</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -114,10 +114,10 @@ public class DescribeMetaListRequest extends TeaModel {
     public String restoreTime;
 
     /**
-     * <p>The restoration method that you want to use. Valid values:</p>
+     * <p>The restoration method. Valid values:</p>
      * <ul>
-     * <li><strong>BackupSetID</strong>: Data is restored from the backup set. If you use this value, you must also specify the <strong>BackupSetID</strong> parameter.</li>
-     * <li><strong>RestoreTime</strong>: Data is restored to a specific point in time. If you use this value, you must also specify the <strong>RestoreTime</strong> parameter.</li>
+     * <li><strong>BackupSetID</strong>: Restores data from a backup set. You must also specify the <strong>BackupSetID</strong> parameter.</li>
+     * <li><strong>RestoreTime</strong>: Restores data to a point in time. You must also specify the <strong>RestoreTime</strong> parameter.</li>
      * </ul>
      * <p>Default value: <strong>BackupSetID</strong>.</p>
      * 

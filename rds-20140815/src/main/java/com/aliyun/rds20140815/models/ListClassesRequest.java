@@ -8,41 +8,49 @@ public class ListClassesRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The commodity code of the instances.</p>
+     * <p>The commodity code of the instance to query.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li><strong>bards_intl</strong>: The instances are pay-as-you-go primary instances.</li>
-     * <li><strong>rds_intl</strong>: The instances are subscription primary instances.</li>
-     * <li><strong>rords_intl</strong>: The instances are pay-as-you-go read-only instances.</li>
-     * <li><strong>rds_rordspre_public_intl</strong>: The instances are subscription read-only instances.</li>
+     * <li><strong>bards</strong>: Pay-as-you-go primary instance.</li>
+     * <li><strong>rds</strong>: Subscription primary instance.</li>
+     * <li><strong>rords</strong>: Pay-as-you-go read-only instance.</li>
+     * <li><strong>rds_rordspre_public_cn</strong>: Subscription read-only instance.</li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <ul>
+     * <li><strong>bards_intl</strong>: Pay-as-you-go primary instance.</li>
+     * <li><strong>rds_intl</strong>: Subscription primary instance.</li>
+     * <li><strong>rords_intl</strong>: Pay-as-you-go read-only instance.</li>
+     * <li><strong>rds_rordspre_public_intl</strong>: Subscription read-only instance.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>bards_intl</p>
+     * <p>bards</p>
      */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
      * <blockquote>
-     * <p> If you set the <strong>CommodityCode</strong> parameter to the commodity code of read-only instances, you must specify this parameter.</p>
+     * <p>This parameter is required when you query the instance type list for read-only instances, which means you set the <strong>CommodityCode</strong> parameter to a commodity code for read-only instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The database engine of the instance. Valid values:</p>
+     * <p>The database engine type. Valid values:</p>
      * <ul>
      * <li><strong>MySQL</strong></li>
      * <li><strong>SQLServer</strong></li>
@@ -57,12 +65,12 @@ public class ListClassesRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The type of order that you want to query. Valid values:</p>
+     * <p>The type of order to query. Valid values:</p>
      * <ul>
-     * <li><strong>BUY</strong>: specifies the query orders that are used to purchase instances.</li>
-     * <li><strong>UPGRADE</strong>: specifies the query orders that are used to change the specifications of instances.</li>
-     * <li><strong>RENEW</strong>: specifies the query orders that are used to renew instances.</li>
-     * <li><strong>CONVERT</strong>: specifies the query orders that are used to change the billing methods of instances.</li>
+     * <li><strong>BUY</strong>: New purchase.</li>
+     * <li><strong>UPGRADE</strong>: Configuration change.</li>
+     * <li><strong>RENEW</strong>: Renewal.</li>
+     * <li><strong>CONVERT</strong>: Billing method change.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -76,9 +84,9 @@ public class ListClassesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call DescribeRegions to obtain the region ID.</p>
      * <blockquote>
-     * <p> If you are using an Alibaba Cloud account on the International site (alibabacloud.com), you must specify this parameter.</p>
+     * <p>This parameter is required if you use an Alibaba Cloud International Website account.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class MigrateDBInstanceResponseBody extends TeaModel {
     /**
-     * <p>The serial number of the task in the migration task queue. When the serial number becomes 0, the system starts the migration.</p>
+     * <p>The migration queue number. When the number is 0, the migration switchover is performed.</p>
      * 
      * <strong>example:</strong>
-     * <p>224****</p>
+     * <p>2245016</p>
      */
     @NameInMap("MigrationId")
     public Integer migrationId;
@@ -26,7 +26,7 @@ public class MigrateDBInstanceResponseBody extends TeaModel {
      * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>10824****</p>
+     * <p>108246861</p>
      */
     @NameInMap("TaskId")
     public Integer taskId;

@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateYouhuiForOrderRequest extends TeaModel {
     /**
-     * <p>The activity ID.</p>
+     * <p>The ID of the ticket that was created.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1711510887******</p>
+     * <p>171151088708****</p>
      */
     @NameInMap("ActivityId")
     public Long activityId;
@@ -18,17 +18,17 @@ public class CreateYouhuiForOrderRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The promotion ID. You can call the GetResourcePrice operation to query the promotion ID.</p>
+     * <p>The promotion ID. You can call the GetResourcePrice operation to obtain this value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2000001******</p>
+     * <p>200000199****</p>
      */
     @NameInMap("PromotionId")
     public Long promotionId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query available region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

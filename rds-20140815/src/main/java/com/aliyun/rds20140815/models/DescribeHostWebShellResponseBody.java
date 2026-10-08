@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHostWebShellResponseBody extends TeaModel {
     /**
-     * <p>The webshell URL.</p>
+     * <p>The WebShell logon URL.</p>
      * 
      * <strong>example:</strong>
      * <hr>

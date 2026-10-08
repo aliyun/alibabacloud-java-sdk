@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaModel {
     /**
-     * <p>The information about the upgrade check reports.</p>
+     * <p>The property list of the major engine version upgrade check report. Each attribute column contains the details of a check report entry.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeUpgradeMajorVersionPrecheckTaskResponseBodyItems> items;
@@ -29,7 +29,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D1586777-41B5-5F9E-81E8-93DFDD379024</p>
@@ -93,8 +93,8 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
 
     public static class DescribeUpgradeMajorVersionPrecheckTaskResponseBodyItems extends TeaModel {
         /**
-         * <p>The time at which the upgrade check was performed.</p>
-         * <p>The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.</p>
+         * <p>The check time.</p>
+         * <p>The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1635143903000</p>
@@ -103,7 +103,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         public String checkTime;
 
         /**
-         * <p>The content of the upgrade check report.</p>
+         * <p>The content of the major engine version upgrade check report.</p>
          * 
          * <strong>example:</strong>
          * <p>[user_check_report]User check success\n[pg_upgrade_internal.log]Performing...</p>
@@ -112,8 +112,8 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         public String detail;
 
         /**
-         * <p>The expiration time of the upgrade check report.</p>
-         * <p>The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.</p>
+         * <p>The expiration time of the check report.</p>
+         * <p>The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1635748703000</p>
@@ -122,9 +122,9 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         public String effectiveTime;
 
         /**
-         * <p>The minimum recommended disk capacity during the upgrade. Unit: GB.</p>
+         * <p>The recommended minimum disk capacity for the upgrade. Unit: GB.</p>
          * <blockquote>
-         * <p> This parameter is returned only for RDS for PostgreSQL instances.</p>
+         * <p>This parameter is returned only for ApsaraDB RDS for PostgreSQL instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -134,9 +134,9 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         public Integer recommendDiskSize;
 
         /**
-         * <p>The minimum recommended memory size during the upgrade. Unit: GB.</p>
+         * <p>The recommended minimum memory for the upgrade. Unit: GB.</p>
          * <blockquote>
-         * <p> This parameter is returned only for RDS for PostgreSQL instances.</p>
+         * <p>This parameter is returned only for ApsaraDB RDS for PostgreSQL instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -146,10 +146,10 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         public Integer recommendLeastMemSize;
 
         /**
-         * <p>The recommended memory size during the upgrade. Unit: GB.</p>
-         * <p>If the memory size of an RDS instance is greater than or equal to the recommended memory size, the RDS instance is immediately upgraded to reduce the read-only time of the instance.</p>
+         * <p>The recommended memory for the upgrade. Unit: GB.</p>
+         * <p>If the memory of the instance is greater than or equal to the recommended memory, the upgrade is performed at the fastest speed to minimize the read-only duration of the instance.</p>
          * <blockquote>
-         * <p> This parameter is returned only for RDS for PostgreSQL instances.</p>
+         * <p>This parameter is returned only for ApsaraDB RDS for PostgreSQL instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -159,14 +159,15 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         public Integer recommendMemSize;
 
         /**
-         * <p>The result of the upgrade check.</p>
+         * <p>The result of major engine version upgrade check.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Success</li>
-         * <li>Fail</li>
+         * <li>Success: The check is passed.</li>
+         * <li>Fail: The check failed.</li>
+         * <li>warning: The check returned warnings. Review the report to determine whether to proceed with the upgrade.</li>
          * </ul>
          * <blockquote>
-         * <p> If the check result is <strong>Fail</strong>, you must check the value of the <strong>Detail</strong> parameter to obtain the information about the errors that occurred, resolve the errors, and then try again. For more information about how to resolve common errors, see <a href="https://help.aliyun.com/document_detail/218391.html">Introduction to the check report for a major engine version upgrade to an ApsaraDB RDS for PostgreSQL instance</a>.</p>
+         * <p>If the check result is <strong>Fail</strong>, check the value of the <strong>Detail</strong> parameter, resolve the errors, and try again. For common errors and solutions, see <a href="https://help.aliyun.com/document_detail/218391.html">Understand major engine version upgrade check report for ApsaraDB RDS for PostgreSQL</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -176,7 +177,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         public String result;
 
         /**
-         * <p>The original major engine version of the instance.</p>
+         * <p>The current major engine version of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>11.0</p>
@@ -185,7 +186,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         public String sourceMajorVersion;
 
         /**
-         * <p>The new major engine version of the instance.</p>
+         * <p>The target instance version.</p>
          * 
          * <strong>example:</strong>
          * <p>12.0</p>
@@ -194,7 +195,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         public String targetMajorVersion;
 
         /**
-         * <p>The ID of the upgrade check task.</p>
+         * <p>The node ID of the major engine version upgrade pre-check task.</p>
          * 
          * <strong>example:</strong>
          * <p>416980000</p>

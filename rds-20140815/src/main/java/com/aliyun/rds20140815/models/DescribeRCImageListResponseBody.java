@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRCImageListResponseBody extends TeaModel {
     /**
-     * <p>The information about the images.</p>
+     * <p>The image information.</p>
      */
     @NameInMap("Images")
     public java.util.List<DescribeRCImageListResponseBodyImages> images;
@@ -20,7 +20,7 @@ public class DescribeRCImageListResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -109,12 +109,34 @@ public class DescribeRCImageListResponseBody extends TeaModel {
     }
 
     public static class DescribeRCImageListResponseBodyImagesDiskDeviceMappings extends TeaModel {
+        /**
+         * <p>The device information of the cloud disk, such as <code>/dev/xvdb</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/dev/xvdb</p>
+         */
         @NameInMap("Device")
         public String device;
 
+        /**
+         * <p>The size of the cloud disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("Size")
         public String size;
 
+        /**
+         * <p>The type of the cloud disk.</p>
+         * <ul>
+         * <li><strong>system</strong>: System cloud disk.</li>
+         * <li><strong>data</strong>: Data cloud disk.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -151,10 +173,10 @@ public class DescribeRCImageListResponseBody extends TeaModel {
 
     public static class DescribeRCImageListResponseBodyImages extends TeaModel {
         /**
-         * <p>The image architecture. Valid values:</p>
+         * <p>The system architecture of the image. Valid values:</p>
          * <ul>
-         * <li>x86_64</li>
-         * <li>arm64</li>
+         * <li>x86_64.</li>
+         * <li>arm64.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -181,6 +203,9 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The mapping between cloud disks and snapshots in the image.</p>
+         */
         @NameInMap("DiskDeviceMappings")
         public java.util.List<DescribeRCImageListResponseBodyImagesDiskDeviceMappings> diskDeviceMappings;
 
@@ -212,7 +237,7 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         public String imageVersion;
 
         /**
-         * <p>Indicates whether the image is a public image. Public images include public images provided by Alibaba Cloud and custom images published as community images.</p>
+         * <p>Indicates whether the image is a public image. Public images include Alibaba Cloud-provided public images and custom images that you have published as community images.</p>
          * <ul>
          * <li><strong>true</strong>: The image is a public image.</li>
          * <li><strong>false</strong>: The image is not a public image.</li>
@@ -224,17 +249,30 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         @NameInMap("IsPublic")
         public Boolean isPublic;
 
+        /**
+         * <p>Indicates whether the image supports RDS Custom instances. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Supported.</li>
+         * <li><strong>false</strong>: Not supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsSupportRdsCustom")
         public Boolean isSupportRdsCustom;
 
         /**
-         * <p>The display name of the operating system in Chinese.</p>
+         * <p>The Chinese display name of the operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba Cloud Linux  2.1903 LTS 64位 快速启动版</p>
          */
         @NameInMap("OSName")
         public String OSName;
 
         /**
-         * <p>The display name of the operating system in English.</p>
+         * <p>The English display name of the operating system.</p>
          * 
          * <strong>example:</strong>
          * <p>Alibaba Cloud Linux  2.1903 LTS 64 bit Quick Boot</p>
@@ -245,8 +283,8 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         /**
          * <p>The type of the operating system. Valid values:</p>
          * <ul>
-         * <li><strong>windows</strong></li>
-         * <li><strong>linux</strong></li>
+         * <li><strong>windows</strong>.</li>
+         * <li><strong>linux</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -255,11 +293,17 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         @NameInMap("OSType")
         public String OSType;
 
+        /**
+         * <p>The operating system platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
+         */
         @NameInMap("Platform")
         public String platform;
 
         /**
-         * <p>The image size. Unit: GiB.</p>
+         * <p>The size of the image. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -268,12 +312,12 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>The image status. Valid values:</p>
+         * <p>The status of the image. Valid values:</p>
          * <ul>
-         * <li><strong>Unavailable</strong></li>
-         * <li><strong>Available</strong></li>
-         * <li><strong>Creating</strong></li>
-         * <li><strong>CreateFailed</strong></li>
+         * <li><strong>UnAvailable</strong>: Unavailable.</li>
+         * <li><strong>Available</strong>: Available.</li>
+         * <li><strong>Creating</strong>: Being created.</li>
+         * <li><strong>CreateFailed</strong>: Creation failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -283,10 +327,10 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Indicates whether the image is used by the RDS Custom instance. Valid values:</p>
+         * <p>Indicates whether the image is used by RDS Custom instances. Valid values:</p>
          * <ul>
-         * <li><strong>instance</strong>: The image is used to create one or more RDS Custom instances.</li>
-         * <li><strong>none</strong>: The image is not used to create RDS Custom instances.</li>
+         * <li><strong>instance</strong>: One or more RDS Custom instances have been created.</li>
+         * <li><strong>none</strong>: No RDS Custom instances have been created.</li>
          * </ul>
          * 
          * <strong>example:</strong>

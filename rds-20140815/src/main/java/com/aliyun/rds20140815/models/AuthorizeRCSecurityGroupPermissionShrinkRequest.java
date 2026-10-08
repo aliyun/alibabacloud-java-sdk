@@ -7,8 +7,8 @@ public class AuthorizeRCSecurityGroupPermissionShrinkRequest extends TeaModel {
     /**
      * <p>The direction of the rule. Valid values:</p>
      * <ul>
-     * <li><strong>ingress</strong>: the inbound security group rule.</li>
-     * <li><strong>egress</strong>: the outbound security group rule.</li>
+     * <li><strong>ingress</strong>: inbound.</li>
+     * <li><strong>egress</strong>: outbound.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class AuthorizeRCSecurityGroupPermissionShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the security group.</p>
+     * <p>The security group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-2ze27hs990o2hn9****</p>
@@ -36,7 +36,7 @@ public class AuthorizeRCSecurityGroupPermissionShrinkRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The information about the security group.</p>
+     * <p>The security group information.</p>
      */
     @NameInMap("SecurityGroupPermissions")
     public String securityGroupPermissionsShrink;

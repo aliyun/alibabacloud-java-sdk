@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeParameterGroupsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return the parameter overview.</p>
+     * <p>The parameter overview information.</p>
      * <ul>
-     * <li><strong>false</strong> (default): The parameter overview is returned.</li>
-     * <li><strong>true</strong>: The parameter overview is not returned.</li>
+     * <li><p><strong>false</strong>: Returns parameter overview information. This is the default value.</p>
+     * </li>
+     * <li><p><strong>true</strong>: Does not return parameter overview information.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +23,7 @@ public class DescribeParameterGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +33,7 @@ public class DescribeParameterGroupsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>

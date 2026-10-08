@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewRCInstanceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the RDS Custom instance.</p>
+     * <p>The instance ID of the RDS Custom instance.</p>
      * 
      * <strong>example:</strong>
      * <p>rc-dh2jf9n6j4s14926****</p>
@@ -13,6 +13,12 @@ public class RenewRCInstanceResponseBody extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23202700556****</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 

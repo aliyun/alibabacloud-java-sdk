@@ -11,14 +11,14 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public java.util.List<ModifyBackupPolicyRequestAdvancedLogPolicies> advancedLogPolicies;
 
     /**
-     * <p>The number of archived backup files that are retained. Default value: <strong>1</strong>. Valid values:</p>
+     * <p>The number of archived backups to retain. The default value is <strong>1</strong>. Valid values:</p>
      * <ul>
-     * <li>Valid values when <strong>ArchiveBackupKeepPolicy</strong> is set to <strong>ByMonth</strong>: <strong>1</strong> to <strong>31</strong>.</li>
-     * <li>Valid values when <strong>ArchiveBackupKeepPolicy</strong> is set to <strong>ByWeek</strong>: <strong>1</strong> to <strong>7</strong>.</li>
+     * <li>When <strong>ArchiveBackupKeepPolicy</strong> is set to <strong>ByMonth</strong>, valid values are <strong>1 to 31</strong>.</li>
+     * <li>When <strong>ArchiveBackupKeepPolicy</strong> is set to <strong>ByWeek</strong>, valid values are <strong>1 to 7</strong>.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>You do not need to specify this parameter when <strong>ArchiveBackupKeepPolicy</strong> is set to <strong>KeepAll</strong>.</li>
+     * <li>When <strong>ArchiveBackupKeepPolicy</strong> is set to <strong>KeepAll</strong>, this parameter does not need to be specified.</li>
      * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
      * </ul>
      * </blockquote>
@@ -30,11 +30,11 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public Integer archiveBackupKeepCount;
 
     /**
-     * <p>The retention period of archived backup files. The number of archived backup files that can be retained within the specified retention period is specified by <strong>ArchiveBackupKeepCount</strong>. Default value: <strong>0</strong>. Valid values:</p>
+     * <p>The retention cycle of archived backups. The number of backups retained within this cycle is determined by <strong>ArchiveBackupKeepCount</strong>. The default value is <strong>0</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>ByMonth</strong></li>
-     * <li><strong>ByWeek</strong></li>
-     * <li><strong>KeepAll</strong></li>
+     * <li><strong>ByMonth</strong>: monthly</li>
+     * <li><strong>ByWeek</strong>: weekly</li>
+     * <li><strong>KeepAll</strong>: all retained</li>
      * </ul>
      * <blockquote>
      * <p>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</p>
@@ -47,7 +47,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String archiveBackupKeepPolicy;
 
     /**
-     * <p>The number of days for which the archived backup is retained. The default value <strong>0</strong> specifies that the backup archiving feature is disabled. Valid values: <strong>30</strong> to <strong>1095</strong>.</p>
+     * <p>The number of days for which archived backups are retained. The default value is <strong>0</strong>, which indicates that archived backup is not enabled. Valid values: <strong>30 to 1095</strong>.</p>
      * <blockquote>
      * <p>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</p>
      * </blockquote>
@@ -59,21 +59,25 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String archiveBackupRetentionPeriod;
 
     /**
-     * <p>The frequency at which you want to perform a snapshot backup on the instance. Valid values:</p>
+     * <p>The snapshot backup frequency. Valid values:</p>
      * <ul>
-     * <li><strong>-1</strong>: No backup frequencies are specified.</li>
-     * <li><strong>30</strong>: A snapshot backup is performed every 30 minutes.</li>
-     * <li><strong>60</strong>: A snapshot backup is performed every 60 minutes.</li>
-     * <li><strong>120</strong>: A snapshot backup is performed every 120 minutes.</li>
-     * <li><strong>240</strong>: A snapshot backup is performed every 240 minutes.</li>
-     * <li><strong>480</strong>: A snapshot backup is performed every 480 minutes.</li>
+     * <li><strong>15</strong>: 15 minutes.</li>
+     * <li><strong>30</strong>: 30 minutes.</li>
+     * <li><strong>60</strong>: 60 minutes.</li>
+     * <li><strong>120</strong>: 120 minutes.</li>
+     * <li><strong>180</strong>: 180 minutes.</li>
+     * <li><strong>240</strong>: 240 minutes.</li>
+     * <li><strong>360</strong>: 360 minutes.</li>
+     * <li><strong>480</strong>: 480 minutes.</li>
+     * <li><strong>720</strong>: 720 minutes.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>You can configure a backup policy by using this parameter and the <strong>PreferredBackupPeriod</strong> parameter. For example, if you set <strong>PreferredBackupPeriod</strong> to Saturday,Sunday and BackupInterval to \<em>\</em>-1\<em>\</em>, a snapshot backup is performed on every Saturday and Sunday.</li>
-     * <li>If the instance runs PostgreSQL, BackupInterval is supported only when the instance is equipped with cloud disks.</li>
-     * <li>If the instance runs SQL Server, BackupInterval is supported only when the snapshot backup feature is enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/211143.html">Enable snapshot backups for an ApsaraDB RDS for SQL Server instance</a>.</li>
-     * <li>If <strong>Category</strong> is set to <strong>Flash</strong>, BackupInterval is invalid.</li>
+     * <li>This parameter works together with the <strong>PreferredBackupPeriod</strong> parameter to determine the backup policy.</li>
+     * <li>MySQL instances must be cloud disk instances running MySQL 5.7 or 8.0 in the <strong>high-availability series or Cluster Edition</strong>.</li>
+     * <li>PostgreSQL instances must be cloud disk instances.</li>
+     * <li>SQL Server instances must have <a href="https://help.aliyun.com/document_detail/211143.html"><strong>snapshot backup</strong></a> <strong>enabled</strong>.</li>
+     * <li>This parameter is invalid when <strong>Category</strong> is set to <strong>Flash</strong>.</li>
      * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
      * </ul>
      * </blockquote>
@@ -85,16 +89,19 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String backupInterval;
 
     /**
-     * <p>Specifies whether to enable the log backup feature. Valid values:</p>
+     * <p>Specifies whether to enable log backup. Valid values:</p>
      * <ul>
-     * <li><strong>Enable</strong>: enables the feature.</li>
-     * <li><strong>Disabled</strong>: disables the feature.</li>
+     * <li><strong>Enable</strong>: Enable.</li>
+     * <li><strong>Disabled</strong>: Disable.</li>
+     * </ul>
+     * <p><strong>For SQL Server instances</strong>, log backup is enabled by default and cannot be disabled. However, you can modify the log backup frequency as follows:</p>
+     * <ul>
+     * <li>Log backup frequency of <strong>every 5 minutes</strong>: Set BackupLog to Enable and leave LogBackupFrequency empty. For more information, see <a href="https://help.aliyun.com/document_detail/2861729.html">5-minute log backup</a>. <strong>This configuration is not supported when backup on the secondary instance is preferred (BackupPriority is set to 1). Otherwise, an error is returned.</strong></li>
+     * <li>Log backup frequency of <strong>every 30 minutes</strong>: Leave BackupLog empty and set LogBackupFrequency to LogInterval.</li>
+     * <li>Log backup frequency <strong>consistent with data backup</strong>: Leave both BackupLog and LogBackupFrequency empty.</li>
      * </ul>
      * <blockquote>
-     * <ul>
-     * <li>This parameter must be specified when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
-     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
-     * </ul>
+     * <p>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong> and is used to enable or disable log backup.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -104,17 +111,13 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String backupLog;
 
     /**
-     * <p>The backup method of the instance. Valid values:</p>
+     * <p>The backup method for <strong>SQL Server instances with cloud disks</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>Physical</strong>: physical backup</li>
-     * <li><strong>Snapshot</strong>: snapshot backup</li>
+     * <li><strong>Physical</strong> (default): physical backup.</li>
+     * <li><strong>Snapshot</strong>: snapshot backup.</li>
      * </ul>
-     * <p>Default value: <strong>Physical</strong>.</p>
      * <blockquote>
-     * <ul>
-     * <li>This parameter takes effect only on instances that run SQL Server with cloud disks.</li>
-     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
-     * </ul>
+     * <p>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -124,7 +127,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String backupMethod;
 
     /**
-     * <p>The type of the backup. Valid values:</p>
+     * <p>The type of the backup policy. Valid values:</p>
      * <ul>
      * <li><strong>DataBackupPolicy</strong>: data backup</li>
      * <li><strong>LogBackupPolicy</strong>: log backup</li>
@@ -137,15 +140,15 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String backupPolicyMode;
 
     /**
-     * <p>Specifies whether the backup settings of a secondary instance are configured. Valid values:</p>
+     * <p>The <a href="https://help.aliyun.com/document_detail/95717.html">backup on secondary instance</a> setting for <strong>SQL Server Cluster Edition</strong> instances. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: secondary instance preferred</li>
-     * <li><strong>2</strong>: primary instance preferred</li>
+     * <li><strong>1</strong>: secondary instance preferred.</li>
+     * <li><strong>2</strong>: primary instance forced.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>This parameter is suitable only for instances that run SQL Server on RDS Cluster Edition.</li>
-     * <li>This parameter takes effect only when <strong>BackupMethod</strong> is set to <strong>Physical</strong>. If <strong>BackupMethod</strong> is set to <strong>Snapshot</strong>, backups are forcefully performed on the primary instance that runs SQL Server on RDS Cluster Edition.</li>
+     * <li>This parameter takes effect only when <strong>BackupMethod</strong> is set to <strong>Physical</strong>. If <strong>BackupMethod</strong> is set to <strong>Snapshot</strong>, SQL Server Cluster Edition instances are forced to perform backups on the primary instance.</li>
+     * <li>After you set <strong>secondary instance preferred</strong> (BackupPriority to 1), the <strong>5-minute log backup</strong> policy (BackupLog set to Enable and LogBackupFrequency left empty) is <strong>not supported</strong>. Otherwise, an error is returned. Set the log backup frequency to every 30 minutes or consistent with data backup.</li>
      * </ul>
      * </blockquote>
      * 
@@ -156,10 +159,10 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public Integer backupPriority;
 
     /**
-     * <p>The number of days for which you want to retain data backup files. Valid values: <strong>7 to 730</strong>.</p>
+     * <p>The number of days for which data backups are retained. Valid values: <strong>7 to 730</strong>.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter must be specified when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
+     * <li>This parameter is required when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
      * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
      * </ul>
      * </blockquote>
@@ -171,10 +174,10 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String backupRetentionPeriod;
 
     /**
-     * <p>Specifies whether to enable the single-digit second backup feature. Valid values:</p>
+     * <p>Specifies whether to enable backup within seconds. Valid values:</p>
      * <ul>
-     * <li><strong>Flash</strong>: enables the feature.</li>
-     * <li><strong>Standard</strong>: disables the feature.</li>
+     * <li><strong>Flash</strong>: Enable.</li>
+     * <li><strong>Standard</strong>: Disable.</li>
      * </ul>
      * <blockquote>
      * <p>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</p>
@@ -187,13 +190,13 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>The format that is used to compress backup data. Valid values:</p>
+     * <p>The backup compression method. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Backups are not compressed.</li>
-     * <li><strong>1</strong>: The zlib tool is used to compress backups into .tar.gz files.</li>
-     * <li><strong>2</strong>: The zlib tool is used to compress backups in parallel.</li>
-     * <li><strong>4</strong>: The QuickLZ tool is used to compress backups into .xb.gz files. This compression format is supported for instances that run MySQL 5.6 or MySQL 5.7. Backups in this compression format can be used to restore individual databases and tables. For more information, see <a href="https://help.aliyun.com/document_detail/103175.html">Restore individual databases and tables of an ApsaraDB RDS for MySQL instance</a>.</li>
-     * <li><strong>8</strong>: The QuickLZ tool is used to compress backups into .xb.gz files. This compression format is supported only for instances that run MySQL 8.0. Backups in this compression format cannot be used to restore individual databases and tables.</li>
+     * <li><strong>0</strong>: not compressed.</li>
+     * <li><strong>1</strong>: zlib compression. The format is tar.gz.</li>
+     * <li><strong>2</strong>: parallel zlib compression.</li>
+     * <li><strong>4</strong>: quicklz compression. The format is xb.gz. This method is applicable only to MySQL 5.6 and 5.7 and can be used for <a href="https://help.aliyun.com/document_detail/103175.html">individual database and table restoration</a>.</li>
+     * <li><strong>8</strong>: quicklz compression. The format is xb.gz. This method is applicable only to MySQL 8.0. Individual database and table restoration is not supported.</li>
      * </ul>
      * <blockquote>
      * <p>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</p>
@@ -206,11 +209,11 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String compressType;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -219,19 +222,17 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public Integer enableAdvancedBackupPolicy;
 
     /**
-     * <p>Specifies whether to enable the log backup feature. Valid values:</p>
+     * <p>Specifies whether to enable instance log backup for <strong>MySQL</strong>, <strong>PostgreSQL</strong>, and <strong>MariaDB</strong> instances. Valid values:</p>
      * <ul>
-     * <li><strong>True</strong> or <strong>1</strong>: enables the log backup feature.</li>
-     * <li><strong>False</strong> or <strong>0</strong>: disables the log backup feature.</li>
+     * <li><strong>True</strong> or <strong>1</strong>: Enable.</li>
+     * <li><strong>False</strong> or <strong>0</strong>: Disable.</li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>You must specify this parameter when you set the <strong>BackupPolicyMode</strong> parameter to <strong>LogBackupPolicy</strong>.</p>
-     * </li>
-     * <li><p>This parameter takes effect only when you set the <strong>BackupPolicyMode</strong> parameter to <strong>LogBackupPolicy</strong>.</p>
-     * </li>
+     * <li>Instance log backup for <strong>SQL Server</strong> instances is enabled by default and cannot be disabled. You do not need to configure this parameter for SQL Server instances.</li>
+     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>LogBackupPolicy</strong> and is used to enable or disable instance log backup.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -240,31 +241,41 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String enableBackupLog;
 
     /**
-     * <p>Specifies whether to enable incremental backup. Valid values:</p>
+     * <p>Specifies whether to enable incremental backup for <strong>SQL Server instances with cloud disks or MySQL instances with local disks</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): disables the feature.</li>
-     * <li><strong>true</strong>: enables the feature.</li>
+     * <li><strong>False</strong> (default): Disable.</li>
+     * <li><strong>True</strong>: Enable.</li>
      * </ul>
      * <blockquote>
-     * <ul>
-     * <li>This parameter takes effect only on instances that run SQL Server with cloud disks.</li>
-     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
-     * </ul>
+     * <p>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>False</p>
      */
     @NameInMap("EnableIncrementDataBackup")
     public Boolean enableIncrementDataBackup;
 
     /**
-     * <p>Specifies whether to forcefully delete log backup files from the instance when the storage usage of the instance exceeds 80% or the amount of remaining storage on the instance is less than 5 GB. Valid values: <strong>Enable and Disable</strong>. You can retain the default value.</p>
-     * <blockquote>
+     * <p>Specifies whether to enable point-in-time recovery for <strong>MySQL</strong> instances. Valid values:</p>
      * <ul>
-     * <li>You must specify this parameter when you set the <strong>BackupPolicyMode</strong> parameter to <strong>LogBackupPolicy</strong>.</li>
-     * <li>This parameter takes effect only when you set the <strong>BackupPolicyMode</strong> parameter to <strong>LogBackupPolicy</strong>.</li>
+     * <li><strong>True</strong>: Enable.</li>
+     * <li><strong>False</strong>: Disable.</li>
      * </ul>
+     * <blockquote>
+     * <p>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong> and <strong>BackupLog</strong> is set to <strong>Enable</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/2666046.html">Configure a point-in-time recovery policy</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
+    @NameInMap("EnablePitrProtection")
+    public Boolean enablePitrProtection;
+
+    /**
+     * <p>Specifies whether to unconditionally clean up binary logs when the storage usage of a <strong>MySQL</strong> instance exceeds 80% or the remaining storage is less than 5 GB. Valid values: <strong>Enable | Disable</strong>. The default value is not modified.</p>
+     * <blockquote>
+     * <p>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>LogBackupPolicy</strong> and is required in this case.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -274,12 +285,28 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String highSpaceUsageProtection;
 
     /**
-     * <p>The number of hours for which you want to retain log backup files on the instance. Valid values: <strong>0 to 168</strong>. The value 0 specifies that log backup files are not retained on the instance. The value 168 is calculated based on the following formula: 7 × 24.</p>
-     * <blockquote>
+     * <p>The high-frequency incremental backup frequency for <strong>MySQL instances with local disks</strong>. Valid values:</p>
      * <ul>
-     * <li>This parameter must be specified when <strong>BackupPolicyMode</strong> is set to <strong>LogBackupPolicy</strong>.</li>
-     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>LogBackupPolicy</strong>.</li>
+     * <li><strong>60</strong>: 60 minutes.</li>
+     * <li><strong>120</strong>: 120 minutes.</li>
+     * <li><strong>240</strong>: 240 minutes.</li>
+     * <li><strong>360</strong>: 360 minutes.</li>
+     * <li><strong>720</strong>: 720 minutes.</li>
      * </ul>
+     * <blockquote>
+     * <p>This parameter takes effect only when <strong>EnableIncrementDataBackup</strong> is set to <strong>True</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>120</p>
+     */
+    @NameInMap("IncBackupInterval")
+    public Integer incBackupInterval;
+
+    /**
+     * <p>The number of hours for which instance log backups are retained on the local storage of a <strong>MySQL</strong> instance. Valid values: <strong>0 to 168</strong> (7 × 24). A value of 0 indicates that instance logs are not retained locally.</p>
+     * <blockquote>
+     * <p>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>LogBackupPolicy</strong> and is required in this case.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -289,12 +316,9 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String localLogRetentionHours;
 
     /**
-     * <p>The maximum storage usage that is allowed for log backup files on the instance. If the storage usage for log backup files on the instance exceeds the value of this parameter, the system deletes earlier log backup files until the storage usage falls below the value of this parameter. Valid values:<strong>0 to 50</strong>. You can retain the default value.</p>
+     * <p>The maximum usage of the local log storage space for a <strong>MySQL</strong> instance. If the usage exceeds this value, the system starts to clean up binary logs from the earliest one until the usage drops below this threshold. Valid values: <strong>0 to 50</strong>. The default value is not modified.</p>
      * <blockquote>
-     * <ul>
-     * <li>This parameter must be specified when <strong>BackupPolicyMode</strong> is set to <strong>LogBackupPolicy</strong>.</li>
-     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>LogBackupPolicy</strong>.</li>
-     * </ul>
+     * <p>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>LogBackupPolicy</strong> and is required in this case.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -304,16 +328,13 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String localLogRetentionSpace;
 
     /**
-     * <p>The frequency at which you want to back up the logs of the instance. Valid values:</p>
+     * <p>The log backup frequency for <strong>SQL Server</strong> instances. Valid values:</p>
      * <ul>
-     * <li><strong>LogInterval</strong>: A log backup is performed every 30 minutes.</li>
-     * <li>The default value is the same as the data backup frequency.</li>
+     * <li><strong>LogInterval</strong>: every <strong>30 minutes</strong>.</li>
+     * <li><strong>Empty</strong> (no value required): every <strong>5 minutes</strong> or <strong>consistent with data backup</strong>.</li>
      * </ul>
      * <blockquote>
-     * <ul>
-     * <li>The value <strong>LogInterval</strong> is supported only for instances that run SQL Server.</li>
-     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
-     * </ul>
+     * <p>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -323,15 +344,13 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String logBackupFrequency;
 
     /**
-     * <p>The number of binary log files that you want to retain on the instance. Default value: <strong>60</strong>. Valid values: <strong>6</strong> to <strong>100</strong>.</p>
+     * <p>The number of binary logs retained locally. The default value is <strong>60</strong>. Valid values: <strong>6 to 100</strong>.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>This parameter takes effect only when you set the <strong>BackupPolicyMode</strong> parameter to <strong>LogBackupPolicy</strong>.</p>
-     * </li>
-     * <li><p>If the instance runs MySQL, you can set this parameter to \<em>\</em>-1\<em>\</em>. The value \<em>\</em>-1\<em>\</em> specifies that an unlimited number of binary log files can be retained on the instance.</p>
-     * </li>
+     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>LogBackupPolicy</strong>.</li>
+     * <li>For MySQL instances, you can set this parameter to -1, which indicates that the number of locally retained binary logs is not limited.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -340,11 +359,11 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public Integer logBackupLocalRetentionNumber;
 
     /**
-     * <p>The number of days for which the log backup is retained. Valid values: <strong>7 to 730</strong>. The log backup retention period cannot be longer than the data backup retention period.</p>
+     * <p>The number of days for which log backups are retained. Valid values: <strong>7 to 730</strong>. The value cannot be greater than the number of days for which data backups are retained.</p>
      * <blockquote>
      * <ul>
-     * <li>If you enable the log backup feature, you can specify the log backup retention period. This parameter is supported for instances that run MySQL and PostgreSQL.</li>
-     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong> or <strong>LogBackupPolicy</strong>.</li>
+     * <li>When log backup is enabled, you can set the retention period of log backup files. Currently, only MySQL and PostgreSQL instances support this setting.</li>
+     * <li>This parameter applies when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong> or <strong>LogBackupPolicy</strong>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -361,7 +380,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The backup cycle. Specify at least two days of the week and separate the days with commas (,). Valid values:</p>
+     * <p>The backup cycle. Specify at least two days. Separate multiple values with commas (,). Valid values:</p>
      * <ul>
      * <li><strong>Monday</strong></li>
      * <li><strong>Tuesday</strong></li>
@@ -373,8 +392,8 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>You can configure a backup policy by using this parameter and the <strong>BackupInterval</strong> parameter. For example, if you set this parameter to Saturday,Sunday and the <strong>BackupInterval</strong> parameter to 30, a backup is performed every 30 minutes on every Saturday and Sunday.</li>
-     * <li>This parameter must be specified when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
+     * <li>This parameter works together with the <strong>BackupInterval</strong> parameter to determine the backup policy. For example, if you set this parameter to Saturday and Sunday and set <strong>BackupInterval</strong> to 30 minutes, a backup is performed every 30 minutes on Saturday and Sunday each week.</li>
+     * <li>This parameter is required when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
      * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
      * </ul>
      * </blockquote>
@@ -386,10 +405,10 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String preferredBackupPeriod;
 
     /**
-     * <p>The time at which you want to perform a backup. Specify the time in the ISO 8601 standard in the <em>HH:mm</em>Z-<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * <p>The time at which to perform a backup task. Format: <i>HH:mm</i>Z-<i>HH:mm</i>Z (UTC).</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter must be specified when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
+     * <li>This parameter is required when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
      * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
      * </ul>
      * </blockquote>
@@ -401,16 +420,16 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String preferredBackupTime;
 
     /**
-     * <p>The policy that is used to retain archived backup files if the instance is released. Valid values:</p>
+     * <p>The archived backup data retention policy for deleted <strong>MySQL</strong> instances. Valid values:</p>
      * <ul>
-     * <li><strong>None</strong>: No archived backup files are retained.</li>
-     * <li><strong>Lastest</strong>: Only the last archived backup file is retained.</li>
-     * <li><strong>All</strong>: All archived backup files are retained.</li>
+     * <li><strong>None</strong>: not retained.</li>
+     * <li><strong>Lastest</strong>: the last backup is retained.</li>
+     * <li><strong>All</strong>: all backups are retained.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>This parameter takes effect only when you set the <strong>BackupPolicyMode</strong> parameter to <strong>DataBackupPolicy</strong>.</li>
-     * <li>If the instance uses cloud disks and was created on or after February 1, 2024, this parameter is automatically set to <strong>Lastest</strong>. If the instance uses local disks in the same scenario, this parameter is automatically set to <strong>None</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/2836955.html">Backup for deleted instances</a>.</li>
+     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
+     * <li>For ApsaraDB RDS for MySQL cloud disk instances purchased on or after February 1, 2024, the default value of ReleasedKeepPolicy is <strong>Lastest</strong>. For instances with Premium Local SSDs, the default value is <strong>None</strong>. For more information about this feature, see <a href="https://help.aliyun.com/document_detail/2836955.html">Backups of deleted instances</a>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -567,12 +586,28 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.enableIncrementDataBackup;
     }
 
+    public ModifyBackupPolicyRequest setEnablePitrProtection(Boolean enablePitrProtection) {
+        this.enablePitrProtection = enablePitrProtection;
+        return this;
+    }
+    public Boolean getEnablePitrProtection() {
+        return this.enablePitrProtection;
+    }
+
     public ModifyBackupPolicyRequest setHighSpaceUsageProtection(String highSpaceUsageProtection) {
         this.highSpaceUsageProtection = highSpaceUsageProtection;
         return this;
     }
     public String getHighSpaceUsageProtection() {
         return this.highSpaceUsageProtection;
+    }
+
+    public ModifyBackupPolicyRequest setIncBackupInterval(Integer incBackupInterval) {
+        this.incBackupInterval = incBackupInterval;
+        return this;
+    }
+    public Integer getIncBackupInterval() {
+        return this.incBackupInterval;
     }
 
     public ModifyBackupPolicyRequest setLocalLogRetentionHours(String localLogRetentionHours) {

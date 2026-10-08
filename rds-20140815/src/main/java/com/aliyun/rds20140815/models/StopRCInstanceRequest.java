@@ -7,8 +7,10 @@ public class StopRCInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcefully stop the instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><p><strong>true</strong>: Forcefully stops the instance.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): Gracefully stops the instance.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,6 +38,23 @@ public class StopRCInstanceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The stop mode of the instance. Valid values:</p>
+     * <ul>
+     * <li><p>StopCharging: economical mode. After economical mode is enabled:</p>
+     * <ul>
+     * <li>Billing for compute resources is suspended.</li>
+     * <li>Billing for system cloud disks and data cloud disks continues.</li>
+     * <li>Because compute resources are released, the instance may fail to start due to insufficient resources. Try again later or change the instance type.</li>
+     * </ul>
+     * </li>
+     * <li><p>KeepCharging: standard mode. Billing continues after the instance is stopped.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>KeepCharging</p>
+     */
     @NameInMap("StoppedMode")
     public String stoppedMode;
 

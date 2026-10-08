@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateDdrInstanceRequest extends TeaModel {
     /**
-     * <p>The backup set ID that you want to use for the restoration. You can call the DescribeCrossRegionBackups operation to query backup set ID.</p>
+     * <p>The ID of the backup set used for restoration from a backup set. You can call the DescribeCrossRegionBackups operation to query backup set IDs.</p>
      * <blockquote>
-     * <p> This parameter is required when you set the <strong>RestoreType</strong> parameter to <strong>BackupSet</strong>.</p>
+     * <p>This parameter is required when <strong>RestoreType</strong> is set to <strong>BackupSet</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>14***</p>
+     * <p>14****</p>
      */
     @NameInMap("BackupSetId")
     public String backupSetId;
 
     /**
-     * <p>The region where the backup set is located.</p>
+     * <p>The region where the backup set resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -29,18 +29,17 @@ public class CreateDdrInstanceRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The connection mode of the destination instance. Valid values:</p>
+     * <p>The access mode of the target instance. Valid values:</p>
      * <ul>
-     * <li><strong>Standard</strong>: standard mode</li>
+     * <li><strong>Standard</strong> (default): standard access mode</li>
      * <li><strong>Safe</strong>: database proxy mode</li>
      * </ul>
-     * <p>Default value: <strong>Standard</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>Standard</p>
@@ -49,7 +48,7 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String connectionMode;
 
     /**
-     * <p>The instance type of the destination instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</p>
+     * <p>The instance type of the target instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rds.mysql.s1.small</p>
@@ -58,22 +57,22 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>The instance name. The name must be 2 to 256 characters in length. The value can contain letters, digits, underscores (_), and hyphens (-), and must start with a letter.</p>
+     * <p>The name of the target instance. The name must be 2 to 256 characters in length. The name must start with a letter or a Chinese character and can contain digits, Chinese characters, letters, underscores (_), and hyphens (-).</p>
      * <blockquote>
-     * <p> The value cannot start with http:// or https://.</p>
+     * <p>The name cannot start with <code>http://</code> or <code>https://</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>Test database</p>
+     * <p>testdb</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
     /**
-     * <p>The network connection type of the destination instance. Valid values:</p>
+     * <p>The network connectivity type of the target instance. Valid values:</p>
      * <ul>
-     * <li><strong>Internet</strong></li>
-     * <li><strong>Intranet</strong></li>
+     * <li><strong>Internet</strong>: public network connection</li>
+     * <li><strong>Intranet</strong>: internal network connection</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -84,7 +83,7 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String DBInstanceNetType;
 
     /**
-     * <p>The storage capacity of the destination instance. Valid values: <strong>5 to 2000</strong>. Unit: GB. You can increase the storage capacity at a step size of 5 GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a>.</p>
+     * <p>The instance storage capacity of the target instance. Valid values: <strong>5 to 2000</strong>. The value is incremented in steps of 5 GB. Unit: GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -93,7 +92,43 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public Integer DBInstanceStorage;
 
     /**
-     * <p>The storage type of the destination instance. Only the local SSD storage type is supported. Default value: <strong>local_ssd</strong>.</p>
+     * <p>The instance storage type of the target instance. Valid values:</p>
+     * <blockquote>
+     * <p>Use the same storage type as the source instance.</p>
+     * </blockquote>
+     * <details>
+     * <summary>ApsaraDB RDS for MySQL</summary>
+     * 
+     * <ul>
+     * <li>local_ssd: Premium Local SSDs (default)</li>
+     * <li>cloud_essd: PL1 ESSD cloud disk</li>
+     * <li>cloud_essd2: PL2 ESSD cloud disk</li>
+     * <li>cloud_essd3: PL3 ESSD cloud disk</li>
+     * <li>cloud_ssd: standard SSD cloud disk (discontinued)</details></li>
+     * </ul>
+     * <details>
+     * <summary>ApsaraDB RDS for SQL Server</summary>
+     * 
+     * <ul>
+     * <li>cloud_essd: PL1 ESSD cloud disk</li>
+     * <li>cloud_essd2: PL2 ESSD cloud disk</li>
+     * <li>cloud_essd3: PL3 ESSD cloud disk</li>
+     * <li>local_ssd: Premium Local SSDs (discontinued)</li>
+     * <li>cloud_ssd: standard SSD cloud disk (discontinued)</li>
+     * </ul>
+     * </details>
+     * 
+     * <details>
+     * <summary>ApsaraDB RDS for PostgreSQL</summary>
+     * 
+     * <ul>
+     * <li>cloud_essd: PL1 ESSD cloud disk</li>
+     * <li>cloud_essd2: PL2 ESSD cloud disk</li>
+     * <li>cloud_essd3: PL3 ESSD cloud disk</li>
+     * <li>local_ssd: Premium Local SSDs (discontinued)</li>
+     * <li>cloud_ssd: standard SSD cloud disk (discontinued)</li>
+     * </ul>
+     * </details>
      * 
      * <strong>example:</strong>
      * <p>local_ssd</p>
@@ -102,15 +137,11 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String DBInstanceStorageType;
 
     /**
-     * <p>The ID of the customer master key (CMK) for cloud disk encryption. If this parameter is specified, cloud disk encryption is enabled and you must also specify the <strong>RoleARN</strong> parameter. Cloud disk encryption cannot be disabled after it is enabled. You can obtain the ID of the key in the KMS console or create a key. For more information, see <a href="https://help.aliyun.com/document_detail/181610.html">Create a key</a>.</p>
-     * <p>**</p>
-     * <p><strong>Notes</strong></p>
-     * <ul>
-     * <li><p>This parameter is applicable only to ApsaraDB RDS for SQL Server instances.</p>
-     * </li>
-     * <li><p>You can leave this parameter empty. If you do not specify this parameter, you only need to specify the <strong>RoleARN</strong> to use the service key that is managed by ApsaraDB RDS to encrypt cloud disks.</p>
-     * </li>
-     * </ul>
+     * <p>The ID of the custom key used for cloud disk encryption for <strong>SQL Server instances</strong>. Specifying this parameter enables cloud disk encryption (which cannot be disabled after it is enabled). You must also specify <strong>RoleARN</strong>.
+     * You can view the key ID in the Key Management Service (KMS) console or <a href="https://help.aliyun.com/document_detail/181610.html">create a new key</a>.</p>
+     * <blockquote>
+     * <p>You can also leave this parameter empty and specify only <strong>RoleARN</strong> to set the cloud disk encryption type to the RDS-managed service key (Default Service CMK).</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>749c1df7-<strong><strong>-</strong></strong>-<strong><strong>-</strong></strong></p>
@@ -119,7 +150,7 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String encryptionKey;
 
     /**
-     * <p>The database engine of the destination instance. Valid values:</p>
+     * <p>The type of the destination database engine. Valid values:</p>
      * <ul>
      * <li><strong>MySQL</strong></li>
      * <li><strong>SQLServer</strong></li>
@@ -134,12 +165,15 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The major engine version of the destination instance. The value of this parameter varies based on the value of <strong>Engine</strong>.</p>
+     * <p>The version of the destination database engine. The valid values vary based on the value of <strong>Engine</strong>:</p>
      * <ul>
-     * <li>Valid values when Engine is set to MySQL: <strong>5.5, 5.6, 5.7, and 8.0</strong></li>
-     * <li>Valid values when Engine is set to SQLServer: <strong>2008r2, 08r2_ent_ha, 2012, 2012_ent_ha, 2012_std_ha, 2012_web, 2014_std_ha, 2016_ent_ha, 2016_std_ha, 2016_web, 2017_std_ha, 2017_ent, 2019_std_ha, and 2019_ent</strong></li>
-     * <li>Valid values when Engine is set to PostgreSQL: <strong>9.4, 10.0, 11.0, 12.0, and 13.0</strong></li>
+     * <li>MySQL: <strong>5.5/5.6/5.7/8.0</strong></li>
+     * <li>SQL Server: <strong>2008r2 (Premium Local SSDs, discontinued)/08r2_ent_ha (cloud disks, discontinued)/2012/2012_ent_ha/2012_std_ha/2012_web/2014_std_ha/2016_ent_ha/2016_std_ha/2016_web/2017_std_ha/2017_ent/2019_std_ha/2019_ent</strong></li>
+     * <li>PostgreSQL: <strong>10.0/11.0/12.0/13.0/14.0/15.0</strong></li>
      * </ul>
+     * <blockquote>
+     * <p>For SQL Server instances, <code>_ent</code> indicates Cluster Edition, <code>_ent_ha</code> indicates Enterprise Edition, <code>_std_ha</code> indicates Standard Edition, and <code>_web</code> indicates Web Edition.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -149,14 +183,13 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The network type of the instance. Valid values:</p>
+     * <p>The network type of the target instance. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong></li>
-     * <li><strong>Classic</strong></li>
+     * <li><strong>VPC</strong>: VPC</li>
+     * <li><strong>Classic</strong>: classic network (offline)</li>
      * </ul>
-     * <p>Default value: Classic.</p>
      * <blockquote>
-     * <p>If you set this parameter to <strong>VPC</strong>, you must also specify <strong>VpcId</strong> and <strong>VSwitchId</strong>.</p>
+     * <p>If you set this parameter to <strong>VPC</strong>, you must also specify the <strong>VpcId</strong> and <strong>VSwitchId</strong> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -172,10 +205,10 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The billing method of the instance. Valid values:</p>
+     * <p>The billing method of the target instance. Valid values:</p>
      * <ul>
      * <li><strong>Postpaid</strong>: pay-as-you-go</li>
-     * <li><strong>Prepaid</strong>: subscription</li>
+     * <li><strong>Prepaid</strong>: upfront (subscription)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -186,13 +219,13 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The unit that is used to measure the subscription duration of the destination instance. Valid values:</p>
+     * <p>The unit of the upfront subscription duration for the target instance. Valid values:</p>
      * <ul>
-     * <li><strong>Year</strong></li>
-     * <li><strong>Month</strong></li>
+     * <li><strong>Year</strong>: yearly subscription</li>
+     * <li><strong>Month</strong>: monthly subscription</li>
      * </ul>
      * <blockquote>
-     * <p>If you set PayType to <strong>Prepaid</strong>, you must specify UsedTime.</p>
+     * <p>This parameter is required when PayType is set to <strong>Prepaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -202,16 +235,16 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The private IP address of the destination instance. The private IP address must be within the CIDR block that is supported by the specified vSwitch. The system automatically assigns an internal IP address based on the values of the <strong>VPCId</strong> and <strong>VSwitchId</strong> parameters.</p>
+     * <p>Settings for the internal network IP address of the target instance. The IP address must be within the IP address range of the specified vSwitch. By default, the system automatically allocates an internal network IP address based on the values of <strong>VPCId</strong> and <strong>VSwitchId</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>172.XXX.XXX.69</p>
+     * <p>172.XX.XX.69</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
     /**
-     * <p>The region ID of the destination instance. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The ID of the destination region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -224,7 +257,7 @@ public class CreateDdrInstanceRequest extends TeaModel {
      * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmyxxxxxxxxxx</p>
+     * <p>rg-acfmy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -236,9 +269,9 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The point in time to which you want to restore data. The point in time that you specify must be earlier than the current time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The point in time to which you want to restore data when you restore data to a point in time. The point in time must be earlier than the current time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * <blockquote>
-     * <p>If <strong>RestoreType</strong> is set to <strong>BackupTime</strong>, you must specify this parameter.</p>
+     * <p>This parameter is required when <strong>RestoreType</strong> is set to <strong>BackupTime</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -248,10 +281,10 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String restoreTime;
 
     /**
-     * <p>The restoration method that you want to use. Valid values:</p>
+     * <p>The restoration method. Valid values:</p>
      * <ul>
-     * <li><strong>BackupSet</strong>: restores data from a backup set. If you use this value, you must also specify <strong>BackupSetId</strong>.</li>
-     * <li><strong>BackupTime</strong>: restores data to a point in time. If you use this value, you must also specify <strong>RestoreTime</strong>, <strong>SourceRegion</strong>, and <strong>SourceDBInstanceName</strong>.</li>
+     * <li><strong>BackupSet</strong>: restores data from a backup set. The data in the backup set is restored to the new instance. You must also specify the <strong>BackupSetId</strong> parameter.</li>
+     * <li><strong>BackupTime</strong>: restores data to a point in time within the log backup retention period. You must also specify the <strong>RestoreTime</strong>, <strong>SourceRegion</strong>, and <strong>SourceDBInstanceName</strong> parameters.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -262,10 +295,7 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String restoreType;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) that is provided by your Alibaba Cloud account for Resource Access Management (RAM) users. RAM users can use the ARN to connect to ApsaraDB RDS to Key Management Service (KMS). You can call the <a href="https://help.aliyun.com/document_detail/2628797.html">CheckCloudResourceAuthorized</a> operation to query the ARN.</p>
-     * <blockquote>
-     * <p> This parameter is applicable only to ApsaraDB RDS for SQL Server instances.</p>
-     * </blockquote>
+     * <p>The global resource descriptor (ARN) that provides authorization for the RDS cloud service account to access Key Management Service (KMS) for <strong>SQL Server instances</strong>. You can call the <a href="https://help.aliyun.com/document_detail/2628797.html">CheckCloudResourceAuthorized</a> operation to query the ARN.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::1406****:role/aliyunrdsinstanceencryptiondefaultrole</p>
@@ -274,10 +304,10 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String roleARN;
 
     /**
-     * <p>The IP address whitelist of the destination instance. If you want to add more than one entry to the IP address whitelist, separate the entries with commas (,). Each entry must be unique. You can add a maximum of 1,000 entries. For more information, see <a href="https://help.aliyun.com/document_detail/43185.html">Configure an IP address whitelist for an ApsaraDB RDS for MySQL instance</a>. The entries in the IP address whitelist must be in one of the following formats:</p>
+     * <p>The <a href="https://help.aliyun.com/document_detail/43185.html">IP whitelist</a> of the target instance. Separate multiple IP addresses with commas (,). IP addresses cannot be duplicated. You can specify up to 1,000 IP addresses. The following two formats are supported:</p>
      * <ul>
-     * <li>IP address. Example: 10.23.12.24.</li>
-     * <li>CIDR block. Example: 10.23.12.24/24. In this example, 24 indicates that the prefix of the CIDR block is 24 bits in length. You can replace 24 with a value that ranges from 1 to 32.</li>
+     * <li>IP address format, such as 10.23.12.24.</li>
+     * <li>CIDR format, such as 10.23.12.24/24 (Classless Inter-Domain Routing. 24 indicates the length of the prefix in the address. The value ranges from 1 to 32).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -288,21 +318,21 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String securityIPList;
 
     /**
-     * <p>The source instance ID, which is used if you want to restore data to a point in time.</p>
+     * <p>The ID of the source instance for point-in-time restoration.</p>
      * <blockquote>
-     * <p> This parameter is required when you set the <strong>RestoreType</strong> parameter to <strong>BackupTime</strong>.</p>
+     * <p>This parameter is required when <strong>RestoreType</strong> is set to <strong>BackupTime</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("SourceDBInstanceName")
     public String sourceDBInstanceName;
 
     /**
-     * <p>The region ID of the source instance if you want to restore data to a point in time.</p>
+     * <p>The ID of the source region for point-in-time restoration.</p>
      * <blockquote>
-     * <p>If you set <strong>RestoreType</strong> to <strong>BackupTime</strong>, you must specify this parameter.</p>
+     * <p>This parameter is required when <strong>RestoreType</strong> is set to <strong>BackupTime</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -312,7 +342,7 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String sourceRegion;
 
     /**
-     * <p>The character set of the destination instance. Valid values:</p>
+     * <p>The character set of the target instance. Valid values:</p>
      * <ul>
      * <li><strong>utf8</strong></li>
      * <li><strong>gbk</strong></li>
@@ -327,13 +357,13 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String systemDBCharset;
 
     /**
-     * <p>The subscription duration of the instance.</p>
+     * <p>The subscription duration. Valid values:</p>
      * <ul>
-     * <li>If you set <strong>Period</strong> to <strong>Year</strong>, the value of UsedTime ranges from <strong>1 to 3</strong>.</li>
-     * <li>If you set <strong>Period</strong> to <strong>Month</strong>, the value of UsedTime ranges from <strong>1 to 9</strong>.</li>
+     * <li>If <strong>Period</strong> is set to <strong>Year</strong>, the valid values of UsedTime are <strong>1 to 3</strong>.</li>
+     * <li>If <strong>Period</strong> is set to <strong>Month</strong>, the valid values of UsedTime are <strong>1 to 9</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p>If you set PayType to <strong>Prepaid</strong>, you must specify UsedTime.</p>
+     * <p>This parameter is required when PayType is set to <strong>Prepaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -343,33 +373,39 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String usedTime;
 
     /**
-     * <p>The VPC ID of the destination instance. This parameter is available only when you set the <strong>InstanceNetworkType</strong> parameter to <strong>VPC</strong>.</p>
+     * <p>The VPC ID of the target instance.</p>
      * <blockquote>
-     * <p> If you specify this parameter, you must also specify the <strong>ZoneId</strong> parameter.</p>
+     * <ul>
+     * <li>This parameter is required when <strong>InstanceNetworkType</strong> is set to <strong>VPC</strong>.</li>
+     * <li>If you specify this parameter, you must also specify the <strong>ZoneId</strong> parameter.</li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>vpc-xxxxxxxxxxxx</p>
+     * <p>vpc-****</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
 
     /**
-     * <p>The vSwitch ID of the destination instance. If you specify more than one vSwitch, separate the IDs of the vSwitches with commas (,). This parameter is available only when you set the <strong>InstanceNetworkType</strong> parameter to <strong>VPC</strong>.</p>
+     * <p>The vSwitch ID of the target instance. Separate multiple values with commas (,).</p>
      * <blockquote>
-     * <p> If you specify this parameter, you must also specify the <strong>ZoneId</strong> parameter.</p>
+     * <ul>
+     * <li>This parameter is required when <strong>InstanceNetworkType</strong> is set to <strong>VPC</strong>.</li>
+     * <li>If you specify this parameter, you must also specify the <strong>ZoneId</strong> parameter.</li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>vsw-xxxxxxxxxxx</p>
+     * <p>vsw-****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>The zone ID of the destination instance. If the destination instance is deployed in multiple zones, separate the IDs of the zones with colons (:).</p>
+     * <p>The active zone ID of the target instance. Separate multiple zones with colons (:).</p>
      * <blockquote>
-     * <p>If you specify a virtual private cloud (VPC) and a vSwitch, you must specify this parameter to identify the zone for the vSwitch.</p>
+     * <p>If you specify a VPC and a vSwitch, this parameter is required to match the zone of the specified vSwitch.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

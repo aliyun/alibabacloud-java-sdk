@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceVectorSupportStatusRequest extends TeaModel {
     /**
+     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class ModifyDBInstanceVectorSupportStatusRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The status of the vector storage feature. Valid values:</p>
+     * <ul>
+     * <li><strong>ON</strong>: Enabled.</li>
+     * <li><strong>OFF</strong>: Disabled.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

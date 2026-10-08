@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeGadInstancesRequest extends TeaModel {
     /**
-     * <p>The ID of the global active database cluster.</p>
+     * <p>The ID of the active geo-redundancy database cluster.</p>
      * <ul>
-     * <li>If you leave this parameter empty, this operation returns the details about all global active database clusters that are created within your Alibaba Cloud account.</li>
-     * <li>If you specify this parameter, this operation returns the details about the global active database cluster that you specify.</li>
+     * <li>If you do not specify this parameter, the IDs of all clusters under the current account are returned.</li>
+     * <li>If you specify this parameter, the details of the specified cluster are returned.</li>
      * </ul>
      * <blockquote>
-     * <p> If you do not specify this parameter when you call this operation for the first time, the IDs of all clusters that are created by using the current account are returned. Then, you can specify the cluster ID to view the cluster details.</p>
+     * <p>You can call this operation without specifying this parameter to obtain the IDs of all clusters under the current account, and then specify a cluster ID to query the details of the cluster.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>gad-rm-bp1npi2j8********</p>
+     * <p>gad-rm-bp1npi2j8****</p>
      */
     @NameInMap("GadInstanceName")
     public String gadInstanceName;
@@ -30,10 +30,10 @@ public class DescribeGadInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmy*****</p>
+     * <p>rg-acfmy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

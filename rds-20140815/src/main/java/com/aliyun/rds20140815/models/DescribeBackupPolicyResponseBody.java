@@ -14,7 +14,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public DescribeBackupPolicyResponseBodyAdvancedLogPolicies advancedLogPolicies;
 
     /**
-     * <p>The number of archived backup files that are retained.</p>
+     * <p>The number of archived backups retained for the <strong>MySQL</strong> instance.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String archiveBackupKeepCount;
 
     /**
-     * <p>The cycle based on which archived backup files are retained.</p>
+     * <p>The retention cycle of archived backups for the <strong>MySQL</strong> instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ByMonth</p>
@@ -32,7 +32,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String archiveBackupKeepPolicy;
 
     /**
-     * <p>The number of days for which archived backup files are retained.</p>
+     * <p>The number of days for which archived backups are retained for the <strong>MySQL</strong> instance.</p>
      * 
      * <strong>example:</strong>
      * <p>365</p>
@@ -43,8 +43,8 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     /**
      * <p>The backup interval. Unit: minutes.</p>
      * <ul>
-     * <li>If the instance runs MySQL, the interval is the same as the value of the Snapshot Backup Start Time parameter rather than the Snapshot Backup Period parameter in the ApsaraDB RDS console. For more information, see <a href="https://help.aliyun.com/document_detail/98818.html">Back up an ApsaraDB RDS for MySQL instance</a>.</li>
-     * <li>If the instance runs SQL Server, the interval is the same as the log backup frequency.</li>
+     * <li>For MySQL instances: the <a href="https://help.aliyun.com/document_detail/98818.html">snapshot backup frequency</a> (not the snapshot backup cycle).</li>
+     * <li>For SQL Server instances: the log backup frequency.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,10 +54,15 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String backupInterval;
 
     /**
-     * <p>Indicates whether the log backup feature is enabled. Valid values:</p>
+     * <p>Indicates whether log backup is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>Enable</strong></li>
-     * <li><strong>Disabled</strong></li>
+     * <li><strong>Enable</strong>: enabled</li>
+     * <li><strong>Disabled</strong>: disabled</li>
+     * </ul>
+     * <p><strong>For SQL Server instances:</strong></p>
+     * <ul>
+     * <li><strong>Enable</strong> is returned only when instance log backup frequency is <strong>every 5 minutes</strong>.</li>
+     * <li>When instance log backup frequency is <strong>every 30 minutes</strong> or <strong>consistent with the data backup cycle</strong>, this parameter returns <strong>Disabled</strong>. <strong>Use the value of BackupInterval as the reference</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,14 +72,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String backupLog;
 
     /**
-     * <p>The backup method of the instance. Valid values:</p>
+     * <p>The backup method of the <strong>SQL Server instance with cloud disks</strong>. Valid values:</p>
      * <ul>
      * <li><strong>Physical</strong>: physical backup</li>
      * <li><strong>Snapshot</strong>: snapshot backup</li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is returned only when the instance runs SQL Server and uses cloud disks.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Physical</p>
@@ -83,13 +85,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String backupMethod;
 
     /**
-     * <p>The backup settings of the secondary instance. Valid values:</p>
+     * <p>The backup settings for the secondary instance of an <strong>SQL Server Enterprise Cluster Edition</strong> instance. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Secondary instance preferred</li>
-     * <li><strong>2</strong>: Primary instance preferred</li>
+     * <li><strong>1</strong>: The secondary instance is preferred.</li>
+     * <li><strong>2</strong>: The primary instance is forced.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is available only for instances that run SQL Server on RDS Cluster Edition. This parameter is returned only when SupportModifyBackupPriority is set to True.</p>
+     * <p>This parameter is returned only when SupportModifyBackupPriority is True.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -99,7 +101,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public Integer backupPriority;
 
     /**
-     * <p>The number of days for which data backup files are retained.</p>
+     * <p>The number of days for which data backups are retained.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -108,13 +110,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public Integer backupRetentionPeriod;
 
     /**
-     * <p>Indicates whether to enable the single-digit second backup feature. This feature allows ApsaraDB RDS to complete a backup within single-digit seconds. Valid values:</p>
+     * <p>Indicates whether backup within seconds is enabled for the <strong>MySQL</strong> or <strong>PostgreSQL</strong> instance. Valid values:</p>
      * <ul>
-     * <li><strong>Flash</strong>: The single-digit second backup feature is enabled.</li>
-     * <li><strong>Standard</strong>: The single-digit second backup feature is disabled.</li>
+     * <li><strong>Flash</strong>: enabled</li>
+     * <li><strong>Standard</strong>: disabled</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter takes effect only when you set the <strong>BackupPolicyMode</strong> parameter to <strong>DataBackupPolicy</strong>.</p>
+     * <p>This parameter takes effect only when the <strong>BackupPolicyMode</strong> parameter is set to <strong>DataBackupPolicy</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -124,13 +126,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String category;
 
     /**
-     * <p>The method that is used to compress backup data. Valid values:</p>
+     * <p>The backup compression method. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Backup data is not compressed.</li>
-     * <li><strong>1</strong>: Backup data is compressed by using zlib.</li>
-     * <li><strong>2</strong>: Backup data is compressed by using zlib that invokes more than one thread in parallel for each backup.</li>
-     * <li><strong>4</strong>: Backup data is compressed by using QuickLZ and can be used to restore individual databases or tables.</li>
-     * <li><strong>8</strong>: Backup data is compressed by using QuickLZ but cannot be used to restore individual databases or tables.</li>
+     * <li><strong>0</strong>: no compression</li>
+     * <li><strong>1</strong>: zlib compression</li>
+     * <li><strong>2</strong>: parallel zlib compression</li>
+     * <li><strong>4</strong>: QuickLZ compression with fast restoration for individual databases and tables enabled</li>
+     * <li><strong>8</strong>: QuickLZ compression without fast restoration for individual databases and tables supported</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -140,10 +142,15 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String compressType;
 
     /**
-     * <p>Indicates whether the log backup feature is enabled. Valid values:</p>
+     * <p>Indicates whether log backup is enabled. Valid values:</p>
      * <ul>
      * <li><strong>1</strong>: enabled</li>
      * <li><strong>0</strong>: disabled</li>
+     * </ul>
+     * <p><strong>For SQL Server instances:</strong></p>
+     * <ul>
+     * <li><strong>1</strong> is returned only when instance log backup frequency is <strong>every 5 minutes</strong>.</li>
+     * <li>When instance log backup frequency is <strong>every 30 minutes</strong> or <strong>consistent with the data backup cycle</strong>, this parameter returns <strong>0</strong>. <strong>Use the value of BackupInterval as the reference</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -153,10 +160,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String enableBackupLog;
 
     /**
-     * <p>Indicates whether incremental backup is enabled. Valid values:</p>
+     * <p>Indicates whether incremental backup is enabled for the <strong>SQL Server</strong> instance. Valid values:</p>
      * <ul>
-     * <li><strong>True</strong>: Incremental backup is enabled.</li>
-     * <li><strong>False</strong>: Incremental backup is disabled.</li>
+     * <li><strong>True</strong>: enabled</li>
+     * <li><strong>False</strong>: disabled</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -166,13 +173,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public Boolean enableIncrementDataBackup;
 
     /**
-     * <p>Indicates whether the point-in-time restoration (PITR) feature is enabled. The PITR feature is an enhancement of the log backup feature. Valid values:</p>
+     * <p>Indicates whether point-in-time recovery (PITR) is enabled for the <strong>MySQL</strong> instance. PITR is an upgraded version of log backup. Valid values:</p>
      * <ul>
-     * <li><strong>True</strong></li>
-     * <li><strong>False</strong></li>
+     * <li><strong>True</strong>: enabled</li>
+     * <li><strong>False</strong>: disabled</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is returned only when the instance runs MySQL. For more information, see <a href="https://help.aliyun.com/document_detail/2666046.html">Configure the PITR feature</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2666046.html">Configure a point-in-time recovery policy</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -182,10 +189,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public Boolean enablePitrProtection;
 
     /**
-     * <p>Indicates whether the log backup deletion feature is enabled. If the disk usage exceeds 80% or the remaining disk space is less than 5 GB on the instance, this feature deletes binary log files. Valid values:</p>
+     * <p>Indicates whether binary logs are forcibly deleted when the storage usage of the <strong>MySQL</strong> instance exceeds 80% or the remaining storage is less than 5 GB. Valid values:</p>
      * <ul>
-     * <li><strong>Disable</strong></li>
-     * <li><strong>Enable</strong></li>
+     * <li><strong>Disable</strong>: Binary logs are not deleted.</li>
+     * <li><strong>Enable</strong>: Binary logs are deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -194,8 +201,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("HighSpaceUsageProtection")
     public String highSpaceUsageProtection;
 
+    @NameInMap("IncBackupInterval")
+    public Integer incBackupInterval;
+
     /**
-     * <p>The number of hours for which log backup files are retained on the instance.</p>
+     * <p>The number of hours for which binary logs are retained on the <strong>MySQL</strong> instance.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -204,7 +214,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public Integer localLogRetentionHours;
 
     /**
-     * <p>The maximum storage usage that is allowed for log files on the instance.</p>
+     * <p>The maximum storage usage of binary logs on the <strong>MySQL</strong> instance, in percentage.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -213,14 +223,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String localLogRetentionSpace;
 
     /**
-     * <p>The backup frequency of logs. Valid values:</p>
+     * <p>The log backup frequency of the <strong>SQL Server</strong> instance. Valid values:</p>
      * <ul>
-     * <li><strong>LogInterval</strong>: Log backups are performed every 30 minutes.</li>
-     * <li>Default value: same as the value of the <strong>PreferredBackupPeriod</strong> parameter.</li>
+     * <li><strong>LogInterval</strong>: every 30 minutes.</li>
+     * <li>Default: consistent with the data backup cycle specified by <strong>PreferredBackupPeriod</strong>.</li>
      * </ul>
-     * <blockquote>
-     * <p> This parameter is returned only when the instance runs SQL Server.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>LogInterval</p>
@@ -229,7 +236,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String logBackupFrequency;
 
     /**
-     * <p>The number of binary log files that you want to retain on the instance.</p>
+     * <p>The number of binary logs retained on the <strong>MySQL</strong> instance.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -238,7 +245,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public Integer logBackupLocalRetentionNumber;
 
     /**
-     * <p>The number of days for which log backup files are retained.</p>
+     * <p>The number of days for which log backups are retained.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -247,7 +254,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public Integer logBackupRetentionPeriod;
 
     /**
-     * <p>The number of days during which you can restore data of the instance to any point in time.</p>
+     * <p>The number of days for which point-in-time recovery is supported for the <strong>MySQL</strong> instance.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -256,7 +263,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public Integer pitrRetentionPeriod;
 
     /**
-     * <p>The cycle based on which you want to perform a backup. Separate multiple values with commas (,). Valid values:</p>
+     * <p>The data backup cycle. Multiple values are separated by commas (,). Valid values:</p>
      * <ul>
      * <li><strong>Monday</strong></li>
      * <li><strong>Tuesday</strong></li>
@@ -274,7 +281,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String preferredBackupPeriod;
 
     /**
-     * <p>The time when a data backup is performed. The time follows the ISO 8601 standard in the <em>HH:mm</em>Z-<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+     * <p>The data backup time. Format: <i>HH:mm</i>Z-<i>HH:mm</i>Z (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>15:00Z-16:00Z</p>
@@ -283,7 +290,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String preferredBackupTime;
 
     /**
-     * <p>The time when the next backup is performed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+     * <p>The next backup time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2018-01-19T15:15Z</p>
@@ -292,11 +299,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String preferredNextBackupTime;
 
     /**
-     * <p>The policy that is used to retain archived backup files if the instance is released. Valid values:</p>
+     * <p>The archived backup data retention policy for deleted <strong>MySQL</strong> instances. Valid values:</p>
      * <ul>
-     * <li><strong>None</strong>: No archived backup files are retained.</li>
-     * <li><strong>Lastest</strong>: Only the last archived backup file is retained.</li>
-     * <li><strong>All</strong>: All archived backup files are retained.</li>
+     * <li><strong>None</strong>: No archived backups are retained.</li>
+     * <li><strong>Lastest</strong>: Only the last archived backup is retained.</li>
+     * <li><strong>All</strong>: All archived backups are retained.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -306,7 +313,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String releasedKeepPolicy;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B87E2AB3-B7C9-4394-9160-7F639F732031</p>
@@ -315,10 +322,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the backup settings of a secondary instance can be modified. Valid values:</p>
+     * <p>Indicates whether the secondary instance backup option can be modified for the <strong>SQL Server</strong> instance. Valid values:</p>
      * <ul>
-     * <li><strong>True</strong></li>
-     * <li><strong>False</strong></li>
+     * <li><strong>True</strong>: The option can be modified.</li>
+     * <li><strong>False</strong>: The option cannot be modified.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -337,14 +344,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public Integer supportReleasedKeep;
 
     /**
-     * <p>Indicates whether the instance supports snapshot backups. Valid values:</p>
+     * <p>Indicates whether snapshot backup is supported for the <strong>SQL Server</strong> instance. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: The instance supports snapshot backups.</li>
-     * <li><strong>0</strong>: The instance does not support snapshot backups.</li>
+     * <li><strong>1</strong>: supported</li>
+     * <li><strong>0</strong>: not supported</li>
      * </ul>
-     * <blockquote>
-     * <p> This parameter is returned only when the instance runs SQL Server.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -353,10 +357,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public Integer supportVolumeShadowCopy;
 
     /**
-     * <p>Indicates whether log backups for SQL Server are performed verery five minutes.</p>
+     * <p>Indicates whether the <a href="https://help.aliyun.com/document_detail/95717.html">5-minute log backup feature</a> is supported for the <strong>SQL Server</strong> instance. Valid values:</p>
      * <ul>
-     * <li>0: No</li>
-     * <li>1: Yes</li>
+     * <li><strong>0</strong>: not supported</li>
+     * <li><strong>1</strong>: supported</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -504,6 +508,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
     public String getHighSpaceUsageProtection() {
         return this.highSpaceUsageProtection;
+    }
+
+    public DescribeBackupPolicyResponseBody setIncBackupInterval(Integer incBackupInterval) {
+        this.incBackupInterval = incBackupInterval;
+        return this;
+    }
+    public Integer getIncBackupInterval() {
+        return this.incBackupInterval;
     }
 
     public DescribeBackupPolicyResponseBody setLocalLogRetentionHours(Integer localLogRetentionHours) {

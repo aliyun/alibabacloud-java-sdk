@@ -8,13 +8,13 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
      * <p>The primary instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-bp*****</p>
+     * <p>rm-bp****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The latency of data replication. Unit: seconds.</p>
+     * <p>The latency, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -29,7 +29,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
      * <p>The read-only instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rr-bp*****</p>
+     * <p>rr-bp****</p>
      */
     @NameInMap("ReadDBInstanceId")
     public String readDBInstanceId;

@@ -8,7 +8,7 @@ public class DescribeAvailableCrossRegionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent zone list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

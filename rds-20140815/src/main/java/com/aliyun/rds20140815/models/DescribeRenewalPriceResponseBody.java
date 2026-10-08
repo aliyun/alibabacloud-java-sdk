@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRenewalPriceResponseBody extends TeaModel {
     /**
-     * <p>Details of price information.</p>
+     * <p>The pricing information.</p>
      */
     @NameInMap("PriceInfo")
     public DescribeRenewalPriceResponseBodyPriceInfo priceInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DC9F4EF6-D038-4405-B497-1F48E722C9F2</p>
@@ -53,7 +53,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoActivityInfo extends TeaModel {
         /**
-         * <p>The returned message.</p>
+         * <p>The error description.</p>
          * 
          * <strong>example:</strong>
          * <p>Error description</p>
@@ -62,7 +62,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         public String checkErrMsg;
 
         /**
-         * <p>The error code that is returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -202,7 +202,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     public static class DescribeRenewalPriceResponseBodyPriceInfo extends TeaModel {
         /**
-         * <p>The information about the promotion.</p>
+         * <p>The promotion information.</p>
          */
         @NameInMap("ActivityInfo")
         public DescribeRenewalPriceResponseBodyPriceInfoActivityInfo activityInfo;
@@ -220,7 +220,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The discount.</p>
+         * <p>The discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>27</p>
@@ -241,7 +241,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         public DescribeRenewalPriceResponseBodyPriceInfoRuleIds ruleIds;
 
         /**
-         * <p>The transaction price, which is equal to the original price minus the discount.</p>
+         * <p>The final price, which is the original price minus the discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>

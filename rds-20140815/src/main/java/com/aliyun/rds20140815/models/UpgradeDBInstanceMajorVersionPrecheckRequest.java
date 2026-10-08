@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceMajorVersionPrecheckRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,15 +18,26 @@ public class UpgradeDBInstanceMajorVersionPrecheckRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The new major engine version of the instance. The new major engine version must be later than the original major engine version.</p>
+     * <p>The major engine version of the target instance. The version must be later than the current major engine version of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>12.0</p>
+     * <p>17.0</p>
      */
     @NameInMap("TargetMajorVersion")
     public String targetMajorVersion;
 
+    /**
+     * <p>The upgrade mode. Valid values:</p>
+     * <ul>
+     * <li><strong>zeroDownTimeUpgrade</strong>: zero-downtime upgrade.</li>
+     * <li><strong>inPlaceUpgrade</strong>: in-place upgrade.</li>
+     * <li><strong>greenBlueDeployment</strong>: blue-green deployment.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zeroDownTimeUpgrade</p>
+     */
     @NameInMap("UpgradeMode")
     public String upgradeMode;
 

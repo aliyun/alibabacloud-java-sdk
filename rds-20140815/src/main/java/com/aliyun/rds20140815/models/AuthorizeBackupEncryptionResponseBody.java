@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class AuthorizeBackupEncryptionResponseBody extends TeaModel {
     /**
+     * <p>The authorization status of the account. Valid values:</p>
+     * <ul>
+     * <li>0: Not authorized.</li>
+     * <li>1: Authorized.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +18,8 @@ public class AuthorizeBackupEncryptionResponseBody extends TeaModel {
     public Integer authorizationState;
 
     /**
+     * <p>The error message returned by the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>create backup encrypt service linked role error.</p>
      */
@@ -19,6 +27,8 @@ public class AuthorizeBackupEncryptionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1A1DD2A4-69F7-5848-AD56-********</p>
      */
@@ -26,6 +36,8 @@ public class AuthorizeBackupEncryptionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The Alibaba Resource Name (ARN) of the service-linked role associated with backup encryption.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::113991************:role/AliyunServiceRoleForRdsBackupEncryption</p>
      */

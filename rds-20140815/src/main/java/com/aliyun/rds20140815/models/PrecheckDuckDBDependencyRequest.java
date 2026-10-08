@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PrecheckDuckDBDependencyRequest extends TeaModel {
     /**
-     * <p>The primary instance ID.</p>
+     * <p>The instance ID of the primary instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

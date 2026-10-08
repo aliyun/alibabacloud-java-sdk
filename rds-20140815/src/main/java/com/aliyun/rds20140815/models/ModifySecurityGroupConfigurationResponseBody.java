@@ -8,7 +8,7 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
      * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;

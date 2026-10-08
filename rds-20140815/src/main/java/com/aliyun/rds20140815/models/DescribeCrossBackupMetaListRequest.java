@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCrossBackupMetaListRequest extends TeaModel {
     /**
-     * <p>The ID of the cross-region backup file that you want to use. You can call the <a href="https://help.aliyun.com/document_detail/121733.html">DescribeCrossRegionBackups</a> operation to query the ID of the cross-region backup file.</p>
+     * <p>The cross-region backup set ID. You can call the DescribeCrossRegionBackups operation to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeCrossBackupMetaListRequest extends TeaModel {
     public String backupSetId;
 
     /**
-     * <p>The name of the database that you want to query. The system implements exact match based on the value of this parameter and returns the name of the matched database and the names of the tables in the matched database.</p>
+     * <p>The name of the database to query. Exact match is used. The specific database name and the table names within the database are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>testdb1</p>
@@ -27,9 +27,9 @@ public class DescribeCrossBackupMetaListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Valid values: any non-zero positive integer.</p>
+     * <p>The page number. Valid values: greater than 0 and up to the maximum value of Integer.</p>
      * <blockquote>
-     * <p>This parameter only takes effect when you specify the <strong>PageSize</strong> parameter.</p>
+     * <p>This parameter takes effect only when it is specified together with <strong>PageSize</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,9 +39,9 @@ public class DescribeCrossBackupMetaListRequest extends TeaModel {
     public String pageIndex;
 
     /**
-     * <p>The number of entries to return per page. Default value: <strong>1</strong>.</p>
+     * <p>The number of entries per page. Default value: <strong>1</strong>.</p>
      * <blockquote>
-     * <p>This parameter only takes effect when you specify the <strong>PageIndex</strong> parameter.</p>
+     * <p>This parameter takes effect only when it is specified together with <strong>PageIndex</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -51,9 +51,9 @@ public class DescribeCrossBackupMetaListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The name of the database that you want to query. The system implements fuzzy match based on the value of this parameter and returns only the name of the matched database.</p>
+     * <p>The name of the database to query. Fuzzy match is used. Only the matched database names are returned, and table names are not returned.</p>
      * <blockquote>
-     * <p>You can implement fuzzy match and then exact match. For example, you can set the Pattern parameter to test to query the testdb1 and testdb2 databases. Then, you can specify the <strong>GetDbName</strong> parameter to query only the matched database and the tables in the matched database.</p>
+     * <p>You can use fuzzy match first. For example, pass in test to match testdb1 and testdb2. After you determine the target database name, use exact match by passing in <strong>GetDbName</strong> to view the specific database name and table names.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class DescribeCrossBackupMetaListRequest extends TeaModel {
     public String pattern;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The region in which the instance resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -72,10 +72,10 @@ public class DescribeCrossBackupMetaListRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmy*****</p>
+     * <p>rg-acfmy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

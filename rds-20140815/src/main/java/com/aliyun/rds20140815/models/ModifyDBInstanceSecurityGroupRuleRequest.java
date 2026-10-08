@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceSecurityGroupRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> operation to query the IDs of instances.</p>
+     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ModifyDBInstanceSecurityGroupRuleRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The type of the transport layer protocol. Valid values:</p>
+     * <p>The transport layer protocol type. Valid values:</p>
      * <ul>
      * <li>TCP</li>
      * <li>UDP</li>
@@ -45,8 +45,8 @@ public class ModifyDBInstanceSecurityGroupRuleRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The range of destination ports over which TCP and UDP traffic is allowed in the security group rule.</p>
-     * <p>Valid values: 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</p>
+     * <p>The range of destination ports for the transport layer protocol (TCP/UDP) that the security group opens.</p>
+     * <p>Valid values: 1 to 65535. Separate the start port and end port with a forward slash (/). Example: 1/200.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class ModifyDBInstanceSecurityGroupRuleRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the security group rule. You can call the <a href="https://help.aliyun.com/document_detail/2834044.html">DescribeDBInstanceSecurityGroupRule</a> to obtain the ID of the security group rule.</p>
+     * <p>The security group rule ID. You can call <a href="https://help.aliyun.com/document_detail/2834044.html">DescribeDBInstanceSecurityGroupRule</a> to obtain the security group rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class ModifyDBInstanceSecurityGroupRuleRequest extends TeaModel {
     public String securityGroupRuleId;
 
     /**
-     * <p>The range of source IP addresses. CIDR blocks and IPv4 addresses are supported.</p>
+     * <p>The source IP address range. CIDR format and IPv4 format are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

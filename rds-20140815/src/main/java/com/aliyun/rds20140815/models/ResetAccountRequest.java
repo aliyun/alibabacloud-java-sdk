@@ -17,15 +17,12 @@ public class ResetAccountRequest extends TeaModel {
     /**
      * <p>The new password of the privileged account.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>The password must be 8 to 32 characters in length.</p>
-     * </li>
-     * <li><p>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
-     * </li>
-     * <li><p>It can contain the following special characters: <code>! @ # $ &amp; ; % ^ * () _ + - =</code>.</p>
-     * </li>
+     * <li>The password must be 8 to 32 characters in length.</li>
+     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>Special characters include <code>!@#$&amp;%^*()_+-=</code>.</li>
      * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,11 +32,11 @@ public class ResetAccountRequest extends TeaModel {
     public String accountPassword;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

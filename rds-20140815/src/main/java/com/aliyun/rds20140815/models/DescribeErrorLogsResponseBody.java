@@ -17,7 +17,7 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of error logs on the current page.</p>
+     * <p>The number of error log entries on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -35,7 +35,7 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

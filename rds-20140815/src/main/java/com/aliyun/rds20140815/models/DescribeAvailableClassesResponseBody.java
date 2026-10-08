@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableClassesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the instance types available for the instance.</p>
+     * <p>The available instance types for the instance.</p>
      */
     @NameInMap("DBInstanceClasses")
     public java.util.List<DescribeAvailableClassesResponseBodyDBInstanceClasses> DBInstanceClasses;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7E4448A6-9FE6-4474-A0C1-AA7CFC772CAC</p>
@@ -42,7 +42,7 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
 
     public static class DescribeAvailableClassesResponseBodyDBInstanceClassesDBInstanceStorageRange extends TeaModel {
         /**
-         * <p>The maximum storage capacity that is supported for the instance. Unit: GB.</p>
+         * <p>The maximum storage capacity. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -51,7 +51,7 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
         public Integer maxValue;
 
         /**
-         * <p>The minimum storage capacity that is supported for the instance. Unit: GB.</p>
+         * <p>The minimum storage capacity. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -60,7 +60,7 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
         public Integer minValue;
 
         /**
-         * <p>The minimum step size at which you can adjust the storage capacity of the instance. The minimum step size is 5 GB.</p>
+         * <p>The minimum granularity for storage capacity adjustment. The value is fixed at 5 GB increments.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -101,7 +101,7 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
 
     public static class DescribeAvailableClassesResponseBodyDBInstanceClasses extends TeaModel {
         /**
-         * <p>The instance type of the instance.</p>
+         * <p>The instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>rds.mysql.c1.large</p>
@@ -110,7 +110,7 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
         public String DBInstanceClass;
 
         /**
-         * <p>The storage capacity range that is supported for the instance.</p>
+         * <p>The instance storage capacity range.</p>
          */
         @NameInMap("DBInstanceStorageRange")
         public DescribeAvailableClassesResponseBodyDBInstanceClassesDBInstanceStorageRange DBInstanceStorageRange;

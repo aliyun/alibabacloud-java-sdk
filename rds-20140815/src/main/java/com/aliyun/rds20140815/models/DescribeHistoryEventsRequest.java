@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class DescribeHistoryEventsRequest extends TeaModel {
     /**
-     * <p>The resource status. Valid values: <strong>importing</strong>, failed, checksuccess, and deleted.</p>
+     * <p>The event status. Valid values:</p>
+     * <ul>
+     * <li><strong>Archived</strong>: archived.</li>
+     * <li><strong>UnArchived</strong>: not archived.</li>
+     * <li><strong>All</strong>: all.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>deleted</p>
+     * <p>All</p>
      */
     @NameInMap("ArchiveStatus")
     public String archiveStatus;
 
     /**
-     * <p>The system event category. For more information, see <a href="https://help.aliyun.com/document_detail/129759.html">View the event history of an ApsaraDB RDS instance</a>.</p>
+     * <p>The system event categorization. Valid values:</p>
+     * <ul>
+     * <li><strong>Exception</strong>: abnormal event.</li>
+     * <li><strong>Optimize</strong>: optimization events.</li>
+     * <li><strong>Notification</strong>: notification event.</li>
+     * <li><strong>Maintenance</strong>: scheduled maintenance event.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Exception</p>
@@ -32,49 +43,56 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public String eventId;
 
     /**
-     * <p>The event level. Valid values: <em><strong>high</strong></em>, <strong>medium</strong>, and <strong>low</strong>.</p>
+     * <p>The event level. Valid values:</p>
+     * <ul>
+     * <li><strong>INFO</strong>: notification.</li>
+     * <li><strong>WARN</strong>: warning.</li>
+     * <li><strong>CRITICAL</strong>: critical.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>high</p>
+     * <p>INFO</p>
      */
     @NameInMap("EventLevel")
     public String eventLevel;
 
     /**
-     * <p>The status of the exception. Valid values:</p>
+     * <p>The event status. Valid values:</p>
      * <ul>
-     * <li>1: pending</li>
-     * <li>2: ignored</li>
-     * <li>4: confirmed</li>
-     * <li>8: marked as false positive</li>
-     * <li>16: handling</li>
-     * <li>32: handled</li>
-     * <li>64: expired</li>
+     * <li><strong>Inquiring</strong>: inquiring.</li>
+     * <li><strong>Scheduled</strong>: scheduled.</li>
+     * <li><strong>Running</strong>: running.</li>
+     * <li><strong>Succeed</strong>: completed.</li>
+     * <li><strong>Failed</strong>: failed.</li>
+     * <li><strong>Canceled</strong>: canceled.<blockquote>
+     * <p>To query multiple statuses, separate them with commas (,).</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>Scheduled</p>
      */
     @NameInMap("EventStatus")
     public String eventStatus;
 
     /**
-     * <p>The system event type. This parameter takes effect only when InstanceEventType.N is not specified. Valid values:</p>
+     * <p>The system event type. This parameter takes effect only when InstanceEventType.N is not specified. Valid values: </p>
      * <ul>
-     * <li>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</li>
-     * <li>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</li>
-     * <li>SystemFailure.Reboot: The instance is restarted due to a system error.</li>
-     * <li>SystemFailure.Redeploy: The instance is redeployed due to a system error.</li>
-     * <li>SystemFailure.Delete: The instance is released due to an instance creation failure.</li>
-     * <li>InstanceFailure.Reboot: The instance is restarted due to an instance error.</li>
-     * <li>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</li>
-     * <li>InstanceExpiration.Delete: The subscription instance is released due to expiration.</li>
-     * <li>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</li>
-     * <li>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</li>
-     * </ul>
-     * <blockquote>
-     * <p> For more information, see Overview. The values of this parameter are applicable only to instance system events, but not to disk system events.</p>
+     * <li><strong>SystemMaintenance.Reboot</strong>: The instance is restarted due to system maintenance.</li>
+     * <li><strong>SystemMaintenance.Redeploy</strong>: The instance is redeployed due to system maintenance.</li>
+     * <li><strong>SystemFailure.Reboot</strong>: The instance is restarted due to a system error.</li>
+     * <li><strong>SystemFailure.Redeploy</strong>: The instance is redeployed due to a system error.</li>
+     * <li><strong>SystemFailure.Delete</strong>: The instance is released due to an instance creation failure.</li>
+     * <li><strong>InstanceFailure.Reboot</strong>: The instance is restarted due to an instance error.</li>
+     * <li><strong>InstanceExpiration.Stop</strong>: The instance is stopped due to subscription expiration.</li>
+     * <li><strong>InstanceExpiration.Delete</strong>: The instance is released due to subscription expiration.</li>
+     * <li><strong>AccountUnbalanced.Stop</strong>: The pay-as-you-go instance is stopped due to an overdue payment.</li>
+     * <li><strong>AccountUnbalanced.Delete</strong>: The pay-as-you-go instance is released due to an overdue payment.<blockquote>
+     * <p>The value of this parameter can only be an instance system event, not a cloud disk system event.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>SystemFailure.Reboot</p>
@@ -83,7 +101,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>The beginning of the time range to query. Only tasks that have a start time later than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The start time can be up to 30 days earlier than the current time. If you set this parameter to a time more than 30 days earlier than the current time, this time is automatically converted to a time that is exactly 30 days earlier than the current time.</p>
+     * <p>The beginning of the time range for the task start time. Tasks whose start time is later than this time are queried. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in <code>UTC +0</code>. The earliest supported time is 30 days before the current time. If the specified time is more than 30 days before the current time, it is automatically converted to 30 days before the current time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -93,7 +111,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public String fromStartTime;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The ApsaraDB RDS instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-uf62br2491p5l****</p>
@@ -102,7 +120,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be greater than 0 and cannot exceed the maximum value of the integer type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -111,7 +129,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 30.</p>
+     * <p>The number of entries per page. Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -120,7 +138,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -138,10 +156,18 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The resource type. Set the value to <strong>INSTANCE</strong>.</p>
+     * <p>The resource type. Valid values:</p>
+     * <ul>
+     * <li><strong>Instance</strong>: instance resource.</li>
+     * <li><strong>Host</strong>: host resource.</li>
+     * <li><strong>User</strong>: user resource.<blockquote>
+     * <p>If this parameter is not specified, all resource types are queried.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>INSTANCE</p>
+     * <p>Instance</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -150,7 +176,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The task ID. This value is used to query the data of a specific task.</p>
+     * <p>The task ID. Specify this parameter to retrieve data for a specific task.</p>
      * 
      * <strong>example:</strong>
      * <p>241535739</p>
@@ -159,7 +185,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The end of the time range to query. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end of the time range for the task start time. Tasks whose start time is earlier than this time are queried. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in <code>UTC +0</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

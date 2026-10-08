@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeReplicationLinkLogsRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeReplicationLinkLogsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -33,7 +33,7 @@ public class DescribeReplicationLinkLogsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The task ID. You must set this parameter to the ID of the task that you create by calling the <strong>CreateReplicationLink</strong> operation for the disaster recovery instance.</p>
+     * <p>The task ID. The task ID returned when you call the <strong>CreateReplicationLink</strong> operation to create a disaster recovery instance.</p>
      * 
      * <strong>example:</strong>
      * <p>8413252</p>
@@ -42,7 +42,7 @@ public class DescribeReplicationLinkLogsRequest extends TeaModel {
     public Long taskId;
 
     /**
-     * <p>The task name. You must set this parameter to the name of the task that you create by calling the <strong>CreateReplicationLink</strong> operation for the disaster recovery instance.</p>
+     * <p>The task name. The task name returned when you call the <strong>CreateReplicationLink</strong> operation to create a disaster recovery instance.</p>
      * 
      * <strong>example:</strong>
      * <p>test01</p>
@@ -51,15 +51,10 @@ public class DescribeReplicationLinkLogsRequest extends TeaModel {
     public String taskName;
 
     /**
-     * <p>The type of the task. Valid values:</p>
+     * <p>The task type. Valid values:</p>
      * <ul>
-     * <li><strong>create</strong>: creates a synchronization link.</li>
-     * <li><strong>create-dryrun</strong>: performs a precheck before a synchronization link is created.</li>
-     * </ul>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>create: creates a replication link.</li>
-     * <li>create-dryrun: performs a precheck before a replication link is created.</li>
+     * <li><strong>create</strong>: Create a replication link.</li>
+     * <li><strong>create-dryrun</strong>: Dry run for creating a replication link.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -16,7 +16,7 @@ public class DeleteSecretRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <blockquote>
-     * <p> If you specify this parameter, you must also specify the <strong>SecretName</strong> parameter. parameter.</p>
+     * <p>This parameter must be specified together with <strong>SecretName</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,9 +26,9 @@ public class DeleteSecretRequest extends TeaModel {
     public String dbInstanceId;
 
     /**
-     * <p>The engine of the database.</p>
+     * <p>The database engine type.</p>
      * <blockquote>
-     * <p>Only MySQL is supported.</p>
+     * <p>This parameter currently supports only the value MySQL.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -67,9 +67,9 @@ public class DeleteSecretRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account. You can call the CreateSecret operation to obtain the value of this parameter.</p>
+     * <p>The user credential of the Data API account that has been created. You can call the createSecret operation to query the value of this parameter.</p>
      * <blockquote>
-     * <p> You must specify one of the SecretArn and <strong>SecretName</strong> parameters.</p>
+     * <p>You must specify either <strong>SecretName</strong> or this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -79,11 +79,11 @@ public class DeleteSecretRequest extends TeaModel {
     public String secretArn;
 
     /**
-     * <p>The name of the credential.</p>
+     * <p>The name of the user credential.</p>
      * <blockquote>
      * <ul>
-     * <li>You must specify one of <strong>SecretArn</strong> and SecretName.</li>
-     * <li>If you specify this parameter, you must also specify <strong>DbInstanceId</strong>.</li>
+     * <li>You must specify either <strong>SecretArn</strong> or this parameter.</li>
+     * <li>This parameter must be specified together with <strong>DbInstanceId</strong>.</li>
      * </ul>
      * </blockquote>
      * 

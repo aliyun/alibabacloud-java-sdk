@@ -7,7 +7,7 @@ public class DescribePriceResponseBody extends TeaModel {
     /**
      * <p>The order parameters.</p>
      * <blockquote>
-     * <p> If the <strong>OrderParamOut</strong> parameter is set to <strong>true</strong>, the value of the OrderParams parameter is returned.</p>
+     * <p>This parameter is returned only when the <strong>OrderParamOut</strong> parameter is set to <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,7 +23,7 @@ public class DescribePriceResponseBody extends TeaModel {
     public DescribePriceResponseBodyPriceInfo priceInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CA0ADDDC-0BEB-4381-A3ED-73B4C79B8CC6</p>
@@ -35,22 +35,22 @@ public class DescribePriceResponseBody extends TeaModel {
     public DescribePriceResponseBodyRules rules;
 
     /**
-     * <p>The pricing information about a serverless RDS instance.</p>
+     * <p>The serverless price information.</p>
      */
     @NameInMap("ServerlessPrice")
     public DescribePriceResponseBodyServerlessPrice serverlessPrice;
 
     /**
-     * <p>Indicates whether discounts can be used.</p>
+     * <p>Indicates whether discounts are allowed.</p>
      * 
      * <strong>example:</strong>
-     * <p>True</p>
+     * <p>true</p>
      */
     @NameInMap("ShowDiscount")
     public Boolean showDiscount;
 
     /**
-     * <p>The estimated hourly fee that is calculated based on the maximum number of RCUs.</p>
+     * <p>The estimated hourly fee calculated based on the maximum RCU selected by the user.</p>
      * 
      * <strong>example:</strong>
      * <p>2**</p>
@@ -59,7 +59,7 @@ public class DescribePriceResponseBody extends TeaModel {
     public Float tradeMaxRCUAmount;
 
     /**
-     * <p>The estimated hourly fee that is calculated based on the minimum number of RCUs.</p>
+     * <p>The estimated hourly fee calculated based on the minimum RCU selected by the user.</p>
      * 
      * <strong>example:</strong>
      * <p>1**</p>
@@ -138,7 +138,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static class DescribePriceResponseBodyPriceInfoActivityInfo extends TeaModel {
         /**
-         * <p>The returned message.</p>
+         * <p>The error description.</p>
          * 
          * <strong>example:</strong>
          * <p>Error description</p>
@@ -147,7 +147,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public String checkErrMsg;
 
         /**
-         * <p>The error code that is returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -287,7 +287,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static class DescribePriceResponseBodyPriceInfo extends TeaModel {
         /**
-         * <p>The information about the promotion.</p>
+         * <p>The price information.</p>
          */
         @NameInMap("ActivityInfo")
         public DescribePriceResponseBodyPriceInfoActivityInfo activityInfo;
@@ -326,7 +326,7 @@ public class DescribePriceResponseBody extends TeaModel {
          * <p>The original price.</p>
          * 
          * <strong>example:</strong>
-         * <p>2504</p>
+         * <p>10508</p>
          */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
@@ -335,7 +335,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public DescribePriceResponseBodyPriceInfoRuleIds ruleIds;
 
         /**
-         * <p>The estimated hourly cost that is calculated based on the maximum number of RCUs you specify.</p>
+         * <p>The estimated hourly fee calculated based on the maximum RCU selected by the user.</p>
          * 
          * <strong>example:</strong>
          * <p>1**</p>
@@ -344,7 +344,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Float tradeMaxRCUAmount;
 
         /**
-         * <p>The estimated hourly cost that is calculated based on the minimum number of RCUs you specify.</p>
+         * <p>The estimated hourly fee calculated based on the minimum RCU selected by the user.</p>
          * 
          * <strong>example:</strong>
          * <p>2**</p>
@@ -353,10 +353,10 @@ public class DescribePriceResponseBody extends TeaModel {
         public Float tradeMinRCUAmount;
 
         /**
-         * <p>The transaction price, which is equal to the original price minus the discount.</p>
+         * <p>The final price, which is the original price minus the discount.</p>
          * 
          * <strong>example:</strong>
-         * <p>2504</p>
+         * <p>10508</p>
          */
         @NameInMap("TradePrice")
         public Float tradePrice;
@@ -510,7 +510,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static class DescribePriceResponseBodyServerlessPrice extends TeaModel {
         /**
-         * <p>The discount amount of the maximum number of RCUs.</p>
+         * <p>The discount amount for the maximum RCU.</p>
          * 
          * <strong>example:</strong>
          * <p>1**.*</p>
@@ -519,7 +519,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Float RCUDiscountMaxAmount;
 
         /**
-         * <p>The discount amount of the minimum number of RCUs.</p>
+         * <p>The discount amount for the minimum RCU.</p>
          * 
          * <strong>example:</strong>
          * <p>1*.*</p>
@@ -528,7 +528,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Float RCUDiscountMinAmount;
 
         /**
-         * <p>The price of the maximum number of RCUs.</p>
+         * <p>The original price for the maximum RCU.</p>
          * 
          * <strong>example:</strong>
          * <p>2**.*</p>
@@ -537,7 +537,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Float RCUOriginalMaxAmount;
 
         /**
-         * <p>The price of the minimum number of RCUs.</p>
+         * <p>The original price for the minimum RCU.</p>
          * 
          * <strong>example:</strong>
          * <p>3*.*</p>
@@ -546,7 +546,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Float RCUOriginalMinAmount;
 
         /**
-         * <p>The original price of the disk capacity.</p>
+         * <p>The original price of the disk.</p>
          * 
          * <strong>example:</strong>
          * <p>1*</p>
@@ -555,7 +555,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Float storageOriginalAmount;
 
         /**
-         * <p>The maximum total price before the discount.</p>
+         * <p>The maximum total price before discount.</p>
          * 
          * <strong>example:</strong>
          * <p>2**.*</p>
@@ -564,7 +564,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Float totalOriginalMaxAmount;
 
         /**
-         * <p>The minimum total price before the discount.</p>
+         * <p>The minimum total price before discount.</p>
          * 
          * <strong>example:</strong>
          * <p>2*.*</p>
@@ -573,7 +573,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Float totalOriginalMinAmount;
 
         /**
-         * <p>The transaction price of the maximum number of RCUs.</p>
+         * <p>The trade price for the maximum RCU.</p>
          * 
          * <strong>example:</strong>
          * <p>1**.*</p>
@@ -582,7 +582,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Float tradeMaxRCUAmount;
 
         /**
-         * <p>The transaction price of the minimum number of RCUs.</p>
+         * <p>The trade price for the minimum RCU.</p>
          * 
          * <strong>example:</strong>
          * <p>2*.*</p>
@@ -591,7 +591,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Float tradeMinRCUAmount;
 
         /**
-         * <p>The discounted price of the disk capacity.</p>
+         * <p>The discount price of the disk.</p>
          * 
          * <strong>example:</strong>
          * <p>2.*</p>

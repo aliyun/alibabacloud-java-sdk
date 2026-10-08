@@ -20,7 +20,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>A2E94301-D07F-4457-9B49-6AA2BB388C85</p>
+     * <p>17F2EA6C-3CA2-528D-A263-DC29707AD652</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,25 +35,25 @@ public class DescribeAccountsResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The first time when the system admin account was enabled. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The time when the super administrator (SA) account was first activated. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * <blockquote>
-     * <p> This parameter is returned only for instances that run SQL Server.</p>
+     * <p>This parameter is returned only for ApsaraDB RDS for SQL Server instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>2020-02-06T11:00:00Z</p>
+     * <p>2023-10-17T07:51:22Z</p>
      */
     @NameInMap("SystemAdminAccountFirstActivationTime")
     public String systemAdminAccountFirstActivationTime;
 
     /**
-     * <p>Indicates whether the system admin account was enabled. Valid values:</p>
+     * <p>Indicates whether the super administrator (SA) account is activated. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The system admin account was enabled.</li>
-     * <li><strong>false</strong>: The system admin account was disabled.</li>
+     * <li><strong>True</strong>: Activated.</li>
+     * <li><strong>False</strong>: Not activated.</li>
      * </ul>
      * <blockquote>
-     * <p> The <a href="https://help.aliyun.com/document_detail/170736.html">system admin account</a> is supported only for the instances that run SQL Server. If the instance runs SQL Server, a value is returned for this parameter. If the instance runs a different database engine, no value is returned for this parameter.</p>
+     * <p>Only ApsaraDB RDS for SQL Server instances support the <a href="https://help.aliyun.com/document_detail/170736.html">super administrator (SA) account</a>, and this parameter has a return value. For instances of other engines, the return value is empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,10 +63,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
     public String systemAdminAccountStatus;
 
     /**
-     * <p>The total number of entries that are returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>3</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;

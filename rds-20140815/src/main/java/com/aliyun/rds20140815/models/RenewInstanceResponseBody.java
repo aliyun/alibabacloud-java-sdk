@@ -8,13 +8,13 @@ public class RenewInstanceResponseBody extends TeaModel {
      * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>201815745430941</p>
+     * <p>20181574543****</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>

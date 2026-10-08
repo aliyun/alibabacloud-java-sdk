@@ -5,41 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreateAccountRequest extends TeaModel {
     /**
-     * <p>The description of the account. The value must be 2 to 256 characters in length. The value can contain letters, digits, underscores (_), and hyphens (-), and must start with a letter.</p>
+     * <p>The description of the account. The description must be 2 to 256 characters in length. It must start with a letter or a Chinese character and can contain digits, Chinese characters, letters, underscores (_), and hyphens (-).</p>
      * <blockquote>
-     * <p>: The name cannot start with http:// or https://.</p>
+     * <p>The description cannot start with <code>http://</code> or <code>https://</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>Test Account A</p>
+     * <p>testuser</p>
      */
     @NameInMap("AccountDescription")
     public String accountDescription;
 
     /**
      * <p>The name of the database account.</p>
-     * <ul>
-     * <li><p>The name must be unique.</p>
-     * </li>
-     * <li><p>The name can contain lowercase letters, digits, and underscores (_). For MySQL databases, the name can contain uppercase letters.</p>
-     * </li>
-     * <li><p>The name must start with a letter and end with a letter or digit.</p>
-     * </li>
-     * <li><p>For MySQL databases, the name of the privileged account cannot be the same as that of the standard account. For example, if the name of the privileged account is <code>Test1</code>, the name of the standard account cannot be <code>test1</code>.</p>
-     * </li>
-     * <li><p>The length of the value must meet the following requirements:</p>
-     * <ul>
-     * <li>If the instance runs MySQL 5.7 or MySQL 8.0, the value must be 2 to 32 characters in length.</li>
-     * <li>If the instance runs MySQL 5.6, the value must be 2 to 16 characters in length.</li>
-     * <li>If the instance runs SQL Server, the value must be 2 to 64 characters in length.</li>
-     * <li>If the instance runs PostgreSQL with cloud disks, the value must be 2 to 63 characters in length.</li>
-     * <li>If the instance runs PostgreSQL with local disks, the value must be 2 to 16 characters in length.</li>
-     * <li>If the instance runs MariaDB, the value must be 2 to 16 characters in length.</li>
-     * </ul>
-     * </li>
-     * <li><p>For more information about invalid characters, see <a href="https://help.aliyun.com/document_detail/26317.html">Forbidden keywords</a>.</p>
-     * </li>
-     * </ul>
+     * <blockquote>
+     * <p>The name must be unique and can contain uppercase letters (supported only by MySQL), lowercase letters, digits, or underscores. For specific naming conventions, refer to the tutorials for each engine: <a href="https://help.aliyun.com/document_detail/96089.html">Create a MySQL account</a>, <a href="https://help.aliyun.com/document_detail/96753.html">Create a PostgreSQL account</a>, <a href="https://help.aliyun.com/document_detail/95810.html">Create a SQL Server account</a>, <a href="https://help.aliyun.com/document_detail/97132.html">Create a MariaDB account</a>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,15 +30,13 @@ public class CreateAccountRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The password of the account.</p>
+     * <p>The password of the database account.</p>
+     * <blockquote>
      * <ul>
-     * <li><p>The value must be 8 to 32 characters in length.</p>
-     * </li>
-     * <li><p>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
-     * </li>
-     * <li><p>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></p>
-     * </li>
+     * <li>The password must be 8 to 32 characters in length.</li>
+     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters (<code>!@#$%^&amp;*()_+-=</code>).</li>
      * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,13 +46,13 @@ public class CreateAccountRequest extends TeaModel {
     public String accountPassword;
 
     /**
-     * <p>The account type. Valid values:</p>
+     * <p>The type of the account. Valid values:</p>
      * <ul>
      * <li><strong>Normal</strong> (default): standard account.</li>
-     * <li><strong>Super</strong>: privileged account.</li>
-     * <li><strong>Sysadmin</strong>: system admin account. The account type is available only for ApsaraDB RDS for SQL Server instances.</li>
+     * <li><strong>Super</strong>: privileged account. You can create at most one privileged account per instance.</li>
+     * <li><strong>Sysadmin</strong> (SQL Server instances only): database account with SA permissions. Before you create this account, check whether the instance meets the <a href="https://help.aliyun.com/document_detail/170736.html">prerequisites</a>.</li>
+     * <li><strong>GlobalRO</strong> (SQL Server instances only): global read-only account. You can create at most two global read-only accounts per instance. The database engine version of the instance must be SQL Server 2016 or later, and the instance type must be dedicated or general-purpose.</li>
      * </ul>
-     * <p>Before you create a system admin account, check whether the instance meets all prerequisites. For more information, see <a href="https://help.aliyun.com/document_detail/170736.html">Create a system admin account</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Normal</p>
@@ -82,13 +61,15 @@ public class CreateAccountRequest extends TeaModel {
     public String accountType;
 
     /**
-     * <p>Specifies whether to use a password policy.</p>
-     * <blockquote>
-     * </blockquote>
+     * <p>The <a href="https://help.aliyun.com/document_detail/2845728.html">account password policy</a> for the SQL Server instance. Valid values:</p>
      * <ul>
-     * <li><p>This parameter is available only for ApsaraDB RDS for SQL Server instances that do not belong to the shared instance family and do not run SQL Server 2008 R2.</p>
-     * </li>
-     * <li><p>Before you call this operation, you must configure a password policy for the account of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/2848317.html">Configure a password policy for the account of an ApsaraDB RDS for SQL Server instance</a>.</p>
+     * <li><strong>true</strong>: The policy is applied.</li>
+     * <li><strong>false</strong>: The policy is not applied.<blockquote>
+     * <ul>
+     * <li>If you set this parameter to true, you must first <a href="https://help.aliyun.com/document_detail/2848317.html">configure the SQL Server account password policy</a>.</li>
+     * <li>This parameter does not support SQL Server instances of the <a href="https://help.aliyun.com/document_detail/57184.html">shared instance type</a>, <a href="https://help.aliyun.com/document_detail/145468.html">2008 R2 edition</a>, or <a href="https://help.aliyun.com/document_detail/603466.html">serverless type</a>.</li>
+     * </ul>
+     * </blockquote>
      * </li>
      * </ul>
      * 
@@ -99,11 +80,11 @@ public class CreateAccountRequest extends TeaModel {
     public Boolean checkPolicy;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

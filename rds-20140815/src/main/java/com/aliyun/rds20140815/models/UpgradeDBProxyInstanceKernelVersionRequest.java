@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBProxyInstanceKernelVersionRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * <p>A reserved parameter. You do not need to configure this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>normal</p>
@@ -33,9 +33,9 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The specific point in time when you want to perform the upgrade. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The specified time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * <blockquote>
-     * <p> If you set <strong>UpgradeTime</strong> to <strong>SpecifyTime</strong>, you must specify SwitchTime.</p>
+     * <p>This parameter is required if <strong>UpgradeTime</strong> is set to <strong>SpecifyTime</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -48,18 +48,12 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends TeaModel {
     public String targetMinorVersion;
 
     /**
-     * <p>The time when you want to upgrade the database proxy version of the instance. Valid values:</p>
+     * <p>The upgrade time. Valid values:</p>
      * <ul>
-     * <li><strong>MaintainTime</strong> (default): performs the upgrade during the maintenance window that you specified. For more information, see <a href="https://help.aliyun.com/document_detail/610402.html">Modify the maintenance window</a>.</li>
-     * <li><strong>Immediate</strong>: performs the upgrade immediately.</li>
-     * <li><strong>SpecifyTime</strong>: performs the upgrade at a specified point in time.</li>
+     * <li><strong>MaintainTime</strong> (default): The upgrade is performed during the <a href="https://help.aliyun.com/document_detail/610402.html">maintenance window</a>.</li>
+     * <li><strong>Immediate</strong>: The upgrade is performed immediately.</li>
+     * <li><strong>SpecifyTime</strong>: The upgrade is performed at a specified time.</li>
      * </ul>
-     * <blockquote>
-     * <ul>
-     * <li><strong>If the instance runs MySQL, you can set this parameter to <strong>MaintainTime</strong>, <strong>Immediate</strong>, or SpecifyTime</strong>.</li>
-     * <li>If the instance runs PostgreSQL, you can set this parameter to <strong>MaintainTime</strong> or <strong>Immediate</strong>.</li>
-     * </ul>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>MaintainTime</p>

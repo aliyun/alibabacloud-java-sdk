@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyImportTaskResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>069EB9B1-DE12-54B9-8C20-822****</p>
      */
@@ -12,6 +14,8 @@ public class ModifyImportTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the data import task.</p>
+     * 
      * <strong>example:</strong>
      * <p>IMPORTING</p>
      */
@@ -19,6 +23,8 @@ public class ModifyImportTaskResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>41698****</p>
      */
@@ -26,6 +32,8 @@ public class ModifyImportTaskResponseBody extends TeaModel {
     public Long taskId;
 
     /**
+     * <p>The task name.</p>
+     * 
      * <strong>example:</strong>
      * <p>task_1234</p>
      */

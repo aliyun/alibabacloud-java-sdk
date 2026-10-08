@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreateDdrInstanceResponseBody extends TeaModel {
     /**
-     * <p>The endpoint that is used to connect to the destination instance.</p>
+     * <p>The endpoint of the new instance.</p>
      * <blockquote>
-     * <p> The <strong>DBInstanceNetType</strong> parameter indicates whether the endpoint is internal or public.</p>
+     * <p>The <strong>DBInstanceNetType</strong> parameter determines whether this endpoint is an internal endpoint or a public endpoint.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>rm-xxxxx.mysql.rds.aliyuncs.com</p>
+     * <p>rm-****.mysql.rds.aliyuncs.com</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;
 
     /**
-     * <p>The destination instance ID.</p>
+     * <p>The instance ID of the new instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-xxxxx</p>
+     * <p>rm-****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -29,15 +29,15 @@ public class CreateDdrInstanceResponseBody extends TeaModel {
      * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>2038691xxxxx</p>
+     * <p>2038691****</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
-     * <p>The port number that is used to connect to the destination instance.</p>
+     * <p>The port of the new instance.</p>
      * <blockquote>
-     * <p><strong>DBInstanceNetType</strong> indicates whether the port is internal or public.</p>
+     * <p>The <strong>DBInstanceNetType</strong> parameter determines whether this port is an internal port or a public port.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class CreateDdrInstanceResponseBody extends TeaModel {
     public String port;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E52666CC-330E-418A-8E5B-A19E3FB42D13</p>

@@ -8,18 +8,18 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     public DescribeDBInstancesResponseBodyItems items;
 
     /**
-     * <p>The token that is used to display the next page. If the returned entries are displayed on multiple pages, the next page can be displayed when you call this operation again with <strong>NextToken</strong> specified.</p>
+     * <p>The pagination token. If the results are displayed on multiple pages, pass this value in the <strong>NextToken</strong> parameter in the next request to display the next page.</p>
      * 
      * <strong>example:</strong>
-     * <p>o7PORW5o2TJg**********</p>
+     * <p>o7PORW5o2TJg****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * <blockquote>
-     * <p>If you specify <strong>MaxResults</strong> or <strong>NextToken</strong>, only the value <strong>1</strong> is returned. You can ignore the value 1.</p>
+     * <p>If you specify the <strong>MaxResults</strong> or <strong>NextToken</strong> parameter, only <strong>1</strong> is returned for this parameter. You can ignore this return value.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The number of instances on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -47,9 +47,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of records.</p>
      * <blockquote>
-     * <p>If you specify <strong>MaxResults</strong> or <strong>NextToken</strong>, only the number of entries on the current page is returned. You can ignore the number.</p>
+     * <p>If you specify the <strong>MaxResults</strong> or <strong>NextToken</strong> parameter, only the number of records on the current page is returned for this parameter. You can ignore this return value.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

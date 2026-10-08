@@ -5,7 +5,14 @@ import com.aliyun.tea.*;
 
 public class AttachRCDiskRequest extends TeaModel {
     /**
-     * <p>The reserved parameter. This parameter is not supported.</p>
+     * <p>Specifies whether the cloud disk is released when the instance is released. Valid values:</p>
+     * <p>true: The cloud disk is released when the instance is released.
+     * false: The cloud disk is not released when the instance is released. The cloud disk is retained as a pay-as-you-go data cloud disk.
+     * Default value: false.</p>
+     * <p>When you configure this parameter, take note of the following items:</p>
+     * <p>If you set DeleteWithInstance to false and the instance is locked for security reasons, meaning that OperationLocks contains &quot;LockReason&quot; : &quot;security&quot;, this parameter is ignored and the cloud disk is released along with the instance.</p>
+     * <p>If the cloud disk to be attached is an elastic ephemeral disk, you must set DeleteWithInstance to true.</p>
+     * <p>This parameter is not supported for cloud disks that have the multi-attach feature enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +21,7 @@ public class AttachRCDiskRequest extends TeaModel {
     public Boolean deleteWithInstance;
 
     /**
-     * <p>The disk ID.</p>
+     * <p>The ID of the cloud disk to be attached. The cloud disk (DiskId) and the instance (InstanceId) must be in the same zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +31,7 @@ public class AttachRCDiskRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the destination RDS Custom instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +41,7 @@ public class AttachRCDiskRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

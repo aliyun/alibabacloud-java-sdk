@@ -8,25 +8,25 @@ public class RestartDBInstanceRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOCzxxxxxx</p>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The node ID, which can be used to restart a specified node. You can call the <a href="https://help.aliyun.com/document_detail/610434.html">DescribeDBInstanceHAConfig</a> operation to obtain the node ID.</p>
+     * <p>The unique ID of the node. This parameter is used to restart a specified node. You can call DescribeDBInstanceHAConfig to query the node ID.</p>
      * <blockquote>
-     * <p>: The secondary instance restart feature is supported for RDS instances that run SQL Server EE on RDS Cluster Edition. For more information, see <a href="https://help.aliyun.com/document_detail/2411880.html">Restart a secondary database</a>.</p>
+     * <p>Currently, only ApsaraDB RDS for SQL Server instances that run Enterprise Edition with the cluster architecture support restarting secondary nodes. For more information, see <a href="https://help.aliyun.com/document_detail/2411880.html">Restart a secondary node</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

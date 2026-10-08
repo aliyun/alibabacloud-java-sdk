@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceUsageResponseBody extends TeaModel {
     /**
-     * <p>The storage that is occupied by archived backup files on the instance. Unit: bytes.</p>
+     * <p>The storage consumed by archived backups. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,10 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
     public Long archiveBackupSize;
 
     /**
-     * <p>The storage that is occupied by data backup files, excluding archived backup files, on the instance. Unit: bytes.</p>
+     * <p>The total storage consumed by data backups, excluding archived backups. Unit: bytes.</p>
+     * <blockquote>
+     * <p>For <strong>SQL Server</strong> instances, this value indicates the total size of physical backups and snapshot backups.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>94324736</p>
@@ -23,7 +26,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
     public Long backupDataSize;
 
     /**
-     * <p>The storage capacity that is used to store the snapshot backup files of the <strong>RDS for SQL Server</strong> instance. Unit: bytes. The value 0 indicates that no snapshot backup files are stored for the instance.</p>
+     * <p>The storage consumed by snapshot backups for <strong>SQL Server instances</strong>. Unit: bytes. A value of 0 indicates no data.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -32,7 +35,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
     public String backupEcsSnapshotSize;
 
     /**
-     * <p>The storage that is occupied by log backup files, excluding archived backup files, on the instance. Unit: bytes.</p>
+     * <p>The total storage consumed by log backups, excluding archived backups. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>45145563</p>
@@ -41,7 +44,10 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
     public Long backupLogSize;
 
     /**
-     * <p>The size of data backup files that are stored in Object Storage Service (OSS) buckets. Unit: bytes. The value 0 indicates no data backup files are stored in OSS buckets.</p>
+     * <p>The size of data files in backup sets stored in OSS. Unit: bytes. A value of 0 indicates no data.</p>
+     * <blockquote>
+     * <p>For <strong>SQL Server</strong> instances, this value indicates the storage consumed by physical backups.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>8821760</p>
@@ -50,7 +56,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
     public Long backupOssDataSize;
 
     /**
-     * <p>The size of log backup files that are stored in OSS buckets. Unit: bytes. The value 0 indicates no log backup files are stored in OSS buckets.</p>
+     * <p>The size of log files in backup sets stored in OSS. Unit: bytes. A value of 0 indicates no data.</p>
      * 
      * <strong>example:</strong>
      * <p>44180999</p>
@@ -59,7 +65,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
     public Long backupOssLogSize;
 
     /**
-     * <p>The storage that is used to store backup files. Unit: bytes. The value -1 indicates that no backup files are stored.</p>
+     * <p>The storage consumed by backups (data backups + log backups). Unit: bytes. A value of -1 indicates no data.</p>
      * 
      * <strong>example:</strong>
      * <p>53002759</p>
@@ -68,7 +74,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
     public Long backupSize;
 
     /**
-     * <p>The storage that is used to store cold backup files. Unit: bytes. The value -1 indicates that no cold backup files are stored.</p>
+     * <p>The storage consumed by cold backups. Unit: bytes. A value of -1 indicates no data.</p>
      * 
      * <strong>example:</strong>
      * <p>2337275904</p>
@@ -80,13 +86,13 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
      * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5******</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The storage that is used to store data files. Unit: bytes. The value -1 indicates that no data files are stored.</p>
+     * <p>The storage consumed by data files. Unit: bytes. A value of -1 indicates no data.</p>
      * 
      * <strong>example:</strong>
      * <p>1292094741</p>
@@ -95,7 +101,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
     public Long dataSize;
 
     /**
-     * <p>The total storage that is occupied by data files and log files on the instance. Unit: bytes. The value -1 indicates that no data files or log files are stored on the instance.</p>
+     * <p>The used storage (DataSize + LogSize). Unit: bytes. A value of -1 indicates no data.</p>
      * 
      * <strong>example:</strong>
      * <p>2337275904</p>
@@ -104,7 +110,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
     public Long diskUsed;
 
     /**
-     * <p>The database engine of the instance.</p>
+     * <p>The database engine type.</p>
      * 
      * <strong>example:</strong>
      * <p>MySQL</p>
@@ -113,7 +119,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>The storage that is used to store log files. Unit: bytes. The value -1 indicates that no log files are stored.</p>
+     * <p>The storage consumed by log files. Unit: bytes. A value of -1 indicates no data.</p>
      * 
      * <strong>example:</strong>
      * <p>1045181163</p>
@@ -122,7 +128,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
     public Long logSize;
 
     /**
-     * <p>The backup storage for which you must pay. The system provides a free quota on backup storage. You must pay for the backup storage that exceeds the free quota. Unit: bytes.</p>
+     * <p>The billable storage consumed by backups after the free quota is deducted. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -140,7 +146,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The storage that is occupied to execute SQL statements on the instance. Unit: bytes. The value -1 indicates that no SQL statements are executed.</p>
+     * <p>The storage consumed by SQL data. Unit: bytes. A value of -1 indicates no data.</p>
      * 
      * <strong>example:</strong>
      * <p>315052751</p>

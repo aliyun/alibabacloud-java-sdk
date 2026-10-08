@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDbProxyInstanceSslResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BF46A62B-3717-4397-9338-36BB95C898B3</p>

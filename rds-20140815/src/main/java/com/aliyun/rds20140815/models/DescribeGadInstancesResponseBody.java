@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGadInstancesResponseBody extends TeaModel {
     /**
-     * <p>The details about the global active database cluster.</p>
+     * <p>The list of active geo-redundancy database clusters.</p>
      */
     @NameInMap("GadInstances")
     public java.util.List<DescribeGadInstancesResponseBodyGadInstances> gadInstances;
@@ -42,30 +42,30 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
 
     public static class DescribeGadInstancesResponseBodyGadInstancesGadInstanceMembers extends TeaModel {
         /**
-         * <p>The ID of the node.</p>
+         * <p>The ID of the node in the cluster.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-bp1npi2j8********</p>
+         * <p>rm-bp1npi2j8****</p>
          */
         @NameInMap("DBInstanceID")
         public String DBInstanceID;
 
         /**
-         * <p>A JSON array that consists of the details about the Data Transmission Service (DTS) synchronization task.</p>
+         * <p>A JSON array that contains DTS synchronization information.</p>
          * <blockquote>
-         * <p> Each unit node (secondary node) synchronizes data from the central node (primary node) by using DTS. This parameter contains the synchronization link ID and request ID of DTS.</p>
+         * <p>Each unit node (secondary node) synchronizes data with the central node (primary node) through DTS. This parameter contains the synchronization task ID and request ID of DTS.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;dtsInstanceId\&quot;:\&quot;dtsm9t107c********\&quot;,\&quot;dtsRequestId\&quot;:\&quot;190F0C6C-4BE6-5676-989B-DBDE6D34CD9C\&quot;}</p>
+         * <p>{\&quot;dtsInstanceId\&quot;:\&quot;dtsm9t107c****\&quot;,\&quot;dtsRequestId\&quot;:\&quot;190F0C6C-4BE6-5676-989B-DBDE6D34CD9C\&quot;}</p>
          */
         @NameInMap("DtsInstance")
         public String dtsInstance;
 
         /**
-         * <p>The database engine that is run by the node.</p>
+         * <p>The database engine of the node in the cluster.</p>
          * <blockquote>
-         * <p> The value of this parameter is fixed as <strong>mysql</strong>.</p>
+         * <p>Only <strong>mysql</strong> is supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -75,7 +75,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The database engine version that is run by the node.</p>
+         * <p>The database engine version of the node in the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>8.0</p>
@@ -84,7 +84,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
-         * <p>The ID of the region where the node resides.</p>
+         * <p>The region ID of the node in the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -96,16 +96,16 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
          * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmy*****</p>
+         * <p>rg-acfmy****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The type of the node. Valid values:</p>
+         * <p>The node type in the active geo-redundancy database cluster. Valid values:</p>
          * <ul>
-         * <li><strong>CENTRAL</strong>: The node is a central node. Each global active database cluster has only one central node. All unit nodes synchronize data from the central node.</li>
-         * <li><strong>UNIT</strong>: The node is a unit node. Each global active database cluster can have up to 10 unit nodes. All unit nodes synchronize data from the central node.</li>
+         * <li><strong>CENTRAL</strong>: central node. The only primary node in the cluster. All unit nodes synchronize data from this node.</li>
+         * <li><strong>UNIT</strong>: unit node. A cluster can contain up to 10 unit nodes. All unit nodes synchronize data from the central node.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,8 +117,8 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         /**
          * <p>The node status. Valid values:</p>
          * <ul>
-         * <li><strong>activation</strong>: The node is running.</li>
-         * <li><strong>creating</strong>: The node is being created.</li>
+         * <li><strong>activation</strong>: running.</li>
+         * <li><strong>creating</strong>: being created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
 
     public static class DescribeGadInstancesResponseBodyGadInstances extends TeaModel {
         /**
-         * <p>The time when the global active database cluster was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the cluster was created. The time follows the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-21T02:57:08Z</p>
@@ -209,7 +209,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>GadTest</p>
@@ -218,22 +218,22 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The information about each node in the cluster.</p>
+         * <p>The list of nodes in the cluster.</p>
          */
         @NameInMap("GadInstanceMembers")
         public java.util.List<DescribeGadInstancesResponseBodyGadInstancesGadInstanceMembers> gadInstanceMembers;
 
         /**
-         * <p>The ID of the global active database cluster.</p>
+         * <p>The ID of the active geo-redundancy database cluster.</p>
          * 
          * <strong>example:</strong>
-         * <p>gad-rm-bp1npi2j8********</p>
+         * <p>gad-rm-bp1npi2j8****</p>
          */
         @NameInMap("GadInstanceName")
         public String gadInstanceName;
 
         /**
-         * <p>The time when the most recent modification was made to the global active database cluster. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the cluster was last modified. The time follows the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-21T03:01:20Z</p>
@@ -242,9 +242,9 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         public String modificationTime;
 
         /**
-         * <p>The database engine that is run by the global active database cluster.</p>
+         * <p>The engine of the active geo-redundancy database cluster.</p>
          * <blockquote>
-         * <p> The value of this parameter is fixed as <strong>mysql</strong>.</p>
+         * <p>Only <strong>mysql</strong> is supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -254,11 +254,11 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         public String service;
 
         /**
-         * <p>The status of the cluster. Valid values:</p>
+         * <p>The cluster status. Valid values:</p>
          * <ul>
-         * <li><strong>activation</strong>: The cluster is running.</li>
-         * <li><strong>creating</strong>: The cluster is being created.</li>
-         * <li><strong>replica_adding</strong>: Nodes are being added to the cluster.</li>
+         * <li><strong>activation</strong>: running.</li>
+         * <li><strong>creating</strong>: being created.</li>
+         * <li><strong>replica_adding</strong>: a node is being added.</li>
          * </ul>
          * 
          * <strong>example:</strong>

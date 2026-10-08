@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateMigrateTaskRequest extends TeaModel {
     /**
-     * <p>The type of the migration task. Valid values:</p>
+     * <p>The type of the cloud migration task. Valid values:</p>
      * <ul>
-     * <li><strong>FULL</strong>: The migration task migrates full backup files.</li>
-     * <li><strong>UPDF</strong>: The migration task migrates incremental or log backup files.</li>
+     * <li><strong>FULL</strong>: performs a restore operation by using a full backup file. This value is applicable to first-time migrations or full data recovery scenarios.</li>
+     * <li><strong>UPDF</strong>: restores incremental data by using an incremental backup file or log file. This value is applicable to incremental synchronization scenarios where a full backup already exists.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,15 +19,12 @@ public class CreateMigrateTaskRequest extends TeaModel {
     public String backupMode;
 
     /**
-     * <p>The consistency check method for the database. Valid values:</p>
+     * <p>The consistency check method after the database is brought online. This parameter takes effect only when IsOnlineDB is set to True. Valid values:</p>
      * <ul>
-     * <li><strong>SyncExecuteDBCheck</strong>: synchronous database check</li>
-     * <li><strong>AsyncExecuteDBCheck</strong>: asynchronous database check</li>
+     * <li><strong>SyncExecuteDBCheck</strong>: performs a synchronous database check. This value is applicable to scenarios that require high data consistency.</li>
+     * <li><strong>AsyncExecuteDBCheck</strong>: performs an asynchronous database check. This value provides higher performance but may delay the detection of potential issues.</li>
      * </ul>
-     * <p>Default value: <strong>AsyncExecuteDBCheck</strong> (compatible with SQL Server 2008 R2)</p>
-     * <blockquote>
-     * <p> This parameter is valid when <strong>IsOnlineDB</strong> is set to <strong>True</strong>.</p>
-     * </blockquote>
+     * <p>Default value: <strong>AsyncExecuteDBCheck</strong> (compatible with SQL Server 2008 R2).</p>
      * 
      * <strong>example:</strong>
      * <p>AsyncExecuteDBCheck</p>
@@ -36,11 +33,11 @@ public class CreateMigrateTaskRequest extends TeaModel {
     public String checkDBMode;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk******</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -56,13 +53,17 @@ public class CreateMigrateTaskRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>Specifies whether to make the restored database data available for user access. Valid values:</p>
+     * <p>Specifies whether to bring the restored database online so that users can access it. Valid values:</p>
      * <ul>
-     * <li><strong>True</strong></li>
-     * <li><strong>False</strong></li>
+     * <li><strong>True</strong>: Brings the database online.</li>
+     * <li><strong>False</strong>: Does not bring the database online.</li>
      * </ul>
      * <blockquote>
-     * <p> Set the value to <strong>True</strong> for instances that run SQL Server 2008 R2.</p>
+     * <ul>
+     * <li>For SQL Server 2008 R2, this value is always True.</li>
+     * <li>When <strong>IsOnlineDB</strong> is set to <strong>True</strong>, <strong>BackupMode</strong> must be set to <strong>FULL</strong>.</li>
+     * <li>When <strong>IsOnlineDB</strong> is set to <strong>False</strong>, <strong>BackupMode</strong> must be set to <strong>UPDF</strong>.</li>
+     * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -73,17 +74,11 @@ public class CreateMigrateTaskRequest extends TeaModel {
     public String isOnlineDB;
 
     /**
-     * <p>The migration task ID.</p>
+     * <p>The migration task ID. Valid values:</p>
      * <ul>
-     * <li>If you set <strong>BackupMode</strong> to <strong>FULL</strong>, the value of this parameter is empty. The full backup mode is compatible with instance that runs SQL Server 2008 R2.</li>
-     * <li>If you set <strong>BackupMode</strong> to <strong>UPDF</strong>, the value of this parameter is the ID of the required full migration task.</li>
+     * <li>When <strong>BackupMode</strong> is set to <strong>FULL</strong>, leave this parameter empty (compatible with SQL Server 2008 R2).</li>
+     * <li>When <strong>BackupMode</strong> is set to <strong>UPDF</strong>, set this parameter to the ID of the corresponding FULL task. You can call DescribeMigrateTasks to query the task ID.</li>
      * </ul>
-     * <blockquote>
-     * <ul>
-     * <li>If you set <strong>IsOnlineDB</strong> to <strong>True</strong>, the value of <strong>BackupMode</strong> must be <strong>FULL</strong>.</li>
-     * <li>If you set <strong>IsOnlineDB</strong> to <strong>False</strong>, the value of <strong>BackupMode</strong> must be <strong>UPDF</strong>.</li>
-     * </ul>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -92,30 +87,26 @@ public class CreateMigrateTaskRequest extends TeaModel {
     public String migrateTaskId;
 
     /**
-     * <p>The shared URL of the backup file in the OSS bucket. The URL must be encoded.</p>
-     * <p>If you specify multiple URLs, separate them with vertical bars (|) and then encode them.</p>
+     * <p>The shared URL of the backup file on OSS (URL-encoded). If multiple URLs exist, separate them with vertical bars (|) before encoding, and then pass the encoded value.</p>
      * <blockquote>
-     * <p> This parameter is required for instances that run SQL Server 2008 R2.</p>
+     * <p>This parameter is required for SQL Server 2008 R2.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>check_cdn_oss.sh <a href="http://www.xxxxxx.mobi">www.xxxxxx.mobi</a></p>
+     * <p>check_cdn_oss.sh www.******.mobi</p>
      */
     @NameInMap("OSSUrls")
     public String OSSUrls;
 
     /**
-     * <p>The information about the backup file in the OSS bucket. The values consist of three parts that are separated by colons (:):</p>
+     * <p>The OSS file information, which consists of the following three parts separated by colons (:):</p>
      * <ul>
-     * <li>OSS endpoint: oss-ap-southeast-1.aliyuncs.com.</li>
-     * <li>Name of the OSS bucket: rdsmssqlsingapore.</li>
-     * <li>Key of the backup file in the OSS bucket: autotest_2008R2_TestMigration_FULL.bak.</li>
+     * <li><strong>OSS endpoint</strong>: oss-ap-southeast-1.aliyuncs.com.</li>
+     * <li><strong>OSS bucket name</strong>: rdsmssqlsingapore.</li>
+     * <li><strong>Backup file name on OSS</strong>: autotest_2008R2_TestMigration_FULL.bak.</li>
      * </ul>
      * <blockquote>
-     * <ul>
-     * <li>This parameter is optional for instances that run SQL Server 2008 R2.</li>
-     * <li>This parameter is required for instances that run a major engine version later than SQL Server 2008 R2.</li>
-     * </ul>
+     * <p>This parameter is required for SQL Server versions later than SQL Server 2008 R2.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

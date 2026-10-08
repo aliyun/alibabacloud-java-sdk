@@ -8,10 +8,10 @@ public class DescribeRdsResourceSettingsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The location of the notification.</p>
+     * <p>The resource niche. Valid values:</p>
      * <ul>
-     * <li>noticeBar: notification bar</li>
-     * <li>popUp: popup</li>
+     * <li>noticeBar: notification bar.</li>
+     * <li>popUp: pop-up dialog box.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

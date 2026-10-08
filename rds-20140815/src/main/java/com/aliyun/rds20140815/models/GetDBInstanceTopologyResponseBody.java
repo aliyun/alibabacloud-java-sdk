@@ -14,7 +14,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The details about the topology.</p>
+     * <p>The topology details.</p>
      */
     @NameInMap("Data")
     public GetDBInstanceTopologyResponseBodyData data;
@@ -29,7 +29,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7430AB1A-6D49-5B6D-B9E5-920250076074</p>
@@ -76,10 +76,10 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
 
     public static class GetDBInstanceTopologyResponseBodyDataConnections extends TeaModel {
         /**
-         * <p>The endpoint that is used to connect to the database instance.</p>
+         * <p>The database endpoint.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-m5ezban**********.mysql.rds.aliyuncs.com</p>
+         * <p>rm-m5ezban****mysql.rds.aliyuncs.com</p>
          */
         @NameInMap("ConnectionString")
         public String connectionString;
@@ -88,16 +88,16 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-m5ezban**********</p>
+         * <p>rm-m5ezban****</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
         /**
-         * <p>The network type of the endpoint. Valid values:</p>
+         * <p>The network endpoint type of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>vpc</strong></li>
-         * <li><strong>public</strong></li>
+         * <li><strong>vpc</strong>: internal endpoint.</li>
+         * <li><strong>public</strong>: public endpoint.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
         public String netType;
 
         /**
-         * <p>The zone ID of the instance.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-qingdao-c</p>
@@ -156,42 +156,42 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
 
     public static class GetDBInstanceTopologyResponseBodyDataNodes extends TeaModel {
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-m5ezban**********</p>
+         * <p>rm-m5ezban****</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
         /**
-         * <p>The ID of the dedicated cluster.</p>
+         * <p>The dedicated cluster ID.</p>
          * <blockquote>
-         * <p>: If the instance does not reside in the specified dedicated cluster, no value is returned.</p>
+         * <p>This parameter is empty for non-dedicated cluster instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>dhg-4n*****</p>
+         * <p>dhg-4n****</p>
          */
         @NameInMap("DedicatedHostGroupId")
         public String dedicatedHostGroupId;
 
         /**
-         * <p>The host ID of the instance in the dedicated cluster.</p>
+         * <p>The host ID in the dedicated cluster.</p>
          * <blockquote>
-         * <p>: If the instance does not reside in the specified dedicated cluster, no value is returned.</p>
+         * <p>This parameter is empty for non-dedicated cluster instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>i-bpxxxxxxx</p>
+         * <p>i-bp****</p>
          */
         @NameInMap("DedicatedHostId")
         public String dedicatedHostId;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The unique identifier of the instance.</p>
          * <blockquote>
-         * <p>: The value \<em>\</em>-1\<em>\</em> is returned for an instance that does not reside in a dedicated cluster.</p>
+         * <p>This parameter returns <strong>-1</strong> for non-dedicated cluster instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -201,10 +201,10 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The type of the node. The following result is returned:</p>
+         * <p>The node type. Valid values:</p>
          * <ul>
-         * <li><strong>Master</strong>: a primary node</li>
-         * <li><strong>Slave</strong>: a secondary node</li>
+         * <li><strong>Master</strong>: primary node.</li>
+         * <li><strong>Slave</strong>: secondary node.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -214,7 +214,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
         public String role;
 
         /**
-         * <p>The zone ID of the instance.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-qingdao-c</p>
@@ -279,7 +279,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
 
     public static class GetDBInstanceTopologyResponseBodyData extends TeaModel {
         /**
-         * <p>The network connection information of the instance.</p>
+         * <p>The network connectivity information of the instance.</p>
          */
         @NameInMap("Connections")
         public java.util.List<GetDBInstanceTopologyResponseBodyDataConnections> connections;
@@ -288,13 +288,13 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-m5ezban**********</p>
+         * <p>rm-m5ezban****</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
         /**
-         * <p>The queried nodes.</p>
+         * <p>The node list.</p>
          */
         @NameInMap("Nodes")
         public java.util.List<GetDBInstanceTopologyResponseBodyDataNodes> nodes;

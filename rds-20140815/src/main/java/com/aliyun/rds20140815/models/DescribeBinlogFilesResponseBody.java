@@ -35,7 +35,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total size of the log file.</p>
+     * <p>The total size of the log files.</p>
      * 
      * <strong>example:</strong>
      * <p>2269410</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,8 +21,8 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number.</p>
-     * <p>Valid values: any non-zero positive integer. Default value: 1</p>
+     * <p>The page number of the pre-upgrade check report.</p>
+     * <p>Valid values: a value greater than 0 that does not exceed the maximum value of the Integer data type. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -31,7 +31,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of records per page in the major engine version upgrade check report.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>30 (default)</li>
@@ -52,7 +52,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The new major engine version of the instance. The new major engine version must be later than the original major engine version.</p>
+     * <p>The target instance version. The value must be greater than the current major engine version of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>12.0</p>
@@ -61,7 +61,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends TeaModel {
     public String targetMajorVersion;
 
     /**
-     * <p>The ID of the upgrade check task. You can obtain the ID of the upgrade check task from the <strong>TaskId</strong> parameter in the response to the UpgradeDBInstanceMajorVersionPrecheck operation.</p>
+     * <p>The ID of the pre-upgrade check task. You can obtain this value from the <strong>TaskId</strong> response parameter after you call the UpgradeDBInstanceMajorVersionPrecheck operation to perform a pre-upgrade check.</p>
      * 
      * <strong>example:</strong>
      * <p>416980000</p>

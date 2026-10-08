@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class RestoreTableRequest extends TeaModel {
     /**
-     * <p>The backup set ID. You can call the DescribeBackups operation to obtain the backup set ID.</p>
+     * <p>The backup set ID. You can call the DescribeBackups operation to query the backup set list.</p>
      * <blockquote>
-     * <p> You must specify at least one of <strong>BackupId</strong> or <strong>RestoreTime</strong> parameters.</p>
+     * <p>You must specify at least one of <strong>BackupId</strong> and <strong>RestoreTime</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>9026262</p>
+     * <p>902****</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -30,19 +30,19 @@ public class RestoreTableRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>Specifies whether to enable the fast restoration feature for individual databases and tables. Valid values:</p>
+     * <p>Specifies whether to enable fast restoration for individual databases and tables. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables the feature.</li>
-     * <li><strong>false</strong>: disables the feature.</li>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
      * </ul>
      * <blockquote>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/103175.html">Restore individual databases and tables of an ApsaraDB RDS for MySQL instance</a>.</p>
+     * <p>For more information about fast restoration for individual databases and tables, see <a href="https://help.aliyun.com/document_detail/103175.html">Restore individual databases and tables</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -64,11 +64,11 @@ public class RestoreTableRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The point in time to which you want to restore data. The point in time must fall within the specified log backup retention period. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>Any point in time within the backup retention period. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * <blockquote>
      * <ul>
      * <li>You must specify at least one of <strong>BackupId</strong> and <strong>RestoreTime</strong>.</li>
-     * <li>You must enable the log backup feature. For more information, see <a href="https://help.aliyun.com/document_detail/98818.html">Back up an ApsaraDB RDS for MySQL instance</a>.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/98818.html">Log backup</a> must be enabled for the instance.</li>
      * </ul>
      * </blockquote>
      * 
@@ -79,13 +79,15 @@ public class RestoreTableRequest extends TeaModel {
     public String restoreTime;
 
     /**
-     * <p>The names of the databases and tables that you want to restore for the source instance.</p>
+     * <p>The databases and tables to restore.</p>
      * <blockquote>
-     * <p> ApsaraDB RDS for PostgreSQL allows you to restore only specified databases, not tables.</p>
+     * <p>ApsaraDB RDS for PostgreSQL supports only the restoration of specific databases, not specific tables.</p>
      * </blockquote>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL: <code>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;&lt;The name of Database 1 on the source instance&gt;&quot;,&quot;newname&quot;:&quot;&lt;The name of Database 1 on the destination instance&gt;&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;The name of Table 1 in Database 1 on the source instance&gt;&quot;,&quot;newname&quot;:&quot;&lt;The name of Table 1 in Database 1 on the destination instance&gt;&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;The name of Table 2 in Database 1 on the source instance&gt;&quot;,&quot;newname&quot;:&quot;&lt;The name of Table 2 in Database 1 on the destination instance&gt;&quot;}]},{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;&lt;The name of Database 2 on the source instance&gt;&quot;,&quot;newname&quot;:&quot;&lt;The name of Database 2 on the destination instance&gt;&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;The name of Table 3 in Database 2 on the source instance&gt;&quot;,&quot;newname&quot;:&quot;&lt;The name of Table 3 in Database 2 on the destination instance&gt;&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;The name of Table 4 in Database 2 on the source instance&gt;&quot;,&quot;newname&quot;:&quot;&lt;The name of Table 4 in Database 2 on the destination instance&gt;&quot;}]}]</code></li>
-     * <li>ApsaraDB RDS for PostgreSQL: <code>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;&lt;The name of Database 1 on the source instance 1&gt;&quot;,&quot;newname&quot;:&quot;&lt;The name of Database 1 on the destination instance&gt;&quot;}]</code></li>
+     * <li><p>ApsaraDB RDS for MySQL format: <code>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;&lt;Database 1 name&gt;&quot;,&quot;newname&quot;:&quot;&lt;New database 1 name&gt;&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Table 1 name in database 1&gt;&quot;,&quot;newname&quot;:&quot;&lt;New table 1 name&gt;&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Table 2 name in database 1&gt;&quot;,&quot;newname&quot;:&quot;&lt;New table 2 name&gt;&quot;}]},{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;&lt;Database 2 name&gt;&quot;,&quot;newname&quot;:&quot;&lt;New database 2 name&gt;&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Table 3 name in database 2&gt;&quot;,&quot;newname&quot;:&quot;&lt;New table 3 name&gt;&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Table 4 name in database 2&gt;&quot;,&quot;newname&quot;:&quot;&lt;New table 4 name&gt;&quot;}]}]</code></p>
+     * </li>
+     * <li><p>ApsaraDB RDS for PostgreSQL format: <code>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;&lt;Database 1 name&gt;&quot;,&quot;newname&quot;:&quot;&lt;New database 1 name&gt;&quot;}]</code></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

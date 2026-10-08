@@ -4,37 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyRCInstanceAttributeShrinkRequest extends TeaModel {
-    /**
-     * <p>Specifies whether to enable the release protection feature for the instance. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong>: enables the release protection feature.</li>
-     * <li><strong>false</strong> (default): does not enable the release protection feature.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
 
     @NameInMap("EnableJumboFrame")
     public Boolean enableJumboFrame;
 
-    /**
-     * <p>The hostname of the instance.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>testHost1</p>
-     */
     @NameInMap("HostName")
     public String hostName;
 
-    /**
-     * <p>The instance ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rm-uf62br2491p5l****</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -48,47 +26,15 @@ public class ModifyRCInstanceAttributeShrinkRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
-    /**
-     * <p>The new password of the instance.</p>
-     * <ul>
-     * <li>The value must be 8 to 30 characters in length.</li>
-     * <li>The value must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <code>()</code> ~ ! @ # $ % ^ &amp; \* - _ + = \`</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>2F9e9@a69c!e18b569c8</p>
-     */
     @NameInMap("Password")
     public String password;
 
-    /**
-     * <p>Specifies whether to restart the instance. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Reboot")
     public Boolean reboot;
 
-    /**
-     * <p>The region ID of the instance. You can call the DescribeRegions operation to query the most recent region list.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The ID of the security group to which the instance is added.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>sg-uf6av412xaxixu****</p>
-     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 

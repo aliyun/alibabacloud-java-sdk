@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHostGroupElasticStrategyParametersResponseBody extends TeaModel {
     /**
-     * <p>The CPU utilization of the instance. Unit: percentage.</p>
+     * <p>The current CPU utilization of the instance. Unit: %.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class DescribeHostGroupElasticStrategyParametersResponseBody extends TeaM
     public Integer cpuShar;
 
     /**
-     * <p>The number of CPU cores used by the instance. Unit: cores.</p>
+     * <p>The CPU usage of the instance. Unit: cores.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -32,7 +32,7 @@ public class DescribeHostGroupElasticStrategyParametersResponseBody extends TeaM
     public Integer iopsZoom;
 
     /**
-     * <p>The maximum number of concurrent connections supported by the instance type.</p>
+     * <p>The maximum number of concurrent connections for the instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -41,7 +41,7 @@ public class DescribeHostGroupElasticStrategyParametersResponseBody extends TeaM
     public Integer maxConnZoom;
 
     /**
-     * <p>The total memory size of the instance in the dedicated cluster. Unit: MB.</p>
+     * <p>The total memory of instances in the current dedicated cluster. Unit: MB.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>

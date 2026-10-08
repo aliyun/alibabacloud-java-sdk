@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListImportTasksRequest extends TeaModel {
     /**
+     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,12 @@ public class ListImportTasksRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>.</p>
+     * <p>Default value: <strong>30</strong>.</p>
+     * <blockquote>
+     * <p>If you specify this parameter, the <strong>PageSize</strong> and <strong>PageNumber</strong> parameters are not available.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -21,6 +28,8 @@ public class ListImportTasksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>
      */
@@ -31,6 +40,7 @@ public class ListImportTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

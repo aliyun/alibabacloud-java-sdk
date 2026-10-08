@@ -8,19 +8,19 @@ public class DescribeDBInstanceMetricsResponseBody extends TeaModel {
      * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-bp1*****</p>
+     * <p>rm-bp1****</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
-     * <p>An array consisting of the Enhanced Monitoring metrics that are enabled for the instance.</p>
+     * <p>The list of enhanced monitoring metrics that are enabled for the instance.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeDBInstanceMetricsResponseBodyItems> items;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>318C3754-F6D0-54BB-A55C-23EAA04708B7</p>
@@ -79,7 +79,7 @@ public class DescribeDBInstanceMetricsResponseBody extends TeaModel {
          * <p>The description of the enhanced monitoring metric.</p>
          * 
          * <strong>example:</strong>
-         * <p>OS CPU utilization, equal to the number of OS-consumed CPUs divided by the total number of CPUs</p>
+         * <p>sys cpu使用率，sys cpu使用量 / cpu总量</p>
          */
         @NameInMap("Description")
         public String description;
@@ -87,8 +87,8 @@ public class DescribeDBInstanceMetricsResponseBody extends TeaModel {
         /**
          * <p>The category of the enhanced monitoring metric. Valid values:</p>
          * <ul>
-         * <li><strong>os</strong>: OS metric</li>
-         * <li><strong>db</strong>: database metric</li>
+         * <li><strong>os</strong>: operating system metric.</li>
+         * <li><strong>db</strong>: database metric.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,17 +110,17 @@ public class DescribeDBInstanceMetricsResponseBody extends TeaModel {
          * <p>The name of the group to which the enhanced monitoring metric belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>CPU Utilization Rate</p>
+         * <p>CPU使用率</p>
          */
         @NameInMap("GroupKeyType")
         public String groupKeyType;
 
         /**
-         * <p>The method that is used to aggregate the monitoring data of the enhanced monitoring metric. Valid values:</p>
+         * <p>The statistical method of the enhanced monitoring metric. Valid values:</p>
          * <ul>
-         * <li><strong>avg</strong>: The system calculates the average value of the enhanced monitoring metric.</li>
-         * <li><strong>min</strong>: The system calculates the minimum value of the enhanced monitoring metric.</li>
-         * <li><strong>max</strong>: The system calculates the maximum value of the enhanced monitoring metric.</li>
+         * <li><strong>avg</strong>: average value.</li>
+         * <li><strong>min</strong>: minimum value.</li>
+         * <li><strong>max</strong>: maximum value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,7 +148,7 @@ public class DescribeDBInstanceMetricsResponseBody extends TeaModel {
         public String metricsKeyAlias;
 
         /**
-         * <p>The serial number of the enhanced monitoring metric.</p>
+         * <p>The sequence number of the enhanced monitoring metric.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

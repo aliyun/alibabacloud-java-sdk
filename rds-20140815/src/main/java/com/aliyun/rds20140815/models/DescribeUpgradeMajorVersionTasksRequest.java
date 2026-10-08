@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUpgradeMajorVersionTasksRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +22,7 @@ public class DescribeUpgradeMajorVersionTasksRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <p>Pages start from 1.</p>
+     * <p>Valid values: a value greater than 0 that does not exceed the maximum value of Integer.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class DescribeUpgradeMajorVersionTasksRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The major engine version of the new instance. Valid values:</p>
+     * <p>The major engine version after the upgrade. Valid values:</p>
      * <ul>
      * <li><strong>10.0</strong></li>
      * <li><strong>11.0</strong></li>
@@ -66,7 +66,7 @@ public class DescribeUpgradeMajorVersionTasksRequest extends TeaModel {
     public String targetMajorVersion;
 
     /**
-     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * <p>A reserved parameter. You do not need to configure this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>417450000</p>

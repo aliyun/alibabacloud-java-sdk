@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnableBackupEncryptionResponseBody extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm-wz951f7f******</p>
      */
@@ -12,6 +14,8 @@ public class EnableBackupEncryptionResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FCA65FA6-658A-5C43-96F4-D************</p>
      */

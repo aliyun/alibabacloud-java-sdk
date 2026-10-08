@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableZonesResponseBody extends TeaModel {
     /**
-     * <p>The available zones in the region.</p>
+     * <p>The list of available zone resources for ApsaraDB RDS.</p>
      */
     @NameInMap("AvailableZones")
     public java.util.List<DescribeAvailableZonesResponseBodyAvailableZones> availableZones;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4256E149-C3C4-4FA7-BDEA-13CA415E8763</p>
@@ -42,7 +42,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
 
     public static class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorysSupportedStorageTypes extends TeaModel {
         /**
-         * <p>The storage type of the instance.</p>
+         * <p>The instance storage type.</p>
          * 
          * <strong>example:</strong>
          * <p>local_ssd</p>
@@ -67,7 +67,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
 
     public static class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorys extends TeaModel {
         /**
-         * <p>The RDS edition of the instance.</p>
+         * <p>The instance edition.</p>
          * 
          * <strong>example:</strong>
          * <p>HighAvailability</p>
@@ -76,7 +76,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The storage types that are available for purchase.</p>
+         * <p>The list of supported storage types available for sale.</p>
          */
         @NameInMap("SupportedStorageTypes")
         public java.util.List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorysSupportedStorageTypes> supportedStorageTypes;
@@ -106,7 +106,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
 
     public static class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions extends TeaModel {
         /**
-         * <p>The RDS editions that are available that are available for purchase.</p>
+         * <p>The list of supported instance editions available for sale.</p>
          */
         @NameInMap("SupportedCategorys")
         public java.util.List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorys> supportedCategorys;
@@ -145,7 +145,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
 
     public static class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEngines extends TeaModel {
         /**
-         * <p>The database engine of the instance.</p>
+         * <p>The database engine.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -154,7 +154,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The database engine versions that are available for purchase.</p>
+         * <p>The list of supported database engine versions available for sale.</p>
          */
         @NameInMap("SupportedEngineVersions")
         public java.util.List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions> supportedEngineVersions;
@@ -193,7 +193,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The database engines that are available for purchase.</p>
+         * <p>The list of supported database engines available for sale.</p>
          */
         @NameInMap("SupportedEngines")
         public java.util.List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEngines> supportedEngines;

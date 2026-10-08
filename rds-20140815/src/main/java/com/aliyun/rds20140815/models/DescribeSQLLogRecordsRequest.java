@@ -5,26 +5,26 @@ import com.aliyun.tea.*;
 
 public class DescribeSQLLogRecordsRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The name of the database. You can enter only one database name. If you specify this parameter, this operation returns the logs that are generated only for the specified database. If you do not specify this parameter, this operation returns the logs that are generated for all databases on the instance.</p>
+     * <p>The name of the database. By default, all databases are queried. You can also enter a database name to query. Only one database name can be entered at a time.</p>
      * 
      * <strong>example:</strong>
      * <p>Database</p>
@@ -33,23 +33,26 @@ public class DescribeSQLLogRecordsRequest extends TeaModel {
     public String database;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. The time span between the start time and the end time must be less than 15 days. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time of the query. The end time must be later than the start time, and the interval between the start time and end time must be 7 days or less. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+     * <blockquote>
+     * <p>If DAS Enterprise Edition V3 is activated and you use the SQL Explorer and Audit feature it provides, you can query data within the hot data storage duration. You can call <a href="https://help.aliyun.com/document_detail/2778837.html">DescribeSqlLogConfig</a> to query the activated Enterprise Edition information.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2011-06-11T15:00:00Z</p>
+     * <p>2011-06-06T15:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>Specifies whether to generate an SQL audit log file or return SQL audit logs. Valid values:</p>
+     * <p>Specifies whether to generate an audit file or return a list of SQL records. Valid values:</p>
      * <ul>
-     * <li><strong>File</strong>: If you set this parameter to File, this operation generates an SQL audit log file and returns only common response parameters. After you call this operation, you must call the DescribeSQLLogFiles operation to obtain the download URL of the SQL audit log file.</li>
-     * <li><strong>Stream</strong> (default): If you set this parameter to Stream, this operation returns SQL audit logs.</li>
+     * <li><strong>File</strong>: If you set this parameter to File, an audit file is generated. Only common parameters are returned. You must call the DescribeSQLLogFiles operation to obtain the download URL of the file.</li>
+     * <li><strong>Stream</strong>: This is the default value. A list of SQL records is returned.</li>
      * </ul>
      * <blockquote>
-     * <p> If you set this parameter to <strong>File</strong>, only ApsaraDB RDS for MySQL instances that use local disks and ApsaraDB RDS for SQL Server instances are supported, and a maximum of 1 million logs are returned.</p>
+     * <p>If this parameter is set to <strong>File</strong>, only MySQL (with Premium Local SSDs) and SQL Server instances are supported, and a maximum of 1,000,000 log entries are recorded.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,7 +68,7 @@ public class DescribeSQLLogRecordsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Pages start from 1.</p>
+     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -84,14 +87,17 @@ public class DescribeSQLLogRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The keyword that is used for the query.</p>
+     * <p>The keywords that are used for the query.</p>
      * <ul>
-     * <li>When you call this operation and set the <strong>Form</strong> parameter to <strong>File</strong> to generate an audit file, you cannot filter log entries by keyword.</li>
-     * <li>You can specify up to 10 keywords. The keywords are evaluated by using the <strong>AND</strong> operator. Separate multiple keywords with spaces.</li>
-     * <li>If a field name in the specified SQL statement is enclosed in grave accents (\<code>) and you want to use the field name as a keyword, you must enter the grave accents (\\</code>) as part of the field name. For example, if the field name is \<code>id\\</code>, enter \<code>id\\</code> instead of id.</li>
+     * <li><p>When you generate an audit file by calling this operation (the <strong>Form</strong> request parameter is set to <strong>File</strong>), keyword-based filtering is not supported.</p>
+     * </li>
+     * <li><p>Separate multiple keywords with spaces. You can specify up to 10 keywords. The logical relationship among keywords is <strong>and</strong>.</p>
+     * </li>
+     * <li><p>If a field name in the SQL statement uses backticks (\<code>), you must also include the backticks when using the field name as a keyword. For example, if the field name is \\</code>id\<code>, enter \\</code>id\` instead of id.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> After you enter a keyword, the system matches the keyword based on the <strong>Database</strong>, <strong>User</strong>, and <strong>QueryKeywords</strong> parameters. The parameters are evaluated by using the <strong>AND</strong> operator.</p>
+     * <p>After you enter keywords, the system matches the keywords against the <strong>Database</strong>, <strong>User</strong>, and <strong>QueryKeywords</strong> parameters simultaneously. The logical relationship among the three request parameters is <strong>and</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -107,16 +113,19 @@ public class DescribeSQLLogRecordsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The unique ID of the SQL statement.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>25623548</p>
+     * <p>None</p>
      */
     @NameInMap("SQLId")
     public Long SQLId;
 
     /**
-     * <p>The beginning of the time range to query. You can query data in the last 15 days before the current date. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time of the query. You can query data within the last 7 days from the current date. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+     * <blockquote>
+     * <p>If DAS Enterprise Edition V3 is activated and you use the SQL Explorer and Audit feature it provides, you can query data within the hot data storage duration. You can call <a href="https://help.aliyun.com/document_detail/2778837.html">DescribeSqlLogConfig</a> to query the activated Enterprise Edition information.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -126,7 +135,7 @@ public class DescribeSQLLogRecordsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The username of the account. You can enter only one username. If you specify this parameter, this operation returns the logs that are generated only for the specified account. If you do not specify this parameter, this operation returns the logs that are generated for all accounts on the instance.</p>
+     * <p>The username. By default, all users are queried. You can also enter a username to query. Only one username can be entered at a time.</p>
      * 
      * <strong>example:</strong>
      * <p>user</p>

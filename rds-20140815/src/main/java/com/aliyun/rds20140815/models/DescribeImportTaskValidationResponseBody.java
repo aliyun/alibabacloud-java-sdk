@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeImportTaskValidationResponseBody extends TeaModel {
     /**
+     * <p>The task details.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;ValidateAction&quot;: &quot;Detail&quot;}</p>
      */
@@ -21,6 +23,8 @@ public class DescribeImportTaskValidationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task status. This parameter is invalid.</p>
+     * 
      * <strong>example:</strong>
      * <p>COMPLETED</p>
      */
@@ -28,6 +32,12 @@ public class DescribeImportTaskValidationResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Successful.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

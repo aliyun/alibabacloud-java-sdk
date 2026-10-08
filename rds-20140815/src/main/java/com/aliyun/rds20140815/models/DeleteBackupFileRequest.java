@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteBackupFileRequest extends TeaModel {
     /**
-     * <p>You can specify only the ID of a backup file whose backup policy is Single-database Backup. You can specify the IDs of up to 100 backup files at a time. Separate the IDs with commas (,). You can call the DescribeBackups operation to query the IDs of data backup files.</p>
+     * <p>The backup set IDs. Only backup set IDs of individual database backup policies are supported. You can specify up to 100 backup set IDs at a time. Separate multiple IDs with commas (,). You can call DescribeBackups to obtain the backup set IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>29304****</p>
@@ -14,26 +14,26 @@ public class DeleteBackupFileRequest extends TeaModel {
     public String backupId;
 
     /**
-     * <p>The time before which the backup files you want to delete are generated. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>Deletes backup files that were created before the specified point in time. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
      * 
      * <strong>example:</strong>
-     * <p>2011-06-11T16:00:00Z</p>
+     * <p>2024-06-11T16:00:00Z</p>
      */
     @NameInMap("BackupTime")
     public String backupTime;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-bp6wjk5******</p>
+     * <p>rm-bp6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
      * 
      * <strong>example:</strong>
      * <p>testdb</p>
@@ -45,7 +45,7 @@ public class DeleteBackupFileRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeDBInstanceAttribute operation to query the region ID.</p>
+     * <p>The region ID. You can call DescribeDBInstanceAttribute to obtain the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

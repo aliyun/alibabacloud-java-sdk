@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCloudMigrationPrecheckTaskRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The ID of the target instance. You can invoke the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CreateCloudMigrationPrecheckTaskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The username of the account that is used to connect to the self-managed PostgreSQL instance. Enter the username of the account that you created in the <a href="https://help.aliyun.com/document_detail/369500.html">Create an account for cloud migration on a self-managed PostgreSQL instance</a> topic.</p>
+     * <p>The username. The database account created in the <a href="https://help.aliyun.com/document_detail/369500.html">Create a migration account</a> step.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,10 +28,10 @@ public class CreateCloudMigrationPrecheckTaskRequest extends TeaModel {
     public String sourceAccount;
 
     /**
-     * <p>The environment in which the self-managed PostgreSQL instance runs.</p>
+     * <p>The type of the self-managed PostgreSQL database. Valid values:</p>
      * <ul>
-     * <li><strong>idcOnVpc</strong>: The self-managed PostgreSQL instance resides in a data center. The data center can communicate with the VPC to which the ApsaraDB RDS for PostgreSQL instance belongs.</li>
-     * <li><strong>ecsOnVpc</strong>: The self-managed PostgreSQL instance resides on an ECS instance.</li>
+     * <li><strong>idcOnVpc</strong>: IDC-based self-managed PostgreSQL database (the IDC is connected to the VPC).</li>
+     * <li><strong>ecsOnVpc</strong>: ECS-based self-managed PostgreSQL database on Alibaba Cloud.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -42,10 +42,10 @@ public class CreateCloudMigrationPrecheckTaskRequest extends TeaModel {
     public String sourceCategory;
 
     /**
-     * <p>The private IP address that is used to connect to the self-managed PostgreSQL instance.</p>
+     * <p>The internal IP address of the self-managed PostgreSQL database.</p>
      * <ul>
-     * <li>If the self-managed PostgreSQL instance resides on an ECS instance, enter the private IP address of the ECS instance. For more information about how to obtain the private IP address of an ECS instance, see <a href="https://help.aliyun.com/document_detail/273914.html">View IP addresses</a>.</li>
-     * <li>If the self-managed PostgreSQL instance resides in an on-premises data center, enter the private IP address of the on-premises data center.</li>
+     * <li>For one-click migration of an ECS-based self-managed PostgreSQL database, set this parameter to the private IP address of the ECS instance. For more information about how to obtain the IP address, see <a href="https://help.aliyun.com/document_detail/273914.html">View IP addresses</a>.</li>
+     * <li>For one-click migration of an IDC-based self-managed PostgreSQL database, set this parameter to the internal IP address of the IDC.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -56,7 +56,7 @@ public class CreateCloudMigrationPrecheckTaskRequest extends TeaModel {
     public String sourceIpAddress;
 
     /**
-     * <p>The password of the account that is used to connect to the self-managed PostgreSQL instance. Enter the password of the account that you created in the <a href="https://help.aliyun.com/document_detail/369500.html">Create an account for cloud migration on a self-managed PostgreSQL instance</a> topic.</p>
+     * <p>The password. The password of the database account created in the <a href="https://help.aliyun.com/document_detail/369500.html">Create a migration account</a> step.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class CreateCloudMigrationPrecheckTaskRequest extends TeaModel {
     public String sourcePassword;
 
     /**
-     * <p>The port that is used to connect to the self-managed PostgreSQL instance. You can run the <code>netstat -a | grep PGSQL</code> command to view the port.</p>
+     * <p>The port of the self-managed PostgreSQL database. You can run the <code>netstat -a | grep PGSQL</code> command to view the port.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class CreateCloudMigrationPrecheckTaskRequest extends TeaModel {
     public Long sourcePort;
 
     /**
-     * <p>The name of the task. If you do not specify this parameter, ApsaraDB RDS automatically generates a name for the cloud migration task.</p>
+     * <p>The task name. You can specify a custom name. If you do not specify this parameter, the system automatically generates a name.</p>
      * 
      * <strong>example:</strong>
      * <p>slf7w7wj3g</p>

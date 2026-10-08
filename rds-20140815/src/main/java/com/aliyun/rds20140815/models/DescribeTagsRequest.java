@@ -16,7 +16,7 @@ public class DescribeTagsRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <blockquote>
-     * <p> If you specify this parameter, all tags that are added to this instance are queried, and other filter conditions becomes invalid.</p>
+     * <p>If you specify this parameter, all tags of the instance are returned and other filter conditions are ignored.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DescribeTagsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query available region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class DescribeTagsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of resource. Set the value to INSTANCE.</p>
+     * <p>The resource type. Set the value to a fixed value.</p>
      * 
      * <strong>example:</strong>
      * <p>INSTANCE</p>
@@ -57,7 +57,8 @@ public class DescribeTagsRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag that you want to query. The value of the parameter consists of TagKey and TagValue. Format: <code>{&quot;TagKey&quot;:&quot;TagValue&quot;}</code>.</p>
+     * <p>The tags to query, including TagKey and TagValue.
+     * Format: <code>{&quot;TagKey&quot;:&quot;TagValue&quot;}</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>{“key1”:”value1”}</p>

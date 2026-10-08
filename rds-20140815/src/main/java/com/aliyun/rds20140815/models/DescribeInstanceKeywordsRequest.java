@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceKeywordsRequest extends TeaModel {
     /**
-     * <p>The type of reserved keyword to query. Valid values:</p>
+     * <p>The type of reserved keywords, which indicates whether the reserved keywords are for account names or database names. Valid values:</p>
      * <ul>
-     * <li><strong>account</strong></li>
-     * <li><strong>database</strong></li>
+     * <li><p><strong>account</strong></p>
+     * </li>
+     * <li><p><strong>database</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is required.</p>
+     * <p>This parameter is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

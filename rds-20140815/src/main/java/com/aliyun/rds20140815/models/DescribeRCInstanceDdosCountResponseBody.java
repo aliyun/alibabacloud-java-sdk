@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRCInstanceDdosCountResponseBody extends TeaModel {
     /**
-     * <p>The number of instances that are under DDoS attacks.</p>
+     * <p>The details about the number of instances that are under DDoS attacks.</p>
      */
     @NameInMap("DdosCount")
     public DescribeRCInstanceDdosCountResponseBodyDdosCount ddosCount;
@@ -14,7 +14,7 @@ public class DescribeRCInstanceDdosCountResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>F77F3176-AAEA-5836-B2B4-A854E3ED****_Zv**</p>
+     * <p>F77F3176-AAEA-5836-B2B4-A854E3EF****_Zv**</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -42,7 +42,7 @@ public class DescribeRCInstanceDdosCountResponseBody extends TeaModel {
 
     public static class DescribeRCInstanceDdosCountResponseBodyDdosCount extends TeaModel {
         /**
-         * <p>The number of instances for which blackhole filtering is triggered.</p>
+         * <p>The number of instances in blackhole filtering status.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -51,7 +51,7 @@ public class DescribeRCInstanceDdosCountResponseBody extends TeaModel {
         public String blackholeCount;
 
         /**
-         * <p>The number of instances for which traffic scrubbing is triggered.</p>
+         * <p>The number of instances for which attack traffic scrubs traffic.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

@@ -11,7 +11,7 @@ public class DeleteBackupFileResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>C7B3A91C-0ACD-4948-ACAE-xxxxxxxD4069</p>
+     * <p>C7B3A91C-0ACD-4948-ACAE-****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,39 +5,39 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupSetExpireTimeRequest extends TeaModel {
     /**
-     * <p>The backup set ID. You can call the DescribeBackups operation to query the backup set ID. The backup set must meet the following requirements:</p>
+     * <p>The backup set ID. You can invoke DescribeBackups to query the backup set ID. The backup set must meet the following conditions:</p>
      * <ul>
-     * <li>The Engine parameter is SQLServer</li>
-     * <li>The BackupMode parameter is set to Manual.</li>
-     * <li>The BackupMethod parameter is set to Physical.</li>
-     * <li>The BackupType parameter is set to FullBackup.</li>
-     * <li>The BackupStatus parameter is set to Success.</li>
+     * <li>Engine (database type): SQLServer</li>
+     * <li>BackupMode (backup pattern): Manual (manual backup)</li>
+     * <li>BackupMethod: Physical (physical backup)</li>
+     * <li>BackupType: FullBackup (full backup)</li>
+     * <li>BackupStatus: Success (backup completed)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>b-n8tpg24c6i0v****</p>
+     * <p>262186****</p>
      */
     @NameInMap("BackupId")
     public Long backupId;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5****</p>
+     * <p>rm-7xv8f2zcia0e4****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The point in time to which you want to extend the expiration time of the backup set. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
-     * <p>The time cannot be earlier than the current expiration time. You can call the DescribeBackups operation to view the current expiration time of the backup set.</p>
+     * <p>The time to which you want to extend the expiration time of the backup set. Specify the time in the yyyy-MM-ddTHH:mmZ format (UTC).</p>
+     * <p>The specified time cannot be earlier than the current expiration time. You can call DescribeBackups to query the current expiration time (ExpectExpireTime).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2025-06-17T12:10:23Z</p>
+     * <p>2025-07-15T12:10:23Z</p>
      */
     @NameInMap("ExpectExpireTime")
     public String expectExpireTime;

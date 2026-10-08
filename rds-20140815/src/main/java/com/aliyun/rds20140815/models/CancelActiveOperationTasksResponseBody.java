@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelActiveOperationTasksResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the tasks that are canceled. Multiple task IDs are separated with commas (,).</p>
+     * <p>The IDs of the tasks that are canceled in batch. Multiple IDs are separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>188****,188****,188****</p>

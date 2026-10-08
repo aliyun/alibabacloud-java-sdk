@@ -5,10 +5,16 @@ import com.aliyun.tea.*;
 
 public class EvaluateLocalExtendDiskResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the instance is available. Valid values: true and false.</p>
+     * <p>Indicates whether the expansion is available. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Available.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Not available.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>True</p>
+     * <p>true</p>
      */
     @NameInMap("Available")
     public String available;
@@ -17,13 +23,13 @@ public class EvaluateLocalExtendDiskResponseBody extends TeaModel {
      * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-bp1375i66nd******</p>
+     * <p>rm-wz9s06u4drm******</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The data transfer type supported by the instance.</p>
+     * <p>The transfer type of the database instance.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -32,7 +38,7 @@ public class EvaluateLocalExtendDiskResponseBody extends TeaModel {
     public String DBInstanceTransType;
 
     /**
-     * <p>The maximum value of the local disk. Unit: GB.</p>
+     * <p>The maximum capacity of the local disk. Unit: GB.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

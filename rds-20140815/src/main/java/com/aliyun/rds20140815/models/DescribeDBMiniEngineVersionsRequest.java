@@ -5,25 +5,28 @@ import com.aliyun.tea.*;
 
 public class DescribeDBMiniEngineVersionsRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the ID.</p>
+     * <blockquote>
+     * <p>For ApsaraDB RDS for PostgreSQL instances, if you specify an instance ID, only minor versions later than the current minor version of the instance are returned.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5*******</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.</p>
+     * <p>The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>dhg-4n*****</p>
+     * <p>dhg-4n****</p>
      */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
 
     /**
-     * <p>The database engine of the instance. Valid values: <strong>MySQL</strong> and <strong>PostgreSQL</strong>.</p>
+     * <p>The database engine. Set the value to <strong>MySQL</strong> or <strong>PostgreSQL</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>MySQL</p>
@@ -32,10 +35,10 @@ public class DescribeDBMiniEngineVersionsRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The database engine version of the instance. Valid values:</p>
+     * <p>The database engine version. Valid values:</p>
      * <ul>
-     * <li>Valid values when you set the Engine parameter to MySQL: <strong>8.0</strong>, <strong>5.7</strong>, <strong>5.6</strong>, and <strong>5.5</strong></li>
-     * <li>Valid values when you set the Engine parameter to PostgreSQL: <strong>15.0</strong>, <strong>14.0</strong>, <strong>13.0</strong>, <strong>12.0</strong>, <strong>11.0</strong>, and <strong>10.0</strong></li>
+     * <li>MySQL: <strong>8.0</strong>, <strong>5.7</strong>, <strong>5.6</strong>, <strong>5.5</strong></li>
+     * <li>PostgreSQL: <strong>17.0</strong>, <strong>16.0</strong>, <strong>15.0</strong>, <strong>14.0</strong>, <strong>13.0</strong>, <strong>12.0</strong>, <strong>11.0</strong>, <strong>10.0</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +48,10 @@ public class DescribeDBMiniEngineVersionsRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The minor engine version of the instance. You can specify this parameter to query the minor engine version of the instance.</p>
+     * <p>The minor engine version number. Specify this parameter to query the details of the specified minor version.</p>
+     * <blockquote>
+     * <p>This parameter is applicable only to ApsaraDB RDS for MySQL.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>rds_20220731</p>
@@ -56,9 +62,10 @@ public class DescribeDBMiniEngineVersionsRequest extends TeaModel {
     /**
      * <p>The instance edition. Valid values:</p>
      * <ul>
-     * <li><strong>Basic</strong>: RDS Basic Edition</li>
-     * <li><strong>HighAvailability</strong>: RDS High-availability Edition</li>
-     * <li><strong>Finance</strong>: RDS Enterprise Edition</li>
+     * <li><strong>Basic</strong>: Basic Edition.</li>
+     * <li><strong>HighAvailability</strong>: high-availability series.</li>
+     * <li><strong>cluster</strong>: Cluster Edition.</li>
+     * <li><strong>Finance</strong>: RDS Enterprise Edition.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +75,7 @@ public class DescribeDBMiniEngineVersionsRequest extends TeaModel {
     public String nodeType;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,13 +88,14 @@ public class DescribeDBMiniEngineVersionsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The storage type of the instance. Valid values:</p>
+     * <p>The instance storage type. Valid values:</p>
      * <ul>
-     * <li><strong>local_ssd</strong>: local SSD</li>
-     * <li><strong>cloud_ssd</strong>: standard SSD</li>
-     * <li><strong>cloud_essd</strong>: enhanced SSD (ESSD) of performance level 1 (PL1)</li>
-     * <li><strong>cloud_essd2</strong>: ESSD of PL2</li>
-     * <li><strong>cloud_essd3</strong>: ESSD of PL3</li>
+     * <li><strong>local_ssd</strong>: Premium Local SSDs.</li>
+     * <li><strong>general_essd</strong>: premium performance disk.</li>
+     * <li><strong>cloud_ssd</strong>: standard SSDs.</li>
+     * <li><strong>cloud_essd</strong>: PL1 ESSDs.</li>
+     * <li><strong>cloud_essd2</strong>: PL2 ESSDs.</li>
+     * <li><strong>cloud_essd3</strong>: PL3 ESSDs.</li>
      * </ul>
      * 
      * <strong>example:</strong>

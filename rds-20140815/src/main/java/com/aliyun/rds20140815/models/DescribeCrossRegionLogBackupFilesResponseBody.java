@@ -8,13 +8,13 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
      * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The end of the time range to query. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The end time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2019-06-15T12:10:00Z</p>
@@ -26,7 +26,7 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
     public DescribeCrossRegionLogBackupFilesResponseBodyItems items;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of cross-region backup files on the current page.</p>
+     * <p>The number of backup files on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -63,7 +63,7 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range to query. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The start time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2019-05-30T12:10:00Z</p>
@@ -72,7 +72,7 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The total number of entries that are returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

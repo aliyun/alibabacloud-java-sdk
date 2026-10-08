@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeCrossRegionBackupsRequest extends TeaModel {
     /**
-     * <p>The ID of the backup file.</p>
+     * <p>The user backup ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>603524***</p>
+     * <p>603524****</p>
      */
     @NameInMap("BackupId")
     public Integer backupId;
 
     /**
-     * <p>The ID of the cross-region data backup file.</p>
+     * <p>The cross-region backup file ID.</p>
      * <blockquote>
-     * <p> You must specify the <strong>CrossBackupId</strong> parameter. Alternatively, you must specify the <strong>StartTime</strong> and <strong>EndTime</strong> parameters.</p>
+     * <p>You must specify either <strong>CrossBackupId</strong> or the time range parameters (<strong>StartTime</strong> and <strong>EndTime</strong>).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DescribeCrossRegionBackupsRequest extends TeaModel {
     public Integer crossBackupId;
 
     /**
-     * <p>The ID of the region in which the cross-region data backup file is stored.</p>
+     * <p>The ID of the destination region for cross-region backup.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -39,16 +39,19 @@ public class DescribeCrossRegionBackupsRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time of the query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format (UTC).</p>
+     * <blockquote>
+     * <p>For non-UTC+0 time zones, subtract 8 hours from the actual time before passing the value.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>2019-06-15T12:10:00Z</p>
+     * <p>2024-03-05T02:24:37Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -57,7 +60,7 @@ public class DescribeCrossRegionBackupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Valid values: any non-zero positive integer.</p>
+     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -82,7 +85,7 @@ public class DescribeCrossRegionBackupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,7 +98,7 @@ public class DescribeCrossRegionBackupsRequest extends TeaModel {
      * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmy*****</p>
+     * <p>rg-acfmy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -107,10 +110,13 @@ public class DescribeCrossRegionBackupsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time of the query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format (UTC).</p>
+     * <blockquote>
+     * <p>For non-UTC+0 time zones, subtract 8 hours from the actual time before passing the value.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>2019-05-30T12:10:00Z</p>
+     * <p>2024-03-05T02:21:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

@@ -5,20 +5,20 @@ import com.aliyun.tea.*;
 
 public class CreateReplicationLinkRequest extends TeaModel {
     /**
-     * <p>The ID of the DR instance.</p>
+     * <p>The instance ID of the disaster recovery instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>pgm-bp1trqb4p1xd****</p>
+     * <p>rm-2zeytekus0r******</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>Specifies whether to perform a dry run before the system creates the DR instance. Valid values:</p>
+     * <p>Specifies whether to perform a dry run for creating the synchronization link of the disaster recovery instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run but does not create the instance. The system checks the request parameters, request syntax, limits, and available resources.</li>
-     * <li><strong>false</strong> (default): performs a dry run and the actual request. If the request passes the dry run, the instance is directly created.</li>
+     * <li><strong>true</strong>: Executes a dry run without creating the instance. The system checks items such as request parameters, request format, business limits, and inventory.</li>
+     * <li><strong>false</strong> (default): Sends a normal request and creates the instance after the check is passed.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -29,7 +29,7 @@ public class CreateReplicationLinkRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The account of the database that is used for data synchronization.</p>
+     * <p>The database account used for data synchronization.</p>
      * 
      * <strong>example:</strong>
      * <p>testdbuser</p>
@@ -38,7 +38,7 @@ public class CreateReplicationLinkRequest extends TeaModel {
     public String replicatorAccount;
 
     /**
-     * <p>The password of the account.</p>
+     * <p>The password of the synchronization account.</p>
      * 
      * <strong>example:</strong>
      * <p>testpassword</p>
@@ -47,19 +47,20 @@ public class CreateReplicationLinkRequest extends TeaModel {
     public String replicatorPassword;
 
     /**
-     * <p>The endpoint of the source ApsaraDB RDS for PostgreSQL instance or the IP address of the source ApsaraDB RDS for SQL Server instance.</p>
+     * <p>The endpoint of the PostgreSQL source instance or the IP address of the SQL Server source instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>pgm-****.pg.rds.aliyuncs.com</p>
+     * <p>PostgreSQL：pgm-****.pg.rds.aliyuncs.com
+     * SQL Server：10.XX.XXX.XXX</p>
      */
     @NameInMap("SourceAddress")
     public String sourceAddress;
 
     /**
-     * <p>The type of the source instance. Valid values:</p>
+     * <p>The category of the source instance. Valid values:</p>
      * <ul>
-     * <li><strong>other</strong>: other instances. <strong>SQL Server instances are not supported.</strong></li>
-     * <li><strong>aliyunRDS</strong>: an ApsaraDB RDS instance.</li>
+     * <li><strong>other</strong>: Other. (<strong>Not supported for SQL Server.</strong>)</li>
+     * <li><strong>aliyunRDS</strong>: ApsaraDB RDS instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,16 +70,16 @@ public class CreateReplicationLinkRequest extends TeaModel {
     public String sourceCategory;
 
     /**
-     * <p>The name of the source instance. If you set <strong>SourceCategory</strong> to <strong>aliyunRDS</strong>, this parameter is required.</p>
+     * <p>The name of the source instance. This parameter is required when <strong>SourceCategory</strong> is set to <strong>aliyunRDS</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>testInstance</p>
+     * <p>rm-2zeaaz62s18******</p>
      */
     @NameInMap("SourceInstanceName")
     public String sourceInstanceName;
 
     /**
-     * <p>The region ID of the source instance. If you set <strong>SourceCategory</strong> to <strong>aliyunRDS</strong>, this parameter is required.</p>
+     * <p>The region ID of the source instance. This parameter is required when <strong>SourceCategory</strong> is set to <strong>aliyunRDS</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -96,7 +97,7 @@ public class CreateReplicationLinkRequest extends TeaModel {
     public Long sourcePort;
 
     /**
-     * <p>The IP address of the DR instance of the ApsaraDB RDS for SQL Server instance.</p>
+     * <p>The IP address of the SQL Server disaster recovery instance.</p>
      * 
      * <strong>example:</strong>
      * <p>192.XXX.XX.XXX</p>
@@ -105,19 +106,19 @@ public class CreateReplicationLinkRequest extends TeaModel {
     public String targetAddress;
 
     /**
-     * <p>The task ID of the successful dry run.</p>
+     * <p>The ID of a successful dry run task.</p>
      * 
      * <strong>example:</strong>
-     * <p>439946016</p>
+     * <p>43994****</p>
      */
     @NameInMap("TaskId")
     public Long taskId;
 
     /**
-     * <p>The task name of the dry run. You can specify a custom task name. If you do not specify this parameter, ApsaraDB RDS automatically generates a task name.</p>
+     * <p>The name of the dry run task. You can specify a custom name. If you do not specify this parameter, the system automatically generates a name.</p>
      * 
      * <strong>example:</strong>
-     * <p>test01</p>
+     * <p>zbtest</p>
      */
     @NameInMap("TaskName")
     public String taskName;

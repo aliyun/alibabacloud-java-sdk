@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GrantAccountPrivilegeRequest extends TeaModel {
     /**
-     * <p>The username of the account.</p>
+     * <p>The account name. You can call <a href="https://help.aliyun.com/document_detail/610454.html">DescribeAccounts</a> to query the account name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,24 +15,42 @@ public class GrantAccountPrivilegeRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The permissions that you want to grant to the account. The number of permissions must be the same as the number of databases that you specify for the DBName parameter. You can specify this parameter based on your business requirements. Valid values:</p>
-     * <ul>
-     * <li><strong>ReadWrite</strong>: read and write permissions</li>
-     * <li><strong>ReadOnly</strong>: read-only permissions</li>
-     * <li><strong>DDLOnly</strong>: DDL-only permissions</li>
-     * <li><strong>DMLOnly</strong>: DML-only permissions</li>
-     * <li><strong>DBOwner</strong>: database owner permissions</li>
-     * </ul>
+     * <p>The type of account permission. If you specify multiple values for DBName, you must specify the same number of permission types in the same order, separated by commas (,).</p>
+     * <p>The supported permission types vary by database engine. Valid values:</p>
      * <blockquote>
+     * <p>For more information about account permissions, see <a href="https://help.aliyun.com/document_detail/146395.html">MySQL/MariaDB permission list</a>, <a href="https://help.aliyun.com/document_detail/95692.html">SQL Server permission list</a>, and <a href="https://help.aliyun.com/document_detail/257684.html">PostgreSQL permission list</a>.</p>
      * </blockquote>
+     * <details>
+     * <summary>ApsaraDB RDS for MySQL/ApsaraDB RDS for MariaDB</summary>
+     * 
      * <ul>
-     * <li><p>If the instance runs MySQL or MariaDB, you can set this parameter to <strong>ReadWrite</strong>, <strong>ReadOnly</strong>, <strong>DDLOnly</strong>, or <strong>DMLOnly</strong>.</p>
-     * </li>
-     * <li><p>If the instance runs SQL Server, you can set this parameter to <strong>ReadWrite</strong>, <strong>ReadOnly</strong>, or <strong>DBOwner</strong>.</p>
-     * </li>
-     * <li><p>If the instance runs PostgreSQL and uses cloud disks, you can set this parameter to <strong>DBOwner</strong>.</p>
-     * </li>
+     * <li><strong>ReadWrite</strong>: read and write.</li>
+     * <li><strong>ReadOnly</strong>: read-only.</li>
+     * <li><strong>DDLOnly</strong>: DDL only.</li>
+     * <li><strong>DMLOnly</strong>: DML only.</li>
      * </ul>
+     * </details>
+     * 
+     * <details>
+     * <summary>ApsaraDB RDS for SQL Server</summary>
+     * 
+     * <ul>
+     * <li><strong>ReadWrite</strong>: read and write. This permission corresponds to the <code>db_datawriter</code> and <code>db_datareader</code> database roles in SQL Server.</li>
+     * <li><strong>ReadOnly</strong>: read-only. This permission corresponds to the <code>db_datareader</code> database role in SQL Server.</li>
+     * <li><strong>DBOwner</strong>: database owner. This permission corresponds to the <code>db_owner</code> database role in SQL Server.<blockquote>
+     * <p>For more information about database-level roles, see <a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-ver16">Microsoft official documentation</a>.</p>
+     * </blockquote>
+     * </details></li>
+     * </ul>
+     * <details>
+     * <summary>ApsaraDB RDS for PostgreSQL</summary>
+     * 
+     * <p><strong>DBOwner</strong>: database owner.</p>
+     * <blockquote>
+     * <p>For fine-grained permission management, see <a href="https://help.aliyun.com/document_detail/352149.html">Best practices for PostgreSQL permission management</a>.</p>
+     * </blockquote>
+     * </details>
+     * 
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,17 +60,17 @@ public class GrantAccountPrivilegeRequest extends TeaModel {
     public String accountPrivilege;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The name of the database on which you want to grant permissions. Separate multiple database names with commas (,).</p>
+     * <p>The name of the database to which you want to grant access permissions. To grant permissions on multiple databases at a time, separate the database names with commas (,), such as <code>db1,db2,db3</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

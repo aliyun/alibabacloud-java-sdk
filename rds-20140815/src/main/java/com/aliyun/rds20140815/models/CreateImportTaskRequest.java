@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateImportTaskRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateImportTaskRequest extends TeaModel {
     public String dbInstanceId;
 
     /**
+     * <p>The estimated data space. Unit: GB.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -21,6 +24,7 @@ public class CreateImportTaskRequest extends TeaModel {
     public Integer estimatedSize;
 
     /**
+     * <p>The host IP address of the source MySQL instance. ApsaraDB RDS accesses this IP address to obtain the backup.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +37,7 @@ public class CreateImportTaskRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The password of the source MySQL account. The password must be Base64-encoded.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +47,7 @@ public class CreateImportTaskRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>The port of the source MySQL instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +57,7 @@ public class CreateImportTaskRequest extends TeaModel {
     public Integer port;
 
     /**
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> to query available regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +67,8 @@ public class CreateImportTaskRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The instance ID of the source cloud instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>i-bp1fe296n52ub3chezpg</p>
      */
@@ -67,6 +76,8 @@ public class CreateImportTaskRequest extends TeaModel {
     public String sourceInstanceId;
 
     /**
+     * <p>The type of the source cloud instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ECS</p>
      */
@@ -74,6 +85,7 @@ public class CreateImportTaskRequest extends TeaModel {
     public String sourcePlatform;
 
     /**
+     * <p>The streaming port used to transfer the backup.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,7 +95,22 @@ public class CreateImportTaskRequest extends TeaModel {
     public Integer streamPort;
 
     /**
-     * <p>This parameter is required.</p>
+     * <p>The account of the source MySQL instance. The account must have permissions to create backups and set up replication. Refer to the following SQL statements for granting permissions:</p>
+     * <pre><code>-- MySQL 5.7
+     * mysql&gt; CREATE USER \\&quot;myadmin\\&quot;@\\&quot;%\\&quot; IDENTIFIED BY \\&quot;s3cret\\&quot;;
+     * mysql&gt; GRANT RELOAD, LOCK TABLES, PROCESS, REPLICATION CLIENT, REPLICATION SLAVE ON *.* TO
+     *        \\&quot;myadmin\\&quot;@\\&quot;%\\&quot;;
+     * mysql&gt; FLUSH PRIVILEGES;
+     * -- MySQL 8.0
+     * mysql&gt; CREATE USER \\&quot;myadmin\\&quot;@\\&quot;%\\&quot; IDENTIFIED BY \\&quot;Test123!\\&quot;;
+     * mysql&gt; GRANT BACKUP_ADMIN, PROCESS, RELOAD, LOCK TABLES, REPLICATION CLIENT, REPLICATION SLAVE ON *.* TO \\&quot;myadmin\\&quot;@\\&quot;%\\&quot;;
+     * mysql&gt; GRANT SELECT ON performance_schema.log_status TO \\&quot;myadmin\\&quot;@\\&quot;%\\&quot;;
+     * mysql&gt; GRANT SELECT ON performance_schema.keyring_component_status TO myadmin@\\&quot;%\\&quot;;
+     * mysql&gt; GRANT SELECT ON performance_schema.replication_group_members TO myadmin@\\&quot;%\\&quot;;
+     * mysql&gt; FLUSH PRIVILEGES;
+     * 
+     * This parameter is required.
+     * </code></pre>
      * 
      * <strong>example:</strong>
      * <p>myadmin</p>
@@ -92,6 +119,8 @@ public class CreateImportTaskRequest extends TeaModel {
     public String user;
 
     /**
+     * <p>The installation path of xtrabackup on the source instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>/usr/bin/xtrabackup</p>
      */

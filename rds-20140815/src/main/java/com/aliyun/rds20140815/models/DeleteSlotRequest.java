@@ -15,7 +15,7 @@ public class DeleteSlotRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>Target instance ID. You can call the DescribeDBInstances operation to query target instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,10 +31,10 @@ public class DeleteSlotRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the resource group. You can leave this parameter empty.</p>
+     * <p>The resource group ID. This parameter can be left empty.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmy*****</p>
+     * <p>rg-acfmy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -46,7 +46,7 @@ public class DeleteSlotRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the replication slot. You can call the DescribeSlots operation to query the name of the replication slot.</p>
+     * <p>The replication slot name. You can call the DescribeSlots operation to query the replication slot name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,10 +56,10 @@ public class DeleteSlotRequest extends TeaModel {
     public String slotName;
 
     /**
-     * <p>The status of the replication slot. You can call the DescribeSlots operation to query the status of the replication slot. Valid values:</p>
+     * <p>The replication slot status. You can call the DescribeSlots operation to query the replication slot status. Valid values:</p>
      * <ul>
-     * <li><strong>ACTIVE</strong></li>
-     * <li><strong>INACTIVE</strong></li>
+     * <li><strong>ACTIVE</strong>: active.</li>
+     * <li><strong>INACTIVE</strong>: inactive.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

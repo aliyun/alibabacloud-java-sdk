@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class AllocateInstancePublicConnectionResponseBody extends TeaModel {
     /**
-     * <p>The endpoint that is used to connect to the database instance.</p>
+     * <p>The database endpoint.</p>
      * 
      * <strong>example:</strong>
-     * <p>test*****.mysql.rds.aliyuncs.com</p>
+     * <p>test****.mysql.rds.aliyuncs.com</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-bp1*****</p>
+     * <p>rm-bp1****</p>
      */
     @NameInMap("DbInstanceName")
     public String dbInstanceName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>65BDA532-28AF-4122-AA39-B382721EEE64</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAccountMaskingPrivilegeRequest extends TeaModel {
     /**
-     * <p>Instance ID</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyAccountMaskingPrivilegeRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>Database name</p>
+     * <p>The database name.</p>
      * 
      * <strong>example:</strong>
      * <p>myDB</p>
@@ -24,7 +24,7 @@ public class ModifyAccountMaskingPrivilegeRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>Permission expiration time in UTC format. (Required only for fullAccess permission.)</p>
+     * <p>The permission expiration time in UTC format. This parameter is required only for the fullAccess privilege.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-22T02:01:20Z</p>
@@ -36,7 +36,7 @@ public class ModifyAccountMaskingPrivilegeRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>Permission type (noneAccess, restrictedAccess, fullAccess)</p>
+     * <p>The privilege type. Valid values: noneAccess, restrictedAccess, and fullAccess.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class ModifyAccountMaskingPrivilegeRequest extends TeaModel {
     public String privilege;
 
     /**
-     * <p>Region ID</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ap-southeast-1</p>
@@ -61,7 +61,7 @@ public class ModifyAccountMaskingPrivilegeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Account name. Multiple accounts are supported and must be separated by commas.</p>
+     * <p>The account name. You can specify multiple accounts separated by commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

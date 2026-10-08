@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateParameterGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the parameter template. You can call the <a href="https://help.aliyun.com/document_detail/144491.html">DescribeParameterGroups</a> operation to query the IDs of parameter templates.</p>
+     * <p>The parameter template ID. You can call the <a href="https://help.aliyun.com/document_detail/144491.html">DescribeParameterGroups</a> operation to query the parameter template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rpg-q488w14xvsk****</p>
@@ -14,7 +14,7 @@ public class CreateParameterGroupResponseBody extends TeaModel {
     public String parameterGroupId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7A41C147-C8D0-4DAE-A1A2-17EBCD60DFA1</p>

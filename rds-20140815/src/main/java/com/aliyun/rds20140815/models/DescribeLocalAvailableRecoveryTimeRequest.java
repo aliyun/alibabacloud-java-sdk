@@ -9,7 +9,7 @@ public class DescribeLocalAvailableRecoveryTimeRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-bp1f****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -18,7 +18,7 @@ public class DescribeLocalAvailableRecoveryTimeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call DescribeRegions to obtain the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -30,7 +30,7 @@ public class DescribeLocalAvailableRecoveryTimeRequest extends TeaModel {
      * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmy*****</p>
+     * <p>rg-acfm****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

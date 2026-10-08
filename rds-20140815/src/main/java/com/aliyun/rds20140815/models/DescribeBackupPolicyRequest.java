@@ -18,13 +18,13 @@ public class DescribeBackupPolicyRequest extends TeaModel {
     public String backupPolicyMode;
 
     /**
-     * <p>The method that is used to compress backup data. Valid values:</p>
+     * <p>The backup compression method. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Backup data is not compressed.</li>
-     * <li><strong>1</strong>: Backup data is compressed by using zlib.</li>
-     * <li><strong>2</strong>: Backup data is compressed by using zlib that invokes more than one thread in parallel for each backup.</li>
-     * <li><strong>4</strong>: Backup data is compressed by using QuickLZ and can be used to restore individual databases or tables.</li>
-     * <li><strong>8</strong>: Backup data is compressed by using QuickLZ but cannot be used to restore individual databases or tables.</li>
+     * <li><strong>0</strong>: no compression</li>
+     * <li><strong>1</strong>: zlib compression</li>
+     * <li><strong>2</strong>: parallel zlib compression</li>
+     * <li><strong>4</strong>: QuickLZ compression with fast restoration for individual databases and tables enabled</li>
+     * <li><strong>8</strong>: QuickLZ compression without fast restoration for individual databases and tables supported</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,11 +34,11 @@ public class DescribeBackupPolicyRequest extends TeaModel {
     public String compressType;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -50,11 +50,11 @@ public class DescribeBackupPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The policy that is used to retain archived backup files if the instance is released. Valid values:</p>
+     * <p>The archived backup data retention policy for deleted <strong>MySQL</strong> instances. Valid values:</p>
      * <ul>
-     * <li><strong>None</strong>: No archived backup files are retained.</li>
-     * <li><strong>Lastest</strong>: Only the last archived backup file is retained.</li>
-     * <li><strong>All</strong>: All archived backup files are retained.</li>
+     * <li><strong>None</strong>: No archived backups are retained.</li>
+     * <li><strong>Lastest</strong>: Only the last archived backup is retained.</li>
+     * <li><strong>All</strong>: All archived backups are retained.</li>
      * </ul>
      * 
      * <strong>example:</strong>

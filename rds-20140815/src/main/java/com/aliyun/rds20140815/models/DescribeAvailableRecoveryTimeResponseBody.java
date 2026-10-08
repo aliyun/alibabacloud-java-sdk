@@ -5,28 +5,28 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cross-region data backup file.</p>
+     * <p>The ID of the cross-region backup file.</p>
      * 
      * <strong>example:</strong>
-     * <p>14377</p>
+     * <p>1249****</p>
      */
     @NameInMap("CrossBackupId")
     public Integer crossBackupId;
 
     /**
-     * <p>The start time from which data can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The start time of the restorable time range for the cross-region backup file. The time follows the format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
      * 
      * <strong>example:</strong>
-     * <p>2019-06-12T05:22:29Z</p>
+     * <p>2024-03-04T21:00:47Z</p>
      */
     @NameInMap("RecoveryBeginTime")
     public String recoveryBeginTime;
 
     /**
-     * <p>The end time to which data can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The end time of the restorable time range for the cross-region backup file. The time follows the format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
      * 
      * <strong>example:</strong>
-     * <p>2019-06-12T07:33:12Z</p>
+     * <p>2024-03-07T02:23:26Z</p>
      */
     @NameInMap("RecoveryEndTime")
     public String recoveryEndTime;
@@ -35,7 +35,7 @@ public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
      * <p>The region where the source instance resides.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
+     * <p>cn-chengdu</p>
      */
     @NameInMap("RegionId")
     public String regionId;
