@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class CheckMaxYearOfServerLockRequest extends TeaModel {
     /**
+     * <p>Type of purchase operation. Valid values:</p>
+     * <ul>
+     * <li>activate: new registration</li>
+     * <li>renew: renewal</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +19,7 @@ public class CheckMaxYearOfServerLockRequest extends TeaModel {
     public String checkAction;
 
     /**
+     * <p>The domain name to be checked.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +29,13 @@ public class CheckMaxYearOfServerLockRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>Language of error messages returned by the API. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -30,6 +43,8 @@ public class CheckMaxYearOfServerLockRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>User IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

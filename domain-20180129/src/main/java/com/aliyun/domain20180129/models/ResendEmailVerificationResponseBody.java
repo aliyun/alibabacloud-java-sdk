@@ -4,16 +4,24 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class ResendEmailVerificationResponseBody extends TeaModel {
+    /**
+     * <p>List of failed verification email sends.</p>
+     */
     @NameInMap("FailList")
     public java.util.List<ResendEmailVerificationResponseBodyFailList> failList;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0EA54E99-DB48-4CE3-A099-6ED8E451B8AC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>List of successfully sent verification emails.</p>
+     */
     @NameInMap("SuccessList")
     public java.util.List<ResendEmailVerificationResponseBodySuccessList> successList;
 
@@ -48,6 +56,8 @@ public class ResendEmailVerificationResponseBody extends TeaModel {
 
     public static class ResendEmailVerificationResponseBodyFailList extends TeaModel {
         /**
+         * <p>Return code.</p>
+         * 
          * <strong>example:</strong>
          * <p>SendTokenQuotaExceeded</p>
          */
@@ -55,6 +65,8 @@ public class ResendEmailVerificationResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>Verified mailbox.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:test1@aliyun.com">test1@aliyun.com</a></p>
          */
@@ -62,6 +74,8 @@ public class ResendEmailVerificationResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>Return message.</p>
+         * 
          * <strong>example:</strong>
          * <p>The maximum number of attempts allowed to send the email verification link is exceeded.</p>
          */
@@ -101,6 +115,8 @@ public class ResendEmailVerificationResponseBody extends TeaModel {
 
     public static class ResendEmailVerificationResponseBodySuccessList extends TeaModel {
         /**
+         * <p>Return code.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -108,6 +124,8 @@ public class ResendEmailVerificationResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>Verified mailbox.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:test2@aliyun.com">test2@aliyun.com</a></p>
          */
@@ -115,6 +133,8 @@ public class ResendEmailVerificationResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>Return message.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */

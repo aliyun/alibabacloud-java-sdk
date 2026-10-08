@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryOperationAuditInfoDetailRequest extends TeaModel {
     /**
+     * <p>Review record ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,13 @@ public class QueryOperationAuditInfoDetailRequest extends TeaModel {
     public Long auditRecordId;
 
     /**
+     * <p>Language for error messages in API responses. Valid values:  </p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.  </li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */

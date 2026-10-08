@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PollTaskResultResponseBody extends TeaModel {
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +17,8 @@ public class PollTaskResultResponseBody extends TeaModel {
     public PollTaskResultResponseBodyData data;
 
     /**
+     * <p>Indicates whether there is a next page.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -22,6 +26,8 @@ public class PollTaskResultResponseBody extends TeaModel {
     public Boolean nextPage;
 
     /**
+     * <p>Paging size.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +35,8 @@ public class PollTaskResultResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Indicates whether a previous page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -36,6 +44,8 @@ public class PollTaskResultResponseBody extends TeaModel {
     public Boolean prePage;
 
     /**
+     * <p>Unique request access token.</p>
+     * 
      * <strong>example:</strong>
      * <p>E879DC07-38EE-4408-9F33-73B30CD965CD</p>
      */
@@ -43,6 +53,8 @@ public class PollTaskResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of items.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -50,6 +62,8 @@ public class PollTaskResultResponseBody extends TeaModel {
     public Integer totalItemNum;
 
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

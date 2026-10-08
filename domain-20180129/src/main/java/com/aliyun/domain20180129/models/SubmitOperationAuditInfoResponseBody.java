@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitOperationAuditInfoResponseBody extends TeaModel {
     /**
+     * <p>The system-generated record ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class SubmitOperationAuditInfoResponseBody extends TeaModel {
     public Long id;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9DKCF6F8-243C-40EC-8035-4B12FEFD7C22</p>
      */

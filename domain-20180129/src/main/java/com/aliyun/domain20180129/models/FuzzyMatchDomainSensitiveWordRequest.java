@@ -5,15 +5,23 @@ import com.aliyun.tea.*;
 
 public class FuzzyMatchDomainSensitiveWordRequest extends TeaModel {
     /**
+     * <p>The domain name keyword (a term contained in the domain name excluding its suffix). Separate multiple keywords with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx**.cn</p>
+     * <p>xxx**</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
+     * <p>The language of the error message returned by the API. Valid values:  </p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese  </li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -21,6 +29,8 @@ public class FuzzyMatchDomainSensitiveWordRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The User IP address. You can set this parameter to <strong>127.0.0.1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

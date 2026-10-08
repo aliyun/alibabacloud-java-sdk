@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryTaskInfoHistoryRequest extends TeaModel {
     /**
+     * <p>Start time of the creation date range for the query, expressed as the number of milliseconds since 00:00 UTC on January 1, 1970. Currently supports queries by day only.</p>
+     * 
      * <strong>example:</strong>
      * <p>1522080000000</p>
      */
@@ -12,6 +14,8 @@ public class QueryTaskInfoHistoryRequest extends TeaModel {
     public Long beginCreateTime;
 
     /**
+     * <p>Cursor for creation date (technical parameter).</p>
+     * 
      * <strong>example:</strong>
      * <p>1522080000000</p>
      */
@@ -19,6 +23,8 @@ public class QueryTaskInfoHistoryRequest extends TeaModel {
     public Long createTimeCursor;
 
     /**
+     * <p>End time of the creation date range for the query, expressed as the number of milliseconds since 00:00 UTC on January 1, 1970. Currently supports queries by day only.</p>
+     * 
      * <strong>example:</strong>
      * <p>1522080000000</p>
      */
@@ -26,6 +32,13 @@ public class QueryTaskInfoHistoryRequest extends TeaModel {
     public Long endCreateTime;
 
     /**
+     * <p>Language for API error messages. Valid values:  </p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese  </li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * <p>Default value is <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -33,6 +46,7 @@ public class QueryTaskInfoHistoryRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Page size.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +56,8 @@ public class QueryTaskInfoHistoryRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Job cursor; pass in the job number from the corresponding page cursor during pagination (technical parameter).</p>
+     * 
      * <strong>example:</strong>
      * <p>aa634d3f-927e-4d17-9d2c-test</p>
      */
@@ -49,6 +65,8 @@ public class QueryTaskInfoHistoryRequest extends TeaModel {
     public String taskNoCursor;
 
     /**
+     * <p>User IP address, which can be set to <strong>127.0.0.1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

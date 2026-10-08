@@ -4,10 +4,15 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryDnsHostResponseBody extends TeaModel {
+    /**
+     * <p>A list of DNS hosts.</p>
+     */
     @NameInMap("DnsHostList")
     public java.util.List<QueryDnsHostResponseBodyDnsHostList> dnsHostList;
 
     /**
+     * <p>A unique ID for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>18A313DD-3AF3-40AA-84F9-56BA45DC511F</p>
      */
@@ -37,12 +42,17 @@ public class QueryDnsHostResponseBody extends TeaModel {
 
     public static class QueryDnsHostResponseBodyDnsHostList extends TeaModel {
         /**
+         * <p>The DNS name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ns3</p>
          */
         @NameInMap("DnsName")
         public String dnsName;
 
+        /**
+         * <p>A list of IP addresses.</p>
+         */
         @NameInMap("IpList")
         public java.util.List<String> ipList;
 

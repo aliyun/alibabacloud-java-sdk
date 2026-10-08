@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryRegistrantProfileRealNameVerificationInfoResponseBody extends TeaModel {
     /**
+     * <p>The Base64-encoded image of the identity verification documents.</p>
+     * 
      * <strong>example:</strong>
      * <p>dGVzdA==</p>
      */
@@ -12,6 +14,8 @@ public class QueryRegistrantProfileRealNameVerificationInfoResponseBody extends 
     public String identityCredential;
 
     /**
+     * <p>The certificate number used for identity verification.</p>
+     * 
      * <strong>example:</strong>
      * <p>4111111111111110**</p>
      */
@@ -19,6 +23,19 @@ public class QueryRegistrantProfileRealNameVerificationInfoResponseBody extends 
     public String identityCredentialNo;
 
     /**
+     * <p>The type of certificate used for identity verification. Valid values:  </p>
+     * <ul>
+     * <li><strong>SFZ</strong>: Identity card.  </li>
+     * <li><strong>HZ</strong>: Passport.  </li>
+     * <li><strong>YYZZ</strong>: Business license.  </li>
+     * <li><strong>ORG</strong>: Organization code certificate.  </li>
+     * <li><strong>XYDM</strong>: Unified Social Credit Code certificate.  </li>
+     * <li><strong>TXZ</strong>: Mainland Travel Permits for Hong Kong and Macao Residents.</li>
+     * </ul>
+     * <blockquote>
+     * <p>For more certificate types, see <a href="https://help.aliyun.com/document_detail/72209.html">Certificate Types Supported for Identity Verification</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>SFZ</p>
      */
@@ -26,6 +43,8 @@ public class QueryRegistrantProfileRealNameVerificationInfoResponseBody extends 
     public String identityCredentialType;
 
     /**
+     * <p>The download URL of the identity verification image.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://test.oss-cn-hangzhou.aliyuncs.com/20170522/1219541161213057_070445190.jpg">http://test.oss-cn-hangzhou.aliyuncs.com/20170522/1219541161213057_070445190.jpg</a></p>
      */
@@ -33,6 +52,8 @@ public class QueryRegistrantProfileRealNameVerificationInfoResponseBody extends 
     public String identityCredentialUrl;
 
     /**
+     * <p>The update time of the identity verification documents.</p>
+     * 
      * <strong>example:</strong>
      * <p>2017-05-22 19:04:49</p>
      */
@@ -40,6 +61,8 @@ public class QueryRegistrantProfileRealNameVerificationInfoResponseBody extends 
     public String modificationDate;
 
     /**
+     * <p>The ID of the queried information template.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567</p>
      */
@@ -47,6 +70,8 @@ public class QueryRegistrantProfileRealNameVerificationInfoResponseBody extends 
     public Long registrantProfileId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4D73432C-7600-4779-ACBB-C3B5CA145D32</p>
      */
@@ -54,6 +79,8 @@ public class QueryRegistrantProfileRealNameVerificationInfoResponseBody extends 
     public String requestId;
 
     /**
+     * <p>The submission time of the identity verification documents.</p>
+     * 
      * <strong>example:</strong>
      * <p>2017-05-22 19:04:49</p>
      */

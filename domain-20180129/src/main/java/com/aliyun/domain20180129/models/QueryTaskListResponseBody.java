@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryTaskListResponseBody extends TeaModel {
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +17,8 @@ public class QueryTaskListResponseBody extends TeaModel {
     public QueryTaskListResponseBodyData data;
 
     /**
+     * <p>Indicates whether a next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -22,6 +26,8 @@ public class QueryTaskListResponseBody extends TeaModel {
     public Boolean nextPage;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -29,6 +35,8 @@ public class QueryTaskListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Indicates whether there is a previous page.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -36,6 +44,8 @@ public class QueryTaskListResponseBody extends TeaModel {
     public Boolean prePage;
 
     /**
+     * <p>Unique request access token.</p>
+     * 
      * <strong>example:</strong>
      * <p>8D7D294A-8E99-481F-B64C-017EFC793059</p>
      */
@@ -43,6 +53,8 @@ public class QueryTaskListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>43</p>
      */
@@ -50,6 +62,8 @@ public class QueryTaskListResponseBody extends TeaModel {
     public Integer totalItemNum;
 
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>22</p>
      */

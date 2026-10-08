@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AcknowledgeTaskResultResponseBody extends TeaModel {
     /**
+     * <p>Unique request access token.</p>
+     * 
      * <strong>example:</strong>
      * <p>D6CB3623-4726-4947-AC2B-2C6E673B447C</p>
      */
@@ -12,6 +14,8 @@ public class AcknowledgeTaskResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Quantity of successfully confirmed items.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

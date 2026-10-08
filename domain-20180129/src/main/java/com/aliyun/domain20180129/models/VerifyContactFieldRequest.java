@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class VerifyContactFieldRequest extends TeaModel {
     /**
+     * <p>Street address (in English).</p>
+     * 
      * <strong>example:</strong>
      * <p>Rd. xitucheng</p>
      */
@@ -12,6 +14,8 @@ public class VerifyContactFieldRequest extends TeaModel {
     public String address;
 
     /**
+     * <p>City (in English).</p>
+     * 
      * <strong>example:</strong>
      * <p>Bei jing</p>
      */
@@ -19,6 +23,8 @@ public class VerifyContactFieldRequest extends TeaModel {
     public String city;
 
     /**
+     * <p>Country code, such as <strong>CN</strong> or <strong>US</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>CN</p>
      */
@@ -26,6 +32,8 @@ public class VerifyContactFieldRequest extends TeaModel {
     public String country;
 
     /**
+     * <p>Domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -33,6 +41,8 @@ public class VerifyContactFieldRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>Email address.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:username@example.com">username@example.com</a></p>
      */
@@ -40,16 +50,31 @@ public class VerifyContactFieldRequest extends TeaModel {
     public String email;
 
     /**
+     * <p>Language of the error message returned by the API. Valid values:  </p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.  </li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Postal code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100000</p>
+     */
     @NameInMap("PostalCode")
     public String postalCode;
 
     /**
+     * <p>Province (in English).</p>
+     * 
      * <strong>example:</strong>
      * <p>Bei jing</p>
      */
@@ -57,6 +82,8 @@ public class VerifyContactFieldRequest extends TeaModel {
     public String province;
 
     /**
+     * <p>Contact name (in English).</p>
+     * 
      * <strong>example:</strong>
      * <p>wang xian sheng</p>
      */
@@ -64,6 +91,8 @@ public class VerifyContactFieldRequest extends TeaModel {
     public String registrantName;
 
     /**
+     * <p>Registrant name (in English).</p>
+     * 
      * <strong>example:</strong>
      * <p>wang xian sheng</p>
      */
@@ -71,6 +100,12 @@ public class VerifyContactFieldRequest extends TeaModel {
     public String registrantOrganization;
 
     /**
+     * <p>Registrant type. Valid values:  </p>
+     * <ul>
+     * <li><strong>1</strong>: Individual.  </li>
+     * <li><strong>2</strong>: Enterprise.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -78,6 +113,8 @@ public class VerifyContactFieldRequest extends TeaModel {
     public String registrantType;
 
     /**
+     * <p>Telephone country code, for example, <strong>86</strong> for China.</p>
+     * 
      * <strong>example:</strong>
      * <p>86</p>
      */
@@ -85,6 +122,8 @@ public class VerifyContactFieldRequest extends TeaModel {
     public String telArea;
 
     /**
+     * <p>Extension number.</p>
+     * 
      * <strong>example:</strong>
      * <p>01</p>
      */
@@ -92,6 +131,8 @@ public class VerifyContactFieldRequest extends TeaModel {
     public String telExt;
 
     /**
+     * <p>Telephone number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1390000****</p>
      */
@@ -99,24 +140,71 @@ public class VerifyContactFieldRequest extends TeaModel {
     public String telephone;
 
     /**
+     * <p>User IP address, which can be set to <strong>127.0.0.1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
+    /**
+     * <p>Detailed address (in Chinese).</p>
+     * <blockquote>
+     * <p>This parameter applies only to the China site (aliyun.com).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>西土城路</p>
+     */
     @NameInMap("ZhAddress")
     public String zhAddress;
 
+    /**
+     * <p>City (in Chinese).  </p>
+     * <blockquote>
+     * <p>This parameter applies only to the China site (aliyun.com).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>北京市</p>
+     */
     @NameInMap("ZhCity")
     public String zhCity;
 
+    /**
+     * <p>Province (in Chinese).  </p>
+     * <blockquote>
+     * <p>This parameter applies only to the China site (aliyun.com).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>北京</p>
+     */
     @NameInMap("ZhProvince")
     public String zhProvince;
 
+    /**
+     * <p>Contact name (in Chinese).  </p>
+     * <blockquote>
+     * <p>This parameter applies only to the China site (aliyun.com).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>王先生</p>
+     */
     @NameInMap("ZhRegistrantName")
     public String zhRegistrantName;
 
+    /**
+     * <p>Registrant name (in Chinese).</p>
+     * <blockquote>
+     * <p>This parameter applies only to the China site (aliyun.com).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>王先生</p>
+     */
     @NameInMap("ZhRegistrantOrganization")
     public String zhRegistrantOrganization;
 

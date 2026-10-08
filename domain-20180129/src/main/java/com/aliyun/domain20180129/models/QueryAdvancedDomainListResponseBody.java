@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryAdvancedDomainListResponseBody extends TeaModel {
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +17,8 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
     public QueryAdvancedDomainListResponseBodyData data;
 
     /**
+     * <p>Indicates whether a next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -22,6 +26,8 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
     public Boolean nextPage;
 
     /**
+     * <p>Paging size.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -29,6 +35,8 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Indicates whether a previous page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -36,6 +44,8 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
     public Boolean prePage;
 
     /**
+     * <p>Unique request access token.</p>
+     * 
      * <strong>example:</strong>
      * <p>D200000-C0B9-4CD3-B92A-9B44A000000</p>
      */
@@ -43,6 +53,8 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>549</p>
      */
@@ -50,6 +62,8 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
     public Integer totalItemNum;
 
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>275</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryFailReasonForDomainRealNameVerificationResponseBody extends TeaModel {
+    /**
+     * <p>List of reasons for identity verification failure.</p>
+     */
     @NameInMap("Data")
     public java.util.List<QueryFailReasonForDomainRealNameVerificationResponseBodyData> data;
 
     /**
+     * <p>Unique request access token.</p>
+     * 
      * <strong>example:</strong>
      * <p>1F1BA893-AD33-4248-8CB8-1657E3733052</p>
      */
@@ -37,6 +42,8 @@ public class QueryFailReasonForDomainRealNameVerificationResponseBody extends Te
 
     public static class QueryFailReasonForDomainRealNameVerificationResponseBodyData extends TeaModel {
         /**
+         * <p>Date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2017-03-17 11:08:02</p>
          */
@@ -44,12 +51,26 @@ public class QueryFailReasonForDomainRealNameVerificationResponseBody extends Te
         public String date;
 
         /**
+         * <p>Review Status. Valid values:  </p>
+         * <ul>
+         * <li><strong>NONAUDIT</strong>: Not authenticated.  </li>
+         * <li><strong>SUCCEED</strong>: Succeeded.  </li>
+         * <li><strong>FAILED</strong>: Review failed.  </li>
+         * <li><strong>AUDITING</strong>: Under review.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SUCCEED</p>
          */
         @NameInMap("DomainNameVerificationStatus")
         public String domainNameVerificationStatus;
 
+        /**
+         * <p>Reason for real-name verification failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>审核失败，所有者（中文）字段必须包含中文字符。</p>
+         */
         @NameInMap("FailReason")
         public String failReason;
 

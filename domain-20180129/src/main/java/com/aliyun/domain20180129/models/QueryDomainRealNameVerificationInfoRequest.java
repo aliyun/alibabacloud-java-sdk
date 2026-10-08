@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryDomainRealNameVerificationInfoRequest extends TeaModel {
     /**
+     * <p>Domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,12 @@ public class QueryDomainRealNameVerificationInfoRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>Specifies whether to retrieve the real-name verification image. Valid values:  </p>
+     * <ul>
+     * <li><strong>true</strong>: Retrieve the image.  </li>
+     * <li><strong>false</strong>: Do not retrieve the image.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -21,6 +28,13 @@ public class QueryDomainRealNameVerificationInfoRequest extends TeaModel {
     public Boolean fetchImage;
 
     /**
+     * <p>Language of error messages returned by the API. Valid values:  </p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.  </li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -28,6 +42,8 @@ public class QueryDomainRealNameVerificationInfoRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>User IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

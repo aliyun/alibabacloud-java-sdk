@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CheckProcessingServerLockApplyResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the domain name has a registry lock service request with the <strong>Processing</strong> status at the domain name registry. Valid values:</p>
+     * <ul>
+     * <li>true: exists</li>
+     * <li>false: does not exist</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +18,8 @@ public class CheckProcessingServerLockApplyResponseBody extends TeaModel {
     public Boolean exists;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9DFCF6F8-243C-****-8035-4B12FEFD7D48</p>
      */

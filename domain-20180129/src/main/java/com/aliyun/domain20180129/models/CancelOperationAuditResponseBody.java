@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelOperationAuditResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9KFCF6F8-243C-40EC-8035-4B12KKFD7D90</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveBatchTaskForModifyingDomainDnsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6A862A8A-E7AB-4C4E-8946-A74122D9CC4B</p>
      */
@@ -12,6 +14,8 @@ public class SaveBatchTaskForModifyingDomainDnsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>35fb2fb7-d4d6-4478-9408-22cb63696b86</p>
      */

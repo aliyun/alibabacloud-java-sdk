@@ -4,10 +4,25 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
+    /**
+     * <p>Review information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;regType&quot;:1,&quot;registrantName&quot;:&quot;张三&quot;,&quot;telephone&quot;:&quot;1390123****&quot;,&quot;account&quot;:&quot;<a href="mailto:username@example.com">username@example.com</a>&quot;,&quot;reason&quot;:1,&quot;remark&quot;:&quot;账号丢失&quot;}</p>
+     */
     @NameInMap("AuditInfo")
     public String auditInfo;
 
     /**
+     * <p>Review Status. Valid values:  </p>
+     * <ul>
+     * <li><strong>0</strong>: Pending supplementary information.  </li>
+     * <li><strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>: Under review.  </li>
+     * <li><strong>5</strong>: Review failed.  </li>
+     * <li><strong>6</strong>: Review succeeded.  </li>
+     * <li><strong>7</strong>: Review canceled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,16 +30,27 @@ public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
     public Integer auditStatus;
 
     /**
+     * <p>Review Type. Valid value:  </p>
+     * <p><strong>1</strong>: Offline domain name transfer.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("AuditType")
     public Integer auditType;
 
+    /**
+     * <p>Name of the reviewed business.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com等域名线下转移</p>
+     */
     @NameInMap("BusinessName")
     public String businessName;
 
     /**
+     * <p>Record creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1581919010100</p>
      */
@@ -32,6 +58,8 @@ public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>Domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com,aliyundoc.com</p>
      */
@@ -39,16 +67,26 @@ public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
     public String domainName;
 
     /**
+     * <p>Review record ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>Review remark.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>审核通过</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9DFCF6F8-243C-40EC-8035-4B12FEFD7D1L</p>
      */
@@ -56,6 +94,8 @@ public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Record update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1581919010101</p>
      */

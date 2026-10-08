@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest extends TeaModel {
     /**
+     * <p>A list of domain names. If you specify multiple domain names, pass them as a <strong>list</strong>. Call the <a href="https://help.aliyun.com/document_detail/69362.htm?spm=a2c4g.11186623.0.0.33f4253cSJy3m8">QueryDomainList</a> API to obtain a list of your domain names.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,15 @@ public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest exten
     public java.util.List<String> domainName;
 
     /**
+     * <p>The language of error messages returned by the API. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -21,6 +31,7 @@ public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest exten
     public String lang;
 
     /**
+     * <p>The registrant profile ID. Call the <a href="https://help.aliyun.com/document_detail/67701.htm?spm=a2c4g.11186623.0.0.33f420daTwRQaO">QueryRegistrantProfiles</a> API to query the registrant profile ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +41,14 @@ public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest exten
     public Long registrantProfileId;
 
     /**
+     * <p>Specifies whether to enable a 60-day transfer lock on the domain name after its registrant information is updated. Valid values:</p>
+     * <ul>
+     * <li><p><strong>false</strong>: Do not apply the lock.</p>
+     * </li>
+     * <li><p><strong>true</strong>: Apply the lock.</p>
+     * </li>
+     * </ul>
+     * <p>Default value: <strong>false</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +58,8 @@ public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest exten
     public Boolean transferOutProhibited;
 
     /**
+     * <p>The IP address of the user. You can set this parameter to <strong>127.0.0.1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

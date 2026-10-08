@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetupDomainAutoRenewRequest extends TeaModel {
     /**
+     * <p>The instance ID of the domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class SetupDomainAutoRenewRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The operation type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

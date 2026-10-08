@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveSingleTaskForSaveArtExtensionRequest extends TeaModel {
     /**
+     * <p>Creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2019-10-01</p>
      */
@@ -12,6 +14,8 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends TeaModel {
     public String dateOrPeriod;
 
     /**
+     * <p>Dimensions.</p>
+     * 
      * <strong>example:</strong>
      * <p>20 cm</p>
      */
@@ -19,6 +23,7 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends TeaModel {
     public String dimensions;
 
     /**
+     * <p>Domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>Artistic features.</p>
+     * 
      * <strong>example:</strong>
      * <p>iconicity</p>
      */
@@ -35,6 +42,8 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends TeaModel {
     public String features;
 
     /**
+     * <p>Inscriptions and markings.</p>
+     * 
      * <strong>example:</strong>
      * <p>realism</p>
      */
@@ -42,6 +51,13 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends TeaModel {
     public String inscriptionsAndMarkings;
 
     /**
+     * <p>Language of the error message returned by the API. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -49,6 +65,8 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Artist or creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>zhang san</p>
      */
@@ -56,6 +74,8 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends TeaModel {
     public String maker;
 
     /**
+     * <p>Materials and techniques.</p>
+     * 
      * <strong>example:</strong>
      * <p>silk</p>
      */
@@ -63,6 +83,8 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends TeaModel {
     public String materialsAndTechniques;
 
     /**
+     * <p>Artwork category.</p>
+     * 
      * <strong>example:</strong>
      * <p>The embroidery</p>
      */
@@ -70,6 +92,8 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends TeaModel {
     public String objectType;
 
     /**
+     * <p>Reference.</p>
+     * 
      * <strong>example:</strong>
      * <p>drawings</p>
      */
@@ -77,6 +101,8 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends TeaModel {
     public String reference;
 
     /**
+     * <p>Art subject.</p>
+     * 
      * <strong>example:</strong>
      * <p>peace</p>
      */
@@ -84,6 +110,8 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends TeaModel {
     public String subject;
 
     /**
+     * <p>Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>Peace and friendship</p>
      */

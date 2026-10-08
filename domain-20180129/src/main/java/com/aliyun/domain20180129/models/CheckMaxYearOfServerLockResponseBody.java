@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckMaxYearOfServerLockResponseBody extends TeaModel {
     /**
+     * <p>Maximum number of years that can be purchased.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class CheckMaxYearOfServerLockResponseBody extends TeaModel {
     public Integer maxYear;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9DFCF6F8-243C-****-8035-4B12FEFD7D48</p>
      */

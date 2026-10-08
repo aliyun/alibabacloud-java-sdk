@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveSingleTaskForDeletingDnsHostResponseBody extends TeaModel {
     /**
+     * <p>Unique request access token.</p>
+     * 
      * <strong>example:</strong>
      * <p>8fc97e44-837a-447d-ac61-ea28d2fe8a38</p>
      */
@@ -12,6 +14,8 @@ public class SaveSingleTaskForDeletingDnsHostResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Job number.</p>
+     * 
      * <strong>example:</strong>
      * <p>8fc97e44-837a-447d-ac61-ea28d2fexxxx</p>
      */

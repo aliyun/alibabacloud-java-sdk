@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryRegistrantProfileRealNameVerificationInfoRequest extends TeaModel {
     /**
+     * <p>Specifies whether to retrieve the identity verification image. Valid values:  </p>
+     * <ul>
+     * <li><strong>true</strong>: Retrieve the image.  </li>
+     * <li><strong>false</strong>: Do not retrieve the image.</li>
+     * </ul>
+     * <p>Default value: <strong>false</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +19,13 @@ public class QueryRegistrantProfileRealNameVerificationInfoRequest extends TeaMo
     public Boolean fetchImage;
 
     /**
+     * <p>The language of error messages returned by the API. Valid values:  </p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.  </li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -19,6 +33,8 @@ public class QueryRegistrantProfileRealNameVerificationInfoRequest extends TeaMo
     public String lang;
 
     /**
+     * <p>The ID of the information template to be queried.  </p>
+     * <p>The system automatically generates this ID after the information template is created. You can call the <a href="https://help.aliyun.com/document_detail/67701.html">QueryRegistrantProfiles</a> API to query the information template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +44,8 @@ public class QueryRegistrantProfileRealNameVerificationInfoRequest extends TeaMo
     public Long registrantProfileId;
 
     /**
+     * <p>The user IP address. You can set it to 127.0.0.1.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

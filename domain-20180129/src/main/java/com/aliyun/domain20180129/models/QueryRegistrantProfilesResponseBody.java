@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryRegistrantProfilesResponseBody extends TeaModel {
     /**
-     * <p>The page number returned.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,10 +14,10 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
     public Integer currentPageNum;
 
     /**
-     * <p>Indicates whether the current page is followed by a page. Valid values:</p>
+     * <p>Indicates whether there is a next page. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
     public Boolean nextPage;
 
     /**
-     * <p>The number of entries returned on each page. Default value: <strong>0</strong>. Maximum value: <strong>5000</strong>.</p>
+     * <p>The number of records per page. Default value: <strong>0</strong>. Maximum value: <strong>5000</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -36,10 +36,10 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Indicates whether the current page is preceded by a page. Valid values:</p>
+     * <p>Indicates whether there is a previous page. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,9 +61,9 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * <blockquote>
-     * <p> This parameter indicates the total number of queried registrant profiles. If multiple registrant profiles are queried, the information about these profiles is returned in sequence by profile.</p>
+     * <p>The total number of records refers to the number of registrant profiles returned by the query. When there are multiple registrant profiles, the next profile is displayed after the previous one.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
     public Integer totalItemNum;
 
     /**
-     * <p>The total number of returned pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

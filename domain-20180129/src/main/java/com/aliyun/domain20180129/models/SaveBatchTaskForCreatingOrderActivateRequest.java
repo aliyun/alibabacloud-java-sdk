@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
     /**
+     * <p>The voucher ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
@@ -12,6 +14,13 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
     public String couponNo;
 
     /**
+     * <p>The language of the error message returned by the API operation. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -19,12 +28,15 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The list of task details.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OrderActivateParam")
     public java.util.List<SaveBatchTaskForCreatingOrderActivateRequestOrderActivateParam> orderActivateParam;
 
     /**
+     * <p>The coupon ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123124</p>
      */
@@ -32,6 +44,8 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
     public String promotionNo;
 
     /**
+     * <p>Specifies whether to use a voucher.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -39,6 +53,8 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
     public Boolean useCoupon;
 
     /**
+     * <p>Specifies whether to use a coupon.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -46,6 +62,8 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
     public Boolean usePromotion;
 
     /**
+     * <p>The IP address of the user.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */
@@ -115,6 +133,11 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
 
     public static class SaveBatchTaskForCreatingOrderActivateRequestOrderActivateParam extends TeaModel {
         /**
+         * <p>The mailing address in English.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>OrderActivateParam.N.RegistrantProfileId</strong> parameter is not specified. If this parameter is not specified, the domain name registration fails.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>chao yan qu *** dasha *** hao</p>
          */
@@ -122,6 +145,16 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
         public String address;
 
         /**
+         * <p>Specifies whether to use Alibaba Cloud DNS. Valid values: <strong>true</strong> and <strong>false</strong>. Default value: <strong>true</strong>.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If this parameter is set to <strong>true</strong>, you do not need to specify the <strong>OrderActivateParam.N.Dns1</strong> and <strong>OrderActivateParam.N.Dns2</strong> parameters. Otherwise, the specified <strong>OrderActivateParam.N.Dns1</strong> and <strong>OrderActivateParam.N.Dns2</strong> parameters do not take effect.</li>
+         * </ul>
+         * </blockquote>
+         * <ul>
+         * <li>If this parameter is set to <strong>false</strong>, you must also specify the <strong>OrderActivateParam.N.Dns1</strong> and <strong>OrderActivateParam.N.Dns2</strong> parameters.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -129,6 +162,11 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
         public Boolean aliyunDns;
 
         /**
+         * <p>The city name in English.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>OrderActivateParam.N.RegistrantProfileId</strong> parameter is not specified. If this parameter is not specified, the domain name registration fails.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>bei jing shi</p>
          */
@@ -136,6 +174,11 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
         public String city;
 
         /**
+         * <p>The country code. For example, <strong>CN</strong> represents China, and <strong>US</strong> represents the United States.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>OrderActivateParam.N.RegistrantProfileId</strong> parameter is not specified. If this parameter is not specified, the domain name registration fails.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>CN</p>
          */
@@ -143,6 +186,16 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
         public String country;
 
         /**
+         * <p>The custom DNS server 1.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is available and required only when the <strong>OrderActivateParam.N.AliyunDns</strong> parameter is set to <strong>false</strong>.</li>
+         * </ul>
+         * </blockquote>
+         * <ul>
+         * <li>Make sure that the custom DNS server is correct. Otherwise, the registration may fail.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ns2.aliyun.com</p>
          */
@@ -150,6 +203,16 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
         public String dns1;
 
         /**
+         * <p>The custom DNS server 2.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is available and required only when the <strong>OrderActivateParam.N.AliyunDns</strong> parameter is set to <strong>false</strong>.</li>
+         * </ul>
+         * </blockquote>
+         * <ul>
+         * <li>Make sure that the custom DNS server is correct. Otherwise, the registration may fail.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ns1.aliyun.com</p>
          */
@@ -157,6 +220,10 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
         public String dns2;
 
         /**
+         * <p>The domain name to be registered.</p>
+         * <blockquote>
+         * <p>When you register a domain name, you must specify the domain name registrant information. Otherwise, the domain name registration fails. You can specify the domain name registrant information by using the OrderActivateParam.N.RegistrantProfileId parameter to associate a domain name registrant profile.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +233,11 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
         public String domainName;
 
         /**
+         * <p>The email address.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>OrderActivateParam.N.RegistrantProfileId</strong> parameter is not specified. If this parameter is not specified, the domain name registration fails.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
@@ -173,6 +245,8 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
         public String email;
 
         /**
+         * <p>Specifies whether to enable the domain name privacy protection service. Default value: <strong>true</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -180,6 +254,17 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
         public Boolean enableDomainProxy;
 
         /**
+         * <p>The domain name in Punycode format. This parameter can be left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xn--fiqs8s.com</p>
+         */
+        @NameInMap("ExpectedPunycode")
+        public String expectedPunycode;
+
+        /**
+         * <p>Specifies whether to allow the registration of premium domain names. Default value: <strong>false</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -187,6 +272,11 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
         public Boolean permitPremiumActivation;
 
         /**
+         * <p>The postal code.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>OrderActivateParam.N.RegistrantProfileId</strong> parameter is not specified. If this parameter is not specified, the domain name registration fails.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>102629</p>
          */
@@ -194,6 +284,11 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
         public String postalCode;
 
         /**
+         * <p>The province name in English.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>OrderActivateParam.N.RegistrantProfileId</strong> parameter is not specified. If this parameter is not specified, the domain name registration fails.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>bei jing</p>
          */
@@ -201,6 +296,11 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
         public String province;
 
         /**
+         * <p>The domain name contact in English.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>OrderActivateParam.N.RegistrantProfileId</strong> parameter is not specified. If this parameter is not specified, the domain name registration fails.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>zhang san</p>
          */
@@ -208,6 +308,11 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
         public String registrantName;
 
         /**
+         * <p>The name of the domain name registrant in English.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>OrderActivateParam.N.RegistrantProfileId</strong> parameter is not specified. If this parameter is not specified, the domain name registration fails.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>zhang san</p>
          */
@@ -215,6 +320,11 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
         public String registrantOrganization;
 
         /**
+         * <p>The ID of the domain name registrant profile. The profile contains information such as the name of the domain name registrant, the domain name contact, the phone number, and the email address. You can only use the ID of a real-name verified domain name registrant profile to register a domain name. If you have created a domain name registrant profile, you can call the <a href="https://help.aliyun.com/document_detail/67701.html">QueryRegistrantProfiles</a> operation to query the profile ID.</p>
+         * <blockquote>
+         * <p>After you specify this parameter, you do not need to specify the <strong>OrderActivateParam.N.RegistrantType</strong>, <strong>OrderActivateParam.N.ZhRegistrantOrganization</strong>, <strong>OrderActivateParam.N.ZhRegistrantName</strong>, <strong>OrderActivateParam.N.ZhProvince</strong>, <strong>OrderActivateParam.N.ZhCity</strong>, <strong>OrderActivateParam.N.ZhAddress</strong>, <strong>OrderActivateParam.N.RegistrantOrganization</strong>, <strong>OrderActivateParam.N.RegistrantName</strong>, <strong>OrderActivateParam.N.Province</strong>, <strong>OrderActivateParam.N.City</strong>, <strong>OrderActivateParam.N.Address</strong>, <strong>OrderActivateParam.N.PostalCode</strong>, <strong>OrderActivateParam.N.Country</strong>, <strong>OrderActivateParam.N.TelArea</strong>, <strong>OrderActivateParam.N.Telephone</strong>, <strong>OrderActivateParam.N.TelExt</strong>, and <strong>OrderActivateParam.N.Email</strong> parameters.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>000000</p>
          */
@@ -222,6 +332,15 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
         public Long registrantProfileId;
 
         /**
+         * <p>The type of the domain name registrant. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Individual.</li>
+         * <li><strong>2</strong>: Enterprise or organization.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>OrderActivateParam.N.RegistrantProfileId</strong> parameter is not specified. If this parameter is not specified, the domain name registration fails.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -229,6 +348,11 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
         public String registrantType;
 
         /**
+         * <p>The resource group ID.</p>
+         * <blockquote>
+         * <p>If this parameter is not specified or the specified resource group ID does not exist, the default resource group ID is used.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>rg-XX</p>
          */
@@ -236,6 +360,8 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The subscription duration. Unit: <strong>year</strong>. Default value: <strong>1</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -243,6 +369,11 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
         public Integer subscriptionDuration;
 
         /**
+         * <p>The country code for the phone number. For example, the country code for China is <strong>86</strong>.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>OrderActivateParam.N.RegistrantProfileId</strong> parameter is not specified. If this parameter is not specified, the domain name registration fails.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>86</p>
          */
@@ -250,6 +381,11 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
         public String telArea;
 
         /**
+         * <p>The extension number.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>OrderActivateParam.N.RegistrantProfileId</strong> parameter is not specified. If this parameter is not specified, the domain name registration fails.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -257,6 +393,11 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
         public String telExt;
 
         /**
+         * <p>The phone number.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>OrderActivateParam.N.RegistrantProfileId</strong> parameter is not specified. If this parameter is not specified, the domain name registration fails.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1820000****</p>
          */
@@ -264,24 +405,71 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
         public String telephone;
 
         /**
+         * <p>Specifies whether to allow the registration of trademark terms.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("TrademarkDomainActivation")
         public Boolean trademarkDomainActivation;
 
+        /**
+         * <p>The mailing address in Chinese.</p>
+         * <blockquote>
+         * <p>This parameter is applicable only to the China site. This parameter is available and required only when the <strong>OrderActivateParam.N.RegistrantProfileId</strong> parameter is not specified. If this parameter is not specified, the domain name registration fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>朝阳区<em><strong>大厦</strong></em>号</p>
+         */
         @NameInMap("ZhAddress")
         public String zhAddress;
 
+        /**
+         * <p>The city name in Chinese.</p>
+         * <blockquote>
+         * <p>This parameter is applicable only to the China site. This parameter is available and required only when the <strong>OrderActivateParam.N.RegistrantProfileId</strong> parameter is not specified. If this parameter is not specified, the domain name registration fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>北京市</p>
+         */
         @NameInMap("ZhCity")
         public String zhCity;
 
+        /**
+         * <p>The province name in Chinese.</p>
+         * <blockquote>
+         * <p>This parameter is applicable only to the China site. This parameter is available and required only when the <strong>OrderActivateParam.N.RegistrantProfileId</strong> parameter is not specified. If this parameter is not specified, the domain name registration fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>北京</p>
+         */
         @NameInMap("ZhProvince")
         public String zhProvince;
 
+        /**
+         * <p>The domain name contact in Chinese.</p>
+         * <blockquote>
+         * <p>This parameter is applicable only to the China site. This parameter is available and required only when the <strong>OrderActivateParam.N.RegistrantProfileId</strong> parameter is not specified. If this parameter is not specified, the domain name registration fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("ZhRegistrantName")
         public String zhRegistrantName;
 
+        /**
+         * <p>The name of the domain name registrant in Chinese.</p>
+         * <blockquote>
+         * <p>This parameter is applicable only to the China site. This parameter is available and required only when the <strong>OrderActivateParam.N.RegistrantProfileId</strong> parameter is not specified. If this parameter is not specified, the domain name registration fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("ZhRegistrantOrganization")
         public String zhRegistrantOrganization;
 
@@ -360,6 +548,14 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
         }
         public Boolean getEnableDomainProxy() {
             return this.enableDomainProxy;
+        }
+
+        public SaveBatchTaskForCreatingOrderActivateRequestOrderActivateParam setExpectedPunycode(String expectedPunycode) {
+            this.expectedPunycode = expectedPunycode;
+            return this;
+        }
+        public String getExpectedPunycode() {
+            return this.expectedPunycode;
         }
 
         public SaveBatchTaskForCreatingOrderActivateRequestOrderActivateParam setPermitPremiumActivation(Boolean permitPremiumActivation) {

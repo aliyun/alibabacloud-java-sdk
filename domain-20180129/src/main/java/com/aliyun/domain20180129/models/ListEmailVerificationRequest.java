@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListEmailVerificationRequest extends TeaModel {
     /**
+     * <p>The start time for querying email verification creation, represented as the number of milliseconds since 00:00 on January 1, 1970, UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>1522080000000</p>
      */
@@ -12,6 +14,8 @@ public class ListEmailVerificationRequest extends TeaModel {
     public Long beginCreateTime;
 
     /**
+     * <p>The email address to query. You can upload only one email address at a time.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:username@example.com">username@example.com</a></p>
      */
@@ -19,6 +23,8 @@ public class ListEmailVerificationRequest extends TeaModel {
     public String email;
 
     /**
+     * <p>The end time for querying the creation of email verification, calculated as the number of milliseconds since 00:00 UTC on January 1, 1970.</p>
+     * 
      * <strong>example:</strong>
      * <p>1522080000000</p>
      */
@@ -26,6 +32,13 @@ public class ListEmailVerificationRequest extends TeaModel {
     public Long endCreateTime;
 
     /**
+     * <p>Language of error messages returned by the API. Valid values:  </p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.  </li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * <p>Default value is <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -33,6 +46,8 @@ public class ListEmailVerificationRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The page number for paging through the domain list. Default value is <strong>1</strong>. You can set this parameter based on your needs.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +55,8 @@ public class ListEmailVerificationRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The page size for paging through the domain list. Default value is <strong>500</strong>, and the maximum value is <strong>5000</strong>. You can set this parameter based on your needs.</p>
+     * 
      * <strong>example:</strong>
      * <p>500</p>
      */
@@ -47,6 +64,8 @@ public class ListEmailVerificationRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>User IP address. You can set it to <strong>127.0.0.1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */
@@ -54,6 +73,12 @@ public class ListEmailVerificationRequest extends TeaModel {
     public String userClientIp;
 
     /**
+     * <p>Email verification status. Valid values:  </p>
+     * <ul>
+     * <li><strong>0</strong>: Waiting for verification.  </li>
+     * <li><strong>1</strong>: Verification succeeded.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

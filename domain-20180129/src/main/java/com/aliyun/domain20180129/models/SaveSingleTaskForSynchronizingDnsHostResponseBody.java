@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveSingleTaskForSynchronizingDnsHostResponseBody extends TeaModel {
     /**
+     * <p>Unique request access token.</p>
+     * 
      * <strong>example:</strong>
      * <p>0F1B3547-BE50-4206-8F78-9540FFB85BC1</p>
      */
@@ -12,6 +14,8 @@ public class SaveSingleTaskForSynchronizingDnsHostResponseBody extends TeaModel 
     public String requestId;
 
     /**
+     * <p>Job number.</p>
+     * 
      * <strong>example:</strong>
      * <p>e9b8e8b4-7334-4548-9cec-c30b6891f292</p>
      */

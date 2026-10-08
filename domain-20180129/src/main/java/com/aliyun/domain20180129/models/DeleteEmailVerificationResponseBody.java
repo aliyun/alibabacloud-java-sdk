@@ -4,16 +4,24 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class DeleteEmailVerificationResponseBody extends TeaModel {
+    /**
+     * <p>List of email addresses for which deletion failed.</p>
+     */
     @NameInMap("FailList")
     public java.util.List<DeleteEmailVerificationResponseBodyFailList> failList;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7A3D0E4A-0D4B-4BD0-90D7-A61DF8DD26AE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>List of successfully deleted email addresses.</p>
+     */
     @NameInMap("SuccessList")
     public java.util.List<DeleteEmailVerificationResponseBodySuccessList> successList;
 
@@ -48,6 +56,8 @@ public class DeleteEmailVerificationResponseBody extends TeaModel {
 
     public static class DeleteEmailVerificationResponseBodyFailList extends TeaModel {
         /**
+         * <p>Returned code.</p>
+         * 
          * <strong>example:</strong>
          * <p>ParameterIllegall</p>
          */
@@ -55,6 +65,8 @@ public class DeleteEmailVerificationResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>Email address for which deletion failed.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:test1@aliyun.com">test1@aliyun.com</a></p>
          */
@@ -62,6 +74,8 @@ public class DeleteEmailVerificationResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>Message returned upon failure to delete the email address.</p>
+         * 
          * <strong>example:</strong>
          * <p>Parameter error</p>
          */
@@ -101,6 +115,8 @@ public class DeleteEmailVerificationResponseBody extends TeaModel {
 
     public static class DeleteEmailVerificationResponseBodySuccessList extends TeaModel {
         /**
+         * <p>Returned code.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -108,6 +124,8 @@ public class DeleteEmailVerificationResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>Email address that was successfully deleted.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:test2@aliyun.com">test2@aliyun.com</a></p>
          */
@@ -115,6 +133,8 @@ public class DeleteEmailVerificationResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>Message returned upon successful deletion of the email address.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveTaskForSubmittingDomainDeleteResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>23C9B3C4-9E2C-4405-A88D-BD33E459D140</p>
      */
@@ -12,6 +14,8 @@ public class SaveTaskForSubmittingDomainDeleteResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The job number.</p>
+     * 
      * <strong>example:</strong>
      * <p>3cb1adc3-20e8-44ae-9e76-e812fa6fc9d8</p>
      */

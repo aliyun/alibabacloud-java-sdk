@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdResponseBody extends TeaModel {
     /**
+     * <p>A unique ID for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>EDC28FEC-6BE0-4583-95BC</p>
      */
@@ -12,6 +14,8 @@ public class SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdResponseBod
     public String requestId;
 
     /**
+     * <p>The ID of the asynchronous task.</p>
+     * 
      * <strong>example:</strong>
      * <p>880f1579-be51-4dd3-a69d</p>
      */

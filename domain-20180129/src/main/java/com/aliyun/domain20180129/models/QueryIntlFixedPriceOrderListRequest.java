@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryIntlFixedPriceOrderListRequest extends TeaModel {
     /**
+     * <p>The business ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>T2024061115213700****</p>
      */
@@ -12,6 +14,8 @@ public class QueryIntlFixedPriceOrderListRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class QueryIntlFixedPriceOrderListRequest extends TeaModel {
     public Long currentPage;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class QueryIntlFixedPriceOrderListRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The order status.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */

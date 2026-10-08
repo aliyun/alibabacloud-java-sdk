@@ -4,10 +4,15 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class CreateIntlFixedPriceDomainOrderResponseBody extends TeaModel {
+    /**
+     * <p>The returned object.</p>
+     */
     @NameInMap("Module")
     public CreateIntlFixedPriceDomainOrderResponseBodyModule module;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E879DC07-38EE-4408-9F33-73B30CD965CD</p>
      */
@@ -37,6 +42,8 @@ public class CreateIntlFixedPriceDomainOrderResponseBody extends TeaModel {
 
     public static class CreateIntlFixedPriceDomainOrderResponseBodyModule extends TeaModel {
         /**
+         * <p>The domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */
@@ -44,6 +51,8 @@ public class CreateIntlFixedPriceDomainOrderResponseBody extends TeaModel {
         public String domain;
 
         /**
+         * <p>The order number.</p>
+         * 
          * <strong>example:</strong>
          * <p>31199295f2074ce895645d386cb2****</p>
          */
@@ -51,6 +60,8 @@ public class CreateIntlFixedPriceDomainOrderResponseBody extends TeaModel {
         public String orderNo;
 
         /**
+         * <p>The transaction price.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.00</p>
          */
@@ -58,6 +69,8 @@ public class CreateIntlFixedPriceDomainOrderResponseBody extends TeaModel {
         public Long payPrice;
 
         /**
+         * <p>The payment URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>https://</p>
          */

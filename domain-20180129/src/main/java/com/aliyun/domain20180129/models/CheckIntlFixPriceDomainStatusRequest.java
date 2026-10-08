@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckIntlFixPriceDomainStatusRequest extends TeaModel {
     /**
+     * <p>The domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>appp16.com</p>
      */

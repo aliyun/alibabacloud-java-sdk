@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveBatchTaskForTransferOutByAuthorizationCodeResponseBody extends TeaModel {
     /**
+     * <p>The unique ID for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>E2598CAF-DBFE-494E-95EF-B42A33C178AA</p>
      */
@@ -12,6 +14,8 @@ public class SaveBatchTaskForTransferOutByAuthorizationCodeResponseBody extends 
     public String requestId;
 
     /**
+     * <p>The ID of the batch transfer-out task.</p>
+     * 
      * <strong>example:</strong>
      * <p>3cb1adc3-20e8-44ae-9e76-e812fa6fc9d8</p>
      */

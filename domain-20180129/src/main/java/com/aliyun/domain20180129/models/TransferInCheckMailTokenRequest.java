@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class TransferInCheckMailTokenRequest extends TeaModel {
     /**
+     * <p>The language of the error message returned by the operation. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -12,6 +19,7 @@ public class TransferInCheckMailTokenRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The token received in the email.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +29,8 @@ public class TransferInCheckMailTokenRequest extends TeaModel {
     public String token;
 
     /**
+     * <p>The IP address of the user.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

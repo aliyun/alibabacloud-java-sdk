@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfirmTransferInEmailRequest extends TeaModel {
     /**
+     * <p>Domain name list</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ConfirmTransferInEmailRequest extends TeaModel {
     public java.util.List<String> domainName;
 
     /**
+     * <p>Mailbox</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class ConfirmTransferInEmailRequest extends TeaModel {
     public String email;
 
     /**
+     * <p>Language of the error message returned by the API. Valid enumeration values: zh (Chinese); en (English). Default value is en.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -30,6 +34,8 @@ public class ConfirmTransferInEmailRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>User IP</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

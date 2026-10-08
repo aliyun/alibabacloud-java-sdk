@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends TeaModel {
     /**
+     * <p>Specific address.</p>
+     * 
      * <strong>example:</strong>
      * <p>chao yang qu</p>
      */
@@ -12,6 +14,8 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends TeaM
     public String address;
 
     /**
+     * <p>City.</p>
+     * 
      * <strong>example:</strong>
      * <p>bei jing shi</p>
      */
@@ -19,6 +23,13 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends TeaM
     public String city;
 
     /**
+     * <p>Contact type. Valid values:  </p>
+     * <ul>
+     * <li><strong>registrant</strong>: Registrant.  </li>
+     * <li><strong>admin</strong>: Administrator.  </li>
+     * <li><strong>billing</strong>: Billing contact.  </li>
+     * <li><strong>tech</strong>: Technical contact.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +39,8 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends TeaM
     public String contactType;
 
     /**
+     * <p>Country code, such as <strong>CN</strong> or <strong>US</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>CN</p>
      */
@@ -35,6 +48,7 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends TeaM
     public String country;
 
     /**
+     * <p>Domain name list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +58,8 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends TeaM
     public java.util.List<String> domainName;
 
     /**
+     * <p>Mailbox.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
      */
@@ -51,6 +67,13 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends TeaM
     public String email;
 
     /**
+     * <p>Language of error messages returned by the API. Valid values:  </p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.  </li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -58,6 +81,8 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends TeaM
     public String lang;
 
     /**
+     * <p>Postal code.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
@@ -65,6 +90,8 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends TeaM
     public String postalCode;
 
     /**
+     * <p>Province.</p>
+     * 
      * <strong>example:</strong>
      * <p>bei jing</p>
      */
@@ -72,6 +99,8 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends TeaM
     public String province;
 
     /**
+     * <p>Contact name.</p>
+     * 
      * <strong>example:</strong>
      * <p>ce shi</p>
      */
@@ -79,6 +108,8 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends TeaM
     public String registrantName;
 
     /**
+     * <p>Registrant organization name.</p>
+     * 
      * <strong>example:</strong>
      * <p>ce shi</p>
      */
@@ -86,6 +117,11 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends TeaM
     public String registrantOrganization;
 
     /**
+     * <p>Domain registrant type. Valid values:  </p>
+     * <ul>
+     * <li><strong>1</strong>: Individual.  </li>
+     * <li><strong>2</strong>: Enterprise.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,6 +131,8 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends TeaM
     public String registrantType;
 
     /**
+     * <p>Telephone country code.</p>
+     * 
      * <strong>example:</strong>
      * <p>86</p>
      */
@@ -102,6 +140,8 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends TeaM
     public String telArea;
 
     /**
+     * <p>Extension number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1235</p>
      */
@@ -109,6 +149,8 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends TeaM
     public String telExt;
 
     /**
+     * <p>Telephone number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890</p>
      */
@@ -116,6 +158,8 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends TeaM
     public String telephone;
 
     /**
+     * <p>Whether to add a transfer-out prohibition restriction. This parameter only takes effect when <strong>ContactType</strong> is <strong>registrant</strong>, indicating whether the domain name is restricted from transfer-out for 60 days after the registrant is modified. The default value is <strong>false</strong>, which means transfer-out is not restricted.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -123,24 +167,56 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends TeaM
     public Boolean transferOutProhibited;
 
     /**
+     * <p>User IP.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
+    /**
+     * <p>Chinese address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>朝阳区</p>
+     */
     @NameInMap("ZhAddress")
     public String zhAddress;
 
+    /**
+     * <p>Chinese city.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>北京市</p>
+     */
     @NameInMap("ZhCity")
     public String zhCity;
 
+    /**
+     * <p>Chinese province.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>北京</p>
+     */
     @NameInMap("ZhProvince")
     public String zhProvince;
 
+    /**
+     * <p>Chinese contact name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试</p>
+     */
     @NameInMap("ZhRegistrantName")
     public String zhRegistrantName;
 
+    /**
+     * <p>Chinese registrant organization name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试</p>
+     */
     @NameInMap("ZhRegistrantOrganization")
     public String zhRegistrantOrganization;
 

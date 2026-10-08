@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetDefaultRegistrantProfileRequest extends TeaModel {
     /**
+     * <p>The ID of the contact template to be set as default.</p>
+     * <p>The system automatically generates this ID after the template is successfully created. You can invoke the <a href="https://help.aliyun.com/document_detail/67701.html">QueryRegistrantProfiles</a> API to query the template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +16,8 @@ public class SetDefaultRegistrantProfileRequest extends TeaModel {
     public Long registrantProfileId;
 
     /**
+     * <p>The user IP address. The default value is <strong>127.0.0.1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

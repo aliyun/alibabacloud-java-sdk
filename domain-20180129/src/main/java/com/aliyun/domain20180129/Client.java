@@ -9,6 +9,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "central";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("ap-southeast-1", "domain-intl.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("domain", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -27,8 +30,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After the task detail result is confirmed, it can no longer be queried from the <a href="https://help.aliyun.com/document_detail/69361.html">PollTaskResult</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>确认任务结果</p>
+     * <p>Invoke AcknowledgeTaskResult to confirm the task detail result.</p>
      * 
      * @param request AcknowledgeTaskResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -67,8 +73,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After the task detail result is confirmed, it can no longer be queried from the <a href="https://help.aliyun.com/document_detail/69361.html">PollTaskResult</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>确认任务结果</p>
+     * <p>Invoke AcknowledgeTaskResult to confirm the task detail result.</p>
      * 
      * @param request AcknowledgeTaskResultRequest
      * @return AcknowledgeTaskResultResponse
@@ -80,7 +89,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过关键字进行批量模糊匹配</p>
+     * <p>You can invoke BatchFuzzyMatchDomainSensitiveWord to batch check whether domain names contain sensitive words.</p>
      * 
      * @param request BatchFuzzyMatchDomainSensitiveWordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -120,7 +129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过关键字进行批量模糊匹配</p>
+     * <p>You can invoke BatchFuzzyMatchDomainSensitiveWord to batch check whether domain names contain sensitive words.</p>
      * 
      * @param request BatchFuzzyMatchDomainSensitiveWordRequest
      * @return BatchFuzzyMatchDomainSensitiveWordResponse
@@ -188,7 +197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消审核</p>
+     * <p>Invoke the CancelOperationAudit API to cancel a self-service operation audit.</p>
      * 
      * @param request CancelOperationAuditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -224,7 +233,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消审核</p>
+     * <p>Invoke the CancelOperationAudit API to cancel a self-service operation audit.</p>
      * 
      * @param request CancelOperationAuditRequest
      * @return CancelOperationAuditResponse
@@ -235,6 +244,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Cancel the qualification verification for &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</p>
+     * 
      * @param request CancelQualificationVerificationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CancelQualificationVerificationResponse
@@ -276,6 +288,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Cancel the qualification verification for &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</p>
+     * 
      * @param request CancelQualificationVerificationRequest
      * @return CancelQualificationVerificationResponse
      */
@@ -285,6 +300,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke CancelTask to cancel an ongoing job.</p>
+     * 
      * @param request CancelTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CancelTaskResponse
@@ -322,6 +340,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke CancelTask to cancel an ongoing job.</p>
+     * 
      * @param request CancelTaskRequest
      * @return CancelTaskResponse
      */
@@ -332,7 +353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ChangeResourceGroup</p>
+     * <p>Modify the resource group to which a domain name belongs.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -380,7 +401,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ChangeResourceGroup</p>
+     * <p>Modify the resource group to which a domain name belongs.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -391,8 +412,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For the legitimacy requirements of domain names, see <a href="https://help.aliyun.com/document_detail/67788.html">Domain Name Legitimacy</a>.</p>
+     * <blockquote>
+     * <p>The CheckDomain API has a frequency limit. The combined queries per second (QPS) limit for an Alibaba Cloud account and its RAM users is 10, and the total QPS limit for this API is 100.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Checks whether a domain name can be registered.</p>
+     * <p>Invoke the CheckDomain API to check whether a domain name can be registered.</p>
      * 
      * @param request CheckDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -439,8 +466,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For the legitimacy requirements of domain names, see <a href="https://help.aliyun.com/document_detail/67788.html">Domain Name Legitimacy</a>.</p>
+     * <blockquote>
+     * <p>The CheckDomain API has a frequency limit. The combined queries per second (QPS) limit for an Alibaba Cloud account and its RAM users is 10, and the total QPS limit for this API is 100.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Checks whether a domain name can be registered.</p>
+     * <p>Invoke the CheckDomain API to check whether a domain name can be registered.</p>
      * 
      * @param request CheckDomainRequest
      * @return CheckDomainResponse
@@ -451,6 +484,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Query the trademark keyword key based on the provided domain name.</p>
+     * 
      * @param request CheckDomainSunriseClaimRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckDomainSunriseClaimResponse
@@ -488,6 +524,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Query the trademark keyword key based on the provided domain name.</p>
+     * 
      * @param request CheckDomainSunriseClaimRequest
      * @return CheckDomainSunriseClaimResponse
      */
@@ -498,7 +537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks the domain name status and price inquiries of a fixed-price order at the international site (alibabacloud.com).</p>
+     * <p>Calls CheckIntlFixPriceDomainStatus to check the status and price of an international fixed-price domain name that is on sale.</p>
      * 
      * @param request CheckIntlFixPriceDomainStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -530,7 +569,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks the domain name status and price inquiries of a fixed-price order at the international site (alibabacloud.com).</p>
+     * <p>Calls CheckIntlFixPriceDomainStatus to check the status and price of an international fixed-price domain name that is on sale.</p>
      * 
      * @param request CheckIntlFixPriceDomainStatusRequest
      * @return CheckIntlFixPriceDomainStatusResponse
@@ -541,6 +580,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Detects the maximum number of years for which a domain name can be purchased or renewed.</p>
+     * 
      * @param request CheckMaxYearOfServerLockRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckMaxYearOfServerLockResponse
@@ -582,6 +624,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Detects the maximum number of years for which a domain name can be purchased or renewed.</p>
+     * 
      * @param request CheckMaxYearOfServerLockRequest
      * @return CheckMaxYearOfServerLockResponse
      */
@@ -591,6 +636,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Checks whether the domain name has a registry lock service request with the <strong>Processing</strong> status at the domain name registry.</p>
+     * 
      * @param request CheckProcessingServerLockApplyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckProcessingServerLockApplyResponse
@@ -632,6 +680,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Checks whether the domain name has a registry lock service request with the <strong>Processing</strong> status at the domain name registry.</p>
+     * 
      * @param request CheckProcessingServerLockApplyRequest
      * @return CheckProcessingServerLockApplyResponse
      */
@@ -641,6 +692,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke the CheckTransferInFeasibility API to validate whether a domain name can be transferred in.</p>
+     * 
      * @param request CheckTransferInFeasibilityRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckTransferInFeasibilityResponse
@@ -682,6 +736,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke the CheckTransferInFeasibility API to validate whether a domain name can be transferred in.</p>
+     * 
      * @param request CheckTransferInFeasibilityRequest
      * @return CheckTransferInFeasibilityResponse
      */
@@ -691,6 +748,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Directly confirm the transfer-in mailbox.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Invoke ConfirmTransferInEmail to confirm the transfer-in mailbox.</p>
+     * 
      * @param request ConfirmTransferInEmailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ConfirmTransferInEmailResponse
@@ -732,6 +795,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Directly confirm the transfer-in mailbox.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Invoke ConfirmTransferInEmail to confirm the transfer-in mailbox.</p>
+     * 
      * @param request ConfirmTransferInEmailRequest
      * @return ConfirmTransferInEmailResponse
      */
@@ -742,7 +811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a fixed-price order at the international site (alibabacloud.com).</p>
+     * <p>Creates an international fixed-price domain name order by calling CreateIntlFixedPriceDomainOrder.</p>
      * 
      * @param request CreateIntlFixedPriceDomainOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -790,7 +859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a fixed-price order at the international site (alibabacloud.com).</p>
+     * <p>Creates an international fixed-price domain name order by calling CreateIntlFixedPriceDomainOrder.</p>
      * 
      * @param request CreateIntlFixedPriceDomainOrderRequest
      * @return CreateIntlFixedPriceDomainOrderResponse
@@ -802,7 +871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量删除联系人模板</p>
+     * <p>Batch delete domain contact templates.</p>
      * 
      * @param request DeleteContactTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -838,7 +907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量删除联系人模板</p>
+     * <p>Batch delete domain contact templates.</p>
      * 
      * @param request DeleteContactTemplatesRequest
      * @return DeleteContactTemplatesResponse
@@ -850,7 +919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除域名分组</p>
+     * <p>Deleting a group containing more than 1,000 domain names is an asynchronous procedure. You must wait for the system to process the request.</p>
      * 
      * @param request DeleteDomainGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -890,7 +959,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除域名分组</p>
+     * <p>Deleting a group containing more than 1,000 domain names is an asynchronous procedure. You must wait for the system to process the request.</p>
      * 
      * @param request DeleteDomainGroupRequest
      * @return DeleteDomainGroupResponse
@@ -901,8 +970,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>If you want to use the email address again after deletion, you must complete email verification again.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>删除邮箱验证</p>
+     * <p>Invoke the DeleteEmailVerification API to delete an email address that has passed verification.</p>
      * 
      * @param request DeleteEmailVerificationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -941,8 +1015,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>If you want to use the email address again after deletion, you must complete email verification again.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>删除邮箱验证</p>
+     * <p>Invoke the DeleteEmailVerification API to delete an email address that has passed verification.</p>
      * 
      * @param request DeleteEmailVerificationRequest
      * @return DeleteEmailVerificationResponse
@@ -953,8 +1032,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>If the API call succeeds, the System immediately deletes the corresponding domain name registrant profile.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>删除联系人模板</p>
+     * <p>Invoke the DeleteRegistrantProfile API to delete a specified domain name registrant profile.</p>
      * 
      * @param request DeleteRegistrantProfileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -993,8 +1077,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>If the API call succeeds, the System immediately deletes the corresponding domain name registrant profile.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>删除联系人模板</p>
+     * <p>Invoke the DeleteRegistrantProfile API to delete a specified domain name registrant profile.</p>
      * 
      * @param request DeleteRegistrantProfileRequest
      * @return DeleteRegistrantProfileResponse
@@ -1006,7 +1095,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消域名特殊业务流程</p>
+     * <p>Retrieves information from the domain name knowledge base.</p>
+     * 
+     * @param request DomainKnowledgeRetrieveRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DomainKnowledgeRetrieveResponse
+     */
+    public DomainKnowledgeRetrieveResponse domainKnowledgeRetrieveWithOptions(DomainKnowledgeRetrieveRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.globalTopN)) {
+            query.put("GlobalTopN", request.globalTopN);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.site)) {
+            query.put("Site", request.site);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DomainKnowledgeRetrieve"),
+            new TeaPair("version", "2018-01-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DomainKnowledgeRetrieveResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves information from the domain name knowledge base.</p>
+     * 
+     * @param request DomainKnowledgeRetrieveRequest
+     * @return DomainKnowledgeRetrieveResponse
+     */
+    public DomainKnowledgeRetrieveResponse domainKnowledgeRetrieve(DomainKnowledgeRetrieveRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.domainKnowledgeRetrieveWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Cancel the special business process for a domain name</p>
      * 
      * @param request DomainSpecialBizCancelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1044,7 +1185,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消域名特殊业务流程</p>
+     * <p>Cancel the special business process for a domain name</p>
      * 
      * @param request DomainSpecialBizCancelRequest
      * @return DomainSpecialBizCancelResponse
@@ -1108,7 +1249,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过关键字进行模糊匹配</p>
+     * <p>Invoke FuzzyMatchDomainSensitiveWord to check whether a domain name contains sensitive words.</p>
      * 
      * @param request FuzzyMatchDomainSensitiveWordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1148,7 +1289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过关键字进行模糊匹配</p>
+     * <p>Invoke FuzzyMatchDomainSensitiveWord to check whether a domain name contains sensitive words.</p>
      * 
      * @param request FuzzyMatchDomainSensitiveWordRequest
      * @return FuzzyMatchDomainSensitiveWordResponse
@@ -1203,6 +1344,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke GetOperationOssUploadPolicy to obtain the storage information for review materials.</p>
+     * 
      * @param request GetOperationOssUploadPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetOperationOssUploadPolicyResponse
@@ -1236,6 +1380,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke GetOperationOssUploadPolicy to obtain the storage information for review materials.</p>
+     * 
      * @param request GetOperationOssUploadPolicyRequest
      * @return GetOperationOssUploadPolicyResponse
      */
@@ -1245,6 +1392,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtain the authorization policy corresponding to the &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</p>
+     * 
      * @param request GetQualificationUploadPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetQualificationUploadPolicyResponse
@@ -1278,6 +1428,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtain the authorization policy corresponding to the &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</p>
+     * 
      * @param request GetQualificationUploadPolicyRequest
      * @return GetQualificationUploadPolicyResponse
      */
@@ -1287,6 +1440,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke the ListEmailVerification API to query the email verification list.</p>
+     * 
      * @param request ListEmailVerificationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListEmailVerificationResponse
@@ -1344,6 +1500,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke the ListEmailVerification API to query the email verification list.</p>
+     * 
      * @param request ListEmailVerificationRequest
      * @return ListEmailVerificationResponse
      */
@@ -1445,6 +1604,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Call <code>LookupTmchNotice</code> to look up a trademark term from the TMCH by passing it as the <code>key</code>.</p>
+     * 
      * @param request LookupTmchNoticeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return LookupTmchNoticeResponse
@@ -1482,6 +1644,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Call <code>LookupTmchNotice</code> to look up a trademark term from the TMCH by passing it as the <code>key</code>.</p>
+     * 
      * @param request LookupTmchNoticeRequest
      * @return LookupTmchNoticeResponse
      */
@@ -1491,6 +1656,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API must be used together with <a href="~~AcknowledgeTaskResult~~">AcknowledgeTaskResult</a> to confirm job results. Once a job result is confirmed, the corresponding job record can no longer be queried through this API.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Invoke PollTaskResult to obtain a list of domain name job details that have completed execution (including jobs that succeeded or failed and exceeded the retry count).</p>
+     * 
      * @param request PollTaskResultRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PollTaskResultResponse
@@ -1548,6 +1719,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API must be used together with <a href="~~AcknowledgeTaskResult~~">AcknowledgeTaskResult</a> to confirm job results. Once a job result is confirmed, the corresponding job record can no longer be queried through this API.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Invoke PollTaskResult to obtain a list of domain name job details that have completed execution (including jobs that succeeded or failed and exceeded the retry count).</p>
+     * 
      * @param request PollTaskResultRequest
      * @return PollTaskResultResponse
      */
@@ -1557,8 +1734,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Search for domain names under your current Alibaba Cloud account that meet specific conditions. A maximum of <strong>5000</strong> entries are displayed. If the result reaches <strong>5000</strong> entries, narrow your search scope.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Searches for domain names by using the advanced search feature.</p>
+     * <p>Invoke QueryAdvancedDomainList to perform an advanced search of the domain name list.</p>
      * 
      * @param request QueryAdvancedDomainListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1701,8 +1881,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Search for domain names under your current Alibaba Cloud account that meet specific conditions. A maximum of <strong>5000</strong> entries are displayed. If the result reaches <strong>5000</strong> entries, narrow your search scope.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Searches for domain names by using the advanced search feature.</p>
+     * <p>Invoke QueryAdvancedDomainList to perform an advanced search of the domain name list.</p>
      * 
      * @param request QueryAdvancedDomainListRequest
      * @return QueryAdvancedDomainListResponse
@@ -1713,6 +1896,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke the QueryArtExtension API to query Art extension information.</p>
+     * 
      * @param request QueryArtExtensionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryArtExtensionResponse
@@ -1750,6 +1936,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke the QueryArtExtension API to query Art extension information.</p>
+     * 
      * @param request QueryArtExtensionRequest
      * @return QueryArtExtensionResponse
      */
@@ -1760,7 +1949,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the operations logs of a domain name.</p>
+     * <p>Call QueryChangeLogList to get a paginated list of the operation logs.</p>
      * 
      * @param request QueryChangeLogListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1816,7 +2005,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the operations logs of a domain name.</p>
+     * <p>Call QueryChangeLogList to get a paginated list of the operation logs.</p>
      * 
      * @param request QueryChangeLogListRequest
      * @return QueryChangeLogListResponse
@@ -1827,6 +2016,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke QueryContactInfo to query domain contact information.</p>
+     * 
      * @param request QueryContactInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryContactInfoResponse
@@ -1868,6 +2060,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke QueryContactInfo to query domain contact information.</p>
+     * 
      * @param request QueryContactInfoRequest
      * @return QueryContactInfoResponse
      */
@@ -1877,6 +2072,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke QueryDSRecord to query the DS records of a domain name.</p>
+     * 
      * @param request QueryDSRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDSRecordResponse
@@ -1914,6 +2112,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke QueryDSRecord to query the DS records of a domain name.</p>
+     * 
      * @param request QueryDSRecordRequest
      * @return QueryDSRecordResponse
      */
@@ -1923,6 +2124,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the DNS host for a domain name.</p>
+     * 
      * @param request QueryDnsHostRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDnsHostResponse
@@ -1960,6 +2164,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the DNS host for a domain name.</p>
+     * 
      * @param request QueryDnsHostRequest
      * @return QueryDnsHostResponse
      */
@@ -1969,6 +2176,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke the QueryDomainAdminDivision API to query Chinese administrative regions.</p>
+     * 
      * @param request QueryDomainAdminDivisionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDomainAdminDivisionResponse
@@ -2002,6 +2212,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke the QueryDomainAdminDivision API to query Chinese administrative regions.</p>
+     * 
      * @param request QueryDomainAdminDivisionRequest
      * @return QueryDomainAdminDivisionResponse
      */
@@ -2012,7 +2225,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a domain name.</p>
+     * <p>Call <code>QueryDomainByDomainName</code> to retrieve information about a domain name.</p>
      * 
      * @param request QueryDomainByDomainNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2052,7 +2265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a domain name.</p>
+     * <p>Call <code>QueryDomainByDomainName</code> to retrieve information about a domain name.</p>
      * 
      * @param request QueryDomainByDomainNameRequest
      * @return QueryDomainByDomainNameResponse
@@ -2064,7 +2277,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the basic information about a domain name based on the instance ID.</p>
+     * <p>Call <code>QueryDomainByInstanceId</code> to retrieve the basic information of a domain name by instance ID.</p>
      * 
      * @param request QueryDomainByInstanceIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2104,7 +2317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the basic information about a domain name based on the instance ID.</p>
+     * <p>Call <code>QueryDomainByInstanceId</code> to retrieve the basic information of a domain name by instance ID.</p>
      * 
      * @param request QueryDomainByInstanceIdRequest
      * @return QueryDomainByInstanceIdResponse
@@ -2116,7 +2329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of domain name groups.</p>
+     * <p>Queries a list of domain groups.</p>
      * 
      * @param request QueryDomainGroupListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2168,7 +2381,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of domain name groups.</p>
+     * <p>Queries a list of domain groups.</p>
      * 
      * @param request QueryDomainGroupListRequest
      * @return QueryDomainGroupListResponse
@@ -2180,7 +2393,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of domain names within your Alibaba Cloud account by page.</p>
+     * <p>Returns a paginated list of domain names in your account.</p>
      * 
      * @param request QueryDomainListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2288,7 +2501,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of domain names within your Alibaba Cloud account by page.</p>
+     * <p>Returns a paginated list of domain names in your account.</p>
      * 
      * @param request QueryDomainListRequest
      * @return QueryDomainListResponse
@@ -2299,6 +2512,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke QueryDomainRealNameVerificationInfo to query real-name verification information for a domain name.</p>
+     * 
      * @param request QueryDomainRealNameVerificationInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDomainRealNameVerificationInfoResponse
@@ -2340,6 +2556,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke QueryDomainRealNameVerificationInfo to query real-name verification information for a domain name.</p>
+     * 
      * @param request QueryDomainRealNameVerificationInfoRequest
      * @return QueryDomainRealNameVerificationInfoResponse
      */
@@ -2404,7 +2623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询域名特殊业务详情</p>
+     * <p>Query domain name special business details</p>
      * 
      * @param request QueryDomainSpecialBizDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2442,7 +2661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询域名特殊业务详情</p>
+     * <p>Query domain name special business details</p>
      * 
      * @param request QueryDomainSpecialBizDetailRequest
      * @return QueryDomainSpecialBizDetailResponse
@@ -2454,7 +2673,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过域名查询域名特殊业务详情</p>
+     * <p>Query domain special business details by domain name</p>
      * 
      * @param request QueryDomainSpecialBizInfoByDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2496,7 +2715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过域名查询域名特殊业务详情</p>
+     * <p>Query domain special business details by domain name</p>
      * 
      * @param request QueryDomainSpecialBizInfoByDomainRequest
      * @return QueryDomainSpecialBizInfoByDomainResponse
@@ -2507,6 +2726,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the available domain name suffixes.</p>
+     * 
      * @param request QueryDomainSuffixRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDomainSuffixResponse
@@ -2540,6 +2762,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the available domain name suffixes.</p>
+     * 
      * @param request QueryDomainSuffixRequest
      * @return QueryDomainSuffixResponse
      */
@@ -2550,7 +2775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询邮箱验证状态</p>
+     * <p>Invoke the QueryEmailVerification API to query the email verification result.</p>
      * 
      * @param request QueryEmailVerificationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2590,7 +2815,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询邮箱验证状态</p>
+     * <p>Invoke the QueryEmailVerification API to query the email verification result.</p>
      * 
      * @param request QueryEmailVerificationRequest
      * @return QueryEmailVerificationResponse
@@ -2601,6 +2826,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke the QueryEnsAssociation API to query the wallet address attached in the ENS system.</p>
+     * 
      * @param request QueryEnsAssociationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryEnsAssociationResponse
@@ -2638,6 +2866,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke the QueryEnsAssociation API to query the wallet address attached in the ENS system.</p>
+     * 
      * @param request QueryEnsAssociationRequest
      * @return QueryEnsAssociationResponse
      */
@@ -2647,6 +2878,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Query the reasons for real-name verification (including naming review) failure for a domain name.</p>
+     * 
      * @param request QueryFailReasonForDomainRealNameVerificationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryFailReasonForDomainRealNameVerificationResponse
@@ -2688,6 +2922,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Query the reasons for real-name verification (including naming review) failure for a domain name.</p>
+     * 
      * @param request QueryFailReasonForDomainRealNameVerificationRequest
      * @return QueryFailReasonForDomainRealNameVerificationResponse
      */
@@ -2697,6 +2934,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke the QueryFailReasonForRegistrantProfileRealNameVerification API to query the reasons why identity verification for an information template failed the Review.</p>
+     * 
      * @param request QueryFailReasonForRegistrantProfileRealNameVerificationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryFailReasonForRegistrantProfileRealNameVerificationResponse
@@ -2734,6 +2974,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke the QueryFailReasonForRegistrantProfileRealNameVerification API to query the reasons why identity verification for an information template failed the Review.</p>
+     * 
      * @param request QueryFailReasonForRegistrantProfileRealNameVerificationRequest
      * @return QueryFailReasonForRegistrantProfileRealNameVerificationResponse
      */
@@ -2743,6 +2986,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Query the reasons for qualification verification failure for &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</p>
+     * 
      * @param request QueryFailingReasonListForQualificationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryFailingReasonListForQualificationResponse
@@ -2788,6 +3034,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Query the reasons for qualification verification failure for &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</p>
+     * 
      * @param request QueryFailingReasonListForQualificationRequest
      * @return QueryFailingReasonListForQualificationResponse
      */
@@ -2798,7 +3047,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of fixed-price orders at the international site (alibabacloud.com).</p>
+     * <p>Queries the list of international fixed-price orders by calling QueryIntlFixedPriceOrderList.</p>
      * 
      * @param request QueryIntlFixedPriceOrderListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2842,7 +3091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of fixed-price orders at the international site (alibabacloud.com).</p>
+     * <p>Queries the list of international fixed-price orders by calling QueryIntlFixedPriceOrderList.</p>
      * 
      * @param request QueryIntlFixedPriceOrderListRequest
      * @return QueryIntlFixedPriceOrderListResponse
@@ -2853,6 +3102,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke QueryLocalEnsAssociation to query the ENS binding address recorded in the Alibaba Cloud system.</p>
+     * 
      * @param request QueryLocalEnsAssociationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryLocalEnsAssociationResponse
@@ -2890,6 +3142,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke QueryLocalEnsAssociation to query the ENS binding address recorded in the Alibaba Cloud system.</p>
+     * 
      * @param request QueryLocalEnsAssociationRequest
      * @return QueryLocalEnsAssociationResponse
      */
@@ -2899,6 +3154,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke the QueryOperationAuditInfoDetail API to query the details of a self-service operation review record.</p>
+     * 
      * @param request QueryOperationAuditInfoDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryOperationAuditInfoDetailResponse
@@ -2932,6 +3190,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke the QueryOperationAuditInfoDetail API to query the details of a self-service operation review record.</p>
+     * 
      * @param request QueryOperationAuditInfoDetailRequest
      * @return QueryOperationAuditInfoDetailResponse
      */
@@ -2941,6 +3202,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can invoke QueryOperationAuditInfoList to query the list of review records for self-service operations.</p>
+     * 
      * @param request QueryOperationAuditInfoListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryOperationAuditInfoListResponse
@@ -2990,6 +3254,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can invoke QueryOperationAuditInfoList to query the list of review records for self-service operations.</p>
+     * 
      * @param request QueryOperationAuditInfoListRequest
      * @return QueryOperationAuditInfoListResponse
      */
@@ -2999,6 +3266,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Query the qualification verification details of &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</p>
+     * 
      * @param request QueryQualificationDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryQualificationDetailResponse
@@ -3040,6 +3310,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Query the qualification verification details of &quot;.restaurant&quot; and &quot;.trademark&quot; domain names.</p>
+     * 
      * @param request QueryQualificationDetailRequest
      * @return QueryQualificationDetailResponse
      */
@@ -3049,6 +3322,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke the QueryRegistrantProfileRealNameVerificationInfo API to query the identity verification documents of an information template.</p>
+     * 
      * @param request QueryRegistrantProfileRealNameVerificationInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryRegistrantProfileRealNameVerificationInfoResponse
@@ -3090,6 +3366,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke the QueryRegistrantProfileRealNameVerificationInfo API to query the identity verification documents of an information template.</p>
+     * 
      * @param request QueryRegistrantProfileRealNameVerificationInfoRequest
      * @return QueryRegistrantProfileRealNameVerificationInfoResponse
      */
@@ -3100,14 +3379,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can use optional request parameters to specify specific query criteria to query registrant profiles as required. For example:</p>
+     * <p>You can pass in optional parameters to help you find registrant profiles more precisely. For example:</p>
      * <ul>
-     * <li>If you know the ID of the profile that you want to query, you can use the registrant profile ID parameter to query the detailed information about the profile.</li>
-     * <li>If you do not know the ID of the profile that you want to query, you can use parameters such as the registrant name parameter to query the detailed information about the profile.</li>
+     * <li>If you already know the ID of a registrant profile, you can pass in the registrant profile ID to query detailed profile information.</li>
+     * <li>If you do not know the ID of a registrant profile, you can pass in parameters such as the domain name registrant name to query detailed profile information.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the registrant profiles that belong to your Alibaba Cloud account.</p>
+     * <p>Queries the domain name registrant profiles under the current account.</p>
      * 
      * @param request QueryRegistrantProfilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3187,14 +3466,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can use optional request parameters to specify specific query criteria to query registrant profiles as required. For example:</p>
+     * <p>You can pass in optional parameters to help you find registrant profiles more precisely. For example:</p>
      * <ul>
-     * <li>If you know the ID of the profile that you want to query, you can use the registrant profile ID parameter to query the detailed information about the profile.</li>
-     * <li>If you do not know the ID of the profile that you want to query, you can use parameters such as the registrant name parameter to query the detailed information about the profile.</li>
+     * <li>If you already know the ID of a registrant profile, you can pass in the registrant profile ID to query detailed profile information.</li>
+     * <li>If you do not know the ID of a registrant profile, you can pass in parameters such as the domain name registrant name to query detailed profile information.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the registrant profiles that belong to your Alibaba Cloud account.</p>
+     * <p>Queries the domain name registrant profiles under the current account.</p>
      * 
      * @param request QueryRegistrantProfilesRequest
      * @return QueryRegistrantProfilesResponse
@@ -3205,6 +3484,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Query the registry lock details of a domain name.</p>
+     * 
      * @param request QueryServerLockRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryServerLockResponse
@@ -3242,6 +3524,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Query the registry lock details of a domain name.</p>
+     * 
      * @param request QueryServerLockRequest
      * @return QueryServerLockResponse
      */
@@ -3251,6 +3536,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can invoke QueryTaskDetailHistory to perform a paged query on the detail history list of a specified domain name job.</p>
+     * 
      * @param request QueryTaskDetailHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryTaskDetailHistoryResponse
@@ -3308,6 +3596,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can invoke QueryTaskDetailHistory to perform a paged query on the detail history list of a specified domain name job.</p>
+     * 
      * @param request QueryTaskDetailHistoryRequest
      * @return QueryTaskDetailHistoryResponse
      */
@@ -3318,7 +3609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specific domain name task by page.</p>
+     * <p>Queries the details list of a specified domain name task by paging.</p>
      * 
      * @param request QueryTaskDetailListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3378,7 +3669,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specific domain name task by page.</p>
+     * <p>Queries the details list of a specified domain name task by paging.</p>
      * 
      * @param request QueryTaskDetailListRequest
      * @return QueryTaskDetailListResponse
@@ -3389,6 +3680,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can invoke QueryTaskInfoHistory to perform a paged query of the domain name job history list under your account.</p>
+     * 
      * @param request QueryTaskInfoHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryTaskInfoHistoryResponse
@@ -3442,6 +3736,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can invoke QueryTaskInfoHistory to perform a paged query of the domain name job history list under your account.</p>
+     * 
      * @param request QueryTaskInfoHistoryRequest
      * @return QueryTaskInfoHistoryResponse
      */
@@ -3452,7 +3749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the domain name tasks under your account by page.</p>
+     * <p>Invoke QueryTaskList to perform a paged query of the domain name job list under your account.</p>
      * 
      * @param request QueryTaskListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3504,7 +3801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the domain name tasks under your account by page.</p>
+     * <p>Invoke QueryTaskList to perform a paged query of the domain name job list under your account.</p>
      * 
      * @param request QueryTaskListRequest
      * @return QueryTaskListResponse
@@ -3515,6 +3812,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke QueryTransferInByInstanceId to query domain name transfer-in information by instance ID.</p>
+     * 
      * @param request QueryTransferInByInstanceIdRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryTransferInByInstanceIdResponse
@@ -3552,6 +3852,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke QueryTransferInByInstanceId to query domain name transfer-in information by instance ID.</p>
+     * 
      * @param request QueryTransferInByInstanceIdRequest
      * @return QueryTransferInByInstanceIdResponse
      */
@@ -3562,7 +3865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the domain names that are transferred to Alibaba Cloud.</p>
+     * <p>Invoke QueryTransferInList to query the domain name transfer-in list.</p>
      * 
      * @param request QueryTransferInListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3622,7 +3925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the domain names that are transferred to Alibaba Cloud.</p>
+     * <p>Invoke QueryTransferInList to query the domain name transfer-in list.</p>
      * 
      * @param request QueryTransferInListRequest
      * @return QueryTransferInListResponse
@@ -3633,6 +3936,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke QueryTransferOutInfo to query domain name transfer-out information.</p>
+     * 
      * @param request QueryTransferOutInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryTransferOutInfoResponse
@@ -3670,6 +3976,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke QueryTransferOutInfo to query domain name transfer-out information.</p>
+     * 
      * @param request QueryTransferOutInfoRequest
      * @return QueryTransferOutInfoResponse
      */
@@ -3679,8 +3988,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Identity verification document review takes 3 to 5 business days. After the authority completes the review, you can invoke the <a href="https://help.aliyun.com/document_detail/67701.html">QueryRegistrantProfiles</a> API to query the identity verification result.  </li>
+     * <li>If identity verification fails, refer to <a href="https://help.aliyun.com/document_detail/35885.html">Reasons for Identity Verification Failure and Solutions</a> for troubleshooting and resolution.<blockquote>
+     * <p>You must invoke this API using the POST method; otherwise, the invocation will fail. When using a software development kit (SDK), set the <strong>method</strong> parameter of the request object to <strong>POST</strong>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>保存联系人模板实名资料</p>
+     * <p>Invoke the RegistrantProfileRealNameVerification API to submit real-name verification for an information template.</p>
      * 
      * @param request RegistrantProfileRealNameVerificationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3733,8 +4051,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Identity verification document review takes 3 to 5 business days. After the authority completes the review, you can invoke the <a href="https://help.aliyun.com/document_detail/67701.html">QueryRegistrantProfiles</a> API to query the identity verification result.  </li>
+     * <li>If identity verification fails, refer to <a href="https://help.aliyun.com/document_detail/35885.html">Reasons for Identity Verification Failure and Solutions</a> for troubleshooting and resolution.<blockquote>
+     * <p>You must invoke this API using the POST method; otherwise, the invocation will fail. When using a software development kit (SDK), set the <strong>method</strong> parameter of the request object to <strong>POST</strong>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>保存联系人模板实名资料</p>
+     * <p>Invoke the RegistrantProfileRealNameVerification API to submit real-name verification for an information template.</p>
      * 
      * @param request RegistrantProfileRealNameVerificationRequest
      * @return RegistrantProfileRealNameVerificationResponse
@@ -3746,7 +4073,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重新发送验证邮件</p>
+     * <p>Invoke the ResendEmailVerification API to resend the verification email.</p>
      * 
      * @param request ResendEmailVerificationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3786,7 +4113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重新发送验证邮件</p>
+     * <p>Invoke the ResendEmailVerification API to resend the verification email.</p>
      * 
      * @param request ResendEmailVerificationRequest
      * @return ResendEmailVerificationResponse
@@ -3798,7 +4125,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重置资质审核状态</p>
+     * <p>Reset the qualification verification status for .restaurant and .trademark domain names.</p>
      * 
      * @param request ResetQualificationVerificationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3838,7 +4165,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重置资质审核状态</p>
+     * <p>Reset the qualification verification status for .restaurant and .trademark domain names.</p>
      * 
      * @param request ResetQualificationVerificationRequest
      * @return ResetQualificationVerificationResponse
@@ -3850,7 +4177,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量保存域名备注信息</p>
+     * <p>Invoke SaveBatchDomainRemark to batch save domain name remarks.</p>
      * 
      * @param request SaveBatchDomainRemarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3894,7 +4221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量保存域名备注信息</p>
+     * <p>Invoke SaveBatchDomainRemark to batch save domain name remarks.</p>
      * 
      * @param request SaveBatchDomainRemarkRequest
      * @return SaveBatchDomainRemarkResponse
@@ -3905,8 +4232,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This is an asynchronous operation. To query the result of the task, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>批量申请域名快速转出</p>
+     * <p>Submits a batch task to quickly transfer out domain names.</p>
      * 
      * @param request SaveBatchTaskForApplyQuickTransferOutOpenlyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3945,8 +4275,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This is an asynchronous operation. To query the result of the task, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>批量申请域名快速转出</p>
+     * <p>Submits a batch task to quickly transfer out domain names.</p>
      * 
      * @param request SaveBatchTaskForApplyQuickTransferOutOpenlyRequest
      * @return SaveBatchTaskForApplyQuickTransferOutOpenlyResponse
@@ -3957,8 +4290,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Starting from March 1, 2022, domain names can only be registered by using real-name verified domain name registrant profiles. Passing registrant information directly to register domain names is no longer supported.
+     * To register a domain name, you must specify associated domain name to be registered, associated domain name registrant information, and the DNS servers. You must associate associated domain name registrant information by using the ID of a real-name verified domain name registrant profile. For DNS servers, you can use the default Alibaba Cloud DNS or specify custom DNS servers.</p>
+     * <blockquote>
+     * <ul>
+     * <li>The total number of domain names registered per week cannot exceed 100,000.</li>
+     * <li>Registration payments can only be made by using the account cash balance. Credit limits are not supported.</li>
+     * </ul>
+     * </blockquote>
+     * <ul>
+     * <li>The request parameter format for the <strong>SaveBatchTaskForCreatingOrderActivate</strong> operation is OrderActivateParam.N.*, where N represents the sequence number of associated domain name.
+     * To query the task execution result, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Submits a task to register multiple domain names at a time.</p>
+     * <p>Submits a batch domain name registration task.</p>
      * 
      * @param request SaveBatchTaskForCreatingOrderActivateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4013,8 +4360,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Starting from March 1, 2022, domain names can only be registered by using real-name verified domain name registrant profiles. Passing registrant information directly to register domain names is no longer supported.
+     * To register a domain name, you must specify associated domain name to be registered, associated domain name registrant information, and the DNS servers. You must associate associated domain name registrant information by using the ID of a real-name verified domain name registrant profile. For DNS servers, you can use the default Alibaba Cloud DNS or specify custom DNS servers.</p>
+     * <blockquote>
+     * <ul>
+     * <li>The total number of domain names registered per week cannot exceed 100,000.</li>
+     * <li>Registration payments can only be made by using the account cash balance. Credit limits are not supported.</li>
+     * </ul>
+     * </blockquote>
+     * <ul>
+     * <li>The request parameter format for the <strong>SaveBatchTaskForCreatingOrderActivate</strong> operation is OrderActivateParam.N.*, where N represents the sequence number of associated domain name.
+     * To query the task execution result, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Submits a task to register multiple domain names at a time.</p>
+     * <p>Submits a batch domain name registration task.</p>
      * 
      * @param request SaveBatchTaskForCreatingOrderActivateRequest
      * @return SaveBatchTaskForCreatingOrderActivateResponse
@@ -4025,6 +4386,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">Query Task Detail List</a> API.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Invoke the SaveBatchTaskForCreatingOrderRedeem API to submit a batch domain redeem job.</p>
+     * 
      * @param request SaveBatchTaskForCreatingOrderRedeemRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SaveBatchTaskForCreatingOrderRedeemResponse
@@ -4078,6 +4445,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">Query Task Detail List</a> API.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Invoke the SaveBatchTaskForCreatingOrderRedeem API to submit a batch domain redeem job.</p>
+     * 
      * @param request SaveBatchTaskForCreatingOrderRedeemRequest
      * @return SaveBatchTaskForCreatingOrderRedeemResponse
      */
@@ -4087,8 +4460,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To query the task result, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存批量任务-续费订单</p>
+     * <p>Submits a batch domain name renewal task.</p>
      * 
      * @param request SaveBatchTaskForCreatingOrderRenewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4143,8 +4519,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To query the task result, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存批量任务-续费订单</p>
+     * <p>Submits a batch domain name renewal task.</p>
      * 
      * @param request SaveBatchTaskForCreatingOrderRenewRequest
      * @return SaveBatchTaskForCreatingOrderRenewResponse
@@ -4155,6 +4534,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by invoking the QueryTaskDetailList API. For more information, see <a href="https://help.aliyun.com/document_detail/67710.htm?spm=a2c4g.11186623.0.0.5096389cgV6sng">QueryTaskDetailList</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Invoke the SaveBatchTaskForCreatingOrderTransfer API to submit a batch domain name transfer-in job.</p>
+     * 
      * @param request SaveBatchTaskForCreatingOrderTransferRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SaveBatchTaskForCreatingOrderTransferResponse
@@ -4208,6 +4593,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by invoking the QueryTaskDetailList API. For more information, see <a href="https://help.aliyun.com/document_detail/67710.htm?spm=a2c4g.11186623.0.0.5096389cgV6sng">QueryTaskDetailList</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Invoke the SaveBatchTaskForCreatingOrderTransfer API to submit a batch domain name transfer-in job.</p>
+     * 
      * @param request SaveBatchTaskForCreatingOrderTransferRequest
      * @return SaveBatchTaskForCreatingOrderTransferResponse
      */
@@ -4217,8 +4608,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存批量任务-开启/关闭whois隐私保护锁</p>
+     * <p>Invoke the SaveBatchTaskForDomainNameProxyService API to submit a batch domain name proxy service job.</p>
      * 
      * @param request SaveBatchTaskForDomainNameProxyServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4265,8 +4659,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存批量任务-开启/关闭whois隐私保护锁</p>
+     * <p>Invoke the SaveBatchTaskForDomainNameProxyService API to submit a batch domain name proxy service job.</p>
      * 
      * @param request SaveBatchTaskForDomainNameProxyServiceRequest
      * @return SaveBatchTaskForDomainNameProxyServiceResponse
@@ -4335,8 +4732,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To query the task result, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>批量修改dns</p>
+     * <p>Submits a batch task to modify the DNS servers for the specified domain names.</p>
      * 
      * @param request SaveBatchTaskForModifyingDomainDnsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4383,8 +4783,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To query the task result, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>批量修改dns</p>
+     * <p>Submits a batch task to modify the DNS servers for the specified domain names.</p>
      * 
      * @param request SaveBatchTaskForModifyingDomainDnsRequest
      * @return SaveBatchTaskForModifyingDomainDnsResponse
@@ -4395,8 +4798,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To query task execution results, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Submits a task to reserve multiple domain names that are provided by HiChina.</p>
+     * <p>Call the SaveBatchTaskForReserveDropListDomain API to submit a batch task for domain reservation.</p>
      * 
      * @param request SaveBatchTaskForReserveDropListDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4431,8 +4837,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To query task execution results, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Submits a task to reserve multiple domain names that are provided by HiChina.</p>
+     * <p>Call the SaveBatchTaskForReserveDropListDomain API to submit a batch task for domain reservation.</p>
      * 
      * @param request SaveBatchTaskForReserveDropListDomainRequest
      * @return SaveBatchTaskForReserveDropListDomainResponse
@@ -4443,8 +4852,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This is an asynchronous operation. After submitting the task, call <code>QueryTaskDetailList</code> to check its status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Submits multiple transfer-out tasks based on the transfer keys of domain names.</p>
+     * <p>Submits a batch transfer-out task for multiple domain names using their authorization codes.</p>
      * 
      * @param request SaveBatchTaskForTransferOutByAuthorizationCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4475,8 +4887,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This is an asynchronous operation. After submitting the task, call <code>QueryTaskDetailList</code> to check its status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Submits multiple transfer-out tasks based on the transfer keys of domain names.</p>
+     * <p>Submits a batch transfer-out task for multiple domain names using their authorization codes.</p>
      * 
      * @param request SaveBatchTaskForTransferOutByAuthorizationCodeRequest
      * @return SaveBatchTaskForTransferOutByAuthorizationCodeResponse
@@ -4487,8 +4902,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To check the result of the task, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存批量任务-开启/关闭禁止转移锁</p>
+     * <p>Call SaveBatchTaskForTransferProhibitionLock to enable or disable the transfer prohibition lock for multiple domain names.</p>
      * 
      * @param request SaveBatchTaskForTransferProhibitionLockRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4531,8 +4949,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To check the result of the task, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存批量任务-开启/关闭禁止转移锁</p>
+     * <p>Call SaveBatchTaskForTransferProhibitionLock to enable or disable the transfer prohibition lock for multiple domain names.</p>
      * 
      * @param request SaveBatchTaskForTransferProhibitionLockRequest
      * @return SaveBatchTaskForTransferProhibitionLockResponse
@@ -4543,6 +4964,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To check the status of the task, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Submits a batch task to enable or disable the update prohibition lock for one or more domain names.</p>
+     * 
      * @param request SaveBatchTaskForUpdateProhibitionLockRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SaveBatchTaskForUpdateProhibitionLockResponse
@@ -4584,6 +5011,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To check the status of the task, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Submits a batch task to enable or disable the update prohibition lock for one or more domain names.</p>
+     * 
      * @param request SaveBatchTaskForUpdateProhibitionLockRequest
      * @return SaveBatchTaskForUpdateProhibitionLockResponse
      */
@@ -4593,8 +5026,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">Query Task Detail List</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>使用联系人信息修改联系人的批量任务</p>
+     * <p>Submit a domain information modification job with new contact information.</p>
      * 
      * @param request SaveBatchTaskForUpdatingContactInfoByNewContactRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4709,8 +5145,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">Query Task Detail List</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>使用联系人信息修改联系人的批量任务</p>
+     * <p>Submit a domain information modification job with new contact information.</p>
      * 
      * @param request SaveBatchTaskForUpdatingContactInfoByNewContactRequest
      * @return SaveBatchTaskForUpdatingContactInfoByNewContactResponse
@@ -4721,8 +5160,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To check the task result, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>使用模板修改联系人的批量任务</p>
+     * <p>Call SaveBatchTaskForUpdatingContactInfoByRegistrantProfileId to update the contact information of one or more domain names by using a registrant profile.</p>
      * 
      * @param request SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4773,8 +5215,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To check the task result, call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>使用模板修改联系人的批量任务</p>
+     * <p>Call SaveBatchTaskForUpdatingContactInfoByRegistrantProfileId to update the contact information of one or more domain names by using a registrant profile.</p>
      * 
      * @param request SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdRequest
      * @return SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdResponse
@@ -4786,7 +5231,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建/更新域名分组</p>
+     * <p>Invoke the SaveDomainGroup API to create or update a domain name group.</p>
      * 
      * @param request SaveDomainGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4830,7 +5275,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建/更新域名分组</p>
+     * <p>Invoke the SaveDomainGroup API to create or update a domain name group.</p>
      * 
      * @param request SaveDomainGroupRequest
      * @return SaveDomainGroupResponse
@@ -4841,8 +5286,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The domain name registrant profile contains registrant information. When you create or update a registrant profile, we recommend that you fill in all registrant information according to your actual situation and ensure consistency between the Chinese and English versions. To avoid faults during domain name registry review, we recommend entering all English registrant information in lowercase letters. For specific requirements, see the parameter descriptions below.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存联系人模板</p>
+     * <p>Invoke the SaveRegistrantProfile API to create or update a domain name registrant profile.</p>
      * 
      * @param request SaveRegistrantProfileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4957,8 +5405,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The domain name registrant profile contains registrant information. When you create or update a registrant profile, we recommend that you fill in all registrant information according to your actual situation and ensure consistency between the Chinese and English versions. To avoid faults during domain name registry review, we recommend entering all English registrant information in lowercase letters. For specific requirements, see the parameter descriptions below.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存联系人模板</p>
+     * <p>Invoke the SaveRegistrantProfile API to create or update a domain name registrant profile.</p>
      * 
      * @param request SaveRegistrantProfileRequest
      * @return SaveRegistrantProfileResponse
@@ -4970,7 +5421,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>保存联系人模板和凭据</p>
+     * <p>Invoke the SaveRegistrantProfileRealNameVerification API to save domain contact and certificate information.</p>
      * 
      * @param request SaveRegistrantProfileRealNameVerificationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5094,7 +5545,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>保存联系人模板和凭据</p>
+     * <p>Invoke the SaveRegistrantProfileRealNameVerification API to save domain contact and certificate information.</p>
      * 
      * @param request SaveRegistrantProfileRealNameVerificationRequest
      * @return SaveRegistrantProfileRealNameVerificationResponse
@@ -5105,8 +5556,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>添加dnsSec记录</p>
+     * <p>Invoke the SaveSingleTaskForAddingDSRecord API to submit a job for creating a DS record.</p>
      * 
      * @param request SaveSingleTaskForAddingDSRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5161,8 +5615,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>添加dnsSec记录</p>
+     * <p>Invoke the SaveSingleTaskForAddingDSRecord API to submit a job for creating a DS record.</p>
      * 
      * @param request SaveSingleTaskForAddingDSRecordRequest
      * @return SaveSingleTaskForAddingDSRecordResponse
@@ -5173,8 +5630,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This is an asynchronous operation. To check the task\&quot;s status, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>申请域名快速转出</p>
+     * <p>Submits a task for a quick transfer-out of a domain name.</p>
      * 
      * @param request SaveSingleTaskForApplyQuickTransferOutOpenlyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5213,8 +5673,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This is an asynchronous operation. To check the task\&quot;s status, call the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>申请域名快速转出</p>
+     * <p>Submits a task for a quick transfer-out of a domain name.</p>
      * 
      * @param request SaveSingleTaskForApplyQuickTransferOutOpenlyRequest
      * @return SaveSingleTaskForApplyQuickTransferOutOpenlyResponse
@@ -5277,6 +5740,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Submit a job to attach an ENS address.</p>
+     * 
      * @param request SaveSingleTaskForAssociatingEnsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SaveSingleTaskForAssociatingEnsResponse
@@ -5318,6 +5787,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Submit a job to attach an ENS address.</p>
+     * 
      * @param request SaveSingleTaskForAssociatingEnsRequest
      * @return SaveSingleTaskForAssociatingEnsResponse
      */
@@ -5327,6 +5802,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by invoking the QueryTaskDetailList API (<del>67710</del>).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Invoke the SaveSingleTaskForCancelingTransferIn API to submit a job to cancel a domain name transfer-in.</p>
+     * 
      * @param request SaveSingleTaskForCancelingTransferInRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SaveSingleTaskForCancelingTransferInResponse
@@ -5364,6 +5845,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by invoking the QueryTaskDetailList API (<del>67710</del>).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Invoke the SaveSingleTaskForCancelingTransferIn API to submit a job to cancel a domain name transfer-in.</p>
+     * 
      * @param request SaveSingleTaskForCancelingTransferInRequest
      * @return SaveSingleTaskForCancelingTransferInResponse
      */
@@ -5373,8 +5860,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by invoking the QueryTaskDetailList API (<del>67710</del>).</p>
+     * 
      * <b>summary</b> : 
-     * <p>取消转出</p>
+     * <p>Invoke the SaveSingleTaskForCancelingTransferOut API to submit a job to cancel a domain name transfer-out.</p>
      * 
      * @param request SaveSingleTaskForCancelingTransferOutRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5413,8 +5903,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by invoking the QueryTaskDetailList API (<del>67710</del>).</p>
+     * 
      * <b>summary</b> : 
-     * <p>取消转出</p>
+     * <p>Invoke the SaveSingleTaskForCancelingTransferOut API to submit a job to cancel a domain name transfer-out.</p>
      * 
      * @param request SaveSingleTaskForCancelingTransferOutRequest
      * @return SaveSingleTaskForCancelingTransferOutResponse
@@ -5425,8 +5918,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存创建dns服务器的任务请求</p>
+     * <p>Invoke SaveSingleTaskForCreatingDnsHost to submit a single job for creating a DNS host.</p>
      * 
      * @param request SaveSingleTaskForCreatingDnsHostRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5473,8 +5969,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存创建dns服务器的任务请求</p>
+     * <p>Invoke SaveSingleTaskForCreatingDnsHost to submit a single job for creating a DNS host.</p>
      * 
      * @param request SaveSingleTaskForCreatingDnsHostRequest
      * @return SaveSingleTaskForCreatingDnsHostResponse
@@ -5485,8 +5984,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Starting from March 1, 2022, you can associated domain names only by using real-name verified domain name registrant profiles. Passing registrant information directly to associated domain names is no longer supported.
+     * To register a domain name, you must specify the domain name, registrant information, and DNS servers. You must associate the registrant information with a real-name verified domain name registrant profile by specifying the profile ID. You can use the default Alibaba Cloud DNS servers or specify custom DNS servers.
+     * You can call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation to query the task execution result.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存单个任务-注册订单</p>
+     * <p>Submits a domain name registration task.</p>
      * 
      * @param request SaveSingleTaskForCreatingOrderActivateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5533,6 +6037,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableDomainProxy)) {
             query.put("EnableDomainProxy", request.enableDomainProxy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expectedPunycode)) {
+            query.put("ExpectedPunycode", request.expectedPunycode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
@@ -5645,8 +6153,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Starting from March 1, 2022, you can associated domain names only by using real-name verified domain name registrant profiles. Passing registrant information directly to associated domain names is no longer supported.
+     * To register a domain name, you must specify the domain name, registrant information, and DNS servers. You must associate the registrant information with a real-name verified domain name registrant profile by specifying the profile ID. You can use the default Alibaba Cloud DNS servers or specify custom DNS servers.
+     * You can call the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> operation to query the task execution result.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存单个任务-注册订单</p>
+     * <p>Submits a domain name registration task.</p>
      * 
      * @param request SaveSingleTaskForCreatingOrderActivateRequest
      * @return SaveSingleTaskForCreatingOrderActivateResponse
@@ -5657,6 +6170,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Invoke SaveSingleTaskForCreatingOrderRedeem to submit a domain redeem job.</p>
+     * 
      * @param request SaveSingleTaskForCreatingOrderRedeemRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SaveSingleTaskForCreatingOrderRedeemResponse
@@ -5714,6 +6233,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Invoke SaveSingleTaskForCreatingOrderRedeem to submit a domain redeem job.</p>
+     * 
      * @param request SaveSingleTaskForCreatingOrderRedeemRequest
      * @return SaveSingleTaskForCreatingOrderRedeemResponse
      */
@@ -5723,8 +6248,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To check the execution results of the task, call <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存单个任务-续费订单</p>
+     * <p>Use SaveSingleTaskForCreatingOrderRenew to submit a domain name renewal task.</p>
      * 
      * @param request SaveSingleTaskForCreatingOrderRenewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5791,8 +6319,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To check the execution results of the task, call <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存单个任务-续费订单</p>
+     * <p>Use SaveSingleTaskForCreatingOrderRenew to submit a domain name renewal task.</p>
      * 
      * @param request SaveSingleTaskForCreatingOrderRenewRequest
      * @return SaveSingleTaskForCreatingOrderRenewResponse
@@ -5803,6 +6334,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the task execution result by calling the QueryTaskDetailList API (<del>67710</del>).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Invoke the SaveSingleTaskForCreatingOrderTransfer API to submit a domain name transfer-in job.</p>
+     * 
      * @param request SaveSingleTaskForCreatingOrderTransferRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SaveSingleTaskForCreatingOrderTransferResponse
@@ -5868,6 +6405,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the task execution result by calling the QueryTaskDetailList API (<del>67710</del>).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Invoke the SaveSingleTaskForCreatingOrderTransfer API to submit a domain name transfer-in job.</p>
+     * 
      * @param request SaveSingleTaskForCreatingOrderTransferRequest
      * @return SaveSingleTaskForCreatingOrderTransferResponse
      */
@@ -5877,8 +6420,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the task execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除dnsSec记录</p>
+     * <p>Invoke the SaveSingleTaskForDeletingDSRecord API to submit a job for deleting a DS record.</p>
      * 
      * @param request SaveSingleTaskForDeletingDSRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5921,8 +6467,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the task execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除dnsSec记录</p>
+     * <p>Invoke the SaveSingleTaskForDeletingDSRecord API to submit a job for deleting a DS record.</p>
      * 
      * @param request SaveSingleTaskForDeletingDSRecordRequest
      * @return SaveSingleTaskForDeletingDSRecordResponse
@@ -5933,8 +6482,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除DNS HOST任务</p>
+     * <p>Invoke the SaveSingleTaskForDeletingDnsHost API to submit a job for deleting a DNS host.</p>
      * 
      * @param request SaveSingleTaskForDeletingDnsHostRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5977,8 +6529,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除DNS HOST任务</p>
+     * <p>Invoke the SaveSingleTaskForDeletingDnsHost API to submit a job for deleting a DNS host.</p>
      * 
      * @param request SaveSingleTaskForDeletingDnsHostRequest
      * @return SaveSingleTaskForDeletingDnsHostResponse
@@ -5989,6 +6544,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Invoke the SaveSingleTaskForDisassociatingEns API to submit a job for detaching an ENS address.</p>
+     * 
      * @param request SaveSingleTaskForDisassociatingEnsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SaveSingleTaskForDisassociatingEnsResponse
@@ -6026,6 +6587,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Invoke the SaveSingleTaskForDisassociatingEns API to submit a job for detaching an ENS address.</p>
+     * 
      * @param request SaveSingleTaskForDisassociatingEnsRequest
      * @return SaveSingleTaskForDisassociatingEnsResponse
      */
@@ -6035,8 +6602,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Invoke the SaveSingleTaskForDomainNameProxyService API to submit a domain name proxy service job.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存单个任务-开启/关闭whois隐私保护锁</p>
+     * <p>Invoke the SaveSingleTaskForDomainNameProxyService API to submit a domain name proxy service job.</p>
      * 
      * @param request SaveSingleTaskForDomainNameProxyServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6079,8 +6649,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Invoke the SaveSingleTaskForDomainNameProxyService API to submit a domain name proxy service job.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存单个任务-开启/关闭whois隐私保护锁</p>
+     * <p>Invoke the SaveSingleTaskForDomainNameProxyService API to submit a domain name proxy service job.</p>
      * 
      * @param request SaveSingleTaskForDomainNameProxyServiceRequest
      * @return SaveSingleTaskForDomainNameProxyServiceResponse
@@ -6143,8 +6716,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改DnsSec记录</p>
+     * <p>Invoke SaveSingleTaskForModifyingDSRecord to submit a job for modifying a DS record.</p>
      * 
      * @param request SaveSingleTaskForModifyingDSRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6199,8 +6775,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改DnsSec记录</p>
+     * <p>Invoke SaveSingleTaskForModifyingDSRecord to submit a job for modifying a DS record.</p>
      * 
      * @param request SaveSingleTaskForModifyingDSRecordRequest
      * @return SaveSingleTaskForModifyingDSRecordResponse
@@ -6211,8 +6790,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存修改dns服务器的任务请求</p>
+     * <p>Invoke the SaveSingleTaskForModifyingDnsHost API to submit a job for modifying a DNS host.</p>
      * 
      * @param request SaveSingleTaskForModifyingDnsHostRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6259,8 +6841,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存修改dns服务器的任务请求</p>
+     * <p>Invoke the SaveSingleTaskForModifyingDnsHost API to submit a job for modifying a DNS host.</p>
      * 
      * @param request SaveSingleTaskForModifyingDnsHostRequest
      * @return SaveSingleTaskForModifyingDnsHostResponse
@@ -6271,8 +6856,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by calling the QueryTaskDetailList API (<del>67710</del>). The transfer password is returned in the TaskResult field of the corresponding job.</p>
+     * 
      * <b>summary</b> : 
-     * <p>发送转移码</p>
+     * <p>Invoke the SaveSingleTaskForQueryingTransferAuthorizationCode API to submit a job for retrieving the domain name transfer password.</p>
      * 
      * @param request SaveSingleTaskForQueryingTransferAuthorizationCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6311,8 +6899,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by calling the QueryTaskDetailList API (<del>67710</del>). The transfer password is returned in the TaskResult field of the corresponding job.</p>
+     * 
      * <b>summary</b> : 
-     * <p>发送转移码</p>
+     * <p>Invoke the SaveSingleTaskForQueryingTransferAuthorizationCode API to submit a job for retrieving the domain name transfer password.</p>
      * 
      * @param request SaveSingleTaskForQueryingTransferAuthorizationCodeRequest
      * @return SaveSingleTaskForQueryingTransferAuthorizationCodeResponse
@@ -6379,8 +6970,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存art扩展信息任务</p>
+     * <p>Invoke the SaveSingleTaskForSaveArtExtension API to submit a job for creating Art extension information.</p>
      * 
      * @param request SaveSingleTaskForSaveArtExtensionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6455,8 +7049,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存art扩展信息任务</p>
+     * <p>Invoke the SaveSingleTaskForSaveArtExtension API to submit a job for creating Art extension information.</p>
      * 
      * @param request SaveSingleTaskForSaveArtExtensionRequest
      * @return SaveSingleTaskForSaveArtExtensionResponse
@@ -6467,8 +7064,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>同步DnsSec记录</p>
+     * <p>Invoke the SaveSingleTaskForSynchronizingDSRecord API to submit a job for synchronizing a DS record.</p>
      * 
      * @param request SaveSingleTaskForSynchronizingDSRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6507,8 +7107,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>同步DnsSec记录</p>
+     * <p>Invoke the SaveSingleTaskForSynchronizingDSRecord API to submit a job for synchronizing a DS record.</p>
      * 
      * @param request SaveSingleTaskForSynchronizingDSRecordRequest
      * @return SaveSingleTaskForSynchronizingDSRecordResponse
@@ -6519,8 +7122,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">Query Task Detail List</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存同步dns服务器的任务请求</p>
+     * <p>Invoke the SaveSingleTaskForSynchronizingDnsHost API to submit a DNS host synchronization job. This is used to handle cases such as missing or inconsistent DNS hosts.</p>
      * 
      * @param request SaveSingleTaskForSynchronizingDnsHostRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6559,8 +7165,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">Query Task Detail List</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存同步dns服务器的任务请求</p>
+     * <p>Invoke the SaveSingleTaskForSynchronizingDnsHost API to submit a DNS host synchronization job. This is used to handle cases such as missing or inconsistent DNS hosts.</p>
      * 
      * @param request SaveSingleTaskForSynchronizingDnsHostRequest
      * @return SaveSingleTaskForSynchronizingDnsHostResponse
@@ -6625,8 +7234,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">List Task Details</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存单个任务-开启/关闭禁止转移锁</p>
+     * <p>Invoke the SaveSingleTaskForTransferProhibitionLock API to submit a transfer prohibition lock job.</p>
      * 
      * @param request SaveSingleTaskForTransferProhibitionLockRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6669,8 +7281,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">List Task Details</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存单个任务-开启/关闭禁止转移锁</p>
+     * <p>Invoke the SaveSingleTaskForTransferProhibitionLock API to submit a transfer prohibition lock job.</p>
      * 
      * @param request SaveSingleTaskForTransferProhibitionLockRequest
      * @return SaveSingleTaskForTransferProhibitionLockResponse
@@ -6681,8 +7296,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存单个任务-开启/关闭信息安全锁</p>
+     * <p>Invoke the SaveSingleTaskForUpdateProhibitionLock API to submit a task for the Update Prohibition Lock.</p>
      * 
      * @param request SaveSingleTaskForUpdateProhibitionLockRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6725,8 +7343,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="~~QueryTaskDetailList~~">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存单个任务-开启/关闭信息安全锁</p>
+     * <p>Invoke the SaveSingleTaskForUpdateProhibitionLock API to submit a task for the Update Prohibition Lock.</p>
      * 
      * @param request SaveSingleTaskForUpdateProhibitionLockRequest
      * @return SaveSingleTaskForUpdateProhibitionLockResponse
@@ -6737,8 +7358,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存修改联系人的任务</p>
+     * <p>Invoke the SaveSingleTaskForUpdatingContactInfo API to submit a domain contact information update job.</p>
      * 
      * @param request SaveSingleTaskForUpdatingContactInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6793,8 +7417,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the job execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存修改联系人的任务</p>
+     * <p>Invoke the SaveSingleTaskForUpdatingContactInfo API to submit a domain contact information update job.</p>
      * 
      * @param request SaveSingleTaskForUpdatingContactInfoRequest
      * @return SaveSingleTaskForUpdatingContactInfoResponse
@@ -6805,8 +7432,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Invoke SaveTaskForSubmittingDomainDelete to submit a domain deletion job.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存删除域名的任务</p>
+     * <p>Submit a domain deletion job. Only whitelist users can access this API.</p>
      * 
      * @param request SaveTaskForSubmittingDomainDeleteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6845,8 +7475,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Invoke SaveTaskForSubmittingDomainDelete to submit a domain deletion job.</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存删除域名的任务</p>
+     * <p>Submit a domain deletion job. Only whitelist users can access this API.</p>
      * 
      * @param request SaveTaskForSubmittingDomainDeleteRequest
      * @return SaveTaskForSubmittingDomainDeleteResponse
@@ -6858,7 +7491,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量提交域名资料</p>
+     * <p>Submits real-name verification information for one or more domain names in bulk.</p>
      * 
      * @param request SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6912,7 +7545,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量提交域名资料</p>
+     * <p>Submits real-name verification information for one or more domain names in bulk.</p>
      * 
      * @param request SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest
      * @return SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialResponse
@@ -6924,7 +7557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据模板保存域名的实名认证信息</p>
+     * <p>Creates a task to submit real-name verification information for a domain name by using a specified registrant profile.</p>
      * 
      * @param request SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileIDRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6972,7 +7605,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据模板保存域名的实名认证信息</p>
+     * <p>Creates a task to submit real-name verification information for a domain name by using a specified registrant profile.</p>
      * 
      * @param request SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileIDRequest
      * @return SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileIDResponse
@@ -6983,8 +7616,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>根据联系人信息批量修改注册联系人信息</p>
+     * <p>Invoke the SaveTaskForUpdatingRegistrantInfoByIdentityCredential API to submit a batch job for updating registrant contact information by providing contact details and required documentation. You must provide the corresponding documentation as required.</p>
      * 
      * @param request SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7109,8 +7745,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the task execution result by using the <a href="https://help.aliyun.com/document_detail/67710.html">QueryTaskDetailList</a> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>根据联系人信息批量修改注册联系人信息</p>
+     * <p>Invoke the SaveTaskForUpdatingRegistrantInfoByIdentityCredential API to submit a batch job for updating registrant contact information by providing contact details and required documentation. You must provide the corresponding documentation as required.</p>
      * 
      * @param request SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest
      * @return SaveTaskForUpdatingRegistrantInfoByIdentityCredentialResponse
@@ -7121,8 +7760,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/67710.htm?spm=a2c4g.11186623.0.0.33f47edeV0nkFx">QueryTaskDetailList</a> API to check the task result. After a successful update, the registrant information for the domain name is updated to match the registrant profile. If the domain name requires real-name verification, it becomes verified.</p>
+     * 
      * <b>summary</b> : 
-     * <p>根据模板批量修改注册联系人</p>
+     * <p>Submits a task to update registrant information using a registrant profile ID.</p>
      * 
      * @param request SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7169,8 +7811,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/67710.htm?spm=a2c4g.11186623.0.0.33f47edeV0nkFx">QueryTaskDetailList</a> API to check the task result. After a successful update, the registrant information for the domain name is updated to match the registrant profile. If the domain name requires real-name verification, it becomes verified.</p>
+     * 
      * <b>summary</b> : 
-     * <p>根据模板批量修改注册联系人</p>
+     * <p>Submits a task to update registrant information using a registrant profile ID.</p>
      * 
      * @param request SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest
      * @return SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDResponse
@@ -7320,7 +7965,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置默认模板</p>
+     * <p>Invoke the SetDefaultRegistrantProfile API to set the default contact template for a domain name.</p>
      * 
      * @param request SetDefaultRegistrantProfileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7356,7 +8001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置默认模板</p>
+     * <p>Invoke the SetDefaultRegistrantProfile API to set the default contact template for a domain name.</p>
      * 
      * @param request SetDefaultRegistrantProfileRequest
      * @return SetDefaultRegistrantProfileResponse
@@ -7367,8 +8012,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation currently supports only domain names registered on the China site (aliyun.com).
+     * <strong>Before using this operation, make sure that you fully understand the billing method and <a href="https://wanwang.aliyun.com/help/price.html?spm=5176.22941859.J_9989412330.10.68a51838KnzTeD">pricing</a> of domain name services.</strong></p>
+     * 
      * <b>summary</b> : 
-     * <p>域名设置自动续费</p>
+     * <p>Sets or cancels auto-renewal for a domain name.</p>
      * 
      * @param request SetupDomainAutoRenewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7403,8 +8052,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation currently supports only domain names registered on the China site (aliyun.com).
+     * <strong>Before using this operation, make sure that you fully understand the billing method and <a href="https://wanwang.aliyun.com/help/price.html?spm=5176.22941859.J_9989412330.10.68a51838KnzTeD">pricing</a> of domain name services.</strong></p>
+     * 
      * <b>summary</b> : 
-     * <p>域名设置自动续费</p>
+     * <p>Sets or cancels auto-renewal for a domain name.</p>
      * 
      * @param request SetupDomainAutoRenewRequest
      * @return SetupDomainAutoRenewResponse
@@ -7416,7 +8069,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>域名特殊业务提交资料</p>
+     * <p>Submit documentation for special domain name services</p>
      * 
      * @param request SubmitDomainSpecialBizCredentialsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7462,7 +8115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>域名特殊业务提交资料</p>
+     * <p>Submit documentation for special domain name services</p>
      * 
      * @param request SubmitDomainSpecialBizCredentialsRequest
      * @return SubmitDomainSpecialBizCredentialsResponse
@@ -7473,8 +8126,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After receiving the verification email, you must log on to your mailbox and complete verification within 3 days. If the verification email has expired, you can invoke the <a href="https://help.aliyun.com/document_detail/67734.html">ResendEmailVerification</a> API to resend the verification email.</p>
+     * 
      * <b>summary</b> : 
-     * <p>提交邮箱验证</p>
+     * <p>Invoke the SubmitEmailVerification API to send an email verification message.</p>
      * 
      * @param request SubmitEmailVerificationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7517,8 +8173,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After receiving the verification email, you must log on to your mailbox and complete verification within 3 days. If the verification email has expired, you can invoke the <a href="https://help.aliyun.com/document_detail/67734.html">ResendEmailVerification</a> API to resend the verification email.</p>
+     * 
      * <b>summary</b> : 
-     * <p>提交邮箱验证</p>
+     * <p>Invoke the SubmitEmailVerification API to send an email verification message.</p>
      * 
      * @param request SubmitEmailVerificationRequest
      * @return SubmitEmailVerificationResponse
@@ -7530,7 +8189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交申请信息</p>
+     * <p>Invoke the SubmitOperationAuditInfo API to submit self-service business review information.</p>
      * 
      * @param request SubmitOperationAuditInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7578,7 +8237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交申请信息</p>
+     * <p>Invoke the SubmitOperationAuditInfo API to submit self-service business review information.</p>
      * 
      * @param request SubmitOperationAuditInfoRequest
      * @return SubmitOperationAuditInfoResponse
@@ -7590,7 +8249,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交证件资料</p>
+     * <p>Invoke the SubmitOperationCredentials API to submit certificate materials for self-service operations pending review.</p>
      * 
      * @param request SubmitOperationCredentialsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7638,7 +8297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交证件资料</p>
+     * <p>Invoke the SubmitOperationCredentials API to submit certificate materials for self-service operations pending review.</p>
      * 
      * @param request SubmitOperationCredentialsRequest
      * @return SubmitOperationCredentialsResponse
@@ -7649,6 +8308,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the TransferInCheckMailToken operation to verify the email token of a domain name registrant.</p>
+     * 
      * @param request TransferInCheckMailTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TransferInCheckMailTokenResponse
@@ -7686,6 +8348,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the TransferInCheckMailToken operation to verify the email token of a domain name registrant.</p>
+     * 
      * @param request TransferInCheckMailTokenRequest
      * @return TransferInCheckMailTokenResponse
      */
@@ -7695,6 +8360,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke the TransferInReenterTransferAuthorizationCode API to re-enter the transfer password for domain name transfer-in.</p>
+     * 
      * @param request TransferInReenterTransferAuthorizationCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TransferInReenterTransferAuthorizationCodeResponse
@@ -7736,6 +8404,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke the TransferInReenterTransferAuthorizationCode API to re-enter the transfer password for domain name transfer-in.</p>
+     * 
      * @param request TransferInReenterTransferAuthorizationCodeRequest
      * @return TransferInReenterTransferAuthorizationCodeResponse
      */
@@ -7745,6 +8416,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The system automatically retrieves the registrant\&quot;s email address from WHOIS. If the email address is incorrect or cannot be retrieved, the system will re-scrape the WHOIS email address.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Invoke TransferInRefetchWhoisEmail to perform email verification for domain transfer-in.</p>
+     * 
      * @param request TransferInRefetchWhoisEmailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TransferInRefetchWhoisEmailResponse
@@ -7782,6 +8459,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The system automatically retrieves the registrant\&quot;s email address from WHOIS. If the email address is incorrect or cannot be retrieved, the system will re-scrape the WHOIS email address.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Invoke TransferInRefetchWhoisEmail to perform email verification for domain transfer-in.</p>
+     * 
      * @param request TransferInRefetchWhoisEmailRequest
      * @return TransferInRefetchWhoisEmailResponse
      */
@@ -7791,6 +8474,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke the TransferInResendMailToken API to resend the verification email for domain transfer-in.</p>
+     * 
      * @param request TransferInResendMailTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TransferInResendMailTokenResponse
@@ -7828,6 +8514,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke the TransferInResendMailToken API to resend the verification email for domain transfer-in.</p>
+     * 
      * @param request TransferInResendMailTokenRequest
      * @return TransferInResendMailTokenResponse
      */
@@ -7838,7 +8527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>向分组设置域名</p>
+     * <p>If you use file upload to replace more than 1,000 domain names in a domain name group, the operation is asynchronous. The result is available only after the request is processed.</p>
      * 
      * @param request UpdateDomainToDomainGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7896,7 +8585,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>向分组设置域名</p>
+     * <p>If you use file upload to replace more than 1,000 domain names in a domain name group, the operation is asynchronous. The result is available only after the request is processed.</p>
      * 
      * @param request UpdateDomainToDomainGroupRequest
      * @return UpdateDomainToDomainGroupResponse
@@ -7908,7 +8597,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>校验联系人信息</p>
+     * <p>Whether some parameters are required depends on the requirements of the domain name registry. This API validates the compliance and validity of the input parameters and does not perform validation against actual domain information.</p>
      * 
      * @param request VerifyContactFieldRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8016,7 +8705,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>校验联系人信息</p>
+     * <p>Whether some parameters are required depends on the requirements of the domain name registry. This API validates the compliance and validity of the input parameters and does not perform validation against actual domain information.</p>
      * 
      * @param request VerifyContactFieldRequest
      * @return VerifyContactFieldResponse
@@ -8028,7 +8717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证邮箱Token</p>
+     * <p>Invoke the VerifyEmail API to submit email verification.</p>
      * 
      * @param request VerifyEmailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8068,7 +8757,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证邮箱Token</p>
+     * <p>Invoke the VerifyEmail API to submit email verification.</p>
      * 
      * @param request VerifyEmailRequest
      * @return VerifyEmailResponse

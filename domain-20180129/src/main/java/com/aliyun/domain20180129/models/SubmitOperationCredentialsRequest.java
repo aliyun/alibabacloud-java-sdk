@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitOperationCredentialsRequest extends TeaModel {
     /**
+     * <p>Review record ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,16 +14,28 @@ public class SubmitOperationCredentialsRequest extends TeaModel {
     public Long auditRecordId;
 
     /**
+     * <p>Review type. Valid value:<br><strong>1</strong>: Offline domain name transfer.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("AuditType")
     public Integer auditType;
 
+    /**
+     * <p>Certificate materials pending review.</p>
+     */
     @NameInMap("Credentials")
     public String credentials;
 
     /**
+     * <p>Language of the error message returned by the API. Valid values:  </p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.  </li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -29,6 +43,12 @@ public class SubmitOperationCredentialsRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Registrant type. Valid values:  </p>
+     * <ul>
+     * <li><strong>1</strong>: Individual.  </li>
+     * <li><strong>2</strong>: Enterprise.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

@@ -4,26 +4,42 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryTaskInfoHistoryResponseBody extends TeaModel {
+    /**
+     * <p>Cursor for the current page.</p>
+     */
     @NameInMap("CurrentPageCursor")
     public QueryTaskInfoHistoryResponseBodyCurrentPageCursor currentPageCursor;
 
+    /**
+     * <p>Cursor for the next page.</p>
+     */
     @NameInMap("NextPageCursor")
     public QueryTaskInfoHistoryResponseBodyNextPageCursor nextPageCursor;
 
+    /**
+     * <p>Job information.</p>
+     */
     @NameInMap("Objects")
     public java.util.List<QueryTaskInfoHistoryResponseBodyObjects> objects;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Cursor for the previous page.</p>
+     */
     @NameInMap("PrePageCursor")
     public QueryTaskInfoHistoryResponseBodyPrePageCursor prePageCursor;
 
     /**
+     * <p>Unique request access token.</p>
+     * 
      * <strong>example:</strong>
      * <p>EB3FCCBA-CA1F-4D31-9F34-test</p>
      */
@@ -85,6 +101,8 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
 
     public static class QueryTaskInfoHistoryResponseBodyCurrentPageCursor extends TeaModel {
         /**
+         * <p>User IP address when the job was submitted.</p>
+         * 
          * <strong>example:</strong>
          * <p>127.0.0.1</p>
          */
@@ -92,6 +110,8 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public String clientip;
 
         /**
+         * <p>Job creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2017-11-01 17:22:51</p>
          */
@@ -99,6 +119,8 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Job creation UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1509528171000</p>
          */
@@ -106,6 +128,8 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public Long createTimeLong;
 
         /**
+         * <p>Job number.</p>
+         * 
          * <strong>example:</strong>
          * <p>aa634d3f-927e-4d17-9d2c-test</p>
          */
@@ -113,6 +137,8 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public String taskNo;
 
         /**
+         * <p>Number of domain names included in the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -120,6 +146,13 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public Integer taskNum;
 
         /**
+         * <p>Task Status. Valid values:</p>
+         * <ul>
+         * <li><strong>WAITING_EXECUTE</strong>: Waiting for execution;</li>
+         * <li><strong>EXECUTING</strong>: Executing;</li>
+         * <li><strong>COMPLETE</strong>: Execution completed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>COMPLETE</p>
          */
@@ -127,6 +160,13 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public String taskStatus;
 
         /**
+         * <p>Job status code. Valid values:  </p>
+         * <ul>
+         * <li><strong>1</strong>: Waiting for execution  </li>
+         * <li><strong>2</strong>: Executing  </li>
+         * <li><strong>3</strong>: Execution completed</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -134,12 +174,38 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public Integer taskStatusCode;
 
         /**
+         * <p>Job type. Valid values:  </p>
+         * <ul>
+         * <li><strong>CHG_HOLDER</strong>: Modify registrant information  </li>
+         * <li><strong>CHG_DNS</strong>: Modify DNS  </li>
+         * <li><strong>SET_WHOIS_PROTECT</strong>: Enable privacy protection  </li>
+         * <li><strong>UPDATE_ADMIN_CONTACT</strong>: Modify administrator contact information  </li>
+         * <li><strong>UPDATE_BILLING_CONTACT</strong>: Modify billing contact information  </li>
+         * <li><strong>UPDATE_TECH_CONTACT</strong>: Modify technical contact information  </li>
+         * <li><strong>SET_UPDATE_PROHIBITED</strong>: Enable domain name edit lock  </li>
+         * <li><strong>SET_TRANSFER_PROHIBITED</strong>: Enable domain name transfer lock  </li>
+         * <li><strong>ORDER_ACTIVATE</strong>: Create registration order  </li>
+         * <li><strong>ORDER_RENEW</strong>: Create renewal order  </li>
+         * <li><strong>ORDER_REDEEM</strong>: Create redemption order  </li>
+         * <li><strong>CREATE_DNSHOST</strong>: Create DNS host  </li>
+         * <li><strong>UPDATE_DNSHOST</strong>: Update DNS host  </li>
+         * <li><strong>UPDATE_REGISTRANT_CONTACT</strong>: Modify registrant contact  </li>
+         * <li><strong>DELETE_DOMAIN</strong>: Delete domain name  </li>
+         * <li><strong>SYNC_DNSHOST</strong>: Synchronize DNS host</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CHG_DNS</p>
          */
         @NameInMap("TaskType")
         public String taskType;
 
+        /**
+         * <p>Task Type description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>修改DNS</p>
+         */
         @NameInMap("TaskTypeDescription")
         public String taskTypeDescription;
 
@@ -224,6 +290,8 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
 
     public static class QueryTaskInfoHistoryResponseBodyNextPageCursor extends TeaModel {
         /**
+         * <p>User IP address when the job was submitted.</p>
+         * 
          * <strong>example:</strong>
          * <p>127.0.0.1</p>
          */
@@ -231,6 +299,8 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public String clientip;
 
         /**
+         * <p>Creation Time of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>2017-10-27 13:07:07</p>
          */
@@ -238,6 +308,8 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Creation Time of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>1509080827000</p>
          */
@@ -245,6 +317,8 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public Long createTimeLong;
 
         /**
+         * <p>Job number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8f112aa1-98be-48c3-82f8-test</p>
          */
@@ -252,6 +326,8 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public String taskNo;
 
         /**
+         * <p>Number of domain names included in the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>15</p>
          */
@@ -259,6 +335,13 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public Integer taskNum;
 
         /**
+         * <p>Task Status. Valid values:  </p>
+         * <ul>
+         * <li><strong>WAITING_EXECUTE</strong>: Waiting to execute;  </li>
+         * <li><strong>EXECUTING</strong>: Executing;  </li>
+         * <li><strong>COMPLETE</strong>: Execution completed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>COMPLETE</p>
          */
@@ -266,6 +349,13 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public String taskStatus;
 
         /**
+         * <p>Job status code. Valid values:  </p>
+         * <ul>
+         * <li><strong>1</strong>: Waiting to execute;  </li>
+         * <li><strong>2</strong>: Executing;  </li>
+         * <li><strong>3</strong>: Execution completed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -273,12 +363,38 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public Integer taskStatusCode;
 
         /**
+         * <p>Task Type. Valid values:  </p>
+         * <ul>
+         * <li><strong>CHG_HOLDER</strong>: Modify registrant information;  </li>
+         * <li><strong>CHG_DNS</strong>: Modify DNS;  </li>
+         * <li><strong>SET_WHOIS_PROTECT</strong>: Enable privacy protection;  </li>
+         * <li><strong>UPDATE_ADMIN_CONTACT</strong>: Modify administrative contact information;  </li>
+         * <li><strong>UPDATE_BILLING_CONTACT</strong>: Modify billing contact information;  </li>
+         * <li><strong>UPDATE_TECH_CONTACT</strong>: Modify technical contact information;  </li>
+         * <li><strong>SET_UPDATE_PROHIBITED</strong>: Enable domain name Edit Lock;  </li>
+         * <li><strong>SET_TRANSFER_PROHIBITED</strong>: Enable domain name transfer lock;  </li>
+         * <li><strong>ORDER_ACTIVATE</strong>: Create a registration order;  </li>
+         * <li><strong>ORDER_RENEW</strong>: Create a renewal order;  </li>
+         * <li><strong>ORDER_REDEEM</strong>: Create a redemption order;  </li>
+         * <li><strong>CREATE_DNSHOST</strong>: Create a DNS host;  </li>
+         * <li><strong>UPDATE_DNSHOST</strong>: Update a DNS host;  </li>
+         * <li><strong>UPDATE_REGISTRANT_CONTACT</strong>: Modify registrant contact information;  </li>
+         * <li><strong>DELETE_DOMAIN</strong>: Delete a domain name;  </li>
+         * <li><strong>SYNC_DNSHOST</strong>: Synchronize DNS host.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CHG_DNS</p>
          */
         @NameInMap("TaskType")
         public String taskType;
 
+        /**
+         * <p>Task type description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>修改DNS</p>
+         */
         @NameInMap("TaskTypeDescription")
         public String taskTypeDescription;
 
@@ -363,6 +479,8 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
 
     public static class QueryTaskInfoHistoryResponseBodyObjects extends TeaModel {
         /**
+         * <p>User IP address when submitting the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>127.0.0.1</p>
          */
@@ -370,6 +488,8 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public String clientip;
 
         /**
+         * <p>Task creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2017-11-01 17:22:51</p>
          */
@@ -377,6 +497,8 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Task creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1509528171000</p>
          */
@@ -384,6 +506,8 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public Long createTimeLong;
 
         /**
+         * <p>Job number.</p>
+         * 
          * <strong>example:</strong>
          * <p>aa634d3f-927e-4d17-9d2c-test</p>
          */
@@ -391,6 +515,8 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public String taskNo;
 
         /**
+         * <p>Number of domain names included in the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -398,6 +524,13 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public Integer taskNum;
 
         /**
+         * <p>Task status. Valid values:</p>
+         * <ul>
+         * <li><strong>WAITING_EXECUTE</strong>: Waiting for execution;</li>
+         * <li><strong>EXECUTING</strong>: Executing;</li>
+         * <li><strong>COMPLETE</strong>: Execution completed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>COMPLETE</p>
          */
@@ -405,6 +538,13 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public String taskStatus;
 
         /**
+         * <p>Task status code. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Waiting for execution;</li>
+         * <li><strong>2</strong>: Executing;</li>
+         * <li><strong>3</strong>: Execution completed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -412,12 +552,38 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public Integer taskStatusCode;
 
         /**
+         * <p>Task Type. Valid values:</p>
+         * <ul>
+         * <li><strong>CHG_HOLDER</strong>: Modify owner information;</li>
+         * <li><strong>CHG_DNS</strong>: Modify DNS;</li>
+         * <li><strong>SET_WHOIS_PROTECT</strong>: Enable privacy protection;</li>
+         * <li><strong>UPDATE_ADMIN_CONTACT</strong>: Modify administrative contact information;</li>
+         * <li><strong>UPDATE_BILLING_CONTACT</strong>: Modify billing contact information;</li>
+         * <li><strong>UPDATE_TECH_CONTACT</strong>: Modify technical contact information;</li>
+         * <li><strong>SET_UPDATE_PROHIBITED</strong>: Enable domain name edit lock;</li>
+         * <li><strong>SET_TRANSFER_PROHIBITED</strong>: Enable domain name transfer lock;</li>
+         * <li><strong>ORDER_ACTIVATE</strong>: Create a registration order;</li>
+         * <li><strong>ORDER_RENEW</strong>: Create a renewal order;</li>
+         * <li><strong>ORDER_REDEEM</strong>: Create a redemption order;</li>
+         * <li><strong>CREATE_DNSHOST</strong>: Create a DNS host;</li>
+         * <li><strong>UPDATE_DNSHOST</strong>: Update a DNS host;</li>
+         * <li><strong>UPDATE_REGISTRANT_CONTACT</strong>: Modify registrant contact information;</li>
+         * <li><strong>DELETE_DOMAIN</strong>: Delete a domain name;</li>
+         * <li><strong>SYNC_DNSHOST</strong>: Synchronize a DNS host.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CHG_DNS</p>
          */
         @NameInMap("TaskType")
         public String taskType;
 
+        /**
+         * <p>Task type description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>修改DNS</p>
+         */
         @NameInMap("TaskTypeDescription")
         public String taskTypeDescription;
 
@@ -502,6 +668,8 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
 
     public static class QueryTaskInfoHistoryResponseBodyPrePageCursor extends TeaModel {
         /**
+         * <p>User IP address when submitting the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>127.0.0.1</p>
          */
@@ -509,6 +677,8 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public String clientip;
 
         /**
+         * <p>Job creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2017-11-01 17:19:47</p>
          */
@@ -516,6 +686,8 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Job creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1509527987000</p>
          */
@@ -523,6 +695,8 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public Long createTimeLong;
 
         /**
+         * <p>Task number.</p>
+         * 
          * <strong>example:</strong>
          * <p>f9baa3d5-33b9-4c81-8847-test</p>
          */
@@ -530,6 +704,8 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public String taskNo;
 
         /**
+         * <p>Number of domain names included in the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>15</p>
          */
@@ -537,6 +713,13 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public Integer taskNum;
 
         /**
+         * <p>Task Status. Valid values:  </p>
+         * <ul>
+         * <li><strong>WAITING_EXECUTE</strong>: Waiting for execution;  </li>
+         * <li><strong>EXECUTING</strong>: Executing;  </li>
+         * <li><strong>COMPLETE</strong>: Execution completed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>COMPLETE</p>
          */
@@ -544,6 +727,13 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public String taskStatus;
 
         /**
+         * <p>Task status code. Valid values:  </p>
+         * <ul>
+         * <li><strong>1</strong>: Waiting for execution;  </li>
+         * <li><strong>2</strong>: Executing;  </li>
+         * <li><strong>3</strong>: Execution completed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -551,12 +741,38 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         public Integer taskStatusCode;
 
         /**
+         * <p>Task Type. Valid values:  </p>
+         * <ul>
+         * <li><strong>CHG_HOLDER</strong>: Modify registrant information;  </li>
+         * <li><strong>CHG_DNS</strong>: Modify DNS;  </li>
+         * <li><strong>SET_WHOIS_PROTECT</strong>: Enable privacy protection;  </li>
+         * <li><strong>UPDATE_ADMIN_CONTACT</strong>: Update administrative contact;  </li>
+         * <li><strong>UPDATE_BILLING_CONTACT</strong>: Update billing contact;  </li>
+         * <li><strong>UPDATE_TECH_CONTACT</strong>: Update technical contact;  </li>
+         * <li><strong>SET_UPDATE_PROHIBITED</strong>: Enable domain name edit lock;  </li>
+         * <li><strong>SET_TRANSFER_PROHIBITED</strong>: Enable domain name transfer lock;  </li>
+         * <li><strong>ORDER_ACTIVATE</strong>: Create a registration order;  </li>
+         * <li><strong>ORDER_RENEW</strong>: Create a renewal order;  </li>
+         * <li><strong>ORDER_REDEEM</strong>: Create a redemption order;  </li>
+         * <li><strong>CREATE_DNSHOST</strong>: Create a DNS host;  </li>
+         * <li><strong>UPDATE_DNSHOST</strong>: Update a DNS host;  </li>
+         * <li><strong>UPDATE_REGISTRANT_CONTACT</strong>: Update registrant contact;  </li>
+         * <li><strong>DELETE_DOMAIN</strong>: Delete a domain name;  </li>
+         * <li><strong>SYNC_DNSHOST</strong>: Synchronize DNS host.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CHG_DNS</p>
          */
         @NameInMap("TaskType")
         public String taskType;
 
+        /**
+         * <p>Task type description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>修改DNS</p>
+         */
         @NameInMap("TaskTypeDescription")
         public String taskTypeDescription;
 

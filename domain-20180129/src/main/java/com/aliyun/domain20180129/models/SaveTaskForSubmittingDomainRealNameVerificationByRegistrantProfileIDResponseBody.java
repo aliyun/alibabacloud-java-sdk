@@ -4,9 +4,15 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileIDResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The task number.</p>
+     */
     @NameInMap("TaskNo")
     public String taskNo;
 

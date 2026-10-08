@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetupDomainAutoRenewResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8fc97e44-837a-447d-ac61-ea28d2fe8a38</p>
      */
@@ -12,6 +14,8 @@ public class SetupDomainAutoRenewResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

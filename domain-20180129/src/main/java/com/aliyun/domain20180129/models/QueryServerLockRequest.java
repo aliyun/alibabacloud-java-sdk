@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryServerLockRequest extends TeaModel {
     /**
+     * <p>Domain instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>S20181*****85212</p>
      */
@@ -12,6 +14,13 @@ public class QueryServerLockRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Language of error messages returned by the API. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -19,6 +28,8 @@ public class QueryServerLockRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>User IP address. You can set it to <strong>127.0.0.1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

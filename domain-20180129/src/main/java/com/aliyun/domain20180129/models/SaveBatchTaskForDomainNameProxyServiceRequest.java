@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveBatchTaskForDomainNameProxyServiceRequest extends TeaModel {
     /**
+     * <p>List of domain names, separated by commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,13 @@ public class SaveBatchTaskForDomainNameProxyServiceRequest extends TeaModel {
     public java.util.List<String> domainName;
 
     /**
+     * <p>Language for error messages returned by the API. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -28,6 +36,11 @@ public class SaveBatchTaskForDomainNameProxyServiceRequest extends TeaModel {
     public String serviceType;
 
     /**
+     * <p>Enabled or shutdown status. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Shutdown.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +50,8 @@ public class SaveBatchTaskForDomainNameProxyServiceRequest extends TeaModel {
     public Boolean status;
 
     /**
+     * <p>User IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

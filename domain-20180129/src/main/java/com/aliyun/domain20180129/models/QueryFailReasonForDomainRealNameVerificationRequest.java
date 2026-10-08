@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryFailReasonForDomainRealNameVerificationRequest extends TeaModel {
     /**
+     * <p>Domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,13 @@ public class QueryFailReasonForDomainRealNameVerificationRequest extends TeaMode
     public String domainName;
 
     /**
+     * <p>Language of error messages returned by the API. Valid values:  </p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.  </li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -21,6 +29,12 @@ public class QueryFailReasonForDomainRealNameVerificationRequest extends TeaMode
     public String lang;
 
     /**
+     * <p>Review Type. Valid values:  </p>
+     * <ul>
+     * <li><strong>ACTIVATE</strong>: New registration.  </li>
+     * <li><strong>CHGHOLDER</strong>: Change of holder.  </li>
+     * <li><strong>TRANSFER</strong>: Transfer-in.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +44,8 @@ public class QueryFailReasonForDomainRealNameVerificationRequest extends TeaMode
     public String realNameVerificationAction;
 
     /**
+     * <p>User IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

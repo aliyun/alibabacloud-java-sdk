@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryTaskDetailHistoryRequest extends TeaModel {
     /**
+     * <p>Domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -12,6 +14,8 @@ public class QueryTaskDetailHistoryRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>Domain name cursor.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -19,6 +23,13 @@ public class QueryTaskDetailHistoryRequest extends TeaModel {
     public String domainNameCursor;
 
     /**
+     * <p>Language of error messages returned by the API. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -26,6 +37,7 @@ public class QueryTaskDetailHistoryRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Page size.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +47,8 @@ public class QueryTaskDetailHistoryRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Task detail cursor.</p>
+     * 
      * <strong>example:</strong>
      * <p>75addb07-28a3-450e-b5ec</p>
      */
@@ -42,6 +56,10 @@ public class QueryTaskDetailHistoryRequest extends TeaModel {
     public String taskDetailNoCursor;
 
     /**
+     * <p>Job number.</p>
+     * <blockquote>
+     * <p>You can obtain the job number by calling the <a href="https://help.aliyun.com/document_detail/67709.html">QueryTaskList</a> API.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +69,14 @@ public class QueryTaskDetailHistoryRequest extends TeaModel {
     public String taskNo;
 
     /**
+     * <p>Job status. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: Waiting to execute.</li>
+     * <li><strong>1</strong>: Executing.</li>
+     * <li><strong>2</strong>: Succeeded.</li>
+     * <li><strong>3</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -58,6 +84,8 @@ public class QueryTaskDetailHistoryRequest extends TeaModel {
     public Integer taskStatus;
 
     /**
+     * <p>User IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

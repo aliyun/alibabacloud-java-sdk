@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveBatchTaskForCreatingOrderRenewRequest extends TeaModel {
     /**
+     * <p>The coupon ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12312412</p>
      */
@@ -12,6 +14,15 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends TeaModel {
     public String couponNo;
 
     /**
+     * <p>The language of the error messages. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -19,12 +30,15 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The parameters for each domain name to be renewed.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OrderRenewParam")
     public java.util.List<SaveBatchTaskForCreatingOrderRenewRequestOrderRenewParam> orderRenewParam;
 
     /**
+     * <p>The promotion ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123123123</p>
      */
@@ -32,6 +46,14 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends TeaModel {
     public String promotionNo;
 
     /**
+     * <p>Specifies whether to use a coupon. Valid values:</p>
+     * <ul>
+     * <li><p><strong>false</strong>: Do not use a coupon.</p>
+     * </li>
+     * <li><p><strong>true</strong>: Use a coupon.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -39,6 +61,14 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends TeaModel {
     public Boolean useCoupon;
 
     /**
+     * <p>Specifies whether to use a promotion. Valid values:</p>
+     * <ul>
+     * <li><p><strong>false</strong>: Do not use a promotion.</p>
+     * </li>
+     * <li><p><strong>true</strong>: Use a promotion.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -46,6 +76,8 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends TeaModel {
     public Boolean usePromotion;
 
     /**
+     * <p>The user\&quot;s IP address. You can set this parameter to <strong>127.0.0.1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */
@@ -115,6 +147,8 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends TeaModel {
 
     public static class SaveBatchTaskForCreatingOrderRenewRequestOrderRenewParam extends TeaModel {
         /**
+         * <p>The current expiration date of the domain name, expressed in milliseconds since 00:00:00 UTC on January 1, 1970.</p>
+         * 
          * <strong>example:</strong>
          * <p>1522080000000</p>
          */
@@ -122,16 +156,23 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends TeaModel {
         public Long currentExpirationDate;
 
         /**
+         * <p>The domain name that you want to renew. You can obtain a list of your domain names by calling the <a href="https://help.aliyun.com/document_detail/67712.html">QueryDomainList</a> operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>Aliyun.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>Specifies whether to allow the renewal of premium domain names. Default value: false.</p>
+         */
         @NameInMap("PermitPremiumRenew")
         public Boolean permitPremiumRenew;
 
         /**
+         * <p>The renewal duration, in years. Default value: <strong>1</strong>. Valid values: <strong>1</strong> to <strong>10</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

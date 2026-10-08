@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryTransferInListRequest extends TeaModel {
     /**
+     * <p>The domain name, which supports prefix matching (fuzzy query).</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -12,6 +14,13 @@ public class QueryTransferInListRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>The language of error messages returned by the API. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -19,6 +28,7 @@ public class QueryTransferInListRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The page number of the domain name list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +38,7 @@ public class QueryTransferInListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The page size for paging the domain name list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +48,17 @@ public class QueryTransferInListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Transfer status. Valid values:  </p>
+     * <ul>
+     * <li><strong>INIT</strong>: Submit transfer-in.  </li>
+     * <li><strong>AUTHORIZATION</strong>: Authorize transfer-in (email verification).  </li>
+     * <li><strong>NAME_VERIFICATION</strong>: Name review.  </li>
+     * <li><strong>PASSWORD_VERIFICATION</strong>: Transfer password verification.  </li>
+     * <li><strong>PENDING</strong>: Transfer-in in progress.  </li>
+     * <li><strong>SUCCESS</strong>: Transfer-in succeeded.  </li>
+     * <li><strong>FAIL</strong>: Transfer-in failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>INIT</p>
      */
@@ -44,6 +66,8 @@ public class QueryTransferInListRequest extends TeaModel {
     public String simpleTransferInStatus;
 
     /**
+     * <p>End time for submitting the domain name list for transfer-in.</p>
+     * 
      * <strong>example:</strong>
      * <p>1514428524669</p>
      */
@@ -51,6 +75,8 @@ public class QueryTransferInListRequest extends TeaModel {
     public Long submissionEndDate;
 
     /**
+     * <p>The start time for submitting the domain name list for transfer-in.</p>
+     * 
      * <strong>example:</strong>
      * <p>1514428524669</p>
      */
@@ -58,6 +84,8 @@ public class QueryTransferInListRequest extends TeaModel {
     public Long submissionStartDate;
 
     /**
+     * <p>The user IP address, which can be set to <strong>127.0.0.1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

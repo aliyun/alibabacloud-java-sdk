@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveSingleTaskForApplyQuickTransferOutOpenlyRequest extends TeaModel {
     /**
+     * <p>The domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class SaveSingleTaskForApplyQuickTransferOutOpenlyRequest extends TeaMode
     public String domainName;
 
     /**
+     * <p>The language of the returned error message. Valid values: zh (Chinese) and en (English). The default is en.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -21,6 +24,8 @@ public class SaveSingleTaskForApplyQuickTransferOutOpenlyRequest extends TeaMode
     public String lang;
 
     /**
+     * <p>The user\&quot;s client IP.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetOperationOssUploadPolicyResponseBody extends TeaModel {
     /**
+     * <p>Access ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>hObpgEXoca42****</p>
      */
@@ -12,6 +14,8 @@ public class GetOperationOssUploadPolicyResponseBody extends TeaModel {
     public String accessid;
 
     /**
+     * <p>Encrypted policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJleHBpcmF0aW9uIjoiMjAaMC0wNy0wMlQxKToyMDoxMS44ODRaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsNTI0Mjg4MDBdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiMTIxOTU0MTE2MTIxMzA1Ny9PRkZMSU5FX1RSQU5TRkVSLzE1OTM2ODg1MTE4ODMi****</p>
      */
@@ -19,6 +23,8 @@ public class GetOperationOssUploadPolicyResponseBody extends TeaModel {
     public String encodedPolicy;
 
     /**
+     * <p>Expiration time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1593688811881</p>
      */
@@ -26,6 +32,8 @@ public class GetOperationOssUploadPolicyResponseBody extends TeaModel {
     public String expireTime;
 
     /**
+     * <p>File directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1219541161213157/OFFLINE_TRANSFER/159368851****</p>
      */
@@ -42,6 +50,8 @@ public class GetOperationOssUploadPolicyResponseBody extends TeaModel {
     public String host;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9DFCF6F8-243C-40EC-8035-4B12FEFD7D011</p>
      */
@@ -49,6 +59,8 @@ public class GetOperationOssUploadPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Signature data.</p>
+     * 
      * <strong>example:</strong>
      * <p>pNVECGkyL0tl4bKXekV5ErZ****</p>
      */

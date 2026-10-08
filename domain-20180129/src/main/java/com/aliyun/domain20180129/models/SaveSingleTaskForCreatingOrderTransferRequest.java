@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveSingleTaskForCreatingOrderTransferRequest extends TeaModel {
     /**
+     * <p>Domain name transfer-in password.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends TeaModel {
     public String authorizationCode;
 
     /**
+     * <p>Coupon number.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
@@ -21,6 +24,7 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends TeaModel {
     public String couponNo;
 
     /**
+     * <p>Domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,13 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>Language for error messages returned by the API. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese;</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -37,6 +48,8 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Is transfer-in of premium domain names allowed. Default value: <strong>false</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -44,6 +57,8 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends TeaModel {
     public Boolean permitPremiumTransfer;
 
     /**
+     * <p>Coupon number.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
@@ -51,6 +66,7 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends TeaModel {
     public String promotionNo;
 
     /**
+     * <p>ID of the domain name registrant profile that has passed identity verification.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +76,8 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends TeaModel {
     public Long registrantProfileId;
 
     /**
+     * <p>Is a coupon used.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -67,6 +85,8 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends TeaModel {
     public Boolean useCoupon;
 
     /**
+     * <p>Is a coupon used.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -74,6 +94,8 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends TeaModel {
     public Boolean usePromotion;
 
     /**
+     * <p>User IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveBatchTaskForReserveDropListDomainRequest extends TeaModel {
     /**
+     * <p>The contact template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends TeaModel {
     public String contactTemplateId;
 
     /**
+     * <p>The domain list.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Domains")
@@ -41,13 +43,42 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends TeaModel {
     }
 
     public static class SaveBatchTaskForReserveDropListDomainRequestDomains extends TeaModel {
+        /**
+         * <p>The first custom DNS server.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is required only if you set <strong>AliyunDns</strong> to <strong>false</strong>.</li>
+         * </ul>
+         * </blockquote>
+         * <ul>
+         * <li>Make sure that your custom DNS servers are valid. Otherwise, the domain reservation may fail.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ns11.big<a href="http://www.com">www.com</a></p>
+         */
         @NameInMap("Dns1")
         public String dns1;
 
+        /**
+         * <p>The second custom DNS server.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is required only if you set <strong>AliyunDns</strong> to <strong>false</strong>.</li>
+         * </ul>
+         * </blockquote>
+         * <ul>
+         * <li>Make sure that your custom DNS servers are valid. Otherwise, the domain reservation may fail.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>nsb.263idc.net</p>
+         */
         @NameInMap("Dns2")
         public String dns2;
 
         /**
+         * <p>The domain name to reserve.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

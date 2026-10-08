@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveSingleTaskForSaveArtExtensionResponseBody extends TeaModel {
     /**
+     * <p>Unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E2598CAF-DBFE-494E-95EF-B42A33C178AB</p>
      */
@@ -12,6 +14,8 @@ public class SaveSingleTaskForSaveArtExtensionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Job number.</p>
+     * 
      * <strong>example:</strong>
      * <p>e893148f-6343-4ae1-9eba-6e2a4116e141</p>
      */

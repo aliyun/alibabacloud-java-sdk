@@ -4,10 +4,15 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class CheckIntlFixPriceDomainStatusResponseBody extends TeaModel {
+    /**
+     * <p>The returned object.</p>
+     */
     @NameInMap("Module")
     public CheckIntlFixPriceDomainStatusResponseBodyModule module;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>40F46D3D-F4F3-4CCB-AC30-2DD20E32E528</p>
      */
@@ -37,6 +42,14 @@ public class CheckIntlFixPriceDomainStatusResponseBody extends TeaModel {
 
     public static class CheckIntlFixPriceDomainStatusResponseBodyModule extends TeaModel {
         /**
+         * <p>The currency. Valid values:</p>
+         * <ul>
+         * <li><p>RMB: Chinese Yuan.</p>
+         * </li>
+         * <li><p>USD: US Dollar.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>USD</p>
          */
@@ -44,6 +57,8 @@ public class CheckIntlFixPriceDomainStatusResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The expiration date of the domain name. After this date, the domain name requires renewal.</p>
+         * 
          * <strong>example:</strong>
          * <p>1567353497</p>
          */
@@ -51,6 +66,8 @@ public class CheckIntlFixPriceDomainStatusResponseBody extends TeaModel {
         public Long deadDate;
 
         /**
+         * <p>The domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */
@@ -58,6 +75,8 @@ public class CheckIntlFixPriceDomainStatusResponseBody extends TeaModel {
         public String domain;
 
         /**
+         * <p>The sale deadline of the domain name. After this time, the domain name is no longer available for sale.</p>
+         * 
          * <strong>example:</strong>
          * <p>1567353497</p>
          */
@@ -65,6 +84,14 @@ public class CheckIntlFixPriceDomainStatusResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>Indicates whether the domain name is a premium domain name. Valid values:</p>
+         * <ul>
+         * <li><p>true: The domain name is a premium domain name.</p>
+         * </li>
+         * <li><p>false: The domain name is not a premium domain name.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -72,6 +99,8 @@ public class CheckIntlFixPriceDomainStatusResponseBody extends TeaModel {
         public Boolean premium;
 
         /**
+         * <p>The price.</p>
+         * 
          * <strong>example:</strong>
          * <p>20.00</p>
          */
@@ -79,6 +108,8 @@ public class CheckIntlFixPriceDomainStatusResponseBody extends TeaModel {
         public Long price;
 
         /**
+         * <p>The registration date of the domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>1566353497</p>
          */

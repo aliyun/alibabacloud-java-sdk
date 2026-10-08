@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateIntlFixedPriceDomainOrderRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
+     * <ul>
+     * <li><p>false (default): manual payment.</p>
+     * </li>
+     * <li><p>true: automatic payment.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +20,8 @@ public class CreateIntlFixedPriceDomainOrderRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
+     * <p>The contact ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>13350500</p>
      */
@@ -19,6 +29,8 @@ public class CreateIntlFixedPriceDomainOrderRequest extends TeaModel {
     public Long contactId;
 
     /**
+     * <p>The domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>appp16.com</p>
      */
@@ -26,6 +38,8 @@ public class CreateIntlFixedPriceDomainOrderRequest extends TeaModel {
     public String domain;
 
     /**
+     * <p>The expected price.</p>
+     * 
      * <strong>example:</strong>
      * <p>58.00</p>
      */

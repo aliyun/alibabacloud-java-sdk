@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class SaveBatchTaskForModifyingDomainDnsRequest extends TeaModel {
     /**
+     * <p>Specifies whether to use Alibaba Cloud DNS servers. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Yes.</p>
+     * </li>
+     * <li><p><strong>false</strong>: No.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +21,7 @@ public class SaveBatchTaskForModifyingDomainDnsRequest extends TeaModel {
     public Boolean aliyunDns;
 
     /**
+     * <p>The domain names.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +31,8 @@ public class SaveBatchTaskForModifyingDomainDnsRequest extends TeaModel {
     public java.util.List<String> domainName;
 
     /**
+     * <p>The new DNS servers. This parameter is required if <strong>AliyunDns</strong> is set to <strong>false</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>ns1.test.com</p>
      */
@@ -30,6 +40,15 @@ public class SaveBatchTaskForModifyingDomainDnsRequest extends TeaModel {
     public java.util.List<String> domainNameServer;
 
     /**
+     * <p>The language of API error messages. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -37,6 +56,8 @@ public class SaveBatchTaskForModifyingDomainDnsRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The user IP address. You can set this parameter to <strong>127.0.0.1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

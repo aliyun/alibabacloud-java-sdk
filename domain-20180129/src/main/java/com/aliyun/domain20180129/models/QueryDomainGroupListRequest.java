@@ -4,10 +4,25 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryDomainGroupListRequest extends TeaModel {
+    /**
+     * <p>The user-defined domain group name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>默认分组</p>
+     */
     @NameInMap("DomainGroupName")
     public String domainGroupName;
 
     /**
+     * <p>The language of error messages in the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
+     * </ul>
+     * <p>The default value is <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -21,6 +36,15 @@ public class QueryDomainGroupListRequest extends TeaModel {
     public String orderKeyType;
 
     /**
+     * <p>Specifies whether to show domain groups that are being deleted. Valid values:</p>
+     * <ul>
+     * <li><p><strong>false</strong></p>
+     * </li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * </ul>
+     * <p>The default value is <strong>false</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -28,6 +52,8 @@ public class QueryDomainGroupListRequest extends TeaModel {
     public Boolean showDeletingGroup;
 
     /**
+     * <p>The client IP address. You can set this parameter to <strong>127.0.0.1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

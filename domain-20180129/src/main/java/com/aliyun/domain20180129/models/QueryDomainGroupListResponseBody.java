@@ -8,6 +8,8 @@ public class QueryDomainGroupListResponseBody extends TeaModel {
     public QueryDomainGroupListResponseBodyData data;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>80011ABC-F573-4795-B0E8-377BFBBA3422</p>
      */

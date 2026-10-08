@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveSingleTaskForUpdatingContactInfoRequest extends TeaModel {
     /**
+     * <p>Specifies whether to add a transfer-out restriction. This parameter takes effect only when <strong>ContactType</strong> is <strong>registrant</strong>. It indicates whether to restrict domain transfer-out for 60 days after the registrant is updated. Default value: <strong>false</strong>, which means no transfer-out restriction is applied.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,13 @@ public class SaveSingleTaskForUpdatingContactInfoRequest extends TeaModel {
     public Boolean addTransferLock;
 
     /**
+     * <p>Contact type. Valid values:</p>
+     * <ul>
+     * <li><strong>registrant</strong></li>
+     * <li><strong>admin</strong></li>
+     * <li><strong>billing</strong></li>
+     * <li><strong>tech</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +30,7 @@ public class SaveSingleTaskForUpdatingContactInfoRequest extends TeaModel {
     public String contactType;
 
     /**
+     * <p>Domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +40,8 @@ public class SaveSingleTaskForUpdatingContactInfoRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>Domain instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>S123456789</p>
      */
@@ -37,6 +49,13 @@ public class SaveSingleTaskForUpdatingContactInfoRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Language of error messages returned by the API. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -44,6 +63,7 @@ public class SaveSingleTaskForUpdatingContactInfoRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Information template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +73,8 @@ public class SaveSingleTaskForUpdatingContactInfoRequest extends TeaModel {
     public Long registrantProfileId;
 
     /**
+     * <p>User IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

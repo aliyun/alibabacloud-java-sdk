@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CheckTransferInFeasibilityResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the domain name can be transferred in. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The domain name can be transferred in.</li>
+     * <li><strong>false</strong>: The domain name cannot be transferred in.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +18,8 @@ public class CheckTransferInFeasibilityResponseBody extends TeaModel {
     public Boolean canTransfer;
 
     /**
+     * <p>The error code returned when the domain name cannot be transferred in.</p>
+     * 
      * <strong>example:</strong>
      * <p>CheckTransferResult.DomainTransferProhibited</p>
      */
@@ -19,6 +27,8 @@ public class CheckTransferInFeasibilityResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The error description returned when the domain name cannot be transferred in.</p>
+     * 
      * <strong>example:</strong>
      * <p>This domain name is in transfer prohibited status, so it cannot be transferred. You can contact your original registrar to change its status.</p>
      */
@@ -26,6 +36,8 @@ public class CheckTransferInFeasibilityResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The product ID of the domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>2a</p>
      */
@@ -33,6 +45,8 @@ public class CheckTransferInFeasibilityResponseBody extends TeaModel {
     public String productId;
 
     /**
+     * <p>The unique request access token.</p>
+     * 
      * <strong>example:</strong>
      * <p>FC0D6B89-2353-4D64-BD80-6606A7DBD7C1</p>
      */

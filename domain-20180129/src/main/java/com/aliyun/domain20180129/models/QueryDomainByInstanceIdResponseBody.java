@@ -15,12 +15,20 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public QueryDomainByInstanceIdResponseBodyDnsList dnsList;
 
     /**
+     * <p>The ID of the domain name group. You can call the <a href="https://help.aliyun.com/document_detail/69362.html">QueryDomainGroupList</a> operation to obtain the ID of the domain name group.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */
     @NameInMap("DomainGroupId")
     public Long domainGroupId;
 
+    /**
+     * <p>The name of the domain name group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试分组</p>
+     */
     @NameInMap("DomainGroupName")
     public String domainGroupName;
 
@@ -28,6 +36,8 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public String domainLifecycleStatus;
 
     /**
+     * <p>The domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -35,6 +45,8 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public String domainName;
 
     /**
+     * <p>Indicates whether the domain name privacy protection service is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -42,6 +54,18 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public Boolean domainNameProxyService;
 
     /**
+     * <p>The status of the domain name review. Valid values:</p>
+     * <ul>
+     * <li><p><strong>NONAUDIT</strong>: The domain name is not verified.</p>
+     * </li>
+     * <li><p><strong>SUCCEED</strong>: The domain name is verified.</p>
+     * </li>
+     * <li><p><strong>FAILED</strong>: The domain name fails to be verified.</p>
+     * </li>
+     * <li><p><strong>AUDITING</strong>: The domain name is being verified.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>NONAUDIT</p>
      */
@@ -49,6 +73,16 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public String domainNameVerificationStatus;
 
     /**
+     * <p>The status of the domain name. Valid values:</p>
+     * <ul>
+     * <li><p>1: The domain name needs to be renewed.</p>
+     * </li>
+     * <li><p>2: The domain name needs to be redeemed.</p>
+     * </li>
+     * <li><p>3: The domain name is normal.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -56,6 +90,16 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public String domainStatus;
 
     /**
+     * <p>The type of the domain name. Valid values:</p>
+     * <ul>
+     * <li><p>New gTLD.</p>
+     * </li>
+     * <li><p>gTLD.</p>
+     * </li>
+     * <li><p>ccTLD.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>gTLD</p>
      */
@@ -63,6 +107,8 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public String domainType;
 
     /**
+     * <p>The email address of the domain name registrant.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:username@example.com">username@example.com</a></p>
      */
@@ -70,6 +116,14 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public String email;
 
     /**
+     * <p>Indicates whether the DNS resolution for the domain name is suspended. Valid values:</p>
+     * <ul>
+     * <li><p><strong>false</strong>: The DNS resolution for the domain name is not suspended.</p>
+     * </li>
+     * <li><p><strong>true</strong>: The DNS resolution for the domain name is suspended.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -77,6 +131,14 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public Boolean emailVerificationClientHold;
 
     /**
+     * <p>Indicates whether the email address of the domain name registrant is verified. Valid values:</p>
+     * <ul>
+     * <li><p><strong>0</strong>: The email address is not verified.</p>
+     * </li>
+     * <li><p><strong>1</strong>: The email address is verified.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -84,6 +146,8 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public Integer emailVerificationStatus;
 
     /**
+     * <p>The number of days from the expiration date to the current date.</p>
+     * 
      * <strong>example:</strong>
      * <p>356</p>
      */
@@ -91,6 +155,8 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public Integer expirationCurrDateDiff;
 
     /**
+     * <p>The expiration date of the domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>2019-12-07 17:02:13</p>
      */
@@ -98,6 +164,8 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public String expirationDate;
 
     /**
+     * <p>The expiration timestamp of the domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>1625111915000</p>
      */
@@ -105,6 +173,14 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public Long expirationDateLong;
 
     /**
+     * <p>The expiration status of the domain name. Valid values:</p>
+     * <ul>
+     * <li><p><strong>1</strong>: The domain name has not expired.</p>
+     * </li>
+     * <li><p><strong>2</strong>: The domain name has expired.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -112,6 +188,8 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public String expirationDateStatus;
 
     /**
+     * <p>The instance ID of the domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>S20179H1BBI9test</p>
      */
@@ -119,6 +197,14 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Indicates whether the domain name is a premium domain name. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: a premium domain name.</p>
+     * </li>
+     * <li><p><strong>false</strong>: not a premium domain name.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -133,6 +219,21 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public String privacyServiceStatus;
 
     /**
+     * <p>The real-name verification status of the domain name. Valid values:</p>
+     * <ul>
+     * <li><p><strong>NONAUDIT</strong>: The real-name verification is not performed.</p>
+     * </li>
+     * <li><p><strong>SUCCEED</strong>: The real-name verification is successful.</p>
+     * </li>
+     * <li><p><strong>FAILED</strong>: The real-name verification fails.</p>
+     * </li>
+     * <li><p><strong>AUDITING</strong>: The real-name verification is in progress.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>The real-name verification status of a domain name is a composite status of domain name review and real-name verification. The real-name verification of a domain name is successful only when both the domain name review and real-name verification are successful.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>NONAUDIT</p>
      */
@@ -140,6 +241,8 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public String realNameStatus;
 
     /**
+     * <p>The name of the contact person.</p>
+     * 
      * <strong>example:</strong>
      * <p>Test litm</p>
      */
@@ -147,6 +250,8 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public String registrantName;
 
     /**
+     * <p>The registrant of the domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>Test litm</p>
      */
@@ -154,6 +259,14 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public String registrantOrganization;
 
     /**
+     * <p>The type of the domain name registrant. Valid values:</p>
+     * <ul>
+     * <li><p><strong>1</strong>: an individual.</p>
+     * </li>
+     * <li><p><strong>2</strong>: an enterprise.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -161,6 +274,14 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public String registrantType;
 
     /**
+     * <p>The status of the domain name registrant. Valid values:</p>
+     * <ul>
+     * <li><p><strong>PENDING</strong>: The information about the domain name registrant is being modified.</p>
+     * </li>
+     * <li><p><strong>NORMAL</strong>: The information about the domain name registrant is not being modified.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
      */
@@ -168,6 +289,8 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public String registrantUpdatingStatus;
 
     /**
+     * <p>The registration date of the domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>2017-12-07 17:02:13</p>
      */
@@ -175,16 +298,26 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public String registrationDate;
 
     /**
+     * <p>The registration timestamp of the domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>1625111915000</p>
      */
     @NameInMap("RegistrationDateLong")
     public Long registrationDateLong;
 
+    /**
+     * <p>The remarks of the domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试备注</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>23C9B3C4-9E2C-4405-A88D-BD33E459D140</p>
      */
@@ -192,6 +325,8 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmw6bpc6n7zai</p>
      */
@@ -202,6 +337,14 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public QueryDomainByInstanceIdResponseBodyTag tag;
 
     /**
+     * <p>The status of the domain name transfer. Valid values:</p>
+     * <ul>
+     * <li><p><strong>NORMAL</strong>: The domain name is not being transferred out of Alibaba Cloud.</p>
+     * </li>
+     * <li><p><strong>PENDING</strong>: The domain name is being transferred out of Alibaba Cloud.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
      */
@@ -209,6 +352,16 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public String transferOutStatus;
 
     /**
+     * <p>The status of the domain name transfer lock. Valid values:</p>
+     * <ul>
+     * <li><p><strong>NONE_SETTING</strong>: The domain name transfer lock is not enabled.</p>
+     * </li>
+     * <li><p><strong>OPEN</strong>: The domain name transfer lock is enabled.</p>
+     * </li>
+     * <li><p><strong>CLOSE</strong>: The domain name transfer lock is disabled.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CLOSE</p>
      */
@@ -216,6 +369,16 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public String transferProhibitionLock;
 
     /**
+     * <p>The status of the security lock for the domain name. Valid values:</p>
+     * <ul>
+     * <li><p><strong>NONE_SETTING</strong>: The security lock is not enabled.</p>
+     * </li>
+     * <li><p><strong>OPEN</strong>: The security lock is enabled.</p>
+     * </li>
+     * <li><p><strong>CLOSE</strong>: The security lock is disabled.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CLOSE</p>
      */
@@ -223,15 +386,35 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public String updateProhibitionLock;
 
     /**
+     * <p>The user ID (UID) of the Alibaba Cloud account.</p>
+     * 
      * <strong>example:</strong>
      * <p>121000000****</p>
      */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>The contact person in Chinese.</p>
+     * <blockquote>
+     * <p>This parameter is applicable only to the China site.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>李四</p>
+     */
     @NameInMap("ZhRegistrantName")
     public String zhRegistrantName;
 
+    /**
+     * <p>The registrant of the domain name in Chinese.</p>
+     * <blockquote>
+     * <p>This parameter is applicable only to the China site.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>李四</p>
+     */
     @NameInMap("ZhRegistrantOrganization")
     public String zhRegistrantOrganization;
 

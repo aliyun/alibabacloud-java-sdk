@@ -52,6 +52,9 @@ public class QueryDomainSpecialBizDetailResponseBody extends TeaModel {
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>参数错误</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -224,12 +227,18 @@ public class QueryDomainSpecialBizDetailResponseBody extends TeaModel {
 
         /**
          * <p>The city.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>鞍山市</p>
          */
         @NameInMap("CCity")
         public String CCity;
 
         /**
          * <p>The organization name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>河北易迪管道制造有限公司</p>
          */
         @NameInMap("CCompany")
         public String CCompany;
@@ -245,18 +254,27 @@ public class QueryDomainSpecialBizDetailResponseBody extends TeaModel {
 
         /**
          * <p>The contact name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>佟大伟</p>
          */
         @NameInMap("CName")
         public String CName;
 
         /**
          * <p>The province.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>辽宁</p>
          */
         @NameInMap("CProvince")
         public String CProvince;
 
         /**
          * <p>The address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>铁西区新开街59-4号</p>
          */
         @NameInMap("CVenu")
         public String CVenu;
@@ -923,12 +941,18 @@ public class QueryDomainSpecialBizDetailResponseBody extends TeaModel {
     public static class QueryDomainSpecialBizDetailResponseBodyModule extends TeaModel {
         /**
          * <p>The review information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>审核通过</p>
          */
         @NameInMap("AuditMsg")
         public String auditMsg;
 
         /**
          * <p>The business name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GOV.CN域名注册(test003.cn)</p>
          */
         @NameInMap("BizName")
         public String bizName;
@@ -1061,6 +1085,9 @@ public class QueryDomainSpecialBizDetailResponseBody extends TeaModel {
 
         /**
          * <p>The description of business status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>信息审核成功</p>
          */
         @NameInMap("StatusDesc")
         public String statusDesc;

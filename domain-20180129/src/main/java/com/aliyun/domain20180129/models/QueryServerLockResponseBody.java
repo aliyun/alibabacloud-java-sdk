@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryServerLockResponseBody extends TeaModel {
     /**
+     * <p>Domain instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>S20190N1DAI4****</p>
      */
@@ -12,6 +14,8 @@ public class QueryServerLockResponseBody extends TeaModel {
     public String domainInstanceId;
 
     /**
+     * <p>The queried domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -19,6 +23,8 @@ public class QueryServerLockResponseBody extends TeaModel {
     public String domainName;
 
     /**
+     * <p>Expiration Time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2030-07-10 17:37:36</p>
      */
@@ -26,6 +32,8 @@ public class QueryServerLockResponseBody extends TeaModel {
     public String expireDate;
 
     /**
+     * <p>Creation Time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-07-10 17:37:36</p>
      */
@@ -33,6 +41,8 @@ public class QueryServerLockResponseBody extends TeaModel {
     public String gmtCreate;
 
     /**
+     * <p>Updated At.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-07-10 17:37:36</p>
      */
@@ -40,6 +50,8 @@ public class QueryServerLockResponseBody extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>Registry lock instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>S2021591IQ28****</p>
      */
@@ -47,6 +59,8 @@ public class QueryServerLockResponseBody extends TeaModel {
     public String lockInstanceId;
 
     /**
+     * <p>Lock product ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1807**</p>
      */
@@ -54,6 +68,8 @@ public class QueryServerLockResponseBody extends TeaModel {
     public String lockProductId;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9DFCF6F8-243C-****-8035-4B12FEFD7D48</p>
      */
@@ -61,6 +77,13 @@ public class QueryServerLockResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Registry lock status. Valid values:</p>
+     * <ul>
+     * <li>1: Disabled</li>
+     * <li>2: Enabled</li>
+     * <li>3: Shutdown</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -68,6 +91,8 @@ public class QueryServerLockResponseBody extends TeaModel {
     public Integer serverLockStatus;
 
     /**
+     * <p>The time when the lock takes effect.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-07-10 17:37:36</p>
      */
@@ -75,6 +100,8 @@ public class QueryServerLockResponseBody extends TeaModel {
     public String startDate;
 
     /**
+     * <p>User UID.</p>
+     * 
      * <strong>example:</strong>
      * <p>121000000****</p>
      */

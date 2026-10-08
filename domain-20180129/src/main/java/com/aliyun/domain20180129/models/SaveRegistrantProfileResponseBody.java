@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveRegistrantProfileResponseBody extends TeaModel {
     /**
+     * <p>Registrant profile ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3600000</p>
      */
@@ -12,6 +14,8 @@ public class SaveRegistrantProfileResponseBody extends TeaModel {
     public Long registrantProfileId;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D09B153B-294D-42F1-BB61-F1C72136DFD3</p>
      */

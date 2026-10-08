@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TransferInRefetchWhoisEmailResponseBody extends TeaModel {
     /**
+     * <p>Unique Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>40F46D3D-F4F3-4CCB-AC30-2DD20E32E528</p>
      */

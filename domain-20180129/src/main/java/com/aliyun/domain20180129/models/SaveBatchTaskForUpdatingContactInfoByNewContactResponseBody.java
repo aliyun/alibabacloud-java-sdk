@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveBatchTaskForUpdatingContactInfoByNewContactResponseBody extends TeaModel {
     /**
+     * <p>Unique request access token.</p>
+     * 
      * <strong>example:</strong>
      * <p>464AF466-CA8E-43A8-B61D-test</p>
      */
@@ -12,6 +14,8 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactResponseBody extends
     public String requestId;
 
     /**
+     * <p>Job number.</p>
+     * 
      * <strong>example:</strong>
      * <p>65de2165-ca09-491f-9fe0-test</p>
      */

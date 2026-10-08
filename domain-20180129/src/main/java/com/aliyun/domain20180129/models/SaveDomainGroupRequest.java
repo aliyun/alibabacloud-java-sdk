@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveDomainGroupRequest extends TeaModel {
     /**
+     * <p>Domain group ID. If this parameter is not provided, a new group is created. If it is provided, the domain group name is updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
@@ -12,12 +14,23 @@ public class SaveDomainGroupRequest extends TeaModel {
     public Long domainGroupId;
 
     /**
+     * <p>Domain Name Group Name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试分组</p>
      */
     @NameInMap("DomainGroupName")
     public String domainGroupName;
 
     /**
+     * <p>Language for error messages returned by the API. Valid values:  </p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese;  </li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * <p>Default value is <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -25,6 +38,8 @@ public class SaveDomainGroupRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>User IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

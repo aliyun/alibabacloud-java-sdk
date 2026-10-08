@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveTaskForSubmittingDomainDeleteRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,13 @@ public class SaveTaskForSubmittingDomainDeleteRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The language of the error message returned by the API. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
+     * </ul>
+     * <p>Default value: en.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -21,6 +29,8 @@ public class SaveTaskForSubmittingDomainDeleteRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The user IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

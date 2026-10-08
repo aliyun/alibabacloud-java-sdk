@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryChangeLogListResponseBody extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +17,8 @@ public class QueryChangeLogListResponseBody extends TeaModel {
     public QueryChangeLogListResponseBodyData data;
 
     /**
+     * <p>Indicates whether a next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -22,6 +26,8 @@ public class QueryChangeLogListResponseBody extends TeaModel {
     public Boolean nextPage;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +35,8 @@ public class QueryChangeLogListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Indicates whether a previous page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -36,6 +44,8 @@ public class QueryChangeLogListResponseBody extends TeaModel {
     public Boolean prePage;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2DEDFF32-7827-46B1-BE90-3DB8ABD91A58</p>
      */
@@ -43,6 +53,8 @@ public class QueryChangeLogListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The API returns a maximum of 1,000 recent records per query, regardless of the specified page size. If your query matches more than 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>. To retrieve all results, narrow the time range and query again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +62,8 @@ public class QueryChangeLogListResponseBody extends TeaModel {
     public Boolean resultLimit;
 
     /**
+     * <p>The total number of items.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -57,6 +71,8 @@ public class QueryChangeLogListResponseBody extends TeaModel {
     public Integer totalItemNum;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */

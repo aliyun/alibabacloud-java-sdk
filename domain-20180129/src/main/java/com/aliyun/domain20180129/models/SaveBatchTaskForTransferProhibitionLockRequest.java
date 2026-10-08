@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveBatchTaskForTransferProhibitionLockRequest extends TeaModel {
     /**
+     * <p>The domain names for which you want to enable or disable the transfer prohibition lock.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,15 @@ public class SaveBatchTaskForTransferProhibitionLockRequest extends TeaModel {
     public java.util.List<String> domainName;
 
     /**
+     * <p>The language of the error message that is returned if the request fails. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -21,6 +31,13 @@ public class SaveBatchTaskForTransferProhibitionLockRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Specifies whether to enable or disable the transfer prohibition lock. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Enable the transfer prohibition lock.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Disable the transfer prohibition lock.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +47,8 @@ public class SaveBatchTaskForTransferProhibitionLockRequest extends TeaModel {
     public Boolean status;
 
     /**
+     * <p>The client IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

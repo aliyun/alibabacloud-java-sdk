@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveSingleTaskForCancelingTransferInRequest extends TeaModel {
     /**
+     * <p>Domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,13 @@ public class SaveSingleTaskForCancelingTransferInRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>Language for the error message returned by the API. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -21,6 +29,8 @@ public class SaveSingleTaskForCancelingTransferInRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>User IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class LookupTmchNoticeRequest extends TeaModel {
     /**
+     * <p>The trademark claim key. Call the <a href="https://help.aliyun.com/document_detail/97210.htm?spm=a2c4g.11186623.0.0.4aec615fTVPYjt">CheckDomainSunriseClaim</a> operation to obtain this key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,15 @@ public class LookupTmchNoticeRequest extends TeaModel {
     public String claimKey;
 
     /**
+     * <p>The language of the error messages that are returned by the API. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -21,6 +31,8 @@ public class LookupTmchNoticeRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The user\&quot;s IP address. You can set this parameter to <strong>127.0.0.1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

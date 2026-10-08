@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryTaskListRequest extends TeaModel {
     /**
+     * <p>Start time of the creation date range for the query, expressed as the number of milliseconds since 00:00 on January 1, 1970, UTC. Currently, queries are supported only by day.</p>
+     * 
      * <strong>example:</strong>
      * <p>1522080000000</p>
      */
@@ -12,6 +14,8 @@ public class QueryTaskListRequest extends TeaModel {
     public Long beginCreateTime;
 
     /**
+     * <p>End time of the creation date range for the query, expressed as the number of milliseconds since 00:00 on January 1, 1970, UTC. Currently, queries are supported only by day.</p>
+     * 
      * <strong>example:</strong>
      * <p>1522080000000</p>
      */
@@ -19,6 +23,13 @@ public class QueryTaskListRequest extends TeaModel {
     public Long endCreateTime;
 
     /**
+     * <p>Language for API error messages. Valid values:  </p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.  </li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -26,6 +37,7 @@ public class QueryTaskListRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Page number for paging.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +47,7 @@ public class QueryTaskListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>Page size for paging.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +57,8 @@ public class QueryTaskListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>User IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

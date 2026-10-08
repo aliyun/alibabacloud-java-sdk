@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class VerifyContactFieldResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABAC3BAC-FCFA-4DAE-B47C-FA4105CB07C6</p>
      */

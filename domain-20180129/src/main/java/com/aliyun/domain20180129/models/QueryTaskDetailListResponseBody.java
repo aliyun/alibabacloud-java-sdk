@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryTaskDetailListResponseBody extends TeaModel {
     /**
-     * <p>The page number returned.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
     public QueryTaskDetailListResponseBodyData data;
 
     /**
-     * <p>Indicates whether the current page is followed by a page.</p>
+     * <p>Indicates whether a next page exists.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -35,7 +35,7 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Indicates whether the current page is preceded by a page.</p>
+     * <p>Indicates whether a previous page exists.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

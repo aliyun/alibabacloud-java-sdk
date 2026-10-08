@@ -5,26 +5,35 @@ import com.aliyun.tea.*;
 
 public class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileIDRequest extends TeaModel {
     /**
+     * <p>The domain name to submit for real-name verification.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
+     * <p>The ID of the domain name instance.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The language of the error message to return. Valid values: <code>zh</code> (Chinese) and <code>en</code> (English). Default value: <code>en</code>.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
     /**
+     * <p>The ID of the registrant profile to use for real-name verification.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegistrantProfileId")
     public Long registrantProfileId;
 
+    /**
+     * <p>The IP address of the client that makes the request.</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

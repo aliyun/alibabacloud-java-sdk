@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryContactInfoResponseBody extends TeaModel {
     /**
+     * <p>Mailing address (English).</p>
+     * 
      * <strong>example:</strong>
      * <p>xi hu qu *** jiedao *** xiaoqu *** zhuang 101</p>
      */
@@ -12,6 +14,8 @@ public class QueryContactInfoResponseBody extends TeaModel {
     public String address;
 
     /**
+     * <p>City (English).</p>
+     * 
      * <strong>example:</strong>
      * <p>hang zhou shi</p>
      */
@@ -19,6 +23,8 @@ public class QueryContactInfoResponseBody extends TeaModel {
     public String city;
 
     /**
+     * <p>Country code. For example, <strong>CN</strong> represents China and <strong>US</strong> represents the United States.</p>
+     * 
      * <strong>example:</strong>
      * <p>CN</p>
      */
@@ -26,6 +32,8 @@ public class QueryContactInfoResponseBody extends TeaModel {
     public String country;
 
     /**
+     * <p>Domain registration date.</p>
+     * 
      * <strong>example:</strong>
      * <p>2019-03-20 11:37:29</p>
      */
@@ -33,6 +41,8 @@ public class QueryContactInfoResponseBody extends TeaModel {
     public String createDate;
 
     /**
+     * <p>Mailbox.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:username@example.com">username@example.com</a></p>
      */
@@ -40,6 +50,8 @@ public class QueryContactInfoResponseBody extends TeaModel {
     public String email;
 
     /**
+     * <p>Postal code.</p>
+     * 
      * <strong>example:</strong>
      * <p>310024</p>
      */
@@ -47,6 +59,8 @@ public class QueryContactInfoResponseBody extends TeaModel {
     public String postalCode;
 
     /**
+     * <p>Province (English).</p>
+     * 
      * <strong>example:</strong>
      * <p>zhe jiang</p>
      */
@@ -54,6 +68,8 @@ public class QueryContactInfoResponseBody extends TeaModel {
     public String province;
 
     /**
+     * <p>Contact name (English).</p>
+     * 
      * <strong>example:</strong>
      * <p>zhang san</p>
      */
@@ -61,6 +77,8 @@ public class QueryContactInfoResponseBody extends TeaModel {
     public String registrantName;
 
     /**
+     * <p>Registrant name (English).</p>
+     * 
      * <strong>example:</strong>
      * <p>zhang san</p>
      */
@@ -68,6 +86,8 @@ public class QueryContactInfoResponseBody extends TeaModel {
     public String registrantOrganization;
 
     /**
+     * <p>Unique request access token.</p>
+     * 
      * <strong>example:</strong>
      * <p>C39ECA8A-BB5E-4F92-B013-6A032FA06B04</p>
      */
@@ -75,6 +95,8 @@ public class QueryContactInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The country code for the telephone number. For example, the country code for China is <strong>86</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>86</p>
      */
@@ -82,6 +104,8 @@ public class QueryContactInfoResponseBody extends TeaModel {
     public String telArea;
 
     /**
+     * <p>Telephone extension number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */
@@ -89,24 +113,56 @@ public class QueryContactInfoResponseBody extends TeaModel {
     public String telExt;
 
     /**
+     * <p>Telephone number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1820000****</p>
      */
     @NameInMap("Telephone")
     public String telephone;
 
+    /**
+     * <p>Mailing address (in Chinese).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>西湖区<em><strong>街道</strong></em>小区***幢101</p>
+     */
     @NameInMap("ZhAddress")
     public String zhAddress;
 
+    /**
+     * <p>City (Chinese).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>杭州市</p>
+     */
     @NameInMap("ZhCity")
     public String zhCity;
 
+    /**
+     * <p>Province (Chinese).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>浙江</p>
+     */
     @NameInMap("ZhProvince")
     public String zhProvince;
 
+    /**
+     * <p>Contact name (Chinese).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
     @NameInMap("ZhRegistrantName")
     public String zhRegistrantName;
 
+    /**
+     * <p>Registrant name (Chinese).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
     @NameInMap("ZhRegistrantOrganization")
     public String zhRegistrantOrganization;
 

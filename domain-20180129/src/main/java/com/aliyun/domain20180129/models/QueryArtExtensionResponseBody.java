@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryArtExtensionResponseBody extends TeaModel {
     /**
+     * <p>Creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2019-10-01</p>
      */
@@ -12,6 +14,8 @@ public class QueryArtExtensionResponseBody extends TeaModel {
     public String dateOrPeriod;
 
     /**
+     * <p>Dimensions.</p>
+     * 
      * <strong>example:</strong>
      * <p>20 cm</p>
      */
@@ -19,6 +23,8 @@ public class QueryArtExtensionResponseBody extends TeaModel {
     public String dimensions;
 
     /**
+     * <p>Art features.</p>
+     * 
      * <strong>example:</strong>
      * <p>iconicity</p>
      */
@@ -26,6 +32,8 @@ public class QueryArtExtensionResponseBody extends TeaModel {
     public String features;
 
     /**
+     * <p>Inscriptions and markings.</p>
+     * 
      * <strong>example:</strong>
      * <p>realism</p>
      */
@@ -33,6 +41,8 @@ public class QueryArtExtensionResponseBody extends TeaModel {
     public String inscriptionsAndMarkings;
 
     /**
+     * <p>Artist or creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>zhang san</p>
      */
@@ -40,6 +50,8 @@ public class QueryArtExtensionResponseBody extends TeaModel {
     public String maker;
 
     /**
+     * <p>Materials and techniques.</p>
+     * 
      * <strong>example:</strong>
      * <p>silk</p>
      */
@@ -47,6 +59,8 @@ public class QueryArtExtensionResponseBody extends TeaModel {
     public String materialsAndTechniques;
 
     /**
+     * <p>Art categorization.</p>
+     * 
      * <strong>example:</strong>
      * <p>The embroidery</p>
      */
@@ -54,6 +68,8 @@ public class QueryArtExtensionResponseBody extends TeaModel {
     public String objectType;
 
     /**
+     * <p>Reference.</p>
+     * 
      * <strong>example:</strong>
      * <p>drawings</p>
      */
@@ -61,6 +77,8 @@ public class QueryArtExtensionResponseBody extends TeaModel {
     public String reference;
 
     /**
+     * <p>Unique request access token.</p>
+     * 
      * <strong>example:</strong>
      * <p>814B2AF0-ED6F-4C13-B41C-8AC0B1023583</p>
      */
@@ -68,6 +86,8 @@ public class QueryArtExtensionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Art subject.</p>
+     * 
      * <strong>example:</strong>
      * <p>peace</p>
      */
@@ -75,6 +95,8 @@ public class QueryArtExtensionResponseBody extends TeaModel {
     public String subject;
 
     /**
+     * <p>Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>Peace and friendship</p>
      */

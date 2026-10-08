@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extends TeaModel {
     /**
+     * <p>Specific address.</p>
+     * 
      * <strong>example:</strong>
      * <p>chao yang qu</p>
      */
@@ -12,6 +14,8 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     public String address;
 
     /**
+     * <p>City.</p>
+     * 
      * <strong>example:</strong>
      * <p>bei jing shi</p>
      */
@@ -19,6 +23,8 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     public String city;
 
     /**
+     * <p>Country code, such as <strong>CN</strong> or <strong>US</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>CN</p>
      */
@@ -26,6 +32,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     public String country;
 
     /**
+     * <p>List of domain names.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,8 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     public java.util.List<String> domainName;
 
     /**
+     * <p>Mailbox.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
      */
@@ -42,6 +51,11 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     public String email;
 
     /**
+     * <p>Base64-encoded image of the identity verification document. Image requirements:</p>
+     * <ul>
+     * <li>Format must be <strong>jpg</strong> or <strong>bmp</strong>.</li>
+     * <li>Original image size must be between <strong>55 KB and 1 MB</strong>.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +65,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     public String identityCredential;
 
     /**
+     * <p>Certificate number used for identity verification, such as an ID card number or Unified Social Credit Code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +75,19 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     public String identityCredentialNo;
 
     /**
+     * <p>Identity verification certificate type. Valid values:</p>
+     * <ul>
+     * <li><strong>SFZ</strong>: Identity card.</li>
+     * <li><strong>HZ</strong>: Passport.</li>
+     * <li><strong>YYZZ</strong>: Business license.</li>
+     * <li><strong>ORG</strong>: Organization code certificate.</li>
+     * <li><strong>XYDM</strong>: Unified Social Credit Code certificate.</li>
+     * <li><strong>TXZ</strong>: Mainland Travel Permits for Hong Kong and Macao Residents.</li>
+     * </ul>
+     * <p>If your certificate type is not listed above, see <a href="https://help.aliyun.com/document_detail/72209.html">Supported identity verification certificate types</a> for valid values of other certificate types.</p>
+     * <blockquote>
+     * <p>You must select the certificate type that matches the document you are submitting.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,6 +97,13 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     public String identityCredentialType;
 
     /**
+     * <p>Language of the error message returned by the API. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -76,6 +111,8 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     public String lang;
 
     /**
+     * <p>Postal code.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
@@ -83,6 +120,8 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     public String postalCode;
 
     /**
+     * <p>Province.</p>
+     * 
      * <strong>example:</strong>
      * <p>bei jing</p>
      */
@@ -90,6 +129,8 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     public String province;
 
     /**
+     * <p>Contact name.</p>
+     * 
      * <strong>example:</strong>
      * <p>ce shi</p>
      */
@@ -97,6 +138,8 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     public String registrantName;
 
     /**
+     * <p>Registrant organization name.</p>
+     * 
      * <strong>example:</strong>
      * <p>ce shi</p>
      */
@@ -104,6 +147,11 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     public String registrantOrganization;
 
     /**
+     * <p>Domain registrant type. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: Individual.</li>
+     * <li><strong>2</strong>: Organization.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -113,6 +161,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     public String registrantType;
 
     /**
+     * <p>Telephone country code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -122,6 +171,8 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     public String telArea;
 
     /**
+     * <p>Telephone extension number.</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */
@@ -129,6 +180,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     public String telExt;
 
     /**
+     * <p>Telephone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -138,6 +190,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     public String telephone;
 
     /**
+     * <p>Whether to add a transfer-out prohibition restriction. This indicates whether modifying the registrant imposes a 60-day restriction on domain name transfer-out. Default value: <strong>false</strong>, which means transfer-out is not restricted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -147,24 +200,56 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     public Boolean transferOutProhibited;
 
     /**
+     * <p>User IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
+    /**
+     * <p>Chinese address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>朝阳区</p>
+     */
     @NameInMap("ZhAddress")
     public String zhAddress;
 
+    /**
+     * <p>Chinese city name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>北京市</p>
+     */
     @NameInMap("ZhCity")
     public String zhCity;
 
+    /**
+     * <p>Chinese province name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>北京</p>
+     */
     @NameInMap("ZhProvince")
     public String zhProvince;
 
+    /**
+     * <p>Chinese contact name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试</p>
+     */
     @NameInMap("ZhRegistrantName")
     public String zhRegistrantName;
 
+    /**
+     * <p>Chinese registrant organization name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试</p>
+     */
     @NameInMap("ZhRegistrantOrganization")
     public String zhRegistrantOrganization;
 

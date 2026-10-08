@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelQualificationVerificationRequest extends TeaModel {
     /**
+     * <p>Domain name instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,13 @@ public class CancelQualificationVerificationRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Language of the error message returned by the API. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -21,6 +29,7 @@ public class CancelQualificationVerificationRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Qualification verification API type. The value is fixed as <strong>knet</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +39,8 @@ public class CancelQualificationVerificationRequest extends TeaModel {
     public String qualificationType;
 
     /**
+     * <p>User IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

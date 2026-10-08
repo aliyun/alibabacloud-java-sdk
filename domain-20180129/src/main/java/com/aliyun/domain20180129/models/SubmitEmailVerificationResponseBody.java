@@ -4,19 +4,30 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SubmitEmailVerificationResponseBody extends TeaModel {
+    /**
+     * <p>List of emails for which verification messages already exist.</p>
+     */
     @NameInMap("ExistList")
     public java.util.List<SubmitEmailVerificationResponseBodyExistList> existList;
 
+    /**
+     * <p>List of emails for which verification messages failed to send.</p>
+     */
     @NameInMap("FailList")
     public java.util.List<SubmitEmailVerificationResponseBodyFailList> failList;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E2A8A5EF-DF8A-4C48-8FD4-9F6BD71AB26D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>List of emails for which verification messages were sent successfully.</p>
+     */
     @NameInMap("SuccessList")
     public java.util.List<SubmitEmailVerificationResponseBodySuccessList> successList;
 
@@ -59,6 +70,8 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
 
     public static class SubmitEmailVerificationResponseBodyExistList extends TeaModel {
         /**
+         * <p>Returned code.</p>
+         * 
          * <strong>example:</strong>
          * <p>SendTokenQuotaExceeded</p>
          */
@@ -66,6 +79,8 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>Email address for verification.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
@@ -73,6 +88,8 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>Returned message.</p>
+         * 
          * <strong>example:</strong>
          * <p>The maximum number of attempts allowed to send the email verification link is exceeded.</p>
          */
@@ -112,6 +129,8 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
 
     public static class SubmitEmailVerificationResponseBodyFailList extends TeaModel {
         /**
+         * <p>The returned code.</p>
+         * 
          * <strong>example:</strong>
          * <p>SendTokenQuotaExceeded</p>
          */
@@ -119,6 +138,8 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>Email address for verification.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
@@ -126,6 +147,8 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>The returned message.</p>
+         * 
          * <strong>example:</strong>
          * <p>The maximum number of attempts allowed to send the email verification link is exceeded</p>
          */
@@ -165,6 +188,8 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
 
     public static class SubmitEmailVerificationResponseBodySuccessList extends TeaModel {
         /**
+         * <p>Returned code.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -172,6 +197,8 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>Email address for verification.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
@@ -179,6 +206,8 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>Returned message.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */

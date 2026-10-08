@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchFuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C560A803-B975-481D-A66B-A4395EA863A1</p>
      */

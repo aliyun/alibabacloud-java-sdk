@@ -52,6 +52,9 @@ public class SubmitDomainSpecialBizCredentialsResponseBody extends TeaModel {
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>参数错误</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;

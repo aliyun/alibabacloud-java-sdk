@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryAdvancedDomainListRequest extends TeaModel {
     /**
+     * <p>Domain group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>-1</p>
      */
@@ -12,6 +14,12 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public Long domainGroupId;
 
     /**
+     * <p>Sorting field based on lexicographic order of domain names. Valid values:  </p>
+     * <ul>
+     * <li><strong>false</strong>: Descending order  </li>
+     * <li><strong>true</strong>: Ascending order</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,6 +27,19 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public Boolean domainNameSort;
 
     /**
+     * <p>Domain status. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: All.</li>
+     * <li><strong>1</strong>: Renewal required urgently.</li>
+     * <li><strong>2</strong>: Redemption required urgently.</li>
+     * <li><strong>3</strong>: Normal.</li>
+     * <li><strong>4</strong>: Transferring out from HiChina.</li>
+     * <li><strong>5</strong>: Registrant information being modified.</li>
+     * <li><strong>6</strong>: Identity verification not completed.</li>
+     * <li><strong>7</strong>: Review failed; re-initiate identity verification.</li>
+     * <li><strong>8</strong>: Under review.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +47,8 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public Integer domainStatus;
 
     /**
+     * <p>End time for expiration date range query, represented as the number of milliseconds since 00:00:00 UTC on January 1, 1970.</p>
+     * 
      * <strong>example:</strong>
      * <p>1522080000000</p>
      */
@@ -33,6 +56,8 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public Long endExpirationDate;
 
     /**
+     * <p>End length for domain name length range query.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -40,6 +65,8 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public Integer endLength;
 
     /**
+     * <p>The end time of the registration date range query, expressed as the number of milliseconds since 00:00 on January 1, 1970, UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>1522080000000</p>
      */
@@ -47,6 +74,8 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public Long endRegistrationDate;
 
     /**
+     * <p>Excluded keyword.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -54,6 +83,8 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public String excluded;
 
     /**
+     * <p>Keyword to exclude at the beginning.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -61,6 +92,8 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public Boolean excludedPrefix;
 
     /**
+     * <p>Keyword to exclude at the end.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -68,6 +101,12 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public Boolean excludedSuffix;
 
     /**
+     * <p>Sorting field based on expiration date. Valid values:</p>
+     * <ul>
+     * <li><strong>false</strong>: Descending order.</li>
+     * <li><strong>true</strong>: Ascending order.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -75,16 +114,37 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public Boolean expirationDateSort;
 
     /**
+     * <p>Domain name composition information:  </p>
+     * <ul>
+     * <li><strong>11</strong>: Numeric-only domain name  </li>
+     * <li><strong>12</strong>: Letter-only domain name  </li>
+     * <li><strong>13</strong>: Mixed domain name (combination of letters and numbers)  </li>
+     * <li><strong>14</strong>: Chinese domain name</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>12</p>
      */
     @NameInMap("Form")
     public Integer form;
 
+    /**
+     * <p>Indicates whether the domain is a premium domain. Valid values:  </p>
+     * <ul>
+     * <li><strong>false</strong>: No  </li>
+     * <li><strong>true</strong>: Yes</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsPremiumDomain")
     public Boolean isPremiumDomain;
 
     /**
+     * <p>Keyword.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -92,6 +152,8 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public String keyWord;
 
     /**
+     * <p>Keyword at the beginning.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -99,6 +161,8 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public Boolean keyWordPrefix;
 
     /**
+     * <p>Keyword at the end.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -106,6 +170,13 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public Boolean keyWordSuffix;
 
     /**
+     * <p>The language of error messages returned by the API. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -113,6 +184,7 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Page number for paging. The minimum value is <strong>0</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -122,6 +194,7 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>Page size for paging. The minimum value is <strong>1</strong> and the maximum value is <strong>200</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -131,6 +204,14 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Domain name type. Valid values:</p>
+     * <ul>
+     * <li><strong>New gTLD</strong> (new top-level domain).</li>
+     * <li><strong>gTLD</strong> (generic top-level domain).</li>
+     * <li><strong>ccTLD</strong> (country code top-level domain).</li>
+     * <li><strong>other</strong> (other top-level domains not listed above).</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>gTLD</p>
      */
@@ -138,6 +219,12 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public String productDomainType;
 
     /**
+     * <p>Sorting field, used to sort by domain name type. Valid values:</p>
+     * <ul>
+     * <li><strong>false</strong>: Descending order.</li>
+     * <li><strong>true</strong>: Ascending order.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -145,6 +232,12 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public Boolean productDomainTypeSort;
 
     /**
+     * <p>Sorting field based on registration date. Valid values:</p>
+     * <ul>
+     * <li><strong>false</strong>: Descending order.</li>
+     * <li><strong>true</strong>: Ascending order.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -152,6 +245,8 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public Boolean registrationDateSort;
 
     /**
+     * <p>Resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmw6bpc6n7zai</p>
      */
@@ -159,6 +254,8 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>Start time for expiration date range query, represented as the number of milliseconds since 00:00:00 UTC on January 1, 1970.</p>
+     * 
      * <strong>example:</strong>
      * <p>1522080000000</p>
      */
@@ -166,6 +263,8 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public Long startExpirationDate;
 
     /**
+     * <p>The starting length for domain name length range queries.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -173,6 +272,8 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public Integer startLength;
 
     /**
+     * <p>The start time of the registration date range query, expressed as the number of milliseconds since 00:00 on January 1, 1970, UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>1522080000000</p>
      */
@@ -180,16 +281,30 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public Long startRegistrationDate;
 
     /**
+     * <p>List of suffixes to query, separated by commas (&quot;,&quot;).</p>
+     * 
      * <strong>example:</strong>
      * <p>com.cn</p>
      */
     @NameInMap("Suffixs")
     public String suffixs;
 
+    /**
+     * <p>List of tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<QueryAdvancedDomainListRequestTag> tag;
 
     /**
+     * <p>Publishing status. Valid values:  </p>
+     * <ul>
+     * <li><strong>2</strong>: Fixed-price listing published  </li>
+     * <li><strong>13</strong>: Negotiable-price listing published  </li>
+     * <li><strong>4</strong>: Auction listing published  </li>
+     * <li><strong>6</strong>: Priced push listing published  </li>
+     * <li><strong>-1</strong>: Domain trading not published</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>-1</p>
      */
@@ -197,6 +312,8 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     public Integer tradeType;
 
     /**
+     * <p>User IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */
@@ -441,9 +558,21 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     }
 
     public static class QueryAdvancedDomainListRequestTag extends TeaModel {
+        /**
+         * <p>Tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>数智</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>Tag value of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>废弃</p>
+         */
         @NameInMap("Value")
         public String value;
 

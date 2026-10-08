@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryTransferInListResponseBody extends TeaModel {
     /**
+     * <p>The page number of the current domain name list.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +17,8 @@ public class QueryTransferInListResponseBody extends TeaModel {
     public QueryTransferInListResponseBodyData data;
 
     /**
+     * <p>Indicates whether a next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -22,6 +26,8 @@ public class QueryTransferInListResponseBody extends TeaModel {
     public Boolean nextPage;
 
     /**
+     * <p>The paging size of the domain name list.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -29,6 +35,8 @@ public class QueryTransferInListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Indicates whether a previous page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -36,6 +44,8 @@ public class QueryTransferInListResponseBody extends TeaModel {
     public Boolean prePage;
 
     /**
+     * <p>The unique request access token.</p>
+     * 
      * <strong>example:</strong>
      * <p>AF7D4DCE-0776-47F2-A9B2-6FB85A87AA60</p>
      */
@@ -43,6 +53,8 @@ public class QueryTransferInListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>40</p>
      */
@@ -50,6 +62,8 @@ public class QueryTransferInListResponseBody extends TeaModel {
     public Integer totalItemNum;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class SaveBatchTaskForTransferOutByAuthorizationCodeRequest extends TeaModel {
     /**
+     * <p>A list of domain names to transfer out, each with its authorization code.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SaveBatchTaskForTransferOutByAuthorizationCode</p>
      */
     @NameInMap("TransferOutParamList")
     public java.util.List<SaveBatchTaskForTransferOutByAuthorizationCodeRequestTransferOutParamList> transferOutParamList;
@@ -25,6 +29,8 @@ public class SaveBatchTaskForTransferOutByAuthorizationCodeRequest extends TeaMo
 
     public static class SaveBatchTaskForTransferOutByAuthorizationCodeRequestTransferOutParamList extends TeaModel {
         /**
+         * <p>The authorization code for the domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Test2o#Lck</p>
          */
@@ -32,6 +38,8 @@ public class SaveBatchTaskForTransferOutByAuthorizationCodeRequest extends TeaMo
         public String authorizationCode;
 
         /**
+         * <p>The domain name to transfer out.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */

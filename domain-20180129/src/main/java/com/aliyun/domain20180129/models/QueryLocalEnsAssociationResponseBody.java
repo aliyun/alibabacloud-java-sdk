@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryLocalEnsAssociationResponseBody extends TeaModel {
     /**
+     * <p>The ENS address recorded in the Alibaba Cloud system.</p>
+     * 
      * <strong>example:</strong>
      * <p>3ECD5439-39A2-477D-9A19-64FCA1F77EEB</p>
      */
@@ -12,6 +14,8 @@ public class QueryLocalEnsAssociationResponseBody extends TeaModel {
     public String address;
 
     /**
+     * <p>Unique request access token.</p>
+     * 
      * <strong>example:</strong>
      * <p>0x1234567890123456789012345678901234567890</p>
      */

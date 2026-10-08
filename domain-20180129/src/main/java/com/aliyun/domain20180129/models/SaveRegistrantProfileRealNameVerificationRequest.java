@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class SaveRegistrantProfileRealNameVerificationRequest extends TeaModel {
     /**
+     * <p>Detailed address (in English).  </p>
+     * <blockquote>
+     * <p>This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. Failure to provide it will cause domain registration to fail.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>chao yang qu</p>
      */
@@ -12,6 +17,11 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends TeaModel {
     public String address;
 
     /**
+     * <p>City (in English).  </p>
+     * <blockquote>
+     * <p>This parameter is active and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. If this parameter is not provided, domain name registration will fail.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>bei jing shi</p>
      */
@@ -19,6 +29,11 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends TeaModel {
     public String city;
 
     /**
+     * <p>Country code, such as <strong>CN</strong>.</p>
+     * <blockquote>
+     * <p>This parameter is active and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. Failure to provide it will cause domain registration to fail.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>CN</p>
      */
@@ -26,6 +41,11 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends TeaModel {
     public String country;
 
     /**
+     * <p>Email address.  </p>
+     * <blockquote>
+     * <p>This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. Failure to provide it will cause domain registration to fail.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:username@example.com">username@example.com</a></p>
      */
@@ -33,6 +53,12 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends TeaModel {
     public String email;
 
     /**
+     * <p>Base64-encoded image of the identity verification document. Image requirements:  </p>
+     * <ul>
+     * <li>Format must be <strong>jpg</strong> or <strong>bmp</strong>.  </li>
+     * <li>Original image size must be between <strong>55 KB and 1 MB</strong>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>dGVzdA==</p>
      */
@@ -40,6 +66,8 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends TeaModel {
     public String identityCredential;
 
     /**
+     * <p>Certificate number for identity verification.</p>
+     * 
      * <strong>example:</strong>
      * <p>4111111111111110**</p>
      */
@@ -47,6 +75,19 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends TeaModel {
     public String identityCredentialNo;
 
     /**
+     * <p>Type of certificate used for identity verification. Valid values:  </p>
+     * <ul>
+     * <li><strong>SFZ</strong>: Identity card.  </li>
+     * <li><strong>HZ</strong>: Passport.  </li>
+     * <li><strong>YYZZ</strong>: Business license.  </li>
+     * <li><strong>ORG</strong>: Organization code certificate.  </li>
+     * <li><strong>XYDM</strong>: Unified Social Credit Code certificate.  </li>
+     * <li><strong>TXZ</strong>: Mainland Travel Permits for Hong Kong and Macao Residents.</li>
+     * </ul>
+     * <blockquote>
+     * <p>For more certificate types, see <a href="https://help.aliyun.com/document_detail/72209.html">Supported Certificate Types for Identity Verification</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>SFZ</p>
      */
@@ -54,6 +95,13 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends TeaModel {
     public String identityCredentialType;
 
     /**
+     * <p>Language of the error message returned by the API. Valid values:  </p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese  </li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -61,6 +109,11 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Postal code.  </p>
+     * <blockquote>
+     * <p>This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. Failure to provide it will cause domain registration to fail.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1234567</p>
      */
@@ -68,6 +121,11 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends TeaModel {
     public String postalCode;
 
     /**
+     * <p>Province (in English).  </p>
+     * <blockquote>
+     * <p>This parameter is active and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. If this parameter is not provided, domain name registration will fail.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>bei jing</p>
      */
@@ -75,6 +133,11 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends TeaModel {
     public String province;
 
     /**
+     * <p>Domain name contact (in English).  </p>
+     * <blockquote>
+     * <p>This parameter is active and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. If this parameter is not provided, domain name registration will fail.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>ce shi</p>
      */
@@ -82,6 +145,11 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends TeaModel {
     public String registrantName;
 
     /**
+     * <p>Registrant name (in English).</p>
+     * <blockquote>
+     * <p>This parameter is active and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. Failure to provide it will cause domain registration to fail.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>ce shi</p>
      */
@@ -89,6 +157,9 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends TeaModel {
     public String registrantOrganization;
 
     /**
+     * <p>ID of the registrant profile template to be saved.  </p>
+     * <p>The system automatically generates this ID after a registrant profile is successfully created. You can invoke the <a href="https://help.aliyun.com/document_detail/67701.html">QueryRegistrantProfiles</a> API to query the registrant profile ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567</p>
      */
@@ -96,6 +167,15 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends TeaModel {
     public Long registrantProfileId;
 
     /**
+     * <p>Templatetype. Valid values:  </p>
+     * <ul>
+     * <li><strong>common</strong>: General template.  </li>
+     * <li><strong>cnnic</strong>: CNNIC template.</li>
+     * </ul>
+     * <blockquote>
+     * <p>The CNNIC template is supported only on the Alibaba Cloud international site (alibabacloud.com). Domains under the CNNIC registry, such as &quot;.cn&quot; and &quot;.中国&quot;, registered on the Alibaba Cloud international site must use the CNNIC template. Other domains must use the general template.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>common</p>
      */
@@ -103,6 +183,15 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends TeaModel {
     public String registrantProfileType;
 
     /**
+     * <p>Type of the registrant. Valid values:  </p>
+     * <ul>
+     * <li><strong>1</strong>: Individual.  </li>
+     * <li><strong>2</strong>: Enterprise or organization.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. Failure to provide it will cause domain registration to fail.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -110,6 +199,11 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends TeaModel {
     public String registrantType;
 
     /**
+     * <p>Telephone country code.</p>
+     * <blockquote>
+     * <p>For example, the telephone country code for China is <strong>86</strong>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>86</p>
      */
@@ -117,6 +211,11 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends TeaModel {
     public String telArea;
 
     /**
+     * <p>Extension number.</p>
+     * <blockquote>
+     * <p>This parameter is active and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. Failure to provide it will cause domain registration to fail.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */
@@ -124,6 +223,11 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends TeaModel {
     public String telExt;
 
     /**
+     * <p>Telephone number.  </p>
+     * <blockquote>
+     * <p>This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. Failure to provide it will cause domain registration to fail.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>12345678</p>
      */
@@ -131,24 +235,71 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends TeaModel {
     public String telephone;
 
     /**
+     * <p>User IP address. You can set it to <strong>127.0.0.1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
+    /**
+     * <p>Full address (in Chinese).</p>
+     * <blockquote>
+     * <p>This parameter applies only to the China site (aliyun.com). It is active and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. Failure to provide it will cause domain registration to fail.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>朝阳区</p>
+     */
     @NameInMap("ZhAddress")
     public String zhAddress;
 
+    /**
+     * <p>City (in Chinese).  </p>
+     * <blockquote>
+     * <p>This parameter applies only to the China site (aliyun.com). It is active and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. If this parameter is not provided, domain name registration will fail.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>北京市</p>
+     */
     @NameInMap("ZhCity")
     public String zhCity;
 
+    /**
+     * <p>Province (in Chinese).  </p>
+     * <blockquote>
+     * <p>This parameter applies only to the China site (aliyun.com). It is available and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. Failure to provide it will cause domain registration to fail.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>北京</p>
+     */
     @NameInMap("ZhProvince")
     public String zhProvince;
 
+    /**
+     * <p>Domain name contact (in Chinese).  </p>
+     * <blockquote>
+     * <p>This parameter applies only to the China site (aliyun.com). It is active and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. If this parameter is not provided, domain name registration will fail.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>测试</p>
+     */
     @NameInMap("ZhRegistrantName")
     public String zhRegistrantName;
 
+    /**
+     * <p>Registrant name (in Chinese).</p>
+     * <blockquote>
+     * <p>This parameter applies only to the China site (aliyun.com). It is active and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. Failure to provide it will cause domain registration to fail.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>测试</p>
+     */
     @NameInMap("ZhRegistrantOrganization")
     public String zhRegistrantOrganization;
 

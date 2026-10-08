@@ -4,10 +4,15 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
+    /**
+     * <p>The response object.</p>
+     */
     @NameInMap("Module")
     public QueryIntlFixedPriceOrderListResponseBodyModule module;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D6CB3623-4726-4947-AC2B-2C6E673B447C</p>
      */
@@ -36,27 +41,84 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
     }
 
     public static class QueryIntlFixedPriceOrderListResponseBodyModuleData extends TeaModel {
+        /**
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T2023122019031400****</p>
+         */
         @NameInMap("BizId")
         public String bizId;
 
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1715134456000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jslxv.cn</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The order type. Valid values:</p>
+         * <ul>
+         * <li>11: international fixed-price.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("OrderType")
         public Integer orderType;
 
+        /**
+         * <p>The price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15000</p>
+         */
         @NameInMap("Price")
         public Long price;
 
+        /**
+         * <p>The order status. Valid values:</p>
+         * <ul>
+         * <li>5: Transaction closed.</li>
+         * <li>6: Paid.</li>
+         * <li>7: Pending production.</li>
+         * <li>9: Transaction completed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1715134456000</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        /**
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>545684317770****</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -132,18 +194,45 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
     }
 
     public static class QueryIntlFixedPriceOrderListResponseBodyModule extends TeaModel {
+        /**
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentPageNum")
         public Integer currentPageNum;
 
+        /**
+         * <p>The order list data.</p>
+         */
         @NameInMap("Data")
         public java.util.List<QueryIntlFixedPriceOrderListResponseBodyModuleData> data;
 
+        /**
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>294</p>
+         */
         @NameInMap("TotalItemNum")
         public Integer totalItemNum;
 
+        /**
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("TotalPageNum")
         public Integer totalPageNum;
 

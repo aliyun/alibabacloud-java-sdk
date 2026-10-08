@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveBatchTaskForCreatingOrderRedeemRequest extends TeaModel {
     /**
+     * <p>Coupon number.</p>
+     * 
      * <strong>example:</strong>
      * <p>123123</p>
      */
@@ -12,6 +14,13 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends TeaModel {
     public String couponNo;
 
     /**
+     * <p>Language of error messages returned by the API. Valid values:  </p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese;  </li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -19,12 +28,15 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>List of job details.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OrderRedeemParam")
     public java.util.List<SaveBatchTaskForCreatingOrderRedeemRequestOrderRedeemParam> orderRedeemParam;
 
     /**
+     * <p>Coupon number.</p>
+     * 
      * <strong>example:</strong>
      * <p>123213123</p>
      */
@@ -32,6 +44,12 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends TeaModel {
     public String promotionNo;
 
     /**
+     * <p>Is coupon used? Valid values:  </p>
+     * <ul>
+     * <li><strong>false</strong>: No.  </li>
+     * <li><strong>true</strong>: Yes.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -39,6 +57,12 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends TeaModel {
     public Boolean useCoupon;
 
     /**
+     * <p>Is coupon used? Valid values:  </p>
+     * <ul>
+     * <li><strong>false</strong>: No.  </li>
+     * <li><strong>true</strong>: Yes.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -46,6 +70,8 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends TeaModel {
     public Boolean usePromotion;
 
     /**
+     * <p>User IP address. You can set it to <strong>127.0.0.1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */
@@ -115,6 +141,8 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends TeaModel {
 
     public static class SaveBatchTaskForCreatingOrderRedeemRequestOrderRedeemParam extends TeaModel {
         /**
+         * <p>Current expiration date of the domain name, represented as the number of milliseconds from 00:00 UTC on January 1, 1970, to the domain’s current expiration date.</p>
+         * 
          * <strong>example:</strong>
          * <p>000000</p>
          */
@@ -122,6 +150,8 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends TeaModel {
         public Long currentExpirationDate;
 
         /**
+         * <p>Domain name. If multiple domain names are involved, pass a domain name list. You can obtain the domain name list by using the <a href="https://help.aliyun.com/document_detail/67712.html">QueryDomainList</a> API.</p>
+         * 
          * <strong>example:</strong>
          * <p>Aliyun.com</p>
          */

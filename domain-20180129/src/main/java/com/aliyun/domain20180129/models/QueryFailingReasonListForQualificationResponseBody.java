@@ -4,10 +4,15 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryFailingReasonListForQualificationResponseBody extends TeaModel {
+    /**
+     * <p>List of domain name qualification verification failures.</p>
+     */
     @NameInMap("Data")
     public java.util.List<QueryFailingReasonListForQualificationResponseBodyData> data;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9DFCF6F8-243C-****-8035-4B12FEFD7D48</p>
      */
@@ -37,12 +42,20 @@ public class QueryFailingReasonListForQualificationResponseBody extends TeaModel
 
     public static class QueryFailingReasonListForQualificationResponseBodyData extends TeaModel {
         /**
+         * <p>Review date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2017-03-17 11:08:02</p>
          */
         @NameInMap("Date")
         public String date;
 
+        /**
+         * <p>Reason for domain name qualification verification failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>证件审核不通过</p>
+         */
         @NameInMap("FailReason")
         public String failReason;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckProcessingServerLockApplyRequest extends TeaModel {
     /**
+     * <p>The domain name to be checked.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CheckProcessingServerLockApplyRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>Registration period in years. Unit: <strong>year(s)</strong>. Valid range: <strong>1 to 10</strong> years.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,13 @@ public class CheckProcessingServerLockApplyRequest extends TeaModel {
     public Integer feePeriod;
 
     /**
+     * <p>Language of error messages returned by the API. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -28,6 +38,8 @@ public class CheckProcessingServerLockApplyRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>User IP address. You can set it to <strong>127.0.0.1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

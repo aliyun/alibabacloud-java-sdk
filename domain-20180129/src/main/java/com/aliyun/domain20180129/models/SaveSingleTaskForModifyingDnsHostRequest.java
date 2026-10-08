@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveSingleTaskForModifyingDnsHostRequest extends TeaModel {
     /**
+     * <p>DNS name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class SaveSingleTaskForModifyingDnsHostRequest extends TeaModel {
     public String dnsName;
 
     /**
+     * <p>Domain instance ID, which can be obtained by invoking the QueryDomainList API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class SaveSingleTaskForModifyingDnsHostRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>List of IP addresses.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,13 @@ public class SaveSingleTaskForModifyingDnsHostRequest extends TeaModel {
     public java.util.List<String> ip;
 
     /**
+     * <p>Language for error messages returned by the API. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -39,6 +49,8 @@ public class SaveSingleTaskForModifyingDnsHostRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>User IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

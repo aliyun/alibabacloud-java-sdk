@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>40F46D3D-F4F3-4CCB-AC30-2DD20E32E528</p>
      */
@@ -12,6 +14,8 @@ public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDResponseBody 
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3cb1adc3-20e8-44ae-9e76-e812fa6fc9d8</p>
      */

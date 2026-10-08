@@ -8,10 +8,10 @@ public class QueryDomainListRequest extends TeaModel {
     public Boolean autoRenewEnabled;
 
     /**
-     * <p>The name of the domain name registrant.</p>
+     * <p>The name of the domain owner.</p>
      * 
      * <strong>example:</strong>
-     * <p>Guangzhou Jinye Renewable Resources Recycling Co., Ltd</p>
+     * <p>广州金烨再生资源回收有限公司</p>
      */
     @NameInMap("Ccompany")
     public String ccompany;
@@ -20,7 +20,8 @@ public class QueryDomainListRequest extends TeaModel {
     public String dns;
 
     /**
-     * <p>The ID of the domain name group.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the domain group. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/69362.html">QueryDomainGroupList</a> operation.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the domain group.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -29,7 +30,7 @@ public class QueryDomainListRequest extends TeaModel {
     public String domainGroupId;
 
     /**
-     * <p>The domain name. You can search for the domain name in the domain name list.</p>
+     * <p>The domain name to query.</p>
      * 
      * <strong>example:</strong>
      * <p>test.com</p>
@@ -38,7 +39,7 @@ public class QueryDomainListRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query domain names based on expiration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed from January 1, 1970, 00:00:00 UTC to the time you perform the query. Only queries by day are supported.</p>
+     * <p>The end of the expiration date range. The value is a Unix timestamp in milliseconds. Currently, only queries by day are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>1522080000000</p>
@@ -47,7 +48,7 @@ public class QueryDomainListRequest extends TeaModel {
     public Long endExpirationDate;
 
     /**
-     * <p>The end of the time range to query domain names based on registration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Only queries by day are supported.</p>
+     * <p>The end of the registration date range. The value is a Unix timestamp in milliseconds. Currently, only queries by day are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>1522080000000</p>
@@ -56,12 +57,14 @@ public class QueryDomainListRequest extends TeaModel {
     public Long endRegistrationDate;
 
     /**
-     * <p>The language of the error message to return if the request fails. Valid values:</p>
+     * <p>The language for API error messages. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
-     * <p>Default value: <strong>en</strong>.</p>
+     * <p>The default value is <strong>en</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -70,13 +73,15 @@ public class QueryDomainListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The order of the information based on which the domain names are sorted, such as the registration date and expiration date. Valid values:</p>
+     * <p>The sort order for the results. Valid values:</p>
      * <ul>
-     * <li><strong>ASC</strong>: ascending order</li>
-     * <li><strong>DESC</strong>: descending order</li>
+     * <li><p><strong>ASC</strong>: Ascending.</p>
+     * </li>
+     * <li><p><strong>DESC</strong>: Descending.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If this parameter is not specified, the default value <strong>DESC</strong> is used.</p>
+     * <p>The default value is <strong>DESC</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -86,13 +91,15 @@ public class QueryDomainListRequest extends TeaModel {
     public String orderByType;
 
     /**
-     * <p>The field that you use to sort the domain names. Valid values:</p>
+     * <p>The field to use for sorting. Valid values:</p>
      * <ul>
-     * <li><strong>RegistrationDate</strong>: registration date</li>
-     * <li><strong>ExpirationDate</strong>: expiration date</li>
+     * <li><p><strong>RegistrationDate</strong>: Sorts by registration date.</p>
+     * </li>
+     * <li><p><strong>ExpirationDate</strong>: Sorts by expiration date.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If this parameter is not specified, the domain names are sorted by the time when they were added to the database.</p>
+     * <p>By default, the results are sorted by the time they were added to the system.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -102,7 +109,7 @@ public class QueryDomainListRequest extends TeaModel {
     public String orderKeyType;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number for the paginated results.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -112,7 +119,7 @@ public class QueryDomainListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -122,11 +129,14 @@ public class QueryDomainListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The type of the domain name. Valid values:</p>
+     * <p>The domain type. Valid values:</p>
      * <ul>
-     * <li><strong>New gTLD</strong>: new generic top-level domain names</li>
-     * <li><strong>gTLD</strong>: generic top-level domain names</li>
-     * <li><strong>ccTLD</strong>: country code top-level domain names</li>
+     * <li><p><strong>New gTLD</strong>: new generic top-level domain.</p>
+     * </li>
+     * <li><p><strong>gTLD</strong>: generic top-level domain.</p>
+     * </li>
+     * <li><p><strong>ccTLD</strong>: country-code top-level domain.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -136,10 +146,12 @@ public class QueryDomainListRequest extends TeaModel {
     public String productDomainType;
 
     /**
-     * <p>The category of the domain names that you want to query. Valid values:</p>
+     * <p>The type of list to return. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: the domain names that need to be renewed</li>
-     * <li><strong>2</strong>: the domain names that need to be redeemed</li>
+     * <li><p><strong>1</strong>: Domain names that require urgent renewal.</p>
+     * </li>
+     * <li><p><strong>2</strong>: Domain names that require urgent redemption.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -161,7 +173,7 @@ public class QueryDomainListRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The beginning of the time range to query domain names based on expiration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed from January 1, 1970, 00:00:00 UTC to the time you perform the query. Only queries by day are supported.</p>
+     * <p>The start of the expiration date range. The value is a Unix timestamp in milliseconds. Currently, only queries by day are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>1522080000000</p>
@@ -170,7 +182,7 @@ public class QueryDomainListRequest extends TeaModel {
     public Long startExpirationDate;
 
     /**
-     * <p>The beginning of the time range to query domain names based on registration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Only queries by day are supported.</p>
+     * <p>The start of the registration date range. The value is a Unix timestamp in milliseconds. Currently, only queries by day are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>1522080000000</p>
@@ -179,13 +191,13 @@ public class QueryDomainListRequest extends TeaModel {
     public Long startRegistrationDate;
 
     /**
-     * <p>The tags to add to the resource.</p>
+     * <p>A list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<QueryDomainListRequestTag> tag;
 
     /**
-     * <p>The IP address of the client. Set the value to <strong>127.0.0.1</strong>.</p>
+     * <p>The user\&quot;s client IP address. You can set this parameter to <strong>127.0.0.1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
@@ -360,19 +372,19 @@ public class QueryDomainListRequest extends TeaModel {
 
     public static class QueryDomainListRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag to add to the resource.</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
-         * <p>testKey</p>
+         * <p>备注</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag to add to the resource.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
-         * <p>testValue</p>
+         * <p>标签1</p>
          */
         @NameInMap("Value")
         public String value;

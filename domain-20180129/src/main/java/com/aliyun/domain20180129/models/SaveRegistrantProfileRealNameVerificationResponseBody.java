@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveRegistrantProfileRealNameVerificationResponseBody extends TeaModel {
     /**
+     * <p>The ID of the retrieved information template.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567</p>
      */
@@ -12,6 +14,8 @@ public class SaveRegistrantProfileRealNameVerificationResponseBody extends TeaMo
     public Long registrantProfileId;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4D73432C-7600-****-ACBB-C3B5CA145D32</p>
      */

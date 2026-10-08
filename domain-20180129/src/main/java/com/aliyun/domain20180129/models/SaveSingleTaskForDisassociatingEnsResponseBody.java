@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveSingleTaskForDisassociatingEnsResponseBody extends TeaModel {
     /**
+     * <p>Unique request access token.</p>
+     * 
      * <strong>example:</strong>
      * <p>E2598CAF-DBFE-494E-95EF-B42A33C178AA</p>
      */
@@ -12,6 +14,8 @@ public class SaveSingleTaskForDisassociatingEnsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Job number.</p>
+     * 
      * <strong>example:</strong>
      * <p>e893148f-6343-4ae1-9eba-6e2a4116e142</p>
      */

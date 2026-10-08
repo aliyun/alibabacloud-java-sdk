@@ -4,10 +4,15 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveBatchTaskForApplyQuickTransferOutOpenlyRequest extends TeaModel {
+    /**
+     * <p>The domain names to transfer out.</p>
+     */
     @NameInMap("DomainNames")
     public java.util.List<String> domainNames;
 
     /**
+     * <p>The language of returned error messages. Valid values: zh (Chinese) and en (English). Default value: en.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -15,6 +20,8 @@ public class SaveBatchTaskForApplyQuickTransferOutOpenlyRequest extends TeaModel
     public String lang;
 
     /**
+     * <p>The IP address of the user\&quot;s client.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */
