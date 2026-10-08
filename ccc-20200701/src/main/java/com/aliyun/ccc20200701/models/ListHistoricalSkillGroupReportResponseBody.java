@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
     /**
-     * <p>Response code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Data.</p>
+     * <p>The data.</p>
      */
     @NameInMap("Data")
     public ListHistoricalSkillGroupReportResponseBodyData data;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,16 +29,16 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Response message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>26A34338-5CD9-4C95-A7A6-5BDCE76C6B94</p>
@@ -93,7 +93,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
 
     public static class ListHistoricalSkillGroupReportResponseBodyDataListBack2Back extends TeaModel {
         /**
-         * <p>Agent acknowledgement rate.</p>
+         * <p>The agent answer rate.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -102,7 +102,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float agentHandleRate;
 
         /**
-         * <p>Answer rate. Calculation Formula: CallsAnswered / CallsDialed. (Because acknowledgement events and answer events may fall into different time ranges, the result may exceed 100% in certain cases.)</p>
+         * <p>The answer rate. Calculation formula: CallsAnswered/CallsDialed. The result may exceed 100% in some cases because answer events and response events may fall into different time ranges.</p>
          * 
          * <strong>example:</strong>
          * <p>0.6</p>
@@ -111,7 +111,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float answerRate;
 
         /**
-         * <p>Average customer-side ring time, in seconds.</p>
+         * <p>The average ring time on the customer side, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -120,7 +120,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float averageCustomerRingTime;
 
         /**
-         * <p>Average ring time, in seconds.</p>
+         * <p>The average ring time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -129,7 +129,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float averageRingTime;
 
         /**
-         * <p>Average talk time, in seconds.</p>
+         * <p>The average talk time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -138,7 +138,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float averageTalkTime;
 
         /**
-         * <p>Number of answered calls.</p>
+         * <p>The number of answered calls.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -147,7 +147,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsAnswered;
 
         /**
-         * <p>Number of calls answered by the customer.</p>
+         * <p>The number of calls answered by customers.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -156,7 +156,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsCustomerAnswered;
 
         /**
-         * <p>Number of dial-up calls.</p>
+         * <p>The number of dialed calls.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -165,7 +165,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsDialed;
 
         /**
-         * <p>Customer answer rate.</p>
+         * <p>The customer answer rate.</p>
          * 
          * <strong>example:</strong>
          * <p>0.8</p>
@@ -174,7 +174,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float customerAnswerRate;
 
         /**
-         * <p>Maximum Customer-side ring time, in seconds.</p>
+         * <p>The maximum ring time on the customer side, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -183,7 +183,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long maxCustomerRingTime;
 
         /**
-         * <p>Maximum ring time, in seconds.</p>
+         * <p>The maximum ring time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -192,7 +192,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long maxRingTime;
 
         /**
-         * <p>Maximum talk time, in seconds.</p>
+         * <p>The maximum talk time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -201,7 +201,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long maxTalkTime;
 
         /**
-         * <p>Total Customer-side ring time, in seconds.</p>
+         * <p>The total ring time on the customer side, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -210,7 +210,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long totalCustomerRingTime;
 
         /**
-         * <p>Total ring time, in seconds.</p>
+         * <p>The total ring time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -219,7 +219,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long totalRingTime;
 
         /**
-         * <p>Total talk time, in seconds.</p>
+         * <p>The total talk time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -356,7 +356,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
 
     public static class ListHistoricalSkillGroupReportResponseBodyDataListInboundAccessChannelTypeDetails extends TeaModel {
         /**
-         * <p>Channel Type.</p>
+         * <p>The channel type.</p>
          * 
          * <strong>example:</strong>
          * <p>Web</p>
@@ -365,7 +365,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public String accessChannelType;
 
         /**
-         * <p>Quantity of assigned sessions.</p>
+         * <p>The number of offered sessions.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -398,7 +398,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
 
     public static class ListHistoricalSkillGroupReportResponseBodyDataListInbound extends TeaModel {
         /**
-         * <p>Abandon rate. Calculation Formula: CallsAbandoned / CallsOffered (Because abandonment events and assignment events may fall into different time ranges, the result may exceed 100% in certain cases).</p>
+         * <p>The abandon rate. Calculation formula: CallsAbandoned/CallsOffered. The result may exceed 100% in some cases because abandon events and allocation events may fall into different time ranges.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -407,13 +407,13 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float abandonRate;
 
         /**
-         * <p>Statistics for each channel.</p>
+         * <p>The statistical data for each channel.</p>
          */
         @NameInMap("AccessChannelTypeDetails")
         public java.util.List<ListHistoricalSkillGroupReportResponseBodyDataListInboundAccessChannelTypeDetails> accessChannelTypeDetails;
 
         /**
-         * <p>Average abandonment duration, in seconds. Calculation Formula: TotalAbandonTime / CallsAbandoned.</p>
+         * <p>The average abandon time, in seconds. Calculation formula: TotalAbandonTime/CallsAbandoned.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -422,7 +422,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float averageAbandonTime;
 
         /**
-         * <p>Average queue abandonment duration, in seconds. Calculation Formula: TotalAbandonedInQueueTime / CallsAbandonedInQueue.</p>
+         * <p>The average abandon time in queue, in seconds. Calculation formula: TotalAbandonedInQueueTime/CallsAbandonedInQueue.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -431,7 +431,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float averageAbandonedInQueueTime;
 
         /**
-         * <p>Average ringing abandonment duration, in seconds. Calculation Formula: TotalAbandonedInRingTime / CallsAbandonedInRing.</p>
+         * <p>The average abandon time during ringing, in seconds. Calculation formula: TotalAbandonedInRingTime/CallsAbandonedInRing.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -440,7 +440,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float averageAbandonedInRingTime;
 
         /**
-         * <p>Average first response time for chat sessions, in seconds.</p>
+         * <p>The average first response time for chat sessions, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -449,7 +449,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float averageFirstResponseTime;
 
         /**
-         * <p>Average call hold duration, in seconds. Calculation Formula: TotalHoldTime / CallsHold.</p>
+         * <p>The average hold time, in seconds. Calculation formula: TotalHoldTime/CallsHold.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -458,7 +458,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float averageHoldTime;
 
         /**
-         * <p>Average response time for chat sessions.</p>
+         * <p>The average response time for chat sessions.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -467,7 +467,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float averageResponseTime;
 
         /**
-         * <p>Average ring time, in seconds. Calculation Formula: TotalRingTime / CallsRinged.</p>
+         * <p>The average ring time, in seconds. Calculation formula: TotalRingTime/CallsRinged.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -476,7 +476,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float averageRingTime;
 
         /**
-         * <p>Average talk time, in seconds. Calculation Formula: TotalTalkTime / CallsHandled.</p>
+         * <p>The average talk time, in seconds. Calculation formula: TotalTalkTime/CallsHandled.</p>
          * 
          * <strong>example:</strong>
          * <p>64</p>
@@ -485,7 +485,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float averageTalkTime;
 
         /**
-         * <p>Average wait time, which is the average duration a caller waits before an agent answers the call. Calculation Formula: TotalWaitTime / CallsHandled.</p>
+         * <p>The average wait time, which is the average time a caller waits before an agent answers the call. Calculation formula: TotalWaitTime/CallsHandled.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -494,7 +494,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float averageWaitTime;
 
         /**
-         * <p>Average post-processing duration, in seconds. Calculation Formula: TotalWorkTime / CallsHandled.</p>
+         * <p>The average after-call work time, in seconds. Calculation formula: TotalWorkTime/CallsHandled.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>
@@ -503,7 +503,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float averageWorkTime;
 
         /**
-         * <p>Quantity of abandoned calls. Calculation Formula: CallsAbandonedInQueue + CallsAbandonedInRing.</p>
+         * <p>The number of abandoned calls. Calculation formula: CallsAbandonedInQueue + CallsAbandonedInRing.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -512,7 +512,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsAbandoned;
 
         /**
-         * <p>Number of calls abandoned in queue, which refers to the number of calls where the customer hung up after entering the queue but before being answered.</p>
+         * <p>The number of calls abandoned in queue, which refers to the number of calls hung up by customers while waiting in the queue after entering it.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -521,7 +521,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsAbandonedInQueue;
 
         /**
-         * <p>Ring abandonment count, which is the number of calls where the customer hung up while the agent\&quot;s phone was ringing.</p>
+         * <p>The number of calls abandoned during ringing, which refers to the number of calls hung up by customers while the agent is ringing.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -530,7 +530,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsAbandonedInRing;
 
         /**
-         * <p>Transfer-in volume, which refers to the number of calls transferred to this skill group from other skill groups. Transfers between agents within the same skill group are not counted. If an agent is signed into multiple skill groups simultaneously, the call is attributed to the first skill group the agent signed into. If a single call is transferred multiple times from other skill groups to this skill group, each transfer is counted separately. The same rule applies below.</p>
+         * <p>The number of attended transfers in, which refers to the number of calls transferred to this skill group from other skill groups through attended transfers. Transfers between agents within the same skill group are not counted. If an agent is signed in to multiple skill groups at the same time, the call is attributed to the first skill group the agent signed in to. If a call is transferred to this skill group multiple times from other skill groups, each transfer is counted as one. The same rule applies to similar metrics below.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -539,7 +539,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsAttendedTransferIn;
 
         /**
-         * <p>Quantity of attended transfer-out calls, which refers to the number of calls transferred from this skill group to another skill group via consultation. Transfers between agents within the same skill group are not counted.</p>
+         * <p>The number of attended transfers out, which refers to the number of calls transferred from this skill group to other skill groups through attended transfers. Transfers between agents within the same skill group are not counted.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -548,7 +548,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsAttendedTransferOut;
 
         /**
-         * <p>Number of blind transfer-in calls, which refers to the number of calls directly transferred to this skill group from other skill groups. Transfers between agents within the same skill group are not counted. If an agent is signed into multiple skill groups simultaneously, the call is attributed to the first skill group the agent signed into. If a single call is transferred multiple times from other skill groups to this skill group, each transfer is counted separately. The same rule applies below.</p>
+         * <p>The number of blind transfers in, which refers to the number of calls transferred to this skill group from other skill groups through blind transfers. Transfers between agents within the same skill group are not counted. If an agent is signed in to multiple skill groups at the same time, the call is attributed to the first skill group the agent signed in to. If a call is transferred to this skill group multiple times from other skill groups, each transfer is counted as one. The same rule applies to similar metrics below.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -557,7 +557,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsBlindTransferIn;
 
         /**
-         * <p>Number of blind transfer-out calls, which refers to the number of calls directly transferred from this skill group to another skill group. Transfers between agents within the same skill group are not counted.</p>
+         * <p>The number of blind transfers out, which refers to the number of calls transferred from this skill group to other skill groups through blind transfers. Transfers between agents within the same skill group are not counted.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -566,7 +566,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsBlindTransferOut;
 
         /**
-         * <p>Acknowledgement count, which is the number of times agents answered calls. For a single call that enters a queue multiple times, if it is answered by multiple agents after one queue entry, it is counted as one.</p>
+         * <p>The number of handled calls, which refers to the number of times agents answer calls. If a call is answered by multiple agents after entering the queue each time, it is counted as one.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -575,7 +575,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsHandled;
 
         /**
-         * <p>Hold count, which is the number of times calls were placed on hold. Each time a call enters the queue and experiences multiple holds, it counts as one.</p>
+         * <p>The number of held calls, which refers to the number of times calls are put on hold. If a call is put on hold multiple times after entering the queue each time, it is counted as one.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -584,7 +584,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsHold;
 
         /**
-         * <p>Assigned call volume, which is the number of calls assigned to this skill group, including calls assigned through queues and calls assigned via transfers (consultation transfers and direct transfers). Calculation Formula: CallsQueued + CallsBlindTransferIn + CallsAttendedTransferIn.</p>
+         * <p>The number of offered calls, which refers to the number of calls assigned to this skill group, including calls assigned through queues and calls assigned through transfers (attended transfers and blind transfers). Calculation formula: CallsQueued + CallsBlindTransferIn + CallsAttendedTransferIn.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -593,7 +593,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsOffered;
 
         /**
-         * <p>Overflow count, which is the number of calls that experienced queue (skill group) overflow. If a single call enters the same queue multiple times, each overflow is counted separately.</p>
+         * <p>The number of overflowed calls, which refers to the number of calls that overflow from the queue or skill group. If a call enters the same queue multiple times and overflows each time, each overflow is counted as one.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -602,7 +602,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsOverflow;
 
         /**
-         * <p>Number of inbound calls entering a queue (skill group). If a single call enters the same queue multiple times, each entry is counted separately.</p>
+         * <p>The number of queued calls in inbound scenarios, which refers to the number of calls that enter the queue or skill group. If a call enters the same queue multiple times, each entry is counted as one.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -611,7 +611,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsQueued;
 
         /**
-         * <p>Queue Failure Quantity, which is the number of calls where the customer hung up after entering the queue but before being answered.</p>
+         * <p>The number of failed queue calls, which refers to the number of calls hung up by customers while waiting in the queue after entering it.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -620,7 +620,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsQueuingFailed;
 
         /**
-         * <p>Quantity of calls that overflowed from the queue. Queue overflow refers to calls that overflow while queuing in IVR.</p>
+         * <p>The number of calls that overflow from the queue, which refers to calls that overflow while waiting in the IVR queue.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -629,7 +629,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsQueuingOverflow;
 
         /**
-         * <p>Number of calls that timed out during the queuing phase.</p>
+         * <p>The number of calls that time out during the queuing phase.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -638,7 +638,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsQueuingTimeout;
 
         /**
-         * <p>Number of calls that rang to agents. Each time a call enters the queue and is assigned to multiple agents, resulting in ringing, it counts as one.</p>
+         * <p>The number of ringing calls, which refers to the number of calls that trigger agent ringing. If a call is assigned to multiple agents and triggers ringing after entering the queue each time, it is counted as one.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -647,7 +647,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsRinged;
 
         /**
-         * <p>Timeout count, which is the number of calls that experienced queue (skill group) timeout. If a single call enters the same queue multiple times, each timeout is counted separately.</p>
+         * <p>The number of timed-out calls, which refers to the number of calls that time out in the queue or skill group. If a call enters the same queue multiple times and times out each time, each timeout is counted as one.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -656,7 +656,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsTimeout;
 
         /**
-         * <p>Acknowledgement rate. Calculation Formula: CallsHandled / CallsOffered (because acknowledgement events and assign events may fall into different time ranges, the result may exceed 100% in certain cases).</p>
+         * <p>The handle rate. Calculation formula: CallsHandled/CallsOffered. The result may exceed 100% in some cases because handle events and offer events may fall into different time ranges.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -665,7 +665,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float handleRate;
 
         /**
-         * <p>Maximum abandonment duration, in seconds.</p>
+         * <p>The maximum abandon time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -674,7 +674,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long maxAbandonTime;
 
         /**
-         * <p>Maximum queue abandonment duration, in seconds.</p>
+         * <p>The maximum abandon time in queue, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -683,7 +683,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long maxAbandonedInQueueTime;
 
         /**
-         * <p>Maximum ring abandonment duration, in seconds.</p>
+         * <p>The maximum abandon time during ringing, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -692,7 +692,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long maxAbandonedInRingTime;
 
         /**
-         * <p>Maximum call hold time, in seconds.</p>
+         * <p>The maximum hold time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -701,7 +701,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long maxHoldTime;
 
         /**
-         * <p>Maximum ring duration, in seconds.</p>
+         * <p>The maximum ring time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -710,7 +710,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long maxRingTime;
 
         /**
-         * <p>Maximum talk duration, in seconds.</p>
+         * <p>The maximum talk time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -719,7 +719,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long maxTalkTime;
 
         /**
-         * <p>Maximum wait time, in seconds.</p>
+         * <p>The maximum wait time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>
@@ -728,7 +728,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long maxWaitTime;
 
         /**
-         * <p>Maximum post-processing duration, in seconds.</p>
+         * <p>The maximum after-call work time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -737,7 +737,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long maxWorkTime;
 
         /**
-         * <p>Satisfaction index, which is the average of the satisfaction keypress digits (single-digit numbers).</p>
+         * <p>The satisfaction index, which is the average value of the satisfaction rating digits.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -746,7 +746,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float satisfactionIndex;
 
         /**
-         * <p>Satisfaction rate. Calculation Formula: Count of evaluations marked as satisfied / Count of satisfaction survey responses.</p>
+         * <p>The satisfaction rate. Calculation formula: Number of satisfied ratings / Number of satisfaction survey responses.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -755,7 +755,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float satisfactionRate;
 
         /**
-         * <p>Sending Count of satisfaction surveys.</p>
+         * <p>The number of satisfaction surveys offered.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -764,7 +764,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long satisfactionSurveysOffered;
 
         /**
-         * <p>Count of satisfaction survey responses.</p>
+         * <p>The number of satisfaction surveys responded to.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -773,7 +773,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long satisfactionSurveysResponded;
 
         /**
-         * <p>Service level within 15 seconds.</p>
+         * <p>The 15-second service level.</p>
          * 
          * <strong>example:</strong>
          * <p>0.7</p>
@@ -782,7 +782,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float serviceLevel15;
 
         /**
-         * <p>Service level within 20 seconds: number of calls with wait time less than or equal to 20 seconds divided by CallsQueued.</p>
+         * <p>The 20-second service level. Calculation formula: Number of calls with a wait time of less than or equal to 20 seconds / CallsQueued.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -791,7 +791,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float serviceLevel20;
 
         /**
-         * <p>Service level within 30 seconds.</p>
+         * <p>The 30-second service level.</p>
          * 
          * <strong>example:</strong>
          * <p>0.9</p>
@@ -800,7 +800,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float serviceLevel30;
 
         /**
-         * <p>Total abandonment duration, in seconds.</p>
+         * <p>The total abandon time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -809,7 +809,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long totalAbandonTime;
 
         /**
-         * <p>Total queue abandonment duration, in seconds.</p>
+         * <p>The total abandon time in queue, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -818,7 +818,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long totalAbandonedInQueueTime;
 
         /**
-         * <p>Total ring abandonment duration, in seconds.</p>
+         * <p>The total abandon time during ringing, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -827,7 +827,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long totalAbandonedInRingTime;
 
         /**
-         * <p>Total call hold duration, in seconds.</p>
+         * <p>The total hold time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -836,7 +836,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long totalHoldTime;
 
         /**
-         * <p>Total number of messages sent in chat sessions.</p>
+         * <p>The total number of messages sent in chat sessions.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -845,7 +845,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long totalMessagesSent;
 
         /**
-         * <p>Total number of messages sent by agents in chat sessions.</p>
+         * <p>The total number of messages sent by agents in chat sessions.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -854,7 +854,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long totalMessagesSentByAgent;
 
         /**
-         * <p>Total number of messages sent by the customer in chat sessions.</p>
+         * <p>The total number of messages sent by customers in chat sessions.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -863,7 +863,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long totalMessagesSentByCustomer;
 
         /**
-         * <p>Total ringing duration, in seconds.</p>
+         * <p>The total ring time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -872,7 +872,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long totalRingTime;
 
         /**
-         * <p>Total talk time, in seconds.</p>
+         * <p>The total talk time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>447</p>
@@ -881,7 +881,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long totalTalkTime;
 
         /**
-         * <p>Total waiting duration, in seconds.</p>
+         * <p>The total wait time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>34</p>
@@ -890,7 +890,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long totalWaitTime;
 
         /**
-         * <p>Total post-processing time, in seconds.</p>
+         * <p>The total after-call work time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>85</p>
@@ -1355,7 +1355,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
 
     public static class ListHistoricalSkillGroupReportResponseBodyDataListOutbound extends TeaModel {
         /**
-         * <p>Answer rate. Calculation Formula: CallsAnswered / CallsDialed. (Because the call answering event and the acknowledgement event may fall into different time ranges, the result may exceed 100% in certain cases.)</p>
+         * <p>The answer rate. Calculation formula: CallsAnswered/CallsDialed. The result may exceed 100% in some cases because answer events and response events may fall into different time ranges.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1364,7 +1364,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float answerRate;
 
         /**
-         * <p>Average dial-up duration, in seconds. Calculation Formula: TotalDialingTime / CallsDialed.</p>
+         * <p>The average dialing time in seconds. Formula: TotalDialingTime/CallsDialed.</p>
          * 
          * <strong>example:</strong>
          * <p>37</p>
@@ -1373,7 +1373,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float averageDialingTime;
 
         /**
-         * <p>Average call hold duration, in seconds. Calculation Formula: TotalHoldTime / CallsHold.</p>
+         * <p>The average hold time, in seconds. Calculation formula: TotalHoldTime/CallsHold.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1382,7 +1382,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float averageHoldTime;
 
         /**
-         * <p>Average ring time, in seconds. Calculation Formula: TotalRingTime / CallsRinged.</p>
+         * <p>The average ring time, in seconds. Calculation formula: TotalRingTime/CallsRinged.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1391,7 +1391,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float averageRingTime;
 
         /**
-         * <p>Average talk time, in seconds. Calculation Formula: TotalTalkTime / CallsAnswered.</p>
+         * <p>The average talk time in seconds. Formula: TotalTalkTime/CallsAnswered.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -1400,7 +1400,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float averageTalkTime;
 
         /**
-         * <p>Average post-processing duration per call, in seconds. Calculation Formula: TotalWorkTime / CallsDialed</p>
+         * <p>The average after-call work time in seconds. Formula: TotalWorkTime/CallsDialed.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1409,7 +1409,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float averageWorkTime;
 
         /**
-         * <p>Number of answered calls.</p>
+         * <p>The number of answered calls.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1418,7 +1418,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsAnswered;
 
         /**
-         * <p>Transfer-in volume for consultation, which refers to the number of calls transferred to this skill group from other skill groups for consultation. Transfers between agents within the same skill group are not counted. If an agent joins multiple skill groups simultaneously, the call is attributed to the first skill group the agent signed into. If a single call is transferred multiple times from other skill groups to this skill group, each transfer is counted separately. The same rule applies below.</p>
+         * <p>The number of attended transfers in, which refers to the number of calls transferred to this skill group from other skill groups through attended transfers. Transfers between agents within the same skill group are not counted. If an agent is signed in to multiple skill groups at the same time, the call is attributed to the first skill group the agent signed in to. If a call is transferred to this skill group multiple times from other skill groups, each transfer is counted as one. The same rule applies to similar metrics below.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1427,7 +1427,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsAttendedTransferIn;
 
         /**
-         * <p>Quantity of attended transfer-out calls, which refers to the number of calls transferred from this skill group to another skill group for consultation. Transfers between agents within the same skill group are not counted.</p>
+         * <p>The number of attended transfers out, which refers to the number of calls transferred from this skill group to other skill groups through attended transfers. Transfers between agents within the same skill group are not counted.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1436,7 +1436,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsAttendedTransferOut;
 
         /**
-         * <p>Quantity of direct transfer-in calls, which refers to the number of calls directly transferred to this skill group from other skill groups. Transfers between agents within the same skill group are not counted. If an agent is signed into multiple skill groups simultaneously, the call is attributed to the first skill group the agent signed into. If a single call is transferred multiple times from other skill groups to this skill group, each transfer is counted separately. The same rule applies below.</p>
+         * <p>The number of blind transfers in, which refers to the number of calls transferred to this skill group from other skill groups through blind transfers. Transfers between agents within the same skill group are not counted. If an agent is signed in to multiple skill groups at the same time, the call is attributed to the first skill group the agent signed in to. If a call is transferred to this skill group multiple times from other skill groups, each transfer is counted as one. The same rule applies to similar metrics below.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1445,7 +1445,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsBlindTransferIn;
 
         /**
-         * <p>Quantity of direct transfer-out calls, which refers to the number of calls directly transferred from this skill group to other skill groups. Transfers between agents within the same skill group are not counted.</p>
+         * <p>The number of blind transfers out, which refers to the number of calls transferred from this skill group to other skill groups through blind transfers. Transfers between agents within the same skill group are not counted.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1454,7 +1454,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsBlindTransferOut;
 
         /**
-         * <p>Number of dialed calls.</p>
+         * <p>The number of dialed calls.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -1463,7 +1463,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsDialed;
 
         /**
-         * <p>Number of calls placed on hold. If a call is placed on hold multiple times before being transfer-out from the current skill group, it counts as one occurrence.</p>
+         * <p>The number of calls placed on hold. If a call is placed on hold multiple times before being transferred out of the current skill group, it is counted as one.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1472,7 +1472,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsHold;
 
         /**
-         * <p>Number of calls that rang to agents. Each time a call enters the queue and is assigned to multiple agents, resulting in ringing, it counts as one occurrence.</p>
+         * <p>The number of ringing calls, which refers to the number of calls that trigger agent ringing. If a call is assigned to multiple agents and triggers ringing after entering the queue each time, it is counted as one.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1481,7 +1481,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long callsRinged;
 
         /**
-         * <p>Maximum dialing time, in seconds.</p>
+         * <p>The maximum dialing time in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -1490,7 +1490,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long maxDialingTime;
 
         /**
-         * <p>Maximum hold time during calls, in seconds.</p>
+         * <p>The maximum hold time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1499,7 +1499,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long maxHoldTime;
 
         /**
-         * <p>Maximum ring duration, in seconds.</p>
+         * <p>The maximum ring time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1508,7 +1508,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long maxRingTime;
 
         /**
-         * <p>Maximum talk time, in seconds.</p>
+         * <p>The maximum talk time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1517,7 +1517,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long maxTalkTime;
 
         /**
-         * <p>Maximum post-processing duration per call, in seconds.</p>
+         * <p>The maximum after-call work time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1526,7 +1526,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long maxWorkTime;
 
         /**
-         * <p>Satisfaction index, which is the average value of the single-digit satisfaction key presses.</p>
+         * <p>The satisfaction index, which is the average value of the satisfaction rating digits.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1535,7 +1535,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float satisfactionIndex;
 
         /**
-         * <p>Satisfaction rate. Calculation Formula: Quantity of evaluations marked as satisfied divided by the Count of satisfaction survey responses.</p>
+         * <p>The satisfaction rate. Calculation formula: Number of satisfied ratings / Number of satisfaction survey responses.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1544,7 +1544,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float satisfactionRate;
 
         /**
-         * <p>Sending Count of satisfaction surveys.</p>
+         * <p>The number of satisfaction surveys offered.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1553,7 +1553,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long satisfactionSurveysOffered;
 
         /**
-         * <p>Response Count of satisfaction surveys.</p>
+         * <p>The number of satisfaction surveys responded to.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1562,7 +1562,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long satisfactionSurveysResponded;
 
         /**
-         * <p>Total dial-up duration, in seconds.</p>
+         * <p>The total dialing time in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>218</p>
@@ -1571,7 +1571,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long totalDialingTime;
 
         /**
-         * <p>Total call hold duration, in seconds.</p>
+         * <p>The total hold time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1580,7 +1580,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long totalHoldTime;
 
         /**
-         * <p>Total ring duration, in seconds.</p>
+         * <p>The total ring time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1589,7 +1589,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long totalRingTime;
 
         /**
-         * <p>Total talk time, in seconds.</p>
+         * <p>The total talk time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -1598,7 +1598,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long totalTalkTime;
 
         /**
-         * <p>Total post-processing duration, in seconds.</p>
+         * <p>The total after-call work time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -1839,16 +1839,16 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
 
     public static class ListHistoricalSkillGroupReportResponseBodyDataListOverallBreakCodeDetailList extends TeaModel {
         /**
-         * <p>Break type code.</p>
+         * <p>The break type code.</p>
          * 
          * <strong>example:</strong>
-         * <p>会议</p>
+         * <p>Meeting</p>
          */
         @NameInMap("BreakCode")
         public String breakCode;
 
         /**
-         * <p>Number of occurrences of this break type.</p>
+         * <p>The number of occurrences of this break type.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1857,7 +1857,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>Total duration of this break type, in seconds.</p>
+         * <p>The total duration of this break type in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -1898,7 +1898,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
 
     public static class ListHistoricalSkillGroupReportResponseBodyDataListOverall extends TeaModel {
         /**
-         * <p>Average break duration, in seconds. Calculation Formula: TotalBreakTime / Break Count. Break Count is a non-API statistical field.</p>
+         * <p>The average break time in seconds. Formula: TotalBreakTime/Number of breaks. The number of breaks is not a statistical field returned by the API.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1907,7 +1907,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float averageBreakTime;
 
         /**
-         * <p>Average call hold duration, in seconds. Calculation Formula: TotalHoldTime / (Inbound CallsHold + Outbound CallsHold).</p>
+         * <p>The average hold time in seconds. Formula: TotalHoldTime/(Inbound CallsHold + Outbound CallsHold).</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1916,7 +1916,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float averageHoldTime;
 
         /**
-         * <p>Average ready time, in seconds. Calculation Formula: TotalReadyTime / Count of ready events. The count of ready events is not an API statistics field.</p>
+         * <p>The average ready time in seconds. Formula: TotalReadyTime/Number of ready states. The number of ready states is not a statistical field returned by the API.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1925,7 +1925,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float averageReadyTime;
 
         /**
-         * <p>Average talk time, in seconds. Calculation formula: TotalTalkTime / (CallsAnswered + CallsHandled).</p>
+         * <p>The average talk time in seconds. Formula: TotalTalkTime/(CallsAnswered + CallsHandled).</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1934,7 +1934,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float averageTalkTime;
 
         /**
-         * <p>Average post-processing time, in seconds. Calculation Formula: TotalWorkTime / TotalCalls.</p>
+         * <p>The average after-call work time in seconds. Formula: TotalWorkTime/TotalCalls.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -1943,13 +1943,13 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float averageWorkTime;
 
         /**
-         * <p>List of break details.</p>
+         * <p>The list of break details.</p>
          */
         @NameInMap("BreakCodeDetailList")
         public java.util.List<ListHistoricalSkillGroupReportResponseBodyDataListOverallBreakCodeDetailList> breakCodeDetailList;
 
         /**
-         * <p>Maximum break duration, in seconds.</p>
+         * <p>The maximum break time in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1958,7 +1958,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long maxBreakTime;
 
         /**
-         * <p>Maximum call hold duration, in seconds.</p>
+         * <p>The maximum hold time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1967,7 +1967,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long maxHoldTime;
 
         /**
-         * <p>Maximum ready time, in seconds.</p>
+         * <p>The maximum ready time in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>19328</p>
@@ -1976,7 +1976,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long maxReadyTime;
 
         /**
-         * <p>Maximum talk time, in seconds.</p>
+         * <p>The maximum talk time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1985,7 +1985,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long maxTalkTime;
 
         /**
-         * <p>Maximum post-processing duration, in seconds.</p>
+         * <p>The maximum after-call work time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -1994,7 +1994,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long maxWorkTime;
 
         /**
-         * <p>Agent occupancy rate. Calculation formula: (TotalWorkTime + TotalTalkTime) / TotalLoggedInTime.</p>
+         * <p>The agent occupancy rate. Formula: (TotalWorkTime + TotalTalkTime) / TotalLoggedInTime.</p>
          * 
          * <strong>example:</strong>
          * <p>0.02332222293912065</p>
@@ -2003,7 +2003,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float occupancyRate;
 
         /**
-         * <p>Satisfaction index, which is the average value of the satisfaction keypress digits (single-digit numbers).</p>
+         * <p>The satisfaction index, which is the average value of the satisfaction rating digits.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -2012,7 +2012,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float satisfactionIndex;
 
         /**
-         * <p>Satisfaction rate. Calculation Formula: Number of responses marked as satisfied / Count of satisfaction survey responses.</p>
+         * <p>The satisfaction rate. Calculation formula: Number of satisfied ratings / Number of satisfaction survey responses.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -2021,7 +2021,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Float satisfactionRate;
 
         /**
-         * <p>Sending Count of satisfaction surveys.</p>
+         * <p>The number of satisfaction surveys offered.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -2030,7 +2030,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long satisfactionSurveysOffered;
 
         /**
-         * <p>Count of satisfaction survey responses.</p>
+         * <p>The number of satisfaction surveys responded to.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -2039,7 +2039,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long satisfactionSurveysResponded;
 
         /**
-         * <p>Total break time, in seconds.</p>
+         * <p>The total break time in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -2048,7 +2048,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long totalBreakTime;
 
         /**
-         * <p>Total call volume. Calculation Formula: CallsOffered + CallsDialed.</p>
+         * <p>The total number of calls. Formula: CallsOffered + CallsDialed.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>
@@ -2057,7 +2057,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long totalCalls;
 
         /**
-         * <p>Total hold duration, in seconds.</p>
+         * <p>The total hold time in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -2066,7 +2066,8 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long totalHoldTime;
 
         /**
-         * <p>Total logon time, in seconds.<br><em>Note: Excludes offline and short break durations.</em></p>
+         * <p>The total logged-in time in seconds.
+         * <em>Note: Excludes offline and break time.</em></p>
          * 
          * <strong>example:</strong>
          * <p>23218</p>
@@ -2075,7 +2076,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long totalLoggedInTime;
 
         /**
-         * <p>Total ready time, in seconds.</p>
+         * <p>The total ready time in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>22428</p>
@@ -2084,7 +2085,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long totalReadyTime;
 
         /**
-         * <p>Total talk time, in seconds.</p>
+         * <p>The total talk time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>449</p>
@@ -2093,7 +2094,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Long totalTalkTime;
 
         /**
-         * <p>Total post-processing duration, in seconds.</p>
+         * <p>The total after-call work time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>94</p>
@@ -2294,31 +2295,31 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
 
     public static class ListHistoricalSkillGroupReportResponseBodyDataList extends TeaModel {
         /**
-         * <p>Back-to-back metric.</p>
+         * <p>The back-to-back call metrics.</p>
          */
         @NameInMap("Back2Back")
         public ListHistoricalSkillGroupReportResponseBodyDataListBack2Back back2Back;
 
         /**
-         * <p>Inbound metrics.</p>
+         * <p>The inbound call metrics.</p>
          */
         @NameInMap("Inbound")
         public ListHistoricalSkillGroupReportResponseBodyDataListInbound inbound;
 
         /**
-         * <p>Outbound metrics.</p>
+         * <p>The outbound metrics.</p>
          */
         @NameInMap("Outbound")
         public ListHistoricalSkillGroupReportResponseBodyDataListOutbound outbound;
 
         /**
-         * <p>Overall metrics.</p>
+         * <p>The overall metrics.</p>
          */
         @NameInMap("Overall")
         public ListHistoricalSkillGroupReportResponseBodyDataListOverall overall;
 
         /**
-         * <p>Skill group ID.</p>
+         * <p>The skill group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
@@ -2327,7 +2328,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public String skillGroupId;
 
         /**
-         * <p>Skill group name.</p>
+         * <p>The skill group name.</p>
          * 
          * <strong>example:</strong>
          * <p>skillgroup</p>
@@ -2392,13 +2393,13 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
 
     public static class ListHistoricalSkillGroupReportResponseBodyData extends TeaModel {
         /**
-         * <p>List of historical data for skill groups.</p>
+         * <p>The list of historical data for the skill group.</p>
          */
         @NameInMap("List")
         public java.util.List<ListHistoricalSkillGroupReportResponseBodyDataList> list;
 
         /**
-         * <p>Page number, ranging from 1 to 100.</p>
+         * <p>The page number. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2407,7 +2408,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>Page size, ranging from 1 to 100.</p>
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -2416,7 +2417,7 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Total count.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>

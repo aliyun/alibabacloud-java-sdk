@@ -1438,10 +1438,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>拥有RAM权限的账号可以到RAM控制台查询阿里云主账号下管理的所有RAM子账号，RAM控制台地址：<a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a></p>
+     * <p>Accounts with RAM permissions can go to the Resource Access Management (RAM) console to query all RAM users managed under the Alibaba Cloud account. RAM console URL: <a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>假期工作日检查</p>
+     * <p>Checks whether the current time is a working hour, considering holidays and special workdays.</p>
      * 
      * @param request CheckBusinessHoursRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1477,10 +1477,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>拥有RAM权限的账号可以到RAM控制台查询阿里云主账号下管理的所有RAM子账号，RAM控制台地址：<a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a></p>
+     * <p>Accounts with RAM permissions can go to the Resource Access Management (RAM) console to query all RAM users managed under the Alibaba Cloud account. RAM console URL: <a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>假期工作日检查</p>
+     * <p>Checks whether the current time is a working hour, considering holidays and special workdays.</p>
      * 
      * @param request CheckBusinessHoursRequest
      * @return CheckBusinessHoursResponse
@@ -8238,7 +8238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can invoke ListHistoricalSkillGroupReport to obtain historical data reports for one or more skill groups under a specified instance.</p>
+     * <p>Retrieves historical data reports for one or more skill groups in a specified instance.</p>
      * 
      * @param request ListHistoricalSkillGroupReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8271,6 +8271,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StartTime", request.startTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.summarizeByInstanceId)) {
+            query.put("SummarizeByInstanceId", request.summarizeByInstanceId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.skillGroupIdList)) {
             body.put("SkillGroupIdList", request.skillGroupIdList);
@@ -8296,7 +8300,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can invoke ListHistoricalSkillGroupReport to obtain historical data reports for one or more skill groups under a specified instance.</p>
+     * <p>Retrieves historical data reports for one or more skill groups in a specified instance.</p>
      * 
      * @param request ListHistoricalSkillGroupReportRequest
      * @return ListHistoricalSkillGroupReportResponse
