@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the job created by this request.</p>
+     * <p>The ID of the job created by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>dlc7*******</p>

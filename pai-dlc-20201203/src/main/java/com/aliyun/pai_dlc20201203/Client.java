@@ -73,13 +73,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before using this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
      * <blockquote>
-     * <p>Notice: The total length of CreateJob operation parameters (including system-generated parameters) cannot exceed 65,536 bytes.</p>
+     * <p>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a job and runs it in a cluster. You can specify information such as the data source configuration, code source configuration, startup command, and compute resource configuration for each node of the job.</p>
+     * <p>Creates a job and runs it in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node of the job.</p>
      * 
      * @param request CreateJobRequest
      * @param headers map
@@ -213,13 +213,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before using this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
      * <blockquote>
-     * <p>Notice: The total length of CreateJob operation parameters (including system-generated parameters) cannot exceed 65,536 bytes.</p>
+     * <p>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a job and runs it in a cluster. You can specify information such as the data source configuration, code source configuration, startup command, and compute resource configuration for each node of the job.</p>
+     * <p>Creates a job and runs it in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node of the job.</p>
      * 
      * @param request CreateJobRequest
      * @return CreateJobResponse
@@ -2805,7 +2805,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration of a job, such as modifying the priority of a queued job.</p>
+     * <p>Updates the configuration of a node, such as modifying the priority of a queued node.</p>
      * 
      * @param request UpdateJobRequest
      * @param headers map
@@ -2855,7 +2855,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration of a job, such as modifying the priority of a queued job.</p>
+     * <p>Updates the configuration of a node, such as modifying the priority of a queued node.</p>
      * 
      * @param request UpdateJobRequest
      * @return UpdateJobResponse

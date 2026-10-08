@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateJobRequest extends TeaModel {
     /**
-     * <p>The visibility of the job. The visibility can only be expanded, not reduced. Valid values:</p>
+     * <p>The visibility of the node can only be expanded, not reduced. Valid values:</p>
      * <ul>
-     * <li>PUBLIC: visible to all users in the workspace.</li>
+     * <li>PUBLIC: Visible to everyone in the workspace.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,16 +24,16 @@ public class UpdateJobRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The job specification definition.</p>
+     * <p>The node specifications.</p>
      */
     @NameInMap("JobSpecs")
     public java.util.List<JobSpec> jobSpecs;
 
     /**
-     * <p>The priority of the job. Valid values: 1 to 9.</p>
+     * <p>The priority of the node. Valid values: 1 to 9.</p>
      * <ul>
-     * <li>1: the lowest priority.</li>
-     * <li>9: the highest priority.</li>
+     * <li>1: lowest priority.</li>
+     * <li>9: highest priority.</li>
      * </ul>
      * 
      * <strong>example:</strong>
