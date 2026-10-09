@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSupabaseProjectRequest extends TeaModel {
     /**
-     * <p>The password of the initial account.</p>
+     * <p>The initial account password.</p>
      * <p>Password rules:</p>
      * <ul>
      * <li>The password must be 8 to 32 characters in length.</li>
@@ -21,7 +21,7 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String accountPassword;
 
     /**
-     * <p>Specifies whether to enable auto start/stop. If this parameter is not specified, the default value is false.</p>
+     * <p>Specifies whether to enable auto-start and auto-stop. If you do not specify this parameter, the default value is false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -30,7 +30,19 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public Boolean autoScale;
 
     /**
-     * <p>The idempotency token. Ensures that duplicate requests do not result in duplicate operations.</p>
+     * <p>The backup set ID.</p>
+     * <blockquote>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/3064623.html">ListSupabaseDataBackups</a> to view the IDs of all backup sets under the target Supabase project.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2176307784</p>
+     */
+    @NameInMap("BackupId")
+    public String backupId;
+
+    /**
+     * <p>The client token. It is used to ensure idempotence and prevent duplicate requests from executing the same operation.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -39,7 +51,16 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The performance level (PL) of the cloud disk. If this parameter is not specified, the default value PL0 is used.</p>
+     * <p>The optional creation parameters. The default value is empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
+    @NameInMap("CreateOptions")
+    public String createOptions;
+
+    /**
+     * <p>The performance level of the cloud disk. If you do not specify this parameter, the default value is PL0.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>PL0</li>
@@ -55,7 +76,7 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String diskPerformanceLevel;
 
     /**
-     * <p>The DPI engine version. If this parameter is not specified, the default value PG15 is used. PG17 and later versions support the data sandbox (branch) feature.</p>
+     * <p>The DPI engine version. If you do not specify this parameter, the default value is PG15. PostgreSQL 17 and later versions support the data sandbox (branch) feature.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>PG15: PostgreSQL 15.</li>
@@ -68,16 +89,22 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    /**
+     * <p>Specifies whether the project is the lightweight edition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Lightweight")
     public Boolean lightweight;
 
     /**
-     * <p>The billing type. If this parameter is not specified, the default value Free is used.</p>
+     * <p>The billing method. If you do not specify this parameter, the default value is Free.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Free: Free tier.</li>
-     * <li>Postpaid: Pay-as-you-go.</li>
-     * <li>Prepaid: Subscription.</li>
+     * <li>Free: the free billing method.</li>
+     * <li>Postpaid: pay-as-you-go.</li>
+     * <li>Prepaid: subscription.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -87,7 +114,7 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The unit of the subscription duration. This parameter takes effect only when PayType is set to PrePay. If this parameter is not specified, the default value Month is used.</p>
+     * <p>The unit of the subscription duration. This parameter takes effect only when PayType is set to Prepaid. If you do not specify this parameter, the default value is Month.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>Month: month.</li>
@@ -105,7 +132,7 @@ public class CreateSupabaseProjectRequest extends TeaModel {
      * <p>Naming rules:</p>
      * <ul>
      * <li>The name must be 1 to 128 characters in length.</li>
-     * <li>The name can contain letters, digits, hyphens (-), and underscores (_).</li>
+     * <li>The name can contain only letters, digits, hyphens (-), and underscores (_).</li>
      * <li>The name must start with a letter or an underscore (_).</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -117,7 +144,7 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The specifications of the Supabase project. The Free billing type uses free-tier specifications. For paid billing types, the specifications must match those available in the console.</p>
+     * <p>The specifications of the Supabase project. The free billing method uses the free specifications. For paid billing methods, the specifications must be consistent with those available in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -127,7 +154,7 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String projectSpec;
 
     /**
-     * <p>The region ID. Specifies the region in which to create the project.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -136,7 +163,7 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IP address whitelist. Separate multiple IP addresses or CIDR blocks with commas (,). If this parameter is not specified, the default value 0.0.0.0/0 is used.</p>
+     * <p>The IP address whitelist. Separate multiple IP addresses or CIDR blocks with commas (,). If you do not specify this parameter, the default value 0.0.0.0/0 is used.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -146,7 +173,16 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String securityIPList;
 
     /**
-     * <p>The storage size, in GB. If this parameter is not specified for non-Free billing types, the default value is 1 GB.</p>
+     * <p>The ID of the Supabase project to which the backup set belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>spb-xxxxxxxx</p>
+     */
+    @NameInMap("SrcProjectId")
+    public String srcProjectId;
+
+    /**
+     * <p>The storage capacity. Unit: GB. If you do not specify this parameter for a non-free billing method, the default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -154,11 +190,14 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     @NameInMap("StorageSize")
     public Long storageSize;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateSupabaseProjectRequestTags> tags;
 
     /**
-     * <p>The subscription duration. This parameter takes effect only when PayType is set to PrePay. If this parameter is not specified, the default value is 1.</p>
+     * <p>The subscription duration of the resource. This parameter takes effect only when PayType is set to Prepaid. If you do not specify this parameter, the default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -187,7 +226,7 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The zone ID. The zone of the vSwitch specified by VSwitchId must be the same as this parameter value.</p>
+     * <p>The zone ID. The zone of the vSwitch specified by VSwitchId must be the same as the value of this parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -217,12 +256,28 @@ public class CreateSupabaseProjectRequest extends TeaModel {
         return this.autoScale;
     }
 
+    public CreateSupabaseProjectRequest setBackupId(String backupId) {
+        this.backupId = backupId;
+        return this;
+    }
+    public String getBackupId() {
+        return this.backupId;
+    }
+
     public CreateSupabaseProjectRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateSupabaseProjectRequest setCreateOptions(String createOptions) {
+        this.createOptions = createOptions;
+        return this;
+    }
+    public String getCreateOptions() {
+        return this.createOptions;
     }
 
     public CreateSupabaseProjectRequest setDiskPerformanceLevel(String diskPerformanceLevel) {
@@ -297,6 +352,14 @@ public class CreateSupabaseProjectRequest extends TeaModel {
         return this.securityIPList;
     }
 
+    public CreateSupabaseProjectRequest setSrcProjectId(String srcProjectId) {
+        this.srcProjectId = srcProjectId;
+        return this;
+    }
+    public String getSrcProjectId() {
+        return this.srcProjectId;
+    }
+
     public CreateSupabaseProjectRequest setStorageSize(Long storageSize) {
         this.storageSize = storageSize;
         return this;
@@ -346,9 +409,26 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     }
 
     public static class CreateSupabaseProjectRequestTags extends TeaModel {
+        /**
+         * <p>The tag key. Limits:</p>
+         * <ul>
+         * <li>It cannot be an empty string.</li>
+         * <li>It can be up to 128 characters in length.</li>
+         * <li>It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>test-key</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. The value can be an empty string. It can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-value</p>
+         */
         @NameInMap("Value")
         public String value;
 

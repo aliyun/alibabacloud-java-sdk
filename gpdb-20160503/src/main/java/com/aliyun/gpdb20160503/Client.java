@@ -3571,7 +3571,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a Supabase project in a specified region and zone. This operation supports the Free, pay-as-you-go, and subscription billing methods. You can specify the network, specifications, storage, access IP address whitelist, DPI engine version, and auto start/stop configurations.</p>
+     * <p>The instance must be in the Running state. After a successful call, you can call ListSupabaseBackupJobs to query the progress of the backup job and call ListSupabaseDataBackups to query backup sets.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a backup job for a specified Supabase instance and returns the backup job ID.</p>
+     * 
+     * @param request CreateSupabaseBackupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSupabaseBackupResponse
+     */
+    public CreateSupabaseBackupResponse createSupabaseBackupWithOptions(CreateSupabaseBackupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSupabaseBackup"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSupabaseBackupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The instance must be in the Running state. After a successful call, you can call ListSupabaseBackupJobs to query the progress of the backup job and call ListSupabaseDataBackups to query backup sets.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a backup job for a specified Supabase instance and returns the backup job ID.</p>
+     * 
+     * @param request CreateSupabaseBackupRequest
+     * @return CreateSupabaseBackupResponse
+     */
+    public CreateSupabaseBackupResponse createSupabaseBackup(CreateSupabaseBackupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSupabaseBackupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a Supabase project in a specified region and active zone. This operation supports the free, pay-as-you-go, and subscription billing methods. You can specify the network, specifications, storage, access whitelist, DPI engine version, and auto-start and auto-stop configurations.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a Supabase project.</p>
@@ -3591,8 +3645,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AutoScale", request.autoScale);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.backupId)) {
+            query.put("BackupId", request.backupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createOptions)) {
+            query.put("CreateOptions", request.createOptions);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.diskPerformanceLevel)) {
@@ -3629,6 +3691,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityIPList)) {
             query.put("SecurityIPList", request.securityIPList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcProjectId)) {
+            query.put("SrcProjectId", request.srcProjectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.storageSize)) {
@@ -3674,7 +3740,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a Supabase project in a specified region and zone. This operation supports the Free, pay-as-you-go, and subscription billing methods. You can specify the network, specifications, storage, access IP address whitelist, DPI engine version, and auto start/stop configurations.</p>
+     * <p>Creates a Supabase project in a specified region and active zone. This operation supports the free, pay-as-you-go, and subscription billing methods. You can specify the network, specifications, storage, access whitelist, DPI engine version, and auto-start and auto-stop configurations.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a Supabase project.</p>
@@ -10230,6 +10296,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To modify the policy, call ModifySupabaseBackupPolicy.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the data backup cycle, backup time, backup retention period, and automatic recovery point configurations of a specified Supabase instance.</p>
+     * 
+     * @param request DescribeSupabaseBackupPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSupabaseBackupPolicyResponse
+     */
+    public DescribeSupabaseBackupPolicyResponse describeSupabaseBackupPolicyWithOptions(DescribeSupabaseBackupPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSupabaseBackupPolicy"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSupabaseBackupPolicyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>To modify the policy, call ModifySupabaseBackupPolicy.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the data backup cycle, backup time, backup retention period, and automatic recovery point configurations of a specified Supabase instance.</p>
+     * 
+     * @param request DescribeSupabaseBackupPolicyRequest
+     * @return DescribeSupabaseBackupPolicyResponse
+     */
+    public DescribeSupabaseBackupPolicyResponse describeSupabaseBackupPolicy(DescribeSupabaseBackupPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSupabaseBackupPolicyWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries the features that are supported by an AnalyticDB for PostgreSQL instance.</p>
      * 
@@ -11955,6 +12075,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetSupabaseProjectDashboardAccountResponse getSupabaseProjectDashboardAccount(GetSupabaseProjectDashboardAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getSupabaseProjectDashboardAccountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the specifications and zones available for creating Supabase projects in a specified region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the available specifications for Supabase projects.</p>
+     * 
+     * @param request GetSupabaseProjectSpecRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSupabaseProjectSpecResponse
+     */
+    public GetSupabaseProjectSpecResponse getSupabaseProjectSpecWithOptions(GetSupabaseProjectSpecRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSupabaseProjectSpec"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSupabaseProjectSpecResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the specifications and zones available for creating Supabase projects in a specified region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the available specifications for Supabase projects.</p>
+     * 
+     * @param request GetSupabaseProjectSpecRequest
+     * @return GetSupabaseProjectSpecResponse
+     */
+    public GetSupabaseProjectSpecResponse getSupabaseProjectSpec(GetSupabaseProjectSpecRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSupabaseProjectSpecWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation queries the currently recommended stable version and the latest upgradable version for a specified Supabase project.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the upgradable versions for a Supabase project.</p>
+     * 
+     * @param request GetSupabaseUpdateVersionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSupabaseUpdateVersionResponse
+     */
+    public GetSupabaseUpdateVersionResponse getSupabaseUpdateVersionWithOptions(GetSupabaseUpdateVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSupabaseUpdateVersion"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSupabaseUpdateVersionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation queries the currently recommended stable version and the latest upgradable version for a specified Supabase project.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the upgradable versions for a Supabase project.</p>
+     * 
+     * @param request GetSupabaseUpdateVersionRequest
+     * @return GetSupabaseUpdateVersionResponse
+     */
+    public GetSupabaseUpdateVersionResponse getSupabaseUpdateVersion(GetSupabaseUpdateVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSupabaseUpdateVersionWithOptions(request, runtime);
     }
 
     /**
@@ -14175,6 +14399,154 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListStreamingJobsResponse listStreamingJobs(ListStreamingJobsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listStreamingJobsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the backup tasks and task progress of a specified Supabase instance.</p>
+     * 
+     * @param request ListSupabaseBackupJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSupabaseBackupJobsResponse
+     */
+    public ListSupabaseBackupJobsResponse listSupabaseBackupJobsWithOptions(ListSupabaseBackupJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.backupMode)) {
+            query.put("BackupMode", request.backupMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSupabaseBackupJobs"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSupabaseBackupJobsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the backup tasks and task progress of a specified Supabase instance.</p>
+     * 
+     * @param request ListSupabaseBackupJobsRequest
+     * @return ListSupabaseBackupJobsResponse
+     */
+    public ListSupabaseBackupJobsResponse listSupabaseBackupJobs(ListSupabaseBackupJobsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listSupabaseBackupJobsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of Supabase data backups.</p>
+     * 
+     * @param request ListSupabaseDataBackupsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSupabaseDataBackupsResponse
+     */
+    public ListSupabaseDataBackupsResponse listSupabaseDataBackupsWithOptions(ListSupabaseDataBackupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.backupId)) {
+            query.put("BackupId", request.backupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backupMode)) {
+            query.put("BackupMode", request.backupMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backupStatus)) {
+            query.put("BackupStatus", request.backupStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataType)) {
+            query.put("DataType", request.dataType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSupabaseDataBackups"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSupabaseDataBackupsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of Supabase data backups.</p>
+     * 
+     * @param request ListSupabaseDataBackupsRequest
+     * @return ListSupabaseDataBackupsResponse
+     */
+    public ListSupabaseDataBackupsResponse listSupabaseDataBackups(ListSupabaseDataBackupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listSupabaseDataBackupsWithOptions(request, runtime);
     }
 
     /**
@@ -16407,6 +16779,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>You can call DescribeSupabaseBackupPolicy to query the current backup policy, and then call this operation again to confirm the configurations after the modification.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the data backup cycle, backup time, backup retention period, and automatic recovery point configurations of a specified Supabase instance.</p>
+     * 
+     * @param request ModifySupabaseBackupPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifySupabaseBackupPolicyResponse
+     */
+    public ModifySupabaseBackupPolicyResponse modifySupabaseBackupPolicyWithOptions(ModifySupabaseBackupPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.backupRetentionPeriod)) {
+            query.put("BackupRetentionPeriod", request.backupRetentionPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableRecoveryPoint)) {
+            query.put("EnableRecoveryPoint", request.enableRecoveryPoint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.preferredBackupPeriod)) {
+            query.put("PreferredBackupPeriod", request.preferredBackupPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.preferredBackupTime)) {
+            query.put("PreferredBackupTime", request.preferredBackupTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recoveryPointPeriod)) {
+            query.put("RecoveryPointPeriod", request.recoveryPointPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifySupabaseBackupPolicy"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifySupabaseBackupPolicyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can call DescribeSupabaseBackupPolicy to query the current backup policy, and then call this operation again to confirm the configurations after the modification.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the data backup cycle, backup time, backup retention period, and automatic recovery point configurations of a specified Supabase instance.</p>
+     * 
+     * @param request ModifySupabaseBackupPolicyRequest
+     * @return ModifySupabaseBackupPolicyResponse
+     */
+    public ModifySupabaseBackupPolicyResponse modifySupabaseBackupPolicy(ModifySupabaseBackupPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifySupabaseBackupPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p><em>Before you use this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-postgresql/product-overview/pricing-1#9eefcc7b5acz1">pricing</a> of AnalyticDB for PostgreSQL Supabase</em>*.。</p>
      * 
      * <b>summary</b> : 
@@ -17015,7 +17461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves vectors and metadata from a specified document collection using natural language queries.</p>
+     * <p>Retrieves vectors and metadata from a specified document collection by using natural language.</p>
      * 
      * @param tmpReq QueryContentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17056,10 +17502,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileUrl)) {
             query.put("FileUrl", request.fileUrl);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
-            query.put("Filter", request.filter);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.graphEnhance)) {
@@ -17147,6 +17589,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Content", request.content);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            body.put("Filter", request.filter);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -17167,7 +17613,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves vectors and metadata from a specified document collection using natural language queries.</p>
+     * <p>Retrieves vectors and metadata from a specified document collection by using natural language.</p>
      * 
      * @param request QueryContentRequest
      * @return QueryContentResponse
@@ -19345,6 +19791,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateSaasServiceVersionResponse updateSaasServiceVersion(UpdateSaasServiceVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateSaasServiceVersionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Upgrades a specified Supabase project to a target minor version. You can query the supported target versions by calling GetSupabaseUpdateVersion.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Upgrades the version of a Supabase project.</p>
+     * 
+     * @param request UpdateSupabaseVersionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSupabaseVersionResponse
+     */
+    public UpdateSupabaseVersionResponse updateSupabaseVersionWithOptions(UpdateSupabaseVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.minorVersion)) {
+            query.put("MinorVersion", request.minorVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateSupabaseVersion"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSupabaseVersionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Upgrades a specified Supabase project to a target minor version. You can query the supported target versions by calling GetSupabaseUpdateVersion.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Upgrades the version of a Supabase project.</p>
+     * 
+     * @param request UpdateSupabaseVersionRequest
+     * @return UpdateSupabaseVersionResponse
+     */
+    public UpdateSupabaseVersionResponse updateSupabaseVersion(UpdateSupabaseVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateSupabaseVersionWithOptions(request, runtime);
     }
 
     /**

@@ -1,3 +1,17 @@
+2026-10-09 Version: 4.15.0
+- Support API CreateSupabaseBackup.
+- Support API DescribeSupabaseBackupPolicy.
+- Support API GetSupabaseProjectSpec.
+- Support API GetSupabaseUpdateVersion.
+- Support API ListSupabaseBackupJobs.
+- Support API ListSupabaseDataBackups.
+- Support API ModifySupabaseBackupPolicy.
+- Support API UpdateSupabaseVersion.
+- Update API CreateSupabaseProject: add request parameters BackupId.
+- Update API CreateSupabaseProject: add request parameters CreateOptions.
+- Update API CreateSupabaseProject: add request parameters SrcProjectId.
+
+
 2026-09-18 Version: 4.14.1
 - Update API ModifyMasterSpec: add request parameters EffectiveTime.
 - Update API UpgradeDBInstance: add request parameters EffectiveTime.

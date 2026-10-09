@@ -17,7 +17,7 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     public String cacheStorageSize;
 
     /**
-     * <p>This parameter is deprecated. You do not need to specify this parameter.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -26,7 +26,7 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>This parameter is deprecated. You do not need to specify this parameter.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -37,7 +37,7 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the specified region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -48,6 +48,12 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The effective period. Valid values:</p>
+     * <ul>
+     * <li><strong>Immediate</strong> (default): The change takes effect immediately.</li>
+     * <li><strong>MaintainTime</strong>: The change takes effect during the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Immediate</p>
      */
@@ -67,7 +73,7 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     public String instanceSpec;
 
     /**
-     * <p>This parameter is deprecated. You do not need to specify this parameter.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -79,7 +85,7 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>This parameter is deprecated. You do not need to specify this parameter.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -109,7 +115,7 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The performance level (PL) of the cloud disk. Valid values:</p>
+     * <p>The performance level (PL) of the disk. Valid values:</p>
      * <ul>
      * <li><strong>pl0</strong>: PL0.</li>
      * <li><strong>pl1</strong>: PL1.</li>
@@ -125,9 +131,9 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     /**
      * <p>The number of segment nodes. The supported number of nodes varies based on the instance resource type and instance edition:</p>
      * <ul>
-     * <li>Elastic storage mode, High-availability Edition: Valid values: 4 to 512. The value must be a multiple of 4.</li>
-     * <li>Elastic storage mode, &lt;props=&quot;china&quot;&gt;Basic Edition (formerly High-performance Edition)&lt;props=&quot;intl&quot;&gt;High-performance Edition: Valid values: 2 to 512. The value must be a multiple of 2.</li>
-     * <li>Serverless manual scheduling mode: Valid values: 2 to 512. The value must be a multiple of 2.</li>
+     * <li>Elastic storage mode, high-availability edition: valid values are 4 to 512, in increments of 4.</li>
+     * <li>Elastic storage mode, &lt;props=&quot;china&quot;&gt;basic edition (formerly high-performance edition)&lt;props=&quot;intl&quot;&gt;high-performance edition: valid values are 2 to 512, in increments of 2.</li>
+     * <li>Serverless manual scheduling mode: valid values are 2 to 512, in increments of 2.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -148,15 +154,15 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     /**
      * <ul>
      * <li><p>Serverless instances:
-     * The compute resource threshold. Valid values: 8 to 32. The value must be a multiple of 8. Unit: ACU. Default value: 32.</p>
+     * The compute resource threshold. Valid values: 8 to 32, in increments of 8. Unit: ACU. Default value: 32.</p>
      * </li>
-     * <li><p>Serverless Pro instances: The reserved compute resources. Valid values: 16 to 1024. Unit: ACU. Default value: 16. The step size varies based on the value range:</p>
+     * <li><p>Serverless Pro instances: The reserved compute resources. Valid values: 16 to 1024. Unit: ACU. Default value: 16. The increment rules are as follows:</p>
      * <ul>
-     * <li>16 to 32: step size of 4.</li>
-     * <li>32 to 64: step size of 8.</li>
-     * <li>64 to 128: step size of 16.</li>
-     * <li>128 to 256: step size of 32.</li>
-     * <li>Greater than 256: step size of 64.<blockquote>
+     * <li>Range 16 to 32: increments of 4.</li>
+     * <li>Range 32 to 64: increments of 8.</li>
+     * <li>Range 64 to 128: increments of 16.</li>
+     * <li>Range 128 to 256: increments of 32.</li>
+     * <li>Range greater than 256: increments of 64.<blockquote>
      * <p>This parameter is required only for Serverless automatic scheduling mode and Serverless Pro instances.</p>
      * </blockquote>
      * </li>
@@ -171,7 +177,7 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     public String serverlessResource;
 
     /**
-     * <p>The storage capacity of segment nodes. Unit: GB. Valid values: 50 to &lt;props=&quot;china&quot;&gt;8000&lt;props=&quot;intl&quot;&gt;6000. The value must be a multiple of 50.</p>
+     * <p>The storage capacity of segment nodes. Unit: GB. Valid values: 50 to &lt;props=&quot;china&quot;&gt;8000&lt;props=&quot;intl&quot;&gt;6000, in increments of 50.</p>
      * <blockquote>
      * <p>This parameter is supported only for elastic storage mode instances.</p>
      * </blockquote>

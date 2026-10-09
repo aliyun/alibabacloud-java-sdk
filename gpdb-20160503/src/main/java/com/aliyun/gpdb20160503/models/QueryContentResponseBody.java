@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class QueryContentResponseBody extends TeaModel {
     /**
-     * <p>The number of tokens used during vectorization.</p>
+     * <p>The number of tokens used for vectorization.</p>
      * <blockquote>
-     * <p>A token is the smallest unit into which the input text is split. A token can be a word, a phrase, a punctuation mark, or a character.</p>
+     * <p>A token is the smallest unit into which input text is divided. A token can be a word, a phrase, a punctuation mark, or a character.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,8 +46,8 @@ public class QueryContentResponseBody extends TeaModel {
     /**
      * <p>The status. Valid values:</p>
      * <ul>
-     * <li><strong>success</strong>: The operation is successful.</li>
-     * <li><strong>fail</strong>: The operation failed.</li>
+     * <li><strong>success</strong>: Successful.</li>
+     * <li><strong>fail</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class QueryContentResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The resource usage of this query.</p>
+     * <p>The resource usage of the current query.</p>
      */
     @NameInMap("Usage")
     public QueryContentResponseBodyUsage usage;
@@ -464,9 +464,9 @@ public class QueryContentResponseBody extends TeaModel {
 
     public static class QueryContentResponseBodyUsage extends TeaModel {
         /**
-         * <p>The number of entries used during vectorization.</p>
+         * <p>The number of entries used for vectorization.</p>
          * <blockquote>
-         * <p>An entry refers to the number of items processed during vectorization of text or images. For example, processing text once counts as 1 entry, and processing an image once counts as 2 entries.</p>
+         * <p>An entry refers to the number of items processed when text or images are vectorized. For example, processing text once counts as 1 entry, and processing an image once counts as 2 entries.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -476,9 +476,9 @@ public class QueryContentResponseBody extends TeaModel {
         public String embeddingEntries;
 
         /**
-         * <p>The number of tokens used during vectorization.</p>
+         * <p>The number of tokens used for vectorization.</p>
          * <blockquote>
-         * <p>A token is the smallest unit into which the input text is split. A token can be a word, a phrase, a punctuation mark, or a character.</p>
+         * <p>A token is the smallest unit into which input text is divided. A token can be a word, a phrase, a punctuation mark, or a character.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
