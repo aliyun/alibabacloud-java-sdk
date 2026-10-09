@@ -14,13 +14,13 @@ public class ListCertResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The list of certificates.</p>
+     * <p>The data source ID to which the certificates belong.</p>
      */
     @NameInMap("List")
     public java.util.List<ListCertResponseBodyList> list;
 
     /**
-     * <p>The maximum number of entries returned.</p>
+     * <p>The maximum number of entries to return.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class ListCertResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A token to retrieve the next page of results. If this value is empty, all results have been returned.</p>
+     * <p>The token for the next query. If this parameter is empty, no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>1d2db86sca4384811e0b5e8707e68181f</p>
@@ -38,7 +38,7 @@ public class ListCertResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +47,7 @@ public class ListCertResponseBody extends TeaModel {
     public Integer pageCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
@@ -56,7 +56,7 @@ public class ListCertResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The page size.</p>
+     * <p>The total size of the certificate. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -144,18 +144,18 @@ public class ListCertResponseBody extends TeaModel {
 
     public static class ListCertResponseBodyList extends TeaModel {
         /**
-         * <p>The expiration time of the certificate.</p>
+         * <p>The expiration time of the certificate in UTC/GMT.</p>
          * 
          * <strong>example:</strong>
-         * <p>2024-05-13 12:59:45</p>
+         * <p>Mon Nov 05 16:33:52 CST 2035</p>
          */
         @NameInMap("AfterDate")
         public String afterDate;
 
         /**
-         * <p>The expiration time of the client certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The service expiration time of the client certificate, in timestamp format. Unit: milliseconds.</p>
          * <blockquote>
-         * <p>The <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must be both left empty or both specified.</p>
+         * <p>The <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must both be empty or both be specified.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class ListCertResponseBody extends TeaModel {
         public Long afterTime;
 
         /**
-         * <p>The public key algorithm.</p>
+         * <p>The algorithm type.</p>
          * 
          * <strong>example:</strong>
          * <p>RSA</p>
@@ -174,7 +174,7 @@ public class ListCertResponseBody extends TeaModel {
         public String algorithm;
 
         /**
-         * <p>The alias of the certificate.</p>
+         * <p>The name of the issued certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -183,18 +183,18 @@ public class ListCertResponseBody extends TeaModel {
         public String aliasName;
 
         /**
-         * <p>The issuance time of the certificate.</p>
+         * <p>The issuance time of the certificate in UTC/GMT.</p>
          * 
          * <strong>example:</strong>
-         * <p>2026-05-19</p>
+         * <p>Wed Nov 05 16:33:52 CST 2025</p>
          */
         @NameInMap("BeforeDate")
         public String beforeDate;
 
         /**
-         * <p>The issuance time of the client certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The issuance time of the client certificate, in timestamp format. The default value is the time when you call this operation. Unit: milliseconds.</p>
          * <blockquote>
-         * <p>The <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must be both left empty or both specified.</p>
+         * <p>The <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must both be empty or both be specified.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -204,14 +204,11 @@ public class ListCertResponseBody extends TeaModel {
         public Long beforeTime;
 
         /**
-         * <p>The type of the certificate. Valid values:</p>
+         * <p>The certificate type. Valid values:</p>
          * <ul>
-         * <li><p><code>free</code>: Free certificate.</p>
-         * </li>
-         * <li><p><code>cas</code>: Alibaba Cloud Security certificate.</p>
-         * </li>
-         * <li><p><code>upload</code>: A user-uploaded certificate.</p>
-         * </li>
+         * <li>free: free certificate.</li>
+         * <li>cas: China Security certificate.</li>
+         * <li>upload: custom upload.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -221,7 +218,7 @@ public class ListCertResponseBody extends TeaModel {
         public String certificateType;
 
         /**
-         * <p>The primary domain name of the certificate.</p>
+         * <p>The primary domain name bound to the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.kfsjn.xyz">www.kfsjn.xyz</a></p>
@@ -230,7 +227,7 @@ public class ListCertResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>A unique, user-defined identifier for the certificate.</p>
+         * <p>The user-defined identifier, which serves as a unique key.</p>
          * 
          * <strong>example:</strong>
          * <p><em><strong>b86sca4384811e0b5e8707e68</strong></em></p>
@@ -239,7 +236,7 @@ public class ListCertResponseBody extends TeaModel {
         public String customIdentifier;
 
         /**
-         * <p>A JSON string containing extended attributes.</p>
+         * <p>The extended field.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;appId&quot;:&quot;APP_PFHMIGUHKDUW6S3N7ZL2&quot;}</p>
@@ -248,7 +245,7 @@ public class ListCertResponseBody extends TeaModel {
         public String extra;
 
         /**
-         * <p>The ID of the data source to which the certificate order belongs.</p>
+         * <p>The data source ID of the certificate order.</p>
          * 
          * <strong>example:</strong>
          * <p>1806958</p>
@@ -257,7 +254,7 @@ public class ListCertResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The unique identifier of the certificate.</p>
+         * <p>The certificate identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>1ef539a8-1e1f-6b88-8c11-21cf01a203e9</p>
@@ -266,12 +263,10 @@ public class ListCertResponseBody extends TeaModel {
         public String identifier;
 
         /**
-         * <p>Specifies if the private key is exportable. Valid values:</p>
+         * <p>Indicates whether the certificate can be used. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: The private key is exportable.</p>
-         * </li>
-         * <li><p><code>false</code>: The private key is not exportable.</p>
-         * </li>
+         * <li>true: The certificate can be used.</li>
+         * <li>false: The certificate cannot be used.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -281,7 +276,7 @@ public class ListCertResponseBody extends TeaModel {
         public Boolean keyExportable;
 
         /**
-         * <p>The organization specified in the certificate.</p>
+         * <p>The organization of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -290,7 +285,7 @@ public class ListCertResponseBody extends TeaModel {
         public String organization;
 
         /**
-         * <p>The organizational unit (OU) specified in the certificate.</p>
+         * <p>The name of the company or organization to which the certificate purchaser belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>IT</p>
@@ -308,12 +303,10 @@ public class ListCertResponseBody extends TeaModel {
         public String serialNumber;
 
         /**
-         * <p>The status of the certificate. Valid values:</p>
+         * <p>The certificate status. Valid values:</p>
          * <ul>
-         * <li><p><code>ISSUE</code>: Issued.</p>
-         * </li>
-         * <li><p><code>REVOKE</code>: Revoked.</p>
-         * </li>
+         * <li>ISSUE: Normal.</li>
+         * <li>REVOKE: Revoked.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -323,7 +316,7 @@ public class ListCertResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The distinguished name (DN) of the certificate subject.</p>
+         * <p>The subscription relationship ID.</p>
          * 
          * <strong>example:</strong>
          * <p>SubjectDn</p>
@@ -332,7 +325,7 @@ public class ListCertResponseBody extends TeaModel {
         public String subjectDn;
 
         /**
-         * <p>The tags of the certificate.</p>
+         * <p>The certificate tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<String> tags;

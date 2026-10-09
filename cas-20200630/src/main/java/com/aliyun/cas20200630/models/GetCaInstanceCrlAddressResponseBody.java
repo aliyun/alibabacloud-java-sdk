@@ -13,6 +13,12 @@ public class GetCaInstanceCrlAddressResponseBody extends TeaModel {
     @NameInMap("CaInstanceStatus")
     public String caInstanceStatus;
 
+    /**
+     * <p>The CA type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>uploadCA</p>
+     */
     @NameInMap("CaType")
     public String caType;
 
@@ -26,7 +32,7 @@ public class GetCaInstanceCrlAddressResponseBody extends TeaModel {
     public String crlUrl;
 
     /**
-     * <p>The hash code used to identify whether the CRL contains new revoked certificates.</p>
+     * <p>The hash code used to identify whether new revoked certificates exist in the CRL.</p>
      * 
      * <strong>example:</strong>
      * <p>5481d1b1228fXXX40ee70dc8cd</p>
@@ -35,7 +41,7 @@ public class GetCaInstanceCrlAddressResponseBody extends TeaModel {
     public String hashCode;
 
     /**
-     * <p>The next update time of the CRL.</p>
+     * <p>The next update time of the CRL. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1778688000000</p>

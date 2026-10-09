@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClientCertificateStatusResponseBody extends TeaModel {
     /**
-     * <p>The details of the certificate status.</p>
+     * <p>The detailed status information of the certificates.</p>
      */
     @NameInMap("CertificateStatus")
     public java.util.List<DescribeClientCertificateStatusResponseBodyCertificateStatus> certificateStatus;
@@ -42,13 +42,13 @@ public class DescribeClientCertificateStatusResponseBody extends TeaModel {
 
     public static class DescribeClientCertificateStatusResponseBodyCertificateStatus extends TeaModel {
         /**
-         * <p>The date when the certificate was revoked.</p>
+         * <p>The date when the certificate was revoked. The value is a UNIX timestamp in milliseconds.</p>
          * <blockquote>
-         * <p>This parameter is returned only when the value of <strong>Status</strong> is <strong>revoked</strong>.</p>
+         * <p>This parameter is returned only when <strong>Status</strong> is <strong>revoked</strong>, which indicates that the certificate has been revoked.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>2021-01-01T00:00Z</p>
+         * <p>1787539908871</p>
          */
         @NameInMap("RevokeTime")
         public Long revokeTime;
@@ -65,12 +65,9 @@ public class DescribeClientCertificateStatusResponseBody extends TeaModel {
         /**
          * <p>The current status of the certificate. Valid values:</p>
          * <ul>
-         * <li><p><strong>good</strong>: The certificate is not revoked.</p>
-         * </li>
-         * <li><p><strong>revoked</strong>: The certificate is revoked.</p>
-         * </li>
-         * <li><p><strong>unknown</strong>: The server cannot determine the status of the certificate.</p>
-         * </li>
+         * <li><strong>good</strong>: The certificate has not been revoked.</li>
+         * <li><strong>revoked</strong>: The certificate has been revoked.</li>
+         * <li><strong>unknown</strong>: The server cannot determine the status of the certificate.</li>
          * </ul>
          * 
          * <strong>example:</strong>

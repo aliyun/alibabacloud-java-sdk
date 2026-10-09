@@ -27,7 +27,7 @@ public class CreateClientCertificateWithCsrRequest extends TeaModel {
      * <li><strong>ECC_512</strong>: The signature algorithm is Sha256WithECDSA.</li>
      * <li><strong>SM2_256</strong>: The signature algorithm is SM3WithSM2.</li>
      * </ul>
-     * <p>The encryption algorithm of the client certificate must be the same as that of the sub-CA certificate, but the key length can be different. For example, if the key algorithm of the sub-CA certificate is RSA_2048, the key algorithm of the client certificate must be RSA_1024, RSA_2048, or RSA_4096.</p>
+     * <p>The encryption algorithm of the client certificate must be the same as that of the sub-CA certificate, but the key length can be different. For example, if the key algorithm of the sub-CA certificate is RSA_2048, the key algorithm of the client certificate must be one of RSA_1024, RSA_2048, or RSA_4096.</p>
      * <blockquote>
      * <p>You can call <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a> to query the key algorithm of the sub-CA certificate.</p>
      * </blockquote>
@@ -49,7 +49,7 @@ public class CreateClientCertificateWithCsrRequest extends TeaModel {
     public Boolean asynchronousFlag;
 
     /**
-     * <p>The issuance time of the client certificate in UNIX timestamp format. Default value: the time when you call this operation. Unit: seconds.</p>
+     * <p>The issuance time of the client certificate in UNIX timestamp format. The default value is the time when you call this operation. Unit: seconds.</p>
      * <blockquote>
      * <p>The <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must both be empty or both be specified.</p>
      * </blockquote>
@@ -82,7 +82,7 @@ public class CreateClientCertificateWithCsrRequest extends TeaModel {
     public String country;
 
     /**
-     * <p>The CSR content. You can use OpenSSL or Keytool to generate a CSR. For more information, see <a href="https://help.aliyun.com/document_detail/42218.html">How to create a CSR file</a>.
+     * <p>The CSR content. You can use OpenSSL or Keytool to generate a CSR. For more information, see <a href="https://help.aliyun.com/document_detail/42218.html">How do I create a CSR file</a>.
      * &lt;props=&quot;china&quot;&gt;You can also create a CSR in the SSL Certificates Service console. For more information, see <a href="https://help.aliyun.com/document_detail/313297.html">Create a CSR</a>.</p>
      * 
      * <strong>example:</strong>
@@ -125,8 +125,8 @@ public class CreateClientCertificateWithCsrRequest extends TeaModel {
     /**
      * <p>Specifies whether to include the Certificate Revocation List (CRL) address. Valid values:</p>
      * <ul>
-     * <li>0: No.</li>
-     * <li>1: Yes.</li>
+     * <li>0: no.</li>
+     * <li>1: yes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -151,7 +151,7 @@ public class CreateClientCertificateWithCsrRequest extends TeaModel {
 
     /**
      * <p>The name of the city where the certificate organization is located. Chinese characters, English characters, and other characters are supported.
-     * Default value: the name of the city where the sub-CA certificate organization that issues this certificate is located.</p>
+     * The default value is the name of the city where the sub-CA certificate organization that issues this certificate is located.</p>
      * 
      * <strong>example:</strong>
      * <p>Hangzhou</p>
@@ -218,7 +218,7 @@ public class CreateClientCertificateWithCsrRequest extends TeaModel {
      * <li><strong>5</strong>: ediPartyName (5): Electronic Data Interchange (EDI) party name.</li>
      * <li><strong>6</strong>: uniformResourceIdentifier (6): Uniform Resource Identifier (URI).</li>
      * <li><strong>7</strong>: iPAddress (7): IP address.</li>
-     * <li><strong>8</strong>: registeredID (8): registered ID (object identifier OID).</li>
+     * <li><strong>8</strong>: registeredID (8): registered ID (Object Identifier, OID).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -233,8 +233,8 @@ public class CreateClientCertificateWithCsrRequest extends TeaModel {
      * <li>otherName (0): other name</li>
      * </ol>
      * <ul>
-     * <li>Example: 1.3.6.1.4.1.311.20.2.3 (OID) + <a href="mailto:user@domain.com">user@domain.com</a> (UPN - User Principal Name)</li>
-     * <li>Description: A custom extension type that typically consists of a specific OID (object identifier) and a corresponding value. In Windows environments, it is commonly used to store UPN (User Principal Name), such as <a href="mailto:zhangsan@company.com">zhangsan@company.com</a> for smart card logon.</li>
+     * <li>Example: 1.3.6.1.4.1.311.20.2.3 (OID) + <a href="mailto:user@domain.com">user@domain.com</a> (UPN, User Principal Name)</li>
+     * <li>Description: A custom extension type that typically consists of a specific OID (Object Identifier) and a corresponding value. In Windows environments, it is commonly used to store UPN (User Principal Name), such as <a href="mailto:zhangsan@company.com">zhangsan@company.com</a> for smart card logon.</li>
      * </ul>
      * <ol start="2">
      * <li>rfc822Name (1): RFC 822 name (email address)</li>
@@ -258,14 +258,14 @@ public class CreateClientCertificateWithCsrRequest extends TeaModel {
      * </ol>
      * <ul>
      * <li>Example: CN=IT Department, OU=Tech, O=Company Ltd, L=Beijing, ST=Beijing, C=CN</li>
-     * <li>Description: A standard X.500 distinguished name (DN). It is typically used to explicitly identify the complete hierarchical information of an organization, department, or entity in a certificate. It is commonly found in enterprise internal root certificates or specific government digital certificates.</li>
+     * <li>Description: A standard X.500 distinguished name (DN). It is typically used to explicitly identify the full hierarchical information of an organization, department, or entity in a certificate. It is commonly found in enterprise internal root certificates or specific government digital certificates.</li>
      * </ul>
      * <ol start="5">
      * <li>ediPartyName (5): EDI party name</li>
      * </ol>
      * <ul>
      * <li>Example: nameAssigner=GlobalTradeOrg, partyName=SupplierA</li>
-     * <li>Description: Used specifically in the Electronic Data Interchange (EDI) domain. It identifies a specific party in business message exchanges (such as order and invoice transmissions) and typically includes the assigning organization (nameAssigner) and the party name (partyName).</li>
+     * <li>Description: Used specifically in the Electronic Data Interchange (EDI) domain. It identifies a specific party in business message exchanges (such as order and invoice transmissions) and typically includes the name-assigning authority (nameAssigner) and the party name (partyName).</li>
      * </ul>
      * <ol start="6">
      * <li>uniformResourceIdentifier (6): Uniform Resource Identifier (URI)</li>
@@ -282,7 +282,7 @@ public class CreateClientCertificateWithCsrRequest extends TeaModel {
      * <li>Description: Directly binds to a server IP address. It is commonly used for internal systems without domain names, API servers, or specific services that can only be accessed through a public IP address. Note: Public IP certificates typically require strict Organization Validation (OV).</li>
      * </ul>
      * <ol start="8">
-     * <li>registeredID (8): registered ID (object identifier OID)</li>
+     * <li>registeredID (8): registered ID (Object Identifier, OID)</li>
      * </ol>
      * <ul>
      * <li>Example: 1.2.3.4.55.6.5.99, 2.5.29.17</li>
@@ -296,8 +296,8 @@ public class CreateClientCertificateWithCsrRequest extends TeaModel {
     public String sanValue;
 
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;The name of the province, municipality, or autonomous region where the certificate organization is located. Chinese characters, English characters, and other characters are supported. Default value: the name of the province, municipality, or autonomous region where the sub-CA certificate organization that issues this certificate is located.
-     * &lt;props=&quot;intl&quot;&gt;The name of the province or state where the certificate organization is located. Chinese characters, English characters, and other characters are supported. Default value: the name of the province or state where the sub-CA certificate organization that issues this certificate is located.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The name of the province, municipality, or autonomous region where the certificate organization is located. Chinese characters, English characters, and other characters are supported. The default value is the name of the province, municipality, or autonomous region where the sub-CA certificate organization that issues this certificate is located.
+     * &lt;props=&quot;intl&quot;&gt;The name of the province or state where the certificate organization is located. Chinese characters, English characters, and other characters are supported. The default value is the name of the province or state where the sub-CA certificate organization that issues this certificate is located.</p>
      * 
      * <strong>example:</strong>
      * <p>Zhejiang</p>

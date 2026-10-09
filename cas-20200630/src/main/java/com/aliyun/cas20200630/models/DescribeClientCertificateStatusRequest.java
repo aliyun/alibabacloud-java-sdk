@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeClientCertificateStatusRequest extends TeaModel {
     /**
-     * <p>The unique identifier of the client or server-side certificate that you want to query. Separate multiple identifiers with commas (,).</p>
+     * <p>The unique identifiers of the client certificates or server certificates to query. Separate multiple certificate identifiers with commas (,).</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/465990.html">ListClientCertificate</a> to query the unique identifiers of all client and server-side certificates.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/465990.html">ListClientCertificate</a> to query the unique identifiers of all client certificates and server certificates.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeCACertificateListRequest extends TeaModel {
     /**
-     * <p>The status of the CA. Valid values:</p>
+     * <p>The current status of the CA. Valid values:</p>
      * <ul>
-     * <li><p>issue: enabled.</p>
-     * </li>
-     * <li><p>forbidden: disabled.</p>
-     * </li>
-     * <li><p>revoke: revoked.</p>
-     * </li>
+     * <li>issue: enabled.</li>
+     * <li>forbidden: disabled.</li>
+     * <li>revoke: revoked.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,12 +21,9 @@ public class DescribeCACertificateListRequest extends TeaModel {
     /**
      * <p>The type of the CA. Valid values:</p>
      * <ul>
-     * <li><p>root: root CA.</p>
-     * </li>
-     * <li><p>subRoot: intermediate CA.</p>
-     * </li>
-     * <li><p>externalCa: an imported external CA.</p>
-     * </li>
+     * <li>root: root CA.</li>
+     * <li>subRoot: subordinate CA.</li>
+     * <li>externalCa: externally imported CA.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +33,7 @@ public class DescribeCACertificateListRequest extends TeaModel {
     public String certType;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number of the current page in a paging query. Settings: specify the desired page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +44,7 @@ public class DescribeCACertificateListRequest extends TeaModel {
     /**
      * <p>The unique identifier of the CA certificate.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/328095.html">DescribeCACertificateList</a> to query the unique identifiers of all CA certificates.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/328095.html">DescribeCACertificateList</a> to query the unique identifiers of all CA certificates.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -60,14 +54,11 @@ public class DescribeCACertificateListRequest extends TeaModel {
     public String identifier;
 
     /**
-     * <p>The issuer of the CA. Valid values:</p>
+     * <p>The issuing authority of the CA. Valid values:</p>
      * <ul>
-     * <li><p>local: private certificate.</p>
-     * </li>
-     * <li><p>iTrusChina: a trusted CA.</p>
-     * </li>
-     * <li><p>external: an imported external CA.</p>
-     * </li>
+     * <li>local: private certificate.</li>
+     * <li>iTrusChina: compliance CA.</li>
+     * <li>external: externally imported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,7 +77,7 @@ public class DescribeCACertificateListRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20.</p>
+     * <p>The number of CA certificates per page in a paging query. Settings: specify the desired number of entries per page. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -95,12 +86,10 @@ public class DescribeCACertificateListRequest extends TeaModel {
     public Integer showSize;
 
     /**
-     * <p>The validity status of the CA. Valid values:</p>
+     * <p>The time-based validity status of the CA. Valid values:</p>
      * <ul>
-     * <li><p>valid: The CA certificate is valid.</p>
-     * </li>
-     * <li><p>notValid: The CA certificate has expired.</p>
-     * </li>
+     * <li>valid: The CA is within its validity period.</li>
+     * <li>notValid: The CA has expired.</li>
      * </ul>
      * 
      * <strong>example:</strong>

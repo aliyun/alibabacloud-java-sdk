@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClientCertificateStatusForSerialNumberResponseBody extends TeaModel {
     /**
-     * <p>An array of objects, where each object contains the status of a queried certificate.</p>
+     * <p>The certificate status details.</p>
      */
     @NameInMap("CertificateStatus")
     public java.util.List<DescribeClientCertificateStatusForSerialNumberResponseBodyCertificateStatus> certificateStatus;
@@ -42,13 +42,13 @@ public class DescribeClientCertificateStatusForSerialNumberResponseBody extends 
 
     public static class DescribeClientCertificateStatusForSerialNumberResponseBodyCertificateStatus extends TeaModel {
         /**
-         * <p>The time when the certificate was revoked.</p>
+         * <p>The date when the certificate was revoked. This value is a UNIX timestamp in milliseconds.</p>
          * <blockquote>
-         * <p>This parameter is returned only when <strong>Status</strong> is <strong>revoked</strong>.</p>
+         * <p>This parameter is returned only when <strong>Status</strong> is <strong>revoked</strong> (indicating that the certificate has been revoked).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>2021-01-01T00:00</p>
+         * <p>1787539908871</p>
          */
         @NameInMap("RevokeTime")
         public Long revokeTime;
@@ -65,12 +65,9 @@ public class DescribeClientCertificateStatusForSerialNumberResponseBody extends 
         /**
          * <p>The current status of the certificate. Valid values:</p>
          * <ul>
-         * <li><p><strong>good</strong>: The certificate is not revoked.</p>
-         * </li>
-         * <li><p><strong>revoked</strong>: The certificate is revoked.</p>
-         * </li>
-         * <li><p><strong>unknown</strong>: The server cannot determine the status of the certificate.</p>
-         * </li>
+         * <li><strong>good</strong>: The certificate has not been revoked.</li>
+         * <li><strong>revoked</strong>: The certificate has been revoked.</li>
+         * <li><strong>unknown</strong>: The server cannot determine the status of the certificate.</li>
          * </ul>
          * 
          * <strong>example:</strong>

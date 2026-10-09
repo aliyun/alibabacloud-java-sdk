@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateExternalCACertificateResponseBody extends TeaModel {
     /**
-     * <p>The content of the certificate.</p>
+     * <p>The certificate content.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----
@@ -36,7 +36,7 @@ public class CreateExternalCACertificateResponseBody extends TeaModel {
     public String certificateChain;
 
     /**
-     * <p>The unique identifier for the certificate.</p>
+     * <p>The unique identifier of the certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>1ed4068c-6f1b-6deb-8e32-3f8439a851cb</p>

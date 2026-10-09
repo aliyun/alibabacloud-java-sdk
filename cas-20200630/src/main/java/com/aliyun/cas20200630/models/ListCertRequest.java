@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListCertRequest extends TeaModel {
     /**
-     * <p>Filters certificates modified after this date.</p>
+     * <p>The host record bound to the certificate, in the YYYY-MM-DD format.</p>
      * 
      * <strong>example:</strong>
-     * <p>2024-05-13 12:59:45</p>
+     * <p>2024-05-13</p>
      */
     @NameInMap("AfterDate")
     public String afterDate;
 
     /**
-     * <p>Filters certificates modified before this date.</p>
+     * <p>The modification time of the certificate, in the YYYY-MM-DD format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-09-04</p>
@@ -23,7 +23,7 @@ public class ListCertRequest extends TeaModel {
     public String beforeDate;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number of the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +50,7 @@ public class ListCertRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to retrieve the next page of results. This is the NextToken value from a previous response. If unspecified, the first page is returned.</p>
+     * <p>The token for the next query. If this parameter is empty, no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>1d2db86sca4384811e0b5e8707e68181f</p>
@@ -59,7 +59,7 @@ public class ListCertRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The identifier of the intermediate CA that issued the certificate.</p>
+     * <p>The identifier of the intermediate CA that issued the certificate. You can call <a href="https://help.aliyun.com/document_detail/465957.html">DescribeCACertificateList</a> to query the unique identifier of a CA certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>273ae6bb538d538c70c01f81jh2****</p>
@@ -68,7 +68,7 @@ public class ListCertRequest extends TeaModel {
     public String parentIdentifier;
 
     /**
-     * <p>The page size. Default value: 50.</p>
+     * <p>The total size of the certificate. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -77,12 +77,10 @@ public class ListCertRequest extends TeaModel {
     public Integer showSize;
 
     /**
-     * <p>The status of the certificate. Valid values:</p>
+     * <p>The certificate status. Valid values:</p>
      * <ul>
-     * <li><p>ISSUE: Active</p>
-     * </li>
-     * <li><p>REVOKE: Revoked</p>
-     * </li>
+     * <li>ISSUE: Normal.</li>
+     * <li>REVOKE: Revoked.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,12 +92,9 @@ public class ListCertRequest extends TeaModel {
     /**
      * <p>The certificate type. Valid values:</p>
      * <ul>
-     * <li><p>SERVER: Server certificate</p>
-     * </li>
-     * <li><p>CLIENT: Client certificate</p>
-     * </li>
-     * <li><p>END_ENTITY: End-entity certificate</p>
-     * </li>
+     * <li>SERVER: server certificate.</li>
+     * <li>CLIENT: client certificate.</li>
+     * <li>END_ENTITY: end-entity certificate.</li>
      * </ul>
      * 
      * <strong>example:</strong>

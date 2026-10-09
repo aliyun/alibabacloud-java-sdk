@@ -20,7 +20,7 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
     public Integer currentPage;
 
     /**
-     * <p>The number of entries on the current page.</p>
+     * <p>The number of entries in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
     public String requestId;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 50.</p>
+     * <p>The number of records to display per page. Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +47,7 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
     public Integer showSize;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -110,16 +110,16 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
 
     public static class DescribePcaAndExternalCACertificateListResponseBodyCertificateList extends TeaModel {
         /**
-         * <p>The expiration time of the certificate.</p>
+         * <p>The certificate expiration time. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>2022-08-23T16:15Z</p>
+         * <p>1787539908871</p>
          */
         @NameInMap("AfterDate")
         public Long afterDate;
 
         /**
-         * <p>The algorithm of the certificate.</p>
+         * <p>The certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>RSA</p>
@@ -128,16 +128,16 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
         public String algorithm;
 
         /**
-         * <p>The time at which the certificate is issued.</p>
+         * <p>The certificate issuance time. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-01-01T00:00Z</p>
+         * <p>1787539908871</p>
          */
         @NameInMap("BeforeDate")
         public Long beforeDate;
 
         /**
-         * <p>The type of the certificate.</p>
+         * <p>The certificate type.</p>
          * 
          * <strong>example:</strong>
          * <p>SUB_ROOT</p>
@@ -146,7 +146,7 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
         public String certificateType;
 
         /**
-         * <p>The primary domain name that is bound to the certificate.</p>
+         * <p>The primary domain name bound to the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun.com</p>
@@ -164,7 +164,7 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
         public String countryCode;
 
         /**
-         * <p>The ID of the certificate.</p>
+         * <p>The certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>05e148d8d3ecc9976d9ecd2b2f25****</p>
@@ -173,7 +173,7 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
         public String identifier;
 
         /**
-         * <p>The key size of the certificate. Unit: bits.</p>
+         * <p>The size of the certificate key. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>2048</p>
@@ -182,7 +182,7 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
         public Integer keySize;
 
         /**
-         * <p>The city in which the organization is located.</p>
+         * <p>The primary domain name bound to the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>Hangzhou</p>
@@ -191,7 +191,7 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
         public String locality;
 
         /**
-         * <p>The MD5 value of the certificate.</p>
+         * <p>The MD5 value bound to the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>05e148d8d3ecc9976d9ecd2b2f25****</p>
@@ -200,16 +200,16 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
         public String md5;
 
         /**
-         * <p>The organization to which the certificate belongs.</p>
+         * <p>The certificate organization.</p>
          * 
          * <strong>example:</strong>
-         * <p>阿里云计算有限公司</p>
+         * <p>Alibaba Cloud Computing Co., Ltd</p>
          */
         @NameInMap("Organization")
         public String organization;
 
         /**
-         * <p>The certificate authority (CA) that issued the certificate.</p>
+         * <p>The certification authority that issued the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>Security</p>
@@ -218,7 +218,7 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
         public String organizationUnit;
 
         /**
-         * <p>The ID of the parent certificate.</p>
+         * <p>The parent certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1a83bcbb89e562885e40aa0108f5****</p>
@@ -227,7 +227,7 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
         public String parentIdentifier;
 
         /**
-         * <p>All domain names that are bound to the certificate.</p>
+         * <p>All domain names bound to the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>[ {&quot;Type&quot;: 7, &quot;Value&quot;: &quot;192.0.XX.XX&quot;}, {&quot;Type&quot;: 2, &quot;Value&quot;: &quot;<a href="http://www.aliyundoc.com%22%7D">www.aliyundoc.com&quot;}</a>, ]</p>
@@ -236,7 +236,7 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
         public String sans;
 
         /**
-         * <p>The serial number of the certificate.</p>
+         * <p>The certificate serial number.</p>
          * 
          * <strong>example:</strong>
          * <p>62b2b943a32d96883a6650e672ea0276****</p>
@@ -245,7 +245,7 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
         public String serialNumber;
 
         /**
-         * <p>The primary domain name that is bound to the certificate.</p>
+         * <p>The primary domain name bound to the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>14dcc8afc7578e1fcec36d658f7e20de18f6957bbac42b373a66bc9de4e9****</p>
@@ -254,7 +254,12 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
         public String sha2;
 
         /**
-         * <p>The signature algorithm of the certificate. Valid values:</p>
+         * <p>The certificate signature algorithm. Valid values:</p>
+         * <ul>
+         * <li><strong>prefix</strong>: Prefix match.</li>
+         * <li><strong>match</strong>: Exact match.</li>
+         * <li><strong>any</strong>: Match all.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>SHA256WITHRSA</p>
@@ -263,7 +268,14 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
         public String signAlgorithm;
 
         /**
-         * <p>The status of the certificate. Valid values:</p>
+         * <p>The certificate state. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong>: Effective.</li>
+         * <li><strong>checking</strong>: Checking whether the domain name is on Alibaba Cloud Dynamic Route for CDN.</li>
+         * <li><strong>cname_error</strong>: The domain name is not pointed to an Alibaba Cloud Global Accelerator (GA) instance.</li>
+         * <li><strong>domain_invalid</strong>: The domain name contains invalid characters.</li>
+         * <li><strong>unsupport_wildcard</strong>: Wildcard domain names are not supported.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Zhejiang</p>
@@ -272,7 +284,14 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
         public String state;
 
         /**
-         * <p>The status of the certificate. Valid values:</p>
+         * <p>The certificate status. Valid values:</p>
+         * <ul>
+         * <li><strong>payed</strong>: Paid.</li>
+         * <li><strong>checking</strong>: Being reviewed.</li>
+         * <li><strong>issued</strong>: Issued.</li>
+         * <li><strong>revoked</strong>: Revoked.</li>
+         * <li><strong>checked_fail</strong>: Review failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ISSUE</p>
@@ -281,16 +300,16 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
         public String status;
 
         /**
-         * <p>The subject of the certificate.</p>
+         * <p>The certificate subject (owner), represented in DN format.</p>
          * 
          * <strong>example:</strong>
-         * <p>C=CN,O=阿里云计算有限公司,OU=Security,L=Hangzhou,ST=Zhejiang,CN=Aliyun</p>
+         * <p>C=CN,O=Alibaba Cloud Computing Co. Ltd.,OU=Security,L=Hangzhou,ST=Zhejiang,CN=Aliyun</p>
          */
         @NameInMap("SubjectDN")
         public String subjectDN;
 
         /**
-         * <p>The content of the X.509 certificate.</p>
+         * <p>The x.509 certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE----- …… -----END CERTIFICATE-----</p>
@@ -299,7 +318,7 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
         public String x509Certificate;
 
         /**
-         * <p>The validity period of the certificate, in years.</p>
+         * <p>The number of years for which the certificate was purchased.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

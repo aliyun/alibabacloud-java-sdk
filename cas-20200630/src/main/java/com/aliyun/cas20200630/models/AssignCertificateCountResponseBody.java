@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssignCertificateCountResponseBody extends TeaModel {
     /**
-     * <p>The number of assigned certificates.</p>
+     * <p>The number of allocated certificates.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,7 +14,7 @@ public class AssignCertificateCountResponseBody extends TeaModel {
     public Integer certCount;
 
     /**
-     * <p>The number of free certificates for the current year.</p>
+     * <p>The number of free certificates in the current year.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

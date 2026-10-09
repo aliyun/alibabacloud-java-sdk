@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateServerCertificateWithCsrRequest extends TeaModel {
     /**
-     * <p>The expiration time of the server certificate in UNIX timestamp format. Unit: seconds.</p>
+     * <p>The expiration time of the server certificate in timestamp format. Unit: seconds.</p>
      * <blockquote>
-     * <p>The <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must both be empty or both be specified.</p>
+     * <p>The <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must both be empty or both be set.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     public Long afterTime;
 
     /**
-     * <p>The key algorithm of the server certificate. The key algorithm is in the <code>&lt;Encryption algorithm&gt;_&lt;Key length&gt;</code> format. Valid values:</p>
+     * <p>The key algorithm of the server certificate. The key algorithm is in the <code>&lt;encryption algorithm&gt;_&lt;key length&gt;</code> format. Valid values:</p>
      * <ul>
      * <li><strong>RSA_1024</strong>: The signature algorithm is Sha256WithRSA.</li>
      * <li><strong>RSA_2048</strong>: The signature algorithm is Sha256WithRSA.</li>
@@ -27,9 +27,9 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
      * <li><strong>ECC_512</strong>: The signature algorithm is Sha256WithECDSA.</li>
      * <li><strong>SM2_256</strong>: The signature algorithm is SM3WithSM2.</li>
      * </ul>
-     * <p>The encryption algorithm of the server certificate must be the same as that of the subordinate CA certificate, but the key length can be different. For example, if the key algorithm of the subordinate CA certificate is RSA_2048, the key algorithm of the server certificate must be RSA_1024, RSA_2048, or RSA_4096.</p>
+     * <p>The encryption algorithm of the server certificate must be the same as that of the sub-CA certificate, but the key length can be different. For example, if the key algorithm of the sub-CA certificate is RSA_2048, the key algorithm of the server certificate must be RSA_1024, RSA_2048, or RSA_4096.</p>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a> to query the key algorithm of the subordinate CA certificate.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a> to query the key algorithm of the sub-CA certificate.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,6 +39,9 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     public String algorithm;
 
     /**
+     * <p>The asynchronous processing flag. If the value is &quot;true&quot;, the backend service issues the certificate asynchronously.
+     * After the request is submitted, you can call the ListClientCertificate operation to obtain the latest certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -46,9 +49,9 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     public Boolean asynchronousFlag;
 
     /**
-     * <p>The issuance time of the server certificate in UNIX timestamp format. The default value is the time when you call this operation. Unit: seconds.</p>
+     * <p>The issuance time of the server certificate in timestamp format. The default value is the time when you call this operation. Unit: seconds.</p>
      * <blockquote>
-     * <p>The <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must both be empty or both be specified.</p>
+     * <p>The <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must both be empty or both be set.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -91,7 +94,7 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     public String csr;
 
     /**
-     * <p>The user-defined identifier, which serves as a unique key.</p>
+     * <p>The custom identifier, which is a unique key.</p>
      * 
      * <strong>example:</strong>
      * <p><em><strong>e6bb538d538c70c01f81hfd3</strong></em>*</p>
@@ -101,7 +104,7 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
 
     /**
      * <p>The validity period of the server certificate. Unit: days.
-     * The <strong>Days</strong>, <strong>BeforeTime</strong>, and <strong>AfterTime</strong> parameters cannot all be empty. The <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must both be empty or both be specified. The following rules apply:</p>
+     * The <strong>Days</strong>, <strong>BeforeTime</strong>, and <strong>AfterTime</strong> parameters cannot all be empty, and the <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must both be empty or both be set. The following describes how to set this parameter:</p>
      * <ul>
      * <li><p>If you set the <strong>Days</strong> parameter, you can choose to set or not set the <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters.</p>
      * </li>
@@ -114,7 +117,7 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>The validity period of the server certificate cannot exceed the validity period of the subordinate CA certificate. You can call <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a> to query the validity period of the subordinate CA certificate.</li>
+     * <li>The validity period of the server certificate cannot exceed the validity period of the sub-CA certificate. You can call <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a> to view the validity period of the sub-CA certificate.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -136,10 +139,8 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     /**
      * <p>Specifies whether to include the CRL address. Valid values:</p>
      * <ul>
-     * <li><p>0: No. </p>
-     * </li>
-     * <li><p>1: Yes.</p>
-     * </li>
+     * <li>0: no.</li>
+     * <li>1: yes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -151,9 +152,9 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     /**
      * <p>Specifies whether to immediately return the digital certificate. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Does not return the certificate. This is the default value.</li>
-     * <li><strong>1</strong>: Returns the certificate.</li>
-     * <li><strong>2</strong>: Returns the certificate and its certificate chain.</li>
+     * <li><strong>0</strong>: does not return the certificate. This is the default value.</li>
+     * <li><strong>1</strong>: returns the certificate.</li>
+     * <li><strong>2</strong>: returns the certificate and its certificate chain.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -164,7 +165,7 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
 
     /**
      * <p>The name of the city where the certificate organization is located. Chinese characters, English characters, and other characters are supported.
-     * The default value is the name of the city where the organization of the subordinate CA certificate that issues this certificate is located.</p>
+     * The default value is the name of the city where the organization of the sub-CA certificate that issues this certificate is located.</p>
      * 
      * <strong>example:</strong>
      * <p>Hangzhou</p>
@@ -200,9 +201,9 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     public String organizationUnit;
 
     /**
-     * <p>The unique identifier of the subordinate CA certificate that issues this certificate.</p>
+     * <p>The unique identifier of the sub-CA certificate that issues this certificate.</p>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/465957.html">DescribeCACertificateList</a> to query the unique identifier of the subordinate CA certificate.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/465957.html">DescribeCACertificateList</a> to query the unique identifier of the sub-CA certificate.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -222,8 +223,8 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;The name of the province, municipality, or autonomous region where the certificate organization is located. Chinese characters, English characters, and other characters are supported. The default value is the name of the province, municipality, or autonomous region where the organization of the subordinate CA certificate that issues this certificate is located.
-     * &lt;props=&quot;intl&quot;&gt;The name of the province or state where the certificate organization is located. Chinese characters, English characters, and other characters are supported. The default value is the name of the province or state where the organization of the subordinate CA certificate that issues this certificate is located.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The name of the province, municipality, or autonomous region where the certificate organization is located. Chinese characters, English characters, and other characters are supported. The default value is the name of the province, municipality, or autonomous region where the organization of the sub-CA certificate that issues this certificate is located.
+     * &lt;props=&quot;intl&quot;&gt;The name of the province or state where the certificate organization is located. Chinese characters, English characters, and other characters are supported. The default value is the name of the province or state where the organization of the sub-CA certificate that issues this certificate is located.</p>
      * 
      * <strong>example:</strong>
      * <p>Zhejiang</p>

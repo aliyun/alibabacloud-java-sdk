@@ -101,7 +101,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
 
     public static class DescribeCACertificateResponseBodyCertificate extends TeaModel {
         /**
-         * <p>The expiration date of the CA certificate. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The expiration date of the CA certificate. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1665819958000</p>
@@ -124,7 +124,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         public String algorithm;
 
         /**
-         * <p>The issuance date of the CA certificate. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The issuance date of the CA certificate. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1634283958000</p>
@@ -156,7 +156,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         public Long certIssuedCount;
 
         /**
-         * <p>The maximum validity period for certificates issued by the CA, as specified by the certMaxTime of the CA.</p>
+         * <p>The maximum validity period for certificates issued by the CA, specified by certMaxTime. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -165,7 +165,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         public Integer certMaxTime;
 
         /**
-         * <p>The number of remaining certificate quotas that can be allocated.</p>
+         * <p>The number of remaining certificate quotas available for allocation.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -196,7 +196,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         public String certificateType;
 
         /**
-         * <p>The identifier of the hardware security module (HSM) cluster. (The CA is enabled through an HSM.)</p>
+         * <p>The identifier of the hardware security module (HSM) cluster. (The CA is enabled by using an HSM.)</p>
          * 
          * <strong>example:</strong>
          * <p>XXX-id</p>
@@ -224,7 +224,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         public String countryCode;
 
         /**
-         * <p>The validity period of the CRL, ranging from 1 to 365 days.</p>
+         * <p>The CRL validity period, ranging from 1 to 365 days.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -233,7 +233,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         public Integer crlDay;
 
         /**
-         * <p>The certificate revocation list (CRL) status (enabled or disabled).</p>
+         * <p>The certificate revocation list (CRL) status (enabling status).</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
@@ -269,7 +269,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         public String identifier;
 
         /**
-         * <p>The issuing authority of the CA. Valid values:</p>
+         * <p>The issuing CA authority. Valid values:</p>
          * <ul>
          * <li>local: private certificate.</li>
          * <li>iTrusChina: compliant CA.</li>
@@ -283,7 +283,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         public String issuerType;
 
         /**
-         * <p>The key index position in the HSM. (The CA is enabled through an HSM.)</p>
+         * <p>The key index position in the HSM. (The CA is enabled by using an HSM.)</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -301,7 +301,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         public Integer keySize;
 
         /**
-         * <p>The name of the city where the organization associated with the CA certificate is located.</p>
+         * <p>The city where the organization associated with the CA certificate is located.</p>
          * 
          * <strong>example:</strong>
          * <p>Hangzhou</p>
@@ -358,7 +358,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -394,8 +394,8 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         public String signAlgorithm;
 
         /**
-         * <p>&lt;props=&quot;china&quot;&gt;The name of the province, municipality, or autonomous region where the organization associated with the CA certificate is located.
-         * &lt;props=&quot;intl&quot;&gt;The name of the province or state where the organization associated with the CA certificate is located.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The province, municipality, or autonomous region where the organization associated with the CA certificate is located.
+         * &lt;props=&quot;intl&quot;&gt;The province or state where the organization associated with the CA certificate is located.</p>
          * 
          * <strong>example:</strong>
          * <p>Zhejiang</p>
@@ -419,13 +419,13 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         /**
          * <p>The subject attributes of the CA certificate, which include the following information:</p>
          * <ul>
-         * <li><strong>C</strong>: the country code of the organization.</li>
-         * <li><strong>O</strong>: the name of the organization.</li>
-         * <li><strong>OU</strong>: the department of the organization.</li>
-         * <li><strong>L</strong>: the city where the organization is located.
-         * &lt;props=&quot;china&quot;&gt;- <strong>ST</strong>: the province, municipality, or autonomous region where the organization is located.
-         * &lt;props=&quot;intl&quot;&gt;- <strong>ST</strong>: the province or state where the organization is located.</li>
-         * <li><strong>CN</strong>: the common name or abbreviation of the organization.</li>
+         * <li><strong>C</strong>: The country code of the organization.</li>
+         * <li><strong>O</strong>: The name of the organization.</li>
+         * <li><strong>OU</strong>: The department of the organization.</li>
+         * <li><strong>L</strong>: The city where the organization is located.
+         * &lt;props=&quot;china&quot;&gt;- <strong>ST</strong>: The province, municipality, or autonomous region where the organization is located.
+         * &lt;props=&quot;intl&quot;&gt;- <strong>ST</strong>: The province or state where the organization is located.</li>
+         * <li><strong>CN</strong>: The common name or abbreviation of the organization.</li>
          * </ul>
          * 
          * <strong>example:</strong>

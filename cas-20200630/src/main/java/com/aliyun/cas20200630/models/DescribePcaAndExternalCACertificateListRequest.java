@@ -14,7 +14,7 @@ public class DescribePcaAndExternalCACertificateListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>One or more certificate identifiers, separated by commas.</p>
+     * <p>The certificate identifiers. Separate multiple identifiers with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>aaa,bbb</p>
@@ -23,7 +23,7 @@ public class DescribePcaAndExternalCACertificateListRequest extends TeaModel {
     public String identifiers;
 
     /**
-     * <p>The keyword for a fuzzy search on the name, domain name, and SAN fields.</p>
+     * <p>The search keyword. Fuzzy search by name, domain name, or SANs is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test_name</p>
@@ -32,7 +32,7 @@ public class DescribePcaAndExternalCACertificateListRequest extends TeaModel {
     public String keyWord;
 
     /**
-     * <p>The number of entries to return per page. The default value is 50.</p>
+     * <p>The number of records to display per page. Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

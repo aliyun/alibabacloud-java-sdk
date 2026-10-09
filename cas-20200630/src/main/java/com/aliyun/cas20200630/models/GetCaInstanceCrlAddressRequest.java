@@ -14,7 +14,7 @@ public class GetCaInstanceCrlAddressRequest extends TeaModel {
     public String caIdentifier;
 
     /**
-     * <p>The zone ID of the China CAS instance.</p>
+     * <p>The zone ID of the China Application Security (CAS) instance.</p>
      * 
      * <strong>example:</strong>
      * <p>1f047318-0815-XXX-f7ceb76b5c0a</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCACertificateListResponseBody extends TeaModel {
     /**
-     * <p>The details of the CA certificates.</p>
+     * <p>The list of CA certificate details.</p>
      */
     @NameInMap("CertificateList")
     public java.util.List<DescribeCACertificateListResponseBodyCertificateList> certificateList;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of pages returned.</p>
+     * <p>The total number of pages returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of CA certificates on each page.</p>
+     * <p>The number of CA certificates per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,7 +47,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
     public Integer showSize;
 
     /**
-     * <p>The total number of root and intermediate CA certificates.</p>
+     * <p>The total number of root CA certificates and subordinate CA certificates.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -110,7 +110,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
 
     public static class DescribeCACertificateListResponseBodyCertificateList extends TeaModel {
         /**
-         * <p>The expiration date of the CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The expiration date of the CA certificate. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1665819958000</p>
@@ -119,14 +119,11 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         public Long afterDate;
 
         /**
-         * <p>The encryption algorithm of the CA certificate. Valid values:</p>
+         * <p>The encryption algorithm type of the CA certificate. Valid values:</p>
          * <ul>
-         * <li><p><strong>RSA</strong>: RSA algorithm.</p>
-         * </li>
-         * <li><p><strong>ECC</strong>: ECC algorithm.</p>
-         * </li>
-         * <li><p><strong>SM2</strong>: SM2 algorithm.</p>
-         * </li>
+         * <li><strong>RSA</strong>: RSA algorithm.</li>
+         * <li><strong>ECC</strong>: ECC algorithm.</li>
+         * <li><strong>SM2</strong>: SM2 (Chinese national cryptographic) algorithm.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,7 +133,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         public String algorithm;
 
         /**
-         * <p>The alias of the instance.</p>
+         * <p>The instance alias.</p>
          * 
          * <strong>example:</strong>
          * <p>Aliyun_CA</p>
@@ -145,7 +142,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         public String alias;
 
         /**
-         * <p>The issuance date of the CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The issuance date of the CA certificate. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1634283958000</p>
@@ -156,10 +153,8 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         /**
          * <p>The type of the CA certificate. Valid values:</p>
          * <ul>
-         * <li><p><strong>ROOT</strong>: root CA certificate.</p>
-         * </li>
-         * <li><p><strong>SUB_ROOT</strong>: intermediate CA certificate.</p>
-         * </li>
+         * <li><strong>ROOT</strong>: root CA certificate.</li>
+         * <li><strong>SUB_ROOT</strong>: subordinate CA certificate.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,8 +173,8 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>The country code of the country where the organization associated with the CA certificate is located.</p>
-         * <p>For more information about country codes, see the <strong>Country codes</strong> section in <a href="https://help.aliyun.com/document_detail/198289.html">Manage company information</a>.</p>
+         * <p>The country code of the organization associated with the CA certificate.</p>
+         * <p>For more information about country codes, see the <strong>International codes</strong> section in <a href="https://help.aliyun.com/document_detail/198289.html">Manage company information</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>CN</p>
@@ -188,12 +183,10 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         public String countryCode;
 
         /**
-         * <p>Indicates whether the instance is a free instance. Valid values:</p>
+         * <p>Indicates whether the instance is a complimentary instance. Valid values:</p>
          * <ul>
-         * <li><p>0: no.</p>
-         * </li>
-         * <li><p>1: yes.</p>
-         * </li>
+         * <li>0: No.</li>
+         * <li>1: Yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -248,7 +241,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         public String organization;
 
         /**
-         * <p>The name of the department of the organization associated with the CA certificate.</p>
+         * <p>The name of the department within the organization associated with the CA certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>Security</p>
@@ -257,9 +250,9 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         public String organizationUnit;
 
         /**
-         * <p>The unique identifier of the root CA certificate that issued the CA certificate.</p>
+         * <p>The unique identifier of the root CA certificate that issued this CA certificate.</p>
          * <blockquote>
-         * <p>This parameter is returned only when <strong>CertificateType</strong> is <strong>SUB_ROOT</strong>, which indicates an intermediate CA certificate.</p>
+         * <p>This parameter is returned only when <strong>CertificateType</strong> is <strong>SUB_ROOT</strong> (subordinate CA certificate).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -278,7 +271,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>The Subject Alternative Names (SANs) of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -314,7 +307,8 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         public String signAlgorithm;
 
         /**
-         * <p>The name of the province or state where the organization associated with the CA certificate is located.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The name of the province, municipality, or autonomous region where the organization associated with the CA certificate is located.
+         * &lt;props=&quot;intl&quot;&gt;The name of the province or state where the organization associated with the CA certificate is located.</p>
          * 
          * <strong>example:</strong>
          * <p>Zhejiang</p>
@@ -325,10 +319,8 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         /**
          * <p>The status of the CA certificate. Valid values:</p>
          * <ul>
-         * <li><p><strong>ISSUE</strong>: The certificate is issued.</p>
-         * </li>
-         * <li><p><strong>REVOKE</strong>: The certificate is revoked.</p>
-         * </li>
+         * <li><strong>ISSUE</strong>: The certificate is issued normally.</li>
+         * <li><strong>REVOKE</strong>: The certificate has been revoked.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -338,18 +330,13 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The distinguished name (DN) of the CA certificate. The DN indicates the user of the certificate and contains the following information:</p>
+         * <p>The Distinguished Name (DN) attribute of the CA certificate, which represents the subject of the certificate. It contains the following information:</p>
          * <ul>
-         * <li><p><strong>C</strong>: The country code where the organization is located.</p>
-         * </li>
-         * <li><p><strong>O</strong>: The name of the organization.</p>
-         * </li>
-         * <li><p><strong>OU</strong>: The department of the organization.</p>
-         * </li>
-         * <li><p><strong>L</strong>: The city where the organization is located.</p>
-         * </li>
-         * <li><p><strong>CN</strong>: The common name or abbreviation of the organization.</p>
-         * </li>
+         * <li><strong>C</strong>: The country code of the organization.</li>
+         * <li><strong>O</strong>: The name of the organization.</li>
+         * <li><strong>OU</strong>: The department within the organization.</li>
+         * <li><strong>L</strong>: The city where the organization is located.</li>
+         * <li><strong>CN</strong>: The common name or abbreviation of the organization.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -361,10 +348,8 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the instance is a trial instance. Valid values:</p>
          * <ul>
-         * <li><p>0: no.</p>
-         * </li>
-         * <li><p>1: yes.</p>
-         * </li>
+         * <li>0: No.</li>
+         * <li>1: Yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -383,7 +368,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         public String x509Certificate;
 
         /**
-         * <p>The validity period of the CA certificate in years.</p>
+         * <p>The validity period of the CA certificate. Unit: years.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
