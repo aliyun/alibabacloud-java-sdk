@@ -2919,17 +2919,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>agentSpace</strong> must be an AgentSpace instance that has been created under the current account.</li>
-     * <li><strong>source.type</strong> currently supports only the <code>logstore</code> type. The <code>logstore.project</code> and <code>logstore.logstore</code> must be authorized within the AgentSpace and located in the same region.</li>
-     * <li><strong>pipeline.nodes</strong> must contain at least one node of the <code>Source</code> type and cannot be empty.</li>
+     * <li><strong>agentSpace</strong> must be an AgentSpace instance created under the current account.</li>
+     * <li><strong>source.type</strong> currently supports only the <code>logstore</code> type, and <code>logstore.project</code> and <code>logstore.logstore</code> must be authorized within the AgentSpace and reside in the same region.</li>
+     * <li><strong>pipeline.nodes</strong> must contain at least one <code>Source</code> node and cannot be empty.</li>
      * <li><strong>fromTime</strong> and <strong>toTime</strong> are UNIX timestamps in seconds. <strong>fromTime</strong> must be earlier than <strong>toTime</strong>.</li>
-     * <li>A maximum of 5 records are returned. Internal fields of the data source system are automatically filtered out.</li>
+     * <li>A maximum of 5 records are returned, and internal fields of the data source system are automatically filtered out.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Previews a pipeline. Without creating pipeline resources, this operation performs a trial query based on the specified data source, node orchestration, and time range, and returns a small number of sample data records to authenticate parameter settings and preview processing results.</p>
+     * <p>Previews a pipeline. Runs a trial query based on the specified data source, node orchestration, and time range without creating pipeline resources, and returns a small amount of sample data to authenticate parameter settings and preview processing results.</p>
      * 
      * @param request PreviewPipelineRequest
      * @param headers map
@@ -2975,17 +2975,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>agentSpace</strong> must be an AgentSpace instance that has been created under the current account.</li>
-     * <li><strong>source.type</strong> currently supports only the <code>logstore</code> type. The <code>logstore.project</code> and <code>logstore.logstore</code> must be authorized within the AgentSpace and located in the same region.</li>
-     * <li><strong>pipeline.nodes</strong> must contain at least one node of the <code>Source</code> type and cannot be empty.</li>
+     * <li><strong>agentSpace</strong> must be an AgentSpace instance created under the current account.</li>
+     * <li><strong>source.type</strong> currently supports only the <code>logstore</code> type, and <code>logstore.project</code> and <code>logstore.logstore</code> must be authorized within the AgentSpace and reside in the same region.</li>
+     * <li><strong>pipeline.nodes</strong> must contain at least one <code>Source</code> node and cannot be empty.</li>
      * <li><strong>fromTime</strong> and <strong>toTime</strong> are UNIX timestamps in seconds. <strong>fromTime</strong> must be earlier than <strong>toTime</strong>.</li>
-     * <li>A maximum of 5 records are returned. Internal fields of the data source system are automatically filtered out.</li>
+     * <li>A maximum of 5 records are returned, and internal fields of the data source system are automatically filtered out.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Previews a pipeline. Without creating pipeline resources, this operation performs a trial query based on the specified data source, node orchestration, and time range, and returns a small number of sample data records to authenticate parameter settings and preview processing results.</p>
+     * <p>Previews a pipeline. Runs a trial query based on the specified data source, node orchestration, and time range without creating pipeline resources, and returns a small amount of sample data to authenticate parameter settings and preview processing results.</p>
      * 
      * @param request PreviewPipelineRequest
      * @return PreviewPipelineResponse

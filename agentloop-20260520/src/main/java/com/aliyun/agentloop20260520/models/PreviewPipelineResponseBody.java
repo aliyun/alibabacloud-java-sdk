@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class PreviewPipelineResponseBody extends TeaModel {
     /**
-     * <p><code>data</code> is a collection of sample rows (maps within an array) that contains only the first N rows (up to 5 by default) and does not reflect the complete write plan.</p>
+     * <p>The collection of sample rows for the preview result. Each row is a key-value structure. The array contains only the first N rows, up to 5 rows by default, and does not reflect the complete write plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;status&quot;:&quot;200&quot;,&quot;method&quot;:&quot;POST&quot;}]</p>
      */
     @NameInMap("data")
     public java.util.List<java.util.Map<String, String>> data;
@@ -17,7 +20,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
     public PreviewPipelineResponseBodyMeta meta;
 
     /**
-     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID. You can use this ID to locate the request when you troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
@@ -56,7 +59,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
 
     public static class PreviewPipelineResponseBodyMeta extends TeaModel {
         /**
-         * <p>The aggregation analysis SPL statement.</p>
+         * <p>The SPL statement for aggregation analysis.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -67,7 +70,10 @@ public class PreviewPipelineResponseBody extends TeaModel {
         public String aggQuery;
 
         /**
-         * <p><code>meta.columnTypes</code> provides the mapping from column names to data types (string / long / double / json).</p>
+         * <p>The list of data types for each column. This field provides a mapping from column names to data types, such as string, long, double, and json.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;long&quot;,&quot;string&quot;]</p>
          */
         @NameInMap("columnTypes")
         public java.util.List<String> columnTypes;
@@ -82,7 +88,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The number of CPU cores consumed.</p>
+         * <p>The number of consumed CPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -91,7 +97,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
         public Integer cpuCores;
 
         /**
-         * <p>The CPU time consumed, in seconds.</p>
+         * <p>The consumed CPU time in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -100,7 +106,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
         public Double cpuSec;
 
         /**
-         * <p>The query duration, in milliseconds.</p>
+         * <p>The query duration in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1200</p>
@@ -109,25 +115,34 @@ public class PreviewPipelineResponseBody extends TeaModel {
         public Long elapsedMillisecond;
 
         /**
-         * <p>Indicates whether the query is an SQL query.</p>
+         * <p>Specifies whether an SQL query is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("hasSQL")
         public Boolean hasSQL;
 
         /**
-         * <p>Indicates whether nanosecond-level ordering is enabled.</p>
+         * <p>Specifies whether nanosecond-level ordering is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("isAccurate")
         public Boolean isAccurate;
 
         /**
          * <p>The list of result column names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;status&quot;,&quot;method&quot;,&quot;path&quot;]</p>
          */
         @NameInMap("keys")
         public java.util.List<String> keys;
 
         /**
-         * <p>The maximum number of rows that can be returned.</p>
+         * <p>The maximum number of rows returned in the result.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -136,7 +151,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
         public Integer limited;
 
         /**
-         * <p>The query mode identifier.</p>
+         * <p>The identifier of the query mode.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -145,7 +160,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
         public Integer mode;
 
         /**
-         * <p>The number of data bytes processed.</p>
+         * <p>The number of bytes of processed data.</p>
          * 
          * <strong>example:</strong>
          * <p>524288</p>
@@ -163,7 +178,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
         public Long processedRows;
 
         /**
-         * <p>The Simple Log Service (SLS) query progress. A value of Complete indicates that the query is complete.</p>
+         * <p>The Simple Log Service (SLS) query progress. A value of Complete indicates that the query is completed.</p>
          * 
          * <strong>example:</strong>
          * <p>Complete</p>
@@ -172,7 +187,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
         public String progress;
 
         /**
-         * <p>The number of raw data bytes scanned.</p>
+         * <p>The number of bytes of scanned raw data.</p>
          * 
          * <strong>example:</strong>
          * <p>1048576</p>
@@ -181,13 +196,25 @@ public class PreviewPipelineResponseBody extends TeaModel {
         public Long scanBytes;
 
         /**
-         * <p>The type and aggregation information of columns.</p>
+         * <p>The dataset schema of the final pipeline output. The keys are field names, and the type in the values supports text, long, double, and json. The field order is determined by the keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;status&quot;:{&quot;type&quot;:&quot;long&quot;}}</p>
+         */
+        @NameInMap("schema")
+        public java.util.Map<String, MetaSchemaValue> schema;
+
+        /**
+         * <p>The column types and aggregation information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;column&quot;:&quot;status&quot;,&quot;type&quot;:&quot;long&quot;}]</p>
          */
         @NameInMap("terms")
         public java.util.List<java.util.Map<String, ?>> terms;
 
         /**
-         * <p>The filter condition SPL statement.</p>
+         * <p>The SPL statement for the filter condition.</p>
          * 
          * <strong>example:</strong>
          * <p>status: 200</p>
@@ -318,6 +345,14 @@ public class PreviewPipelineResponseBody extends TeaModel {
         }
         public Long getScanBytes() {
             return this.scanBytes;
+        }
+
+        public PreviewPipelineResponseBodyMeta setSchema(java.util.Map<String, MetaSchemaValue> schema) {
+            this.schema = schema;
+            return this;
+        }
+        public java.util.Map<String, MetaSchemaValue> getSchema() {
+            return this.schema;
         }
 
         public PreviewPipelineResponseBodyMeta setTerms(java.util.List<java.util.Map<String, ?>> terms) {

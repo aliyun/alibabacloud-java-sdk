@@ -91,6 +91,29 @@ public class ListPipelinesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListPipelinesResponseBodyPipelinesExecutePolicyContinuous extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1735660800</p>
+         */
+        @NameInMap("fromTime")
+        public Long fromTime;
+
+        public static ListPipelinesResponseBodyPipelinesExecutePolicyContinuous build(java.util.Map<String, ?> map) throws Exception {
+            ListPipelinesResponseBodyPipelinesExecutePolicyContinuous self = new ListPipelinesResponseBodyPipelinesExecutePolicyContinuous();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPipelinesResponseBodyPipelinesExecutePolicyContinuous setFromTime(Long fromTime) {
+            this.fromTime = fromTime;
+            return this;
+        }
+        public Long getFromTime() {
+            return this.fromTime;
+        }
+
+    }
+
     public static class ListPipelinesResponseBodyPipelinesExecutePolicyRunOnce extends TeaModel {
         /**
          * <p>The start of the time slice, in UNIX millisecond timestamp format.</p>
@@ -177,6 +200,13 @@ public class ListPipelinesResponseBody extends TeaModel {
 
     public static class ListPipelinesResponseBodyPipelinesExecutePolicy extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>{&quot;fromTime&quot;:1735660800}</p>
+         */
+        @NameInMap("continuous")
+        public ListPipelinesResponseBodyPipelinesExecutePolicyContinuous continuous;
+
+        /**
          * <p>The scheduling mode. Valid values:</p>
          * <ul>
          * <li>RunOnce: one-time execution.</li>
@@ -191,12 +221,18 @@ public class ListPipelinesResponseBody extends TeaModel {
 
         /**
          * <p>The parameters for one-time execution. This parameter has a value only when mode is set to RunOnce.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;fromTime&quot;:1735660800,&quot;toTime&quot;:1735664400}</p>
          */
         @NameInMap("runOnce")
         public ListPipelinesResponseBodyPipelinesExecutePolicyRunOnce runOnce;
 
         /**
          * <p>The parameters for periodic scheduling. This parameter has a value only when mode is set to Scheduled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;interval&quot;:&quot;1h&quot;,&quot;fromTime&quot;:1735660800}</p>
          */
         @NameInMap("scheduled")
         public ListPipelinesResponseBodyPipelinesExecutePolicyScheduled scheduled;
@@ -204,6 +240,14 @@ public class ListPipelinesResponseBody extends TeaModel {
         public static ListPipelinesResponseBodyPipelinesExecutePolicy build(java.util.Map<String, ?> map) throws Exception {
             ListPipelinesResponseBodyPipelinesExecutePolicy self = new ListPipelinesResponseBodyPipelinesExecutePolicy();
             return TeaModel.build(map, self);
+        }
+
+        public ListPipelinesResponseBodyPipelinesExecutePolicy setContinuous(ListPipelinesResponseBodyPipelinesExecutePolicyContinuous continuous) {
+            this.continuous = continuous;
+            return this;
+        }
+        public ListPipelinesResponseBodyPipelinesExecutePolicyContinuous getContinuous() {
+            return this.continuous;
         }
 
         public ListPipelinesResponseBodyPipelinesExecutePolicy setMode(String mode) {
@@ -642,6 +686,44 @@ public class ListPipelinesResponseBody extends TeaModel {
 
     }
 
+    public static class ListPipelinesResponseBodyPipelinesSourceInputFields extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>question</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        public static ListPipelinesResponseBodyPipelinesSourceInputFields build(java.util.Map<String, ?> map) throws Exception {
+            ListPipelinesResponseBodyPipelinesSourceInputFields self = new ListPipelinesResponseBodyPipelinesSourceInputFields();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPipelinesResponseBodyPipelinesSourceInputFields setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListPipelinesResponseBodyPipelinesSourceInputFields setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class ListPipelinesResponseBodyPipelinesSourceLogstore extends TeaModel {
         /**
          * <p>The name of the SLS Logstore.</p>
@@ -703,18 +785,99 @@ public class ListPipelinesResponseBody extends TeaModel {
 
     }
 
+    public static class ListPipelinesResponseBodyPipelinesSourceTrajectoryEnrich extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;input&quot;,&quot;output&quot;,&quot;session_id&quot;]</p>
+         */
+        @NameInMap("columns")
+        public java.util.List<String> columns;
+
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        public static ListPipelinesResponseBodyPipelinesSourceTrajectoryEnrich build(java.util.Map<String, ?> map) throws Exception {
+            ListPipelinesResponseBodyPipelinesSourceTrajectoryEnrich self = new ListPipelinesResponseBodyPipelinesSourceTrajectoryEnrich();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPipelinesResponseBodyPipelinesSourceTrajectoryEnrich setColumns(java.util.List<String> columns) {
+            this.columns = columns;
+            return this;
+        }
+        public java.util.List<String> getColumns() {
+            return this.columns;
+        }
+
+        public ListPipelinesResponseBodyPipelinesSourceTrajectoryEnrich setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+    }
+
+    public static class ListPipelinesResponseBodyPipelinesSourceTrajectory extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;enabled&quot;:true,&quot;columns&quot;:[&quot;input&quot;,&quot;output&quot;]}</p>
+         */
+        @NameInMap("enrich")
+        public ListPipelinesResponseBodyPipelinesSourceTrajectoryEnrich enrich;
+
+        public static ListPipelinesResponseBodyPipelinesSourceTrajectory build(java.util.Map<String, ?> map) throws Exception {
+            ListPipelinesResponseBodyPipelinesSourceTrajectory self = new ListPipelinesResponseBodyPipelinesSourceTrajectory();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPipelinesResponseBodyPipelinesSourceTrajectory setEnrich(ListPipelinesResponseBodyPipelinesSourceTrajectoryEnrich enrich) {
+            this.enrich = enrich;
+            return this;
+        }
+        public ListPipelinesResponseBodyPipelinesSourceTrajectoryEnrich getEnrich() {
+            return this.enrich;
+        }
+
+    }
+
     public static class ListPipelinesResponseBodyPipelinesSource extends TeaModel {
         /**
          * <p>The dataset datasource config in the current AgentSpace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;dataset&quot;:&quot;my-dataset&quot;,&quot;filter&quot;:&quot;status = \&quot;pending\&quot;&quot;}</p>
          */
         @NameInMap("dataset")
         public ListPipelinesResponseBodyPipelinesSourceDataset dataset;
 
         /**
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;question&quot;,&quot;type&quot;:&quot;text&quot;}]</p>
+         */
+        @NameInMap("inputFields")
+        public java.util.List<ListPipelinesResponseBodyPipelinesSourceInputFields> inputFields;
+
+        /**
          * <p>The Simple Log Service (SLS) Logstore datasource config.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;project&quot;:&quot;my-sls-project&quot;,&quot;logstore&quot;:&quot;agent-logs&quot;}</p>
          */
         @NameInMap("logstore")
         public ListPipelinesResponseBodyPipelinesSourceLogstore logstore;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;enrich&quot;:{&quot;enabled&quot;:true,&quot;columns&quot;:[&quot;input&quot;,&quot;output&quot;]}}</p>
+         */
+        @NameInMap("trajectory")
+        public ListPipelinesResponseBodyPipelinesSourceTrajectory trajectory;
 
         /**
          * <p>The data source type. Valid values: logstore or dataset.</p>
@@ -738,12 +901,28 @@ public class ListPipelinesResponseBody extends TeaModel {
             return this.dataset;
         }
 
+        public ListPipelinesResponseBodyPipelinesSource setInputFields(java.util.List<ListPipelinesResponseBodyPipelinesSourceInputFields> inputFields) {
+            this.inputFields = inputFields;
+            return this;
+        }
+        public java.util.List<ListPipelinesResponseBodyPipelinesSourceInputFields> getInputFields() {
+            return this.inputFields;
+        }
+
         public ListPipelinesResponseBodyPipelinesSource setLogstore(ListPipelinesResponseBodyPipelinesSourceLogstore logstore) {
             this.logstore = logstore;
             return this;
         }
         public ListPipelinesResponseBodyPipelinesSourceLogstore getLogstore() {
             return this.logstore;
+        }
+
+        public ListPipelinesResponseBodyPipelinesSource setTrajectory(ListPipelinesResponseBodyPipelinesSourceTrajectory trajectory) {
+            this.trajectory = trajectory;
+            return this;
+        }
+        public ListPipelinesResponseBodyPipelinesSourceTrajectory getTrajectory() {
+            return this.trajectory;
         }
 
         public ListPipelinesResponseBodyPipelinesSource setType(String type) {
@@ -778,6 +957,9 @@ public class ListPipelinesResponseBody extends TeaModel {
 
         /**
          * <p>The execution policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;mode&quot;:&quot;RunOnce&quot;,&quot;runOnce&quot;:{&quot;fromTime&quot;:1735660800,&quot;toTime&quot;:1735664400}}</p>
          */
         @NameInMap("executePolicy")
         public ListPipelinesResponseBodyPipelinesExecutePolicy executePolicy;
@@ -836,6 +1018,9 @@ public class ListPipelinesResponseBody extends TeaModel {
 
         /**
          * <p>The pipeline data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;logstore&quot;,&quot;logstore&quot;:{&quot;project&quot;:&quot;my-sls-project&quot;,&quot;logstore&quot;:&quot;agent-logs&quot;},&quot;inputFields&quot;:[{&quot;name&quot;:&quot;question&quot;,&quot;type&quot;:&quot;text&quot;}]}</p>
          */
         @NameInMap("source")
         public ListPipelinesResponseBodyPipelinesSource source;
