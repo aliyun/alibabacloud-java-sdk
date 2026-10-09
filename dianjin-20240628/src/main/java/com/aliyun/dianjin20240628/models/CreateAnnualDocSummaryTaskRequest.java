@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateAnnualDocSummaryTaskRequest extends TeaModel {
     /**
-     * <p>List of years to analyze</p>
+     * <p>The list of analysis years.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("anaYears")
     public java.util.List<Integer> anaYears;
 
     /**
-     * <p>List of document information</p>
+     * <p>The list of document information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("docInfos")
     public java.util.List<CreateAnnualDocSummaryTaskRequestDocInfos> docInfos;
 
     /**
-     * <p>Enable table extraction. Default is true.</p>
+     * <p>Specifies whether to enable tables. Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -28,21 +28,21 @@ public class CreateAnnualDocSummaryTaskRequest extends TeaModel {
     public Boolean enableTable;
 
     /**
-     * <p>Instruction</p>
+     * <p>The instruction.</p>
      * 
      * <strong>example:</strong>
-     * <p>你是资深的证券研究员，对xx年上市公司进行业绩分析。根据参考信息从如下方面详细分析：</p>
+     * <p>You are a senior securities researcher conducting performance analysis on listed companies for the year XX. Based on the reference information, provide a detailed analysis covering the following aspects:</p>
      * <ol>
-     * <li>整体业绩变化情况，包括营收，利润等详细指标变化情况</li>
-     * <li>业绩变化情况具体原因，包括各个业务变化情况
-     * 严格只输出xx年情况。</li>
+     * <li>Overall performance changes, including detailed metrics such as revenue and profit.</li>
+     * <li>Specific reasons for performance changes, including changes in each business segment.
+     * Strictly output only the information for the year XX</li>
      * </ol>
      */
     @NameInMap("instruction")
     public String instruction;
 
     /**
-     * <p>Model ID</p>
+     * <p>The model ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,7 +98,7 @@ public class CreateAnnualDocSummaryTaskRequest extends TeaModel {
 
     public static class CreateAnnualDocSummaryTaskRequestDocInfos extends TeaModel {
         /**
-         * <p>Document ID</p>
+         * <p>The document ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -108,7 +108,7 @@ public class CreateAnnualDocSummaryTaskRequest extends TeaModel {
         public String docId;
 
         /**
-         * <p>Document year</p>
+         * <p>The document year.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class CreateAnnualDocSummaryTaskRequest extends TeaModel {
         public Integer docYear;
 
         /**
-         * <p>End page number</p>
+         * <p>The end page.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -127,7 +127,7 @@ public class CreateAnnualDocSummaryTaskRequest extends TeaModel {
         public Integer endPage;
 
         /**
-         * <p>Document library ID</p>
+         * <p>The document library ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +137,7 @@ public class CreateAnnualDocSummaryTaskRequest extends TeaModel {
         public String libraryId;
 
         /**
-         * <p>Start page number</p>
+         * <p>The start page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

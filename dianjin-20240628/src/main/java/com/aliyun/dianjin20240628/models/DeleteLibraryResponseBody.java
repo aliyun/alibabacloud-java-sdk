@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLibraryResponseBody extends TeaModel {
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,7 @@ public class DeleteLibraryResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>Error message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -23,7 +23,7 @@ public class DeleteLibraryResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>30F6AD44-F078-540D-B5A5-1E519C8E9E6D</p>
@@ -32,7 +32,7 @@ public class DeleteLibraryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

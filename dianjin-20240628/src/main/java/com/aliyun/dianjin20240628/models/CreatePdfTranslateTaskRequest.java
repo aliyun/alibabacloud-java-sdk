@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePdfTranslateTaskRequest extends TeaModel {
     /**
-     * <p>Document ID</p>
+     * <p>The document ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,18 +15,18 @@ public class CreatePdfTranslateTaskRequest extends TeaModel {
     public String docId;
 
     /**
-     * <p>Domain knowledge used as reference during translation</p>
+     * <p>The domain knowledge referenced during translation.</p>
      * 
      * <strong>example:</strong>
-     * <p>净利润 (Net Profit)
-     * 英文：Net Profit
-     * 中文：净利润（通常指扣除所有费用和税后的利润）</p>
+     * <p>Net Profit
+     * English: Net Profit
+     * Chinese: Net profit (typically refers to the profit after deducting all expenses and taxes)</p>
      */
     @NameInMap("knowledge")
     public String knowledge;
 
     /**
-     * <p>Document library ID</p>
+     * <p>The document library ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class CreatePdfTranslateTaskRequest extends TeaModel {
     public String libraryId;
 
     /**
-     * <p>Model ID</p>
+     * <p>The model ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,10 +46,10 @@ public class CreatePdfTranslateTaskRequest extends TeaModel {
     public String modelId;
 
     /**
-     * <p>Target language. Default is Chinese</p>
+     * <p>The target language. Default value: Chinese.</p>
      * 
      * <strong>example:</strong>
-     * <p>中文</p>
+     * <p>Chinese</p>
      */
     @NameInMap("translateTo")
     public String translateTo;

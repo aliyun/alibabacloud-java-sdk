@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAnnualDocSummaryTaskResponseBody extends TeaModel {
     /**
-     * <p>Processing time in milliseconds</p>
+     * <p>The execution duration.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -14,7 +14,7 @@ public class CreateAnnualDocSummaryTaskResponseBody extends TeaModel {
     public Long cost;
 
     /**
-     * <p>Response data. This is the task ID.</p>
+     * <p>The response data, which is the task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3284627354</p>
@@ -23,7 +23,7 @@ public class CreateAnnualDocSummaryTaskResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>Data type</p>
+     * <p>The data type.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -32,7 +32,7 @@ public class CreateAnnualDocSummaryTaskResponseBody extends TeaModel {
     public String dataType;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -41,7 +41,7 @@ public class CreateAnnualDocSummaryTaskResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>Error message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -50,7 +50,7 @@ public class CreateAnnualDocSummaryTaskResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>32FFC91D-0A9F-585A-B84F-8A54C5187035</p>
@@ -59,7 +59,7 @@ public class CreateAnnualDocSummaryTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -68,7 +68,7 @@ public class CreateAnnualDocSummaryTaskResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Timestamp</p>
+     * <p>The timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-01 00:00:00</p>

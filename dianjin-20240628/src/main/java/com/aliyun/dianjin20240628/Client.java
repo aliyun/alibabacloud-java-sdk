@@ -212,13 +212,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you use this operation, review the billing methods and pricing for Alibaba Cloud Tongyi Dianjin.
-     * Prerequisites
-     * You have activated Alibaba Cloud Model Studio and Tongyi Dianjin.
-     * Obtain your <a href="https://help.aliyun.com/zh/model-studio/developer-reference/get-app-id-and-workspace?spm=openapi-amp.newDocPublishment.0.0.2eb8281foUVd15#2612f896detsz:~:text=%E6%9F%A5%E7%9C%8BAPI%2DKEY%E3%80%82-,%E8%8E%B7%E5%8F%96APP%2DID%E5%92%8CWORKSPACE,-%E8%BF%9B%E5%85%A5%E6%88%91%E7%9A%84%E5%BA%94%E7%94%A8">workspace ID</a>.</p>
+     * <p>Make sure that you fully understand the billing methods and pricing of the Tongyi Dianjin product before you call this operation.
+     * Before you begin
+     * Alibaba Cloud Model Studio and Tongyi Dianjin are activated.
+     * The workspace ID is obtained. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/get-app-id-and-workspace#2612f896detsz:~:text=%E6%9F%A5%E7%9C%8BAPI%2DKEY%E3%80%82-,%E8%8E%B7%E5%8F%96APP%2DID%E5%92%8CWORKSPACE,-%E8%BF%9B%E5%85%A5%E6%88%91%E7%9A%84%E5%BA%94%E7%94%A8">workspace ID</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create a task to summarize documents by year.</p>
+     * <p>Creates a task to summarize documents by year.</p>
      * 
      * @param request CreateAnnualDocSummaryTaskRequest
      * @param headers map
@@ -268,13 +268,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you use this operation, review the billing methods and pricing for Alibaba Cloud Tongyi Dianjin.
-     * Prerequisites
-     * You have activated Alibaba Cloud Model Studio and Tongyi Dianjin.
-     * Obtain your <a href="https://help.aliyun.com/zh/model-studio/developer-reference/get-app-id-and-workspace?spm=openapi-amp.newDocPublishment.0.0.2eb8281foUVd15#2612f896detsz:~:text=%E6%9F%A5%E7%9C%8BAPI%2DKEY%E3%80%82-,%E8%8E%B7%E5%8F%96APP%2DID%E5%92%8CWORKSPACE,-%E8%BF%9B%E5%85%A5%E6%88%91%E7%9A%84%E5%BA%94%E7%94%A8">workspace ID</a>.</p>
+     * <p>Make sure that you fully understand the billing methods and pricing of the Tongyi Dianjin product before you call this operation.
+     * Before you begin
+     * Alibaba Cloud Model Studio and Tongyi Dianjin are activated.
+     * The workspace ID is obtained. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/get-app-id-and-workspace#2612f896detsz:~:text=%E6%9F%A5%E7%9C%8BAPI%2DKEY%E3%80%82-,%E8%8E%B7%E5%8F%96APP%2DID%E5%92%8CWORKSPACE,-%E8%BF%9B%E5%85%A5%E6%88%91%E7%9A%84%E5%BA%94%E7%94%A8">workspace ID</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create a task to summarize documents by year.</p>
+     * <p>Creates a task to summarize documents by year.</p>
      * 
      * @param request CreateAnnualDocSummaryTaskRequest
      * @return CreateAnnualDocSummaryTaskResponse
@@ -732,15 +732,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you use this operation, review the billing methods and pricing for Alibaba Cloud Tongyi Dianjin.
-     * <strong>Prerequisites</strong></p>
+     * <p>Make sure that you fully understand the billing methods and pricing of the Tongyi Dianjin product before you call this operation.
+     * <strong>Before you begin</strong></p>
      * <ul>
-     * <li>You have activated Alibaba Cloud Model Studio and Tongyi Dianjin.</li>
-     * <li>You have obtained a workspace ID. To obtain your <a href="https://help.aliyun.com/zh/model-studio/developer-reference/get-app-id-and-workspace?spm=openapi-amp.newDocPublishment.0.0.2eb8281foUVd15#2612f896detsz:~:text=%E6%9F%A5%E7%9C%8BAPI%2DKEY%E3%80%82-,%E8%8E%B7%E5%8F%96APP%2DID%E5%92%8CWORKSPACE,-%E8%BF%9B%E5%85%A5%E6%88%91%E7%9A%84%E5%BA%94%E7%94%A8">workspace ID</a>.</li>
+     * <li>Alibaba Cloud Model Studio and Tongyi Dianjin are activated.</li>
+     * <li>The workspace ID is obtained. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/get-app-id-and-workspace#2612f896detsz:~:text=%E6%9F%A5%E7%9C%8BAPI%2DKEY%E3%80%82-,%E8%8E%B7%E5%8F%96APP%2DID%E5%92%8CWORKSPACE,-%E8%BF%9B%E5%85%A5%E6%88%91%E7%9A%84%E5%BA%94%E7%94%A8">workspace ID</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create a PDF document translation task. Submit the task to start asynchronous translation.</p>
+     * <p>Creates a PDF document translation task. Submits the translation task and executes the translation process asynchronously.</p>
      * 
      * @param request CreatePdfTranslateTaskRequest
      * @param headers map
@@ -790,15 +790,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you use this operation, review the billing methods and pricing for Alibaba Cloud Tongyi Dianjin.
-     * <strong>Prerequisites</strong></p>
+     * <p>Make sure that you fully understand the billing methods and pricing of the Tongyi Dianjin product before you call this operation.
+     * <strong>Before you begin</strong></p>
      * <ul>
-     * <li>You have activated Alibaba Cloud Model Studio and Tongyi Dianjin.</li>
-     * <li>You have obtained a workspace ID. To obtain your <a href="https://help.aliyun.com/zh/model-studio/developer-reference/get-app-id-and-workspace?spm=openapi-amp.newDocPublishment.0.0.2eb8281foUVd15#2612f896detsz:~:text=%E6%9F%A5%E7%9C%8BAPI%2DKEY%E3%80%82-,%E8%8E%B7%E5%8F%96APP%2DID%E5%92%8CWORKSPACE,-%E8%BF%9B%E5%85%A5%E6%88%91%E7%9A%84%E5%BA%94%E7%94%A8">workspace ID</a>.</li>
+     * <li>Alibaba Cloud Model Studio and Tongyi Dianjin are activated.</li>
+     * <li>The workspace ID is obtained. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/get-app-id-and-workspace#2612f896detsz:~:text=%E6%9F%A5%E7%9C%8BAPI%2DKEY%E3%80%82-,%E8%8E%B7%E5%8F%96APP%2DID%E5%92%8CWORKSPACE,-%E8%BF%9B%E5%85%A5%E6%88%91%E7%9A%84%E5%BA%94%E7%94%A8">workspace ID</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create a PDF document translation task. Submit the task to start asynchronous translation.</p>
+     * <p>Creates a PDF document translation task. Submits the translation task and executes the translation process asynchronously.</p>
      * 
      * @param request CreatePdfTranslateTaskRequest
      * @return CreatePdfTranslateTaskResponse
@@ -1162,14 +1162,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Prerequisites</em>*</p>
+     * <p><em>Before you begin</em>*</p>
      * <ul>
-     * <li>Activate Alibaba Cloud Model Studio and Tongyi Dianjin services.</li>
-     * <li>Obtain your workspaceId. For more information, refer to the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/get-app-id-and-workspace?spm=openapi-amp.newDocPublishment.0.0.2eb8281foUVd15#2612f896detsz:~:text=%E6%9F%A5%E7%9C%8BAPI%2DKEY%E3%80%82-,%E8%8E%B7%E5%8F%96APP%2DID%E5%92%8CWORKSPACE,-%E8%BF%9B%E5%85%A5%E6%88%91%E7%9A%84%E5%BA%94%E7%94%A8">workspace identifier</a>.</li>
+     * <li>Alibaba Cloud Model Studio and Tongyi Dianjin services are activated.</li>
+     * <li>The workspace ID is obtained: Obtain the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/get-app-id-and-workspace#2612f896detsz:~:text=%E6%9F%A5%E7%9C%8BAPI%2DKEY%E3%80%82-,%E8%8E%B7%E5%8F%96APP%2DID%E5%92%8CWORKSPACE,-%E8%BF%9B%E5%85%A5%E6%88%91%E7%9A%84%E5%BA%94%E7%94%A8">workspace ID</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Delete a document library. ⚠️ This operation deletes the library and all its associated documents.</p>
+     * <p>Deletes a document library. Warning: This operation deletes the document library and all associated documents.</p>
      * 
      * @param request DeleteLibraryRequest
      * @param headers map
@@ -1203,14 +1203,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Prerequisites</em>*</p>
+     * <p><em>Before you begin</em>*</p>
      * <ul>
-     * <li>Activate Alibaba Cloud Model Studio and Tongyi Dianjin services.</li>
-     * <li>Obtain your workspaceId. For more information, refer to the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/get-app-id-and-workspace?spm=openapi-amp.newDocPublishment.0.0.2eb8281foUVd15#2612f896detsz:~:text=%E6%9F%A5%E7%9C%8BAPI%2DKEY%E3%80%82-,%E8%8E%B7%E5%8F%96APP%2DID%E5%92%8CWORKSPACE,-%E8%BF%9B%E5%85%A5%E6%88%91%E7%9A%84%E5%BA%94%E7%94%A8">workspace identifier</a>.</li>
+     * <li>Alibaba Cloud Model Studio and Tongyi Dianjin services are activated.</li>
+     * <li>The workspace ID is obtained: Obtain the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/get-app-id-and-workspace#2612f896detsz:~:text=%E6%9F%A5%E7%9C%8BAPI%2DKEY%E3%80%82-,%E8%8E%B7%E5%8F%96APP%2DID%E5%92%8CWORKSPACE,-%E8%BF%9B%E5%85%A5%E6%88%91%E7%9A%84%E5%BA%94%E7%94%A8">workspace ID</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Delete a document library. ⚠️ This operation deletes the library and all its associated documents.</p>
+     * <p>Deletes a document library. Warning: This operation deletes the document library and all associated documents.</p>
      * 
      * @param request DeleteLibraryRequest
      * @return DeleteLibraryResponse
@@ -2385,7 +2385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve quality check results.</p>
+     * <p>Retrieves the quality inspection results.</p>
      * 
      * @param request GetQualityCheckTaskResultRequest
      * @param headers map
@@ -2419,7 +2419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve quality check results.</p>
+     * <p>Retrieves the quality inspection results.</p>
      * 
      * @param request GetQualityCheckTaskResultRequest
      * @return GetQualityCheckTaskResultResponse
