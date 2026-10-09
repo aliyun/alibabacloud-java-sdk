@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCheckItemRequest extends TeaModel {
     /**
-     * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
+     * <p>The page number from which query results are displayed. Default value: <strong>1</strong>, which means results start from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListCheckItemRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for requests and responses. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>

@@ -5,22 +5,40 @@ import com.aliyun.tea.*;
 
 public class DataValue extends TeaModel {
     /**
-     * <p>The number of risky hosts.</p>
+     * <p>The total number of baseline check items.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
      */
-    @NameInMap("RiskMachine")
-    public Integer riskMachine;
+    @NameInMap("BaselineCheckCount")
+    public Integer baselineCheckCount;
 
     /**
-     * <p>The number of scanned hosts.</p>
+     * <p>The total number of system vulnerability items.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
      */
-    @NameInMap("ScanMachine")
-    public Integer scanMachine;
+    @NameInMap("CveVulCount")
+    public Integer cveVulCount;
+
+    /**
+     * <p>The estimated detection volume in GB. This field is not currently returned by the batch statistics operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
+    @NameInMap("EstimateUsedSize")
+    public Long estimateUsedSize;
+
+    /**
+     * <p>The timestamp of the last scan time, in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1682577532318</p>
+     */
+    @NameInMap("LastTaskTime")
+    public Long lastTaskTime;
 
     /**
      * <p>The total number of malicious sample files.</p>
@@ -32,31 +50,13 @@ public class DataValue extends TeaModel {
     public Integer maliciousFile;
 
     /**
-     * <p>The number of vulnerability risks.</p>
+     * <p>The number of vulnerable servers.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
      */
-    @NameInMap("Vulnerability")
-    public Integer vulnerability;
-
-    /**
-     * <p>The timestamp of the last scan time. Unit: milliseconds.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1682577532318</p>
-     */
-    @NameInMap("LastTaskTime")
-    public Long lastTaskTime;
-
-    /**
-     * <p>The total number of baseline check items.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
-    @NameInMap("BaselineCheckCount")
-    public Integer baselineCheckCount;
+    @NameInMap("RiskMachine")
+    public Integer riskMachine;
 
     /**
      * <p>The total number of application vulnerabilities.</p>
@@ -68,22 +68,13 @@ public class DataValue extends TeaModel {
     public Integer scaVulCount;
 
     /**
-     * <p>The total number of system vulnerabilities.</p>
+     * <p>The number of scanned servers.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
      */
-    @NameInMap("CveVulCount")
-    public Integer cveVulCount;
-
-    /**
-     * <p>The total number of Windows system vulnerabilities.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
-    @NameInMap("SysVulCount")
-    public Integer sysVulCount;
+    @NameInMap("ScanMachine")
+    public Integer scanMachine;
 
     /**
      * <p>The total number of sensitive files.</p>
@@ -95,13 +86,22 @@ public class DataValue extends TeaModel {
     public Integer sensitiveFileCount;
 
     /**
-     * <p>The estimated detection volume. Unit: GB. This field is not returned by the batch statistics operation.</p>
+     * <p>The total number of Windows system vulnerability items.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>1</p>
      */
-    @NameInMap("EstimateUsedSize")
-    public Long estimateUsedSize;
+    @NameInMap("SysVulCount")
+    public Integer sysVulCount;
+
+    /**
+     * <p>The number of vulnerability risks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("Vulnerability")
+    public Integer vulnerability;
 
     /**
      * <p>The number of Linux software vulnerabilities.</p>
@@ -198,60 +198,12 @@ public class DataValue extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DataValue setRiskMachine(Integer riskMachine) {
-        this.riskMachine = riskMachine;
-        return this;
-    }
-    public Integer getRiskMachine() {
-        return this.riskMachine;
-    }
-
-    public DataValue setScanMachine(Integer scanMachine) {
-        this.scanMachine = scanMachine;
-        return this;
-    }
-    public Integer getScanMachine() {
-        return this.scanMachine;
-    }
-
-    public DataValue setMaliciousFile(Integer maliciousFile) {
-        this.maliciousFile = maliciousFile;
-        return this;
-    }
-    public Integer getMaliciousFile() {
-        return this.maliciousFile;
-    }
-
-    public DataValue setVulnerability(Integer vulnerability) {
-        this.vulnerability = vulnerability;
-        return this;
-    }
-    public Integer getVulnerability() {
-        return this.vulnerability;
-    }
-
-    public DataValue setLastTaskTime(Long lastTaskTime) {
-        this.lastTaskTime = lastTaskTime;
-        return this;
-    }
-    public Long getLastTaskTime() {
-        return this.lastTaskTime;
-    }
-
     public DataValue setBaselineCheckCount(Integer baselineCheckCount) {
         this.baselineCheckCount = baselineCheckCount;
         return this;
     }
     public Integer getBaselineCheckCount() {
         return this.baselineCheckCount;
-    }
-
-    public DataValue setScaVulCount(Integer scaVulCount) {
-        this.scaVulCount = scaVulCount;
-        return this;
-    }
-    public Integer getScaVulCount() {
-        return this.scaVulCount;
     }
 
     public DataValue setCveVulCount(Integer cveVulCount) {
@@ -262,12 +214,52 @@ public class DataValue extends TeaModel {
         return this.cveVulCount;
     }
 
-    public DataValue setSysVulCount(Integer sysVulCount) {
-        this.sysVulCount = sysVulCount;
+    public DataValue setEstimateUsedSize(Long estimateUsedSize) {
+        this.estimateUsedSize = estimateUsedSize;
         return this;
     }
-    public Integer getSysVulCount() {
-        return this.sysVulCount;
+    public Long getEstimateUsedSize() {
+        return this.estimateUsedSize;
+    }
+
+    public DataValue setLastTaskTime(Long lastTaskTime) {
+        this.lastTaskTime = lastTaskTime;
+        return this;
+    }
+    public Long getLastTaskTime() {
+        return this.lastTaskTime;
+    }
+
+    public DataValue setMaliciousFile(Integer maliciousFile) {
+        this.maliciousFile = maliciousFile;
+        return this;
+    }
+    public Integer getMaliciousFile() {
+        return this.maliciousFile;
+    }
+
+    public DataValue setRiskMachine(Integer riskMachine) {
+        this.riskMachine = riskMachine;
+        return this;
+    }
+    public Integer getRiskMachine() {
+        return this.riskMachine;
+    }
+
+    public DataValue setScaVulCount(Integer scaVulCount) {
+        this.scaVulCount = scaVulCount;
+        return this;
+    }
+    public Integer getScaVulCount() {
+        return this.scaVulCount;
+    }
+
+    public DataValue setScanMachine(Integer scanMachine) {
+        this.scanMachine = scanMachine;
+        return this;
+    }
+    public Integer getScanMachine() {
+        return this.scanMachine;
     }
 
     public DataValue setSensitiveFileCount(Integer sensitiveFileCount) {
@@ -278,12 +270,20 @@ public class DataValue extends TeaModel {
         return this.sensitiveFileCount;
     }
 
-    public DataValue setEstimateUsedSize(Long estimateUsedSize) {
-        this.estimateUsedSize = estimateUsedSize;
+    public DataValue setSysVulCount(Integer sysVulCount) {
+        this.sysVulCount = sysVulCount;
         return this;
     }
-    public Long getEstimateUsedSize() {
-        return this.estimateUsedSize;
+    public Integer getSysVulCount() {
+        return this.sysVulCount;
+    }
+
+    public DataValue setVulnerability(Integer vulnerability) {
+        this.vulnerability = vulnerability;
+        return this;
+    }
+    public Integer getVulnerability() {
+        return this.vulnerability;
     }
 
     public DataValue setCveNum(Integer cveNum) {

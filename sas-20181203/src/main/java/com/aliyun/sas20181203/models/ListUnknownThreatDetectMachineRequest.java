@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUnknownThreatDetectMachineRequest extends TeaModel {
     /**
-     * <p>The page number of the current page when using paging.</p>
+     * <p>The page number of the current page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class ListUnknownThreatDetectMachineRequest extends TeaModel {
     public Integer eventStatus;
 
     /**
-     * <p>The maximum number of entries per page when using paging.</p>
+     * <p>The maximum number of entries to display per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -35,12 +35,12 @@ public class ListUnknownThreatDetectMachineRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The running status of the machine. Valid values:</p>
+     * <p>The machine running status. Valid values:</p>
      * <ul>
-     * <li><strong>monitoring</strong>: Warning.</li>
-     * <li><strong>blocking</strong>: Blocking.</li>
-     * <li><strong>studying</strong>: Learning.</li>
-     * <li><strong>study_finish</strong>: Learning completed.</li>
+     * <li><strong>monitoring</strong>: warning in progress</li>
+     * <li><strong>blocking</strong>: under control</li>
+     * <li><strong>studying</strong>: learning in progress</li>
+     * <li><strong>study_finish</strong>: learning completed</li>
      * </ul>
      * 
      * <strong>example:</strong>

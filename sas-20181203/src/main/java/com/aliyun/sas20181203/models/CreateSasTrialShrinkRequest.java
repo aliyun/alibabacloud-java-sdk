@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreateSasTrialShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token used to ensure request idempotence. Use a different token for each request. Only ASCII characters are supported. The token can be up to 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run. true: performs only a dry run without performing the actual request. false: performs the actual request. Default value: false.</p>
+     * <p>Specifies whether to perform only a dry run for this request. Valid values: true: performs only a dry run without executing the actual operation. false: executes the request normally. Default value: false.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether the request is from the ECS console. Valid values:</p>
+     * <p>Specifies whether the request originates from the ECS console. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Yes</li>
+     * <li><strong>false</strong>: No</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,10 +30,10 @@ public class CreateSasTrialShrinkRequest extends TeaModel {
     public Boolean fromEcs;
 
     /**
-     * <p>The language of the request and response. Valid values:</p>
+     * <p>The language of the request and response messages. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese.</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class CreateSasTrialShrinkRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The reason for applying for the trial. This parameter is required for a second trial.</p>
+     * <p>The reason for applying for a trial. A reason is required for a second trial.</p>
      */
     @NameInMap("RequestForm")
     public String requestFormShrink;
@@ -51,12 +51,12 @@ public class CreateSasTrialShrinkRequest extends TeaModel {
     /**
      * <p>The trial type. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Trial is not allowed.</li>
-     * <li><strong>1</strong>: First trial.</li>
+     * <li><strong>0</strong>: Trial not allowed.</li>
+     * <li><strong>1</strong>: First-time trial.</li>
      * <li><strong>2</strong>: Second trial.</li>
      * </ul>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/2623574.html">GetCanTrySas</a> operation to obtain this parameter. The trial can be started only when the value is not 0.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2623574.html">GetCanTrySas</a> operation to retrieve this parameter. You can start a trial only when this value is not 0.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -68,11 +68,11 @@ public class CreateSasTrialShrinkRequest extends TeaModel {
     /**
      * <p>The trial edition. Valid values:</p>
      * <ul>
-     * <li><strong>3</strong>: Enterprise Edition.</li>
-     * <li><strong>7</strong>: Ultimate Edition.</li>
+     * <li><strong>3</strong>: Enterprise Edition</li>
+     * <li><strong>7</strong>: Ultimate Edition</li>
      * </ul>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/2623574.html">GetCanTrySas</a> operation to obtain this parameter.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2623574.html">GetCanTrySas</a> operation to retrieve this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

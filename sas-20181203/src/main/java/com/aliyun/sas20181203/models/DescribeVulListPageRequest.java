@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVulListPageRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The number of the current page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeVulListPageRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.</p>
+     * <p>The CVE ID of the vulnerability.</p>
      * 
      * <strong>example:</strong>
      * <p>CVE-2022-44702</p>
@@ -23,7 +23,7 @@ public class DescribeVulListPageRequest extends TeaModel {
     public String cveId;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of entries to display per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,12 +32,10 @@ public class DescribeVulListPageRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Indicates whether the application protection feature is supported. Valid values:</p>
+     * <p>Specifies whether runtime application self-protection (RASP) is supported. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: no.</p>
-     * </li>
-     * <li><p><strong>1</strong>: yes.</p>
-     * </li>
+     * <li><strong>0</strong>: Not supported.</li>
+     * <li><strong>1</strong>: Supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,20 +48,17 @@ public class DescribeVulListPageRequest extends TeaModel {
      * <p>The name of the vulnerability.</p>
      * 
      * <strong>example:</strong>
-     * <p>远程代码执行漏洞</p>
+     * <p>Remote code execute vulnerability</p>
      */
     @NameInMap("VulNameLike")
     public String vulNameLike;
 
     /**
-     * <p>The type of the vulnerabilities. Valid values:</p>
+     * <p>The type of vulnerability to query. Valid values:</p>
      * <ul>
-     * <li><p><strong>cve</strong>: Linux software vulnerability.</p>
-     * </li>
-     * <li><p><strong>sys</strong>: Windows system vulnerability.</p>
-     * </li>
-     * <li><p><strong>app</strong>: Application vulnerability that is detected by using web scanner.</p>
-     * </li>
+     * <li>cve: Linux software vulnerability</li>
+     * <li>sys: Windows system vulnerability</li>
+     * <li>app: application vulnerability</li>
      * </ul>
      * 
      * <strong>example:</strong>

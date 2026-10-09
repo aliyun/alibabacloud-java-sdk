@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUniRecoverableListRequest extends TeaModel {
     /**
-     * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates the first page.</p>
+     * <p>The number of the page from which query results start to be displayed. Default value: <strong>1</strong>. This value indicates that the results start from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,9 +23,9 @@ public class DescribeUniRecoverableListRequest extends TeaModel {
     public String database;
 
     /**
-     * <p>The maximum number of entries per page when using paging. Default value: 20. If you leave this parameter empty, 20 entries are returned per page by default.</p>
+     * <p>The maximum number of entries to display per page in a paged query. The default number of entries per page is 20. If PageSize is left empty, 20 entries are returned by default.</p>
      * <blockquote>
-     * <p>Do not leave PageSize empty.</p>
+     * <p>Set PageSize to a non-empty value.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class DescribeUniRecoverableListRequest extends TeaModel {
     /**
      * <p>The ID of the anti-ransomware backup policy for the database.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to obtain this parameter.</p>
+     * <p>Call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

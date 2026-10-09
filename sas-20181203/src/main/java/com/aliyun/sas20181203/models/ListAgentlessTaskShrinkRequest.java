@@ -3,7 +3,7 @@ package com.aliyun.sas20181203.models;
 
 import com.aliyun.tea.*;
 
-public class ListAgentlessTaskRequest extends TeaModel {
+public class ListAgentlessTaskShrinkRequest extends TeaModel {
     /**
      * <p>The page number of the current page in a paging query.</p>
      * 
@@ -152,7 +152,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
      * <p>The list of task IDs to return. You can specify up to 100 IDs. You must specify RootTask and cannot specify this parameter together with TaskId. If RootTask is set to true, root tasks are queried. If RootTask is set to false, subtasks are queried, and cross-root task queries are allowed. If RootTaskId is specified, the intersection is returned.</p>
      */
     @NameInMap("TaskIdList")
-    public java.util.List<String> taskIdList;
+    public String taskIdListShrink;
 
     /**
      * <p>The UUID of the server to query.</p>
@@ -163,12 +163,12 @@ public class ListAgentlessTaskRequest extends TeaModel {
     @NameInMap("Uuid")
     public String uuid;
 
-    public static ListAgentlessTaskRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListAgentlessTaskRequest self = new ListAgentlessTaskRequest();
+    public static ListAgentlessTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListAgentlessTaskShrinkRequest self = new ListAgentlessTaskShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListAgentlessTaskRequest setCurrentPage(Integer currentPage) {
+    public ListAgentlessTaskShrinkRequest setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
     }
@@ -176,7 +176,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
         return this.currentPage;
     }
 
-    public ListAgentlessTaskRequest setEndTime(Long endTime) {
+    public ListAgentlessTaskShrinkRequest setEndTime(Long endTime) {
         this.endTime = endTime;
         return this;
     }
@@ -184,7 +184,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
         return this.endTime;
     }
 
-    public ListAgentlessTaskRequest setInternetIp(String internetIp) {
+    public ListAgentlessTaskShrinkRequest setInternetIp(String internetIp) {
         this.internetIp = internetIp;
         return this;
     }
@@ -192,7 +192,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
         return this.internetIp;
     }
 
-    public ListAgentlessTaskRequest setIntranetIp(String intranetIp) {
+    public ListAgentlessTaskShrinkRequest setIntranetIp(String intranetIp) {
         this.intranetIp = intranetIp;
         return this;
     }
@@ -200,7 +200,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
         return this.intranetIp;
     }
 
-    public ListAgentlessTaskRequest setLang(String lang) {
+    public ListAgentlessTaskShrinkRequest setLang(String lang) {
         this.lang = lang;
         return this;
     }
@@ -208,7 +208,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
         return this.lang;
     }
 
-    public ListAgentlessTaskRequest setMachineName(String machineName) {
+    public ListAgentlessTaskShrinkRequest setMachineName(String machineName) {
         this.machineName = machineName;
         return this;
     }
@@ -216,7 +216,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
         return this.machineName;
     }
 
-    public ListAgentlessTaskRequest setPageSize(Integer pageSize) {
+    public ListAgentlessTaskShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -224,7 +224,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListAgentlessTaskRequest setRootTask(Boolean rootTask) {
+    public ListAgentlessTaskShrinkRequest setRootTask(Boolean rootTask) {
         this.rootTask = rootTask;
         return this;
     }
@@ -232,7 +232,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
         return this.rootTask;
     }
 
-    public ListAgentlessTaskRequest setRootTaskId(String rootTaskId) {
+    public ListAgentlessTaskShrinkRequest setRootTaskId(String rootTaskId) {
         this.rootTaskId = rootTaskId;
         return this;
     }
@@ -240,7 +240,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
         return this.rootTaskId;
     }
 
-    public ListAgentlessTaskRequest setStartTime(Long startTime) {
+    public ListAgentlessTaskShrinkRequest setStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }
@@ -248,7 +248,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
         return this.startTime;
     }
 
-    public ListAgentlessTaskRequest setStatus(Integer status) {
+    public ListAgentlessTaskShrinkRequest setStatus(Integer status) {
         this.status = status;
         return this;
     }
@@ -256,7 +256,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
         return this.status;
     }
 
-    public ListAgentlessTaskRequest setTargetName(String targetName) {
+    public ListAgentlessTaskShrinkRequest setTargetName(String targetName) {
         this.targetName = targetName;
         return this;
     }
@@ -264,7 +264,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
         return this.targetName;
     }
 
-    public ListAgentlessTaskRequest setTargetType(Integer targetType) {
+    public ListAgentlessTaskShrinkRequest setTargetType(Integer targetType) {
         this.targetType = targetType;
         return this;
     }
@@ -272,7 +272,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
         return this.targetType;
     }
 
-    public ListAgentlessTaskRequest setTaskId(String taskId) {
+    public ListAgentlessTaskShrinkRequest setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
@@ -280,15 +280,15 @@ public class ListAgentlessTaskRequest extends TeaModel {
         return this.taskId;
     }
 
-    public ListAgentlessTaskRequest setTaskIdList(java.util.List<String> taskIdList) {
-        this.taskIdList = taskIdList;
+    public ListAgentlessTaskShrinkRequest setTaskIdListShrink(String taskIdListShrink) {
+        this.taskIdListShrink = taskIdListShrink;
         return this;
     }
-    public java.util.List<String> getTaskIdList() {
-        return this.taskIdList;
+    public String getTaskIdListShrink() {
+        return this.taskIdListShrink;
     }
 
-    public ListAgentlessTaskRequest setUuid(String uuid) {
+    public ListAgentlessTaskShrinkRequest setUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }

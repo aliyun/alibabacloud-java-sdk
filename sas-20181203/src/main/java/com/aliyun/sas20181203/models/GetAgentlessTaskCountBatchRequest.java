@@ -23,7 +23,7 @@ public class GetAgentlessTaskCountBatchRequest extends TeaModel {
     public Integer targetType;
 
     /**
-     * <p>The list of resource UUIDs to query. The list can contain 1 to 100 elements.</p>
+     * <p>The list of UUIDs of the resources to query. You can specify 1 to 100 UUIDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

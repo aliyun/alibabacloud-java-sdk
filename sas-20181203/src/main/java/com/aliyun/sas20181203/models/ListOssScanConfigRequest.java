@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOssScanConfigRequest extends TeaModel {
     /**
-     * <p>The page number of the current page in a paged query.</p>
+     * <p>The current page number for paged queries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListOssScanConfigRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of entries per page in a paged query.</p>
+     * <p>The maximum number of entries to display on each page for paged queries.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

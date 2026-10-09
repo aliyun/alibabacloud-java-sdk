@@ -55,6 +55,12 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
     }
 
     public static class ListUnknownThreatDetectMachineResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of days the policy has been in effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("EffectDays")
         public Long effectDays;
 
@@ -85,13 +91,28 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The number of malicious processes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaliciousProcessCount")
         public Long maliciousProcessCount;
 
+        /**
+         * <p>The number of normal events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("NormalEventCount")
         @Deprecated
         public Long normalEventCount;
 
+        /**
+         * <p>The plug-in status.</p>
+         */
         @NameInMap("PluginStatus")
         public String pluginStatus;
 
@@ -104,15 +125,21 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         @NameInMap("ProcessCount")
         public Integer processCount;
 
+        /**
+         * <p>The number of recent deviation behaviors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RecentDeviationBehaviorCount")
         public Long recentDeviationBehaviorCount;
 
         /**
-         * <p>The running status of the machine. Valid values:</p>
+         * <p>The machine running status. Valid values:</p>
          * <ul>
-         * <li><strong>monitoring</strong>: Warning.</li>
-         * <li><strong>blocking</strong>: Blocking.</li>
-         * <li><strong>studying</strong>: Learning.</li>
+         * <li><strong>monitoring</strong>: warning in progress</li>
+         * <li><strong>blocking</strong>: under control</li>
+         * <li><strong>studying</strong>: learning in progress</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,6 +161,12 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         @NameInMap("StudyMode")
         public String studyMode;
 
+        /**
+         * <p>The number of remaining learning days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("StudyRemainDays")
         public Long studyRemainDays;
 
@@ -277,7 +310,7 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
 
     public static class ListUnknownThreatDetectMachineResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries on the current page when using paging.</p>
+         * <p>The number of entries displayed on the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -286,7 +319,7 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number of the current page when using paging.</p>
+         * <p>The page number of the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -295,7 +328,7 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The maximum number of entries per page when using paging.</p>
+         * <p>The maximum number of entries to display per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

@@ -5,11 +5,17 @@ import com.aliyun.tea.*;
 
 public class AddUnknownThreatDetectProcessRequest extends TeaModel {
     /**
-     * <p>The list of specified event IDs.</p>
+     * <p>The list of event IDs.</p>
      */
     @NameInMap("EventIdList")
     public java.util.List<Long> eventIdList;
 
+    /**
+     * <p>The handling remarks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Confirmed</p>
+     */
     @NameInMap("HandleRemark")
     public String handleRemark;
 
@@ -20,7 +26,7 @@ public class AddUnknownThreatDetectProcessRequest extends TeaModel {
     public java.util.List<AddUnknownThreatDetectProcessRequestProcessList> processList;
 
     /**
-     * <p>The list of asset UUIDs for which processes are to be added.</p>
+     * <p>The list of asset UUIDs for which the process is to be added.</p>
      */
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;
@@ -73,7 +79,7 @@ public class AddUnknownThreatDetectProcessRequest extends TeaModel {
         public String md5;
 
         /**
-         * <p>The process path.</p>
+         * <p>The path of the process.</p>
          * 
          * <strong>example:</strong>
          * <p>/bin/rm</p>

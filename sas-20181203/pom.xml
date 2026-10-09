@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>sas20181203</artifactId>
-  <version>10.2.0</version>
+  <version>10.2.1</version>
   <packaging>jar</packaging>
   <name>sas20181203</name>
   <description>Alibaba Cloud Threat Detection  (20181203) SDK for Java
@@ -41,12 +41,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.26</version>
+      <version>0.2.28</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.12</version>
+      <version>0.3.18</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

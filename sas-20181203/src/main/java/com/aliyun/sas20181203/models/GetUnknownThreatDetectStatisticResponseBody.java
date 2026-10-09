@@ -41,6 +41,9 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
     }
 
     public static class GetUnknownThreatDetectStatisticResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of servers that have blocking events.</p>
+         */
         @NameInMap("BlockEventMachineCount")
         public Integer blockEventMachineCount;
 
@@ -63,7 +66,7 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
         public Integer machineCount;
 
         /**
-         * <p>The number of servers in warning status.</p>
+         * <p>The number of servers in warning mode.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -81,7 +84,7 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
         public Integer openMachineCount;
 
         /**
-         * <p>The number of servers in learning status.</p>
+         * <p>The number of servers in the learning state.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

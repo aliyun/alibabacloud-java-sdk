@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class ModifyOperateVulRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token used to ensure request idempotence. Use a different token for each request. Only ASCII characters are supported. The value can be up to 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values: true: performs only a dry run without performing the actual operation. false: performs the actual request. Default value: false.</p>
+     * <p>Specifies whether to perform only a dry run for this request. Valid values: true: performs only a dry run without executing the actual operation. false: sends the request normally. Default value: false.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The source identifier of the request. Set the value to <strong>sas</strong>.</p>
+     * <p>The source identifier of the request. Set this parameter to <strong>sas</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>sas</p>
@@ -29,8 +32,8 @@ public class ModifyOperateVulRequest extends TeaModel {
      * <p>The information about the vulnerability to handle. This parameter is in JSON format and contains the following fields:</p>
      * <ul>
      * <li><strong>name</strong>: The name of the vulnerability.</li>
-     * <li><strong>uuid</strong>: The UUID of the server on which the vulnerability is detected.</li>
-     * <li><strong>tag</strong>: The tag of the vulnerability. Valid values:<ul>
+     * <li><strong>uuid</strong>: The UUID of the server that has the vulnerability.</li>
+     * <li><strong>tag</strong>: The label of the vulnerability. Valid values:<ul>
      * <li><strong>oval</strong>: Linux software vulnerability</li>
      * <li><strong>system</strong>: Windows system vulnerability</li>
      * <li><strong>cms</strong>: Web-CMS vulnerability</li>
@@ -38,17 +41,17 @@ public class ModifyOperateVulRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>For other vulnerability types, call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to obtain the vulnerability information.</p>
+     * <p>For other vulnerability types, call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to obtain vulnerability information.</p>
      * </blockquote>
      * <ul>
-     * <li><strong>isFront</strong>: Specifies whether the Windows patch is a prerequisite patch. This parameter is required only when handling Windows system vulnerabilities and can be ignored for other vulnerability types. Valid values:<ul>
+     * <li><strong>isFront</strong>: Specifies whether the Windows patch is a prerequisite patch. Set this parameter only when handling Windows system vulnerabilities. You can ignore this parameter for other vulnerability types. Valid values:<ul>
      * <li><strong>0</strong>: No.</li>
      * <li><strong>1</strong>: Yes.</li>
      * </ul>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>Batch processing of vulnerabilities is supported. Separate multiple vulnerability entries with commas (,). Call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to obtain the vulnerability information.</p>
+     * <p>Batch processing is supported. Separate multiple vulnerability entries with commas (,). Call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to obtain vulnerability information.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -76,10 +79,7 @@ public class ModifyOperateVulRequest extends TeaModel {
     public String operateType;
 
     /**
-     * <p>The reason for ignoring the vulnerability.</p>
-     * <blockquote>
-     * <p>This parameter is required only when the operation type is <strong>ignore</strong> (that is, <strong>OperateType</strong> is set to <strong>vul_ignore</strong>).</p>
-     * </blockquote>
+     * <p>The reason for ignoring the vulnerability. This parameter is required only when the operation is set to <strong>ignore</strong> (that is, <strong>OperateType</strong> is set to <strong>vul_ignore</strong>).</p>
      * 
      * <strong>example:</strong>
      * <p>not operate</p>
@@ -88,26 +88,26 @@ public class ModifyOperateVulRequest extends TeaModel {
     public String reason;
 
     /**
-     * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
+     * <p>The ID of the Alibaba Cloud account associated with a member account in the resource directory.</p>
      * <blockquote>
-     * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>The type of the vulnerability to handle. Valid values:</p>
+     * <p>The type of vulnerability to handle. Valid values:</p>
      * <ul>
      * <li><strong>cve</strong>: Linux software vulnerability</li>
      * <li><strong>sys</strong>: Windows system vulnerability</li>
      * <li><strong>cms</strong>: Web-CMS vulnerability</li>
-     * <li><strong>emg</strong>: emergency vulnerability</li>
-     * <li><strong>app</strong>: application vulnerability</li>
-     * <li><strong>sca</strong>: software constituency parsing vulnerability</li>
+     * <li><strong>emg</strong>: Emergency vulnerability</li>
+     * <li><strong>app</strong>: Application vulnerability</li>
+     * <li><strong>sca</strong>: Software constituency parsing vulnerability</li>
      * </ul>
      * <blockquote>
-     * <p>Emergency vulnerabilities (emg), application vulnerabilities (app), and software constituency parsing vulnerabilities (sca) do not support the vulnerability fix operation. You cannot execute the fix operation for these types.</p>
+     * <p>Fix operations are not supported for emergency vulnerabilities (emg), application vulnerabilities (app), or software constituency parsing vulnerabilities (sca). These vulnerability types do not support the execute vulnerability fix operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

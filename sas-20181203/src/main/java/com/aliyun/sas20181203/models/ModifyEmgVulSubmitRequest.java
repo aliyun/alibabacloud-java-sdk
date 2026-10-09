@@ -5,22 +5,27 @@ import com.aliyun.tea.*;
 
 public class ModifyEmgVulSubmitRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token used to ensure the idempotence of the request. Use a different token for different requests. Only ASCII characters are supported. The token can be up to 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values: true: performs a dry run without executing the actual operation. false: performs the actual operation. Default value: false.</p>
+     * <p>Specifies whether to perform only a dry run for this request. Valid values: true: performs only a dry run without executing the actual operation. false: executes the request normally. Default value: false.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The language type of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,9 +45,9 @@ public class ModifyEmgVulSubmitRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the member account in the resource directory (Alibaba Cloud account).</p>
+     * <p>The ID of the member accounts in the resource directory (Alibaba Cloud account).</p>
      * <blockquote>
-     * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -52,10 +57,12 @@ public class ModifyEmgVulSubmitRequest extends TeaModel {
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>Specifies whether to perform vulnerability detection. Valid values:</p>
+     * <p>Specifies whether to run vulnerability detection. Valid values:</p>
      * <ul>
-     * <li><strong>yes</strong>: Perform vulnerability detection.</li>
-     * <li><strong>no</strong>: Do not perform vulnerability detection.</li>
+     * <li><p><strong>yes</strong>: Run.</p>
+     * </li>
+     * <li><p><strong>no</strong>: Do not run.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

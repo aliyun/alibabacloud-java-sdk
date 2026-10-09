@@ -10,6 +10,12 @@ public class HandleUnknownThreatDetectEventRequest extends TeaModel {
     @NameInMap("EventIdList")
     public java.util.List<String> eventIdList;
 
+    /**
+     * <p>The handling remarks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Confirmed and handled</p>
+     */
     @NameInMap("HandleRemark")
     public String handleRemark;
 

@@ -11,7 +11,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
     public java.util.List<DescribeVulListPageResponseBodyData> data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4347E985-6E64-467B-96EC-30D4EA9E32FB</p>
@@ -20,7 +20,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -59,7 +59,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
 
     public static class DescribeVulListPageResponseBodyData extends TeaModel {
         /**
-         * <p>The common vulnerabilities and exposures (CVE) ID of the vulnerability.</p>
+         * <p>The CVE ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CVE-2022-42836</p>
@@ -68,7 +68,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
         public String cveId;
 
         /**
-         * <p>The extended field for Server Guard.</p>
+         * <p>The Server Guard extended field.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;relatedType\&quot;:[{\&quot;type\&quot;:\&quot;sys\&quot;}]}</p>
@@ -77,7 +77,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
         public String extAegis;
 
         /**
-         * <p>The primary key ID of the database.</p>
+         * <p>The primary key ID in the database.</p>
          * 
          * <strong>example:</strong>
          * <p>40586</p>
@@ -86,12 +86,10 @@ public class DescribeVulListPageResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Indicates whether the vulnerability was detected based on version comparison. Valid values:</p>
+         * <p>Indicates whether version comparison is supported. Valid values:</p>
          * <ul>
-         * <li><p>1: The vulnerability was detected based on version comparison.</p>
-         * </li>
-         * <li><p>0: The vulnerability was not detected based on version comparison.</p>
-         * </li>
+         * <li>1: Yes.</li>
+         * <li>0: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -101,12 +99,10 @@ public class DescribeVulListPageResponseBody extends TeaModel {
         public Integer isAegis;
 
         /**
-         * <p>Indicates whether the vulnerability was detected based on proof of concept (POC) verification. Valid values:</p>
+         * <p>Indicates whether proof-of-concept (PoC) verification is supported. Valid values:</p>
          * <ul>
-         * <li><p>1: The vulnerability was detected based on POC verification.</p>
-         * </li>
-         * <li><p>0: The vulnerability was not detected based on POC verification.</p>
-         * </li>
+         * <li>1: Yes.</li>
+         * <li>0: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,7 +112,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
         public Integer isSas;
 
         /**
-         * <p>The ID of the vulnerability.</p>
+         * <p>The ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AVD-2018-8218</p>
@@ -125,7 +121,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
         public String otherId;
 
         /**
-         * <p>The time when the vulnerability was disclosed.</p>
+         * <p>The release time in UTC (ISO 8601 format), for example, 2022-12-13T08:00Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-12-13T08:00Z</p>
@@ -137,7 +133,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
          * <p>The name of the vulnerability.</p>
          * 
          * <strong>example:</strong>
-         * <p>Windows 终端远程代码执行漏洞</p>
+         * <p>Windows Terminal remote code execute vulnerability</p>
          */
         @NameInMap("Title")
         public String title;

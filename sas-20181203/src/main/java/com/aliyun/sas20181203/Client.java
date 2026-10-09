@@ -1477,7 +1477,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds processes for intelligent behavior analytics.</p>
+     * <p>Adds a process to behavior analytics.</p>
      * 
      * @param request AddUnknownThreatDetectProcessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1521,7 +1521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds processes for intelligent behavior analytics.</p>
+     * <p>Adds a process to behavior analytics.</p>
      * 
      * @param request AddUnknownThreatDetectProcessRequest
      * @return AddUnknownThreatDetectProcessResponse
@@ -5781,8 +5781,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Starts a Security Center trial. Before calling this operation, call GetCanTrySas to check trial eligibility and retrieve the TryVersion and TryType values. You can start a trial only when TryType is not 0.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Starts a free trial of Security Center.</p>
+     * <p>Starts a Security Center trial.</p>
      * 
      * @param tmpReq CreateSasTrialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5845,8 +5848,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Starts a Security Center trial. Before calling this operation, call GetCanTrySas to check trial eligibility and retrieve the TryVersion and TryType values. You can start a trial only when TryType is not 0.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Starts a free trial of Security Center.</p>
+     * <p>Starts a Security Center trial.</p>
      * 
      * @param request CreateSasTrialRequest
      * @return CreateSasTrialResponse
@@ -12217,10 +12223,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple criteria.</p>
+     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other criteria. You can also set logical relationships between different search criteria to find assets that match multiple conditions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries asset information by settings conditional query criteria, such as asset instance name or asset instance region. Both paging and NextToken methods are supported. The NextToken method is recommended.</p>
+     * <p>Queries assets that match specified search criteria by using conditional query settings such as asset instance name and region. Supports both paging and NextToken methods. The NextToken method is recommended.</p>
      * 
      * @param request DescribeCloudCenterInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12300,10 +12306,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple criteria.</p>
+     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other criteria. You can also set logical relationships between different search criteria to find assets that match multiple conditions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries asset information by settings conditional query criteria, such as asset instance name or asset instance region. Both paging and NextToken methods are supported. The NextToken method is recommended.</p>
+     * <p>Queries assets that match specified search criteria by using conditional query settings such as asset instance name and region. Supports both paging and NextToken methods. The NextToken method is recommended.</p>
      * 
      * @param request DescribeCloudCenterInstancesRequest
      * @return DescribeCloudCenterInstancesResponse
@@ -23379,7 +23385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about baseline check policies.</p>
+     * <p>Queries baseline check policies.</p>
      * 
      * @param request DescribeStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23423,7 +23429,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about baseline check policies.</p>
+     * <p>Queries baseline check policies.</p>
      * 
      * @param request DescribeStrategyRequest
      * @return DescribeStrategyResponse
@@ -25964,7 +25970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the vulnerabilities that can be detected.</p>
+     * <p>Queries the list of vulnerabilities supported for detection.</p>
      * 
      * @param request DescribeVulListPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26016,7 +26022,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the vulnerabilities that can be detected.</p>
+     * <p>Queries the list of vulnerabilities supported for detection.</p>
      * 
      * @param request DescribeVulListPageRequest
      * @return DescribeVulListPageResponse
@@ -29006,10 +29012,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for Security Center agentless detection can call this operation. UuidList can contain up to 100 UUIDs. Duplicate UUIDs are deduplicated based on the order of first occurrence. The returned Data is keyed by UUID and does not aggregate results across multiple resources. RiskMachine, ScanMachine, and LastTaskTime are account-level statistics and remain consistent across all resources in the same request.</p>
+     * <p>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for the agentless detection feature of Security Center can call this operation. The UuidList parameter can contain up to 100 UUIDs. Duplicate UUIDs are deduplicated based on the order of their first appearance. The returned Data is keyed by UUID, and the results for multiple resources are not aggregated. RiskMachine, ScanMachine, and LastTaskTime are account-level statistics, and the results for each resource in the same request remain consistent.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves agentless detection risk statistics for resources in batches of 1 to 100 resources per request.</p>
+     * <p>Retrieves the agentless detection risk statistics for 1 to 100 resources in a single batch.</p>
      * 
      * @param request GetAgentlessTaskCountBatchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29047,10 +29053,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for Security Center agentless detection can call this operation. UuidList can contain up to 100 UUIDs. Duplicate UUIDs are deduplicated based on the order of first occurrence. The returned Data is keyed by UUID and does not aggregate results across multiple resources. RiskMachine, ScanMachine, and LastTaskTime are account-level statistics and remain consistent across all resources in the same request.</p>
+     * <p>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for the agentless detection feature of Security Center can call this operation. The UuidList parameter can contain up to 100 UUIDs. Duplicate UUIDs are deduplicated based on the order of their first appearance. The returned Data is keyed by UUID, and the results for multiple resources are not aggregated. RiskMachine, ScanMachine, and LastTaskTime are account-level statistics, and the results for each resource in the same request remain consistent.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves agentless detection risk statistics for resources in batches of 1 to 100 resources per request.</p>
+     * <p>Retrieves the agentless detection risk statistics for 1 to 100 resources in a single batch.</p>
      * 
      * @param request GetAgentlessTaskCountBatchRequest
      * @return GetAgentlessTaskCountBatchResponse
@@ -30230,7 +30236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the sales information of cloud service configuration check, including the number of authorized quotas and consumed quotas.</p>
+     * <p>Retrieves the sales information for cloud product configuration checks, including the number of authorized assets and consumed authorized assets.</p>
      * 
      * @param request GetCheckSaleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30262,7 +30268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the sales information of cloud service configuration check, including the number of authorized quotas and consumed quotas.</p>
+     * <p>Retrieves the sales information for cloud product configuration checks, including the number of authorized assets and consumed authorized assets.</p>
      * 
      * @param request GetCheckSaleRequest
      * @return GetCheckSaleResponse
@@ -34415,7 +34421,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves statistics information on intelligent behavior analytics.</p>
+     * <p>Retrieves behavior analytics statistics information.</p>
      * 
      * @param request GetUnknownThreatDetectStatisticRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -34440,7 +34446,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves statistics information on intelligent behavior analytics.</p>
+     * <p>Retrieves behavior analytics statistics information.</p>
      * 
      * @param request GetUnknownThreatDetectStatisticRequest
      * @return GetUnknownThreatDetectStatisticResponse
@@ -35106,7 +35112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Handles alerting from intelligent behavior analytics.</p>
+     * <p>Handles alerts for behavior analytics.</p>
      * 
      * @param request HandleUnknownThreatDetectEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35146,7 +35152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Handles alerting from intelligent behavior analytics.</p>
+     * <p>Handles alerts for behavior analytics.</p>
      * 
      * @param request HandleUnknownThreatDetectEventRequest
      * @return HandleUnknownThreatDetectEventResponse
@@ -35874,8 +35880,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of assets for agentless detection.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Query agentless detection assets.</p>
+     * <p>Queries agentless detection assets.</p>
      * 
      * @param request ListAgentlessAssetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35938,8 +35947,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of assets for agentless detection.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Query agentless detection assets.</p>
+     * <p>Queries agentless detection assets.</p>
      * 
      * @param request ListAgentlessAssetRequest
      * @return ListAgentlessAssetResponse
@@ -36212,14 +36224,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of agentless detection tasks.</p>
+     * <p>Retrieves a list of agentless detection tasks.</p>
      * 
-     * @param request ListAgentlessTaskRequest
+     * @param tmpReq ListAgentlessTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAgentlessTaskResponse
      */
-    public ListAgentlessTaskResponse listAgentlessTaskWithOptions(ListAgentlessTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListAgentlessTaskResponse listAgentlessTaskWithOptions(ListAgentlessTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListAgentlessTaskShrinkRequest request = new ListAgentlessTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.taskIdList)) {
+            request.taskIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.taskIdList, "TaskIdList", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
@@ -36277,6 +36295,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskId", request.taskId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.taskIdListShrink)) {
+            query.put("TaskIdList", request.taskIdListShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
             query.put("Uuid", request.uuid);
         }
@@ -36300,7 +36322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of agentless detection tasks.</p>
+     * <p>Retrieves a list of agentless detection tasks.</p>
      * 
      * @param request ListAgentlessTaskRequest
      * @return ListAgentlessTaskResponse
@@ -37123,7 +37145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of check items that can be configured with custom settings.</p>
+     * <p>Retrieves the list of check items that support custom configuration.</p>
      * 
      * @param request ListCheckItemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -37167,7 +37189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of check items that can be configured with custom settings.</p>
+     * <p>Retrieves the list of check items that support custom configuration.</p>
      * 
      * @param request ListCheckItemRequest
      * @return ListCheckItemResponse
@@ -37916,7 +37938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of cloud service assets.</p>
+     * <p>Retrieves the asset list of cloud products.</p>
      * 
      * @param request ListCloudAssetInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -37980,7 +38002,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of cloud service assets.</p>
+     * <p>Retrieves the asset list of cloud products.</p>
      * 
      * @param request ListCloudAssetInstancesRequest
      * @return ListCloudAssetInstancesResponse
@@ -44701,7 +44723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs emergency vulnerability detection.</p>
+     * <p>Runs an emergency vulnerability detection.</p>
      * 
      * @param request ModifyEmgVulSubmitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -44753,7 +44775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs emergency vulnerability detection.</p>
+     * <p>Runs an emergency vulnerability detection.</p>
      * 
      * @param request ModifyEmgVulSubmitRequest
      * @return ModifyEmgVulSubmitResponse
@@ -45661,7 +45683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Handles detected vulnerabilities. Supported operations include fix, verify, and ignore.</p>
+     * <p>Handles detected vulnerabilities. Supported operations include fixing, verifying, and ignoring vulnerabilities.</p>
      * 
      * @param request ModifyOperateVulRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -45721,7 +45743,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Handles detected vulnerabilities. Supported operations include fix, verify, and ignore.</p>
+     * <p>Handles detected vulnerabilities. Supported operations include fixing, verifying, and ignoring vulnerabilities.</p>
      * 
      * @param request ModifyOperateVulRequest
      * @return ModifyOperateVulResponse
@@ -47951,7 +47973,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures a global switch based on the specified type.</p>
+     * <p>Sets the global switch based on the specified type.</p>
      * 
      * @param request OperateCommonOverallConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -48003,7 +48025,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures a global switch based on the specified type.</p>
+     * <p>Sets the global switch based on the specified type.</p>
      * 
      * @param request OperateCommonOverallConfigRequest
      * @return OperateCommonOverallConfigResponse
@@ -53624,7 +53646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Manages authorization assignments for member accounts in multi-account authorization management.</p>
+     * <p>Manages multi-account authorization by editing allocation assignments in the administrator account.</p>
      * 
      * @param request UpdateMultiUserInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -53656,7 +53678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Manages authorization assignments for member accounts in multi-account authorization management.</p>
+     * <p>Manages multi-account authorization by editing allocation assignments in the administrator account.</p>
      * 
      * @param request UpdateMultiUserInstancesRequest
      * @return UpdateMultiUserInstancesResponse
@@ -54152,7 +54174,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the key that corresponds to a specified type.</p>
+     * <p>Modifies the key corresponding to the specified type.</p>
      * 
      * @param request UpdateSelectionKeyByTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -54196,7 +54218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the key that corresponds to a specified type.</p>
+     * <p>Modifies the key corresponding to the specified type.</p>
      * 
      * @param request UpdateSelectionKeyByTypeRequest
      * @return UpdateSelectionKeyByTypeResponse
