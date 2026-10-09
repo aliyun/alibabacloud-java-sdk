@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTaskInstanceResponseBody extends TeaModel {
     /**
-     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>22C97E95-F023-56B5-8852-B1A77****</p>
@@ -14,7 +14,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The detailed information about the task instance.</p>
+     * <p>The details of the task instance.</p>
      */
     @NameInMap("TaskInstance")
     public GetTaskInstanceResponseBodyTaskInstance taskInstance;
@@ -76,12 +76,12 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The type. Valid values:</p>
+         * <p>The type of the variable. Valid values:</p>
          * <ul>
-         * <li>Constant: constant.</li>
-         * <li>PassThrough: output of a parameter node.</li>
-         * <li>System: variable.</li>
-         * <li>NodeOutput: script output.</li>
+         * <li>Constant: The variable is a constant.</li>
+         * <li>PassThrough: The variable is the output of a parameter node.</li>
+         * <li>System: The variable is a system variable.</li>
+         * <li>NodeOutput: The variable is the script output.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -188,12 +188,12 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The type. Valid values:</p>
+         * <p>The type of the variable. Valid values:</p>
          * <ul>
-         * <li>Constant: constant.</li>
-         * <li>PassThrough: output of a parameter node.</li>
-         * <li>System: variable.</li>
-         * <li>NodeOutput: script output.</li>
+         * <li>Constant: The variable is a constant.</li>
+         * <li>PassThrough: The variable is the output of a parameter node.</li>
+         * <li>System: The variable is a system variable.</li>
+         * <li>NodeOutput: The variable is the script output.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -280,7 +280,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
 
     public static class GetTaskInstanceResponseBodyTaskInstanceRuntime extends TeaModel {
         /**
-         * <p>The machine on which the task runs.</p>
+         * <p>The machine on which the task is executed.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai.1.2</p>
@@ -289,7 +289,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public String gateway;
 
         /**
-         * <p>The unique ID of the run.</p>
+         * <p>The unique ID of the execution process.</p>
          * 
          * <strong>example:</strong>
          * <p>T3_123</p>
@@ -322,7 +322,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
 
     public static class GetTaskInstanceResponseBodyTaskInstanceRuntimeResource extends TeaModel {
         /**
-         * <p>The compute unit (CU) consumption configured for the task.</p>
+         * <p>The compute unit (CU) consumption configured for task execution.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -331,7 +331,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public String cu;
 
         /**
-         * <p>The image ID configured for the task.</p>
+         * <p>The ID of the image configured for task execution.</p>
          * 
          * <strong>example:</strong>
          * <p>i-xxxxxx</p>
@@ -340,7 +340,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public String image;
 
         /**
-         * <p>The identifier of the schedule resource group configured for the task.</p>
+         * <p>The identifier of the scheduling resource group configured for task execution.</p>
          * 
          * <strong>example:</strong>
          * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
@@ -381,7 +381,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
 
     public static class GetTaskInstanceResponseBodyTaskInstanceScript extends TeaModel {
         /**
-         * <p>The script content.</p>
+         * <p>The content of the script.</p>
          * 
          * <strong>example:</strong>
          * <p>echo &quot;helloWorld&quot;</p>
@@ -423,7 +423,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
 
     public static class GetTaskInstanceResponseBodyTaskInstanceTags extends TeaModel {
         /**
-         * <p>The label key.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -432,7 +432,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The label value.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>
@@ -474,7 +474,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public Long baselineId;
 
         /**
-         * <p>The business date.</p>
+         * <p>The business date. The value is a 13-digit UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -483,7 +483,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public Long bizdate;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a 13-digit UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -501,7 +501,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public String createUser;
 
         /**
-         * <p>The data source information associated with the instance.</p>
+         * <p>The information about the data source associated with the instance.</p>
          */
         @NameInMap("DataSource")
         public GetTaskInstanceResponseBodyTaskInstanceDataSource dataSource;
@@ -516,7 +516,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The completion time.</p>
+         * <p>The completion time. The value is a 13-digit UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -525,7 +525,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public Long finishedTime;
 
         /**
-         * <p>The unique identifier of the node instance.</p>
+         * <p>The unique identifier of the task instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -540,7 +540,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public GetTaskInstanceResponseBodyTaskInstanceInputs inputs;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time. The value is a 13-digit UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -549,7 +549,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The account ID of the user who modified the instance.</p>
+         * <p>The account ID of the user who updated the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -558,7 +558,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public String modifyUser;
 
         /**
-         * <p>The type of the most recent operation on the instance.</p>
+         * <p>The type of the latest operation on the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>TriggerDqc</p>
@@ -573,7 +573,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public GetTaskInstanceResponseBodyTaskInstanceOutputs outputs;
 
         /**
-         * <p>The account ID of the node owner.</p>
+         * <p>The account ID of the task owner.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -582,7 +582,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The period number. Indicates which scheduling cycle of the day the task instance is in.</p>
+         * <p>The period number. This indicates the sequence of the execution cycle for the task instance on the current day.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -591,7 +591,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public Integer periodNumber;
 
         /**
-         * <p>The running priority of the task. Minimum value: 1. Maximum value: 8. A larger value indicates a higher priority. Default value: 1.</p>
+         * <p>The execution priority of the task. Valid values: 1 to 8. A larger value indicates a higher priority. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -622,11 +622,11 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The rerun configuration of the task. Valid values:</p>
+         * <p>The configuration that specifies whether the task can be rerun. Valid values:</p>
          * <ul>
-         * <li>AllDenied: reruns are not allowed regardless of whether the task fails or succeeds.</li>
-         * <li>AllAllowed: reruns are allowed regardless of whether the task fails or succeeds.</li>
-         * <li>FailureAllowed: reruns are allowed only when the task fails.</li>
+         * <li>AllDenied: The task cannot be rerun regardless of whether it fails or succeeds.</li>
+         * <li>AllAllowed: The task can be rerun regardless of whether it fails or succeeds.</li>
+         * <li>FailureAllowed: The task can be rerun only if it fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -636,7 +636,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public String rerunMode;
 
         /**
-         * <p>The current run number. The value starts from 1 by default.</p>
+         * <p>The current number of runs. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -651,19 +651,19 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public GetTaskInstanceResponseBodyTaskInstanceRuntime runtime;
 
         /**
-         * <p>The resource group information associated with the instance.</p>
+         * <p>The information about the resource group associated with the instance.</p>
          */
         @NameInMap("RuntimeResource")
         public GetTaskInstanceResponseBodyTaskInstanceRuntimeResource runtimeResource;
 
         /**
-         * <p>The running script information.</p>
+         * <p>The information about the execution script.</p>
          */
         @NameInMap("Script")
         public GetTaskInstanceResponseBodyTaskInstanceScript script;
 
         /**
-         * <p>The start time of the run.</p>
+         * <p>The start time. The value is a 13-digit UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -672,17 +672,17 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public Long startedTime;
 
         /**
-         * <p>The instance running status. Valid values:</p>
+         * <p>The running status of the instance. Valid values:</p>
          * <ul>
          * <li>NotRun: Not run.</li>
          * <li>Running: Running.</li>
-         * <li>WaitTime: Waiting for the TriggerTime to arrive.</li>
+         * <li>WaitTime: Waiting for the trigger time.</li>
          * <li>CheckingCondition: Checking branch conditions.</li>
          * <li>WaitResource: Waiting for resources.</li>
          * <li>Failure: Execution failed.</li>
          * <li>Success: Execution succeeded.</li>
          * <li>Checking: Submitted for data quality check.</li>
-         * <li>WaitTrigger: Waiting for an external trigger. Trigger-based nodes enter this status after the waiting time elapses.</li>
+         * <li>WaitTrigger: Waiting for an external trigger. Triggered nodes change to this status after the waiting time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -692,13 +692,13 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The list of node tags.</p>
+         * <p>The list of task tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<GetTaskInstanceResponseBodyTaskInstanceTags> tags;
 
         /**
-         * <p>The ID of the corresponding task.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -707,7 +707,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public Long taskId;
 
         /**
-         * <p>The name of the corresponding task.</p>
+         * <p>The name of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>SQL node</p>
@@ -716,7 +716,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>The type of the corresponding task.</p>
+         * <p>The type of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>ODPS_SQL</p>
@@ -725,8 +725,8 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The timeout period for task execution. Unit: seconds.</p>
-         * <p>Note: The scheduling system rounds the configured value to whole hours.</p>
+         * <p>The timeout period for task execution, in seconds.</p>
+         * <p>Note: The scheduling system rounds the configured value to the nearest hour.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -735,18 +735,18 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public Integer timeout;
 
         /**
-         * <p>The running mode when triggered. This parameter takes effect when TriggerType is set to Scheduler. Valid values:</p>
+         * <p>The run mode upon trigger. This parameter takes effect only when TriggerType is set to Scheduler. Valid values:</p>
          * <ul>
-         * <li>Normal: a normal scheduled task that is scheduled on a regular basis.</li>
-         * <li>Manual: a manual task that is not scheduled on a regular basis.</li>
-         * <li>Pause: a paused task that is scheduled on a regular basis but is set to failed when scheduling starts.</li>
-         * <li>Skip: a dry-run task that is scheduled on a regular basis but is set to succeeded when scheduling starts.</li>
-         * <li>SkipUnchoose: a task that is not selected in a temporary workflow. This value exists only in temporary workflows. The task is set to succeeded when scheduling starts.</li>
-         * <li>SkipCycle: a weekly or monthly task whose running cycle has not arrived. The task is scheduled on a regular basis but is set to succeeded when scheduling starts.</li>
-         * <li>ConditionUnchoose: a downstream node that is not selected by an upstream branch (IF) node. The task directly becomes a dry run.</li>
-         * <li>RealtimeDeprecated: an expired periodic instance generated in real time. The task is set to succeeded.</li>
-         * <li>PauseCalendar: the instance is paused because a calendar is referenced.</li>
-         * <li>SkipCalendar: the instance is a dry run because a calendar is referenced.</li>
+         * <li>Normal: The task is a normal scheduled task and is scheduled on a daily basis.</li>
+         * <li>Manual: The task is a manual task and is not scheduled on a daily basis.</li>
+         * <li>Pause: The task is paused. It is scheduled on a daily basis, but is directly set to failed when the scheduling is triggered.</li>
+         * <li>Skip: The task performs a dry run. It is scheduled on a daily basis, but is directly set to successful when the scheduling is triggered.</li>
+         * <li>SkipUnchoose: The task is an unselected task in a temporary workflow. It exists only in temporary workflows and is directly set to successful when the scheduling is triggered.</li>
+         * <li>SkipCycle: The task is a weekly or monthly task that has not reached its execution cycle. It is scheduled on a daily basis, but is directly set to successful when the scheduling is triggered.</li>
+         * <li>ConditionUnchoose: The downstream node is not selected by an upstream branch (IF) node. The task is directly set to a dry run.</li>
+         * <li>RealtimeDeprecated: The task is an expired periodic instance generated in real time. It is directly set to successful.</li>
+         * <li>PauseCalendar: The instance is paused due to a referenced calendar.</li>
+         * <li>SkipCalendar: The instance performs a dry run due to a referenced calendar.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -756,7 +756,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public String triggerRecurrence;
 
         /**
-         * <p>The scheduled trigger time.</p>
+         * <p>The scheduled trigger time. The value is a 13-digit UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -767,8 +767,8 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         /**
          * <p>The trigger type. You can obtain the trigger type from the Trigger.Type response parameter of the GetTask operation. Valid values:</p>
          * <ul>
-         * <li>Scheduler: triggered by a scheduling cycle.</li>
-         * <li>Manual: manually triggered.</li>
+         * <li>Scheduler: The task is triggered by a scheduling cycle.</li>
+         * <li>Manual: The task is triggered manually.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -778,7 +778,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public String triggerType;
 
         /**
-         * <p>The unified workflow instance ID. All task instances within the same business date under a single trigger share the same value for this field.</p>
+         * <p>The unified workflow instance ID. The value of this field is the same for all task instances within a specific business date under a single trigger.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -787,7 +787,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public Long unifiedWorkflowInstanceId;
 
         /**
-         * <p>The time when the instance entered the waiting-for-resource state.</p>
+         * <p>The time when the instance starts waiting for resources.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -796,7 +796,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public Long waitingResourceTime;
 
         /**
-         * <p>The time when the instance entered the waiting-for-scheduled-time state.</p>
+         * <p>The time when the instance starts waiting for the scheduled trigger. The value is a 13-digit UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -825,12 +825,12 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         /**
          * <p>The type of the workflow instance to which the task instance belongs. Valid values:</p>
          * <ul>
-         * <li>SmokeTest: test.</li>
-         * <li>SupplementData: data backfill.</li>
-         * <li>Manual: manual task.</li>
-         * <li>ManualWorkflow: manual workflow.</li>
-         * <li>Normal: periodic scheduling.</li>
-         * <li>ManualFlow: manually executed business flow.</li>
+         * <li>SmokeTest: The instance is a smoke test.</li>
+         * <li>SupplementData: The instance is for data backfill.</li>
+         * <li>Manual: The instance is a manual task.</li>
+         * <li>ManualWorkflow: The instance is a manual workflow.</li>
+         * <li>Normal: The instance uses periodic scheduling.</li>
+         * <li>ManualFlow: The instance is a manually executed business flow.</li>
          * </ul>
          * 
          * <strong>example:</strong>

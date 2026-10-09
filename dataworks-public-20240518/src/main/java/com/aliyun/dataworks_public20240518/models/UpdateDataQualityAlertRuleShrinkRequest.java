@@ -14,7 +14,7 @@ public class UpdateDataQualityAlertRuleShrinkRequest extends TeaModel {
     public String condition;
 
     /**
-     * <p>The alert rule ID.</p>
+     * <p>The ID of the alert rule.</p>
      * 
      * <strong>example:</strong>
      * <p>105412</p>
@@ -29,7 +29,7 @@ public class UpdateDataQualityAlertRuleShrinkRequest extends TeaModel {
     public String notificationShrink;
 
     /**
-     * <p>The project ID.</p>
+     * <p>The ID of the project.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -38,7 +38,7 @@ public class UpdateDataQualityAlertRuleShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The monitoring target of the data quality monitoring alert rule.</p>
+     * <p>The target of the data quality monitoring alert rule.</p>
      */
     @NameInMap("Target")
     public String targetShrink;

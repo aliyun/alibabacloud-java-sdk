@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
     /**
-     * <p>List of data quality rules associated with the data quality monitoring.</p>
+     * <p>The list of data quality rules associated with data quality monitoring.</p>
      */
     @NameInMap("DataQualityRules")
     public String dataQualityRulesShrink;
 
     /**
-     * <p>Data source ID. You can call <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> to obtain the data source ID.</p>
+     * <p>The data source ID. You can call the <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> operation to obtain the data source ID.</p>
      * 
      * <strong>example:</strong>
      * <p>358750</p>
@@ -20,7 +20,7 @@ public class UpdateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
     public Long dataSourceId;
 
     /**
-     * <p>Description of the quality monitoring task</p>
+     * <p>The description of the quality monitoring task.</p>
      * 
      * <strong>example:</strong>
      * <p>OpenAPI data quality monitoring test.</p>
@@ -29,13 +29,13 @@ public class UpdateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Callback settings</p>
+     * <p>The hook settings.</p>
      */
     @NameInMap("Hooks")
     public String hooksShrink;
 
     /**
-     * <p>Data quality monitoring ID.</p>
+     * <p>The ID of the data quality monitoring task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class UpdateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Name of the quality monitoring task</p>
+     * <p>The name of the quality monitoring task.</p>
      * 
      * <strong>example:</strong>
      * <p>OpenAPI data quality monitoring test.</p>
@@ -54,13 +54,13 @@ public class UpdateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Notification subscription configuration</p>
+     * <p>The notification subscription configuration.</p>
      */
     @NameInMap("Notifications")
     public String notificationsShrink;
 
     /**
-     * <p>Workspace ID</p>
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,10 +70,10 @@ public class UpdateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>Extended configuration. A JSON-formatted string. Takes effect only for EMR-type data quality monitoring.</p>
+     * <p>The extension configuration. This parameter is a character string in JSON format and takes effect only for EMR data quality monitoring.</p>
      * <ul>
-     * <li>queue: The YARN queue used when executing EMR data quality validation. Defaults to the queue configured for the current project.</li>
-     * <li>sqlEngine: The SQL engine used when executing EMR data validation.<ul>
+     * <li>queue: the YARN queue used when you execute EMR data validation. Default value: the queue configured for the current project.</li>
+     * <li>sqlEngine: the SQL DPI engine used when you execute EMR data validation. Valid values:<ul>
      * <li>HIVE_SQL</li>
      * <li>SPARK_SQL</li>
      * </ul>
@@ -87,13 +87,13 @@ public class UpdateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
     public String runtimeConf;
 
     /**
-     * <p>Data quality monitoring object</p>
+     * <p>The monitored object for data quality monitoring.</p>
      */
     @NameInMap("Target")
     public String targetShrink;
 
     /**
-     * <p>Trigger configuration of the data quality validation task</p>
+     * <p>The trigger configuration of the data quality check task.</p>
      */
     @NameInMap("Trigger")
     public String triggerShrink;

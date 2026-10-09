@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDataAssetTagsResponseBody extends TeaModel {
     /**
-     * <p>The pagination information.</p>
+     * <p>The paginated query results for the tag list.</p>
      */
     @NameInMap("PagingInfo")
     public ListDataAssetTagsResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>0bc1ec92159376****</p>
@@ -42,13 +42,10 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
 
     public static class ListDataAssetTagsResponseBodyPagingInfoDataAssetTags extends TeaModel {
         /**
-         * <p>The type of the tag.</p>
-         * <p>Valid values:</p>
+         * <p>The tag type.</p>
          * <ul>
-         * <li><p>Normal</p>
-         * </li>
-         * <li><p>System</p>
-         * </li>
+         * <li>Normal</li>
+         * <li>System</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -58,7 +55,8 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The time when the tag was created.</p>
+         * <p>The creation time of the tag.</p>
+         * <p>The value is a 13-digit number, such as <code>1735890003000</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1735890003000</p>
@@ -76,7 +74,7 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
         public String createUser;
 
         /**
-         * <p>The description of the tag.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a description</p>
@@ -94,13 +92,14 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag administrators.</p>
+         * <p>The list of tag administrators.</p>
          */
         @NameInMap("Managers")
         public java.util.List<String> managers;
 
         /**
-         * <p>The time when the tag was last modified.</p>
+         * <p>The last modification time of the tag.</p>
+         * <p>The value is a 13-digit number, such as <code>1735890003000</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1735890003000</p>
@@ -127,7 +126,7 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
         public String valueType;
 
         /**
-         * <p>The tag values.</p>
+         * <p>The list of tag values.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -221,7 +220,7 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
 
     public static class ListDataAssetTagsResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("DataAssetTags")
         public java.util.List<ListDataAssetTagsResponseBodyPagingInfoDataAssetTags> dataAssetTags;
@@ -245,7 +244,7 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2524</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTaskInstanceRequest extends TeaModel {
     /**
-     * <p>The unique identifier of the task instance.</p>
+     * <p>The unique identifier of the node instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

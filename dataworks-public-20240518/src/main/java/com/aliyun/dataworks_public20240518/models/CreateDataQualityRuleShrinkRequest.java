@@ -11,7 +11,7 @@ public class CreateDataQualityRuleShrinkRequest extends TeaModel {
     public String checkingConfigShrink;
 
     /**
-     * <p>The description of the rule. The maximum length is 500 characters.</p>
+     * <p>The description of the rule. The description can be up to 500 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a odps _sql task</p>
@@ -20,7 +20,7 @@ public class CreateDataQualityRuleShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to enable the data quality rule.</p>
+     * <p>Specifies whether the quality rule is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -29,7 +29,7 @@ public class CreateDataQualityRuleShrinkRequest extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The list of issue handlers for the data quality rule check.</p>
+     * <p>The list of handlers for quality rule check issues.</p>
      */
     @NameInMap("ErrorHandlers")
     public String errorHandlersShrink;
@@ -61,7 +61,7 @@ public class CreateDataQualityRuleShrinkRequest extends TeaModel {
     public String samplingConfigShrink;
 
     /**
-     * <p>The severity of the rule for the business (corresponding to the strong/weak rule on the page). Valid values:</p>
+     * <p>The severity level of the rule for business operations, which corresponds to strong and weak rules on the page. Valid values:</p>
      * <ul>
      * <li>Normal</li>
      * <li>High</li>
@@ -80,7 +80,7 @@ public class CreateDataQualityRuleShrinkRequest extends TeaModel {
     public String targetShrink;
 
     /**
-     * <p>The unique identifier of the rule template that the rule references.</p>
+     * <p>The unique identifier of the rule template referenced by the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM:table:table_count:fixed</p>

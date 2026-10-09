@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListNodesRequest extends TeaModel {
     /**
-     * <p>Leave this parameter empty if not specified. The filter condition: within the specified container. Specify the container ID. This parameter is not related to the resource group (ResourceGroupId).</p>
-     * <p>This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. This change does not affect normal SDK usage; the field is returned in the type defined in the SDK. When upgrading across SDK version 8.0.0, the type change may cause compilation failures. In this case, manually correct the data type.</p>
+     * <p>The ID of the container. This parameter is used as a filter condition to query nodes in a specified container. If you do not specify this parameter, leave it empty. This parameter is independent of the ResourceGroupId parameter.</p>
+     * <blockquote>
+     * <p>Notice: Before SDK version 8.0.0, this field is of the Long type. In SDK version 8.0.0 and later, this field is of the String type. <strong>This change does not affect the normal use of the SDK, and the parameter is still returned based on the type defined in the SDK</strong>. However, if you upgrade the SDK across version 8.0.0, the type change may cause project compilation failures. In this case, you must manually correct the data type.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>860438872620113XXXX</p>
@@ -15,7 +17,7 @@ public class ListNodesRequest extends TeaModel {
     public String containerId;
 
     /**
-     * <p>The node name. Fuzzy match is supported.</p>
+     * <p>The name of the node. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -24,7 +26,7 @@ public class ListNodesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The page number for pagination.</p>
+     * <p>The page number of the requested data.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +35,7 @@ public class ListNodesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -42,7 +44,7 @@ public class ListNodesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,13 +54,13 @@ public class ListNodesRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>Filter condition: scheduling type. Valid values:</p>
+     * <p>The scheduling type. This parameter is used as a filter condition. Valid values: </p>
      * <ul>
-     * <li><p>Normal: The node is executed normally.</p>
+     * <li><p>Normal: The node runs as expected.</p>
      * </li>
-     * <li><p>Pause: The node status is set to paused, and downstream nodes that depend on the current node are blocked from execution.</p>
+     * <li><p>Pause: The node is paused, and the execution of its downstream nodes is blocked.</p>
      * </li>
-     * <li><p>Skip: The node status is set to dry run. The system directly returns a success result (with an execution duration of 0 seconds), does not block downstream node execution, and does not consume resources.</p>
+     * <li><p>Skip: The node is set to dry run. The system directly returns a success response with an execution duration of 0 seconds. This does not block the execution of downstream nodes or consume resources.</p>
      * </li>
      * </ul>
      * 
@@ -69,13 +71,13 @@ public class ListNodesRequest extends TeaModel {
     public String recurrence;
 
     /**
-     * <p>The rerun property. If not specified, this parameter is left empty. Valid values:</p>
+     * <p>The rerun mode. If you do not specify this parameter, leave it empty. Valid values: </p>
      * <ul>
-     * <li><p>Allowed: The node can be rerun regardless of whether it runs successfully or fails.</p>
+     * <li><p>Allowed: The node can be rerun regardless of whether it is successfully run or fails to run.</p>
      * </li>
-     * <li><p>FailureAllowed: The node can be rerun only after a failed run, not after a successful run.</p>
+     * <li><p>FailureAllowed: The node can be rerun only after it fails to run.</p>
      * </li>
-     * <li><p>Denied: The node cannot be rerun regardless of whether it runs successfully or fails.</p>
+     * <li><p>Denied: The node cannot be rerun regardless of whether it is successfully run or fails to run.</p>
      * </li>
      * </ul>
      * 
@@ -86,11 +88,14 @@ public class ListNodesRequest extends TeaModel {
     public String rerunMode;
 
     /**
-     * <p>The scene in which the node resides. Leave this parameter empty if not specified. This parameter corresponds to the partition of the left-side navigation pane in Data Studio. Valid values:</p>
+     * <p>The scenario to which the node belongs. This parameter is used as a filter condition. If you do not specify this parameter, leave it empty. In DataStudio, this parameter corresponds to the partitions in the left-side directory tree. Valid values: </p>
      * <ul>
-     * <li>DataworksProject: project folder.</li>
-     * <li>DataworksManualWorkflow: manual workflow.</li>
-     * <li>DataworksManualTask: manual node.</li>
+     * <li><p>DataworksProject: project directory.</p>
+     * </li>
+     * <li><p>DataworksManualWorkflow: manual workflow. </p>
+     * </li>
+     * <li><p>DataworksManualTask: manual task.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

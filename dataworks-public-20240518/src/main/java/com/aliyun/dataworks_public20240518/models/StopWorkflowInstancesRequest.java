@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopWorkflowInstancesRequest extends TeaModel {
     /**
-     * <p>The remarks.</p>
+     * <p>The comment.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a comment</p>
@@ -14,7 +14,7 @@ public class StopWorkflowInstancesRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The workflow instance IDs.</p>
+     * <p>The list of workflow instance IDs. You can call the ListWorkflowInstances operation to query workflow instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Ids")

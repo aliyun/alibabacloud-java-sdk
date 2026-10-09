@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkflowInstancesRequest extends TeaModel {
     /**
-     * <p>The business date. This is typically 00:00:00 of the day before the scheduled time of the periodic instance. The value is a millisecond-level timestamp, such as 1743350400000.</p>
+     * <p>The business date. Typically, this is 00:00:00 on the day before the scheduled time of the periodic instance, formatted as a millisecond timestamp, such as 1743350400000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,8 +17,8 @@ public class ListWorkflowInstancesRequest extends TeaModel {
     /**
      * <p>The project environment. Valid values:</p>
      * <ul>
-     * <li>Prod: production</li>
-     * <li>Dev: development</li>
+     * <li>Prod: Production.</li>
+     * <li>Dev: Development.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class ListWorkflowInstancesRequest extends TeaModel {
     public String envType;
 
     /**
-     * <p>The filter. The value is in JSON format. Multiple filter conditions have an AND relationship. Currently supported fields: <code>status, executionDate</code>.</p>
+     * <p>The filter. The value is in JSON format. Multiple filter conditions are connected by the logical AND operator. Supported fields: <code>status</code> and <code>executionDate</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>{<br>    &quot;status&quot;: &quot;Success&quot;,
@@ -39,7 +39,7 @@ public class ListWorkflowInstancesRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>The list of workflow instance IDs. You can use this parameter to query information about multiple workflow instances in a batch.</p>
+     * <p>The list of workflow instance IDs. You can use this parameter to query multiple workflow instances in batches by their IDs.</p>
      */
     @NameInMap("Ids")
     public java.util.List<Long> ids;
@@ -91,7 +91,7 @@ public class ListWorkflowInstancesRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The list of sort fields. Sorting by scheduled time, start time, and other fields is supported. The format is &quot;sort field + sort order (Desc/Asc)&quot;. Asc is the default if omitted. Valid values for the sort field:</p>
+     * <p>The list of sort fields. Fields such as the scheduled time and start time are supported. The format is &quot;Sort field + Sort order (Desc/Asc)&quot;, where Asc can be omitted. Valid values for sort fields:</p>
      * <ul>
      * <li>TriggerTime (Desc/Asc)</li>
      * <li>StartedTime (Desc/Asc)</li>
@@ -108,7 +108,7 @@ public class ListWorkflowInstancesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The list of tags. Results are returned if any one of the specified tags matches.</p>
+     * <p>The list of tags. If an instance matches any of the specified tags, it is returned in the result.</p>
      */
     @NameInMap("Tags")
     public java.util.List<String> tags;
@@ -116,12 +116,12 @@ public class ListWorkflowInstancesRequest extends TeaModel {
     /**
      * <p>The type of the workflow instance. Valid values:</p>
      * <ul>
-     * <li>Normal: periodic scheduling</li>
-     * <li>Manual: manual task</li>
-     * <li>SmokeTest: test</li>
-     * <li>SupplementData: data backfill</li>
-     * <li>ManualWorkflow: manual workflow</li>
-     * <li>TriggerWorkflow: trigger-based workflow</li>
+     * <li>Normal: Periodic scheduling.</li>
+     * <li>Manual: Manual task.</li>
+     * <li>SmokeTest: Smoke test.</li>
+     * <li>SupplementData: Data backfill.</li>
+     * <li>ManualWorkflow: Manual workflow.</li>
+     * <li>TriggerWorkflow: Triggered workflow.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class ListWorkflowInstancesRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The unified workflow instance ID. All workflow instances within the same business date under a specific trigger share the same value for this field.</p>
+     * <p>The unified workflow instance ID. The value of this field is the same for all workflow instances within a specific business date under a single trigger.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>

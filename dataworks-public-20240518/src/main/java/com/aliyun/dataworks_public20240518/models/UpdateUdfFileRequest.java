@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUdfFileRequest extends TeaModel {
     /**
-     * <p>The class name where the function is defined, corresponding to the class name field in the Create Function form.</p>
+     * <p>The name of the class where the function is defined, which corresponds to the class name in the create function form.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String className;
 
     /**
-     * <p>The command format for invoking the function, corresponding to the command format field in the Create Function form.</p>
+     * <p>The command format used to call the function, which corresponds to the command format in the create function form.</p>
      * 
      * <strong>example:</strong>
      * <p>StringConcat(String... substrs)</p>
@@ -24,7 +24,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String cmdDescription;
 
     /**
-     * <p>An example demonstrating how to call the function, corresponding to the example field in the Create Function form.</p>
+     * <p>The call example of the function, which corresponds to the example in the create function form.</p>
      * 
      * <strong>example:</strong>
      * <p>StringConcat(\&quot;a\&quot;, \&quot;b\&quot;, \&quot;c\&quot;)</p>
@@ -33,7 +33,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String example;
 
     /**
-     * <p>The path to the folder containing the function file.</p>
+     * <p>The path of the folder where the function file is located.</p>
      * 
      * <strong>example:</strong>
      * <p>Business_process/First_Business_Process/function/string_processing_function</p>
@@ -42,7 +42,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String fileFolderPath;
 
     /**
-     * <p>The file ID.</p>
+     * <p>The ID of the file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The function category, corresponding to the function type field in the Create Function form. Valid values: MATH (mathematical functions), AGGREGATE (aggregate functions), STRING (string processing functions), DATE (date processing functions), ANALYTIC (window functions), and OTHER (other functions).</p>
+     * <p>The category of the function, which corresponds to the function type in the create function form. Valid values: MATH (mathematical operation functions), AGGREGATE (aggregate functions), STRING (string processing functions), DATE (date processing functions), ANALYTIC (window functions), and OTHER (other functions).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String functionType;
 
     /**
-     * <p>The description of the function input parameters, corresponding to the Parameter Description field in the Create Function form.</p>
+     * <p>The description of the input parameters for the function, which corresponds to the metric description in the create function form.</p>
      * 
      * <strong>example:</strong>
      * <p>List of strings to be connected</p>
@@ -71,7 +71,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String parameterDescription;
 
     /**
-     * <p>The DataWorks workspace ID. To find this, click the wrench icon in the upper-right corner and navigate to the workspace management page.</p>
+     * <p>The ID of the DataWorks workspace. You can view the ID on the storage management page by clicking the Settings icon in the upper-right corner.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -80,8 +80,8 @@ public class UpdateUdfFileRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The unique identifier of the DataWorks workspace, which is the English identifier at the top of the Data Studio page where you switch workspaces.</p>
-     * <p>Either this parameter or ProjectId must be specified to identify the target DataWorks workspace for this API call.</p>
+     * <p>The unique identifier of the DataWorks workspace, which is the English identifier displayed when you switch workspaces at the top of the DataStudio page.</p>
+     * <p>You must specify either this parameter or the ProjectId parameter to determine the DataWorks workspace for the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>dw_project</p>
@@ -90,7 +90,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String projectIdentifier;
 
     /**
-     * <p>A comma-separated list of resource names referenced by the function, corresponding to the resource list field in the Create Function form.</p>
+     * <p>The list of resource names referenced by the function. Separate multiple resource names with commas (,). This corresponds to the resources in the create function form.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -100,7 +100,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String resources;
 
     /**
-     * <p>The return value description, corresponding to the return value field in the Create Function form.</p>
+     * <p>The description of the return value of the function, which corresponds to the return value in the create function form.</p>
      * 
      * <strong>example:</strong>
      * <p>New strings generated by concatenating all strings before and after the input order</p>
@@ -109,7 +109,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String returnValue;
 
     /**
-     * <p>The function purpose description, corresponding to the description field in the Create Function form.</p>
+     * <p>The description of the function purpose, which corresponds to the description in the create function form.</p>
      * 
      * <strong>example:</strong>
      * <p>Concatenate several strings to generate a new string</p>

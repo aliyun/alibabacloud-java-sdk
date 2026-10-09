@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnTagDataAssetsResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>8754EE08-4AA2-5F77-ADD7-754DBBDA9F75</p>
@@ -14,7 +14,11 @@ public class UnTagDataAssetsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true (successful) and false (failed).</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

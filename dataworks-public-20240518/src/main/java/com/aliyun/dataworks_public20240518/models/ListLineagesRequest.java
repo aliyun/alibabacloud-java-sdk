@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLineagesRequest extends TeaModel {
     /**
-     * <p>The destination entity ID. You can use the table or column ID returned by the ListTables or ListColumns operation, or a custom entity ID.</p>
+     * <p>The destination entity ID. You can refer to the table or column ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dlf-table::catalog_id:database_name::table_name</p>
@@ -32,10 +32,10 @@ public class ListLineagesRequest extends TeaModel {
     public Boolean needAttachRelationship;
 
     /**
-     * <p>The sort direction. Default value: Asc. Valid values:</p>
+     * <p>The sort order. Default value: Asc. Valid values:</p>
      * <ul>
-     * <li>Asc: ascending order.</li>
-     * <li>Desc: descending order.</li>
+     * <li>Asc: ascending order</li>
+     * <li>Desc: descending order</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class ListLineagesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page size. Default value: 10. Maximum value: 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -66,7 +66,7 @@ public class ListLineagesRequest extends TeaModel {
     public Integer recentDays;
 
     /**
-     * <p>The sort field. Default value: Name, which sorts by lineage entity name.</p>
+     * <p>The sort field. Default value: Name. The entities are sorted by lineage entity name.</p>
      * 
      * <strong>example:</strong>
      * <p>Name</p>
@@ -75,7 +75,7 @@ public class ListLineagesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The source entity ID. You can use the table or column ID returned by the ListTables or ListColumns operation, or a custom entity ID.</p>
+     * <p>The source entity ID. You can refer to the table or column ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</p>
      * 
      * <strong>example:</strong>
      * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>

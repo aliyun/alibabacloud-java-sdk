@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateComputeResourceRequest extends TeaModel {
     /**
-     * <p>The connection configuration of the compute resource, including the endpoint, access identity, and environment context. The EnvType field is a member property of this object and specifies the environment of the compute resource. Valid values: DEV (development environment) and PROD (production environment). The EnvType value is case-insensitive.</p>
+     * <p>The specific connection configuration information of the compute resource, including the endpoint, access identity, and environment context. The environment type (EnvType) of the compute resource is a member property of this object. Valid values include DEV (development environment) and PROD (production environment). The EnvType value is not case-sensitive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateComputeResourceRequest extends TeaModel {
     public String connectionProperties;
 
     /**
-     * <p>The category for adding the compute resource. Different types have different subtypes with different parameter constraints. For example, a Hologres compute resource supports InstanceMode (instance mode) and UrlMode (connection string mode).</p>
+     * <p>The mode in which the compute resource is added. Different types have different subtypes and corresponding parameter constraints. For example, for a Hologres compute resource, valid values include InstanceMode (instance mode) and UrlMode (connection string mode).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class CreateComputeResourceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the compute resource. The name can contain letters, digits, and underscores (_), and cannot start with a digit or underscore. The name can be up to 255 characters in length.</p>
+     * <p>The name of the compute resource. The name can contain letters, digits, and underscores (_), and cannot start with a digit or an underscore. The name can be up to 255 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

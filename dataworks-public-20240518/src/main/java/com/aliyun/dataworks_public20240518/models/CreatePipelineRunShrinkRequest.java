@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreatePipelineRunShrinkRequest extends TeaModel {
     /**
-     * <p>The code of the stage in the deployment process. This parameter takes effect only when RunMode is set to Auto. After the deployment process is created, it automatically runs to the specified stage.</p>
+     * <p>The code of the stage to which the deployment process runs. This parameter takes effect only when the RunMode parameter is set to Auto. After the deployment process is created, it automatically runs to the specified stage.</p>
      * <blockquote>
-     * <p>&lt;notice&gt;The specified stage is automatically completed. For example, if you set this parameter to DEV, the automatic run stops after the DEV stage reaches the terminal state.&gt;&lt;/notice&gt;</p>
+     * <p>Notice: The specified stage is automatically completed. For example, if you set this parameter to DEV, the automatic running stops after the DEV stage reaches the desired state.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,9 +26,9 @@ public class CreatePipelineRunShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The list of entity IDs that you want to deploy in this deployment process.</p>
+     * <p>The list of entity IDs to be deployed in this deployment process.</p>
      * <blockquote>
-     * <p>&lt;notice&gt;Only a single entity and its child entities can be deployed at a time. Only the first entity in this array and its child entities are deployed. Make sure that the length of this array is 1. Entities beyond the first one are ignored.&gt;&lt;/notice&gt;</p>
+     * <p>Notice: Currently, only a single entity and its child entities can be deployed. Therefore, only the first entity and its child entities in the array are deployed. Make sure that the array contains only one element. Additional elements are ignored.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -36,8 +36,8 @@ public class CreatePipelineRunShrinkRequest extends TeaModel {
     public String objectIdsShrink;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID.
-     * This parameter specifies the DataWorks workspace for this API call.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Configuration page to obtain the workspace ID.
+     * This parameter specifies the DataWorks workspace on which the API operation is performed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class CreatePipelineRunShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The run mode of the deployment process. Default value: Normal. If you set this parameter to Auto, the deployment process is automatically driven to the specified stage. This parameter is used together with the AutoRunUntilStage parameter.</p>
+     * <p>The running mode of the deployment process. Default value: Normal. If you set this parameter to Auto, the deployment process automatically runs to the specified stage. This parameter must be used together with the AutoRunUntilStage parameter.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>Normal</li>
@@ -61,10 +61,11 @@ public class CreatePipelineRunShrinkRequest extends TeaModel {
     public String runMode;
 
     /**
-     * <p>Specifies whether the deployment process is used to deploy or undeploy an entity.</p>
+     * <p>Specifies the type of the deployment process.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>Online: deploy</li>
-     * <li>Offline: undeploy</li>
+     * <li>Online: Goes online.</li>
+     * <li>Offline: Goes offline.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

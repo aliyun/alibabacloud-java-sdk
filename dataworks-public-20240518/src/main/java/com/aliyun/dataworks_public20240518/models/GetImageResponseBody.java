@@ -11,7 +11,7 @@ public class GetImageResponseBody extends TeaModel {
     public GetImageResponseBodyImage image;
 
     /**
-     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
@@ -20,7 +20,7 @@ public class GetImageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,7 +59,7 @@ public class GetImageResponseBody extends TeaModel {
 
     public static class GetImageResponseBodyImageBuildConfigPackageInstallationScripts extends TeaModel {
         /**
-         * <p>The script content. If the content contains package names, separate them with commas (,).</p>
+         * <p>The script content. If the content is a list of installation package names, separate the names with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>requests</p>
@@ -110,7 +110,7 @@ public class GetImageResponseBody extends TeaModel {
         public String buildType;
 
         /**
-         * <p>The list of pre-installation scripts.</p>
+         * <p>The list of pre-installation execution scripts.</p>
          */
         @NameInMap("PackageInstallationScripts")
         public java.util.List<GetImageResponseBodyImageBuildConfigPackageInstallationScripts> packageInstallationScripts;
@@ -142,7 +142,7 @@ public class GetImageResponseBody extends TeaModel {
         /**
          * <p>The supported module. Valid values:</p>
          * <ul>
-         * <li>Scheduler: scheduling.</li>
+         * <li>Scheduler: Scheduling.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,8 +184,8 @@ public class GetImageResponseBody extends TeaModel {
         /**
          * <p>The image visibility. Valid values:</p>
          * <ul>
-         * <li>Public: visible to all users.</li>
-         * <li>Private: visible only to the creator.</li>
+         * <li>Public: Visible to all users.</li>
+         * <li>Private: Visible only to the creator.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -195,7 +195,7 @@ public class GetImageResponseBody extends TeaModel {
         public String accessibility;
 
         /**
-         * <p>The VPC ID associated with the ACR instance.</p>
+         * <p>The ID of the VPC associated with the ACR instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-xxx</p>
@@ -228,7 +228,7 @@ public class GetImageResponseBody extends TeaModel {
         public GetImageResponseBodyImageBuildConfig buildConfig;
 
         /**
-         * <p>The creation time, represented as a 64-bit timestamp.</p>
+         * <p>The creation time. The value is a 64-bit timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1727055811000</p>
@@ -255,7 +255,7 @@ public class GetImageResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether synchronization with MaxCompute is enabled.</p>
+         * <p>Indicates whether MaxCompute synchronization is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -309,7 +309,7 @@ public class GetImageResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The last modification time, represented as a 64-bit timestamp.</p>
+         * <p>The last modified time. The value is a 64-bit timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1727055811000</p>
@@ -354,7 +354,7 @@ public class GetImageResponseBody extends TeaModel {
         public Boolean official;
 
         /**
-         * <p>The image ID from the image provider.</p>
+         * <p>The image ID of the provider.</p>
          * 
          * <strong>example:</strong>
          * <p>acr_image_id</p>
@@ -378,19 +378,19 @@ public class GetImageResponseBody extends TeaModel {
         /**
          * <p>The publish status. Valid values:</p>
          * <ul>
-         * <li>Untest: not tested.</li>
-         * <li>Testing: being tested.</li>
-         * <li>TestFailed: test failed.</li>
-         * <li>Unpublished: not published.</li>
-         * <li>Publishing: being published.</li>
-         * <li>Published: published.</li>
-         * <li>PublishFailed: publish failed.</li>
-         * <li>Building: being built.</li>
-         * <li>BuildSuccess: build succeeded.</li>
-         * <li>BuildFailed: build failed.</li>
-         * <li>Accelerating: being accelerated.</li>
-         * <li>AccelerateSuccess: acceleration succeeded.</li>
-         * <li>AccelerateFailed: acceleration failed.</li>
+         * <li>Untest: The image is not tested.</li>
+         * <li>Testing: The image is being tested.</li>
+         * <li>TestFailed: The test failed.</li>
+         * <li>Unpublished: The image is unpublished.</li>
+         * <li>Publishing: The image is being published.</li>
+         * <li>Published: The image is published.</li>
+         * <li>PublishFailed: The publication failed.</li>
+         * <li>Building: The image is being built.</li>
+         * <li>BuildSuccess: The build succeeded.</li>
+         * <li>BuildFailed: The build failed.</li>
+         * <li>Accelerating: The image is being accelerated.</li>
+         * <li>AccelerateSuccess: The acceleration succeeded.</li>
+         * <li>AccelerateFailed: The acceleration failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -420,10 +420,10 @@ public class GetImageResponseBody extends TeaModel {
         /**
          * <p>The image status. Valid values:</p>
          * <ul>
-         * <li>Disabled: disabled.</li>
-         * <li>Expired: expired.</li>
-         * <li>Available: active.</li>
-         * <li>ReadOnly: read-only.</li>
+         * <li>Disabled: The image is disabled.</li>
+         * <li>Expired: The image has expired.</li>
+         * <li>Available: The image is available.</li>
+         * <li>ReadOnly: The image is read-only.</li>
          * </ul>
          * 
          * <strong>example:</strong>

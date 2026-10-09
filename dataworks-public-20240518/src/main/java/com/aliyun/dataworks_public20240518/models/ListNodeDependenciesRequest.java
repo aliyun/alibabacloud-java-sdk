@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListNodeDependenciesRequest extends TeaModel {
     /**
-     * <p>The unique identifier of the Data Studio node.</p>
+     * <p>The unique identifier of the data development node.</p>
      * <blockquote>
-     * <p>&lt;notice&gt;This field was of the Long type in SDK versions earlier than 8.0.0 and was changed to the String type in SDK 8.0.0 and later. <strong>This change does not affect normal SDK usage, and the parameter is still returned in the type defined in the SDK</strong>. Only when you upgrade across SDK version 8.0.0, the type change may cause project compilation failures, and you must manually correct the data type.&gt;&lt;/notice&gt;</p>
+     * <p>Notice: This field is of the Long type in SDK versions earlier than 8.0.0, and of the String type in SDK version 8.0.0 and later. <strong>This change does not affect the normal use of the SDK. The parameter is still returned based on the data type defined in the SDK</strong>. The type change may cause project compilation failures only when you upgrade the SDK across version 8.0.0. In this case, you must manually correct the data type.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class ListNodeDependenciesRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,8 +36,8 @@ public class ListNodeDependenciesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace settings page to obtain the workspace ID.</p>
-     * <p>This parameter specifies the DataWorks workspace for this API call.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID.</p>
+     * <p>This parameter specifies the DataWorks workspace used for this API call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

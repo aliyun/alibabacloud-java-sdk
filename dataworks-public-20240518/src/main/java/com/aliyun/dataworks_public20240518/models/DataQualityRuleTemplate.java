@@ -4,32 +4,63 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class DataQualityRuleTemplate extends TeaModel {
+    /**
+     * <p>The sample check settings.</p>
+     */
     @NameInMap("CheckingConfig")
     public DataQualityRuleTemplateCheckingConfig checkingConfig;
 
+    /**
+     * <p>The globally unique code of the rule template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>USER_DEFINED:123</p>
+     */
     @NameInMap("Code")
     public String code;
 
     /**
+     * <p>The category directory where the custom template is stored. Levels are separated by forward slashes.</p>
+     * 
      * <strong>example:</strong>
-     * <p>/ods/订单数据</p>
+     * <p>/ods/OrderData</p>
      */
     @NameInMap("DirectoryPath")
     public String directoryPath;
 
+    /**
+     * <p>The name of the rule template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Table row count check</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The DataWorks workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2043</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The sample collection settings.</p>
+     */
     @NameInMap("SamplingConfig")
     public DataQualityRuleTemplateSamplingConfig samplingConfig;
 
+    /**
+     * <p>The DataWorks tenant ID.</p>
+     */
     @NameInMap("TenantId")
     public Long tenantId;
 
     /**
+     * <p>The visibility scope of the template.</p>
+     * 
      * <strong>example:</strong>
      * <p>Project</p>
      */
@@ -107,6 +138,8 @@ public class DataQualityRuleTemplate extends TeaModel {
 
     public static class DataQualityRuleTemplateCheckingConfig extends TeaModel {
         /**
+         * <p>The expression used to query referenced samples. Some threshold types require querying referenced samples and aggregating their values to derive the comparison threshold.</p>
+         * 
          * <strong>example:</strong>
          * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
          */
@@ -114,6 +147,8 @@ public class DataQualityRuleTemplate extends TeaModel {
         public String referencedSamplesFilter;
 
         /**
+         * <p>The threshold calculation method.</p>
+         * 
          * <strong>example:</strong>
          * <p>Fixed</p>
          */
@@ -145,6 +180,8 @@ public class DataQualityRuleTemplate extends TeaModel {
 
     public static class DataQualityRuleTemplateSamplingConfig extends TeaModel {
         /**
+         * <p>The name of the sampled metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Min</p>
          */
@@ -152,6 +189,8 @@ public class DataQualityRuleTemplate extends TeaModel {
         public String metric;
 
         /**
+         * <p>The parameters required for sample collection.</p>
+         * 
          * <strong>example:</strong>
          * <p>{ &quot;SQL&quot;: &quot;SELECT min(id) from table;&quot; }</p>
          */
@@ -159,6 +198,8 @@ public class DataQualityRuleTemplate extends TeaModel {
         public String metricParameters;
 
         /**
+         * <p>The runtime parameter setting statements inserted before the execution of the sampling statement. The maximum length is 1,000 characters. Currently, only MaxCompute is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>SET odps.sql.udf.timeout=600s;</p>
          */

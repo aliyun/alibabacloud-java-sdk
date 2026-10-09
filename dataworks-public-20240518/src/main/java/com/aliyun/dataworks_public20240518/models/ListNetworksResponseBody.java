@@ -11,7 +11,7 @@ public class ListNetworksResponseBody extends TeaModel {
     public ListNetworksResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
+     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
@@ -20,7 +20,7 @@ public class ListNetworksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -68,7 +68,7 @@ public class ListNetworksResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the user who creates the network resource.</p>
+         * <p>The ID of the user who created the network resource.</p>
          * 
          * <strong>example:</strong>
          * <p>11075500042XXXXX</p>
@@ -77,7 +77,7 @@ public class ListNetworksResponseBody extends TeaModel {
         public String createUser;
 
         /**
-         * <p>The network ID.</p>
+         * <p>The ID of the network resource.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -86,7 +86,7 @@ public class ListNetworksResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The ID of the serverless resource group.</p>
+         * <p>The unique identifier of the general resource group to which the network resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
@@ -95,7 +95,7 @@ public class ListNetworksResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The security group ID.</p>
+         * <p>The security group ID of the network resource.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-2ze13vamugr7jenXXXXX</p>
@@ -104,7 +104,7 @@ public class ListNetworksResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The status of the network resource. Valid values: Pending: waiting; Creating: being created; Running: running normally; Deleting: being deleted; Deleted: deleted.</p>
+         * <p>The current status of the network resource. A value of Pending indicates that the resource is waiting. A value of Creating indicates that the resource is being created. A value of Running indicates that the resource is running normally. A value of Deleting indicates that the resource is being deleted. A value of Deleted indicates that the resource is deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -113,7 +113,7 @@ public class ListNetworksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The VPC ID of the network resource.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-m2et4f3oc8msfbccXXXXX</p>
@@ -122,7 +122,7 @@ public class ListNetworksResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The VSwitch ID.</p>
+         * <p>The vSwitch ID of the network resource.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-uf8usrhs7hjd9amsXXXXX</p>
@@ -203,7 +203,7 @@ public class ListNetworksResponseBody extends TeaModel {
 
     public static class ListNetworksResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>The network resources of the serverless resource group.</p>
+         * <p>The list of detailed information about the network resources in the general resource group.</p>
          */
         @NameInMap("NetworkList")
         public java.util.List<ListNetworksResponseBodyPagingInfoNetworkList> networkList;
@@ -227,7 +227,7 @@ public class ListNetworksResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries that meet the conditions.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

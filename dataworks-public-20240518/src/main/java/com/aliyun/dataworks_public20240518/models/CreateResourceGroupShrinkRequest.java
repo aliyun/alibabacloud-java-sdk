@@ -20,13 +20,13 @@ public class CreateResourceGroupShrinkRequest extends TeaModel {
     public String aliyunResourceTagsShrink;
 
     /**
-     * <p>Specifies whether auto-renewal is enabled.</p>
+     * <p>Specifies whether to enable auto-renewal.</p>
      */
     @NameInMap("AutoRenewEnabled")
     public Boolean autoRenewEnabled;
 
     /**
-     * <p>The client idempotency token that is used to ensure the idempotence of the create resource group operation.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class CreateResourceGroupShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The name of the common resource group. The name must start with a letter and can contain letters, digits, and underscores (_), up to 128 characters.</p>
+     * <p>The name of the general-purpose resource group. It must start with a letter and can contain letters, digits, and underscores (_). It can be up to 128 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class CreateResourceGroupShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The payment duration.</p>
+     * <p>The billing duration.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -55,11 +55,7 @@ public class CreateResourceGroupShrinkRequest extends TeaModel {
     public Integer paymentDuration;
 
     /**
-     * <p>The unit of the payment duration. Valid values:</p>
-     * <ul>
-     * <li>Month: monthly subscription.</li>
-     * <li>Year: yearly subscription.</li>
-     * </ul>
+     * <p>The unit of the billing duration. Month indicates months, and Year indicates years.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -68,11 +64,7 @@ public class CreateResourceGroupShrinkRequest extends TeaModel {
     public String paymentDurationUnit;
 
     /**
-     * <p>The payment type of the resource group. Valid values:</p>
-     * <ul>
-     * <li>PrePaid: subscription.</li>
-     * <li>PostPaid: pay-as-you-go.</li>
-     * </ul>
+     * <p>The billing method of the resource group. PrePaid indicates subscription, and PostPaid indicates pay-as-you-go.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,7 +74,7 @@ public class CreateResourceGroupShrinkRequest extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>The remarks for the common resource group. The remarks can contain letters, Chinese characters, digits, and underscores (_), up to 128 characters.</p>
+     * <p>The remark of the general-purpose resource group. It can contain letters, Chinese characters, digits, and underscores (_). It can be up to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>Create a serverless resource group for common tasks</p>
@@ -91,7 +83,7 @@ public class CreateResourceGroupShrinkRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The resource group specification, in CUs. This parameter is required when the payment type is PrePaid.</p>
+     * <p>The specifications of the resource group. Unit: CU. This parameter is required when the billing method of the resource group is PrePaid.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -100,7 +92,7 @@ public class CreateResourceGroupShrinkRequest extends TeaModel {
     public Integer spec;
 
     /**
-     * <p>The ID of the VPC to associate by default.</p>
+     * <p>The ID of the default VPC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -110,7 +102,7 @@ public class CreateResourceGroupShrinkRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the vSwitch to associate by default.</p>
+     * <p>The ID of the default vSwitch.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

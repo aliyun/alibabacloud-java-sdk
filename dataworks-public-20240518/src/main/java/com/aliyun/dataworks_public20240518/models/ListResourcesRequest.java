@@ -14,7 +14,7 @@ public class ListResourcesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the owner, which is the account UID of the workspace administrator. You can log on to the Alibaba Cloud Management Console and view the account UID in the security management section of account management.</p>
+     * <p>The ID of the owner, which is the UID of the workspace administrator account. You can log on to the Alibaba Cloud Management Console and view the account UID in the Security Management section of Account Management.</p>
      * 
      * <strong>example:</strong>
      * <p>110755000425XXXX</p>
@@ -23,7 +23,7 @@ public class ListResourcesRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The page number of the request, used for pagination.</p>
+     * <p>The number of the page to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,8 +41,7 @@ public class ListResourcesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID.</p>
-     * <p>This parameter specifies the DataWorks workspace for this API call.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the workspace ID. This parameter specifies the DataWorks workspace for the API operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,8 +51,7 @@ public class ListResourcesRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The filter condition: resource file type.</p>
-     * <p>Valid values:</p>
+     * <p>The filter condition for the resource type. Valid values:</p>
      * <ul>
      * <li>Python</li>
      * <li>Jar</li>

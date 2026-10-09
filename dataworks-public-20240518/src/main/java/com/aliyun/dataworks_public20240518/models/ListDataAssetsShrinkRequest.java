@@ -23,17 +23,17 @@ public class ListDataAssetsShrinkRequest extends TeaModel {
     public String categoryUuid;
 
     /**
-     * <p>The list of unique data asset IDs.</p>
+     * <p>The list of unique IDs of the data assets.</p>
      */
     @NameInMap("DataAssetIds")
     public String dataAssetIdsShrink;
 
     /**
-     * <p>The Asset Type of the data asset. Valid values:</p>
+     * <p>The asset type of the data asset.</p>
      * <ul>
-     * <li><p>ACS::DataWorks::Table: data table.</p>
+     * <li><p>DataWorks table (ACS::DataWorks::Table)</p>
      * </li>
-     * <li><p>ACS::DataWorks::Task: scheduling node.</p>
+     * <li><p>DataWorks scheduling node (ACS::DataWorks::Task)</p>
      * </li>
      * </ul>
      * 
@@ -46,8 +46,8 @@ public class ListDataAssetsShrinkRequest extends TeaModel {
     /**
      * <p>The workspace environment to which the data asset belongs. Valid values:</p>
      * <ul>
-     * <li>Dev: development environment.</li>
-     * <li>Prod: production environment.</li>
+     * <li>Dev: development environment</li>
+     * <li>Prod: production environment</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class ListDataAssetsShrinkRequest extends TeaModel {
      * <p>The name of the asset. Fuzzy search by name is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>AssetDomainName</p>
+     * <p>Asset domain name</p>
      */
     @NameInMap("Name")
     public String name;
@@ -93,10 +93,10 @@ public class ListDataAssetsShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The list of tags associated with data assets. Tags are used as query filters:</p>
+     * <p>The list of tags associated with the data assets. This parameter is used to filter query results based on tags:</p>
      * <ul>
-     * <li>Multiple values have an OR relationship. For example, <code>[&quot;key1:v1&quot;, &quot;key2:v1&quot;, &quot;key3:v1&quot;]</code> queries data assets that contain any one of the specified tags.</li>
-     * <li>If this parameter is not specified or is left empty, no tag-based filtering is applied.</li>
+     * <li>Multiple values are evaluated with an OR logical operator. For example, if you specify <code>[&quot;key1:v1&quot;, &quot;key2:v1&quot;, &quot;key3:v1&quot;]</code>, the system queries data assets that contain at least one of the specified tags.</li>
+     * <li>If this parameter is not specified or is left empty, no tag-based filtering is performed.</li>
      * </ul>
      */
     @NameInMap("Tags")

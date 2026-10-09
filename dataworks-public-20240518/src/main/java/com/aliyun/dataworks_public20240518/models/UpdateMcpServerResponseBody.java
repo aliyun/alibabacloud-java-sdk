@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMcpServerResponseBody extends TeaModel {
     /**
-     * <p>The MCP Server details.</p>
+     * <p>The details of the MCP server.</p>
      */
     @NameInMap("McpServer")
     public UpdateMcpServerResponseBodyMcpServer mcpServer;
@@ -43,7 +43,7 @@ public class UpdateMcpServerResponseBody extends TeaModel {
     public static class UpdateMcpServerResponseBodyMcpServer extends TeaModel {
         /**
          * <p>The creation time.</p>
-         * <p>The value is a 13-digit number, for example, <code>1780555634000</code>.</p>
+         * <p>The value is a 13-digit number, such as <code>1780555634000</code>.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class UpdateMcpServerResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The last modification time, in millisecond-level timestamp.</p>
+         * <p><strong>The last modification time in milliseconds.</strong></p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class UpdateMcpServerResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
-         * <p>The MCP Server name.</p>
+         * <p><strong>The name of the MCP server.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>my-mcp-server</p>

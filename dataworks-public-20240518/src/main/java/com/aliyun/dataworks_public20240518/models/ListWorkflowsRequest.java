@@ -5,13 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkflowsRequest extends TeaModel {
     /**
-     * <p>The environment of the workspace. Valid values:</p>
-     * <ul>
-     * <li><p>Prod: production environment</p>
-     * </li>
-     * <li><p>Dev: development environment</p>
-     * </li>
-     * </ul>
+     * <p>The project environment.</p>
      * 
      * <strong>example:</strong>
      * <p>Prod</p>
@@ -20,13 +14,13 @@ public class ListWorkflowsRequest extends TeaModel {
     public String envType;
 
     /**
-     * <p>The IDs of the workflows. You can query multiple workflows at a time by workflow ID.</p>
+     * <p>The list of workflow IDs. You can specify multiple workflow IDs to query multiple workflows at a time.</p>
      */
     @NameInMap("Ids")
     public java.util.List<Long> ids;
 
     /**
-     * <p>The name of the workflow. Fuzzy match is supported.</p>
+     * <p>The name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Workflow1</p>
@@ -35,7 +29,7 @@ public class ListWorkflowsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The account ID of the workflow owner.</p>
+     * <p>The account ID of the owner.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -44,7 +38,7 @@ public class ListWorkflowsRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -62,7 +56,7 @@ public class ListWorkflowsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The workspace ID.</p>
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +66,13 @@ public class ListWorkflowsRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The field used for sorting. Fields such as ModifyTime and CreateTime are supported. Format: sort field + sort order (Desc/Asc). Asc can be omitted. Valid values: ModifyTime (Desc/Asc), CreateTime (Desc/Asc), and Id (Desc/Asc). Default value: Id Desc.</p>
+     * <p>The sort field. You can sort by fields such as modification time and creation time. The format is \&quot;SortField+SortOrder(Desc/Asc)\&quot;, where Asc can be omitted. Valid values for the sort field:</p>
+     * <ul>
+     * <li>ModifyTime (Desc/Asc)</li>
+     * <li>CreateTime (Desc/Asc)</li>
+     * <li>Id (Desc/Asc)</li>
+     * </ul>
+     * <p>Default value: Id Desc.</p>
      * 
      * <strong>example:</strong>
      * <p>Id Desc</p>
@@ -81,20 +81,17 @@ public class ListWorkflowsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>List of tags. A result is returned if it matches any one of the specified tags.</p>
+     * <p>The list of tags. If a workflow matches any of the specified tags, it is returned in the result.</p>
      */
     @NameInMap("Tags")
     public java.util.List<String> tags;
 
     /**
-     * <p>The trigger type.</p>
+     * <p>The trigger type. Valid values:</p>
      * <ul>
-     * <li><p>Scheduler</p>
-     * </li>
-     * <li><p>Manual</p>
-     * </li>
-     * <li><p>TriggerWorkflow</p>
-     * </li>
+     * <li>Scheduler</li>
+     * <li>Manual</li>
+     * <li>TriggerWorkflow</li>
      * </ul>
      * 
      * <strong>example:</strong>

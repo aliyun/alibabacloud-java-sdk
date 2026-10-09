@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityStrategyResponseBody extends TeaModel {
     /**
-     * <p>The security strategy ID.</p>
+     * <p>The security policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>
@@ -14,7 +14,7 @@ public class CreateSecurityStrategyResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The API request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0bc5df3a17****903790e8e8a</p>

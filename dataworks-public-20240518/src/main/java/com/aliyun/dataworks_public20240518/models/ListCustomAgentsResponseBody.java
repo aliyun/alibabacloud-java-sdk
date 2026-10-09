@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCustomAgentsResponseBody extends TeaModel {
     /**
-     * <p>The paging information.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PagingInfo")
     public ListCustomAgentsResponseBodyPagingInfo pagingInfo;
@@ -42,7 +42,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
 
     public static class ListCustomAgentsResponseBodyPagingInfoAgents extends TeaModel {
         /**
-         * <p>The ID of the user who created the agent.</p>
+         * <p><strong>The creator ID.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -51,25 +51,25 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String creatorId;
 
         /**
-         * <p>A description of the custom agent.</p>
+         * <p><strong>The description.</strong></p>
          * 
          * <strong>example:</strong>
-         * <p>Data analysis assistant</p>
+         * <p>Data analytics assistant</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The display name of the custom agent.</p>
+         * <p><strong>The display name.</strong></p>
          * 
          * <strong>example:</strong>
-         * <p>My assistant</p>
+         * <p>My Assistant</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
-         * <p>The time when the agent was created, provided in milliseconds since the Unix epoch.</p>
+         * <p><strong>The creation time (UNIX timestamp in milliseconds).</strong></p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The time when the agent was last modified, provided in milliseconds since the Unix epoch.</p>
+         * <p><strong>The last modification time (UNIX timestamp in milliseconds).</strong></p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
-         * <p>The ID of the user who last modified the agent.</p>
+         * <p><strong>The last modifier ID.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -98,7 +98,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String modifierId;
 
         /**
-         * <p>The name of the custom agent.</p>
+         * <p><strong>The agent name.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>my-agent</p>
@@ -107,7 +107,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The visibility level of the custom agent.</p>
+         * <p><strong>The visibility level.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>TENANT</p>
@@ -203,7 +203,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token to retrieve the next page of results. This parameter is empty when there are no more results to return.</p>
+         * <p>The token for the next page. An empty value indicates that the last page is reached.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -212,7 +212,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The total number of entries that meet the filter criteria.</p>
+         * <p>The total number of entries that meet the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

@@ -14,7 +14,7 @@ public class ListWorkflowDefinitionsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the owner, which is the account UID of the workspace administrator. To view the UID, log on to the Alibaba Cloud console and go to the Security Management section of Account Management.</p>
+     * <p>The ID of the owner, which is the UID of the workspace administrator account. You can log on to the Alibaba Cloud Management Console and view the account UID on the Security Settings page of Account Management.</p>
      * 
      * <strong>example:</strong>
      * <p>110755000425XXXX</p>
@@ -23,7 +23,7 @@ public class ListWorkflowDefinitionsRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The page number of the data to retrieve, used for pagination.</p>
+     * <p>The number of the page to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListWorkflowDefinitionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,8 +41,8 @@ public class ListWorkflowDefinitionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to query the ID.</p>
-     * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Configuration page to obtain the workspace ID.</p>
+     * <p>This parameter specifies the DataWorks workspace for the current API call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,13 +52,10 @@ public class ListWorkflowDefinitionsRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>Filter condition: The type of the workflow. The default value is CycleWorkflow.</p>
-     * <p>Valid values:</p>
+     * <p>The type of the workflow. This parameter is used as a filter condition. If you do not specify this parameter, the default value is CycleWorkflow. Valid values:</p>
      * <ul>
-     * <li><p>CycleWorkflow</p>
-     * </li>
-     * <li><p>ManualWorkflow</p>
-     * </li>
+     * <li>CycleWorkflow</li>
+     * <li>ManualWorkflow</li>
      * </ul>
      * 
      * <strong>example:</strong>

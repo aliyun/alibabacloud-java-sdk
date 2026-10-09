@@ -14,9 +14,7 @@ public class CreateSkillResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>The skill details.</p>
      */
     @NameInMap("Skill")
     public CreateSkillResponseBodySkill skill;
@@ -44,13 +42,13 @@ public class CreateSkillResponseBody extends TeaModel {
 
     public static class CreateSkillResponseBodySkillVisibilityScope extends TeaModel {
         /**
-         * <p>The list of visible project IDs.</p>
+         * <p>The IDs of the visible projects.</p>
          */
         @NameInMap("ProjectIds")
         public java.util.List<String> projectIds;
 
         /**
-         * <p>The list of visible user IDs. This parameter takes effect only when Visibility is set to <code>USER</code>.</p>
+         * <p>The IDs of the visible users. This field is returned only when Visibility is set to USER.</p>
          */
         @NameInMap("UserIds")
         public java.util.List<String> userIds;
@@ -80,7 +78,7 @@ public class CreateSkillResponseBody extends TeaModel {
 
     public static class CreateSkillResponseBodySkill extends TeaModel {
         /**
-         * <p>The SKILL.md body content.</p>
+         * <p>The content of the SKILL.md file.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -91,7 +89,7 @@ public class CreateSkillResponseBody extends TeaModel {
         public String body;
 
         /**
-         * <p>The creator ID.</p>
+         * <p>The ID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -100,16 +98,16 @@ public class CreateSkillResponseBody extends TeaModel {
         public String creatorId;
 
         /**
-         * <p>The Skill description.</p>
+         * <p>The skill description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Data analytics skill.</p>
+         * <p>Data analytics skill</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The creation time, in millisecond-level UNIX timestamp.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -119,7 +117,7 @@ public class CreateSkillResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The last modification time, in millisecond-level UNIX timestamp.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +127,7 @@ public class CreateSkillResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
-         * <p>The ID of the user who last modified the Skill.</p>
+         * <p>The ID of the last modifier.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -138,7 +136,7 @@ public class CreateSkillResponseBody extends TeaModel {
         public String modifierId;
 
         /**
-         * <p>The Skill name.</p>
+         * <p>The skill name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-skill</p>

@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListDataAssetTagsRequest extends TeaModel {
     /**
-     * <p>The type of the tag. Valid values:</p>
+     * <p>The tag type.</p>
      * <ul>
-     * <li><p>Normal</p>
-     * </li>
-     * <li><p>System</p>
-     * </li>
+     * <li>Normal</li>
+     * <li>System</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +27,7 @@ public class ListDataAssetTagsRequest extends TeaModel {
     public String key;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class RerunWorkflowInstancesShrinkRequest extends TeaModel {
     /**
-     * <p>The business date used for matching manual workflow instances.</p>
+     * <p>The data timestamp specified for the manual workflow instance run, used for matching.</p>
+     * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>1710239005403</p>
@@ -14,7 +15,8 @@ public class RerunWorkflowInstancesShrinkRequest extends TeaModel {
     public Long bizdate;
 
     /**
-     * <p>The end trigger time (creation time) of the manual workflow instance used for matching. This parameter must be used together with the StartTriggerTime.</p>
+     * <p>The end trigger time (creation time) of the manual workflow instance used for matching. This parameter must be used together with StartTriggerTime.</p>
+     * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>1710239005403</p>
@@ -23,7 +25,11 @@ public class RerunWorkflowInstancesShrinkRequest extends TeaModel {
     public Long endTriggerTime;
 
     /**
-     * <p>The environment of the workspace. Valid values: Prod (production) and Dev (development).</p>
+     * <p>The project environment. Valid values:</p>
+     * <ul>
+     * <li>Prod: Production.</li>
+     * <li>Dev: Development.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Prod</p>
@@ -32,19 +38,19 @@ public class RerunWorkflowInstancesShrinkRequest extends TeaModel {
     public String envType;
 
     /**
-     * <p>The match conditions for internal instances of manual workflow instances.</p>
+     * <p>The matching conditions for the internal instances of the manual workflow instance.</p>
      */
     @NameInMap("Filter")
     public String filterShrink;
 
     /**
-     * <p>The instance IDs used for matching manual workflow instances.</p>
+     * <p>The list of manual workflow instance IDs used for matching.</p>
      */
     @NameInMap("Ids")
     public String idsShrink;
 
     /**
-     * <p>The manual workflow name, used for fuzzy matching.</p>
+     * <p>The name of the manual workflow used for fuzzy matching.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -64,6 +70,7 @@ public class RerunWorkflowInstancesShrinkRequest extends TeaModel {
 
     /**
      * <p>The start trigger time (creation time) of the manual workflow instance used for matching. This parameter must be used together with EndTriggerTime.</p>
+     * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>1710239005403</p>
@@ -72,7 +79,7 @@ public class RerunWorkflowInstancesShrinkRequest extends TeaModel {
     public Long startTriggerTime;
 
     /**
-     * <p>The status used for matching manual workflow instances.</p>
+     * <p>The running status of the manual workflow instance used for matching.</p>
      * 
      * <strong>example:</strong>
      * <p>Failure</p>
@@ -81,7 +88,10 @@ public class RerunWorkflowInstancesShrinkRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The type of the workflow instance. Valid value: ManualWorkflow (manual workflow).</p>
+     * <p>The type of the workflow instance. Valid values:</p>
+     * <ul>
+     * <li>ManualWorkflow: Manual workflow.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -91,7 +101,7 @@ public class RerunWorkflowInstancesShrinkRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The workflow ID.</p>
+     * <p>The ID of the workflow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

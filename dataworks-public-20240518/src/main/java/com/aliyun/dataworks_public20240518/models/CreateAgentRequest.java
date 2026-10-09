@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAgentRequest extends TeaModel {
     /**
-     * <p>The list of child Agents that can be called by this Agent.</p>
+     * <p>The list of child agents that can be called by this agent.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -16,7 +16,7 @@ public class CreateAgentRequest extends TeaModel {
     public java.util.List<CreateAgentRequestCallableAgents> callableAgents;
 
     /**
-     * <p>The description of the Agent.</p>
+     * <p>The description of the agent.</p>
      * 
      * <strong>example:</strong>
      * <p>Data analytics assistant</p>
@@ -25,16 +25,16 @@ public class CreateAgentRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The display name of the Agent.</p>
+     * <p>The display name of the agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>MyAssistant</p>
+     * <p>My Assistant</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
-     * <p>The extended metadata (key-value pairs).</p>
+     * <p>The extended metadata in key-value pairs.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -54,7 +54,7 @@ public class CreateAgentRequest extends TeaModel {
     public java.util.Map<String, ?> model;
 
     /**
-     * <p>The Agent name, which must be unique within the current account.</p>
+     * <p>The name of the agent. The name must be unique within the current account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class CreateAgentRequest extends TeaModel {
      * <p>The system prompt.</p>
      * 
      * <strong>example:</strong>
-     * <p>You are a data analytics assistant.</p>
+     * <p>You are a data analytics assistant</p>
      */
     @NameInMap("SystemPrompt")
     public String systemPrompt;
@@ -97,7 +97,7 @@ public class CreateAgentRequest extends TeaModel {
     /**
      * <p>The visibility level.<br>
      * <code>TENANT</code>: Visible within the account.<br>
-     * <code>PROJECT</code>: Visible to a specified project.<br>
+     * <code>PROJECT</code>: Visible to specified projects.<br>
      * <code>USER</code>: Visible to specified users.</p>
      * 
      * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class CreateAgentRequest extends TeaModel {
     public String visibility;
 
     /**
-     * <p>The visibility scope. The corresponding field is determined by the Visibility parameter.</p>
+     * <p>The visibility scope. The corresponding field is used based on the visibility level.</p>
      */
     @NameInMap("VisibilityScope")
     public CreateAgentRequestVisibilityScope visibilityScope;
@@ -207,7 +207,7 @@ public class CreateAgentRequest extends TeaModel {
 
     public static class CreateAgentRequestCallableAgents extends TeaModel {
         /**
-         * <p>The Agent name.</p>
+         * <p>The name of the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-1</p>
@@ -232,7 +232,7 @@ public class CreateAgentRequest extends TeaModel {
 
     public static class CreateAgentRequestSkills extends TeaModel {
         /**
-         * <p>The skill name.</p>
+         * <p>The name of the skill.</p>
          * 
          * <strong>example:</strong>
          * <p>skill-1</p>
@@ -257,7 +257,7 @@ public class CreateAgentRequest extends TeaModel {
 
     public static class CreateAgentRequestTools extends TeaModel {
         /**
-         * <p>The McpServer name.</p>
+         * <p>The name of the McpServer.</p>
          * 
          * <strong>example:</strong>
          * <p>server-1</p>
@@ -282,13 +282,13 @@ public class CreateAgentRequest extends TeaModel {
 
     public static class CreateAgentRequestVisibilityScope extends TeaModel {
         /**
-         * <p>The list of project IDs to which the Agent is visible. This parameter takes effect only when Visibility is set to <code>PROJECT</code>.</p>
+         * <p>The list of visible project IDs. This parameter takes effect when Visibility is set to <code>PROJECT</code>.</p>
          */
         @NameInMap("ProjectIds")
         public java.util.List<String> projectIds;
 
         /**
-         * <p>The list of user IDs to which the Agent is visible. This parameter takes effect only when Visibility is set to <code>USER</code>.</p>
+         * <p>The list of visible user IDs. This parameter takes effect when Visibility is set to <code>USER</code>.</p>
          */
         @NameInMap("UserIds")
         public java.util.List<String> userIds;

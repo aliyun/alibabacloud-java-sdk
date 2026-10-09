@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
     /**
-     * <p>The list of data quality rules associated with the data quality monitoring task. If DataQualityRule.Id is specified, the rule corresponding to the ID is associated with the new quality monitoring task. If DataQualityRule.Id is not specified, a new rule is created based on the other fields and associated with the new quality monitoring task.</p>
+     * <p>The list of data quality rules associated with the data quality monitoring task. If DataQualityRule.Id is specified, the rule corresponding to the ID is associated with the new quality monitoring task. If it is not specified, a new rule is created by using other fields and associated with the new quality monitoring task.</p>
      */
     @NameInMap("DataQualityRules")
     public String dataQualityRulesShrink;
 
     /**
-     * <p>The data source ID. You can call <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> to obtain the data source ID.</p>
+     * <p>The ID of the data source. You can call the <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> operation to query the ID of the data source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class CreateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
     public Long dataSourceId;
 
     /**
-     * <p>The description of the data quality monitor task.</p>
+     * <p>The description of the data quality monitoring task.</p>
      * 
      * <strong>example:</strong>
      * <p>OpenAPI create a data quality monitoring test</p>
@@ -30,13 +30,13 @@ public class CreateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The callback settings.</p>
+     * <p>The hook settings.</p>
      */
     @NameInMap("Hooks")
     public String hooksShrink;
 
     /**
-     * <p>The name of the data quality monitor task.</p>
+     * <p>The name of the data quality monitoring task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,8 @@ public class CreateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
     public String notificationsShrink;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the ID.</p>
+     * <p>This parameter is used to determine the DataWorks workspace used to invoke this API operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,10 +63,14 @@ public class CreateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The extended configuration. The value is a JSON-formatted string. This parameter takes effect only for EMR-type data quality monitors.</p>
+     * <p>The extension configurations in JSON string format. This parameter takes effect only for EMR data quality monitoring tasks.</p>
      * <ul>
-     * <li>queue: The YARN queue used for EMR data quality checks. By default, the queue configured for the current project is used.</li>
-     * <li>sqlEngine: The SQL engine used for EMR data quality checks. Valid values: HIVE_SQL and SPARK_SQL.</li>
+     * <li>queue: the YARN queue used to execute EMR data validation. Default value: the queue configured for the project.</li>
+     * <li>sqlEngine: the SQL engine used to execute EMR data validation. Valid values:<ul>
+     * <li>HIVE_SQL</li>
+     * <li>SPARK_SQL</li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,14 +80,14 @@ public class CreateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
     public String runtimeConf;
 
     /**
-     * <p>The monitored object of the data quality monitor.</p>
+     * <p>The monitored object for the data quality monitoring task.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Target")
     public String targetShrink;
 
     /**
-     * <p>The trigger configuration of the data quality check task.</p>
+     * <p>The trigger configuration for the data quality check task.</p>
      */
     @NameInMap("Trigger")
     public String triggerShrink;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateDataQualityRuleShrinkRequest extends TeaModel {
     /**
-     * <p>The sample verification settings.</p>
+     * <p>The sample check settings.</p>
      */
     @NameInMap("CheckingConfig")
     public String checkingConfigShrink;
 
     /**
-     * <p>The rule description. The maximum length is 500 characters.</p>
+     * <p>The description of the rule. It can be up to 500 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a odps _sql task</p>
@@ -29,13 +29,13 @@ public class UpdateDataQualityRuleShrinkRequest extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The list of issue handlers for data quality rule verification.</p>
+     * <p>The list of error handlers for quality rule check issues.</p>
      */
     @NameInMap("ErrorHandlers")
     public String errorHandlersShrink;
 
     /**
-     * <p>The rule ID.</p>
+     * <p>The ID of the rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,16 +45,16 @@ public class UpdateDataQualityRuleShrinkRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The rule name. The name can be a combination of digits, English letters, Chinese characters, and half-width or full-width punctuation. The maximum length is 255 characters.</p>
+     * <p>The name of the rule. The name can contain digits, letters, Chinese characters, and half-width or full-width punctuation marks. It can be up to 255 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>The table cannot be empty</p>
+     * <p>Table cannot be empty</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Settings page to obtain the workspace ID.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Configuration page to obtain the workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class UpdateDataQualityRuleShrinkRequest extends TeaModel {
     public String samplingConfigShrink;
 
     /**
-     * <p>The severity level of the rule for the business (corresponding to strong/weak rules on the page). Valid values:</p>
+     * <p>The severity level of the rule for the business, which corresponds to the strong or weak rule on the page. Valid values:</p>
      * <ul>
      * <li>Normal</li>
      * <li>High</li>

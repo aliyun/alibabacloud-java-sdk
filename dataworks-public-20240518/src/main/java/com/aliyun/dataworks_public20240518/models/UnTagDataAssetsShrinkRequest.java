@@ -5,14 +5,20 @@ import com.aliyun.tea.*;
 
 public class UnTagDataAssetsShrinkRequest extends TeaModel {
     /**
-     * <p>The data asset IDs.</p>
+     * <p>The unique IDs of the data assets.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DataAssetIds")
     public String dataAssetIdsShrink;
 
     /**
-     * <p>The type of the data asset. Valid values: ACS::DataWorks::Table (data table) and ACS::DataWorks::Task (scheduled task).</p>
+     * <p>The Asset Type of the data asset. Valid values:</p>
+     * <ul>
+     * <li><p>Data table (ACS::DataWorks::Table)</p>
+     * </li>
+     * <li><p>Scheduling node (ACS::DataWorks::Task)</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +28,7 @@ public class UnTagDataAssetsShrinkRequest extends TeaModel {
     public String dataAssetType;
 
     /**
-     * <p>The environment of the workspace to which the data asset belongs. Valid values:</p>
+     * <p>The workspace environment to which the data asset belongs. Valid values:</p>
      * <ul>
      * <li><p>Dev: development environment</p>
      * </li>
@@ -37,7 +43,7 @@ public class UnTagDataAssetsShrinkRequest extends TeaModel {
     public String envType;
 
     /**
-     * <p>The DataWorks workspace ID.</p>
+     * <p>The ID of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -46,7 +52,7 @@ public class UnTagDataAssetsShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The tags that you want to remove.</p>
+     * <p>The tags to disassociate.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tags")

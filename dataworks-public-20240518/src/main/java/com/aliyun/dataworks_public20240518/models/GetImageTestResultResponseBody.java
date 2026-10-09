@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetImageTestResultResponseBody extends TeaModel {
     /**
-     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
@@ -14,7 +14,7 @@ public class GetImageTestResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -77,7 +77,7 @@ public class GetImageTestResultResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The operation time, represented as a 64-bit timestamp.</p>
+         * <p>The operation time. The value is a 64-bit timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1727055811000</p>
@@ -86,7 +86,7 @@ public class GetImageTestResultResponseBody extends TeaModel {
         public Long operateTime;
 
         /**
-         * <p>The process ID.</p>
+         * <p>The ID of the process.</p>
          * 
          * <strong>example:</strong>
          * <p>582d4896-d224-413b-b883-239eeebe0bc5</p>
@@ -95,19 +95,19 @@ public class GetImageTestResultResponseBody extends TeaModel {
         public String processId;
 
         /**
-         * <p>The image publish status. Valid values:</p>
+         * <p>The publishing status of the image. Valid values:</p>
          * <ul>
          * <li>Untest: Not tested.</li>
-         * <li>Testing: Testing in progress.</li>
+         * <li>Testing: Testing.</li>
          * <li>TestFailed: Test failed.</li>
-         * <li>Unpublished: Not published.</li>
-         * <li>Publishing: Publishing in progress.</li>
+         * <li>Unpublished: Unpublished.</li>
+         * <li>Publishing: Publishing.</li>
          * <li>Published: Published.</li>
-         * <li>PublishFailed: Publish failed.</li>
-         * <li>Building: Building in progress.</li>
+         * <li>PublishFailed: Publishing failed.</li>
+         * <li>Building: Building.</li>
          * <li>BuildSuccess: Build succeeded.</li>
          * <li>BuildFailed: Build failed.</li>
-         * <li>Accelerating: Acceleration in progress.</li>
+         * <li>Accelerating: Accelerating.</li>
          * <li>AccelerateSuccess: Acceleration succeeded.</li>
          * <li>AccelerateFailed: Acceleration failed.</li>
          * </ul>
@@ -119,7 +119,7 @@ public class GetImageTestResultResponseBody extends TeaModel {
         public String publishStage;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>Serverless_res_group_****</p>
@@ -128,12 +128,12 @@ public class GetImageTestResultResponseBody extends TeaModel {
         public Long resourceGroupId;
 
         /**
-         * <p>The test process status. Valid values:</p>
+         * <p>The status of the test process. Valid values:</p>
          * <ul>
          * <li>running: Running.</li>
          * <li>completed: Completed.</li>
          * <li>failed: Failed.</li>
-         * <li>cancelled: Cancelled.</li>
+         * <li>cancelled: Canceled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

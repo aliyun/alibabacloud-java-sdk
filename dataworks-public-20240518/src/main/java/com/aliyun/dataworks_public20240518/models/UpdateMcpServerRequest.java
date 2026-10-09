@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMcpServerRequest extends TeaModel {
     /**
-     * <p>The new custom request headers (key-value pairs).</p>
+     * <p>The new custom request headers in key-value pairs.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class UpdateMcpServerRequest extends TeaModel {
     public java.util.Map<String, ?> customHeaders;
 
     /**
-     * <p>The name of the MCP Server to update.</p>
+     * <p>The name of the MCP server to update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class UpdateMcpServerRequest extends TeaModel {
     public String visibility;
 
     /**
-     * <p>The new visibility scope. Provide the corresponding field based on the Visibility setting.</p>
+     * <p>The new visibility scope. Specify the corresponding fields based on the <code>Visibility</code> value.</p>
      */
     @NameInMap("VisibilityScope")
     public UpdateMcpServerRequestVisibilityScope visibilityScope;
@@ -111,13 +111,13 @@ public class UpdateMcpServerRequest extends TeaModel {
 
     public static class UpdateMcpServerRequestVisibilityScope extends TeaModel {
         /**
-         * <p>The list of visible project IDs. This parameter takes effect only when Visibility is set to <code>PROJECT</code>.</p>
+         * <p>The list of visible project IDs. This field takes effect when <code>Visibility</code> is set to <code>PROJECT</code>.</p>
          */
         @NameInMap("ProjectIds")
         public java.util.List<String> projectIds;
 
         /**
-         * <p>The list of visible user IDs. This parameter takes effect only when Visibility is set to <code>USER</code>.</p>
+         * <p>The list of visible user IDs. This field takes effect when <code>Visibility</code> is set to <code>USER</code>.</p>
          */
         @NameInMap("UserIds")
         public java.util.List<String> userIds;

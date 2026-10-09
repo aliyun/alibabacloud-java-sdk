@@ -54,8 +54,8 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
         /**
          * <p>The object type. Valid values:</p>
          * <ul>
-         * <li>Task: node</li>
-         * <li>TaskInstance: node instance</li>
+         * <li>Task: task.</li>
+         * <li>TaskInstance: task instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -83,7 +83,7 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
         public Long operationSeq;
 
         /**
-         * <p>The ID of the node on which the operation was performed.</p>
+         * <p>The ID of the operated task.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -92,7 +92,7 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
         public Long taskId;
 
         /**
-         * <p>The ID of the node instance on which the operation was performed.</p>
+         * <p>The ID of the operated task instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -101,7 +101,7 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
         public Long taskInstanceId;
 
         /**
-         * <p>The account ID of the user who performed the operation.</p>
+         * <p>The account ID of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>

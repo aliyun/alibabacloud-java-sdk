@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListServerIdeInstancesRequest extends TeaModel {
     /**
-     * <p>The keyword for fuzzy match by instance ID or instance name.</p>
+     * <p>The keyword used to match the instance ID or instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>notebook_dev</p>
@@ -14,7 +14,7 @@ public class ListServerIdeInstancesRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The maximum number of records to return in a single request.</p>
+     * <p>The maximum number of entries to return for a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class ListServerIdeInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. You do not need to specify this parameter for the first request.</p>
+     * <p>The pagination token used to continue the query. You do not need to specify this parameter for the first call.</p>
      * 
      * <strong>example:</strong>
      * <p>CAESG****</p>
@@ -32,7 +32,7 @@ public class ListServerIdeInstancesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number. Minimum value: 1.</p>
+     * <p>The page number. Pages start from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class ListServerIdeInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +59,7 @@ public class ListServerIdeInstancesRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The account ID of the user who owns the instance. Used to filter instances by owner.</p>
+     * <p>The account ID of the user that owns the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>20933221576142****</p>
@@ -68,7 +68,7 @@ public class ListServerIdeInstancesRequest extends TeaModel {
     public String relatedUserId;
 
     /**
-     * <p>The DataWorks resource group identifier. You can specify a numeric resource group ID or a full identifier in the format of Serverless_res_group_{tenantId}_{resgId}.</p>
+     * <p>The DataWorks resource group identifier. You can use the numeric ID of the resource group or the full identifier in the Serverless_res_group_{tenantId}_{resgId} format.</p>
      * 
      * <strong>example:</strong>
      * <p>Serverless_res_group_123456789012345_9876543210****</p>
@@ -79,8 +79,8 @@ public class ListServerIdeInstancesRequest extends TeaModel {
     /**
      * <p>The instance subtype. Valid values:</p>
      * <ul>
-     * <li>PERSONAL_DEV: personal development environment.</li>
-     * <li>DATA_AGENT: Data Agent.</li>
+     * <li>PERSONAL_DEV: personal development environment</li>
+     * <li>DATA_AGENT: Data Agent</li>
      * </ul>
      * 
      * <strong>example:</strong>

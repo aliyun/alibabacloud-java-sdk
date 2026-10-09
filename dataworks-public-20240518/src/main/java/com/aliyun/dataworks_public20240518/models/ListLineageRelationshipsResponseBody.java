@@ -11,7 +11,7 @@ public class ListLineageRelationshipsResponseBody extends TeaModel {
     public ListLineageRelationshipsResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>The request ID. You can use this ID to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>SDFSDFSDF-SDFSDF-SDFDSF-SDFSDF</p>
@@ -20,7 +20,7 @@ public class ListLineageRelationshipsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -74,7 +74,7 @@ public class ListLineageRelationshipsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityStrategyShrinkRequest extends TeaModel {
     /**
-     * <p>A client-generated token that ensures request idempotency, preventing duplicate operations if you retry the request.</p>
+     * <p>The idempotency parameter. This parameter is used to prevent duplicate operations caused by multiple calls.</p>
      * 
      * <strong>example:</strong>
      * <p>ABFUOEUOTRTRJKE</p>
@@ -14,14 +14,14 @@ public class CreateSecurityStrategyShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The content of the strategy. This value is constrained by the <code>SecurityStrategySchema</code>.</p>
+     * <p>The policy content. The content is constrained by SecurityStrategySchema.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Content")
     public String contentShrink;
 
     /**
-     * <p><strong>The control scope. Valid values: Workspace and Tenant.</strong></p>
+     * <p>The control scope.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class CreateSecurityStrategyShrinkRequest extends TeaModel {
     public String controlDwScope;
 
     /**
-     * <p><strong>Control module</strong></p>
+     * <p>The control module.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class CreateSecurityStrategyShrinkRequest extends TeaModel {
     public String controlModule;
 
     /**
-     * <p><strong>Control submodule</strong></p>
+     * <p>The control submodule.</p>
      * 
      * <strong>example:</strong>
      * <p>MyCatalog</p>
@@ -50,26 +50,26 @@ public class CreateSecurityStrategyShrinkRequest extends TeaModel {
     public String controlSubModule;
 
     /**
-     * <p><strong>Strategy description</strong></p>
+     * <p>The description of the policy.</p>
      * 
      * <strong>example:</strong>
-     * <p>控制数据分析模块的查询结果安全行为</p>
+     * <p>Controls the security behavior of query results in the data analysis module</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p><strong>Strategy name</strong></p>
+     * <p>The policy name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>默认数据分析策略</p>
+     * <p>Default data analysis policy</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p><strong>Schema template name</strong></p>
+     * <p>The name of the schema template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class CreateSecurityStrategyShrinkRequest extends TeaModel {
     public String schemaName;
 
     /**
-     * <p>A list of associated workspace IDs.</p>
+     * <p>The list of associated workspace IDs.</p>
      */
     @NameInMap("Workspaces")
     public String workspacesShrink;

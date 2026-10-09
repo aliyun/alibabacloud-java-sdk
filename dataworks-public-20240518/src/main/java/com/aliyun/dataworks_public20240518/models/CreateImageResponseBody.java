@@ -14,7 +14,7 @@ public class CreateImageResponseBody extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The request ID, which is used for locating logs and troubleshooting.</p>
+     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
@@ -23,7 +23,7 @@ public class CreateImageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

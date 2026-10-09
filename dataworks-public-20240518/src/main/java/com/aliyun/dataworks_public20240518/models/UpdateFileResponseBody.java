@@ -32,7 +32,7 @@ public class UpdateFileResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID. Use this ID to troubleshoot issues.</p>
+     * <p>The unique ID of the request. You can use the ID to troubleshoot issues when an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFGH-IJKLMNOPQ</p>
@@ -41,12 +41,10 @@ public class UpdateFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call succeeded. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The call succeeded.</p>
-     * </li>
-     * <li><p>false: The call failed.</p>
-     * </li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

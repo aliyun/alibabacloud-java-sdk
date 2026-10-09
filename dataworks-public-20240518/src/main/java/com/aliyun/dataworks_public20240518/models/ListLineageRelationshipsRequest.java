@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLineageRelationshipsRequest extends TeaModel {
     /**
-     * <p>The destination entity ID. You can use the table or field ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</p>
+     * <p>The ID of the destination entity. You can refer to the table or field ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListLineageRelationshipsRequest extends TeaModel {
     public String dstEntityId;
 
     /**
-     * <p>The destination entity name. Fuzzy match is supported.</p>
+     * <p>The name of the destination entity. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>dstName</p>
@@ -46,7 +46,7 @@ public class ListLineageRelationshipsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page size. Default value: 10. Maximum value: 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -55,7 +55,7 @@ public class ListLineageRelationshipsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The sort field. Default value: Name.</p>
+     * <p>The field used for sorting. Default value: Name.</p>
      * 
      * <strong>example:</strong>
      * <p>Name</p>
@@ -64,8 +64,8 @@ public class ListLineageRelationshipsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The source entity ID. You can use the table or field ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</p>
-     * <p>To obtain a table or field entity ID, first call ListCrawlers to obtain the MetaEntityId of the metadata crawler. For types that contain a data catalog level, such as DLF and StarRocks, call ListCatalogs to obtain the catalog ID. Then call ListDatabases to obtain the database ID. If necessary, call ListSchemas to obtain the schema ID. Finally, call ListTables or ListColumns to obtain the table or field ID.</p>
+     * <p>The ID of the source entity. You can refer to the table or field ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</p>
+     * <p>To obtain the entity ID of a table or field, first call ListCrawlers to obtain the MetaEntityId of the metadata crawler. For types that include a data catalog hierarchy, such as DLF and StarRocks, call ListCatalogs to obtain the catalog ID. Then, call ListDatabases to obtain the database ID, and call ListSchemas to obtain the schema ID if necessary. Finally, call ListTables or ListColumns to obtain the table or field ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,7 +75,7 @@ public class ListLineageRelationshipsRequest extends TeaModel {
     public String srcEntityId;
 
     /**
-     * <p>The source entity name. Fuzzy match is supported.</p>
+     * <p>The name of the source entity. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>srcName</p>

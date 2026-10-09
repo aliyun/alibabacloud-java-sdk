@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RerunWorkflowInstancesResponseBody extends TeaModel {
     /**
-     * <p>The operation ID. You can use this value to query the creation result via the GetRerunWorkflowInstancesResult operation.</p>
+     * <p>The operation ID. You can use this field to call the GetRerunWorkflowInstancesResult operation to query the result of the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>e15ad21c-b0e9-4792-8f55-b037xxxxxxxx</p>
@@ -14,7 +14,7 @@ public class RerunWorkflowInstancesResponseBody extends TeaModel {
     public String operationId;
 
     /**
-     * <p>The request ID. Used for troubleshooting and log tracking.</p>
+     * <p>The ID of the request. You can use this ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>

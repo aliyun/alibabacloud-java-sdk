@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
     /**
-     * <p>The list of data quality rules associated with the data quality monitoring task. If DataQualityRule.Id is specified, the rule corresponding to the ID is associated with the new quality monitoring task. If DataQualityRule.Id is not specified, a new rule is created based on the other fields and associated with the new quality monitoring task.</p>
+     * <p>The list of data quality rules associated with the data quality monitoring task. If DataQualityRule.Id is specified, the rule corresponding to the ID is associated with the new quality monitoring task. If it is not specified, a new rule is created by using other fields and associated with the new quality monitoring task.</p>
      */
     @NameInMap("DataQualityRules")
     public java.util.List<CreateDataQualityEvaluationTaskRequestDataQualityRules> dataQualityRules;
 
     /**
-     * <p>The data source ID. You can call <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> to obtain the data source ID.</p>
+     * <p>The ID of the data source. You can call the <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> operation to query the ID of the data source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
     public Long dataSourceId;
 
     /**
-     * <p>The description of the data quality monitor task.</p>
+     * <p>The description of the data quality monitoring task.</p>
      * 
      * <strong>example:</strong>
      * <p>OpenAPI create a data quality monitoring test</p>
@@ -30,13 +30,13 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The callback settings.</p>
+     * <p>The hook settings.</p>
      */
     @NameInMap("Hooks")
     public java.util.List<CreateDataQualityEvaluationTaskRequestHooks> hooks;
 
     /**
-     * <p>The name of the data quality monitor task.</p>
+     * <p>The name of the data quality monitoring task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,8 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
     public CreateDataQualityEvaluationTaskRequestNotifications notifications;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the ID.</p>
+     * <p>This parameter is used to determine the DataWorks workspace used to invoke this API operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,10 +63,14 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The extended configuration. The value is a JSON-formatted string. This parameter takes effect only for EMR-type data quality monitors.</p>
+     * <p>The extension configurations in JSON string format. This parameter takes effect only for EMR data quality monitoring tasks.</p>
      * <ul>
-     * <li>queue: The YARN queue used for EMR data quality checks. By default, the queue configured for the current project is used.</li>
-     * <li>sqlEngine: The SQL engine used for EMR data quality checks. Valid values: HIVE_SQL and SPARK_SQL.</li>
+     * <li>queue: the YARN queue used to execute EMR data validation. Default value: the queue configured for the project.</li>
+     * <li>sqlEngine: the SQL engine used to execute EMR data validation. Valid values:<ul>
+     * <li>HIVE_SQL</li>
+     * <li>SPARK_SQL</li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,14 +80,14 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
     public String runtimeConf;
 
     /**
-     * <p>The monitored object of the data quality monitor.</p>
+     * <p>The monitored object for the data quality monitoring task.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Target")
     public CreateDataQualityEvaluationTaskRequestTarget target;
 
     /**
-     * <p>The trigger configuration of the data quality check task.</p>
+     * <p>The trigger configuration for the data quality check task.</p>
      */
     @NameInMap("Trigger")
     public CreateDataQualityEvaluationTaskRequestTrigger trigger;
@@ -174,14 +179,14 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
     public static class CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsCritical extends TeaModel {
         /**
-         * <p>The threshold expression.</p>
-         * <p>Rules of the fluctuation type must use expressions to represent fluctuation thresholds. Examples:</p>
+         * <p>The threshold expression. </p>
+         * <p>For fluctuation rules, you must use an expression to represent the fluctuation threshold. Examples:</p>
          * <ul>
-         * <li>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01</li>
-         * <li>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01</li>
-         * <li>Absolute value of fluctuation: abs($checkValue) &gt; 0.01</li>
+         * <li>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </li>
+         * <li>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </li>
+         * <li>Absolute value of fluctuation rate: abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>Rules of the fixed value type can also use expressions to configure thresholds. If both are configured, the expression takes precedence over Operator and Value.</p>
+         * <p>Fixed value rules can also use expressions to configure thresholds. If both are configured, the expression takes precedence over Operator and Value.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
@@ -190,10 +195,10 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
         public String expression;
 
         /**
-         * <p>The comparison operator.</p>
+         * <p>The comparison operator. Valid values:</p>
          * <ul>
-         * <li>&gt;</li>
-         * <li>&gt;=</li>
+         * <li>\&gt;</li>
+         * <li>\&gt;=</li>
          * <li>&lt;</li>
          * <li>&lt;=</li>
          * <li>!=</li>
@@ -249,14 +254,14 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
     public static class CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsExpected extends TeaModel {
         /**
-         * <p>The threshold expression.</p>
-         * <p>Rules of the fluctuation type must use expressions to represent fluctuation thresholds. Examples:</p>
+         * <p>The threshold expression. </p>
+         * <p>For fluctuation rules, you must use an expression to represent the fluctuation threshold. Examples:</p>
          * <ul>
-         * <li>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01</li>
-         * <li>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01</li>
-         * <li>Absolute value of fluctuation: abs($checkValue) &gt; 0.01</li>
+         * <li>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </li>
+         * <li>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </li>
+         * <li>Absolute value of fluctuation rate: abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>Rules of the fixed value type can also use expressions to configure thresholds. If both are configured, the expression takes precedence over Operator and Value.</p>
+         * <p>Fixed value rules can also use expressions to configure thresholds. If both are configured, the expression takes precedence over Operator and Value.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
@@ -265,10 +270,10 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
         public String expression;
 
         /**
-         * <p>The comparison operator.</p>
+         * <p>The comparison operator. Valid values:</p>
          * <ul>
-         * <li>&gt;</li>
-         * <li>&gt;=</li>
+         * <li>\&gt;</li>
+         * <li>\&gt;=</li>
          * <li>&lt;</li>
          * <li>&lt;=</li>
          * <li>!=</li>
@@ -323,14 +328,14 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
     public static class CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsWarned extends TeaModel {
         /**
-         * <p>The threshold expression.</p>
-         * <p>Rules of the fluctuation type must use expressions to represent fluctuation thresholds. Examples:</p>
+         * <p>The threshold expression. </p>
+         * <p>For fluctuation rules, you must use an expression to represent the fluctuation threshold. Examples:</p>
          * <ul>
-         * <li>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01</li>
-         * <li>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01</li>
-         * <li>Absolute value of fluctuation: abs($checkValue) &gt; 0.01</li>
+         * <li>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </li>
+         * <li>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </li>
+         * <li>Absolute value of fluctuation rate: abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>Rules of the fixed value type can also use expressions to configure thresholds. If both are configured, the expression takes precedence over Operator and Value.</p>
+         * <p>Fixed value rules can also use expressions to configure thresholds. If both are configured, the expression takes precedence over Operator and Value.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
@@ -339,10 +344,10 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
         public String expression;
 
         /**
-         * <p>The comparison operator.</p>
+         * <p>The comparison operator. Valid values:</p>
          * <ul>
-         * <li>&gt;</li>
-         * <li>&gt;=</li>
+         * <li>\&gt;</li>
+         * <li>\&gt;=</li>
          * <li>&lt;</li>
          * <li>&lt;=</li>
          * <li>!=</li>
@@ -410,7 +415,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
         public CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsExpected expected;
 
         /**
-         * <p>The threshold settings for normal warnings.</p>
+         * <p>The threshold settings for common warnings.</p>
          */
         @NameInMap("Warned")
         public CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsWarned warned;
@@ -448,7 +453,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
     public static class CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfig extends TeaModel {
         /**
-         * <p>The expression that specifies how to query reference samples. Some threshold types require querying reference samples and then aggregating the values of the reference samples to derive the threshold for comparison.</p>
+         * <p>The expression that represents the query method for reference samples. Some types of thresholds require querying reference samples and aggregating their values to obtain the threshold for comparison.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;bizdate&quot;: [&quot;-1&quot;]}</p>
@@ -463,7 +468,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
         public CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholds thresholds;
 
         /**
-         * <p>The threshold calculation method.</p>
+         * <p>The threshold calculation method. Valid values:</p>
          * <ul>
          * <li>Fixed</li>
          * <li>Fluctation</li>
@@ -511,7 +516,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
     public static class CreateDataQualityEvaluationTaskRequestDataQualityRulesErrorHandlers extends TeaModel {
         /**
-         * <p>The SQL statement specified by the user to filter problematic data. This is required for custom SQL rules.</p>
+         * <p>The SQL statement specified by the user to filter problematic data if the rule is a custom SQL rule.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT * FROM ods_api_log WHERE status = \&quot;Error\&quot;;</p>
@@ -520,9 +525,9 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
         public String errorDataFilter;
 
         /**
-         * <p>The handler type:</p>
+         * <p>The handler type. Valid values:</p>
          * <ul>
-         * <li>SaveErrorData: Retains problematic data.</li>
+         * <li>SaveErrorData: Retain problematic data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -558,21 +563,21 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
         /**
          * <p>The name of the sampling metric. Valid values:</p>
          * <ul>
-         * <li>Count: the number of table rows.</li>
-         * <li>Min: the minimum value of the field.</li>
-         * <li>Max: the maximum value of the field.</li>
-         * <li>Avg: the average value of the field.</li>
-         * <li>DistinctCount: the number of distinct values in the field.</li>
-         * <li>DistinctPercent: the ratio of distinct values in the field to the total number of rows.</li>
-         * <li>DuplicatedCount: the number of duplicate values in the field.</li>
-         * <li>DuplicatedPercent: the ratio of duplicate values in the field to the total number of rows.</li>
-         * <li>TableSize: the table size.</li>
-         * <li>NullValueCount: the number of rows where the field is null.</li>
-         * <li>NullValuePercent: the ratio of rows where the field is null.</li>
-         * <li>GroupCount: the count of rows for each value after aggregation by field value.</li>
-         * <li>CountNotIn: the number of rows that do not match the enumerated values.</li>
-         * <li>CountDistinctNotIn: the number of distinct values that do not match the enumerated values.</li>
-         * <li>UserDefinedSql: sample collection through a custom SQL statement.</li>
+         * <li>Count: The number of rows in the table.</li>
+         * <li>Min: The minimum value of the field.</li>
+         * <li>Max: The maximum value of the field.</li>
+         * <li>Avg: The average value of the field.</li>
+         * <li>DistinctCount: The number of unique values in the field.</li>
+         * <li>DistinctPercent: The ratio of the number of unique values in the field to the number of data rows.</li>
+         * <li>DuplicatedCount: The number of duplicate values in the field.</li>
+         * <li>DuplicatedPercent: The ratio of the number of duplicate values in the field to the number of data rows.</li>
+         * <li>TableSize: The size of the table.</li>
+         * <li>NullValueCount: The number of rows where the field is null.</li>
+         * <li>NullValuePercent: The ratio of rows where the field is null.</li>
+         * <li>GroupCount: The number of data rows corresponding to each value after aggregation by field value.</li>
+         * <li>CountNotIn: The number of rows that do not match the enumerated values.</li>
+         * <li>CountDistinctNotIn: The number of unique values that do not match the enumerated values.</li>
+         * <li>UserDefinedSql: Sample collection by using custom SQL statements.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -591,7 +596,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
         public String metricParameters;
 
         /**
-         * <p>The filter condition used to perform secondary filtering on data that is not of interest during sampling. The maximum length is 16,777,215 characters.</p>
+         * <p>The conditions for secondary filtering of irrelevant data during sampling. The maximum length is 16,777,215 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>status != \&quot;Succeeded\&quot;</p>
@@ -600,7 +605,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
         public String samplingFilter;
 
         /**
-         * <p>The runtime parameter setting statements that are executed before the sampling statement. The maximum length is 1,000 characters. Currently, only MaxCompute is supported.</p>
+         * <p>The runtime parameter setting statements inserted before the sampling statements are executed. The maximum length is 1,000 characters. Only MaxCompute is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.sql.type.system.odps2=True,odps.sql.hive.compatible=True</p>
@@ -673,7 +678,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The list of error handlers for quality rule verification issues.</p>
+         * <p>The list of error handlers for quality rule verification.</p>
          */
         @NameInMap("ErrorHandlers")
         public java.util.List<CreateDataQualityEvaluationTaskRequestDataQualityRulesErrorHandlers> errorHandlers;
@@ -703,7 +708,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
         public CreateDataQualityEvaluationTaskRequestDataQualityRulesSamplingConfig samplingConfig;
 
         /**
-         * <p>The severity level of the rule for the business (corresponding to strong or weak rules on the page). Valid values:</p>
+         * <p>The severity level of the rule for the business, which corresponds to strong and weak rules on the page. Valid values:</p>
          * <ul>
          * <li>Normal</li>
          * <li>High</li>
@@ -805,10 +810,10 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
     public static class CreateDataQualityEvaluationTaskRequestHooks extends TeaModel {
         /**
-         * <p>The hook trigger condition. When this condition is met, the hook action is triggered. Only two types of conditional expressions are supported:</p>
+         * <p>The trigger condition for the hook. When this condition is met, the hook action is triggered. Two conditional expressions are supported:</p>
          * <ol>
-         * <li>Specify a single combination of rule severity type and rule check status, such as <code>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</code>. This means that if any executed rule with a severity of High has a check result of Critical, the condition is met.</li>
-         * <li>Specify multiple combinations of rule severity type and rule check status, such as <code>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</code>. This means that the condition is met if any executed rule with a severity of High has a check result of Critical, or any rule with a severity of Normal has a check result of Critical, or any rule with a severity of Normal has a check result of Error. The enumerated values of severity in the conditional expression are consistent with those of severity in DataQualityRule, and the enumerated values of status are consistent with those of status in DataQualityResult.</li>
+         * <li>Specify only one group of rule severity and check status. Example: <code>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</code>. This means that among the rules to execute, if the check result of a rule with the High severity is Critical, the condition is met.</li>
+         * <li>Specify multiple groups of rule severity and check status. Example: <code>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</code>. This means that among the rules to execute, if the check result of a rule with the High severity is Critical, the check result of a rule with the Normal severity is Critical, or the check result of a rule with the Normal severity is Error, the condition is met. The valid values of severity in the conditional expression are the same as those in DataQualityRule, and the valid values of status are the same as those in DataQualityResult.</li>
          * </ol>
          * 
          * <strong>example:</strong>
@@ -818,9 +823,9 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
         public String condition;
 
         /**
-         * <p>The hook type. Currently, only one type is supported:</p>
+         * <p>The hook type. Only one type is supported:</p>
          * <ul>
-         * <li>BlockTaskInstance: Blocks the scheduling task from continuing to run. If the data quality monitor is triggered by a scheduling task, Hook.Condition is evaluated after quality monitoring completes to determine whether the scheduling task is blocked from continuing.</li>
+         * <li>BlockTaskInstance: blocks the scheduled node from continuing to run. If the data quality monitoring task is triggered by a scheduled node, the system determines whether to block the scheduled node based on Hook.Condition after the data quality monitoring task is completed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -876,9 +881,9 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
     public static class CreateDataQualityEvaluationTaskRequestNotificationsNotificationsNotificationReceivers extends TeaModel {
         /**
-         * <p>The additional parameter settings for sending alerts. The value is in JSON format. The following keys are supported:</p>
+         * <p>The additional parameter settings in JSON format when an alert is sent. Supported keys:</p>
          * <ul>
-         * <li>atAll: Specifies whether to mention all members in the group when sending DingTalk alerts. This setting takes effect when ReceiverType is DingdingUrl.</li>
+         * <li>atAll: specifies whether to @all in the group when sending a DingTalk alert. This key takes effect only when ReceiverType is set to DingdingUrl.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -888,13 +893,13 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
         public String extension;
 
         /**
-         * <p>The type of the alert recipient.</p>
+         * <p>The type of the alert recipient. Valid values:</p>
          * <ul>
-         * <li>WebhookUrl: Custom webhook URL.</li>
-         * <li>FeishuUrl: Lark alert URL.</li>
-         * <li>DingdingUrl: DingTalk alert URL.</li>
-         * <li>WeixinUrl: WeCom alert URL.</li>
-         * <li>AliUid: Alibaba Cloud user ID.</li>
+         * <li>WebhookUrl: custom webhook URL</li>
+         * <li>FeishuUrl: Lark alert URL</li>
+         * <li>DingdingUrl: DingTalk alert URL</li>
+         * <li>WeixinUrl: WeCom alert URL</li>
+         * <li>AliUid: Alibaba Cloud user ID</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -978,9 +983,9 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
     public static class CreateDataQualityEvaluationTaskRequestNotifications extends TeaModel {
         /**
-         * <p>The notification trigger condition. When this condition is met, a message notification is triggered. Currently, only two types of conditional expressions are supported:</p>
-         * <p>Specify a single combination of rule severity type and rule check status, such as <code>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</code>. This means that among the executed rules, if a rule with severity High has a check result of Critical, the condition is met.
-         * Specify multiple combinations of rule severity type and rule check status, such as <code>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</code>. This means that among the executed rules, if a rule with severity High has a check result of Critical, or a rule with severity Normal has a check result of Critical, or a rule with severity Normal has a check result of Error, the condition is met. The enumeration values of severity in the conditional expression are consistent with the severity enumeration in DataQualityRule, and the enumeration values of status are consistent with the status enumeration in DataQualityResult.</p>
+         * <p>The trigger condition for notifications. When this condition is met, a message notification is triggered. Two conditional expressions are supported:</p>
+         * <p>Specify only one group of rule severity and check status. Example: <code>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</code>. This means that among the rules to execute, if the check result of a rule with the High severity is Critical, the condition is met.
+         * Specify multiple groups of rule severity and check status. Example: <code>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</code>. This means that among the rules to execute, if the check result of a rule with the High severity is Critical, the check result of a rule with the Normal severity is Critical, or the check result of a rule with the Normal severity is Error, the condition is met. The valid values of severity in the conditional expression are the same as those in DataQualityRule, and the valid values of status are the same as those in DataQualityResult.</p>
          * 
          * <strong>example:</strong>
          * <p>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</p>
@@ -1019,7 +1024,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
     public static class CreateDataQualityEvaluationTaskRequestTarget extends TeaModel {
         /**
-         * <p>The type of the database to which the table belongs. Valid values:</p>
+         * <p>The database type of the table. Valid values:</p>
          * <ul>
          * <li>maxcompute</li>
          * <li>hologres</li>
@@ -1038,7 +1043,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
         public String databaseType;
 
         /**
-         * <p>The partition settings of the partitioned table.</p>
+         * <p>The partition settings for the partitioned table.</p>
          * 
          * <strong>example:</strong>
          * <p>pt=$[yyyymmdd-1]</p>
@@ -1089,16 +1094,16 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
     public static class CreateDataQualityEvaluationTaskRequestTrigger extends TeaModel {
         /**
-         * <p>The list of scheduling task IDs. This parameter is valid only when Type is set to ByScheduledTaskInstance.</p>
+         * <p>The list of scheduled node IDs. This parameter takes effect only when Type is set to ByScheduledTaskInstance.</p>
          */
         @NameInMap("TaskIds")
         public java.util.List<Long> taskIds;
 
         /**
-         * <p>The trigger type for quality monitoring. Valid values:</p>
+         * <p>The trigger type for the data quality monitoring task. Valid values:</p>
          * <ul>
-         * <li>ByManual: manual trigger. This is the default value.</li>
-         * <li>ByScheduledTaskInstance: triggered by an associated scheduled task instance.</li>
+         * <li>ByManual: triggered manually. This is the default value.</li>
+         * <li>ByScheduledTaskInstance: triggered by an associated scheduled node.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReplyAgentSessionShrinkRequest extends TeaModel {
     /**
-     * <p>The JSON-RPC correlation ID for this reply request. The response returns this value as-is. This is different from PermissionRequestId.</p>
+     * <p>The JSON-RPC correlation ID for the current reply request. It is returned as-is in the response and is different from PermissionRequestId.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ReplyAgentSessionShrinkRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The JSON-RPC protocol version. Fixed value: 2.0.</p>
+     * <p>The JSON-RPC protocol version. Fixed to 2.0.</p>
      * 
      * <strong>example:</strong>
      * <p>2.0</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMcpServerShrinkRequest extends TeaModel {
     /**
-     * <p>The new custom request headers (key-value pairs).</p>
+     * <p>The new custom request headers in key-value pairs.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class UpdateMcpServerShrinkRequest extends TeaModel {
     public String customHeadersShrink;
 
     /**
-     * <p>The name of the MCP Server to update.</p>
+     * <p>The name of the MCP server to update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class UpdateMcpServerShrinkRequest extends TeaModel {
     public String visibility;
 
     /**
-     * <p>The new visibility scope. Provide the corresponding field based on the Visibility setting.</p>
+     * <p>The new visibility scope. Specify the corresponding fields based on the <code>Visibility</code> value.</p>
      */
     @NameInMap("VisibilityScope")
     public String visibilityScopeShrink;

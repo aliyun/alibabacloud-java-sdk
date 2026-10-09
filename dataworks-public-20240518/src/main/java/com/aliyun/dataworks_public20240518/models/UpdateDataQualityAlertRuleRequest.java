@@ -14,7 +14,7 @@ public class UpdateDataQualityAlertRuleRequest extends TeaModel {
     public String condition;
 
     /**
-     * <p>The alert rule ID.</p>
+     * <p>The ID of the alert rule.</p>
      * 
      * <strong>example:</strong>
      * <p>105412</p>
@@ -29,7 +29,7 @@ public class UpdateDataQualityAlertRuleRequest extends TeaModel {
     public UpdateDataQualityAlertRuleRequestNotification notification;
 
     /**
-     * <p>The project ID.</p>
+     * <p>The ID of the project.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -38,7 +38,7 @@ public class UpdateDataQualityAlertRuleRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The monitoring target of the data quality monitoring alert rule.</p>
+     * <p>The target of the data quality monitoring alert rule.</p>
      */
     @NameInMap("Target")
     public UpdateDataQualityAlertRuleRequestTarget target;
@@ -90,7 +90,7 @@ public class UpdateDataQualityAlertRuleRequest extends TeaModel {
 
     public static class UpdateDataQualityAlertRuleRequestNotificationReceivers extends TeaModel {
         /**
-         * <p>The additional configuration required for the alert recipient. When ReceiverType is set to DingdingUrl, you can set <code>{&quot;atAll&quot;:true}</code> to @ all members.</p>
+         * <p>The additional configuration required for the alert recipient. When ReceiverType is set to DingdingUrl, you can set <code>{&quot;atAll&quot;:true}</code> to mention all members.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;atAll&quot;:true}</p>
@@ -99,7 +99,7 @@ public class UpdateDataQualityAlertRuleRequest extends TeaModel {
         public String extension;
 
         /**
-         * <p>The alerting accept object type. Valid values:</p>
+         * <p>The alerting accept object type.</p>
          * <ul>
          * <li>AliUid</li>
          * <li>WebhookUrl</li>
@@ -119,7 +119,7 @@ public class UpdateDataQualityAlertRuleRequest extends TeaModel {
         public String receiverType;
 
         /**
-         * <p>The values of the alert recipients.</p>
+         * <p>The value of the alert recipient.</p>
          */
         @NameInMap("ReceiverValues")
         public java.util.List<String> receiverValues;
@@ -157,7 +157,7 @@ public class UpdateDataQualityAlertRuleRequest extends TeaModel {
 
     public static class UpdateDataQualityAlertRuleRequestNotification extends TeaModel {
         /**
-         * <p>The list of notification channels. You can set both Email and Sms at the same time. In other cases, only one channel can be specified.</p>
+         * <p>The list of notification channels. You can configure both Email and Sms simultaneously. For other cases, only one channel can be configured.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Channels")
@@ -194,7 +194,7 @@ public class UpdateDataQualityAlertRuleRequest extends TeaModel {
 
     public static class UpdateDataQualityAlertRuleRequestTarget extends TeaModel {
         /**
-         * <p>The list of monitoring target IDs. Currently, only one ID can be specified.</p>
+         * <p>The list of monitored target IDs. Currently, only one ID is supported.</p>
          */
         @NameInMap("Ids")
         public java.util.List<Long> ids;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityStrategyRequest extends TeaModel {
     /**
-     * <p>A client-generated token that ensures request idempotency, preventing duplicate operations if you retry the request.</p>
+     * <p>The idempotency parameter. This parameter is used to prevent duplicate operations caused by multiple calls.</p>
      * 
      * <strong>example:</strong>
      * <p>ABFUOEUOTRTRJKE</p>
@@ -14,14 +14,14 @@ public class CreateSecurityStrategyRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The content of the strategy. This value is constrained by the <code>SecurityStrategySchema</code>.</p>
+     * <p>The policy content. The content is constrained by SecurityStrategySchema.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Content")
     public CreateSecurityStrategyRequestContent content;
 
     /**
-     * <p><strong>The control scope. Valid values: Workspace and Tenant.</strong></p>
+     * <p>The control scope.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class CreateSecurityStrategyRequest extends TeaModel {
     public String controlDwScope;
 
     /**
-     * <p><strong>Control module</strong></p>
+     * <p>The control module.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class CreateSecurityStrategyRequest extends TeaModel {
     public String controlModule;
 
     /**
-     * <p><strong>Control submodule</strong></p>
+     * <p>The control submodule.</p>
      * 
      * <strong>example:</strong>
      * <p>MyCatalog</p>
@@ -50,26 +50,26 @@ public class CreateSecurityStrategyRequest extends TeaModel {
     public String controlSubModule;
 
     /**
-     * <p><strong>Strategy description</strong></p>
+     * <p>The description of the policy.</p>
      * 
      * <strong>example:</strong>
-     * <p>控制数据分析模块的查询结果安全行为</p>
+     * <p>Controls the security behavior of query results in the data analysis module</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p><strong>Strategy name</strong></p>
+     * <p>The policy name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>默认数据分析策略</p>
+     * <p>Default data analysis policy</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p><strong>Schema template name</strong></p>
+     * <p>The name of the schema template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class CreateSecurityStrategyRequest extends TeaModel {
     public String schemaName;
 
     /**
-     * <p>A list of associated workspace IDs.</p>
+     * <p>The list of associated workspace IDs.</p>
      */
     @NameInMap("Workspaces")
     public java.util.List<Long> workspaces;
@@ -172,13 +172,13 @@ public class CreateSecurityStrategyRequest extends TeaModel {
         public Object basicEditionDefaultValue;
 
         /**
-         * <p>The valid value interval for Basic Edition, in the format <code>[min, max]</code>.</p>
+         * <p>The valid value range for Basic Edition, in the format of [min, max].</p>
          */
         @NameInMap("BasicEditionIntervalValue")
         public java.util.List<Integer> basicEditionIntervalValue;
 
         /**
-         * <p>The controller identifier. For valid values, see the list of controllers for each schema.</p>
+         * <p>The identifier of the control item. For valid values, refer to the control item list for each schema.</p>
          * 
          * <strong>example:</strong>
          * <p>viewCount</p>
@@ -187,7 +187,7 @@ public class CreateSecurityStrategyRequest extends TeaModel {
         public String controller;
 
         /**
-         * <p>The value type. Valid values: <code>Boolean</code>, <code>Integer</code>, <code>Long</code>, and <code>String</code>.</p>
+         * <p>The value type. Valid values: Boolean, Integer, Long, and String.</p>
          * 
          * <strong>example:</strong>
          * <p>Integer</p>
@@ -199,7 +199,7 @@ public class CreateSecurityStrategyRequest extends TeaModel {
          * <p>The display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>查询结果-单次展示记录值上限</p>
+         * <p>Query results - Maximum number of records displayed per query</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -214,7 +214,7 @@ public class CreateSecurityStrategyRequest extends TeaModel {
         public String displayNameEn;
 
         /**
-         * <p>Specifies whether to enable this controller.</p>
+         * <p>Specifies whether to enable the control item.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -232,7 +232,7 @@ public class CreateSecurityStrategyRequest extends TeaModel {
         public Object enterpriseEditionDefaultValue;
 
         /**
-         * <p>The valid value interval for Enterprise Edition, in the format <code>[min, max]</code>.</p>
+         * <p>The valid value range for Enterprise Edition, in the format of [min, max].</p>
          */
         @NameInMap("EnterpriseEditionIntervalValue")
         public java.util.List<Integer> enterpriseEditionIntervalValue;
@@ -247,7 +247,7 @@ public class CreateSecurityStrategyRequest extends TeaModel {
         public Object professionalEditionDefaultValue;
 
         /**
-         * <p>The valid value interval for Professional Edition, in the format <code>[min, max]</code>.</p>
+         * <p>The valid value range for Professional Edition, in the format of [min, max].</p>
          */
         @NameInMap("ProfessionalEditionIntervalValue")
         public java.util.List<Integer> professionalEditionIntervalValue;
@@ -262,13 +262,13 @@ public class CreateSecurityStrategyRequest extends TeaModel {
         public Object standardEditionDefaultValue;
 
         /**
-         * <p>The valid value interval for Standard Edition, in the format <code>[min, max]</code>.</p>
+         * <p>The valid value range for Standard Edition, in the format of [min, max].</p>
          */
         @NameInMap("StandardEditionIntervalValue")
         public java.util.List<Integer> standardEditionIntervalValue;
 
         /**
-         * <p>The user-configured value. The type of this value depends on the <code>ControllerValueType</code> parameter.</p>
+         * <p>The user-configured value. The type depends on <code>ControllerValueType</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -397,7 +397,7 @@ public class CreateSecurityStrategyRequest extends TeaModel {
 
     public static class CreateSecurityStrategyRequestContent extends TeaModel {
         /**
-         * <p>The control scope. This corresponds to the <code>controlDwScope</code> property of the <code>SecurityStrategySchema</code> associated with the current strategy.</p>
+         * <p>The control scope. This is the name of the SecurityStrategySchema associated with the current policy.</p>
          * 
          * <strong>example:</strong>
          * <p>Tenant</p>
@@ -406,7 +406,7 @@ public class CreateSecurityStrategyRequest extends TeaModel {
         public String controlDwScope;
 
         /**
-         * <p>The control module. This corresponds to the <code>controlModule</code> property of the <code>SecurityStrategySchema</code> associated with the current strategy.</p>
+         * <p>The control module. This is the controlModule of the SecurityStrategySchema associated with the current policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -416,7 +416,7 @@ public class CreateSecurityStrategyRequest extends TeaModel {
         public String controlModule;
 
         /**
-         * <p>The control submodule. This corresponds to the <code>controlSubModule</code> property of the <code>SecurityStrategySchema</code> associated with the current strategy.</p>
+         * <p>The control submodule. This is the controlSubModule of the SecurityStrategySchema associated with the current policy.</p>
          * 
          * <strong>example:</strong>
          * <p>MyCatalog</p>
@@ -425,23 +425,23 @@ public class CreateSecurityStrategyRequest extends TeaModel {
         public String controlSubModule;
 
         /**
-         * <p>A list of controllers.</p>
-         * <p><strong>Note:</strong> Valid controllers depend on the selected schema. For more information, see the controller definitions and the list of controllers for each schema.</p>
+         * <p>The list of control items.</p>
+         * <p>Note: Valid control items depend on the selected schema. Refer to the controller definitions and the control item list for each schema.</p>
          */
         @NameInMap("Controllers")
         public java.util.List<CreateSecurityStrategyRequestContentControllers> controllers;
 
         /**
-         * <p>The <code>displayName</code> property of the <code>SecurityStrategySchema</code> associated with the current strategy.</p>
+         * <p>The display name of the SecurityStrategySchema associated with the current policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>数据分析</p>
+         * <p>Data analysis</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
-         * <p>The <code>displayNameEn</code> property of the <code>SecurityStrategySchema</code> associated with the current strategy.</p>
+         * <p>The English display name of the SecurityStrategySchema associated with the current policy.</p>
          * 
          * <strong>example:</strong>
          * <p>Data Analysis</p>
@@ -450,7 +450,7 @@ public class CreateSecurityStrategyRequest extends TeaModel {
         public String displayNameEn;
 
         /**
-         * <p>The <code>name</code> property of the <code>SecurityStrategySchema</code> associated with the current strategy.</p>
+         * <p>The name of the SecurityStrategySchema associated with the current policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -460,7 +460,7 @@ public class CreateSecurityStrategyRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The <code>systemPolicyDisplayName</code> property of the <code>SecurityStrategySchema</code> associated with the current strategy.</p>
+         * <p>The name of the SecurityStrategySchema associated with the current policy.</p>
          * 
          * <strong>example:</strong>
          * <p>Default system generate data query policy</p>
@@ -469,7 +469,7 @@ public class CreateSecurityStrategyRequest extends TeaModel {
         public String systemPolicyDisplayName;
 
         /**
-         * <p>The <code>systemPolicyName</code> property of the <code>SecurityStrategySchema</code> associated with the current strategy.</p>
+         * <p>The name of the SecurityStrategySchema associated with the current policy.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM_GENERATE_DEFAULT_DATA_QUERY</p>

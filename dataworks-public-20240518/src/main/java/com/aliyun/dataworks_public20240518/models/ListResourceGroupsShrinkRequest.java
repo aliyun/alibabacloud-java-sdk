@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListResourceGroupsShrinkRequest extends TeaModel {
     /**
-     * <p>The Alibaba Cloud resource group ID.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2kqofrgXXXXX</p>
@@ -14,13 +14,13 @@ public class ListResourceGroupsShrinkRequest extends TeaModel {
     public String aliyunResourceGroupId;
 
     /**
-     * <p>The list of Alibaba Cloud tags.</p>
+     * <p>The Alibaba Cloud tags.</p>
      */
     @NameInMap("AliyunResourceTags")
     public String aliyunResourceTagsShrink;
 
     /**
-     * <p>The name of the resource group. Fuzzy search is supported.</p>
+     * <p>The name of the resource group for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>Resource</p>
@@ -38,7 +38,7 @@ public class ListResourceGroupsShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -47,12 +47,10 @@ public class ListResourceGroupsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The billing method of the resource group. Valid values include:</p>
+     * <p>The billing method of the resource group. Valid values:</p>
      * <ul>
-     * <li><p><code>PrePaid</code>: subscription.</p>
-     * </li>
-     * <li><p><code>PostPaid</code>: pay-as-you-go.</p>
-     * </li>
+     * <li>PrePaid: Subscription.</li>
+     * <li>PostPaid: Pay-as-you-go.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +60,7 @@ public class ListResourceGroupsShrinkRequest extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The ID of the workspace to which the resource group belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -71,32 +69,24 @@ public class ListResourceGroupsShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The types of the resource groups to query. <strong>If this parameter is not specified, general-purpose resource groups are queried by default.</strong></p>
+     * <p>The types of the resource groups to query. <strong>If this parameter is left empty, general-purpose resource groups are queried by default.</strong></p>
      */
     @NameInMap("ResourceGroupTypes")
     public String resourceGroupTypesShrink;
 
     /**
-     * <p>The sorting criterion for the results. The format is <code>FieldName SortOrder</code>. <code>SortOrder</code> can be <code>Asc</code> (ascending) or <code>Desc</code> (descending). If you do not specify <code>SortOrder</code>, the default is <code>Asc</code>. The following fields are supported:</p>
+     * <p>The fields by which to sort the results. You can sort the results by fields such as scheduled time and start time. The format is \&quot;Sort field+Sort order (Desc/Asc)\&quot;. Asc can be omitted. Valid values for the sort field:</p>
      * <ul>
-     * <li><p><code>Id</code>: Resource group ID</p>
-     * </li>
-     * <li><p><code>Name</code>: Resource group name</p>
-     * </li>
-     * <li><p><code>Remark</code>: Resource group remarks</p>
-     * </li>
-     * <li><p><code>Type</code>: Resource group type</p>
-     * </li>
-     * <li><p><code>Status</code>: Resource group status</p>
-     * </li>
-     * <li><p><code>Spec</code>: Resource group specifications</p>
-     * </li>
-     * <li><p><code>CreateUser</code>: The user who created the resource group</p>
-     * </li>
-     * <li><p><code>CreateTime</code>: The time when the resource group was created</p>
-     * </li>
+     * <li>Id (Desc/Asc): The ID of the resource group.</li>
+     * <li>Name (Desc/Asc): The name of the resource group.</li>
+     * <li>Remark (Desc/Asc): The description of the resource group.</li>
+     * <li>Type (Desc/Asc): The type of the resource group.</li>
+     * <li>Status (Desc/Asc): The status of the resource group.</li>
+     * <li>Spec (Desc/Asc): The specifications of the resource group.</li>
+     * <li>CreateUser (Desc/Asc): The creator of the resource group.</li>
+     * <li>CreateTime (Desc/Asc): The time when the resource group was created.</li>
      * </ul>
-     * <p>Default value: <code>CreateTime Asc</code></p>
+     * <p>Default value: CreateTime Asc.</p>
      * 
      * <strong>example:</strong>
      * <p>CreateTime Asc</p>
