@@ -16,11 +16,20 @@ public class DeleteControlPolicyRequest extends TeaModel {
     public String aclUuid;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token. Make sure that the token is unique among different requests. The token must be a string that is case-sensitive and matches the regular expression [0-9a-zA-Z-_]{1,64}. We recommend that you use a UUID. The server ensures idempotence within the validity period of 600 seconds. If you send a repeated request with the same client token and the same business parameters, the server returns the same response as the first request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dedeaxfedxxx</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
      * <p>The traffic direction controlled by the access control policy.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>in</strong>: inbound traffic.</li>
-     * <li><strong>out</strong>: outbound traffic.</li>
+     * <li><strong>in</strong>: inbound traffic</li>
+     * <li><strong>out</strong>: outbound traffic</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,11 +39,20 @@ public class DeleteControlPolicyRequest extends TeaModel {
     public String direction;
 
     /**
+     * <p>Specifies whether to only precheck the request. If you set this parameter to true, the system only performs prechecks on parameter validity, identity permissions, resource existence, quota limits, and dependencies. The system does not create, update, or delete actual resources, trigger actual asynchronous traffic diversion tasks, or generate downstream side effects such as billing, notifications, or callbacks. If the precheck is successful, the response includes DryRun=true, which distinguishes it from the response of an actual call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>The language of the request and response.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,12 +84,28 @@ public class DeleteControlPolicyRequest extends TeaModel {
         return this.aclUuid;
     }
 
+    public DeleteControlPolicyRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public DeleteControlPolicyRequest setDirection(String direction) {
         this.direction = direction;
         return this;
     }
     public String getDirection() {
         return this.direction;
+    }
+
+    public DeleteControlPolicyRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public DeleteControlPolicyRequest setLang(String lang) {

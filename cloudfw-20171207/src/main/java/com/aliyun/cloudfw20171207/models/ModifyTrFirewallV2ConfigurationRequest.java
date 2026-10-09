@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyTrFirewallV2ConfigurationRequest extends TeaModel {
     /**
-     * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+     * <p>The instance ID of the VPC firewall. You can call DescribeTrFirewallsV2List to obtain the ID.</p>
      * <blockquote>
-     * <p>FirewallId and FirewallName are both required. If either is not provided, an ErrorParameters(400) error is returned. You can call DescribeTrFirewallsV2List to obtain the FirewallId.</p>
+     * <p>Note: FirewallId and FirewallName are jointly required. Both parameters must be provided at the same time. If either parameter is missing, the operation returns a 400 error.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class ModifyTrFirewallV2ConfigurationRequest extends TeaModel {
     public String firewallId;
 
     /**
-     * <p>The instance name of the virtual private cloud (VPC) firewall.</p>
+     * <p>The instance name of the VPC firewall.</p>
      * <blockquote>
-     * <p>FirewallId and FirewallName are both required. If either is not provided, an ErrorParameters(400) error is returned.</p>
+     * <p>Note: FirewallId and FirewallName are jointly required. Both parameters must be provided at the same time. If either parameter is missing, the operation returns a 400 error.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

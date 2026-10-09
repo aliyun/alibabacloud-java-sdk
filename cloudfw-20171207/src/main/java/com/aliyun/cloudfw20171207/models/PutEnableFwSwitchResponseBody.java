@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class PutEnableFwSwitchResponseBody extends TeaModel {
     /**
-     * <p>The status information list of assets that are not synchronized.</p>
+     * <p>The status information list for assets that are not synchronized.</p>
      */
     @NameInMap("AbnormalResourceStatusList")
     public java.util.List<PutEnableFwSwitchResponseBodyAbnormalResourceStatusList> abnormalResourceStatusList;
 
     /**
-     * <p>Indicates that this is a successful dry run response. A value of true indicates that only the dry run was completed and no real changes were made. This field is not returned or is set to false for real calls.</p>
+     * <p>Indicates whether this response is a dry run success response. A value of true indicates that only the dry run was completed and no actual changes were made. This field is not returned or is set to false for actual calls.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -61,7 +61,7 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
         /**
          * <p>The message when the asset is not synchronized. Valid values:</p>
          * <ul>
-         * <li>cloudfirewall do not sync this ip address: Cloud Firewall has not synchronized this asset IP address.</li>
+         * <li>cloudfirewall do not sync this ip address: Cloud Firewall did not synchronize this asset IP address.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -80,9 +80,9 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
         public String resource;
 
         /**
-         * <p>The status of the asset that is not synchronized. Valid values:</p>
+         * <p>The status when the asset is not synchronized. Valid values:</p>
          * <ul>
-         * <li>ip_not_sync: The asset is not synchronized.</li>
+         * <li>ip_not_sync: the asset is not synchronized.</li>
          * </ul>
          * 
          * <strong>example:</strong>

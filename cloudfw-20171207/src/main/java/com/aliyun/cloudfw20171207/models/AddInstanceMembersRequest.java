@@ -29,7 +29,7 @@ public class AddInstanceMembersRequest extends TeaModel {
 
     public static class AddInstanceMembersRequestMembers extends TeaModel {
         /**
-         * <p>The description of the Cloud Firewall member account. The description must be 1 to 256 characters in length. You can add up to 20 member accounts.</p>
+         * <p>The remarks of the Cloud Firewall member account. The value must be 1 to 256 characters in length. You can add up to 20 member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>renewal</p>

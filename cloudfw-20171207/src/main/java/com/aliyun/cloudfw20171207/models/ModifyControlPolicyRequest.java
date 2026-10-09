@@ -8,7 +8,7 @@ public class ModifyControlPolicyRequest extends TeaModel {
      * <p>The action that the access control policy performs on the traffic that passes through the firewall. Valid values:</p>
      * <ul>
      * <li><strong>accept</strong>: allows access.</li>
-     * <li><strong>drop</strong>: deny access.</li>
+     * <li><strong>drop</strong>: deny.</li>
      * <li><strong>log</strong>: monitors the traffic.</li>
      * </ul>
      * 
@@ -32,7 +32,7 @@ public class ModifyControlPolicyRequest extends TeaModel {
     public String aclUuid;
 
     /**
-     * <p>The application type supported by the access control policy. Valid values:</p>
+     * <p>The application type supported by the access control policy. The following application types are supported:</p>
      * <ul>
      * <li><strong>ANY</strong></li>
      * <li><strong>HTTP</strong></li>
@@ -127,7 +127,7 @@ public class ModifyControlPolicyRequest extends TeaModel {
      * <li>If <strong>DestinationType</strong> is set to net, <strong>Destination</strong> is a destination CIDR block. Example: 1.2.XX.XX/24.</li>
      * <li>If <strong>DestinationType</strong> is set to group, <strong>Destination</strong> is a destination address book name. Example: db_group.</li>
      * <li>If <strong>DestinationType</strong> is set to domain, <strong>Destination</strong> is a destination domain name. Example: *.aliyuncs.com.</li>
-     * <li>If <strong>DestinationType</strong> is set to location, <strong>Destination</strong> is a destination area. For specific area positional encoding, see the subsequent sections. Example: [&quot;BJ11&quot;, &quot;ZB&quot;\].</li>
+     * <li>If <strong>DestinationType</strong> is set to location, <strong>Destination</strong> is a destination area. For more information about area positional encoding, see the following sections. Example: [&quot;BJ11&quot;, &quot;ZB&quot;\].</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -154,8 +154,8 @@ public class ModifyControlPolicyRequest extends TeaModel {
     /**
      * <p>The traffic direction of the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>in</strong>: inbound traffic access control</li>
-     * <li><strong>out</strong>: outbound traffic access control</li>
+     * <li><strong>in</strong>: inbound traffic</li>
+     * <li><strong>out</strong>: outbound traffic</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class ModifyControlPolicyRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The end time of the Policy Validity Period for the access control policy. The value is a UNIX timestamp in seconds format. The time must be on the hour or half hour and must be at least 30 minutes later than the start time. Settings for the access control policy validity period.</p>
+     * <p>The end time of the Policy Validity Period of the access control policy. The value is a UNIX timestamp in seconds format. The time must be on the hour or half hour and must be at least 30 minutes later than the start time. Settings for the end time.</p>
      * <blockquote>
      * <p>If RepeatType is set to Permanent, this parameter is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter is required.</p>
      * </blockquote>
@@ -210,7 +210,7 @@ public class ModifyControlPolicyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The security protocol type in the access control policy. Valid values:</p>
+     * <p>The security protocol type in the access control policy. The following protocol types are supported:</p>
      * <ul>
      * <li><strong>ANY</strong></li>
      * <li><strong>TCP</strong></li>
@@ -221,7 +221,7 @@ public class ModifyControlPolicyRequest extends TeaModel {
      * <p><strong>ANY</strong> indicates that the policy applies to all protocol types.</p>
      * </blockquote>
      * <blockquote>
-     * <p>If the traffic direction is outbound and the destination address is a threat intelligence address book or cloud service address book of the domain type, you can configure only the TCP or ANY protocol. If you select TCP, the application can be HTTP, HTTPS, SMTP, SMTPS, or SSL. If you select ANY, the application can only be ANY.</p>
+     * <p>If the traffic direction is outbound and the destination address is a threat intelligence address book or cloud service address book of the domain type, you can set the protocol to TCP or ANY. If you select TCP, the application can be set to HTTP, HTTPS, SMTP, SMTPS, or SSL. If you select ANY, the application can only be set to ANY.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -234,7 +234,7 @@ public class ModifyControlPolicyRequest extends TeaModel {
      * <p>The enabling status of the access control policy. Valid values:</p>
      * <ul>
      * <li>true: The policy is enabled.</li>
-     * <li>false: The policy is in shutdown state.</li>
+     * <li>false: The policy is disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -244,16 +244,16 @@ public class ModifyControlPolicyRequest extends TeaModel {
     public String release;
 
     /**
-     * <p>The days of a week or of a month on which the access control policy takes effect. Settings for the Policy Validity Period recurrence days.</p>
+     * <p>The days of a week or of a month on which the access control policy takes effect. Settings for the Policy Validity Period.</p>
      * <ul>
-     * <li>If RepeatType is set to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, RepeatDays is an empty collection.
+     * <li>If RepeatType is set to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, RepeatDays is an empty array.
      * Example: []</li>
-     * <li>If RepeatType is set to Weekly, RepeatDays cannot be empty.
+     * <li>If RepeatType is set to Weekly, RepeatDays must not be empty.
      * Example: [0, 6]<blockquote>
      * <p>If RepeatType is set to Weekly, the values in RepeatDays cannot be repeated.</p>
      * </blockquote>
      * </li>
-     * <li>If RepeatType is set to <code>Monthly</code>, RepeatDays cannot be empty.
+     * <li>If RepeatType is set to <code>Monthly</code>, RepeatDays must not be empty.
      * Example: [1, 31]<blockquote>
      * <p>If RepeatType is set to Monthly, the values in RepeatDays cannot be repeated.</p>
      * </blockquote>
@@ -308,7 +308,7 @@ public class ModifyControlPolicyRequest extends TeaModel {
      * <ul>
      * <li>If <strong>SourceType</strong> is set to net, <strong>Source</strong> is a source CIDR block. Example: 1.2.XX.XX/24.</li>
      * <li>If <strong>SourceType</strong> is set to group, <strong>Source</strong> is a source address book name. Example: db_group.</li>
-     * <li>If <strong>SourceType</strong> is set to location, <strong>Source</strong> is a source area. For specific area positional encoding, see the subsequent sections. Example: [&quot;BJ11&quot;, &quot;ZB&quot;\].</li>
+     * <li>If <strong>SourceType</strong> is set to location, <strong>Source</strong> is a source area. For more information about area positional encoding, see the following sections. Example: [&quot;BJ11&quot;, &quot;ZB&quot;\].</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -332,7 +332,7 @@ public class ModifyControlPolicyRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The start time of the Policy Validity Period for the access control policy. The value is a UNIX timestamp in seconds format. The time must be on the hour or half hour and must be at least 30 minutes earlier than the end time. Settings for the access control policy validity period.</p>
+     * <p>The start time of the Policy Validity Period of the access control policy. The value is a UNIX timestamp in seconds format. The time must be on the hour or half hour and must be at least 30 minutes earlier than the end time. Settings for the start time.</p>
      * <blockquote>
      * <p>If RepeatType is set to Permanent, this parameter is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter is required.</p>
      * </blockquote>

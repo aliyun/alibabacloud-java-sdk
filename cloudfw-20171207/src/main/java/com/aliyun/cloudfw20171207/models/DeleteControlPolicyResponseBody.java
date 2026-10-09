@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteControlPolicyResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the response is for a successful dry run. A value of true indicates that only the precheck is completed and no actual changes are made. This field is not returned or is set to false for actual calls.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
@@ -16,6 +22,14 @@ public class DeleteControlPolicyResponseBody extends TeaModel {
     public static DeleteControlPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteControlPolicyResponseBody self = new DeleteControlPolicyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteControlPolicyResponseBody setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public DeleteControlPolicyResponseBody setRequestId(String requestId) {

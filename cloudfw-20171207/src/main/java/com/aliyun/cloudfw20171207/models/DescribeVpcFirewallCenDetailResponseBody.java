@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
     /**
-     * <p>The connectivity type of the virtual private cloud (VPC) firewall. Valid values: <strong>cen</strong>, which indicates Cloud Enterprise Network.</p>
+     * <p>The connection type of the virtual private cloud (VPC) firewall. Valid values: <strong>cen</strong>, which indicates CEN.</p>
      * 
      * <strong>example:</strong>
      * <p>cen</p>
@@ -14,13 +14,13 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
     public String connectType;
 
     /**
-     * <p>The switch status of the virtual private cloud (VPC) firewall. Valid values:</p>
+     * <p>The status of the virtual private cloud (VPC) firewall. Valid values:</p>
      * <ul>
-     * <li><p><strong>opened</strong>: Enabled.</p>
+     * <li><p><strong>opened</strong>: enabled.</p>
      * </li>
-     * <li><p><strong>closed</strong>: Shutdown.</p>
+     * <li><p><strong>closed</strong>: shutdown.</p>
      * </li>
-     * <li><p><strong>notconfigured</strong>: Not configured.</p>
+     * <li><p><strong>notconfigured</strong>: not configured.</p>
      * </li>
      * </ul>
      * 
@@ -37,7 +37,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
     public DescribeVpcFirewallCenDetailResponseBodyFirewallVpc firewallVpc;
 
     /**
-     * <p>The VPC details.</p>
+     * <p>The details of the VPC.</p>
      */
     @NameInMap("LocalVpc")
     public DescribeVpcFirewallCenDetailResponseBodyLocalVpc localVpc;
@@ -145,7 +145,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         public Integer allowConfiguration;
 
         /**
-         * <p>The deployment mode of the VPC firewall service. Valid values: <strong>PrimaryStandby</strong> (active/standby mode) and <strong>MultiPrimary</strong> (active-active mode).</p>
+         * <p>The deployment mode of the VPC firewall service. Valid values: <strong>PrimaryStandby</strong> (primary/standby mode) and <strong>MultiPrimary</strong> (active-active mode).</p>
          * 
          * <strong>example:</strong>
          * <p>PrimaryStandby</p>
@@ -154,7 +154,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         public String firewallServiceMode;
 
         /**
-         * <p>The zone IDs used by the VPC firewall service.</p>
+         * <p>The list of zone IDs used by the VPC firewall service.</p>
          */
         @NameInMap("FirewallServiceZones")
         public java.util.List<String> firewallServiceZones;
@@ -315,7 +315,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
 
     public static class DescribeVpcFirewallCenDetailResponseBodyLocalVpcEniList extends TeaModel {
         /**
-         * <p>The instance ID of the elastic network interface (ENI) that serves as the network interface controller (NIC) in the VPC.</p>
+         * <p>The instance ID of the elastic network interface (ENI) in the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-8vbhfosfqv2rff42****</p>
@@ -324,7 +324,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         public String eniId;
 
         /**
-         * <p>The private IP of the elastic network interface (ENI) that serves as the network interface controller (NIC) in the VPC.</p>
+         * <p>The private IP address of the elastic network interface (ENI) in the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -333,7 +333,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         public String eniPrivateIpAddress;
 
         /**
-         * <p>The vSwitch ID of the elastic network interface (ENI) that serves as the network interface controller (NIC) in the VPC.</p>
+         * <p>The vSwitch ID of the elastic network interface (ENI) in the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-wz9viido7j436b0n1****</p>
@@ -342,7 +342,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         public String eniVSwitchId;
 
         /**
-         * <p>The zone ID where the elastic network interface (ENI) that serves as the network interface controller (NIC) is active.</p>
+         * <p>The zone ID of the elastic network interface (ENI).</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
@@ -490,19 +490,19 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         public String attachmentName;
 
         /**
-         * <p>The CIDR blocks protected by the virtual private cloud (VPC) firewall.</p>
+         * <p>The list of CIDR blocks protected by the virtual private cloud (VPC) firewall.</p>
          */
         @NameInMap("DefendCidrList")
         public java.util.List<String> defendCidrList;
 
         /**
-         * <p>The network interface controller (NIC) list.</p>
+         * <p>The list of elastic network interfaces (ENIs).</p>
          */
         @NameInMap("EniList")
         public java.util.List<DescribeVpcFirewallCenDetailResponseBodyLocalVpcEniList> eniList;
 
         /**
-         * <p>The ID of the vSwitch specified when the routing mode is manual.</p>
+         * <p>The ID of the vSwitch specified when the routing mode is set to manual.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-zeq4o875u****</p>
@@ -511,7 +511,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         public String manualVSwitchId;
 
         /**
-         * <p>The VPC instance ID used to create a VPC firewall.</p>
+         * <p>The ID of the VPC for which the virtual private cloud (VPC) firewall is created.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2zefk9fbn8j7v585g****</p>
@@ -571,7 +571,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         public String routeMode;
 
         /**
-         * <p>Indicates whether the routing mode supports manual mode. Valid values:</p>
+         * <p>Indicates whether manual routing mode is supported. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: Supported.</li>
          * <li><strong>0</strong>: Not supported.</li>
@@ -584,7 +584,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         public String supportManualMode;
 
         /**
-         * <p>The instance ID of the CEN-TR.</p>
+         * <p>The instance ID of the CEN transit router (CEN-TR).</p>
          * 
          * <strong>example:</strong>
          * <p>tr-2zetwxskej633l3u1****</p>
@@ -593,7 +593,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         public String transitRouterId;
 
         /**
-         * <p>The version of the CEN transit router (CEN-TR). Valid values:</p>
+         * <p>The edition of the CEN transit router (CEN-TR). Valid values:</p>
          * <ul>
          * <li><p><strong>Basic</strong>: Basic Edition.</p>
          * </li>

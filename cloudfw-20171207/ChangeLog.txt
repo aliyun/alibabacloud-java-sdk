@@ -1,3 +1,9 @@
+2026-10-09 Version: 9.4.4
+- Update API DeleteControlPolicy: add request parameters ClientToken.
+- Update API DeleteControlPolicy: add request parameters DryRun.
+- Update API DeleteControlPolicy: add response parameters Body.DryRun.
+
+
 2026-09-04 Version: 9.4.3
 - Update API ListTlsInspectCACertificates: add response parameters Body.Certificates.$.CertChainExpirationTime.
 

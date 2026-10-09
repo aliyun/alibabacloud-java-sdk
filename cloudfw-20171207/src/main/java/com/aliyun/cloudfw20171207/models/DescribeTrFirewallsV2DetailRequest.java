@@ -7,7 +7,7 @@ public class DescribeTrFirewallsV2DetailRequest extends TeaModel {
     /**
      * <p>The ID of the VPC firewall instance. This parameter is required. If this parameter is not specified, the error ErrorMissingFirewallId (-360444, firewall id is required) is returned.</p>
      * <blockquote>
-     * <p>You can call DescribeTrFirewallsV2List to query existing FirewallId values (in the format of vfw-tr-*). If no firewall has been created, create an Enterprise Edition transit router in the CEN console first, and then call CreateTrFirewallV2.</p>
+     * <p>You can call DescribeTrFirewallsV2List to query existing FirewallId values (in the format of vfw-tr-\*). If no firewall has been created, create an Enterprise Edition transit router in the CEN console first, and then call CreateTrFirewallV2.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

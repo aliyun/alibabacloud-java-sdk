@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAddressBookResponseBody extends TeaModel {
     /**
-     * <p>Indicates that this is a successful dry run response. A value of true indicates that only the dry run was completed and no actual modification was performed.</p>
+     * <p>Indicates whether the request is a successful dry run. A value of true indicates that only the dry run is performed and no actual modifications are made.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyControlPolicyResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether this is a successful dry run response. A value of true indicates that only the dry run was completed and no actual modification was performed.</p>
+     * <p>Indicates whether the request is a dry run. A value of true indicates that only a dry run was performed and no actual modification was made.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;

@@ -20,7 +20,7 @@ public class DescribeVpcFirewallCenDetailRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The VPC instance ID used to create a VPC firewall.</p>
+     * <p>The ID of the VPC for which the virtual private cloud (VPC) firewall is created.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-2zefk9fbn8j7v585g****</p>
@@ -31,7 +31,7 @@ public class DescribeVpcFirewallCenDetailRequest extends TeaModel {
     /**
      * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
      * <blockquote>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/345777.html">DescribeVpcFirewallCenList</a> operation to query the instance ID of the VPC firewall.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/345777.html">DescribeVpcFirewallCenList</a> operation to query the instance ID of the virtual private cloud (VPC) firewall.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

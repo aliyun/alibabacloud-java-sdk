@@ -526,7 +526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>The member UID to be added must belong to the same resource directory. Otherwise, the error ErrorInstanceMemberNotBelongRd (-103308) is returned.</li>
      * </ul>
      * <h2>Rate limit</h2>
-     * <p>The single-user queries per second (QPS) limit for this operation is 10. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Call this operation as appropriate.</p>
+     * <p>The single-user queries per second (QPS) limit for this operation is 10. If the number of calls per second exceeds the limit, throttling is triggered. Throttling may affect your business. Call this operation within the limit.</p>
      * 
      * <b>summary</b> : 
      * <p>Adds member accounts to Cloud Firewall.</p>
@@ -568,7 +568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>The member UID to be added must belong to the same resource directory. Otherwise, the error ErrorInstanceMemberNotBelongRd (-103308) is returned.</li>
      * </ul>
      * <h2>Rate limit</h2>
-     * <p>The single-user queries per second (QPS) limit for this operation is 10. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Call this operation as appropriate.</p>
+     * <p>The single-user queries per second (QPS) limit for this operation is 10. If the number of calls per second exceeds the limit, throttling is triggered. Throttling may affect your business. Call this operation within the limit.</p>
      * 
      * <b>summary</b> : 
      * <p>Adds member accounts to Cloud Firewall.</p>
@@ -1620,7 +1620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Creates a virtual private cloud (VPC) firewall for an Enterprise Edition transit router (TR). Before calling this operation, create a CEN instance and an Enterprise Edition transit router in the CEN console, and synchronize the TR to Cloud Firewall. Then call this operation with the CEN ID, TransitRouterId, RegionNo, and RouteMode parameters.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a VPC firewall for a transit router. Before you begin: (1) Purchase Cloud Firewall. (2) Create a Cloud Enterprise Network (CEN) instance and enable an Enterprise Edition forwarding router. (3) Synchronize the transit router to Cloud Firewall.</p>
+     * <p>Creates a VPC firewall for a transit router (TR). Before you begin: (1) Purchase Cloud Firewall. (2) Create a Cloud Enterprise Network (CEN) instance and enable an Enterprise Edition forwarding router. (3) Synchronize the TR routing to Cloud Firewall.</p>
      * 
      * @param request CreateTrFirewallV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -1727,7 +1727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Creates a virtual private cloud (VPC) firewall for an Enterprise Edition transit router (TR). Before calling this operation, create a CEN instance and an Enterprise Edition transit router in the CEN console, and synchronize the TR to Cloud Firewall. Then call this operation with the CEN ID, TransitRouterId, RegionNo, and RouteMode parameters.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a VPC firewall for a transit router. Before you begin: (1) Purchase Cloud Firewall. (2) Create a Cloud Enterprise Network (CEN) instance and enable an Enterprise Edition forwarding router. (3) Synchronize the transit router to Cloud Firewall.</p>
+     * <p>Creates a VPC firewall for a transit router (TR). Before you begin: (1) Purchase Cloud Firewall. (2) Create a Cloud Enterprise Network (CEN) instance and enable an Enterprise Edition forwarding router. (3) Synchronize the TR routing to Cloud Firewall.</p>
      * 
      * @param request CreateTrFirewallV2Request
      * @return CreateTrFirewallV2Response
@@ -2553,9 +2553,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to delete an access control policy whose traffic direction is inbound or outbound.</p>
+     * <p>This operation is typically used to delete an access control policy whose traffic direction is inbound or outbound.</p>
      * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, throttling is triggered, which may affect your business. Call this operation appropriately.</p>
+     * <p>The QPS limit for a single user is 10 requests per second. If the limit is exceeded, API requests are throttled, which may affect your business. Invoke this operation at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an access control policy.</p>
@@ -2571,8 +2571,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AclUuid", request.aclUuid);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
             query.put("Direction", request.direction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
@@ -2602,9 +2610,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to delete an access control policy whose traffic direction is inbound or outbound.</p>
+     * <p>This operation is typically used to delete an access control policy whose traffic direction is inbound or outbound.</p>
      * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, throttling is triggered, which may affect your business. Call this operation appropriately.</p>
+     * <p>The QPS limit for a single user is 10 requests per second. If the limit is exceeded, API requests are throttled, which may affect your business. Invoke this operation at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an access control policy.</p>
@@ -12348,7 +12356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a VPC firewall for an Enterprise Edition transit router. You can obtain the FirewallId by calling DescribeTrFirewallsV2List. If no firewall has been created, prepare an Enterprise Edition transit router in the Cloud Enterprise Network (CEN) console first, and then call CreateTrFirewallV2 to create the firewall and obtain the FirewallId.</p>
+     * <p>Queries the details of a virtual private cloud (VPC) firewall for an Enterprise Edition transit router. You can call DescribeTrFirewallsV2List to obtain the FirewallId. If no firewall has been created, prepare an Enterprise Edition transit router in the Cloud Enterprise Network (CEN) console first, and then call CreateTrFirewallV2 to create a firewall and obtain the FirewallId.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the details of a VPC firewall for a transit router.</p>
@@ -12387,7 +12395,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a VPC firewall for an Enterprise Edition transit router. You can obtain the FirewallId by calling DescribeTrFirewallsV2List. If no firewall has been created, prepare an Enterprise Edition transit router in the Cloud Enterprise Network (CEN) console first, and then call CreateTrFirewallV2 to create the firewall and obtain the FirewallId.</p>
+     * <p>Queries the details of a virtual private cloud (VPC) firewall for an Enterprise Edition transit router. You can call DescribeTrFirewallsV2List to obtain the FirewallId. If no firewall has been created, prepare an Enterprise Edition transit router in the Cloud Enterprise Network (CEN) console first, and then call CreateTrFirewallV2 to create a firewall and obtain the FirewallId.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the details of a VPC firewall for a transit router.</p>
@@ -13562,12 +13570,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to query the details of a virtual private cloud (VPC) firewall. The VPC firewall protects traffic between network instances (including VPCs, virtual border routers (VBRs), and Cloud Connect Networks (CCNs)) in a CEN instance and a specified VPC.</p>
+     * <p>This operation is used to query the details of a virtual private cloud (VPC) firewall. The VPC firewall controls mutual access traffic between network instances (including VPCs, virtual border routers (VBRs), and Cloud Connect Network (CCN) instances) in a CEN instance and a specified VPC.</p>
      * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation as appropriate.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. Throttling may affect your business. Invoke this operation within the limit.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a virtual private cloud (VPC) firewall that protects traffic between network instances in a Cloud Enterprise Network (CEN) instance and a specified VPC.</p>
+     * <p>Queries the details of a virtual private cloud (VPC) firewall that controls mutual access traffic between a network instance in a Cloud Enterprise Network (CEN) instance and a specified VPC.</p>
      * 
      * @param request DescribeVpcFirewallCenDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13611,12 +13619,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to query the details of a virtual private cloud (VPC) firewall. The VPC firewall protects traffic between network instances (including VPCs, virtual border routers (VBRs), and Cloud Connect Networks (CCNs)) in a CEN instance and a specified VPC.</p>
+     * <p>This operation is used to query the details of a virtual private cloud (VPC) firewall. The VPC firewall controls mutual access traffic between network instances (including VPCs, virtual border routers (VBRs), and Cloud Connect Network (CCN) instances) in a CEN instance and a specified VPC.</p>
      * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation as appropriate.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. Throttling may affect your business. Invoke this operation within the limit.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a virtual private cloud (VPC) firewall that protects traffic between network instances in a Cloud Enterprise Network (CEN) instance and a specified VPC.</p>
+     * <p>Queries the details of a virtual private cloud (VPC) firewall that controls mutual access traffic between a network instance in a Cloud Enterprise Network (CEN) instance and a specified VPC.</p>
      * 
      * @param request DescribeVpcFirewallCenDetailRequest
      * @return DescribeVpcFirewallCenDetailResponse
@@ -15333,6 +15341,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This operation is used to modify an address book.</p>
+     * <h2>QPS limits</h2>
+     * <p>The queries per second (QPS) limit per user is 10. If this limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies an address book.</p>
@@ -15438,6 +15448,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This operation is used to modify an address book.</p>
+     * <h2>QPS limits</h2>
+     * <p>The queries per second (QPS) limit per user is 10. If this limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies an address book.</p>
@@ -15508,7 +15520,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>This operation is used to modify the configurations of an access control policy that allows, denies, or monitors traffic through Cloud Firewall.</p>
      * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the configurations of an access control policy.</p>
@@ -15641,7 +15653,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>This operation is used to modify the configurations of an access control policy that allows, denies, or monitors traffic through Cloud Firewall.</p>
      * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the configurations of an access control policy.</p>
@@ -16870,10 +16882,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the configuration of a VPC firewall for an Enterprise Edition transit router. Before you call this operation, create an Enterprise Edition transit router in the CEN console and call CreateTrFirewallV2 to create the firewall. You can call DescribeTrFirewallsV2List to obtain the FirewallId.</p>
+     * <p>Modifies the configuration of a virtual private cloud (VPC) firewall. Although this operation is named ModifyTrFirewallV2Configuration, it supports all VPC firewall types and is not limited to VPC firewalls for Enterprise Edition transit routers. The FirewallId format is not restricted to the vfw-tr-* prefix. Before calling this operation, create a VPC firewall instance. For transit router-type firewalls, call CreateTrFirewallV2 to create the firewall, and call DescribeTrFirewallsV2List to query the FirewallId.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a VPC firewall for a transit router. Before you call this operation, create a Cloud Enterprise Network (CEN) Enterprise Edition transit router and then call CreateTrFirewallV2 to create a VPC firewall for the transit router. You can obtain the FirewallId and then call this operation.</p>
+     * <p>Modifies the configuration of a VPC firewall for a transit router. <strong>Prerequisites</strong>: Cloud Enterprise Network (CEN) Enterprise Edition transit router → Create a VPC firewall for the transit router by calling CreateTrFirewallV2 → Obtain the FirewallId and then call this operation.</p>
      * 
      * @param request ModifyTrFirewallV2ConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16913,10 +16925,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the configuration of a VPC firewall for an Enterprise Edition transit router. Before you call this operation, create an Enterprise Edition transit router in the CEN console and call CreateTrFirewallV2 to create the firewall. You can call DescribeTrFirewallsV2List to obtain the FirewallId.</p>
+     * <p>Modifies the configuration of a virtual private cloud (VPC) firewall. Although this operation is named ModifyTrFirewallV2Configuration, it supports all VPC firewall types and is not limited to VPC firewalls for Enterprise Edition transit routers. The FirewallId format is not restricted to the vfw-tr-* prefix. Before calling this operation, create a VPC firewall instance. For transit router-type firewalls, call CreateTrFirewallV2 to create the firewall, and call DescribeTrFirewallsV2List to query the FirewallId.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a VPC firewall for a transit router. Before you call this operation, create a Cloud Enterprise Network (CEN) Enterprise Edition transit router and then call CreateTrFirewallV2 to create a VPC firewall for the transit router. You can obtain the FirewallId and then call this operation.</p>
+     * <p>Modifies the configuration of a VPC firewall for a transit router. <strong>Prerequisites</strong>: Cloud Enterprise Network (CEN) Enterprise Edition transit router → Create a VPC firewall for the transit router by calling CreateTrFirewallV2 → Obtain the FirewallId and then call this operation.</p>
      * 
      * @param request ModifyTrFirewallV2ConfigurationRequest
      * @return ModifyTrFirewallV2ConfigurationResponse
@@ -17854,13 +17866,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to modify the status of a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect. After you enable the VPC firewall, traffic between the two VPCs connected through Express Connect is protected by the VPC firewall. After you disable the VPC firewall, the VPC firewall no longer protects traffic between the two VPCs connected through Express Connect.
-     * Before you invoke this operation, make sure that you have invoked the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation to create a virtual private cloud (VPC) firewall.</p>
+     * <p>This operation is used to modify the status of a virtual private cloud (VPC) firewall. The VPC firewall protects traffic between two VPCs connected through an Express Connect circuit. After you enable the VPC firewall, mutual access traffic between the two VPCs connected through the Express Connect circuit is protected by the VPC firewall. After you disable the VPC firewall, the VPC firewall no longer protects mutual access traffic between the two VPCs connected through the Express Connect circuit.
+     * Before you invoke this operation, make sure that you have invoked the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation to create a VPC firewall.</p>
      * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Manage your calls to this operation accordingly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the status of a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.</p>
+     * <p>Modifies the status of a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through an Express Connect circuit.</p>
      * 
      * @param request ModifyVpcFirewallSwitchStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17904,13 +17916,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to modify the status of a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect. After you enable the VPC firewall, traffic between the two VPCs connected through Express Connect is protected by the VPC firewall. After you disable the VPC firewall, the VPC firewall no longer protects traffic between the two VPCs connected through Express Connect.
-     * Before you invoke this operation, make sure that you have invoked the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation to create a virtual private cloud (VPC) firewall.</p>
+     * <p>This operation is used to modify the status of a virtual private cloud (VPC) firewall. The VPC firewall protects traffic between two VPCs connected through an Express Connect circuit. After you enable the VPC firewall, mutual access traffic between the two VPCs connected through the Express Connect circuit is protected by the VPC firewall. After you disable the VPC firewall, the VPC firewall no longer protects mutual access traffic between the two VPCs connected through the Express Connect circuit.
+     * Before you invoke this operation, make sure that you have invoked the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation to create a VPC firewall.</p>
      * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Manage your calls to this operation accordingly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the status of a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.</p>
+     * <p>Modifies the status of a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through an Express Connect circuit.</p>
      * 
      * @param request ModifyVpcFirewallSwitchStatusRequest
      * @return ModifyVpcFirewallSwitchStatusResponse

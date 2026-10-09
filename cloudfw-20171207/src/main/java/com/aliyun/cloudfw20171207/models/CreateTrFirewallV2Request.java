@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateTrFirewallV2Request extends TeaModel {
     /**
-     * <p>The ID of the CEN instance. This parameter is required. Create a CEN instance in the CEN console before calling this operation, and ensure that an Enterprise Edition transit router has been created.</p>
+     * <p>The ID of the CEN instance. Create a CEN instance in the CEN console first and make sure that an Enterprise Edition transit router has been created.</p>
+     * <blockquote>
+     * <p>Note: Although this parameter is marked as not required in the schema, it is actually required. If this parameter is not specified, the ErrorParameters (400) error is returned.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>cen-4xbjup276au29r****</p>
@@ -47,7 +50,7 @@ public class CreateTrFirewallV2Request extends TeaModel {
      * <li><strong>MultiPrimary</strong>: Active-active mode.</li>
      * </ul>
      * <blockquote>
-     * <p>If this parameter is not specified, the system automatically selects a deployment mode based on the capabilities of the transit router. If an invalid value is specified, the error ErrorFwServiceMode (-360437) is returned. MultiPrimary mode does not support specifying zones.</p>
+     * <p>If this parameter is not specified, the system automatically selects a deployment mode based on the capabilities of the transit router. If an invalid value is specified, the ErrorFwServiceMode (-360437) error is returned. The MultiPrimary mode does not support specifying zones.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,7 +66,7 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public java.util.List<String> firewallServiceZones;
 
     /**
-     * <p>The subnet CIDR block used to store the firewall ENI in the firewall VPC in automatic mode.</p>
+     * <p>The subnet CIDR block used to store the firewall elastic network interface (ENI) in the firewall VPC in automatic mode.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.1.0/24</p>
@@ -113,7 +116,10 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public String lang;
 
     /**
-     * <p>The region ID of the Enterprise Edition transit router. This parameter is required.</p>
+     * <p>The region ID of the Enterprise Edition transit router.</p>
+     * <blockquote>
+     * <p>Note: Although this parameter is marked as not required in the schema, it is actually required. If this parameter is not specified, the ErrorParameters (400) error is returned.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -122,7 +128,10 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public String regionNo;
 
     /**
-     * <p>The routing mode. This parameter is required. Valid values: managed (automatic mode) and manual (manual mode). In managed mode, you must specify FirewallVpcCidr, FirewallSubnetCidr, TrAttachmentSlaveCidr, and TrAttachmentMasterCidr. In manual mode, you must specify FirewallVpcId, FirewallVswitchId, TrAttachmentSlaveZone, and TrAttachmentMasterZone.</p>
+     * <p>The routing mode. Valid values: managed (automatic mode) and manual (manual mode). In managed mode, only FirewallVpcCidr is required. The FirewallSubnetCidr, TrAttachmentSlaveCidr, and TrAttachmentMasterCidr parameters are deprecated and do not need to be specified. In manual mode, specify FirewallVpcId, FirewallVswitchId, TrAttachmentSlaveZone, and TrAttachmentMasterZone.</p>
+     * <blockquote>
+     * <p>Note: Although this parameter is marked as not required in the schema, it is actually required. If this parameter is not specified, the ErrorParameters (400) error is returned.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>managed</p>
@@ -175,7 +184,10 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public java.util.List<String> trAttachmentZones;
 
     /**
-     * <p>The ID of the Enterprise Edition transit router instance. This parameter is required. The transit router must belong to the CEN instance specified by CenId.</p>
+     * <p>The ID of the Enterprise Edition transit router instance. The transit router must belong to the CEN instance specified by CenId.</p>
+     * <blockquote>
+     * <p>Note: Although this parameter is marked as not required in the schema, it is actually required. If this parameter is not specified, the ErrorParameters (400) error is returned.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>tr-m5etmb2q7e0mxcur****</p>

@@ -7,9 +7,9 @@ public class ModifyVpcFirewallSwitchStatusRequest extends TeaModel {
     /**
      * <p>The status of the virtual private cloud (VPC) firewall. Valid values:</p>
      * <ul>
-     * <li><p><strong>open</strong>: enabled.</p>
+     * <li><p><strong>open</strong>: Enable.</p>
      * </li>
-     * <li><p><strong>close</strong>: disabled.</p>
+     * <li><p><strong>close</strong>: Disable.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
