@@ -8,7 +8,7 @@ public class CreateReceiverRequest extends TeaModel {
      * <p>The comment.</p>
      * 
      * <strong>example:</strong>
-     * <p>Customer A.</p>
+     * <p>客户A。</p>
      */
     @NameInMap("comment")
     public String comment;

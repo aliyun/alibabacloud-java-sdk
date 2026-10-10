@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListCatalogsResponseBody extends TeaModel {
     /**
-     * <p>A list of catalogs.</p>
+     * <p>The list of catalogs.</p>
      */
     @NameInMap("catalogs")
     public java.util.List<Catalog> catalogs;
 
     /**
-     * <p>The token to retrieve the next page of results. If this parameter is null, all results have been returned.</p>
+     * <p>The pagination token used to retrieve the next page of results. A null value indicates that the current query has reached the last page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>E8ABEB1C3DB893D16576269017992F57</p>
@@ -20,7 +20,7 @@ public class ListCatalogsResponseBody extends TeaModel {
     public String nextPageToken;
 
     /**
-     * <p>A list of subscription computing resources.</p>
+     * <p>The list of subscription compute resources.</p>
      */
     @NameInMap("prepayResource")
     public java.util.List<PrepayResource> prepayResource;

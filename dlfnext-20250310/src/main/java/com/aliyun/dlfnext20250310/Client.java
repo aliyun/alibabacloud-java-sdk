@@ -940,7 +940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a data lake data catalog. The following conditions must be met, otherwise the deletion will fail: all tables and user-created databases under the catalog have been deleted; the databases and tables have been deleted for at least 24 hours.</p>
+     * <p>Deletes a data lake data catalog. The deletion fails unless the following conditions are met: all tables and self-managed databases under the catalog have been deleted, and the databases and tables have been deleted for at least 24 hours.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -966,7 +966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a data lake data catalog. The following conditions must be met, otherwise the deletion will fail: all tables and user-created databases under the catalog have been deleted; the databases and tables have been deleted for at least 24 hours.</p>
+     * <p>Deletes a data lake data catalog. The deletion fails unless the following conditions are met: all tables and self-managed databases under the catalog have been deleted, and the databases and tables have been deleted for at least 24 hours.</p>
      * @return DropCatalogResponse
      */
     public DropCatalogResponse dropCatalog(String catalog) throws Exception {
@@ -1125,7 +1125,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a catalog.</p>
+     * <p>Retrieves the details of a data catalog.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1151,7 +1151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a catalog.</p>
+     * <p>Retrieves the details of a data catalog.</p>
      * @return GetCatalogResponse
      */
     public GetCatalogResponse getCatalog(String catalog) throws Exception {
@@ -1162,7 +1162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a catalog.</p>
+     * <p>Retrieves the details of a data catalog.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1188,7 +1188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a catalog.</p>
+     * <p>Retrieves the details of a data catalog.</p>
      * @return GetCatalogByIdResponse
      */
     public GetCatalogByIdResponse getCatalogById(String id) throws Exception {
@@ -2078,7 +2078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists catalogs.</p>
+     * <p>Queries the list of data catalogs.</p>
      * 
      * @param request ListCatalogsRequest
      * @param headers map
@@ -2120,7 +2120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists catalogs.</p>
+     * <p>Queries the list of data catalogs.</p>
      * 
      * @param request ListCatalogsRequest
      * @return ListCatalogsResponse
@@ -3688,6 +3688,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.subscribeWithOptions(headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes tags from resources.</p>
+     * 
+     * @param tmpReq UntagResourcesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UntagResourcesResponse
+     */
+    public UntagResourcesResponse untagResourcesWithOptions(UntagResourcesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UntagResourcesShrinkRequest request = new UntagResourcesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceId)) {
+            request.resourceIdShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceId, "resourceId", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tagKey)) {
+            request.tagKeyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tagKey, "tagKey", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.all)) {
+            query.put("all", request.all);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIdShrink)) {
+            query.put("resourceId", request.resourceIdShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("resourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagKeyShrink)) {
+            query.put("tagKey", request.tagKeyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UntagResources"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/tags"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes tags from resources.</p>
+     * 
+     * @param request UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
+    public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.untagResourcesWithOptions(request, headers, runtime);
     }
 
     /**
