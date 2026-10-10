@@ -470,7 +470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch Invocation of Images</p>
+     * <p>Invokes image moderation in batches.</p>
      * 
      * @param request ImageBatchModerationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -506,7 +506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch Invocation of Images</p>
+     * <p>Invokes image moderation in batches.</p>
      * 
      * @param request ImageBatchModerationRequest
      * @return ImageBatchModerationResponse
@@ -518,15 +518,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, complete the following steps:</p>
+     * <p>Before calling this API operation, complete the following tasks:</p>
      * <ol>
-     * <li><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate AI Guardrails-Enhanced Edition</a>.</li>
-     * <li>Understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of the enhanced image moderation feature.</li>
-     * <li>For more information about API usage and parameters, see the <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</li>
+     * <li><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate Content Moderation Enhanced Edition</a>.</li>
+     * <li>Fully understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of Image Moderation Enhanced Edition.</li>
+     * <li>For more information about how to use the API operation and its parameters, refer to the <a href="https://help.aliyun.com/document_detail/467829.html">API operation documentation</a>.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Image moderation</p>
+     * <p>Moderates images.</p>
      * 
      * @param request ImageModerationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -562,15 +562,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, complete the following steps:</p>
+     * <p>Before calling this API operation, complete the following tasks:</p>
      * <ol>
-     * <li><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate AI Guardrails-Enhanced Edition</a>.</li>
-     * <li>Understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of the enhanced image moderation feature.</li>
-     * <li>For more information about API usage and parameters, see the <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</li>
+     * <li><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate Content Moderation Enhanced Edition</a>.</li>
+     * <li>Fully understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of Image Moderation Enhanced Edition.</li>
+     * <li>For more information about how to use the API operation and its parameters, refer to the <a href="https://help.aliyun.com/document_detail/467829.html">API operation documentation</a>.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Image moderation</p>
+     * <p>Moderates images.</p>
      * 
      * @param request ImageModerationRequest
      * @return ImageModerationResponse
