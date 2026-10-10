@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDocumentsShrinkRequest extends TeaModel {
     /**
-     * <p>A list of document IDs.</p>
+     * <p>The list of document IDs.</p>
      */
     @NameInMap("DocumentIds")
     public String documentIdsShrink;
@@ -30,7 +30,7 @@ public class DeleteDocumentsShrinkRequest extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The schema ID.</p>
+     * <p>schema id</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

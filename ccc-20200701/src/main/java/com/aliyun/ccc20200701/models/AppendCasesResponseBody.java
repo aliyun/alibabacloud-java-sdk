@@ -13,6 +13,9 @@ public class AppendCasesResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list of processing results for appending outbound call cases.</p>
+     */
     @NameInMap("Data")
     public java.util.List<AppendCasesResponseBodyData> data;
 
@@ -29,7 +32,7 @@ public class AppendCasesResponseBody extends TeaModel {
      * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
@@ -89,12 +92,21 @@ public class AppendCasesResponseBody extends TeaModel {
     }
 
     public static class AppendCasesResponseBodyData extends TeaModel {
+        /**
+         * <p>The custom variables of the contact, represented as a JSON string.</p>
+         */
         @NameInMap("CustomVariables")
         public String customVariables;
 
+        /**
+         * <p>The phone number of the contact.</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <p>The unique identifier of the contact in the customer\&quot;s business system.</p>
+         */
         @NameInMap("ReferenceId")
         public String referenceId;
 

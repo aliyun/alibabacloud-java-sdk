@@ -14,7 +14,7 @@ public class ExportDoNotCallNumbersResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The OSS download link for the exported file. The link is valid for 24 hours.</p>
+     * <p>The data, which is the OSS download URL for the export result. The URL is valid for 24 hours.</p>
      * 
      * <strong>example:</strong>
      * <p>https://<strong><strong>.oss-cn-shanghai.aliyuncs.com/ccc-test/blacklist.xlsx?Expires=3294624578&amp;OSSAccessKeyId=</strong></strong>&amp;Signature=****</p>
@@ -35,13 +35,16 @@ public class ExportDoNotCallNumbersResponseBody extends TeaModel {
      * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The list of error parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;ParameterName&quot;]</p>
      */
     @NameInMap("Params")
     public java.util.List<String> params;

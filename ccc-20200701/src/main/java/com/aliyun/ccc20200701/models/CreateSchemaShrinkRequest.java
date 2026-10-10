@@ -16,7 +16,7 @@ public class CreateSchemaShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The schema ID.</p>
+     * <p>schema id</p>
      * 
      * <strong>example:</strong>
      * <p>profile</p>
@@ -35,7 +35,7 @@ public class CreateSchemaShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The list of fields.</p>
+     * <p>The list of properties.</p>
      */
     @NameInMap("Properties")
     public String propertiesShrink;

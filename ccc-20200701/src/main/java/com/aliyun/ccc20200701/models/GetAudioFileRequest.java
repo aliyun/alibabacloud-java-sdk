@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAudioFileRequest extends TeaModel {
     /**
-     * <p>Audio resource ID, the UUID of the audio file.</p>
+     * <p>The audio resource ID, which is the unique identifier of the audio file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetAudioFileRequest extends TeaModel {
     public String audioResourceId;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

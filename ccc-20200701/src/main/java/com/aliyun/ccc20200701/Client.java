@@ -537,6 +537,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Adds a property to the schema of a specified instance.</p>
+     * 
      * @param tmpReq AddSchemaPropertyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddSchemaPropertyResponse
@@ -584,6 +587,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Adds a property to the schema of a specified instance.</p>
+     * 
      * @param request AddSchemaPropertyRequest
      * @return AddSchemaPropertyResponse
      */
@@ -880,7 +886,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds cases to a predictive campaign in a specified instance.</p>
+     * <p>Appends outbound call cases to a specified predictive outbound campaign under an instance.</p>
      * 
      * @param tmpReq AppendCasesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -928,7 +934,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds cases to a predictive campaign in a specified instance.</p>
+     * <p>Appends outbound call cases to a specified predictive outbound campaign under an instance.</p>
      * 
      * @param request AppendCasesRequest
      * @return AppendCasesResponse
@@ -940,10 +946,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Accounts with RAM permissions can view all RAM users under an Alibaba Cloud account in the RAM console. You can access the RAM console at https\://ram.console.aliyun.com/users.</p>
+     * <p>Accounts with RAM permissions can query all Resource Access Management (RAM) users managed under the Alibaba Cloud account in the Resource Access Management (RAM) console. RAM console URL: <a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Call AssignUsers to import one or more RAM users into a specified instance. After the import, the RAM users become agents in the instance.</p>
+     * <p>Imports one or more RAM users into a specified instance. After a successful import, the RAM users exist as agents in the instance.</p>
      * 
      * @deprecated OpenAPI AssignUsers is deprecated, please use CCC::2020-07-01::ImportRamUsers instead.
      * 
@@ -999,10 +1005,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Accounts with RAM permissions can view all RAM users under an Alibaba Cloud account in the RAM console. You can access the RAM console at https\://ram.console.aliyun.com/users.</p>
+     * <p>Accounts with RAM permissions can query all Resource Access Management (RAM) users managed under the Alibaba Cloud account in the Resource Access Management (RAM) console. RAM console URL: <a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Call AssignUsers to import one or more RAM users into a specified instance. After the import, the RAM users become agents in the instance.</p>
+     * <p>Imports one or more RAM users into a specified instance. After a successful import, the RAM users exist as agents in the instance.</p>
      * 
      * @deprecated OpenAPI AssignUsers is deprecated, please use CCC::2020-07-01::ImportRamUsers instead.
      * 
@@ -2077,6 +2083,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the upload URL for chat message media files.</p>
+     * 
      * @param request CreateChatMediaUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateChatMediaUrlResponse
@@ -2114,6 +2123,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the upload URL for chat message media files.</p>
+     * 
      * @param request CreateChatMediaUrlRequest
      * @return CreateChatMediaUrlResponse
      */
@@ -2299,6 +2311,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a schema in a specified instance.</p>
+     * 
      * @param tmpReq CreateSchemaRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateSchemaResponse
@@ -2350,6 +2365,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a schema in a specified instance.</p>
+     * 
      * @param request CreateSchemaRequest
      * @return CreateSchemaResponse
      */
@@ -2682,7 +2700,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the specified contact flow.</p>
+     * <p>Deletes a specified contact flow.</p>
      * 
      * @param request DeleteContactFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2722,7 +2740,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the specified contact flow.</p>
+     * <p>Deletes a specified contact flow.</p>
      * 
      * @param request DeleteContactFlowRequest
      * @return DeleteContactFlowResponse
@@ -2781,6 +2799,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a single document from a specified instance.</p>
+     * 
      * @param request DeleteDocumentRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDocumentResponse
@@ -2822,6 +2843,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a single document from a specified instance.</p>
+     * 
      * @param request DeleteDocumentRequest
      * @return DeleteDocumentResponse
      */
@@ -2831,6 +2855,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes documents from a specified instance in batches.</p>
+     * 
      * @param tmpReq DeleteDocumentsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDocumentsResponse
@@ -2878,6 +2905,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes documents from a specified instance in batches.</p>
+     * 
      * @param request DeleteDocumentsRequest
      * @return DeleteDocumentsResponse
      */
@@ -2887,6 +2917,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a specified Cloud Call Center instance.</p>
+     * 
      * @param request DeleteInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteInstanceResponse
@@ -2916,6 +2949,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a specified Cloud Call Center instance.</p>
+     * 
      * @param request DeleteInstanceRequest
      * @return DeleteInstanceResponse
      */
@@ -2925,6 +2961,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a schema from the specified instance.</p>
+     * 
      * @param request DeleteSchemaRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteSchemaResponse
@@ -2962,6 +3001,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a schema from the specified instance.</p>
+     * 
      * @param request DeleteSchemaRequest
      * @return DeleteSchemaResponse
      */
@@ -2971,6 +3013,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a property in a specified schema.</p>
+     * 
      * @param request DeleteSchemaPropertyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteSchemaPropertyResponse
@@ -3012,6 +3057,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a property in a specified schema.</p>
+     * 
      * @param request DeleteSchemaPropertyRequest
      * @return DeleteSchemaPropertyResponse
      */
@@ -3169,6 +3217,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disables a field in a specified schema.</p>
+     * 
      * @param request DisableSchemaPropertyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableSchemaPropertyResponse
@@ -3210,6 +3261,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disables a field in a specified schema.</p>
+     * 
      * @param request DisableSchemaPropertyRequest
      * @return DisableSchemaPropertyResponse
      */
@@ -3319,6 +3373,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Enables a property in a specified schema.</p>
+     * 
      * @param request EnableSchemaPropertyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableSchemaPropertyResponse
@@ -3360,6 +3417,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Enables a property in a specified schema.</p>
+     * 
      * @param request EnableSchemaPropertyRequest
      * @return EnableSchemaPropertyResponse
      */
@@ -3469,6 +3529,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Exports the IVR contact flow of a specified instance.</p>
+     * 
      * @param request ExportContactFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ExportContactFlowResponse
@@ -3506,6 +3569,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Exports the IVR contact flow of a specified instance.</p>
+     * 
      * @param request ExportContactFlowRequest
      * @return ExportContactFlowResponse
      */
@@ -3568,7 +3634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ExportDoNotCallNumbers operation exports a filtered list of do-not-call numbers from a specified instance.</p>
+     * <p>Exports the list of do-not-call numbers filtered by the specified search conditions for a specified instance.</p>
      * 
      * @param request ExportDoNotCallNumbersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3608,7 +3674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ExportDoNotCallNumbers operation exports a filtered list of do-not-call numbers from a specified instance.</p>
+     * <p>Exports the list of do-not-call numbers filtered by the specified search conditions for a specified instance.</p>
      * 
      * @param request ExportDoNotCallNumbersRequest
      * @return ExportDoNotCallNumbersResponse
@@ -3716,7 +3782,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke GetAudioFile to obtain the audio file information corresponding to a specified audio resource ID under a specified instance.</p>
+     * <p>Retrieves the information about an audio file for a specified audio resource ID in a specified instance.</p>
      * 
      * @param request GetAudioFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3752,7 +3818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke GetAudioFile to obtain the audio file information corresponding to a specified audio resource ID under a specified instance.</p>
+     * <p>Retrieves the information about an audio file for a specified audio resource ID in a specified instance.</p>
      * 
      * @param request GetAudioFileRequest
      * @return GetAudioFileResponse
@@ -3860,7 +3926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can invoke the GetCallDetailRecord operation to retrieve call details for a specific call ID within a specific instance.</p>
+     * <p>Retrieves the details of a call specified by call ID for a specified instance.</p>
      * 
      * @param request GetCallDetailRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3896,7 +3962,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can invoke the GetCallDetailRecord operation to retrieve call details for a specific call ID within a specific instance.</p>
+     * <p>Retrieves the details of a call specified by call ID for a specified instance.</p>
      * 
      * @param request GetCallDetailRecordRequest
      * @return GetCallDetailRecordResponse
@@ -4003,6 +4069,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the access URL for a media file in a chat message.</p>
+     * 
      * @param request GetChatMediaUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetChatMediaUrlResponse
@@ -4040,6 +4109,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the access URL for a media file in a chat message.</p>
+     * 
      * @param request GetChatMediaUrlRequest
      * @return GetChatMediaUrlResponse
      */
@@ -4094,7 +4166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve a specified contact flow.</p>
+     * <p>Retrieves a specified contact flow.</p>
      * 
      * @param request GetContactFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4134,7 +4206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve a specified contact flow.</p>
+     * <p>Retrieves a specified contact flow.</p>
      * 
      * @param request GetContactFlowRequest
      * @return GetContactFlowResponse
@@ -4293,6 +4365,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the upload parameters required to import a document.</p>
+     * 
      * @param request GetDocumentUploadParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDocumentUploadParametersResponse
@@ -4330,6 +4405,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the upload parameters required to import a document.</p>
+     * 
      * @param request GetDocumentUploadParametersRequest
      * @return GetDocumentUploadParametersResponse
      */
@@ -4540,7 +4618,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a Cloud Contact Center instance.</p>
+     * <p>Queries the details of a Cloud Call Center instance based on the specified instance ID.</p>
      * 
      * @param request GetInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4572,7 +4650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a Cloud Contact Center instance.</p>
+     * <p>Queries the details of a Cloud Call Center instance based on the specified instance ID.</p>
      * 
      * @param request GetInstanceRequest
      * @return GetInstanceResponse
@@ -4975,6 +5053,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the schema and its field definitions in a specified instance.</p>
+     * 
      * @param request GetSchemaRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSchemaResponse
@@ -5012,6 +5093,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the schema and its field definitions in a specified instance.</p>
+     * 
      * @param request GetSchemaRequest
      * @return GetSchemaResponse
      */
@@ -5118,7 +5202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about a specific ticket.</p>
+     * <p>Queries the details of a specified ticket.</p>
      * 
      * @param request GetTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5154,7 +5238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about a specific ticket.</p>
+     * <p>Queries the details of a specified ticket.</p>
      * 
      * @param request GetTicketRequest
      * @return GetTicketResponse
@@ -8026,6 +8110,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListFlashSmsTemplatesResponse listFlashSmsTemplates(ListFlashSmsTemplatesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listFlashSmsTemplatesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>若RAM子账号需要调用该接口，则需具有“管理云呼叫中心(CCC)的权限”（AliyunCCCFullAccess）。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询函数元数据</p>
+     * 
+     * @param request ListFunctionMetasRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFunctionMetasResponse
+     */
+    public ListFunctionMetasResponse listFunctionMetasWithOptions(ListFunctionMetasRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hasHttpTrigger)) {
+            query.put("HasHttpTrigger", request.hasHttpTrigger);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListFunctionMetas"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFunctionMetasResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>若RAM子账号需要调用该接口，则需具有“管理云呼叫中心(CCC)的权限”（AliyunCCCFullAccess）。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询函数元数据</p>
+     * 
+     * @param request ListFunctionMetasRequest
+     * @return ListFunctionMetasResponse
+     */
+    public ListFunctionMetasResponse listFunctionMetas(ListFunctionMetasRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listFunctionMetasWithOptions(request, runtime);
     }
 
     /**

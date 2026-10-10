@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AppendCasesShrinkRequest extends TeaModel {
     /**
-     * <p>The predictive campaign ID.</p>
+     * <p>The predictive outbound campaign ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class AppendCasesShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The list of cases to be added.</p>
+     * <p>The list of outbound call cases in the request body.</p>
      */
     @NameInMap("body")
     public String bodyShrink;

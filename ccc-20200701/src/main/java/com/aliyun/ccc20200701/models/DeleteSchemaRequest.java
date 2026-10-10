@@ -24,7 +24,7 @@ public class DeleteSchemaRequest extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The schema ID.</p>
+     * <p>schema id</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

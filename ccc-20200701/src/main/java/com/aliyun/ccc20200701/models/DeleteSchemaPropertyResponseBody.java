@@ -32,7 +32,7 @@ public class DeleteSchemaPropertyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The information about error parameters.</p>
+     * <p>The error parameter information.</p>
      */
     @NameInMap("Params")
     public java.util.List<String> params;

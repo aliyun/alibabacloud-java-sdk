@@ -35,7 +35,7 @@ public class ExportContactFlowResponseBody extends TeaModel {
      * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
@@ -47,7 +47,7 @@ public class ExportContactFlowResponseBody extends TeaModel {
     public java.util.List<String> params;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>DE803553-8AA9-4B9D-9E4E-A82BC69EDCEE</p>

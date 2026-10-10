@@ -16,7 +16,7 @@ public class CreateSchemaRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The schema ID.</p>
+     * <p>schema id</p>
      * 
      * <strong>example:</strong>
      * <p>profile</p>
@@ -35,7 +35,7 @@ public class CreateSchemaRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The list of fields.</p>
+     * <p>The list of properties.</p>
      */
     @NameInMap("Properties")
     public java.util.List<CreateSchemaRequestProperties> properties;
@@ -96,7 +96,7 @@ public class CreateSchemaRequest extends TeaModel {
 
     public static class CreateSchemaRequestProperties extends TeaModel {
         /**
-         * <p>Indicates whether the field is an array.</p>
+         * <p>Specifies whether the field is an array.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -105,7 +105,7 @@ public class CreateSchemaRequest extends TeaModel {
         public Boolean array;
 
         /**
-         * <p>The extended properties.</p>
+         * <p>The extended attributes.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;Clusters\&quot;: {\&quot;Description\&quot;: \&quot;The list of clusters.\&quot;}, \&quot;ClusterIds\&quot;: {\&quot;Description\&quot;: \&quot;The list of cluster IDs.\&quot;}}</p>
@@ -124,7 +124,7 @@ public class CreateSchemaRequest extends TeaModel {
         public String dataType;
 
         /**
-         * <p>The description of the version.</p>
+         * <p>The version description.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -135,7 +135,7 @@ public class CreateSchemaRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the field is disabled.</p>
+         * <p>Specifies whether the field is disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -144,10 +144,10 @@ public class CreateSchemaRequest extends TeaModel {
         public Boolean disabled;
 
         /**
-         * <p>The display name for agents.</p>
+         * <p>The display name of the agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>显示名称</p>
+         * <p>Display name</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -180,7 +180,7 @@ public class CreateSchemaRequest extends TeaModel {
         public Integer maxLength;
 
         /**
-         * <p>The maximum value of the number.</p>
+         * <p>The maximum numeric value.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -198,7 +198,7 @@ public class CreateSchemaRequest extends TeaModel {
         public Integer minLength;
 
         /**
-         * <p>The minimum value of the number.</p>
+         * <p>The minimum numeric value.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -217,7 +217,7 @@ public class CreateSchemaRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The regular expression that is used for validation.</p>
+         * <p>The regular expression validation rule.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -228,16 +228,16 @@ public class CreateSchemaRequest extends TeaModel {
         public String pattern;
 
         /**
-         * <p>The error message that is returned when the regular expression fails to match.</p>
+         * <p>The error message for regular expression validation.</p>
          * 
          * <strong>example:</strong>
-         * <p>错误的格式</p>
+         * <p>Invalid format</p>
          */
         @NameInMap("PatternErrorMessage")
         public String patternErrorMessage;
 
         /**
-         * <p>Indicates whether the field is read-only.</p>
+         * <p>Specifies whether the field is read-only.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -246,7 +246,7 @@ public class CreateSchemaRequest extends TeaModel {
         public Boolean readOnly;
 
         /**
-         * <p>Indicates whether the field is required.</p>
+         * <p>Specifies whether the field is required.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

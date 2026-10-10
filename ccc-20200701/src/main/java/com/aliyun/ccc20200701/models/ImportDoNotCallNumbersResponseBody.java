@@ -31,6 +31,10 @@ public class ImportDoNotCallNumbersResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;ParameterName&quot;]</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 

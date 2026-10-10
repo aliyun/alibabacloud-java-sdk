@@ -32,13 +32,13 @@ public class GetTicketResponseBody extends TeaModel {
      * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The list of incorrect parameters.</p>
+     * <p>The list of error parameters.</p>
      */
     @NameInMap("Params")
     public java.util.List<String> params;
@@ -107,7 +107,7 @@ public class GetTicketResponseBody extends TeaModel {
 
     public static class GetTicketResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the assignee.</p>
+         * <p>The assignee ID.</p>
          * 
          * <strong>example:</strong>
          * <p>agent1@ccc-test</p>
@@ -116,10 +116,10 @@ public class GetTicketResponseBody extends TeaModel {
         public String assignee;
 
         /**
-         * <p>The name of the assignee.</p>
+         * <p>The assignee name.</p>
          * 
          * <strong>example:</strong>
-         * <p>坐席A</p>
+         * <p>Agent A</p>
          */
         @NameInMap("AssigneeName")
         public String assigneeName;
@@ -134,21 +134,19 @@ public class GetTicketResponseBody extends TeaModel {
         public String categoryId;
 
         /**
-         * <p>The name of the ticket category.</p>
+         * <p>The ticket category name.</p>
          * 
          * <strong>example:</strong>
-         * <p>售后类目</p>
+         * <p>After-sales category</p>
          */
         @NameInMap("CategoryName")
         public String categoryName;
 
         /**
-         * <p>The reason for closing the ticket.</p>
+         * <p>The reason for closing the ticket. Valid values:</p>
          * <ul>
-         * <li><p>Completed</p>
-         * </li>
-         * <li><p>Terminated</p>
-         * </li>
+         * <li>Completed: Completed.</li>
+         * <li>Terminated: Canceled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,25 +156,25 @@ public class GetTicketResponseBody extends TeaModel {
         public String closeCode;
 
         /**
-         * <p>The comment.</p>
+         * <p>The handling comments.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
-         * <p>The fields of the ticket.</p>
+         * <p>The ticket field information.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;productName&quot;:&quot;商品A&quot;}</p>
+         * <p>{&quot;productName&quot;:&quot;Product A&quot;}</p>
          */
         @NameInMap("Context")
         public String context;
 
         /**
-         * <p>The time when the ticket was created.</p>
+         * <p>The time when the ticket was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1620259200000</p>
@@ -185,7 +183,7 @@ public class GetTicketResponseBody extends TeaModel {
         public Long createdTime;
 
         /**
-         * <p>The ID of the creator.</p>
+         * <p>The creator ID.</p>
          * 
          * <strong>example:</strong>
          * <p>creator@ccc-test</p>
@@ -194,16 +192,16 @@ public class GetTicketResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The name of the creator.</p>
+         * <p>The creator name.</p>
          * 
          * <strong>example:</strong>
-         * <p>坐席B</p>
+         * <p>Agent B</p>
          */
         @NameInMap("CreatorName")
         public String creatorName;
 
         /**
-         * <p>The ID of the current node.</p>
+         * <p>The current node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>912f0b78-6639-4a93-ae18-0d832885c27e</p>
@@ -212,16 +210,16 @@ public class GetTicketResponseBody extends TeaModel {
         public String currentTaskId;
 
         /**
-         * <p>The name of the current node.</p>
+         * <p>The current node name.</p>
          * 
          * <strong>example:</strong>
-         * <p>节点1</p>
+         * <p>Node 1</p>
          */
         @NameInMap("CurrentTaskName")
         public String currentTaskName;
 
         /**
-         * <p>The time when the current node started.</p>
+         * <p>The start time of the current node. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1693793208075</p>
@@ -230,7 +228,7 @@ public class GetTicketResponseBody extends TeaModel {
         public Long currentTaskStartTime;
 
         /**
-         * <p>The customer ID. This is the customer ID in the customer profile of Cloud Contact Center.</p>
+         * <p>The customer ID in the customer profile of Cloud Call Center.</p>
          * 
          * <strong>example:</strong>
          * <p>4223-86d0-6bd187905-891798749</p>
@@ -239,7 +237,7 @@ public class GetTicketResponseBody extends TeaModel {
         public String customerId;
 
         /**
-         * <p>The time when the ticket processing was completed.</p>
+         * <p>The completion time of ticket processing. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1687846259999</p>
@@ -266,14 +264,11 @@ public class GetTicketResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The source of the ticket.</p>
+         * <p>The ticket source. Valid values:</p>
          * <ul>
-         * <li><p>AUDIO: Voice service.</p>
-         * </li>
-         * <li><p>CHAT: Web service.</p>
-         * </li>
-         * <li><p>Console: Created in the ticket console.</p>
-         * </li>
+         * <li>AUDIO: Voice service.</li>
+         * <li>CHAT: Online service.</li>
+         * <li>Console: Created from the ticket console.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -283,7 +278,7 @@ public class GetTicketResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The time when the ticket processing started.</p>
+         * <p>The start time of ticket processing. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1620259200000</p>
@@ -292,16 +287,12 @@ public class GetTicketResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The ticket status.</p>
+         * <p>The ticket status. Valid values:</p>
          * <ul>
-         * <li><p>Processing</p>
-         * </li>
-         * <li><p>Withdrawal</p>
-         * </li>
-         * <li><p>Rejected</p>
-         * </li>
-         * <li><p>Closed</p>
-         * </li>
+         * <li>Processing: Processing.</li>
+         * <li>Withdrawal: Withdrawn.</li>
+         * <li>Rejected: Rejected.</li>
+         * <li>Closed: Closed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -320,7 +311,7 @@ public class GetTicketResponseBody extends TeaModel {
         public String templateId;
 
         /**
-         * <p>The version of the ticket template.</p>
+         * <p>The ticket template version.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -341,13 +332,13 @@ public class GetTicketResponseBody extends TeaModel {
          * <p>The ticket title.</p>
          * 
          * <strong>example:</strong>
-         * <p>售后工单</p>
+         * <p>After-sales ticket</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
-         * <p>The time of the last update.</p>
+         * <p>The time of the last update. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1693793208075</p>

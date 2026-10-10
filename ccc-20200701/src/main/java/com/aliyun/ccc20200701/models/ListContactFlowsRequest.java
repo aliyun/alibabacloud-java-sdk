@@ -45,6 +45,9 @@ public class ListContactFlowsRequest extends TeaModel {
 
     /**
      * <p>A keyword to search for in the names or descriptions of IVR flows.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>默认流程</p>
      */
     @NameInMap("SearchPattern")
     public String searchPattern;

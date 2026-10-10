@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDocumentUploadParametersResponseBody extends TeaModel {
     /**
-     * <p>Response code</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Data.</p>
+     * <p>The data.</p>
      */
     @NameInMap("Data")
     public GetDocumentUploadParametersResponseBodyData data;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,22 +29,22 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Response message</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Response parameters.</p>
+     * <p>The response parameters.</p>
      */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9FBA26B0-462B-4D77-B78F-AF35560DBC71</p>
@@ -107,7 +107,7 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
 
     public static class GetDocumentUploadParametersResponseBodyData extends TeaModel {
         /**
-         * <p>AccessKeyId used for signing</p>
+         * <p>The AccessKey ID used for signing.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -116,7 +116,7 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
         public String accessKeyId;
 
         /**
-         * <p>Expired At</p>
+         * <p>The expiration time. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1647313420</p>
@@ -125,7 +125,7 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
         public Integer expireTime;
 
         /**
-         * <p>OSS file path</p>
+         * <p>The OSS file path.</p>
          * 
          * <strong>example:</strong>
          * <p>ccc-test/blacklist.xlsx</p>
@@ -134,7 +134,7 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
         public String filePath;
 
         /**
-         * <p>OSS host</p>
+         * <p>oss host</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com">https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com</a></p>
@@ -143,7 +143,7 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
         public String host;
 
         /**
-         * <p>Signature policy</p>
+         * <p>The signature policy.</p>
          * 
          * <strong>example:</strong>
          * <p>Permit</p>
@@ -152,7 +152,7 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
         public String policy;
 
         /**
-         * <p>Signature</p>
+         * <p>The signature.</p>
          * 
          * <strong>example:</strong>
          * <p>zi31STIMtIfa/UN2l+6lww****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddSchemaPropertyShrinkRequest extends TeaModel {
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,13 @@ public class AddSchemaPropertyShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Field</p>
+     * <p>The property.</p>
      */
     @NameInMap("Property")
     public String propertyShrink;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>

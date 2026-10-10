@@ -4,11 +4,14 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class AssignUsersRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to asynchronously execute user assignment.</p>
+     */
     @NameInMap("Async")
     public Boolean async;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +21,7 @@ public class AssignUsersRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>A JSON array of RAM user IDs to import, formatted as a string.</p>
+     * <p>The list of IDs of the Resource Access Management (RAM) users to be added.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +31,7 @@ public class AssignUsersRequest extends TeaModel {
     public String ramIdList;
 
     /**
-     * <p>The ID of the role to assign to the users in the instance. After the RAM users are imported, they are assigned this role. Valid roles are Administrator, Teamleader, and Agent.</p>
+     * <p>The role ID. This specifies the role of the agent in the instance after a successful import. Valid roles include administrator, skill group supervisor, and agent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +41,7 @@ public class AssignUsersRequest extends TeaModel {
     public String roleId;
 
     /**
-     * <p>A JSON array of skill objects, provided as a string. Each object specifies a skillGroupId and a skillLevel from 1 to 10. A lower skillLevel value indicates higher proficiency and greater call-handling capacity.</p>
+     * <p>The list of skill levels for skill groups. The value is a string in JSON array format. Each array element is an object that contains two fields: skillGroupId and skillLevel. Set skillGroupId to the ID of the skill group to which you want to associate the agent. Set skillLevel to the skill level of the agent in the skill group. Valid values: 1 to 10. A smaller value indicates a stronger business capability, allowing the agent to handle more calls per unit of time.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;skillGroupId&quot;:&quot;skillgroup@ccc-test&quot;,&quot;skillLevel&quot;:5}]</p>
@@ -47,7 +50,7 @@ public class AssignUsersRequest extends TeaModel {
     public String skillLevelList;
 
     /**
-     * <p>The work mode for the agents.</p>
+     * <p>The work mode.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteContactFlowRequest extends TeaModel {
     /**
-     * <p>The ID of the contact flow.</p>
+     * <p>The contact flow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,11 +14,14 @@ public class DeleteContactFlowRequest extends TeaModel {
     @NameInMap("ContactFlowId")
     public String contactFlowId;
 
+    /**
+     * <p>Specifies whether the contact flow is force deleted.</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

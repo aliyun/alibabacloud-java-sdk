@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateChatMediaUrlResponseBody extends TeaModel {
     /**
-     * <p>Response code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class CreateChatMediaUrlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Data.</p>
+     * <p>The data.</p>
      */
     @NameInMap("Data")
     public CreateChatMediaUrlResponseBodyData data;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,22 +29,22 @@ public class CreateChatMediaUrlResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Response message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Response parameters.</p>
+     * <p>The response parameters.</p>
      */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
@@ -107,7 +107,7 @@ public class CreateChatMediaUrlResponseBody extends TeaModel {
 
     public static class CreateChatMediaUrlResponseBodyData extends TeaModel {
         /**
-         * <p>Media ID.</p>
+         * <p>The media ID.</p>
          * 
          * <strong>example:</strong>
          * <p>$iAHNCNQCo21wMwMGBAAFAAbaACOEAaQhIH6TAqogDGyb-qD2Hbj0A88AAAGRLKYVnwTOACwwYwcACM8AAAGRLRPynQ</p>
@@ -116,7 +116,7 @@ public class CreateChatMediaUrlResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>File URL.</p>
+         * <p>The file URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-test/namelist.csv?Expires=1642067227&OSSAccessKeyId=****&Signature=">https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-test/namelist.csv?Expires=1642067227&amp;OSSAccessKeyId=****&amp;Signature=</a>****</p>

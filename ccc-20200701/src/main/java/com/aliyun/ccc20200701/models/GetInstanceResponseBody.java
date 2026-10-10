@@ -32,7 +32,7 @@ public class GetInstanceResponseBody extends TeaModel {
      * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
@@ -93,16 +93,16 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyDataAdminList extends TeaModel {
         /**
-         * <p>The name of the administrator.</p>
+         * <p>The display name of the administrator.</p>
          * 
          * <strong>example:</strong>
-         * <p>管理员</p>
+         * <p>Administrator</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
-         * <p>The mailbox.</p>
+         * <p>The email address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:username@example.com">username@example.com</a></p>
@@ -111,7 +111,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>The agent\&quot;s extension number.</p>
+         * <p>The extension number of the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>8032****</p>
@@ -129,7 +129,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The agent\&quot;s logon name.</p>
+         * <p>The logon name of the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>agent</p>
@@ -138,7 +138,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String loginName;
 
         /**
-         * <p>The agent\&quot;s personal phone number.</p>
+         * <p>The personal phone number of the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>1382114****</p>
@@ -147,7 +147,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String mobile;
 
         /**
-         * <p>The role ID. The format is: Role\@Instance ID.</p>
+         * <p>The role ID, in the format of Role@Instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>Admin@ccc-test</p>
@@ -270,9 +270,18 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyDataChatbotBusinessUnit extends TeaModel {
+        /**
+         * <p>The ID of the chatbot business unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("UnitId")
         public Long unitId;
 
+        /**
+         * <p>The identifier of the chatbot business unit.</p>
+         */
         @NameInMap("UnitKey")
         public String unitKey;
 
@@ -304,7 +313,7 @@ public class GetInstanceResponseBody extends TeaModel {
          * <p>The description of the skill group.</p>
          * 
          * <strong>example:</strong>
-         * <p>云联络中心的测试技能组。</p>
+         * <p>Test skill group of Cloud Call Center</p>
          */
         @NameInMap("Description")
         public String description;
@@ -313,7 +322,7 @@ public class GetInstanceResponseBody extends TeaModel {
          * <p>The display name of the skill group.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试技能组</p>
+         * <p>Test skill group</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -328,7 +337,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The name of the skill group.</p>
+         * <p>The skill group name.</p>
          * 
          * <strong>example:</strong>
          * <p>skillgroup</p>
@@ -428,7 +437,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyDataNumberList extends TeaModel {
         /**
-         * <p>Indicates whether the number is active.</p>
+         * <p>Indicates whether the phone number is available.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -437,10 +446,10 @@ public class GetInstanceResponseBody extends TeaModel {
         public Boolean active;
 
         /**
-         * <p>The city where the number is registered.</p>
+         * <p>The city to which the phone number belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>乐山</p>
+         * <p>Leshan</p>
          */
         @NameInMap("City")
         public String city;
@@ -473,22 +482,22 @@ public class GetInstanceResponseBody extends TeaModel {
         public String number;
 
         /**
-         * <p>The province where the number is registered.</p>
+         * <p>The province to which the phone number belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>四川</p>
+         * <p>Sichuan</p>
          */
         @NameInMap("Province")
         public String province;
 
         /**
-         * <p>The list of skill groups associated with the number.</p>
+         * <p>The list of skill groups associated with the phone number.</p>
          */
         @NameInMap("SkillGroups")
         public java.util.List<GetInstanceResponseBodyDataNumberListSkillGroups> skillGroups;
 
         /**
-         * <p>The purpose of the number.</p>
+         * <p>The usage of the phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>Bidirection</p>
@@ -497,7 +506,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String usage;
 
         /**
-         * <p>The agent ID. If this parameter is not empty, the number is a personal outbound number for the agent.</p>
+         * <p>The agent ID. If this parameter is not empty, the phone number is a personal outbound phone number of the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
@@ -591,6 +600,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("AdminList")
         public java.util.List<GetInstanceResponseBodyDataAdminList> adminList;
 
+        /**
+         * <p>The agent type used by the instance.</p>
+         */
         @NameInMap("AgentType")
         public String agentType;
 
@@ -603,11 +615,17 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("AliyunUid")
         public String aliyunUid;
 
+        /**
+         * <p>The chatbot business unit associated with the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;UnitId&quot;:0,&quot;UnitKey&quot;:&quot;&quot;}</p>
+         */
         @NameInMap("ChatbotBusinessUnit")
         public GetInstanceResponseBodyDataChatbotBusinessUnit chatbotBusinessUnit;
 
         /**
-         * <p>The URL of the Cloud Contact Center instance homepage. This URL is formed by combining the base URL of Cloud Contact Center and the instance ID.</p>
+         * <p>The URL of the Cloud Call Center instance. This URL is used to access the homepage of the instance and consists of a specific Cloud Call Center URL and the instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://ccc-v2.aliyun.com/#/workbench/ccc-test">https://ccc-v2.aliyun.com/#/workbench/ccc-test</a></p>
@@ -619,13 +637,13 @@ public class GetInstanceResponseBody extends TeaModel {
          * <p>The description of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>云联络中心的测试实例。</p>
+         * <p>Test instance of Cloud Call Center</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The domain name of the instance. It is globally unique.</p>
+         * <p>The globally unique domain name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
@@ -646,13 +664,13 @@ public class GetInstanceResponseBody extends TeaModel {
          * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试实例</p>
+         * <p>Test instance</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The list of numbers.</p>
+         * <p>The list of phone numbers.</p>
          */
         @NameInMap("NumberList")
         public java.util.List<GetInstanceResponseBodyDataNumberList> numberList;

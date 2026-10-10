@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddSchemaPropertyRequest extends TeaModel {
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,13 @@ public class AddSchemaPropertyRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Field</p>
+     * <p>The property.</p>
      */
     @NameInMap("Property")
     public AddSchemaPropertyRequestProperty property;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
@@ -78,7 +78,7 @@ public class AddSchemaPropertyRequest extends TeaModel {
 
     public static class AddSchemaPropertyRequestProperty extends TeaModel {
         /**
-         * <p>Is array</p>
+         * <p>Specifies whether the property is an array.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -87,16 +87,16 @@ public class AddSchemaPropertyRequest extends TeaModel {
         public Boolean array;
 
         /**
-         * <p>Extension attributes</p>
+         * <p>The extended attributes.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;newName\&quot;:\&quot;小桔充电-demo\&quot;,\&quot;appId\&quot;:\&quot;69FRKB4193W8BYP0\&quot;}</p>
+         * <p>{&quot;newName&quot;:&quot;Xiaoju Charging-demo&quot;,&quot;appId&quot;:&quot;69FRKB4193W8BYP0&quot;}</p>
          */
         @NameInMap("Attributes")
         public String attributes;
 
         /**
-         * <p>Data type</p>
+         * <p>The data type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class AddSchemaPropertyRequest extends TeaModel {
         public String dataType;
 
         /**
-         * <p>Description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -117,7 +117,7 @@ public class AddSchemaPropertyRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>Is disabled</p>
+         * <p>Specifies whether the property is disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -126,7 +126,7 @@ public class AddSchemaPropertyRequest extends TeaModel {
         public Boolean disabled;
 
         /**
-         * <p>Name</p>
+         * <p>The display name.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -135,7 +135,7 @@ public class AddSchemaPropertyRequest extends TeaModel {
         public String displayName;
 
         /**
-         * <p>List display order</p>
+         * <p>The display order in the list.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -144,7 +144,7 @@ public class AddSchemaPropertyRequest extends TeaModel {
         public Integer displayOrder;
 
         /**
-         * <p>Editor type</p>
+         * <p>The editor type.</p>
          * 
          * <strong>example:</strong>
          * <p>textbox</p>
@@ -153,7 +153,7 @@ public class AddSchemaPropertyRequest extends TeaModel {
         public String editorType;
 
         /**
-         * <p>Maximum length</p>
+         * <p>The maximum length.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -162,7 +162,7 @@ public class AddSchemaPropertyRequest extends TeaModel {
         public Integer maxLength;
 
         /**
-         * <p>Maximum numeric value</p>
+         * <p>The maximum numeric value.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -171,7 +171,7 @@ public class AddSchemaPropertyRequest extends TeaModel {
         public Double maximum;
 
         /**
-         * <p>Minimum length</p>
+         * <p>The minimum length.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -180,7 +180,7 @@ public class AddSchemaPropertyRequest extends TeaModel {
         public Integer minLength;
 
         /**
-         * <p>Minimum numeric value</p>
+         * <p>The minimum numeric value.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -189,7 +189,7 @@ public class AddSchemaPropertyRequest extends TeaModel {
         public Double minimum;
 
         /**
-         * <p>Name</p>
+         * <p>The display name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class AddSchemaPropertyRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>Regular expression validation rule</p>
+         * <p>The regular expression validation rule.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -210,16 +210,16 @@ public class AddSchemaPropertyRequest extends TeaModel {
         public String pattern;
 
         /**
-         * <p>Regular expression validation error message</p>
+         * <p>The error message for regular expression validation.</p>
          * 
          * <strong>example:</strong>
-         * <p>格式错误</p>
+         * <p>Invalid format</p>
          */
         @NameInMap("PatternErrorMessage")
         public String patternErrorMessage;
 
         /**
-         * <p>Is read-only</p>
+         * <p>Specifies whether the property is read-only.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -228,7 +228,7 @@ public class AddSchemaPropertyRequest extends TeaModel {
         public Boolean readOnly;
 
         /**
-         * <p>Is required</p>
+         * <p>Specifies whether the property is required.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
