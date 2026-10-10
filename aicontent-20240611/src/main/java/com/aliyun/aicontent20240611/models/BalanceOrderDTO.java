@@ -76,7 +76,7 @@ public class BalanceOrderDTO extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>Administrator manual recharge</p>
+     * <p>Manual top-up by administrator</p>
      */
     @NameInMap("remark")
     public String remark;

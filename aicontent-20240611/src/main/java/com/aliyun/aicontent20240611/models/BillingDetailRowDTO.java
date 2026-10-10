@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BillingDetailRowDTO extends TeaModel {
     /**
+     * <p>The actual payment amount (after discount), rounded to 8 decimal places.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.00012800</p>
      */
@@ -12,6 +14,8 @@ public class BillingDetailRowDTO extends TeaModel {
     public Double amount;
 
     /**
+     * <p>API Key ID</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -19,13 +23,17 @@ public class BillingDetailRowDTO extends TeaModel {
     public Long apiKeyId;
 
     /**
+     * <p>The API key name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>默认密钥</p>
+     * <p>Default Key</p>
      */
     @NameInMap("apiKeyName")
     public String apiKeyName;
 
     /**
+     * <p>The number of cache creation tokens (explicit cache writes).</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -33,6 +41,8 @@ public class BillingDetailRowDTO extends TeaModel {
     public Double cacheCreationTokens;
 
     /**
+     * <p>The number of tokens that hit the cache.</p>
+     * 
      * <strong>example:</strong>
      * <p>256</p>
      */
@@ -40,6 +50,8 @@ public class BillingDetailRowDTO extends TeaModel {
     public Double cachedTokens;
 
     /**
+     * <p>The department ID. A value of 0 indicates that no department is associated.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,13 +59,17 @@ public class BillingDetailRowDTO extends TeaModel {
     public Long clientId;
 
     /**
+     * <p>The department name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>研发部</p>
+     * <p>R&amp;D Department</p>
      */
     @NameInMap("clientName")
     public String clientName;
 
     /**
+     * <p>The discount coefficient. A value of 1.0 indicates no discount.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0</p>
      */
@@ -61,6 +77,8 @@ public class BillingDetailRowDTO extends TeaModel {
     public Double discount;
 
     /**
+     * <p>The number of input tokens, including cached tokens and cache creation tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>1024</p>
      */
@@ -68,6 +86,8 @@ public class BillingDetailRowDTO extends TeaModel {
     public Double inputTokens;
 
     /**
+     * <p>The member user ID for a member row. The value is 0 for a department row.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001</p>
      */
@@ -75,13 +95,17 @@ public class BillingDetailRowDTO extends TeaModel {
     public Long memberUserId;
 
     /**
+     * <p>The member name for a member row. The value is empty for a department row.</p>
+     * 
      * <strong>example:</strong>
-     * <p>张三</p>
+     * <p>John</p>
      */
     @NameInMap("memberUserName")
     public String memberUserName;
 
     /**
+     * <p>The JSON of other metering field mapping, such as video duration and image count. Fields with a value of 0 are not included in the output.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -89,6 +113,8 @@ public class BillingDetailRowDTO extends TeaModel {
     public String metrics;
 
     /**
+     * <p>The model identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen-plus</p>
      */
@@ -96,6 +122,8 @@ public class BillingDetailRowDTO extends TeaModel {
     public String modelCode;
 
     /**
+     * <p>The model ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -103,13 +131,17 @@ public class BillingDetailRowDTO extends TeaModel {
     public Long modelId;
 
     /**
+     * <p>The model name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>通义千问-Plus</p>
+     * <p>Qwen-Plus</p>
      */
     @NameInMap("modelName")
     public String modelName;
 
     /**
+     * <p>The model symbol (provider identifier).</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen</p>
      */
@@ -117,6 +149,8 @@ public class BillingDetailRowDTO extends TeaModel {
     public String modelSymbol;
 
     /**
+     * <p>The model type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Chat</p>
      */
@@ -124,6 +158,8 @@ public class BillingDetailRowDTO extends TeaModel {
     public String modelType;
 
     /**
+     * <p>The model version number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -131,6 +167,8 @@ public class BillingDetailRowDTO extends TeaModel {
     public Integer modelVersion;
 
     /**
+     * <p>The number of output tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>512</p>
      */
@@ -138,6 +176,8 @@ public class BillingDetailRowDTO extends TeaModel {
     public Double outputTokens;
 
     /**
+     * <p>The number of reasoning tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>128</p>
      */
@@ -145,6 +185,8 @@ public class BillingDetailRowDTO extends TeaModel {
     public Double reasoningTokens;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>chatcmpl-abc123def456</p>
      */
@@ -152,6 +194,8 @@ public class BillingDetailRowDTO extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The request time as a UNIX timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1700000000</p>
      */
@@ -159,6 +203,8 @@ public class BillingDetailRowDTO extends TeaModel {
     public Long requestTime;
 
     /**
+     * <p>The total number of tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>1536</p>
      */
@@ -166,6 +212,8 @@ public class BillingDetailRowDTO extends TeaModel {
     public Double totalTokens;
 
     /**
+     * <p>The raw JSON of the usage details.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;input_tokens&quot;: 1024, &quot;output_tokens&quot;: 512}</p>
      */

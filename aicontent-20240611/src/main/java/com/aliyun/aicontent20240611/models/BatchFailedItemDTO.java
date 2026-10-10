@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class BatchFailedItemDTO extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>Member node is missing</p>
+     * <p>Member node missing</p>
      */
     @NameInMap("reason")
     public String reason;

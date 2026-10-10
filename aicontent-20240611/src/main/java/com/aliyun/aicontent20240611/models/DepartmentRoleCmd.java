@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DepartmentRoleCmd extends TeaModel {
     /**
+     * <p>The department ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DepartmentRoleCmd extends TeaModel {
     public Long clientId;
 
     /**
+     * <p>The role code.</p>
+     * 
      * <strong>example:</strong>
      * <p>member</p>
      */

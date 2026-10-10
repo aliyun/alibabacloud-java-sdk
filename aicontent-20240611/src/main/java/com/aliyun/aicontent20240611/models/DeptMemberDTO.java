@@ -55,7 +55,7 @@ public class DeptMemberDTO extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>John Smith</p>
+     * <p>Zhang San</p>
      */
     @NameInMap("name")
     public String name;

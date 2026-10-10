@@ -2454,6 +2454,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Renews member API keys in bulk in authorization management.</p>
+     * 
+     * @param request ModelRouterBatchRenewMemberApiKeysRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterBatchRenewMemberApiKeysResponse
+     */
+    public ModelRouterBatchRenewMemberApiKeysResponse modelRouterBatchRenewMemberApiKeysWithOptions(String id, ModelRouterBatchRenewMemberApiKeysRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.expireAt)) {
+            body.put("expireAt", request.expireAt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userIds)) {
+            body.put("userIds", request.userIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterBatchRenewMemberApiKeys"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/member-apikeys/renew"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterBatchRenewMemberApiKeysResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Renews member API keys in bulk in authorization management.</p>
+     * 
+     * @param request ModelRouterBatchRenewMemberApiKeysRequest
+     * @return ModelRouterBatchRenewMemberApiKeysResponse
+     */
+    public ModelRouterBatchRenewMemberApiKeysResponse modelRouterBatchRenewMemberApiKeys(String id, ModelRouterBatchRenewMemberApiKeysRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterBatchRenewMemberApiKeysWithOptions(id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Batch resets member authorizations to inherit under a department in organization management.</p>
      * 
      * @param request ModelRouterBatchResetMemberAuthorizationRequest
@@ -6839,6 +6890,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modelRouterQueryUserListWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Manages authorization and renews an API key.</p>
+     * 
+     * @param request ModelRouterRenewApiKeyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterRenewApiKeyResponse
+     */
+    public ModelRouterRenewApiKeyResponse modelRouterRenewApiKeyWithOptions(String id, ModelRouterRenewApiKeyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.expireAt)) {
+            body.put("expireAt", request.expireAt);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterRenewApiKey"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/apikeys/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/renew"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterRenewApiKeyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Manages authorization and renews an API key.</p>
+     * 
+     * @param request ModelRouterRenewApiKeyRequest
+     * @return ModelRouterRenewApiKeyResponse
+     */
+    public ModelRouterRenewApiKeyResponse modelRouterRenewApiKey(String id, ModelRouterRenewApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterRenewApiKeyWithOptions(id, request, headers, runtime);
     }
 
     /**

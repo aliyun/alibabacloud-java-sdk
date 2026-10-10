@@ -90,7 +90,7 @@ public class ClientDTO extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>My customer</p>
+     * <p>My Customer</p>
      */
     @NameInMap("name")
     public String name;
