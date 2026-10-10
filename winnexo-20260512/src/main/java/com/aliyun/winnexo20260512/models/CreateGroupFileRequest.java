@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGroupFileRequest extends TeaModel {
     /**
-     * <p>资料描述</p>
+     * <p>The description of the AI assistant.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -14,7 +14,7 @@ public class CreateGroupFileRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>当前空间物理目录ID；省略/root使用空间根，首次可能初始化根目录；引用目录不可写</p>
+     * <p>The folder ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dir_example</p>
@@ -23,7 +23,7 @@ public class CreateGroupFileRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>当前用户在当前租户上传的SOURCE/OSS文件记录ID；须先完成文件PUT</p>
+     * <p>The file record ID. This parameter is optional and corresponds to settings.file_record_id.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class CreateGroupFileRequest extends TeaModel {
     public String fileRecordId;
 
     /**
-     * <p>协作空间 ID</p>
+     * <p>The project group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,17 +43,17 @@ public class CreateGroupFileRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>资料显示名；最终名称沿用Provider规则</p>
+     * <p>The name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>项目资料</p>
+     * <p>Project Files</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>资料标签，JSON字符串列表</p>
+     * <p>The source tags.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -62,7 +62,7 @@ public class CreateGroupFileRequest extends TeaModel {
     public String sourceTags;
 
     /**
-     * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

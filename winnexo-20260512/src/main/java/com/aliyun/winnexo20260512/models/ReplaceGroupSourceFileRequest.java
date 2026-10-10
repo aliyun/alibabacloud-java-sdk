@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReplaceGroupSourceFileRequest extends TeaModel {
     /**
-     * <p>新文件名；省略或空字符串保留原文件名，用户自定义展示名沿用现有保护规则</p>
+     * <p>The new file name. This parameter is optional. If you do not specify this parameter or set it to an empty string, the original file name is retained.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -14,7 +14,7 @@ public class ReplaceGroupSourceFileRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>已上传新文件的 OSS 持久化地址，使用上传接口返回值</p>
+     * <p>The OSS persistent storage path of the replacement file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ReplaceGroupSourceFileRequest extends TeaModel {
     public String filePath;
 
     /**
-     * <p>已上传新文件的访问 URL，可能携带临时签名</p>
+     * <p>The OSS persistent storage path of the replacement file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ReplaceGroupSourceFileRequest extends TeaModel {
     public String filePublicUrl;
 
     /**
-     * <p>已上传新文件的文件记录 ID</p>
+     * <p>The file record ID of the replacement file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class ReplaceGroupSourceFileRequest extends TeaModel {
     public String fileRecordId;
 
     /**
-     * <p>是否等待解析完成；默认 false 异步受理，true 同步等待，网关超时 300000ms</p>
+     * <p>Specifies whether to synchronously wait for re-parsing to complete. Default value: false, which means the task is asynchronously enqueued.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -53,7 +53,7 @@ public class ReplaceGroupSourceFileRequest extends TeaModel {
     public Boolean forceSync;
 
     /**
-     * <p>资料所属协作空间 ID</p>
+     * <p>The project group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class ReplaceGroupSourceFileRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>当前空间物理 GROUP 资料 ID；引用资料只读</p>
+     * <p>The data source ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class ReplaceGroupSourceFileRequest extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass this parameter explicitly by using <code>--tenant-id</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveGroupResourceResponseBody extends TeaModel {
     /**
-     * <p>业务状态码，成功为200</p>
+     * <p>The business status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class MoveGroupResourceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>协作空间 ID</p>
+     * <p>The collaboration space ID.</p>
      * 
      * <strong>example:</strong>
      * <p>group_example</p>
@@ -23,16 +23,16 @@ public class MoveGroupResourceResponseBody extends TeaModel {
     public String groupId;
 
     /**
-     * <p>错误描述</p>
+     * <p>The error description.</p>
      * 
      * <strong>example:</strong>
-     * <p>请求的资源不存在</p>
+     * <p>The requested resource does not exist</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪ID</p>
+     * <p>The request trace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -41,7 +41,7 @@ public class MoveGroupResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>移动前的目录 ID</p>
+     * <p>The directory ID before the move.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -50,7 +50,7 @@ public class MoveGroupResourceResponseBody extends TeaModel {
     public String sourceDirectoryId;
 
     /**
-     * <p>移动的资料 ID，移动前后保持不变</p>
+     * <p>The ID of the moved resource. This value remains unchanged before and after the move.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -59,7 +59,7 @@ public class MoveGroupResourceResponseBody extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>移动后的目录 ID</p>
+     * <p>The directory ID after the move.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>

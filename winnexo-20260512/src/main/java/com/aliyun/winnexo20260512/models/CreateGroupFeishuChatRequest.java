@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGroupFeishuChatRequest extends TeaModel {
     /**
-     * <p>飞书群聊ID，以oc_开头，需当前用户有权读取</p>
+     * <p>The DingTalk group chat session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateGroupFeishuChatRequest extends TeaModel {
     public String chatId;
 
     /**
-     * <p>资料描述</p>
+     * <p>The pipeline description.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -24,7 +24,7 @@ public class CreateGroupFeishuChatRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>空间物理目录ID；省略/root使用空间根，首次可能初始化根目录</p>
+     * <p>The folder ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -33,7 +33,7 @@ public class CreateGroupFeishuChatRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>协作空间 ID</p>
+     * <p>The project group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class CreateGroupFeishuChatRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>历史起始时间，YYYY-MM-DD或YYYY-MM-DD HH:MM:SS；省略读取全部可见历史</p>
+     * <p>The start time for historical messages. The value must be in the YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format. If this parameter is not specified, all visible historical messages are retrieved.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-08-01</p>
@@ -52,16 +52,16 @@ public class CreateGroupFeishuChatRequest extends TeaModel {
     public String historyStartTime;
 
     /**
-     * <p>分析指令</p>
+     * <p>The meeting notes content (optional). The notes are used for auxiliary analysis.</p>
      * 
      * <strong>example:</strong>
-     * <p>重点识别客户诉求与待办</p>
+     * <p>Focus on identifying customer demands and to-do items</p>
      */
     @NameInMap("notes")
     public String notes;
 
     /**
-     * <p>运营对象名称，用于来源追溯</p>
+     * <p>The digital employee name (operating object name, optional).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -70,16 +70,16 @@ public class CreateGroupFeishuChatRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>资料标签JSON字符串列表</p>
+     * <p>The source tags.</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;重点&quot;,&quot;文件&quot;]</p>
+     * <p>[&quot;Key&quot;,&quot;File&quot;]</p>
      */
     @NameInMap("sourceTags")
     public String sourceTags;
 
     /**
-     * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. You can pass it explicitly by using --tenant-id in winnexo-cli.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -88,7 +88,7 @@ public class CreateGroupFeishuChatRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>Source级同步配置</p>
+     * <p>The feature update frequency.</p>
      */
     @NameInMap("updateFrequency")
     public CreateGroupFeishuChatRequestUpdateFrequency updateFrequency;
@@ -180,7 +180,7 @@ public class CreateGroupFeishuChatRequest extends TeaModel {
 
     public static class CreateGroupFeishuChatRequestUpdateFrequency extends TeaModel {
         /**
-         * <p>五段 cron，优先于 preset</p>
+         * <p>The cron expression for the timed scheduling task.</p>
          * 
          * <strong>example:</strong>
          * <p>0 2 * * *</p>
@@ -189,7 +189,7 @@ public class CreateGroupFeishuChatRequest extends TeaModel {
         public String cron;
 
         /**
-         * <p>是否启用同步，默认true</p>
+         * <p><strong>Enable/Disable</strong></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -198,7 +198,7 @@ public class CreateGroupFeishuChatRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>同步预设：hourly 或 daily_2am</p>
+         * <p>The synchronization preset: hourly or daily_2am.</p>
          * 
          * <strong>example:</strong>
          * <p>hourly</p>

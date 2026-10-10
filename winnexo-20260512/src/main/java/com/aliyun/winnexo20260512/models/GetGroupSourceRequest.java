@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGroupSourceRequest extends TeaModel {
     /**
-     * <p>协作空间 ID</p>
+     * <p>The project group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetGroupSourceRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>空间内可读的资料ID，支持有效引用资料</p>
+     * <p>The ID of the personal FILE data source to be replaced. The ID is unique within the tenant.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetGroupSourceRequest extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

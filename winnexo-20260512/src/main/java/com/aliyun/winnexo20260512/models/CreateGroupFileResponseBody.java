@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGroupFileResponseBody extends TeaModel {
     /**
-     * <p>业务状态码，成功为200</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CreateGroupFileResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>解析并绑定的真实目录ID</p>
+     * <p>The folder ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dir_example</p>
@@ -23,7 +23,7 @@ public class CreateGroupFileResponseBody extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>创建时间，ISO8601格式</p>
+     * <p>The creation timestamp of the customer group, in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -32,7 +32,7 @@ public class CreateGroupFileResponseBody extends TeaModel {
     public String gmtCreate;
 
     /**
-     * <p>协作空间ID</p>
+     * <p>The project group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>group_example</p>
@@ -41,7 +41,7 @@ public class CreateGroupFileResponseBody extends TeaModel {
     public String groupId;
 
     /**
-     * <p>错误描述</p>
+     * <p>The error details.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -50,16 +50,16 @@ public class CreateGroupFileResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Provider处理后的实际资料名称</p>
+     * <p>The image name.</p>
      * 
      * <strong>example:</strong>
-     * <p>项目资料</p>
+     * <p>Project Files</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>请求追踪ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E68654BD-F7BA-5837-8686-5645D739A47C</p>
@@ -68,7 +68,7 @@ public class CreateGroupFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>资料范围，固定GROUP</p>
+     * <p>The permission scope.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -77,7 +77,7 @@ public class CreateGroupFileResponseBody extends TeaModel {
     public String scope;
 
     /**
-     * <p>新建资料ID</p>
+     * <p>The source ID.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -86,7 +86,12 @@ public class CreateGroupFileResponseBody extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>实际资料状态；RUNNING表示处理中，FAILED表示创建处理失败</p>
+     * <p>The signing status. Valid values:</p>
+     * <ul>
+     * <li>CREATED: Created but not signed.</li>
+     * <li>SUCCESS: Signed successfully.</li>
+     * <li>STOP: Terminated.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>example</p>
