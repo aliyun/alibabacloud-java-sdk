@@ -157,6 +157,13 @@ public class ListContextStoresResponseBody extends TeaModel {
         public java.util.List<String> serviceNames;
 
         /**
+         * <strong>example:</strong>
+         * <p>trajectory</p>
+         */
+        @NameInMap("sourceType")
+        public String sourceType;
+
+        /**
          * <p>The status of the context store. Valid values: ACTIVE, INITIALIZING, and FAILED.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +171,13 @@ public class ListContextStoresResponseBody extends TeaModel {
          */
         @NameInMap("status")
         public String status;
+
+        /**
+         * <strong>example:</strong>
+         * <p>upsert</p>
+         */
+        @NameInMap("storageMode")
+        public String storageMode;
 
         /**
          * <p>The time when the context store was last updated, in ISO 8601 UTC format.</p>
@@ -236,12 +250,28 @@ public class ListContextStoresResponseBody extends TeaModel {
             return this.serviceNames;
         }
 
+        public ListContextStoresResponseBodyResults setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
         public ListContextStoresResponseBodyResults setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListContextStoresResponseBodyResults setStorageMode(String storageMode) {
+            this.storageMode = storageMode;
+            return this;
+        }
+        public String getStorageMode() {
+            return this.storageMode;
         }
 
         public ListContextStoresResponseBodyResults setUpdateTime(String updateTime) {

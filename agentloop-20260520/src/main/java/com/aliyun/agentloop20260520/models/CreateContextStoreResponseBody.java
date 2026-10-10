@@ -13,6 +13,13 @@ public class CreateContextStoreResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("strategyVersion")
+    public Integer strategyVersion;
+
     public static CreateContextStoreResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateContextStoreResponseBody self = new CreateContextStoreResponseBody();
         return TeaModel.build(map, self);
@@ -24,6 +31,14 @@ public class CreateContextStoreResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateContextStoreResponseBody setStrategyVersion(Integer strategyVersion) {
+        this.strategyVersion = strategyVersion;
+        return this;
+    }
+    public Integer getStrategyVersion() {
+        return this.strategyVersion;
     }
 
 }

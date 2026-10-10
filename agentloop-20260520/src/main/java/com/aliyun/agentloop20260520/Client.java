@@ -946,8 +946,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public DeleteContextStoreResponse deleteContextStoreWithOptions(String agentSpace, String contextStoreName, DeleteContextStoreRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteOutputDataset)) {
+            query.put("deleteOutputDataset", request.deleteOutputDataset);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteContextStore"),
@@ -2230,6 +2236,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("nextToken", request.nextToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            query.put("sourceType", request.sourceType);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -3112,6 +3122,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("formatted", request.formatted);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.includeInactive)) {
+            body.put("includeInactive", request.includeInactive);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
             body.put("limit", request.limit);
         }
@@ -3122,6 +3136,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.retrievalOption)) {
             body.put("retrievalOption", request.retrievalOption);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            body.put("scope", request.scope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.threshold)) {
@@ -3265,7 +3283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a context store.</p>
+     * <p>Updates the context store configuration.</p>
      * 
      * @param request UpdateContextStoreRequest
      * @param headers map
@@ -3280,6 +3298,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.changeNote)) {
+            body.put("changeNote", request.changeNote);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.config)) {
             body.put("config", request.config);
         }
@@ -3317,7 +3339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a context store.</p>
+     * <p>Updates the context store configuration.</p>
      * 
      * @param request UpdateContextStoreRequest
      * @return UpdateContextStoreResponse

@@ -23,6 +23,13 @@ public class SearchContextRequest extends TeaModel {
     public Boolean formatted;
 
     /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("includeInactive")
+    public Boolean includeInactive;
+
+    /**
      * <p>The maximum number of returned results (similarity Top-N).</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +56,9 @@ public class SearchContextRequest extends TeaModel {
      */
     @NameInMap("retrievalOption")
     public String retrievalOption;
+
+    @NameInMap("scope")
+    public SearchContextRequestScope scope;
 
     /**
      * <p>The similarity threshold. Results with a similarity score lower than this value are filtered out. Valid values: 0 to 1.</p>
@@ -80,6 +90,14 @@ public class SearchContextRequest extends TeaModel {
         return this.formatted;
     }
 
+    public SearchContextRequest setIncludeInactive(Boolean includeInactive) {
+        this.includeInactive = includeInactive;
+        return this;
+    }
+    public Boolean getIncludeInactive() {
+        return this.includeInactive;
+    }
+
     public SearchContextRequest setLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -104,12 +122,88 @@ public class SearchContextRequest extends TeaModel {
         return this.retrievalOption;
     }
 
+    public SearchContextRequest setScope(SearchContextRequestScope scope) {
+        this.scope = scope;
+        return this;
+    }
+    public SearchContextRequestScope getScope() {
+        return this.scope;
+    }
+
     public SearchContextRequest setThreshold(Double threshold) {
         this.threshold = threshold;
         return this;
     }
     public Double getThreshold() {
         return this.threshold;
+    }
+
+    public static class SearchContextRequestScope extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>sales-copilot</p>
+         */
+        @NameInMap("agentId")
+        public String agentId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>crm-service</p>
+         */
+        @NameInMap("appId")
+        public String appId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>run-001</p>
+         */
+        @NameInMap("runId")
+        public String runId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>u-10001</p>
+         */
+        @NameInMap("userId")
+        public String userId;
+
+        public static SearchContextRequestScope build(java.util.Map<String, ?> map) throws Exception {
+            SearchContextRequestScope self = new SearchContextRequestScope();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchContextRequestScope setAgentId(String agentId) {
+            this.agentId = agentId;
+            return this;
+        }
+        public String getAgentId() {
+            return this.agentId;
+        }
+
+        public SearchContextRequestScope setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
+        }
+
+        public SearchContextRequestScope setRunId(String runId) {
+            this.runId = runId;
+            return this;
+        }
+        public String getRunId() {
+            return this.runId;
+        }
+
+        public SearchContextRequestScope setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
     }
 
 }

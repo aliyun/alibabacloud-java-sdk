@@ -40,6 +40,13 @@ public class ListContextStoresRequest extends TeaModel {
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>trajectory</p>
+     */
+    @NameInMap("sourceType")
+    public String sourceType;
+
     public static ListContextStoresRequest build(java.util.Map<String, ?> map) throws Exception {
         ListContextStoresRequest self = new ListContextStoresRequest();
         return TeaModel.build(map, self);
@@ -75,6 +82,14 @@ public class ListContextStoresRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListContextStoresRequest setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    public String getSourceType() {
+        return this.sourceType;
     }
 
 }

@@ -13,6 +13,15 @@ public class UpdateContextStoreResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The effective strategy version number after the update for the memory type. If the strategy remains unchanged, the version number is the same as before the update.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
+    @NameInMap("strategyVersion")
+    public Integer strategyVersion;
+
     public static UpdateContextStoreResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateContextStoreResponseBody self = new UpdateContextStoreResponseBody();
         return TeaModel.build(map, self);
@@ -24,6 +33,14 @@ public class UpdateContextStoreResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UpdateContextStoreResponseBody setStrategyVersion(Integer strategyVersion) {
+        this.strategyVersion = strategyVersion;
+        return this;
+    }
+    public Integer getStrategyVersion() {
+        return this.strategyVersion;
     }
 
 }

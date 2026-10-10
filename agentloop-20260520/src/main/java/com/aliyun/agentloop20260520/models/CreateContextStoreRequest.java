@@ -93,6 +93,657 @@ public class CreateContextStoreRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public static class CreateContextStoreRequestConfigAudit extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("droppedCandidates")
+        public Boolean droppedCandidates;
+
+        /**
+         * <strong>example:</strong>
+         * <p>raw</p>
+         */
+        @NameInMap("queryMode")
+        public String queryMode;
+
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
+        @NameInMap("retentionDays")
+        public Integer retentionDays;
+
+        public static CreateContextStoreRequestConfigAudit build(java.util.Map<String, ?> map) throws Exception {
+            CreateContextStoreRequestConfigAudit self = new CreateContextStoreRequestConfigAudit();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateContextStoreRequestConfigAudit setDroppedCandidates(Boolean droppedCandidates) {
+            this.droppedCandidates = droppedCandidates;
+            return this;
+        }
+        public Boolean getDroppedCandidates() {
+            return this.droppedCandidates;
+        }
+
+        public CreateContextStoreRequestConfigAudit setQueryMode(String queryMode) {
+            this.queryMode = queryMode;
+            return this;
+        }
+        public String getQueryMode() {
+            return this.queryMode;
+        }
+
+        public CreateContextStoreRequestConfigAudit setRetentionDays(Integer retentionDays) {
+            this.retentionDays = retentionDays;
+            return this;
+        }
+        public Integer getRetentionDays() {
+            return this.retentionDays;
+        }
+
+    }
+
+    public static class CreateContextStoreRequestConfigExtractionPolicyModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>qwen3.8-flash</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        public static CreateContextStoreRequestConfigExtractionPolicyModel build(java.util.Map<String, ?> map) throws Exception {
+            CreateContextStoreRequestConfigExtractionPolicyModel self = new CreateContextStoreRequestConfigExtractionPolicyModel();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateContextStoreRequestConfigExtractionPolicyModel setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class CreateContextStoreRequestConfigExtractionPolicy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;preference&quot;,&quot;profile&quot;]</p>
+         */
+        @NameInMap("categories")
+        public java.util.List<String> categories;
+
+        /**
+         * <strong>example:</strong>
+         * <p>只抽取用户的产品偏好</p>
+         */
+        @NameInMap("customInstructions")
+        public String customInstructions;
+
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;密码&quot;,&quot;证件号&quot;]</p>
+         */
+        @NameInMap("excludeRules")
+        public java.util.List<String> excludeRules;
+
+        @NameInMap("model")
+        public CreateContextStoreRequestConfigExtractionPolicyModel model;
+
+        /**
+         * <strong>example:</strong>
+         * <p>fact</p>
+         */
+        @NameInMap("preset")
+        public String preset;
+
+        public static CreateContextStoreRequestConfigExtractionPolicy build(java.util.Map<String, ?> map) throws Exception {
+            CreateContextStoreRequestConfigExtractionPolicy self = new CreateContextStoreRequestConfigExtractionPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateContextStoreRequestConfigExtractionPolicy setCategories(java.util.List<String> categories) {
+            this.categories = categories;
+            return this;
+        }
+        public java.util.List<String> getCategories() {
+            return this.categories;
+        }
+
+        public CreateContextStoreRequestConfigExtractionPolicy setCustomInstructions(String customInstructions) {
+            this.customInstructions = customInstructions;
+            return this;
+        }
+        public String getCustomInstructions() {
+            return this.customInstructions;
+        }
+
+        public CreateContextStoreRequestConfigExtractionPolicy setExcludeRules(java.util.List<String> excludeRules) {
+            this.excludeRules = excludeRules;
+            return this;
+        }
+        public java.util.List<String> getExcludeRules() {
+            return this.excludeRules;
+        }
+
+        public CreateContextStoreRequestConfigExtractionPolicy setModel(CreateContextStoreRequestConfigExtractionPolicyModel model) {
+            this.model = model;
+            return this;
+        }
+        public CreateContextStoreRequestConfigExtractionPolicyModel getModel() {
+            return this.model;
+        }
+
+        public CreateContextStoreRequestConfigExtractionPolicy setPreset(String preset) {
+            this.preset = preset;
+            return this;
+        }
+        public String getPreset() {
+            return this.preset;
+        }
+
+    }
+
+    public static class CreateContextStoreRequestConfigScopePolicy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;userId&quot;]</p>
+         */
+        @NameInMap("requiredAnyOf")
+        public java.util.List<String> requiredAnyOf;
+
+        public static CreateContextStoreRequestConfigScopePolicy build(java.util.Map<String, ?> map) throws Exception {
+            CreateContextStoreRequestConfigScopePolicy self = new CreateContextStoreRequestConfigScopePolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateContextStoreRequestConfigScopePolicy setRequiredAnyOf(java.util.List<String> requiredAnyOf) {
+            this.requiredAnyOf = requiredAnyOf;
+            return this;
+        }
+        public java.util.List<String> getRequiredAnyOf() {
+            return this.requiredAnyOf;
+        }
+
+    }
+
+    public static class CreateContextStoreRequestConfigSourceDatasetCustomFields extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>客户等级</p>
+         */
+        @NameInMap("description")
+        public String description;
+
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("sensitive")
+        public Boolean sensitive;
+
+        /**
+         * <strong>example:</strong>
+         * <p>customerTier</p>
+         */
+        @NameInMap("sourceField")
+        public String sourceField;
+
+        /**
+         * <strong>example:</strong>
+         * <p>metadata.customerTier</p>
+         */
+        @NameInMap("target")
+        public String target;
+
+        /**
+         * <strong>example:</strong>
+         * <p>extraction-input</p>
+         */
+        @NameInMap("usage")
+        public String usage;
+
+        public static CreateContextStoreRequestConfigSourceDatasetCustomFields build(java.util.Map<String, ?> map) throws Exception {
+            CreateContextStoreRequestConfigSourceDatasetCustomFields self = new CreateContextStoreRequestConfigSourceDatasetCustomFields();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateContextStoreRequestConfigSourceDatasetCustomFields setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public CreateContextStoreRequestConfigSourceDatasetCustomFields setSensitive(Boolean sensitive) {
+            this.sensitive = sensitive;
+            return this;
+        }
+        public Boolean getSensitive() {
+            return this.sensitive;
+        }
+
+        public CreateContextStoreRequestConfigSourceDatasetCustomFields setSourceField(String sourceField) {
+            this.sourceField = sourceField;
+            return this;
+        }
+        public String getSourceField() {
+            return this.sourceField;
+        }
+
+        public CreateContextStoreRequestConfigSourceDatasetCustomFields setTarget(String target) {
+            this.target = target;
+            return this;
+        }
+        public String getTarget() {
+            return this.target;
+        }
+
+        public CreateContextStoreRequestConfigSourceDatasetCustomFields setUsage(String usage) {
+            this.usage = usage;
+            return this;
+        }
+        public String getUsage() {
+            return this.usage;
+        }
+
+    }
+
+    public static class CreateContextStoreRequestConfigSourceDatasetFilter extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>appId = \&quot;crm-service\&quot;</p>
+         */
+        @NameInMap("where")
+        public String where;
+
+        public static CreateContextStoreRequestConfigSourceDatasetFilter build(java.util.Map<String, ?> map) throws Exception {
+            CreateContextStoreRequestConfigSourceDatasetFilter self = new CreateContextStoreRequestConfigSourceDatasetFilter();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateContextStoreRequestConfigSourceDatasetFilter setWhere(String where) {
+            this.where = where;
+            return this;
+        }
+        public String getWhere() {
+            return this.where;
+        }
+
+    }
+
+    public static class CreateContextStoreRequestConfigSourceDatasetVersionPolicy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>follow</p>
+         */
+        @NameInMap("mode")
+        public String mode;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("startSeq")
+        public Long startSeq;
+
+        /**
+         * <strong>example:</strong>
+         * <p>v3</p>
+         */
+        @NameInMap("version")
+        public String version;
+
+        public static CreateContextStoreRequestConfigSourceDatasetVersionPolicy build(java.util.Map<String, ?> map) throws Exception {
+            CreateContextStoreRequestConfigSourceDatasetVersionPolicy self = new CreateContextStoreRequestConfigSourceDatasetVersionPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateContextStoreRequestConfigSourceDatasetVersionPolicy setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
+        public CreateContextStoreRequestConfigSourceDatasetVersionPolicy setStartSeq(Long startSeq) {
+            this.startSeq = startSeq;
+            return this;
+        }
+        public Long getStartSeq() {
+            return this.startSeq;
+        }
+
+        public CreateContextStoreRequestConfigSourceDatasetVersionPolicy setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+    }
+
+    public static class CreateContextStoreRequestConfigSourceDataset extends TeaModel {
+        @NameInMap("customFields")
+        public java.util.List<CreateContextStoreRequestConfigSourceDatasetCustomFields> customFields;
+
+        /**
+         * <strong>example:</strong>
+         * <p>trajectory-with-crm-profile</p>
+         */
+        @NameInMap("datasetName")
+        public String datasetName;
+
+        @NameInMap("filter")
+        public CreateContextStoreRequestConfigSourceDatasetFilter filter;
+
+        /**
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
+        @NameInMap("pollIntervalSeconds")
+        public Integer pollIntervalSeconds;
+
+        /**
+         * <strong>example:</strong>
+         * <p>MemorySourceV1</p>
+         */
+        @NameInMap("schemaContract")
+        public String schemaContract;
+
+        @NameInMap("versionPolicy")
+        public CreateContextStoreRequestConfigSourceDatasetVersionPolicy versionPolicy;
+
+        public static CreateContextStoreRequestConfigSourceDataset build(java.util.Map<String, ?> map) throws Exception {
+            CreateContextStoreRequestConfigSourceDataset self = new CreateContextStoreRequestConfigSourceDataset();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateContextStoreRequestConfigSourceDataset setCustomFields(java.util.List<CreateContextStoreRequestConfigSourceDatasetCustomFields> customFields) {
+            this.customFields = customFields;
+            return this;
+        }
+        public java.util.List<CreateContextStoreRequestConfigSourceDatasetCustomFields> getCustomFields() {
+            return this.customFields;
+        }
+
+        public CreateContextStoreRequestConfigSourceDataset setDatasetName(String datasetName) {
+            this.datasetName = datasetName;
+            return this;
+        }
+        public String getDatasetName() {
+            return this.datasetName;
+        }
+
+        public CreateContextStoreRequestConfigSourceDataset setFilter(CreateContextStoreRequestConfigSourceDatasetFilter filter) {
+            this.filter = filter;
+            return this;
+        }
+        public CreateContextStoreRequestConfigSourceDatasetFilter getFilter() {
+            return this.filter;
+        }
+
+        public CreateContextStoreRequestConfigSourceDataset setPollIntervalSeconds(Integer pollIntervalSeconds) {
+            this.pollIntervalSeconds = pollIntervalSeconds;
+            return this;
+        }
+        public Integer getPollIntervalSeconds() {
+            return this.pollIntervalSeconds;
+        }
+
+        public CreateContextStoreRequestConfigSourceDataset setSchemaContract(String schemaContract) {
+            this.schemaContract = schemaContract;
+            return this;
+        }
+        public String getSchemaContract() {
+            return this.schemaContract;
+        }
+
+        public CreateContextStoreRequestConfigSourceDataset setVersionPolicy(CreateContextStoreRequestConfigSourceDatasetVersionPolicy versionPolicy) {
+            this.versionPolicy = versionPolicy;
+            return this;
+        }
+        public CreateContextStoreRequestConfigSourceDatasetVersionPolicy getVersionPolicy() {
+            return this.versionPolicy;
+        }
+
+    }
+
+    public static class CreateContextStoreRequestConfigSourceTrajectoryFilter extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;sales-copilot&quot;]</p>
+         */
+        @NameInMap("agentNames")
+        public java.util.List<String> agentNames;
+
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("excludeDegraded")
+        public Boolean excludeDegraded;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("minStepCount")
+        public Integer minStepCount;
+
+        /**
+         * <strong>example:</strong>
+         * <p>tool_names:&quot;search_order&quot;</p>
+         */
+        @NameInMap("query")
+        public String query;
+
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;crm-service&quot;,&quot;app-*&quot;]</p>
+         */
+        @NameInMap("serviceNames")
+        public java.util.List<String> serviceNames;
+
+        public static CreateContextStoreRequestConfigSourceTrajectoryFilter build(java.util.Map<String, ?> map) throws Exception {
+            CreateContextStoreRequestConfigSourceTrajectoryFilter self = new CreateContextStoreRequestConfigSourceTrajectoryFilter();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateContextStoreRequestConfigSourceTrajectoryFilter setAgentNames(java.util.List<String> agentNames) {
+            this.agentNames = agentNames;
+            return this;
+        }
+        public java.util.List<String> getAgentNames() {
+            return this.agentNames;
+        }
+
+        public CreateContextStoreRequestConfigSourceTrajectoryFilter setExcludeDegraded(Boolean excludeDegraded) {
+            this.excludeDegraded = excludeDegraded;
+            return this;
+        }
+        public Boolean getExcludeDegraded() {
+            return this.excludeDegraded;
+        }
+
+        public CreateContextStoreRequestConfigSourceTrajectoryFilter setMinStepCount(Integer minStepCount) {
+            this.minStepCount = minStepCount;
+            return this;
+        }
+        public Integer getMinStepCount() {
+            return this.minStepCount;
+        }
+
+        public CreateContextStoreRequestConfigSourceTrajectoryFilter setQuery(String query) {
+            this.query = query;
+            return this;
+        }
+        public String getQuery() {
+            return this.query;
+        }
+
+        public CreateContextStoreRequestConfigSourceTrajectoryFilter setServiceNames(java.util.List<String> serviceNames) {
+            this.serviceNames = serviceNames;
+            return this;
+        }
+        public java.util.List<String> getServiceNames() {
+            return this.serviceNames;
+        }
+
+    }
+
+    public static class CreateContextStoreRequestConfigSourceTrajectoryScopeMapping extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>$.agent_name</p>
+         */
+        @NameInMap("agentId")
+        public String agentId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>$.service_names[0]</p>
+         */
+        @NameInMap("appId")
+        public String appId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>$.trajectory_id</p>
+         */
+        @NameInMap("runId")
+        public String runId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>$.trajectory_extensions.user_id</p>
+         */
+        @NameInMap("userId")
+        public String userId;
+
+        public static CreateContextStoreRequestConfigSourceTrajectoryScopeMapping build(java.util.Map<String, ?> map) throws Exception {
+            CreateContextStoreRequestConfigSourceTrajectoryScopeMapping self = new CreateContextStoreRequestConfigSourceTrajectoryScopeMapping();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateContextStoreRequestConfigSourceTrajectoryScopeMapping setAgentId(String agentId) {
+            this.agentId = agentId;
+            return this;
+        }
+        public String getAgentId() {
+            return this.agentId;
+        }
+
+        public CreateContextStoreRequestConfigSourceTrajectoryScopeMapping setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
+        }
+
+        public CreateContextStoreRequestConfigSourceTrajectoryScopeMapping setRunId(String runId) {
+            this.runId = runId;
+            return this;
+        }
+        public String getRunId() {
+            return this.runId;
+        }
+
+        public CreateContextStoreRequestConfigSourceTrajectoryScopeMapping setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+    }
+
+    public static class CreateContextStoreRequestConfigSourceTrajectory extends TeaModel {
+        @NameInMap("filter")
+        public CreateContextStoreRequestConfigSourceTrajectoryFilter filter;
+
+        /**
+         * <strong>example:</strong>
+         * <p>agent-trajectory</p>
+         */
+        @NameInMap("logstore")
+        public String logstore;
+
+        /**
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
+        @NameInMap("pollIntervalSeconds")
+        public Integer pollIntervalSeconds;
+
+        @NameInMap("scopeMapping")
+        public CreateContextStoreRequestConfigSourceTrajectoryScopeMapping scopeMapping;
+
+        /**
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-10-01T00:00:00Z</p>
+         */
+        @NameInMap("startTime")
+        public String startTime;
+
+        public static CreateContextStoreRequestConfigSourceTrajectory build(java.util.Map<String, ?> map) throws Exception {
+            CreateContextStoreRequestConfigSourceTrajectory self = new CreateContextStoreRequestConfigSourceTrajectory();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateContextStoreRequestConfigSourceTrajectory setFilter(CreateContextStoreRequestConfigSourceTrajectoryFilter filter) {
+            this.filter = filter;
+            return this;
+        }
+        public CreateContextStoreRequestConfigSourceTrajectoryFilter getFilter() {
+            return this.filter;
+        }
+
+        public CreateContextStoreRequestConfigSourceTrajectory setLogstore(String logstore) {
+            this.logstore = logstore;
+            return this;
+        }
+        public String getLogstore() {
+            return this.logstore;
+        }
+
+        public CreateContextStoreRequestConfigSourceTrajectory setPollIntervalSeconds(Integer pollIntervalSeconds) {
+            this.pollIntervalSeconds = pollIntervalSeconds;
+            return this;
+        }
+        public Integer getPollIntervalSeconds() {
+            return this.pollIntervalSeconds;
+        }
+
+        public CreateContextStoreRequestConfigSourceTrajectory setScopeMapping(CreateContextStoreRequestConfigSourceTrajectoryScopeMapping scopeMapping) {
+            this.scopeMapping = scopeMapping;
+            return this;
+        }
+        public CreateContextStoreRequestConfigSourceTrajectoryScopeMapping getScopeMapping() {
+            return this.scopeMapping;
+        }
+
+        public CreateContextStoreRequestConfigSourceTrajectory setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+    }
+
     public static class CreateContextStoreRequestConfigSource extends TeaModel {
         /**
          * <p>The AgentSpace where the trace data source resides. If not specified, the AgentSpace in the current path is used by default. Cross-AgentSpace access is not supported in the current version. If specified, the value must match the AgentSpace in the path. Otherwise, a 400 parameter error is returned. This value cannot be changed after creation.</p>
@@ -103,6 +754,9 @@ public class CreateContextStoreRequest extends TeaModel {
         @NameInMap("agentSpace")
         public String agentSpace;
 
+        @NameInMap("dataset")
+        public CreateContextStoreRequestConfigSourceDataset dataset;
+
         /**
          * <p>The start time for data backfill, in ISO 8601 UTC format. If not specified, the current time is used.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
@@ -112,6 +766,16 @@ public class CreateContextStoreRequest extends TeaModel {
          */
         @NameInMap("startTime")
         public String startTime;
+
+        @NameInMap("trajectory")
+        public CreateContextStoreRequestConfigSourceTrajectory trajectory;
+
+        /**
+         * <strong>example:</strong>
+         * <p>trajectory</p>
+         */
+        @NameInMap("type")
+        public String type;
 
         public static CreateContextStoreRequestConfigSource build(java.util.Map<String, ?> map) throws Exception {
             CreateContextStoreRequestConfigSource self = new CreateContextStoreRequestConfigSource();
@@ -126,6 +790,14 @@ public class CreateContextStoreRequest extends TeaModel {
             return this.agentSpace;
         }
 
+        public CreateContextStoreRequestConfigSource setDataset(CreateContextStoreRequestConfigSourceDataset dataset) {
+            this.dataset = dataset;
+            return this;
+        }
+        public CreateContextStoreRequestConfigSourceDataset getDataset() {
+            return this.dataset;
+        }
+
         public CreateContextStoreRequestConfigSource setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
@@ -134,9 +806,144 @@ public class CreateContextStoreRequest extends TeaModel {
             return this.startTime;
         }
 
+        public CreateContextStoreRequestConfigSource setTrajectory(CreateContextStoreRequestConfigSourceTrajectory trajectory) {
+            this.trajectory = trajectory;
+            return this;
+        }
+        public CreateContextStoreRequestConfigSourceTrajectory getTrajectory() {
+            return this.trajectory;
+        }
+
+        public CreateContextStoreRequestConfigSource setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class CreateContextStoreRequestConfigStoragePolicy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;ADD&quot;,&quot;UPDATE&quot;,&quot;MERGE&quot;,&quot;DELETE&quot;]</p>
+         */
+        @NameInMap("allowedActions")
+        public java.util.List<String> allowedActions;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("dedupe")
+        public Boolean dedupe;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("humanEditProtection")
+        public Boolean humanEditProtection;
+
+        /**
+         * <strong>example:</strong>
+         * <p>semantic</p>
+         */
+        @NameInMap("mergeKey")
+        public String mergeKey;
+
+        /**
+         * <strong>example:</strong>
+         * <p>upsert</p>
+         */
+        @NameInMap("mode")
+        public String mode;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0.4</p>
+         */
+        @NameInMap("similarityThreshold")
+        public Double similarityThreshold;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("ttlDays")
+        public Integer ttlDays;
+
+        public static CreateContextStoreRequestConfigStoragePolicy build(java.util.Map<String, ?> map) throws Exception {
+            CreateContextStoreRequestConfigStoragePolicy self = new CreateContextStoreRequestConfigStoragePolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateContextStoreRequestConfigStoragePolicy setAllowedActions(java.util.List<String> allowedActions) {
+            this.allowedActions = allowedActions;
+            return this;
+        }
+        public java.util.List<String> getAllowedActions() {
+            return this.allowedActions;
+        }
+
+        public CreateContextStoreRequestConfigStoragePolicy setDedupe(Boolean dedupe) {
+            this.dedupe = dedupe;
+            return this;
+        }
+        public Boolean getDedupe() {
+            return this.dedupe;
+        }
+
+        public CreateContextStoreRequestConfigStoragePolicy setHumanEditProtection(Boolean humanEditProtection) {
+            this.humanEditProtection = humanEditProtection;
+            return this;
+        }
+        public Boolean getHumanEditProtection() {
+            return this.humanEditProtection;
+        }
+
+        public CreateContextStoreRequestConfigStoragePolicy setMergeKey(String mergeKey) {
+            this.mergeKey = mergeKey;
+            return this;
+        }
+        public String getMergeKey() {
+            return this.mergeKey;
+        }
+
+        public CreateContextStoreRequestConfigStoragePolicy setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
+        public CreateContextStoreRequestConfigStoragePolicy setSimilarityThreshold(Double similarityThreshold) {
+            this.similarityThreshold = similarityThreshold;
+            return this;
+        }
+        public Double getSimilarityThreshold() {
+            return this.similarityThreshold;
+        }
+
+        public CreateContextStoreRequestConfigStoragePolicy setTtlDays(Integer ttlDays) {
+            this.ttlDays = ttlDays;
+            return this;
+        }
+        public Integer getTtlDays() {
+            return this.ttlDays;
+        }
+
     }
 
     public static class CreateContextStoreRequestConfig extends TeaModel {
+        @NameInMap("audit")
+        public CreateContextStoreRequestConfigAudit audit;
+
+        @NameInMap("extractionPolicy")
+        public CreateContextStoreRequestConfigExtractionPolicy extractionPolicy;
+
         /**
          * <p>The metadata field mapping. The key is the business field and the value is the storage field.</p>
          * 
@@ -155,9 +962,11 @@ public class CreateContextStoreRequest extends TeaModel {
         @NameInMap("miningInterval")
         public String miningInterval;
 
+        @NameInMap("scopePolicy")
+        public CreateContextStoreRequestConfigScopePolicy scopePolicy;
+
         /**
          * <p>The list of service names. This parameter is required and cannot be empty. It works with source.agentSpace to locate the trace data source. The trajectory extraction service uses the AgentSpace to look up the bound CMS workspace and project/logstore, and then filters by service name. This value cannot be changed after creation. No modification entry is available in the current version.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;order-service&quot;,&quot;payment-service&quot;]</p>
@@ -171,9 +980,28 @@ public class CreateContextStoreRequest extends TeaModel {
         @NameInMap("source")
         public CreateContextStoreRequestConfigSource source;
 
+        @NameInMap("storagePolicy")
+        public CreateContextStoreRequestConfigStoragePolicy storagePolicy;
+
         public static CreateContextStoreRequestConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateContextStoreRequestConfig self = new CreateContextStoreRequestConfig();
             return TeaModel.build(map, self);
+        }
+
+        public CreateContextStoreRequestConfig setAudit(CreateContextStoreRequestConfigAudit audit) {
+            this.audit = audit;
+            return this;
+        }
+        public CreateContextStoreRequestConfigAudit getAudit() {
+            return this.audit;
+        }
+
+        public CreateContextStoreRequestConfig setExtractionPolicy(CreateContextStoreRequestConfigExtractionPolicy extractionPolicy) {
+            this.extractionPolicy = extractionPolicy;
+            return this;
+        }
+        public CreateContextStoreRequestConfigExtractionPolicy getExtractionPolicy() {
+            return this.extractionPolicy;
         }
 
         public CreateContextStoreRequestConfig setMetadataField(java.util.Map<String, String> metadataField) {
@@ -192,6 +1020,14 @@ public class CreateContextStoreRequest extends TeaModel {
             return this.miningInterval;
         }
 
+        public CreateContextStoreRequestConfig setScopePolicy(CreateContextStoreRequestConfigScopePolicy scopePolicy) {
+            this.scopePolicy = scopePolicy;
+            return this;
+        }
+        public CreateContextStoreRequestConfigScopePolicy getScopePolicy() {
+            return this.scopePolicy;
+        }
+
         public CreateContextStoreRequestConfig setServiceNames(java.util.List<String> serviceNames) {
             this.serviceNames = serviceNames;
             return this;
@@ -206,6 +1042,14 @@ public class CreateContextStoreRequest extends TeaModel {
         }
         public CreateContextStoreRequestConfigSource getSource() {
             return this.source;
+        }
+
+        public CreateContextStoreRequestConfig setStoragePolicy(CreateContextStoreRequestConfigStoragePolicy storagePolicy) {
+            this.storagePolicy = storagePolicy;
+            return this;
+        }
+        public CreateContextStoreRequestConfigStoragePolicy getStoragePolicy() {
+            return this.storagePolicy;
         }
 
     }
