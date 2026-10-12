@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class HttpApiRequestContract extends TeaModel {
     /**
-     * <p>The body parameters.</p>
+     * <p>The request body parameter definitions.</p>
      */
     @NameInMap("body")
     public HttpApiRequestContractBody body;
 
     /**
-     * <p>The request header parameters.</p>
+     * <p>The request header parameter definitions.</p>
      */
     @NameInMap("headerParameters")
     public java.util.List<HttpApiParameter> headerParameters;
 
     /**
-     * <p>The path parameters.</p>
+     * <p>The path parameter definitions.</p>
      */
     @NameInMap("pathParameters")
     public java.util.List<HttpApiParameter> pathParameters;
 
     /**
-     * <p>The query parameters.</p>
+     * <p>The query parameter definitions.</p>
      */
     @NameInMap("queryParameters")
     public java.util.List<HttpApiParameter> queryParameters;
@@ -76,16 +76,16 @@ public class HttpApiRequestContract extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The parameter description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is a description.</p>
+         * <p>Body parameter description</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The sample value.</p>
+         * <p>The example value.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;result&quot;:&quot;ok&quot;}</p>
@@ -94,21 +94,21 @@ public class HttpApiRequestContract extends TeaModel {
         public String example;
 
         /**
-         * <p>The JSON definition description of the request body.</p>
+         * <p>The JSON schema definition of the request body.</p>
          * 
          * <strong>example:</strong>
          * <p>{
-         *       &quot;type&quot;: &quot;object&quot;,
-         *       &quot;required&quot;: [
-         *           &quot;result&quot;
-         *       ],
-         *       &quot;properties&quot;: {
-         *           &quot;result&quot;: {
-         *               &quot;type&quot;: &quot;string&quot;,
-         *               &quot;description&quot;: &quot;Operation result. \&quot;ok\&quot; indicates success.&quot;
-         *           }
-         *       }
-         *   }</p>
+         *     &quot;type&quot;: &quot;object&quot;,
+         *     &quot;required&quot;: [
+         *         &quot;result&quot;
+         *     ],
+         *     &quot;properties&quot;: {
+         *         &quot;result&quot;: {
+         *             &quot;type&quot;: &quot;string&quot;,
+         *             &quot;description&quot;: &quot;Operation result. \&quot;ok\&quot; indicates success.&quot;
+         *         }
+         *     }
+         * }</p>
          */
         @NameInMap("jsonSchema")
         public String jsonSchema;

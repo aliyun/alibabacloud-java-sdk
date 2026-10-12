@@ -7,8 +7,8 @@ public class GetDashboardRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,8 +35,8 @@ public class GetDashboardRequest extends TeaModel {
     /**
      * <p>The name of the dashboard. Valid values:</p>
      * <ul>
-     * <li>LOG: Access log.</li>
-     * <li>PLUGIN: Plugin log.</li>
+     * <li>LOG: access log.</li>
+     * <li>PLUGIN: plugin log.</li>
      * </ul>
      * <blockquote>
      * <p>Note: This parameter is required. If this parameter is not specified, the API returns InvalidParameter.IsEmpty (400).</p>
@@ -78,7 +78,7 @@ public class GetDashboardRequest extends TeaModel {
     /**
      * <p>The source of the dashboard. Valid values:</p>
      * <ul>
-     * <li>SLS: Log dashboard.</li>
+     * <li>SLS: log dashboard.</li>
      * </ul>
      * <blockquote>
      * <p>Note: This parameter is required. If this parameter is not specified, the API returns InvalidParameter.IsEmpty (400).</p>

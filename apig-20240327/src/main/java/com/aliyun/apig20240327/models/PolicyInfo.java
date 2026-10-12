@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PolicyInfo extends TeaModel {
     /**
-     * <p>The mount information.</p>
+     * <p>The list of mount information.</p>
      */
     @NameInMap("attachments")
     public java.util.List<Attachment> attachments;
@@ -14,34 +14,34 @@ public class PolicyInfo extends TeaModel {
      * <p>The policy class alias.</p>
      * 
      * <strong>example:</strong>
-     * <p>流量控制</p>
+     * <p>Throttling</p>
      */
     @NameInMap("classAlias")
     public String classAlias;
 
     /**
-     * <p>The class name supported by the policy. Different policies support different mount points. This parameter is used in combination with AttachResourceType.</p>
+     * <p>The class name supported by the policy. Different policies support different mount points. This parameter is used together with AttachResourceType. Valid values:</p>
      * <ul>
-     * <li>RateLimit: throttles traffic. Supported: HttpApi, Operation, and GatewayRoute.</li>
-     * <li>ConcurrencyLimit: controls concurrency. Supported: HttpApi, Operation, and GatewayRoute.</li>
-     * <li>CircuitBreaker: breaks circuits and downgrades traffic. Supported: HttpApi, Operation, and GatewayRoute.</li>
-     * <li>HttpRewrite: rewrites HTTP traffic. Supported: HttpApi, Operation, and GatewayRoute.</li>
-     * <li>HeaderModify: modifies headers. Supported: HttpApi, Operation, and GatewayRoute.</li>
-     * <li>Cors: supports CORS. Supported: HttpApi, Operation, and GatewayRoute.</li>
-     * <li>FlowCopy: replicates traffic. Supported: HttpApi, Operation, and GatewayRoute.</li>
-     * <li>Timeout: times out requests. Supported: HttpApi, Operation, and GatewayRoute.</li>
-     * <li>Retry: retries requests. Supported: HttpApi, Operation, and GatewayRoute.</li>
-     * <li>IpAccessControl: implements IP address-based access control. Supported: HttpApi, Operation, GatewayRoute, Domain, and Gateway.</li>
-     * <li>DirectResponse: mocks responses. Supported: Operation and GatewayRoute.</li>
-     * <li>Redirect: redirects traffic. Supported: GatewayRoute.</li>
-     * <li>Fallback: implements fallback. Supported: Operation and GatewayRoute.</li>
-     * <li>ServiceTls: implements TLS authentication. Supported: GatewayService.</li>
-     * <li>ServiceLb: balances loads. Supported: GatewayService.</li>
-     * <li>ServicePortTls: implements service port TLS authentication. Supported: GatewayServicePort.</li>
-     * <li>Waf: implements WAF protection. Supported: GatewayRoute and Gateway.</li>
-     * <li>JWTAuth: implements global JWT authentication. Supported: Gateway.</li>
-     * <li>OIDCAuth: implements global OIDC authentication. Supported: Gateway.</li>
-     * <li>ExternalZAuth: implements custom authentication. Supported: Gateway.</li>
+     * <li>RateLimit: throttling. Supported for HttpApi, Operation, and GatewayRoute.</li>
+     * <li>ConcurrencyLimit: concurrency control. Supported for HttpApi, Operation, and GatewayRoute.</li>
+     * <li>CircuitBreaker: circuit breaking. Supported for HttpApi, Operation, and GatewayRoute.</li>
+     * <li>HttpRewrite: HTTP rewrite. Supported for HttpApi, Operation, and GatewayRoute.</li>
+     * <li>HeaderModify: header modification. Supported for HttpApi, Operation, and GatewayRoute.</li>
+     * <li>Cors: cross-origin resource sharing (CORS). Supported for HttpApi, Operation, and GatewayRoute.</li>
+     * <li>FlowCopy: traffic copy. Supported for HttpApi, Operation, and GatewayRoute.</li>
+     * <li>Timeout: timeout. Supported for HttpApi, Operation, and GatewayRoute.</li>
+     * <li>Retry: retry. Supported for HttpApi, Operation, and GatewayRoute.</li>
+     * <li>IpAccessControl: IP access control. Supported for HttpApi, Operation, GatewayRoute, Domain, and Gateway.</li>
+     * <li>DirectResponse: mock. Supported for Operation and GatewayRoute.</li>
+     * <li>Redirect: redirect. Supported for GatewayRoute.</li>
+     * <li>Fallback: fallback. Supported for Operation and GatewayRoute.</li>
+     * <li>ServiceTls: service TLS authentication. Supported for GatewayService.</li>
+     * <li>ServiceLb: service load balancing. Supported for GatewayService.</li>
+     * <li>ServicePortTls: service port TLS authentication. Supported for GatewayServicePort.</li>
+     * <li>Waf: WAF protection. Supported for GatewayRoute and Gateway.</li>
+     * <li>JWTAuth: JWT global authentication. Supported for Gateway.</li>
+     * <li>OIDCAuth: OIDC global authentication. Supported for Gateway.</li>
+     * <li>ExternalZAuth: custom authentication. Supported for Gateway.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class PolicyInfo extends TeaModel {
     public String className;
 
     /**
-     * <p>The policy configurations.</p>
+     * <p>The policy configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;enable&quot;:false}</p>
@@ -60,11 +60,11 @@ public class PolicyInfo extends TeaModel {
     public String config;
 
     /**
-     * <p>The direction of traffic on which the policy takes effect. Valid values:</p>
+     * <p>The inbound or outbound direction of the policy. Valid values:</p>
      * <ul>
-     * <li>OutBound</li>
-     * <li>InBound</li>
-     * <li>Both</li>
+     * <li>OutBound: outbound.</li>
+     * <li>InBound: inbound.</li>
+     * <li>Both: both directions.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,16 +83,7 @@ public class PolicyInfo extends TeaModel {
     public String executePriority;
 
     /**
-     * <p>The execution phase.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>PluginStatistic</li>
-     * <li>PluginAuthorization</li>
-     * <li>PluginPre</li>
-     * <li>PluginAuthentication</li>
-     * <li>PluginDefault</li>
-     * <li>PluginPost</li>
-     * </ul>
+     * <p>The execution stage.</p>
      * 
      * <strong>example:</strong>
      * <p>PluginPost</p>
@@ -122,7 +113,7 @@ public class PolicyInfo extends TeaModel {
      * <p>The policy type.</p>
      * 
      * <strong>example:</strong>
-     * <p>策略类型</p>
+     * <p>Policy type</p>
      */
     @NameInMap("type")
     public String type;

@@ -76,7 +76,7 @@ public class CreatePolicyAttachmentResponseBody extends TeaModel {
 
     public static class CreatePolicyAttachmentResponseBodyData extends TeaModel {
         /**
-         * <p>The policy mount ID.</p>
+         * <p>The policy attachment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pr-cqooju5lhtgquuj6***</p>

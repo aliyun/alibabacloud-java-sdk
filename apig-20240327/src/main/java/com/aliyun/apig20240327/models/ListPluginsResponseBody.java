@@ -76,7 +76,7 @@ public class ListPluginsResponseBody extends TeaModel {
 
     public static class ListPluginsResponseBodyDataItemsAttachmentInfo extends TeaModel {
         /**
-         * <p>Indicates whether the plugin is enabled.</p>
+         * <p>Indicates whether the plug-in is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -85,7 +85,7 @@ public class ListPluginsResponseBody extends TeaModel {
         public String enable;
 
         /**
-         * <p>The plugin attachment ID.</p>
+         * <p>The plug-in mounting ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pa-ct2irn6m1hkreaen0t40</p>
@@ -163,7 +163,7 @@ public class ListPluginsResponseBody extends TeaModel {
          * <p>The alias.</p>
          * 
          * <strong>example:</strong>
-         * <p>基于 Key 限流</p>
+         * <p>Key-based throttling</p>
          */
         @NameInMap("alias")
         public String alias;
@@ -187,7 +187,7 @@ public class ListPluginsResponseBody extends TeaModel {
         public String executeStage;
 
         /**
-         * <p>The plugin name.</p>
+         * <p>The plug-in name.</p>
          * 
          * <strong>example:</strong>
          * <p>key-rate-limit</p>
@@ -196,7 +196,7 @@ public class ListPluginsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The plugin type ID.</p>
+         * <p>The plug-in type ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pls-cqebrgh46ppatmpri</p>
@@ -205,7 +205,7 @@ public class ListPluginsResponseBody extends TeaModel {
         public String pluginClassId;
 
         /**
-         * <p>The plugin source.</p>
+         * <p>The plug-in source.</p>
          * 
          * <strong>example:</strong>
          * <p>HigressOfficial</p>
@@ -226,7 +226,7 @@ public class ListPluginsResponseBody extends TeaModel {
          * <p>The version description.</p>
          * 
          * <strong>example:</strong>
-         * <p>版本描述</p>
+         * <p>Version description</p>
          */
         @NameInMap("versionDescription")
         public String versionDescription;
@@ -304,7 +304,7 @@ public class ListPluginsResponseBody extends TeaModel {
 
     public static class ListPluginsResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The plugin attachment information.</p>
+         * <p>The plug-in mounting information.</p>
          */
         @NameInMap("attachmentInfo")
         public ListPluginsResponseBodyDataItemsAttachmentInfo attachmentInfo;
@@ -316,13 +316,13 @@ public class ListPluginsResponseBody extends TeaModel {
         public ListPluginsResponseBodyDataItemsGatewayInfo gatewayInfo;
 
         /**
-         * <p>The plugin type information.</p>
+         * <p>The plug-in type information.</p>
          */
         @NameInMap("pluginClassInfo")
         public ListPluginsResponseBodyDataItemsPluginClassInfo pluginClassInfo;
 
         /**
-         * <p>The plugin ID.</p>
+         * <p>The plug-in ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-cvu6r4um1hko3b3ti0a0</p>
@@ -371,7 +371,7 @@ public class ListPluginsResponseBody extends TeaModel {
 
     public static class ListPluginsResponseBodyData extends TeaModel {
         /**
-         * <p>The plugin list.</p>
+         * <p>The list of plug-ins.</p>
          */
         @NameInMap("items")
         public java.util.List<ListPluginsResponseBodyDataItems> items;
@@ -386,7 +386,7 @@ public class ListPluginsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

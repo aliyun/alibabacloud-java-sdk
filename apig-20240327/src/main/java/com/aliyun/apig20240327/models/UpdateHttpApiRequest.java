@@ -102,7 +102,7 @@ public class UpdateHttpApiRequest extends TeaModel {
     public HttpApiVersionConfig versionConfig;
 
     /**
-     * <p>The idempotent request identifier. If you call this operation for the same HTTP API with the same clientToken value and request parameters, the result of the first successful call is returned.</p>
+     * <p>The idempotency token. If you call this operation for the same HTTP API by using the same clientToken value and request parameters, the result of the first successful call is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>update-http-api-client-token-001</p>

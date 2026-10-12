@@ -76,7 +76,7 @@ public class CreateConsumerResponseBody extends TeaModel {
 
     public static class CreateConsumerResponseBodyData extends TeaModel {
         /**
-         * <p>The consumer ID.</p>
+         * <p>The API consumer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-cvnjramm1hks1r3fmmug</p>

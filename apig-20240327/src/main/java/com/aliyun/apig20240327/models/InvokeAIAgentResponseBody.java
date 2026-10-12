@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class InvokeAIAgentResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public InvokeAIAgentResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -69,16 +76,23 @@ public class InvokeAIAgentResponseBody extends TeaModel {
 
     public static class InvokeAIAgentResponseBodyData extends TeaModel {
         /**
+         * <p>The response body of the debug result.</p>
+         * 
          * <strong>example:</strong>
-         * <p>{&quot;choices&quot;:[{&quot;delta&quot;:{&quot;content&quot;:&quot;分析结果...&quot;}}]}</p>
+         * <p>{&quot;choices&quot;:[{&quot;delta&quot;:{&quot;content&quot;:&quot;Analysis result...&quot;}}]}</p>
          */
         @NameInMap("body")
         public String body;
 
+        /**
+         * <p>The response headers, such as Content-Type: text/event-stream.</p>
+         */
         @NameInMap("headers")
         public java.util.Map<String, String> headers;
 
         /**
+         * <p>The HTTP status code of the debug result.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */

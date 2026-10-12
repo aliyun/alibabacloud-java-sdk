@@ -141,10 +141,10 @@ public class ListMcpServersResponseBody extends TeaModel {
         public String importInstanceId;
 
         /**
-         * <p>The synced MCP server ID.</p>
+         * <p>The ID of the synced MCP server.</p>
          * 
          * <strong>example:</strong>
-         * <p>The synced MCP server ID</p>
+         * <p>The ID of the synced MCP server</p>
          */
         @NameInMap("importMcpServerId")
         public String importMcpServerId;
@@ -200,7 +200,7 @@ public class ListMcpServersResponseBody extends TeaModel {
         public String apiId;
 
         /**
-         * <p>The list of assembled sources. This parameter is required when type is AssemblyMCP.</p>
+         * <p>The list of assembly sources. This parameter is required when type is AssemblyMCP.</p>
          */
         @NameInMap("assembledSources")
         public java.util.List<ListMcpServersResponseBodyDataItemsAssembledSources> assembledSources;
@@ -212,13 +212,13 @@ public class ListMcpServersResponseBody extends TeaModel {
         public Backend backend;
 
         /**
-         * <p>The creation source type. Valid values:</p>
+         * <p>The creation source type.</p>
          * <ul>
-         * <li>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP.</li>
-         * <li>ApiGatewayMcpHosting: gateway-managed MCP direct proxy.</li>
-         * <li>ApiGatewayAssembly: gateway MCP assembly.</li>
-         * <li>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP.</li>
-         * <li>NacosMcpHosting: gateway-managed Nacos-synced MCP direct proxy.</li>
+         * <li>ApiGatewayHttpToMCP: Gateway-managed HTTP-to-MCP.</li>
+         * <li>ApiGatewayMcpHosting: Gateway-managed MCP direct proxy.</li>
+         * <li>ApiGatewayAssembly: Gateway MCP assembly.</li>
+         * <li>NacosHttpToMCP: Gateway-managed Nacos-synced HTTP-to-MCP.</li>
+         * <li>NacosMcpHosting: Gateway-managed Nacos-synced MCP direct proxy.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -545,7 +545,7 @@ public class ListMcpServersResponseBody extends TeaModel {
 
     public static class ListMcpServersResponseBodyData extends TeaModel {
         /**
-         * <p>The MCP server list information.</p>
+         * <p>The list of MCP servers.</p>
          */
         @NameInMap("items")
         public java.util.List<ListMcpServersResponseBodyDataItems> items;

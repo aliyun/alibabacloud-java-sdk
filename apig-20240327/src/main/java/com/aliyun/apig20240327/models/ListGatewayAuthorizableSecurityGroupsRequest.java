@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGatewayAuthorizableSecurityGroupsRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>Queries only the security groups associated with a Container Service cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>c4a21b3560fad4ec299f3e63f4***</p>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class VerifyMigrationTaskResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public VerifyMigrationTaskResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -69,6 +76,8 @@ public class VerifyMigrationTaskResponseBody extends TeaModel {
 
     public static class VerifyMigrationTaskResponseBodyDataUnSupportedRouteRules extends TeaModel {
         /**
+         * <p>The namespaced name of the incompatible Ingress.</p>
+         * 
          * <strong>example:</strong>
          * <p>default/my-ingress</p>
          */
@@ -76,12 +85,17 @@ public class VerifyMigrationTaskResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The summary of the incompatible rule, in the format of request URI → destination service.</p>
+         * 
          * <strong>example:</strong>
          * <p>/api/v1/pets -&gt; pet-service</p>
          */
         @NameInMap("rule")
         public String rule;
 
+        /**
+         * <p>The list of unsupported annotations on the Ingress.</p>
+         */
         @NameInMap("unSupportedAnnotations")
         public java.util.List<String> unSupportedAnnotations;
 
@@ -118,6 +132,8 @@ public class VerifyMigrationTaskResponseBody extends TeaModel {
 
     public static class VerifyMigrationTaskResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether all routes are compatible and can be migrated.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -125,6 +141,8 @@ public class VerifyMigrationTaskResponseBody extends TeaModel {
         public Boolean isSupported;
 
         /**
+         * <p>The description of the check result, such as the failure reason or incompatibility summary. This value is from the Istio validation Reason.</p>
+         * 
          * <strong>example:</strong>
          * <p>all routes supported</p>
          */
@@ -132,12 +150,17 @@ public class VerifyMigrationTaskResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>Indicates whether the check is successful, which means whether the Istiod query link is working properly.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("success")
         public Boolean success;
 
+        /**
+         * <p>The list of incompatible routes.</p>
+         */
         @NameInMap("unSupportedRouteRules")
         public java.util.List<VerifyMigrationTaskResponseBodyDataUnSupportedRouteRules> unSupportedRouteRules;
 

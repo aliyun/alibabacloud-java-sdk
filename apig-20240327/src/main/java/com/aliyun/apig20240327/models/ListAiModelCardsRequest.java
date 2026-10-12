@@ -15,7 +15,7 @@ public class ListAiModelCardsRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The fuzzy match keyword for the model provider identifier or model name. If left empty, all model cards under the current gateway are queried.</p>
+     * <p>The keyword for fuzzy match against the model provider identifier or model name. If this parameter is left empty, all model cards under the current gateway are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen</p>

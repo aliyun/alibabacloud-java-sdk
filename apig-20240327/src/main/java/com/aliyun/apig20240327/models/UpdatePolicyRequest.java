@@ -18,13 +18,13 @@ public class UpdatePolicyRequest extends TeaModel {
      * <p>The description of the policy.</p>
      * 
      * <strong>example:</strong>
-     * <p>这是一条网关超时策略</p>
+     * <p>This is a gateway timeout policy</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The Policy Name.</p>
+     * <p>The policy name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListBatchExportTasksRequest extends TeaModel {
     /**
+     * <p>The end of the creation time range. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-05-26T11:00:00Z</p>
      */
@@ -12,6 +14,8 @@ public class ListBatchExportTasksRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The gateway instance ID. If specified, only tasks under this gateway are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-xxx</p>
      */
@@ -19,6 +23,8 @@ public class ListBatchExportTasksRequest extends TeaModel {
     public String gatewayId;
 
     /**
+     * <p>The maximum number of tasks to return in a single request.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -26,6 +32,8 @@ public class ListBatchExportTasksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The paging token that indicates the start position of the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>token-xxx</p>
      */
@@ -33,6 +41,8 @@ public class ListBatchExportTasksRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class ListBatchExportTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -47,6 +59,8 @@ public class ListBatchExportTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The start of the creation time range. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-05-26T10:00:00Z</p>
      */
@@ -54,6 +68,8 @@ public class ListBatchExportTasksRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The list of task statuses. Separate multiple statuses with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>Pending,Running</p>
      */

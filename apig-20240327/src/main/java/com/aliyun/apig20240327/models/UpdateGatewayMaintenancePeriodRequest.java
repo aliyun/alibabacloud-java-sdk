@@ -4,6 +4,9 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayMaintenancePeriodRequest extends TeaModel {
+    /**
+     * <p>The O&amp;M window.</p>
+     */
     @NameInMap("maintenancePeriod")
     public UpdateGatewayMaintenancePeriodRequestMaintenancePeriod maintenancePeriod;
 
@@ -22,6 +25,8 @@ public class UpdateGatewayMaintenancePeriodRequest extends TeaModel {
 
     public static class UpdateGatewayMaintenancePeriodRequestMaintenancePeriod extends TeaModel {
         /**
+         * <p>The O&amp;M end time (HH:mm).</p>
+         * 
          * <strong>example:</strong>
          * <p>02:00</p>
          */
@@ -29,6 +34,8 @@ public class UpdateGatewayMaintenancePeriodRequest extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The O&amp;M start time (HH:mm).</p>
+         * 
          * <strong>example:</strong>
          * <p>02:00</p>
          */

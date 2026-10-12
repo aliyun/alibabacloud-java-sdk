@@ -23,7 +23,7 @@ public class HiMarketPortalDeployConfig extends TeaModel {
     public String platform;
 
     /**
-     * <p>The SAE (Serverless App Engine) deployment configuration.</p>
+     * <p>The Serverless App Engine (SAE) deployment configuration.</p>
      */
     @NameInMap("saeConfig")
     public HiMarketPortalDeployConfigSaeConfig saeConfig;
@@ -103,7 +103,7 @@ public class HiMarketPortalDeployConfig extends TeaModel {
         public String oidcRoleName;
 
         /**
-         * <p>The region ID of SAE.</p>
+         * <p>The region ID where SAE is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

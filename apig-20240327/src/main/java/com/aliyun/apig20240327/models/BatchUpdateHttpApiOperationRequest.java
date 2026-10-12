@@ -4,16 +4,24 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class BatchUpdateHttpApiOperationRequest extends TeaModel {
+    /**
+     * <p>The authentication configuration. This parameter is required when enableAuth is set to true.</p>
+     */
     @NameInMap("authConfig")
     public BatchUpdateHttpApiOperationRequestAuthConfig authConfig;
 
     /**
+     * <p>Specifies whether to enable consumer authentication. If set to true, a valid authConfig must be provided. If set to false, authConfig is not validated and the existing configuration remains unchanged.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("enableAuth")
     public Boolean enableAuth;
 
+    /**
+     * <p>The list of operation IDs to update in batches. This parameter cannot be empty.</p>
+     */
     @NameInMap("operationIds")
     public java.util.List<String> operationIds;
 
@@ -48,6 +56,8 @@ public class BatchUpdateHttpApiOperationRequest extends TeaModel {
 
     public static class BatchUpdateHttpApiOperationRequestAuthConfig extends TeaModel {
         /**
+         * <p>The authentication mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>Custom</p>
          */
@@ -55,6 +65,8 @@ public class BatchUpdateHttpApiOperationRequest extends TeaModel {
         public String authMode;
 
         /**
+         * <p>The authentication type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Jwt</p>
          */

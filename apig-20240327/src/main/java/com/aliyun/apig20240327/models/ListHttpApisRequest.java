@@ -36,7 +36,7 @@ public class ListHttpApisRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>Searches for an HTTP API by exact name match.</p>
+     * <p>Searches for an exact match by name.</p>
      * 
      * <strong>example:</strong>
      * <p>login</p>
@@ -63,7 +63,7 @@ public class ListHttpApisRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ahr5uil8raz0rq3b</p>
@@ -150,7 +150,7 @@ public class ListHttpApisRequest extends TeaModel {
     public Boolean withIngressInfo;
 
     /**
-     * <p>The plug-in ID. If specified, the response includes plug-in publishing information for the specified plug-in.</p>
+     * <p>The plug-in ID. If specified, the response includes plug-in publishing information based on this plug-in ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pl-ct9qn3um1hktue8dqol0</p>

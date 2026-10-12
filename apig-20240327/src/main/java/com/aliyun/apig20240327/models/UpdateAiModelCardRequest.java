@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAiModelCardRequest extends TeaModel {
     /**
-     * <p>The list of invocation paths supported by the model. Each item must include both path and type. The list is overwritten as a whole during updates.</p>
+     * <p>The list of invocation paths supported by the model. Each item must include both path and type. The entire list is overwritten during an update.</p>
      */
     @NameInMap("availablePaths")
     public java.util.List<UpdateAiModelCardRequestAvailablePaths> availablePaths;
@@ -32,7 +32,7 @@ public class UpdateAiModelCardRequest extends TeaModel {
     public UpdateAiModelCardRequestMeta meta;
 
     /**
-     * <p>The model name. The name must be unique within the same AI gateway instance and model provider. Maximum length: 256 characters.</p>
+     * <p>The model name. The name must be unique within the same AI gateway instance and the same model provider. Maximum length: 256 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -148,7 +148,7 @@ public class UpdateAiModelCardRequest extends TeaModel {
 
     public static class UpdateAiModelCardRequestCredit extends TeaModel {
         /**
-         * <p>The cache hit token cost in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</p>
+         * <p>The cost of cache-hit tokens, in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -157,7 +157,7 @@ public class UpdateAiModelCardRequest extends TeaModel {
         public Float cacheCost;
 
         /**
-         * <p>The input token cost in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</p>
+         * <p>The cost of input tokens, in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1.5</p>
@@ -166,7 +166,7 @@ public class UpdateAiModelCardRequest extends TeaModel {
         public Float inputCost;
 
         /**
-         * <p>The output token cost in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</p>
+         * <p>The cost of output tokens, in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

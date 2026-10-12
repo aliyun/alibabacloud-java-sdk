@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class HttpApiInfoByName extends TeaModel {
     /**
+     * <p>The gateway ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-xx</p>
      */
@@ -21,7 +23,7 @@ public class HttpApiInfoByName extends TeaModel {
     public String name;
 
     /**
-     * <p>The API type.</p>
+     * <p>The type of the HTTP API.</p>
      * 
      * <strong>example:</strong>
      * <p>Http</p>
@@ -30,7 +32,7 @@ public class HttpApiInfoByName extends TeaModel {
     public String type;
 
     /**
-     * <p>Specifies whether to enable versioning.</p>
+     * <p>Indicates whether version management is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -39,7 +41,7 @@ public class HttpApiInfoByName extends TeaModel {
     public Boolean versionEnabled;
 
     /**
-     * <p>The information about the versioned API.</p>
+     * <p>The versioned API version information.</p>
      */
     @NameInMap("versionedHttpApis")
     public java.util.List<HttpApiApiInfo> versionedHttpApis;

@@ -23,7 +23,7 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
     public ResetGatewayQuotaRuleResponseBodyData data;
 
     /**
-     * <p>The message.</p>
+     * <p>The message content.</p>
      * 
      * <strong>example:</strong>
      * <p>Hello, World!</p>
@@ -32,7 +32,7 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique identifier of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -81,9 +81,9 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
         /**
          * <p>The period type of the existing conflicting rule on the subject. Valid values:</p>
          * <ul>
-         * <li>day: The period of the existing conflicting rule is daily.</li>
-         * <li>week: The period of the existing conflicting rule is weekly.</li>
-         * <li>month: The period of the existing conflicting rule is monthly.</li>
+         * <li>day: daily.</li>
+         * <li>week: weekly.</li>
+         * <li>month: monthly.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -144,8 +144,8 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
         /**
          * <p>The type of the conflicting subject. Valid values:</p>
          * <ul>
-         * <li>consumer</li>
-         * <li>consumer_group</li>
+         * <li>consumer: consumer.</li>
+         * <li>consumer_group: consumer group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -219,7 +219,7 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
 
     public static class ResetGatewayQuotaRuleResponseBodyDataConflictPreview extends TeaModel {
         /**
-         * <p>The conflict hash.</p>
+         * <p>The hash of the conflict snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</p>

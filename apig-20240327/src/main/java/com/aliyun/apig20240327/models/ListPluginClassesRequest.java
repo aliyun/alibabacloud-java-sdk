@@ -8,7 +8,7 @@ public class ListPluginClassesRequest extends TeaModel {
      * <p>The plug-in alias. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>OAuth2 认证</p>
+     * <p>OAuth2 Authentication</p>
      */
     @NameInMap("aliasLike")
     public String aliasLike;

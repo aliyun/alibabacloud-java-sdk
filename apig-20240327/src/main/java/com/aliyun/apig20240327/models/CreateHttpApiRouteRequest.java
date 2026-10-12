@@ -193,10 +193,10 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The Terms of Service. Valid values:</p>
+         * <p>The service protocol. Valid values:</p>
          * <ul>
-         * <li>HTTP.</li>
-         * <li>HTTPS.</li>
+         * <li>HTTP</li>
+         * <li>HTTPS</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -224,7 +224,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The service version. This parameter takes effect only in tag-based scenarios.</p>
+         * <p>The service version. This parameter takes effect only in the by-tag scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -332,10 +332,10 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         /**
          * <p>The backend service scenario. Valid values:</p>
          * <ul>
-         * <li>SingleService: single service.</li>
-         * <li>MultiServiceByRatio: multiple services with ratio-based canary release.</li>
-         * <li>Mock: mock service.</li>
-         * <li>Redirect: redirect service.</li>
+         * <li>SingleService: Single service.</li>
+         * <li>MultiServiceByRatio: Multi-service canary release by ratio.</li>
+         * <li>Mock: Mock service.</li>
+         * <li>Redirect: Redirect service.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -393,11 +393,11 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public Boolean mcpStatisticsEnable;
 
         /**
-         * <p>The Terms of Service. Valid values:</p>
+         * <p>The service protocol. Valid values:</p>
          * <ul>
-         * <li>TCP.</li>
-         * <li>HTTP.</li>
-         * <li>DUBBO.</li>
+         * <li>TCP</li>
+         * <li>HTTP</li>
+         * <li>DUBBO</li>
          * </ul>
          * 
          * <strong>example:</strong>

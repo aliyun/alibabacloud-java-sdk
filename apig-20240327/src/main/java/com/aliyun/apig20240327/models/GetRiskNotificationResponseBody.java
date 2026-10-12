@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetRiskNotificationResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The risk detection result.</p>
+     */
     @NameInMap("data")
     public GetRiskNotificationResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -69,6 +76,8 @@ public class GetRiskNotificationResponseBody extends TeaModel {
 
     public static class GetRiskNotificationResponseBodyData extends TeaModel {
         /**
+         * <p>The gateway ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-xxxx</p>
          */
@@ -76,6 +85,8 @@ public class GetRiskNotificationResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
+         * <p>Indicates whether the notification for the risk item is muted.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -83,6 +94,8 @@ public class GetRiskNotificationResponseBody extends TeaModel {
         public Boolean isMute;
 
         /**
+         * <p>The code of the risk item.</p>
+         * 
          * <strong>example:</strong>
          * <p>GW_VERSION_EXPIRED</p>
          */

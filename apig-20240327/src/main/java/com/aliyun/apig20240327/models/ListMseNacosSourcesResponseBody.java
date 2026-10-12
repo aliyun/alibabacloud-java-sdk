@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMseNacosSourcesResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class ListMseNacosSourcesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public ListMseNacosSourcesResponseBodyData data;
 
     /**
-     * <p>The response message returned.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -88,7 +88,7 @@ public class ListMseNacosSourcesResponseBody extends TeaModel {
          * <p>The Nacos instance name.</p>
          * 
          * <strong>example:</strong>
-         * <p>商品中心Nacos注册中心</p>
+         * <p>Product Center Nacos Registry</p>
          */
         @NameInMap("name")
         public String name;

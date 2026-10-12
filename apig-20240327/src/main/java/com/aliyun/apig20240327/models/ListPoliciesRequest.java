@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPoliciesRequest extends TeaModel {
     /**
-     * <p>The ID of the attachment point.</p>
+     * <p>The attachment point ID.</p>
      * 
      * <strong>example:</strong>
      * <p>api-cq7l5s5lhtgi6qasrdc0</p>
@@ -16,13 +16,13 @@ public class ListPoliciesRequest extends TeaModel {
     /**
      * <p>The type of attachment point supported by the policy.</p>
      * <ul>
-     * <li>HttpApi: HttpApi.</li>
-     * <li>Operation: Operation of HttpApi.</li>
-     * <li>GatewayRoute: gateway route.</li>
-     * <li>GatewayService: gateway service.</li>
-     * <li>GatewayServicePort: gateway service port.</li>
-     * <li>Domain: gateway domain name.</li>
-     * <li>Gateway: gateway.</li>
+     * <li>HttpApi: HTTP API.</li>
+     * <li>Operation: Operation of an HTTP API.</li>
+     * <li>GatewayRoute: Gateway route.</li>
+     * <li>GatewayService: Gateway service.</li>
+     * <li>GatewayServicePort: Gateway service port.</li>
+     * <li>Domain: Gateway domain name.</li>
+     * <li>Gateway: Gateway.</li>
      * </ul>
      * 
      * <strong>example:</strong>

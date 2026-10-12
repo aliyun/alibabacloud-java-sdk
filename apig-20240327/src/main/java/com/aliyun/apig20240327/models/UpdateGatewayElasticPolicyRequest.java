@@ -4,6 +4,9 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayElasticPolicyRequest extends TeaModel {
+    /**
+     * <p>The elastic policy object.</p>
+     */
     @NameInMap("elasticPolicy")
     public UpdateGatewayElasticPolicyRequestElasticPolicy elasticPolicy;
 
@@ -22,6 +25,8 @@ public class UpdateGatewayElasticPolicyRequest extends TeaModel {
 
     public static class UpdateGatewayElasticPolicyRequestElasticPolicyEnableScaleTimePolicyList extends TeaModel {
         /**
+         * <p>The O&amp;M end time in the HH:mm format.</p>
+         * 
          * <strong>example:</strong>
          * <p>18:00</p>
          */
@@ -29,6 +34,8 @@ public class UpdateGatewayElasticPolicyRequest extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The O&amp;M start time in the HH:mm format.</p>
+         * 
          * <strong>example:</strong>
          * <p>09:00</p>
          */
@@ -60,6 +67,8 @@ public class UpdateGatewayElasticPolicyRequest extends TeaModel {
 
     public static class UpdateGatewayElasticPolicyRequestElasticPolicyTimePolicyList extends TeaModel {
         /**
+         * <p>The O&amp;M end time in the HH:mm format.</p>
+         * 
          * <strong>example:</strong>
          * <p>06:00</p>
          */
@@ -67,6 +76,8 @@ public class UpdateGatewayElasticPolicyRequest extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The O&amp;M start time in the HH:mm format.</p>
+         * 
          * <strong>example:</strong>
          * <p>00:00</p>
          */
@@ -74,6 +85,8 @@ public class UpdateGatewayElasticPolicyRequest extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The number of replicas.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -113,6 +126,8 @@ public class UpdateGatewayElasticPolicyRequest extends TeaModel {
 
     public static class UpdateGatewayElasticPolicyRequestElasticPolicy extends TeaModel {
         /**
+         * <p>Specifies whether to enable the elastic policy. A value of false indicates that the elastic policy is disabled. When the elastic policy is disabled, other fields are not validated and the system directly proceeds with the disabling process.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -120,16 +135,23 @@ public class UpdateGatewayElasticPolicyRequest extends TeaModel {
         public Boolean elasticEnabled;
 
         /**
+         * <p>The policy type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CronHPA</p>
          */
         @NameInMap("elasticType")
         public String elasticType;
 
+        /**
+         * <p>The time periods during which AutoHPA is allowed to scale out, specified by startTime and endTime.</p>
+         */
         @NameInMap("enableScaleTimePolicyList")
         public java.util.List<UpdateGatewayElasticPolicyRequestElasticPolicyEnableScaleTimePolicyList> enableScaleTimePolicyList;
 
         /**
+         * <p>Specifies whether to enable the AutoHPA load alert threshold.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -137,12 +159,17 @@ public class UpdateGatewayElasticPolicyRequest extends TeaModel {
         public Boolean loadWarningThreshold;
 
         /**
+         * <p>The maximum number of replicas. This parameter is required for AutoHPA.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("maxUnits")
         public Integer maxUnits;
 
+        /**
+         * <p>The list of scheduled policies.</p>
+         */
         @NameInMap("timePolicyList")
         public java.util.List<UpdateGatewayElasticPolicyRequestElasticPolicyTimePolicyList> timePolicyList;
 

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateRiskCheckTaskResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public CreateRiskCheckTaskResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -69,6 +76,8 @@ public class CreateRiskCheckTaskResponseBody extends TeaModel {
 
     public static class CreateRiskCheckTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The risk detection task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rct-xxxxxxxx</p>
          */

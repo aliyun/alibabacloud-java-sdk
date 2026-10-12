@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListPluginWorkspaceResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public java.util.List<ListPluginWorkspaceResponseBodyData> data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -69,6 +76,8 @@ public class ListPluginWorkspaceResponseBody extends TeaModel {
 
     public static class ListPluginWorkspaceResponseBodyData extends TeaModel {
         /**
+         * <p>The Codeup organization ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>664f1e2xxxx</p>
          */
@@ -76,6 +85,8 @@ public class ListPluginWorkspaceResponseBody extends TeaModel {
         public String organizationId;
 
         /**
+         * <p>The Codeup repository ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345678</p>
          */
@@ -83,6 +94,8 @@ public class ListPluginWorkspaceResponseBody extends TeaModel {
         public String repoId;
 
         /**
+         * <p>The repository name (the English ID of the plugin).</p>
+         * 
          * <strong>example:</strong>
          * <p>my-custom-plugin</p>
          */
@@ -90,6 +103,8 @@ public class ListPluginWorkspaceResponseBody extends TeaModel {
         public String repoName;
 
         /**
+         * <p>The workspace ID (prefixed with plw-).</p>
+         * 
          * <strong>example:</strong>
          * <p>plw-xxxxxxxx</p>
          */

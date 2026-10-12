@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class PolicyClassInfo extends TeaModel {
     /**
-     * <p>The template alias.</p>
+     * <p>The alias of the policy template.</p>
      * 
      * <strong>example:</strong>
-     * <p>Rate Limit</p>
+     * <p>Concurrency Control</p>
      */
     @NameInMap("alias")
     public String alias;
@@ -20,7 +20,7 @@ public class PolicyClassInfo extends TeaModel {
     public java.util.List<String> attachableResourceTypes;
 
     /**
-     * <p>The template identifier.</p>
+     * <p>The identifier of the policy template.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-cpqm0s94ckt1displ8ng</p>
@@ -29,7 +29,7 @@ public class PolicyClassInfo extends TeaModel {
     public String classId;
 
     /**
-     * <p>A configuration example.</p>
+     * <p>The configuration example.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -38,7 +38,7 @@ public class PolicyClassInfo extends TeaModel {
     public String configExample;
 
     /**
-     * <p>Specifies whether the policy has been deprecated.</p>
+     * <p>Indicates whether the policy is deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -47,16 +47,16 @@ public class PolicyClassInfo extends TeaModel {
     public Boolean deprecated;
 
     /**
-     * <p>The template description.</p>
+     * <p>The detailed description of the policy template.</p>
      * 
      * <strong>example:</strong>
-     * <p>Limits the number of requests per unit of time</p>
+     * <p>Controls the number of concurrent threads to ensure system stability. Applicable to scenarios where internal application components or downstream dependencies become unstable, such as slow SQL queries or increased response time from downstream applications</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The direction of traffic on which the policy takes effect.</p>
+     * <p>The direction in which the policy takes effect.</p>
      * 
      * <strong>example:</strong>
      * <p>InBound</p>
@@ -65,7 +65,7 @@ public class PolicyClassInfo extends TeaModel {
     public String direction;
 
     /**
-     * <p>Specifies whether to enable logging.</p>
+     * <p>Indicates whether log recording is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -83,7 +83,7 @@ public class PolicyClassInfo extends TeaModel {
     public String executePriority;
 
     /**
-     * <p>The execution phase.</p>
+     * <p>The execution stage.</p>
      * 
      * <strong>example:</strong>
      * <p>POST</p>
@@ -92,7 +92,7 @@ public class PolicyClassInfo extends TeaModel {
     public String executeStage;
 
     /**
-     * <p>The template name.</p>
+     * <p>The name of the policy template.</p>
      * 
      * <strong>example:</strong>
      * <p>ConcurrencyLimit</p>
@@ -110,7 +110,7 @@ public class PolicyClassInfo extends TeaModel {
     public String type;
 
     /**
-     * <p>The template version.</p>
+     * <p>The version of the policy template.</p>
      * 
      * <strong>example:</strong>
      * <p>1.0.0</p>

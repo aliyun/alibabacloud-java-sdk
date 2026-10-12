@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateRiskNotificationRequest extends TeaModel {
     /**
+     * <p>Specifies whether to mute notifications.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,8 +14,11 @@ public class UpdateRiskNotificationRequest extends TeaModel {
     public Boolean isMute;
 
     /**
+     * <p>The risk item code. This parameter is required.</p>
+     * <p>The value is a numeric string (for example, 60010010002 or 50010010009). Call GetRiskNotification to query the code of the current risk item.</p>
+     * 
      * <strong>example:</strong>
-     * <p>GW_VERSION_EXPIRED</p>
+     * <p>60010010002</p>
      */
     @NameInMap("riskCode")
     public String riskCode;

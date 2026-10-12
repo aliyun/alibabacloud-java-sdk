@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateMigrationTaskResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public CreateMigrationTaskResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,7 +29,7 @@ public class CreateMigrationTaskResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FD4D8-8A86-5FDE-B79F-357C69677DFB</p>
@@ -69,6 +76,8 @@ public class CreateMigrationTaskResponseBody extends TeaModel {
 
     public static class CreateMigrationTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>async-task-xxx</p>
          */

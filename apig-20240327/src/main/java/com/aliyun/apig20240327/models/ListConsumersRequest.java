@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConsumersRequest extends TeaModel {
     /**
-     * <p>Filters by gateway type. Valid values: <strong>AI</strong> and <strong>API</strong>.</p>
+     * <p>The gateway type used to filter results. Valid values: <strong>AI</strong> and <strong>API</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>AI</p>
@@ -23,7 +23,7 @@ public class ListConsumersRequest extends TeaModel {
     public String nameLike;
 
     /**
-     * <p>The page number, starting from 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetMigrationNamespacedServicesResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public GetMigrationNamespacedServicesResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,7 +29,7 @@ public class GetMigrationNamespacedServicesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7D513911-206E-5E93-9C9E-71D63C0D68E7</p>
@@ -69,6 +76,8 @@ public class GetMigrationNamespacedServicesResponseBody extends TeaModel {
 
     public static class GetMigrationNamespacedServicesResponseBodyDataNamespacedServicesServices extends TeaModel {
         /**
+         * <p>The service name. After you select a Server Load Balancer (SLB) instance, the frontend populates this value into the serviceName field.</p>
+         * 
          * <strong>example:</strong>
          * <p>nginx-ingress-lb</p>
          */
@@ -76,6 +85,8 @@ public class GetMigrationNamespacedServicesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the load balancing instance associated with the service.</p>
+         * 
          * <strong>example:</strong>
          * <p>lb-xxxx / nlb-xxxx</p>
          */
@@ -107,12 +118,17 @@ public class GetMigrationNamespacedServicesResponseBody extends TeaModel {
 
     public static class GetMigrationNamespacedServicesResponseBodyDataNamespacedServices extends TeaModel {
         /**
+         * <p>The Kubernetes namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
         @NameInMap("namespace")
         public String namespace;
 
+        /**
+         * <p>The list of migratable services in the namespace.</p>
+         */
         @NameInMap("services")
         public java.util.List<GetMigrationNamespacedServicesResponseBodyDataNamespacedServicesServices> services;
 
@@ -140,6 +156,9 @@ public class GetMigrationNamespacedServicesResponseBody extends TeaModel {
     }
 
     public static class GetMigrationNamespacedServicesResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of services grouped by namespace.</p>
+         */
         @NameInMap("namespacedServices")
         public java.util.List<GetMigrationNamespacedServicesResponseBodyDataNamespacedServices> namespacedServices;
 

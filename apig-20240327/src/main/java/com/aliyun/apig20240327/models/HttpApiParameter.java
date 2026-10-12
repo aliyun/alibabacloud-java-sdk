@@ -14,16 +14,16 @@ public class HttpApiParameter extends TeaModel {
     public String defaultValue;
 
     /**
-     * <p>The parameter description.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>The example description.</p>
+     * <p>User ID</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The sample value of the parameter.</p>
+     * <p>The example value of the parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -32,7 +32,7 @@ public class HttpApiParameter extends TeaModel {
     public String exampleValue;
 
     /**
-     * <p>The parameter name.</p>
+     * <p>The name of the parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class HttpApiParameter extends TeaModel {
     public String name;
 
     /**
-     * <p>Specifies whether the parameter is required.</p>
+     * <p>Indicates whether the parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -51,14 +51,7 @@ public class HttpApiParameter extends TeaModel {
     public Boolean required;
 
     /**
-     * <p>The parameter type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Integer</li>
-     * <li>Number</li>
-     * <li>String</li>
-     * <li>Boolean</li>
-     * </ul>
+     * <p>The type of the parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

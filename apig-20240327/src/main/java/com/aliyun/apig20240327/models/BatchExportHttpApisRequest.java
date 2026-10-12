@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class BatchExportHttpApisRequest extends TeaModel {
     /**
+     * <p>The list of API IDs to export.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("apiIds")
     public java.util.List<String> apiIds;
 
     /**
+     * <p>The API type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,10 +21,15 @@ public class BatchExportHttpApisRequest extends TeaModel {
     @NameInMap("apiType")
     public String apiType;
 
+    /**
+     * <p>The export extension configuration. When this configuration is specified for a REST API, gatewayId is required. This configuration is required for batch export of HTTP APIs.</p>
+     */
     @NameInMap("extensionConfig")
     public BatchExportHttpApisRequestExtensionConfig extensionConfig;
 
     /**
+     * <p>The export format. Valid values: json and yaml. Default value: yaml.</p>
+     * 
      * <strong>example:</strong>
      * <p>yaml</p>
      */
@@ -30,6 +37,8 @@ public class BatchExportHttpApisRequest extends TeaModel {
     public String format;
 
     /**
+     * <p>The gateway instance ID. This parameter is required when extensionConfig is specified for a REST API. This parameter is required for batch export of HTTP APIs.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-xxx</p>
      */
@@ -82,18 +91,48 @@ public class BatchExportHttpApisRequest extends TeaModel {
     }
 
     public static class BatchExportHttpApisRequestExtensionConfig extends TeaModel {
+        /**
+         * <p>Specifies whether to export the consumer authorization configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("withAuthConfig")
         public Boolean withAuthConfig;
 
+        /**
+         * <p>Specifies whether to export the authorized consumers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("withAuthConsumer")
         public Boolean withAuthConsumer;
 
+        /**
+         * <p>Specifies whether to export the plugin configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("withPlugin")
         public Boolean withPlugin;
 
+        /**
+         * <p>Specifies whether to export the policy configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("withPolicy")
         public Boolean withPolicy;
 
+        /**
+         * <p>Specifies whether to export the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("withService")
         public Boolean withService;
 

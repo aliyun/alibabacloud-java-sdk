@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class BatchImportHttpApisResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public BatchImportHttpApisResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class BatchImportHttpApisResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>CE534E1D-FCE4-5930-B784-E055EC1AEE6F</p>
      */
@@ -67,6 +76,8 @@ public class BatchImportHttpApisResponseBody extends TeaModel {
 
     public static class BatchImportHttpApisResponseBodyData extends TeaModel {
         /**
+         * <p>The asynchronous task ID. You can call the GetBatchImportTask operation to query the task progress.</p>
+         * 
          * <strong>example:</strong>
          * <p>async-task-xxx</p>
          */

@@ -9,13 +9,13 @@ public class UpdateAiModelProviderRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Qwen Cloud / Alibaba Cloud Bailian.</p>
+     * <p>Qwen Cloud / Alibaba Cloud Bailian</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
-     * <p>The complete set of AI service IDs to bind to the model provider. If this parameter is not specified, the existing bindings are retained. If an empty array is specified, all bindings are cleared. Duplicate and empty values are normalized.</p>
+     * <p>The complete set of AI service IDs to bind to the model provider. If this parameter is not specified, the existing bindings are retained. If an empty array is passed, all bindings are cleared. Duplicate and empty values are normalized.</p>
      */
     @NameInMap("serviceIds")
     public java.util.List<String> serviceIds;

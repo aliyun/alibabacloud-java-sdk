@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreatePluginWorkspaceResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public CreatePluginWorkspaceResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,7 +29,7 @@ public class CreatePluginWorkspaceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>01A02219-8028-57D8-9D60-2D167FF9118E</p>
@@ -69,6 +76,8 @@ public class CreatePluginWorkspaceResponseBody extends TeaModel {
 
     public static class CreatePluginWorkspaceResponseBodyData extends TeaModel {
         /**
+         * <p>The Codeup repository ID, which is a numeric string.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345678</p>
          */
@@ -76,6 +85,8 @@ public class CreatePluginWorkspaceResponseBody extends TeaModel {
         public String repoId;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>plw-xxxxxxxx</p>
          */

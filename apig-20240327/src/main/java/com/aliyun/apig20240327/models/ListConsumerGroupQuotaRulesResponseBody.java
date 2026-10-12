@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response data.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;totalSize&quot;:100}</p>
      */
@@ -19,6 +23,8 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
     public ListConsumerGroupQuotaRulesResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,6 +32,8 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890</p>
      */
@@ -71,6 +79,8 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
 
     public static class ListConsumerGroupQuotaRulesResponseBodyDataItems extends TeaModel {
         /**
+         * <p>The ID of the gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-123456</p>
          */
@@ -78,6 +88,8 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
+         * <p>The name of the gateway. Falls back to the gateway ID if the name is unavailable.</p>
+         * 
          * <strong>example:</strong>
          * <p>prod-gateway</p>
          */
@@ -85,6 +97,8 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
         public String gatewayName;
 
         /**
+         * <p>The period multiplier, which specifies the number of days before the quota resets. A positive integer is returned for custom periods. This field is not returned for calendar-based periods.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -92,6 +106,8 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
         public Long periodMultiplier;
 
         /**
+         * <p>The period type.</p>
+         * 
          * <strong>example:</strong>
          * <p>week</p>
          */
@@ -99,6 +115,8 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
         public String periodType;
 
         /**
+         * <p>The quota dimension.</p>
+         * 
          * <strong>example:</strong>
          * <p>token</p>
          */
@@ -106,6 +124,8 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
         public String quotaDimension;
 
         /**
+         * <p>The quota limit.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -113,6 +133,8 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
         public Long quotaLimit;
 
         /**
+         * <p>The ID of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>rule-001</p>
          */
@@ -120,6 +142,8 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
         public String ruleId;
 
         /**
+         * <p>The name of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>daily-token-limit</p>
          */
@@ -127,6 +151,12 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
         public String ruleName;
 
         /**
+         * <p>The status of the rule. Valid values:</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>enabled</p>
          */
@@ -134,6 +164,8 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
         public String ruleStatus;
 
         /**
+         * <p>The time zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>UTC+8</p>
          */
@@ -141,6 +173,12 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
         public String timezone;
 
         /**
+         * <p>The window alignment type. Valid values:</p>
+         * <ul>
+         * <li>calendar: calendar-based period.</li>
+         * <li>epoch: custom period.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>calendar</p>
          */
@@ -244,6 +282,8 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
 
     public static class ListConsumerGroupQuotaRulesResponseBodyData extends TeaModel {
         /**
+         * <p>The list of rules.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;ruleId&quot;:&quot;rule-001&quot;}]</p>
          */
@@ -251,6 +291,8 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
         public java.util.List<ListConsumerGroupQuotaRulesResponseBodyDataItems> items;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -258,6 +300,8 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The current page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -265,6 +309,8 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

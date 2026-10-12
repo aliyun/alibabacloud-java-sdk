@@ -7,7 +7,7 @@ public class ListZonesRequest extends TeaModel {
     /**
      * <p>The target gateway edition for querying zones. Valid values:</p>
      * <ul>
-     * <li>Professional: standard gateway. This is the default value.</li>
+     * <li>Professional: Standard gateway. This is the default value.</li>
      * <li>ServerlessV2: API multi-tenant Serverless V2.</li>
      * </ul>
      * <p>If this parameter is not specified, Professional is used.</p>

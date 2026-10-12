@@ -76,7 +76,7 @@ public class GetSecretValueResponseBody extends TeaModel {
 
     public static class GetSecretValueResponseBodyData extends TeaModel {
         /**
-         * <p>The key value.</p>
+         * <p>The secret value.</p>
          * 
          * <strong>example:</strong>
          * <p>apikey-xxxxxxxx</p>

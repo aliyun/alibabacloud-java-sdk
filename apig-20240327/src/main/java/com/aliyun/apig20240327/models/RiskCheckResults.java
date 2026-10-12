@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RiskCheckResults extends TeaModel {
     /**
-     * <p>The check time</p>
+     * <p>The check timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890000</p>
@@ -14,7 +14,7 @@ public class RiskCheckResults extends TeaModel {
     public Long checkTime;
 
     /**
-     * <p>The gateway ID</p>
+     * <p>The unique identifier of the gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-0364f863b1a04474911b48cd6d51d03d</p>
@@ -23,19 +23,25 @@ public class RiskCheckResults extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The instance metadata</p>
+     * <p>The basic information about the instance.</p>
      */
     @NameInMap("metadata")
     public RiskCheckResultsMetadata metadata;
 
     /**
-     * <p>The risk details list</p>
+     * <p>The list of detailed risk items.</p>
      */
     @NameInMap("riskDetails")
     public java.util.List<RiskCheckResultsRiskDetails> riskDetails;
 
     /**
-     * <p>The risk level</p>
+     * <p>The overall risk level. Valid values:</p>
+     * <ul>
+     * <li>LOW: Low risk.</li>
+     * <li>MEDIUM: Medium risk.</li>
+     * <li>HIGH: High risk.</li>
+     * <li>CRITICAL: Critical risk.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>MEDIUM</p>
@@ -44,7 +50,7 @@ public class RiskCheckResults extends TeaModel {
     public String riskLevel;
 
     /**
-     * <p>The risk score</p>
+     * <p>The overall risk score. Valid values: 0 to 100. A higher score indicates a lower risk.</p>
      * 
      * <strong>example:</strong>
      * <p>85</p>
@@ -53,7 +59,7 @@ public class RiskCheckResults extends TeaModel {
     public Integer score;
 
     /**
-     * <p>The snapshot time</p>
+     * <p>The snapshot time.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890000</p>
@@ -62,7 +68,12 @@ public class RiskCheckResults extends TeaModel {
     public Long snapshotTime;
 
     /**
-     * <p>The execution status</p>
+     * <p>The risk detection status. Valid values:</p>
+     * <ul>
+     * <li>SUCCESS: The detection succeeded.</li>
+     * <li>FAIL: The detection failed.</li>
+     * <li>RUNNING: The detection is running.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -71,7 +82,7 @@ public class RiskCheckResults extends TeaModel {
     public String status;
 
     /**
-     * <p>The total number of risks</p>
+     * <p>The total number of detected risk items.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -158,7 +169,7 @@ public class RiskCheckResults extends TeaModel {
 
     public static class RiskCheckResultsMetadata extends TeaModel {
         /**
-         * <p>The cluster type</p>
+         * <p>The cluster type.</p>
          * 
          * <strong>example:</strong>
          * <p>Ingress</p>
@@ -167,7 +178,7 @@ public class RiskCheckResults extends TeaModel {
         public String clusterType;
 
         /**
-         * <p>The replica count</p>
+         * <p>The number of replicas.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -176,7 +187,7 @@ public class RiskCheckResults extends TeaModel {
         public Integer replica;
 
         /**
-         * <p>The specification</p>
+         * <p>The instance specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>apigw.small.x1</p>
@@ -185,7 +196,7 @@ public class RiskCheckResults extends TeaModel {
         public String spec;
 
         /**
-         * <p>The version</p>
+         * <p>The instance version.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0.14</p>
@@ -234,7 +245,7 @@ public class RiskCheckResults extends TeaModel {
 
     public static class RiskCheckResultsRiskDetails extends TeaModel {
         /**
-         * <p>The check module</p>
+         * <p>The name of the module that performed the check.</p>
          * 
          * <strong>example:</strong>
          * <p>BaseInfo</p>
@@ -243,22 +254,22 @@ public class RiskCheckResults extends TeaModel {
         public String checkModule;
 
         /**
-         * <p>The risk detailed data</p>
+         * <p>The detailed data related to the risk. The data structure varies by risk type.</p>
          */
         @NameInMap("data")
         public java.util.Map<String, String> data;
 
         /**
-         * <p>The risk description</p>
+         * <p>The detailed description of the risk in JSON string format.</p>
          * 
          * <strong>example:</strong>
-         * <p>The version is outdated</p>
+         * <p>{&quot;desc&quot;:&quot;The single-node instance has an architecture risk. A single point of failure can cause service unavailability. Scale out to two or more nodes.&quot;}</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>Whether to mute notifications</p>
+         * <p>Indicates whether the alert notification for the risk item is muted.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -267,7 +278,7 @@ public class RiskCheckResults extends TeaModel {
         public Boolean isNoticeMute;
 
         /**
-         * <p>The risk code</p>
+         * <p>The unique identifier of the risk item.</p>
          * 
          * <strong>example:</strong>
          * <p>30010010001</p>
@@ -276,7 +287,7 @@ public class RiskCheckResults extends TeaModel {
         public String riskCode;
 
         /**
-         * <p>The risk level</p>
+         * <p>The level of the risk item. Valid values: LOW, MEDIUM, HIGH, and CRITICAL.</p>
          * 
          * <strong>example:</strong>
          * <p>HIGH</p>
@@ -285,16 +296,22 @@ public class RiskCheckResults extends TeaModel {
         public String riskLevel;
 
         /**
-         * <p>The risk title</p>
+         * <p>The name of the risk item.</p>
          * 
          * <strong>example:</strong>
-         * <p>Version Risk</p>
+         * <p>Single-node architecture risk</p>
          */
         @NameInMap("riskName")
         public String riskName;
 
         /**
-         * <p>The risk type</p>
+         * <p>The risk category. Valid values:</p>
+         * <ul>
+         * <li>SYSTEM: System risk.</li>
+         * <li>VERSION: Version risk.</li>
+         * <li>SAFE: Security risk.</li>
+         * <li>CAPACITY: Capacity risk.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>
@@ -303,19 +320,19 @@ public class RiskCheckResults extends TeaModel {
         public String riskType;
 
         /**
-         * <p>The risk situation</p>
+         * <p>The current risk situation of the instance in JSON string format.</p>
          * 
          * <strong>example:</strong>
-         * <p>Current version is 2 releases behind</p>
+         * <p>{&quot;desc&quot;:&quot;The cluster has only one node and does not support high availability.&quot;}</p>
          */
         @NameInMap("situation")
         public String situation;
 
         /**
-         * <p>The fix suggestion</p>
+         * <p>The optimization suggestions for the risk in JSON string format, including descriptions and action links.</p>
          * 
          * <strong>example:</strong>
-         * <p>Upgrade to the latest version</p>
+         * <p>{&quot;desc&quot;:&quot;Scale out to two or more nodes.&quot;,&quot;links&quot;:[{&quot;descEn&quot;:&quot;click to upgrade specification&quot;,&quot;type&quot;:&quot;upgrade&quot;,&quot;desc&quot;:&quot;Click to scale out&quot;}]}</p>
          */
         @NameInMap("suggestion")
         public String suggestion;

@@ -9,16 +9,16 @@ public class CreateEnvironmentRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试环境</p>
+     * <p>Test environment</p>
      */
     @NameInMap("alias")
     public String alias;
 
     /**
-     * <p>The description of the environment. You can specify information such as the purpose and owner of the environment.</p>
+     * <p>The description of the environment. You can specify information such as the purpose of the environment and the owner.</p>
      * 
      * <strong>example:</strong>
-     * <p>这是xxx的xx项目测试环境</p>
+     * <p>This is the test environment for the xx project of xxx</p>
      */
     @NameInMap("description")
     public String description;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AiToolSelectionConfig extends TeaModel {
     /**
-     * <p>The enable conditions configuration. Controls when the overall feature is triggered.</p>
+     * <p>The enable condition configuration that controls when the overall feature is triggered.</p>
      */
     @NameInMap("enableConditions")
     public AiToolSelectionConfigEnableConditions enableConditions;
@@ -20,13 +20,13 @@ public class AiToolSelectionConfig extends TeaModel {
     public AiPluginStatus pluginStatus;
 
     /**
-     * <p>The query rewrite configuration. Rewrites user queries before tool reranking to improve matching precision.</p>
+     * <p>The query rewrite configuration that rewrites user queries before tool reranking to improve matching precision.</p>
      */
     @NameInMap("queryRewriting")
     public AiToolSelectionConfigQueryRewriting queryRewriting;
 
     /**
-     * <p>The tool reranking configuration. Uses a model to rank and filter candidate tools.</p>
+     * <p>The tool reranking configuration that uses a model to sort and filter candidate tools.</p>
      */
     @NameInMap("toolReranking")
     public AiToolSelectionConfigToolReranking toolReranking;
@@ -199,7 +199,7 @@ public class AiToolSelectionConfig extends TeaModel {
          * <p>The custom prompt content.</p>
          * 
          * <strong>example:</strong>
-         * <p>请将以下用户问题改写为...</p>
+         * <p>Rewrite the following user question as..</p>
          */
         @NameInMap("customPrompt")
         public String customPrompt;
@@ -238,7 +238,7 @@ public class AiToolSelectionConfig extends TeaModel {
 
     public static class AiToolSelectionConfigQueryRewritingTriggerConditions extends TeaModel {
         /**
-         * <p>The number of conversation turns after which rewriting is triggered.</p>
+         * <p>The conversation turn threshold. Rewriting is triggered when the number of conversation turns exceeds this value.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -269,7 +269,7 @@ public class AiToolSelectionConfig extends TeaModel {
         public AiToolSelectionConfigQueryRewritingContextSelection contextSelection;
 
         /**
-         * <p>Specifies whether query rewrite is enabled.</p>
+         * <p>Indicates whether query rewrite is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -287,7 +287,7 @@ public class AiToolSelectionConfig extends TeaModel {
         public String fallbackStrategy;
 
         /**
-         * <p>The maximum number of output tokens for rewriting.</p>
+         * <p>The maximum number of output tokens for the rewriting result.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

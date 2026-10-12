@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListInstallableGatewaysResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public ListInstallableGatewaysResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -69,6 +76,8 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
 
     public static class ListInstallableGatewaysResponseBodyDataItems extends TeaModel {
         /**
+         * <p>The database engine version of the gateway DPI engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.1.10</p>
          */
@@ -76,6 +85,8 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
+         * <p>The gateway ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-xxxx</p>
          */
@@ -83,6 +94,8 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
+         * <p>The gateway status. The value is passed through from the GatewayPhase enumeration, such as Running or Creating.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -90,6 +103,8 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
         public String gatewayPhase;
 
         /**
+         * <p>Indicates whether the plugin can be installed on the gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -97,6 +112,8 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
         public Boolean installable;
 
         /**
+         * <p>The reason why the plugin cannot be installed.</p>
+         * 
          * <strong>example:</strong>
          * <p>VERSION_NOT_MATCH</p>
          */
@@ -104,6 +121,8 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
         public String installableFalseReasonType;
 
         /**
+         * <p>The version number of another version of the same plugin class that is already installed on the gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
          */
@@ -111,6 +130,8 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
         public String installedPluginVersion;
 
         /**
+         * <p>The gateway name.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-gateway</p>
          */
@@ -181,10 +202,15 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
     }
 
     public static class ListInstallableGatewaysResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of gateways.</p>
+         */
         @NameInMap("items")
         public java.util.List<ListInstallableGatewaysResponseBodyDataItems> items;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -192,6 +218,8 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
         public String pageNumber;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -199,6 +227,8 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
         public String pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>43</p>
          */

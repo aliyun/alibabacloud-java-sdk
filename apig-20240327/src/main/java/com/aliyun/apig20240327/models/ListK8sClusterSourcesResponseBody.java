@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListK8sClusterSourcesResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public ListK8sClusterSourcesResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class ListK8sClusterSourcesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>043360DA-ED3B-5386-9B7A-D94DECF99A30</p>
      */
@@ -67,6 +76,8 @@ public class ListK8sClusterSourcesResponseBody extends TeaModel {
 
     public static class ListK8sClusterSourcesResponseBodyDataItems extends TeaModel {
         /**
+         * <p>The container service cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>c4a21b3560fad4ec***</p>
          */
@@ -74,6 +85,8 @@ public class ListK8sClusterSourcesResponseBody extends TeaModel {
         public String clusterId;
 
         /**
+         * <p>The container service cluster name.</p>
+         * 
          * <strong>example:</strong>
          * <p>itemcenter-dev-cluster</p>
          */
@@ -104,6 +117,9 @@ public class ListK8sClusterSourcesResponseBody extends TeaModel {
     }
 
     public static class ListK8sClusterSourcesResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of Kubernetes clusters that can be added.</p>
+         */
         @NameInMap("items")
         public java.util.List<ListK8sClusterSourcesResponseBodyDataItems> items;
 

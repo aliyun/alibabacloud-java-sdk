@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRiskNotificationRequest extends TeaModel {
     /**
+     * <p>The code of the risk item, such as the code for version risk or capacity risk.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

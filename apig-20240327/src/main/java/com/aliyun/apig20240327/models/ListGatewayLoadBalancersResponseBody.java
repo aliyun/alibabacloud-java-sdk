@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListGatewayLoadBalancersResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public ListGatewayLoadBalancersResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,7 +29,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C7C7C3EB-00B6-509A-B6A3-5462EE759047</p>
@@ -69,6 +76,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
 
     public static class ListGatewayLoadBalancersResponseBodyDataItemsLoadBalancerZoneMappingsLoadBalancerAddresses extends TeaModel {
         /**
+         * <p>The Elastic IP Address (EIP) allocation ID that corresponds to the public address.</p>
+         * 
          * <strong>example:</strong>
          * <p>eip-bp1xxxx</p>
          */
@@ -76,26 +85,38 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         public String allocationId;
 
         /**
+         * <p>The ID of the elastic network interface (ENI).</p>
+         * 
          * <strong>example:</strong>
          * <p>eni-bp1xxxx</p>
          */
         @NameInMap("eniId")
         public String eniId;
 
+        /**
+         * <p>The list of private IPv4 addresses.</p>
+         */
         @NameInMap("ipv4LocalAddresses")
         public java.util.List<String> ipv4LocalAddresses;
 
         /**
+         * <p>The public IPv6 address.</p>
+         * 
          * <strong>example:</strong>
          * <p>2408:xxxx</p>
          */
         @NameInMap("ipv6Address")
         public String ipv6Address;
 
+        /**
+         * <p>The list of private IPv6 addresses.</p>
+         */
         @NameInMap("ipv6LocalAddresses")
         public java.util.List<String> ipv6LocalAddresses;
 
         /**
+         * <p>The private IPv4 address.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.x.x</p>
          */
@@ -103,6 +124,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         public String privateIPv4Address;
 
         /**
+         * <p>The health check status of the private IPv4 address.</p>
+         * 
          * <strong>example:</strong>
          * <p>Healthy</p>
          */
@@ -110,6 +133,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         public String privateIPv4HcStatus;
 
         /**
+         * <p>The health check status of the private IPv6 address.</p>
+         * 
          * <strong>example:</strong>
          * <p>Healthy</p>
          */
@@ -117,6 +142,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         public String privateIPv6HcStatus;
 
         /**
+         * <p>The public IPv4 address.</p>
+         * 
          * <strong>example:</strong>
          * <p>47.x.x.x</p>
          */
@@ -203,10 +230,15 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
     }
 
     public static class ListGatewayLoadBalancersResponseBodyDataItemsLoadBalancerZoneMappings extends TeaModel {
+        /**
+         * <p>The list of load balancer addresses in the zone.</p>
+         */
         @NameInMap("loadBalancerAddresses")
         public java.util.List<ListGatewayLoadBalancersResponseBodyDataItemsLoadBalancerZoneMappingsLoadBalancerAddresses> loadBalancerAddresses;
 
         /**
+         * <p>The zone status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Active</p>
          */
@@ -214,6 +246,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The vSwitch ID that corresponds to the zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-bp1xxxx</p>
          */
@@ -221,6 +255,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-a</p>
          */
@@ -268,6 +304,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
 
     public static class ListGatewayLoadBalancersResponseBodyDataItemsPorts extends TeaModel {
         /**
+         * <p>The port.</p>
+         * 
          * <strong>example:</strong>
          * <p>443</p>
          */
@@ -275,6 +313,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The port protocol.</p>
+         * 
          * <strong>example:</strong>
          * <p>https</p>
          */
@@ -306,6 +346,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
 
     public static class ListGatewayLoadBalancersResponseBodyDataItemsVirtualServerGroupListListeners extends TeaModel {
         /**
+         * <p>The listener port.</p>
+         * 
          * <strong>example:</strong>
          * <p>443</p>
          */
@@ -313,6 +355,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The listener protocol. No backend enumeration validation is performed. The actual values are returned from SLB or NLB OpenAPI. Common values include tcp, udp, http, https, and tls.</p>
+         * 
          * <strong>example:</strong>
          * <p>https</p>
          */
@@ -343,10 +387,15 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
     }
 
     public static class ListGatewayLoadBalancersResponseBodyDataItemsVirtualServerGroupList extends TeaModel {
+        /**
+         * <p>The list of associated listeners.</p>
+         */
         @NameInMap("listeners")
         public java.util.List<ListGatewayLoadBalancersResponseBodyDataItemsVirtualServerGroupListListeners> listeners;
 
         /**
+         * <p>The virtual server group ID. For CLB, this is the VServerGroupId. For NLB, this is the ServerGroupId.</p>
+         * 
          * <strong>example:</strong>
          * <p>rsp-xxxx</p>
          */
@@ -354,6 +403,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         public String virtualServiceGroupId;
 
         /**
+         * <p>The group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>80-tcp</p>
          */
@@ -393,6 +444,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
 
     public static class ListGatewayLoadBalancersResponseBodyDataItems extends TeaModel {
         /**
+         * <p>Indicates whether this is the default ingress of the gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -400,6 +453,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         public Boolean defaultGatewayIngress;
 
         /**
+         * <p>Indicates whether the load balancer can be edited. This parameter serves as an edit switch for load balancers that are being migrated.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -407,6 +462,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         public Boolean editEnable;
 
         /**
+         * <p>The gateway ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-xxxx</p>
          */
@@ -414,6 +471,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
+         * <p>The load balancer address (IP address or domain name).</p>
+         * 
          * <strong>example:</strong>
          * <p>47.x.x.x</p>
          */
@@ -421,6 +480,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         public String loadBalancerAddress;
 
         /**
+         * <p>The IP version.</p>
+         * 
          * <strong>example:</strong>
          * <p>ipv4</p>
          */
@@ -428,6 +489,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         public String loadBalancerAddressIpVersion;
 
         /**
+         * <p>The address type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Internet</p>
          */
@@ -435,6 +498,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         public String loadBalancerAddressType;
 
         /**
+         * <p>The load balancer availability status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Active</p>
          */
@@ -442,6 +507,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         public String loadBalancerAvailableStatus;
 
         /**
+         * <p>The load balancer instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>lb-bp1xxxx / nlb-xxxx</p>
          */
@@ -449,6 +516,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         public String loadBalancerId;
 
         /**
+         * <p>The binding mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>Managed</p>
          */
@@ -456,6 +525,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         public String loadBalancerMode;
 
         /**
+         * <p>The load balancer name.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-nlb</p>
          */
@@ -463,6 +534,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         public String loadBalancerName;
 
         /**
+         * <p>The load balancer specification.</p>
+         * 
          * <strong>example:</strong>
          * <p>slb.s2.small</p>
          */
@@ -470,6 +543,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         public String loadBalancerSpec;
 
         /**
+         * <p>The association status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Ready</p>
          */
@@ -477,19 +552,29 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         public String loadBalancerStatus;
 
         /**
+         * <p>The load balancer type.</p>
+         * 
          * <strong>example:</strong>
          * <p>NLB</p>
          */
         @NameInMap("loadBalancerType")
         public String loadBalancerType;
 
+        /**
+         * <p>The zone mappings.</p>
+         */
         @NameInMap("loadBalancerZoneMappings")
         public java.util.List<ListGatewayLoadBalancersResponseBodyDataItemsLoadBalancerZoneMappings> loadBalancerZoneMappings;
 
+        /**
+         * <p>The list of listener ports.</p>
+         */
         @NameInMap("ports")
         public java.util.List<ListGatewayLoadBalancersResponseBodyDataItemsPorts> ports;
 
         /**
+         * <p>The gateway service weight, which ranges from 0 to 100. This parameter is used in migration and traffic shifting scenarios.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -497,6 +582,8 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         public Long serviceWeight;
 
         /**
+         * <p>The VServerGroup metadata.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -505,6 +592,9 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         @NameInMap("vServerGroupMetaInfo")
         public String vServerGroupMetaInfo;
 
+        /**
+         * <p>The list of virtual server groups.</p>
+         */
         @NameInMap("virtualServerGroupList")
         public java.util.List<ListGatewayLoadBalancersResponseBodyDataItemsVirtualServerGroupList> virtualServerGroupList;
 
@@ -660,6 +750,9 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
     }
 
     public static class ListGatewayLoadBalancersResponseBodyData extends TeaModel {
+        /**
+         * <p>The instances.</p>
+         */
         @NameInMap("items")
         public java.util.List<ListGatewayLoadBalancersResponseBodyDataItems> items;
 

@@ -4,6 +4,9 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class UpdateAuthorizationRuleRequest extends TeaModel {
+    /**
+     * <p>The new list of authorized resources. In MCP Tool scenarios, this is a set of tool names. An empty array returns ErrInvalidParameterWithEmpty.</p>
+     */
     @NameInMap("resources")
     public java.util.List<String> resources;
 

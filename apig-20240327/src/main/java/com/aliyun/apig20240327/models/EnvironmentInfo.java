@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class EnvironmentInfo extends TeaModel {
     /**
-     * <p>The environment alias.</p>
+     * <p>The alias.</p>
      * 
      * <strong>example:</strong>
-     * <p>test-env</p>
+     * <p>Test environment</p>
      */
     @NameInMap("alias")
     public String alias;
@@ -23,7 +23,7 @@ public class EnvironmentInfo extends TeaModel {
     public Long createTimestamp;
 
     /**
-     * <p>Specifies whether the environment is the default environment.</p>
+     * <p>Indicates whether the environment is the default environment.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,10 +32,10 @@ public class EnvironmentInfo extends TeaModel {
     public Boolean _default;
 
     /**
-     * <p>The environment descriptiont.</p>
+     * <p>The environment description.</p>
      * 
      * <strong>example:</strong>
-     * <p>This is a test environment.</p>
+     * <p>This is the test environment for the xx project of xxx</p>
      */
     @NameInMap("description")
     public String description;
@@ -50,7 +50,7 @@ public class EnvironmentInfo extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>The instance information.</p>
+     * <p>The gateway information.</p>
      */
     @NameInMap("gatewayInfo")
     public GatewayInfo gatewayInfo;
@@ -74,7 +74,7 @@ public class EnvironmentInfo extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The subdomains.</p>
+     * <p>The subdomain list.</p>
      */
     @NameInMap("subDomainInfos")
     public java.util.List<SubDomainInfo> subDomainInfos;

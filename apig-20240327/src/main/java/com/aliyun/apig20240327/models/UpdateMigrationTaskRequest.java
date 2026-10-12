@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateMigrationTaskRequest extends TeaModel {
     /**
+     * <p>The namespace of the source cluster (for SLB traffic switching).</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -12,13 +14,17 @@ public class UpdateMigrationTaskRequest extends TeaModel {
     public String clusterNamespace;
 
     /**
+     * <p>The task description. For DNS-based Engine updates, only this field is modified.</p>
+     * 
      * <strong>example:</strong>
-     * <p>迁移测试</p>
+     * <p>Migration test</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The SLB service name.</p>
+     * 
      * <strong>example:</strong>
      * <p>nginx-ingress-lb</p>
      */
@@ -26,6 +32,8 @@ public class UpdateMigrationTaskRequest extends TeaModel {
     public String serviceName;
 
     /**
+     * <p>The SLB instance ID. Required when the task is in the Initial state with SLB traffic switching. The type is determined by the prefix (lb- or nlb-).</p>
+     * 
      * <strong>example:</strong>
      * <p>lb-bp1xxxx</p>
      */
@@ -33,6 +41,8 @@ public class UpdateMigrationTaskRequest extends TeaModel {
     public String slbId;
 
     /**
+     * <p>The traffic switching method. Required when advancing from the Initial state.</p>
+     * 
      * <strong>example:</strong>
      * <p>SLB</p>
      */
@@ -40,16 +50,23 @@ public class UpdateMigrationTaskRequest extends TeaModel {
     public String switchType;
 
     /**
+     * <p>Required. The update target. Determines whether to advance the task status or perform an engine operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>Task</p>
      */
     @NameInMap("target")
     public String target;
 
+    /**
+     * <p>The list of backend server group bindings.</p>
+     */
     @NameInMap("virtualServices")
     public java.util.List<UpdateMigrationTaskRequestVirtualServices> virtualServices;
 
     /**
+     * <p>The traffic switching weight for the legacy flow. Valid values: 0 to 100. Takes effect when the target is set to Engine.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -127,6 +144,8 @@ public class UpdateMigrationTaskRequest extends TeaModel {
 
     public static class UpdateMigrationTaskRequestVirtualServices extends TeaModel {
         /**
+         * <p>The port. Valid values: 1 to 65535.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -134,6 +153,8 @@ public class UpdateMigrationTaskRequest extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The protocol. Required for CLB.</p>
+         * 
          * <strong>example:</strong>
          * <p>tcp</p>
          */
@@ -141,6 +162,8 @@ public class UpdateMigrationTaskRequest extends TeaModel {
         public String protocol;
 
         /**
+         * <p>CLB VServerGroupId / NLB ServerGroupId</p>
+         * 
          * <strong>example:</strong>
          * <p>rsp-xxxx</p>
          */
@@ -148,6 +171,8 @@ public class UpdateMigrationTaskRequest extends TeaModel {
         public String virtualServiceGroupId;
 
         /**
+         * <p>The group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>80-tcp</p>
          */

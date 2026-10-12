@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRiskCheckResultsRequest extends TeaModel {
     /**
+     * <p>The maximum number of entries to return in this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class ListRiskCheckResultsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>token-xxx</p>
      */
@@ -19,6 +23,8 @@ public class ListRiskCheckResultsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number. Default value: 1 (DefaultPageNumber).</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ListRiskCheckResultsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10 (DefaultPageSize).</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

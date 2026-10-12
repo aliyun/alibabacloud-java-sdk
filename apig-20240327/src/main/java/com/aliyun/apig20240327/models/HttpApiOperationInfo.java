@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HttpApiOperationInfo extends TeaModel {
     /**
-     * <p>The authentication configurations of the operation.</p>
+     * <p>The authentication configuration.</p>
      */
     @NameInMap("authConfig")
     public AuthConfig authConfig;
@@ -20,22 +20,22 @@ public class HttpApiOperationInfo extends TeaModel {
     public Long createTimestamp;
 
     /**
-     * <p>The backend service deployment information of the operation.</p>
+     * <p>The backend service deployment information for the API operation.</p>
      */
     @NameInMap("deployConfigs")
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
     /**
-     * <p>The operation description.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>A example operation.</p>
+     * <p>Retrieve user information</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>Specifies whether to enable authentication.</p>
+     * <p>Indicates whether authentication is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -44,19 +44,7 @@ public class HttpApiOperationInfo extends TeaModel {
     public Boolean enableAuth;
 
     /**
-     * <p>The HTTP method of the operation.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>TRACE</li>
-     * <li>HEAD</li>
-     * <li>DELETE</li>
-     * <li>POST</li>
-     * <li>GET</li>
-     * <li>CONNECT</li>
-     * <li>OPTIONS</li>
-     * <li>PUT</li>
-     * <li>PATCH</li>
-     * </ul>
+     * <p>The HTTP method of the API operation.</p>
      * 
      * <strong>example:</strong>
      * <p>GET</p>
@@ -65,13 +53,13 @@ public class HttpApiOperationInfo extends TeaModel {
     public String method;
 
     /**
-     * <p>The mocked parameters of the operation.</p>
+     * <p>The mock parameter settings for the API operation.</p>
      */
     @NameInMap("mock")
     public HttpApiMockContract mock;
 
     /**
-     * <p>The operation name.</p>
+     * <p>The name of the API operation.</p>
      * 
      * <strong>example:</strong>
      * <p>GetUserInfo</p>
@@ -80,7 +68,7 @@ public class HttpApiOperationInfo extends TeaModel {
     public String name;
 
     /**
-     * <p>The operation ID.</p>
+     * <p>The ID of the API operation.</p>
      * 
      * <strong>example:</strong>
      * <p>op-xxx</p>
@@ -89,7 +77,7 @@ public class HttpApiOperationInfo extends TeaModel {
     public String operationId;
 
     /**
-     * <p>The operation path.</p>
+     * <p>The path of the API operation.</p>
      * 
      * <strong>example:</strong>
      * <p>/user/123</p>
@@ -98,19 +86,19 @@ public class HttpApiOperationInfo extends TeaModel {
     public String path;
 
     /**
-     * <p>The request parameters of the operation.</p>
+     * <p>The request parameter definition of the API operation.</p>
      */
     @NameInMap("request")
     public HttpApiRequestContract request;
 
     /**
-     * <p>The response parameters of the operation.</p>
+     * <p>The response parameter definition of the API operation.</p>
      */
     @NameInMap("response")
     public HttpApiResponseContract response;
 
     /**
-     * <p>The operation publishing status on the instance.</p>
+     * <p>The publish status of the API operation on the gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>Deployed</p>

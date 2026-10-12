@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportHttpApiRequest extends TeaModel {
     /**
-     * <p>Specifies whether to export the plug-in configuration.</p>
+     * <p>Specifies whether to export plug-in configurations.</p>
      */
     @NameInMap("extensionConfig")
     public ExportHttpApiRequestExtensionConfig extensionConfig;
@@ -56,31 +56,31 @@ public class ExportHttpApiRequest extends TeaModel {
 
     public static class ExportHttpApiRequestExtensionConfig extends TeaModel {
         /**
-         * <p>Specifies whether to export the consumer authorization configuration for operations or routes.</p>
+         * <p>Specifies whether to export consumer authorization configurations for operations or routes.</p>
          */
         @NameInMap("withAuthConfig")
         public Boolean withAuthConfig;
 
         /**
-         * <p>Specifies whether to export the authorized consumers.</p>
+         * <p>Specifies whether to export authorized consumers.</p>
          */
         @NameInMap("withAuthConsumer")
         public Boolean withAuthConsumer;
 
         /**
-         * <p>Specifies whether to export the plug-in configuration.</p>
+         * <p>Specifies whether to export plug-in configurations.</p>
          */
         @NameInMap("withPlugin")
         public Boolean withPlugin;
 
         /**
-         * <p>Specifies whether to export the policy configuration.</p>
+         * <p>Specifies whether to export policy configurations.</p>
          */
         @NameInMap("withPolicy")
         public Boolean withPolicy;
 
         /**
-         * <p>Specifies whether to export the backend service.</p>
+         * <p>Specifies whether to export backend services.</p>
          */
         @NameInMap("withService")
         public Boolean withService;

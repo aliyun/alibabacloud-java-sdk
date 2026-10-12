@@ -23,7 +23,7 @@ public class ListExternalServicesRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>Fuzzy search by API name.</p>
+     * <p>Fuzzy match by API name.</p>
      * 
      * <strong>example:</strong>
      * <p>imah</p>

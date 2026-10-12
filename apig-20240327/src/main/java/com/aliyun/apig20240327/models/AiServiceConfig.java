@@ -5,18 +5,16 @@ import com.aliyun.tea.*;
 
 public class AiServiceConfig extends TeaModel {
     /**
-     * <p>API key generation mode.</p>
+     * <p>The generation mode of the API key.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>Custom</p>
      */
     @NameInMap("ApiKeyGenerateMode")
     public String apiKeyGenerateMode;
 
     /**
-     * <p>The service endpoint.</p>
+     * <p>The service address.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://dashscope.aliyun.com">https://dashscope.aliyun.com</a></p>
@@ -25,34 +23,34 @@ public class AiServiceConfig extends TeaModel {
     public String address;
 
     /**
-     * <p>The API keys.</p>
+     * <p>The list of API keys.</p>
      */
     @NameInMap("apiKeys")
     public java.util.List<String> apiKeys;
 
     /**
-     * <p>Bedrock service configuration.</p>
+     * <p>The configuration specific to the Bedrock service.</p>
      */
     @NameInMap("bedrockServiceConfig")
     public AiServiceConfigBedrockServiceConfig bedrockServiceConfig;
 
     /**
-     * <p>Supported compatible protocols.</p>
+     * <p>The list of compatible protocols supported by the service.</p>
      */
     @NameInMap("compatibleProtocols")
     public java.util.List<String> compatibleProtocols;
 
     /**
-     * <p>Default model name.</p>
+     * <p>The name of the default model.</p>
      * 
      * <strong>example:</strong>
-     * <p>qwen-turbo</p>
+     * <p>gpt-4</p>
      */
     @NameInMap("defaultModelName")
     public String defaultModelName;
 
     /**
-     * <p>Specifies whether to enable health check.</p>
+     * <p>Indicates whether health check is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -61,37 +59,57 @@ public class AiServiceConfig extends TeaModel {
     public Boolean enableHealthCheck;
 
     /**
-     * <p>Enable outlier detection.</p>
+     * <p>Indicates whether outlier detection is enabled.</p>
      * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>true</p>
      */
     @NameInMap("enableOutlierDetection")
     public Boolean enableOutlierDetection;
 
     /**
-     * <p>PAI-EAS service configuration settings.</p>
+     * <p>The configuration specific to the PAI-EAS service.</p>
      */
     @NameInMap("paiEASServiceConfig")
     public AiServiceConfigPaiEASServiceConfig paiEASServiceConfig;
 
     /**
-     * <p>The LLM protocols.</p>
+     * <p>The list of model protocols.</p>
      */
     @NameInMap("protocols")
     public java.util.List<String> protocols;
 
     /**
-     * <p>The Large Language Model (LLM) provider.</p>
+     * <p>The large language model provider.</p>
      * 
      * <strong>example:</strong>
-     * <p>qwen</p>
+     * <p>qwen
+     * moonshot
+     * baichuan
+     * yi
+     * zhipuai
+     * 360ai
+     * hunyuan
+     * stepfun
+     * spark
+     * openai
+     * claude
+     * anthropic
+     * doubao
+     * minimax
+     * gemini
+     * azure
+     * deepseek
+     * custom
+     * pai-eas
+     * bedrock
+     * vertex</p>
      */
     @NameInMap("provider")
     public String provider;
 
     /**
-     * <p>Vertex AI service configuration.</p>
+     * <p>The configuration of the Vertex AI service.</p>
      */
     @NameInMap("vertexServiceConfig")
     public AiServiceConfigVertexServiceConfig vertexServiceConfig;
@@ -199,7 +217,7 @@ public class AiServiceConfig extends TeaModel {
 
     public static class AiServiceConfigBedrockServiceConfig extends TeaModel {
         /**
-         * <p>AWS-AccessKey</p>
+         * <p>The AWS access key.</p>
          * 
          * <strong>example:</strong>
          * <p>AKIAIOSFODNN7EXAMPLE</p>
@@ -208,16 +226,16 @@ public class AiServiceConfig extends TeaModel {
         public String awsAccessKey;
 
         /**
-         * <p>AWS-Region</p>
+         * <p>The AWS region.</p>
          * 
          * <strong>example:</strong>
-         * <p>us-west-2</p>
+         * <p>us-east-1</p>
          */
         @NameInMap("awsRegion")
         public String awsRegion;
 
         /**
-         * <p>AWS-SecretKey</p>
+         * <p>The AWS secret key.</p>
          * 
          * <strong>example:</strong>
          * <p>wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY</p>
@@ -258,7 +276,7 @@ public class AiServiceConfig extends TeaModel {
 
     public static class AiServiceConfigPaiEASServiceConfig extends TeaModel {
         /**
-         * <p>Type of endpoint.</p>
+         * <p>The connection type: private network (vpc) or public network (public).</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;public&quot;，&quot;private&quot;</p>
@@ -267,28 +285,28 @@ public class AiServiceConfig extends TeaModel {
         public String endpointType;
 
         /**
-         * <p>Service identifier.</p>
+         * <p>The service ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>svc-d33onfmm1hkn5duhuqjg</p>
+         * <p>svc-cvaeb0um1hkqp79k72v0</p>
          */
         @NameInMap("serviceId")
         public String serviceId;
 
         /**
-         * <p>Name of the service.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
-         * <p>service-hello</p>
+         * <p>auto-ai-service</p>
          */
         @NameInMap("serviceName")
         public String serviceName;
 
         /**
-         * <p>Workspace identifier.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>plw-d5g7qsem1hkmih54g210</p>
+         * <p>cb89d4de30042df4459442589664e00d</p>
          */
         @NameInMap("workspaceId")
         public String workspaceId;
@@ -334,40 +352,40 @@ public class AiServiceConfig extends TeaModel {
 
     public static class AiServiceConfigVertexServiceConfig extends TeaModel {
         /**
-         * <p>Gemini safety settings.</p>
+         * <p>The safety filtering level settings for the Gemini model.</p>
          */
         @NameInMap("geminiSafetySetting")
         public java.util.Map<String, String> geminiSafetySetting;
 
         /**
-         * <p>Vertex AI authentication key.</p>
+         * <p>The authentication key for Vertex AI.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;type\&quot;:\&quot;service_account\&quot;,\&quot;project_id\&quot;:\&quot;xxx\&quot;,\&quot;private_key\&quot;:\&quot;-----BEGIN PRIVATE KEY-----\&quot;,\&quot;client_email\&quot;:\&quot;<a href="mailto:xxx@xxx.iam.gserviceaccount.com">xxx@xxx.iam.gserviceaccount.com</a>\&quot;,\&quot;token_uri\&quot;:\&quot;<a href="https://oauth2.googleapis.com/token%5C%5C%22%7D">https://oauth2.googleapis.com/token\\&quot;}</a></p>
+         * <p>{\&quot;type\&quot;:\&quot;service_account\&quot;,\&quot;project_id\&quot;:\&quot;my-project\&quot;,\&quot;private_key\&quot;:\&quot;-----BEGIN PRIVATE KEY-----...\&quot;,\&quot;client_email\&quot;:\&quot;<a href="mailto:xxx@xxx.iam.gserviceaccount.com">xxx@xxx.iam.gserviceaccount.com</a>\&quot;,\&quot;token_uri\&quot;:\&quot;<a href="https://oauth2.googleapis.com/token%5C%5C%22%7D">https://oauth2.googleapis.com/token\\&quot;}</a></p>
          */
         @NameInMap("vertexAuthKey")
         public String vertexAuthKey;
 
         /**
-         * <p>Vertex AI auth service name.</p>
+         * <p>The service name of the authentication service used by Vertex AI.</p>
          * 
          * <strong>example:</strong>
-         * <p>custom-vertex-auth</p>
+         * <p>google-oauth2</p>
          */
         @NameInMap("vertexAuthServiceName")
         public String vertexAuthServiceName;
 
         /**
-         * <p>Vertex AI project ID.</p>
+         * <p>The Google Cloud project ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>my-gcp-project-123</p>
+         * <p>my-project</p>
          */
         @NameInMap("vertexProjectId")
         public String vertexProjectId;
 
         /**
-         * <p>Vertex AI region.</p>
+         * <p>The Google Cloud region where the Vertex AI service is located.</p>
          * 
          * <strong>example:</strong>
          * <p>us-central1</p>
@@ -376,7 +394,7 @@ public class AiServiceConfig extends TeaModel {
         public String vertexRegion;
 
         /**
-         * <p>Vertex token refresh lead time.</p>
+         * <p>The number of seconds before the access token expires to refresh it in advance.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>

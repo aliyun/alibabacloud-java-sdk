@@ -14,7 +14,7 @@ public class AiPolicyRedisConfig extends TeaModel {
     public Integer databaseNumber;
 
     /**
-     * <p>The Redis host address.</p>
+     * <p>The Redis hostname.</p>
      * 
      * <strong>example:</strong>
      * <p>r-xxx.redis.rds.aliyuncs.com</p>

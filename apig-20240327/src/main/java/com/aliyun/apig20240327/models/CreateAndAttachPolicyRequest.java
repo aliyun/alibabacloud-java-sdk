@@ -32,7 +32,7 @@ public class CreateAndAttachPolicyRequest extends TeaModel {
     public String className;
 
     /**
-     * <p>The policy configuration content (JSON string).</p>
+     * <p>The policy configuration content in JSON string format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class CreateAndAttachPolicyRequest extends TeaModel {
      * <p>The policy description.</p>
      * 
      * <strong>example:</strong>
-     * <p>Fallback when primary route fails</p>
+     * <p>Fallback when the primary route fails</p>
      */
     @NameInMap("description")
     public String description;
@@ -70,8 +70,8 @@ public class CreateAndAttachPolicyRequest extends TeaModel {
 
     /**
      * <p>The policy name.
-     * This parameter is required when className is set to IpAccessControl, JWTAuth, OIDCAuth, or ExternalZAuth, and must be unique within the same gateway instance (gatewayId) under the current account. If the name conflicts with an existing policy, a PolicyExisted error is returned. When retrying after receiving this error, you must use a different name. Submitting the same name repeatedly will always fail.
-     * For other className values (such as RateLimit, Timeout, Retry, ServiceTls, and AiProxy), name is optional and used only for display purposes.</p>
+     * This parameter is required when className is set to IpAccessControl, JWTAuth, OIDCAuth, or ExternalZAuth, and the name must be unique within the same gateway instance (gatewayId) under the current account. If a policy with the same name already exists, a PolicyExisted error is returned. When retrying after receiving this error, use a different name. Submitting the same name repeatedly will always fail.
+     * For other className values such as RateLimit, Timeout, Retry, ServiceTls, and AiProxy, this parameter is optional and used only for display purposes.</p>
      * 
      * <strong>example:</strong>
      * <p>my-fallback-policy</p>

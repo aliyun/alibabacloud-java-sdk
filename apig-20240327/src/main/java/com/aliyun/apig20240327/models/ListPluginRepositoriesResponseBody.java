@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListPluginRepositoriesResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public java.util.List<ListPluginRepositoriesResponseBodyData> data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,7 +29,7 @@ public class ListPluginRepositoriesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FCA83-0416-588D-9763-2474980495F1</p>
@@ -69,6 +76,8 @@ public class ListPluginRepositoriesResponseBody extends TeaModel {
 
     public static class ListPluginRepositoriesResponseBodyDataRepositories extends TeaModel {
         /**
+         * <p>The Codeup repository ID (numeric string).</p>
+         * 
          * <strong>example:</strong>
          * <p>12345678</p>
          */
@@ -76,6 +85,8 @@ public class ListPluginRepositoriesResponseBody extends TeaModel {
         public String repositoryId;
 
         /**
+         * <p>The repository name.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-custom-plugin</p>
          */
@@ -107,6 +118,8 @@ public class ListPluginRepositoriesResponseBody extends TeaModel {
 
     public static class ListPluginRepositoriesResponseBodyData extends TeaModel {
         /**
+         * <p>The Codeup organization ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>664f1e2xxxx</p>
          */
@@ -114,12 +127,17 @@ public class ListPluginRepositoriesResponseBody extends TeaModel {
         public String organizationId;
 
         /**
+         * <p>The organization name.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-org</p>
          */
         @NameInMap("organizationName")
         public String organizationName;
 
+        /**
+         * <p>The list of repositories under the organization.</p>
+         */
         @NameInMap("repositories")
         public java.util.List<ListPluginRepositoriesResponseBodyDataRepositories> repositories;
 

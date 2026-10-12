@@ -20,7 +20,7 @@ public class AiTokenRateLimitConfig extends TeaModel {
     public java.util.List<AiTokenRateLimitConfigRule> globalRules;
 
     /**
-     * <p>The running status of the plugin.</p>
+     * <p>The running status of the plug-in.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>

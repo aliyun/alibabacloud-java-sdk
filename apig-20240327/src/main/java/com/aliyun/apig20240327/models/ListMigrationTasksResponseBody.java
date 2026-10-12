@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListMigrationTasksResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public ListMigrationTasksResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -69,6 +76,8 @@ public class ListMigrationTasksResponseBody extends TeaModel {
 
     public static class ListMigrationTasksResponseBodyDataItemsIngressConfig extends TeaModel {
         /**
+         * <p>The monitored Ingress Class.</p>
+         * 
          * <strong>example:</strong>
          * <p>nginx</p>
          */
@@ -76,6 +85,8 @@ public class ListMigrationTasksResponseBody extends TeaModel {
         public String ingressClass;
 
         /**
+         * <p>The monitored namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -107,6 +118,8 @@ public class ListMigrationTasksResponseBody extends TeaModel {
 
     public static class ListMigrationTasksResponseBodyDataItemsVirtualServices extends TeaModel {
         /**
+         * <p>The listener port. Valid values: 1 to 65535. This parameter is required in Step 3 of the frontend form.</p>
+         * 
          * <strong>example:</strong>
          * <p>443</p>
          */
@@ -114,6 +127,8 @@ public class ListMigrationTasksResponseBody extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The listener protocol. This parameter is required for CLB migration. During MSE migration validation, CLB requests without a protocol are directly rejected. See migrationtask.go#L95-L97. This parameter can be left empty for NLB scenarios.</p>
+         * 
          * <strong>example:</strong>
          * <p>tcp</p>
          */
@@ -121,6 +136,8 @@ public class ListMigrationTasksResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The virtual server group ID. For CLB, this is the VServerGroupId. For NLB, this is the ServerGroupId. This parameter is required in Step 3 of the frontend form.</p>
+         * 
          * <strong>example:</strong>
          * <p>rsp-xxxx</p>
          */
@@ -128,6 +145,8 @@ public class ListMigrationTasksResponseBody extends TeaModel {
         public String virtualServiceGroupId;
 
         /**
+         * <p>The name of the virtual server group.</p>
+         * 
          * <strong>example:</strong>
          * <p>80-tcp</p>
          */
@@ -175,6 +194,8 @@ public class ListMigrationTasksResponseBody extends TeaModel {
 
     public static class ListMigrationTasksResponseBodyDataItems extends TeaModel {
         /**
+         * <p>The associated HTTP API.</p>
+         * 
          * <strong>example:</strong>
          * <p>api-xxxx</p>
          */
@@ -182,6 +203,8 @@ public class ListMigrationTasksResponseBody extends TeaModel {
         public String apiId;
 
         /**
+         * <p>The associated HTTP API.</p>
+         * 
          * <strong>example:</strong>
          * <p>api-name</p>
          */
@@ -189,6 +212,8 @@ public class ListMigrationTasksResponseBody extends TeaModel {
         public String apiName;
 
         /**
+         * <p>The source ACK cluster. A hyphen (-) is displayed if the cluster name fails to be queried.</p>
+         * 
          * <strong>example:</strong>
          * <p>c-xxxxxx</p>
          */
@@ -196,6 +221,8 @@ public class ListMigrationTasksResponseBody extends TeaModel {
         public String clusterId;
 
         /**
+         * <p>The cluster name.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc_hz_domain_1</p>
          */
@@ -203,6 +230,8 @@ public class ListMigrationTasksResponseBody extends TeaModel {
         public String clusterName;
 
         /**
+         * <p>The namespace for SLB traffic switching.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -210,6 +239,8 @@ public class ListMigrationTasksResponseBody extends TeaModel {
         public String clusterNamespace;
 
         /**
+         * <p>The creation time, in Unix seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1756262400</p>
          */
@@ -217,13 +248,17 @@ public class ListMigrationTasksResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The task description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>迁移测试</p>
+         * <p>Migration test</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>The ID of the destination environment.</p>
+         * 
          * <strong>example:</strong>
          * <p>env-xxxx</p>
          */
@@ -231,6 +266,8 @@ public class ListMigrationTasksResponseBody extends TeaModel {
         public String envId;
 
         /**
+         * <p>The ID of the destination gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-xxxx</p>
          */
@@ -238,16 +275,23 @@ public class ListMigrationTasksResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
+         * <p>The name of the gateway to which the rule belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>prod-gateway</p>
          */
         @NameInMap("gatewayName")
         public String gatewayName;
 
+        /**
+         * <p>The monitored Ingress Class configuration.</p>
+         */
         @NameInMap("ingressConfig")
         public ListMigrationTasksResponseBodyDataItemsIngressConfig ingressConfig;
 
         /**
+         * <p>The migration type. Currently, only Nginx Ingress is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>Nginx Ingress</p>
          */
@@ -255,6 +299,8 @@ public class ListMigrationTasksResponseBody extends TeaModel {
         public String migrationType;
 
         /**
+         * <p>The name of the SLB service.</p>
+         * 
          * <strong>example:</strong>
          * <p>nginx-ingress-lb</p>
          */
@@ -262,6 +308,8 @@ public class ListMigrationTasksResponseBody extends TeaModel {
         public String serviceName;
 
         /**
+         * <p>The ID of the SLB instance used for traffic switching.</p>
+         * 
          * <strong>example:</strong>
          * <p>lb-bp1xxxx</p>
          */
@@ -269,6 +317,8 @@ public class ListMigrationTasksResponseBody extends TeaModel {
         public String slbId;
 
         /**
+         * <p>The task status.</p>
+         * 
          * <strong>example:</strong>
          * <p>FlowSwitch</p>
          */
@@ -276,6 +326,8 @@ public class ListMigrationTasksResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The traffic switching method. Valid values: DNS and SLB.</p>
+         * 
          * <strong>example:</strong>
          * <p>SLB</p>
          */
@@ -283,6 +335,8 @@ public class ListMigrationTasksResponseBody extends TeaModel {
         public String switchType;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mt-xxxxxxxx</p>
          */
@@ -290,16 +344,23 @@ public class ListMigrationTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The ID of the user to whom the task belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234567890</p>
          */
         @NameInMap("userId")
         public String userId;
 
+        /**
+         * <p>The list of virtual server groups.</p>
+         */
         @NameInMap("virtualServices")
         public java.util.List<ListMigrationTasksResponseBodyDataItemsVirtualServices> virtualServices;
 
         /**
+         * <p>The weight of the service on the API gateway side in the legacy workflow. Valid values: 0 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -474,10 +535,15 @@ public class ListMigrationTasksResponseBody extends TeaModel {
     }
 
     public static class ListMigrationTasksResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of migration tasks.</p>
+         */
         @NameInMap("items")
         public java.util.List<ListMigrationTasksResponseBodyDataItems> items;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -485,6 +551,8 @@ public class ListMigrationTasksResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -492,6 +560,8 @@ public class ListMigrationTasksResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>25</p>
          */

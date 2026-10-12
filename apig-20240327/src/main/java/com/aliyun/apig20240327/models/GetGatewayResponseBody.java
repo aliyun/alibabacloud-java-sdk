@@ -190,7 +190,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String address;
 
         /**
-         * <p>The protocol version. Valid values:</p>
+         * <p>The IP version. Valid values:</p>
          * <ul>
          * <li>ipv4: IPv4.</li>
          * <li>ipv6: IPv6.</li>
@@ -205,8 +205,8 @@ public class GetGatewayResponseBody extends TeaModel {
         /**
          * <p>The load balancing address type. Valid values:</p>
          * <ul>
-         * <li>Internet: public network.</li>
-         * <li>Intranet: private network.</li>
+         * <li>Internet: Public network.</li>
+         * <li>Intranet: Private network.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -248,7 +248,7 @@ public class GetGatewayResponseBody extends TeaModel {
         /**
          * <p>The load balancing mode of the gateway. Valid values:</p>
          * <ul>
-         * <li>Managed: managed by Cloud-native API Gateway.</li>
+         * <li>Managed: Managed by Cloud-native API Gateway.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -709,7 +709,7 @@ public class GetGatewayResponseBody extends TeaModel {
         /**
          * <p>The source from which the gateway was created. Valid values:</p>
          * <ul>
-         * <li>Console: the console.</li>
+         * <li>Console: Console.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -745,7 +745,7 @@ public class GetGatewayResponseBody extends TeaModel {
         /**
          * <p>The gateway instance edition. Valid values:</p>
          * <ul>
-         * <li><p>Professional: standard instance.</p>
+         * <li><p>Professional: Standard instance.</p>
          * </li>
          * <li><p>Serverless: Serverless instance.</p>
          * </li>
@@ -767,7 +767,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
-         * <p>The running mode for AI multi-tenant V2. Default value: ENTERPRISE. Only AI + MultiTenantServerless allows this parameter. Valid values:</p>
+         * <p>The running mode of AI multi-tenant V2. Default value: ENTERPRISE. Only AI + MultiTenantServerless allows this parameter. Valid values:</p>
          * <ul>
          * <li>ENTERPRISE: default.</li>
          * <li>STANDARD: allowed only for AI multi-tenant V2.</li>
@@ -849,7 +849,7 @@ public class GetGatewayResponseBody extends TeaModel {
         /**
          * <p>The gateway specification. Valid values:</p>
          * <ul>
-         * <li>apigw.small.x1: small specification.</li>
+         * <li>apigw.small.x1: Small specification.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -861,15 +861,15 @@ public class GetGatewayResponseBody extends TeaModel {
         /**
          * <p>The gateway status. Valid values:</p>
          * <ul>
-         * <li>Running: The gateway is running.</li>
-         * <li>Creating: The gateway is being created.</li>
-         * <li>CreateFailed: The gateway failed to be created.</li>
-         * <li>Upgrading: The gateway is being upgraded.</li>
-         * <li>UpgradeFailed: The gateway failed to be upgraded.</li>
-         * <li>Restarting: The gateway is being restarted.</li>
-         * <li>RestartFailed: The gateway failed to be restarted.</li>
-         * <li>Deleting: The gateway is being released.</li>
-         * <li>DeleteFailed: The gateway failed to be released.</li>
+         * <li>Running: Running.</li>
+         * <li>Creating: Being created.</li>
+         * <li>CreateFailed: Creation failed.</li>
+         * <li>Upgrading: Being upgraded.</li>
+         * <li>UpgradeFailed: Upgrade failed.</li>
+         * <li>Restarting: Being restarted.</li>
+         * <li>RestartFailed: Restart failed.</li>
+         * <li>Deleting: Being released.</li>
+         * <li>DeleteFailed: Release failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -885,7 +885,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public java.util.List<GetGatewayResponseBodyDataTags> tags;
 
         /**
-         * <p>The target version of the gateway. When this value differs from version, a version upgrade can be performed.</p>
+         * <p>The target version of the gateway. If this value differs from version, a version upgrade can be performed.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0.2</p>

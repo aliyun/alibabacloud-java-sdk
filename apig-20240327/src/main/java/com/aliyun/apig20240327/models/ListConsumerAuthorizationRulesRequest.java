@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConsumerAuthorizationRulesRequest extends TeaModel {
     /**
-     * <p>The API name used for fuzzy match.</p>
+     * <p>The fuzzy match parameter for the API name.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen3</p>

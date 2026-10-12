@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGatewayAuthorizedSecurityGroupRulesResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class ListGatewayAuthorizedSecurityGroupRulesResponseBody extends TeaMode
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public ListGatewayAuthorizedSecurityGroupRulesResponseBodyData data;
 
     /**
-     * <p>The response message returned.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -76,7 +76,7 @@ public class ListGatewayAuthorizedSecurityGroupRulesResponseBody extends TeaMode
 
     public static class ListGatewayAuthorizedSecurityGroupRulesResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The list of authorized CIDR blocks.</p>
+         * <p>The list of authorized CIDR block addresses.</p>
          */
         @NameInMap("authCidrs")
         public java.util.List<String> authCidrs;
@@ -85,13 +85,13 @@ public class ListGatewayAuthorizedSecurityGroupRulesResponseBody extends TeaMode
          * <p>The rule description.</p>
          * 
          * <strong>example:</strong>
-         * <p>商品中心预发网关授权安全组</p>
+         * <p>Security group authorized by the staging gateway of the product center</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The protocol. Valid values:</p>
+         * <p>The protocol:</p>
          * <ul>
          * <li>TCP</li>
          * </ul>
@@ -124,13 +124,13 @@ public class ListGatewayAuthorizedSecurityGroupRulesResponseBody extends TeaMode
          * <p>The security group name.</p>
          * 
          * <strong>example:</strong>
-         * <p>商品中心集群安全组</p>
+         * <p>Product center cluster security group</p>
          */
         @NameInMap("securityGroupName")
         public String securityGroupName;
 
         /**
-         * <p>The rule ID.</p>
+         * <p>The security rule ID of the cloud-native API gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>gsgr-cqadis5lhtgmv***</p>
@@ -139,7 +139,7 @@ public class ListGatewayAuthorizedSecurityGroupRulesResponseBody extends TeaMode
         public String securityGroupRuleId;
 
         /**
-         * <p>The ID of the source security group.</p>
+         * <p>The source security group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-bp19akuepfe***</p>
@@ -148,7 +148,7 @@ public class ListGatewayAuthorizedSecurityGroupRulesResponseBody extends TeaMode
         public String sourceSecurityGroupId;
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1g63b5q2q29***</p>
@@ -237,7 +237,7 @@ public class ListGatewayAuthorizedSecurityGroupRulesResponseBody extends TeaMode
 
     public static class ListGatewayAuthorizedSecurityGroupRulesResponseBodyData extends TeaModel {
         /**
-         * <p>The security group rules.</p>
+         * <p>The list of security group rules.</p>
          */
         @NameInMap("items")
         public java.util.List<ListGatewayAuthorizedSecurityGroupRulesResponseBodyDataItems> items;

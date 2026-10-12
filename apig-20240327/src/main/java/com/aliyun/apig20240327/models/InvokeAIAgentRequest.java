@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class InvokeAIAgentRequest extends TeaModel {
     /**
+     * <p>The agent name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,13 +14,21 @@ public class InvokeAIAgentRequest extends TeaModel {
     @NameInMap("agentName")
     public String agentName;
 
+    /**
+     * <p>The business parameters. Each agent performs custom validation on these parameters, such as the SLS context passed for log diagnostics.</p>
+     */
     @NameInMap("bizParams")
     public java.util.Map<String, String> bizParams;
 
+    /**
+     * <p>The conversation history. Each element contains role (user/assistant) and content. The role and content fields in each element cannot be empty.</p>
+     */
     @NameInMap("history")
     public java.util.List<InvokeAIAgentRequestHistory> history;
 
     /**
+     * <p>The output language. When set to en, fallback error messages are displayed in English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh / en</p>
      */
@@ -27,8 +36,10 @@ public class InvokeAIAgentRequest extends TeaModel {
     public String outputLanguage;
 
     /**
+     * <p>The user input for the current turn. If left empty, a default prompt is used based on the scenario, such as &quot;Start&quot;.</p>
+     * 
      * <strong>example:</strong>
-     * <p>帮我诊断这个错误日志</p>
+     * <p>Help me diagnose this error log</p>
      */
     @NameInMap("prompt")
     public String prompt;
@@ -80,13 +91,17 @@ public class InvokeAIAgentRequest extends TeaModel {
 
     public static class InvokeAIAgentRequestHistory extends TeaModel {
         /**
+         * <p>The content of the message. The returned data is in rich text format.</p>
+         * 
          * <strong>example:</strong>
-         * <p>上一轮问题</p>
+         * <p>Previous question</p>
          */
         @NameInMap("content")
         public String content;
 
         /**
+         * <p>The role.</p>
+         * 
          * <strong>example:</strong>
          * <p>user</p>
          */

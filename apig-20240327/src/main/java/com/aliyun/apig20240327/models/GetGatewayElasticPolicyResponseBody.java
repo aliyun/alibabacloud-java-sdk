@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetGatewayElasticPolicyResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public GetGatewayElasticPolicyResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -69,6 +76,8 @@ public class GetGatewayElasticPolicyResponseBody extends TeaModel {
 
     public static class GetGatewayElasticPolicyResponseBodyDataElasticPolicyDisableScaleTimePolicyList extends TeaModel {
         /**
+         * <p>The O&amp;M end time in the HH:mm format.</p>
+         * 
          * <strong>example:</strong>
          * <p>00:00</p>
          */
@@ -76,6 +85,8 @@ public class GetGatewayElasticPolicyResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The O&amp;M start time in the HH:mm format.</p>
+         * 
          * <strong>example:</strong>
          * <p>00:00</p>
          */
@@ -107,6 +118,8 @@ public class GetGatewayElasticPolicyResponseBody extends TeaModel {
 
     public static class GetGatewayElasticPolicyResponseBodyDataElasticPolicyEnableScaleTimePolicyList extends TeaModel {
         /**
+         * <p>The O&amp;M end time in the HH:mm format.</p>
+         * 
          * <strong>example:</strong>
          * <p>18:00</p>
          */
@@ -114,6 +127,8 @@ public class GetGatewayElasticPolicyResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The O&amp;M start time in the HH:mm format.</p>
+         * 
          * <strong>example:</strong>
          * <p>09:00</p>
          */
@@ -145,6 +160,8 @@ public class GetGatewayElasticPolicyResponseBody extends TeaModel {
 
     public static class GetGatewayElasticPolicyResponseBodyDataElasticPolicyTimePolicyList extends TeaModel {
         /**
+         * <p>The O&amp;M end time in the HH:mm format.</p>
+         * 
          * <strong>example:</strong>
          * <p>06:00</p>
          */
@@ -152,6 +169,8 @@ public class GetGatewayElasticPolicyResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The O&amp;M start time in the HH:mm format.</p>
+         * 
          * <strong>example:</strong>
          * <p>00:00</p>
          */
@@ -159,6 +178,8 @@ public class GetGatewayElasticPolicyResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The number of replicas.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -197,10 +218,15 @@ public class GetGatewayElasticPolicyResponseBody extends TeaModel {
     }
 
     public static class GetGatewayElasticPolicyResponseBodyDataElasticPolicy extends TeaModel {
+        /**
+         * <p>The time periods during which AutoHPA scale-out is prohibited.</p>
+         */
         @NameInMap("disableScaleTimePolicyList")
         public java.util.List<GetGatewayElasticPolicyResponseBodyDataElasticPolicyDisableScaleTimePolicyList> disableScaleTimePolicyList;
 
         /**
+         * <p>Indicates whether elastic scaling is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -208,16 +234,23 @@ public class GetGatewayElasticPolicyResponseBody extends TeaModel {
         public Boolean elasticEnabled;
 
         /**
+         * <p>The policy type.</p>
+         * 
          * <strong>example:</strong>
          * <p>AutoHPA</p>
          */
         @NameInMap("elasticType")
         public String elasticType;
 
+        /**
+         * <p>The time periods during which AutoHPA scale-out is allowed.</p>
+         */
         @NameInMap("enableScaleTimePolicyList")
         public java.util.List<GetGatewayElasticPolicyResponseBodyDataElasticPolicyEnableScaleTimePolicyList> enableScaleTimePolicyList;
 
         /**
+         * <p>The load alert threshold switch for AutoHPA.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -225,12 +258,17 @@ public class GetGatewayElasticPolicyResponseBody extends TeaModel {
         public Boolean loadWarningThreshold;
 
         /**
+         * <p>The maximum number of replicas for AutoHPA.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("maxUnits")
         public Integer maxUnits;
 
+        /**
+         * <p>The list of CronHPA scheduled policies. Each entry includes units (number of replicas), startTime, and endTime.</p>
+         */
         @NameInMap("timePolicyList")
         public java.util.List<GetGatewayElasticPolicyResponseBodyDataElasticPolicyTimePolicyList> timePolicyList;
 
@@ -298,10 +336,15 @@ public class GetGatewayElasticPolicyResponseBody extends TeaModel {
     }
 
     public static class GetGatewayElasticPolicyResponseBodyData extends TeaModel {
+        /**
+         * <p>The elastic policy configuration, deserialized from the elastic_config JSON field in the database.</p>
+         */
         @NameInMap("elasticPolicy")
         public GetGatewayElasticPolicyResponseBodyDataElasticPolicy elasticPolicy;
 
         /**
+         * <p>The KubeOne AutoScaleStrategy instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -309,6 +352,8 @@ public class GetGatewayElasticPolicyResponseBody extends TeaModel {
         public String elasticStrategyId;
 
         /**
+         * <p>The elastic policy type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CronHPA</p>
          */
@@ -316,6 +361,8 @@ public class GetGatewayElasticPolicyResponseBody extends TeaModel {
         public String elasticType;
 
         /**
+         * <p>The gateway ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-xxxx</p>
          */

@@ -14,7 +14,7 @@ public class ListConsumerQuotaRulesRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The rule name keyword, used for fuzzy match.</p>
+     * <p>The keyword for the rule name, used for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>daily</p>

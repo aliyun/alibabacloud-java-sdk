@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateSourceRequest extends TeaModel {
     /**
      * <p>The gateway ID.</p>
+     * <blockquote>
+     * <p>Note: This parameter is required. If this parameter is not specified, the API returns a 400 InvalidParameter.IsEmpty error.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>gw-cq7l5s5lhtgi6q***</p>
@@ -14,7 +17,7 @@ public class CreateSourceRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The Container Service source configuration.</p>
+     * <p>The container service source configuration.</p>
      */
     @NameInMap("k8sSourceConfig")
     public CreateSourceRequestK8sSourceConfig k8sSourceConfig;
@@ -37,8 +40,8 @@ public class CreateSourceRequest extends TeaModel {
     /**
      * <p>The source type. Valid values:</p>
      * <ul>
-     * <li>MSE_NACOS: Microservices Engine (MSE) Nacos.</li>
-     * <li>K8S: Container Service.</li>
+     * <li>MSE_NACOS: MSE Nacos.</li>
+     * <li>K8S: container service.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +100,7 @@ public class CreateSourceRequest extends TeaModel {
          * <p>The rule description.</p>
          * 
          * <strong>example:</strong>
-         * <p>预发网关访问安全组</p>
+         * <p>Staging gateway access security group</p>
          */
         @NameInMap("description")
         public String description;
@@ -156,7 +159,7 @@ public class CreateSourceRequest extends TeaModel {
         public java.util.List<CreateSourceRequestK8sSourceConfigAuthorizeSecurityGroupRules> authorizeSecurityGroupRules;
 
         /**
-         * <p>The Container Service cluster ID.</p>
+         * <p>The container service cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c3fbe6caaaece4062b*****</p>

@@ -4,6 +4,9 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class CreateHttpApiVersionRequest extends TeaModel {
+    /**
+     * <p>The API versioning configuration.</p>
+     */
     @NameInMap("versionConfig")
     public HttpApiVersionConfig versionConfig;
 

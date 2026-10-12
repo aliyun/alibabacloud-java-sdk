@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResourceStatistic extends TeaModel {
     /**
-     * <p>The number of online resources.</p>
+     * <p>The online resource count.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -15,11 +15,6 @@ public class ResourceStatistic extends TeaModel {
 
     /**
      * <p>The resource type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>HttpApi</li>
-     * <li>GatewayRoute</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>HttpApi</p>

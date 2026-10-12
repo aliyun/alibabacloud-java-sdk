@@ -12,13 +12,14 @@ public class DeployHttpApiRequest extends TeaModel {
     public DeployHttpApiRequestHttpApiConfig httpApiConfig;
 
     /**
-     * <p>The REST API deployment configuration. This parameter is required when the HTTP API to be published is a REST API. At least one of revisionId, environment, or gatewayId must be specified to identify the publish target.</p>
+     * <p>The deployment configuration for a REST API. This parameter is required when the HTTP API to be published is a REST API. At least one of revisionId, environment, or gatewayId must be specified to identify the deployment target.</p>
      */
     @NameInMap("restApiConfig")
     public DeployHttpApiRequestRestApiConfig restApiConfig;
 
     /**
-     * <p>The route ID. This parameter is required when publishing a route of an HTTP API. Before deploying with routeId, make sure the target route is associated with a publishable domain name. If the domain name was not configured when the route was created, call UpdateHttpApiRoute to add domainIds.</p>
+     * <p>The route ID. This parameter is required when you publish a route of an HTTP API. Before deploying with routeId, make sure the target route is associated with a publishable domain name. If the domain name was not configured when the route was created, call UpdateHttpApiRoute to add domainIds.</p>
+     * <p>A publishable domain name refers to the default subdomain of the environment and does not include custom Dedicated domain names. If the route is associated only with a Dedicated domain name, call UpdateHttpApiRoute to add the domainIds corresponding to the default subdomain of the environment before deployment.</p>
      * 
      * <strong>example:</strong>
      * <p>hr-cr82undlhtgrl***</p>
@@ -97,7 +98,7 @@ public class DeployHttpApiRequest extends TeaModel {
 
     public static class DeployHttpApiRequestRestApiConfigEnvironmentServiceConfigs extends TeaModel {
         /**
-         * <p>The match condition configuration for API publishing.</p>
+         * <p>The match condition configuration related to API publishing.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;change_order_revision\&quot;:\&quot;3.657.33_fc-hz-yunqi.1662568293908382_faas-eerouter\&quot;}</p>
@@ -115,7 +116,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The service protocol. Valid values:</p>
+         * <p>The Terms of Service. Valid values:</p>
          * <ul>
          * <li>HTTP.</li>
          * <li>HTTPS.</li>
@@ -146,7 +147,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public String version;
 
         /**
-         * <p>The weight. Valid values: 1 to 100. This parameter takes effect only in the ratio-based scenario.</p>
+         * <p>The weight. Valid values: 1 to 100. This parameter takes effect only in ratio-based scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>49</p>
@@ -211,7 +212,7 @@ public class DeployHttpApiRequest extends TeaModel {
 
     public static class DeployHttpApiRequestRestApiConfigEnvironment extends TeaModel {
         /**
-         * <p>The API publish scenario. Backend configurations cannot be specified during publishing. Configure them in advance by calling UpdateHttpApi or UpdateHttpApiOperation before publishing.</p>
+         * <p>The API publish scenario. Backend configurations cannot be specified during publish. Configure them in advance by calling UpdateHttpApi or UpdateHttpApiOperation before publishing.</p>
          * 
          * <strong>example:</strong>
          * <p>SingleService</p>
@@ -237,7 +238,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>The existing service configurations. In the single-service scenario, only one entry is allowed. In ratio-based or content-based scenarios, multiple entries are allowed. Backend configurations cannot be specified during publishing. Configure them in advance by calling UpdateHttpApi or UpdateHttpApiOperation before publishing.</p>
+         * <p>The existing service configurations. In a single-service scenario, only one entry is allowed. In ratio-based or content-based scenarios, multiple entries are allowed. Backend configurations cannot be specified during publish. Configure them in advance by calling UpdateHttpApi or UpdateHttpApiOperation before publishing.</p>
          * 
          * <strong>if can be null:</strong>
          * <p>true</p>
@@ -332,7 +333,7 @@ public class DeployHttpApiRequest extends TeaModel {
 
     public static class DeployHttpApiRequestRestApiConfig extends TeaModel {
         /**
-         * <p>The description of the publish.</p>
+         * <p>The description of the publish operation.</p>
          * 
          * <strong>example:</strong>
          * <p>User service API publish</p>
@@ -341,7 +342,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>Specifies whether to enable REST API route compression. If this parameter is omitted or set to false, operations are published individually. If this parameter is set to true, the API is published as a single prefix route. This parameter is ignored for historical revision publishing, which uses the routing mode saved in the historical revision. When set to true, operationDeployments must not be specified because prefix route publishing supports only full publishing.</p>
+         * <p>Specifies whether to enable REST API route compression. If this parameter is omitted or set to false, operations are published individually. If this parameter is set to true, the API is published as a single prefix route. This parameter is ignored for historical revision publishing, which uses the route mode saved in the historical revision. When this parameter is set to true, operationDeployments must not be specified because prefix route publishing supports only full publishing.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -378,7 +379,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public java.util.List<String> operationIds;
 
         /**
-         * <p>The historical revision ID. If this parameter is specified, the publish uses the information from the historical revision.</p>
+         * <p>The historical revision ID. If this parameter is specified, the deployment uses the information from the historical revision.</p>
          * 
          * <strong>example:</strong>
          * <p>apr-xxx</p>

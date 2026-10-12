@@ -99,8 +99,8 @@ public class GetTraceConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether Tracing Analysis is enabled. Valid values:</p>
          * <ul>
-         * <li>true: enabled.</li>
-         * <li>false: shutdown.</li>
+         * <li>true: Enabled.</li>
+         * <li>false: Shutdown.</li>
          * </ul>
          * 
          * <strong>example:</strong>

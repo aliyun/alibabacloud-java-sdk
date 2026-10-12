@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public UpdateGatewayLoadBalancerResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -69,6 +76,8 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
 
     public static class UpdateGatewayLoadBalancerResponseBodyDataVirtualServiceList extends TeaModel {
         /**
+         * <p>The port. When an NLB instance is associated, two placeholder entries with ports 80 and 443 are returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -76,6 +85,8 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
         public String port;
 
         /**
+         * <p>The protocol. When an NLB instance is associated, HTTP and HTTPS are returned as placeholders. For CLB, the value is deserialized from the stored vServerGroupMetaInfo.</p>
+         * 
          * <strong>example:</strong>
          * <p>http</p>
          */
@@ -83,6 +94,8 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The VServerGroup or ServerGroup ID. When an NLB instance is associated, this field is an empty string placeholder.</p>
+         * 
          * <strong>example:</strong>
          * <p>rsp-xxxx</p>
          */
@@ -90,6 +103,8 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
         public String virtualServiceGroupId;
 
         /**
+         * <p>The group name. When an NLB instance is associated, this field is an empty string placeholder.</p>
+         * 
          * <strong>example:</strong>
          * <p>80-tcp</p>
          */
@@ -137,6 +152,8 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
 
     public static class UpdateGatewayLoadBalancerResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the load balancer can be edited. This serves as the edit toggle for a load balancer that is being migrated.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -144,6 +161,8 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
         public Boolean editEnable;
 
         /**
+         * <p>The load balancer address.</p>
+         * 
          * <strong>example:</strong>
          * <p>47.x.x.x</p>
          */
@@ -151,6 +170,8 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
         public String loadBalancerAddress;
 
         /**
+         * <p>The load balancer instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>lb-bp1xxxx</p>
          */
@@ -158,6 +179,8 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
         public String loadBalancerId;
 
         /**
+         * <p>The load balancer name.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-clb</p>
          */
@@ -165,6 +188,8 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
         public String loadBalancerName;
 
         /**
+         * <p>The load balancer type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CLB</p>
          */
@@ -172,16 +197,23 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
         public String loadBalancerType;
 
         /**
+         * <p>The network type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Internet</p>
          */
         @NameInMap("networkType")
         public String networkType;
 
+        /**
+         * <p>The port information.</p>
+         */
         @NameInMap("ports")
         public java.util.List<Integer> ports;
 
         /**
+         * <p>The gateway service weight for traffic shifting during migration. Valid values: 0 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -189,12 +221,17 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
         public Long serviceWeight;
 
         /**
+         * <p>The status description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>状态描述</p>
+         * <p>Status description</p>
          */
         @NameInMap("statusDescription")
         public String statusDescription;
 
+        /**
+         * <p>The backend server group bindings.</p>
+         */
         @NameInMap("virtualServiceList")
         public java.util.List<UpdateGatewayLoadBalancerResponseBodyDataVirtualServiceList> virtualServiceList;
 

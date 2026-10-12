@@ -4,16 +4,24 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayLoadBalancerRequest extends TeaModel {
+    /**
+     * <p>The load balancer operation DTO.</p>
+     */
     @NameInMap("loadBalancerDTO")
     public UpdateGatewayLoadBalancerRequestLoadBalancerDTO loadBalancerDTO;
 
     /**
+     * <p>The operation type. If this parameter is left empty or not specified, only the listening ports are updated (only the ports field is used).</p>
+     * 
      * <strong>example:</strong>
      * <p>Add</p>
      */
     @NameInMap("option")
     public String option;
 
+    /**
+     * <p>The port list.</p>
+     */
     @NameInMap("ports")
     public java.util.List<UpdateGatewayLoadBalancerRequestPorts> ports;
 
@@ -48,6 +56,8 @@ public class UpdateGatewayLoadBalancerRequest extends TeaModel {
 
     public static class UpdateGatewayLoadBalancerRequestLoadBalancerDTOVirtualServiceList extends TeaModel {
         /**
+         * <p>The port number. Valid values: 1 to 65535. An error is returned if an invalid value is specified.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -55,6 +65,8 @@ public class UpdateGatewayLoadBalancerRequest extends TeaModel {
         public Long port;
 
         /**
+         * <p>The protocol. This parameter is required for CLB. If this parameter is not specified for CLB, the error message &quot;protocol is missing for CLB&quot; is returned. No backend enumeration validation is performed. Valid values: tcp, udp, http, https, and tls.</p>
+         * 
          * <strong>example:</strong>
          * <p>http</p>
          */
@@ -62,6 +74,8 @@ public class UpdateGatewayLoadBalancerRequest extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The CLB VServerGroupId or NLB ServerGroupId. This parameter is required. If a duplicate group ID is specified, an error is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>rsp-xxxx</p>
          */
@@ -69,6 +83,8 @@ public class UpdateGatewayLoadBalancerRequest extends TeaModel {
         public String virtualServiceGroupId;
 
         /**
+         * <p>The group name. This parameter is required. If this parameter is not specified, the error message &quot;virtual service parameter is missing&quot; is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>80-tcp</p>
          */
@@ -116,6 +132,8 @@ public class UpdateGatewayLoadBalancerRequest extends TeaModel {
 
     public static class UpdateGatewayLoadBalancerRequestLoadBalancerDTO extends TeaModel {
         /**
+         * <p>The load balancer instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>lb-bp1xxxx</p>
          */
@@ -123,6 +141,8 @@ public class UpdateGatewayLoadBalancerRequest extends TeaModel {
         public String loadBalancerId;
 
         /**
+         * <p>The load balancer type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CLB</p>
          */
@@ -130,6 +150,8 @@ public class UpdateGatewayLoadBalancerRequest extends TeaModel {
         public String loadBalancerType;
 
         /**
+         * <p>The network type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Internet</p>
          */
@@ -137,12 +159,17 @@ public class UpdateGatewayLoadBalancerRequest extends TeaModel {
         public String networkType;
 
         /**
+         * <p>The service weight. Valid values: 0 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("serviceWeight")
         public Long serviceWeight;
 
+        /**
+         * <p>The backend server group bindings.</p>
+         */
         @NameInMap("virtualServiceList")
         public java.util.List<UpdateGatewayLoadBalancerRequestLoadBalancerDTOVirtualServiceList> virtualServiceList;
 
@@ -195,6 +222,8 @@ public class UpdateGatewayLoadBalancerRequest extends TeaModel {
 
     public static class UpdateGatewayLoadBalancerRequestPortsGatewayLoadBalancerPorts extends TeaModel {
         /**
+         * <p>The listening port. Valid values: 0 to 65535. A maximum of 50 custom ports can be configured in the console.</p>
+         * 
          * <strong>example:</strong>
          * <p>8080</p>
          */
@@ -202,6 +231,8 @@ public class UpdateGatewayLoadBalancerRequest extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The protocol.</p>
+         * 
          * <strong>example:</strong>
          * <p>HTTP</p>
          */
@@ -232,10 +263,15 @@ public class UpdateGatewayLoadBalancerRequest extends TeaModel {
     }
 
     public static class UpdateGatewayLoadBalancerRequestPorts extends TeaModel {
+        /**
+         * <p>The listening ports.</p>
+         */
         @NameInMap("gatewayLoadBalancerPorts")
         public java.util.List<UpdateGatewayLoadBalancerRequestPortsGatewayLoadBalancerPorts> gatewayLoadBalancerPorts;
 
         /**
+         * <p>The load balancer type.</p>
+         * 
          * <strong>example:</strong>
          * <p>NLB</p>
          */

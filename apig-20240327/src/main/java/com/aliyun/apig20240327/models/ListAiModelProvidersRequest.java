@@ -33,7 +33,7 @@ public class ListAiModelProvidersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The fuzzy match condition for the model provider identifier. If left empty, all model providers under the current gateway are queried.</p>
+     * <p>The fuzzy match condition for the model provider identifier. If this parameter is left empty, all model providers under the current gateway are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen</p>

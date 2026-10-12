@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSecretRequest extends TeaModel {
     /**
-     * <p>The key pair value.</p>
+     * <p>The secret value.</p>
      * 
      * <strong>example:</strong>
      * <p>apikey-xxxxxxxx</p>

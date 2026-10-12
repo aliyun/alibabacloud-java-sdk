@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateMigrationTaskRequest extends TeaModel {
     /**
+     * <p>The ID of the source ACK cluster. The value must be the same as the cluster specified in the IngressInfo of the API. Note: This parameter is actually required. If this parameter is not specified, the API returns 400 InvalidParameter.IsEmpty.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-xxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class CreateMigrationTaskRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The description of the task. The description is stored only when the task is created.</p>
+     * 
      * <strong>example:</strong>
      * <p>migration from Nginx</p>
      */
@@ -19,6 +23,8 @@ public class CreateMigrationTaskRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The ID of the destination environment. The value must be the same as the Ingress import environment of the API. Note: This parameter is actually required. If this parameter is not specified, the API returns 400 InvalidParameter.IsEmpty. You can call ListEnvironments to query existing environment IDs. CreateEnvironment has been deprecated.</p>
+     * 
      * <strong>example:</strong>
      * <p>env-xxxx</p>
      */
@@ -27,6 +33,8 @@ public class CreateMigrationTaskRequest extends TeaModel {
     public String environmentId;
 
     /**
+     * <p>The ID of the destination gateway to which traffic is migrated.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-xxxx</p>
      */
@@ -34,6 +42,8 @@ public class CreateMigrationTaskRequest extends TeaModel {
     public String gatewayId;
 
     /**
+     * <p>The HTTP API ID. The API must have been imported as an Ingress type (HttpIngress) API. Note: This parameter is actually required. If this parameter is not specified, the API returns 400 InvalidParameter.IsEmpty.</p>
+     * 
      * <strong>example:</strong>
      * <p>api-xxxx</p>
      */
@@ -41,6 +51,8 @@ public class CreateMigrationTaskRequest extends TeaModel {
     public String httpApiId;
 
     /**
+     * <p>The Ingress class. If specified, the value must be the same as the API import configuration. Otherwise, an ingress class conflict error is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>nginx</p>
      */
@@ -48,6 +60,9 @@ public class CreateMigrationTaskRequest extends TeaModel {
     public String ingressClass;
 
     /**
+     * <p>The migration type.
+     * [_single.params.body.props.migrationType.enum.Nginx Ingress]Nginx Ingress migration.</p>
+     * 
      * <strong>example:</strong>
      * <p>Nginx Ingress</p>
      */
@@ -55,6 +70,8 @@ public class CreateMigrationTaskRequest extends TeaModel {
     public String migrationType;
 
     /**
+     * <p>The watched namespace. If specified, the value must be the same as the API import configuration. Otherwise, a watchNamespace conflict error is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */

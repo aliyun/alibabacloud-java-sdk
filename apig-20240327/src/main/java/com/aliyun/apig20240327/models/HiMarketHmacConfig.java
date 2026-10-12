@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HiMarketHmacConfig extends TeaModel {
     /**
-     * <p>The list of credentials.</p>
+     * <p>The credential list.</p>
      */
     @NameInMap("credentials")
     public java.util.List<HiMarketHmacConfigCredentials> credentials;

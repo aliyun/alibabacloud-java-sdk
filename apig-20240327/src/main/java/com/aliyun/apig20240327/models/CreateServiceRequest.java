@@ -131,13 +131,13 @@ public class CreateServiceRequest extends TeaModel {
         public java.util.List<String> addresses;
 
         /**
-         * <p>The Agent service configuration. Required when sourceType is AGENT.</p>
+         * <p>The Agent service configuration. This parameter is required when sourceType is set to AGENT.</p>
          */
         @NameInMap("agentServiceConfig")
         public AgentServiceConfig agentServiceConfig;
 
         /**
-         * <p>The AI service configuration. Required when sourceType is AI.</p>
+         * <p>The AI service configuration. This parameter is required when sourceType is set to AI.</p>
          */
         @NameInMap("aiServiceConfig")
         public AiServiceConfig aiServiceConfig;
@@ -158,7 +158,7 @@ public class CreateServiceRequest extends TeaModel {
         public String expressType;
 
         /**
-         * <p>The service group name. Required when sourceType is MSE_NACOS.</p>
+         * <p>The service group name. This parameter is required when sourceType is set to MSE_NACOS.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT_GROUP</p>
@@ -176,7 +176,7 @@ public class CreateServiceRequest extends TeaModel {
         public String modelProviderId;
 
         /**
-         * <p>The service name. Required when sourceType is FC3.</p>
+         * <p>The service name. This parameter is required when sourceType is set to FC3.</p>
          * 
          * <strong>example:</strong>
          * <p>user-service</p>
@@ -185,12 +185,12 @@ public class CreateServiceRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The namespace of the service:</p>
+         * <p>The namespace of the service.</p>
          * <ul>
-         * <li>If sourceType is K8S, this indicates the namespace of the Kubernetes service.</li>
-         * <li>If sourceType is MSE_NACOS, this indicates the namespace in Nacos.</li>
+         * <li>If sourceType is set to K8S, this parameter specifies the namespace of the Kubernetes service.</li>
+         * <li>If sourceType is set to MSE_NACOS, this parameter specifies the namespace in Nacos.</li>
          * </ul>
-         * <p>Required when sourceType is K8S or MSE_NACOS.</p>
+         * <p>This parameter is required when sourceType is set to K8S or MSE_NACOS.</p>
          * 
          * <strong>example:</strong>
          * <p>PUBLIC</p>
@@ -208,7 +208,7 @@ public class CreateServiceRequest extends TeaModel {
         public String qualifier;
 
         /**
-         * <p>The service source ID. Required in multi-Nacos instance scenarios.</p>
+         * <p>The service source ID. This parameter is required in multi-Nacos instance scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>nacos-instance-001</p>

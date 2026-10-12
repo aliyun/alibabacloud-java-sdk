@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Service extends TeaModel {
     /**
-     * <p>The address information, including IP addresses or domain name lists.</p>
+     * <p>The address information, which is a list of IP addresses or domain names.</p>
      */
     @NameInMap("addresses")
     public java.util.List<String> addresses;
@@ -122,7 +122,7 @@ public class Service extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The configuration for removing abnormal instances.</p>
+     * <p>The outlier detection configuration for removing abnormal instances.</p>
      */
     @NameInMap("outlierDetection")
     public ServiceOutlierDetection outlierDetection;
@@ -209,7 +209,7 @@ public class Service extends TeaModel {
     public java.util.List<String> unhealthyEndpoints;
 
     /**
-     * <p>The time when the service was created.</p>
+     * <p>The time when the service was updated.</p>
      * 
      * <strong>example:</strong>
      * <p>1725868548440</p>

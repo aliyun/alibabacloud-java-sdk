@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListGatewayErrorAccessLogsRequest extends TeaModel {
     /**
+     * <p>The domain name filter. This parameter performs an exact match against the authority field in Simple Log Service (SLS).</p>
+     * 
      * <strong>example:</strong>
      * <p>api.example.com</p>
      */
@@ -12,6 +14,7 @@ public class ListGatewayErrorAccessLogsRequest extends TeaModel {
     public String authority;
 
     /**
+     * <p>The end of the query window, in UNIX seconds. The value cannot be later than the current time, and the time span cannot exceed 24 hours.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ListGatewayErrorAccessLogsRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The gateway request ID (x-acs-request-id) for exact match filtering.</p>
+     * 
      * <strong>example:</strong>
      * <p>E5D4xxxx</p>
      */
@@ -28,6 +33,8 @@ public class ListGatewayErrorAccessLogsRequest extends TeaModel {
     public String gatewayRequestId;
 
     /**
+     * <p>The request path filter.</p>
+     * 
      * <strong>example:</strong>
      * <p>/api/v1/pets</p>
      */
@@ -35,6 +42,8 @@ public class ListGatewayErrorAccessLogsRequest extends TeaModel {
     public String path;
 
     /**
+     * <p>The HTTP error code. Only three-digit numbers in the 400–599 range are accepted. This parameter is required. If you do not specify this parameter, the API returns InvalidParameter.WithDetail (400).</p>
+     * 
      * <strong>example:</strong>
      * <p>502</p>
      */
@@ -42,6 +51,8 @@ public class ListGatewayErrorAccessLogsRequest extends TeaModel {
     public String responseCode;
 
     /**
+     * <p>The route name filter.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-route</p>
      */
@@ -49,6 +60,7 @@ public class ListGatewayErrorAccessLogsRequest extends TeaModel {
     public String routeName;
 
     /**
+     * <p>The start of the query window, in UNIX seconds. The value must be no earlier than 24 hours before the current time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

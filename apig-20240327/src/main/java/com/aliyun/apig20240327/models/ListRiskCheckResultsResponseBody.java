@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListRiskCheckResultsResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The risk detection results.</p>
+     */
     @NameInMap("data")
     public ListRiskCheckResultsResponseBodyData data;
 
     /**
+     * <p>The maximum number of entries to return in this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class ListRiskCheckResultsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class ListRiskCheckResultsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The pagination token. This parameter is empty if no more pages are available.</p>
+     * 
      * <strong>example:</strong>
      * <p>token-xxx</p>
      */
@@ -98,10 +109,15 @@ public class ListRiskCheckResultsResponseBody extends TeaModel {
     }
 
     public static class ListRiskCheckResultsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of risk detection results.</p>
+         */
         @NameInMap("items")
         public java.util.List<RiskCheckResults> items;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -109,6 +125,8 @@ public class ListRiskCheckResultsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -116,6 +134,8 @@ public class ListRiskCheckResultsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

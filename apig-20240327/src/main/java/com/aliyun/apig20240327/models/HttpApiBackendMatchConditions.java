@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class HttpApiBackendMatchConditions extends TeaModel {
     /**
-     * <p>The configurations of the matching conditions.</p>
+     * <p>The matching condition configuration.</p>
      */
     @NameInMap("conditions")
     public java.util.List<HttpApiBackendMatchCondition> conditions;
 
     /**
-     * <p>Specifies whether the matching condition is the default one.</p>
+     * <p>Indicates whether this is the default matching condition.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -23,7 +23,7 @@ public class CreateSecretRequest extends TeaModel {
     public String gatewayType;
 
     /**
-     * <p>The KMS key configuration.</p>
+     * <p>The KMS key configuration information.</p>
      */
     @NameInMap("kmsConfig")
     public KMSConfig kmsConfig;
@@ -47,7 +47,7 @@ public class CreateSecretRequest extends TeaModel {
     public String secretData;
 
     /**
-     * <p>The source of the key.</p>
+     * <p>The key source.</p>
      * 
      * <strong>example:</strong>
      * <p>KMS</p>

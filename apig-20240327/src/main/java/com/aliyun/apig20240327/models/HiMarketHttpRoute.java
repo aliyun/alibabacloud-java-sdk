@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HiMarketHttpRoute extends TeaModel {
     /**
-     * <p>Indicates whether the route is a built-in route.</p>
+     * <p>Indicates whether this is a built-in route.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

@@ -76,7 +76,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
 
     public static class ListPluginAttachmentsResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The plug-in mount resource type. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, Operation.</p>
+         * <p>The plug-in mount resource type. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, and Operation.</p>
          * 
          * <strong>example:</strong>
          * <p>GatewayRoute</p>
@@ -85,7 +85,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         public String attachResourceType;
 
         /**
-         * <p>Specifies whether the plug-in is enabled.</p>
+         * <p>Indicates whether the plug-in is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -115,7 +115,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         public String pluginAttachmentId;
 
         /**
-         * <p>The plug-in type information.</p>
+         * <p>The plug-in class information.</p>
          */
         @NameInMap("pluginClassInfo")
         public PluginClassInfo pluginClassInfo;
@@ -240,7 +240,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

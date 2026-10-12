@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LabelDetail extends TeaModel {
     /**
-     * <p>The label key</p>
+     * <p>The label key.</p>
      * 
      * <strong>example:</strong>
      * <p>version</p>
@@ -14,7 +14,7 @@ public class LabelDetail extends TeaModel {
     public String key;
 
     /**
-     * <p>The list of available values for this label</p>
+     * <p>The list of label values.</p>
      */
     @NameInMap("values")
     public java.util.List<String> values;

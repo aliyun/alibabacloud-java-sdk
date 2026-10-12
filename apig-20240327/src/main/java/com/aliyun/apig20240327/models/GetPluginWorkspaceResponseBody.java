@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetPluginWorkspaceResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public GetPluginWorkspaceResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,7 +29,7 @@ public class GetPluginWorkspaceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4AFA893B-A75B-5002-AACF-84CABE06197A</p>
@@ -69,6 +76,8 @@ public class GetPluginWorkspaceResponseBody extends TeaModel {
 
     public static class GetPluginWorkspaceResponseBodyData extends TeaModel {
         /**
+         * <p>The Codeup organization ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>664f1e2xxxx</p>
          */
@@ -76,6 +85,8 @@ public class GetPluginWorkspaceResponseBody extends TeaModel {
         public String organizationId;
 
         /**
+         * <p>The ID of the most recent pipeline run. This parameter is not returned if the plugin has never been built.</p>
+         * 
          * <strong>example:</strong>
          * <p>987654</p>
          */
@@ -83,6 +94,8 @@ public class GetPluginWorkspaceResponseBody extends TeaModel {
         public String pipelineRunId;
 
         /**
+         * <p>The Codeup repository ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345678</p>
          */
@@ -90,6 +103,8 @@ public class GetPluginWorkspaceResponseBody extends TeaModel {
         public String repoId;
 
         /**
+         * <p>The repository name (the English ID of the plugin).</p>
+         * 
          * <strong>example:</strong>
          * <p>my-custom-plugin</p>
          */
@@ -97,6 +112,8 @@ public class GetPluginWorkspaceResponseBody extends TeaModel {
         public String repoName;
 
         /**
+         * <p>The OSS download URL of the compiled WASM build output. This parameter is returned only when the pipeline status is SUCCESS.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://apigw-console-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/%7Buid%7D/plugin/plugin_1756262400.wasm">https://apigw-console-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/{uid}/plugin/plugin_1756262400.wasm</a></p>
          */
@@ -104,6 +121,8 @@ public class GetPluginWorkspaceResponseBody extends TeaModel {
         public String wasmUrl;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>plw-xxxxxxxx</p>
          */

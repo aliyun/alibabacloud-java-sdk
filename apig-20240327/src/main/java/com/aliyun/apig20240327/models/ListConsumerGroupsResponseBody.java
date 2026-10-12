@@ -106,7 +106,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
          * <p>The consumer group description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Used for online API caller grouping.</p>
+         * <p>Used for grouping online API callers</p>
          */
         @NameInMap("description")
         public String description;
@@ -210,7 +210,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of consumer groups that match the conditions.</p>
+         * <p>The total number of consumer groups that match the specified conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetBatchExportTaskResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public GetBatchExportTaskResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>CE534E1D-FCE4-5930-B784-E055EC1AEE6F</p>
      */
@@ -67,6 +76,8 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
 
     public static class GetBatchExportTaskResponseBodyDataResultFailureItems extends TeaModel {
         /**
+         * <p>API ID。</p>
+         * 
          * <strong>example:</strong>
          * <p>api-xxx</p>
          */
@@ -74,6 +85,8 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
         public String apiId;
 
         /**
+         * <p>The API name.</p>
+         * 
          * <strong>example:</strong>
          * <p>petstore</p>
          */
@@ -81,6 +94,8 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
         public String apiName;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>api definition is invalid</p>
          */
@@ -120,6 +135,8 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
 
     public static class GetBatchExportTaskResponseBodyDataResultSuccessItems extends TeaModel {
         /**
+         * <p>API ID。</p>
+         * 
          * <strong>example:</strong>
          * <p>api-xxx</p>
          */
@@ -127,6 +144,8 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
         public String apiId;
 
         /**
+         * <p>The API name.</p>
+         * 
          * <strong>example:</strong>
          * <p>petstore</p>
          */
@@ -134,6 +153,8 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
         public String apiName;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>api definition is invalid</p>
          */
@@ -173,16 +194,23 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
 
     public static class GetBatchExportTaskResponseBodyDataResult extends TeaModel {
         /**
+         * <p>The API type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Http</p>
          */
         @NameInMap("apiType")
         public String apiType;
 
+        /**
+         * <p>The list of APIs that failed to be processed.</p>
+         */
         @NameInMap("failureItems")
         public java.util.List<GetBatchExportTaskResponseBodyDataResultFailureItems> failureItems;
 
         /**
+         * <p>The gateway instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-xxx</p>
          */
@@ -190,12 +218,17 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
+         * <p>The Base64-encoded ZIP file content. After the frontend decodes the content, it can directly trigger a browser download.</p>
+         * 
          * <strong>example:</strong>
          * <p>UEsDBBQAAAA...</p>
          */
         @NameInMap("specContentBase64")
         public String specContentBase64;
 
+        /**
+         * <p>The list of APIs that were processed successfully.</p>
+         */
         @NameInMap("successItems")
         public java.util.List<GetBatchExportTaskResponseBodyDataResultSuccessItems> successItems;
 
@@ -248,6 +281,8 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
 
     public static class GetBatchExportTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The time when the task was created. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-05-15T10:00:00Z</p>
          */
@@ -255,6 +290,8 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>some apis export failed</p>
          */
@@ -262,16 +299,23 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The number of processed items.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
         @NameInMap("processedCount")
         public Integer processedCount;
 
+        /**
+         * <p>The task result details.</p>
+         */
         @NameInMap("result")
         public GetBatchExportTaskResponseBodyDataResult result;
 
         /**
+         * <p>The task status. Valid values: Pending, Running, Success, PartialSuccess, and Failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -279,6 +323,8 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>async-task-xxx</p>
          */
@@ -286,6 +332,8 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The task type.</p>
+         * 
          * <strong>example:</strong>
          * <p>BatchExport</p>
          */
@@ -293,6 +341,8 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
         public String taskType;
 
         /**
+         * <p>The total number of items.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

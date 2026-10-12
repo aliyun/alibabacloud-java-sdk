@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HttpApiApiInfo extends TeaModel {
     /**
-     * <p>The list of agent protocols.</p>
+     * <p>The list of Agent protocols.</p>
      */
     @NameInMap("agentProtocols")
     public java.util.List<String> agentProtocols;
@@ -32,7 +32,7 @@ public class HttpApiApiInfo extends TeaModel {
     public String basePath;
 
     /**
-     * <p>The API operation deployment status.</p>
+     * <p>The API operation publish status.</p>
      */
     @NameInMap("deployCntMap")
     public java.util.Map<String, HttpApiApiInfoDeployCntMapValue> deployCntMap;
@@ -53,6 +53,8 @@ public class HttpApiApiInfo extends TeaModel {
     public String description;
 
     /**
+     * <p>Indicates whether authentication is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -288,6 +290,8 @@ public class HttpApiApiInfo extends TeaModel {
 
     public static class HttpApiApiInfoEnvironmentsGatewayInfo extends TeaModel {
         /**
+         * <p>The gateway instance edition. Valid values: Professional, Serverless, MultiTenantServerless, and Unknown.</p>
+         * 
          * <strong>example:</strong>
          * <p>MultiTenantServerless</p>
          */
@@ -571,7 +575,7 @@ public class HttpApiApiInfo extends TeaModel {
         public String alias;
 
         /**
-         * <p>The deployment scenario.</p>
+         * <p>The publish scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>SingleService</p>
@@ -589,13 +593,13 @@ public class HttpApiApiInfo extends TeaModel {
         public String backendType;
 
         /**
-         * <p>The domain name information published by the user.</p>
+         * <p>The custom domain information published by the user.</p>
          */
         @NameInMap("customDomains")
         public java.util.List<HttpApiDomainInfo> customDomains;
 
         /**
-         * <p>The deployment status of the API in the current environment.</p>
+         * <p>The publish status of the API in the current environment.</p>
          * 
          * <strong>example:</strong>
          * <p>Deployed</p>
@@ -784,7 +788,7 @@ public class HttpApiApiInfo extends TeaModel {
         public HttpApiApiInfoIngressInfoEnvironmentInfo environmentInfo;
 
         /**
-         * <p>The monitored Ingress Class.</p>
+         * <p>The Ingress Class to listen on.</p>
          * 
          * <strong>example:</strong>
          * <p>mse</p>
@@ -799,7 +803,7 @@ public class HttpApiApiInfo extends TeaModel {
         public HttpApiApiInfoIngressInfoK8sClusterInfo k8sClusterInfo;
 
         /**
-         * <p>Specifies whether to update the address in Ingress Status.</p>
+         * <p>Specifies whether to update the address in the Ingress Status.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -817,7 +821,7 @@ public class HttpApiApiInfo extends TeaModel {
         public String sourceId;
 
         /**
-         * <p>The monitored namespace.</p>
+         * <p>The namespace to listen on.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

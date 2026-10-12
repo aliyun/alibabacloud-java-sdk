@@ -52,11 +52,11 @@ public class ListServicesRequest extends TeaModel {
     /**
      * <p>The source type of the service. Valid values:</p>
      * <ul>
-     * <li>MSE_NACOS: The service is from MSE Nacos.</li>
-     * <li>K8S: The service is from a Kubernetes cluster in Container Service.</li>
-     * <li>FC3: The service is from Function Compute.</li>
-     * <li>VIP: The service is from a fixed address.</li>
-     * <li>DNS: The service is from a domain name.</li>
+     * <li>MSE_NACOS: The service originates from MSE Nacos.</li>
+     * <li>K8S: The service originates from a Kubernetes cluster in Container Service.</li>
+     * <li>FC3: The service originates from Function Compute.</li>
+     * <li>VIP: The service originates from a fixed address.</li>
+     * <li>DNS: The service originates from a domain name.</li>
      * </ul>
      * 
      * <strong>example:</strong>

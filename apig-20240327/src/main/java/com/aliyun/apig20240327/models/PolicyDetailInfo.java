@@ -35,7 +35,7 @@ public class PolicyDetailInfo extends TeaModel {
      * <p>The policy description.</p>
      * 
      * <strong>example:</strong>
-     * <p>每秒限流100次</p>
+     * <p>Rate limited to 100 requests per second</p>
      */
     @NameInMap("description")
     public String description;

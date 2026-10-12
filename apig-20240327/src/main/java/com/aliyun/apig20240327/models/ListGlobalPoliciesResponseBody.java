@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListGlobalPoliciesResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public ListGlobalPoliciesResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -68,10 +75,15 @@ public class ListGlobalPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListGlobalPoliciesResponseBodyData extends TeaModel {
+        /**
+         * <p>object</p>
+         */
         @NameInMap("items")
         public java.util.List<PolicyInfo> items;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -79,6 +91,8 @@ public class ListGlobalPoliciesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -86,6 +100,8 @@ public class ListGlobalPoliciesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>25</p>
          */

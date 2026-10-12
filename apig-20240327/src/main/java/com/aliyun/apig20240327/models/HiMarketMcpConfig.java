@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class HiMarketMcpConfig extends TeaModel {
     /**
-     * <p>The MCP Server configuration.</p>
+     * <p>The MCP server configuration.</p>
      */
     @NameInMap("mcpServerConfig")
     public HiMarketMcpConfigMcpServerConfig mcpServerConfig;
 
     /**
-     * <p>The MCP Server name.</p>
+     * <p>The MCP server name.</p>
      * 
      * <strong>example:</strong>
      * <p>my-mcp-server</p>
@@ -29,7 +29,7 @@ public class HiMarketMcpConfig extends TeaModel {
      * <p>The MCP tool definitions.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;name\&quot;:\&quot;search\&quot;,\&quot;description\&quot;:\&quot;搜索工具\&quot;}]</p>
+     * <p>[{\&quot;name\&quot;:\&quot;search\&quot;,\&quot;description\&quot;:\&quot;Search tool\&quot;}]</p>
      */
     @NameInMap("tools")
     public String tools;

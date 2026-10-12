@@ -4,11 +4,14 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayErrorAccessLogsResponseBody extends TeaModel {
+    /**
+     * <p>The list of log entries. Each entry is a mapping from field names to field values.</p>
+     */
     @NameInMap("data")
     public java.util.List<java.util.Map<String, String>> data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C9BF49BD-3037-5006-B379-656ECBA6F56C</p>

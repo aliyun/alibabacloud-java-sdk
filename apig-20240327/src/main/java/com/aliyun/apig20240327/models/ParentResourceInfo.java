@@ -11,7 +11,14 @@ public class ParentResourceInfo extends TeaModel {
     public HttpApiApiInfo apiInfo;
 
     /**
-     * <p>The resource type. Valid values: HttpApi/Operation/GatewayRoute/Gateway/GatewayDomain</p>
+     * <p>The resource type. Valid values:</p>
+     * <ul>
+     * <li>HttpApi</li>
+     * <li>Operation</li>
+     * <li>GatewayRoute</li>
+     * <li>Gateway</li>
+     * <li>GatewayDomain</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Gateway</p>

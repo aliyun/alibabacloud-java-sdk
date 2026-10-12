@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListInstallableGatewaysRequest extends TeaModel {
     /**
+     * <p>The gateway type used for filtering.</p>
+     * 
      * <strong>example:</strong>
      * <p>AI</p>
      */
@@ -12,6 +14,8 @@ public class ListInstallableGatewaysRequest extends TeaModel {
     public String gatewayType;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListInstallableGatewaysRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

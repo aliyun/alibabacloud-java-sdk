@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HttpApiResponseContract extends TeaModel {
     /**
-     * <p>The content type.</p>
+     * <p>The response content type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class HttpApiResponseContract extends TeaModel {
     public String contentType;
 
     /**
-     * <p>The response definition.</p>
+     * <p>The response definitions.</p>
      */
     @NameInMap("items")
     public java.util.List<HttpApiResponseContractItems> items;
@@ -52,16 +52,16 @@ public class HttpApiResponseContract extends TeaModel {
         public Integer code;
 
         /**
-         * <p>The response description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is a description.</p>
+         * <p>Normal API response</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The sample value.</p>
+         * <p>The example value.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;result&quot;: &quot;ok&quot;}</p>
@@ -70,7 +70,7 @@ public class HttpApiResponseContract extends TeaModel {
         public String example;
 
         /**
-         * <p>The JSON definition description of the response body.</p>
+         * <p>The JSON schema definition of the response body.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -81,7 +81,7 @@ public class HttpApiResponseContract extends TeaModel {
          *     &quot;properties&quot;: {
          *         &quot;result&quot;: {
          *             &quot;type&quot;: &quot;string&quot;,
-         *             &quot;description&quot;: &quot;This is a description.&quot;
+         *             &quot;description&quot;: &quot;Operation result. \&quot;ok\&quot; indicates success.&quot;
          *         }
          *     }
          * }</p>

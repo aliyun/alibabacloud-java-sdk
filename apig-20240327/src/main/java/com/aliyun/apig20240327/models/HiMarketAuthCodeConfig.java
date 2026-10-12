@@ -23,7 +23,7 @@ public class HiMarketAuthCodeConfig extends TeaModel {
     public String clientId;
 
     /**
-     * <p>The OAuth2 client secret. The secret is AES-encrypted when stored.</p>
+     * <p>The OAuth2 client secret, which is AES-encrypted when stored.</p>
      * 
      * <strong>example:</strong>
      * <p>my-client-secret</p>
@@ -41,7 +41,7 @@ public class HiMarketAuthCodeConfig extends TeaModel {
     public String issuer;
 
     /**
-     * <p>The JWKS public key set URI, used for token signature verification.</p>
+     * <p>The JWKS public key set URI, which is used for token signature verification.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://idp.example.com/.well-known/jwks.json">https://idp.example.com/.well-known/jwks.json</a></p>

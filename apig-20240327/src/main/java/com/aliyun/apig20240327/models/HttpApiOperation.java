@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class HttpApiOperation extends TeaModel {
     /**
-     * <p>The authentication configurations.</p>
+     * <p>The authentication configuration.</p>
      */
     @NameInMap("authConfig")
     public AuthConfig authConfig;
 
     /**
-     * <p>The deployment configurations.</p>
+     * <p>The deployment configuration.</p>
      */
     @NameInMap("deployConfigs")
     public java.util.List<HttpApiDeployConfig> deployConfigs;
@@ -20,13 +20,13 @@ public class HttpApiOperation extends TeaModel {
      * <p>The operation description.</p>
      * 
      * <strong>example:</strong>
-     * <p>This is a operation description.</p>
+     * <p>Retrieve user information</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>Specifies whether to enable authentication.</p>
+     * <p>Indicates whether authentication is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -35,19 +35,7 @@ public class HttpApiOperation extends TeaModel {
     public Boolean enableAuth;
 
     /**
-     * <p>The HTTP method.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>TRACE</li>
-     * <li>HEAD</li>
-     * <li>DELETE</li>
-     * <li>POST</li>
-     * <li>GET</li>
-     * <li>CONNECT</li>
-     * <li>OPTIONS</li>
-     * <li>PUT</li>
-     * <li>PATCH</li>
-     * </ul>
+     * <p>The method.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +45,7 @@ public class HttpApiOperation extends TeaModel {
     public String method;
 
     /**
-     * <p>The mocking configuration of the operation. This field takes effect only when the API publishing scenario is Mock.</p>
+     * <p>The mock configuration of the operation. This configuration takes effect only when the API is published in Mock mode.</p>
      */
     @NameInMap("mock")
     public HttpApiMockContract mock;
@@ -83,13 +71,13 @@ public class HttpApiOperation extends TeaModel {
     public String path;
 
     /**
-     * <p>The request parameters of the operation.</p>
+     * <p>The request parameter definition of the operation.</p>
      */
     @NameInMap("request")
     public HttpApiRequestContract request;
 
     /**
-     * <p>The response parameters of the operation.</p>
+     * <p>The response parameter definition of the operation.</p>
      */
     @NameInMap("response")
     public HttpApiResponseContract response;

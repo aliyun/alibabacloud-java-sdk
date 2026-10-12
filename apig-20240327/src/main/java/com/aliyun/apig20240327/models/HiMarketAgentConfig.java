@@ -25,13 +25,13 @@ public class HiMarketAgentConfig extends TeaModel {
 
     public static class HiMarketAgentConfigAgentAPIConfig extends TeaModel {
         /**
-         * <p>The list of agent protocols.</p>
+         * <p>The agent protocol list.</p>
          */
         @NameInMap("agentProtocols")
         public java.util.List<String> agentProtocols;
 
         /**
-         * <p>The list of agent API routing configurations.</p>
+         * <p>The agent API routing configuration list.</p>
          */
         @NameInMap("routes")
         public java.util.List<HiMarketHttpRoute> routes;

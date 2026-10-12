@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HiMarketProductPublicationDetail extends TeaModel {
     /**
-     * <p>The portal ID.</p>
+     * <p>Portal ID</p>
      * 
      * <strong>example:</strong>
      * <p>portal-xxx</p>
@@ -17,7 +17,7 @@ public class HiMarketProductPublicationDetail extends TeaModel {
      * <p>The portal name.</p>
      * 
      * <strong>example:</strong>
-     * <p>开发者门户</p>
+     * <p>Developer Portal</p>
      */
     @NameInMap("portalName")
     public String portalName;
@@ -35,7 +35,7 @@ public class HiMarketProductPublicationDetail extends TeaModel {
      * <p>The product name.</p>
      * 
      * <strong>example:</strong>
-     * <p>AI网关API</p>
+     * <p>AI Gateway API</p>
      */
     @NameInMap("productName")
     public String productName;
@@ -50,7 +50,7 @@ public class HiMarketProductPublicationDetail extends TeaModel {
     public String productType;
 
     /**
-     * <p>The product publish ID.</p>
+     * <p>The product publication ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pub-xxx</p>

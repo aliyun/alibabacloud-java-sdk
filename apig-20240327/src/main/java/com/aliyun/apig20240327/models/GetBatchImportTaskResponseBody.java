@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetBatchImportTaskResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public GetBatchImportTaskResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CE534E1D-FCE4-5930-B784-E055EC1AEE6F</p>
      */
@@ -67,6 +76,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
 
     public static class GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoExistHttpApiInfoVersionInfo extends TeaModel {
         /**
+         * <p>Indicates whether versioning is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -74,6 +85,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The key in the specified header parameter when the header versioning scheme is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-version</p>
          */
@@ -81,6 +94,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String headerName;
 
         /**
+         * <p>The key in the specified query parameter when the query versioning scheme is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>myVersion</p>
          */
@@ -88,6 +103,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String queryName;
 
         /**
+         * <p>The versioning scheme.</p>
+         * 
          * <strong>example:</strong>
          * <p>Query</p>
          */
@@ -95,6 +112,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String scheme;
 
         /**
+         * <p>The version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */
@@ -150,6 +169,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
 
     public static class GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoExistHttpApiInfo extends TeaModel {
         /**
+         * <p>The base path of the API.</p>
+         * 
          * <strong>example:</strong>
          * <p>/v1</p>
          */
@@ -157,6 +178,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String basePath;
 
         /**
+         * <p>The gateway instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-xxx</p>
          */
@@ -164,6 +187,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
+         * <p>The ID of the HTTP API.</p>
+         * 
          * <strong>example:</strong>
          * <p>api-xxx</p>
          */
@@ -171,6 +196,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String httpApiId;
 
         /**
+         * <p>The name of the API.</p>
+         * 
          * <strong>example:</strong>
          * <p>petstore</p>
          */
@@ -178,12 +205,17 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The API type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Rest</p>
          */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The API versioning information.</p>
+         */
         @NameInMap("versionInfo")
         public GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoExistHttpApiInfoVersionInfo versionInfo;
 
@@ -244,6 +276,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
 
     public static class GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoFailureComponents extends TeaModel {
         /**
+         * <p>The reason why the dry run failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>invalid schema</p>
          */
@@ -251,6 +285,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The name of the data structure.</p>
+         * 
          * <strong>example:</strong>
          * <p>Pet</p>
          */
@@ -282,6 +318,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
 
     public static class GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoFailureOperations extends TeaModel {
         /**
+         * <p>The reason why the dry run failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>unsupported operation</p>
          */
@@ -289,6 +327,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The HTTP method of the REST API operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>GET</p>
          */
@@ -296,6 +336,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String method;
 
         /**
+         * <p>The path of the REST API operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>/pets/{petId}</p>
          */
@@ -335,6 +377,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
 
     public static class GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoFailureRoutes extends TeaModel {
         /**
+         * <p>The reason why the dry run failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>domain not found</p>
          */
@@ -342,6 +386,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The name of the route.</p>
+         * 
          * <strong>example:</strong>
          * <p>route-pets</p>
          */
@@ -373,6 +419,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
 
     public static class GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoSuccessComponents extends TeaModel {
         /**
+         * <p>The action type to be performed after the dry run.</p>
+         * 
          * <strong>example:</strong>
          * <p>Create</p>
          */
@@ -380,6 +428,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String action;
 
         /**
+         * <p>The name of the data structure.</p>
+         * 
          * <strong>example:</strong>
          * <p>Pet</p>
          */
@@ -411,6 +461,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
 
     public static class GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoSuccessOperations extends TeaModel {
         /**
+         * <p>The action type to be performed after the dry run.</p>
+         * 
          * <strong>example:</strong>
          * <p>Create</p>
          */
@@ -418,6 +470,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String action;
 
         /**
+         * <p>The HTTP method of the REST API operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>GET</p>
          */
@@ -425,6 +479,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String method;
 
         /**
+         * <p>The name of the REST API operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>getPetById</p>
          */
@@ -432,6 +488,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The path of the REST API operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>/pets/{petId}</p>
          */
@@ -479,6 +537,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
 
     public static class GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoSuccessRoutes extends TeaModel {
         /**
+         * <p>The action type to be performed after the dry run.</p>
+         * 
          * <strong>example:</strong>
          * <p>Create</p>
          */
@@ -486,6 +546,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String action;
 
         /**
+         * <p>The name of the route.</p>
+         * 
          * <strong>example:</strong>
          * <p>route-pets</p>
          */
@@ -516,30 +578,57 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
     }
 
     public static class GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfo extends TeaModel {
+        /**
+         * <p>The list of dry run error messages.</p>
+         */
         @NameInMap("errorMessages")
         public java.util.List<String> errorMessages;
 
+        /**
+         * <p>The basic information about the existing HTTP API matched during import.</p>
+         */
         @NameInMap("existHttpApiInfo")
         public GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoExistHttpApiInfo existHttpApiInfo;
 
+        /**
+         * <p>The list of data structures that failed the dry run.</p>
+         */
         @NameInMap("failureComponents")
         public java.util.List<GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoFailureComponents> failureComponents;
 
+        /**
+         * <p>The list of REST API operations that failed the dry run.</p>
+         */
         @NameInMap("failureOperations")
         public java.util.List<GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoFailureOperations> failureOperations;
 
+        /**
+         * <p>The list of routes that failed the dry run.</p>
+         */
         @NameInMap("failureRoutes")
         public java.util.List<GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoFailureRoutes> failureRoutes;
 
+        /**
+         * <p>The list of data structures that passed the dry run.</p>
+         */
         @NameInMap("successComponents")
         public java.util.List<GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoSuccessComponents> successComponents;
 
+        /**
+         * <p>The list of REST API operations that passed the dry run.</p>
+         */
         @NameInMap("successOperations")
         public java.util.List<GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoSuccessOperations> successOperations;
 
+        /**
+         * <p>The list of routes that passed the dry run.</p>
+         */
         @NameInMap("successRoutes")
         public java.util.List<GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoSuccessRoutes> successRoutes;
 
+        /**
+         * <p>The list of dry run warning messages.</p>
+         */
         @NameInMap("warningMessages")
         public java.util.List<String> warningMessages;
 
@@ -624,16 +713,23 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
 
     public static class GetBatchImportTaskResponseBodyDataResultDryRunResults extends TeaModel {
         /**
+         * <p>The API name. The value unknown is returned if the name cannot be identified.</p>
+         * 
          * <strong>example:</strong>
          * <p>petstore</p>
          */
         @NameInMap("apiName")
         public String apiName;
 
+        /**
+         * <p>The dry run details, including the operations, routes, components, and error or warning messages planned for creation or update in this file.</p>
+         */
         @NameInMap("dryRunInfo")
         public GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfo dryRunInfo;
 
         /**
+         * <p>The dry run error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>unsupported oas version</p>
          */
@@ -641,6 +737,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String error;
 
         /**
+         * <p>The file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>petstore.yaml</p>
          */
@@ -688,6 +786,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
 
     public static class GetBatchImportTaskResponseBodyDataResultFailureItems extends TeaModel {
         /**
+         * <p>The ID of the API.</p>
+         * 
          * <strong>example:</strong>
          * <p>api-xxx</p>
          */
@@ -695,6 +795,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String apiId;
 
         /**
+         * <p>The API name. The value unknown is returned if the name cannot be identified.</p>
+         * 
          * <strong>example:</strong>
          * <p>petstore</p>
          */
@@ -702,6 +804,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String apiName;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>invalid oas format</p>
          */
@@ -709,6 +813,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>petstore.yaml</p>
          */
@@ -756,6 +862,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
 
     public static class GetBatchImportTaskResponseBodyDataResultImportRequestSpecOssConfig extends TeaModel {
         /**
+         * <p>The name of the OSS bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-bucket</p>
          */
@@ -763,6 +871,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String bucketName;
 
         /**
+         * <p>The object key of the specification file in the OSS bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>imports/batch.zip</p>
          */
@@ -770,6 +880,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String objectKey;
 
         /**
+         * <p>The region ID of the OSS bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -808,10 +920,15 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
     }
 
     public static class GetBatchImportTaskResponseBodyDataResultImportRequest extends TeaModel {
+        /**
+         * <p>Specifies whether to allow overwriting existing APIs.</p>
+         */
         @NameInMap("allowUpdate")
         public Boolean allowUpdate;
 
         /**
+         * <p>The API type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Http</p>
          */
@@ -819,6 +936,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String apiType;
 
         /**
+         * <p>Specifies whether the request is in dry run mode. This parameter is fixed to false in the formal import request body.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -826,6 +945,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public Boolean dryRun;
 
         /**
+         * <p>The gateway instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-xxx</p>
          */
@@ -833,6 +954,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-xxx</p>
          */
@@ -840,22 +963,32 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The download URL of the OAS ZIP file, which is consistent with the dry run request.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://oss-cn-hangzhou.aliyuncs.com/my-bucket/imports/batch.zip">https://oss-cn-hangzhou.aliyuncs.com/my-bucket/imports/batch.zip</a></p>
          */
         @NameInMap("specFileUrl")
         public String specFileUrl;
 
+        /**
+         * <p>The OSS configuration of the OAS file, which is consistent with the dry run request.</p>
+         */
         @NameInMap("specOssConfig")
         public GetBatchImportTaskResponseBodyDataResultImportRequestSpecOssConfig specOssConfig;
 
         /**
+         * <p>The conflict merge strategy used during import.</p>
+         * 
          * <strong>example:</strong>
          * <p>ExistFirst</p>
          */
         @NameInMap("strategy")
         public String strategy;
 
+        /**
+         * <p>Specifies whether to import with gateway extension configurations.</p>
+         */
         @NameInMap("withGatewayExtension")
         public Boolean withGatewayExtension;
 
@@ -940,6 +1073,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
 
     public static class GetBatchImportTaskResponseBodyDataResultSuccessItems extends TeaModel {
         /**
+         * <p>The ID of the API.</p>
+         * 
          * <strong>example:</strong>
          * <p>api-xxx</p>
          */
@@ -947,6 +1082,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String apiId;
 
         /**
+         * <p>The API name. The value unknown is returned if the name cannot be identified.</p>
+         * 
          * <strong>example:</strong>
          * <p>petstore</p>
          */
@@ -954,6 +1091,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String apiName;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>invalid oas format</p>
          */
@@ -961,6 +1100,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>petstore.yaml</p>
          */
@@ -1008,6 +1149,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
 
     public static class GetBatchImportTaskResponseBodyDataResult extends TeaModel {
         /**
+         * <p>The API type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Http</p>
          */
@@ -1015,28 +1158,44 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String apiType;
 
         /**
+         * <p>Indicates whether the task is in dry run mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("dryRun")
         public Boolean dryRun;
 
+        /**
+         * <p>The list of dry run results.</p>
+         */
         @NameInMap("dryRunResults")
         public java.util.List<GetBatchImportTaskResponseBodyDataResultDryRunResults> dryRunResults;
 
+        /**
+         * <p>The list of APIs that failed to be processed.</p>
+         */
         @NameInMap("failureItems")
         public java.util.List<GetBatchImportTaskResponseBodyDataResultFailureItems> failureItems;
 
         /**
+         * <p>The gateway instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-xxx</p>
          */
         @NameInMap("gatewayId")
         public String gatewayId;
 
+        /**
+         * <p>The formal import request body. This field is returned only for dry run tasks and can be resubmitted as the request body of BatchImportHttpApis. The dryRun parameter is fixed to false. Temporary specFileUrl values are still subject to URL expiration constraints.</p>
+         */
         @NameInMap("importRequest")
         public GetBatchImportTaskResponseBodyDataResultImportRequest importRequest;
 
+        /**
+         * <p>The list of successfully processed APIs.</p>
+         */
         @NameInMap("successItems")
         public java.util.List<GetBatchImportTaskResponseBodyDataResultSuccessItems> successItems;
 
@@ -1105,6 +1264,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
 
     public static class GetBatchImportTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The time when the task was created. The time is in UTC and follows the RFC 3339 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-05-15T10:00:00Z</p>
          */
@@ -1112,6 +1273,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>some apis import failed</p>
          */
@@ -1119,16 +1282,23 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The number of processed items.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
         @NameInMap("processedCount")
         public Integer processedCount;
 
+        /**
+         * <p>The task result details.</p>
+         */
         @NameInMap("result")
         public GetBatchImportTaskResponseBodyDataResult result;
 
         /**
+         * <p>The task status. Valid values: Pending, Running, Success, PartialSuccess, and Failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -1136,6 +1306,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>async-task-xxx</p>
          */
@@ -1143,6 +1315,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The task type.</p>
+         * 
          * <strong>example:</strong>
          * <p>BatchImport</p>
          */
@@ -1150,6 +1324,8 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         public String taskType;
 
         /**
+         * <p>The total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ApiRouteConflictInfo extends TeaModel {
     /**
-     * <p>The conflicts.</p>
+     * <p>The list of conflict information.</p>
      */
     @NameInMap("conflicts")
     public java.util.List<ApiRouteConflictInfoConflicts> conflicts;
 
     /**
-     * <p>The conflicting routes.</p>
+     * <p>The conflicting domain information.</p>
      */
     @NameInMap("domainInfo")
     public ApiRouteConflictInfoDomainInfo domainInfo;
@@ -87,7 +87,7 @@ public class ApiRouteConflictInfo extends TeaModel {
         public HttpRouteMatch match;
 
         /**
-         * <p>The corresponding operation information if the conflicting target is an API.</p>
+         * <p>When the conflicting target is an API, this indicates the corresponding operation information.</p>
          */
         @NameInMap("operationInfo")
         public ApiRouteConflictInfoConflictsDetailsConflictingMatchOperationInfo operationInfo;
@@ -159,13 +159,13 @@ public class ApiRouteConflictInfo extends TeaModel {
 
     public static class ApiRouteConflictInfoConflictsDetailsDetectedMatch extends TeaModel {
         /**
-         * <p>The matching rule information of the object being detected.</p>
+         * <p>The matching rule information of the detected target.</p>
          */
         @NameInMap("match")
         public HttpRouteMatch match;
 
         /**
-         * <p>If the object is an API, the conflicting operation information needs to be returned.</p>
+         * <p>When the detected target is an API, the conflicting operation information is returned.</p>
          */
         @NameInMap("operationInfo")
         public ApiRouteConflictInfoConflictsDetailsDetectedMatchOperationInfo operationInfo;
@@ -201,13 +201,21 @@ public class ApiRouteConflictInfo extends TeaModel {
         public ApiRouteConflictInfoConflictsDetailsConflictingMatch conflictingMatch;
 
         /**
-         * <p>The matching rule information of the object being detected.</p>
+         * <p>The matching rule information of the detected target.</p>
          */
         @NameInMap("detectedMatch")
         public ApiRouteConflictInfoConflictsDetailsDetectedMatch detectedMatch;
 
         /**
-         * <p>The conflict level. Valid values: Critical, Warning, and Informational.</p>
+         * <p>The conflict level. Valid values:</p>
+         * <ul>
+         * <li><p>Critical</p>
+         * </li>
+         * <li><p>Warning</p>
+         * </li>
+         * <li><p>Informational</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Critical</p>
@@ -332,19 +340,19 @@ public class ApiRouteConflictInfo extends TeaModel {
 
     public static class ApiRouteConflictInfoConflicts extends TeaModel {
         /**
-         * <p>The details about the conflicts.</p>
+         * <p>The list of conflict details.</p>
          */
         @NameInMap("details")
         public java.util.List<ApiRouteConflictInfoConflictsDetails> details;
 
         /**
-         * <p>For APIs, conflicts exist in the specific environment. If the conflict object is a route, ignore.</p>
+         * <p>For an API, the conflict exists in a specific environment. If the conflicting object is a route, this field is ignored.</p>
          */
         @NameInMap("environmentInfo")
         public ApiRouteConflictInfoConflictsEnvironmentInfo environmentInfo;
 
         /**
-         * <p>The conflicting resource ID.</p>
+         * <p>The conflicting resource ID, which is the API ID.</p>
          * 
          * <strong>example:</strong>
          * <p>api-crdclqllhtggm***</p>
@@ -353,7 +361,7 @@ public class ApiRouteConflictInfo extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The conflicting resource name.</p>
+         * <p>The conflicting resource name, which is the API name.</p>
          * 
          * <strong>example:</strong>
          * <p>item-stock</p>
@@ -362,8 +370,7 @@ public class ApiRouteConflictInfo extends TeaModel {
         public String resourceName;
 
         /**
-         * <p>The type of the conflicting resource.</p>
-         * <p>Valid values:</p>
+         * <p>The conflicting resource type. Valid values:</p>
          * <ul>
          * <li>RestApi</li>
          * <li>HttpApiRoute</li>
@@ -438,7 +445,7 @@ public class ApiRouteConflictInfo extends TeaModel {
 
     public static class ApiRouteConflictInfoDomainInfo extends TeaModel {
         /**
-         * <p>The domain name ID.</p>
+         * <p>The domain ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-cqookcllhtgvof7e***</p>

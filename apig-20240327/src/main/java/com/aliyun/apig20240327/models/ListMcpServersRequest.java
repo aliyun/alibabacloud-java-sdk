@@ -33,7 +33,7 @@ public class ListMcpServersRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>Fuzzy searches for MCP servers by API name.</p>
+     * <p>The keyword used to fuzzy match MCP servers by name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -42,7 +42,7 @@ public class ListMcpServersRequest extends TeaModel {
     public String nameLike;
 
     /**
-     * <p>The page number, starting from 1. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

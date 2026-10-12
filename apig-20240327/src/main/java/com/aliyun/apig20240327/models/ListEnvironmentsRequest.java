@@ -8,7 +8,7 @@ public class ListEnvironmentsRequest extends TeaModel {
      * <p>The environment alias. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试</p>
+     * <p>Test</p>
      */
     @NameInMap("aliasLike")
     public String aliasLike;

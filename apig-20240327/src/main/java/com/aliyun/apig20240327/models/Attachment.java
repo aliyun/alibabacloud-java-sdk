@@ -44,7 +44,7 @@ public class Attachment extends TeaModel {
     public String attachResourceType;
 
     /**
-     * <p>The environment to which the mounted resource belongs. If the environment ID is *, the mounted resource of the policy is not associated with any environment.</p>
+     * <p>The environment to which the mounted resource belongs. If the environment ID is returned as *, the mounted resource of the policy is not associated with any environment.</p>
      * 
      * <strong>example:</strong>
      * <p>env-cq7l5s5lhtgi6qasrdc0</p>

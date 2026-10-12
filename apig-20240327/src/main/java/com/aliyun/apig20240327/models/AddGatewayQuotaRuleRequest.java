@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AddGatewayQuotaRuleRequest extends TeaModel {
     /**
-     * <p>The conflict snapshot hash, used to prevent concurrent dirty overwrites during confirmation. Retrieve this value from the response of a previous dry run (dryRun=true).</p>
+     * <p>The conflict snapshot hash, used to prevent concurrent dirty overwrites during confirmation. Obtain this value from the response of a previous dry run (dryRun=true).</p>
      * <p>This parameter is not required in the following cases: no conflicts exist, the request is a dry run (dryRun=true), or overwrite is set to false.</p>
-     * <p>When dryRun is set to false and overwrite is set to true, if this parameter is not provided or the value has expired and no longer matches, the backend returns accepted=false with a new conflict preview. Perform a new dry run to confirm the updated conflicts.</p>
+     * <p>When dryRun is set to false and overwrite is set to true, if this parameter is not specified or the value has expired and no longer matches, the backend returns accepted=false with a new conflict preview. Perform a new dry run to confirm the updated conflicts.</p>
      * 
      * <strong>example:</strong>
      * <p>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</p>
@@ -34,7 +34,7 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public java.util.List<String> consumerIds;
 
     /**
-     * <p>Specifies whether to perform only a dry run without applying the configuration. A dry run checks whether conflicting rules exist on the bound consumer subjects. For example, a consumer subject that already has a calendar-day quota cannot have another calendar-day quota rule added.</p>
+     * <p>Specifies whether to perform only a dry run without applying the configuration. A dry run checks whether conflicting rules exist on the bound consumer subjects. For example, a consumer that already has a calendar-day quota rule cannot have another calendar-day quota rule.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -123,7 +123,7 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public String timezone;
 
     /**
-     * <p>The reset period type. Valid values:</p>
+     * <p>The reset period alignment type. Valid values:</p>
      * <ul>
      * <li>calendar: calendar period. The period starts from the beginning of a calendar day, week, or month.</li>
      * <li>epoch: custom period. The period starts from the time the rule is applied.</li>

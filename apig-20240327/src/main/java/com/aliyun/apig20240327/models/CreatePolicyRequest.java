@@ -5,39 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePolicyRequest extends TeaModel {
     /**
-     * <p>The policy type. Valid values:</p>
-     * <ul>
-     * <li>RateLimit: Rate limiting. Limits the request rate.</li>
-     * <li>ConcurrencyLimit: Concurrency limiting. Limits the number of concurrent requests.</li>
-     * <li>CircuitBreaker: Circuit breaker. Automatically triggers circuit breaking when backend exceptions occur.</li>
-     * <li>HttpRewrite: HTTP rewrite. Rewrites the request URL or path.</li>
-     * <li>HeaderModify: Header modification. Adds, removes, or modifies HTTP request headers.</li>
-     * <li>Cors: Cross-Origin Resource Sharing (CORS). Controls cross-origin requests.</li>
-     * <li>Authentication: General authentication. A general request authentication policy.</li>
-     * <li>FlowCopy: Traffic mirroring. Copies requests to an additional backend.</li>
-     * <li>Timeout: Timeout. Sets the request timeout period.</li>
-     * <li>Retry: Retry. Automatically retries failed requests.</li>
-     * <li>IpAccessControl: IP access control. Filters requests based on IP address whitelists and blacklists.</li>
-     * <li>DirectResponse: Direct response. Returns a fixed response directly.</li>
-     * <li>Redirect: Redirect. Redirects requests to another address.</li>
-     * <li>Fallback: Fallback. Returns a fallback response when the backend is unavailable.</li>
-     * <li>ServiceTls: Service TLS. Configures TLS for backend services.</li>
-     * <li>ServiceLb: Service load balancing. Configures load balancing for backend services.</li>
-     * <li>ServicePortTls: Service port TLS. Configures TLS for backend service ports.</li>
-     * <li>Waf: Web Application Firewall (WAF). Provides request security protection.</li>
-     * <li>JWTAuth: JWT authentication. Authenticates requests based on JSON Web Tokens (JWT).</li>
-     * <li>OIDCAuth: OIDC authentication. Authenticates requests based on the OpenID Connect (OIDC) protocol.</li>
-     * <li>ExternalZAuth: External authentication. Integrates with an external authentication service.</li>
-     * <li>AiProxy: AI proxy.</li>
-     * <li>ModelRouter: Model router.</li>
-     * <li>AiStatistics: AI statistics.</li>
-     * <li>AiSecurityGuard: AI security guard. Detects the security of AI request and response content.</li>
-     * <li>AiFallback: AI fallback. Falls back to an alternative model when the AI service is unavailable.</li>
-     * <li>ModelMapper: Model mapper.</li>
-     * <li>AiTokenRateLimit: AI token rate limiting. Limits the rate based on token consumption.</li>
-     * <li>AiCache: AI cache. Caches AI response results.</li>
-     * <li>DynamicRoute: Dynamic route.</li>
-     * </ul>
+     * <p>The policy type. Valid values: RateLimit, ConcurrencyLimit, CircuitBreaker, HttpRewrite, HeaderModify, Cors, Authentication, FlowCopy, Timeout, Retry, IpAccessControl, DirectResponse, Redirect, Fallback, ServiceTls, ServiceLb, ServicePortTls, Waf, JWTAuth, OIDCAuth, ExternalZAuth, AiProxy, ModelRouter, AiStatistics, AiSecurityGuard, AiFallback, ModelMapper, AiTokenRateLimit, AiCache, and DynamicRoute.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +25,7 @@ public class CreatePolicyRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>The description of the policy.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>Timeout policy</p>

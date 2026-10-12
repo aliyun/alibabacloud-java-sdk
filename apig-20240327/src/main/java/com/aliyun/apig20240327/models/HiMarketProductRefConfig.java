@@ -42,7 +42,7 @@ public class HiMarketProductRefConfig extends TeaModel {
 
     public static class HiMarketProductRefConfigApigRefConfig extends TeaModel {
         /**
-         * <p>The associated Agent API ID.</p>
+         * <p>The ID of the associated Agent API.</p>
          * 
          * <strong>example:</strong>
          * <p>api-xxx</p>
@@ -51,7 +51,7 @@ public class HiMarketProductRefConfig extends TeaModel {
         public String agentApiId;
 
         /**
-         * <p>The Agent API name.</p>
+         * <p>The name of the Agent API.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent-api</p>
@@ -60,7 +60,7 @@ public class HiMarketProductRefConfig extends TeaModel {
         public String agentApiName;
 
         /**
-         * <p>The associated MCP route ID.</p>
+         * <p>The ID of the associated MCP route.</p>
          * 
          * <strong>example:</strong>
          * <p>route-xxx</p>
@@ -69,7 +69,7 @@ public class HiMarketProductRefConfig extends TeaModel {
         public String mcpRouteId;
 
         /**
-         * <p>The associated MCP Server ID.</p>
+         * <p>The ID of the associated MCP Server.</p>
          * 
          * <strong>example:</strong>
          * <p>mcp-xxx</p>
@@ -78,7 +78,7 @@ public class HiMarketProductRefConfig extends TeaModel {
         public String mcpServerId;
 
         /**
-         * <p>The MCP Server name.</p>
+         * <p>The name of the MCP Server.</p>
          * 
          * <strong>example:</strong>
          * <p>my-mcp-server</p>
@@ -87,7 +87,7 @@ public class HiMarketProductRefConfig extends TeaModel {
         public String mcpServerName;
 
         /**
-         * <p>The associated Model API ID.</p>
+         * <p>The ID of the associated Model API.</p>
          * 
          * <strong>example:</strong>
          * <p>api-yyy</p>
@@ -96,7 +96,7 @@ public class HiMarketProductRefConfig extends TeaModel {
         public String modelApiId;
 
         /**
-         * <p>The Model API name.</p>
+         * <p>The name of the Model API.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-model-api</p>

@@ -15,19 +15,19 @@ public class AgentServiceConfig extends TeaModel {
     public String address;
 
     /**
-     * <p>The custom configuration. Required when provider is set to custom.</p>
+     * <p>The custom configuration. This parameter is required when provider is set to custom.</p>
      */
     @NameInMap("customConfig")
     public AgentServiceConfigCustomConfig customConfig;
 
     /**
-     * <p>The DashScope service configuration. Required when provider is set to qwen. The appCredentials parameter cannot be empty, and each entry must have non-empty appId and apiKey values.</p>
+     * <p>The DashScope service configuration. This parameter is required when provider is set to qwen. The appCredentials parameter cannot be empty, and each entry must have non-empty appId and apiKey values.</p>
      */
     @NameInMap("dashScopeConfig")
     public AgentServiceConfigDashScopeConfig dashScopeConfig;
 
     /**
-     * <p>The Dify service configuration. Required when provider is set to dify. The botType and apiKey parameters cannot be empty.</p>
+     * <p>The Dify service configuration. This parameter is required when provider is set to dify. The botType and apiKey parameters cannot be empty.</p>
      */
     @NameInMap("difyConfig")
     public AgentServiceConfigDifyConfig difyConfig;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the destination resource group. You can view resource group IDs in the Resource Management console.</p>
+     * <p>The ID of the destination resource group. You can view the ID in the Resource Management console.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzuqyxxxxxxxx</p>
@@ -23,7 +23,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The resource type. The value is case-sensitive and must exactly match one of the valid values.</p>
+     * <p>The resource type. This parameter is case-sensitive and must exactly match one of the valid values.</p>
      * 
      * <strong>example:</strong>
      * <p>Gateway</p>

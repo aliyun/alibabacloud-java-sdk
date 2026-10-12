@@ -41,7 +41,7 @@ public class HttpApiDeployConfig extends TeaModel {
     public java.util.List<HttpApiDeployConfigCustomDomainInfos> customDomainInfos;
 
     /**
-     * <p>Specifies whether to enable gateway system models. This parameter takes effect only when the publishing scenario is AiAutoRouter. Default value: false. This field is used for backward compatibility with older clients. If systemModelTiers is not submitted, true indicates that all three tiers of system models are enabled, and false indicates that all are disabled.</p>
+     * <p>Specifies whether to enable gateway system models. This parameter takes effect only when the publishing scenario is AiAutoRouter. Default value: false. This parameter is used for backward compatibility with earlier clients. If systemModelTiers is not submitted, true indicates that all three tiers of system models are enabled, and false indicates that all are disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -113,7 +113,7 @@ public class HttpApiDeployConfig extends TeaModel {
     public java.util.List<HttpApiPolicyConfigs> policyConfigs;
 
     /**
-     * <p>The current online routing mode of the REST API. ordinary indicates per-operation routing, and compressed indicates single-prefix routing for the API. This field is not returned for non-REST APIs.</p>
+     * <p>The current online routing mode of the REST API. ordinary indicates per-operation routing, and compressed indicates single-prefix routing for the API. This parameter is not returned for non-REST APIs.</p>
      * 
      * <strong>example:</strong>
      * <p>ordinary</p>
@@ -487,7 +487,7 @@ public class HttpApiDeployConfig extends TeaModel {
 
     public static class HttpApiDeployConfigServiceConfigs extends TeaModel {
         /**
-         * <p>The capability tier for intelligent routing candidates. Specify this parameter only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, and premium.</p>
+         * <p>The capability tier of the intelligent routing candidate. Specify this parameter only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, and premium.</p>
          * 
          * <strong>example:</strong>
          * <p>standard</p>

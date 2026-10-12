@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateMcpServerRequest extends TeaModel {
     /**
-     * <p>The list of assembled sources. This parameter is required when type is AssemblyMCP.</p>
+     * <p>The list of assembled sources. This parameter is required when type is set to AssemblyMCP.</p>
      */
     @NameInMap("assembledSources")
     public java.util.List<UpdateMcpServerRequestAssembledSources> assembledSources;
 
     /**
-     * <p>The backend service configuration of the route.</p>
+     * <p>The backend service configuration of the route. This parameter is conditionally required. If this parameter is not specified, the API returns InvalidParameter.WithValue(400).</p>
      */
     @NameInMap("backendConfig")
     public UpdateMcpServerRequestBackendConfig backendConfig;
@@ -19,11 +19,11 @@ public class UpdateMcpServerRequest extends TeaModel {
     /**
      * <p>The creation source type. Valid values:</p>
      * <ul>
-     * <li>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP conversion.</li>
-     * <li>ApiGatewayProxyMcpHosting: gateway-managed MCP direct proxy.</li>
-     * <li>ApiGatewayAssembly: gateway MCP assembly.</li>
-     * <li>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP conversion.</li>
-     * <li>NacosMcpHosting: gateway-managed Nacos-synced MCP direct proxy.</li>
+     * <li>ApiGatewayHttpToMCP: Gateway-managed HTTP-to-MCP conversion.</li>
+     * <li>ApiGatewayProxyMcpHosting: Gateway-managed MCP direct proxy.</li>
+     * <li>ApiGatewayAssembly: Gateway MCP assembly.</li>
+     * <li>NacosHttpToMCP: Gateway-managed Nacos-synced HTTP-to-MCP conversion.</li>
+     * <li>NacosMcpHosting: Gateway-managed Nacos-synced MCP direct proxy.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,19 +36,19 @@ public class UpdateMcpServerRequest extends TeaModel {
      * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>Product center service routing</p>
+     * <p>商品中心服务路由</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The domain name IDs.</p>
+     * <p>The domain name ID.</p>
      */
     @NameInMap("domainIds")
     public java.util.List<String> domainIds;
 
     /**
-     * <p>The exposed URI path. This parameter is required when protocol is SSE or StreamableHTTP and type is RealMCP.</p>
+     * <p>The exposed URI path. This parameter is required when protocol is set to SSE or StreamableHTTP and type is set to RealMCP.</p>
      * 
      * <strong>example:</strong>
      * <p>/sse</p>
@@ -57,13 +57,13 @@ public class UpdateMcpServerRequest extends TeaModel {
     public String exposedUriPath;
 
     /**
-     * <p>The list of canary release MCP server routing configurations.</p>
+     * <p>The list of canary release MCP server route configurations.</p>
      */
     @NameInMap("grayMcpServerConfigs")
     public java.util.List<UpdateMcpServerRequestGrayMcpServerConfigs> grayMcpServerConfigs;
 
     /**
-     * <p>The route match rules.</p>
+     * <p>The route match rule. This parameter is conditionally required. If this parameter is not specified, the API returns InvalidParameter.IsEmpty(400).</p>
      */
     @NameInMap("match")
     public HttpRouteMatch match;
@@ -100,11 +100,7 @@ public class UpdateMcpServerRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The MCP server type filter. Valid values:</p>
-     * <ul>
-     * <li>RealMCP</li>
-     * <li>AssemblyMCP</li>
-     * </ul>
+     * <p>The MCP server type filter. Valid values: RealMCP, AssemblyMCP.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -281,11 +277,11 @@ public class UpdateMcpServerRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The service protocol. Valid values:</p>
+         * <p>The Terms of Service. Valid values:</p>
          * <ul>
-         * <li>TCP</li>
-         * <li>HTTP</li>
-         * <li>DUBBO</li>
+         * <li>TCP.</li>
+         * <li>HTTP.</li>
+         * <li>DUBBO.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -418,7 +414,7 @@ public class UpdateMcpServerRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The service protocol.</p>
+         * <p>The Terms of Service.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -547,7 +543,7 @@ public class UpdateMcpServerRequest extends TeaModel {
         public UpdateMcpServerRequestGrayMcpServerConfigsBackendConfig backendConfig;
 
         /**
-         * <p>The route match rules.</p>
+         * <p>The route match rule.</p>
          */
         @NameInMap("match")
         public HttpRouteMatch match;

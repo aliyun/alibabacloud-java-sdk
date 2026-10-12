@@ -32,7 +32,7 @@ public class SubDomainInfo extends TeaModel {
     public String networkType;
 
     /**
-     * <p>The protocol type supported by the subdomain. Valid values: HTTP, HTTPS.</p>
+     * <p>The protocol type supported by the subdomain. Valid values: HTTP and HTTPS.</p>
      * 
      * <strong>example:</strong>
      * <p>HTTP</p>

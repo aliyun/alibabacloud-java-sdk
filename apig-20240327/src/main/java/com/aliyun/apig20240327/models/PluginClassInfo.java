@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class PluginClassInfo extends TeaModel {
     /**
-     * <p>The plugin class alias.</p>
+     * <p>The alias of the plugin class.</p>
      * 
      * <strong>example:</strong>
-     * <p>AI安全护栏</p>
+     * <p>AI Safety Guardrail</p>
      */
     @NameInMap("alias")
     public String alias;
@@ -23,10 +23,10 @@ public class PluginClassInfo extends TeaModel {
     public String configExample;
 
     /**
-     * <p>The plugin class description.</p>
+     * <p>The description of the plugin class.</p>
      * 
      * <strong>example:</strong>
-     * <p>AI请求内容安全检测插件</p>
+     * <p>AI request content security detection plugin</p>
      */
     @NameInMap("description")
     public String description;
@@ -77,7 +77,7 @@ public class PluginClassInfo extends TeaModel {
     public String mode;
 
     /**
-     * <p>The plugin class name.</p>
+     * <p>The name of the plugin class.</p>
      * 
      * <strong>example:</strong>
      * <p>ai-security-guard</p>
@@ -134,7 +134,7 @@ public class PluginClassInfo extends TeaModel {
      * <p>The version description.</p>
      * 
      * <strong>example:</strong>
-     * <p>初始版本</p>
+     * <p>Initial version</p>
      */
     @NameInMap("versionDescription")
     public String versionDescription;
@@ -149,7 +149,7 @@ public class PluginClassInfo extends TeaModel {
     public String wasmLanguage;
 
     /**
-     * <p>The Wasm file download URL.</p>
+     * <p>The download URL of the Wasm file.</p>
      * 
      * <strong>example:</strong>
      * <p>https://...</p>

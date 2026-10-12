@@ -11,7 +11,7 @@ public class HiMarketOidcConfig extends TeaModel {
     public HiMarketOidcConfigAuthCodeConfig authCodeConfig;
 
     /**
-     * <p>Indicates whether the OIDC configuration is enabled.</p>
+     * <p>Specifies whether to enable the OIDC configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -56,7 +56,7 @@ public class HiMarketOidcConfig extends TeaModel {
      * <p>The OIDC provider name.</p>
      * 
      * <strong>example:</strong>
-     * <p>阿里云IDaaS</p>
+     * <p>Alibaba Cloud IDaaS</p>
      */
     @NameInMap("provider")
     public String provider;
@@ -285,7 +285,7 @@ public class HiMarketOidcConfig extends TeaModel {
 
     public static class HiMarketOidcConfigIdentityMapping extends TeaModel {
         /**
-         * <p>The custom field mappings.</p>
+         * <p>The custom field mapping.</p>
          */
         @NameInMap("customFields")
         public java.util.Map<String, String> customFields;
