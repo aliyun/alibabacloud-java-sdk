@@ -7,10 +7,8 @@ public class GetImageResponseBody extends TeaModel {
     /**
      * <p>The visibility of the image. Valid values:</p>
      * <ul>
-     * <li><p>PUBLIC: All members in the current workspace can perform operations on the image.</p>
-     * </li>
-     * <li><p>PRIVATE: Only the creator can perform operations on the image.</p>
-     * </li>
+     * <li>PUBLIC: All members of the current workspace can access the image.</li>
+     * <li>PRIVATE: Only the creator can access the image.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class GetImageResponseBody extends TeaModel {
     public String accessibility;
 
     /**
-     * <p>The description of the image.</p>
+     * <p>The image description.</p>
      * 
      * <strong>example:</strong>
      * <p>NLP model compression training image</p>
@@ -29,7 +27,7 @@ public class GetImageResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The time when the image was created. The time is in UTC and the format is ISO 8601.</p>
+     * <p>The creation time of the image in UTC, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35.232Z</p>
@@ -38,7 +36,7 @@ public class GetImageResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The time when the image was last modified. The time is in UTC and the format is ISO 8601.</p>
+     * <p>The modification time of the image in UTC, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35.232Z</p>
@@ -47,7 +45,7 @@ public class GetImageResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
-     * <p>The URL of the image, including the version number.</p>
+     * <p>The image address, including the version number.</p>
      * 
      * <strong>example:</strong>
      * <p>registry.cn-hangzhou.aliyuncs.******ession/nlp:gpu</p>
@@ -56,14 +54,14 @@ public class GetImageResponseBody extends TeaModel {
     public String imageUri;
 
     /**
-     * <p>A list of image labels. This is an array. Each item in the array contains a Key and a Value field.
-     * Official images have the following label: the key is system.official and the value is true.</p>
+     * <p>The list of image labels. This is an array in which each element contains the Key and Value fields.
+     * Official images have the following label: Key is system.official and Value is true.</p>
      */
     @NameInMap("Labels")
     public java.util.List<GetImageResponseBodyLabels> labels;
 
     /**
-     * <p>The name of the image.</p>
+     * <p>The image name.</p>
      * 
      * <strong>example:</strong>
      * <p>nlp-compression</p>
@@ -90,7 +88,7 @@ public class GetImageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The size of the image in bytes.</p>
+     * <p>The image size, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -99,13 +97,19 @@ public class GetImageResponseBody extends TeaModel {
     public Long size;
 
     /**
-     * <p>The ID of the image source.</p>
+     * <p>The image source ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>build-****ks92</p>
      */
     @NameInMap("SourceId")
     public String sourceId;
 
     /**
-     * <p>The type of the image source.</p>
+     * <p>The image source type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Build</p>
      */
     @NameInMap("SourceType")
     public String sourceType;

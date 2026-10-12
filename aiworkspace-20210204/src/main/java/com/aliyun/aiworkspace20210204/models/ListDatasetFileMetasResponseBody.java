@@ -38,7 +38,7 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. If the results that match the query conditions exceed the page size, this pagination token is returned. Pass the returned token value as a request parameter to retrieve the next page, until no token is returned, which indicates that all data has been retrieved.</p>
+     * <p>The pagination token. If the number of results that match the query conditions exceeds the page size, this pagination token is returned. To retrieve the next page of data, pass the returned token value as a request parameter until no token value is returned, which indicates that all data has been retrieved.</p>
      * 
      * <strong>example:</strong>
      * <p>90******-f5c5-4cd4-927e-1f45e1cb8b62_1729644433000</p>

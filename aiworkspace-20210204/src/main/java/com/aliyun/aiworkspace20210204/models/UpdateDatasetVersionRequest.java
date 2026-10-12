@@ -41,7 +41,8 @@ public class UpdateDatasetVersionRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The extended field in JsonString format. When DLC uses the dataset, you can specify the default mount path of the dataset by configuring the mountPath field.</p>
+     * <p>The extended field in JsonString format.
+     * When Deep Learning Containers (DLC) uses the dataset, you can specify the default mount path of the dataset by configuring the mountPath field.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -51,6 +52,9 @@ public class UpdateDatasetVersionRequest extends TeaModel {
     @NameInMap("Options")
     public String options;
 
+    /**
+     * <p>The list of user metric collection endpoints.</p>
+     */
     @NameInMap("UserMetricsEndpoints")
     public java.util.List<UserMetricsEndpoint> userMetricsEndpoints;
 

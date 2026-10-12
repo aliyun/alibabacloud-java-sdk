@@ -4,6 +4,12 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class GetMemberResponseBody extends TeaModel {
+    /**
+     * <p>The account type of the member. Valid values: 1: primary account. 5: sub-account. 6: role account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("AccountType")
     public String accountType;
 
@@ -17,7 +23,7 @@ public class GetMemberResponseBody extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The time when the member was created. The time is in Coordinated Universal Time (UTC) and the format is ISO 8601.</p>
+     * <p>The creation time in UTC, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35.232Z</p>

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class LineageRelation extends TeaModel {
     /**
-     * <p>The fully qualified name of the target entity in the relationship.</p>
+     * <p>The unique qualified name of the destination data lineage entity.</p>
      */
     @NameInMap("DestEntityQualifiedName")
     public String destEntityQualifiedName;
 
     /**
-     * <p>The system-assigned unique identifier (GUID) for the relationship.</p>
+     * <p>The globally unique identifier of the data lineage relationship.</p>
      */
     @NameInMap("RelationshipGuid")
     public String relationshipGuid;
 
     /**
-     * <p>The fully qualified name of the source entity in the relationship.</p>
+     * <p>The unique qualified name of the source data lineage entity.</p>
      */
     @NameInMap("SrcEntityQualifiedName")
     public String srcEntityQualifiedName;

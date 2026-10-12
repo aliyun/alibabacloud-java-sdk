@@ -12,6 +12,9 @@ public class Trial extends TeaModel {
 
     /**
      * <p>ExperimentId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exp-1zpfthdx******</p>
      */
     @NameInMap("ExperimentId")
     public String experimentId;
@@ -60,6 +63,9 @@ public class Trial extends TeaModel {
 
     /**
      * <p>TrialId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>trl-v0fw9a0sd8f9af</p>
      */
     @NameInMap("TrialId")
     public String trialId;

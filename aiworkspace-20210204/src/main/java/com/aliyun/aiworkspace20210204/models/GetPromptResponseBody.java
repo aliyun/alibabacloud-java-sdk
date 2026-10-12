@@ -18,7 +18,7 @@ public class GetPromptResponseBody extends TeaModel {
     public String accessibility;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The creation time in UTC, formatted as YYYY-MM-DDTHH:mm:ssZ in the ISO 8601 standard.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-10-16T01:44:10Z</p>
@@ -27,7 +27,7 @@ public class GetPromptResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The prompt description.</p>
+     * <p>The description of the prompt.</p>
      * 
      * <strong>example:</strong>
      * <p>This is an information extraction prompt for autonomous driving highway scenarios, focusing on extracting lane and weather information</p>
@@ -36,11 +36,11 @@ public class GetPromptResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The prompt content.</p>
+     * <p>The content of the prompt.</p>
      * 
      * <strong>example:</strong>
      * <p>{
-     *   &quot;context&quot;:&quot;You are an experienced driver with ten years of driving experience. Please analyze and make judgments about the following image scenarios.&quot;,
+     *   &quot;context&quot;:&quot;You are an experienced driver with ten years of driving experience. Please analyze and make judgments about the following image scenario.&quot;,
      *   &quot;inputData&quot;:&quot;{
      *     \&quot;Reflective strips\&quot;: \&quot;Usually yellow or yellow-black alternating, attached to permanent protruding obstacles such as wall corners to remind drivers to avoid them. They are strip-shaped, not cones, not ground locks, not water barriers!\&quot;,
      *     \&quot;Ground lock\&quot;: \&quot;Also called a parking space lock, it can prevent a parking space from being occupied when raised. When a ground lock is present, you must indicate whether it is in the raised or lowered state. It is in the raised state when there is a raised frame, otherwise it is in the lowered state.\&quot;,
@@ -51,7 +51,7 @@ public class GetPromptResponseBody extends TeaModel {
     public String frameworkContent;
 
     /**
-     * <p>The prompt template framework type.</p>
+     * <p>The framework type of the prompt template.</p>
      * 
      * <strong>example:</strong>
      * <p>ICIO</p>
@@ -60,7 +60,7 @@ public class GetPromptResponseBody extends TeaModel {
     public String frameworkType;
 
     /**
-     * <p>The modification time.</p>
+     * <p>The modification time in UTC, formatted as YYYY-MM-DDTHH:mm:ssZ in the ISO 8601 standard.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-08-27T02:01:10Z</p>
@@ -69,7 +69,7 @@ public class GetPromptResponseBody extends TeaModel {
     public String modifyTime;
 
     /**
-     * <p>The prompt name.</p>
+     * <p>The name of the prompt.</p>
      * 
      * <strong>example:</strong>
      * <p>Autonomous driving prompt</p>

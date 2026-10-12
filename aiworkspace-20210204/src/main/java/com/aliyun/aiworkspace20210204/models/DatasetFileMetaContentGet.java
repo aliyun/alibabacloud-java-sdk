@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DatasetFileMetaContentGet extends TeaModel {
     /**
-     * <p>The comment on the file.</p>
+     * <p>The file comment.</p>
      * 
      * <strong>example:</strong>
      * <p>The first image file in the dataset.</p>
@@ -14,10 +14,10 @@ public class DatasetFileMetaContentGet extends TeaModel {
     public String comment;
 
     /**
-     * <p>The MIME type of the file. It includes a type and a subtype.</p>
+     * <p>The MIME type of the file, which includes the type and subtype.</p>
      * 
      * <strong>example:</strong>
-     * <p>text/png</p>
+     * <p>image/png</p>
      */
     @NameInMap("ContentType")
     public String contentType;
@@ -41,7 +41,7 @@ public class DatasetFileMetaContentGet extends TeaModel {
     public String datasetFileMetaId;
 
     /**
-     * <p>The time when the file was created. The time is in the ISO 8601 format.</p>
+     * <p>The creation time of the file in ISO 8601 format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class DatasetFileMetaContentGet extends TeaModel {
     public String fileCreateTime;
 
     /**
-     * <p>The path of the folder where the OSS, NAS, or CPFS file is located.</p>
+     * <p>The directory path of the OSS, NAS, or CPFS file.</p>
      * 
      * <strong>example:</strong>
      * <p>icp_certificate_card/icp/1577179298694813/1716429710367</p>
@@ -60,7 +60,7 @@ public class DatasetFileMetaContentGet extends TeaModel {
     public String fileDir;
 
     /**
-     * <p>The fingerprint of the file. This value ensures the uniqueness of the file content. The value changes if the file content is modified. For OSS files, the ETag is used. For NAS files, the MD5 hash is used.</p>
+     * <p>The fingerprint of the file. This value is used to determine the uniqueness of the file content and changes when the file content is modified. The ETag is used for OSS files, and the MD5 value is used for NAS files.</p>
      * 
      * <strong>example:</strong>
      * <p>D41D8CD98F*****E9800998ECF8</p>
@@ -78,7 +78,7 @@ public class DatasetFileMetaContentGet extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The file type. This is the same as the Multipurpose Internet Mail Extensions (MIME) type.</p>
+     * <p>The file type. This is the same as the MIME type.</p>
      * 
      * <strong>example:</strong>
      * <p>image</p>
@@ -87,7 +87,7 @@ public class DatasetFileMetaContentGet extends TeaModel {
     public String fileType;
 
     /**
-     * <p>The time when the file was last modified. The time is in the ISO 8601 format.</p>
+     * <p>The last modification time of the file in ISO 8601 format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -97,23 +97,19 @@ public class DatasetFileMetaContentGet extends TeaModel {
     public String fileUpdateTime;
 
     /**
-     * <p>The specific metadata of the file. This metadata cannot be used for retrieval. The format is a JSON string.</p>
+     * <p>The specific metadata of the file in JSON string format. This metadata does not support search capabilities.</p>
      * 
      * <strong>example:</strong>
      * <p>{
-     *     &quot;Image&quot;:
-     *     {
-     *         &quot;Width&quot;: 1920,
-     *         &quot;Height&quot;: 1080,
-     *         &quot;Channel&quot;: 3
-     *     }
+     *     &quot;ImageHeight&quot;: 1080,
+     *     &quot;ImageWidth&quot;: 1920
      * }</p>
      */
     @NameInMap("MetaAttributes")
     public String metaAttributes;
 
     /**
-     * <p>The ID of the job that builds the semantic index.</p>
+     * <p>The task ID for building the semantic index.</p>
      * 
      * <strong>example:</strong>
      * <p>dsjob-klfwtjtov*****scvt3</p>
@@ -131,11 +127,17 @@ public class DatasetFileMetaContentGet extends TeaModel {
     @NameInMap("SemanticIndexUpdateTime")
     public String semanticIndexUpdateTime;
 
+    /**
+     * <p>The status of the file metadata. ACTIVE indicates that the metadata is valid, and DELETED indicates that the metadata is deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACTIVE</p>
+     */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The time when the tag was last modified. The time is in the ISO 8601 format.</p>
+     * <p>The last modification time of the tags in ISO 8601 format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -145,19 +147,15 @@ public class DatasetFileMetaContentGet extends TeaModel {
     public String tagUpdateTime;
 
     /**
-     * <p>A collection of tags for the metadata. It includes the following groups:</p>
+     * <p>The collection of tags for this metadata, including:</p>
      * <ul>
-     * <li><p>Algorithm tag group:</p>
-     * <ul>
-     * <li>ai: A list of tag names aggregated from all algorithmic tagging tasks for a single metadata record.</li>
+     * <li>Algorithm tag groups:<ul>
+     * <li>ai: A list of tag names summarized from all algorithm tagging tasks for a single metadata entry.</li>
      * </ul>
      * </li>
-     * <li><p>User-defined tag group:</p>
-     * <ul>
-     * <li><p>user: A list of tag names that a user adds to a single metadata record.</p>
-     * </li>
-     * <li><p>user-delete-ai-tags: A list of tag names from the algorithm tag group that the user wants to delete from a single metadata record.</p>
-     * </li>
+     * <li>User-defined tag groups:<ul>
+     * <li>user: A list of tag names added by the user for a single metadata entry.</li>
+     * <li>user-delete-ai-tags: A list of tag names to be deleted by the user from the algorithm tag group for a single metadata entry.</li>
      * </ul>
      * </li>
      * </ul>
@@ -166,13 +164,19 @@ public class DatasetFileMetaContentGet extends TeaModel {
      * <p>{
      *     &quot;ai&quot;:
      *     [
-     *         &quot;Felis catus&quot;,
-     *         &quot;Shorthair&quot;
+     *         &quot;Lane line&quot;,
+     *         &quot;Water horse&quot;,
+     *         &quot;Sunny day&quot;
      *     ],
      *     &quot;user&quot;:
      *     [
-     *         &quot;cat&quot;,
-     *         &quot;White&quot;
+     *         &quot;Everett&quot;,
+     *         &quot;Intelligent driving Dataset 1&quot;,
+     *         &quot;Cloudy day&quot;
+     *     ],
+     *     &quot;user-delete-ai-tags&quot;:
+     *     [
+     *         &quot;Sunny day&quot;
      *     ]
      * }</p>
      */
@@ -180,25 +184,14 @@ public class DatasetFileMetaContentGet extends TeaModel {
     public String tags;
 
     /**
-     * <p>The unique URI of the file. This URI records the unique path of the file. Paths for files in OSS and NAS are supported.</p>
+     * <p>The unique URI of the file. This URI records the unique path of the file. File paths in OSS and NAS are supported.</p>
      * <details>
-     * 
-     * <summary>
-     * 
-     * <p>OSS</p>
-     * </summary>
-     * 
-     * <p>oss\://${bucket}/${path}</p>
+     * <summary>OSS</summary>
+     * oss://${bucket}/${path}
      * </details>
-     * 
      * <details>
-     * 
-     * <summary>
-     * 
-     * <p>NAS</p>
-     * </summary>
-     * 
-     * <p>nas\://${fileSystemId}/${path}</p>
+     * <summary>NAS</summary>
+     * nas://${fileSystemId}/${path}
      * </details>
      * 
      * <strong>example:</strong>

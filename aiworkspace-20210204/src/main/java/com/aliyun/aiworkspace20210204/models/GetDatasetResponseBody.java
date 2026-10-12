@@ -7,8 +7,8 @@ public class GetDatasetResponseBody extends TeaModel {
     /**
      * <p>The workspace visibility. Valid values:</p>
      * <ul>
-     * <li>PRIVATE: Only the dataset owner and administrators in the workspace can access the dataset.</li>
-     * <li>PUBLIC: All members in the workspace can access the dataset.</li>
+     * <li>PRIVATE: Only the dataset owner and administrators within the workspace can access the dataset.</li>
+     * <li>PUBLIC: All members of the workspace can access the dataset.</li>
      * <li>ROLE_PUBLIC: Only specified workspace roles can access the dataset. For the role list, see AccessibleRoleIdList. The dataset owner and administrators always have access under this condition.</li>
      * </ul>
      * 
@@ -19,7 +19,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String accessibility;
 
     /**
-     * <p>The list of workspace role names that can access the dataset. This field takes effect when Accessibility is ROLE_PUBLIC. IDs starting with PAI are basic role IDs, and IDs starting with role- are custom role IDs.</p>
+     * <p>The list of workspace role names that can access the dataset. This parameter takes effect only when Accessibility is set to ROLE_PUBLIC. Role IDs starting with PAI are basic role IDs, and role IDs starting with role- are custom role IDs.</p>
      */
     @NameInMap("AccessibleRoleIdList")
     public java.util.List<String> accessibleRoleIdList;
@@ -27,8 +27,8 @@ public class GetDatasetResponseBody extends TeaModel {
     /**
      * <p>The data source type. Valid values:</p>
      * <ul>
-     * <li>OSS: Alibaba Cloud Object Storage Service (OSS).</li>
-     * <li>NAS: Alibaba Cloud Apsara File Storage NAS (NAS).</li>
+     * <li>OSS: Object Storage Service (OSS).</li>
+     * <li>NAS: Apsara File Storage NAS (NAS).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class GetDatasetResponseBody extends TeaModel {
      * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>Data for labeling</p>
+     * <p>Data for annotation</p>
      */
     @NameInMap("Description")
     public String description;
@@ -87,7 +87,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String edition;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The creation time, in UTC, in the ISO 8601 format of YYYY-MM-DDTHH:mm:ss.sssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-30T12:51:33.028Z</p>
@@ -96,7 +96,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The update time.</p>
+     * <p>The update time, in UTC, in the ISO 8601 format of YYYY-MM-DDTHH:mm:ss.sssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-30T12:51:33.028Z</p>
@@ -142,8 +142,8 @@ public class GetDatasetResponseBody extends TeaModel {
      * "region": "${region}",//Region ID<BR>
      * "fileSystemId": "${file_system_id}", //File system ID<BR>
      * "path": "${path}", //File system path<BR>
-     * "mountTarget": "${mount_target}" //File system mount target, specific to Lingjun edition<BR>
-     * "isVpcMount": boolean, //Whether it is a VPC mount target, specific to Lingjun edition<BR>
+     * "mountTarget": "${mount_target}" //File system mount target, specific to Lingjun<BR>
+     * "isVpcMount": boolean, //Specifies whether the mount target is a VPC mount target, specific to Lingjun<BR>
      * }<BR>
      * </details>
      * 
@@ -181,10 +181,10 @@ public class GetDatasetResponseBody extends TeaModel {
     public DatasetVersion latestVersion;
 
     /**
-     * <p>The permission when the dataset is mounted. Valid values:</p>
+     * <p>The permission when the dataset is mounted.</p>
      * <ul>
      * <li>RO: read-only mount.</li>
-     * <li>RW: read-write mount.</li>
+     * <li>RW: read/write mount.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -194,7 +194,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String mountAccess;
 
     /**
-     * <p>The list of workspace role names that have read and write permission on the dataset. IDs starting with PAI are basic role IDs, and IDs starting with role- are custom role IDs. If the list contains &quot;*&quot;, all roles have read and write permission.</p>
+     * <p>The list of workspace role names that have read and write permission on the dataset. Role IDs starting with PAI are basic role IDs, and role IDs starting with role- are custom role IDs. If the list contains &quot;*&quot;, all roles have read and write permission.</p>
      */
     @NameInMap("MountAccessReadWriteRoleIdList")
     public java.util.List<String> mountAccessReadWriteRoleIdList;
@@ -274,7 +274,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The source relationship of the shared dataset. This field is valid only when IsShared is true.</p>
+     * <p>The source relationship of the shared dataset. This parameter is valid only when IsShared is true.</p>
      */
     @NameInMap("SharedFrom")
     public DatasetShareRelationship sharedFrom;
@@ -286,7 +286,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public GetDatasetResponseBodySharingConfig sharingConfig;
 
     /**
-     * <p>The source dataset ID of the iTag labeling dataset.</p>
+     * <p>The source dataset ID of the iTAG annotation dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>d-rcdg3wxxxxxhc5jk87</p>
@@ -295,7 +295,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String sourceDatasetId;
 
     /**
-     * <p>The source dataset version of the labeling dataset.</p>
+     * <p>The source dataset version of the annotation dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>v2</p>
@@ -307,7 +307,7 @@ public class GetDatasetResponseBody extends TeaModel {
      * <p>The source ID of the initial version v1. Valid values:</p>
      * <ul>
      * <li>If SourceType is USER, SourceId can be customized.</li>
-     * <li>If SourceType is ITAG, which indicates a dataset generated from iTAG labeling results, SourceId is the iTAG task ID.</li>
+     * <li>If SourceType is ITAG, which indicates a dataset generated from iTAG annotation results, SourceId is the iTAG task ID.</li>
      * <li>If SourceType is PAI_PUBLIC_DATASET, which indicates a dataset created from a PAI public dataset, SourceId is empty by default.</li>
      * </ul>
      * 
@@ -327,7 +327,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The labeling template of the iTag labeling dataset.</p>
+     * <p>The annotation template of the iTAG annotation dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>TextClassification</p>
@@ -635,7 +635,7 @@ public class GetDatasetResponseBody extends TeaModel {
 
     public static class GetDatasetResponseBodySharingConfig extends TeaModel {
         /**
-         * <p>The list of sharing configuration relationships.</p>
+         * <p>The list of sharing configurations.</p>
          */
         @NameInMap("SharedTo")
         public java.util.List<DatasetShareRelationship> sharedTo;

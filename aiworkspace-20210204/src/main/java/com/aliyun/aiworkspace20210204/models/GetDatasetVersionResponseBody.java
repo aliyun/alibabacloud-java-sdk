@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDatasetVersionResponseBody extends TeaModel {
     /**
-     * <p>The data volume.</p>
+     * <p>The data count.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -23,7 +23,12 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     public Long dataSize;
 
     /**
-     * <p>The data source type.</p>
+     * <p>The data source type. Valid values:</p>
+     * <ul>
+     * <li>NAS: File Storage NAS.</li>
+     * <li>CPFS: Cloud Parallel File Storage.</li>
+     * <li>OSS: Object Storage Service (OSS).</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +38,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     public String dataSourceType;
 
     /**
-     * <p>The primary resource ID.</p>
+     * <p>The primary ID of the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>d-dkdbnnap0g7b6su4yg</p>
@@ -60,7 +65,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ss.sssZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-12-13T10:22:05.694Z</p>
@@ -69,7 +74,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The last modification time.</p>
+     * <p>The last modification time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ss.sssZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-12-13T10:22:05.694Z</p>
@@ -82,9 +87,9 @@ public class GetDatasetVersionResponseBody extends TeaModel {
      * <details>
      * <summary>OSS</summary>
      * {
-     * "region": "${region}",//The region ID.
-     * "bucket": "${bucket}",//The bucket name.
-     * "path": "${path}" //The file path.
+     * "region": "${region}",// The region ID
+     * "bucket": "${bucket}",// The bucket name
+     * "path": "${path}" // The file path
      * }
      * </details>
      * 
@@ -100,7 +105,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
      * 
      * 
      * <details>
-     * <summary>Intelligent computing CPFS</summary>
+     * <summary>AI CPFS</summary>
      * Block content
      * </details>
      * 
@@ -117,16 +122,16 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     public String importInfo;
 
     /**
-     * <p>The resource labels.</p>
+     * <p>The resource tags.</p>
      */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
     /**
-     * <p>The permission when the dataset is mounted. Valid values:</p>
+     * <p>The permissions when the dataset is mounted. Valid values:</p>
      * <ul>
-     * <li>RO: read-only mount</li>
-     * <li>RW: read and write mount</li>
+     * <li>RO: Read-only mount.</li>
+     * <li>RW: Read/write mount.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -136,7 +141,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     public String mountAccess;
 
     /**
-     * <p>The extension field.</p>
+     * <p>The extended fields.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -147,7 +152,11 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     public String options;
 
     /**
-     * <p>The property of the dataset.</p>
+     * <p>The property of the dataset. Valid values:</p>
+     * <ul>
+     * <li>DIRECTORY: Directory.</li>
+     * <li>FILE: File.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -166,7 +175,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The dataset source ID.</p>
+     * <p>The source ID of the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>d-rbvg5wzljzjhc9ks92</p>
@@ -175,7 +184,12 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>The data source type.</p>
+     * <p>The source type. Valid values:</p>
+     * <ul>
+     * <li>ENHANCE: Data augmentation.</li>
+     * <li>ADDVERSION: Added version.</li>
+     * <li>CLEANING: Data cleaning.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>USER</p>
@@ -193,6 +207,12 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     @NameInMap("Uri")
     public String uri;
 
+    /**
+     * <p>The list of user metric collection endpoints.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;Port&quot;:0,&quot;Path&quot;:&quot;&quot;}]</p>
+     */
     @NameInMap("UserMetricsEndpoints")
     public java.util.List<UserMetricsEndpoint> userMetricsEndpoints;
 

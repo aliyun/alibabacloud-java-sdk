@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class DatasetLabel extends TeaModel {
     /**
-     * <p>The label key, which must be 1 to 128 characters long.</p>
+     * <p>The key of the dataset label.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
-     * <p>The label value, which can be 0 to 128 characters long.</p>
+     * <p>The value of the dataset label.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Value")
     public String value;

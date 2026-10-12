@@ -27,7 +27,7 @@ public class AddImageRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The image ID. If this parameter is not specified, the system automatically generates one. The format is image- followed by 18 uppercase or lowercase letters or digits.</p>
+     * <p>The image ID. If you do not specify this parameter, the system automatically generates one. The format is image- followed by 18 uppercase or lowercase letters or digits.</p>
      * 
      * <strong>example:</strong>
      * <p>image-k83*****cv</p>
@@ -98,7 +98,10 @@ public class AddImageRequest extends TeaModel {
     public Long size;
 
     /**
-     * <p>The image source ID. When the image source type is Build, the source ID corresponds to the image build ID.</p>
+     * <p>The image source ID. If the image source type is Build, the source ID corresponds to the image build ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>build-****ks92</p>
      */
     @NameInMap("SourceId")
     public String sourceId;
@@ -109,10 +112,16 @@ public class AddImageRequest extends TeaModel {
      * <li>Import: import.</li>
      * <li>Build: generate.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Build</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <p>The user ID (UID) of the image creator.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

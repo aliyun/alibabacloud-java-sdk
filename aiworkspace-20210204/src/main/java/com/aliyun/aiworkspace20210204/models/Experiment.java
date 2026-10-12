@@ -5,37 +5,46 @@ import com.aliyun.tea.*;
 
 public class Experiment extends TeaModel {
     /**
-     * <p>Accessibility</p>
+     * <p>The visibility of the experiment. PRIVATE indicates that the experiment is visible only to the creator and their Alibaba Cloud account. PUBLIC indicates that the experiment is visible to all users.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PRIVATE</p>
      */
     @NameInMap("Accessibility")
     public String accessibility;
 
     /**
-     * <p>ArtifactUri</p>
+     * <p>The default artifact output path for tasks associated with the experiment. Currently, only OSS paths are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://test-bucket.oss-cn-hangzhou.aliyuncs.com/test</p>
      */
     @NameInMap("ArtifactUri")
     public String artifactUri;
 
     /**
-     * <p>ExperimentId</p>
+     * <p>The experiment ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exp-1zpfthdx******</p>
      */
     @NameInMap("ExperimentId")
     public String experimentId;
 
     /**
-     * <p>GmtCreatedTime</p>
+     * <p>The time when the experiment was created.</p>
      */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
     /**
-     * <p>GmtModifiedTime</p>
+     * <p>The time when the experiment was last modified.</p>
      */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
     /**
-     * <p>Labels</p>
+     * <p>The list of labels for the experiment.</p>
      */
     @NameInMap("Labels")
     public java.util.List<ExperimentLabel> labels;
@@ -47,37 +56,43 @@ public class Experiment extends TeaModel {
     public Run latestRun;
 
     /**
-     * <p>Name</p>
+     * <p>The name of the experiment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exp-test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>OwnerId</p>
+     * <p>The Alibaba Cloud account ID of the experiment owner.</p>
      */
     @NameInMap("OwnerId")
     public String ownerId;
 
     /**
-     * <p>RequestId</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>TensorboardLogUri</p>
+     * <p>The default OSS storage path for TensorBoard logs of each trial in the experiment.</p>
      */
     @NameInMap("TensorboardLogUri")
     public String tensorboardLogUri;
 
     /**
-     * <p>UserId</p>
+     * <p>The user ID of the experiment creator.</p>
      */
     @NameInMap("UserId")
     public String userId;
 
     /**
-     * <p>WorkspaceId</p>
+     * <p>The ID of the workspace to which the experiment belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1517**</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

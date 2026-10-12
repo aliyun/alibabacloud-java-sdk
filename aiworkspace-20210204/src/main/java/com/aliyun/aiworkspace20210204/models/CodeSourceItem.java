@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CodeSourceItem extends TeaModel {
     /**
-     * <p>The visibility of the code source configuration.</p>
+     * <p>The visibility of the code configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>PUBLIC</p>
@@ -16,7 +16,7 @@ public class CodeSourceItem extends TeaModel {
     /**
      * <p>The clone mode. Valid values:</p>
      * <ul>
-     * <li>0: Create a new subdirectory.</li>
+     * <li>0: Create a subdirectory.</li>
      * <li>1: Tile to the current directory.</li>
      * </ul>
      * 
@@ -45,7 +45,7 @@ public class CodeSourceItem extends TeaModel {
     public String codeCommit;
 
     /**
-     * <p>The code repository URL.</p>
+     * <p>The address of the code repository.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://code.aliyun.com/">https://code.aliyun.com/</a>****</p>
@@ -54,13 +54,16 @@ public class CodeSourceItem extends TeaModel {
     public String codeRepo;
 
     /**
-     * <p>The token used as the access code for the code repository.</p>
+     * <p>The token used to access code in the repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxx</p>
      */
     @NameInMap("CodeRepoAccessToken")
     public String codeRepoAccessToken;
 
     /**
-     * <p>The username used as the access code for the code repository.</p>
+     * <p>The username used to access code in the repository.</p>
      * 
      * <strong>example:</strong>
      * <p>user</p>
@@ -69,7 +72,7 @@ public class CodeSourceItem extends TeaModel {
     public String codeRepoUserName;
 
     /**
-     * <p>The code source configuration ID.</p>
+     * <p>The code configuration ID.</p>
      * 
      * <strong>example:</strong>
      * <p>code-202**********</p>
@@ -87,7 +90,7 @@ public class CodeSourceItem extends TeaModel {
     public String description;
 
     /**
-     * <p>The display name of the code source configuration.</p>
+     * <p>The name of the code source configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>MyCodeSourceName1</p>
@@ -123,7 +126,7 @@ public class CodeSourceItem extends TeaModel {
     public String mountPath;
 
     /**
-     * <p>The creator ID.</p>
+     * <p>The ID of the creator.</p>
      * 
      * <strong>example:</strong>
      * <p>1157290171663117</p>

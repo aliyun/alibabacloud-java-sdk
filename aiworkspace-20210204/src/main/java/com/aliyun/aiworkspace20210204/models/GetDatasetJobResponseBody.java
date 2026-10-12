@@ -14,7 +14,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public Long completedFileCount;
 
     /**
-     * <p>The time when the task was started.</p>
+     * <p>The time when the job was started, in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-11-15T07:06:42Z</p>
@@ -23,10 +23,10 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The task description.</p>
+     * <p>The job description.</p>
      * 
      * <strong>example:</strong>
-     * <p>This is a task description.</p>
+     * <p>This is a job description</p>
      */
     @NameInMap("Description")
     public String description;
@@ -41,7 +41,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public Long failedFileCount;
 
     /**
-     * <p>The time when the task was finished.</p>
+     * <p>The time when the job ended, in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-07-16T02:03:23Z</p>
@@ -50,7 +50,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public String finishTime;
 
     /**
-     * <p>The task operation.</p>
+     * <p>The job action.</p>
      * 
      * <strong>example:</strong>
      * <p>SemanticIndex</p>
@@ -59,7 +59,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public String jobAction;
 
     /**
-     * <p>The task pattern.</p>
+     * <p>The job mode.</p>
      * 
      * <strong>example:</strong>
      * <p>Full</p>
@@ -68,7 +68,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public String jobMode;
 
     /**
-     * <p>The task details.</p>
+     * <p>The job details.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;modelId\&quot;:\&quot;xxx\&quot;}</p>
@@ -92,7 +92,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task status.</p>
+     * <p>The job status.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -101,7 +101,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The total number of files for the task.</p>
+     * <p>The total number of files in the job.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>

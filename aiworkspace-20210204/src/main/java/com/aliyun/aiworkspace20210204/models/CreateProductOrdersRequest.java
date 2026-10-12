@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateProductOrdersRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically pay for all products listed in the Products parameter.</p>
+     * <p>Specifies whether automatic payment is applied to all products specified in the Products parameter. Valid values:</p>
      * <ul>
-     * <li><p>true: Enables automatic payment.</p>
-     * </li>
-     * <li><p>false: Disables automatic payment.</p>
-     * </li>
+     * <li>true: automatic payment</li>
+     * <li>false: no automatic payment</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class CreateProductOrdersRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The list of products to purchase.</p>
+     * <p>The list of products to purchase, separated by commas.</p>
      */
     @NameInMap("Products")
     public java.util.List<CreateProductOrdersRequestProducts> products;
@@ -60,7 +58,7 @@ public class CreateProductOrdersRequest extends TeaModel {
          * <p>The name of the instance property.</p>
          * 
          * <strong>example:</strong>
-         * <p>Object Storage Service</p>
+         * <p>Object Storage Service (OSS)</p>
          */
         @NameInMap("Name")
         public String name;
@@ -107,12 +105,10 @@ public class CreateProductOrdersRequest extends TeaModel {
 
     public static class CreateProductOrdersRequestProducts extends TeaModel {
         /**
-         * <p>Specifies whether to enable auto-renewal.</p>
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
          * <ul>
-         * <li><p>true: Enables auto-renewal.</p>
-         * </li>
-         * <li><p>false: Disables auto-renewal.</p>
-         * </li>
+         * <li>true: Auto-renewal is enabled.</li>
+         * <li>false: Auto-renewal is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,7 +127,7 @@ public class CreateProductOrdersRequest extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The subscription duration. This parameter is used with PricingCycle. Currently, only a value of 1 is supported.</p>
+         * <p>The purchase duration. This parameter is used together with PricingCycle. Currently, only 1 is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -140,31 +136,28 @@ public class CreateProductOrdersRequest extends TeaModel {
         public Long duration;
 
         /**
-         * <p>The list of instance properties.</p>
+         * <p>The list of instance property information.</p>
          * <ul>
-         * <li><p>DataWorks_share:
+         * <li>DataWorks_share:
          * [ {
          * &quot;Code&quot;: &quot;region&quot;,
          * &quot;Value&quot;: &quot;cn-shanghai&quot;
          * }
-         * ]</p>
-         * </li>
-         * <li><p>OSS_share:
+         * ]</li>
+         * <li>OSS_share:
          * [ {
          * &quot;Code&quot;: &quot;commodity_type&quot;,
          * &quot;Value&quot;: &quot;oss&quot;,
-         * &quot;Name&quot;: &quot;Object Storage Service&quot;
+         * &quot;Name&quot;: &quot;Object Storage Service (OSS)&quot;
          * },
          * {
          * &quot;Code&quot;: &quot;ord_time&quot;,
          * &quot;Value&quot;: &quot;1:Hour&quot;,
-         * &quot;Name&quot;: &quot;1 Hour&quot;
+         * &quot;Name&quot;: &quot;1 hour&quot;
          * }
-         * ]</p>
-         * </li>
-         * <li><p>PAI_share: None</p>
-         * </li>
-         * <li><p>MaxCompute_share for accounts in mainland China:
+         * ]</li>
+         * <li>PAI_share: None</li>
+         * <li>MaxCompute_share for the Chinese site:
          * [
          * {
          * &quot;Code&quot;: &quot;region&quot;,
@@ -178,9 +171,8 @@ public class CreateProductOrdersRequest extends TeaModel {
          * &quot;Code&quot;: &quot;ord_time&quot;,
          * &quot;Value&quot;: &quot;1:Hour&quot;
          * }
-         * ]</p>
-         * </li>
-         * <li><p>MaxCompute_share for accounts outside mainland China:
+         * ]</li>
+         * <li>MaxCompute_share for the international site:
          * [
          * {
          * &quot;Code&quot;: &quot;region&quot;,
@@ -190,8 +182,7 @@ public class CreateProductOrdersRequest extends TeaModel {
          * &quot;Code&quot;: &quot;ord_time&quot;,
          * &quot;Value&quot;: &quot;1:Hour&quot;
          * }
-         * ]</p>
-         * </li>
+         * ]</li>
          * </ul>
          */
         @NameInMap("InstanceProperties")
@@ -207,12 +198,10 @@ public class CreateProductOrdersRequest extends TeaModel {
         public String orderType;
 
         /**
-         * <p>The billing cycle. The following values are supported:</p>
+         * <p>The pricing unit. Valid values:</p>
          * <ul>
-         * <li><p>Month: Monthly billing. Only DataWorks_share supports this value.</p>
-         * </li>
-         * <li><p>Hour: Hourly billing. Only OSS_share and MaxCompute_share support this value.</p>
-         * </li>
+         * <li>Month: Monthly pricing. Only DataWorks_share supports this value.</li>
+         * <li>Hour: Hourly pricing. Only OSS_share and MaxCompute_share support this value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -222,16 +211,12 @@ public class CreateProductOrdersRequest extends TeaModel {
         public String pricingCycle;
 
         /**
-         * <p>The product code. The following codes are supported:</p>
+         * <p>The product code. Valid values:</p>
          * <ul>
-         * <li><p>DataWorks_share: The pay-as-you-go DataWorks product.</p>
-         * </li>
-         * <li><p>MaxCompute_share: The pay-as-you-go MaxCompute product.</p>
-         * </li>
-         * <li><p>PAI_share: The pay-as-you-go PAI product.</p>
-         * </li>
-         * <li><p>OSS_share: The pay-as-you-go OSS product.</p>
-         * </li>
+         * <li>DataWorks_share: Pay-as-you-go DataWorks.</li>
+         * <li>MaxCompute_share: Pay-as-you-go MaxCompute.</li>
+         * <li>PAI_share: Pay-as-you-go PAI.</li>
+         * <li>OSS_share: Pay-as-you-go OSS.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -20,7 +20,7 @@ public class CreateWorkspaceRoleRequest extends TeaModel {
     public String roleName;
 
     /**
-     * <p>The role type. Valid values: custom (custom role). Only custom roles are supported. This is the default value.</p>
+     * <p>The role type. Valid values: custom: custom role. Only custom roles are supported. This is the default value.</p>
      * 
      * <strong>example:</strong>
      * <p>custom</p>
@@ -28,6 +28,12 @@ public class CreateWorkspaceRoleRequest extends TeaModel {
     @NameInMap("RoleType")
     public String roleType;
 
+    /**
+     * <p>The user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21513926******88039</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

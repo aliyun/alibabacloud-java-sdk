@@ -19,12 +19,18 @@ public class RunLabel extends TeaModel {
     /**
      * <p>Key of the label</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>is_evaluation</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
      * <p>ID of the Run that owns this label</p>
+     * 
+     * <strong>example:</strong>
+     * <p>run-1qJhzJ2YXgX****</p>
      */
     @NameInMap("RunId")
     public String runId;
@@ -32,6 +38,9 @@ public class RunLabel extends TeaModel {
     /**
      * <p>Value of the label</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Value")
     public String value;

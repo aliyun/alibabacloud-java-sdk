@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TrialLabel extends TeaModel {
     /**
-     * <p>The time the label was created, in UTC and following the ISO 8601 standard.</p>
+     * <p>Create time</p>
      * 
      * <strong>example:</strong>
      * <p>2023-12-27T03:30:04Z</p>
@@ -14,7 +14,7 @@ public class TrialLabel extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The time the label was last modified, in UTC and following the ISO 8601 standard.</p>
+     * <p>Modified time</p>
      * 
      * <strong>example:</strong>
      * <p>2023-12-27T03:30:04Z</p>
@@ -23,7 +23,7 @@ public class TrialLabel extends TeaModel {
     public String gmtModifiedTime;
 
     /**
-     * <p>The key of the label.</p>
+     * <p>Key of Trial Label</p>
      * 
      * <strong>example:</strong>
      * <p>key</p>
@@ -32,13 +32,16 @@ public class TrialLabel extends TeaModel {
     public String key;
 
     /**
-     * <p>The ID of the associated trial.</p>
+     * <p>Trial ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>trl-v0fw9a0sd8f9af</p>
      */
     @NameInMap("TrialId")
     public String trialId;
 
     /**
-     * <p>The value of the label.</p>
+     * <p>Value of Trial Label</p>
      * 
      * <strong>example:</strong>
      * <p>value</p>

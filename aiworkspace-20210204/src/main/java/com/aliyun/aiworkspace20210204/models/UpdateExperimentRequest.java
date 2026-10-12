@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateExperimentRequest extends TeaModel {
     /**
-     * <p>The visibility of the experiment in the workspace. Valid values:</p>
+     * <p>The visibility of the workspace. Valid values:</p>
      * <ul>
-     * <li><p>PRIVATE: The experiment is visible only to you and the administrator in the workspace.</p>
-     * </li>
-     * <li><p>PUBLIC: The experiment is visible to everyone in the workspace.</p>
-     * </li>
+     * <li>PRIVATE: The experiment is visible only to you and the administrator in the workspace.</li>
+     * <li>PUBLIC: The experiment is visible to all users in the workspace.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,14 +18,11 @@ public class UpdateExperimentRequest extends TeaModel {
     public String accessibility;
 
     /**
-     * <p>The name of the experiment. The naming convention is as follows:</p>
+     * <p>The name of the experiment. The name must meet the following rules:</p>
      * <ul>
-     * <li><p>Must start with a lowercase or uppercase letter.</p>
-     * </li>
-     * <li><p>Can contain lowercase letters, uppercase letters, digits, underscores (_), and hyphens (-).</p>
-     * </li>
-     * <li><p>The length must be 1 to 63 characters.</p>
-     * </li>
+     * <li>The name must start with a lowercase or uppercase letter.</li>
+     * <li>The name can contain uppercase letters, lowercase letters, digits, underscores (_), or hyphens (-).</li>
+     * <li>The name must be 1 to 63 characters in length.</li>
      * </ul>
      * 
      * <strong>example:</strong>

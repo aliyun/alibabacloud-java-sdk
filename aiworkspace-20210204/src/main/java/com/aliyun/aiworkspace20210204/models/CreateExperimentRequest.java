@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateExperimentRequest extends TeaModel {
     /**
-     * <p>The visibility of the experiment. It can be PRIVATE (visible only to the creator and the creator\&quot;s Alibaba Cloud account) or PUBLIC (visible to all users). This parameter is optional. The default value is PRIVATE.</p>
+     * <p>The visibility of the experiment. Valid values:</p>
+     * <ul>
+     * <li>PUBLIC: Visible to all users.</li>
+     * <li>PRIVATE: Visible only to the creator and the Alibaba Cloud account.</li>
+     * </ul>
+     * <p>Default value: PRIVATE.</p>
      * 
      * <strong>example:</strong>
      * <p>PRIVATE</p>
@@ -14,7 +19,7 @@ public class CreateExperimentRequest extends TeaModel {
     public String accessibility;
 
     /**
-     * <p>The default output path of artifacts for all tasks that are associated with the experiment. Only Object Storage Service (OSS) paths are supported.</p>
+     * <p>The default artifact output path for all tasks associated with the experiment. Currently, only OSS paths are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://test-bucket.oss-cn-hangzhou.aliyuncs.com/test</p>
@@ -29,14 +34,11 @@ public class CreateExperimentRequest extends TeaModel {
     public java.util.List<LabelInfo> labels;
 
     /**
-     * <p>The name of the experiment. The name must meet the following requirements:</p>
+     * <p>The name of the experiment. The name must meet the following rules:</p>
      * <ul>
-     * <li><p>Start with an uppercase or lowercase letter.</p>
-     * </li>
-     * <li><p>Contain uppercase letters, lowercase letters, digits, underscores (_), and hyphens (-).</p>
-     * </li>
-     * <li><p>Be 1 to 63 characters in length.</p>
-     * </li>
+     * <li>The name must start with a lowercase or uppercase letter.</li>
+     * <li>The name can contain uppercase letters, lowercase letters, digits, underscores (_), or hyphens (-).</li>
+     * <li>The name must be 1 to 63 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

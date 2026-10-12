@@ -5,13 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetImageRequest extends TeaModel {
     /**
-     * <p>Specifies whether to display non-essential information. Non-essential information currently includes labels.
-     * Valid values:</p>
+     * <p>Specifies whether to display optional information. Optional information currently includes Labels.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><p>false (default): Does not display non-essential information.</p>
-     * </li>
-     * <li><p>true: Displays non-essential information.</p>
-     * </li>
+     * <li>false (default): Optional information is not displayed.</li>
+     * <li>true: Optional information is displayed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

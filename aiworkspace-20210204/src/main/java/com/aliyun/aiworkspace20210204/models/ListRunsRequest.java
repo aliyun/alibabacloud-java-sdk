@@ -14,7 +14,7 @@ public class ListRunsRequest extends TeaModel {
     public String experimentId;
 
     /**
-     * <p>The time when the instance was created.</p>
+     * <p>The time when the instance was created. The time follows the ISO 8601 standard in UTC. Format: YYYY-MM-DDTHH:mm:ss.sssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-30T12:51:33.028Z</p>
@@ -23,12 +23,10 @@ public class ListRunsRequest extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The labels of the run for an exact match. The following formats are supported:</p>
+     * <p>The labels of the task for exact match. Supported formats:</p>
      * <ul>
-     * <li><p>Single-label query: &quot;is_evaluation:true&quot;</p>
-     * </li>
-     * <li><p>Multi-label query: &quot;is_evaluation:true,LLM_evaluation:true&quot;. This method is not recommended for common scenarios because it may degrade performance. Use commas (,) to separate multiple labels. The system matches all specified key-value pairs.</p>
-     * </li>
+     * <li>Single-label query: &quot;is_evaluation:true&quot;</li>
+     * <li>Multi-label scenario (not recommended except in special cases due to potential performance issues): &quot;is_evaluation:true,LLM_evaluation:true&quot; separated by commas (,), indicating that multiple label key-value pairs must all match.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +36,7 @@ public class ListRunsRequest extends TeaModel {
     public String labels;
 
     /**
-     * <p>The maximum number of results to return. The default value is 10.</p>
+     * <p>The maximum number of results to return. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +45,7 @@ public class ListRunsRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The name of the run.</p>
+     * <p>The run name.</p>
      * 
      * <strong>example:</strong>
      * <p>myName</p>
@@ -56,12 +54,10 @@ public class ListRunsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The sort order for the paged query. Use this parameter with SortBy.</p>
+     * <p>The sorting order for the specified field in a paging query. Used together with SortBy. Valid values:</p>
      * <ul>
-     * <li><p>ASC: ascending order.</p>
-     * </li>
-     * <li><p>DESC (default): descending order.</p>
-     * </li>
+     * <li>ASC: Ascending order.</li>
+     * <li>DESC (default): Descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +67,7 @@ public class ListRunsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The fields to sort by and the sort order. You can sort by GmtCreateTime and Name. Valid sort orders are DESC and ASC. The default is ASC. To sort by multiple fields, separate them with a comma (,).</p>
+     * <p>A comma-separated list of sorting strings. Supported fields: GmtCreateTime and Name. Supported sorting orders: DESC and ASC. Default: ASC. Separate multiple fields with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>GmtCreateTime DESC,Name ASC</p>
@@ -80,7 +76,7 @@ public class ListRunsRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The page number. The value must be greater than 0. Default value: 1.</p>
+     * <p>The page number. Valid values: greater than 0. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -89,7 +85,7 @@ public class ListRunsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of records to display on each page.</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -98,7 +94,7 @@ public class ListRunsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The paging token. The value starts from 0. The default value is 0.</p>
+     * <p>The pagination token. Starts from 0. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -107,12 +103,10 @@ public class ListRunsRequest extends TeaModel {
     public Long pageToken;
 
     /**
-     * <p>The field to use for sorting. Valid values:</p>
+     * <p>The field used for sorting. Valid values:</p>
      * <ul>
-     * <li><p>Name: the name of the run.</p>
-     * </li>
-     * <li><p>GmtCreateTime (default): the time when the run was created.</p>
-     * </li>
+     * <li>Name: The run name.</li>
+     * <li>GmtCreateTime (default): The run creation time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -140,12 +134,10 @@ public class ListRunsRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>Specifies whether to display details, including Metrics, Params, and Labels. Valid values:</p>
+     * <p>Specifies whether to display detailed information, including Metrics, Params, and Labels. Valid values:</p>
      * <ul>
-     * <li><p>true: displays details.</p>
-     * </li>
-     * <li><p>false (default): does not display details.</p>
-     * </li>
+     * <li>true: Detailed information is displayed.</li>
+     * <li>false (default): Detailed information is not displayed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -155,9 +147,9 @@ public class ListRunsRequest extends TeaModel {
     public Boolean verbose;
 
     /**
-     * <p>The ID of the workspace where the experiment resides. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+     * <p>The ID of the workspace where the experiment resides. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * <blockquote>
-     * <p>If you do not specify a workspace ID, the system returns the list of runs in the default workspace.</p>
+     * <p>If you do not specify a workspace ID, the system returns the run list of the default workspace.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

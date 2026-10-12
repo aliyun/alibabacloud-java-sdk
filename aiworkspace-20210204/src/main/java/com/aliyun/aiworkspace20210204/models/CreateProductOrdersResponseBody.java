@@ -31,6 +31,9 @@ public class CreateProductOrdersResponseBody extends TeaModel {
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The list of IDs of the successfully purchased products.</p>
+     */
     @NameInMap("ProductIds")
     public java.util.List<String> productIds;
 

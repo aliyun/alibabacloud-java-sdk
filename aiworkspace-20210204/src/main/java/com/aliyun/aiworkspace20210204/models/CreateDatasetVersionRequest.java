@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetVersionRequest extends TeaModel {
     /**
-     * <p>The number of dataset files.</p>
+     * <p>The number of files in the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -14,7 +14,7 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public Long dataCount;
 
     /**
-     * <p>The size of space occupied by dataset files. Unit: bytes.</p>
+     * <p>The size of the space occupied by the dataset files. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>19000</p>
@@ -23,18 +23,16 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public Long dataSize;
 
     /**
-     * <p>The data source type. Separate multiple values with commas (,). Valid values:</p>
+     * <p>The data source type. Separate multiple values with commas. Valid values:</p>
      * <ul>
-     * <li><p>NAS: Alibaba Cloud Network Attached Storage (NAS).</p>
+     * <li><p>NAS: Alibaba Cloud File Storage NAS.</p>
      * </li>
      * <li><p>OSS: Alibaba Cloud Object Storage Service (OSS).</p>
      * </li>
      * <li><p>CPFS</p>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>The DataSourceType of the version must be consistent with the DataSourceType of the dataset. Validation is performed against the dataset when a version is created.</p>
-     * </blockquote>
+     * <p>Note: The DataSourceType of the version must be the same as the DataSourceType of the dataset. The system validates this when you create the version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +51,7 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public String datasetTaskRamRole;
 
     /**
-     * <p>The custom description of the dataset version, used to distinguish different dataset versions.</p>
+     * <p>The custom description of the dataset version. You can use this description to distinguish between different dataset versions.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a description of the dataset version.</p>
@@ -62,23 +60,29 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Specifies whether to perform only a dry run without actually creating the dataset version.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>The storage import configuration of the dataset. OSS, NAS, and CPFS are supported.</p>
      * <details>
      * <summary>OSS</summary>
      * {<BR>
-     *   "region": "${region}",//Region ID<BR>
-     *   "bucket": "${bucket}",//Bucket name<BR>
-     *   "path": "${path}" //File path<BR>
+     *   "region": "${region}",// The region ID.<BR>
+     *   "bucket": "${bucket}",// The bucket name.<BR>
+     *   "path": "${path}" // The file path.<BR>
      * }<BR>
      * </details>
      * 
      * <details>
      * <summary>NAS</summary>
      * {<BR>
-     *   "region": "${region}",//Region ID<BR>
-     *   "fileSystemId": "${file_system_id}", //File system ID<BR>
-     *   "path": "${path}", //File system path<BR>
-     *   "mountTarget": "${mount_target}" //File system mount target<BR>
+     *   "region": "${region}",// The region ID.<BR>
+     *   "fileSystemId": "${file_system_id}", // The file system ID.<BR>
+     *   "path": "${path}", // The file system path.<BR>
+     *   "mountTarget": "${mount_target}" // The mount target of the file system.<BR>
      * }<BR>
      * </details>
      * 
@@ -86,22 +90,22 @@ public class CreateDatasetVersionRequest extends TeaModel {
      * <details>
      * <summary>CPFS</summary>
      * {<BR>
-     *   "region": "${region}",//Region ID<BR>
-     *   "fileSystemId": "${file_system_id}", //File system ID<BR>
-     *   "protocolServiceId":"${protocol_service_id}", //File system protocol service<BR>
-     *   "exportId": "${export_id}", //File system export directory<BR>
-     *   "path": "${path}",  //File system path<BR>
+     *   "region": "${region}",// The region ID.<BR>
+     *   "fileSystemId": "${file_system_id}", // The file system ID.<BR>
+     *   "protocolServiceId":"${protocol_service_id}", // The protocol service of the file system.<BR>
+     *   "exportId": "${export_id}", // The export directory of the file system.<BR>
+     *   "path": "${path}",  // The file system path.<BR>
      * }<BR>
      * </details>
      * 
      * <details>
-     * <summary>Lingjun CPFS</summary>
+     * <summary>CPFS for AI computing</summary>
      * {<BR>
-     *   "region": "${region}",//Region ID<BR>
-     *   "fileSystemId": "${file_system_id}", //File system ID<BR>
-     *   "path": "${path}",  //File system path<BR>
-     *   "mountTarget": "${mount_target}" //File system mount target, specific to Lingjun edition<BR>
-     *   "isVpcMount": boolean, //Whether it is a VPC mount target, specific to Lingjun edition<BR>
+     *   "region": "${region}",// The region ID.<BR>
+     *   "fileSystemId": "${file_system_id}", // The file system ID.<BR>
+     *   "path": "${path}",  // The file system path.<BR>
+     *   "mountTarget": "${mount_target}" // The mount target of the file system. This parameter is specific to the AI computing edition.<BR>
+     *   "isVpcMount": boolean, // Specifies whether the mount target is a VPC mount target. This parameter is specific to the AI computing edition.<BR>
      * }<BR>
      * </details>
      * 
@@ -118,14 +122,13 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public String importInfo;
 
     /**
-     * <p>The list of dataset version labels.</p>
+     * <p>The list of labels for the dataset version.</p>
      */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
     /**
-     * <p>The extended field in JsonString format.
-     * When DLC uses a dataset, you can specify the default mount path of the dataset by configuring the mountPath field.</p>
+     * <p>The extended field. The value is a JSON string. When DLC uses the dataset, you can configure the mountPath field to specify the default mount path for the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -138,8 +141,8 @@ public class CreateDatasetVersionRequest extends TeaModel {
     /**
      * <p>The property of the dataset. Valid values:</p>
      * <ul>
-     * <li>FILE: file.</li>
-     * <li>DIRECTORY: folder.</li>
+     * <li>FILE: file</li>
+     * <li>DIRECTORY: directory</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -150,11 +153,11 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public String property;
 
     /**
-     * <p>The data source ID.</p>
+     * <p>The source ID.</p>
      * <ul>
-     * <li>If SourceType is USER, SourceId can be customized.</li>
-     * <li>If SourceType is ITAG, which indicates a dataset generated from iTAG annotation results, SourceId is the iTAG task ID.</li>
-     * <li>If SourceType is PAI_PUBLIC_DATASET, which indicates a dataset created from a PAI public dataset, SourceId is empty by default.</li>
+     * <li>If SourceType is set to USER, you can specify a custom SourceId.</li>
+     * <li>If SourceType is set to ITAG, the dataset is generated from the labeling results of the iTAG module, and SourceId is the task ID in iTAG.</li>
+     * <li>If SourceType is set to PAI_PUBLIC_DATASET, the dataset is created from a PAI public dataset, and SourceId is empty by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -164,10 +167,10 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>The data source type. Default value: USER. Valid values:</p>
+     * <p>The source type. Default value: USER. Valid values:</p>
      * <ul>
      * <li>PAI-PUBLIC-DATASET: PAI public dataset.</li>
-     * <li>ITAG: dataset generated from iTAG annotation results.</li>
+     * <li>ITAG: dataset generated from the labeling results of the iTAG module.</li>
      * <li>USER: user-registered dataset.</li>
      * </ul>
      * 
@@ -178,14 +181,14 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>Examples of Uri configurations:</p>
+     * <p>The URI. Configuration examples:</p>
      * <ul>
      * <li>If the data source type is OSS: <code>oss://bucket.endpoint/object</code></li>
      * <li>If the data source type is NAS:
-     * General-purpose NAS format: <code>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</code>;
-     * CPFS 1.0: <code>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</code>;
-     * CPFS 2.0: <code>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</code>.
-     * CPFS 1.0 and CPFS 2.0 are distinguished by the format of the fsid: CPFS 1.0 format is cpfs-&lt;8 ASCII characters&gt;; CPFS 2.0 format is cpfs-&lt;16 ASCII characters&gt;.</li>
+     * For general-purpose NAS, the format is <code>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</code>.
+     * For CPFS 1.0, the format is <code>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</code>.
+     * For CPFS 2.0, the format is <code>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</code>.
+     * CPFS 1.0 and CPFS 2.0 are distinguished by the format of the fsid: the format for CPFS 1.0 is cpfs-&lt;8 ASCII characters&gt;, and the format for CPFS 2.0 is cpfs-&lt;16 ASCII characters&gt;.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -195,6 +198,9 @@ public class CreateDatasetVersionRequest extends TeaModel {
     @NameInMap("Uri")
     public String uri;
 
+    /**
+     * <p>The list of user metric collection endpoints.</p>
+     */
     @NameInMap("UserMetricsEndpoints")
     public java.util.List<UserMetricsEndpoint> userMetricsEndpoints;
 
@@ -241,6 +247,14 @@ public class CreateDatasetVersionRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateDatasetVersionRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateDatasetVersionRequest setImportInfo(String importInfo) {

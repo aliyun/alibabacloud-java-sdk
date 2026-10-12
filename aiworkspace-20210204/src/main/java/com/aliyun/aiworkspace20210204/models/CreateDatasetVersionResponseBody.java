@@ -14,7 +14,7 @@ public class CreateDatasetVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The dataset version name.</p>
+     * <p>The name of the dataset version.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>

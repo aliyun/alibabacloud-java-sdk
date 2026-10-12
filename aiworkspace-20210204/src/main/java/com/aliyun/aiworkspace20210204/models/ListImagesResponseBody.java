@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListImagesResponseBody extends TeaModel {
     /**
-     * <p>The list of images.</p>
+     * <p>The image list.</p>
      */
     @NameInMap("Images")
     public java.util.List<ListImagesResponseBodyImages> images;
@@ -20,7 +20,7 @@ public class ListImagesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned images.</p>
+     * <p>The total number of images returned.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -103,10 +103,8 @@ public class ListImagesResponseBody extends TeaModel {
         /**
          * <p>The visibility of the image. Valid values:</p>
          * <ul>
-         * <li><p>PUBLIC: All members in the current workspace can perform operations on the image.</p>
-         * </li>
-         * <li><p>PRIVATE: Only the creator can perform operations on the image.</p>
-         * </li>
+         * <li>PUBLIC: All members of the current workspace can operate on the image.</li>
+         * <li>PRIVATE: Only the creator can operate on the image.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -125,7 +123,7 @@ public class ListImagesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The time when the image was created. The time is in UTC and the format is ISO 8601.</p>
+         * <p>The creation time in UTC, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-21T17:12:35.232Z</p>
@@ -134,7 +132,7 @@ public class ListImagesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The time when the image was last modified. The time is in UTC and the format is ISO 8601.</p>
+         * <p>The modification time in UTC, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-21T17:12:35.232Z</p>
@@ -152,13 +150,13 @@ public class ListImagesResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The image URL, which includes the version number.</p>
+         * <p>The image URI, including the version number.</p>
          */
         @NameInMap("ImageUri")
         public String imageUri;
 
         /**
-         * <p>The list of image labels.</p>
+         * <p>The image label list.</p>
          */
         @NameInMap("Labels")
         public java.util.List<ListImagesResponseBodyImagesLabels> labels;
@@ -173,7 +171,7 @@ public class ListImagesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The UID of the Alibaba Cloud account that created the image.</p>
+         * <p>The UID of the Alibaba Cloud account of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>155**********904</p>
@@ -182,7 +180,7 @@ public class ListImagesResponseBody extends TeaModel {
         public String parentUserId;
 
         /**
-         * <p>The image size in bytes.</p>
+         * <p>The image size, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -191,19 +189,25 @@ public class ListImagesResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>The ID of the image source.</p>
+         * <p>The image source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>build-****ks92</p>
          */
         @NameInMap("SourceId")
         public String sourceId;
 
         /**
-         * <p>The type of the image source.</p>
+         * <p>The image source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Build</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
-         * <p>The UID of the Alibaba Cloud account that created the image.</p>
+         * <p>The UID of the Alibaba Cloud account of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>155**********904</p>

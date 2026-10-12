@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMembersRequest extends TeaModel {
     /**
-     * <p>Username. Fuzzy match is supported.</p>
+     * <p>The member name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>zhangsan</p>
@@ -14,7 +14,7 @@ public class ListMembersRequest extends TeaModel {
     public String memberName;
 
     /**
-     * <p>Page number. Pages start at 1. Default value: 1.</p>
+     * <p>The page number of the workspace list. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListMembersRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>Number of entries per page. Default value: 20.</p>
+     * <p>The paging Settings for the number of entries per page in a paged query. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,22 +32,16 @@ public class ListMembersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Roles used to filter members. Separate multiple roles with commas (,). Valid values:</p>
+     * <p>Filters members by role. Separate multiple roles with commas (,).
+     * Valid values:</p>
      * <ul>
-     * <li><p>PAI.AlgoDeveloper: Algorithm developer</p>
-     * </li>
-     * <li><p>PAI.AlgoOperator: Algorithm O\&amp;M engineer</p>
-     * </li>
-     * <li><p>PAI.LabelManager: Annotation administrator</p>
-     * </li>
-     * <li><p>PAI.MaxComputeDeveloper: MaxCompute developer</p>
-     * </li>
-     * <li><p>PAI.WorkspaceAdmin: Workspace administrator</p>
-     * </li>
-     * <li><p>PAI.WorkspaceGuest: Guest</p>
-     * </li>
-     * <li><p>PAI.WorkspaceOwner: Workspace owner</p>
-     * </li>
+     * <li>PAI.AlgoDeveloper: Algorithm developer.</li>
+     * <li>PAI.AlgoOperator: Algorithm O&amp;M.</li>
+     * <li>PAI.LabelManager: Labeling administrator.</li>
+     * <li>PAI.MaxComputeDeveloper: MaxCompute developer.</li>
+     * <li>PAI.WorkspaceAdmin: Administrator.</li>
+     * <li>PAI.WorkspaceGuest: Guest.</li>
+     * <li>PAI.WorkspaceOwner: Owner.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,6 +51,8 @@ public class ListMembersRequest extends TeaModel {
     public String roles;
 
     /**
+     * <p>The ID of the user to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>2788******129</p>
      */

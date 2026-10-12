@@ -21,7 +21,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     public String datasetVersion;
 
     /**
-     * <p>The end time for the file update time query range. The value is a UTC timestamp in ISO 8601 format.</p>
+     * <p>The start time of the file update time range for the query. The value is a UTC timestamp in ISO 8601 format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     public String endFileUpdateTime;
 
     /**
-     * <p>The end time for the tag last update time query range. The value is a UTC timestamp in ISO 8601 format.</p>
+     * <p>The end time of the tag last update time range for the query. The value is a UTC timestamp in ISO 8601 format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The sorting order for the specified sort field in paging queries. Used together with SortBy. Default value: DESC. Valid values:</p>
+     * <p>The sorting order for the specified sorting field in paging queries. Used together with SortBy. Default value: DESC. Valid values:</p>
      * <ul>
      * <li>ASC: ascending order.</li>
      * <li>DESC: descending order.</li>
@@ -77,7 +77,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     /**
      * <p>The number of entries per page. If MaxResults is also specified, MaxResults takes precedence.</p>
      * <blockquote>
-     * <p>This parameter will be offline soon. Use NextToken and MaxResults to perform paging operations.</p>
+     * <p>This parameter will be offline soon. Use NextToken and MaxResults to perform paging query operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -88,14 +88,14 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The search condition for &quot;include any of the following content types&quot;. You can select multiple content types, and the query results need to match only one of them. If empty, this condition is not applied. Array values are separated by commas.</p>
+     * <p>The search condition for &quot;include any of the following content types&quot;. You can select multiple content types, and the query results need to match only one of them. If this parameter is empty, this condition is not applied. Array elements are separated by commas.</p>
      */
     @NameInMap("QueryContentTypeIncludeAny")
     public java.util.List<String> queryContentTypeIncludeAny;
 
     /**
-     * <p>The query statement (DSL) is a domain-specific language for expressing complex retrieve conditions. It supports grouping, Boolean logic (AND/OR/NOT), range comparisons (&gt;, &gt;=, &lt;, &lt;=), property existence (HAS/NOT HAS), tokenized matching (:), and exact match (=), suitable for advanced retrieve scenarios.
-     * Generally used for complex advanced conditional retrieve operations.
+     * <p>The query statement (DSL) is a realm-specific language for expressing complex retrieve conditions. It supports grouping, Boolean logic (AND/OR/NOT), range comparisons (&gt;, &gt;=, &lt;, &lt;=), property existence checks (HAS/NOT HAS), token match (:), and exact match (=), which are suitable for advanced retrieve scenarios.
+     * This parameter is typically used for complex advanced retrieve conditional statements.
      * <notice>To avoid conflicts, after setting this query statement, do not use it together with other query parameters.</notice></p>
      * 
      * <strong>example:</strong>
@@ -123,7 +123,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     public String queryFileName;
 
     /**
-     * <p>The search condition for &quot;include any of the following file types&quot;. You can select multiple file types, and the query results need to match only one of them. If empty, this condition is not applied. Array values are separated by commas.</p>
+     * <p>The search condition for &quot;include any of the following file types&quot;. You can select multiple file types, and the query results need to match only one of them. If this parameter is empty, this condition is not applied. Array elements are separated by commas.</p>
      */
     @NameInMap("QueryFileTypeIncludeAny")
     public java.util.List<String> queryFileTypeIncludeAny;
@@ -131,7 +131,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     /**
      * <p>The image information for image-to-image search.</p>
      * <ul>
-     * <li>Supports a public network access OSS URL in the format: oss://{bucket_name}/{object_path}, where bucket_name is the bucket name and object_path is the file path in the bucket.<blockquote>
+     * <li>An OSS URL with public network access is supported. Format: oss://{bucket_name}/{object_path}, where bucket_name is the bucket name and object_path is the file path in the bucket.<blockquote>
      * <p>This parameter takes effect only when QueryType is set to VECTOR or MIX.</p>
      * </blockquote>
      * </li>
@@ -144,7 +144,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     public String queryImage;
 
     /**
-     * <p>The search condition for &quot;exclude the following tags&quot;. You can select multiple tags, and the query results must not contain any of them. If empty, this condition is not applied.</p>
+     * <p>The search condition for &quot;exclude the following tags&quot;. You can select multiple tags, and the query results must not contain any of them. If this parameter is empty, this condition is not applied.</p>
      * <blockquote>
      * <p>This parameter takes effect only when QueryType is set to TAG or MIX.</p>
      * </blockquote>
@@ -153,16 +153,16 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     public java.util.List<String> queryTagsExclude;
 
     /**
-     * <p>The search condition for &quot;include all of the following tags&quot;. You can select multiple tags, and the query results must match all of them. If empty, this condition is not applied. Array values are separated by commas.</p>
+     * <p>The search condition for &quot;include all of the following tags&quot;. You can select multiple tags, and the query results must match all of them. If this parameter is empty, this condition is not applied. Array elements are separated by commas.</p>
      * <blockquote>
-     * <p>This parameter takes effect only when QueryType is set to TAG or MIX. When QueryType is set to TAG, QueryText is added to this condition.</p>
+     * <p>This parameter takes effect only when QueryType is set to TAG or MIX. When QueryType is set to TAG, the value of QueryText is added to this condition.</p>
      * </blockquote>
      */
     @NameInMap("QueryTagsIncludeAll")
     public java.util.List<String> queryTagsIncludeAll;
 
     /**
-     * <p>The search condition for &quot;include any of the following tags&quot;. You can select multiple tags, and the query results need to match only one of them. If empty, this condition is not applied. Array values are separated by commas.</p>
+     * <p>The search condition for &quot;include any of the following tags&quot;. You can select multiple tags, and the query results need to match only one of them. If this parameter is empty, this condition is not applied. Array elements are separated by commas.</p>
      * <blockquote>
      * <p>This parameter takes effect only when QueryType is set to TAG or MIX.</p>
      * </blockquote>
@@ -184,7 +184,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
      * <ul>
      * <li>MIX: hybrid retrieve (default).</li>
      * <li>TAG: label-only retrieve.</li>
-     * <li>VECTOR: vector retrieve only.</li>
+     * <li>VECTOR: AISearch-only retrieve.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -196,7 +196,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     /**
      * <p>The video file information for video-based search.</p>
      * <ul>
-     * <li>Supports a public network access OSS URL in the format: oss://{bucket_name}/{object_path}, where bucket_name is the bucket name and object_path is the file path in the bucket.<blockquote>
+     * <li>A video OSS URL with public network access is supported. Format: oss://{bucket_name}/{object_path}, where bucket_name is the bucket name and object_path is the file path in the bucket.<blockquote>
      * <p>This parameter takes effect only when QueryType is set to VECTOR or MIX.</p>
      * </blockquote>
      * </li>
@@ -221,10 +221,10 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     public Float scoreThreshold;
 
     /**
-     * <p>The sorting field for paging queries. By default, results are sorted by retrieve relevance in descending order. Valid values:</p>
+     * <p>The sorting field for paging queries. By default, results are sorted by retrieve relevance in descending order. Other valid values:</p>
      * <ul>
      * <li>FileCreateTime: sorting by file creation time.</li>
-     * <li>FileUpdateTime: sorting by file last modification time.</li>
+     * <li>FileUpdateTime: sorting by file last modified time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -234,7 +234,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The start time for the file update time query range. The value is a UTC timestamp in ISO 8601 format.</p>
+     * <p>The end time of the file update time range for the query. The value is a UTC timestamp in ISO 8601 format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
      * 
      * <strong>example:</strong>
@@ -244,7 +244,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     public String startFileUpdateTime;
 
     /**
-     * <p>The start time for the tag last update time query range. The value is a UTC timestamp in ISO 8601 format.</p>
+     * <p>The start time of the tag last update time range for the query. The value is a UTC timestamp in ISO 8601 format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
      * 
      * <strong>example:</strong>
@@ -273,9 +273,9 @@ public class ListDatasetFileMetasRequest extends TeaModel {
      * <li>Proportional scaling: p_{percentage}, where percentage specifies the desired scaling ratio. Valid values: [1, 100]. Example: p_50 uses 50% of the original file size as the thumbnail.</li>
      * <li>Fixed width with adaptive height: w_{width}, where width specifies the desired image width. Valid values: [1, 16384]. Example: w_200 fixes the image width to 200 pixels and adaptively scales the height.</li>
      * <li>Fixed height with adaptive width: h_{height}, where height specifies the desired image height. Valid values: [1, 16384]. Example: h_100 fixes the image height to 100 pixels and adaptively scales the width.</li>
-     * <li>Fixed dimensions with padding: m_pad,w_{width},h_{height},color_{RGB}. m_pad scales the image to the largest size that fits within the specified width and height rectangle. RGB specifies the fill color for blank areas. If not specified, white is used by default. width specifies the desired image width and height specifies the desired image height. Valid values for both width and height: [1, 16384].</li>
-     * <li>Fixed dimensions with center cropping: m_fill,w_{width},h_{height}. m_fill proportionally scales the image to the smallest size that extends beyond the specified width and height rectangle, and center-crops the excess. width specifies the desired image width and height specifies the desired image height. Valid values for both width and height: [1, 16384]. Example: m_fill,w_100,h_100 fixes both width and height to 100 pixels with center cropping.</li>
-     * <li>Forced dimensions: m_fixed,w_{width},h_{height}. width specifies the desired image width and height specifies the desired image height. Valid values for both width and height: [1, 16384]. Example: m_fixed,w_100,h_100 forces both width and height to 100 pixels.</li>
+     * <li>Fixed dimensions with padding: m_pad,w_{width},h_{height},color_{RGB}. m_pad scales the image to the largest size that fits within the specified width and height rectangle. RGB specifies the fill color for blank areas. If this parameter is not specified, white is used by default. width specifies the desired image width and height specifies the desired image height. Valid values for both width and height: [1, 16384]. Example:</li>
+     * <li>Fixed dimensions with center cropping: m_fill,w_{width},h_{height}. m_fill proportionally scales the image to the smallest size that extends beyond the specified width and height rectangle, and center-crops the excess. width specifies the desired image width and height specifies the desired image height. Valid values for both width and height: [1, 16384]. Example: m_fill,w_100,h_100 fixes both the width and height to 100 pixels with center cropping.</li>
+     * <li>Forced dimensions: m_fixed,w_{width},h_{height}. width specifies the desired image width and height specifies the desired image height. Valid values for both width and height: [1, 16384]. Example: m_fixed,w_100,h_100 forces both the width and height to 100 pixels.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -297,7 +297,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     public Integer topK;
 
     /**
-     * <p>The workspace ID where the dataset resides. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+     * <p>The workspace ID of the dataset. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

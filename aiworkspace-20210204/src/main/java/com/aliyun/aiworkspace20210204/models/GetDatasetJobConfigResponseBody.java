@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetDatasetJobConfigResponseBody extends TeaModel {
     /**
-     * <p>The configuration content. The format depends on the ConfigType value.
-     * If ConfigType is MultimodalIntelligentTag, the format is as follows:</p>
+     * <p>The configuration content.</p>
+     * <p>The configuration format for MultimodalIntelligentTag is as follows:</p>
      * <p>{
-     * &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot;
+     *   &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot;
      * }</p>
-     * <p>If ConfigType is MultimodalSemanticIndex, the format is as follows:</p>
+     * <p>The configuration format for MultimodalSemanticIndex is as follows:</p>
      * <p>{
-     * &quot;defaultModelId&quot;: &quot;xxx&quot;,
-     * &quot;defaultModelVersion&quot;:&quot;1.0.0&quot;
+     *   &quot;defaultModelId&quot;: &quot;xxx&quot;
+     *   &quot;defaultModelVersion&quot;:&quot;1.0.0&quot;
      * }</p>
      * 
      * <strong>example:</strong>
@@ -23,7 +23,7 @@ public class GetDatasetJobConfigResponseBody extends TeaModel {
     public String config;
 
     /**
-     * <p>The configuration type.</p>
+     * <p>The configuration type. Valid values:</p>
      * <ul>
      * <li><p>MultimodalIntelligentTag</p>
      * </li>
@@ -38,7 +38,7 @@ public class GetDatasetJobConfigResponseBody extends TeaModel {
     public String configType;
 
     /**
-     * <p>The time when the configuration was created.</p>
+     * <p>The creation time in the ISO 8601 standard in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-10-16T01:44:10Z</p>
@@ -56,7 +56,7 @@ public class GetDatasetJobConfigResponseBody extends TeaModel {
     public String datasetId;
 
     /**
-     * <p>The time when the configuration was last modified.</p>
+     * <p>The modification time of the configuration in the ISO 8601 standard in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-12-26T02:17:18Z</p>
