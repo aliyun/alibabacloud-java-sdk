@@ -42,7 +42,7 @@ public class UpdateExternalAgentRequest extends TeaModel {
 
     public static class UpdateExternalAgentRequestBodyModelQuota extends TeaModel {
         /**
-         * <p>Specifies whether to enable token quota. Defaults to true if not specified. Set to false to disable and delete existing quota rules.</p>
+         * <p>Specifies whether to enable the token quota. Default value: true. If set to false, the quota is disabled and existing quota rules are deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -51,7 +51,7 @@ public class UpdateExternalAgentRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The quota limit type. Required by backend validation when quota is enabled. Fixed value: token.</p>
+         * <p>The quota limit type. Required and validated by the backend when the quota is enabled. Fixed value: token.</p>
          * 
          * <strong>example:</strong>
          * <p>token</p>
@@ -60,7 +60,11 @@ public class UpdateExternalAgentRequest extends TeaModel {
         public String limitType;
 
         /**
-         * <p>The quota statistical period. Required by backend validation when quota is enabled. Valid values: day (daily) and month (monthly).</p>
+         * <p>The statistical period for the quota. Required and validated by the backend when the quota is enabled. Valid values:</p>
+         * <ul>
+         * <li>day: Daily.</li>
+         * <li>month: Monthly.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>day</p>
@@ -69,7 +73,7 @@ public class UpdateExternalAgentRequest extends TeaModel {
         public String periodType;
 
         /**
-         * <p>The maximum number of tokens that can be consumed within a single period. Required by backend validation when quota is enabled. The value must be greater than 0.</p>
+         * <p>The maximum number of tokens allowed to be consumed within a single period. Required and validated by the backend when the quota is enabled. The value must be greater than 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1000000</p>
@@ -138,7 +142,7 @@ public class UpdateExternalAgentRequest extends TeaModel {
         public String modelName;
 
         /**
-         * <p>The model token quota configuration. If not specified, no quota is configured.</p>
+         * <p>The model token quota configuration. If not passed, no quota is configured.</p>
          */
         @NameInMap("quota")
         public UpdateExternalAgentRequestBodyModelQuota quota;
@@ -174,6 +178,52 @@ public class UpdateExternalAgentRequest extends TeaModel {
 
     }
 
+    public static class UpdateExternalAgentRequestBodySkillsVersionSelector extends TeaModel {
+        /**
+         * <p>The type of the version selector. Valid values:</p>
+         * <ul>
+         * <li>LABEL: By label.</li>
+         * <li>VERSION: By specific version.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LABEL</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        /**
+         * <p>The value of the selector. When the type is LABEL, this is the label name, such as latest. When the type is VERSION, this is the specific version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>latest</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static UpdateExternalAgentRequestBodySkillsVersionSelector build(java.util.Map<String, ?> map) throws Exception {
+            UpdateExternalAgentRequestBodySkillsVersionSelector self = new UpdateExternalAgentRequestBodySkillsVersionSelector();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateExternalAgentRequestBodySkillsVersionSelector setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public UpdateExternalAgentRequestBodySkillsVersionSelector setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class UpdateExternalAgentRequestBodySkills extends TeaModel {
         /**
          * <p>The skill name.</p>
@@ -186,6 +236,19 @@ public class UpdateExternalAgentRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The source type of the skill. Valid values:</p>
+         * <ul>
+         * <li>REFERENCE: References the AI Registry.</li>
+         * <li>STATIC: Statically provided with the package.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>REFERENCE</p>
+         */
+        @NameInMap("sourceType")
+        public String sourceType;
+
+        /**
          * <p>The skill version.</p>
          * 
          * <strong>example:</strong>
@@ -193,6 +256,12 @@ public class UpdateExternalAgentRequest extends TeaModel {
          */
         @NameInMap("version")
         public String version;
+
+        /**
+         * <p>The referenced version selector. If omitted, the default is LABEL/latest. Currently, only LABEL/latest is supported.</p>
+         */
+        @NameInMap("versionSelector")
+        public UpdateExternalAgentRequestBodySkillsVersionSelector versionSelector;
 
         public static UpdateExternalAgentRequestBodySkills build(java.util.Map<String, ?> map) throws Exception {
             UpdateExternalAgentRequestBodySkills self = new UpdateExternalAgentRequestBodySkills();
@@ -207,6 +276,14 @@ public class UpdateExternalAgentRequest extends TeaModel {
             return this.name;
         }
 
+        public UpdateExternalAgentRequestBodySkills setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
         public UpdateExternalAgentRequestBodySkills setVersion(String version) {
             this.version = version;
             return this;
@@ -215,11 +292,19 @@ public class UpdateExternalAgentRequest extends TeaModel {
             return this.version;
         }
 
+        public UpdateExternalAgentRequestBodySkills setVersionSelector(UpdateExternalAgentRequestBodySkillsVersionSelector versionSelector) {
+            this.versionSelector = versionSelector;
+            return this;
+        }
+        public UpdateExternalAgentRequestBodySkillsVersionSelector getVersionSelector() {
+            return this.versionSelector;
+        }
+
     }
 
     public static class UpdateExternalAgentRequestBodyTemplateAiRegistry extends TeaModel {
         /**
-         * <p>The name of the template in AI Registry.</p>
+         * <p>The name of the template in the AI Registry.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,7 +314,7 @@ public class UpdateExternalAgentRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The version of the template in AI Registry.</p>
+         * <p>The version of the template in the AI Registry.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -335,13 +420,13 @@ public class UpdateExternalAgentRequest extends TeaModel {
          * <p>The description of the external agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>A code review agent running in the user environment</p>
+         * <p>Code review agent running in the user environment</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The agent instruction that guides the behavior of the agent.</p>
+         * <p>The agent instructions used to guide the behavior of the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>You are a code review assistant</p>
@@ -356,10 +441,10 @@ public class UpdateExternalAgentRequest extends TeaModel {
         public UpdateExternalAgentRequestBodyModel model;
 
         /**
-         * <p>The model configuration source. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model independently, and the model parameter cannot be specified at the same time. Valid values:</p>
+         * <p>The source of the model configuration. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model independently, and the model parameter cannot be passed at the same time. Valid values:</p>
          * <ul>
-         * <li>PLATFORM: platform model.</li>
-         * <li>RUNTIME: runtime model.</li>
+         * <li>PLATFORM: Platform model.</li>
+         * <li>RUNTIME: Runtime model.</li>
          * </ul>
          * 
          * <strong>example:</strong>

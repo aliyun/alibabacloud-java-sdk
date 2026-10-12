@@ -23,13 +23,13 @@ public class ListUsersResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The user list.</p>
+     * <p>The list of users.</p>
      */
     @NameInMap("items")
     public java.util.List<ListUsersResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of records per page that takes effect in the current query.</p>
+     * <p>The maximum number of records per page that takes effect in this query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListUsersResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The response message. If the request fails, an error description is returned.</p>
+     * <p>The response message. An error description is returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class ListUsersResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The cursor for the next page. If no next page exists, this parameter is empty.</p>
+     * <p>The cursor for the next page. This parameter is empty if no next page exists.</p>
      * 
      * <strong>example:</strong>
      * <p>dXNlci1vZmZzZXQ6MTA</p>
@@ -167,7 +167,7 @@ public class ListUsersResponseBody extends TeaModel {
         public String agentCoreUserId;
 
         /**
-         * <p>The authentication method of the user. A value of password indicates that the user is authenticated by using the local password of the workspace. A value of dingtalk or feishu indicates that the user is synchronized and authenticated by the corresponding external identity provider.</p>
+         * <p>The authentication method of the user. A value of password indicates that local password authentication in the workspace is used. A value of dingtalk or feishu indicates that the user is synchronized and authenticated by the corresponding external identity provider.</p>
          * 
          * <strong>example:</strong>
          * <p>password</p>
@@ -176,7 +176,7 @@ public class ListUsersResponseBody extends TeaModel {
         public String authMethod;
 
         /**
-         * <p>The creation time. The time is displayed in UTC and follows the RFC 3339 format.</p>
+         * <p>The creation time in UTC format based on RFC 3339.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
@@ -203,7 +203,7 @@ public class ListUsersResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>The username. The username must be unique within the workspace and can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or a digit, and must be 1 to 32 characters in length.</p>
+         * <p>The user name. The name must be unique within the workspace, contain only lowercase letters, digits, and hyphens, start and end with a lowercase letter or a digit, and be 1 to 32 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>user-01</p>
@@ -212,10 +212,10 @@ public class ListUsersResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The note of the user. The note can be up to 1,024 characters in length.</p>
+         * <p>The user remarks. The remarks can be up to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>Agent operations team member</p>
+         * <p>Member of the agent operations team</p>
          */
         @NameInMap("note")
         public String note;
@@ -230,7 +230,7 @@ public class ListUsersResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The status of the user. Valid values: Creating, Active, Updating, Deleting, Failed, and DeleteFailed.</p>
+         * <p>The user status. Valid values: Creating, Active, Updating, Deleting, Failed, and DeleteFailed.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>
@@ -239,7 +239,7 @@ public class ListUsersResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time of the last modification. The time is displayed in UTC and follows the RFC 3339 format.</p>
+         * <p>The last modification time in UTC format based on RFC 3339.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>

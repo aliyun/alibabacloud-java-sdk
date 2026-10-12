@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetExternalAgentResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value is SUCCESS when the request succeeds.</p>
+     * <p>The business status code. The value is SUCCESS if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -20,7 +20,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
     public GetExternalAgentResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. The value is 200 when the request succeeds.</p>
+     * <p>The HTTP status code. 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,7 +47,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -105,14 +105,125 @@ public class GetExternalAgentResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetExternalAgentResponseBodyDataConfiguredSkillsVersionSelector extends TeaModel {
+        /**
+         * <p>The type of the version selector. Valid values: LABEL (selects by tag) and VERSION (selects by specific version).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LABEL</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        /**
+         * <p>The value of the selector. If the type is LABEL, the value is a tag name such as latest. If the type is VERSION, the value is a specific version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>latest</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static GetExternalAgentResponseBodyDataConfiguredSkillsVersionSelector build(java.util.Map<String, ?> map) throws Exception {
+            GetExternalAgentResponseBodyDataConfiguredSkillsVersionSelector self = new GetExternalAgentResponseBodyDataConfiguredSkillsVersionSelector();
+            return TeaModel.build(map, self);
+        }
+
+        public GetExternalAgentResponseBodyDataConfiguredSkillsVersionSelector setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public GetExternalAgentResponseBodyDataConfiguredSkillsVersionSelector setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class GetExternalAgentResponseBodyDataConfiguredSkills extends TeaModel {
+        /**
+         * <p>The name of the skill in the Workspace AI Registry.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>web-search</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <p>The source type of the skill. Valid values: REFERENCE (references the AI Registry) and STATIC (statically provided with the package).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>REFERENCE</p>
+         */
+        @NameInMap("sourceType")
+        public String sourceType;
+
+        /**
+         * <p>The legacy compatibility field. Use sourceType and versionSelector for new requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
+        @NameInMap("version")
+        public String version;
+
+        /**
+         * <p>The referenced version selector. If omitted, the default value is LABEL/latest. Only LABEL/latest is supported in the current phase.</p>
+         */
+        @NameInMap("versionSelector")
+        public GetExternalAgentResponseBodyDataConfiguredSkillsVersionSelector versionSelector;
+
+        public static GetExternalAgentResponseBodyDataConfiguredSkills build(java.util.Map<String, ?> map) throws Exception {
+            GetExternalAgentResponseBodyDataConfiguredSkills self = new GetExternalAgentResponseBodyDataConfiguredSkills();
+            return TeaModel.build(map, self);
+        }
+
+        public GetExternalAgentResponseBodyDataConfiguredSkills setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetExternalAgentResponseBodyDataConfiguredSkills setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        public GetExternalAgentResponseBodyDataConfiguredSkills setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+        public GetExternalAgentResponseBodyDataConfiguredSkills setVersionSelector(GetExternalAgentResponseBodyDataConfiguredSkillsVersionSelector versionSelector) {
+            this.versionSelector = versionSelector;
+            return this;
+        }
+        public GetExternalAgentResponseBodyDataConfiguredSkillsVersionSelector getVersionSelector() {
+            return this.versionSelector;
+        }
+
+    }
+
     public static class GetExternalAgentResponseBodyDataExternalAgentStatus extends TeaModel {
         /**
-         * <p>The heartbeat status. ONLINE indicates that the most recent heartbeat has not exceeded the configured timeout threshold. STALE indicates that the heartbeat has timed out. UNKNOWN indicates that the heartbeat is missing or has an invalid format. Valid values:</p>
-         * <ul>
-         * <li>ONLINE: Online.</li>
-         * <li>STALE: Heartbeat expired.</li>
-         * <li>UNKNOWN: Unknown.</li>
-         * </ul>
+         * <p>The heartbeat status. ONLINE indicates that the most recent heartbeat did not exceed the configured timeout threshold. STALE indicates that the heartbeat has timed out. UNKNOWN indicates that the heartbeat is missing or the format is invalid. Valid values: ONLINE (online), STALE (heartbeat expired), and UNKNOWN (unknown).</p>
          * 
          * <strong>example:</strong>
          * <p>ONLINE</p>
@@ -121,7 +232,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public String heartbeatStatus;
 
         /**
-         * <p>The most recent active time of the external agent in RFC 3339 format.</p>
+         * <p>The last active time of the external agent in RFC 3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01T00:00:00Z</p>
@@ -130,7 +241,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public String lastActiveAt;
 
         /**
-         * <p>The most recent heartbeat time of the external agent in RFC 3339 format.</p>
+         * <p>The last heartbeat time of the external agent in RFC 3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01T00:00:00Z</p>
@@ -205,7 +316,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
 
     public static class GetExternalAgentResponseBodyDataModelQuota extends TeaModel {
         /**
-         * <p>Indicates whether the quota is enabled. This parameter is not returned if no quota is configured.</p>
+         * <p>Specifies whether the quota is enabled. This field is not returned if no quota is configured.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -214,7 +325,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The quota limit type. Currently, only token is supported.</p>
+         * <p>The quota limit type. Only token is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>token</p>
@@ -223,7 +334,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public String limitType;
 
         /**
-         * <p>Indicates whether the quota has been exceeded in the current cycle. This is a read-only field returned by the backend.</p>
+         * <p>Specifies whether the quota is exceeded in the current period. This field is read-only and returned by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -232,7 +343,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public Boolean overLimit;
 
         /**
-         * <p>The quota statistical period. day indicates daily and month indicates monthly.</p>
+         * <p>The quota statistical period. Valid values: day (daily) and month (monthly).</p>
          * 
          * <strong>example:</strong>
          * <p>day</p>
@@ -241,7 +352,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public String periodType;
 
         /**
-         * <p>The gateway quota rule status. This is a read-only field returned by the backend.</p>
+         * <p>The gateway quota rule status. This field is read-only and returned by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
@@ -250,7 +361,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public String ruleStatus;
 
         /**
-         * <p>The maximum number of tokens that can be consumed within a single cycle.</p>
+         * <p>The maximum number of tokens allowed to be consumed in a single period.</p>
          * 
          * <strong>example:</strong>
          * <p>1000000</p>
@@ -259,7 +370,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public Long usageLimit;
 
         /**
-         * <p>The number of tokens consumed in the current cycle. This is a read-only field returned by the backend.</p>
+         * <p>The number of tokens consumed in the current period. This field is read-only and returned by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -341,7 +452,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public String modelConnectionId;
 
         /**
-         * <p>The upstream model name.</p>
+         * <p>The name of the upstream model.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-max</p>
@@ -350,7 +461,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public String modelName;
 
         /**
-         * <p>The model token quota configuration and the quota usage status in the current cycle. This parameter is empty if no quota is configured.</p>
+         * <p>The model token quota configuration and usage status for the current period. This field is empty if no quota is configured.</p>
          */
         @NameInMap("quota")
         public GetExternalAgentResponseBodyDataModelQuota quota;
@@ -386,16 +497,93 @@ public class GetExternalAgentResponseBody extends TeaModel {
 
     }
 
+    public static class GetExternalAgentResponseBodyDataSkillsVersionSelector extends TeaModel {
+        /**
+         * <p>The type of the version selector. Valid values: LABEL (selects by tag) and VERSION (selects by specific version).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LABEL</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        /**
+         * <p>The value of the selector. If the type is LABEL, the value is a tag name such as latest. If the type is VERSION, the value is a specific version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>latest</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static GetExternalAgentResponseBodyDataSkillsVersionSelector build(java.util.Map<String, ?> map) throws Exception {
+            GetExternalAgentResponseBodyDataSkillsVersionSelector self = new GetExternalAgentResponseBodyDataSkillsVersionSelector();
+            return TeaModel.build(map, self);
+        }
+
+        public GetExternalAgentResponseBodyDataSkillsVersionSelector setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public GetExternalAgentResponseBodyDataSkillsVersionSelector setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetExternalAgentResponseBodyDataSkills extends TeaModel {
         /**
-         * <p>The skill name.</p>
-         * <p>This parameter is required.</p>
+         * <p>The effective version at runtime. This field is read-only.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
+        @NameInMap("appliedVersion")
+        public String appliedVersion;
+
+        /**
+         * <p>Specifies whether the skill is from a fixed template. This field is read-only. Template items cannot be removed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("fromTemplate")
+        public Boolean fromTemplate;
+
+        /**
+         * <p>The name of the skill.</p>
          * 
          * <strong>example:</strong>
          * <p>code-analysis</p>
          */
         @NameInMap("name")
         public String name;
+
+        /**
+         * <p>The current target version. This field is read-only.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
+        @NameInMap("resolvedVersion")
+        public String resolvedVersion;
+
+        /**
+         * <p>The source type of the skill. Valid values: REFERENCE (references the AI Registry) and STATIC (statically provided with the package).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>REFERENCE</p>
+         */
+        @NameInMap("sourceType")
+        public String sourceType;
 
         /**
          * <p>The skill version.</p>
@@ -406,9 +594,31 @@ public class GetExternalAgentResponseBody extends TeaModel {
         @NameInMap("version")
         public String version;
 
+        /**
+         * <p>The referenced version selector. If omitted, the default value is LABEL/latest.</p>
+         */
+        @NameInMap("versionSelector")
+        public GetExternalAgentResponseBodyDataSkillsVersionSelector versionSelector;
+
         public static GetExternalAgentResponseBodyDataSkills build(java.util.Map<String, ?> map) throws Exception {
             GetExternalAgentResponseBodyDataSkills self = new GetExternalAgentResponseBodyDataSkills();
             return TeaModel.build(map, self);
+        }
+
+        public GetExternalAgentResponseBodyDataSkills setAppliedVersion(String appliedVersion) {
+            this.appliedVersion = appliedVersion;
+            return this;
+        }
+        public String getAppliedVersion() {
+            return this.appliedVersion;
+        }
+
+        public GetExternalAgentResponseBodyDataSkills setFromTemplate(Boolean fromTemplate) {
+            this.fromTemplate = fromTemplate;
+            return this;
+        }
+        public Boolean getFromTemplate() {
+            return this.fromTemplate;
         }
 
         public GetExternalAgentResponseBodyDataSkills setName(String name) {
@@ -419,12 +629,36 @@ public class GetExternalAgentResponseBody extends TeaModel {
             return this.name;
         }
 
+        public GetExternalAgentResponseBodyDataSkills setResolvedVersion(String resolvedVersion) {
+            this.resolvedVersion = resolvedVersion;
+            return this;
+        }
+        public String getResolvedVersion() {
+            return this.resolvedVersion;
+        }
+
+        public GetExternalAgentResponseBodyDataSkills setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
         public GetExternalAgentResponseBodyDataSkills setVersion(String version) {
             this.version = version;
             return this;
         }
         public String getVersion() {
             return this.version;
+        }
+
+        public GetExternalAgentResponseBodyDataSkills setVersionSelector(GetExternalAgentResponseBodyDataSkillsVersionSelector versionSelector) {
+            this.versionSelector = versionSelector;
+            return this;
+        }
+        public GetExternalAgentResponseBodyDataSkillsVersionSelector getVersionSelector() {
+            return this.versionSelector;
         }
 
     }
@@ -507,10 +741,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The tool type. Valid values:</p>
-         * <ul>
-         * <li>MCP: MCP tool.</li>
-         * </ul>
+         * <p>The tool type. Valid values: MCP.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -553,6 +784,12 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public String agentId;
 
         /**
+         * <p>Includes only the skills added or overridden by the user, excluding inherited items from templates. The resource model reads this field to preserve update semantics. Creation and update operations still use the skills in the request.</p>
+         */
+        @NameInMap("configuredSkills")
+        public java.util.List<GetExternalAgentResponseBodyDataConfiguredSkills> configuredSkills;
+
+        /**
          * <p>The creation mode.</p>
          * 
          * <strong>example:</strong>
@@ -583,19 +820,19 @@ public class GetExternalAgentResponseBody extends TeaModel {
          * <p>The description of the external agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>A code review agent running in the user environment</p>
+         * <p>Code review agent running in the user environment</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The runtime status information reported by the external agent.</p>
+         * <p>The running status information reported by the external agent.</p>
          */
         @NameInMap("externalAgentStatus")
         public GetExternalAgentResponseBodyDataExternalAgentStatus externalAgentStatus;
 
         /**
-         * <p>The agent instruction that guides the behavior of the agent.</p>
+         * <p>The agent instruction used to guide the behavior of the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>You are a code review assistant</p>
@@ -613,15 +850,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public Long latestSpecVersion;
 
         /**
-         * <p>The processing status of the latest specification version. Valid values:</p>
-         * <ul>
-         * <li>pending: Pending.</li>
-         * <li>processing: Processing.</li>
-         * <li>waiting_retry: Waiting for retry.</li>
-         * <li>succeeded: Succeeded.</li>
-         * <li>failed: Failed.</li>
-         * <li>superseded: Superseded by a newer version.</li>
-         * </ul>
+         * <p>The processing status of the latest specification version. Valid values: pending (pending), processing (processing), waiting_retry (waiting for retry), succeeded (succeeded), failed (failed), and superseded (superseded by a new version).</p>
          * 
          * <strong>example:</strong>
          * <p>pending</p>
@@ -630,17 +859,13 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public String latestVersionStatus;
 
         /**
-         * <p>The model configuration. This parameter is available only when modelSource is set to PLATFORM.</p>
+         * <p>The model configuration. This field is available only when modelSource is set to PLATFORM.</p>
          */
         @NameInMap("model")
         public GetExternalAgentResponseBodyDataModel model;
 
         /**
-         * <p>The model configuration source. PLATFORM indicates that the model configuration is parsed and distributed by the platform. RUNTIME indicates that the model is managed by the external runtime, and the model parameter cannot be specified at the same time. Valid values:</p>
-         * <ul>
-         * <li>PLATFORM: Platform model.</li>
-         * <li>RUNTIME: Runtime model.</li>
-         * </ul>
+         * <p>The source of the model configuration. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model itself, and the model field cannot be passed at the same time. Valid values: PLATFORM (platform model) and RUNTIME (runtime model).</p>
          * 
          * <strong>example:</strong>
          * <p>PLATFORM</p>
@@ -682,15 +907,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         public java.util.List<GetExternalAgentResponseBodyDataSkills> skills;
 
         /**
-         * <p>The status of the external agent. Valid values:</p>
-         * <ul>
-         * <li>Creating: Being created.</li>
-         * <li>Running: Running.</li>
-         * <li>Failed: Failed.</li>
-         * <li>Updating: Being updated.</li>
-         * <li>Deleting: Being deleted.</li>
-         * <li>Deleted: Deleted.</li>
-         * </ul>
+         * <p>The status of the external agent. Valid values: Creating (creating), Running (running), Failed (failed), Updating (updating), Deleting (deleting), and Deleted (deleted).</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -739,6 +956,14 @@ public class GetExternalAgentResponseBody extends TeaModel {
         }
         public String getAgentId() {
             return this.agentId;
+        }
+
+        public GetExternalAgentResponseBodyData setConfiguredSkills(java.util.List<GetExternalAgentResponseBodyDataConfiguredSkills> configuredSkills) {
+            this.configuredSkills = configuredSkills;
+            return this;
+        }
+        public java.util.List<GetExternalAgentResponseBodyDataConfiguredSkills> getConfiguredSkills() {
+            return this.configuredSkills;
         }
 
         public GetExternalAgentResponseBodyData setCreateMode(String createMode) {

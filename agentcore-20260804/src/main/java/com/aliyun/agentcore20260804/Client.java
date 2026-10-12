@@ -5106,7 +5106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query of users in a specified workspace. You can filter users by fuzzy match on the username by using nameLike, specify the maximum number of records per page for paging by using maxResults, and obtain the next page by using nextToken. If maxResults is not specified, the server returns 10 records by default.</p>
+     * <p>Performs a paged query for users in a specified workspace. You can use nameLike to filter users by fuzzy match on the username, maxResults to specify the maximum number of records per page for paging, and nextToken to retrieve the next page. If maxResults is not specified, 10 records are returned by default.</p>
      * 
      * @param request ListUsersRequest
      * @param headers map
@@ -5116,6 +5116,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListUsersResponse listUsersWithOptions(String workspaceId, ListUsersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("email", request.email);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("maxResults", request.maxResults);
         }
@@ -5152,7 +5156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query of users in a specified workspace. You can filter users by fuzzy match on the username by using nameLike, specify the maximum number of records per page for paging by using maxResults, and obtain the next page by using nextToken. If maxResults is not specified, the server returns 10 records by default.</p>
+     * <p>Performs a paged query for users in a specified workspace. You can use nameLike to filter users by fuzzy match on the username, maxResults to specify the maximum number of records per page for paging, and nextToken to retrieve the next page. If maxResults is not specified, 10 records are returned by default.</p>
      * 
      * @param request ListUsersRequest
      * @return ListUsersResponse
