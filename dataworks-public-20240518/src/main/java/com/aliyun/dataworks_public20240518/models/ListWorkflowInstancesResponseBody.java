@@ -273,7 +273,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         public String workflowParameters;
 
         /**
-         * <p>The instance ID of the node corresponding to the workflow instance.</p>
+         * <p>The ID of the task instance corresponding to the workflow instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>

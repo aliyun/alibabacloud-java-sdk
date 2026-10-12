@@ -1103,7 +1103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
      * </ol>
      * <ul>
-     * <li>Tenant owner, storage management administrator, project owner, or O&amp;M engineer.</li>
+     * <li>Tenant owner, workspace administrator, project owner, or O&amp;M engineer.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1148,7 +1148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
      * </ol>
      * <ul>
-     * <li>Tenant owner, storage management administrator, project owner, or O&amp;M engineer.</li>
+     * <li>Tenant owner, workspace administrator, project owner, or O&amp;M engineer.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1576,9 +1576,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a more advanced edition to use this API.
-     * You must have at least one of the following roles in the DataWorks workspace:
-     * Tenant owner, storage management administrator, project owner, or O&amp;M engineer.</p>
+     * <p>DataWorks Basic Edition or later is required.
+     * You must have at least one of the following roles in the DataWorks workspace: tenant owner, workspace administrator, project owner, or O&amp;M engineer.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a compute resource in a specified workspace. The compute resource can be used in the development or production environment.</p>
@@ -1633,9 +1632,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a more advanced edition to use this API.
-     * You must have at least one of the following roles in the DataWorks workspace:
-     * Tenant owner, storage management administrator, project owner, or O&amp;M engineer.</p>
+     * <p>DataWorks Basic Edition or later is required.
+     * You must have at least one of the following roles in the DataWorks workspace: tenant owner, workspace administrator, project owner, or O&amp;M engineer.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a compute resource in a specified workspace. The compute resource can be used in the development or production environment.</p>
@@ -2901,15 +2899,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must have purchased DataWorks Basic Edition or a higher edition.</li>
-     * <li>You must have at least one of the following roles in the DataWorks project workspace:</li>
+     * <li>You must purchase DataWorks Basic Edition or a more advanced edition to use this API.</li>
+     * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
      * </ol>
      * <ul>
-     * <li>Tenant Owner, workspace administrator, Project Owner, or O&amp;M</li>
+     * <li>tenant owner, workspace administrator, project owner, or operator.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a data source in a specified project workspace for the development or production environment.</p>
+     * <p>Creates a data source in a specified workspace for the development or production environment.</p>
      * 
      * @param request CreateDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2962,15 +2960,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must have purchased DataWorks Basic Edition or a higher edition.</li>
-     * <li>You must have at least one of the following roles in the DataWorks project workspace:</li>
+     * <li>You must purchase DataWorks Basic Edition or a more advanced edition to use this API.</li>
+     * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
      * </ol>
      * <ul>
-     * <li>Tenant Owner, workspace administrator, Project Owner, or O&amp;M</li>
+     * <li>tenant owner, workspace administrator, project owner, or operator.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a data source in a specified project workspace for the development or production environment.</p>
+     * <p>Creates a data source in a specified workspace for the development or production environment.</p>
      * 
      * @param request CreateDataSourceRequest
      * @return CreateDataSourceResponse
@@ -4176,7 +4174,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a deployment process for an entity in DataStudio.</p>
+     * <p>Creates a deployment process for an entity in Data Studio.</p>
      * 
      * @param tmpReq CreatePipelineRunRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4240,7 +4238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a deployment process for an entity in DataStudio.</p>
+     * <p>Creates a deployment process for an entity in Data Studio.</p>
      * 
      * @param request CreatePipelineRunRequest
      * @return CreatePipelineRunResponse
@@ -9607,12 +9605,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This feature is available only in DataWorks Basic Edition or a higher edition.</li>
-     * <li>You must have at least one of the following roles in the DataWorks project: Tenant Owner, Space Administrator, Deployment, Developer, Project Owner, or O&amp;M.</li>
+     * <li>You must purchase DataWorks Basic Edition or a more advanced edition to use this API.</li>
+     * <li>You must have at least one of the following roles in the DataWorks workspace: tenant owner, workspace administrator, deployer, developer, project owner, or operator.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>You can view authentication files.</p>
+     * <p>Retrieves a certificate file.</p>
      * 
      * @param request GetCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9641,12 +9639,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This feature is available only in DataWorks Basic Edition or a higher edition.</li>
-     * <li>You must have at least one of the following roles in the DataWorks project: Tenant Owner, Space Administrator, Deployment, Developer, Project Owner, or O&amp;M.</li>
+     * <li>You must purchase DataWorks Basic Edition or a more advanced edition to use this API.</li>
+     * <li>You must have at least one of the following roles in the DataWorks workspace: tenant owner, workspace administrator, deployer, developer, project owner, or operator.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>You can view authentication files.</p>
+     * <p>Retrieves a certificate file.</p>
      * 
      * @param request GetCertificateRequest
      * @return GetCertificateResponse
@@ -12237,10 +12235,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or a later edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the information of a specified resource group by ID.</p>
+     * <p>Retrieves the details of a specified resource group by ID.</p>
      * 
      * @param request GetResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12268,10 +12266,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or a later edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the information of a specified resource group by ID.</p>
+     * <p>Retrieves the details of a specified resource group by ID.</p>
      * 
      * @param request GetResourceGroupRequest
      * @return GetResourceGroupResponse
@@ -12840,7 +12838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You must purchase DataWorks Basic Edition or later to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified node instance.</p>
+     * <p>Retrieves the details of a specified task instance.</p>
      * 
      * @param request GetTaskInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12871,7 +12869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You must purchase DataWorks Basic Edition or later to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified node instance.</p>
+     * <p>Retrieves the details of a specified task instance.</p>
      * 
      * @param request GetTaskInstanceRequest
      * @return GetTaskInstanceResponse
@@ -19475,7 +19473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a paged list of node instances. You can also perform a filtered query based on conditions.</p>
+     * <p>Retrieves a paged list of task instances. You can also perform a filtered query based on conditions.</p>
      * 
      * @param tmpReq ListTaskInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19604,7 +19602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a paged list of node instances. You can also perform a filtered query based on conditions.</p>
+     * <p>Retrieves a paged list of task instances. You can also perform a filtered query based on conditions.</p>
      * 
      * @param request ListTaskInstancesRequest
      * @return ListTaskInstancesResponse
@@ -22040,10 +22038,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>DataWorks Basic Edition or later is required.
+     * Task instance stop mechanism and precautions:</p>
+     * <ol>
+     * <li>Stopping a task instance is an asynchronous operation. Sending a stop request does not mean that the instance stops immediately. Continue to query the instance status after sending the request to confirm the result. If external compute resources are involved, verify the actual status of the remote job.</li>
+     * <li>The status of a DataWorks task instance may not match the status of the remote job. For tasks that rely on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a stop request to the remote end through a client. Due to network exceptions, client compatibility, and other factors, a DataWorks task instance may be marked as failed while the remote job is still running. Therefore, you cannot rely solely on the DataWorks task instance status to determine whether the remote job has stopped. Check the status on the corresponding computing platform and manually stop the job if necessary to prevent it from continuing to run or consuming additional resources.</li>
+     * <li>Pay special attention to MaxCompute tasks that use shared schedule resource groups. DataWorks shared schedule resource groups will soon be retired. Due to component version and compatibility limits, stop commands for some MaxCompute tasks may not take effect on the remote end. If this occurs, check the actual status of the corresponding instance in MaxCompute. If the instance is still running, perform a kill operation in MaxCompute and verify that it has stopped.</li>
+     * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Stops multiple instances in a batch.</p>
+     * <p>Stops multiple task instances.</p>
      * 
      * @param tmpReq StopTaskInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22085,10 +22089,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>DataWorks Basic Edition or later is required.
+     * Task instance stop mechanism and precautions:</p>
+     * <ol>
+     * <li>Stopping a task instance is an asynchronous operation. Sending a stop request does not mean that the instance stops immediately. Continue to query the instance status after sending the request to confirm the result. If external compute resources are involved, verify the actual status of the remote job.</li>
+     * <li>The status of a DataWorks task instance may not match the status of the remote job. For tasks that rely on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a stop request to the remote end through a client. Due to network exceptions, client compatibility, and other factors, a DataWorks task instance may be marked as failed while the remote job is still running. Therefore, you cannot rely solely on the DataWorks task instance status to determine whether the remote job has stopped. Check the status on the corresponding computing platform and manually stop the job if necessary to prevent it from continuing to run or consuming additional resources.</li>
+     * <li>Pay special attention to MaxCompute tasks that use shared schedule resource groups. DataWorks shared schedule resource groups will soon be retired. Due to component version and compatibility limits, stop commands for some MaxCompute tasks may not take effect on the remote end. If this occurs, check the actual status of the corresponding instance in MaxCompute. If the instance is still running, perform a kill operation in MaxCompute and verify that it has stopped.</li>
+     * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Stops multiple instances in a batch.</p>
+     * <p>Stops multiple task instances.</p>
      * 
      * @param request StopTaskInstancesRequest
      * @return StopTaskInstancesResponse
@@ -22889,9 +22899,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a more advanced edition to use this operation.</li>
-     * <li>You must have at least one of the following roles in a DataWorks workspace:</li>
-     * <li>Tenant owner, tenant administrator, storage management administrator, project owner, or O&amp;M engineer.</li>
+     * <li>DataWorks Basic Edition or later is required.</li>
+     * <li>You must have at least one of the following roles in the DataWorks workspace: tenant owner, tenant administrator, workspace administrator, project owner, or O&amp;M engineer.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -22944,9 +22953,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a more advanced edition to use this operation.</li>
-     * <li>You must have at least one of the following roles in a DataWorks workspace:</li>
-     * <li>Tenant owner, tenant administrator, storage management administrator, project owner, or O&amp;M engineer.</li>
+     * <li>DataWorks Basic Edition or later is required.</li>
+     * <li>You must have at least one of the following roles in the DataWorks workspace: tenant owner, tenant administrator, workspace administrator, project owner, or O&amp;M engineer.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -24037,7 +24045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
      * </ol>
      * <ul>
-     * <li>Tenant Owner, Tenant Administrator, storage management administrator, Project Owner, or O&amp;M Engineer.</li>
+     * <li>Tenant Owner, Tenant Administrator, Workspace Administrator, Project Owner, or O&amp;M Engineer.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -24094,7 +24102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
      * </ol>
      * <ul>
-     * <li>Tenant Owner, Tenant Administrator, storage management administrator, Project Owner, or O&amp;M Engineer.</li>
+     * <li>Tenant Owner, Tenant Administrator, Workspace Administrator, Project Owner, or O&amp;M Engineer.</li>
      * </ul>
      * 
      * <b>summary</b> : 

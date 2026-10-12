@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Table extends TeaModel {
     /**
-     * <p>The business metadata related to DataWorks, including the instructions, tags, categories, upstream output nodes, and extension information.</p>
+     * <p>The business metadata related to DataWorks, including the instructions, tags, categories, upstream output tasks, and extension information.</p>
      */
     @NameInMap("BusinessMetadata")
     public TableBusinessMetadata businessMetadata;
@@ -422,7 +422,7 @@ public class Table extends TeaModel {
 
     public static class TableBusinessMetadataUpstreamTasks extends TeaModel {
         /**
-         * <p>The node ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -431,7 +431,7 @@ public class Table extends TeaModel {
         public Long id;
 
         /**
-         * <p>The node name.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_task</p>
@@ -497,7 +497,7 @@ public class Table extends TeaModel {
         public java.util.List<TableBusinessMetadataTags> tags;
 
         /**
-         * <p>The list of upstream output nodes.</p>
+         * <p>The list of upstream output tasks.</p>
          */
         @NameInMap("UpstreamTasks")
         public java.util.List<TableBusinessMetadataUpstreamTasks> upstreamTasks;

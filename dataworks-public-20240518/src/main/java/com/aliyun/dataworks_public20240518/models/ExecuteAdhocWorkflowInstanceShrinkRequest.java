@@ -14,7 +14,11 @@ public class ExecuteAdhocWorkflowInstanceShrinkRequest extends TeaModel {
     public Long bizDate;
 
     /**
-     * <p>The project environment.</p>
+     * <p>The project environment. Valid values:</p>
+     * <ul>
+     * <li>Prod: production.</li>
+     * <li>Dev: development.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Prod</p>
@@ -53,7 +57,7 @@ public class ExecuteAdhocWorkflowInstanceShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The list of nodes.</p>
+     * <p>The list of tasks.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tasks")

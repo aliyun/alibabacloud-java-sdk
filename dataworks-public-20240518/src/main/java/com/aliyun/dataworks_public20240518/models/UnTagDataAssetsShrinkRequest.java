@@ -12,12 +12,10 @@ public class UnTagDataAssetsShrinkRequest extends TeaModel {
     public String dataAssetIdsShrink;
 
     /**
-     * <p>The Asset Type of the data asset. Valid values:</p>
+     * <p>The type of the data asset. Valid values:</p>
      * <ul>
-     * <li><p>Data table (ACS::DataWorks::Table)</p>
-     * </li>
-     * <li><p>Scheduling node (ACS::DataWorks::Task)</p>
-     * </li>
+     * <li>Data table (ACS::DataWorks::Table)</li>
+     * <li>Scheduled task (ACS::DataWorks::Task)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

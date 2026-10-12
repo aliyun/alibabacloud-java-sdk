@@ -23,10 +23,8 @@ public class TagDataAssetsRequest extends TeaModel {
     /**
      * <p>The data asset type. Valid values:</p>
      * <ul>
-     * <li><p>DataWorks table (ACS::DataWorks::Table)</p>
-     * </li>
-     * <li><p>DataWorks scheduling node (ACS::DataWorks::Task)</p>
-     * </li>
+     * <li>DataWorks table (ACS::DataWorks::Table)</li>
+     * <li>DataWorks scheduled task (ACS::DataWorks::Task)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

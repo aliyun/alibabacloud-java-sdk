@@ -825,7 +825,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
         /**
          * <p>The hook type. Only one type is supported:</p>
          * <ul>
-         * <li>BlockTaskInstance: blocks the scheduled node from continuing to run. If the data quality monitoring task is triggered by a scheduled node, the system determines whether to block the scheduled node based on Hook.Condition after the data quality monitoring task is completed.</li>
+         * <li>BlockTaskInstance: blocks the scheduled task from continuing to run. If the data quality monitoring task is triggered by a scheduled task, the system determines whether to block the scheduled task based on Hook.Condition after the data quality monitoring task is completed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1094,7 +1094,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
     public static class CreateDataQualityEvaluationTaskRequestTrigger extends TeaModel {
         /**
-         * <p>The list of scheduled node IDs. This parameter takes effect only when Type is set to ByScheduledTaskInstance.</p>
+         * <p>The list of scheduled task IDs. This parameter takes effect only when Type is set to ByScheduledTaskInstance.</p>
          */
         @NameInMap("TaskIds")
         public java.util.List<Long> taskIds;
@@ -1103,7 +1103,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
          * <p>The trigger type for the data quality monitoring task. Valid values:</p>
          * <ul>
          * <li>ByManual: triggered manually. This is the default value.</li>
-         * <li>ByScheduledTaskInstance: triggered by an associated scheduled node.</li>
+         * <li>ByScheduledTaskInstance: triggered by an associated scheduled task.</li>
          * </ul>
          * 
          * <strong>example:</strong>

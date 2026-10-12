@@ -109,7 +109,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
 
     public static class ListTaskInstancesResponseBodyPagingInfoTaskInstancesRuntimeResource extends TeaModel {
         /**
-         * <p>The number of compute units (CUs) consumed during node execution.</p>
+         * <p>The number of compute units (CUs) consumed during task execution.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -118,7 +118,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public String cu;
 
         /**
-         * <p>The ID of the image configured for node execution.</p>
+         * <p>The ID of the image configured for task execution.</p>
          * 
          * <strong>example:</strong>
          * <p>i-xxxxxx</p>
@@ -127,7 +127,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public String image;
 
         /**
-         * <p>The identifier of the schedule resource group configured for node execution.</p>
+         * <p>The identifier of the schedule resource group configured for task execution.</p>
          * 
          * <strong>example:</strong>
          * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
@@ -228,7 +228,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Long finishedTime;
 
         /**
-         * <p>The unique identifier of the node instance.</p>
+         * <p>The unique identifier of the task instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -273,7 +273,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The cycle number. This indicates the cycle round of the node instance on the current day.</p>
+         * <p>The cycle number. This indicates the cycle round of the task instance on the current day.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -282,7 +282,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Integer periodNumber;
 
         /**
-         * <p>The running priority of the node. Valid values: 1 to 8. A larger value indicates a higher priority. Default value: 1.</p>
+         * <p>The running priority of the task. Valid values: 1 to 8. A larger value indicates a higher priority. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -313,7 +313,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The rerun configuration for the node. Valid values:</p>
+         * <p>The rerun configuration for the task. Valid values:</p>
          * <ul>
          * <li>AllDenied: Reruns are not allowed regardless of success or failure.</li>
          * <li>FailureAllowed: Reruns are allowed only after failures.</li>
@@ -395,7 +395,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Long taskId;
 
         /**
-         * <p>The name of the node.</p>
+         * <p>The name of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>SQL node</p>
@@ -404,7 +404,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>The type of the node.</p>
+         * <p>The type of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>ODPS_SQL</p>
@@ -413,7 +413,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The timeout period for node execution, in seconds. Note: The scheduling system rounds the configured value to the nearest hour.</p>
+         * <p>The timeout period for task execution, in seconds. Note: The scheduling system rounds the configured value to the whole hours.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -503,7 +503,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Long workflowInstanceId;
 
         /**
-         * <p>The type of the workflow instance to which the node belongs. Valid values:</p>
+         * <p>The type of the workflow instance to which the task instance belongs. Valid values:</p>
          * <ul>
          * <li>SmokeTest: Smoke test.</li>
          * <li>SupplementData: Data backfill.</li>
@@ -520,7 +520,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public String workflowInstanceType;
 
         /**
-         * <p>The name of the workflow to which the node belongs.</p>
+         * <p>The name of the workflow to which the task instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>Test workflow</p>
@@ -851,7 +851,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The list of node instances.</p>
+         * <p>The list of task instances.</p>
          */
         @NameInMap("TaskInstances")
         public java.util.List<ListTaskInstancesResponseBodyPagingInfoTaskInstances> taskInstances;

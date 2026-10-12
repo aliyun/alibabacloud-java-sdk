@@ -535,7 +535,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         public CreateWorkflowInstancesRequestDefaultRunPropertiesRunPolicy runPolicy;
 
         /**
-         * <p>The identifier of the custom scheduling resource group. If this field is left empty, the node configuration is used.</p>
+         * <p>The identifier of the custom scheduling resource group. If this field is left empty, the task configuration is used.</p>
          * 
          * <strong>example:</strong>
          * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>

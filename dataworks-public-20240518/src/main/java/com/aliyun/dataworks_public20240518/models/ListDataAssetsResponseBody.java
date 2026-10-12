@@ -271,7 +271,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
          * <ul>
          * <li><p>DataWorks table (ACS::DataWorks::Table)</p>
          * </li>
-         * <li><p>DataWorks scheduling node (ACS::DataWorks::Task)</p>
+         * <li><p>DataWorks scheduled task (ACS::DataWorks::Task)</p>
          * </li>
          * </ul>
          * 

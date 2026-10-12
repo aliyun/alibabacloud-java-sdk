@@ -99,7 +99,7 @@ public class UpdateDataQualityAlertRuleRequest extends TeaModel {
         public String extension;
 
         /**
-         * <p>The alerting accept object type.</p>
+         * <p>The type of the alert recipient.</p>
          * <ul>
          * <li>AliUid</li>
          * <li>WebhookUrl</li>

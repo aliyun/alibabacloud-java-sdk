@@ -53,7 +53,7 @@ public class UpdateMcpServerResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p><strong>The last modification time in milliseconds.</strong></p>
+         * <p><strong>The last modification time as a millisecond timestamp.</strong></p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>

@@ -62,7 +62,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String functionType;
 
     /**
-     * <p>The description of the input parameters for the function, which corresponds to the metric description in the create function form.</p>
+     * <p>The description of the input parameters for the function, which corresponds to the parameter description in the create function form.</p>
      * 
      * <strong>example:</strong>
      * <p>List of strings to be connected</p>
@@ -71,7 +71,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String parameterDescription;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can view the ID on the storage management page by clicking the Settings icon in the upper-right corner.</p>
+     * <p>The ID of the DataWorks workspace. You can view the ID on the Workspace Management page by clicking the Settings icon in the upper-right corner.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -80,7 +80,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The unique identifier of the DataWorks workspace, which is the English identifier displayed when you switch workspaces at the top of the DataStudio page.</p>
+     * <p>The unique identifier of the DataWorks workspace, which is the English identifier displayed when you switch workspaces at the top of the Data Studio page.</p>
      * <p>You must specify either this parameter or the ProjectId parameter to determine the DataWorks workspace for the API call.</p>
      * 
      * <strong>example:</strong>

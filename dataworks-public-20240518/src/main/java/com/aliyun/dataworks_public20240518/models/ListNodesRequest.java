@@ -88,7 +88,7 @@ public class ListNodesRequest extends TeaModel {
     public String rerunMode;
 
     /**
-     * <p>The scenario to which the node belongs. This parameter is used as a filter condition. If you do not specify this parameter, leave it empty. In DataStudio, this parameter corresponds to the partitions in the left-side directory tree. Valid values: </p>
+     * <p>The scenario to which the node belongs. This parameter is used as a filter condition. If you do not specify this parameter, leave it empty. In Data Studio, this parameter corresponds to the partitions in the left-side directory tree. Valid values: </p>
      * <ul>
      * <li><p>DataworksProject: project directory.</p>
      * </li>

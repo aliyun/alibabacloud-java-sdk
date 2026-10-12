@@ -6,9 +6,8 @@ import com.aliyun.tea.*;
 public class UpdateFileRequest extends TeaModel {
     /**
      * <p>The advanced settings of the task.</p>
-     * <p>This parameter corresponds to the Advanced Settings section in the right-side navigation pane of the edit page for EMR Spark Streaming and EMR Streaming SQL data development tasks in the DataWorks console.</p>
-     * <p>Currently, only EMR Spark Streaming and EMR Streaming SQL tasks support this parameter, and the parameter value must be in JSON format.
-     * <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></p>
+     * <p>This parameter corresponds to the Advanced Settings section in the right-side navigation pane of the edit page for EMR Spark Streaming and EMR Streaming SQL data development tasks in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+     * <p>Currently, only EMR Spark Streaming and EMR Streaming SQL tasks support this parameter, and the parameter value must be in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;queue&quot;:&quot;default&quot;,&quot;SPARK_CONF&quot;:&quot;--conf spark.driver.memory=2g&quot;}</p>
@@ -31,8 +30,7 @@ public class UpdateFileRequest extends TeaModel {
      * <li>true: The file automatically parses code.</li>
      * <li>false: The file does not automatically parse code.</li>
      * </ul>
-     * <p>This parameter corresponds to the Code Parsing parameter in the Schedule &gt; Scheduling Dependencies section of the DataWorks console.
-     * <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></p>
+     * <p>This parameter corresponds to the Code Parsing parameter in the Schedule &gt; Scheduling Dependencies section of the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -42,8 +40,7 @@ public class UpdateFileRequest extends TeaModel {
 
     /**
      * <p>The interval between automatic reruns after a failure, in milliseconds. The maximum value is 1800000, which indicates 30 minutes.</p>
-     * <p>This parameter corresponds to the Rerun Interval parameter in the Schedule &gt; Time Attributes &gt; Auto Rerun upon Failure section of the DataWorks console. The unit of the Rerun Interval parameter in the console is minutes. Convert the time unit when you call this operation.
-     * <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></p>
+     * <p>This parameter corresponds to the Rerun Interval parameter in the Schedule &gt; Time Attributes &gt; Auto Rerun upon Failure section of the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. The unit of the Rerun Interval parameter in the console is minutes. Convert the time unit when you call this operation.</p>
      * 
      * <strong>example:</strong>
      * <p>120000</p>
@@ -79,22 +76,22 @@ public class UpdateFileRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>The cron expression for periodic scheduling. This parameter corresponds to the cron expression in the Schedule &gt; Time Property section for the data development node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. After you configure the scheduling cycle and timed scheduling time, DataWorks automatically generates the corresponding cron expression.</p>
+     * <p>The cron expression for periodic scheduling. This parameter corresponds to the cron expression in the Schedule &gt; Time Property section for the data development task in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. After you configure the scheduling cycle and timed scheduling time, DataWorks automatically generates the corresponding cron expression.</p>
      * <p>Examples:</p>
      * <ul>
-     * <li><p>Schedule a node at 05:30 every day: <code>00 30 05 * * ?</code>.</p>
+     * <li><p>Schedule a task at 05:30 every day: <code>00 30 05 * * ?</code>.</p>
      * </li>
-     * <li><p>Schedule a node at the 15th minute of every hour: <code>00 15 * * * ?</code>.</p>
+     * <li><p>Schedule a task at the 15th minute of every hour: <code>00 15 * * * ?</code>.</p>
      * </li>
-     * <li><p>Schedule a node every 10 minutes: <code>00 00/10 * * * ?</code>.</p>
+     * <li><p>Schedule a task every 10 minutes: <code>00 00/10 * * * ?</code>.</p>
      * </li>
-     * <li><p>Schedule a node every 10 minutes from 08:00 to 17:00 every day: <code>00 00-59/10 8-23 * * * ?</code>.</p>
+     * <li><p>Schedule a task every 10 minutes from 08:00 to 17:00 every day: <code>00 00-59/10 8-23 * * * ?</code>.</p>
      * </li>
-     * <li><p>Schedule a node at 00:20 on the first day of every month: <code>00 20 00 1 * ?</code>.</p>
+     * <li><p>Schedule a task at 00:20 on the first day of every month: <code>00 20 00 1 * ?</code>.</p>
      * </li>
-     * <li><p>Schedule a node every three months starting from 00:10 on January 1: <code>00 10 00 1 1-12/3 ?</code>.</p>
+     * <li><p>Schedule a task every three months starting from 00:10 on January 1: <code>00 10 00 1 1-12/3 ?</code>.</p>
      * </li>
-     * <li><p>Schedule a node at 00:05 every Tuesday and Friday: <code>00 05 00 * * 2,5</code>.</p>
+     * <li><p>Schedule a task at 00:05 every Tuesday and Friday: <code>00 05 00 * * 2,5</code>.</p>
      * </li>
      * </ul>
      * <p>Due to the rules of the DataWorks scheduling system, cron expressions have the following limits:</p>
@@ -113,8 +110,7 @@ public class UpdateFileRequest extends TeaModel {
 
     /**
      * <p>The type of the scheduling cycle. Valid values: NOT_DAY (minutes and hours) and DAY (days, weeks, and months).</p>
-     * <p>This parameter corresponds to the Schedule Type parameter in the Schedule &gt; Time Attributes section of the DataWorks console.
-     * <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></p>
+     * <p>This parameter corresponds to the Schedule Type parameter in the Schedule &gt; Time Attributes section of the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>NOT_DAY</p>
@@ -149,8 +145,7 @@ public class UpdateFileRequest extends TeaModel {
 
     /**
      * <p>The end time of automatic scheduling, in the form of a millisecond timestamp.</p>
-     * <p>This parameter corresponds to the end time in the Schedule &gt; Time Attributes &gt; Effective Date section of the DataWorks console.
-     * <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></p>
+     * <p>This parameter corresponds to the end time in the Schedule &gt; Time Attributes &gt; Effective Date section of the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>4155787800000</p>
@@ -196,8 +191,7 @@ public class UpdateFileRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>This parameter corresponds to the Skip Dry Run of Upstream Nodes parameter that is configured when you set the Dependency parameter to Cross-cycle Dependency (Previous Cycle) and select Current Node or Child Nodes at First Level in the Schedule &gt; Scheduling Dependencies section of the DataWorks console.
-     * <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></p>
+     * <p>This parameter corresponds to the Skip Dry Run of Upstream Nodes parameter that is configured when you set the Dependency parameter to Cross-cycle Dependency (Previous Cycle) and select Current Node or Child Nodes at First Level in the Schedule &gt; Scheduling Dependencies section of the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -216,10 +210,9 @@ public class UpdateFileRequest extends TeaModel {
 
     /**
      * <p>The output names of the upstream files on which the current file depends. Separate multiple output names with commas (,).</p>
-     * <p>This parameter corresponds to the Output Name of Upstream Node parameter in the Schedule &gt; Scheduling Dependencies section of the DataWorks console.</p>
+     * <p>This parameter corresponds to the Output Name of Upstream Node parameter in the Schedule &gt; Scheduling Dependencies section of the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * <blockquote>
-     * <p>This parameter is required when you create a batch synchronization task by calling the CreateDISyncTask or UpdateFile operation.
-     * <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></p>
+     * <p>This parameter is required when you create a offline synchronization task by calling the CreateDISyncTask or UpdateFile operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -230,8 +223,7 @@ public class UpdateFileRequest extends TeaModel {
 
     /**
      * <p>The context input parameters of the node. The parameter value is in JSON format. For the included fields, refer to the InputContextParameterList parameter structure in the response of the <a href="https://help.aliyun.com/document_detail/173954.html">GetFile</a> operation.</p>
-     * <p>This parameter corresponds to the Input Parameters of Current Node parameter in the Schedule &gt; Node Context Parameters section of the DataWorks console.
-     * <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></p>
+     * <p>This parameter corresponds to the Input Parameters of Current Node parameter in the Schedule &gt; Node Context Parameters section of the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;ValueSource&quot;: &quot;project_001.first_node:bizdate_param&quot;,&quot;ParameterName&quot;: &quot;bizdate_input&quot;}]</p>
@@ -241,8 +233,7 @@ public class UpdateFileRequest extends TeaModel {
 
     /**
      * <p>The output of the file.</p>
-     * <p>This parameter corresponds to the Output Name of Current Node parameter in the Schedule &gt; Scheduling Dependencies section of the DataWorks console.
-     * <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></p>
+     * <p>This parameter corresponds to the Output Name of Current Node parameter in the Schedule &gt; Scheduling Dependencies section of the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>dw_project.ods_user_info_d</p>
@@ -252,8 +243,7 @@ public class UpdateFileRequest extends TeaModel {
 
     /**
      * <p>The context output parameters of the node. The parameter value is in JSON format. For the included fields, refer to the OutputContextParameterList parameter structure in the response of the <a href="https://help.aliyun.com/document_detail/173954.html">GetFile</a> operation.</p>
-     * <p>This parameter corresponds to the Output Parameters of Current Node parameter in the Schedule &gt; Node Context Parameters section of the DataWorks console.
-     * <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></p>
+     * <p>This parameter corresponds to the Output Parameters of Current Node parameter in the Schedule &gt; Node Context Parameters section of the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;Type&quot;: 1,&quot;Value&quot;: &quot;${bizdate}&quot;,&quot;ParameterName&quot;: &quot;bizdate_param&quot;}]</p>
@@ -272,8 +262,7 @@ public class UpdateFileRequest extends TeaModel {
 
     /**
      * <p>The scheduling parameters.</p>
-     * <p>This parameter corresponds to the Scheduling Parameters section in the Schedule section of the DataWorks console. For more information, see <a href="https://help.aliyun.com/document_detail/137548.html">Scheduling parameters</a>.
-     * <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></p>
+     * <p>This parameter corresponds to the Scheduling Parameters section in the Schedule section of the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/137548.html">Scheduling parameters</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>x=a y=b z=c</p>
@@ -303,12 +292,11 @@ public class UpdateFileRequest extends TeaModel {
     /**
      * <p>The rerun mode. Valid values:</p>
      * <ul>
-     * <li>ALL_ALLOWED: The node can be rerun regardless of whether it is successfully run or fails to run.</li>
-     * <li>FAILURE_ALLOWED: The node can be rerun only after it fails to run.</li>
-     * <li>ALL_DENIED: The node cannot be rerun regardless of whether it is successfully run or fails to run.</li>
+     * <li>ALL_ALLOWED: The task can be rerun regardless of whether it is successfully run or fails to run.</li>
+     * <li>FAILURE_ALLOWED: The task can be rerun only after it fails to run.</li>
+     * <li>ALL_DENIED: The task cannot be rerun regardless of whether it is successfully run or fails to run.</li>
      * </ul>
-     * <p>This parameter corresponds to the Rerun Mode parameter in the Schedule &gt; Time Attributes section of the DataWorks console.
-     * <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></p>
+     * <p>This parameter corresponds to the Rerun Mode parameter in the Schedule &gt; Time Attributes section of the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ALL_ALLOWED</p>
@@ -342,8 +330,7 @@ public class UpdateFileRequest extends TeaModel {
 
     /**
      * <p>The start time of automatic scheduling, in the form of a millisecond timestamp.</p>
-     * <p>This parameter corresponds to the start time in the Schedule &gt; Time Attributes &gt; Effective Date section of the DataWorks console.
-     * <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></p>
+     * <p>This parameter corresponds to the start time in the Schedule &gt; Time Attributes &gt; Effective Date section of the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>936923400000</p>
@@ -357,8 +344,7 @@ public class UpdateFileRequest extends TeaModel {
      * <li>true: Start the task immediately after it is published.</li>
      * <li>false: Do not start the task immediately after it is published.</li>
      * </ul>
-     * <p>This parameter corresponds to the Startup Method parameter in the Configuration &gt; Time Attributes section in the right-side navigation pane of the edit page for EMR Spark Streaming and EMR Streaming SQL data development tasks in the DataWorks console.
-     * <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></p>
+     * <p>This parameter corresponds to the Startup Method parameter in the Configuration &gt; Time Attributes section in the right-side navigation pane of the edit page for EMR Spark Streaming and EMR Streaming SQL data development tasks in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -372,8 +358,7 @@ public class UpdateFileRequest extends TeaModel {
      * <li>true: Pause scheduling.</li>
      * <li>false: Do not pause scheduling.</li>
      * </ul>
-     * <p>This parameter corresponds to the Pause Scheduling option in the Schedule &gt; Time Attributes &gt; Schedule Type section of the DataWorks console.
-     * <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></p>
+     * <p>This parameter corresponds to the Pause Scheduling option in the Schedule &gt; Time Attributes &gt; Schedule Type section of the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

@@ -298,7 +298,7 @@ public class ListWorkflowsResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The node tags.</p>
+         * <p>The task tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListWorkflowsResponseBodyPagingInfoWorkflowsTags> tags;

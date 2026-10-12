@@ -34,7 +34,7 @@ public class ListDataQualityScanRunsShrinkRequest extends TeaModel {
     /**
      * <p>The extension query filter. The following filter parameters are supported:</p>
      * <ul>
-     * <li>TaskInstanceId: the scheduling node instance ID.</li>
+     * <li>TaskInstanceId: the scheduled task instance ID.</li>
      * <li>RunNumber: the number of times the instance has run.</li>
      * </ul>
      * 

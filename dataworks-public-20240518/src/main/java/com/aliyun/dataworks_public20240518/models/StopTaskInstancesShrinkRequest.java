@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopTaskInstancesShrinkRequest extends TeaModel {
     /**
-     * <p>The remarks.</p>
+     * <p>The comment.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a comment</p>
@@ -14,7 +14,7 @@ public class StopTaskInstancesShrinkRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The list of instance IDs.</p>
+     * <p>The list of task instance IDs.</p>
      */
     @NameInMap("Ids")
     public String idsShrink;
