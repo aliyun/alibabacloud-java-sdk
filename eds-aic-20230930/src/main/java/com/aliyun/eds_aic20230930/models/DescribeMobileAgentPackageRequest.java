@@ -17,7 +17,7 @@ public class DescribeMobileAgentPackageRequest extends TeaModel {
     public java.util.List<String> packageIds;
 
     /**
-     * <p>The package specification.</p>
+     * <p>The package specifications.</p>
      * 
      * <strong>example:</strong>
      * <p>advanced</p>

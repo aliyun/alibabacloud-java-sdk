@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewCloudPhoneNodesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment. The default value is false.</p>
+     * <p>Specifies whether to enable automatic payment. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,21 +23,22 @@ public class RenewCloudPhoneNodesRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>A list of cloud phone matrix IDs.</p>
+     * <p>The list of cloud phone matrix IDs.</p>
      */
     @NameInMap("NodeIds")
     public java.util.List<String> nodeIds;
 
+    /**
+     * <p>The redirect URL for the payment success page.</p>
+     */
     @NameInMap("PaidCallBackUrl")
     public String paidCallBackUrl;
 
     /**
-     * <p>The renewal duration. The <code>PeriodUnit</code> parameter specifies the unit.</p>
+     * <p>The subscription period. The unit is specified by PeriodUnit.</p>
      * <ul>
-     * <li><p>If <code>PeriodUnit</code> is <strong>Year</strong>, the value must be 1.</p>
-     * </li>
-     * <li><p>If <code>PeriodUnit</code> is <strong>Month</strong>, the valid values are 1, 2, 3, and 6.</p>
-     * </li>
+     * <li>If PeriodUnit is set to <strong>year</strong>, the only valid value is 1.</li>
+     * <li>If PeriodUnit is set to <strong>month</strong>, valid values are 1, 2, 3, and 6.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +48,7 @@ public class RenewCloudPhoneNodesRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the renewal duration.</p>
+     * <p>The unit of the subscription period.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -56,7 +57,7 @@ public class RenewCloudPhoneNodesRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The promotion ID.</p>
+     * <p>The ID of the promotion.</p>
      */
     @NameInMap("PromotionId")
     public String promotionId;

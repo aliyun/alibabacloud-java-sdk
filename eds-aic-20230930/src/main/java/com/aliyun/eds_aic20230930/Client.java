@@ -572,7 +572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a cloud phone matrix. Currently, only the instance type and the number of cloud phone instances (the instance count of the cloud phone matrix) can be changed.</p>
+     * <p>Modifies the configuration of a cloud phone matrix. Currently, only instance type changes and cloud phone instance count changes are supported (the instance count refers to the number of instances in the cloud phone matrix).</p>
      * 
      * @param request ChangeCloudPhoneNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -644,7 +644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a cloud phone matrix. Currently, only the instance type and the number of cloud phone instances (the instance count of the cloud phone matrix) can be changed.</p>
+     * <p>Modifies the configuration of a cloud phone matrix. Currently, only instance type changes and cloud phone instance count changes are supported (the instance count refers to the number of instances in the cloud phone matrix).</p>
      * 
      * @param request ChangeCloudPhoneNodeRequest
      * @return ChangeCloudPhoneNodeResponse
@@ -1178,8 +1178,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a cloud phone matrix.
-     * In the Wuying Cloud Phone system, a matrix (Cloud Phone Server) is a logical resource management unit that represents a physical server instance. The physical server can be divided into multiple independently running cloud phone instances that share the underlying compute, storage, and network resources of the matrix. Creating a matrix is equivalent to obtaining a physical server on which you can create cloud phone instances. The number of cloud phone instances varies based on the configuration.</p>
+     * <p>Creates a cloud phone matrix. In the Wuying Cloud Phone system, a matrix (Cloud Phone Server) is a logical resource management snap-in that represents a physical server instance. The physical server can be divided into multiple independently running cloud phone instances that share the underlying compute, storage, and network resources of the matrix. Creating a matrix is equivalent to obtaining a physical server on which you can create the corresponding cloud phone instances. The number of cloud phone instances varies based on the configuration.</p>
      * 
      * @param tmpReq CreateCloudPhoneNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1351,8 +1350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a cloud phone matrix.
-     * In the Wuying Cloud Phone system, a matrix (Cloud Phone Server) is a logical resource management unit that represents a physical server instance. The physical server can be divided into multiple independently running cloud phone instances that share the underlying compute, storage, and network resources of the matrix. Creating a matrix is equivalent to obtaining a physical server on which you can create cloud phone instances. The number of cloud phone instances varies based on the configuration.</p>
+     * <p>Creates a cloud phone matrix. In the Wuying Cloud Phone system, a matrix (Cloud Phone Server) is a logical resource management snap-in that represents a physical server instance. The physical server can be divided into multiple independently running cloud phone instances that share the underlying compute, storage, and network resources of the matrix. Creating a matrix is equivalent to obtaining a physical server on which you can create the corresponding cloud phone instances. The number of cloud phone instances varies based on the configuration.</p>
      * 
      * @param request CreateCloudPhoneNodeRequest
      * @return CreateCloudPhoneNodeResponse
@@ -1364,10 +1362,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Elastic Cloud Phone.</p>
+     * <p>This API operation involves billing. Make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of WUYING Cloud Phone before you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Purchases a credit booster pack.</p>
+     * <p>Places an order to purchase a credit top-up package.</p>
      * 
      * @param request CreateCreditPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1423,10 +1421,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Elastic Cloud Phone.</p>
+     * <p>This API operation involves billing. Make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of WUYING Cloud Phone before you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Purchases a credit booster pack.</p>
+     * <p>Places an order to purchase a credit top-up package.</p>
      * 
      * @param request CreateCreditPackageRequest
      * @return CreateCreditPackageResponse
@@ -1628,10 +1626,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation involves billing. Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Elastic Cloud Phone.</p>
+     * <p>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of WUYING Cloud Phone.</p>
      * 
      * <b>summary</b> : 
-     * <p>Purchases a resource plan by placing an order.</p>
+     * <p>Purchases a resource plan.</p>
      * 
      * @param request CreateMobileAgentPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1723,10 +1721,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation involves billing. Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Elastic Cloud Phone.</p>
+     * <p>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of WUYING Cloud Phone.</p>
      * 
      * <b>summary</b> : 
-     * <p>Purchases a resource plan by placing an order.</p>
+     * <p>Purchases a resource plan.</p>
      * 
      * @param request CreateMobileAgentPackageRequest
      * @return CreateMobileAgentPackageResponse
@@ -1734,6 +1732,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateMobileAgentPackageResponse createMobileAgentPackage(CreateMobileAgentPackageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createMobileAgentPackageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an agent task.</p>
+     * 
+     * @param request CreateMobileAgentTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMobileAgentTaskResponse
+     */
+    public CreateMobileAgentTaskResponse createMobileAgentTaskWithOptions(CreateMobileAgentTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("AgentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputParam)) {
+            query.put("InputParam", request.inputParam);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeIds)) {
+            query.put("NodeIds", request.nodeIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMobileAgentTask"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMobileAgentTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an agent task.</p>
+     * 
+     * @param request CreateMobileAgentTaskRequest
+     * @return CreateMobileAgentTaskResponse
+     */
+    public CreateMobileAgentTaskResponse createMobileAgentTask(CreateMobileAgentTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createMobileAgentTaskWithOptions(request, runtime);
     }
 
     /**
@@ -2560,7 +2622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about Agent Tasks.</p>
+     * <p>Queries the information about agent tasks.</p>
      * 
      * @param request DescribeAgentTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2592,7 +2654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about Agent Tasks.</p>
+     * <p>Queries the information about agent tasks.</p>
      * 
      * @param request DescribeAgentTaskRequest
      * @return DescribeAgentTaskResponse
@@ -2908,7 +2970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Currently, only backup files generated by cloud phones can be stored in Object Storage Service (OSS).</p>
+     * <p>Currently, only backup files generated by cloud phones can be saved in Object Storage Service (OSS).</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a list of backup files.</p>
@@ -2995,7 +3057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Currently, only backup files generated by cloud phones can be stored in Object Storage Service (OSS).</p>
+     * <p>Currently, only backup files generated by cloud phones can be saved in Object Storage Service (OSS).</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a list of backup files.</p>
@@ -3010,10 +3072,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Currently, you can save backup files generated by Cloud Phone only to Object Storage Service (OSS).</p>
+     * <p>Currently, only backup files generated by Cloud Phone can be stored in Object Storage Service (OSS).</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about buckets. This operation returns only the buckets whose names start with <code>cloudphone-saved-bucket-</code>.</p>
+     * <p>Queries the list of buckets whose names start with cloudphone-saved-bucket-.</p>
      * 
      * @param request DescribeBucketsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3045,10 +3107,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Currently, you can save backup files generated by Cloud Phone only to Object Storage Service (OSS).</p>
+     * <p>Currently, only backup files generated by Cloud Phone can be stored in Object Storage Service (OSS).</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about buckets. This operation returns only the buckets whose names start with <code>cloudphone-saved-bucket-</code>.</p>
+     * <p>Queries the list of buckets whose names start with cloudphone-saved-bucket-.</p>
      * 
      * @param request DescribeBucketsRequest
      * @return DescribeBucketsResponse
@@ -3230,7 +3292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries credit booster packages.</p>
+     * <p>Queries credit boost packages.</p>
      * 
      * @param request DescribeCreditPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3266,7 +3328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries credit booster packages.</p>
+     * <p>Queries credit boost packages.</p>
      * 
      * @param request DescribeCreditPackageRequest
      * @return DescribeCreditPackageResponse
@@ -3386,7 +3448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of available images.</p>
+     * <p>Queries a list of images.</p>
      * 
      * @param request DescribeImageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3456,7 +3518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of available images.</p>
+     * <p>Queries a list of images.</p>
      * 
      * @param request DescribeImageListRequest
      * @return DescribeImageListResponse
@@ -3468,10 +3530,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is being deprecated. Use the <a href="t2740507.xdita#"></a>operation to query the progress and results of a command execution.</p>
+     * <p>This operation will be deprecated soon. Use the <a href="https://help.aliyun.com/document_detail/2833926.html">DescribeTasks</a> operation to query the progress and results of command execution.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the execution results of a command run by calling the RunCommand operation.</p>
+     * <p>Queries the command execution results of the RunCommand operation.</p>
      * 
      * @param request DescribeInvocationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3507,10 +3569,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is being deprecated. Use the <a href="t2740507.xdita#"></a>operation to query the progress and results of a command execution.</p>
+     * <p>This operation will be deprecated soon. Use the <a href="https://help.aliyun.com/document_detail/2833926.html">DescribeTasks</a> operation to query the progress and results of command execution.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the execution results of a command run by calling the RunCommand operation.</p>
+     * <p>Queries the command execution results of the RunCommand operation.</p>
      * 
      * @param request DescribeInvocationsRequest
      * @return DescribeInvocationsResponse
@@ -3522,7 +3584,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries JVS instance information.</p>
+     * <p>Queries the details of JVS instances.</p>
      * 
      * @param request DescribeJVSInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3562,7 +3624,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries JVS instance information.</p>
+     * <p>Queries the details of JVS instances.</p>
      * 
      * @param request DescribeJVSInstanceRequest
      * @return DescribeJVSInstanceResponse
@@ -3630,7 +3692,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the latest monitoring data for an instance or a matrix. You can query metrics such as CPU, memory, disk, and network.</p>
+     * <p>Queries the latest monitoring data of instances or matrices. Supports querying monitoring data such as CPU, memory, disk, and network.</p>
      * 
      * @param request DescribeMetricLastRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3692,7 +3754,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the latest monitoring data for an instance or a matrix. You can query metrics such as CPU, memory, disk, and network.</p>
+     * <p>Queries the latest monitoring data of instances or matrices. Supports querying monitoring data such as CPU, memory, disk, and network.</p>
      * 
      * @param request DescribeMetricLastRequest
      * @return DescribeMetricLastResponse
@@ -3704,7 +3766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries monitoring data for specified metrics, such as network bandwidth.</p>
+     * <p>Queries the monitoring data of specified metrics, such as network bandwidth.</p>
      * 
      * @param request DescribeMetricListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3768,7 +3830,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries monitoring data for specified metrics, such as network bandwidth.</p>
+     * <p>Queries the monitoring data of specified metrics, such as network bandwidth.</p>
      * 
      * @param request DescribeMetricListRequest
      * @return DescribeMetricListResponse
@@ -3780,7 +3842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the latest monitoring data for metrics such as instance network bandwidth and returns the results in a sorted list.</p>
+     * <p>Queries the latest sorted monitoring data and supports querying monitoring data such as instance network bandwidth.</p>
      * 
      * @param request DescribeMetricTopRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3840,7 +3902,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the latest monitoring data for metrics such as instance network bandwidth and returns the results in a sorted list.</p>
+     * <p>Queries the latest sorted monitoring data and supports querying monitoring data such as instance network bandwidth.</p>
      * 
      * @param request DescribeMetricTopRequest
      * @return DescribeMetricTopResponse
@@ -4172,7 +4234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the available specifications for cloud phones. This information is required to create an instance. For the cloud phone matrix mode, this operation also returns the minimum and maximum number of instances allowed per matrix.</p>
+     * <p>Queries the available specifications for cloud phones. You must specify a specification when you create an instance. You can call this operation to retrieve all specification information. For matrix creation, this operation retrieves the maximum and minimum limits on the number of instances that can be created in a single matrix.</p>
      * 
      * @param request DescribeSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4236,7 +4298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the available specifications for cloud phones. This information is required to create an instance. For the cloud phone matrix mode, this operation also returns the minimum and maximum number of instances allowed per matrix.</p>
+     * <p>Queries the available specifications for cloud phones. You must specify a specification when you create an instance. You can call this operation to retrieve all specification information. For matrix creation, this operation retrieves the maximum and minimum limits on the number of instances that can be created in a single matrix.</p>
      * 
      * @param request DescribeSpecRequest
      * @return DescribeSpecResponse
@@ -4305,15 +4367,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call the DescribeTasks operation to query the tasks created for one or more cloud phone instances.</li>
-     * <li>The system currently supports various tasks, including starting, stopping, restarting, and resetting cloud phone instances; backing up and restoring data; installing apps; and executing remote commands.</li>
-     * <li>You can use the Level field to specify the type of task. If Level is set to 1, it represents a batch task. If Level is set to 2, it represents an instance-level task.
-     * <strong>Example</strong>
-     * Assume you restart two cloud phone instances with the instance IDs acp-25nt4kk9whhok\<em>\</em>\<em>\</em> and acp-j2taq887orj8l\<em>\</em>\<em>\</em>, and the returned request ID is B8ED2BA9-0C6A-5643-818F-B5D60A64\<em>\</em>\<em>\</em>. If you want to check the operation outcomes of the two cloud phone instances, you can call the DescribeTasks operation. You need to set the InvokeId request parameter to B8ED2BA9-0C6A-5643-818F-B5D60A64\<em>\</em>\<em>\</em>. If you only want to check the cloud phone instance with the ID acp-25nt4kk9whhok\<em>\</em>\<em>\</em>, you must set the ParentTaskId request parameter to the ID of the batch task and the AndroidInstanceId request parameter to acp-25nt4kk9whhok\<em>\</em>\<em>\</em> when calling the DescribeTasks operation.</li>
+     * <li>You can call the DescribeTasks operation to query the operation status of one or more cloud phone instances.</li>
+     * <li>Task queries are currently supported for operations such as power-on, power-off, restart, reset, backup or restoration, application installation, and remote commands.</li>
+     * <li>The Level field distinguishes task levels. If Level is set to 1, the task is a batch task. If Level is set to 2, the task is an instance-level task.
+     * <strong>Examples:</strong>
+     * Assume that you restart two cloud phone instances whose instance IDs are acp-25nt4kk9whhok**** and acp-j2taq887orj8l****. The requestId returned for this operation is B8ED2BA9-0C6A-5643-818F-B5D60A64****. To check the result of this batch operation, you can call DescribeTasks and set InvokeId to B8ED2BA9-0C6A-5643-818F-B5D60A64****. To obtain the restart result for the instance whose ID is acp-25nt4kk9whhok****, you can call DescribeTasks and set ParentTaskId to the batch task ID and AndroidInstanceId to acp-25nt4kk9whhok****.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries tasks created for a cloud phone instance. Many operations on cloud phones—such as creating, starting, or stopping them—are asynchronous. When you initiate an operation, the system returns a <code>Task ID</code> that you can use to track its progress and final result. You can call this API to retrieve a list of all tasks and their execution statuses.</p>
+     * <p>Queries the current task list of cloud phone instances. Many operations on cloud phones, such as creation and power-on or power-off, are performed asynchronously. The system generates a task ID for you to query the operation progress and results. You can call this operation to query the complete task list and execution status.</p>
      * 
      * @param request DescribeTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4398,15 +4460,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call the DescribeTasks operation to query the tasks created for one or more cloud phone instances.</li>
-     * <li>The system currently supports various tasks, including starting, stopping, restarting, and resetting cloud phone instances; backing up and restoring data; installing apps; and executing remote commands.</li>
-     * <li>You can use the Level field to specify the type of task. If Level is set to 1, it represents a batch task. If Level is set to 2, it represents an instance-level task.
-     * <strong>Example</strong>
-     * Assume you restart two cloud phone instances with the instance IDs acp-25nt4kk9whhok\<em>\</em>\<em>\</em> and acp-j2taq887orj8l\<em>\</em>\<em>\</em>, and the returned request ID is B8ED2BA9-0C6A-5643-818F-B5D60A64\<em>\</em>\<em>\</em>. If you want to check the operation outcomes of the two cloud phone instances, you can call the DescribeTasks operation. You need to set the InvokeId request parameter to B8ED2BA9-0C6A-5643-818F-B5D60A64\<em>\</em>\<em>\</em>. If you only want to check the cloud phone instance with the ID acp-25nt4kk9whhok\<em>\</em>\<em>\</em>, you must set the ParentTaskId request parameter to the ID of the batch task and the AndroidInstanceId request parameter to acp-25nt4kk9whhok\<em>\</em>\<em>\</em> when calling the DescribeTasks operation.</li>
+     * <li>You can call the DescribeTasks operation to query the operation status of one or more cloud phone instances.</li>
+     * <li>Task queries are currently supported for operations such as power-on, power-off, restart, reset, backup or restoration, application installation, and remote commands.</li>
+     * <li>The Level field distinguishes task levels. If Level is set to 1, the task is a batch task. If Level is set to 2, the task is an instance-level task.
+     * <strong>Examples:</strong>
+     * Assume that you restart two cloud phone instances whose instance IDs are acp-25nt4kk9whhok**** and acp-j2taq887orj8l****. The requestId returned for this operation is B8ED2BA9-0C6A-5643-818F-B5D60A64****. To check the result of this batch operation, you can call DescribeTasks and set InvokeId to B8ED2BA9-0C6A-5643-818F-B5D60A64****. To obtain the restart result for the instance whose ID is acp-25nt4kk9whhok****, you can call DescribeTasks and set ParentTaskId to the batch task ID and AndroidInstanceId to acp-25nt4kk9whhok****.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries tasks created for a cloud phone instance. Many operations on cloud phones—such as creating, starting, or stopping them—are asynchronous. When you initiate an operation, the system returns a <code>Task ID</code> that you can use to track its progress and final result. You can call this API to retrieve a list of all tasks and their execution statuses.</p>
+     * <p>Queries the current task list of cloud phone instances. Many operations on cloud phones, such as creation and power-on or power-off, are performed asynchronously. The system generates a task ID for you to query the operation progress and results. You can call this operation to query the complete task list and execution status.</p>
      * 
      * @param request DescribeTasksRequest
      * @return DescribeTasksResponse
@@ -4696,10 +4758,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is only available on the china site (aliyun.com).</p>
+     * <p>This API operation is available only on the China site.</p>
      * 
      * <b>summary</b> : 
-     * <p>Expands the storage of a cloud phone matrix. You can expand shared storage for matrix-level files such as images, and instance storage. Expanding the storage incurs new fees, and the API response returns an order ID.</p>
+     * <p>Expands the storage of a cloud phone matrix. You can expand the shared device storage used to store matrix-level files such as images, as well as the independent device storage. Storage capacity expansion incurs additional fees. The response parameters returned when you invoke the API operation include the order ID for the new fees.</p>
      * 
      * @param request ExpandDataVolumeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4755,10 +4817,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is only available on the china site (aliyun.com).</p>
+     * <p>This API operation is available only on the China site.</p>
      * 
      * <b>summary</b> : 
-     * <p>Expands the storage of a cloud phone matrix. You can expand shared storage for matrix-level files such as images, and instance storage. Expanding the storage incurs new fees, and the API response returns an order ID.</p>
+     * <p>Expands the storage of a cloud phone matrix. You can expand the shared device storage used to store matrix-level files such as images, as well as the independent device storage. Storage capacity expansion incurs additional fees. The response parameters returned when you invoke the API operation include the order ID for the new fees.</p>
      * 
      * @param request ExpandDataVolumeRequest
      * @return ExpandDataVolumeResponse
@@ -5996,7 +6058,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a JVS instance.</p>
+     * <p>Modifies the configurations of JVS instances.</p>
      * 
      * @param request ModifyJVSInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6048,7 +6110,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a JVS instance.</p>
+     * <p>Modifies the configurations of JVS instances.</p>
      * 
      * @param request ModifyJVSInstanceRequest
      * @return ModifyJVSInstanceResponse
@@ -6104,6 +6166,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyKeyPairNameResponse modifyKeyPairName(ModifyKeyPairNameRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyKeyPairNameWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a package.</p>
+     * 
+     * @param request ModifyMobileAgentPackageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyMobileAgentPackageResponse
+     */
+    public ModifyMobileAgentPackageResponse modifyMobileAgentPackageWithOptions(ModifyMobileAgentPackageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.packageId)) {
+            query.put("PackageId", request.packageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyMobileAgentPackage"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyMobileAgentPackageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a package.</p>
+     * 
+     * @param request ModifyMobileAgentPackageRequest
+     * @return ModifyMobileAgentPackageResponse
+     */
+    public ModifyMobileAgentPackageResponse modifyMobileAgentPackage(ModifyMobileAgentPackageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyMobileAgentPackageWithOptions(request, runtime);
     }
 
     /**
@@ -6848,7 +6958,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews the specified cloud phone matrices.</p>
+     * <p>Renews a cloud phone matrix.</p>
      * 
      * @param request RenewCloudPhoneNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6906,7 +7016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews the specified cloud phone matrices.</p>
+     * <p>Renews a cloud phone matrix.</p>
      * 
      * @param request RenewCloudPhoneNodesRequest
      * @return RenewCloudPhoneNodesResponse
@@ -7120,7 +7230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Triggers an Agent on Mobile nodes to execute an AI automation task.</p>
+     * <p>Triggers an agent on a Mobile node to execute AI automation tasks.</p>
      * 
      * @param tmpReq RunAgentTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7194,7 +7304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Triggers an Agent on Mobile nodes to execute an AI automation task.</p>
+     * <p>Triggers an agent on a Mobile node to execute AI automation tasks.</p>
      * 
      * @param request RunAgentTaskRequest
      * @return RunAgentTaskResponse
@@ -7266,10 +7376,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The <code>RunSyncCommand</code> operation is designed for commands that return a result quickly, typically within milliseconds. For longer-running commands that may take several seconds, we recommend using the asynchronous <a href="t2729835.xdita#"></a>operation.</p>
+     * <p><code>RunSyncCommand</code> is suitable for commands that return results quickly, typically within milliseconds. For commands that take longer to execute, typically within seconds, use the <a href="~~RunCommand~~">RunCommand</a> operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Runs a synchronous command on one or more Cloud Phone instances and returns the execution result.</p>
+     * <p>Executes a command on a cloud phone and attempts to return the result.</p>
      * 
      * @param request RunSyncCommandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7313,10 +7423,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The <code>RunSyncCommand</code> operation is designed for commands that return a result quickly, typically within milliseconds. For longer-running commands that may take several seconds, we recommend using the asynchronous <a href="t2729835.xdita#"></a>operation.</p>
+     * <p><code>RunSyncCommand</code> is suitable for commands that return results quickly, typically within milliseconds. For commands that take longer to execute, typically within seconds, use the <a href="~~RunCommand~~">RunCommand</a> operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Runs a synchronous command on one or more Cloud Phone instances and returns the execution result.</p>
+     * <p>Executes a command on a cloud phone and attempts to return the result.</p>
      * 
      * @param request RunSyncCommandRequest
      * @return RunSyncCommandResponse
@@ -8270,7 +8380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrades an instance group. This operation only supports scaling out an instance group, which increases the number of instances.</p>
+     * <p>Upgrades an instance group. Currently, only scaling out the instance group by increasing the number of instances is supported.</p>
      * 
      * @param request UpgradeAndroidInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8318,7 +8428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrades an instance group. This operation only supports scaling out an instance group, which increases the number of instances.</p>
+     * <p>Upgrades an instance group. Currently, only scaling out the instance group by increasing the number of instances is supported.</p>
      * 
      * @param request UpgradeAndroidInstanceGroupRequest
      * @return UpgradeAndroidInstanceGroupResponse

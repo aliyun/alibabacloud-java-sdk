@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCreditDetailRequest extends TeaModel {
     /**
-     * <p>The list of agent types, used to filter credit change details by specified agent types.</p>
+     * <p>The agent types. This parameter is used to filter credit change details by agent type.</p>
      */
     @NameInMap("AgentTypes")
     public java.util.List<String> agentTypes;
 
     /**
-     * <p>The end time.</p>
+     * <p>The end time. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1782906240000</p>
@@ -20,13 +20,13 @@ public class DescribeCreditDetailRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The list of instance IDs.</p>
+     * <p>The instance IDs.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The maximum number of entries to read in this request.</p>
+     * <p>The maximum number of entries to return for this query.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -35,7 +35,7 @@ public class DescribeCreditDetailRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. If a query does not return all results, the returned NextToken is not empty. You can pass the returned NextToken in the next query to continue retrieving results.</p>
+     * <p>The token for the next query. If a query does not return all results, the returned NextToken is not empty. You can pass the returned NextToken in the next query to continue the query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
@@ -44,13 +44,13 @@ public class DescribeCreditDetailRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The list of package or credit booster pack IDs.</p>
+     * <p>The package IDs.</p>
      */
     @NameInMap("PackageIds")
     public java.util.List<String> packageIds;
 
     /**
-     * <p>The page number for pagination. Default value: 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -68,7 +68,7 @@ public class DescribeCreditDetailRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The start time.</p>
+     * <p>The start time. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1782819840000</p>

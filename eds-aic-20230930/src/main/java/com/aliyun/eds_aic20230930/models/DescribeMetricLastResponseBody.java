@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricLastResponseBody extends TeaModel {
     /**
-     * <p>The number of records.</p>
+     * <p>The total count.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -14,13 +14,13 @@ public class DescribeMetricLastResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The instance monitoring data.</p>
+     * <p>The list of instance monitoring results.</p>
      */
     @NameInMap("MetricTotalModel")
     public java.util.List<DescribeMetricLastResponseBodyMetricTotalModel> metricTotalModel;
 
     /**
-     * <p>The token for the next query. If not all results are returned in a single query, the returned NextToken is not empty. You can use the returned NextToken in the next query to query the next page.</p>
+     * <p>The token for the next query. If a single query does not return all results, the returned NextToken is not empty. You can pass the returned NextToken in the next query to continue querying.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
@@ -78,7 +78,7 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         /**
          * <p>The average value. Unit: %.</p>
          * <blockquote>
-         * <p>The unit is bps when the metric is \<code>bandwidth_package_usage_out\\</code> or \<code>bandwidth_package_usage_in\\</code>.</p>
+         * <p>The unit is bps when the monitoring metric is bandwidth_package_usage_out or bandwidth_package_usage_in.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -99,7 +99,7 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         /**
          * <p>The maximum value. Unit: %.</p>
          * <blockquote>
-         * <p>The unit is bps when the metric is \<code>bandwidth_package_usage_out\\</code> or \<code>bandwidth_package_usage_in\\</code>.</p>
+         * <p>The unit is bps when the monitoring metric is bandwidth_package_usage_out or bandwidth_package_usage_in.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         /**
          * <p>The minimum value. Unit: %.</p>
          * <blockquote>
-         * <p>The unit is bps when the metric is \<code>bandwidth_package_usage_out\\</code> or \<code>bandwidth_package_usage_in\\</code>.</p>
+         * <p>The unit is bps when the monitoring metric is bandwidth_package_usage_out or bandwidth_package_usage_in.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -121,7 +121,7 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         public Double minimum;
 
         /**
-         * <p>The timestamp of the statistics. Unit: milliseconds.</p>
+         * <p>The statistical timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1548777660000</p>
@@ -178,7 +178,7 @@ public class DescribeMetricLastResponseBody extends TeaModel {
 
     public static class DescribeMetricLastResponseBodyMetricTotalModelMetricModelListProcessLastInfos extends TeaModel {
         /**
-         * <p>The CPU utilization. Unit: %.</p>
+         * <p>The CPU usage. Unit: %.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -211,7 +211,7 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         public java.util.List<Integer> processIds;
 
         /**
-         * <p>The timestamp of the statistics. Unit: milliseconds.</p>
+         * <p>The statistical timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1548777660000</p>
@@ -268,13 +268,13 @@ public class DescribeMetricLastResponseBody extends TeaModel {
 
     public static class DescribeMetricLastResponseBodyMetricTotalModelMetricModelList extends TeaModel {
         /**
-         * <p>The monitoring data points.</p>
+         * <p>The list of monitoring statistics data points.</p>
          */
         @NameInMap("DataPoints")
         public java.util.List<DescribeMetricLastResponseBodyMetricTotalModelMetricModelListDataPoints> dataPoints;
 
         /**
-         * <p>The name of the metric.</p>
+         * <p>The name of the monitoring metric.</p>
          * 
          * <strong>example:</strong>
          * <p>cpu_utilization</p>
@@ -283,9 +283,9 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         public String metricName;
 
         /**
-         * <p>The process monitoring metrics.</p>
+         * <p>The list of process monitoring metrics.</p>
          * <blockquote>
-         * <p>This parameter is returned when the metric is \<code>process_cpu\\</code> or \<code>process_memory\\</code>.</p>
+         * <p>This parameter is returned when the monitoring metric is process_cpu or process_memory.</p>
          * </blockquote>
          */
         @NameInMap("ProcessLastInfos")
@@ -324,8 +324,8 @@ public class DescribeMetricLastResponseBody extends TeaModel {
 
     public static class DescribeMetricLastResponseBodyMetricTotalModel extends TeaModel {
         /**
-         * <p>For instance-level monitoring, the Cloud Phone instance ID is returned.
-         * &lt;props=&quot;china&quot;&gt;For matrix-level monitoring, the matrix ID is returned.</p>
+         * <p>The cloud phone instance ID returned for instance-level monitoring. 
+         * &lt;props=&quot;china&quot;&gt;The matrix ID returned for matrix-level monitoring.</p>
          * 
          * <strong>example:</strong>
          * <p>acp-fkuit0cmyru4p****</p>
@@ -334,7 +334,7 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         public String androidInstanceId;
 
         /**
-         * <p>The monitoring data for metrics.</p>
+         * <p>The list of metric monitoring results.</p>
          */
         @NameInMap("MetricModelList")
         public java.util.List<DescribeMetricLastResponseBodyMetricTotalModelMetricModelList> metricModelList;

@@ -73,7 +73,7 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
 
     public static class CreateCloudPhoneNodeResponseBodyNetworkPackageOrderModel extends TeaModel {
         /**
-         * <p>The ID of the Internet Shared Bandwidth instance.</p>
+         * <p>The ID of the Internet Shared Bandwidth.</p>
          * 
          * <strong>example:</strong>
          * <p>cbwp-uf63gsv8j0ir53*****</p>

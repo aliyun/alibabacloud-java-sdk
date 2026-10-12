@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEdgeMobileAgentPackagesRequest extends TeaModel {
     /**
-     * <p>The device type filter. Valid values: BOX, PHONE, PAD, and OTHER.</p>
+     * <p>The device class filter. Valid values: BOX, PHONE, PAD, and OTHER.</p>
      * 
      * <strong>example:</strong>
      * <p>BOX</p>
@@ -23,7 +23,7 @@ public class DescribeEdgeMobileAgentPackagesRequest extends TeaModel {
     public String licenseKeys;
 
     /**
-     * <p>The maximum number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The maximum number of entries to return per page. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,7 +32,7 @@ public class DescribeEdgeMobileAgentPackagesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Leave this parameter empty for the first query. For subsequent queries, use the value returned in the previous response.</p>
+     * <p>The pagination token. Leave this parameter empty for the first query. For subsequent queries, obtain the token from the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU****</p>

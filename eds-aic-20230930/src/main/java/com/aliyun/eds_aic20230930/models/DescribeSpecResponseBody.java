@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSpecResponseBody extends TeaModel {
     /**
-     * <p>The token to use for the next request to retrieve a new page of results. If this parameter is empty, all results have been returned.</p>
+     * <p>The token that indicates the position up to which the data is retrieved. An empty value indicates that all data has been retrieved.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</p>
@@ -94,7 +94,7 @@ public class DescribeSpecResponseBody extends TeaModel {
         public String maxPhoneCount;
 
         /**
-         * <p>The memory size in GB.</p>
+         * <p>The memory size.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -112,7 +112,7 @@ public class DescribeSpecResponseBody extends TeaModel {
         public String minPhoneCount;
 
         /**
-         * <p>The number of instances.</p>
+         * <p>The number of cloud phone instances.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -157,7 +157,7 @@ public class DescribeSpecResponseBody extends TeaModel {
         public String specType;
 
         /**
-         * <p>The size of the system disk, in GB.</p>
+         * <p>The system cloud disk size. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>

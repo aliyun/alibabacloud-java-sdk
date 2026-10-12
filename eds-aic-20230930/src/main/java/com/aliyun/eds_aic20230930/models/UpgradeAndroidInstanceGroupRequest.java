@@ -31,11 +31,14 @@ public class UpgradeAndroidInstanceGroupRequest extends TeaModel {
     @NameInMap("InstanceGroupId")
     public String instanceGroupId;
 
+    /**
+     * <p>The redirect URL for the payment success page.</p>
+     */
     @NameInMap("PaidCallBackUrl")
     public String paidCallBackUrl;
 
     /**
-     * <p>The promotion ID.</p>
+     * <p>The ID of the promotion.</p>
      */
     @NameInMap("PromotionId")
     public String promotionId;

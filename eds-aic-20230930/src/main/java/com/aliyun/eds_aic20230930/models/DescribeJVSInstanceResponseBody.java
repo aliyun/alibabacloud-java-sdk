@@ -11,7 +11,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
     public java.util.List<DescribeJVSInstanceResponseBodyData> data;
 
     /**
-     * <p>The maximum number of entries returned per page.</p>
+     * <p>The maximum number of results returned in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -20,7 +20,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that indicates the current position from which to start reading. An empty value indicates reading from the beginning.</p>
+     * <p>The token that specifies the starting position for the next query. An empty value indicates that the query starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
@@ -134,15 +134,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
 
     public static class DescribeJVSInstanceResponseBodyDataCreditConfig extends TeaModel {
         /**
-         * <p>The quota limit. Valid values:</p>
-         * <ul>
-         * <li>0: not available for use.</li>
-         * <li><blockquote>
-         * <p>0: the quota is configured based on the numeric value.</p>
-         * </blockquote>
-         * </li>
-         * <li>-1: unlimited.</li>
-         * </ul>
+         * <p>The limit value.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -151,12 +143,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public Long creditLimit;
 
         /**
-         * <p>The quota period. Valid values:</p>
-         * <ul>
-         * <li>total: The total usage limit.</li>
-         * <li>month: Monthly. The quota resets based on the resource activation time as one cycle.</li>
-         * <li>day: Daily. The quota resets at 00:00.</li>
-         * </ul>
+         * <p>The limit period.</p>
          * 
          * <strong>example:</strong>
          * <p>day</p>
@@ -308,7 +295,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public DescribeJVSInstanceResponseBodyDataAgentVersion agentVersion;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is in UTC and follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-10T01:31:32Z</p>
@@ -317,13 +304,13 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The credit quota configuration. Subsequent quota configurations overwrite previous configurations.</p>
+         * <p>The credit limit configuration. Subsequent quota configurations overwrite previous configurations.</p>
          */
         @NameInMap("CreditConfig")
         public java.util.List<DescribeJVSInstanceResponseBodyDataCreditConfig> creditConfig;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The expiration time. The time is in UTC and follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-10T01:31:32Z</p>
@@ -353,7 +340,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public String jvsPackageId;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The modification time. The time is in UTC and follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-10T01:31:32Z</p>
@@ -371,7 +358,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The used credits.</p>
+         * <p>The used credit.</p>
          */
         @NameInMap("UsedCredit")
         public java.util.List<DescribeJVSInstanceResponseBodyDataUsedCredit> usedCredit;

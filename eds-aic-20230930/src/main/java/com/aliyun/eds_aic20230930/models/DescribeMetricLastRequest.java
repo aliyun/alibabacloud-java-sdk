@@ -5,15 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricLastRequest extends TeaModel {
     /**
-     * <p>For instance-level monitoring, specify a list of Cloud Phone instance IDs.</p>
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p>For matrix-level monitoring, specify a list of matrix IDs.</p>
+     * <p>The list of cloud phone instance IDs for instance-level monitoring.
+     * &lt;props=&quot;china&quot;&gt;The list of matrix IDs for matrix-level monitoring.</p>
      */
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
     /**
-     * <p>The end time for the query.</p>
+     * <p>The end time for querying the monitoring metric. The time format is YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-01-31 11:00:00</p>
@@ -28,8 +27,8 @@ public class DescribeMetricLastRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The number of monitoring data records to return on each page for a paged query.</p>
-     * <p>The default value is 1000. This means that 1000 monitoring data records are returned per page.</p>
+     * <p>The page size of the returned monitoring data, used for paged query.</p>
+     * <p>Default value: 1000, indicating 1,000 monitoring data entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -45,7 +44,7 @@ public class DescribeMetricLastRequest extends TeaModel {
     public java.util.List<String> metricNames;
 
     /**
-     * <p>The token that marks the start of the current read position. If you leave this parameter empty, the query starts from the beginning.</p>
+     * <p>The token that marks the position from which to start reading. An empty value indicates that the query starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
@@ -54,7 +53,7 @@ public class DescribeMetricLastRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The statistic period for monitoring data.</p>
+     * <p>The statistical period for the monitoring data.</p>
      * <p>Valid values: 60, 900, and 3600.</p>
      * <p>Unit: seconds.</p>
      * 
@@ -65,7 +64,7 @@ public class DescribeMetricLastRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The start time for the query.</p>
+     * <p>The start time for querying the monitoring metric. The time format is YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-01-31 10:00:00</p>

@@ -144,7 +144,7 @@ public class DescribeSkillsResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-03-13 15:40:51</p>
@@ -171,7 +171,7 @@ public class DescribeSkillsResponseBody extends TeaModel {
         public String iconOssUrl;
 
         /**
-         * <p>The number of instances that have the skill installed.</p>
+         * <p>The number of instances on which the skill is installed.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -180,7 +180,7 @@ public class DescribeSkillsResponseBody extends TeaModel {
         public Integer installedCount;
 
         /**
-         * <p>The information about the installed instances.</p>
+         * <p>The information about the instances on which the skill is installed.</p>
          */
         @NameInMap("InstalledInstances")
         public java.util.List<DescribeSkillsResponseBodySkillInfoInstalledInstances> installedInstances;
@@ -222,7 +222,7 @@ public class DescribeSkillsResponseBody extends TeaModel {
         public String skillSource;
 
         /**
-         * <p>The skill lifecycle status.</p>
+         * <p>The lifecycle status of the skill.</p>
          * 
          * <strong>example:</strong>
          * <p>UPLOADED</p>
@@ -231,7 +231,7 @@ public class DescribeSkillsResponseBody extends TeaModel {
         public String skillStatus;
 
         /**
-         * <p>The source node ID of the skill created from a conversation. This value is empty for user-uploaded skills.</p>
+         * <p>The source node ID of the skill created from a conversation. This parameter is empty if the skill is uploaded by a user.</p>
          * 
          * <strong>example:</strong>
          * <p>acp-bp4du4v74mc7qw8****</p>
@@ -258,7 +258,7 @@ public class DescribeSkillsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The skill version.</p>
+         * <p>The skill version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>

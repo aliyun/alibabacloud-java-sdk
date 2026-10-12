@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyJVSInstanceRequest extends TeaModel {
     /**
-     * <p>The target version, such as 2607W1. Set this parameter to latest to automatically resolve to the latest available version.</p>
+     * <p>The target version of AI Engine, such as 2607W1. You can also set this parameter to latest to automatically resolve to the latest available version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>latest</p>
      */
     @NameInMap("AgentVersion")
     public String agentVersion;
@@ -20,11 +23,14 @@ public class ModifyJVSInstanceRequest extends TeaModel {
     public Boolean applyToAll;
 
     /**
-     * <p>The credit quota configuration. If you submit the configuration multiple times, the latest configuration overwrites the previous one.</p>
+     * <p>The credit limit configuration. Subsequent quota configurations overwrite previous ones.</p>
      */
     @NameInMap("CreditConfig")
     public java.util.List<ModifyJVSInstanceRequestCreditConfig> creditConfig;
 
+    /**
+     * <p>The image ID.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
@@ -107,12 +113,7 @@ public class ModifyJVSInstanceRequest extends TeaModel {
         public Long creditLimit;
 
         /**
-         * <p>The dimension of the current credit. Valid values:</p>
-         * <ul>
-         * <li>total: Total usage limit.</li>
-         * <li>month: Monthly. The quota resets based on the resource activation time cycle.</li>
-         * <li>day: Daily. The quota resets at 00:00.</li>
-         * </ul>
+         * <p>The period of the current credit.</p>
          * 
          * <strong>example:</strong>
          * <p>day</p>

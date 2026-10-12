@@ -59,7 +59,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
 
     public static class DescribeInvocationsResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the command finished running.</p>
+         * <p>The end time of the command execution. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-11 17:45:03</p>
@@ -68,7 +68,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The ID of the instance where the command was run.</p>
+         * <p>The instance ID on which the current command is executed.</p>
          * 
          * <strong>example:</strong>
          * <p>acp-uto81vfd8t8z****</p>
@@ -77,7 +77,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ID of the command execution.</p>
+         * <p>The command execution ID.</p>
          * 
          * <strong>example:</strong>
          * <p>t-15775dc8****</p>
@@ -86,7 +86,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String invocationId;
 
         /**
-         * <p>The status of the command execution.</p>
+         * <p>The execution status of the command.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -104,7 +104,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String output;
 
         /**
-         * <p>The time when the command started to run.</p>
+         * <p>The start time of the command execution. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-11 17:45:03</p>

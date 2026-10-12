@@ -7,11 +7,11 @@ public class CreateCreditPackageRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables automatic payment. Make sure that your account balance is sufficient.</li>
-     * <li><strong>false</strong> (default): generates an order without charging your account.</li>
+     * <li><strong>true</strong>: Enables automatic payment. Make sure that your account balance is sufficient.</li>
+     * <li><strong>false</strong> (default): Generates an order without deducting payment.</li>
      * </ul>
      * <blockquote>
-     * <p>If your payment method has an insufficient balance, set this parameter to false. An unpaid order is generated, and you can log on to the Elastic Cloud Phone console to complete the payment.</p>
+     * <p>If the balance of your payment method is insufficient, set this parameter to false. An unpaid order is generated. You can log on to the WUYING Cloud Phone console to complete the payment.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class CreateCreditPackageRequest extends TeaModel {
     public String packageAmount;
 
     /**
-     * <p>The duration for which you want to purchase the resource. The unit is specified by PeriodUnit.</p>
+     * <p>The subscription duration of the purchased resource. The unit is specified by PeriodUnit.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -45,11 +45,10 @@ public class CreateCreditPackageRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the duration for which you want to purchase the resource.</p>
-     * <p>Valid values:</p>
+     * <p>The unit of the subscription duration for the purchased resource. Valid values:</p>
      * <ul>
-     * <li><strong>Month</strong>: month.</li>
-     * <li><strong>Year</strong>: year.</li>
+     * <li><strong>Month</strong>: Month.</li>
+     * <li><strong>Year</strong>: Year.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,7 +58,7 @@ public class CreateCreditPackageRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The ID of the promotional campaign.</p>
+     * <p>The ID of the promotion.</p>
      * 
      * <strong>example:</strong>
      * <p>50003308011****</p>

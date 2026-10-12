@@ -14,7 +14,7 @@ public class DescribeEdgeMobileAgentPackagesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page. An empty value indicates that no more data exists.</p>
+     * <p>The pagination token for the next page. An empty value indicates that no more data is available.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
@@ -38,7 +38,7 @@ public class DescribeEdgeMobileAgentPackagesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -93,7 +93,7 @@ public class DescribeEdgeMobileAgentPackagesResponseBody extends TeaModel {
 
     public static class DescribeEdgeMobileAgentPackagesResponseBodyPackages extends TeaModel {
         /**
-         * <p>The device type.</p>
+         * <p>The device class.</p>
          * 
          * <strong>example:</strong>
          * <p>BOX</p>
@@ -102,7 +102,7 @@ public class DescribeEdgeMobileAgentPackagesResponseBody extends TeaModel {
         public String deviceClass;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The expiration time. The time format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-05 10:04:07</p>

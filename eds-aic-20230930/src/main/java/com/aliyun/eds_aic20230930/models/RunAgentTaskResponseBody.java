@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class RunAgentTaskResponseBody extends TeaModel {
     /**
-     * <p>The status code of the operation.</p>
+     * <p>The status code of the API operation.</p>
      * 
      * <strong>example:</strong>
-     * <p>For example, &quot;200&quot; indicates success</p>
+     * <p>&quot;200&quot; indicates success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,7 +23,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The response message.</p>
+     * <p>The message returned by the API operation.</p>
      * 
      * <strong>example:</strong>
      * <p>Success.</p>
@@ -32,7 +32,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</p>
@@ -94,18 +94,20 @@ public class RunAgentTaskResponseBody extends TeaModel {
     public static class RunAgentTaskResponseBodyTasks extends TeaModel {
         /**
          * <p>The current status of the task. Valid values:</p>
-         * <p>PENDING: The task is being created.</p>
-         * <p>RUNNING: The task is running.</p>
-         * <p>COMPLETED: The task is completed.</p>
-         * <p>FAILED: The task failed.</p>
-         * <p>TIMEOUT: The task timed out.</p>
-         * <p>CALL_FOR_USER: Waiting for user action.</p>
-         * <p>PAUSING: The task is being paused.</p>
-         * <p>PAUSED: The task is paused.</p>
-         * <p>CANCELLING: The task is being canceled.</p>
-         * <p>CANCELED: The task is canceled.</p>
-         * <p>STOPPED: The task is stopped.</p>
-         * <p>TIMEOUT: The task timed out.</p>
+         * <ul>
+         * <li>PENDING: The task is being created.</li>
+         * <li>RUNNING: The task is running.</li>
+         * <li>COMPLETED: The task is completed.</li>
+         * <li>FAILED: The task failed.</li>
+         * <li>TIMEOUT: The task execution timed out.</li>
+         * <li>CALL_FOR_USER: The task is waiting for user operations.</li>
+         * <li>PAUSING: The task is being paused.</li>
+         * <li>PAUSED: The task is paused.</li>
+         * <li>CANCELLING: The task is being canceled.</li>
+         * <li>CANCELED: The task is canceled.</li>
+         * <li>STOPPED: The task is stopped.</li>
+         * <li>TIMEOUT: The task timed out.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
@@ -114,7 +116,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
         public String currentStatus;
 
         /**
-         * <p>The Mobile node ID.</p>
+         * <p>The ID of the Mobile node.</p>
          * 
          * <strong>example:</strong>
          * <p>acp-ek65k51zoxia3x8xz</p>
@@ -123,7 +125,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time when the task was created, in ISO 8601 format.</p>
+         * <p>The time when the task was created. The time is in the ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-13T17:42:19Z</p>
@@ -132,7 +134,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
         public String runningAt;
 
         /**
-         * <p>The session ID. Tasks with the same session ID share context.</p>
+         * <p>The session ID. Tasks with the same session ID share the context.</p>
          * 
          * <strong>example:</strong>
          * <p>ses-260702-21bh****。</p>
@@ -141,7 +143,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The task ID, which is globally unique.</p>
+         * <p>The globally unique ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>t-imr0fufqd7cle****</p>
@@ -150,10 +152,10 @@ public class RunAgentTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The user instruction in natural language. The Agent performs operations based on this instruction.</p>
+         * <p>The user prompt in natural language. The agent performs operations based on this prompt.</p>
          * 
          * <strong>example:</strong>
-         * <p>Go to App Store and download DingTalk</p>
+         * <p>Download DingTalk from the app store</p>
          */
         @NameInMap("UserPrompt")
         public String userPrompt;

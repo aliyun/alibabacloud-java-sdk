@@ -14,7 +14,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The message returned by the API operation.</p>
      * 
      * <strong>example:</strong>
      * <p>Success.</p>
@@ -23,7 +23,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The list of package information.</p>
+     * <p>The list of packages.</p>
      */
     @NameInMap("PackageList")
     public java.util.List<DescribeMobileAgentPackageResponseBodyPackageList> packageList;
@@ -93,7 +93,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
 
     public static class DescribeMobileAgentPackageResponseBodyPackageListTags extends TeaModel {
         /**
-         * <p>The label key.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key</p>
@@ -102,7 +102,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The label value.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value</p>
@@ -135,7 +135,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
 
     public static class DescribeMobileAgentPackageResponseBodyPackageList extends TeaModel {
         /**
-         * <p>The expiration time.</p>
+         * <p>The expiration time. The time format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-30 00:00:00</p>
@@ -168,7 +168,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         public String packageId;
 
         /**
-         * <p>The package specification.</p>
+         * <p>The package specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>advanced</p>
@@ -195,13 +195,13 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         public String periodStartTime;
 
         /**
-         * <p>The labels.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeMobileAgentPackageResponseBodyPackageListTags> tags;
 
         /**
-         * <p>The number of credits that have been used.</p>
+         * <p>The number of used credits.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>

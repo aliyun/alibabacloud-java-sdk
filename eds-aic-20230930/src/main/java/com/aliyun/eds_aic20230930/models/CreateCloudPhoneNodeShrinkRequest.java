@@ -54,7 +54,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String channelCookie;
 
     /**
-     * <p>The billing type. Only subscription is supported.</p>
+     * <p>The billing method. Only subscription is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -63,7 +63,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The number of cloud phone matrices to purchase.</p>
+     * <p>The Quantity of the cloud phone matrix.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -96,10 +96,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The instance type.</p>
-     * <blockquote>
-     * <p>To purchase more instance types, <a href="https://smartservice.console.aliyun.com/service/pre-sales-chat?spm=5176.6d6ecb63.0.0.729adda2VqVQx7">contact pre-sales support</a>.</p>
-     * </blockquote>
+     * <p>The instance type. &gt; To purchase more instance types, you can <a href="https://smartservice.console.aliyun.com/service/pre-sales-chat?spm=5176.6d6ecb63.0.0.729adda2VqVQx7">contact pre-sales support</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ac.max</p>
@@ -143,14 +140,17 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     @NameInMap("NodeName")
     public String nodeName;
 
+    /**
+     * <p>The redirect URL for the payment success page.</p>
+     */
     @NameInMap("PaidCallBackUrl")
     public String paidCallBackUrl;
 
     /**
-     * <p>The subscription duration. The unit is specified by PeriodUnit.</p>
+     * <p>The subscription period of the resource. The unit is specified by <code>PeriodUnit</code>.</p>
      * <ul>
-     * <li>If PeriodUnit is set to <strong>year</strong>, the value can only be 1.</li>
-     * <li>If PeriodUnit is set to <strong>month</strong>, valid values are 1, 2, 3, and 6.</li>
+     * <li>If <code>PeriodUnit</code> is set to <strong>year</strong>, the only valid value is 1.</li>
+     * <li>If <code>PeriodUnit</code> is set to <strong>month</strong>, valid values are 1, 2, 3, and 6.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the subscription duration.</p>
+     * <p>The unit of the subscription period.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -186,6 +186,9 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     @NameInMap("PhoneDataVolume")
     public Integer phoneDataVolume;
 
+    /**
+     * <p>The ID of the promotion.</p>
+     */
     @NameInMap("PromotionId")
     public String promotionId;
 
@@ -210,7 +213,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     /**
      * <p>The size of the shared device storage. Unit: GiB.</p>
      * <blockquote>
-     * <p>The minimum value of the shared device storage must be greater than the number of instances in the matrix multiplied by 10 GiB.</p>
+     * <p>The minimum size of the shared device storage must be greater than the number of instances in the matrix multiplied by 10 GiB.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -220,7 +223,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public Integer serverShareDataVolume;
 
     /**
-     * <p>The specifications of the cloud phone matrix.</p>
+     * <p>The specification of the cloud phone matrix.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -257,7 +260,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public Integer upBandwidthLimit;
 
     /**
-     * <p>Specifies whether to use a template during creation. Set this parameter to <code>Random</code> to use a random template from the template list. Alternatively, specify a template ID to use that template.</p>
+     * <p>Specifies whether to use a template during creation. If you want to use a random template from the template list, set the value to <code>Random</code>. If you specify a template ID, the specified template is used.</p>
      * 
      * <strong>example:</strong>
      * <p>Random</p>

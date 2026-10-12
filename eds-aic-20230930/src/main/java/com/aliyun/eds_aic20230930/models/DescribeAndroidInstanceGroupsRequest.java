@@ -14,8 +14,8 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The billing type.
-     * [_single.params.ChargeType.enum. PrePaid]subscription</p>
+     * <p>The billing method.
+     * [_single.params.ChargeType.enum. PrePaid]Subscription.</p>
      * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
@@ -24,20 +24,23 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The list of instance group IDs.</p>
+     * <p>The IDs of the instance groups.</p>
      */
     @NameInMap("InstanceGroupIds")
     public java.util.List<String> instanceGroupIds;
 
     /**
-     * <p>The instance group name. Fuzzy match is supported.</p>
+     * <p>The name of the instance group. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>Cloud phone</p>
+     * <p>Cloud Phone</p>
      */
     @NameInMap("InstanceGroupName")
     public String instanceGroupName;
 
+    /**
+     * <p>The instance version. A value of basic indicates a Wuying Cloud Phone instance, and a value of EnterpriseAi indicates a JVS Mobile instance.</p>
+     */
     @NameInMap("InstanceVersion")
     public String instanceVersion;
 
@@ -51,7 +54,7 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public String keyPairId;
 
     /**
-     * <p>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 100.</p>
+     * <p>The maximum number of entries to return on each page in a paging query. Valid values: 1 to 100. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -60,7 +63,7 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that indicates the position from which to start reading. An empty value indicates reading from the beginning.</p>
+     * <p>The token that indicates the starting position for the query. If this parameter is left empty, the query starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
@@ -69,7 +72,7 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The policy ID.</p>
+     * <p>The ID of the policy.</p>
      * 
      * <strong>example:</strong>
      * <p>pg-1b77w6xrqfubi****</p>
@@ -86,14 +89,20 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     @NameInMap("SaleMode")
     public String saleMode;
 
+    /**
+     * <p>The sort field. A value of CreationTime indicates the creation time, and a value of ExpiredTime indicates the expiration time.</p>
+     */
     @NameInMap("SortKey")
     public String sortKey;
 
+    /**
+     * <p>The sort order. A value of ASC indicates ascending order, and a value of DESC indicates descending order.</p>
+     */
     @NameInMap("SortType")
     public String sortType;
 
     /**
-     * <p>The instance group status.</p>
+     * <p>The status of the instance group.</p>
      * 
      * <strong>example:</strong>
      * <p>CREATING</p>
@@ -102,7 +111,7 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags of the instance group. You can bind up to 20 tags to each instance.</p>
+     * <p>The tags of the instance group. You can add up to 20 tags to each instance.</p>
      */
     @NameInMap("Tags")
     public java.util.List<DescribeAndroidInstanceGroupsRequestTags> tags;
@@ -228,7 +237,7 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
         /**
          * <p>The tag key. You can specify 1 to 20 tag keys.</p>
          * <blockquote>
-         * <p>Notice: The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+         * <p>Notice: A tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -240,7 +249,7 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
         /**
          * <p>The tag value.</p>
          * <blockquote>
-         * <p>Notice: The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>Notice: A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

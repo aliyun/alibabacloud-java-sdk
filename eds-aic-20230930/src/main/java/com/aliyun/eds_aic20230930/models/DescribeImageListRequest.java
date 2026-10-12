@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageListRequest extends TeaModel {
     /**
-     * <p>An array of tag objects.</p>
+     * <p>The array of tag objects.</p>
      */
     @NameInMap("ImageBizTags")
     public java.util.List<DescribeImageListRequestImageBizTags> imageBizTags;
@@ -30,7 +30,7 @@ public class DescribeImageListRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not yet available.</p>
+     * <p>This parameter is not yet available for public use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class DescribeImageListRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The maximum number of entries to return on each page for a paged query. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -71,7 +71,7 @@ public class DescribeImageListRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that specifies the position from which to start the query. If you leave this parameter empty, the query starts from the beginning.</p>
+     * <p>The position from which the read operation starts. An empty value indicates that the read operation starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</p>
@@ -88,6 +88,9 @@ public class DescribeImageListRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The operating system type.</p>
+     */
     @NameInMap("SystemType")
     public String systemType;
 

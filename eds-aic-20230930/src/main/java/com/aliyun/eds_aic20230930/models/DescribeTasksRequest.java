@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTasksRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud phone instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>acp-2zecay9ponatdc4m****</p>
@@ -14,7 +14,7 @@ public class DescribeTasksRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the cloud phone instance.</p>
+     * <p>The instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>defaultInstanceName</p>
@@ -23,7 +23,7 @@ public class DescribeTasksRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The ID of the command execution. You can set the value to the last returned request ID.</p>
+     * <p>The command execution ID. You can enter the requestId returned by the previous operation.</p>
      * 
      * <strong>example:</strong>
      * <p>B8ED2BA9-0C6A-5643-818F-B5D60A64****</p>
@@ -32,7 +32,7 @@ public class DescribeTasksRequest extends TeaModel {
     public String invokeId;
 
     /**
-     * <p>The level of the task. A value of 1 specifies a batch task. A value of 2 specifies an instance-level task.</p>
+     * <p>The task level. A value of 1 indicates a batch task. A value of 2 indicates an instance-level task.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class DescribeTasksRequest extends TeaModel {
     public Integer level;
 
     /**
-     * <p>The maximum number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,7 +50,7 @@ public class DescribeTasksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the parameter is left empty, the data is queried from the first entry.</p>
+     * <p>The token that specifies the starting position for reading. If this parameter is left empty, the reading starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>FFbc8N4E1iOlcSxC+8boa0HHH2LKWbggYUinyrZWvtS1oTrMYCg1HuMLGuftj0****</p>
@@ -59,7 +59,7 @@ public class DescribeTasksRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The extension field.</p>
+     * <p>The extended field.</p>
      * 
      * <strong>example:</strong>
      * <p>param</p>
@@ -68,7 +68,7 @@ public class DescribeTasksRequest extends TeaModel {
     public String param;
 
     /**
-     * <p>The ID of the parent task.</p>
+     * <p>The parent task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>t-iaej5dkbnmivx****</p>
@@ -77,19 +77,19 @@ public class DescribeTasksRequest extends TeaModel {
     public String parentTaskId;
 
     /**
-     * <p>The IDs of the resources.</p>
+     * <p>The list of resource IDs.</p>
      */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
     /**
-     * <p>The IDs of the tasks.</p>
+     * <p>The list of task IDs.</p>
      */
     @NameInMap("TaskIds")
     public java.util.List<String> taskIds;
 
     /**
-     * <p>The state of the task.</p>
+     * <p>The task status.</p>
      * 
      * <strong>example:</strong>
      * <p>Processing</p>
@@ -98,13 +98,13 @@ public class DescribeTasksRequest extends TeaModel {
     public String taskStatus;
 
     /**
-     * <p>The status of the tasks.</p>
+     * <p>The list of task statuses.</p>
      */
     @NameInMap("TaskStatuses")
     public java.util.List<String> taskStatuses;
 
     /**
-     * <p>The type of the task.</p>
+     * <p>The task type.</p>
      * 
      * <strong>example:</strong>
      * <p>StartInstance</p>
@@ -113,7 +113,7 @@ public class DescribeTasksRequest extends TeaModel {
     public String taskType;
 
     /**
-     * <p>The types of the tasks.</p>
+     * <p>The list of task types.</p>
      */
     @NameInMap("TaskTypes")
     public java.util.List<String> taskTypes;
