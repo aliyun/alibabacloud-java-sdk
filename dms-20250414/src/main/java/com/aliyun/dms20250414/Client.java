@@ -1984,7 +1984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a custom agent by custom agent ID.</p>
+     * <p>Queries the details of a custom agent by custom agent ID.</p>
      * 
      * @param request DescribeCustomAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2020,7 +2020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a custom agent by custom agent ID.</p>
+     * <p>Queries the details of a custom agent by custom agent ID.</p>
      * 
      * @param request DescribeCustomAgentRequest
      * @return DescribeCustomAgentResponse
@@ -2028,6 +2028,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCustomAgentResponse describeCustomAgent(DescribeCustomAgentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCustomAgentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DescribeCustomAgentMonitorMetrics - Retrieves monitoring metrics data for custom agents, including trend data.</p>
+     * 
+     * @param request DescribeCustomAgentMonitorMetricsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCustomAgentMonitorMetricsResponse
+     */
+    public DescribeCustomAgentMonitorMetricsResponse describeCustomAgentMonitorMetricsWithOptions(DescribeCustomAgentMonitorMetricsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customAgentId)) {
+            query.put("CustomAgentId", request.customAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.granularity)) {
+            query.put("Granularity", request.granularity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryType)) {
+            query.put("QueryType", request.queryType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCustomAgentMonitorMetrics"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCustomAgentMonitorMetricsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DescribeCustomAgentMonitorMetrics - Retrieves monitoring metrics data for custom agents, including trend data.</p>
+     * 
+     * @param request DescribeCustomAgentMonitorMetricsRequest
+     * @return DescribeCustomAgentMonitorMetricsResponse
+     */
+    public DescribeCustomAgentMonitorMetricsResponse describeCustomAgentMonitorMetrics(DescribeCustomAgentMonitorMetricsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCustomAgentMonitorMetricsWithOptions(request, runtime);
     }
 
     /**
@@ -3754,7 +3818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists all custom agents in a personal space or workspace.</p>
+     * <p>Lists all custom agents in personal spaces and workspaces.</p>
      * 
      * @param request ListCustomAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3806,7 +3870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists all custom agents in a personal space or workspace.</p>
+     * <p>Lists all custom agents in personal spaces and workspaces.</p>
      * 
      * @param request ListCustomAgentRequest
      * @return ListCustomAgentResponse
@@ -3814,6 +3878,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListCustomAgentResponse listCustomAgent(ListCustomAgentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCustomAgentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ListCustomAgentMonitorSessions - Retrieves the list of monitoring sessions for custom agents.</p>
+     * 
+     * @param request ListCustomAgentMonitorSessionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCustomAgentMonitorSessionsResponse
+     */
+    public ListCustomAgentMonitorSessionsResponse listCustomAgentMonitorSessionsWithOptions(ListCustomAgentMonitorSessionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customAgentId)) {
+            query.put("CustomAgentId", request.customAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryType)) {
+            query.put("QueryType", request.queryType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCustomAgentMonitorSessions"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCustomAgentMonitorSessionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ListCustomAgentMonitorSessions - Retrieves the list of monitoring sessions for custom agents.</p>
+     * 
+     * @param request ListCustomAgentMonitorSessionsRequest
+     * @return ListCustomAgentMonitorSessionsResponse
+     */
+    public ListCustomAgentMonitorSessionsResponse listCustomAgentMonitorSessions(ListCustomAgentMonitorSessionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCustomAgentMonitorSessionsWithOptions(request, runtime);
     }
 
     /**
@@ -4424,7 +4556,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the workspaces under the primary account with pagination.</p>
+     * <p>Retrieves a paginated list of collaborative workspaces under the primary account.</p>
      * 
      * @param request ListDataAgentWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4492,7 +4624,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the workspaces under the primary account with pagination.</p>
+     * <p>Retrieves a paginated list of collaborative workspaces under the primary account.</p>
      * 
      * @param request ListDataAgentWorkspaceRequest
      * @return ListDataAgentWorkspaceResponse
@@ -5198,7 +5330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a custom agent in a personal space or workspace.</p>
+     * <p>Modifies a custom agent in a personal or shared workspace.</p>
      * 
      * @param tmpReq ModifyCustomAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5324,7 +5456,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a custom agent in a personal space or workspace.</p>
+     * <p>Modifies a custom agent in a personal or shared workspace.</p>
      * 
      * @param request ModifyCustomAgentRequest
      * @return ModifyCustomAgentResponse

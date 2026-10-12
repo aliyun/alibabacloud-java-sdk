@@ -4,6 +4,12 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class ListDataAgentWorkspaceRequest extends TeaModel {
+    /**
+     * <p>The ID of the creator used to search for workspaces.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>186xxx9947</p>
+     */
     @NameInMap("Creator")
     public String creator;
 
@@ -17,7 +23,7 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public String DMSUnit;
 
     /**
-     * <p>The maximum number of entries per page.</p>
+     * <p>The maximum number of results per page.</p>
      * 
      * <strong>example:</strong>
      * <p>no use</p>
@@ -26,7 +32,7 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token.</p>
+     * <p>The next token.</p>
      * 
      * <strong>example:</strong>
      * <p>no use</p>
@@ -44,7 +50,7 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The name of the field by which to sort.</p>
+     * <p>The sort field name.</p>
      * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
@@ -63,7 +69,7 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of records per page.</p>
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +79,7 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The workspace name.</p>
+     * <p>The name of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>workspaceTest</p>
@@ -82,7 +88,7 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public String workspaceName;
 
     /**
-     * <p>The type of workspace to query.</p>
+     * <p>The workspace type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
