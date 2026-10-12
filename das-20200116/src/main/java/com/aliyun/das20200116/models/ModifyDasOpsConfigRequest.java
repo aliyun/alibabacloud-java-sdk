@@ -7,8 +7,8 @@ public class ModifyDasOpsConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable DAS Alibaba Cloud Managed Services. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Enable.</li>
-     * <li><strong>false</strong>: Disable. Shutdown only turns off the feature but does not unsubscribe from the service. To unsubscribe, go to the unsubscription management page.</li>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled. Note that shutdown only disables the feature, but does not cancel your subscription. To cancel your subscription, go to the Unsubscription Management page.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ModifyDasOpsConfigRequest extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      */
     @NameInMap("Filters")
     public java.util.List<ModifyDasOpsConfigRequestFilters> filters;
@@ -66,7 +66,7 @@ public class ModifyDasOpsConfigRequest extends TeaModel {
         /**
          * <p>The filter parameter.</p>
          * <blockquote>
-         * <p>For supported filter parameters and their values, see <strong>Supplementary description of request parameters</strong>.</p>
+         * <p>For supported filter parameters and their valid values, see <strong>Supplementary description of request parameters</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class ModifyDasOpsConfigRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>select</p>

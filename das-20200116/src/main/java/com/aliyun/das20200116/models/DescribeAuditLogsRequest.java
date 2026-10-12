@@ -14,7 +14,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String asyncRequestId;
 
     /**
-     * <p>The IP address of the request client.</p>
+     * <p>The IP address of the client that sends the request.</p>
      * 
      * <strong>example:</strong>
      * <p>11.26.118.7</p>
@@ -59,7 +59,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String effectRowRange;
 
     /**
-     * <p>The end time of the alert log. The value is a UNIX timestamp in milliseconds.</p>
+     * <p>The end time of the alert logs. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>15682887991222</p>
@@ -68,7 +68,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The range of the execution time.</p>
+     * <p>The execution time range.</p>
      * 
      * <strong>example:</strong>
      * <p>in[1000 2000]</p>
@@ -88,9 +88,9 @@ public class DescribeAuditLogsRequest extends TeaModel {
     /**
      * <p>The network type. Valid values:</p>
      * <ul>
-     * <li><p><strong>default</strong> (default): non-Alibaba Cloud service.</p>
+     * <li><p><strong>default</strong>: Non-Alibaba Cloud services. This is the default value.</p>
      * </li>
-     * <li><p><strong>aliyun</strong>: Alibaba Cloud service.</p>
+     * <li><p><strong>aliyun</strong>: Alibaba Cloud services.</p>
      * </li>
      * </ul>
      * 
@@ -101,7 +101,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String ipType;
 
     /**
-     * <p>The language of the request and response. Default value: zh_cn. Valid values:</p>
+     * <p>The language type of the request and response messages. Default value: zh_cn. Valid values:</p>
      * <ul>
      * <li>zh_cn: Chinese.</li>
      * <li>en_us: English.</li>
@@ -144,7 +144,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String operateType;
 
     /**
-     * <p>The key of the OSS storage object.</p>
+     * <p>The key of the OSS object.</p>
      * 
      * <strong>example:</strong>
      * <p>N.A</p>
@@ -153,7 +153,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String ossObjectKey;
 
     /**
-     * <p>The maximum number of records per page. Default value: 10.</p>
+     * <p>The maximum number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -162,7 +162,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the product to which the data asset belongs. Valid values: <strong>RDS, PolarDB, PolarDB-X 2.0</strong>, and others.</p>
+     * <p>The name of the product to which the data asset belongs. Valid values include <strong>RDS</strong>, <strong>PolarDB</strong>, and <strong>PolarDB-X 2.0</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>RDS</p>
@@ -171,7 +171,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The ID that corresponds to the product name to which the data object belongs. Valid values:</p>
+     * <p>The ID of the product to which the data object belongs. Valid values:</p>
      * <ul>
      * <li>3: ADB-MYSQL</li>
      * <li>5: RDS</li>
@@ -189,7 +189,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public Long productId;
 
     /**
-     * <p>Specifies whether to use aggregate query.</p>
+     * <p>Specifies whether to perform an aggregate query.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -216,7 +216,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String ruleId;
 
     /**
-     * <p>The name of the audit policy.</p>
+     * <p>The name of the audit rule.</p>
      * 
      * <strong>example:</strong>
      * <p>test_rule</p>
@@ -234,7 +234,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String sqlText;
 
     /**
-     * <p>The start time of the alert log, in milliseconds.</p>
+     * <p>The start time of the alert logs. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1608888296000</p>

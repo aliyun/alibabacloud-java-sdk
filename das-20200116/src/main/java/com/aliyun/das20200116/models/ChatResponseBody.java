@@ -32,7 +32,7 @@ public class ChatResponseBody extends TeaModel {
     public String content;
 
     /**
-     * <p>Indicates whether the content is incremental.</p>
+     * <p>Specifies whether the content is incremental.</p>
      * 
      * <strong>example:</strong>
      * <p>hello</p>
@@ -41,7 +41,7 @@ public class ChatResponseBody extends TeaModel {
     public String delta;
 
     /**
-     * <p>The step type of STEP_STARTED, such as task.</p>
+     * <p>The step type for STEP_STARTED, such as task.</p>
      * 
      * <strong>example:</strong>
      * <p>task</p>
@@ -50,10 +50,10 @@ public class ChatResponseBody extends TeaModel {
     public String kind;
 
     /**
-     * <p>The display name of the sub-agent for STEP_STARTED.</p>
+     * <p>The display name of the child agent for STEP_STARTED.</p>
      * 
      * <strong>example:</strong>
-     * <p>SQL Performance Diagnostics</p>
+     * <p>SQL performance diagnostics</p>
      */
     @NameInMap("Label")
     public String label;
@@ -131,7 +131,7 @@ public class ChatResponseBody extends TeaModel {
     public String stepName;
 
     /**
-     * <p>The step status of STEP_FINISHED, such as completed.</p>
+     * <p>The step status for STEP_FINISHED, such as completed.</p>
      * 
      * <strong>example:</strong>
      * <p>completed</p>
@@ -140,7 +140,7 @@ public class ChatResponseBody extends TeaModel {
     public String stepStatus;
 
     /**
-     * <p>The callback utility class.</p>
+     * <p>The callback tool class.</p>
      * 
      * <strong>example:</strong>
      * <p>das_api</p>
@@ -167,7 +167,7 @@ public class ChatResponseBody extends TeaModel {
     public Long timestamp;
 
     /**
-     * <p>The error that occurred during tool invocation.</p>
+     * <p>The error that occurred when invoking the tool.</p>
      * 
      * <strong>example:</strong>
      * <p>error</p>
@@ -176,7 +176,7 @@ public class ChatResponseBody extends TeaModel {
     public String toolCallError;
 
     /**
-     * <p>The tool invocation ID.</p>
+     * <p>The tool call ID.</p>
      * 
      * <strong>example:</strong>
      * <p>call_edf9cdb69e0e4c9796a6a5a6</p>

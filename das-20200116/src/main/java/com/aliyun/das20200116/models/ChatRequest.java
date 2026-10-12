@@ -5,13 +5,22 @@ import com.aliyun.tea.*;
 
 public class ChatRequest extends TeaModel {
     /**
-     * <p>The agent ID used for the service. This parameter is optional. You can specify an agent generated after DAS Agent is enabled or an agent that you manually created. If this parameter is not specified, the default agent is used.</p>
+     * <p>Optional. The agent ID used for the service. You can specify the agent generated after enabling the DAS Agent or a manually created agent. If not specified, the default agent is used.</p>
      * 
      * <strong>example:</strong>
      * <p>ag-472T0DxtmjIxxxxx</p>
      */
     @NameInMap("AgentId")
     public String agentId;
+
+    /**
+     * <p>The forwarded properties.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;enableInteractiveTools&quot;:true}</p>
+     */
+    @NameInMap("ForwardedProps")
+    public String forwardedProps;
 
     /**
      * <p>The message.</p>
@@ -32,7 +41,7 @@ public class ChatRequest extends TeaModel {
     public String resume;
 
     /**
-     * <p>The session ID in UUID string format. This parameter is optional. If this parameter is not specified, a new session is created by default. To maintain context across conversations, use the same session ID.</p>
+     * <p>Optional. The session ID, which is a UUID string. If not specified, a new session is created by default. The same session ID must be maintained for contextual conversations.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-xxxxxxxxxxxx</p>
@@ -60,6 +69,14 @@ public class ChatRequest extends TeaModel {
     }
     public String getAgentId() {
         return this.agentId;
+    }
+
+    public ChatRequest setForwardedProps(String forwardedProps) {
+        this.forwardedProps = forwardedProps;
+        return this;
+    }
+    public String getForwardedProps() {
+        return this.forwardedProps;
     }
 
     public ChatRequest setMessage(String message) {
