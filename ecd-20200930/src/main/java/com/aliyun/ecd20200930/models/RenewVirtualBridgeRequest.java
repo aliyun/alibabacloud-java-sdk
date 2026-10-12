@@ -23,7 +23,7 @@ public class RenewVirtualBridgeRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The virtual bridge ID.</p>
+     * <p>The ID of the virtual bridge.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class RenewVirtualBridgeRequest extends TeaModel {
     public String paidCallBackUrl;
 
     /**
-     * <p>The renewal duration. The valid values of this parameter are determined by the value of the <code>PeriodUnit</code> parameter.</p>
+     * <p>The renewal duration. The valid values depend on the value of the <code>PeriodUnit</code> parameter.</p>
      * <ul>
      * <li>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values are 1, 2, 3, and 6.</li>
      * <li>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values are 1, 2, and 3.</li>
@@ -74,7 +74,7 @@ public class RenewVirtualBridgeRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Wuying Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

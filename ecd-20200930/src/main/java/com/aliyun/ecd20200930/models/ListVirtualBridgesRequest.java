@@ -21,7 +21,7 @@ public class ListVirtualBridgesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. If NextToken is empty, no more results exist.</p>
+     * <p>The token used to start the next query. An empty NextToken indicates that no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6mnFXZiT7NdvGNgkInJ****</p>
@@ -32,7 +32,7 @@ public class ListVirtualBridgesRequest extends TeaModel {
     /**
      * <p>The office network ID.</p>
      * <blockquote>
-     * <p>The <code>DirectoryId</code> parameter will be deprecated. Use this parameter instead.</p>
+     * <p>The <code>DirectoryId</code> parameter is deprecated. Use this parameter instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class ListVirtualBridgesRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class ModifyVirtualBridgeLevelRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal. This parameter takes effect and is optional only when the billing method is <code>PrePaid</code>.</p>
+     * <p>Specifies whether to enable auto-renewal. This parameter takes effect and is optional only when the billing method is set to <code>PrePaid</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -52,7 +52,7 @@ public class ModifyVirtualBridgeLevelRequest extends TeaModel {
     public String paidCallBackUrl;
 
     /**
-     * <p>The renewal duration. Valid values of this parameter are determined by the value of the <code>PeriodUnit</code> parameter.</p>
+     * <p>The renewal duration. The valid values depend on the value of the <code>PeriodUnit</code> parameter.</p>
      * <ul>
      * <li>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values are 1, 2, 3, and 6.</li>
      * <li>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values are 1, 2, and 3.</li>
@@ -66,7 +66,7 @@ public class ModifyVirtualBridgeLevelRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the subscription duration for the prepaid cloud disk. This parameter takes effect and is required only when the <code>CdsChargeType</code> parameter is set to <code>PrePaid</code>.</p>
+     * <p>The unit of the subscription duration for the cloud disk. This parameter takes effect and is required only when the <code>CdsChargeType</code> parameter is set to <code>PrePaid</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -75,7 +75,7 @@ public class ModifyVirtualBridgeLevelRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The promotion ID. You can call the pricing query operation to obtain the list of matched promotion IDs.</p>
+     * <p>The promotion ID. You can call the pricing API operation to obtain the list of matched promotion IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>23141</p>
@@ -84,7 +84,7 @@ public class ModifyVirtualBridgeLevelRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by WUYING Workspace.</p>
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

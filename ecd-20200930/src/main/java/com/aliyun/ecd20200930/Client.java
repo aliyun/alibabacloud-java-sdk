@@ -5905,7 +5905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device the next time they log on to a Cloud Desktop.</p>
+     * <p>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding Active Directory (AD) user must bind a new MFA device when logging on to a cloud desktop.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a virtual bridge.</p>
@@ -5972,7 +5972,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device the next time they log on to a Cloud Desktop.</p>
+     * <p>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding Active Directory (AD) user must bind a new MFA device when logging on to a cloud desktop.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a virtual bridge.</p>
@@ -7489,7 +7489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device when logging on to Cloud Desktop.</p>
+     * <p>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting and disabling the MFA device. The corresponding Active Directory (AD) user must bind a new MFA device when logging on to a Cloud Desktop.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the status of a virtual bridge.</p>
@@ -7528,7 +7528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device when logging on to Cloud Desktop.</p>
+     * <p>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting and disabling the MFA device. The corresponding Active Directory (AD) user must bind a new MFA device when logging on to a Cloud Desktop.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the status of a virtual bridge.</p>
@@ -8552,6 +8552,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries console messages and their configurations under the current Alibaba Cloud account. You can filter messages by message ID, business channel, message type, client type, message level, title or body keyword, and target audience. Returns the list of messages on the current page and the total number of messages that match the query conditions.</p>
+     * <ul>
+     * <li>When multiple filter conditions are provided, all conditions are applied together to limit the query results.</li>
+     * <li>Uses PageNum and PageSize for pagination. The default value of PageNum is 1, and the default and maximum values of PageSize are both 200.</li>
+     * <li>When querying by a specified convenience user, the results include messages targeted at all convenience users, the user themselves, and the organization to which the user belongs. When querying by a specified AD user, the results also include messages targeted at all AD users, the user themselves, and the AD organization to which the user belongs.</li>
+     * <li>Query results may include messages in the initializing, pushing, published, expired, deleting, and failed states. The Published state does not indicate that all target terminals have successfully received the message.</li>
+     * <li>Image download URLs are temporary links. If a link expires, you can query again to obtain a new one.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries WUYING Workspace management messages.</p>
+     * 
+     * @param request DescribeConsoleMessagesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeConsoleMessagesResponse
+     */
+    public DescribeConsoleMessagesResponse describeConsoleMessagesWithOptions(DescribeConsoleMessagesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientTypes)) {
+            query.put("ClientTypes", request.clientTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.messageIds)) {
+            query.put("MessageIds", request.messageIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.messageLevel)) {
+            query.put("MessageLevel", request.messageLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.messageType)) {
+            query.put("MessageType", request.messageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetIds)) {
+            query.put("TargetIds", request.targetIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetType)) {
+            query.put("TargetType", request.targetType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeConsoleMessages"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeConsoleMessagesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries console messages and their configurations under the current Alibaba Cloud account. You can filter messages by message ID, business channel, message type, client type, message level, title or body keyword, and target audience. Returns the list of messages on the current page and the total number of messages that match the query conditions.</p>
+     * <ul>
+     * <li>When multiple filter conditions are provided, all conditions are applied together to limit the query results.</li>
+     * <li>Uses PageNum and PageSize for pagination. The default value of PageNum is 1, and the default and maximum values of PageSize are both 200.</li>
+     * <li>When querying by a specified convenience user, the results include messages targeted at all convenience users, the user themselves, and the organization to which the user belongs. When querying by a specified AD user, the results also include messages targeted at all AD users, the user themselves, and the AD organization to which the user belongs.</li>
+     * <li>Query results may include messages in the initializing, pushing, published, expired, deleting, and failed states. The Published state does not indicate that all target terminals have successfully received the message.</li>
+     * <li>Image download URLs are temporary links. If a link expires, you can query again to obtain a new one.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries WUYING Workspace management messages.</p>
+     * 
+     * @param request DescribeConsoleMessagesRequest
+     * @return DescribeConsoleMessagesResponse
+     */
+    public DescribeConsoleMessagesResponse describeConsoleMessages(DescribeConsoleMessagesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeConsoleMessagesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Obtain the table header information of the WUYING Workspace list page.</p>
      * 
@@ -9397,7 +9497,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of cloud computers.</p>
+     * <p>Queries the details of a cloud computer.</p>
      * 
      * @param request DescribeDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9589,7 +9689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of cloud computers.</p>
+     * <p>Queries the details of a cloud computer.</p>
      * 
      * @param request DescribeDesktopsRequest
      * @return DescribeDesktopsResponse
@@ -14543,7 +14643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries desktop data statistics by different dimensions.</p>
+     * <p>Queries desktop statistics by different dimensions.</p>
      * 
      * @param request GetAggregatedDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14583,7 +14683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries desktop data statistics by different dimensions.</p>
+     * <p>Queries desktop statistics by different dimensions.</p>
      * 
      * @param request GetAggregatedDesktopsRequest
      * @return GetAggregatedDesktopsResponse
@@ -15633,10 +15733,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the WUYING terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</p>
+     * <p>After an MFA device is locked, its status changes to LOCKED. The corresponding Active Directory (AD) account cannot log on to the Wuying terminal because it cannot authenticate the MFA device. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of virtual bridges.</p>
+     * <p>Queries virtual bridges.</p>
      * 
      * @param request ListVirtualBridgesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15684,10 +15784,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the WUYING terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</p>
+     * <p>After an MFA device is locked, its status changes to LOCKED. The corresponding Active Directory (AD) account cannot log on to the Wuying terminal because it cannot authenticate the MFA device. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of virtual bridges.</p>
+     * <p>Queries virtual bridges.</p>
      * 
      * @param request ListVirtualBridgesRequest
      * @return ListVirtualBridgesResponse
@@ -19918,10 +20018,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device when logging on to a cloud desktop.</p>
+     * <p>Deleting an MFA device means unbinding the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device when logging on to a Cloud Desktop.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the specifications of a virtual bridge.</p>
+     * <p>Upgrades or downgrades the specifications of a virtual bridge.</p>
      * 
      * @param request ModifyVirtualBridgeLevelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19985,10 +20085,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device when logging on to a cloud desktop.</p>
+     * <p>Deleting an MFA device means unbinding the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device when logging on to a Cloud Desktop.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the specifications of a virtual bridge.</p>
+     * <p>Upgrades or downgrades the specifications of a virtual bridge.</p>
      * 
      * @param request ModifyVirtualBridgeLevelRequest
      * @return ModifyVirtualBridgeLevelResponse
@@ -20000,7 +20100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only custom images in the active (Available) state can be modified.</p>
+     * <p>Only custom images in the Available state can be modified.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the status of a virtual bridge.</p>
@@ -20043,7 +20143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only custom images in the active (Available) state can be modified.</p>
+     * <p>Only custom images in the Available state can be modified.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the status of a virtual bridge.</p>
@@ -21374,7 +21474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the WUYING terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</p>
+     * <p>After being locked, the status of the MFA device changes to Locked (LOCKED). The corresponding AD account cannot log on to the Wuying terminal because it cannot authenticate the MFA device. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock it.</p>
      * 
      * <b>summary</b> : 
      * <p>Renews a virtual bridge.</p>
@@ -21437,7 +21537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the WUYING terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</p>
+     * <p>After being locked, the status of the MFA device changes to Locked (LOCKED). The corresponding AD account cannot log on to the Wuying terminal because it cannot authenticate the MFA device. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock it.</p>
      * 
      * <b>summary</b> : 
      * <p>Renews a virtual bridge.</p>
@@ -21792,6 +21892,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RunCommandResponse runCommand(RunCommandRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.runCommandWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation sends a created management message. The message body, client type, recipients, and business type all use the saved configurations. Each call processes only one MessageId.</p>
+     * <ul>
+     * <li>The message must belong to the current Alibaba Cloud account. Messages in the Init, Pushing, Expired, Deleting, or Failed state cannot be sent. Only messages in the Published state can be sent.</li>
+     * <li>Before the request is accepted, the system checks the number of Pushing messages of the same message type under the current account. If there are 5 or more such messages, the request is rejected. The count is not split by business channel.</li>
+     * <li>Regular notifications and wallpaper messages are pushed through asynchronous tasks. For the OPERATIONAL type, only the publish status is updated. Messages configured for scheduled sending retain their original schedules and are not immediately triggered by this operation.</li>
+     * <li>A Success value of true indicates that the request is accepted, but it does not mean that all recipients have received the message. Published indicates that the message is published or the server-side push processing is complete, and it is not a delivery confirmation for each individual target.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Sends a created Elastic Desktop Service management message.</p>
+     * 
+     * @param request SendConsoleMessageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendConsoleMessageResponse
+     */
+    public SendConsoleMessageResponse sendConsoleMessageWithOptions(SendConsoleMessageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.messageId)) {
+            query.put("MessageId", request.messageId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SendConsoleMessage"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SendConsoleMessageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation sends a created management message. The message body, client type, recipients, and business type all use the saved configurations. Each call processes only one MessageId.</p>
+     * <ul>
+     * <li>The message must belong to the current Alibaba Cloud account. Messages in the Init, Pushing, Expired, Deleting, or Failed state cannot be sent. Only messages in the Published state can be sent.</li>
+     * <li>Before the request is accepted, the system checks the number of Pushing messages of the same message type under the current account. If there are 5 or more such messages, the request is rejected. The count is not split by business channel.</li>
+     * <li>Regular notifications and wallpaper messages are pushed through asynchronous tasks. For the OPERATIONAL type, only the publish status is updated. Messages configured for scheduled sending retain their original schedules and are not immediately triggered by this operation.</li>
+     * <li>A Success value of true indicates that the request is accepted, but it does not mean that all recipients have received the message. Published indicates that the message is published or the server-side push processing is complete, and it is not a delivery confirmation for each individual target.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Sends a created Elastic Desktop Service management message.</p>
+     * 
+     * @param request SendConsoleMessageRequest
+     * @return SendConsoleMessageResponse
+     */
+    public SendConsoleMessageResponse sendConsoleMessage(SendConsoleMessageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.sendConsoleMessageWithOptions(request, runtime);
     }
 
     /**

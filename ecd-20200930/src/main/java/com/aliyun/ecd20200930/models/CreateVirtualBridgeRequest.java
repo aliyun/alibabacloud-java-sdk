@@ -51,7 +51,7 @@ public class CreateVirtualBridgeRequest extends TeaModel {
     public String paidCallBackUrl;
 
     /**
-     * <p>The duration for which you want to purchase the resource. The unit is specified by <code>PeriodUnit</code>. This parameter takes effect and is required only when <code>ChargeType</code> is set to <code>PrePaid</code>.</p>
+     * <p>The subscription duration of the purchased resource. The unit is specified by <code>PeriodUnit</code>. This parameter is required and takes effect only when <code>ChargeType</code> is set to <code>PrePaid</code>.</p>
      * <ul>
      * <li><p>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values:</p>
      * <ul>
@@ -79,7 +79,7 @@ public class CreateVirtualBridgeRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of duration for the subscription billable methods.</p>
+     * <p>The billing time unit of the subscription Billable methods.</p>
      * 
      * <strong>example:</strong>
      * <p>Week</p>

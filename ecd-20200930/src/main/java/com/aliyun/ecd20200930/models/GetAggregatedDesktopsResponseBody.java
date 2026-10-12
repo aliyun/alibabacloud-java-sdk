@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAggregatedDesktopsResponseBody extends TeaModel {
     /**
-     * <p>The list of aggregation field information.</p>
+     * <p>The list of aggregated field information.</p>
      * <blockquote>
      * <p>Notice: When you use an aggregate query, only aggregation results are returned. The list of matched metadata is not returned.</p>
      * </blockquote>

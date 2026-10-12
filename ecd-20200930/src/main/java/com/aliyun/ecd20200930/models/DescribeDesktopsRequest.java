@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopsRequest extends TeaModel {
     /**
-     * <p>The business channel. Valid values:</p>
-     * <ul>
-     * <li>Enterprise: Enterprise Edition.</li>
-     * <li>Business: Business Edition.</li>
-     * </ul>
+     * <p>The business channel. Valid values:
+     * Enterprise: Enterprise Edition
+     * Business: Business Edition</p>
      * 
      * <strong>example:</strong>
      * <p>Enterprise</p>
@@ -27,7 +25,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The cloud computer pool ID. If <code>DesktopId</code> is specified, <code>DesktopGroupId</code> is ignored. If <code>DesktopId</code> is empty, the system retrieves the DesktopId values of all cloud computers in the cloud computer pool specified by <code>DesktopGroupId</code>.</p>
+     * <p>The cloud computer pool ID. If you specify <code>DesktopId</code>, this <code>DesktopGroupId</code> parameter is ignored. If <code>DesktopId</code> is empty, the system retrieves the <code>DesktopId</code> of all cloud computers in the specified cloud computer pool based on <code>DesktopGroupId</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>dg-2i8qxpv6t1a03****</p>
@@ -69,7 +67,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public java.util.List<String> desktopStatusList;
 
     /**
-     * <p>The cloud computer specifications. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the specification IDs supported by cloud computers.</p>
+     * <p>The cloud computer instance type. Call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the supported instance type IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>eds.general.2c8g</p>
@@ -78,7 +76,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String desktopType;
 
     /**
-     * <p>The directory ID, which is the same as the office network ID.</p>
+     * <p>The directory ID. This is the same as the office network ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-363353****</p>
@@ -87,9 +85,9 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The list of authorized users of the cloud computer. You can specify 1 to 100 users.</p>
+     * <p>The list of authorized users for the cloud computer. You can set 1 to 100 users.</p>
      * <blockquote>
-     * <p>Only one user can connect to and use the cloud computer at a time.</p>
+     * <p>At any given time, only one user can connect to and use the cloud computer.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -108,7 +106,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public java.util.List<String> excludedEndUserId;
 
     /**
-     * <p>The expiration time of the subscription cloud computer. The time follows the ISO 8601 standard in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The expiration time of the subscription cloud computer. The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-12-31T15:59:59Z</p>
@@ -117,7 +115,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String expiredTime;
 
     /**
-     * <p>Specifies whether to query resource group information.</p>
+     * <p>Specifies whether to include enterprise resource group information in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -153,7 +151,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The image IDs.</p>
+     * <p>The list of image IDs.</p>
      */
     @NameInMap("ImageId")
     public java.util.List<String> imageId;
@@ -179,8 +177,8 @@ public class DescribeDesktopsRequest extends TeaModel {
     /**
      * <p>The number of entries per page for a paged query.</p>
      * <ul>
-     * <li>Maximum value: 100.</li>
-     * <li>Default value: 10.</li>
+     * <li>Maximum value: 100</li>
+     * <li>Default value: 10</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -208,7 +206,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String networkInterfaceIp;
 
     /**
-     * <p>The pagination token for the next query. If this parameter is empty, no more results are available.</p>
+     * <p>The token that marks the start of the next query. An empty NextToken value indicates that there are no more results.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -244,13 +242,13 @@ public class DescribeDesktopsRequest extends TeaModel {
     public Boolean onlyDesktopGroup;
 
     /**
-     * <p>The operating system types.</p>
+     * <p>The operating system type.</p>
      */
     @NameInMap("OsTypes")
     public java.util.List<String> osTypes;
 
     /**
-     * <p>The page number of the current page in a paged query.</p>
+     * <p>The page number in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -286,7 +284,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String protocolType;
 
     /**
-     * <p>The public IP address of the instance to query.</p>
+     * <p>The public IP address of the instance. Use this parameter to filter instances by public IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>121.199.28.39</p>
@@ -295,7 +293,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String publicIp;
 
     /**
-     * <p>The Internet bandwidth throttling rule ID.</p>
+     * <p>The public network bandwidth throttling rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>qos-5605u0gelk200****</p>
@@ -304,7 +302,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String qosRuleId;
 
     /**
-     * <p>Specifies whether to query cloud computer image version information.</p>
+     * <p>Specifies whether to query the image version information of the cloud computer.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -313,7 +311,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public Boolean queryFotaUpdate;
 
     /**
-     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to retrieve the list of regions supported by Alibaba Cloud Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -322,11 +320,17 @@ public class DescribeDesktopsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource reservation pool ID (rp-xxx). Filters cloud computers by reservation pool exactly. If not specified or left empty, no filtering by reservation pool is applied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rp-xxx</p>
+     */
     @NameInMap("ReservePoolId")
     public String reservePoolId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The enterprise resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-4hsvzbbmqdzu3s****</p>
@@ -353,7 +357,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String subPayType;
 
     /**
-     * <p>The tags. A tag consists of a key-value pair and is used to mark resources. You can use tags to group and manage cloud computers for easy searching and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud computers</a>.</p>
+     * <p>The list of tags. A tag consists of a key-value pair and is used to identify resources. You can use tags to group and manage cloud computers for easier search and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud computers</a>.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDesktopsRequestTag> tag;
@@ -702,7 +706,7 @@ public class DescribeDesktopsRequest extends TeaModel {
 
     public static class DescribeDesktopsRequestTag extends TeaModel {
         /**
-         * <p>The tag key. If you specify <code>Tag</code>, <code>Key</code> is required. The tag key cannot exceed 128 characters, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>. It also cannot consist of only spaces.</p>
+         * <p>The tag key. If you specify <code>Tag</code>, <code>Key</code> is required. The value cannot exceed 128 characters, cannot start with <code>aliyun</code> or <code>acs:</code>, cannot contain <code>http://</code> or <code>https://</code>, and cannot consist of spaces only.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -711,7 +715,7 @@ public class DescribeDesktopsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The tag value cannot exceed 128 characters, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value. The value cannot exceed 128 characters, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
