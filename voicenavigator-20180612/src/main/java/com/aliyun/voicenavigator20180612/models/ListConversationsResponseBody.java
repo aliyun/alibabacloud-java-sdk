@@ -129,18 +129,20 @@ public class ListConversationsResponseBody extends TeaModel {
         public java.util.List<String> dsReportTitles;
 
         /**
-         * <p>The reason for hanging up. Valid values:
-         *      1: Normal completion.
-         *      2: Bot hung up after unrecognized input.
-         *      3: Hung up due to silence timeout.
-         *      4: User hung up after unrecognized input.
-         *      5: User hung up without reason.
-         *      6: Transferred to human agent due to intent match.
-         *      7: Transferred to human agent due to unrecognized input.
-         *      8: No interaction from the user side.
-         *      9: System exception interruption.
-         *      10: Transferred to IVR due to intent match.
-         *      11: Transferred to IVR due to unrecognized input.</p>
+         * <p>The reason for ending the session. Valid values:</p>
+         * <ol>
+         * <li>Normal completion.</li>
+         * <li>Hangup by the bot after unrecognized input.</li>
+         * <li>Hangup due to silence timeout.</li>
+         * <li>Hangup by the user after unrecognized input.</li>
+         * <li>Hangup by the user without a reason.</li>
+         * <li>Transfer to a human agent due to matched intent.</li>
+         * <li>Transfer to a human agent after unrecognized input.</li>
+         * <li>No interaction from the user.</li>
+         * <li>Interruption due to a system exception.</li>
+         * <li>Transfer to IVR due to matched intent.</li>
+         * <li>Transfer to IVR after unrecognized input.</li>
+         * </ol>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -158,7 +160,7 @@ public class ListConversationsResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>Indicates whether the last playback was completed when the session ended.</p>
+         * <p>Specifies whether the last prompt was fully played before the session ended.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -167,7 +169,7 @@ public class ListConversationsResponseBody extends TeaModel {
         public Boolean hasLastPlaybackCompleted;
 
         /**
-         * <p>Indicates whether the session was transferred to a human agent.</p>
+         * <p>Specifies whether the session was transferred to a human agent.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -185,7 +187,7 @@ public class ListConversationsResponseBody extends TeaModel {
         public Integer rounds;
 
         /**
-         * <p>Indicates whether the session is in a sandbox environment.</p>
+         * <p>Specifies whether the sandbox mode is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -210,6 +212,15 @@ public class ListConversationsResponseBody extends TeaModel {
          */
         @NameInMap("StartTime")
         public Long startTime;
+
+        /**
+         * <p>The text-to-speech (TTS) voice used for the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cosyvoice-v3-flash:longanyang</p>
+         */
+        @NameInMap("Voice")
+        public String voice;
 
         public static ListConversationsResponseBodyConversations build(java.util.Map<String, ?> map) throws Exception {
             ListConversationsResponseBodyConversations self = new ListConversationsResponseBodyConversations();
@@ -326,6 +337,14 @@ public class ListConversationsResponseBody extends TeaModel {
         }
         public Long getStartTime() {
             return this.startTime;
+        }
+
+        public ListConversationsResponseBodyConversations setVoice(String voice) {
+            this.voice = voice;
+            return this;
+        }
+        public String getVoice() {
+            return this.voice;
         }
 
     }

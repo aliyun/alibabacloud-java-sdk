@@ -4,11 +4,14 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class ListConversationsRequest extends TeaModel {
+    /**
+     * <p>The AB test ID.</p>
+     */
     @NameInMap("AbTestId")
     public String abTestId;
 
     /**
-     * <p>The left boundary of the start time range.</p>
+     * <p>The lower bound of the start time range.</p>
      * 
      * <strong>example:</strong>
      * <p>1638288000000</p>
@@ -17,7 +20,7 @@ public class ListConversationsRequest extends TeaModel {
     public Long beginTimeLeftRange;
 
     /**
-     * <p>The right boundary of the start time range.</p>
+     * <p>The upper bound of the start time range.</p>
      * 
      * <strong>example:</strong>
      * <p>1637547875311</p>
@@ -38,7 +41,7 @@ public class ListConversationsRequest extends TeaModel {
     public Integer debugConversation;
 
     /**
-     * <p>The instance list.</p>
+     * <p>The instance IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +51,7 @@ public class ListConversationsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Specifies whether the session is in a sandbox environment.</p>
+     * <p>Specifies whether the sandbox mode is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -77,7 +80,7 @@ public class ListConversationsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The query condition.</p>
+     * <p>The query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>13788914724</p>
@@ -95,7 +98,7 @@ public class ListConversationsRequest extends TeaModel {
     public Long result;
 
     /**
-     * <p>The left boundary of the rounds query range.</p>
+     * <p>The lower bound of the conversation rounds range.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -104,7 +107,7 @@ public class ListConversationsRequest extends TeaModel {
     public Integer roundsLeftRange;
 
     /**
-     * <p>The right boundary of the rounds query range.</p>
+     * <p>The upper bound of the conversation rounds range.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>

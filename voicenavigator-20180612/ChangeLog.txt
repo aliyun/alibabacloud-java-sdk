@@ -1,3 +1,7 @@
+2026-10-12 Version: 2.0.7
+- Update API ListConversations: add response parameters Body.Conversations.$.Voice.
+
+
 2026-09-03 Version: 2.0.6
 - Update API DescribeTTSConfig: add response parameters Body.TtsOverridesUuid.
 - Update API GetAsrConfig: add response parameters Body.Data.AsrOverridesUuid.
