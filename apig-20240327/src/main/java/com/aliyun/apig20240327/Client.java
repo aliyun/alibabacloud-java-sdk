@@ -2347,6 +2347,144 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a HiMarket developer portal and returns the ID of the newly created portal.</p>
+     * 
+     * @param request CreatePortalRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePortalResponse
+     */
+    public CreatePortalResponse createPortalWithOptions(CreatePortalRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePortal"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/portals"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePortalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a HiMarket developer portal and returns the ID of the newly created portal.</p>
+     * 
+     * @param request CreatePortalRequest
+     * @return CreatePortalResponse
+     */
+    public CreatePortalResponse createPortal(CreatePortalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createPortalWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an API product in the product catalog of the HiMarket portal and returns the ID of the new product upon successful creation.</p>
+     * 
+     * @param request CreateProductRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateProductResponse
+     */
+    public CreateProductResponse createProductWithOptions(CreateProductRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoApprove)) {
+            body.put("autoApprove", request.autoApprove);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.categories)) {
+            body.put("categories", request.categories);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.document)) {
+            body.put("document", request.document);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.feature)) {
+            body.put("feature", request.feature);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.icon)) {
+            body.put("icon", request.icon);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateProduct"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/products"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateProductResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an API product in the product catalog of the HiMarket portal and returns the ID of the new product upon successful creation.</p>
+     * 
+     * @param request CreateProductRequest
+     * @return CreateProductResponse
+     */
+    public CreateProductResponse createProduct(CreateProductRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createProductWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a product category for an API product and returns the ID and name of the new category upon success.</p>
      * 
      * @param request CreateProductCategoryRequest
@@ -5479,6 +5617,170 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the details of a single HiMarket developer portal by portal ID and returns the portal name, description, region ID, portal settings, and portal domain name configurations.</p>
+     * 
+     * @param request GetPortalRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPortalResponse
+     */
+    public GetPortalResponse getPortalWithOptions(String portalId, GetPortalRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPortal"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/portals/" + com.aliyun.openapiutil.Client.getEncodeParam(portalId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPortalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a single HiMarket developer portal by portal ID and returns the portal name, description, region ID, portal settings, and portal domain name configurations.</p>
+     * 
+     * @param request GetPortalRequest
+     * @return GetPortalResponse
+     */
+    public GetPortalResponse getPortal(String portalId, GetPortalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getPortalWithOptions(portalId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a single API product by API product ID and returns information such as the name, description, status, type, documentation, icon, automatic subscription approval setting, MCP, Agent, and model configurations, product capability configurations, and region.</p>
+     * 
+     * @param request GetProductRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetProductResponse
+     */
+    public GetProductResponse getProductWithOptions(String productId, GetProductRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetProduct"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/products/" + com.aliyun.openapiutil.Client.getEncodeParam(productId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProductResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a single API product by API product ID and returns information such as the name, description, status, type, documentation, icon, automatic subscription approval setting, MCP, Agent, and model configurations, product capability configurations, and region.</p>
+     * 
+     * @param request GetProductRequest
+     * @return GetProductResponse
+     */
+    public GetProductResponse getProduct(String productId, GetProductRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getProductWithOptions(productId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a product category by ID and returns the ID, name, description, and icon of the category.</p>
+     * 
+     * @param request GetProductCategoryRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetProductCategoryResponse
+     */
+    public GetProductCategoryResponse getProductCategoryWithOptions(String categoryId, GetProductCategoryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetProductCategory"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/product-categories/" + com.aliyun.openapiutil.Client.getEncodeParam(categoryId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProductCategoryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a product category by ID and returns the ID, name, description, and icon of the category.</p>
+     * 
+     * @param request GetProductCategoryRequest
+     * @return GetProductCategoryResponse
+     */
+    public GetProductCategoryResponse getProductCategory(String categoryId, GetProductCategoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getProductCategoryWithOptions(categoryId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the API configurations associated with an API product by API product ID, and returns the ID of the gateway where the association resides and the APIG association configuration.</p>
+     * 
+     * @param request GetProductRefRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetProductRefResponse
+     */
+    public GetProductRefResponse getProductRefWithOptions(String productId, GetProductRefRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetProductRef"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/products/" + com.aliyun.openapiutil.Client.getEncodeParam(productId) + "/ref"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProductRefResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the API configurations associated with an API product by API product ID, and returns the ID of the gateway where the association resides and the APIG association configuration.</p>
+     * 
+     * @param request GetProductRefRequest
+     * @return GetProductRefResponse
+     */
+    public GetProductRefResponse getProductRef(String productId, GetProductRefRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getProductRefWithOptions(productId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves the resource overview information.</p>
      * 
      * @param request GetResourceOverviewRequest
@@ -5780,6 +6082,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Executes the callback step in the OIDC logon flow by submitting the code and state query parameters via a GET request, and returns the accessToken, tokenType, and expiresIn fields in the response data.</p>
+     * 
+     * @param request HandleOidcCallbackRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return HandleOidcCallbackResponse
+     */
+    public HandleOidcCallbackResponse handleOidcCallbackWithOptions(HandleOidcCallbackRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.code)) {
+            query.put("code", request.code);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.state)) {
+            query.put("state", request.state);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "HandleOidcCallback"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/oidc/callback"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new HandleOidcCallbackResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Executes the callback step in the OIDC logon flow by submitting the code and state query parameters via a GET request, and returns the accessToken, tokenType, and expiresIn fields in the response data.</p>
+     * 
+     * @param request HandleOidcCallbackRequest
+     * @return HandleOidcCallbackResponse
+     */
+    public HandleOidcCallbackResponse handleOidcCallback(HandleOidcCallbackRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.handleOidcCallbackWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</p>
      * 
      * @param request ImportHttpApiRequest
@@ -5875,6 +6228,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.importHttpApiWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Initiates the Authorize step in the OIDC logon process based on the OIDC provider identifier. The response body defined by the API operation contains only the requestId, code, and message fields, and does not declare the business response parameter data.</p>
+     * 
+     * @param request InitiateOidcAuthRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InitiateOidcAuthResponse
+     */
+    public InitiateOidcAuthResponse initiateOidcAuthWithOptions(InitiateOidcAuthRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.provider)) {
+            query.put("provider", request.provider);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InitiateOidcAuth"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/oidc/authorize"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InitiateOidcAuthResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Initiates the Authorize step in the OIDC logon process based on the OIDC provider identifier. The response body defined by the API operation contains only the requestId, code, and message fields, and does not declare the business response parameter data.</p>
+     * 
+     * @param request InitiateOidcAuthRequest
+     * @return InitiateOidcAuthResponse
+     */
+    public InitiateOidcAuthResponse initiateOidcAuth(InitiateOidcAuthRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.initiateOidcAuthWithOptions(request, headers, runtime);
     }
 
     /**
@@ -6111,6 +6511,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Performs a paging query on the field template list and returns the template ID, request path, and applicable protocol for each template record.</p>
+     * 
+     * @param request ListApiPathFieldTemplatesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListApiPathFieldTemplatesResponse
+     */
+    public ListApiPathFieldTemplatesResponse listApiPathFieldTemplatesWithOptions(ListApiPathFieldTemplatesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListApiPathFieldTemplates"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/api-path-fields/templates"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListApiPathFieldTemplatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paging query on the field template list and returns the template ID, request path, and applicable protocol for each template record.</p>
+     * 
+     * @param request ListApiPathFieldTemplatesRequest
+     * @return ListApiPathFieldTemplatesResponse
+     */
+    public ListApiPathFieldTemplatesResponse listApiPathFieldTemplates(ListApiPathFieldTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listApiPathFieldTemplatesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries a list of batch export tasks.</p>
      * 
      * @param request ListBatchExportTasksRequest
@@ -6182,6 +6633,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listBatchExportTasksWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query on the list of HiMarket chat sessions, returning the session ID, name, conversation type, and associated API products for each session. The response also includes the paging page number, paging size, and total count.</p>
+     * 
+     * @param request ListChatSessionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListChatSessionsResponse
+     */
+    public ListChatSessionsResponse listChatSessionsWithOptions(ListChatSessionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListChatSessions"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/sessions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListChatSessionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query on the list of HiMarket chat sessions, returning the session ID, name, conversation type, and associated API products for each session. The response also includes the paging page number, paging size, and total count.</p>
+     * 
+     * @param request ListChatSessionsRequest
+     * @return ListChatSessionsResponse
+     */
+    public ListChatSessionsResponse listChatSessions(ListChatSessionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listChatSessionsWithOptions(request, headers, runtime);
     }
 
     /**
@@ -6534,6 +7044,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listConsumersWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query on the HiMarket developer list. You can filter the paging results by portal ID, username, and developer status. The response includes the developer ID, portal ID, username, and status.</p>
+     * 
+     * @param request ListDevelopersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDevelopersResponse
+     */
+    public ListDevelopersResponse listDevelopersWithOptions(ListDevelopersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.portalId)) {
+            query.put("portalId", request.portalId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.username)) {
+            query.put("username", request.username);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDevelopers"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/developers"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDevelopersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query on the HiMarket developer list. You can filter the paging results by portal ID, username, and developer status. The response includes the developer ID, portal ID, username, and status.</p>
+     * 
+     * @param request ListDevelopersRequest
+     * @return ListDevelopersResponse
+     */
+    public ListDevelopersResponse listDevelopers(ListDevelopersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listDevelopersWithOptions(request, headers, runtime);
     }
 
     /**
@@ -7273,6 +7854,140 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Performs a paged query to retrieve the API product subscriptions of a specified HiMarket consumer. The paging process allows you to filter subscriptions by status. Each subscription record includes the subscription ID, the ID, name, and type of the subscribed API product, the consumer ID and name, and the subscription status.</p>
+     * 
+     * @param request ListHiMarketConsumerSubscriptionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListHiMarketConsumerSubscriptionsResponse
+     */
+    public ListHiMarketConsumerSubscriptionsResponse listHiMarketConsumerSubscriptionsWithOptions(String consumerId, ListHiMarketConsumerSubscriptionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListHiMarketConsumerSubscriptions"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/consumers/" + com.aliyun.openapiutil.Client.getEncodeParam(consumerId) + "/subscriptions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListHiMarketConsumerSubscriptionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query to retrieve the API product subscriptions of a specified HiMarket consumer. The paging process allows you to filter subscriptions by status. Each subscription record includes the subscription ID, the ID, name, and type of the subscribed API product, the consumer ID and name, and the subscription status.</p>
+     * 
+     * @param request ListHiMarketConsumerSubscriptionsRequest
+     * @return ListHiMarketConsumerSubscriptionsResponse
+     */
+    public ListHiMarketConsumerSubscriptionsResponse listHiMarketConsumerSubscriptions(String consumerId, ListHiMarketConsumerSubscriptionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listHiMarketConsumerSubscriptionsWithOptions(consumerId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paging query on the HiMarket consumer list. You can filter consumers by name keywords, portal ID, and developer ID. The response includes the ID, name, description, and primary status of each consumer.</p>
+     * 
+     * @param request ListHiMarketConsumersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListHiMarketConsumersResponse
+     */
+    public ListHiMarketConsumersResponse listHiMarketConsumersWithOptions(ListHiMarketConsumersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.developerId)) {
+            query.put("developerId", request.developerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.portalId)) {
+            query.put("portalId", request.portalId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListHiMarketConsumers"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/consumers"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListHiMarketConsumersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paging query on the HiMarket consumer list. You can filter consumers by name keywords, portal ID, and developer ID. The response includes the ID, name, description, and primary status of each consumer.</p>
+     * 
+     * @param request ListHiMarketConsumersRequest
+     * @return ListHiMarketConsumersResponse
+     */
+    public ListHiMarketConsumersResponse listHiMarketConsumers(ListHiMarketConsumersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listHiMarketConsumersWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves a list of API operations.</p>
      * 
      * @param request ListHttpApiOperationsRequest
@@ -7683,6 +8398,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of Model Context Protocol (MCP) tools in an MCP Server API product and returns a list of tools. Each tool includes three text fields (name, title, and description) and four map structures (inputSchema, outputSchema, annotations, and meta).</p>
+     * 
+     * @param request ListMcpProductToolsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMcpProductToolsResponse
+     */
+    public ListMcpProductToolsResponse listMcpProductToolsWithOptions(String productId, ListMcpProductToolsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMcpProductTools"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/products/" + com.aliyun.openapiutil.Client.getEncodeParam(productId) + "/tools"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMcpProductToolsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of Model Context Protocol (MCP) tools in an MCP Server API product and returns a list of tools. Each tool includes three text fields (name, title, and description) and four map structures (inputSchema, outputSchema, annotations, and meta).</p>
+     * 
+     * @param request ListMcpProductToolsRequest
+     * @return ListMcpProductToolsResponse
+     */
+    public ListMcpProductToolsResponse listMcpProductTools(String productId, ListMcpProductToolsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMcpProductToolsWithOptions(productId, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>The operation supports creating multiple services.</p>
      * 
@@ -7808,6 +8564,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listMigrationTasksWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of model cards and returns the model name, provider, and source identifier for each card, along with the features, pricing, meta, availablePaths, and snapshots structures. The only business request parameter is the provider identifier.</p>
+     * 
+     * @param request ListModelCardsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListModelCardsResponse
+     */
+    public ListModelCardsResponse listModelCardsWithOptions(ListModelCardsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.provider)) {
+            query.put("provider", request.provider);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListModelCards"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/model-cards"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListModelCardsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of model cards and returns the model name, provider, and source identifier for each card, along with the features, pricing, meta, availablePaths, and snapshots structures. The only business request parameter is the provider identifier.</p>
+     * 
+     * @param request ListModelCardsRequest
+     * @return ListModelCardsResponse
+     */
+    public ListModelCardsResponse listModelCards(ListModelCardsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listModelCardsWithOptions(request, headers, runtime);
     }
 
     /**
@@ -8330,6 +9133,427 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listPolicyClassesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query for the list of published API products on a specified HiMarket developer portal. The paging result contains list items, each returning the publication record ID, API product ID, API product name, and API product type.</p>
+     * 
+     * @param request ListPortalPublicationsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPortalPublicationsResponse
+     */
+    public ListPortalPublicationsResponse listPortalPublicationsWithOptions(String portalId, ListPortalPublicationsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productName)) {
+            query.put("productName", request.productName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPortalPublications"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/portals/" + com.aliyun.openapiutil.Client.getEncodeParam(portalId) + "/publications"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPortalPublicationsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query for the list of published API products on a specified HiMarket developer portal. The paging result contains list items, each returning the publication record ID, API product ID, API product name, and API product type.</p>
+     * 
+     * @param request ListPortalPublicationsRequest
+     * @return ListPortalPublicationsResponse
+     */
+    public ListPortalPublicationsResponse listPortalPublications(String portalId, ListPortalPublicationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listPortalPublicationsWithOptions(portalId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query for the list of HiMarket developer portals under the current tenant. Each list item in the paging result returns the portal ID, portal name, portal description, region ID, portal settings, and portal domain configurations.</p>
+     * 
+     * @param request ListPortalsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPortalsResponse
+     */
+    public ListPortalsResponse listPortalsWithOptions(ListPortalsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPortals"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/portals"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPortalsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query for the list of HiMarket developer portals under the current tenant. Each list item in the paging result returns the portal ID, portal name, portal description, region ID, portal settings, and portal domain configurations.</p>
+     * 
+     * @param request ListPortalsRequest
+     * @return ListPortalsResponse
+     */
+    public ListPortalsResponse listPortals(ListPortalsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listPortalsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of product categories for the current tenant with paging. You can search by category name keywords. Each item in the list includes the category ID, category name, category description, and category icon.</p>
+     * 
+     * @param request ListProductCategoriesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProductCategoriesResponse
+     */
+    public ListProductCategoriesResponse listProductCategoriesWithOptions(ListProductCategoriesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProductCategories"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/product-categories"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProductCategoriesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of product categories for the current tenant with paging. You can search by category name keywords. Each item in the list includes the category ID, category name, category description, and category icon.</p>
+     * 
+     * @param request ListProductCategoriesRequest
+     * @return ListProductCategoriesResponse
+     */
+    public ListProductCategoriesResponse listProductCategories(ListProductCategoriesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listProductCategoriesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query on the publication information of a specified API product, which is the list of portal records to which the product is published. The list items include the publication record ID, portal ID, portal name, API product ID, API product name, and API product type. You can perform a parameter query by portal name and paging parameters.</p>
+     * 
+     * @param request ListProductPublicationsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProductPublicationsResponse
+     */
+    public ListProductPublicationsResponse listProductPublicationsWithOptions(String productId, ListProductPublicationsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.portalName)) {
+            query.put("portalName", request.portalName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProductPublications"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/products/" + com.aliyun.openapiutil.Client.getEncodeParam(productId) + "/publications"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProductPublicationsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query on the publication information of a specified API product, which is the list of portal records to which the product is published. The list items include the publication record ID, portal ID, portal name, API product ID, API product name, and API product type. You can perform a parameter query by portal name and paging parameters.</p>
+     * 
+     * @param request ListProductPublicationsRequest
+     * @return ListProductPublicationsResponse
+     */
+    public ListProductPublicationsResponse listProductPublications(String productId, ListProductPublicationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listProductPublicationsWithOptions(productId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query to retrieve the paging list of subscribe records for a specified API product. The records can be filtered by subscribe status and searched by consumer name keywords. Each record includes the subscribe ID, API product ID and name, API product type, consumer ID and name, and subscribe status.</p>
+     * 
+     * @param request ListProductSubscriptionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProductSubscriptionsResponse
+     */
+    public ListProductSubscriptionsResponse listProductSubscriptionsWithOptions(String productId, ListProductSubscriptionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.consumerName)) {
+            query.put("consumerName", request.consumerName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProductSubscriptions"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/products/" + com.aliyun.openapiutil.Client.getEncodeParam(productId) + "/subscriptions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProductSubscriptionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query to retrieve the paging list of subscribe records for a specified API product. The records can be filtered by subscribe status and searched by consumer name keywords. Each record includes the subscribe ID, API product ID and name, API product type, consumer ID and name, and subscribe status.</p>
+     * 
+     * @param request ListProductSubscriptionsRequest
+     * @return ListProductSubscriptionsResponse
+     */
+    public ListProductSubscriptionsResponse listProductSubscriptions(String productId, ListProductSubscriptionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listProductSubscriptionsWithOptions(productId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a paginated list of API products under the current tenant. You can specify the product name, product type, product status, product category, and the portal where the product is published in the request parameters. The response includes the product ID, name, description, status, type, documentation, icon, product category, automatic subscription approval status, and the MCP, agent, model, and product capability configurations.</p>
+     * 
+     * @param request ListProductsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProductsResponse
+     */
+    public ListProductsResponse listProductsWithOptions(ListProductsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryIds)) {
+            query.put("categoryIds", request.categoryIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.portalId)) {
+            query.put("portalId", request.portalId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProducts"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/products"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProductsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a paginated list of API products under the current tenant. You can specify the product name, product type, product status, product category, and the portal where the product is published in the request parameters. The response includes the product ID, name, description, status, type, documentation, icon, product category, automatic subscription approval status, and the MCP, agent, model, and product capability configurations.</p>
+     * 
+     * @param request ListProductsRequest
+     * @return ListProductsResponse
+     */
+    public ListProductsResponse listProducts(ListProductsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listProductsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query to retrieve the list of API products that can be published to a specified HiMarket developer portal. The request accepts the portal ID, API product name, and paging parameters. Each item in the response includes the API product ID, name, and description.</p>
+     * 
+     * @param request ListPublishableProductsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPublishableProductsResponse
+     */
+    public ListPublishableProductsResponse listPublishableProductsWithOptions(String portalId, ListPublishableProductsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPublishableProducts"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/portals/" + com.aliyun.openapiutil.Client.getEncodeParam(portalId) + "/publishable-products"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPublishableProductsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query to retrieve the list of API products that can be published to a specified HiMarket developer portal. The request accepts the portal ID, API product name, and paging parameters. Each item in the response includes the API product ID, name, and description.</p>
+     * 
+     * @param request ListPublishableProductsRequest
+     * @return ListPublishableProductsResponse
+     */
+    public ListPublishableProductsResponse listPublishableProducts(String portalId, ListPublishableProductsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listPublishableProductsWithOptions(portalId, request, headers, runtime);
     }
 
     /**
@@ -8879,6 +10103,145 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Logs in to a HiMarket developer account by using a developer username and password, and returns the accessToken and expiresIn fields in the data object of a successful response.</p>
+     * 
+     * @param request LoginDeveloperRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return LoginDeveloperResponse
+     */
+    public LoginDeveloperResponse loginDeveloperWithOptions(LoginDeveloperRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            body.put("password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.username)) {
+            body.put("username", request.username);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "LoginDeveloper"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/developers/login"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new LoginDeveloperResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Logs in to a HiMarket developer account by using a developer username and password, and returns the accessToken and expiresIn fields in the data object of a successful response.</p>
+     * 
+     * @param request LoginDeveloperRequest
+     * @return LoginDeveloperResponse
+     */
+    public LoginDeveloperResponse loginDeveloper(LoginDeveloperRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.loginDeveloperWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Logs a developer out of a HiMarket developer account. This operation takes no business request parameters. A successful response returns only the requestId, code, and message fields.</p>
+     * 
+     * @param request LogoutDeveloperRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return LogoutDeveloperResponse
+     */
+    public LogoutDeveloperResponse logoutDeveloperWithOptions(LogoutDeveloperRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "LogoutDeveloper"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/developers/logout"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new LogoutDeveloperResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Logs a developer out of a HiMarket developer account. This operation takes no business request parameters. A successful response returns only the requestId, code, and message fields.</p>
+     * 
+     * @param request LogoutDeveloperRequest
+     * @return LogoutDeveloperResponse
+     */
+    public LogoutDeveloperResponse logoutDeveloper(LogoutDeveloperRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.logoutDeveloperWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Publishes a specified API product to a specified HiMarket portal. The path parameter specifies the API product ID, and the request body specifies the target portal ID. This operation returns the publication record ID for the publication. You can query the publication record by calling ListProductPublications and unpublish the product by calling UnpublishProduct at /himarket/v1/products/{productId}/publications/{publicationId}.</p>
+     * 
+     * @param request PublishProductRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PublishProductResponse
+     */
+    public PublishProductResponse publishProductWithOptions(String productId, PublishProductRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.portalId)) {
+            body.put("portalId", request.portalId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PublishProduct"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/products/" + com.aliyun.openapiutil.Client.getEncodeParam(productId) + "/publications"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PublishProductResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Publishes a specified API product to a specified HiMarket portal. The path parameter specifies the API product ID, and the request body specifies the target portal ID. This operation returns the publication record ID for the publication. You can query the publication record by calling ListProductPublications and unpublish the product by calling UnpublishProduct at /himarket/v1/products/{productId}/publications/{publicationId}.</p>
+     * 
+     * @param request PublishProductRequest
+     * @return PublishProductResponse
+     */
+    public PublishProductResponse publishProduct(String productId, PublishProductRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.publishProductWithOptions(productId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the list of consumer authorization rules.</p>
      * 
      * @param request QueryConsumerAuthorizationRulesRequest
@@ -9279,6 +10642,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Subscribes to an API product on a specified HiMarket consumer. The path parameter specifies the consumer ID, and the request body specifies the ID of the API product to subscribe to. The response returns the subscription ID, API product ID and name, API product type, consumer ID and name, and subscription status of the subscription record.</p>
+     * 
+     * @param request SubscribeProductRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubscribeProductResponse
+     */
+    public SubscribeProductResponse subscribeProductWithOptions(String consumerId, SubscribeProductRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.productId)) {
+            body.put("productId", request.productId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubscribeProduct"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/consumers/" + com.aliyun.openapiutil.Client.getEncodeParam(consumerId) + "/subscriptions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubscribeProductResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Subscribes to an API product on a specified HiMarket consumer. The path parameter specifies the consumer ID, and the request body specifies the ID of the API product to subscribe to. The response returns the subscription ID, API product ID and name, API product type, consumer ID and name, and subscription status of the subscription record.</p>
+     * 
+     * @param request SubscribeProductRequest
+     * @return SubscribeProductResponse
+     */
+    public SubscribeProductResponse subscribeProduct(String consumerId, SubscribeProductRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.subscribeProductWithOptions(consumerId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Syncs an external MCP server.</p>
      * 
      * @param request SyncMCPServersRequest
@@ -9526,6 +10936,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.uninstallPluginWithOptions(pluginId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Unpublishes a publication record of an API product based on the API product ID and the publication record ID. Both identifiers are parameters in the /himarket/v1/products/{productId}/publications/{publicationId} path. The publication record is created by the PublishProduct operation and can be queried by the ListProductPublications operation. This operation only manages the publication record and does not delete the API product itself. To delete a product, use DeleteProduct. The response returns only the requestId, code, and message.</p>
+     * 
+     * @param request UnpublishProductRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UnpublishProductResponse
+     */
+    public UnpublishProductResponse unpublishProductWithOptions(String productId, String publicationId, UnpublishProductRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UnpublishProduct"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/products/" + com.aliyun.openapiutil.Client.getEncodeParam(productId) + "/publications/" + com.aliyun.openapiutil.Client.getEncodeParam(publicationId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UnpublishProductResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Unpublishes a publication record of an API product based on the API product ID and the publication record ID. Both identifiers are parameters in the /himarket/v1/products/{productId}/publications/{publicationId} path. The publication record is created by the PublishProduct operation and can be queried by the ListProductPublications operation. This operation only manages the publication record and does not delete the API product itself. To delete a product, use DeleteProduct. The response returns only the requestId, code, and message.</p>
+     * 
+     * @param request UnpublishProductRequest
+     * @return UnpublishProductResponse
+     */
+    public UnpublishProductResponse unpublishProduct(String productId, String publicationId, UnpublishProductRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.unpublishProductWithOptions(productId, publicationId, request, headers, runtime);
     }
 
     /**
@@ -9835,6 +11286,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Adds or removes API products in bulk under a specified product category. The path parameter specifies the category ID, the action in the request body specifies the operation direction, and productIds specifies the list of API product IDs to process. The response returns only the requestId, code, and message, and does not return item-by-item processing results.</p>
+     * 
+     * @param request UpdateCategoryProductsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCategoryProductsResponse
+     */
+    public UpdateCategoryProductsResponse updateCategoryProductsWithOptions(String categoryId, UpdateCategoryProductsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.action)) {
+            body.put("action", request.action);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productIds)) {
+            body.put("productIds", request.productIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCategoryProducts"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/product-categories/" + com.aliyun.openapiutil.Client.getEncodeParam(categoryId) + "/products"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCategoryProductsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Adds or removes API products in bulk under a specified product category. The path parameter specifies the category ID, the action in the request body specifies the operation direction, and productIds specifies the list of API product IDs to process. The response returns only the requestId, code, and message, and does not return item-by-item processing results.</p>
+     * 
+     * @param request UpdateCategoryProductsRequest
+     * @return UpdateCategoryProductsResponse
+     */
+    public UpdateCategoryProductsResponse updateCategoryProducts(String categoryId, UpdateCategoryProductsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateCategoryProductsWithOptions(categoryId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Updates a consumer.</p>
      * 
      * @param request UpdateConsumerRequest
@@ -10006,6 +11508,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateConsumerGroupWithOptions(consumerGroupId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the status of a HiMarket developer by developer ID. The request body specifies the target status and portal ID. A successful response returns only the requestId, code, and message, and does not return the updated developer information.</p>
+     * 
+     * @param request UpdateDeveloperStatusRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDeveloperStatusResponse
+     */
+    public UpdateDeveloperStatusResponse updateDeveloperStatusWithOptions(String developerId, UpdateDeveloperStatusRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.portalId)) {
+            body.put("portalId", request.portalId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDeveloperStatus"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/developers/" + com.aliyun.openapiutil.Client.getEncodeParam(developerId) + "/status"),
+            new TeaPair("method", "PATCH"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDeveloperStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the status of a HiMarket developer by developer ID. The request body specifies the target status and portal ID. A successful response returns only the requestId, code, and message, and does not return the updated developer information.</p>
+     * 
+     * @param request UpdateDeveloperStatusRequest
+     * @return UpdateDeveloperStatusResponse
+     */
+    public UpdateDeveloperStatusResponse updateDeveloperStatus(String developerId, UpdateDeveloperStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateDeveloperStatusWithOptions(developerId, request, headers, runtime);
     }
 
     /**
@@ -11151,6 +12704,203 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updatePolicyWithOptions(policyId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the name, description, and portal configurations of a HiMarket developer portal by portal ID. The request body is in JSON format. A successful response returns the ID of the updated portal.</p>
+     * 
+     * @param request UpdatePortalRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdatePortalResponse
+     */
+    public UpdatePortalResponse updatePortalWithOptions(String portalId, UpdatePortalRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.portalSettingConfig)) {
+            body.put("portalSettingConfig", request.portalSettingConfig);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdatePortal"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/portals/" + com.aliyun.openapiutil.Client.getEncodeParam(portalId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePortalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the name, description, and portal configurations of a HiMarket developer portal by portal ID. The request body is in JSON format. A successful response returns the ID of the updated portal.</p>
+     * 
+     * @param request UpdatePortalRequest
+     * @return UpdatePortalResponse
+     */
+    public UpdatePortalResponse updatePortal(String portalId, UpdatePortalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updatePortalWithOptions(portalId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the name, description, type, documentation, icon, automatic subscription approval setting, product categories, and capabilities of an API product by API product ID. The request body is in JSON format. A successful response returns only the requestId, code, and message, and does not return the updated product information.</p>
+     * 
+     * @param request UpdateProductRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateProductResponse
+     */
+    public UpdateProductResponse updateProductWithOptions(String productId, UpdateProductRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoApprove)) {
+            body.put("autoApprove", request.autoApprove);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.categories)) {
+            body.put("categories", request.categories);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.document)) {
+            body.put("document", request.document);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.feature)) {
+            body.put("feature", request.feature);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.icon)) {
+            body.put("icon", request.icon);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateProduct"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/products/" + com.aliyun.openapiutil.Client.getEncodeParam(productId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateProductResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the name, description, type, documentation, icon, automatic subscription approval setting, product categories, and capabilities of an API product by API product ID. The request body is in JSON format. A successful response returns only the requestId, code, and message, and does not return the updated product information.</p>
+     * 
+     * @param request UpdateProductRequest
+     * @return UpdateProductResponse
+     */
+    public UpdateProductResponse updateProduct(String productId, UpdateProductRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateProductWithOptions(productId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the name, description, and icon of a product category by category ID. The request body is in JSON format. The response returns only the request ID, response status code, and response message.</p>
+     * 
+     * @param request UpdateProductCategoryRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateProductCategoryResponse
+     */
+    public UpdateProductCategoryResponse updateProductCategoryWithOptions(String categoryId, UpdateProductCategoryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.icon)) {
+            body.put("icon", request.icon);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateProductCategory"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/himarket/v1/product-categories/" + com.aliyun.openapiutil.Client.getEncodeParam(categoryId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateProductCategoryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the name, description, and icon of a product category by category ID. The request body is in JSON format. The response returns only the request ID, response status code, and response message.</p>
+     * 
+     * @param request UpdateProductCategoryRequest
+     * @return UpdateProductCategoryResponse
+     */
+    public UpdateProductCategoryResponse updateProductCategory(String categoryId, UpdateProductCategoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateProductCategoryWithOptions(categoryId, request, headers, runtime);
     }
 
     /**
