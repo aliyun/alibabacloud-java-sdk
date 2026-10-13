@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListMachineTypesResponseBody extends TeaModel {
     /**
-     * <p>Details of the machine types.</p>
+     * <p>The details of the machine types.</p>
      */
     @NameInMap("MachineTypes")
     public java.util.List<ListMachineTypesResponseBodyMachineTypes> machineTypes;
 
     /**
-     * <p>The token to request the next page of results. Include this token in your next request to retrieve the next page.</p>
+     * <p>The next token for pagination. Include this value in the request to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>a3f2224a5ec7224116c4f5246120abe4</p>
@@ -59,6 +59,8 @@ public class ListMachineTypesResponseBody extends TeaModel {
 
     public static class ListMachineTypesResponseBodyMachineTypesCpuInfoDetail extends TeaModel {
         /**
+         * <p>The CPU architecture.</p>
+         * 
          * <strong>example:</strong>
          * <p>x86_64</p>
          */
@@ -66,6 +68,8 @@ public class ListMachineTypesResponseBody extends TeaModel {
         public String cpuArch;
 
         /**
+         * <p>The number of CPU sockets.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -73,6 +77,8 @@ public class ListMachineTypesResponseBody extends TeaModel {
         public Integer cpuSockets;
 
         /**
+         * <p>The number of vCPU cores.</p>
+         * 
          * <strong>example:</strong>
          * <p>192</p>
          */
@@ -112,6 +118,8 @@ public class ListMachineTypesResponseBody extends TeaModel {
 
     public static class ListMachineTypesResponseBodyMachineTypesDiskInfoDetail extends TeaModel {
         /**
+         * <p>The number of disks.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -119,6 +127,8 @@ public class ListMachineTypesResponseBody extends TeaModel {
         public Integer localDiskCount;
 
         /**
+         * <p>The capacity per disk, in TB.</p>
+         * 
          * <strong>example:</strong>
          * <p>3.84</p>
          */
@@ -126,6 +136,8 @@ public class ListMachineTypesResponseBody extends TeaModel {
         public Float localDiskSizeInTB;
 
         /**
+         * <p>The disk type.</p>
+         * 
          * <strong>example:</strong>
          * <p>NVMe SSD</p>
          */
@@ -165,6 +177,8 @@ public class ListMachineTypesResponseBody extends TeaModel {
 
     public static class ListMachineTypesResponseBodyMachineTypesFrontendNetworkDetail extends TeaModel {
         /**
+         * <p>The frontend network type.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc</p>
          */
@@ -172,6 +186,8 @@ public class ListMachineTypesResponseBody extends TeaModel {
         public String frontendNetworkType;
 
         /**
+         * <p>Indicates whether jumbo frames are supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -203,6 +219,8 @@ public class ListMachineTypesResponseBody extends TeaModel {
 
     public static class ListMachineTypesResponseBodyMachineTypesGpuInfoDetail extends TeaModel {
         /**
+         * <p>The number of GPUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -210,6 +228,8 @@ public class ListMachineTypesResponseBody extends TeaModel {
         public Integer gpuCount;
 
         /**
+         * <p>The GPU memory per card, in GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>144</p>
          */
@@ -217,6 +237,8 @@ public class ListMachineTypesResponseBody extends TeaModel {
         public Integer gpuMemoryInGB;
 
         /**
+         * <p>The GPU name.</p>
+         * 
          * <strong>example:</strong>
          * <p>M890P-144G</p>
          */
@@ -224,6 +246,8 @@ public class ListMachineTypesResponseBody extends TeaModel {
         public String gpuName;
 
         /**
+         * <p>The GPU vendor.</p>
+         * 
          * <strong>example:</strong>
          * <p>T-HEAD</p>
          */
@@ -231,6 +255,8 @@ public class ListMachineTypesResponseBody extends TeaModel {
         public String gpuVendor;
 
         /**
+         * <p>The total GPU memory, in GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>9216</p>
          */
@@ -286,6 +312,8 @@ public class ListMachineTypesResponseBody extends TeaModel {
 
     public static class ListMachineTypesResponseBodyMachineTypesMemoryInfoDetail extends TeaModel {
         /**
+         * <p>The memory size, in GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>2048</p>
          */
@@ -309,6 +337,8 @@ public class ListMachineTypesResponseBody extends TeaModel {
 
     public static class ListMachineTypesResponseBodyMachineTypesRdmaInfoDetail extends TeaModel {
         /**
+         * <p>The bandwidth per backend RDMA NIC, in Gbps.</p>
+         * 
          * <strong>example:</strong>
          * <p>400</p>
          */
@@ -316,11 +346,26 @@ public class ListMachineTypesResponseBody extends TeaModel {
         public Integer backendRdmaNicBwInGbps;
 
         /**
+         * <p>The number of backend RDMA NICs.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
         @NameInMap("BackendRdmaNicCount")
         public Integer backendRdmaNicCount;
+
+        /**
+         * <p>Indicates whether backend RDMA is supported. Valid values:</p>
+         * <ul>
+         * <li>true: The current machine type supports backend RDMA.</li>
+         * <li>false: The current machine type does not support backend RDMA.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("BackendRdmaSupported")
+        public Boolean backendRdmaSupported;
 
         public static ListMachineTypesResponseBodyMachineTypesRdmaInfoDetail build(java.util.Map<String, ?> map) throws Exception {
             ListMachineTypesResponseBodyMachineTypesRdmaInfoDetail self = new ListMachineTypesResponseBodyMachineTypesRdmaInfoDetail();
@@ -343,6 +388,14 @@ public class ListMachineTypesResponseBody extends TeaModel {
             return this.backendRdmaNicCount;
         }
 
+        public ListMachineTypesResponseBodyMachineTypesRdmaInfoDetail setBackendRdmaSupported(Boolean backendRdmaSupported) {
+            this.backendRdmaSupported = backendRdmaSupported;
+            return this;
+        }
+        public Boolean getBackendRdmaSupported() {
+            return this.backendRdmaSupported;
+        }
+
     }
 
     public static class ListMachineTypesResponseBodyMachineTypes extends TeaModel {
@@ -356,7 +409,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
         public Integer bondNum;
 
         /**
-         * <p>CPU information.</p>
+         * <p>The CPU information.</p>
          * 
          * <strong>example:</strong>
          * <p>2x Intel Icelake 8369B 32C CPU</p>
@@ -364,11 +417,14 @@ public class ListMachineTypesResponseBody extends TeaModel {
         @NameInMap("CpuInfo")
         public String cpuInfo;
 
+        /**
+         * <p>The structured CPU specifications.</p>
+         */
         @NameInMap("CpuInfoDetail")
         public ListMachineTypesResponseBodyMachineTypesCpuInfoDetail cpuInfoDetail;
 
         /**
-         * <p>Disk information.</p>
+         * <p>The disk information.</p>
          * 
          * <strong>example:</strong>
          * <p>2x 480GB SATA SSD</p>
@@ -376,14 +432,20 @@ public class ListMachineTypesResponseBody extends TeaModel {
         @NameInMap("DiskInfo")
         public String diskInfo;
 
+        /**
+         * <p>The disk information.</p>
+         */
         @NameInMap("DiskInfoDetail")
         public ListMachineTypesResponseBodyMachineTypesDiskInfoDetail diskInfoDetail;
 
+        /**
+         * <p>The frontend network information.</p>
+         */
         @NameInMap("FrontendNetworkDetail")
         public ListMachineTypesResponseBodyMachineTypesFrontendNetworkDetail frontendNetworkDetail;
 
         /**
-         * <p>GPU information.</p>
+         * <p>The GPU information.</p>
          * 
          * <strong>example:</strong>
          * <p>8x NVIDIA SXM4 80GB A100 GPU</p>
@@ -391,11 +453,14 @@ public class ListMachineTypesResponseBody extends TeaModel {
         @NameInMap("GpuInfo")
         public String gpuInfo;
 
+        /**
+         * <p>The GPU information.</p>
+         */
         @NameInMap("GpuInfoDetail")
         public ListMachineTypesResponseBodyMachineTypesGpuInfoDetail gpuInfoDetail;
 
         /**
-         * <p>Memory information.</p>
+         * <p>The memory information.</p>
          * 
          * <strong>example:</strong>
          * <p>32x 64GB DDR4 3200 Memory</p>
@@ -403,6 +468,9 @@ public class ListMachineTypesResponseBody extends TeaModel {
         @NameInMap("MemoryInfo")
         public String memoryInfo;
 
+        /**
+         * <p>The memory information.</p>
+         */
         @NameInMap("MemoryInfoDetail")
         public ListMachineTypesResponseBodyMachineTypesMemoryInfoDetail memoryInfoDetail;
 
@@ -416,7 +484,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Network information.</p>
+         * <p>The network information.</p>
          * 
          * <strong>example:</strong>
          * <p>2x 100Gbps DP NIC</p>
@@ -433,6 +501,9 @@ public class ListMachineTypesResponseBody extends TeaModel {
         @NameInMap("NodeCount")
         public String nodeCount;
 
+        /**
+         * <p>The RDMA information.</p>
+         */
         @NameInMap("RdmaInfoDetail")
         public ListMachineTypesResponseBodyMachineTypesRdmaInfoDetail rdmaInfoDetail;
 
@@ -446,7 +517,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
         public Integer totalCpuCore;
 
         /**
-         * <p>The type of the machine type.</p>
+         * <p>The machine type.</p>
          * 
          * <strong>example:</strong>
          * <p>Public</p>

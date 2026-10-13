@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHyperNodesShrinkRequest extends TeaModel {
     /**
-     * <p>The name of the cluster.</p>
+     * <p>The cluster name.</p>
      * 
      * <strong>example:</strong>
      * <p>Standard_Cluster</p>
@@ -32,7 +32,7 @@ public class ListHyperNodesShrinkRequest extends TeaModel {
     public String hpnZone;
 
     /**
-     * <p>The ID of the node.</p>
+     * <p>The node ID.</p>
      * 
      * <strong>example:</strong>
      * <p>e01-cn-zvp2tgykr08</p>
@@ -56,10 +56,14 @@ public class ListHyperNodesShrinkRequest extends TeaModel {
     public String machineType;
 
     /**
-     * <p>The number of entries to return on each page. The maximum value is 100.</p>
-     * <p>Default values:</p>
-     * <p>• If you do not specify this parameter or you specify a value that is less than 20, the default value is 20.</p>
-     * <p>• If you specify a value that is greater than 100, the default value is 100.</p>
+     * <p>The number of entries per page in a paged query. Maximum value: 100.</p>
+     * <p>Default value:</p>
+     * <ul>
+     * <li><p>If this parameter is not specified or is set to a value less than 20, the default value is 20.</p>
+     * </li>
+     * <li><p>If this parameter is set to a value greater than 100, the default value is 100.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -68,7 +72,7 @@ public class ListHyperNodesShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Set this parameter to the NextToken value that is returned from a previous call.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>3a6b93229825ac667104463b56790c91</p>
@@ -86,13 +90,13 @@ public class ListHyperNodesShrinkRequest extends TeaModel {
     public String nodeGroupName;
 
     /**
-     * <p>The state of the node. If you do not specify this parameter, nodes in all states are returned. Valid values: Extending, UnusedNodeStopped, UnusedNodeStopping, Unused, Using, ReleaseLocking, Operating, Cutting, ClusterNodeStopped, UnusedNodeRecovering, ClusterNodeStopping, ClusterNodeRecovering, and Replacing.</p>
+     * <p>The node status. If this parameter is not specified, all statuses are returned. Valid values: Extending, UnusedNodeStopped, UnusedNodeStopping, Unused, Using, ReleaseLocking, Operating, Cutting, ClusterNodeStopped, UnusedNodeRecovering, ClusterNodeStopping, ClusterNodeRecovering, and Replacing.</p>
      */
     @NameInMap("OperatingStates")
     public String operatingStatesShrink;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmwfm33rlt6zi</p>
@@ -101,13 +105,13 @@ public class ListHyperNodesShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tag information.</p>
      */
     @NameInMap("Tags")
     public java.util.List<ListHyperNodesShrinkRequestTags> tags;
 
     /**
-     * <p>The ID of the zone.</p>
+     * <p>The zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-i</p>

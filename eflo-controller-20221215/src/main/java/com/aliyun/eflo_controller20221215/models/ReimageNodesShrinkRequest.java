@@ -17,7 +17,7 @@ public class ReimageNodesShrinkRequest extends TeaModel {
      * <p>Specifies whether to skip failed nodes. Default value: False.</p>
      * 
      * <strong>example:</strong>
-     * <p>False</p>
+     * <p>false</p>
      */
     @NameInMap("IgnoreFailedNodeTasks")
     public Boolean ignoreFailedNodeTasks;

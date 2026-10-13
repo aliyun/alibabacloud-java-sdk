@@ -14,7 +14,7 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The time when the device was created. The time is in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-06-15T10:17:56</p>
@@ -23,7 +23,7 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
     public String createdTime;
 
     /**
-     * <p>The diagnostic task ID.</p>
+     * <p>The diagnostic ID.</p>
      * 
      * <strong>example:</strong>
      * <p>diag-i155363241720059671316</p>
@@ -47,7 +47,7 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
     public String diagnosticState;
 
     /**
-     * <p>The type of the diagnostic task.</p>
+     * <p>The diagnostic type.</p>
      * 
      * <strong>example:</strong>
      * <p>CheckByAiJobLogs</p>
@@ -56,7 +56,7 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
     public String diagnosticType;
 
     /**
-     * <p>The end time of the instance exception. The time format with time zone based on the ISO8601 standard. The format is yyyy-MM-ddTHH:mm:ss +0800.</p>
+     * <p>The time when the node exception ended. The time is in ISO 8601 format with a time zone, in the yyyy-MM-ddTHH:mm:ss+0800 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-06-11T10:00:30</p>
@@ -65,7 +65,7 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The node IDs.</p>
+     * <p>The list of node IDs.</p>
      */
     @NameInMap("NodeIds")
     public java.util.List<String> nodeIds;

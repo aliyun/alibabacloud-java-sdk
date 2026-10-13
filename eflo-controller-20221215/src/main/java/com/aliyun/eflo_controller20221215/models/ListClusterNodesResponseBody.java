@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClusterNodesResponseBody extends TeaModel {
     /**
-     * <p>The token to retrieve the next page of results. If this parameter is empty, no more results are available.</p>
+     * <p>The query token returned by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAXW/ZB9TBvH+0ZK0phtCibQgQmu1RbqplAI6Velo2OKR</p>
@@ -59,7 +59,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
 
     public static class ListClusterNodesResponseBodyNodesNetworks extends TeaModel {
         /**
-         * <p>The name of the network interface.</p>
+         * <p>The name of the network interface on the machine.</p>
          * 
          * <strong>example:</strong>
          * <p>bond0</p>
@@ -68,7 +68,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String bondName;
 
         /**
-         * <p>The IP address of the node in the VPC.</p>
+         * <p>The IP address of the machine in the virtual private cloud (VPC).</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.22.2</p>
@@ -77,7 +77,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The subnet ID.</p>
+         * <p>The subnet ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>subnet-fwekrvg9</p>
@@ -86,7 +86,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String subnetId;
 
         /**
-         * <p>The ID of the VPC to which the network interface belongs.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpd-eoiy88ju</p>
@@ -177,16 +177,16 @@ public class ListClusterNodesResponseBody extends TeaModel {
 
     public static class ListClusterNodesResponseBodyNodes extends TeaModel {
         /**
-         * <p>The unique code that identifies the cloud product or service.</p>
+         * <p>The commodity code, which is a unique identifier for a specific cloud product or service.</p>
          * 
          * <strong>example:</strong>
-         * <p>bccluster_eflocomputing_public_cn（表示灵骏中国站包年包月）、bccluster_eflocomputing_public_intl（表示灵骏国际站包年包月）</p>
+         * <p>bccluster_eflocomputing_public_cn (Lingjun China site subscription), bccluster_eflocomputing_public_intl (Lingjun international site subscription)</p>
          */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-02-02T11:27:07</p>
@@ -195,7 +195,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The expiration time of the node.</p>
+         * <p>The expiration time of the machine. The time is in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-03-03T00:00:00</p>
@@ -204,7 +204,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>Indicates whether the node supports mounting file storage.</p>
+         * <p>Indicates whether file storage mounting is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -222,7 +222,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String hostname;
 
         /**
-         * <p>The ID of the HPN zone.</p>
+         * <p>The cluster number.</p>
          * 
          * <strong>example:</strong>
          * <p>A1</p>
@@ -240,7 +240,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String hyperNodeId;
 
         /**
-         * <p>The image ID.</p>
+         * <p>The system image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i190297201669099844192</p>
@@ -267,7 +267,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String machineType;
 
         /**
-         * <p>Network details.</p>
+         * <p>The network information.</p>
          */
         @NameInMap("Networks")
         public java.util.List<ListClusterNodesResponseBodyNodesNetworks> networks;
@@ -300,7 +300,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The type of the node.</p>
+         * <p>The node specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>standard</p>
@@ -309,7 +309,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String nodeType;
 
         /**
-         * <p>The status of the node.</p>
+         * <p>The node status.</p>
          * 
          * <strong>example:</strong>
          * <p>Extending</p>
@@ -318,7 +318,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String operatingState;
 
         /**
-         * <p>The serial number (SN) of the node.</p>
+         * <p>The serial number (SN) of the machine.</p>
          * 
          * <strong>example:</strong>
          * <p>sn_tOuUk</p>
@@ -327,7 +327,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String sn;
 
         /**
-         * <p>The list of tags attached to the node.</p>
+         * <p>The tag information.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListClusterNodesResponseBodyNodesTags> tags;
@@ -351,7 +351,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the VPC where the node is located.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-f8zcet5mwerafyqlrhyoi</p>
@@ -360,7 +360,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The availability zone ID.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-b</p>

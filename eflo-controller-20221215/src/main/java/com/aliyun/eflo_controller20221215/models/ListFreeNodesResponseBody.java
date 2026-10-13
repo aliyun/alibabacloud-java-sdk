@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFreeNodesResponseBody extends TeaModel {
     /**
-     * <p>The token returned for the next query.</p>
+     * <p>The pagination token returned by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>a3f2224a5ec7224116c4f5246120abe4</p>
@@ -110,7 +110,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-02-02T11:27:07</p>
@@ -119,7 +119,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The expiration time of the machine.</p>
+         * <p>The expiration time of the machine. The time is in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-03-03T00:00:00</p>
@@ -128,7 +128,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The cluster number.</p>
          * 
          * <strong>example:</strong>
          * <p>A1</p>

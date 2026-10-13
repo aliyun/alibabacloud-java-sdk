@@ -11,10 +11,10 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
     public java.util.List<ListFreeHyperNodesResponseBodyHyperNodes> hyperNodes;
 
     /**
-     * <p>The number of entries returned on each page. The maximum value is 100.</p>
+     * <p>The number of entries per page in a paged query. Maximum value: 100.</p>
      * <p>Default value:</p>
-     * <p>• If you do not set this parameter or you set a value less than 20, the default value is 20.</p>
-     * <p>• If you set a value greater than 100, the default value is 100.</p>
+     * <p>•If this parameter is not specified or is set to a value less than 20, the default value is 20.</p>
+     * <p>•If this parameter is set to a value greater than 100, the default value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results. If this parameter is empty, no more results are available.</p>
+     * <p>The pagination token returned by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>563d42ae0b17572449ec8c97f7f66069</p>
@@ -130,7 +130,7 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
-         * <p>The time when the node was created.</p>
+         * <p>The creation time. The time is in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-08-06T10:11:41.569</p>
@@ -139,7 +139,7 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The expiration time of the machine.</p>
+         * <p>The machine expiration time. The time is in ISO 8601 format. Z in the example indicates UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-22T23:59:59Z</p>
@@ -184,7 +184,7 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
         public String machineType;
 
         /**
-         * <p>The status of the hypernode.</p>
+         * <p>The hyper node status.</p>
          * 
          * <strong>example:</strong>
          * <p>Using</p>
@@ -202,7 +202,7 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The status of the hypernode.</p>
+         * <p>The hyper node status.</p>
          * 
          * <strong>example:</strong>
          * <p>Using</p>

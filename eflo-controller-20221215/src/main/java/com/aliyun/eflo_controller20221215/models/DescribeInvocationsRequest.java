@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeInvocationsRequest extends TeaModel {
     /**
-     * <p>The encoding mode of the <code>CommandContent</code> and <code>Output</code> fields in the response. Valid values:</p>
+     * <p>The encoding method for the CommandContent and Output fields in the response. Valid values:</p>
      * <ul>
-     * <li><p>PlainText: Returns the original command content and output.</p>
-     * </li>
-     * <li><p>Base64 (default): Returns the Base64-encoded command content and output.</p>
-     * </li>
+     * <li>PlainText: Returns the original command content and output.</li>
+     * <li>Base64 (default): Returns the Base64-encoded command content and output.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,12 +18,10 @@ public class DescribeInvocationsRequest extends TeaModel {
     public String contentEncoding;
 
     /**
-     * <p>Specifies whether to include the command output in the response.</p>
+     * <p>Specifies whether to return the command output in the results.</p>
      * <ul>
-     * <li><p>true: Returns the output. You must specify the <code>InvokeId</code> or <code>NodeId</code> parameter.</p>
-     * </li>
-     * <li><p>false (default): Does not return the output.</p>
-     * </li>
+     * <li>true: Returns the output. In this case, specify at least the InvokeId or InstanceId parameter.</li>
+     * <li>false (default): Does not return the output.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +31,7 @@ public class DescribeInvocationsRequest extends TeaModel {
     public Boolean includeOutput;
 
     /**
-     * <p>The ID of the command execution.</p>
+     * <p>The command execution ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +41,7 @@ public class DescribeInvocationsRequest extends TeaModel {
     public String invokeId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>e01-cn-zvp2tgykr08</p>

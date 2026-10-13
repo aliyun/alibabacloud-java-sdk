@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListNodeGroupsResponseBody extends TeaModel {
     /**
-     * <p>The node groups.</p>
+     * <p>The cluster group information.</p>
      */
     @NameInMap("Groups")
     public java.util.List<ListNodeGroupsResponseBodyGroups> groups;
 
     /**
-     * <p>The token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The NextToken for the next page. Include this return value when requesting the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>563d42ae0b17572449ec8c97f7f66069</p>
@@ -20,7 +20,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>887FA855-89F4-5DB3-B305-C5879EC480E6</p>
@@ -77,7 +77,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         public String clusterName;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-02-27T13:16:31.599</p>
@@ -96,6 +96,9 @@ public class ListNodeGroupsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether file storage mounting is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("FileSystemMountEnabled")
         public Boolean fileSystemMountEnabled;
@@ -137,7 +140,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         public String imageName;
 
         /**
-         * <p>The instance type.</p>
+         * <p>The machine type.</p>
          * 
          * <strong>example:</strong>
          * <p>efg1.nvga1n</p>
@@ -155,7 +158,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         public Long nodeCount;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. The time is in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-09-22T00:03:05.114</p>
@@ -164,7 +167,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>Whether to enable gpu virtualization or not</p>
+         * <p>Indicates whether GPU virtualization splitting is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

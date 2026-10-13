@@ -17,19 +17,19 @@ public class ExtendClusterRequest extends TeaModel {
      * <p>Specifies whether to skip failed nodes. Default value: False.</p>
      * 
      * <strong>example:</strong>
-     * <p>False</p>
+     * <p>false</p>
      */
     @NameInMap("IgnoreFailedNodeTasks")
     public Boolean ignoreFailedNodeTasks;
 
     /**
-     * <p>The combined IP allocation policy. Each policy can use only one policy type, and multiple policies can be combined.</p>
+     * <p>The combined policy for IP allocation. Each policy can use only one policy type, and multiple policies can be combined.</p>
      */
     @NameInMap("IpAllocationPolicy")
     public java.util.List<ExtendClusterRequestIpAllocationPolicy> ipAllocationPolicy;
 
     /**
-     * <p>The node groups.</p>
+     * <p>The node group.</p>
      */
     @NameInMap("NodeGroups")
     public java.util.List<ExtendClusterRequestNodeGroups> nodeGroups;
@@ -414,7 +414,7 @@ public class ExtendClusterRequest extends TeaModel {
 
     public static class ExtendClusterRequestNodeGroupsHyperNodesDataDisk extends TeaModel {
         /**
-         * <p>Specifies whether to enable burst (I/O burst).</p>
+         * <p>Specifies whether to enable burst (performance burst).</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -425,7 +425,7 @@ public class ExtendClusterRequest extends TeaModel {
         /**
          * <p>The cloud disk type. Valid values:</p>
          * <ul>
-         * <li>cloud_essd: ESSD.</li>
+         * <li>cloud_essd: Enterprise SSD (ESSD) cloud disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -444,10 +444,10 @@ public class ExtendClusterRequest extends TeaModel {
         public Boolean deleteWithNode;
 
         /**
-         * <p>The performance level (PL) when an ESSD is used as a system cloud disk. Valid values:</p>
+         * <p>The performance level (PL) of the ESSD cloud disk used as a system cloud disk. Valid values:</p>
          * <ul>
-         * <li>PL0: a maximum of 10,000 random read/write IOPS per disk.</li>
-         * <li>PL1: a maximum of 50,000 random read/write IOPS per disk.</li>
+         * <li>PL0: A maximum of 10,000 random read/write IOPS per disk.</li>
+         * <li>PL1: A maximum of 50,000 random read/write IOPS per disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -457,7 +457,7 @@ public class ExtendClusterRequest extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The provisioned performance (read/write IOPS) of a single ESSD AutoPL cloud disk.</p>
+         * <p>The provisioned performance of read/write IOPS for the ESSD AutoPL cloud disk (per disk).</p>
          * 
          * <strong>example:</strong>
          * <p>9600</p>
@@ -466,7 +466,7 @@ public class ExtendClusterRequest extends TeaModel {
         public Long provisionedIops;
 
         /**
-         * <p>The cloud disk size. Unit: GiB.</p>
+         * <p>The disk size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -531,7 +531,7 @@ public class ExtendClusterRequest extends TeaModel {
 
     public static class ExtendClusterRequestNodeGroupsHyperNodes extends TeaModel {
         /**
-         * <p>The list of cloud disk information.</p>
+         * <p>The list of disk information.</p>
          */
         @NameInMap("DataDisk")
         public java.util.List<ExtendClusterRequestNodeGroupsHyperNodesDataDisk> dataDisk;
@@ -697,7 +697,7 @@ public class ExtendClusterRequest extends TeaModel {
 
     public static class ExtendClusterRequestNodeGroupsNodesDataDisk extends TeaModel {
         /**
-         * <p>Specifies whether to enable burst (I/O burst).</p>
+         * <p>Specifies whether to enable burst (performance burst).</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -724,7 +724,7 @@ public class ExtendClusterRequest extends TeaModel {
         public Boolean deleteWithNode;
 
         /**
-         * <p>The performance metric of the data cloud disk.</p>
+         * <p>The performance parameter of the data cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>PL0</p>
@@ -742,7 +742,7 @@ public class ExtendClusterRequest extends TeaModel {
         public Long provisionedIops;
 
         /**
-         * <p>The cloud disk size.</p>
+         * <p>The disk size.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -931,7 +931,7 @@ public class ExtendClusterRequest extends TeaModel {
 
     public static class ExtendClusterRequestNodeGroups extends TeaModel {
         /**
-         * <p>The number of nodes to purchase. Valid values: 0 to 500. If Amount is set to 0, no nodes are purchased and existing nodes are used for scale-out. If Amount is set to a value from 1 to 500, the specified number of nodes are purchased and used for scale-out. Default value: 0</p>
+         * <p>The number of nodes to purchase. Valid values: 0 to 500. If Amount is set to 0, no nodes are purchased and existing nodes are used for scale-out. If Amount is set to a value from 1 to 500, the specified number of nodes are purchased and used for scale-out. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -994,7 +994,7 @@ public class ExtendClusterRequest extends TeaModel {
         public java.util.List<ExtendClusterRequestNodeGroupsNodeTag> nodeTag;
 
         /**
-         * <p>The node list.</p>
+         * <p>The list of nodes.</p>
          */
         @NameInMap("Nodes")
         public java.util.List<ExtendClusterRequestNodeGroupsNodes> nodes;
@@ -1018,7 +1018,7 @@ public class ExtendClusterRequest extends TeaModel {
         public String savingsPlanId;
 
         /**
-         * <p>The custom executable shell script. The script must be Base64-encoded. The maximum size of the raw data is 16 KB.</p>
+         * <p>The custom executable shell script. The script must be in Base64 encoding. The maximum size of the raw data is 16 KB.</p>
          * 
          * <strong>example:</strong>
          * <p>ZWNobyBoZWxsbyBlY3Mh</p>

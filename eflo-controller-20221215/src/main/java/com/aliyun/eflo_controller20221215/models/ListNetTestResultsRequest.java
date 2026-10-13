@@ -5,11 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListNetTestResultsRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100.</p>
+     * <p>The number of entries per page in a paged query. Maximum value: 100.</p>
      * <p>Default value:</p>
      * <ul>
-     * <li>If you do not set this parameter or you set it to a value less than 20, the default value is 20.</li>
-     * <li>If you set the value to greater than 100, the default value is 100.</li>
+     * <li><p>If this parameter is not specified or is set to a value less than 20, the default value is 20.</p>
+     * </li>
+     * <li><p>If this parameter is set to a value greater than 100, the default value is 100.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +21,7 @@ public class ListNetTestResultsRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The type of the network test.</p>
+     * <p>The network test type.</p>
      * 
      * <strong>example:</strong>
      * <p>DelayTest</p>
@@ -28,7 +30,7 @@ public class ListNetTestResultsRequest extends TeaModel {
     public String netTestType;
 
     /**
-     * <p>The token that is used to retrieve the next page of results. Set this parameter to the value of \<code>NextToken\\</code> that is returned in the last response.</p>
+     * <p>The pagination token. Set this parameter to the value of NextToken that is returned from the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>3a6b93229825ac667104463b5679****</p>
@@ -37,7 +39,7 @@ public class ListNetTestResultsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxno4vh5****</p>

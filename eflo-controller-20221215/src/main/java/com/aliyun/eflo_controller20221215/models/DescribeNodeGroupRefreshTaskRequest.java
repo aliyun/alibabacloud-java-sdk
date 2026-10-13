@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNodeGroupRefreshTaskRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries per page for a paged query. Valid values: 1 to 500. Default value: 100. For more information about paging, set this parameter together with NextToken.</p>
+     * <p>The maximum number of entries per page for a paged query. Valid values: 1 to 500. Default value: 100. For more information about paging, see the NextToken parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class DescribeNodeGroupRefreshTaskRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the refresh task.</p>
+     * <p>The ID of the node group configuration refresh task. After you call RefreshNodeGroupNodes to trigger a node group configuration refresh, obtain this value from the NodeGroupRefreshTaskId response parameter. Before you call this operation, the node group must contain nodes with configuration drift.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class DescribeNodeGroupRefreshTaskRequest extends TeaModel {
     public String nodeGroupRefreshTaskId;
 
     /**
-     * <p>The node refresh statuses to filter by. Valid values:</p>
+     * <p>The node refresh statuses to filter by:</p>
      * <ul>
      * <li>Pending: the node is waiting to be refreshed.</li>
      * <li>InProgress: the node is being refreshed.</li>

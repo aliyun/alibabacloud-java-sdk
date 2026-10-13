@@ -14,7 +14,7 @@ public class ListNodeGroupRefreshTasksResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
+     * <p>The pagination token for the next query. If NextToken is empty, no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>563d42ae0b17572449ec8c97f7f66069</p>
@@ -154,7 +154,7 @@ public class ListNodeGroupRefreshTasksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The total number of nodes to refresh in this task.</p>
+         * <p>The total number of nodes to be refreshed by the task.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

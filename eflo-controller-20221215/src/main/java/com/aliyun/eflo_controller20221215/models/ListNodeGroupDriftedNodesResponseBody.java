@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNodeGroupDriftedNodesResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries per page for a single query.</p>
+     * <p>The maximum number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListNodeGroupDriftedNodesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token returned by this call. An empty value indicates that no more pages are available.</p>
+     * <p>The pagination token returned by this call. An empty value indicates that no more pages exist.</p>
      * 
      * <strong>example:</strong>
      * <p>3a6b93229825ac667104463b56790c91</p>
@@ -85,7 +85,7 @@ public class ListNodeGroupDriftedNodesResponseBody extends TeaModel {
         public String actualValue;
 
         /**
-         * <p>The minimum action required to apply the TargetValue: Refresh / Reboot / Reimage. For more information, refer to the MaxDisruptiveAction parameter description in the RefreshNodeGroupNodes operation.</p>
+         * <p>The minimum action required to apply the TargetValue: Refresh, Reboot, or Reimage. For more information, refer to the MaxDisruptiveAction parameter of the RefreshNodeGroupNodes operation.</p>
          * 
          * <strong>example:</strong>
          * <p>Refresh</p>
@@ -152,7 +152,7 @@ public class ListNodeGroupDriftedNodesResponseBody extends TeaModel {
 
     public static class ListNodeGroupDriftedNodesResponseBodyNodes extends TeaModel {
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>node-001</p>

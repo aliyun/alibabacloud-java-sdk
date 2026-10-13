@@ -15,7 +15,7 @@ public class ListClusterNodesRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The maximum number of entries to return on each page. The default value is 20.</p>
+     * <p>The number of entries per page in a paged query. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -24,7 +24,7 @@ public class ListClusterNodesRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The token for pagination. To retrieve the next page of results, set this parameter to the NextToken value returned from the previous call.</p>
+     * <p>The pagination token. Set this parameter to the value of NextToken that was returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdQ3Z+oPlg49gsr2y8jb6wY=</p>
@@ -42,7 +42,7 @@ public class ListClusterNodesRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
-     * <p>The operating states for filtering nodes.</p>
+     * <p>The list of node states.</p>
      */
     @NameInMap("OperatingStates")
     public java.util.List<String> operatingStates;
@@ -57,7 +57,7 @@ public class ListClusterNodesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags for filtering nodes.</p>
+     * <p>The tag information.</p>
      */
     @NameInMap("Tags")
     public java.util.List<ListClusterNodesRequestTags> tags;
@@ -125,7 +125,7 @@ public class ListClusterNodesRequest extends TeaModel {
 
     public static class ListClusterNodesRequestTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The key of the node tag.</p>
          * 
          * <strong>example:</strong>
          * <p>my_key</p>
@@ -134,7 +134,7 @@ public class ListClusterNodesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The value of the node tag.</p>
          * 
          * <strong>example:</strong>
          * <p>my_value</p>

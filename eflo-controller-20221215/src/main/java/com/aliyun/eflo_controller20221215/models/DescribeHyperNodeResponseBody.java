@@ -23,7 +23,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The time when the hyper node was created.</p>
+     * <p>The creation time. The time is in ISO 8601 format. The Z in the example indicates UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-11-30T02:00:00.852Z</p>
@@ -32,7 +32,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The expiration time.</p>
+     * <p>The expiration time. The time is in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2125-06-24T16:52:44.318000</p>
@@ -68,7 +68,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
     public String hpnZone;
 
     /**
-     * <p>The ID of the hyper node.</p>
+     * <p>The hypernode ID.</p>
      * 
      * <strong>example:</strong>
      * <p>e01-cn-zvp2tgykr08</p>
@@ -95,7 +95,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
     public String nodeGroupId;
 
     /**
-     * <p>The name of the node group.</p>
+     * <p>The node group name.</p>
      * 
      * <strong>example:</strong>
      * <p>lisan-nodegroup</p>
@@ -110,7 +110,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
     public java.util.List<DescribeHyperNodeResponseBodyNodes> nodes;
 
     /**
-     * <p>The state of the hyper node.</p>
+     * <p>The hypernode status.</p>
      * 
      * <strong>example:</strong>
      * <p>Using</p>
@@ -137,7 +137,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The state of the node.</p>
+     * <p>The node status.</p>
      * 
      * <strong>example:</strong>
      * <p>Operating</p>
@@ -299,12 +299,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
 
     public static class DescribeHyperNodeResponseBodyNodesDisks extends TeaModel {
         /**
-         * <p>The packet classification. Valid values:</p>
+         * <p>The packet category. Valid values:</p>
          * <ul>
-         * <li><p><strong>DOWNLINK_PACKET</strong>: downlink packet</p>
-         * </li>
-         * <li><p><strong>UPLINK_PACKET</strong>: uplink packet</p>
-         * </li>
+         * <li><strong>DOWNLINK_PACKET</strong>: downlink packet.</li>
+         * <li><strong>UPLINK_PACKET</strong>: uplink packet.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -323,12 +321,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         public String diskId;
 
         /**
-         * <p>When you create an enhanced SSD (ESSD) to use as a system disk, set the performance level of the disk. Valid values:</p>
+         * <p>The performance level (PL) of the cloud disk when an ESSD is created as the system cloud disk. Settings:</p>
          * <ul>
-         * <li><p>PL0: A maximum of 10,000 random read/write input/output operations per second (IOPS) per disk.</p>
-         * </li>
-         * <li><p>PL1: A maximum of 50,000 random read/write IOPS per disk.</p>
-         * </li>
+         * <li>PL0: A maximum of 10,000 random read/write IOPS per standard SSD.</li>
+         * <li>PL1: A maximum of 50,000 random read/write IOPS per standard SSD.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -349,10 +345,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         /**
          * <p>The disk type. Valid values:</p>
          * <ul>
-         * <li><p>system: system disk.</p>
-         * </li>
-         * <li><p>data: data disk.</p>
-         * </li>
+         * <li>system: system cloud disk.</li>
+         * <li>data: data cloud disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -410,7 +404,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
 
     public static class DescribeHyperNodeResponseBodyNodesNetworks extends TeaModel {
         /**
-         * <p>The name of the network interface on the machine.</p>
+         * <p>The bond interface name of the machine.</p>
          * 
          * <strong>example:</strong>
          * <p>bond0</p>
@@ -419,7 +413,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         public String bondName;
 
         /**
-         * <p>The IP address of the machine in the virtual private cloud (VPC).</p>
+         * <p>The IP address of the machine in the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.22.2</p>
@@ -500,7 +494,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The state of the node.</p>
+         * <p>The node status.</p>
          * 
          * <strong>example:</strong>
          * <p>Using</p>
@@ -509,7 +503,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         public String operatingState;
 
         /**
-         * <p>The state.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>InProgress</p>

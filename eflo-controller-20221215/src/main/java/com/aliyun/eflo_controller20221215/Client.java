@@ -9,26 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-wulanchabu", "eflo-controller.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "eflo-controller.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "eflo-controller.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "eflo-controller.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "eflo-controller.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "eflo-controller.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "eflo-controller.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "eflo-controller.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "eflo-controller.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "eflo-controller.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "eflo-controller.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "eflo-controller.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "eflo-controller.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "eflo-controller.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "eflo-controller.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("eu-central-1", "eflo-controller.eu-central-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "eflo-controller.me-east-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "eflo-controller.cn-shanghai-finance-1.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("eflo-controller", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -96,10 +76,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a session, returns a frontend endpoint, and starts an auto-triggered task to track the session status.</p>
+     * <p>Creates a session, returns the frontend endpoint, and starts an epoch task to track the session status.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the node group of a node.</p>
+     * <p>Modifies the node group of nodes.</p>
      * 
      * @param tmpReq ChangeNodeGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -147,10 +127,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a session, returns a frontend endpoint, and starts an auto-triggered task to track the session status.</p>
+     * <p>Creates a session, returns the frontend endpoint, and starts an epoch task to track the session status.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the node group of a node.</p>
+     * <p>Modifies the node group of nodes.</p>
      * 
      * @param request ChangeNodeGroupRequest
      * @return ChangeNodeGroupResponse
@@ -1014,10 +994,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a specified cluster.</p>
+     * <p>Closes a remote session.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a cluster.</p>
+     * <p>Queries the details of a Lingjun AI Computing Service cluster.</p>
      * 
      * @param request DescribeClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1049,10 +1029,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a specified cluster.</p>
+     * <p>Closes a remote session.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a cluster.</p>
+     * <p>Queries the details of a Lingjun AI Computing Service cluster.</p>
      * 
      * @param request DescribeClusterRequest
      * @return DescribeClusterResponse
@@ -1063,9 +1043,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The API creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
-     * 
      * <b>summary</b> : 
      * <p>Queries the results of a diagnostic task.</p>
      * 
@@ -1098,9 +1075,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The API creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
-     * 
      * <b>summary</b> : 
      * <p>Queries the results of a diagnostic task.</p>
      * 
@@ -1114,10 +1088,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a specified hyper node.</p>
+     * <p>Queries the details of a fault report. After you call ReportNodeStatus to submit a fault report, you can obtain the report ID from the ReportId response parameter. You can also call ListFaultReports to query existing fault reports and obtain the ReportId.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a hyper node.</p>
+     * <p>Queries the details of a fault report after a user submits one.</p>
+     * 
+     * @param request DescribeFaultReportRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeFaultReportResponse
+     */
+    public DescribeFaultReportResponse describeFaultReportWithOptions(DescribeFaultReportRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.reportId)) {
+            body.put("ReportId", request.reportId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeFaultReport"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeFaultReportResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the details of a fault report. After you call ReportNodeStatus to submit a fault report, you can obtain the report ID from the ReportId response parameter. You can also call ListFaultReports to query existing fault reports and obtain the ReportId.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a fault report after a user submits one.</p>
+     * 
+     * @param request DescribeFaultReportRequest
+     * @return DescribeFaultReportResponse
+     */
+    public DescribeFaultReportResponse describeFaultReport(DescribeFaultReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeFaultReportWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the details of a hypernode.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a hypernode.</p>
      * 
      * @param request DescribeHyperNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1149,10 +1173,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a specified hyper node.</p>
+     * <p>Queries the details of a hypernode.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a hyper node.</p>
+     * <p>Queries the details of a hypernode.</p>
      * 
      * @param request DescribeHyperNodeRequest
      * @return DescribeHyperNodeResponse
@@ -1164,7 +1188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution history and status of Cloud Assistant commands.</p>
+     * <p>Queries the execution list and status of O&amp;M Assistant commands.</p>
      * 
      * @param request DescribeInvocationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1208,7 +1232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution history and status of Cloud Assistant commands.</p>
+     * <p>Queries the execution list and status of O&amp;M Assistant commands.</p>
      * 
      * @param request DescribeInvocationsRequest
      * @return DescribeInvocationsResponse
@@ -1220,7 +1244,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the results of a network test.</p>
+     * <p>Queries network test results.</p>
      * 
      * @param request DescribeNetTestResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1252,7 +1276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the results of a network test.</p>
+     * <p>Queries network test results.</p>
      * 
      * @param request DescribeNetTestResultRequest
      * @return DescribeNetTestResultResponse
@@ -1264,10 +1288,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the detailed information of a hyper node.</p>
+     * <p>Queries the details of a supernode.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of nodes.</p>
+     * <p>Queries a list of nodes.</p>
      * 
      * @param request DescribeNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1299,10 +1323,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the detailed information of a hyper node.</p>
+     * <p>Queries the details of a supernode.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of nodes.</p>
+     * <p>Queries a list of nodes.</p>
      * 
      * @param request DescribeNodeRequest
      * @return DescribeNodeResponse
@@ -1314,10 +1338,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the details of a node group.</p>
+     * <p>Queries the details of a supernode.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a node group.</p>
+     * <p>Queries node groups.</p>
      * 
      * @param request DescribeNodeGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1349,10 +1373,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the details of a node group.</p>
+     * <p>Queries the details of a supernode.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a node group.</p>
+     * <p>Queries node groups.</p>
      * 
      * @param request DescribeNodeGroupRequest
      * @return DescribeNodeGroupResponse
@@ -1364,11 +1388,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The returned results contain the following information:</p>
+     * <p>The returned results include the following:</p>
      * <ul>
-     * <li>The processing status of each node with configuration drift</li>
-     * <li>The processing result, status, and reason for each node</li>
-     * <li>The refreshed and skipped properties for each node</li>
+     * <li>The processing status of each node with configuration drift.</li>
+     * <li>The processing result, status, and reason for each node.</li>
+     * <li>The refreshed and skipped properties for each node.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1422,11 +1446,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The returned results contain the following information:</p>
+     * <p>The returned results include the following:</p>
      * <ul>
-     * <li>The processing status of each node with configuration drift</li>
-     * <li>The processing result, status, and reason for each node</li>
-     * <li>The refreshed and skipped properties for each node</li>
+     * <li>The processing status of each node with configuration drift.</li>
+     * <li>The processing result, status, and reason for each node.</li>
+     * <li>The refreshed and skipped properties for each node.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1442,7 +1466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Describes the constraints for a node type.</p>
+     * <p>Queries the constraints for a node type.</p>
      * 
      * @param request DescribeNodeTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1474,7 +1498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Describes the constraints for a node type.</p>
+     * <p>Queries the constraints for a node type.</p>
      * 
      * @param request DescribeNodeTypeRequest
      * @return DescribeNodeTypeResponse
@@ -1530,7 +1554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the files that are sent by an O\\\&amp;M assistant and the status of the files.</p>
+     * <p>Queries the list and status of files sent by O&amp;M Assistant.</p>
      * 
      * @param request DescribeSendFileResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1566,7 +1590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the files that are sent by an O\\\&amp;M assistant and the status of the files.</p>
+     * <p>Queries the list and status of files sent by O&amp;M Assistant.</p>
      * 
      * @param request DescribeSendFileResultsRequest
      * @return DescribeSendFileResultsResponse
@@ -1578,7 +1602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a task.</p>
+     * <p>Queries the details of a node.</p>
      * 
      * @param request DescribeTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1610,7 +1634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a task.</p>
+     * <p>Queries the details of a node.</p>
      * 
      * @param request DescribeTaskRequest
      * @return DescribeTaskResponse
@@ -1794,7 +1818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the node groups of a cluster and the nodes in each group.</p>
+     * <p>Queries the host group list under a cluster and the host list under each group.</p>
      * 
      * @param request ListClusterHyperNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1848,7 +1872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the node groups of a cluster and the nodes in each group.</p>
+     * <p>Queries the host group list under a cluster and the host list under each group.</p>
      * 
      * @param request ListClusterHyperNodesRequest
      * @return ListClusterHyperNodesResponse
@@ -1860,7 +1884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the nodes in a cluster.</p>
+     * <p>Queries the list of nodes in a cluster.</p>
      * 
      * @param request ListClusterNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1918,7 +1942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the nodes in a cluster.</p>
+     * <p>Queries the list of nodes in a cluster.</p>
      * 
      * @param request ListClusterNodesRequest
      * @return ListClusterNodesResponse
@@ -1930,7 +1954,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query cluster instances with optional filtering by resource group and tags.</p>
+     * <p>Queries a list of cluster instances.</p>
      * 
      * @param request ListClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1976,7 +2000,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query cluster instances with optional filtering by resource group and tags.</p>
+     * <p>Queries a list of cluster instances.</p>
      * 
      * @param request ListClustersRequest
      * @return ListClustersResponse
@@ -1987,11 +2011,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</p>
-     * 
      * <b>summary</b> : 
-     * <p>List of Diagnostic Tasks</p>
+     * <p>Queries a list of diagnostic tasks.</p>
      * 
      * @param request ListDiagnosticResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2034,11 +2055,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</p>
-     * 
      * <b>summary</b> : 
-     * <p>List of Diagnostic Tasks</p>
+     * <p>Queries a list of diagnostic tasks.</p>
      * 
      * @param request ListDiagnosticResultsRequest
      * @return ListDiagnosticResultsResponse
@@ -2049,8 +2067,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Lists the active physical servers in the rack.</p>
+     * <p>Queries the list of historical fault reports.</p>
+     * 
+     * @param tmpReq ListFaultReportsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFaultReportsResponse
+     */
+    public ListFaultReportsResponse listFaultReportsWithOptions(ListFaultReportsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListFaultReportsShrinkRequest request = new ListFaultReportsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.nodes)) {
+            request.nodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.nodes, "Nodes", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodesShrink)) {
+            body.put("Nodes", request.nodesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListFaultReports"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFaultReportsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of historical fault reports.</p>
+     * 
+     * @param request ListFaultReportsRequest
+     * @return ListFaultReportsResponse
+     */
+    public ListFaultReportsResponse listFaultReports(ListFaultReportsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listFaultReportsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of available rack physical machines.</p>
      * 
      * @param request ListFreeHyperNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2106,7 +2192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the active physical servers in the rack.</p>
+     * <p>Queries the list of available rack physical machines.</p>
      * 
      * @param request ListFreeHyperNodesRequest
      * @return ListFreeHyperNodesResponse
@@ -2118,7 +2204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists all unused nodes.</p>
+     * <p>Queries the list of unused nodes.</p>
      * 
      * @param request ListFreeNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2176,7 +2262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists all unused nodes.</p>
+     * <p>Queries the list of unused nodes.</p>
      * 
      * @param request ListFreeNodesRequest
      * @return ListFreeNodesResponse
@@ -2188,10 +2274,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of hypernodes.</p>
+     * <p>Queries the details of hyper nodes.</p>
      * 
      * <b>summary</b> : 
-     * <p>Machines</p>
+     * <p>Queries a list of machines.</p>
      * 
      * @param tmpReq ListHyperNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2283,10 +2369,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of hypernodes.</p>
+     * <p>Queries the details of hyper nodes.</p>
      * 
      * <b>summary</b> : 
-     * <p>Machines</p>
+     * <p>Queries a list of machines.</p>
      * 
      * @param request ListHyperNodesRequest
      * @return ListHyperNodesResponse
@@ -2400,7 +2486,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of available machine types.</p>
+     * <p>Queries the list of available machine types.</p>
      * 
      * @param request ListMachineTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2432,7 +2518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of available machine types.</p>
+     * <p>Queries the list of available machine types.</p>
      * 
      * @param request ListMachineTypesRequest
      * @return ListMachineTypesResponse
@@ -2444,7 +2530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists network test results.</p>
+     * <p>Queries the list of network tests.</p>
      * 
      * @param request ListNetTestResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2488,7 +2574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists network test results.</p>
+     * <p>Queries the list of network tests.</p>
      * 
      * @param request ListNetTestResultsRequest
      * @return ListNetTestResultsResponse
@@ -2500,7 +2586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Compares the node group configuration template with the actual configuration of each node, and returns all nodes with configuration inconsistencies, along with the difference type, before-and-after values, and the action level required for refresh for each inconsistent property. This is a read-only operation.</p>
+     * <p>Compares the node group configuration template with the actual configuration of each node, and returns all nodes with configuration inconsistencies, along with the drift type, before-and-after values, and the required action level for refreshing each inconsistent property. This is a read-only operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries nodes with configuration drift within a node group and the drift details.</p>
@@ -2553,7 +2639,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Compares the node group configuration template with the actual configuration of each node, and returns all nodes with configuration inconsistencies, along with the difference type, before-and-after values, and the action level required for refresh for each inconsistent property. This is a read-only operation.</p>
+     * <p>Compares the node group configuration template with the actual configuration of each node, and returns all nodes with configuration inconsistencies, along with the drift type, before-and-after values, and the required action level for refreshing each inconsistent property. This is a read-only operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries nodes with configuration drift within a node group and the drift details.</p>
@@ -2571,7 +2657,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>If you do not know which node group has refresh tasks, you can use conditional query. The task list contains only summary information. To query task details, use the DescribeNodeGroupRefreshTask operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of node group configuration refresh tasks with paging.</p>
+     * <p>Queries the list of node group configuration refresh tasks by paging.</p>
      * 
      * @param tmpReq ListNodeGroupRefreshTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2628,7 +2714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>If you do not know which node group has refresh tasks, you can use conditional query. The task list contains only summary information. To query task details, use the DescribeNodeGroupRefreshTask operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of node group configuration refresh tasks with paging.</p>
+     * <p>Queries the list of node group configuration refresh tasks by paging.</p>
      * 
      * @param request ListNodeGroupRefreshTasksRequest
      * @return ListNodeGroupRefreshTasksResponse
@@ -2640,7 +2726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Node Group Information Under the Cluster</p>
+     * <p>Queries node group information in a cluster.</p>
      * 
      * @param request ListNodeGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2684,7 +2770,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Node Group Information Under the Cluster</p>
+     * <p>Queries node group information in a cluster.</p>
      * 
      * @param request ListNodeGroupsRequest
      * @return ListNodeGroupsResponse
@@ -2989,16 +3075,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.
+     * <p>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.
      * Limits:</p>
      * <ul>
-     * <li>Only one node group configuration refresh task can be running at a time for a node group.</li>
+     * <li>A node group can have only one running node group configuration refresh task at a time.</li>
      * <li>When the asynchronous task executes the refresh, if a node is not in the &quot;In Use&quot; state, the refresh of that node is failed.
      * <warning>Currently, only the RamRoleName property is supported for refresh.</warning></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.</p>
+     * <p>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.</p>
      * 
      * @param tmpReq RefreshNodeGroupNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3044,16 +3130,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.
+     * <p>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.
      * Limits:</p>
      * <ul>
-     * <li>Only one node group configuration refresh task can be running at a time for a node group.</li>
+     * <li>A node group can have only one running node group configuration refresh task at a time.</li>
      * <li>When the asynchronous task executes the refresh, if a node is not in the &quot;In Use&quot; state, the refresh of that node is failed.
      * <warning>Currently, only the RamRoleName property is supported for refresh.</warning></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.</p>
+     * <p>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.</p>
      * 
      * @param request RefreshNodeGroupNodesRequest
      * @return RefreshNodeGroupNodesResponse
@@ -3123,6 +3209,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ReimageNodesResponse reimageNodes(ReimageNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.reimageNodesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Reports a fault for an abnormal node.</p>
+     * 
+     * @param request ReportNodeStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReportNodeStatusResponse
+     */
+    public ReportNodeStatusResponse reportNodeStatusWithOptions(ReportNodeStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diagnosisType)) {
+            body.put("DiagnosisType", request.diagnosisType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            body.put("NodeId", request.nodeId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReportNodeStatus"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReportNodeStatusResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Reports a fault for an abnormal node.</p>
+     * 
+     * @param request ReportNodeStatusRequest
+     * @return ReportNodeStatusResponse
+     */
+    public ReportNodeStatusResponse reportNodeStatus(ReportNodeStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.reportNodeStatusWithOptions(request, runtime);
     }
 
     /**
@@ -3515,6 +3659,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StopInvocationResponse stopInvocation(StopInvocationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopInvocationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Stops an ongoing fault reporting diagnostics process. Before calling this operation, initiate a fault report for the abnormal node by calling ReportNodeStatus, and use the returned ReportId as the ReportId for this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops an ongoing fault reporting diagnostics process after a user initiates a fault report.</p>
+     * 
+     * @param request StopNodeDiagnosticRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopNodeDiagnosticResponse
+     */
+    public StopNodeDiagnosticResponse stopNodeDiagnosticWithOptions(StopNodeDiagnosticRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.reportId)) {
+            body.put("ReportId", request.reportId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopNodeDiagnostic"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopNodeDiagnosticResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Stops an ongoing fault reporting diagnostics process. Before calling this operation, initiate a fault report for the abnormal node by calling ReportNodeStatus, and use the returned ReportId as the ReportId for this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops an ongoing fault reporting diagnostics process after a user initiates a fault report.</p>
+     * 
+     * @param request StopNodeDiagnosticRequest
+     * @return StopNodeDiagnosticResponse
+     */
+    public StopNodeDiagnosticResponse stopNodeDiagnostic(StopNodeDiagnosticRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopNodeDiagnosticWithOptions(request, runtime);
     }
 
     /**

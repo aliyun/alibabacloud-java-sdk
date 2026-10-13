@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFreeNodesRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The cluster number.</p>
      * 
      * <strong>example:</strong>
      * <p>A1</p>
@@ -23,7 +23,7 @@ public class ListFreeNodesRequest extends TeaModel {
     public String machineType;
 
     /**
-     * <p>The number of entries to return on each page for a paged query. The default value is 20.</p>
+     * <p>The number of entries per page for a paged query. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,7 +32,7 @@ public class ListFreeNodesRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The query token. Set it to the NextToken value returned from the previous API call.</p>
+     * <p>The pagination token. Set this parameter to the value of NextToken that is returned from the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>a3f2224a5ec7224116c4f5246120abe4</p>
@@ -41,7 +41,7 @@ public class ListFreeNodesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The type of unused nodes to be returned.</p>
+     * <p>The type of unused nodes to return.</p>
      */
     @NameInMap("OperatingStates")
     public java.util.List<String> operatingStates;

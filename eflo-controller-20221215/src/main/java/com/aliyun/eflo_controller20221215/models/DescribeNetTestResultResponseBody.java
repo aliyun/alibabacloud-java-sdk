@@ -23,13 +23,13 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The configuration for the communication library test. This parameter is returned when the network test type is a communication library test.</p>
+     * <p>The communication library test configuration. This field is required when the traffic test type is communication library test.</p>
      */
     @NameInMap("CommTest")
     public DescribeNetTestResultResponseBodyCommTest commTest;
 
     /**
-     * <p>The time when the diagnostic task was created.</p>
+     * <p>The time when the diagnostic task was created. The time is in ISO 8601 format and includes the time zone offset.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-10-15T10:25:42+08:00</p>
@@ -38,13 +38,13 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
     public String creationTime;
 
     /**
-     * <p>The configuration for the delay test. This parameter is returned when the network test type is a delay test.</p>
+     * <p>The latency test configuration. This field is required when the network test type is latency test.</p>
      */
     @NameInMap("DelayTest")
     public DescribeNetTestResultResponseBodyDelayTest delayTest;
 
     /**
-     * <p>The time when the diagnostic task was completed.</p>
+     * <p>The time when the diagnostic task was completed. The time is in ISO 8601 format. Z in the example indicates UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-10-16T02:04Z</p>
@@ -53,7 +53,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
     public String finishedTime;
 
     /**
-     * <p>The type of the network test.</p>
+     * <p>The network test type.</p>
      * 
      * <strong>example:</strong>
      * <p>DelayTest</p>
@@ -80,7 +80,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the diagnostic result. The value is a JSON string.</p>
+     * <p>The details of the diagnostic result. The value is returned as a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -91,12 +91,9 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
     /**
      * <p>The status of the diagnostic task. Valid values:</p>
      * <ul>
-     * <li><p>InProgress: The task is in progress.</p>
-     * </li>
-     * <li><p>Finished: The task is complete.</p>
-     * </li>
-     * <li><p>Failed: The task failed.</p>
-     * </li>
+     * <li>InProgress: The diagnostic task is in progress.</li>
+     * <li>Finished: The diagnostic task is complete.</li>
+     * <li>Failed: The diagnostic task failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -106,7 +103,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the test task. This ID uniquely identifies the network test task.</p>
+     * <p>The ID of the test task. This is the unique identifier of the network test task.</p>
      * 
      * <strong>example:</strong>
      * <p>af35ce53-7c35-4277-834a-fbf49c316a96</p>
@@ -115,7 +112,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
     public String testId;
 
     /**
-     * <p>The configuration for the traffic test. This parameter is returned when the network test type is a traffic test.</p>
+     * <p>If TrafficModel is set to Fullmesh, this field is empty.</p>
      */
     @NameInMap("TrafficTest")
     public DescribeNetTestResultResponseBodyTrafficTest trafficTest;
@@ -299,7 +296,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public String GPUNum;
 
         /**
-         * <p>The hosts for the test.</p>
+         * <p>The resource ID.</p>
          */
         @NameInMap("Hosts")
         public java.util.List<DescribeNetTestResultResponseBodyCommTestHosts> hosts;
@@ -314,7 +311,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public String model;
 
         /**
-         * <p>The type of the communication library test. Valid values: Alibaba Cloud Collective Communication Library (ACCL) and NVIDIA Collective Communication Library (NCCL).</p>
+         * <p>The communication library test category. Valid values: ACCL and NCCL.</p>
          * 
          * <strong>example:</strong>
          * <p>ACCL</p>
@@ -363,7 +360,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
 
     public static class DescribeNetTestResultResponseBodyDelayTestHosts extends TeaModel {
         /**
-         * <p>The bonded port of the NIC.</p>
+         * <p>The NIC bond interface.</p>
          * 
          * <strong>example:</strong>
          * <p>bond1</p>
@@ -372,7 +369,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public String bond;
 
         /**
-         * <p>The IP address of the node.</p>
+         * <p>The node IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>125.210.225.48</p>
@@ -461,7 +458,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
 
     public static class DescribeNetTestResultResponseBodyTrafficTestClients extends TeaModel {
         /**
-         * <p>The bonded port of the network interface card (NIC).</p>
+         * <p>The NIC bond interface.</p>
          * 
          * <strong>example:</strong>
          * <p>bond1</p>
@@ -470,7 +467,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public String bond;
 
         /**
-         * <p>The IP address of the node.</p>
+         * <p>The node IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.1</p>
@@ -537,7 +534,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
 
     public static class DescribeNetTestResultResponseBodyTrafficTestServers extends TeaModel {
         /**
-         * <p>The bonded port of the NIC.</p>
+         * <p>The NIC bond interface.</p>
          * 
          * <strong>example:</strong>
          * <p>bond1</p>
@@ -546,7 +543,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public String bond;
 
         /**
-         * <p>The IP address of the node.</p>
+         * <p>The node IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>47.121.110.190</p>
@@ -613,13 +610,13 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
 
     public static class DescribeNetTestResultResponseBodyTrafficTest extends TeaModel {
         /**
-         * <p>The client nodes.</p>
+         * <p>The resource IDs.</p>
          */
         @NameInMap("Clients")
         public java.util.List<DescribeNetTestResultResponseBodyTrafficTestClients> clients;
 
         /**
-         * <p>The runtime of the flow task in seconds.</p>
+         * <p>The duration of the workflow task. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -628,7 +625,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public Long duration;
 
         /**
-         * <p>Indicates whether GPUDirect RDMA (GDR) is enabled. This parameter is returned only if the protocol is RDMA. Valid values: True and False. If the protocol is TCP, this field is empty.</p>
+         * <p>If Protocol is set to RDMA, specify True or False. If Protocol is set to TCP, this field is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -637,7 +634,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public String GDR;
 
         /**
-         * <p>The network protocol. Valid values: Remote Direct Memory Access (RDMA) and Transmission Control Protocol (TCP).</p>
+         * <p>The network protocol. Valid values: RDMA and TCP.</p>
          * 
          * <strong>example:</strong>
          * <p>TCP</p>
@@ -646,7 +643,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>If the protocol is TCP, this is the number of concurrent connections for the test. If the protocol is RDMA, this is the Queue Pair (QP) value.</p>
+         * <p>If Protocol is set to TCP, specify the number of test Concurrent Connections. If Protocol is set to RDMA, specify the QP value.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListSyslogsResponseBody extends TeaModel {
     /**
-     * <p>The object that contains the paginated list of logs.</p>
+     * <p>The paginated list of log objects.</p>
      */
     @NameInMap("Logs")
     public java.util.List<ListSyslogsResponseBodyLogs> logs;
 
     /**
-     * <p>The \<code>NextToken\\</code> for the next page. To retrieve the next page of results, include this return value in the next request.</p>
+     * <p>The NextToken for the next page. Include this value in the request to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>563d42ae0b17572449ec8c97f7f66069</p>
@@ -20,7 +20,7 @@ public class ListSyslogsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>2FE2B22C-CF9D-59DE-BF63-DC9B9B33A9D1</p>
@@ -77,7 +77,7 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>A standard field in Linux syslog.</p>
+         * <p>The Linux syslog standard field.</p>
          * 
          * <strong>example:</strong>
          * <p>kern</p>
@@ -104,7 +104,7 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The content of the syslog.</p>
+         * <p>The syslog content.</p>
          * 
          * <strong>example:</strong>
          * <p>bond4: failed to get link speed/duplex for eth8</p>
@@ -122,7 +122,7 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>A standard field in Linux syslog.</p>
+         * <p>The Linux syslog standard field.</p>
          * 
          * <strong>example:</strong>
          * <p>warning</p>
@@ -149,7 +149,7 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>A standard field in Linux syslog.</p>
+         * <p>The Linux syslog standard field.</p>
          * 
          * <strong>example:</strong>
          * <p>kernel</p>
@@ -158,7 +158,7 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String syslogtag;
 
         /**
-         * <p>Tag: Hostname.</p>
+         * <p>The tag for the hostname.</p>
          * 
          * <strong>example:</strong>
          * <p>damo-m53kr8kd-0008</p>
@@ -167,7 +167,7 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String tagHostname;
 
         /**
-         * <p>Tag: Package ID.</p>
+         * <p>The tag for the pack ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D990314D3C25D7E8-1080</p>
@@ -176,7 +176,7 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String tagPackId;
 
         /**
-         * <p>Tag: Path.</p>
+         * <p>The tag for the path.</p>
          * 
          * <strong>example:</strong>
          * <p>/var/log/kern</p>
@@ -185,7 +185,7 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String tagPath;
 
         /**
-         * <p>Tag: Receive time.</p>
+         * <p>The tag for the receive time. Specify a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1687363348</p>
@@ -194,7 +194,7 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String tagReceiveTime;
 
         /**
-         * <p>Tag: User-defined ID.</p>
+         * <p>The tag for the user-defined ID.</p>
          * 
          * <strong>example:</strong>
          * <p>application_b</p>
@@ -203,7 +203,7 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String tagUserDefinedId;
 
         /**
-         * <p>The time in UNIX format.</p>
+         * <p>The time in UNIX timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>1687363346</p>
@@ -212,7 +212,7 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String time;
 
         /**
-         * <p>The topic. Valid values are \<code>logserver\\</code> and \<code>log2sls\\</code>. Note: Both are syslog servers. \<code>logserver\\</code> collects data over TCP. \<code>log2sls\\</code> collects data over UDP.</p>
+         * <p>The topic, which is logserver or log2sls. Both are syslog servers. logserver collects logs over TCP, and log2sls collects logs over UDP.</p>
          * 
          * <strong>example:</strong>
          * <p>logserver</p>

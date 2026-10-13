@@ -23,10 +23,10 @@ public class ListFreeHyperNodesRequest extends TeaModel {
     public String machineType;
 
     /**
-     * <p>The number of entries to return on each page. The maximum value is 100.</p>
+     * <p>The number of entries per page in a paged query. Maximum value: 100.</p>
      * <p>Default value:</p>
-     * <p>• If you do not set this parameter or you set a value less than 20, the default value is 20.</p>
-     * <p>• If you set a value greater than 100, the default value is 100.</p>
+     * <p>•If this parameter is not specified or is set to a value less than 20, the default value is 20.</p>
+     * <p>•If this parameter is set to a value greater than 100, the default value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -35,7 +35,7 @@ public class ListFreeHyperNodesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results. Set this parameter to the NextToken value from the previous response.</p>
+     * <p>The pagination token. Set this parameter to the value of NextToken that was returned from the last API call.</p>
      * 
      * <strong>example:</strong>
      * <p>a3f2224a5ec7224116c4f5246120****</p>
@@ -53,7 +53,7 @@ public class ListFreeHyperNodesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>A list of statuses of unused nodes to return.</p>
+     * <p>The list of unused node statuses to return.</p>
      */
     @NameInMap("Status")
     public java.util.List<String> status;

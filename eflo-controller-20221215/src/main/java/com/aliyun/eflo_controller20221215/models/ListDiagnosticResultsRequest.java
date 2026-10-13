@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDiagnosticResultsRequest extends TeaModel {
     /**
-     * <p>Type of diagnosis, indicating which diagnostic rules are hit.</p>
+     * <p>The diagnostic type.</p>
      * 
      * <strong>example:</strong>
      * <p>NetDiag</p>
@@ -14,11 +14,13 @@ public class ListDiagnosticResultsRequest extends TeaModel {
     public String diagType;
 
     /**
-     * <p>Number of items per page in a paginated query. The maximum value is 100.</p>
+     * <p>The number of entries per page in a paged query. Maximum value: 100.</p>
      * <p>Default value:</p>
      * <ul>
-     * <li>If no value is set or the set value is less than 20, the default value is 20.</li>
-     * <li>If the set value is greater than 100, the default value is 100.</li>
+     * <li><p>If this parameter is not specified or is set to a value less than 20, the default value is 20.</p>
+     * </li>
+     * <li><p>If this parameter is set to a value greater than 100, the default value is 100.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +30,7 @@ public class ListDiagnosticResultsRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>NextToken for the next page. Include this value when requesting the next page.</p>
+     * <p>The pagination token. Set this parameter to the value of NextToken that was returned from the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>a3f2224a5ec7224116c4f5246120****</p>

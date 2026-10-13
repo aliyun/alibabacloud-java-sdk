@@ -23,7 +23,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The creation time. The time is in ISO 8601 format. Z in the example indicates UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-09-30T03:35:53Z</p>
@@ -38,7 +38,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public java.util.List<DescribeNodeResponseBodyDisks> disks;
 
     /**
-     * <p>The expiration time.</p>
+     * <p>The expiration time. The time is in ISO 8601 format. Z in the example indicates UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-06-23T16:00:00Z</p>
@@ -47,7 +47,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String expiredTime;
 
     /**
-     * <p>Indicates whether file system mounting is supported.</p>
+     * <p>Indicates whether file storage mounting is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -74,7 +74,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String hpnZone;
 
     /**
-     * <p>The hyper node ID.</p>
+     * <p>The HyperNode ID.</p>
      * 
      * <strong>example:</strong>
      * <p>e01-cn-zvp2tgykr08</p>
@@ -194,7 +194,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String savingsPlanId;
 
     /**
-     * <p>The unique machine identifier.</p>
+     * <p>The unique identifier of the machine.</p>
      * 
      * <strong>example:</strong>
      * <p>sag42ckf4jx</p>
@@ -421,7 +421,7 @@ public class DescribeNodeResponseBody extends TeaModel {
 
     public static class DescribeNodeResponseBodyDisks extends TeaModel {
         /**
-         * <p>The disk type. Valid values:</p>
+         * <p>The disk category. Valid values:</p>
          * <ul>
          * <li>cloud_essd: ESSD cloud disk.</li>
          * </ul>
@@ -442,10 +442,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         public String diskId;
 
         /**
-         * <p>The performance level of the cloud disk when an ESSD cloud disk is created as a system disk. Valid values:</p>
+         * <p>The performance level (PL) of the ESSD cloud disk when it is used as the system cloud disk. Valid values:</p>
          * <ul>
-         * <li>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</li>
-         * <li>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</li>
+         * <li>PL0: a maximum of 10,000 random read/write IOPS per disk.</li>
+         * <li>PL1: a maximum of 50,000 random read/write IOPS per disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -466,8 +466,8 @@ public class DescribeNodeResponseBody extends TeaModel {
         /**
          * <p>The disk type. Valid values:</p>
          * <ul>
-         * <li>system: system disk.</li>
-         * <li>data: data disk.</li>
+         * <li>system: system cloud disk.</li>
+         * <li>data: data cloud disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -534,7 +534,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         public String bondName;
 
         /**
-         * <p>The machine IP address.</p>
+         * <p>The IP address of the machine.</p>
          * 
          * <strong>example:</strong>
          * <p>47.254.235.44</p>

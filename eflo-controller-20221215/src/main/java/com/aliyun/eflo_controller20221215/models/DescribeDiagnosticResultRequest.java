@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosticResultRequest extends TeaModel {
     /**
-     * <p>The diagnostic task ID.</p>
+     * <p>The diagnostic ID.</p>
      * 
      * <strong>example:</strong>
      * <p>diag-i151942361720577788844</p>

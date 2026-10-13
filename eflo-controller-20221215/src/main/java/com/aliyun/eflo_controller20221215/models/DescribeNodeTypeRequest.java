@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNodeTypeRequest extends TeaModel {
     /**
-     * <p>The node scale-out pattern.</p>
+     * <p>The node scaling mode.</p>
      * 
      * <strong>example:</strong>
      * <p>standard</p>

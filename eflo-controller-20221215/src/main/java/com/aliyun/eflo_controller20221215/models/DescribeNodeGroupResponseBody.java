@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNodeGroupResponseBody extends TeaModel {
     /**
-     * <p>The zone ID.</p>
+     * <p>The zone.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-wulanchabu-a</p>
@@ -14,7 +14,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
     public String az;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i111987311754895199538</p>
@@ -32,7 +32,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The creation time. The time is in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-07-07T17:19:42.980000</p>
@@ -41,7 +41,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>Indicates whether file storage can be mounted.</p>
+     * <p>Indicates whether file storage mounting is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -59,7 +59,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The name of the image.</p>
+     * <p>The image name.</p>
      * 
      * <strong>example:</strong>
      * <p>Alinux3_x86_5.10.134-16.3_NV_RunC_D3_E3C7_570.133.20_V1.0_250428</p>
@@ -78,10 +78,10 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
 
     /**
      * <p>Valid values:
-     * • password: The node group supports only password-based logon.
-     * • keypair: The node group supports only key pair-based logon.
-     * • both: The node group supports password-based and key pair-based logon.</p>
-     * <p>If this parameter is not returned, no logon method is configured for the node group.</p>
+     * • password: The group supports only password-based logon. 
+     * • keypair: The group supports only key pair-based logon. 
+     * • both: The group supports both password-based and key pair-based logon.</p>
+     * <p>If the value is empty, no logon method is configured for the group.</p>
      * 
      * <strong>example:</strong>
      * <p>password</p>
@@ -90,7 +90,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
     public String loginType;
 
     /**
-     * <p>The instance type.</p>
+     * <p>The machine type.</p>
      * 
      * <strong>example:</strong>
      * <p>efg2.NH2cn</p>
@@ -108,7 +108,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
     public String nodeCount;
 
     /**
-     * <p>The description of the node group.</p>
+     * <p>The node group description.</p>
      * 
      * <strong>example:</strong>
      * <p>lingjun alinux node group</p>
@@ -117,7 +117,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
     public String nodeGroupDescription;
 
     /**
-     * <p>The ID of the node group.</p>
+     * <p>The node group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i120982301752461697971</p>
@@ -126,7 +126,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
     public String nodeGroupId;
 
     /**
-     * <p>The name of the node group.</p>
+     * <p>The node group name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-ack</p>
@@ -135,7 +135,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
     public String nodeGroupName;
 
     /**
-     * <p>The name of the RAM role. You can call the ListRoles operation of the RAM API to query the RAM roles that you created.</p>
+     * <p>The name of the RAM role for the node. You can call the RAM API ListRoles to query the RAM roles that you have created.</p>
      * 
      * <strong>example:</strong>
      * <p>xianwen-test-ram-role</p>
@@ -144,7 +144,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
     public String ramRoleName;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>83896080-59E3-5775-BDDC-8084691C3D96</p>
@@ -153,13 +153,13 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The system disk information.</p>
+     * <p>The system cloud disk information.</p>
      */
     @NameInMap("SystemDisk")
     public DescribeNodeGroupResponseBodySystemDisk systemDisk;
 
     /**
-     * <p>The time when the node group was last updated.</p>
+     * <p>The update time. The time is in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-08-20T11:18:11.164000</p>
@@ -168,7 +168,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>The user data.</p>
+     * <p>The user-defined script.</p>
      * 
      * <strong>example:</strong>
      * <p>#!/bin/bash
@@ -179,7 +179,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
     public String userData;
 
     /**
-     * <p>Indicates whether the node group supports GPU virtualization.</p>
+     * <p>Indicates whether GPU virtualization slicing is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -354,7 +354,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
 
     public static class DescribeNodeGroupResponseBodySystemDisk extends TeaModel {
         /**
-         * <p>The category of the disk.</p>
+         * <p>The category of the cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>system</p>
@@ -363,12 +363,10 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The performance level of the ESSD. Valid values:</p>
+         * <p>The performance level (PL) of the ESSD used as the system cloud disk. Valid values:</p>
          * <ul>
-         * <li><p>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
-         * </li>
-         * <li><p>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</p>
-         * </li>
+         * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -378,28 +376,20 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The size of the system disk. Unit: GiB. Valid values:</p>
+         * <p>The size of the system cloud disk. Unit: GiB. Valid values:</p>
          * <ul>
-         * <li><p>Basic disk: 20–500.</p>
-         * </li>
-         * <li><p>ESSD:</p>
-         * <ul>
-         * <li><p>PL0: 1–2,048.</p>
-         * </li>
-         * <li><p>PL1: 20–2,048.</p>
-         * </li>
-         * <li><p>PL2: 461–2,048.</p>
-         * </li>
-         * <li><p>PL3: 1,261–2,048.</p>
-         * </li>
+         * <li>Premium performance disk: 20 to 500.</li>
+         * <li>ESSD:<ul>
+         * <li>PL0: 1 to 2048.</li>
+         * <li>PL1: 20 to 2048.</li>
+         * <li>PL2: 461 to 2048.</li>
+         * <li>PL3: 1261 to 2048.</li>
          * </ul>
          * </li>
-         * <li><p>ESSD AutoPL disk: 1–2,048.</p>
-         * </li>
-         * <li><p>Other disk categories: 20–2,048.</p>
-         * </li>
+         * <li>ESSD AutoPL: 1 to 2048.</li>
+         * <li>Other cloud disk types: 20 to 2048.</li>
          * </ul>
-         * <p>Default value: the larger value between 20 and the size of the image that is specified by <code>ImageId</code>.</p>
+         * <p>Default value: max{20, size of the image specified by the parameter ImageId}.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>

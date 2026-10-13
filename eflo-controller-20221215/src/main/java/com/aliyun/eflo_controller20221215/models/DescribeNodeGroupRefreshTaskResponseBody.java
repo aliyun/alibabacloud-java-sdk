@@ -50,7 +50,7 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. An empty value of NextToken indicates that no more results exist.</p>
+     * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>7ed93fda-5e7f-436a-ae5a-bd8e6b04e36b</p>
@@ -59,7 +59,7 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the node group.</p>
+     * <p>The node group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ng-3525</p>
@@ -68,7 +68,7 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
     public String nodeGroupId;
 
     /**
-     * <p>The ID of the refresh task.</p>
+     * <p>The refresh task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>task-159136551662516768776</p>
@@ -244,7 +244,7 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
         public String actualValue;
 
         /**
-         * <p>The minimum action required to apply the target value: Refresh / Reboot / Reimage. For more information, see the MaxDisruptiveAction parameter description in the RefreshNodeGroupNodes operation.</p>
+         * <p>The minimum action required to apply the target value: Refresh, Reboot, or Reimage. For more information, see the MaxDisruptiveAction parameter of the RefreshNodeGroupNodes operation.</p>
          * 
          * <strong>example:</strong>
          * <p>Refresh</p>
@@ -328,7 +328,7 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
 
     public static class DescribeNodeGroupRefreshTaskResponseBodyNodes extends TeaModel {
         /**
-         * <p>The action level actually executed on the node. If multiple properties are refreshed on the node, the highest required action level is used. Valid values:</p>
+         * <p>The action level actually performed on the node. If multiple properties are refreshed on the node, the highest required action level is used. Valid values:</p>
          * <ul>
          * <li>Refresh: in-place refresh.</li>
          * <li>Reboot: restart.</li>
@@ -361,7 +361,7 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>node-001</p>
@@ -370,7 +370,7 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The list of property drifts for the node, including both executed and skipped properties.</p>
+         * <p>The property drift list for the node, including both executed and skipped properties.</p>
          */
         @NameInMap("PropertyDrifts")
         public java.util.List<DescribeNodeGroupRefreshTaskResponseBodyNodesPropertyDrifts> propertyDrifts;

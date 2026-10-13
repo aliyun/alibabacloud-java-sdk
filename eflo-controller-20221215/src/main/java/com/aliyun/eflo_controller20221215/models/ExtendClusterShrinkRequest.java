@@ -17,19 +17,19 @@ public class ExtendClusterShrinkRequest extends TeaModel {
      * <p>Specifies whether to skip failed nodes. Default value: False.</p>
      * 
      * <strong>example:</strong>
-     * <p>False</p>
+     * <p>false</p>
      */
     @NameInMap("IgnoreFailedNodeTasks")
     public Boolean ignoreFailedNodeTasks;
 
     /**
-     * <p>The combined IP allocation policy. Each policy can use only one policy type, and multiple policies can be combined.</p>
+     * <p>The combined policy for IP allocation. Each policy can use only one policy type, and multiple policies can be combined.</p>
      */
     @NameInMap("IpAllocationPolicy")
     public String ipAllocationPolicyShrink;
 
     /**
-     * <p>The node groups.</p>
+     * <p>The node group.</p>
      */
     @NameInMap("NodeGroups")
     public String nodeGroupsShrink;

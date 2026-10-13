@@ -14,7 +14,7 @@ public class UpdateNodeGroupShrinkRequest extends TeaModel {
     public Boolean fileSystemMountEnabled;
 
     /**
-     * <p>The default image ID of the node group. If this parameter is not specified, the image remains unchanged.</p>
+     * <p>The default image ID of the node group. If you do not specify this parameter, the image ID remains unchanged.</p>
      * 
      * <strong>example:</strong>
      * <p>i1232142432432</p>
@@ -23,7 +23,7 @@ public class UpdateNodeGroupShrinkRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The key pair name.</p>
+     * <p>The name of the key pair.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -32,16 +32,16 @@ public class UpdateNodeGroupShrinkRequest extends TeaModel {
     public String keyPairName;
 
     /**
-     * <p>The logon password of the machines in the node group.</p>
+     * <p>The logon password for the machines in the node group.</p>
      * 
      * <strong>example:</strong>
-     * <p>密码</p>
+     * <p>Password</p>
      */
     @NameInMap("LoginPassword")
     public String loginPassword;
 
     /**
-     * <p>The node group name.</p>
+     * <p>The name of the node group.</p>
      * 
      * <strong>example:</strong>
      * <p>test-update</p>
@@ -50,7 +50,7 @@ public class UpdateNodeGroupShrinkRequest extends TeaModel {
     public String newNodeGroupName;
 
     /**
-     * <p>The node group ID.</p>
+     * <p>The ID of the node group.</p>
      * 
      * <strong>example:</strong>
      * <p>i120021051733814190732</p>
@@ -59,8 +59,7 @@ public class UpdateNodeGroupShrinkRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
-     * <p>The RAM role name of the node. You can call the RAM API ListRoles to query the node RAM roles that you have created. The trusted entity of the role must be set to Lingjun AI Computing Service.
-     * Note: Clearing an existing role is not supported.</p>
+     * <p>The name of the RAM role for the node. You can call the ListRoles API operation of RAM to query the RAM roles that you have created. The trusted entity of the role must be Lingjun AI Computing Service. <warning>Submitting an empty string &quot;&quot; clears the RAM role of the node group.</warning></p>
      * 
      * <strong>example:</strong>
      * <p>xianwen-test-ram-role</p>
@@ -68,11 +67,14 @@ public class UpdateNodeGroupShrinkRequest extends TeaModel {
     @NameInMap("RamRoleName")
     public String ramRoleName;
 
+    /**
+     * <p>The system cloud disk configuration.</p>
+     */
     @NameInMap("SystemDisk")
     public String systemDiskShrink;
 
     /**
-     * <p>The custom executable shell script. The script must be Base64-encoded. The maximum size of the raw data is 16 KB.</p>
+     * <p>The custom executable shell script. It must be Base64-encoded, and the maximum size of the raw data is 16 KB.</p>
      * 
      * <strong>example:</strong>
      * <p>ZWNobyBoZWxsbyBlY3Mh</p>

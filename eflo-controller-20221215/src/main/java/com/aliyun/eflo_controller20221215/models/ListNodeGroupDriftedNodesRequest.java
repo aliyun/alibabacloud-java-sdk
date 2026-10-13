@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNodeGroupDriftedNodesRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries per page for a paged query. Valid values: 1 to 500. Default value: 100.</p>
+     * <p>The maximum number of entries per page in a paging query. Valid values: 1 to 500. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class ListNodeGroupDriftedNodesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the node group.</p>
+     * <p>The node group ID. Call ListClusters to obtain the ClusterId, pass the ClusterId to ListNodeGroups, and obtain the value from the NodeGroupId response parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

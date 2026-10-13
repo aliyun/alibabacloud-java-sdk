@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterResponseBody extends TeaModel {
     /**
-     * <p>The description of the cluster.</p>
+     * <p>The cluster description.</p>
      * 
      * <strong>example:</strong>
      * <p>Test cluster</p>
@@ -23,7 +23,7 @@ public class DescribeClusterResponseBody extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The name of the cluster.</p>
+     * <p>The cluster name.</p>
      * 
      * <strong>example:</strong>
      * <p>Eflo-YJ-Test-Cluster</p>
@@ -32,7 +32,7 @@ public class DescribeClusterResponseBody extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The type of the cluster.</p>
+     * <p>The cluster type.</p>
      * 
      * <strong>example:</strong>
      * <p>AckEdgePro</p>
@@ -56,7 +56,7 @@ public class DescribeClusterResponseBody extends TeaModel {
     public String computingIpVersion;
 
     /**
-     * <p>The time when the cluster was created.</p>
+     * <p>The creation time. The time is in ISO 8601 format. Z in the example indicates UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-06-08T07:05:11Z</p>
@@ -65,7 +65,7 @@ public class DescribeClusterResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The zone of the cluster.</p>
+     * <p>The cluster number.</p>
      * 
      * <strong>example:</strong>
      * <p>A2</p>
@@ -107,7 +107,7 @@ public class DescribeClusterResponseBody extends TeaModel {
     public String openEniJumboFrame;
 
     /**
-     * <p>The state of the cluster.</p>
+     * <p>The cluster status.</p>
      * 
      * <strong>example:</strong>
      * <p>running</p>
@@ -152,7 +152,7 @@ public class DescribeClusterResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The time when the cluster was last updated.</p>
+     * <p>The update time. The time is in ISO 8601 format. Z in the example indicates UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-08-23T06:36:17.000Z</p>
@@ -170,7 +170,7 @@ public class DescribeClusterResponseBody extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC).</p>
+     * <p>The VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-0jlkqysom5dmcviymep3f</p>
@@ -354,7 +354,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         public String componentId;
 
         /**
-         * <p>The type of the component.</p>
+         * <p>The component type.</p>
          * 
          * <strong>example:</strong>
          * <p>ACKEdge</p>
@@ -387,7 +387,7 @@ public class DescribeClusterResponseBody extends TeaModel {
 
     public static class DescribeClusterResponseBodyNetworks extends TeaModel {
         /**
-         * <p>The ID of the virtual private datacenter (VPD).</p>
+         * <p>The cluster CIDR block ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpd-iqd7xunc</p>

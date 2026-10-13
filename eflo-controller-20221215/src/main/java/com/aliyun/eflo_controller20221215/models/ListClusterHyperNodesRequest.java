@@ -15,10 +15,14 @@ public class ListClusterHyperNodesRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The number of entries to return on each page. The maximum value is 100.</p>
+     * <p>The number of entries per page in a paged query. Maximum value: 100.</p>
      * <p>Default value:</p>
-     * <p>• If this parameter is not set or is set to a value less than 20, the default value is 20.</p>
-     * <p>• If this parameter is set to a value greater than 100, the default value is 100.</p>
+     * <ul>
+     * <li><p>If this parameter is not set or is set to a value less than 20, the default value is 20.</p>
+     * </li>
+     * <li><p>If this parameter is set to a value greater than 100, the default value is 100.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -27,7 +31,7 @@ public class ListClusterHyperNodesRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The token used to start the query. Set this parameter to the NextToken value returned from a previous call.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>563d42ae0b17572449ec8c97f7f66069</p>
